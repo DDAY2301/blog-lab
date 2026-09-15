@@ -665,19 +665,88 @@ function readingTime(content = "") {
   return Math.max(1, Math.ceil(content.trim().split(/\s+/).filter(Boolean).length / 190));
 }
 
+function InlineMarkdown({ text }) {
+  const tokenPattern = /(\*\*[^*]+\*\*|\[[^\]]+\]\(https?:\/\/[^)\s]+\)|`[^`]+`)/g;
+  const parts = [];
+  let lastIndex = 0;
+  let match;
+
+  while ((match = tokenPattern.exec(text)) !== null) {
+    if (match.index > lastIndex) parts.push(text.slice(lastIndex, match.index));
+    const token = match[0];
+
+    if (token.startsWith("**")) {
+      parts.push(<strong key={match.index}>{token.slice(2, -2)}</strong>);
+    } else if (token.startsWith("[")) {
+      const linkMatch = token.match(/^\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)$/);
+      if (linkMatch) {
+        parts.push(
+          <a key={match.index} href={linkMatch[2]} target="_blank" rel="noopener noreferrer">
+            {linkMatch[1]}
+          </a>
+        );
+      }
+    } else {
+      parts.push(<code key={match.index}>{token.slice(1, -1)}</code>);
+    }
+
+    lastIndex = tokenPattern.lastIndex;
+  }
+
+  if (lastIndex < text.length) parts.push(text.slice(lastIndex));
+  return parts;
+}
+
 function ArticleBody({ content }) {
-  return (
-    <div className="article-body">
-      {content.split("\n").map((line, index) => {
-        if (line.startsWith("### ")) return <h3 key={index}>{line.slice(4)}</h3>;
-        if (line.startsWith("## ")) return <h2 key={index}>{line.slice(3)}</h2>;
-        if (line.startsWith("# ")) return <h1 key={index}>{line.slice(2)}</h1>;
-        if (line.startsWith("- ")) return <div className="bullet" key={index}>• {line.slice(2)}</div>;
-        if (!line.trim()) return <div className="line-space" key={index} />;
-        return <p key={index}>{line}</p>;
-      })}
-    </div>
-  );
+  const lines = content.split("\n");
+  const blocks = [];
+
+  for (let index = 0; index < lines.length; index += 1) {
+    const line = lines[index];
+
+    if (line.startsWith("### ")) {
+      blocks.push(<h3 key={index}><InlineMarkdown text={line.slice(4)} /></h3>);
+      continue;
+    }
+    if (line.startsWith("## ")) {
+      blocks.push(<h2 key={index}><InlineMarkdown text={line.slice(3)} /></h2>);
+      continue;
+    }
+    if (line.startsWith("# ")) {
+      blocks.push(<h1 key={index}><InlineMarkdown text={line.slice(2)} /></h1>);
+      continue;
+    }
+    if (line.startsWith("- ")) {
+      const items = [];
+      const listKey = index;
+      while (index < lines.length && lines[index].startsWith("- ")) {
+        items.push(<li key={index}><InlineMarkdown text={lines[index].slice(2)} /></li>);
+        index += 1;
+      }
+      index -= 1;
+      blocks.push(<ul key={listKey}>{items}</ul>);
+      continue;
+    }
+    if (/^\d+\.\s/.test(line)) {
+      const items = [];
+      const listKey = index;
+      while (index < lines.length && /^\d+\.\s/.test(lines[index])) {
+        items.push(<li key={index}><InlineMarkdown text={lines[index].replace(/^\d+\.\s/, "")} /></li>);
+        index += 1;
+      }
+      index -= 1;
+      blocks.push(<ol key={listKey}>{items}</ol>);
+      continue;
+    }
+    if (!line.trim()) {
+      blocks.push(<div className="line-space" key={index} />);
+      continue;
+    }
+
+    blocks.push(<p key={index}><InlineMarkdown text={line} /></p>);
+  }
+
+  return <div className="article-body">{blocks}</div>;
 }
 
 function Icon({ name }) {
@@ -709,8 +778,9 @@ export default function Home() {
     try {
       const stored = JSON.parse(localStorage.getItem(STORAGE_KEY) || "null");
       if (Array.isArray(stored) && stored.length) {
-        const storedIds = new Set(stored.map((article) => article.id));
-        setArticles([...starterArticles.filter((article) => !storedIds.has(article.id)), ...stored]);
+        const starterIds = new Set(starterArticles.map((article) => article.id));
+        const localOnlyArticles = stored.filter((article) => !starterIds.has(article.id));
+        setArticles([...starterArticles, ...localOnlyArticles]);
       } else {
         setArticles(starterArticles);
       }
@@ -723,6 +793,38 @@ export default function Home() {
   useEffect(() => {
     if (ready) localStorage.setItem(STORAGE_KEY, JSON.stringify(articles));
   }, [articles, ready]);
+
+  useEffect(() => {
+    if (!ready) return undefined;
+
+    function syncViewFromUrl() {
+      const requestedId = new URLSearchParams(window.location.search).get("article");
+      if (requestedId && articles.some((article) => article.id === requestedId)) {
+        setSelectedId(requestedId);
+        setView("article");
+      } else if (view === "article") {
+        setSelectedId("");
+        setView("home");
+      }
+    }
+
+    syncViewFromUrl();
+    window.addEventListener("popstate", syncViewFromUrl);
+    return () => window.removeEventListener("popstate", syncViewFromUrl);
+  }, [articles, ready]);
+
+  useEffect(() => {
+    const selectedArticle = articles.find((article) => article.id === selectedId);
+    const description = document.querySelector('meta[name="description"]');
+
+    document.title = selectedArticle ? `${selectedArticle.title} | Blog Lab` : "Blog Lab";
+    if (description) {
+      description.setAttribute(
+        "content",
+        selectedArticle?.seoDescription || "Blog Lab – preprosta platforma za pisanje in objavljanje člankov."
+      );
+    }
+  }, [articles, selectedId]);
 
   useEffect(() => {
     if (!toast) return;
@@ -746,6 +848,12 @@ export default function Home() {
   const selected = articles.find((article) => article.id === selectedId);
 
   function navigate(nextView) {
+    if (nextView !== "article") {
+      const url = new URL(window.location.href);
+      url.searchParams.delete("article");
+      window.history.pushState({}, "", `${url.pathname}${url.search}${url.hash}`);
+      setSelectedId("");
+    }
     setView(nextView);
     setPreview(false);
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -762,8 +870,13 @@ export default function Home() {
   }
 
   function openArticle(article) {
+    const url = new URL(window.location.href);
+    url.searchParams.set("article", article.id);
+    window.history.pushState({}, "", `${url.pathname}${url.search}${url.hash}`);
     setSelectedId(article.id);
-    navigate("article");
+    setView("article");
+    setPreview(false);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
   function validateDraft() {
@@ -873,7 +986,15 @@ export default function Home() {
             </div>
             <div className="post-grid">
               {published.length ? published.slice(0, 6).map((article, index) => (
-                <article className={`post-card ${index === 0 ? "featured" : ""}`} key={article.id} onClick={() => openArticle(article)}>
+                <a
+                  className={`post-card ${index === 0 ? "featured" : ""}`}
+                  href={`?article=${encodeURIComponent(article.id)}`}
+                  key={article.id}
+                  onClick={(event) => {
+                    event.preventDefault();
+                    openArticle(article);
+                  }}
+                >
                   <div className="card-art"><span>{article.category.slice(0, 1)}</span></div>
                   <div className="card-copy">
                     <div className="meta"><span>{article.category}</span><span>{readingTime(article.content)} min branja</span></div>
@@ -881,7 +1002,7 @@ export default function Home() {
                     <p>{article.excerpt}</p>
                     <div className="card-foot"><span>{article.author}</span><span>{formatDate(article.updatedAt)}</span></div>
                   </div>
-                </article>
+                </a>
               )) : (
                 <div className="empty-state">
                   <h3>Še ni objavljenih člankov.</h3>
