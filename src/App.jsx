@@ -7,6 +7,99 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    id: "kurent-ptuj-unesco-heritage-guide",
+    title: "Kurent in Ptuj: UNESCO Heritage Beyond the Carnival",
+    excerpt: "Meet Slovenia’s best-known Shrovetide figure, separate living tradition from popular legend, and plan a respectful visit to Ptuj even outside carnival season.",
+    seoDescription: "Discover the Kurent tradition of Ptuj, its UNESCO-listed door-to-door rounds, meanings, costume and practical ways to experience the heritage responsibly.",
+    content: `# Kurent in Ptuj: UNESCO Heritage Beyond the Carnival
+
+With a shaggy sheepskin outfit, a belt of heavy bells and a dramatic headpiece, the Kurent is one of Slovenia’s most recognisable traditional figures. Visitors often hear that Kurenti “chase winter away.” That is a useful introduction to the symbolism, but it is not a complete history—and the figure is not simply a carnival mascot.
+
+The heritage recognised by UNESCO is specifically the **door-to-door rounds of Kurenti**, a living Shrovetide custom rooted in communities around Ptuj. Understanding that distinction makes a visit more interesting and more respectful.
+
+## What UNESCO actually recognised
+
+UNESCO inscribed the door-to-door rounds of Kurenti on the Representative List of the Intangible Cultural Heritage of Humanity in **2017**. The custom is practised between **Candlemas on 2 February and Ash Wednesday**, so its exact end date changes with the Christian calendar.
+
+Groups move from house to house, jumping and ringing the bells worn around their waists. UNESCO’s description also notes the presence of one or more accompanying devils and the importance of families, schools, museums and associations in passing knowledge and skills to younger generations.
+
+The inscription recognises a community practice, not ownership of every horned or feathered costume that appears at a parade. It also does not mean that UNESCO has certified the popular supernatural explanations as historical fact.
+
+## Tradition, belief and what history can prove
+
+The familiar interpretation says that the noise and movement drive winter away and call in spring. Visit Ptuj presents this as an **ancient belief** associated with the Kurent. It belongs to the meaning people give the custom and should be described as belief or folklore—not as a scientifically verifiable event.
+
+Historical certainty is more limited. Carnival customs change as communities transmit them, and their origins are not captured in one simple founding document. It is safer to say that the Kurent tradition has deep roots in the Shrovetide culture of north-eastern Slovenia than to claim a precise prehistoric age.
+
+The living tradition has changed too. Visit Ptuj notes that in the past the outfit was worn by adult men, while safeguarding today involves a broader network of families, societies, schools and museums. Tradition is not frozen: continuity depends on people practising, teaching and adapting it.
+
+## Kurent or Korant?
+
+You may encounter both names. **Kurent** is widely used in Ptuj and in international descriptions; **Korant** is common in parts of the surrounding countryside. Treat the local choice of name as part of regional identity rather than correcting it.
+
+Costumes also vary. Official Ptuj tourism material distinguishes feathered and horned types. Do not assume that every group should look identical: details can indicate the wearer’s community and local tradition.
+
+## The outfit is not a souvenir costume
+
+A Kurent outfit combines sheepskin clothing, bells and an elaborate headpiece. Visit Ptuj states that a complete outfit can weigh up to **40 kilograms**. The weight, heat, noise and constant movement help explain why the rounds demand stamina and learned practice.
+
+Visitors should not enter a procession, grab bells or touch a headpiece for a photograph unless the wearer explicitly invites it. Ask before photographing people at close range, especially children and participants preparing away from the public route.
+
+Buying a mass-produced mask and treating it as comic fancy dress can flatten a living custom into decoration. A better souvenir supports a local maker, museum or heritage organisation and comes with an explanation of what it represents.
+
+## How to experience the heritage outside Shrovetide
+
+You do not need to visit during the busiest carnival weekend. **Kurent House** at Murkova ulica 7 in Ptuj presents the character through an interactive visitor experience and operates under the auspices of the Slovenian National Commission for UNESCO.
+
+At the time of verification on **15 September 2026**, the official listing advertised summer opening from Wednesday to Sunday, 12:00–18:00, with Thursday closed; visits take place on the hour and capacity is limited. Hours can change, so check the official page and online ticket availability before travelling.
+
+The Ptuj-Ormož Regional Museum at Ptuj Castle also holds a traditional carnival-mask collection. Combining the Kurent House with the castle gives useful context: one focuses tightly on the living figure, while the museum places masks within the wider culture of the region.
+
+Allow time to walk through Ptuj’s historic centre rather than treating the heritage stop as a quick photo opportunity. Kurent House, the Tourist Information Centre and the route toward the castle are close enough to combine on foot for most visitors.
+
+## Visiting during Kurentovanje
+
+Kurentovanje is Ptuj’s large carnival festival, but the UNESCO-listed practice is broader than the organised event. Village rounds and community encounters are central to the heritage.
+
+If planning a future carnival visit:
+
+- confirm the year’s exact dates and programme on the official festival or Visit Ptuj website;
+- book accommodation early;
+- use public transport where practical and expect street closures;
+- dress for winter weather and long periods outdoors;
+- protect young children’s hearing around large groups of bells;
+- stay behind barriers and follow stewards’ instructions;
+- never describe every masked participant as a performer hired for tourists.
+
+Do not publish or rely on a future festival date until the organiser has confirmed it. Shrovetide dates move from year to year, and individual rounds may not be public events.
+
+## A respectful visitor checklist
+
+Before your visit:
+
+1. Check current opening hours, tickets and language options.
+2. Distinguish the UNESCO-listed rounds from the wider festival programme.
+3. Refer to “belief,” “tradition” or “folklore” when discussing the expulsion of winter.
+4. Ask permission before close-up photographs or physical contact with costume elements.
+5. Give moving groups space; bells, headpieces and crowds require room.
+6. Support the communities safeguarding the custom through official visits and local work.
+
+The Kurent is memorable because the sight and sound are extraordinary. The deeper reason to visit Ptuj is quieter: this is heritage kept alive through repeated community practice, not a legend staged only for spectators.
+
+## Verified sources
+
+- [UNESCO: Door-to-door rounds of Kurenti](https://ich.unesco.org/en/RL/door-to-door-rounds-of-kurenti-01278)
+- [UNESCO decision 12.COM 11.B.30](https://ich.unesco.org/en/decisions/12.COM/11.B.30)
+- [Visit Ptuj: Kurent](https://visitptuj.eu/en/see-do/culture-heritage/sightseeing/kurent-2/)
+- [Visit Ptuj: Kurent House](https://visitptuj.eu/en/see-do/culture-heritage/sightseeing/kurent-house/)
+- [Ptuj-Ormož Regional Museum](https://pmpo.si/en/)`,
+    category: "Vodniki",
+    author: "Uredništvo Blog Lab",
+    status: "published",
+    createdAt: "2026-09-15T15:00:20+02:00",
+    updatedAt: "2026-09-15T15:00:20+02:00",
+  },
+  {
     id: "soca-rafting-early-autumn-2026",
     title: "Early Autumn Rafting on the Soča: A Safety-First Guide",
     excerpt: "Plan a mid-September Soča rafting or kayaking trip with the 2026 navigation hours, permit rules, cold-water equipment and honest advice on choosing a guide.",
@@ -665,19 +758,88 @@ function readingTime(content = "") {
   return Math.max(1, Math.ceil(content.trim().split(/\s+/).filter(Boolean).length / 190));
 }
 
+function InlineMarkdown({ text }) {
+  const tokenPattern = /(\*\*[^*]+\*\*|\[[^\]]+\]\(https?:\/\/[^)\s]+\)|`[^`]+`)/g;
+  const parts = [];
+  let lastIndex = 0;
+  let match;
+
+  while ((match = tokenPattern.exec(text)) !== null) {
+    if (match.index > lastIndex) parts.push(text.slice(lastIndex, match.index));
+    const token = match[0];
+
+    if (token.startsWith("**")) {
+      parts.push(<strong key={match.index}>{token.slice(2, -2)}</strong>);
+    } else if (token.startsWith("[")) {
+      const linkMatch = token.match(/^\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)$/);
+      if (linkMatch) {
+        parts.push(
+          <a key={match.index} href={linkMatch[2]} target="_blank" rel="noopener noreferrer">
+            {linkMatch[1]}
+          </a>
+        );
+      }
+    } else {
+      parts.push(<code key={match.index}>{token.slice(1, -1)}</code>);
+    }
+
+    lastIndex = tokenPattern.lastIndex;
+  }
+
+  if (lastIndex < text.length) parts.push(text.slice(lastIndex));
+  return parts;
+}
+
 function ArticleBody({ content }) {
-  return (
-    <div className="article-body">
-      {content.split("\n").map((line, index) => {
-        if (line.startsWith("### ")) return <h3 key={index}>{line.slice(4)}</h3>;
-        if (line.startsWith("## ")) return <h2 key={index}>{line.slice(3)}</h2>;
-        if (line.startsWith("# ")) return <h1 key={index}>{line.slice(2)}</h1>;
-        if (line.startsWith("- ")) return <div className="bullet" key={index}>• {line.slice(2)}</div>;
-        if (!line.trim()) return <div className="line-space" key={index} />;
-        return <p key={index}>{line}</p>;
-      })}
-    </div>
-  );
+  const lines = content.split("\n");
+  const blocks = [];
+
+  for (let index = 0; index < lines.length; index += 1) {
+    const line = lines[index];
+
+    if (line.startsWith("### ")) {
+      blocks.push(<h3 key={index}><InlineMarkdown text={line.slice(4)} /></h3>);
+      continue;
+    }
+    if (line.startsWith("## ")) {
+      blocks.push(<h2 key={index}><InlineMarkdown text={line.slice(3)} /></h2>);
+      continue;
+    }
+    if (line.startsWith("# ")) {
+      blocks.push(<h1 key={index}><InlineMarkdown text={line.slice(2)} /></h1>);
+      continue;
+    }
+    if (line.startsWith("- ")) {
+      const items = [];
+      const listKey = index;
+      while (index < lines.length && lines[index].startsWith("- ")) {
+        items.push(<li key={index}><InlineMarkdown text={lines[index].slice(2)} /></li>);
+        index += 1;
+      }
+      index -= 1;
+      blocks.push(<ul key={listKey}>{items}</ul>);
+      continue;
+    }
+    if (/^\d+\.\s/.test(line)) {
+      const items = [];
+      const listKey = index;
+      while (index < lines.length && /^\d+\.\s/.test(lines[index])) {
+        items.push(<li key={index}><InlineMarkdown text={lines[index].replace(/^\d+\.\s/, "")} /></li>);
+        index += 1;
+      }
+      index -= 1;
+      blocks.push(<ol key={listKey}>{items}</ol>);
+      continue;
+    }
+    if (!line.trim()) {
+      blocks.push(<div className="line-space" key={index} />);
+      continue;
+    }
+
+    blocks.push(<p key={index}><InlineMarkdown text={line} /></p>);
+  }
+
+  return <div className="article-body">{blocks}</div>;
 }
 
 function Icon({ name }) {
@@ -709,8 +871,9 @@ export default function Home() {
     try {
       const stored = JSON.parse(localStorage.getItem(STORAGE_KEY) || "null");
       if (Array.isArray(stored) && stored.length) {
-        const storedIds = new Set(stored.map((article) => article.id));
-        setArticles([...starterArticles.filter((article) => !storedIds.has(article.id)), ...stored]);
+        const starterIds = new Set(starterArticles.map((article) => article.id));
+        const localOnlyArticles = stored.filter((article) => !starterIds.has(article.id));
+        setArticles([...starterArticles, ...localOnlyArticles]);
       } else {
         setArticles(starterArticles);
       }
@@ -723,6 +886,38 @@ export default function Home() {
   useEffect(() => {
     if (ready) localStorage.setItem(STORAGE_KEY, JSON.stringify(articles));
   }, [articles, ready]);
+
+  useEffect(() => {
+    if (!ready) return undefined;
+
+    function syncViewFromUrl() {
+      const requestedId = new URLSearchParams(window.location.search).get("article");
+      if (requestedId && articles.some((article) => article.id === requestedId)) {
+        setSelectedId(requestedId);
+        setView("article");
+      } else {
+        setSelectedId("");
+        setView("home");
+      }
+    }
+
+    syncViewFromUrl();
+    window.addEventListener("popstate", syncViewFromUrl);
+    return () => window.removeEventListener("popstate", syncViewFromUrl);
+  }, [articles, ready]);
+
+  useEffect(() => {
+    const selectedArticle = articles.find((article) => article.id === selectedId);
+    const description = document.querySelector('meta[name="description"]');
+
+    document.title = selectedArticle ? `${selectedArticle.title} | Blog Lab` : "Blog Lab";
+    if (description) {
+      description.setAttribute(
+        "content",
+        selectedArticle?.seoDescription || "Blog Lab – preprosta platforma za pisanje in objavljanje člankov."
+      );
+    }
+  }, [articles, selectedId]);
 
   useEffect(() => {
     if (!toast) return;
@@ -746,6 +941,12 @@ export default function Home() {
   const selected = articles.find((article) => article.id === selectedId);
 
   function navigate(nextView) {
+    if (nextView !== "article") {
+      const url = new URL(window.location.href);
+      url.searchParams.delete("article");
+      window.history.pushState({}, "", `${url.pathname}${url.search}${url.hash}`);
+      setSelectedId("");
+    }
     setView(nextView);
     setPreview(false);
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -762,8 +963,13 @@ export default function Home() {
   }
 
   function openArticle(article) {
+    const url = new URL(window.location.href);
+    url.searchParams.set("article", article.id);
+    window.history.pushState({}, "", `${url.pathname}${url.search}${url.hash}`);
     setSelectedId(article.id);
-    navigate("article");
+    setView("article");
+    setPreview(false);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
   function validateDraft() {
@@ -873,7 +1079,15 @@ export default function Home() {
             </div>
             <div className="post-grid">
               {published.length ? published.slice(0, 6).map((article, index) => (
-                <article className={`post-card ${index === 0 ? "featured" : ""}`} key={article.id} onClick={() => openArticle(article)}>
+                <a
+                  className={`post-card ${index === 0 ? "featured" : ""}`}
+                  href={`?article=${encodeURIComponent(article.id)}`}
+                  key={article.id}
+                  onClick={(event) => {
+                    event.preventDefault();
+                    openArticle(article);
+                  }}
+                >
                   <div className="card-art"><span>{article.category.slice(0, 1)}</span></div>
                   <div className="card-copy">
                     <div className="meta"><span>{article.category}</span><span>{readingTime(article.content)} min branja</span></div>
@@ -881,7 +1095,7 @@ export default function Home() {
                     <p>{article.excerpt}</p>
                     <div className="card-foot"><span>{article.author}</span><span>{formatDate(article.updatedAt)}</span></div>
                   </div>
-                </article>
+                </a>
               )) : (
                 <div className="empty-state">
                   <h3>Še ni objavljenih člankov.</h3>
