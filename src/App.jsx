@@ -7,6 +7,104 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    id: "mineralfest-ljubljana-2026-visitor-guide",
+    title: "MineralFest Ljubljana 2026: A Visitor’s Guide",
+    excerpt: "Plan a practical visit to Ljubljana’s two-day mineral, fossil and jewellery fair, with verified dates, ticket prices, highlights and car-light access.",
+    seoDescription: "Visit MineralFest Ljubljana on 19–20 September 2026: verified hours, ticket prices, exhibitions, workshops and practical Cankarjev dom access tips.",
+    content: `MineralFest Ljubljana returns to Cankarjev dom on **19 and 20 September 2026**, offering an indoor weekend stop for visitors interested in geology, fossils, jewellery and hands-on craft. The 2026 edition marks the fair’s tenth anniversary and brings together Slovenian and international exhibitors alongside special displays and activities.
+
+This guide uses information checked on **15 September 2026**. Event details can still change, so recheck the organiser and venue pages before setting out.
+
+## Dates, hours and venue
+
+The official tourism listing gives the event window as **Saturday 19 September from 09:00 until Sunday 20 September at 19:00**. Cankarjev dom lists the fair on both days in its **Large Reception Hall** (*Velika sprejemna dvorana*), in central Ljubljana.
+
+The venue is at Prešernova cesta 10, beside Republic Square and a short walk from the pedestrianised historic centre. If you are staying centrally, walking is usually the simplest choice. For longer journeys, consult Ljubljana Passenger Transport’s current journey planner and allow extra time for any European Mobility Week diversions.
+
+## What tickets cost
+
+Cankarjev dom’s event listing shows these **door prices**:
+
+- adults: **€8.50**;
+- students, seniors and disabled visitors: **€7.50**;
+- primary-school children: **€4.00**;
+- family ticket: **€21.00**.
+
+The organiser also advertises lower advance prices, including **€7.50 for adults**, **€6.50 for pupils, students, pensioners and disabled visitors**, and **€3.50 for primary-school children**. Because eligibility wording differs slightly between listings, select the correct concession category in the official ticket shop and bring any supporting identification that may be requested.
+
+Do not rely on an old screenshot or social-media post for the final price. Use the linked Cankarjev dom ticket page immediately before purchase and check whether a ticket is valid for one day or the whole weekend.
+
+## What you can see and do
+
+The official Slovenian tourism listing describes a mix of mineral, fossil, jewellery and esoterica exhibitors. It also announces:
+
+- **The Enchanting World of Minerals**, a special display by the Slovenian Museum of Natural History;
+- **Loški Kremen**, presented by Gorazd and Blaž Tomc;
+- wire-jewellery making;
+- gemstone-cutting activities;
+- a Wheel of Fortune activity.
+
+Treat workshop places and activity times as limited unless the organiser confirms otherwise. If one activity is essential to your visit, contact the organiser or check the latest programme rather than assuming it runs continuously.
+
+## A useful plan for first-time visitors
+
+Allow roughly **90 minutes to three hours**, depending on whether you want to shop, attend activities or examine the special exhibitions carefully. Arriving near opening time may give you more space to speak with exhibitors; later visits can be livelier but busier.
+
+Start with the museum-backed mineral display before browsing commercial stands. It gives scientific context for colour, crystal form and geological origin, making the sales area easier to assess. Then compare labels and prices across several exhibitors before buying.
+
+Families can make the visit more focused by choosing a small question in advance: how fossils form, why minerals have different colours, or how a rough stone becomes jewellery. Young children should remain supervised around fragile, sharp or small objects.
+
+## Buying responsibly
+
+A beautiful specimen does not automatically have a clear or ethical origin. Ask the seller:
+
+1. What is the mineral or fossil?
+2. Where was it collected?
+3. Is the label included?
+4. Has it been treated, dyed, repaired or assembled?
+5. Are there export or import restrictions for your destination?
+
+Keep the receipt and written identification. Rules for collecting, selling and transporting geological or palaeontological material vary by country, and airline baggage rules are separate from customs rules. If provenance is vague or a protected fossil claim sounds extraordinary, leave it and seek expert advice.
+
+Claims that crystals diagnose or treat illness are not a substitute for medical care. Enjoy minerals for their geology, craft, beauty or cultural meaning without treating unverified health claims as evidence.
+
+## Accessibility and comfort
+
+Cankarjev dom publishes visitor accessibility information, but individual needs differ. Contact the venue in advance about step-free routes, wheelchair spaces, assistance or companion-ticket conditions. The fair can involve prolonged standing, bright display lighting and crowded aisles; plan breaks and avoid blocking circulation while examining a stand.
+
+Bring a small reusable bag with padding if you expect to buy delicate pieces. Heavy specimens become uncomfortable quickly, so consider weight before continuing a full day of sightseeing.
+
+## Make it part of a Ljubljana day
+
+MineralFest works well as the indoor anchor of a city day. From Cankarjev dom, most visitors can walk to Congress Square, the National Museum of Slovenia or the historic centre. Check each institution’s current opening hours and ticket requirements separately.
+
+For a quieter itinerary, visit the fair in the morning, take lunch in the centre and spend the afternoon walking beside the Ljubljanica. Keep purchases secure, dry and out of direct sun rather than carrying them loose through a crowded market or café.
+
+## Before you go
+
+- Reconfirm the programme, prices and opening times on 18 or 19 September.
+- Buy only through the official organiser or Cankarjev dom ticket channel.
+- Use public transport or walk where practical; do not assume central parking will be available.
+- Ask before photographing people, private collections or sales displays.
+- Supervise children and handle objects only with the exhibitor’s permission.
+- Request provenance and treatment information before buying.
+
+MineralFest is most rewarding when approached as more than a shopping hall: it is a chance to connect attractive objects with the science, craft and responsible collecting practices behind them.
+
+## Verified sources
+
+- [MineralFest Slovenia: official organiser and 2026 event information](https://www.mineralfest.si/)
+- [Cankarjev dom: MineralFest Ljubljana event and ticket prices](https://www.cd-cc.si/en)
+- [Official Cankarjev dom ticket shop](https://vstopnice.cd-cc.si/)
+- [Slovenian Tourist Board: MineralFest Ljubljana 2026](https://www.slovenia.info/en/things-to-do/events/12980-mineralfest-ljubljana-2026)
+- [Cankarjev dom: accessibility information](https://www.cd-cc.si/en/accessibility)`,
+    category: "Aktualno",
+    author: "Uredništvo Blog Lab",
+    status: "published",
+    createdAt: "2026-09-15T20:59:27+02:00",
+    updatedAt: "2026-09-15T20:59:27+02:00",
+  },
+  {
     id: "kurent-ptuj-unesco-heritage-guide",
     title: "Kurent in Ptuj: UNESCO Heritage Beyond the Carnival",
     excerpt: "Meet Slovenia’s best-known Shrovetide figure, separate living tradition from popular legend, and plan a respectful visit to Ptuj even outside carnival season.",
