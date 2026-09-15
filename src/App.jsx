@@ -11,9 +11,7 @@ const starterArticles = [
     title: "Kurent in Ptuj: UNESCO Heritage Beyond the Carnival",
     excerpt: "Meet Slovenia’s best-known Shrovetide figure, separate living tradition from popular legend, and plan a respectful visit to Ptuj even outside carnival season.",
     seoDescription: "Discover the Kurent tradition of Ptuj, its UNESCO-listed door-to-door rounds, meanings, costume and practical ways to experience the heritage responsibly.",
-    content: `# Kurent in Ptuj: UNESCO Heritage Beyond the Carnival
-
-With a shaggy sheepskin outfit, a belt of heavy bells and a dramatic headpiece, the Kurent is one of Slovenia’s most recognisable traditional figures. Visitors often hear that Kurenti “chase winter away.” That is a useful introduction to the symbolism, but it is not a complete history—and the figure is not simply a carnival mascot.
+    content: `With a shaggy sheepskin outfit, a belt of heavy bells and a dramatic headpiece, the Kurent is one of Slovenia’s most recognisable traditional figures. Visitors often hear that Kurenti “chase winter away.” That is a useful introduction to the symbolism, but it is not a complete history—and the figure is not simply a carnival mascot.
 
 The heritage recognised by UNESCO is specifically the **door-to-door rounds of Kurenti**, a living Shrovetide custom rooted in communities around Ptuj. Understanding that distinction makes a visit more interesting and more respectful.
 
