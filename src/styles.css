@@ -48,7 +48,7 @@ nav button:hover, nav button.active { color: var(--ink); background: rgba(23,107
 .section-heading h2, .page-title h1 { margin: 8px 0 0; font: 700 42px/1.1 Georgia, serif; }
 .count { color: var(--muted); font-size: 14px; }
 .post-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
-.post-card { display: grid; grid-template-columns: 180px 1fr; min-height: 245px; background: var(--white); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; cursor: pointer; transition: .2s ease; }
+.post-card { color: inherit; text-decoration: none; display: grid; grid-template-columns: 180px 1fr; min-height: 245px; background: var(--white); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; cursor: pointer; transition: .2s ease; }
 .post-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: transparent; }
 .post-card.featured { grid-column: 1 / -1; grid-template-columns: minmax(320px, 42%) 1fr; min-height: 340px; }
 .card-art { display: grid; place-items: center; background: linear-gradient(145deg, #c7dfbb, #f1d7bc); position: relative; overflow: hidden; }
@@ -129,6 +129,12 @@ nav button:hover, nav button.active { color: var(--ink); background: rgba(23,107
 .article-heading h1, .preview-modal > h1 { margin: 18px 0; font: 700 clamp(42px, 7vw, 68px)/1.02 Georgia, serif; letter-spacing: -.035em; }
 .article-heading > p, .preview-excerpt { color: var(--muted); font-size: 20px; line-height: 1.55; }
 .article-byline { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 24px; color: var(--muted); font-size: 13px; }
+
+.article-body ul, .article-body ol { margin: 0 0 18px; padding-left: 26px; }
+.article-body li { margin: 7px 0; line-height: 1.75; }
+.article-body a { color: var(--green); text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
+.article-body code { padding: 2px 6px; border-radius: 5px; background: #f3f4ef; font-size: .92em; }
+.post-card:focus-visible, .article-body a:focus-visible { outline: 3px solid var(--green); outline-offset: 3px; }
 .article-body { padding: 38px 0; font: 18px/1.78 Georgia, serif; color: #28342c; }
 .article-body h1, .article-body h2, .article-body h3 { color: var(--ink); line-height: 1.15; margin: 1.7em 0 .65em; }
 .article-body h1 { font-size: 36px; }.article-body h2 { font-size: 29px; }.article-body h3 { font-size: 23px; }
