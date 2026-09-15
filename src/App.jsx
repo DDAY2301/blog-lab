@@ -802,7 +802,7 @@ export default function Home() {
       if (requestedId && articles.some((article) => article.id === requestedId)) {
         setSelectedId(requestedId);
         setView("article");
-      } else if (view === "article") {
+      } else {
         setSelectedId("");
         setView("home");
       }
