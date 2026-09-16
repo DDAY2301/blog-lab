@@ -7,6 +7,95 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    id: "idrija-mercury-legend-unesco-guide",
+    title: "Idrija Mercury: Legend, History and UNESCO Heritage",
+    excerpt: "Separate Idrija’s tub-maker legend from its documented mercury history, then plan a responsible visit to the mine, castle museum and UNESCO heritage sites.",
+    seoDescription: "Explore Idrija’s mercury legend and documented UNESCO mining heritage, with practical advice for visiting Anthony’s Main Road and Gewerkenegg Castle.",
+    content: `Idrija's story begins with a flash of liquid metal in a stream—or so local tradition says. What followed is documented on a global scale: five centuries of mercury mining shaped the town, connected it to trade across the Atlantic and left an industrial landscape shared with Almadén in Spain on the UNESCO World Heritage List.
+
+This guide separates the memorable origin story from the historical record and shows how to explore the heritage without romanticising the dangerous work or the toxic metal behind it.
+
+## The tub-maker story: legend, not a discovery report
+
+The familiar tale says that in **1490** a maker of wooden tubs found unusually heavy, shining droplets while soaking a tub in a creek. The discoverer is often called **Škafar**, a name linked to the Slovenian word for a tub.
+
+Visit Idrija explicitly presents the tub-maker episode as a **legend**. It is a powerful local origin story, but it should not be treated as an eyewitness account or proof of exactly who first identified the deposit. The date itself has firmer institutional support: UNESCO records that mercury was first found at Idrija in **1490**.
+
+That distinction matters. Folklore helps a community explain its beginnings; historical interpretation asks what surviving records and material evidence can establish.
+
+## What the evidence establishes
+
+Idrija developed around mercury extraction for roughly five centuries. UNESCO identifies Idrija and Almadén as the two largest mercury mines in the world until recent times and describes their preserved shafts, galleries, surface installations, miners' housing and civic buildings as evidence of a specialised mining society.
+
+Mercury's chemical symbol is \`Hg\`. Because the metal was used in amalgamation to extract silver and gold, production in Idrija and Almadén became part of an intercontinental economic system from the early modern period onward. The Idrija Municipal Museum explains that mercury from the two mines was used in South American precious-metal production from the mid-16th century.
+
+The heritage therefore tells more than a story of engineering. It also raises questions about labour, illness, pollution and the unequal costs of global trade. UNESCO notes plainly that mercury is a pollutant dangerous to human health.
+
+## Why Idrija is a UNESCO World Heritage site
+
+In **2012**, UNESCO inscribed the serial property **Heritage of Mercury: Almadén and Idrija**. The designation joins sites in Slovenia and Spain because together they preserve the technical, urban and social evidence of mercury extraction and its worldwide trade.
+
+In Idrija, the protected story extends beyond the underground workings. It includes infrastructure, storage, administrative buildings and places associated with miners' lives. That is why a useful visit combines at least two perspectives:
+
+- the underground working environment at Anthony's Main Road;
+- the town-wide historical interpretation at Gewerkenegg Castle and the Idrija Municipal Museum.
+
+## How to experience it today
+
+### 1. Enter through Anthony's Main Road
+
+Anthony's Main Road leads into the oldest visitor-accessible part of the Idrija mine. Visits are organised experiences rather than independent cave walks. Check the [official mine schedule](https://www.cudhg-idrija.si/en/schedule) and reserve ahead, especially for a specific language or during busy periods.
+
+Expect stairs, low temperatures and an underground environment. Follow the guide, remain on the visitor route and disclose relevant mobility, respiratory or health concerns before booking. The visit is industrial heritage interpretation—not an invitation to enter closed workings or collect minerals.
+
+### 2. Continue to Gewerkenegg Castle
+
+The castle was not a noble residence. From the early 16th century until the end of the Second World War it housed the mine administration, and guarded cellars were used to store mercury. Today its museum exhibitions explain mining technology, workers' lives, Idrija lace and the connections between Idrija and Almadén.
+
+Confirm current hours and admission on the [Idrija Municipal Museum visitor pages](https://www.muzej-idrija-cerkno.si/en/obiscite-nas/kje-smo/) before setting out. A combined mine-and-museum visit gives better context than either attraction alone.
+
+### 3. Add the smelting story if time allows
+
+The Hg Smelting Plant explains how mercury-bearing ore became liquid metal and why the process was both technically important and hazardous. It completes the route from geology to extraction, processing and export. Do not handle unidentified mineral material or assume that historic industrial sites are harmless because they are museums.
+
+## A practical car-light day trip
+
+Idrija lies **56 kilometres west of Ljubljana**. The official destination site says it can be reached directly by bus from Ljubljana; rail travellers should change to a bus at Logatec. Check the current operator timetable before travel, because connections and journey times can change.
+
+A sensible sequence is:
+
+1. Take a morning bus to Idrija and walk from the bus station into the compact centre.
+2. Join a pre-booked underground tour at Anthony's Main Road.
+3. Allow time for lunch; Idrija žlikrofi, the town's protected filled pasta, are the most characteristic local choice.
+4. Visit Gewerkenegg Castle and its museum exhibitions.
+5. Add the smelting plant only if opening times and your return bus leave enough margin.
+
+Individual opening hours do not always align, so build the day around the timed mine tour rather than assuming every site is continuously open. The official multi-attraction package currently advertises adult and child options, but verify the live price and inclusions before purchase.
+
+## Visit responsibly
+
+- **Treat mercury as hazardous.** Do not touch droplets, ore or residues outside supervised exhibits.
+- **Respect barriers and guides.** Historic workings are controlled environments, not shortcuts or adventure playgrounds.
+- **Dress for underground conditions.** Wear closed, stable footwear and bring a warm layer even when the surface is mild.
+- **Read beyond the machinery.** Notice the evidence of miners' housing, administration and family life as well as technical achievements.
+- **Keep legend and history distinct.** Retell the Škafar story as local tradition, while using UNESCO and museum evidence for historical claims.
+
+## Direct sources
+
+Information was checked on **16 September 2026**:
+
+- [UNESCO World Heritage Centre: Heritage of Mercury, Almadén and Idrija](https://whc.unesco.org/en/list/1313/)
+- [Idrija Municipal Museum: UNESCO Heritage](https://www.muzej-idrija-cerkno.si/en/obiscite-nas/unesco-heritage/)
+- [Visit Idrija: UNESCO mercury story](https://www.visit-idrija.si/en/experience/2019092609005398/unesco-mercury-story)
+- [Visit Idrija: how to reach Idrija](https://www.visit-idrija.si/en/destination/how-to-reach-us/)
+- [Visit Idrija: Discover the secrets of mercury](https://www.visit-idrija.si/en/plan-your-stay/packages/135/discover-the-secrets-of-mercury/)`,
+    category: "Vodniki",
+    author: "Uredništvo Blog Lab",
+    status: "published",
+    createdAt: "2026-09-16T14:58:17+02:00",
+    updatedAt: "2026-09-16T14:58:17+02:00",
+  },
+  {
     id: "ljubljana-marathon-2026-runner-spectator-guide",
     title: "Ljubljana Marathon 2026: Runner and Spectator Guide",
     excerpt: "Plan the 30th Ljubljana Marathon weekend with confirmed race times, bib collection, Expo access, spectator advice and practical city transport tips.",
