@@ -7,6 +7,111 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    id: "poljanska-fest-2026-ljubljana-guide",
+    title: "Poljanska Fest 2026: Ljubljana Street Festival Guide",
+    excerpt: "Plan a free Sunday at Poljanska Fest with the confirmed programme, street-closure details, music, food and practical advice for reaching the neighbourhood on foot.",
+    seoDescription: "Visit Poljanska Fest in Ljubljana on 20 September 2026: confirmed programme, free entry, street closure, food, concerts and practical access tips.",
+    content: `Poljanska Fest turns one of Ljubljana's historic approaches to the city centre into a neighbourhood street festival on **Sunday 20 September 2026**. From breakfast and children's storytelling to interviews, jazz, blues and swing, the event offers international visitors a relaxed way to experience Ljubljana beyond its main postcard sights.
+
+The festival runs from **10:00 to 22:00** and admission is **free**. Details below were checked against Ljubljana Tourism's official event listing on **16 September 2026**.
+
+## Date, time and exact location
+
+The event occupies **Poljanska cesta between Resljeva cesta and Ulica Janeza Pavla II**. This section of the road closes to traffic while shops, cafés, food providers and performers move into the street.
+
+Key facts:
+
+- **Date:** Sunday 20 September 2026;
+- **Time:** 10:00–22:00;
+- **Place:** Poljanska cesta, from Resljeva cesta to Ulica Janeza Pavla II;
+- **Admission:** free;
+- **Format:** outdoor food, talks, children's activities and live music.
+
+The organiser says the road reopens to traffic at **22:00**. Treat the published times as the current plan and check the official listing again on the morning of the event, especially if weather or operational conditions change.
+
+## Confirmed programme
+
+The official schedule moves from a family-friendly morning to evening concerts:
+
+1. **10:00:** breakfast from local food businesses, music by DJ Zvuk and a comic-book reading for children by Izar Lunaček.
+2. **12:30:** street performance by Počeni škafi.
+3. **15:00:** lunch accompanied by DJ Zvuk.
+4. **16:00:** live interviews led by journalist Patricija Maličev.
+5. **17:00:** a final philosophical gathering and audience conversation.
+6. **19:00:** Teja Saksida and her ensemble perform jazz standards in translation.
+7. **20:00:** blues and soul with Jana Šušteršič and saxophone.
+8. **21:00:** Počeni škafi bring swing to the main stage.
+9. **22:00:** scheduled end and reopening of the road.
+
+The programme includes named food providers, but the festival listing does not promise fixed menus or prices. Bring a payment card and some euros, then decide on site rather than relying on unofficial menus shared earlier.
+
+## When should you arrive?
+
+Choose your arrival time according to the experience you want:
+
+- **Families:** arrive close to 10:00 for breakfast and children's storytelling, before the street becomes busier.
+- **Food-focused visitors:** breakfast or the 15:00 lunch period gives the clearest culinary anchor.
+- **Culture and conversation:** arrive before 16:00 for the interviews and philosophical gathering.
+- **Live-music visitors:** come by 18:30, allowing time to walk the street before the first evening concert.
+
+Because this is a free public event, there are no reserved seats. Popular performances may attract standing crowds, so do not block doorways, crossings or access to homes and businesses.
+
+## How to get there without a car
+
+Poljanska cesta begins just east of Ljubljana's pedestrian centre. From the Triple Bridge or Central Market area, the western end of the festival zone is a straightforward walk of roughly 10–15 minutes for most visitors.
+
+Walking is the simplest option because the event itself closes part of the road. If you use a city bus, check the live Ljubljana Passenger Transport journey planner before departure: the street closure can affect stops, routes and travel times. Cyclists should dismount in dense crowds and use designated parking rather than attaching bicycles to barriers, shopfronts or emergency infrastructure.
+
+Do not drive toward the closed section expecting drop-off access. For taxis or accessible transport, arrange a meeting point outside the closure and confirm the closest usable approach with the operator on the day.
+
+## Accessibility and comfort
+
+The event takes place on a paved city street, but stalls, cables and crowds can narrow the usable route. Visitors who need step-free access should arrive earlier, when movement is likely to be easier, and contact the event information source in advance if a specific accommodation is essential.
+
+Bring:
+
+- weather-appropriate layers for a full day outdoors;
+- a reusable water bottle;
+- hearing protection for young children during evening concerts;
+- a small bag that remains easy to manage in a crowd;
+- any essential medication.
+
+There is no need to carry specialised equipment—\`comfortable shoes\` are more useful than a tightly packed sightseeing schedule.
+
+## Make it part of a Ljubljana day
+
+Poljanska Fest works well as a neighbourhood extension to a central-city itinerary. A balanced day might look like this:
+
+1. Visit Ljubljana Central Market in the morning.
+2. Walk east to Poljanska cesta for breakfast or the midday performance.
+3. Explore the festival street and support independent local businesses.
+4. Take a quiet break beside the Ljubljanica before returning for the evening concerts.
+
+Avoid trying to combine every programme item with multiple distant attractions. The value of the event lies in spending time in the district and seeing how residents temporarily reclaim the street for food, conversation and music.
+
+## Responsible festival etiquette
+
+- **Use bins and reusable containers** where available; do not leave cups or food packaging on the street.
+- **Keep emergency access clear**, even when a performance attracts a crowd.
+- **Ask before photographing children or identifiable residents** at close range.
+- **Supervise children and dogs** around food stalls, cables and loud music.
+- **Respect the neighbourhood:** people live above and beside the event area.
+- **Follow staff and city instructions** if the layout or programme changes.
+
+## Direct sources
+
+Information was checked on **16 September 2026**:
+
+- [Ljubljana Tourism: Poljanska Fest 2026](https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/poljanska-fest)
+- [Ljubljana Tourism: events calendar](https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana)
+- [Ljubljana Passenger Transport: official website](https://www.lpp.si/en)`,
+    category: "Aktualno",
+    author: "Uredništvo Blog Lab",
+    status: "published",
+    createdAt: "2026-09-16T20:59:53+02:00",
+    updatedAt: "2026-09-16T20:59:53+02:00",
+  },
+  {
     id: "idrija-mercury-legend-unesco-guide",
     title: "Idrija Mercury: Legend, History and UNESCO Heritage",
     excerpt: "Separate Idrija’s tub-maker legend from its documented mercury history, then plan a responsible visit to the mine, castle museum and UNESCO heritage sites.",
