@@ -7,6 +7,131 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    id: "ljubljana-marathon-2026-runner-spectator-guide",
+    title: "Ljubljana Marathon 2026: Runner and Spectator Guide",
+    excerpt: "Plan the 30th Ljubljana Marathon weekend with confirmed race times, bib collection, Expo access, spectator advice and practical city transport tips.",
+    seoDescription: "A practical guide to the 30th Ljubljana Marathon on 17–18 October 2026, including race times, bib pickup, Expo, course access and spectator tips.",
+    content: `The **30th NLB Ljubljana Marathon** takes place on **Saturday 17 and Sunday 18 October 2026**, turning the Slovenian capital into a weekend-long running venue. The programme includes children’s and school events, a 10-kilometre race, a half marathon and the full marathon, while the free Running Expo opens two days earlier.
+
+This guide is for registered runners, companions and visitors deciding how to experience the weekend. Information was checked against the organiser’s official pages on **16 September 2026**.
+
+## Registration has closed
+
+The organiser states that standard online registration closed at **24:00 on 15 September 2026** and that late registration is not available at the event. Do not travel expecting to buy a marathon or half-marathon place at the start.
+
+Registered participants should use the official account and organiser instructions for any permitted changes. Never buy a bib informally: identity, emergency details and timing data must match the authorised runner. The organiser’s FAQ explains the official procedure and fees for post-deadline name, bib or distance changes.
+
+## Key weekend times
+
+The official programme confirms:
+
+- **Saturday 17 October:** the 10 km race starts at **16:30**;
+- **Sunday 18 October:** the marathon and half marathon start at **09:00**;
+- the children’s programme begins on Saturday, with individual schedules published by the organiser;
+- the Running Expo operates from **15 to 17 October**.
+
+The full marathon distance is 42.195 km, the half marathon is 21.098 km and the Saturday road race is 10 km. Check the final organiser schedule before leaving your accommodation because assembly times and access rules are earlier than the race starts.
+
+## Collecting your bib and starter pack
+
+Bib collection takes place only at the NLB Ljubljana Marathon Expo at **Ljubljana Exhibition and Convention Centre, Dunajska cesta 18**. The official collection hours are:
+
+- Thursday 15 October: **09:00–19:00**;
+- Friday 16 October: **09:00–19:00**;
+- Saturday 17 October: **09:00–21:00**.
+
+Bring the official voucher—printed or displayed as a QR code on your phone—and valid identification. Retrieve the voucher from the confirmation email or the organiser’s \`MY ACCOUNT\` area before travelling, rather than searching for it in a crowded hall.
+
+The organiser advises runners to wear the bib visibly on the front and complete the emergency-information section on its reverse. Do not fold over or cover the timing component.
+
+## The Running Expo is open to visitors
+
+The Expo is at the same exhibition centre and has **free admission**. It is open:
+
+- Thursday 15 October, 09:00–19:00;
+- Friday 16 October, 09:00–19:00;
+- Saturday 17 October, 09:00–21:00.
+
+The announced programme includes running equipment, sports nutrition, international race organisers, a 30th-anniversary exhibition and a “Made in Slovenia” avenue featuring local food and crafts. Non-runners can visit, but the busiest periods are likely to coincide with bib collection. Give participants space near collection points and do not treat product samples as a substitute for your normal race nutrition.
+
+## Start, finish and course character
+
+The organiser describes the marathon route as flat. The marathon and half marathon start on **Slovenska cesta** and finish at **Kongresni trg**. The course crosses central streets and outer parts of Ljubljana under full road closure.
+
+For marathon runners, the official limit is **six hours**. Anyone who has not completed the first 20 km in 2 hours 45 minutes gross time is redirected to the finish and listed with the half-marathon results. Train for this rule rather than trying to solve it with an unusually fast opening pace.
+
+The organiser lists eight refreshment stations and six water stations on the marathon route. Use only products already tested during training. October conditions can range from cool rain to unexpectedly warm sun, so final clothing and hydration choices should follow the actual forecast, not a long-range assumption.
+
+## A sensible final-month plan
+
+With the event about a month away, fitness gains must be balanced against injury risk. Avoid suddenly increasing weekly distance or adding unfamiliar speed sessions. Registered runners should follow an established plan, taper appropriately for their distance and seek qualified medical advice for persistent pain, illness or concerns about exercise.
+
+A practical checklist:
+
+1. Confirm that registration, name and distance are correct.
+2. Book accommodation and plan Expo collection before race day.
+3. Test shoes, socks, breakfast and fuel during training—nothing new on race morning.
+4. Study the official course, start zone and baggage instructions when final versions are published.
+5. Save emergency contacts and carry essential medication as advised by a clinician.
+6. Check the official weather forecast and organiser notices during race week.
+
+Do not run with fever, chest pain, severe breathing difficulty or an injury that changes your gait. A start number is not an obligation to start.
+
+## Getting around without a car
+
+Central road closures make walking and public transport the practical default. Registered marathon participants receive free public transport on race day with their bib, according to the organiser. Confirm exactly which services and period this covers before travelling.
+
+The Expo at Dunajska cesta 18 is north of the city centre and is served by urban transport. On race weekend, allow for rerouted buses and longer walks around closures. Ljubljana railway and bus stations are within walking distance of the Expo for many visitors, while the start and finish area lies farther south in the centre.
+
+Drivers should use official traffic and parking information published closer to the event. Never move barriers, enter a closed street or park across an emergency route, even if navigation software still suggests it.
+
+## How to watch responsibly
+
+Spectators can make the event better without obstructing it:
+
+- choose a viewing point before roads close;
+- stand behind barriers and leave crossings clear;
+- never step onto the course for a photograph;
+- keep dogs controlled and away from runners;
+- supervise children near crowded corners;
+- follow police, marshal and medical instructions;
+- take rubbish away or use event bins.
+
+If following a specific runner, use the organiser’s official mobile app or live-tracking information when available. Mobile data and GPS can lag in crowded areas, so agree on a post-race meeting point in advance.
+
+The finish area at Kongresni trg will be busy. Give runners time to pass through medals, refreshments and medical checks before arranging a reunion away from the narrowest exits.
+
+## If you are visiting rather than racing
+
+The marathon is also a chance to see Ljubljana as a sporting city. Visit the free Expo, watch a race section and explore open parts of the pedestrian centre on foot. Expect a different city rhythm: some usual bus routes, taxi approaches and museum access points may be altered.
+
+Businesses outside the closed course remain worth visiting, but make reservations flexible and check access. Do not plan a tight airport or rail connection immediately after crossing the city during the Sunday race.
+
+## Final checks before the weekend
+
+- Reopen the official schedule, course and traffic pages shortly before travel.
+- Download or print the bib voucher and pack identification.
+- Confirm your start zone, baggage procedure and meeting point.
+- Follow the actual weather forecast and medical guidance.
+- Use only official channels for registration changes and tracking.
+- Allow extra time throughout central Ljubljana.
+
+The best marathon weekend is not defined only by a personal best. Good preparation, realistic pacing and respect for closures help runners, spectators, residents and emergency teams share the city safely.
+
+## Verified sources
+
+- [NLB Ljubljana Marathon: official 2026 event page](https://ljubljanskimaraton.si/en/)
+- [Official marathon rules, route and registration information](https://ljubljanskimaraton.si/en/marathon)
+- [Official bib collection instructions](https://ljubljanskimaraton.si/en/information-for-runners/starting-numbers-and-chips)
+- [Official Running Expo programme and hours](https://ljubljanskimaraton.si/en/running-expo)
+- [Official runner FAQ](https://ljubljanskimaraton.si/en/faq)`,
+    category: "Šport",
+    author: "Uredništvo Blog Lab",
+    status: "published",
+    createdAt: "2026-09-16T09:00:37+02:00",
+    updatedAt: "2026-09-16T09:00:37+02:00",
+  },
+  {
     id: "mineralfest-ljubljana-2026-visitor-guide",
     title: "MineralFest Ljubljana 2026: A Visitor’s Guide",
     excerpt: "Plan a practical visit to Ljubljana’s two-day mineral, fossil and jewellery fair, with verified dates, ticket prices, highlights and car-light access.",
