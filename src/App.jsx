@@ -30,7 +30,7 @@ Do not use these headline figures as navigation. Registered runners should downl
 
 ## A practical plan for spectators
 
-Kranjska Gora is the clearest base for the weekend because it hosts Sunday's shorter races and the main event atmosphere. For runners on the longer courses, use the organiser's **UTMB Live** service rather than trying to intercept them on mountain roads. Tracking is informative, not a guarantee of a runner's condition or exact position.
+Kranjska Gora is the clearest base for the weekend because it hosts Sunday's shorter races and the main event atmosphere. For runners on the longer courses, use the organiser's \`UTMB Live\` service rather than trying to intercept them on mountain roads. Tracking is informative, not a guarantee of a runner's condition or exact position.
 
 A low-impact spectator plan:
 
