@@ -7,6 +7,86 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    id: "julian-alps-trail-run-2026-guide",
+    title: "Julian Alps Trail Run 2026: Runner and Spectator Guide",
+    excerpt: "Plan race weekend in the Julian Alps with confirmed dates, start towns, closed-registration advice, live tracking, parking changes and mountain-safety context.",
+    seoDescription: "Visit Julian Alps Trail Run by UTMB on 18–20 September 2026: race dates, start towns, spectator advice, live tracking, access and mountain safety.",
+    content: `Julian Alps Trail Run by UTMB returns from **Friday 18 to Sunday 20 September 2026**, linking several towns around Slovenia's Julian Alps before the races converge on Kranjska Gora. This guide is for registered runners and visitors who want to follow the event responsibly; official entries for every listed 2026 distance are already closed.
+
+The event is not the same experience as hiking the Juliana Trail. It is a timed mountain-running weekend with separate courses, race controls and participant rules. Spectators should use official information, stay off the marked course and expect temporary changes around the event hub.
+
+## Which races happen when?
+
+The organiser lists seven races or categories:
+
+- **I Feel Slovenia 120K:** starts in Radovljica on Friday 18 September; the published course is 122 km with 5,855 m of ascent.
+- **Sky Trail 50K:** starts in Žirovnica on Friday 18 September; the published course is 55 km with 2,828 m of ascent.
+- **Lake Bled 80K:** starts in Bled on Saturday 19 September; the published course is 80 km with 3,866 m of ascent.
+- **Kranjska Gora 25K:** starts in Kranjska Gora on Sunday 20 September; 25 km with 1,090 m of ascent.
+- **Intersport Speed 15K:** starts in Kranjska Gora on Sunday 20 September; the published course is 17 km with 583 m of ascent.
+- **Vitranc Funny 10K** and **NextGen 10K:** both are listed for Sunday 20 September in Kranjska Gora; each published course is 11 km with 329 m of ascent.
+
+Do not use these headline figures as navigation. Registered runners should download the current race guide, read their race-specific instructions and follow only official course markings.
+
+## A practical plan for spectators
+
+Kranjska Gora is the clearest base for the weekend because it hosts Sunday's shorter races and the main event atmosphere. For runners on the longer courses, use the organiser's **UTMB Live** service rather than trying to intercept them on mountain roads. Tracking is informative, not a guarantee of a runner's condition or exact position.
+
+A low-impact spectator plan:
+
+1. Check the official event schedule and your runner's course before leaving.
+2. Choose one authorised public viewing location with safe pedestrian access.
+3. Keep the full width of the marked trail and finish approach clear.
+4. Never provide unauthorised pacing or assistance; race rules govern outside support.
+5. Carry your rubbish back and avoid shortcuts across meadows or protected habitat.
+
+The event website also lists supporter bus transfers. Check availability and booking conditions directly with the organiser before relying on them.
+
+## Access and current parking changes
+
+Kranjska Gora can be reached by scheduled bus connections, but timetables vary by day and season. Check the current journey planner before travel and leave extra time for race-weekend traffic.
+
+The municipal parking service currently states that the **Občina** and **Dvorana Vitranc** car parks are closed through the end of race week. Do not drive to Kranjska Gora assuming your usual parking place will be available. Follow temporary signs and marshal instructions; guests covered by a local GOST parking subscription may use other municipal car parks under the conditions published by the parking operator.
+
+## Safety for registered runners
+
+September conditions in the Julian Alps can change quickly, while the long races extend through the night and over sustained climbing. The organiser publishes a dedicated equipment page and race regulations. Mandatory kit is a minimum, not a substitute for skills or judgement.
+
+Before your start:
+
+- check the latest official weather forecast and organiser alerts;
+- carry every item required for your specific race, including any activated hot- or cold-weather kit;
+- know the cut-off rules, aid-station plan and emergency procedure in the race guide;
+- do not continue through injury, hypothermia symptoms, lightning exposure or unsafe terrain merely to finish;
+- follow organiser, medical and mountain-rescue instructions immediately.
+
+Spectators should prepare for cold rain too. Wear grippy footwear, carry warm waterproof layers and avoid entering remote mountain terrain just to find a quieter viewpoint.
+
+## How to experience it responsibly
+
+The courses pass through sensitive Alpine landscapes, including areas around Triglav National Park. Race participation does not make the mountains a closed sporting arena: residents, wildlife and other trail users remain part of the landscape.
+
+Stay on designated paths, keep noise low away from the event hub, never move course markers and do not follow runners by bicycle or car on restricted roads. If you are not registered, enjoy the atmosphere as a spectator rather than entering a course unofficially.
+
+## Direct sources
+
+Details were checked on **17 September 2026**:
+
+- [Julian Alps Trail Run by UTMB — official event site](https://julianalps.utmb.world/)
+- [Official race list, dates, distances and registration status](https://julianalps.utmb.world/races)
+- [Official event schedule](https://julianalps.utmb.world/runners/event-schedule)
+- [Official equipment information](https://julianalps.utmb.world/runners/equipment)
+- [Kranjska Gora municipal parking notices](https://parking.kranjska-gora.si/)
+
+Event operations can change close to race time. Recheck the official schedule, race guide, weather alerts and transport information before setting out.`,
+    category: "Šport",
+    author: "Uredništvo Blog Lab",
+    status: "published",
+    createdAt: "2026-09-17T09:02:57+02:00",
+    updatedAt: "2026-09-17T09:02:57+02:00",
+  },
+
+  {
     "id": "plecnik-ljubljana-self-guided-walking-tour",
     "title": "Plečnik’s Ljubljana: A Self-Guided UNESCO Walking Tour",
     "excerpt": "Follow Jože Plečnik’s human-centred vision through Ljubljana on a practical walking route linking Trnovo, the river embankments, the National Library, bridges and Central Market.",
