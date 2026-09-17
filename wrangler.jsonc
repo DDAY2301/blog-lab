@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "blog-lab-private-terminal",
+  "name": "blog-lab",
   "main": "terminal/worker/src/index.js",
   "compatibility_date": "2026-09-17",
   "workers_dev": true,
