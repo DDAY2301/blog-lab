@@ -1,4 +1,4 @@
 {
-  "workerName": "blog-lab-private-terminal",
-  "terminalUrl": ""
+  "workerName": "blog-lab",
+  "terminalUrl": "https://blog-lab.dan-grmusa.workers.dev/"
 }
