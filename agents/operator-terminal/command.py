@@ -31,7 +31,7 @@ def infer_mode(command: str) -> str:
     return "site"
 
 def control_command(command: str) -> None:
-    ctl = read_json(CONTROL, {"enabled": True, "publish_mode": "automatic"})
+    ctl = read_json(CONTROL, {"enabled": True})
     low = command.lower()
     if any(x in low for x in ["ustavi", "zaustavi", "izklopi", "pause", "pavza"]): ctl["enabled"] = False
     elif any(x in low for x in ["nadaljuj", "vklopi", "resume", "začni", "zacni"]): ctl["enabled"] = True
