@@ -20,13 +20,13 @@
     <div class="mark">B</div>
     <div class="eyebrow">Blog Lab</div>
     <h1>Zasebni terminal</h1>
-    <p class="lead">Prijava poteka prek Cloudflare Access. Dostop je namenjen samo pooblaščenima operaterjema.</p>
+    <p class="lead">Prijava je vgrajena neposredno v zasebni Worker. Dostop je dovoljen samo pooblaščenima operaterjema in ne potrebuje Cloudflare Zero Trust naročnine.</p>
     <div id="status" class="status">Preverjam povezavo s terminalom …</div>
     <div class="actions">
       <a id="open" class="button primary" href="#" hidden>Prijava</a>
       <a class="button secondary" href="./">Nazaj na Blog Lab</a>
     </div>
-    <small id="detail">Če je terminal pravkar objavljen, bo ta stran samodejno zaznala njegov URL in nadaljevala na prijavo.</small>
+    <small id="detail">Če je terminal pravkar objavljen, bo ta stran samodejno zaznala njegov URL in odprla prijavo.</small>
   </main>
   <script>
     const statusEl = document.getElementById('status');
@@ -48,7 +48,7 @@
         const config = response.ok ? await response.json() : null;
         const terminalUrl = cleanUrl(config && config.terminalUrl);
         if (terminalUrl) {
-          statusEl.textContent = 'Terminal je povezan. Odpiram varno prijavo …';
+          statusEl.textContent = 'Terminal je povezan. Odpiram zasebno prijavo …';
           statusEl.classList.remove('bad');
           openEl.href = terminalUrl;
           openEl.hidden = false;
@@ -58,7 +58,7 @@
         }
         statusEl.textContent = 'Terminal je objavljen v kodi, produkcijski URL pa še ni vpisan.';
         statusEl.classList.add('bad');
-        detailEl.textContent = 'Ko je Cloudflare workers.dev URL dodan v terminal-config.json, bo gumb Prijava samodejno odprl Cloudflare Access.';
+        detailEl.textContent = 'Ko je workers.dev URL dodan v terminal-config.json, bo gumb Prijava odprl zasebni login terminala.';
       } catch {
         statusEl.textContent = 'Povezave s konfiguracijo trenutno ni mogoče preveriti.';
         statusEl.classList.add('bad');
