@@ -4,14 +4,16 @@ Zasebni terminal za upravljanje `DDAY2301/blog-lab`. Worker je pripravljen tako,
 
 ## Dostop
 
-Produkcijski Worker mora biti zaščiten s Cloudflare Access. Access policy naj dovoli samo Dana in Maja prek njunih e-mail naslovov. Worker zaupa preverjeni `ctx.access` identiteti. Dodatni secret `ALLOWED_EMAILS` je neobvezen; če je nastavljen, Worker naredi še drugi allowlist pregled.
+Produkcijski Worker mora biti zaščiten s Cloudflare Access. Access policy naj dovoli samo Dana in Maja prek njunih e-mail naslovov. Worker preveri podpis `Cf-Access-Jwt-Assertion`, issuer, Access application AUD in nato še e-mail allowlist.
 
 ## Potrebni runtime secrets
 
 V Cloudflare Workerju:
 - `GITHUB_DISPATCH_TOKEN` — fine-grained GitHub token samo za `DDAY2301/blog-lab`, z `Actions: write`.
 - `TERMINAL_COMMAND_KEY` — base64 zapis natanko 32 naključnih bajtov.
-- `ALLOWED_EMAILS` — neobvezno, `dan@example.com,maj@example.com`.
+- `ALLOWED_EMAILS` — `dan.grmusa@gmail.com,maj@klemenc.org`.
+- `TEAM_DOMAIN` — `https://<team-name>.cloudflareaccess.com`.
+- `POLICY_AUD` — Application Audience (AUD) tag Access aplikacije.
 
 V GitHub Actions secrets mora biti isti `TERMINAL_COMMAND_KEY`.
 
