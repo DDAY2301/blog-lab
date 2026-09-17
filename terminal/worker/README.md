@@ -4,28 +4,30 @@ Zasebni terminal za upravljanje `DDAY2301/blog-lab`. Worker je pripravljen tako,
 
 ## Dostop
 
-Produkcijski Worker mora biti zaščiten s Cloudflare Access. Access policy naj dovoli samo Dana in Maja prek njunih e-mail naslovov. Worker preveri podpis `Cf-Access-Jwt-Assertion`, issuer, Access application AUD in nato še e-mail allowlist.
+Produkcijski Worker mora biti zaščiten s Cloudflare Access. Access policy naj dovoli samo dva konkretna operaterja. Worker uporablja Cloudflare Workers `ctx.access.getIdentity()` in nato naredi še dodatni pregled proti `ALLOWED_EMAILS`, zato je dostop zaprt tudi v primeru napačno preširoke Access policy.
 
 ## Potrebni runtime secrets
 
 V Cloudflare Workerju:
-- `GITHUB_DISPATCH_TOKEN` — fine-grained GitHub token samo za `DDAY2301/blog-lab`, z `Actions: write`.
+- `GITHUB_DISPATCH_TOKEN` — fine-grained GitHub token samo za `DDAY2301/blog-lab`, z dovoljenjem za sprožanje Actions workflowov.
 - `TERMINAL_COMMAND_KEY` — base64 zapis natanko 32 naključnih bajtov.
-- `ALLOWED_EMAILS` — `dan.grmusa@gmail.com,maj@klemenc.org`.
-- `TEAM_DOMAIN` — `https://<team-name>.cloudflareaccess.com`.
-- `POLICY_AUD` — Application Audience (AUD) tag Access aplikacije.
+- `ALLOWED_EMAILS` — vejica-ločen allowlist obeh dovoljenih operaterjev.
 
 V GitHub Actions secrets mora biti isti `TERMINAL_COMMAND_KEY`.
 
-## KV ni več potreben
+`TEAM_DOMAIN` in `POLICY_AUD` nista potrebna, ker produkcijski Worker uporablja Cloudflarejev native Access identity context.
 
-Terminal ne potrebuje Cloudflare KV. Ukazi ostanejo lokalno v brskalniku posameznega operaterja, status pa se na približno štiri sekunde osveži iz GitHub Actions prek anonimnega `request_id`. Ukaz je pred `workflow_dispatch` šifriran z AES-256-GCM, zato sam tekst ukaza ni poslan kot berljiv workflow input.
+## KV ni potreben
+
+Terminal ne potrebuje Cloudflare KV. Ukazi ostanejo lokalno v brskalniku posameznega operaterja, status pa se osvežuje iz GitHub Actions prek anonimnega `request_id`. Ukaz je pred `workflow_dispatch` šifriran z AES-256-GCM, zato sam tekst ukaza ni poslan kot berljiv workflow input.
 
 ## URL
 
-`workers_dev` je eksplicitno vključen v Wrangler konfiguraciji. Po uspešnem deployu naj Worker dobi `blog-lab-private-terminal.<account-subdomain>.workers.dev`, če ima Cloudflare račun nastavljen `workers.dev` subdomain.
+`workers_dev` je eksplicitno vključen v Wrangler konfiguraciji. Po uspešnem deployu Worker dobi `blog-lab-private-terminal.<account-subdomain>.workers.dev`, če ima Cloudflare račun nastavljen `workers.dev` subdomain.
 
-Javni health endpoint je `/health`; ne razkriva vrednosti skrivnosti, samo pove ali sta potrebni runtime skrivnosti nastavljeni.
+Ko je produkcijski URL znan, ga je treba vpisati v `public/terminal-config.json` kot `terminalUrl`. Gumb `Prijava` na javni strani nato vodi neposredno v Cloudflare Access in po uspešni prijavi odpre terminal.
+
+Javni health endpoint je `/health`; ne razkriva vrednosti skrivnosti, samo readiness in imena morebitnih manjkajočih nastavitev.
 
 ## Delovanje
 
