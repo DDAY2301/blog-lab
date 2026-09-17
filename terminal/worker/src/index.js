@@ -1,6 +1,9 @@
+import { createRemoteJWKSet, jwtVerify } from "jose";
+
 const OWNER = "DDAY2301";
 const REPO = "blog-lab";
 const WORKFLOW = "operator-terminal.yml";
+const accessKeySets = new Map();
 
 function json(data, status = 200) {
   return new Response(JSON.stringify(data), {
@@ -31,6 +34,9 @@ function setupState(env) {
   const missing = [];
   if (!String(env.GITHUB_DISPATCH_TOKEN || "").trim()) missing.push("GITHUB_DISPATCH_TOKEN");
   if (!String(env.TERMINAL_COMMAND_KEY || "").trim()) missing.push("TERMINAL_COMMAND_KEY");
+  if (!String(env.TEAM_DOMAIN || "").trim()) missing.push("TEAM_DOMAIN");
+  if (!String(env.POLICY_AUD || "").trim()) missing.push("POLICY_AUD");
+  if (!String(env.ALLOWED_EMAILS || "").trim()) missing.push("ALLOWED_EMAILS");
   return { ready: missing.length === 0, missing };
 }
 
@@ -47,17 +53,36 @@ async function encryptPayload(env, value) {
   return b64url(joined);
 }
 
-async function identity(ctx, env) {
-  if (!ctx.access) return null;
-  let who;
-  try { who = await ctx.access.getIdentity(); } catch { return null; }
-  const email = String(who?.email || "").trim().toLowerCase();
+function accessKeySet(teamDomain) {
+  let jwks = accessKeySets.get(teamDomain);
+  if (!jwks) {
+    jwks = createRemoteJWKSet(new URL(`${teamDomain}/cdn-cgi/access/certs`));
+    accessKeySets.set(teamDomain, jwks);
+  }
+  return jwks;
+}
+
+async function identity(request, env) {
+  const token = String(request.headers.get("cf-access-jwt-assertion") || "").trim();
+  const teamDomain = String(env.TEAM_DOMAIN || "").trim().replace(/\/$/, "");
+  const audience = String(env.POLICY_AUD || "").trim();
+  if (!token || !teamDomain || !audience) return null;
+  let payload;
+  try {
+    ({ payload } = await jwtVerify(token, accessKeySet(teamDomain), {
+      issuer: teamDomain,
+      audience
+    }));
+  } catch {
+    return null;
+  }
+  const email = String(payload?.email || "").trim().toLowerCase();
   if (!email) return null;
   const allowed = String(env.ALLOWED_EMAILS || "")
     .split(",")
     .map(x => x.trim().toLowerCase())
     .filter(Boolean);
-  if (allowed.length && !allowed.includes(email)) return null;
+  if (!allowed.length || !allowed.includes(email)) return null;
   return { email };
 }
 
@@ -98,14 +123,14 @@ load();setInterval(load,4000);
 </script></body></html>`;
 
 export default {
-  async fetch(request, env, ctx) {
+  async fetch(request, env) {
     const url = new URL(request.url);
     if (request.method === "GET" && url.pathname === "/health") {
       const state = setupState(env);
       return json({ ok: true, worker: "blog-lab-private-terminal", ...state, access_required: true });
     }
 
-    const user = await identity(ctx, env);
+    const user = await identity(request, env);
     if (!user) return new Response("Cloudflare Access required", { status: 403, headers: { "cache-control": "no-store" } });
 
     if (request.method === "GET" && url.pathname === "/") {
