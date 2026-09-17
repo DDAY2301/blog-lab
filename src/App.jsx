@@ -7,6 +7,92 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    id: "skofja-loka-passion-play-unesco-guide",
+    title: "Škofja Loka Passion Play: A UNESCO Heritage Guide",
+    excerpt: "Discover the documented history and living community tradition behind Slovenia's oldest preserved dramatic text, with a practical year-round visit to Škofja Loka.",
+    seoDescription: "Explore the Škofja Loka Passion Play responsibly: its 1721 manuscript, UNESCO status, performances, museum exhibition and practical visitor route.",
+    content: `The **Škofja Loka Passion Play**—\`Škofjeloški pasijon\` in Slovene—is more than a historic script. It is a community procession that turns the medieval streets and squares of Škofja Loka into a moving stage. UNESCO added the tradition to its Representative List of the Intangible Cultural Heritage of Humanity in **2016**.
+
+The large 2026 performances took place from **21 March to 19 April 2026**. Visitors arriving later in the year should not expect a live procession, but they can still understand the story through the old town, the permanent museum exhibition and the Capuchin heritage connected with the manuscript.
+
+## What is documented history?
+
+The preserved play was written in **1721** by the Capuchin friar Father Romuald, also identified in sources as Romuald Marušič or Romuald Štandreški. It is recognised by the official heritage organisations as the oldest preserved dramatic text in the Slovenian language.
+
+Its subject is Christian: scenes present the Passion of Christ and other biblical material. The procession format matters as much as the words. Performers move through the town and spectators encounter successive scenes in public space rather than inside a conventional theatre.
+
+The manuscript is associated with the Capuchin monastery in Škofja Loka. The official tourism site describes it as an exceptionally early preserved European directing book. That phrase refers to the practical staging record as well as the literary text; it should not be read as a claim that European theatre began in Škofja Loka.
+
+## What UNESCO recognition means
+
+UNESCO recognised the **living practice**, not merely an old object. The heritage survives because local residents, performers, craftspeople and volunteers transmit knowledge and recreate the procession periodically.
+
+This distinction is useful for visitors:
+
+- the **manuscript** is a historical document;
+- the **Passion narrative** comes from Christian religious tradition;
+- the **procession** is a recurring community performance;
+- UNESCO status recognises the cultural practice and its transmission.
+
+There is no local legend that needs to be accepted as fact here. Religious belief, documented manuscript history and contemporary heritage work are different layers, and each deserves to be described on its own terms.
+
+## Why the town is part of the performance
+
+Škofja Loka's historic centre is not a decorative backdrop added to a modern show. Streets and squares shape how the procession moves and how spectators experience it. Periodic performances bring together roughly a thousand performers and volunteers, according to the destination's official account.
+
+The scale explains why the full production is not a daily attraction. The tradition depends on extensive local participation and preparation. Outside a performance year, visitors should approach it as heritage to study rather than a spectacle that can be ordered on demand.
+
+## How to experience it today
+
+Begin on **Mestni trg**, the main historic square, and walk slowly through the compact old centre. Rather than inventing an exact procession route, use the official map or tourist information available on the day of your visit: staging and visitor arrangements can change between performance cycles.
+
+Then visit the permanent Passion Play exhibition at **Loški muzej** in Škofja Loka Castle. The museum describes a display combining historic objects, photographs, film, a digital version of the Passion codex and material from earlier performances. Check the museum's current opening hours, admission and accessibility information before climbing to the castle.
+
+The Capuchin library and monastery provide another historical connection. Access is not equivalent to an always-open public museum, so contact the local tourist information centre or monastery in advance instead of arriving with an expectation of unrestricted entry.
+
+## A practical half-day plan
+
+1. Arrive in Škofja Loka and begin at the tourist information point or main square.
+2. Spend 45–60 minutes walking through Mestni trg and the old-town streets.
+3. Allow time for the uphill walk to Škofja Loka Castle.
+4. Explore the permanent Passion Play exhibition inside Loški muzej.
+5. If arranged in advance, add the Capuchin heritage site and library.
+
+The centre is compact but includes cobbles, slopes and steps. Visitors with limited mobility should confirm step-free routes and museum access directly; historic streets can create barriers even when destinations provide accessible services.
+
+## Reaching Škofja Loka without a car
+
+Škofja Loka is accessible from Ljubljana by bus and train, but the railway station lies about **2.5 kilometres** from the centre. The destination's public-transport page lists a local bus between the railway station, bus station and central area. Timetables and fares may change, so verify the current connection with the operator before travelling.
+
+If arriving by train, allow extra transfer time. If arriving by intercity bus, the bus station is closer to the historic centre. A car is not necessary for the central heritage route.
+
+## Respectful visiting
+
+- Treat the Passion Play as both religious tradition and community heritage.
+- Do not enter monastic or worship spaces without permission.
+- Ask before photographing people, services or private interiors.
+- During future performances, follow official crowd routes and never obstruct performers.
+- Support year-round preservation by using museums, guides and local businesses rather than seeking unauthorised access to the manuscript.
+
+## Direct sources
+
+Historical and visitor information was checked on **17 September 2026**:
+
+- [UNESCO: Škofja Loka Passion Play](https://ich.unesco.org/en/RL/skofja-loka-passion-play-01203)
+- [Official Škofja Loka Passion Play site](https://www.pasijon.si/en/about/)
+- [Tourism Škofja Loka: UNESCO heritage](https://www.visitskofjaloka.si/si/dozivetja/umetnost-in-kultura/unesco-dediscina)
+- [Loški muzej: permanent Passion Play exhibition](https://www.loski-muzej.si/skofjeloski-pasijon/)
+- [Tourism Škofja Loka: public transport](https://www.visitskofjaloka.si/si/javni-prevoz)
+
+Always recheck museum opening times, transport and access arrangements shortly before visiting.`,
+    category: "Vodniki",
+    author: "Uredništvo Blog Lab",
+    status: "published",
+    createdAt: "2026-09-17T15:02:06+02:00",
+    updatedAt: "2026-09-17T15:02:06+02:00",
+  },
+
+  {
     id: "julian-alps-trail-run-2026-guide",
     title: "Julian Alps Trail Run 2026: Runner and Spectator Guide",
     excerpt: "Plan race weekend in the Julian Alps with confirmed dates, start towns, closed-registration advice, live tracking, parking changes and mountain-safety context.",
