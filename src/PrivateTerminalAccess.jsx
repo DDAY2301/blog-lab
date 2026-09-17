@@ -52,10 +52,7 @@ export default function PrivateTerminalAccess() {
     };
   }, [terminalUrl]);
 
-  const fallbackUrl = useMemo(
-    () => `${import.meta.env.BASE_URL}terminal-access.html`,
-    []
-  );
+  const fallbackUrl = useMemo(() => `${import.meta.env.BASE_URL}terminal-access.html`, []);
 
   if (!host) return null;
 
@@ -63,10 +60,14 @@ export default function PrivateTerminalAccess() {
     <a
       className={`terminal-login-button${terminalUrl ? " is-ready" : " is-setup"}`}
       href={terminalUrl || fallbackUrl}
-      target={terminalUrl ? "_blank" : undefined}
-      rel={terminalUrl ? "noreferrer" : undefined}
-      aria-label={terminalUrl ? "Prijava v zasebni Blog Lab terminal" : "Nastavitev zasebnega Blog Lab terminala"}
-      title={terminalUrl ? "Prijava prek Cloudflare Access" : configLoaded ? "Terminal še ni povezan z javnim URL-jem" : "Preverjam terminal"}
+      aria-label="Prijava v zasebni Blog Lab terminal"
+      title={
+        terminalUrl
+          ? "Prijava prek Cloudflare Access"
+          : configLoaded
+            ? "Odpri zasebni terminal"
+            : "Preverjam povezavo s terminalom"
+      }
     >
       <svg aria-hidden="true" viewBox="0 0 24 24">
         <path d="M12 3a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z" />
