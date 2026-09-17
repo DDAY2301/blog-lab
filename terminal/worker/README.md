@@ -1,43 +1,57 @@
 # Blog Lab Private Terminal
 
-Zasebni terminal za upravljanje `DDAY2301/blog-lab`. Worker je pripravljen tako, da Cloudflare Builds lahko ostane nastavljen na root repozitorija (`/`), z `npm run build` in `npx wrangler deploy`. Root `wrangler.jsonc` kaže neposredno na `terminal/worker/src/index.js`.
+Zasebni terminal za upravljanje `DDAY2301/blog-lab`. Worker je pripravljen tako, da Cloudflare Builds ostane nastavljen na root repozitorija (`/`), z `npm run build` in `npx wrangler deploy`. Root `wrangler.jsonc` kaže neposredno na `terminal/worker/src/index.js`.
 
-## Dostop
+## Brezplačni način dostopa
 
-Produkcijski Worker mora biti zaščiten s Cloudflare Access. Access policy naj dovoli samo dva konkretna operaterja. Worker uporablja Cloudflare Workers `ctx.access.getIdentity()` in nato naredi še dodatni pregled proti `ALLOWED_EMAILS`, zato je dostop zaprt tudi v primeru napačno preširoke Access policy.
+Terminal ne uporablja Cloudflare Zero Trust/Access, zato za prijavo ni potrebna aktivacija Zero Trust plačilnega profila ali kartice. Prijava je vgrajena neposredno v Worker.
 
-## Potrebni runtime secrets
+Dovoljena operaterja sta fiksno omejena na:
+- `dan.grmusa@gmail.com`
+- `maj@klemenc.org`
 
-V Cloudflare Workerju:
+Vsak uporablja svoje geslo, shranjeno samo kot Cloudflare Worker secret. Po uspešni prijavi Worker ustvari podpisano `HttpOnly`, `Secure`, `SameSite=Strict` sejo z veljavnostjo 12 ur. Seja je podpisana s ključem, izpeljanim iz `TERMINAL_COMMAND_KEY` prek HKDF/HMAC in se ne shranjuje v GitHub repo.
+
+## Potrebni Cloudflare Worker secrets
+
 - `GITHUB_DISPATCH_TOKEN` — fine-grained GitHub token samo za `DDAY2301/blog-lab`, z dovoljenjem za sprožanje Actions workflowov.
 - `TERMINAL_COMMAND_KEY` — base64 zapis natanko 32 naključnih bajtov.
-- `ALLOWED_EMAILS` — vejica-ločen allowlist obeh dovoljenih operaterjev.
+- `DAN_LOGIN_PASSWORD` — močno geslo za `dan.grmusa@gmail.com`, najmanj 16 znakov.
+- `MAJ_LOGIN_PASSWORD` — močno geslo za `maj@klemenc.org`, najmanj 16 znakov.
 
 V GitHub Actions secrets mora biti isti `TERMINAL_COMMAND_KEY`.
 
-`TEAM_DOMAIN` in `POLICY_AUD` nista potrebna, ker produkcijski Worker uporablja Cloudflarejev native Access identity context.
+Gesel, tokenov ali ključa ne zapisuj v source code, GitHub Variables ali commit zgodovino.
 
-## KV ni potreben
+## Cena in infrastruktura
 
-Terminal ne potrebuje Cloudflare KV. Ukazi ostanejo lokalno v brskalniku posameznega operaterja, status pa se osvežuje iz GitHub Actions prek anonimnega `request_id`. Ukaz je pred `workflow_dispatch` šifriran z AES-256-GCM, zato sam tekst ukaza ni poslan kot berljiv workflow input.
+Worker uporablja običajni Cloudflare Workers Free plan. Zero Trust ni potreben. Javni Blog Lab ostane na GitHub Pages, zasebni terminal pa na `https://blog-lab.dan-grmusa.workers.dev/`.
 
-## URL
+Repo je javen, zato standardni GitHub-hosted Actions runnerji za ta projekt ne porabljajo plačljivih minut. Samostojni publisher teče po svojem urniku tudi, ko terminal ni odprt. Terminal je serverless in je dosegljiv kadarkoli brez lokalnega računalnika; Worker se izvede ob zahtevi, GitHub Actions pa izvajajo dejanske agente in objave.
 
-`workers_dev` je eksplicitno vključen v Wrangler konfiguraciji. Po uspešnem deployu Worker dobi `blog-lab-private-terminal.<account-subdomain>.workers.dev`, če ima Cloudflare račun nastavljen `workers.dev` subdomain.
+## Zasebnost ukazov
 
-Ko je produkcijski URL znan, ga je treba vpisati v `public/terminal-config.json` kot `terminalUrl`. Gumb `Prijava` na javni strani nato vodi neposredno v Cloudflare Access in po uspešni prijavi odpre terminal.
+Ukazi ostanejo lokalno v brskalniku posameznega operaterja kot zgodovina uporabniškega vmesnika. Pred `workflow_dispatch` se ukaz AES-256-GCM šifrira s `TERMINAL_COMMAND_KEY`, zato čisti tekst ukaza ni poslan kot berljiv GitHub Actions input. Runner ga dešifrira samo začasno za izvedbo.
 
-Javni health endpoint je `/health`; ne razkriva vrednosti skrivnosti, samo readiness in imena morebitnih manjkajočih nastavitev.
+## URL in javni gumb Prijava
 
-## Delovanje
+`workers_dev` je vključen v Wrangler konfiguraciji. Produkcijski Worker je `blog-lab` in uporablja URL:
+
+`https://blog-lab.dan-grmusa.workers.dev/`
+
+Ta URL je vpisan v `public/terminal-config.json`. Gumb `Prijava` na javni strani vodi neposredno na vgrajeno prijavo terminala.
+
+Javni `/health` endpoint ne razkriva skrivnosti. Vrne samo osnovno readiness stanje in način avtentikacije.
+
+## Delovanje terminala
 
 - `Samodejno`: agent sam prepozna tip zahteve.
 - `Članek`: uporabi obstoječ Blog Lab publisher in temo operaterja.
 - `Sprememba strani`: Copilot spremeni samo dovoljene spletne datoteke, nato workflow izvede teste in build.
 - `Nadzor agenta`: ustavitev/vklop in `automatic`, `draft`, `review` način.
 
-Samostojni Blog Lab publisher še naprej dela po svojem urniku tudi brez terminala.
+Varnostne poti `.github/`, `terminal/`, `agents/operator-terminal/`, `AGENTS.md`, `requirements-agent.txt` in `.env*` ostanejo zaščitene pred samodejnim urejanjem skozi terminal.
 
 ## Deployment source of truth
 
-Cloudflare naj deploya iz root-a repozitorija. `wrangler.jsonc` v root-u je produkcijski source of truth in eksplicitno kaže na `terminal/worker/src/index.js`; zato ni treba spreminjati Cloudflare Root directory nastavitve iz `/`.
+Cloudflare deploya iz root-a repozitorija. `wrangler.jsonc` v root-u je produkcijski source of truth in kaže na `terminal/worker/src/index.js`; zato Cloudflare Root directory ostane `/`.
