@@ -1,10 +1,12 @@
 from __future__ import annotations
 import hashlib
+from html import unescape
+import re
 import time
 from urllib.request import Request, urlopen
 from xml.etree import ElementTree as ET
 
-USER_AGENT = "BlogLabPublisher/1.0 (+https://github.com/DDAY2301/blog-lab)"
+USER_AGENT = "BlogLabPublisher/2.0 (+https://github.com/DDAY2301/blog-lab)"
 
 def _text(node, names):
     for name in names:
@@ -14,7 +16,20 @@ def _text(node, names):
     return ""
 
 def _clean(value):
-    return " ".join((value or "").replace("\x00", "").split())
+    value = re.sub(r"<[^>]+>", " ", unescape(value or ""))
+    return " ".join(value.replace("\x00", "").split())
+
+def _item(source, title, link, summary, published):
+    material = f"{title}|{link}".encode("utf-8")
+    return {
+        "source_name": source.get("name", source["url"]),
+        "category": source.get("category", "aktualno"),
+        "title": _clean(title)[:500],
+        "url": _clean(link)[:2000],
+        "summary": _clean(summary)[:4000],
+        "published": _clean(published)[:200],
+        "hash": hashlib.sha256(material).hexdigest(),
+    }
 
 def fetch_feed(source: dict, timeout: int = 15, retries: int = 3) -> list[dict]:
     url = source["url"]
@@ -31,20 +46,20 @@ def fetch_feed(source: dict, timeout: int = 15, retries: int = 3) -> list[dict]:
             nodes = root.findall(".//item")
             if nodes:
                 for n in nodes:
-                    title = _clean(_text(n, ["title"]))
-                    link = _clean(_text(n, ["link"]))
-                    summary = _clean(_text(n, ["description"]))
-                    published = _clean(_text(n, ["pubDate"]))
+                    title = _text(n, ["title"])
+                    link = _text(n, ["link"])
+                    summary = _text(n, ["description", "summary"])
+                    published = _text(n, ["pubDate", "date"])
                     if title and link:
                         items.append(_item(source, title, link, summary, published))
                 return items
-            ns = {"a": "http://www.w3.org/2005/Atom"}
-            for n in root.findall(".//a:entry", ns):
-                title = _clean(_text(n, ["{http://www.w3.org/2005/Atom}title"]))
-                link_el = n.find("{http://www.w3.org/2005/Atom}link")
-                link = _clean(link_el.attrib.get("href", "") if link_el is not None else "")
-                summary = _clean(_text(n, ["{http://www.w3.org/2005/Atom}summary", "{http://www.w3.org/2005/Atom}content"]))
-                published = _clean(_text(n, ["{http://www.w3.org/2005/Atom}published", "{http://www.w3.org/2005/Atom}updated"]))
+            nsurl = "http://www.w3.org/2005/Atom"
+            for n in root.findall(f".//{{{nsurl}}}entry"):
+                title = _text(n, [f"{{{nsurl}}}title"])
+                link_el = n.find(f"{{{nsurl}}}link")
+                link = link_el.attrib.get("href", "") if link_el is not None else ""
+                summary = _text(n, [f"{{{nsurl}}}summary", f"{{{nsurl}}}content"])
+                published = _text(n, [f"{{{nsurl}}}published", f"{{{nsurl}}}updated"])
                 if title and link:
                     items.append(_item(source, title, link, summary, published))
             return items
@@ -54,15 +69,19 @@ def fetch_feed(source: dict, timeout: int = 15, retries: int = 3) -> list[dict]:
                 time.sleep(2 ** attempt)
     raise RuntimeError(f"Vir ni dosegljiv: {url}: {last}")
 
-def _item(source, title, link, summary, published):
-    material = f"{title}|{link}".encode("utf-8")
-    return {"source_name": source.get("name", source["url"]), "title": title[:500], "url": link[:2000], "summary": summary[:4000], "published": published[:200], "hash": hashlib.sha256(material).hexdigest()}
-
-def collect(sources: list[dict], max_items: int = 20) -> list[dict]:
+def collect(sources: list[dict], category: str, max_items: int = 30) -> list[dict]:
     out = []
-    for source in sources:
+    selected = [s for s in sources if s.get("category", "aktualno") == category]
+    for source in selected:
         try:
             out.extend(fetch_feed(source))
         except Exception as exc:
             print(f"WARN source={source.get('url')} error={exc}")
-    return out[:max_items]
+    seen = set()
+    unique = []
+    for item in out:
+        if item["hash"] in seen:
+            continue
+        seen.add(item["hash"])
+        unique.append(item)
+    return unique[:max_items]

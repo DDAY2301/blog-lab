@@ -10,13 +10,19 @@ on:
       timezone: "Europe/Ljubljana"
   workflow_dispatch:
     inputs:
+      category:
+        description: "Kategorija članka"
+        required: true
+        default: "aktualno"
+        type: choice
+        options: [sport, politika, aktualno]
       dry_run:
-        description: "Run without publishing"
+        description: "Samo test, brez objave"
         required: false
-        default: true
+        default: false
         type: boolean
       force:
-        description: "Ignore daily limit"
+        description: "Prezri dnevno omejitev"
         required: false
         default: false
         type: boolean
@@ -27,18 +33,25 @@ concurrency:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
+  copilot-requests: write
 
 jobs:
   run-agent:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 15
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     env:
       AGENT_ENABLED: ${{ vars.AGENT_ENABLED || 'true' }}
       PUBLISH_MODE: ${{ vars.PUBLISH_MODE || 'automatic' }}
+      AI_PROVIDER: ${{ vars.AI_PROVIDER || 'auto' }}
       MODEL_API_KEY: ${{ secrets.MODEL_API_KEY }}
       MODEL_BASE_URL: ${{ secrets.MODEL_BASE_URL }}
       MODEL_NAME: ${{ secrets.MODEL_NAME }}
-      AI_PROVIDER: auto
+      GITHUB_TOKEN: ${{ github.token }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -51,33 +64,71 @@ jobs:
         with:
           node-version: 22
           cache: npm
-      - name: Install Python dependencies
-        run: pip install -r requirements-agent.txt
+      - name: Install agent dependencies
+        run: |
+          pip install -r requirements-agent.txt
+          npm install -g @github/copilot@latest
       - name: Install frontend dependencies
         run: npm ci
-      - name: Run agent tests
-        run: pytest -q agents/blog-lab-publisher/tests
-      - name: Run agent
+      - name: Test agent
+        run: |
+          python -m py_compile agents/blog-lab-publisher/agent.py agents/blog-lab-publisher/services/*.py
+          pytest -q agents/blog-lab-publisher/tests
+      - name: Select editorial category
         shell: bash
         run: |
-          ARGS=()
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            CATEGORY="${{ inputs.category }}"
+          else
+            case "${{ github.event.schedule }}" in
+              "17 8 * * *") CATEGORY="sport" ;;
+              "27 13 * * *") CATEGORY="politika" ;;
+              *) CATEGORY="aktualno" ;;
+            esac
+          fi
+          echo "RUN_CATEGORY=$CATEGORY" >> "$GITHUB_ENV"
+          echo "Selected category: $CATEGORY"
+      - name: Run autonomous publisher
+        shell: bash
+        run: |
+          ARGS=(--category "$RUN_CATEGORY")
           if [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.dry_run }}" == "true" ]]; then ARGS+=(--dry-run); fi
           if [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.force }}" == "true" ]]; then ARGS+=(--force); fi
           python agents/blog-lab-publisher/agent.py "${ARGS[@]}"
       - name: Verify frontend build
         run: npm run build
-      - name: Ensure no obvious secrets were written
+      - name: Ensure no obvious credentials were written
         shell: bash
         run: |
-          ! grep -R --exclude-dir=.git -E "(ghp_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,})" . || exit 1
-      - name: Commit verified changes
+          ! grep -R --exclude-dir=.git --exclude=package-lock.json -E "(ghp_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|sk-[A-Za-z0-9_-]{20,})" . || exit 1
+      - name: Detect published-content change
+        id: content
+        shell: bash
+        run: |
+          if git diff --quiet -- src/App.jsx; then echo "changed=false" >> "$GITHUB_OUTPUT"; else echo "changed=true" >> "$GITHUB_OUTPUT"; fi
+      - name: Commit verified agent state/content
+        id: commit
         if: ${{ github.event_name != 'workflow_dispatch' || inputs.dry_run == false }}
         shell: bash
         run: |
-          if git diff --quiet && [[ -z "$(git status --porcelain)" ]]; then echo "No changes to commit."; exit 0; fi
+          echo "changed=false" >> "$GITHUB_OUTPUT"
+          if git diff --quiet && [[ -z "$(git status --porcelain)" ]]; then exit 0; fi
           git config user.name "blog-lab-publisher[bot]"
           git config user.email "blog-lab-publisher[bot]@users.noreply.github.com"
           git add src/App.jsx data public/data content/drafts logs 2>/dev/null || true
           if git diff --cached --quiet; then exit 0; fi
-          git commit -m "Agent: publish verified Blog Lab update"
+          git commit -m "Agent: publish $RUN_CATEGORY Blog Lab update"
           git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+      - name: Configure GitHub Pages
+        if: ${{ steps.content.outputs.changed == 'true' && (github.event_name != 'workflow_dispatch' || inputs.dry_run == false) }}
+        uses: actions/configure-pages@v5
+      - name: Upload Pages artifact
+        if: ${{ steps.content.outputs.changed == 'true' && (github.event_name != 'workflow_dispatch' || inputs.dry_run == false) }}
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+      - name: Deploy generated article to GitHub Pages
+        id: deployment
+        if: ${{ steps.content.outputs.changed == 'true' && (github.event_name != 'workflow_dispatch' || inputs.dry_run == false) }}
+        uses: actions/deploy-pages@v4

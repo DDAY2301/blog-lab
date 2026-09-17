@@ -1,28 +1,38 @@
-# Blog Lab Publisher
+# Blog Lab Publisher v2
 
-Samostojni scheduled agent za repozitorij `DDAY2301/blog-lab`.
+Samostojni agent za `DDAY2301/blog-lab`, zasnovan za tri dnevne uredniške cikle.
 
-## Arhitektura
-GitHub Actions → Python agent → RSS/Atom → AI provider → QA → `src/App.jsx` → state JSON → commit → obstoječi Pages workflow.
+## Kaj objavlja
+- 08:17 Europe/Ljubljana — šport
+- 13:27 Europe/Ljubljana — politika
+- 19:43 Europe/Ljubljana — aktualna/trend tema
 
-Agent se ne izvaja neprekinjeno. GitHub Actions ga prebudi ob 08:17, 13:27 in 19:43 po `Europe/Ljubljana`. Ročni zagon podpira `dry_run` in `force`.
+Vsak cikel pridobi samo dovoljene RSS vire za svojo kategorijo, odstrani že obdelane vnose, pripravi članek, izvede QA, zgradi Vite stran, naredi commit in v istem workflowu izvede GitHub Pages deployment.
+
+## AI način
+Privzeti `AI_PROVIDER=auto` najprej uporabi GitHub Copilot CLI z vgrajenim kratkotrajnim `GITHUB_TOKEN`. Copilot nima dovoljenja za shell, pisanje datotek, splet ali GitHub MCP; prejme samo že zbrane RSS podatke in vrne JSON članka.
+
+Če Copilot ni dosegljiv ali račun nima ustrezne Copilot možnosti, agent poskusi z OpenAI-compatible API-jem, če so nastavljeni `MODEL_API_KEY`, `MODEL_BASE_URL` in `MODEL_NAME`. Če tudi tega ni, agent NE obstane: izdela konservativen, virsko označen RSS pregled brez dodajanja novih dejstev.
 
 ## GitHub Variables
 - `AGENT_ENABLED=true`
-- `PUBLISH_MODE=automatic|draft|review`
+- `PUBLISH_MODE=automatic`
+- `AI_PROVIDER=auto` (možno tudi `copilot` ali `external`)
 
-## GitHub Secrets
+## Izbirni Secrets
+Zunanji AI ni obvezen. Če ga želite kot dodatni provider:
 - `MODEL_API_KEY`
 - `MODEL_BASE_URL`
 - `MODEL_NAME`
 
-Če ključi manjkajo, agent varno izvede tehnični cikel in zaključi brez lažne objave.
+## Ročni zagon
+Actions → Blog Lab Publisher Agent → Run workflow. Izberete `sport`, `politika` ali `aktualno`. `dry_run=true` pripravi osnutek brez objave; `force=true` prezre dnevni limit.
 
 ## Ustavitev
-Repository → Settings → Secrets and variables → Actions → Variables → `AGENT_ENABLED=false`. Lahko tudi nastavite `enabled: false` v `config.yaml`.
+Nastavite repository variable `AGENT_ENABLED=false`. Dodatno stikalo je `enabled: false` v `config.yaml`.
 
-## Diagnostika
-Status je v `public/data/agent-status.json`, napake QA pa v `logs/`. Nadzorna stran: `/agent.html`.
+## Varnost
+Zunanja vsebina je vedno obravnavana kot podatek, nikoli kot navodilo. Politična vsebina mora biti nevtralna, faktografska, brez podpore kandidatov ali strank, brez razvrščanja in brez volilnih napovedi. Agent ne prejme trajnega GitHub PAT-a.
 
-## Omejitve
-Scheduled workflow mora biti na default veji, da se samodejno izvaja. GitHub lahko scheduled workflow v javnem neaktivnem repozitoriju po daljšem obdobju izklopi. Zunanji AI in RSS viri imajo lastne kvote/omejitve.
+## Status
+`/agent.html` bere `public/data/agent-status.json`. Stanje in deduplikacija sta v `data/agent-state.json` in `data/processed-items.json`.

@@ -1,6 +1,6 @@
 agent_name: "Blog Lab Publisher"
 agent_slug: "blog-lab-publisher"
-mission: "Iz dovoljenih RSS/Atom virov izberi novo relevantno temo, pripravi preverjen slovenski članek in ga objavi v Blog Lab."
+mission: "Samostojno spremljaj aktualne vire in vsak dan objavi do tri preverjene slovenske članke: šport, politika in aktualna/trend tema."
 target_repository: "DDAY2301/blog-lab"
 website_url: "https://blog-agent-lab.dan-grmusa.chatgpt.site/"
 default_branch: "main"
@@ -9,13 +9,25 @@ timezone: "Europe/Ljubljana"
 enabled: true
 schedule:
   enabled: true
-  times:
-    - "08:17"
-    - "13:27"
-    - "19:43"
+  slots:
+    - time: "08:17"
+      category: "sport"
+    - time: "13:27"
+      category: "politika"
+    - time: "19:43"
+      category: "aktualno"
 input_sources:
-  - name: "RTV Slovenija - novice"
-    url: "https://www.rtvslo.si/feeds/01.xml"
+  - name: "Google News Slovenija – šport"
+    category: "sport"
+    url: "https://news.google.com/rss/search?q=%C5%A1port+Slovenija&hl=sl&gl=SI&ceid=SI:sl"
+    type: "rss"
+  - name: "Google News Slovenija – politika"
+    category: "politika"
+    url: "https://news.google.com/rss/search?q=Slovenija+politika&hl=sl&gl=SI&ceid=SI:sl"
+    type: "rss"
+  - name: "Google News Slovenija – aktualno"
+    category: "aktualno"
+    url: "https://news.google.com/rss/search?q=Slovenija+aktualno&hl=sl&gl=SI&ceid=SI:sl"
     type: "rss"
 output_type: "blog_post"
 output_directory: "content/posts"
@@ -24,6 +36,6 @@ maximum_outputs_per_run: 1
 maximum_outputs_per_day: 3
 approval_mode: "automatic"
 ai_provider: "auto"
-min_article_chars: 1800
-max_article_chars: 9000
-max_source_items: 20
+min_article_chars: 1200
+max_article_chars: 10000
+max_source_items: 30
