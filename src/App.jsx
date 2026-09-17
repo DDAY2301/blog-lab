@@ -7,6 +7,90 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    id: "bohinj-cows-ball-2026-visitor-guide",
+    title: "Bohinj Cows’ Ball 2026: A Car-Light Visitor Guide",
+    excerpt: "Visit Bohinj’s traditional Kravji bal in Ukanc with confirmed times, ticket prices, free event buses, parking guidance and respectful tips for experiencing living pastoral heritage.",
+    seoDescription: "Plan the 67th Bohinj Cows’ Ball in Ukanc on 20 September 2026: programme, tickets, free buses, boat packages, parking and responsible visitor advice.",
+    content: `The **67th Traditional Cows’ Ball**—\`Kravji bal\` in Slovene—takes place in **Ukanc, Bohinj, on Sunday 20 September 2026**. The event runs from **10:00 to 18:00**, with the ceremonial arrival of decorated cattle from the high pastures expected at about **13:00**.
+
+This is a public festival built around Bohinj’s pastoral heritage, not a staged wildlife attraction. Its central image—the return of cattle and herders from mountain pastures—comes from the seasonal movement of livestock known as transhumance. Visitors also encounter local food, crafts, music and demonstrations connected with rural life.
+
+## Essential event details
+
+- **Date:** Sunday 20 September 2026
+- **Time:** 10:00–18:00
+- **Place:** Ukanc, at the western end of Lake Bohinj
+- **Adult admission:** €10 on the day or €8 in advance
+- **Children aged 7–14:** €6
+- **Children under 7:** free
+
+Prices and programme details were checked on **17 September 2026**. Buy only through the organiser or its linked official sales channel, and recheck the event page before departure in case weather or operational conditions change.
+
+## What happens during the day?
+
+The festival opens in the morning, while the best-known moment is scheduled for around 13:00, when herders bring decorated cattle into the event area. The arrival time is approximate: animals, people and mountain conditions do not run like a theatre cue.
+
+The wider programme presents elements of Bohinj’s dairy and shepherding culture alongside entertainment and food. Treat demonstrations as interpretations of living heritage rather than proof that every historic practice is still performed in exactly the same way.
+
+For a comfortable visit, arrive before midday. This gives you time to find the entrance, understand the layout and choose a viewing place without blocking routes used by animals, handlers or emergency staff.
+
+## The easiest car-light journey
+
+Bohinj has published a special transport plan for the festival. On 20 September, dedicated buses will connect villages and park-and-ride locations with Ukanc:
+
+1. **Lower Bohinj Valley:** Bohinjska Bistrica–Lake Bohinj–Ukanc, approximately every 20 minutes from 08:30 to 19:00.
+2. **Upper Bohinj Valley:** Jereka–Stara Fužina–Ukanc, first departure at 09:00 and then approximately every 30 minutes between 10:00 and 19:00.
+3. **Nomenj route:** Nomenj–Lake Bohinj–Ukanc, approximately every 60 minutes from 08:00 to 19:00.
+
+The municipality states that these event services are free. Line 3 between Lake Bohinj and Ukanc and marked Line 9 services to Savica Waterfall are also free that day; Lines 4 and 5 are not included in the free offer.
+
+If arriving from elsewhere in Slovenia, check the current national bus or rail connection to Bohinjska Bistrica, then allow generous transfer time. Event traffic and passenger numbers may affect the journey.
+
+## Parking and the lake boat option
+
+Drivers are asked to leave vehicles outside Ukanc and continue by bus. The official recommendation is to use **P13 Danica** or **P23 Kobla** in Bohinjska Bistrica. Free event-day parking is also listed at Ribčev Laz–Kristal, Stara Fužina–Labora and P32 Nomenj.
+
+Park only in marked spaces. Roadside parking is prohibited and creates problems for residents, buses and emergency access.
+
+A panoramic boat package combines admission with travel across Lake Bohinj. The published adult price is **€12 with a one-way boat journey** or **€17 with a return journey**. Confirm sailing times, capacity and the departure pier before relying on this option, especially if wind or poor weather is forecast.
+
+## How to experience the festival responsibly
+
+- Keep well behind barriers and follow instructions from animal handlers.
+- Do not touch, feed, startle or crowd the cattle.
+- Avoid flash photography and sudden noise near animals.
+- Keep children close and dogs away from livestock; check the organiser’s pet rules before bringing one.
+- Wear footwear suitable for grass, mud and uneven ground.
+- Bring rain protection and a warm layer: late-September weather beside the lake can change quickly.
+- Use refillable water containers and dispose of waste only at designated points.
+- Ask before photographing individual herders, craftspeople or children.
+
+The event is inside the wider Triglav National Park landscape. Festival admission does not relax conservation rules: remain on authorised routes, respect private land and do not extend the day with an unplanned mountain hike.
+
+## A simple day plan
+
+Take an early connection to Bohinjska Bistrica, then use the free event bus to Ukanc. Arrive between 10:00 and 11:30 to explore calmly, eat before the busiest period and locate the viewing area. Watch the cattle arrival at about 13:00, then spend the afternoon with the heritage programme before returning by organised transport.
+
+Save the official transport page on your phone, but also note your last practical return connection. Mobile coverage, battery life and crowding can make last-minute planning unreliable.
+
+## Direct sources
+
+Information was checked on **17 September 2026**:
+
+- [Bohinj Tourist Association: official Cows’ Ball event page](https://tdbohinj.si/)
+- [Bohinj destination: official event calendar](https://www.bohinj.si/)
+- [Promet Bohinj: festival buses, parking and boat packages](https://promet.bohinj.si/en/2026/08/road-closures-and-transport-during-events/)
+- [Slovenian Tourist Board: 67th Traditional Cow Ball 2026](https://www.slovenia.info/en/things-to-do/events)
+
+Recheck the organiser and transport notices shortly before travel. Weather, traffic measures and programme timing can change.`,
+    category: "Aktualno",
+    author: "Uredništvo Blog Lab",
+    status: "published",
+    createdAt: "2026-09-17T21:38:19+02:00",
+    updatedAt: "2026-09-17T21:38:19+02:00",
+  },
+
+  {
     id: "skofja-loka-passion-play-unesco-guide",
     title: "Škofja Loka Passion Play: A UNESCO Heritage Guide",
     excerpt: "Discover the documented history and living community tradition behind Slovenia's oldest preserved dramatic text, with a practical year-round visit to Škofja Loka.",
