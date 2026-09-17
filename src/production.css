@@ -1,0 +1,80 @@
+/* Public production shell: editorial tools live behind the private Cloudflare terminal. */
+#new-article-button,
+.site-header nav button:nth-child(2),
+.article-end .secondary {
+  display: none !important;
+}
+
+.site-header {
+  gap: 18px;
+}
+
+.site-header nav {
+  margin-left: auto;
+}
+
+.terminal-login-button {
+  min-height: 40px;
+  padding: 0 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid rgba(23, 107, 69, .24);
+  border-radius: 10px;
+  color: var(--green);
+  background: rgba(255, 254, 253, .84);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 800;
+  box-shadow: 0 5px 14px rgba(23, 33, 27, .06);
+  transition: transform .18s ease, background .18s ease, border-color .18s ease, color .18s ease;
+}
+
+.terminal-login-button svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.terminal-login-button:hover,
+.terminal-login-button:focus-visible {
+  color: white;
+  background: var(--green);
+  border-color: var(--green);
+  transform: translateY(-1px);
+  outline: none;
+}
+
+.terminal-login-button.is-setup {
+  border-style: dashed;
+}
+
+@media (max-width: 680px) {
+  .site-header {
+    height: 68px;
+    padding: 0 18px;
+  }
+
+  .site-header nav {
+    display: none;
+  }
+
+  .brand {
+    font-size: 19px;
+  }
+
+  .brand-mark {
+    width: 32px;
+    height: 32px;
+  }
+
+  .terminal-login-button {
+    min-height: 38px;
+    padding: 0 13px;
+  }
+}
