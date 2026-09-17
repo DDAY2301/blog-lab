@@ -63,7 +63,7 @@ export default function PrivateTerminalAccess() {
       aria-label="Prijava v zasebni Blog Lab terminal"
       title={
         terminalUrl
-          ? "Prijava prek Cloudflare Access"
+          ? "Odpri varno prijavo v zasebni terminal"
           : configLoaded
             ? "Odpri zasebni terminal"
             : "Preverjam povezavo s terminalom"
