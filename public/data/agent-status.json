@@ -1,0 +1,12 @@
+{
+  "agent": "Blog Lab Publisher",
+  "status": "idle",
+  "enabled": true,
+  "last_run": null,
+  "last_success": null,
+  "last_output": null,
+  "next_run": null,
+  "posts_today": 0,
+  "last_error": null,
+  "message": "Agent je pripravljen."
+}

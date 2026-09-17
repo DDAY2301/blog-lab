@@ -1,0 +1,29 @@
+agent_name: "Blog Lab Publisher"
+agent_slug: "blog-lab-publisher"
+mission: "Iz dovoljenih RSS/Atom virov izberi novo relevantno temo, pripravi preverjen slovenski članek in ga objavi v Blog Lab."
+target_repository: "DDAY2301/blog-lab"
+website_url: "https://blog-agent-lab.dan-grmusa.chatgpt.site/"
+default_branch: "main"
+language: "sl"
+timezone: "Europe/Ljubljana"
+enabled: true
+schedule:
+  enabled: true
+  times:
+    - "08:17"
+    - "13:27"
+    - "19:43"
+input_sources:
+  - name: "RTV Slovenija - novice"
+    url: "https://www.rtvslo.si/feeds/01.xml"
+    type: "rss"
+output_type: "blog_post"
+output_directory: "content/posts"
+automatic_publish: true
+maximum_outputs_per_run: 1
+maximum_outputs_per_day: 3
+approval_mode: "automatic"
+ai_provider: "auto"
+min_article_chars: 1800
+max_article_chars: 9000
+max_source_items: 20

@@ -1,0 +1,83 @@
+name: Blog Lab Publisher Agent
+
+on:
+  schedule:
+    - cron: "17 8 * * *"
+      timezone: "Europe/Ljubljana"
+    - cron: "27 13 * * *"
+      timezone: "Europe/Ljubljana"
+    - cron: "43 19 * * *"
+      timezone: "Europe/Ljubljana"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Run without publishing"
+        required: false
+        default: true
+        type: boolean
+      force:
+        description: "Ignore daily limit"
+        required: false
+        default: false
+        type: boolean
+
+concurrency:
+  group: blog-lab-publisher
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  run-agent:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    env:
+      AGENT_ENABLED: ${{ vars.AGENT_ENABLED || 'true' }}
+      PUBLISH_MODE: ${{ vars.PUBLISH_MODE || 'automatic' }}
+      MODEL_API_KEY: ${{ secrets.MODEL_API_KEY }}
+      MODEL_BASE_URL: ${{ secrets.MODEL_BASE_URL }}
+      MODEL_NAME: ${{ secrets.MODEL_NAME }}
+      AI_PROVIDER: auto
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install Python dependencies
+        run: pip install -r requirements-agent.txt
+      - name: Install frontend dependencies
+        run: npm ci
+      - name: Run agent tests
+        run: pytest -q agents/blog-lab-publisher/tests
+      - name: Run agent
+        shell: bash
+        run: |
+          ARGS=()
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.dry_run }}" == "true" ]]; then ARGS+=(--dry-run); fi
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.force }}" == "true" ]]; then ARGS+=(--force); fi
+          python agents/blog-lab-publisher/agent.py "${ARGS[@]}"
+      - name: Verify frontend build
+        run: npm run build
+      - name: Ensure no obvious secrets were written
+        shell: bash
+        run: |
+          ! grep -R --exclude-dir=.git -E "(ghp_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,})" . || exit 1
+      - name: Commit verified changes
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.dry_run == false }}
+        shell: bash
+        run: |
+          if git diff --quiet && [[ -z "$(git status --porcelain)" ]]; then echo "No changes to commit."; exit 0; fi
+          git config user.name "blog-lab-publisher[bot]"
+          git config user.email "blog-lab-publisher[bot]@users.noreply.github.com"
+          git add src/App.jsx data public/data content/drafts logs 2>/dev/null || true
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Agent: publish verified Blog Lab update"
+          git push
