@@ -1,0 +1,110 @@
+name: Private Operator Terminal
+
+on:
+  workflow_dispatch:
+    inputs:
+      request_id:
+        description: "Opaque terminal request ID"
+        required: true
+        type: string
+      payload:
+        description: "AES-GCM encrypted operator payload"
+        required: true
+        type: string
+
+concurrency:
+  group: private-operator-terminal
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+  copilot-requests: write
+
+jobs:
+  execute:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    env:
+      TERMINAL_PAYLOAD: ${{ inputs.payload }}
+      TERMINAL_COMMAND_KEY: ${{ secrets.TERMINAL_COMMAND_KEY }}
+      GITHUB_TOKEN: ${{ github.token }}
+      AGENT_ENABLED: "true"
+      PUBLISH_MODE: "automatic"
+      AI_PROVIDER: ${{ vars.AI_PROVIDER || 'auto' }}
+      MODEL_API_KEY: ${{ secrets.MODEL_API_KEY }}
+      MODEL_BASE_URL: ${{ secrets.MODEL_BASE_URL }}
+      MODEL_NAME: ${{ secrets.MODEL_NAME }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install dependencies
+        run: |
+          pip install -r requirements-agent.txt
+          npm ci
+          npm install -g @github/copilot@latest
+      - name: Test protected operator code
+        run: |
+          python -m py_compile agents/operator-terminal/*.py agents/blog-lab-publisher/agent.py agents/blog-lab-publisher/services/*.py
+          pytest -q agents/operator-terminal/tests agents/blog-lab-publisher/tests
+      - name: Decrypt private command
+        run: python agents/operator-terminal/decrypt.py "$RUNNER_TEMP/operator-command.json"
+      - name: Execute private command
+        run: python agents/operator-terminal/command.py --command-file "$RUNNER_TEMP/operator-command.json"
+      - name: Reject edits to protected security paths
+        shell: bash
+        run: |
+          CHANGED="$(git diff --name-only)"
+          if printf '%s\n' "$CHANGED" | grep -Eq '^(\.github/|terminal/|agents/operator-terminal/|AGENTS\.md$|requirements-agent\.txt$|\.env)'; then
+            echo "A protected path was modified; refusing to publish."
+            printf '%s\n' "$CHANGED"
+            exit 1
+          fi
+      - name: Validate website and agent
+        run: |
+          pytest -q agents/blog-lab-publisher/tests
+          npm run build
+      - name: Detect public site change
+        id: web
+        shell: bash
+        run: |
+          if git diff --quiet -- src public; then echo "changed=false" >> "$GITHUB_OUTPUT"; else echo "changed=true" >> "$GITHUB_OUTPUT"; fi
+      - name: Commit verified changes
+        shell: bash
+        run: |
+          if git diff --quiet && [[ -z "$(git status --porcelain)" ]]; then echo "No repository changes."; exit 0; fi
+          git config user.name "blog-lab-terminal[bot]"
+          git config user.email "blog-lab-terminal[bot]@users.noreply.github.com"
+          git add src public data agents/blog-lab-publisher/config.yaml agents/blog-lab-publisher/prompts content/drafts logs 2>/dev/null || true
+          if git diff --cached --quiet; then echo "No permitted changes to commit."; exit 0; fi
+          git commit -m "Terminal: apply authenticated operator request"
+          git push
+      - name: Configure Pages
+        if: ${{ steps.web.outputs.changed == 'true' }}
+        uses: actions/configure-pages@v5
+      - name: Upload Pages artifact
+        if: ${{ steps.web.outputs.changed == 'true' }}
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+      - name: Deploy Pages
+        if: ${{ steps.web.outputs.changed == 'true' }}
+        id: deployment
+        uses: actions/deploy-pages@v4
+      - name: Destroy decrypted command
+        if: ${{ always() }}
+        shell: bash
+        run: rm -f "$RUNNER_TEMP/operator-command.json"
