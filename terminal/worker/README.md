@@ -33,3 +33,7 @@ Javni health endpoint je `/health`; ne razkriva vrednosti skrivnosti, samo pove 
 - `Nadzor agenta`: ustavitev/vklop in `automatic`, `draft`, `review` način.
 
 Samostojni Blog Lab publisher še naprej dela po svojem urniku tudi brez terminala.
+
+## Deployment source of truth
+
+Cloudflare naj deploya iz root-a repozitorija. `wrangler.jsonc` v root-u je produkcijski source of truth in eksplicitno kaže na `terminal/worker/src/index.js`; zato ni treba spreminjati Cloudflare Root directory nastavitve iz `/`.
