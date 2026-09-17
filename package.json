@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@vitejs/plugin-react": "^6.0.2",
+    "jose": "^6.2.12",
     "vite": "^8.0.13",
     "typescript": "^5.9.3",
     "react": "^19.2.6",
