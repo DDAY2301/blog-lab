@@ -1,9 +1,6 @@
-import { createRemoteJWKSet, jwtVerify } from "jose";
-
 const OWNER = "DDAY2301";
 const REPO = "blog-lab";
 const WORKFLOW = "operator-terminal.yml";
-const accessKeySets = new Map();
 
 function json(data, status = 200) {
   return new Response(JSON.stringify(data), {
@@ -30,13 +27,18 @@ function fromB64(value) {
   return out;
 }
 
+function allowedEmails(env) {
+  return String(env.ALLOWED_EMAILS || "")
+    .split(",")
+    .map((x) => x.trim().toLowerCase())
+    .filter(Boolean);
+}
+
 function setupState(env) {
   const missing = [];
   if (!String(env.GITHUB_DISPATCH_TOKEN || "").trim()) missing.push("GITHUB_DISPATCH_TOKEN");
   if (!String(env.TERMINAL_COMMAND_KEY || "").trim()) missing.push("TERMINAL_COMMAND_KEY");
-  if (!String(env.TEAM_DOMAIN || "").trim()) missing.push("TEAM_DOMAIN");
-  if (!String(env.POLICY_AUD || "").trim()) missing.push("POLICY_AUD");
-  if (!String(env.ALLOWED_EMAILS || "").trim()) missing.push("ALLOWED_EMAILS");
+  if (allowedEmails(env).length === 0) missing.push("ALLOWED_EMAILS");
   return { ready: missing.length === 0, missing };
 }
 
@@ -53,36 +55,17 @@ async function encryptPayload(env, value) {
   return b64url(joined);
 }
 
-function accessKeySet(teamDomain) {
-  let jwks = accessKeySets.get(teamDomain);
-  if (!jwks) {
-    jwks = createRemoteJWKSet(new URL(`${teamDomain}/cdn-cgi/access/certs`));
-    accessKeySets.set(teamDomain, jwks);
-  }
-  return jwks;
-}
-
-async function identity(request, env) {
-  const token = String(request.headers.get("cf-access-jwt-assertion") || "").trim();
-  const teamDomain = String(env.TEAM_DOMAIN || "").trim().replace(/\/$/, "");
-  const audience = String(env.POLICY_AUD || "").trim();
-  if (!token || !teamDomain || !audience) return null;
-  let payload;
+async function identity(ctx, env) {
+  if (!ctx.access) return null;
+  let who;
   try {
-    ({ payload } = await jwtVerify(token, accessKeySet(teamDomain), {
-      issuer: teamDomain,
-      audience
-    }));
+    who = await ctx.access.getIdentity();
   } catch {
     return null;
   }
-  const email = String(payload?.email || "").trim().toLowerCase();
-  if (!email) return null;
-  const allowed = String(env.ALLOWED_EMAILS || "")
-    .split(",")
-    .map(x => x.trim().toLowerCase())
-    .filter(Boolean);
-  if (!allowed.length || !allowed.includes(email)) return null;
+  const email = String(who?.email || "").trim().toLowerCase();
+  const allowed = allowedEmails(env);
+  if (!email || !allowed.length || !allowed.includes(email)) return null;
   return { email };
 }
 
@@ -92,7 +75,7 @@ async function github(path, env, init = {}) {
   const headers = new Headers(init.headers || {});
   headers.set("accept", "application/vnd.github+json");
   headers.set("x-github-api-version", "2022-11-28");
-  headers.set("user-agent", "BlogLabPrivateTerminal/2.0");
+  headers.set("user-agent", "BlogLabPrivateTerminal/2.1");
   headers.set("authorization", `Bearer ${token}`);
   return fetch(`https://api.github.com${path}`, { ...init, headers });
 }
@@ -103,7 +86,7 @@ async function findRun(requestId, env) {
     if (!r.ok) return null;
     const data = await r.json();
     const expected = `Private Terminal · ${requestId}`;
-    const run = (data.workflow_runs || []).find(x => x.display_title === expected);
+    const run = (data.workflow_runs || []).find((x) => x.display_title === expected);
     if (!run) return { id: requestId, status: "queued", conclusion: null, run_url: null };
     return { id: requestId, status: run.status, conclusion: run.conclusion, run_url: run.html_url, updated_at: run.updated_at };
   } catch {
@@ -111,8 +94,8 @@ async function findRun(requestId, env) {
   }
 }
 
-const PAGE = `<!doctype html><html lang="sl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Blog Lab · Private Terminal</title><style>*{box-sizing:border-box}body{margin:0;background:#090b0f;color:#d7e0ea;font:15px ui-monospace,SFMono-Regular,Consolas,monospace}.wrap{max-width:1100px;margin:auto;padding:28px}.bar{display:flex;justify-content:space-between;gap:16px;align-items:center;margin-bottom:18px}.tag{color:#7ee787}.warn{color:#d29922}.panel{border:1px solid #30363d;background:#0d1117;border-radius:14px;overflow:hidden}.head{padding:12px 16px;border-bottom:1px solid #30363d;color:#8b949e}.screen{height:430px;overflow:auto;padding:16px;display:flex;flex-direction:column;gap:10px}.entry{border-left:2px solid #30363d;padding:8px 12px}.entry b{color:#7ee787}.entry .meta{color:#8b949e;font-size:12px;margin-top:5px}.entry.fail b{color:#ff7b72}.composer{border-top:1px solid #30363d;padding:14px}.row{display:flex;gap:10px;flex-wrap:wrap}.row select,.row textarea,.row button{background:#161b22;color:#d7e0ea;border:1px solid #30363d;border-radius:8px;padding:10px}.row textarea{width:100%;min-height:90px;resize:vertical;margin-top:10px}.row button{background:#238636;border-color:#2ea043;cursor:pointer;font-weight:700}.row button:disabled{opacity:.5}.hint{color:#8b949e;font-size:12px;margin-top:8px}a{color:#58a6ff}</style></head><body><div class="wrap"><div class="bar"><div><strong>Blog Lab / private-terminal</strong><div class="tag" id="who">● preverjam dostop …</div><div id="setup" class="warn"></div></div><a href="https://dday2301.github.io/blog-lab/" target="_blank" rel="noreferrer">odpri blog ↗</a></div><div class="panel"><div class="head">authenticated operator channel · ukazi se pošiljajo AES-GCM šifrirano</div><div class="screen" id="screen"></div><div class="composer"><div class="row"><select id="mode"><option value="auto">Samodejno</option><option value="article">Članek</option><option value="site">Sprememba strani</option><option value="control">Nadzor agenta</option></select><select id="category"><option value="aktualno">Aktualno</option><option value="sport">Šport</option><option value="politika">Politika</option></select><button id="send">IZVEDI</button><textarea id="command" placeholder="Primer: Objavi članek o današnji temi … / Dodaj rubriko Projekti … / Ustavi objavljanje …"></textarea></div><div class="hint">Terminal hrani ukaze samo v tem brskalniku. Status izvedbe se v realnem času bere iz GitHub Actions. Varnostne datoteke se skozi ta kanal ne morejo spreminjati.</div></div></div></div><script>
-const $=s=>document.querySelector(s), KEY='bloglab-private-terminal-v2';
+const PAGE = `<!doctype html><html lang="sl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Blog Lab · Private Terminal</title><style>*{box-sizing:border-box}body{margin:0;background:#090b0f;color:#d7e0ea;font:15px ui-monospace,SFMono-Regular,Consolas,monospace}.wrap{max-width:1100px;margin:auto;padding:28px}.bar{display:flex;justify-content:space-between;gap:16px;align-items:center;margin-bottom:18px}.tag{color:#7ee787}.warn{color:#d29922}.panel{border:1px solid #30363d;background:#0d1117;border-radius:14px;overflow:hidden}.head{padding:12px 16px;border-bottom:1px solid #30363d;color:#8b949e}.screen{height:430px;overflow:auto;padding:16px;display:flex;flex-direction:column;gap:10px}.entry{border-left:2px solid #30363d;padding:8px 12px}.entry b{color:#7ee787}.entry .meta{color:#8b949e;font-size:12px;margin-top:5px}.entry.fail b{color:#ff7b72}.composer{border-top:1px solid #30363d;padding:14px}.row{display:flex;gap:10px;flex-wrap:wrap}.row select,.row textarea,.row button{background:#161b22;color:#d7e0ea;border:1px solid #30363d;border-radius:8px;padding:10px}.row textarea{width:100%;min-height:90px;resize:vertical;margin-top:10px}.row button{background:#238636;border-color:#2ea043;cursor:pointer;font-weight:700}.row button:disabled{opacity:.5}.hint{color:#8b949e;font-size:12px;margin-top:8px}a{color:#58a6ff}</style></head><body><div class="wrap"><div class="bar"><div><strong>Blog Lab / private-terminal</strong><div class="tag" id="who">● preverjam dostop …</div><div id="setup" class="warn"></div></div><a href="https://dday2301.github.io/blog-lab/" rel="noreferrer">nazaj na blog ↗</a></div><div class="panel"><div class="head">authenticated operator channel · ukazi se pošiljajo AES-GCM šifrirano</div><div class="screen" id="screen"></div><div class="composer"><div class="row"><select id="mode"><option value="auto">Samodejno</option><option value="article">Članek</option><option value="site">Sprememba strani</option><option value="control">Nadzor agenta</option></select><select id="category"><option value="aktualno">Aktualno</option><option value="sport">Šport</option><option value="politika">Politika</option></select><button id="send">IZVEDI</button><textarea id="command" placeholder="Primer: Objavi članek o današnji temi … / Dodaj rubriko Projekti … / Ustavi objavljanje …"></textarea></div><div class="hint">Terminal hrani ukaze samo v tem brskalniku. Status izvedbe se bere iz GitHub Actions. Varnostnih datotek skozi ta kanal ni mogoče spreminjati.</div></div></div></div><script>
+const $=s=>document.querySelector(s),KEY='bloglab-private-terminal-v2';
 function esc(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function rows(){try{return JSON.parse(localStorage.getItem(KEY)||'[]')}catch{return []}}
 function save(x){localStorage.setItem(KEY,JSON.stringify(x.slice(-60)))}
@@ -123,14 +106,14 @@ load();setInterval(load,4000);
 </script></body></html>`;
 
 export default {
-  async fetch(request, env) {
+  async fetch(request, env, ctx) {
     const url = new URL(request.url);
     if (request.method === "GET" && url.pathname === "/health") {
       const state = setupState(env);
       return json({ ok: true, worker: "blog-lab-private-terminal", ...state, access_required: true });
     }
 
-    const user = await identity(request, env);
+    const user = await identity(ctx, env);
     if (!user) return new Response("Cloudflare Access required", { status: 403, headers: { "cache-control": "no-store" } });
 
     if (request.method === "GET" && url.pathname === "/") {
@@ -162,7 +145,7 @@ export default {
       let privatePayload;
       try {
         privatePayload = await encryptPayload(env, { request_id: requestId, command, mode, category, actor: user.email, created_at: createdAt });
-      } catch (e) {
+      } catch {
         return json({ error: "Šifriranje ukaza ni pravilno konfigurirano." }, 503);
       }
       const dispatch = await github(`/repos/${OWNER}/${REPO}/actions/workflows/${WORKFLOW}/dispatches`, env, {
