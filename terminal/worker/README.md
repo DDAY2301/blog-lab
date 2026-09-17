@@ -1,57 +1,35 @@
 # Blog Lab Private Terminal
 
-Zasebni operaterski terminal za Blog Lab. Javna stran ostane na GitHub Pages; terminal teče kot ločen Cloudflare Worker in je zaklenjen s Cloudflare Access.
+Zasebni terminal za upravljanje `DDAY2301/blog-lab`. Worker je pripravljen tako, da Cloudflare Builds lahko ostane nastavljen na root repozitorija (`/`), z `npm run build` in `npx wrangler deploy`. Root `wrangler.jsonc` kaže neposredno na `terminal/worker/src/index.js`.
 
-## Varnostni model
+## Dostop
 
-1. Cloudflare Access mora biti vključen za Worker production URL.
-2. Access policy dovoli samo dva konkretna e-mail naslova in uporablja One-Time PIN ali drug zaupanja vreden IdP.
-3. Worker dodatno preveri e-mail proti secretu `ALLOWED_EMAILS`.
-4. Ukaz se pred pošiljanjem v GitHub AES-256-GCM šifrira. Javni GitHub Actions input zato ne vsebuje berljivega ukaza.
-5. Worker hrani zasebno zgodovino ukazov v KV največ 30 dni.
-6. GitHub workflow dešifrira ukaz samo v začasno datoteko runnerja in jo ob koncu izbriše.
-7. Terminalski AI ne sme spreminjati `.github/`, `terminal/`, `agents/operator-terminal/`, `AGENTS.md`, `requirements-agent.txt` ali `.env*`.
+Produkcijski Worker mora biti zaščiten s Cloudflare Access. Access policy naj dovoli samo Dana in Maja prek njunih e-mail naslovov. Worker zaupa preverjeni `ctx.access` identiteti. Dodatni secret `ALLOWED_EMAILS` je neobvezen; če je nastavljen, Worker naredi še drugi allowlist pregled.
 
-## Cloudflare nastavitev
+## Potrebni runtime secrets
 
-V mapi `terminal/worker`:
+V Cloudflare Workerju:
+- `GITHUB_DISPATCH_TOKEN` — fine-grained GitHub token samo za `DDAY2301/blog-lab`, z `Actions: write`.
+- `TERMINAL_COMMAND_KEY` — base64 zapis natanko 32 naključnih bajtov.
+- `ALLOWED_EMAILS` — neobvezno, `dan@example.com,maj@example.com`.
 
-```bash
-npm install
-npx wrangler kv namespace create COMMANDS
-```
+V GitHub Actions secrets mora biti isti `TERMINAL_COMMAND_KEY`.
 
-Vrnjeni KV namespace ID vpiši v `wrangler.jsonc` namesto `REPLACE_WITH_KV_NAMESPACE_ID`.
+## KV ni več potreben
 
-Nato nastavi Worker secrets:
+Terminal ne potrebuje Cloudflare KV. Ukazi ostanejo lokalno v brskalniku posameznega operaterja, status pa se na približno štiri sekunde osveži iz GitHub Actions prek anonimnega `request_id`. Ukaz je pred `workflow_dispatch` šifriran z AES-256-GCM, zato sam tekst ukaza ni poslan kot berljiv workflow input.
 
-```bash
-npx wrangler secret put ALLOWED_EMAILS
-npx wrangler secret put GITHUB_DISPATCH_TOKEN
-npx wrangler secret put TERMINAL_COMMAND_KEY
-```
+## URL
 
-- `ALLOWED_EMAILS`: dva dovoljena naslova, ločena z vejico.
-- `GITHUB_DISPATCH_TOKEN`: fine-grained GitHub token samo za `DDAY2301/blog-lab` z `Actions: write`.
-- `TERMINAL_COMMAND_KEY`: base64 zapis natanko 32 naključnih bajtov, npr. rezultat `openssl rand -base64 32`.
+`workers_dev` je eksplicitno vključen v Wrangler konfiguraciji. Po uspešnem deployu naj Worker dobi `blog-lab-private-terminal.<account-subdomain>.workers.dev`, če ima Cloudflare račun nastavljen `workers.dev` subdomain.
 
-Isto vrednost `TERMINAL_COMMAND_KEY` dodaj tudi kot GitHub Actions secret v repozitoriju.
+Javni health endpoint je `/health`; ne razkriva vrednosti skrivnosti, samo pove ali sta potrebni runtime skrivnosti nastavljeni.
 
-Deploy:
+## Delovanje
 
-```bash
-npx wrangler deploy
-```
+- `Samodejno`: agent sam prepozna tip zahteve.
+- `Članek`: uporabi obstoječ Blog Lab publisher in temo operaterja.
+- `Sprememba strani`: Copilot spremeni samo dovoljene spletne datoteke, nato workflow izvede teste in build.
+- `Nadzor agenta`: ustavitev/vklop in `automatic`, `draft`, `review` način.
 
-V Cloudflare Workers > Access vključi zaščito produkcijskega Worker URL-ja. V Access policy dodaj samo oba dovoljena e-mail naslova. Za e-mail prijavo omogoči One-Time PIN.
-
-## Uporaba
-
-Terminal podpira:
-
-- `Samodejno`: sam prepozna ali gre za članek, nadzor ali spremembo strani;
-- `Članek`: ukaz uporabi kot uredniško temo in za dejstva poišče nove RSS rezultate;
-- `Sprememba strani`: Copilot uredi dovoljene spletne datoteke, nato workflow izvede teste in build;
-- `Nadzor agenta`: ukazi za ustavitev/vklop in `automatic`, `draft`, `review` način.
-
-Blog publisher še naprej samostojno teče po svojem urniku tudi brez odprtega terminala.
+Samostojni Blog Lab publisher še naprej dela po svojem urniku tudi brez terminala.

@@ -3,5 +3,8 @@
   "name": "blog-lab-private-terminal",
   "main": "src/index.js",
   "compatibility_date": "2026-09-17",
+  "workers_dev": true,
+  "preview_urls": false,
+  "keep_vars": true,
   "observability": { "enabled": true }
 }

@@ -1,4 +1,5 @@
 name: Private Operator Terminal
+run-name: Private Terminal · ${{ inputs.request_id }}
 
 on:
   workflow_dispatch:
