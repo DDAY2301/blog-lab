@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="sl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Blog Lab · Prijava</title>
+  <style>
+    :root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#18201b;background:#f6f3ec}
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px;background:radial-gradient(circle at top,#fff 0,#f6f3ec 55%,#ece7dc 100%)}
+    .card{width:min(560px,100%);background:rgba(255,255,255,.92);border:1px solid rgba(24,32,27,.12);border-radius:22px;padding:30px;box-shadow:0 24px 80px rgba(24,32,27,.12)}
+    .eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#55705f;font-weight:800}.mark{width:46px;height:46px;border-radius:14px;background:#176b45;color:white;display:grid;place-items:center;font-weight:900;font-size:22px;margin-bottom:20px}
+    h1{margin:8px 0 10px;font-size:30px;line-height:1.1}.lead{color:#59635c;line-height:1.6;margin:0 0 24px}.status{padding:14px 16px;border-radius:12px;background:#f4f7f5;border:1px solid #dce6df;color:#385243;font-weight:700}.status.bad{background:#fff7ec;border-color:#eed6ae;color:#79521d}
+    .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 18px;border-radius:11px;text-decoration:none;font-weight:800;border:1px solid #176b45}.primary{background:#176b45;color:#fff}.secondary{color:#176b45;background:#fff}
+    small{display:block;color:#7a817c;margin-top:18px;line-height:1.5}
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="mark">B</div>
+    <div class="eyebrow">Blog Lab</div>
+    <h1>Zasebni terminal</h1>
+    <p class="lead">Prijava poteka prek Cloudflare Access. Dostop je namenjen samo pooblaščenima operaterjema.</p>
+    <div id="status" class="status">Preverjam povezavo s terminalom …</div>
+    <div class="actions">
+      <a id="open" class="button primary" href="#" hidden>Prijava</a>
+      <a class="button secondary" href="./">Nazaj na Blog Lab</a>
+    </div>
+    <small id="detail">Če je terminal pravkar objavljen, bo ta stran samodejno zaznala njegov URL in nadaljevala na prijavo.</small>
+  </main>
+  <script>
+    const statusEl = document.getElementById('status');
+    const openEl = document.getElementById('open');
+    const detailEl = document.getElementById('detail');
+
+    function cleanUrl(value) {
+      try {
+        const url = new URL(String(value || '').trim());
+        return url.protocol === 'https:' ? url.href : '';
+      } catch {
+        return '';
+      }
+    }
+
+    async function check() {
+      try {
+        const response = await fetch('./terminal-config.json?ts=' + Date.now(), { cache: 'no-store' });
+        const config = response.ok ? await response.json() : null;
+        const terminalUrl = cleanUrl(config && config.terminalUrl);
+        if (terminalUrl) {
+          statusEl.textContent = 'Terminal je povezan. Odpiram varno prijavo …';
+          statusEl.classList.remove('bad');
+          openEl.href = terminalUrl;
+          openEl.hidden = false;
+          detailEl.textContent = 'Če preusmeritev ne steče samodejno, klikni Prijava.';
+          setTimeout(() => window.location.replace(terminalUrl), 700);
+          return true;
+        }
+        statusEl.textContent = 'Terminal je objavljen v kodi, produkcijski URL pa še ni vpisan.';
+        statusEl.classList.add('bad');
+        detailEl.textContent = 'Ko je Cloudflare workers.dev URL dodan v terminal-config.json, bo gumb Prijava samodejno odprl Cloudflare Access.';
+      } catch {
+        statusEl.textContent = 'Povezave s konfiguracijo trenutno ni mogoče preveriti.';
+        statusEl.classList.add('bad');
+      }
+      return false;
+    }
+
+    check().then((ready) => {
+      if (!ready) setInterval(check, 5000);
+    });
+  </script>
+</body>
+</html>
