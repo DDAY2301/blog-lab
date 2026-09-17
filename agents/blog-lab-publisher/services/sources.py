@@ -3,10 +3,11 @@ import hashlib
 from html import unescape
 import re
 import time
+from urllib.parse import quote_plus
 from urllib.request import Request, urlopen
 from xml.etree import ElementTree as ET
 
-USER_AGENT = "BlogLabPublisher/2.0 (+https://github.com/DDAY2301/blog-lab)"
+USER_AGENT = "BlogLabPublisher/2.1 (+https://github.com/DDAY2301/blog-lab)"
 
 def _text(node, names):
     for name in names:
@@ -77,11 +78,30 @@ def collect(sources: list[dict], category: str, max_items: int = 30) -> list[dic
             out.extend(fetch_feed(source))
         except Exception as exc:
             print(f"WARN source={source.get('url')} error={exc}")
+    return _dedupe(out)[:max_items]
+
+def collect_topic(topic: str, category: str, max_items: int = 30) -> list[dict]:
+    query = quote_plus((topic or "").strip())
+    if not query:
+        return []
+    source = {
+        "name": f"Google News – {category}",
+        "category": category,
+        "url": f"https://news.google.com/rss/search?q={query}&hl=sl&gl=SI&ceid=SI:sl",
+        "type": "rss",
+    }
+    try:
+        return _dedupe(fetch_feed(source))[:max_items]
+    except Exception as exc:
+        print(f"WARN topic source error={exc}")
+        return []
+
+def _dedupe(items: list[dict]) -> list[dict]:
     seen = set()
     unique = []
-    for item in out:
+    for item in items:
         if item["hash"] in seen:
             continue
         seen.add(item["hash"])
         unique.append(item)
-    return unique[:max_items]
+    return unique
