@@ -1,7 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "blog-lab-private-terminal",
-  "main": "src/index.js",
+  "main": "terminal/worker/src/index.js",
   "compatibility_date": "2026-09-17",
   "observability": { "enabled": true }
 }
