@@ -431,3 +431,37 @@ footer {
     transition: none !important;
   }
 }
+
+/* Blog Lab managed theme:start */
+:root {
+  --ink: #243447;
+  --muted: #65798d;
+  --paper: #eef5fb;
+  --white: #fbfdff;
+  --line: #cbdbea;
+  --green: #7fa9d1;
+  --green-dark: #527fa8;
+  --mint: #dbeaf7;
+  --orange: #a9c8e5;
+  --shadow: 0 16px 48px rgba(56,86,116,.10);
+}
+body {
+  background:
+    radial-gradient(circle at 10% 5%, #dbeaf788, transparent 32rem),
+    linear-gradient(180deg, #eef5fb 0%, #f8fbfe 100%);
+}
+.site-header { background: rgba(242,248,253,.84); }
+.hero {
+  background:
+    radial-gradient(circle at 82% 22%, #dbeaf7 0 14%, transparent 36%),
+    linear-gradient(135deg, #e4f0fa 0%, #f7fbff 100%);
+}
+.hero::after { border-color: #7fa9d122; }
+.hero::before { background: radial-gradient(circle, #7fa9d122, transparent 68%); }
+.card-art { background: linear-gradient(145deg, #dbeaf7, #a9c8e555); }
+.card-art::after { border-color: #7fa9d122; }
+.article-category, .status-pill.published { background: #dbeaf7; }
+.agent-note { background: #dbeaf7; }
+.live-pulse { background: rgba(242,248,253,.84); }
+footer { background: rgba(242,248,253,.84); }
+/* Blog Lab managed theme:end */
