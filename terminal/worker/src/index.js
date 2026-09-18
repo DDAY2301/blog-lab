@@ -229,10 +229,21 @@ export default {
 
     if (request.method === "GET" && url.pathname === "/health") {
       const state = setupState(env);
-      const authReady =
-        loginPassword(env, "dan.grmusa@gmail.com").length >= 8 &&
-        loginPassword(env, "maj@klemenc.org").length >= 8;
-      return json({ ok: true, worker: "blog-lab", version: "auth-v3-cross-device", ready: state.ready, auth_ready: authReady, auth_mode: "built-in-session", free_tier_compatible: true });
+      const userReadiness = [
+        loginPassword(env, "dan.grmusa@gmail.com").length >= 8,
+        loginPassword(env, "maj@klemenc.org").length >= 8
+      ];
+      const authReady = userReadiness.every(Boolean);
+      return json({
+        ok: true,
+        worker: "blog-lab",
+        version: "auth-v3-cross-device",
+        ready: state.ready,
+        auth_ready: authReady,
+        authorized_users_ready: userReadiness.filter(Boolean).length,
+        auth_mode: "built-in-session",
+        free_tier_compatible: true
+      });
     }
 
     if (request.method === "POST" && url.pathname === "/api/login") {
