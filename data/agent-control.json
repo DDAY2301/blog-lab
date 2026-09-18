@@ -1,4 +1,22 @@
 {
   "enabled": true,
-  "publish_mode": "automatic"
+  "publish_mode": "automatic",
+  "schedule_profile": "default-3x-daily",
+  "schedule": {
+    "timezone": "Europe/Ljubljana",
+    "slots": [
+      {
+        "time": "08:17",
+        "category": "sport"
+      },
+      {
+        "time": "13:27",
+        "category": "politika"
+      },
+      {
+        "time": "19:43",
+        "category": "aktualno"
+      }
+    ]
+  }
 }
