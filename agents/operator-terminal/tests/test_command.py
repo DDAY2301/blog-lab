@@ -622,3 +622,59 @@ def test_main_accepts_exactly_4000_chars(tmp_path, monkeypatch):
     monkeypatch.setattr(sys, "argv", ["command.py", "--command-file", str(path)])
     assert cmd.main() == 0
     assert calls == [command]
+
+
+def test_pastel_blue_theme_command(tmp_path, monkeypatch):
+    monkeypatch.setattr(cmd, "BASE", tmp_path)
+    css = tmp_path / "src/styles.css"
+    css.parent.mkdir(parents=True)
+    css.write_text(":root { --green: #176b45; }", encoding="utf-8")
+    text = "spremeni celotno stran v drugačen barvni spekter pastel modra recimo"
+    assert cmd.infer_mode(text) == "site"
+    assert cmd.builtin_site_command(text) is True
+    value = css.read_text(encoding="utf-8")
+    assert cmd.THEME_START in value
+    assert "#7fa9d1" in value
+    assert "theme=pastel-blue" not in value
+
+
+def test_theme_replaces_previous_theme(tmp_path, monkeypatch):
+    monkeypatch.setattr(cmd, "BASE", tmp_path)
+    css = tmp_path / "src/styles.css"
+    css.parent.mkdir(parents=True)
+    css.write_text("body{}", encoding="utf-8")
+    assert cmd.apply_theme("pastel-blue") is True
+    assert cmd.apply_theme("pink") is True
+    value = css.read_text(encoding="utf-8")
+    assert value.count(cmd.THEME_START) == 1
+    assert "#c887a4" in value
+    assert "#7fa9d1" not in value
+
+
+@pytest.mark.parametrize(("text", "theme"), [
+    ("spremeni barve strani v modro", "blue"),
+    ("nastavi barvno temo zeleno", "green"),
+    ("spremeni paleto v roza", "pink"),
+    ("tema strani naj bo pastel vijolična", "lilac"),
+    ("nastavi barve strani v bež", "beige"),
+    ("spremeni temo strani v temno", "dark"),
+])
+def test_theme_variants(tmp_path, monkeypatch, text, theme):
+    monkeypatch.setattr(cmd, "BASE", tmp_path)
+    css = tmp_path / "src/styles.css"
+    css.parent.mkdir(parents=True)
+    css.write_text("body{}", encoding="utf-8")
+    assert cmd.builtin_site_command(text) is True
+    value = css.read_text(encoding="utf-8")
+    assert cmd.THEME_START in value
+    assert cmd._requested_theme(text.lower()) == theme
+
+
+def test_unknown_theme_is_explicitly_rejected(tmp_path, monkeypatch):
+    monkeypatch.setattr(cmd, "BASE", tmp_path)
+    css = tmp_path / "src/styles.css"
+    css.parent.mkdir(parents=True)
+    css.write_text("body{}", encoding="utf-8")
+    with pytest.raises(SystemExit) as exc:
+        cmd.builtin_site_command("spremeni barvno temo v koralno")
+    assert exc.value.code == 64
