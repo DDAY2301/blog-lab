@@ -65,8 +65,28 @@ jobs:
           pytest -q agents/operator-terminal/tests agents/blog-lab-publisher/tests
       - name: Decrypt private command
         run: python agents/operator-terminal/decrypt.py "$RUNNER_TEMP/operator-command.json"
-      - name: Execute private command
-        run: python agents/operator-terminal/command.py --command-file "$RUNNER_TEMP/operator-command.json"
+      - name: Execute private command with bounded recovery
+        shell: bash
+        run: |
+          set -u
+          for attempt in 1 2 3; do
+            echo "Operator attempt $attempt/3"
+            if python agents/operator-terminal/command.py --command-file "$RUNNER_TEMP/operator-command.json" \
+              && pytest -q agents/blog-lab-publisher/tests \
+              && npm run build; then
+              echo "Operator request validated on attempt $attempt."
+              exit 0
+            fi
+            if [[ "$attempt" -ge 3 ]]; then
+              echo "::error::Operator request failed after 3 validated attempts."
+              exit 1
+            fi
+            echo "::warning::Attempt $attempt failed; restoring clean repository state and retrying."
+            git restore --staged --worktree .
+            git clean -fd -e node_modules/
+            sleep $((attempt * 4))
+          done
+
       - name: Clean runner-only Python bytecode
         shell: bash
         run: |
@@ -85,10 +105,6 @@ jobs:
             printf '%s\n' "$CHANGED"
             exit 1
           fi
-      - name: Validate website and agent
-        run: |
-          pytest -q agents/blog-lab-publisher/tests
-          npm run build
       - name: Ensure no obvious credentials were written
         shell: bash
         run: |
