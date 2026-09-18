@@ -17,8 +17,10 @@ VALID_MODES = {"auto", "article", "site", "control"}
 VALID_CATEGORIES = {"sport", "politika", "aktualno"}
 
 def read_json(path: Path, default):
-    try: return json.loads(path.read_text(encoding="utf-8"))
-    except FileNotFoundError: return default
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except (FileNotFoundError, json.JSONDecodeError, OSError, TypeError):
+        return default
 
 def write_json(path: Path, data):
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -138,10 +140,29 @@ def _sha256(path: Path) -> str:
         return ""
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
+def _requested_rubric(command: str):
+    rubrics = read_json(RUBRICS, [])
+    if not isinstance(rubrics, list):
+        return None, command
+    for rubric in sorted(
+        [r for r in rubrics if isinstance(r, dict) and r.get("name")],
+        key=lambda item: len(str(item["name"])),
+        reverse=True,
+    ):
+        name = str(rubric["name"]).strip()
+        pattern = re.compile(r"\bv\s+(?:rubriki|kategoriji)\s+" + re.escape(name) + r"\b", re.I)
+        if pattern.search(command):
+            cleaned = " ".join(pattern.sub(" ", command).split())
+            return name, cleaned
+    return None, command
+
 def article_command(command: str, category: str) -> None:
     app = BASE / "src/App.jsx"
     before = _sha256(app)
-    cmd = [sys.executable, str(ARTICLE_AGENT), "--category", category, "--topic", command, "--force"]
+    output_category, topic_command = _requested_rubric(command)
+    cmd = [sys.executable, str(ARTICLE_AGENT), "--category", category, "--topic", topic_command, "--force"]
+    if output_category:
+        cmd.extend(["--output-category", output_category])
     result = subprocess.run(cmd, cwd=BASE, check=False)
     if result.returncode != 0:
         raise SystemExit(result.returncode)
