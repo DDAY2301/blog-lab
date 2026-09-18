@@ -56,6 +56,11 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - name: Sync latest main
+        shell: bash
+        run: |
+          git fetch origin main
+          git checkout -B main origin/main
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -131,7 +136,8 @@ jobs:
             exit 1
           fi
           git commit -m "Agent: publish $RUN_CATEGORY Blog Lab update"
-          git push
+          git pull --rebase origin main
+          git push origin HEAD:main
           echo "changed=true" >> "$GITHUB_OUTPUT"
       - name: Configure GitHub Pages
         if: ${{ steps.content.outputs.changed == 'true' && (github.event_name != 'workflow_dispatch' || inputs.dry_run == false) }}
