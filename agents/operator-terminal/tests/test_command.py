@@ -542,3 +542,22 @@ def test_more_design_phrases_are_builtin(tmp_path, monkeypatch, text):
     css.write_text("body{}")
     assert cmd.builtin_site_command(text) is True
     assert cmd.DESIGN_MARKER in css.read_text()
+
+
+@pytest.mark.parametrize("text", [
+    "Naj objavlja samodejno",
+    "Agent naj deluje avtomatsko",
+    "Preklopi v automatic mode",
+    "Naj dela samostojno objavljanje",
+])
+def test_publish_mode_phrases_route_to_control(text):
+    assert cmd.infer_mode(text) == "control"
+
+
+@pytest.mark.parametrize("text", [
+    "status",
+    "preveri status",
+    "preveri status agenta",
+])
+def test_generic_status_phrases_route_to_control(text):
+    assert cmd.infer_mode(text) == "control"
