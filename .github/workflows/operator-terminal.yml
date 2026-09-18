@@ -73,11 +73,19 @@ jobs:
           set -u
           for attempt in 1 2 3; do
             echo "Operator attempt $attempt/3"
-            if python agents/operator-terminal/command.py --command-file "$RUNNER_TEMP/operator-command.json" \
+            set +e
+            python agents/operator-terminal/command.py --command-file "$RUNNER_TEMP/operator-command.json"
+            COMMAND_RC=$?
+            set -e
+            if [[ "$COMMAND_RC" -eq 0 ]] \
               && pytest -q agents/blog-lab-publisher/tests \
               && npm run build; then
               echo "Operator request validated on attempt $attempt."
               exit 0
+            fi
+            if [[ "$COMMAND_RC" -eq 78 ]]; then
+              echo "::error::Copilot policy denied this non-built-in site edit. Not retrying a permanent policy error."
+              exit 78
             fi
             if [[ "$attempt" -ge 3 ]]; then
               echo "::error::Operator request failed after 3 validated attempts."
