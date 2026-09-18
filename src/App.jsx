@@ -1674,7 +1674,9 @@ export default function Home() {
       const stored = JSON.parse(localStorage.getItem(STORAGE_KEY) || "null");
       if (Array.isArray(stored) && stored.length) {
         const starterIds = new Set(starterArticles.map((article) => article.id));
-        const localOnlyArticles = stored.filter((article) => !starterIds.has(article.id));
+        const localOnlyArticles = stored
+          .filter((article) => !starterIds.has(article.id))
+          .map((article) => ({ ...article, localOnly: true }));
         setArticles([...starterArticles, ...localOnlyArticles]);
       } else {
         setArticles(starterArticles);
@@ -1797,6 +1799,7 @@ export default function Home() {
       excerpt: draft.excerpt.trim() || draft.content.replace(/^#+\s*/gm, "").trim().slice(0, 155),
       author: draft.author.trim() || "Uredništvo",
       status,
+      localOnly: true,
       createdAt: draft.createdAt || now,
       updatedAt: now
     });
@@ -1913,7 +1916,7 @@ export default function Home() {
       {view === "dashboard" && (
         <section className="dashboard container">
           <div className="page-title">
-            <div><span className="kicker">UREDNIK</span><h1>Vsi članki</h1><p>Upravljajte objave in osnutke na enem mestu.</p></div>
+            <div><span className="kicker">UREDNIK</span><h1>Vsi članki</h1><p>Trajne objave prihajajo iz GitHub repozitorija. Lokalni osnutki so označeni posebej.</p></div>
             <button className="primary" onClick={newArticle}>+ Nov članek</button>
           </div>
           <div className="stats">
@@ -1941,7 +1944,7 @@ export default function Home() {
                   <h3>{article.title}</h3>
                   <p>{article.excerpt}</p>
                 </div>
-                <span className={`status-pill ${article.status}`}>{article.status === "published" ? "Objavljeno" : "Osnutek"}</span>
+                <span className={`status-pill ${article.status}`}>{article.localOnly ? "Lokalno" : (article.status === "published" ? "Objavljeno" : "Osnutek")}</span>
                 <div className="row-actions">
                   {article.status === "published" && <button onClick={() => openArticle(article)}>Odpri</button>}
                   <button onClick={() => editArticle(article)}>Uredi</button>
