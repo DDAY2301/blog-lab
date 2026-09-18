@@ -1793,6 +1793,8 @@ function Icon({ name }) {
 
 export default function Home() {
   const [articles, setArticles] = useState([]);
+  const [rubrics, setRubrics] = useState([]);
+  const [publicCategory, setPublicCategory] = useState("");
   const [view, setView] = useState("home");
   const [draft, setDraft] = useState(emptyDraft());
   const [selectedId, setSelectedId] = useState("");
@@ -1824,6 +1826,21 @@ export default function Home() {
   useEffect(() => {
     if (ready) localStorage.setItem(STORAGE_KEY, JSON.stringify(articles));
   }, [articles, ready]);
+
+  useEffect(() => {
+    let active = true;
+    const base = import.meta.env.BASE_URL || "/";
+    fetch(`${base}site-rubrics.json?t=${Date.now()}`, { cache: "no-store" })
+      .then((response) => response.ok ? response.json() : [])
+      .then((data) => {
+        if (!active) return;
+        const items = Array.isArray(data) ? data : [];
+        setRubrics(items.filter((item) => item && typeof item.name === "string").slice(0, 12));
+      })
+      .catch(() => { if (active) setRubrics([]); });
+    return () => { active = false; };
+  }, []);
+
 
   useEffect(() => {
     if (!ready) return undefined;
@@ -1868,6 +1885,12 @@ export default function Home() {
     [articles]
   );
 
+  const visiblePublished = useMemo(() => {
+    if (!publicCategory) return published;
+    const target = publicCategory.trim().toLowerCase();
+    return published.filter((article) => String(article.category || "").trim().toLowerCase() === target);
+  }, [published, publicCategory]);
+
   const shownArticles = useMemo(() => {
     const normalized = query.trim().toLowerCase();
     return articles
@@ -1888,6 +1911,11 @@ export default function Home() {
     setView(nextView);
     setPreview(false);
     window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function showPublicCategory(name = "") {
+    setPublicCategory(name);
+    navigate("home");
   }
 
   function newArticle() {
@@ -1982,14 +2010,23 @@ export default function Home() {
   return (
     <main>
       <header className="site-header">
-        <button className="brand" onClick={() => navigate("home")} aria-label="Blog Lab – domov">
+        <button className="brand" onClick={() => showPublicCategory("")} aria-label="Blog Lab – domov">
           <span className="brand-mark">B</span>
           <span>Blog Lab</span>
         </button>
         <nav aria-label="Glavna navigacija">
-          <button className={view === "home" ? "active" : ""} onClick={() => navigate("home")}>
+          <button className={view === "home" && !publicCategory ? "active" : ""} onClick={() => showPublicCategory("")}>
             <Icon name="home" /> Objave
           </button>
+          {rubrics.map((rubric) => (
+            <button
+              key={rubric.slug || rubric.name}
+              className={view === "home" && publicCategory === rubric.name ? "active" : ""}
+              onClick={() => showPublicCategory(rubric.name)}
+            >
+              {rubric.name}
+            </button>
+          ))}
           <button className={view === "dashboard" ? "active" : ""} onClick={() => navigate("dashboard")}>
             <Icon name="file" /> Članki
           </button>
@@ -2013,13 +2050,13 @@ export default function Home() {
             <section className="feed">
             <div className="section-heading">
               <div>
-                <span className="kicker">ZADNJE OBJAVE</span>
-                <h2>Sveže iz uredništva</h2>
+                <span className="kicker">{publicCategory ? "RUBRIKA" : "ZADNJE OBJAVE"}</span>
+                <h2>{publicCategory || "Sveže iz uredništva"}</h2>
               </div>
-              <span className="count">{published.length} {published.length === 1 ? "objava" : "objav"}</span>
+              <span className="count">{visiblePublished.length} {visiblePublished.length === 1 ? "objava" : "objav"}</span>
             </div>
             <div className="post-grid">
-              {published.length ? published.slice(0, 6).map((article, index) => (
+              {visiblePublished.length ? visiblePublished.slice(0, 12).map((article, index) => (
                 <a
                   className={`post-card ${index === 0 ? "featured" : ""}`}
                   href={`?article=${encodeURIComponent(article.id)}`}
@@ -2039,8 +2076,8 @@ export default function Home() {
                 </a>
               )) : (
                 <div className="empty-state">
-                  <h3>Še ni objavljenih člankov.</h3>
-                  <p>Ustvarite članek in ga objavite — prikazal se bo tukaj.</p>
+                  <h3>{publicCategory ? `V rubriki ${publicCategory} še ni objav.` : "Še ni objavljenih člankov."}</h3>
+                  <p>{publicCategory ? "Ko bo objavljen članek v tej kategoriji, se bo prikazal tukaj." : "Ustvarite članek in ga objavite — prikazal se bo tukaj."}</p>
                   <button className="secondary" onClick={newArticle}>Ustvari članek</button>
                 </div>
               )}
