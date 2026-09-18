@@ -81,18 +81,15 @@ function setupState(env) {
 }
 
 async function deriveSessionKey(env) {
-  const raw = fromB64(env.TERMINAL_COMMAND_KEY || "");
-  if (raw.length !== 32) throw new Error("TERMINAL_COMMAND_KEY must be base64 for 32 bytes");
-  const material = await crypto.subtle.importKey("raw", raw, "HKDF", false, ["deriveKey"]);
-  return crypto.subtle.deriveKey(
-    {
-      name: "HKDF",
-      hash: "SHA-256",
-      salt: new TextEncoder().encode("blog-lab-session-salt-v1"),
-      info: new TextEncoder().encode("blog-lab-private-terminal-session-v1")
-    },
-    material,
-    { name: "HMAC", hash: "SHA-256", length: 256 },
+  const dan = String(env.DAN_LOGIN_PASSWORD || "");
+  const maj = String(env.MAJ_LOGIN_PASSWORD || "");
+  if (dan.length < 8 || maj.length < 8) throw new Error("Login passwords are not configured");
+  const seed = new TextEncoder().encode(`blog-lab-session-v2\n${dan}\n${maj}`);
+  const digest = new Uint8Array(await crypto.subtle.digest("SHA-256", seed));
+  return crypto.subtle.importKey(
+    "raw",
+    digest,
+    { name: "HMAC", hash: "SHA-256" },
     false,
     ["sign", "verify"]
   );
@@ -209,7 +206,8 @@ export default {
 
     if (request.method === "GET" && url.pathname === "/health") {
       const state = setupState(env);
-      return json({ ok: true, worker: "blog-lab", ready: state.ready, auth_mode: "built-in-session", free_tier_compatible: true });
+      const authReady = String(env.DAN_LOGIN_PASSWORD || "").length >= 8 && String(env.MAJ_LOGIN_PASSWORD || "").length >= 8;
+      return json({ ok: true, worker: "blog-lab", ready: state.ready, auth_ready: authReady, auth_mode: "built-in-session", free_tier_compatible: true });
     }
 
     if (request.method === "POST" && url.pathname === "/api/login") {
