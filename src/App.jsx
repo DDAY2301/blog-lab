@@ -17,6 +17,37 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    id: "blog-lab-system-test-persistent",
+    title: "Testni članek Blog Lab: trajna objava na vseh napravah",
+    excerpt: "Trajna testna objava za preverjanje, da javni Blog Lab, zasebni terminal in repo-backed objave delujejo enako na vseh napravah.",
+    seoDescription: "Trajni sistemski test Blog Lab za preverjanje objav na vseh napravah.",
+    content: `Ta članek je **trajni produkcijski test** sistema Blog Lab. Za razliko od lokalnega osnutka je zapisan neposredno v GitHub repozitorij, zato mora biti viden enako na vsakem računalniku in telefonu.
+
+## Kaj preverja ta objava?
+
+- da javna stran naloži repo-backed članke;
+- da objava ni odvisna od localStorage posameznega brskalnika;
+- da povezava do članka deluje neposredno;
+- da je novi multimedia renderer združljiv tudi s članki brez fotografije ali videa.
+
+## Kako bomo uporabljali test?
+
+Ko agent iz terminala uspešno objavi nov članek, mora ta postati enako trajen kot ta objava. Lokalni uredniški osnutki se lahko še vedno uporabljajo za preizkus, vendar se na javni naslovnici ne obravnavajo več kot trajne produkcijske objave.
+
+## Stanje
+
+Če ta članek vidiš na več napravah, repo-backed prikaz deluje pravilno.`,
+    category: "Aktualno",
+    author: "Blog Lab",
+    status: "published",
+    heroImage: null,
+    video: null,
+    gallery: [],
+    sources: [],
+    createdAt: "2026-09-18T12:57:00+02:00",
+    updatedAt: "2026-09-18T12:57:00+02:00"
+  },
+  {
     id: "smarna-gora-hike-ljubljana-guide",
     title: "Hiking Šmarna Gora: Ljubljana’s Car-Free Hill Escape",
     excerpt: "Plan a short hike from Ljubljana to Šmarna Gora using city buses, a standard marked route and practical safety advice for steep, muddy or crowded trails.",
@@ -1730,7 +1761,7 @@ export default function Home() {
   }, [toast]);
 
   const published = useMemo(
-    () => articles.filter((article) => article.status === "published"),
+    () => articles.filter((article) => article.status === "published" && !article.localOnly),
     [articles]
   );
 
