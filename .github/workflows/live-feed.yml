@@ -1,6 +1,12 @@
 name: Blog Lab Live Pulse
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - "agents/live-feed/**"
+      - "src/LivePulse.jsx"
+      - ".github/workflows/live-feed.yml"
   schedule:
     - cron: "*/30 * * * *"
   workflow_dispatch:
