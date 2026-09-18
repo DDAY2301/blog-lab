@@ -257,13 +257,10 @@ THEME_START = "/* Blog Lab managed theme:start */"
 THEME_END = "/* Blog Lab managed theme:end */"
 
 def _theme_intent(low: str) -> bool:
-    terms = [
-        "barvni spekter", "barvna tema", "barve strani", "barvo strani",
-        "spremeni barve", "spremeni barv", "tema strani", "palette", "paleta",
-        "pastel modr", "pastelno modr", "pastel zelen", "pastel roza",
-        "pastel vijoli", "temna tema", "dark theme",
-    ]
-    return any(term in low for term in terms)
+    # Use Slovene word stems so inflections such as "barvno temo",
+    # "paleto" and "temo strani" are handled deterministically.
+    structural = any(stem in low for stem in ["barv", "tema", "temo", "palet", "spekter", "theme"])
+    return structural
 
 def _requested_theme(low: str):
     if ("pastel" in low and ("modr" in low or "blue" in low)) or "pastelno modr" in low:
