@@ -29,10 +29,34 @@ def write_json(path: Path, data):
     tmp.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     tmp.replace(path)
 
+def _requested_daily_count(low: str):
+    match = re.search(r"\b(\d+)\s*(?:x|krat)\s+na\s+dan\b", low)
+    if match:
+        return int(match.group(1))
+    words = {
+        "enkrat na dan": 1,
+        "en krat na dan": 1,
+        "dvakrat na dan": 2,
+        "dva krat na dan": 2,
+        "trikrat na dan": 3,
+        "tri krat na dan": 3,
+        "štirikrat na dan": 4,
+        "stirikrat na dan": 4,
+        "štiri krat na dan": 4,
+        "stiri krat na dan": 4,
+    }
+    for phrase, count in words.items():
+        if phrase in low:
+            return count
+    return None
+
 def _schedule_intent(low: str) -> bool:
     schedule_terms = [
-        "urnik",
-        "trikrat na dan", "tri krat na dan", "3x na dan", "3 x na dan", "3 krat na dan",
+        "urnik", "vsako uro", "na vsako uro",
+        "enkrat na dan", "en krat na dan", "dvakrat na dan", "dva krat na dan",
+        "trikrat na dan", "tri krat na dan", "štirikrat na dan", "stirikrat na dan",
+        "štiri krat na dan", "stiri krat na dan", "1x na dan", "2x na dan", "3x na dan", "4x na dan",
+        "1 x na dan", "2 x na dan", "3 x na dan", "4 x na dan",
         "samostojna objava", "samodejna objava", "avtomatska objava",
         "samostojno objavljanje", "samodejno objavljanje", "avtomatsko objavljanje",
     ]
@@ -106,7 +130,21 @@ def control_command(command: str) -> None:
     ctl = read_json(CONTROL, {"enabled": True, "publish_mode": "automatic"})
     low = command.lower()
     schedule_requested = _schedule_intent(low)
+    requested_daily_count = _requested_daily_count(low)
     explicit_times = _explicit_schedule_times(low)
+    if requested_daily_count is not None and requested_daily_count != 3:
+        print(
+            f"CONTROL_UNSUPPORTED requested {requested_daily_count} objav na dan. "
+            "Trenutni preverjeni scheduler podpira 3 objave na dan ob 08:17 / 13:27 / 19:43.",
+            file=sys.stderr,
+        )
+        raise SystemExit(64)
+    if "vsako uro" in low or "na vsako uro" in low:
+        print(
+            "CONTROL_UNSUPPORTED urni scheduler ni omogočen; podprt je 3x-dnevni urnik.",
+            file=sys.stderr,
+        )
+        raise SystemExit(64)
     if _status_intent(low):
         schedule = ctl.get("schedule") or {
             "timezone": "Europe/Ljubljana",
@@ -214,6 +252,8 @@ def _design_intent(low: str) -> bool:
         "lepši izgled", "lepsi izgled", "modernizir", "modern design",
         "izgled strani", "design strani", "dizajn strani",
         "uredi izgled", "izboljšaj stran", "izboljsaj stran",
+        "naredi stran lepšo", "naredi stran lepso", "lepša stran", "lepsa stran",
+        "profesionalen izgled", "profesionalni izgled", "premium izgled",
     ]
     return any(term in low for term in design_terms)
 
@@ -353,7 +393,7 @@ def _rubric_slug(value: str) -> str:
 def _rubric_request(command: str):
     text = " ".join(str(command or "").strip().split())
     add = re.match(
-        r"^(?:dodaj|ustvari)\s+(?:novo\s+|novo\s+spletno\s+)?(?:rubriko|stran|kategorijo|zavihek|tab)\s+(.+?)"
+        r"^(?:dodaj|ustvari|objavi|naredi|kreiraj)\s+(?:novo\s+|novo\s+spletno\s+)?(?:rubriko|stran|kategorijo|zavihek|tab)\s+(.+?)"
         r"(?:\s+(?:v|na)\s+(?:meni|navigacijo|header|glavni\s+meni))?[.!?]?$",
         text,
         flags=re.I,
