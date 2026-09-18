@@ -55,10 +55,13 @@ def _article_intent(low: str) -> bool:
 
 def infer_mode(command: str) -> str:
     low = command.lower()
-    if (
-        any(x in low for x in ["ustavi", "pavza", "zaustavi", "nadaljuj", "vklopi", "izklopi", "resume", "pause"])
-        or _schedule_intent(low)
-    ):
+    control_terms = [
+        "ustavi", "pavza", "zaustavi", "nadaljuj", "vklopi", "izklopi", "resume", "pause",
+        "začni", "zacni", "zaženi", "zazeni", "aktiviraj", "deaktiviraj", "restart",
+        "draft", "osnutek", "osnut", "review",
+    ]
+    review_mode = ("preklopi" in low or "način" in low or "mode" in low) and "pregled" in low
+    if any(x in low for x in control_terms) or review_mode or _schedule_intent(low):
         return "control"
     if _article_intent(low):
         return "article"
@@ -96,9 +99,9 @@ def control_command(command: str) -> None:
         )
         raise SystemExit(64)
 
-    if any(x in low for x in ["ustavi", "zaustavi", "izklopi", "pause", "pavza"]):
+    if any(x in low for x in ["ustavi", "zaustavi", "izklopi", "pause", "pavza", "deaktiviraj"]):
         ctl["enabled"] = False
-    elif any(x in low for x in ["nadaljuj", "vklopi", "resume", "začni", "zacni"]) or schedule_requested:
+    elif any(x in low for x in ["nadaljuj", "vklopi", "resume", "začni", "zacni", "zaženi", "zazeni", "aktiviraj", "restart"]) or schedule_requested:
         ctl["enabled"] = True
 
     if "draft" in low or "osnut" in low:
