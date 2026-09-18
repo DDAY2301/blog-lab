@@ -1,5 +1,6 @@
 from __future__ import annotations
 import base64
+import json
 import os
 import sys
 from pathlib import Path
@@ -13,6 +14,14 @@ def main() -> int:
     if len(sys.argv) != 2:
         raise SystemExit("output path required")
     payload = os.environ.get("TERMINAL_PAYLOAD", "")
+    if not payload:
+        event_path = os.environ.get("GITHUB_EVENT_PATH", "")
+        if event_path:
+            try:
+                event = json.loads(Path(event_path).read_text(encoding="utf-8"))
+                payload = str(event.get("inputs", {}).get("payload", ""))
+            except Exception:
+                payload = ""
     key_text = os.environ.get("TERMINAL_COMMAND_KEY", "")
     if not payload or not key_text:
         raise SystemExit("terminal encryption configuration missing")
