@@ -113,21 +113,61 @@ def collect(sources: list[dict], category: str, max_items: int = 30) -> list[dic
             print(f"WARN source={source.get('url')} error={exc}")
     return _dedupe(out)[:max_items]
 
-def collect_topic(topic: str, category: str, max_items: int = 30) -> list[dict]:
-    query = quote_plus((topic or "").strip())
-    if not query:
+def _topic_queries(topic: str) -> list[str]:
+    text = _clean(topic or "")
+    text = re.sub(r"https://\S+", " ", text)
+    text = re.sub(r"\[naložena slika:[^\]]+\]", " ", text, flags=re.I)
+    text = " ".join(text.split()).strip(" .,:;!?")
+    if not text:
         return []
-    source = {
-        "name": f"Google News – {category}",
-        "category": category,
-        "url": f"https://news.google.com/rss/search?q={query}&hl=sl&gl=SI&ceid=SI:sl",
-        "type": "rss",
+
+    candidates = [text]
+
+    # Natural editorial prompts often contain two useful topic clauses joined by "in".
+    parts = [p.strip(" .,:;!?") for p in re.split(r"\s+(?:in|ter)\s+", text, flags=re.I) if len(p.strip()) >= 8]
+    candidates.extend(parts[:3])
+
+    stop = {
+        "objavi", "objava", "članek", "clanek", "napiši", "napisi", "prispevek",
+        "dodaj", "prosim", "lahko", "naj", "bodi", "naredi", "sedaj", "zdaj",
+        "kjer", "kako", "kam", "nekaj", "zelo", "tudi", "samo", "stran",
     }
-    try:
-        return _dedupe(fetch_feed(source))[:max_items]
-    except Exception as exc:
-        print(f"WARN topic source error={exc}")
+    words = [
+        w for w in re.findall(r"[A-Za-zČŠŽčšžĆćĐđ0-9-]+", text)
+        if len(w) >= 4 and w.lower() not in stop
+    ]
+    if words:
+        candidates.append(" ".join(words[:7]))
+        candidates.append(" ".join(words[:4]))
+
+    out = []
+    seen = set()
+    for candidate in candidates:
+        key = candidate.lower()
+        if candidate and key not in seen:
+            seen.add(key)
+            out.append(candidate)
+    return out[:6]
+
+def collect_topic(topic: str, category: str, max_items: int = 30) -> list[dict]:
+    queries = _topic_queries(topic)
+    if not queries:
         return []
+    out = []
+    for query_text in queries:
+        source = {
+            "name": f"Google News – {category} – {query_text[:60]}",
+            "category": category,
+            "url": f"https://news.google.com/rss/search?q={quote_plus(query_text)}&hl=sl&gl=SI&ceid=SI:sl",
+            "type": "rss",
+        }
+        try:
+            out.extend(fetch_feed(source))
+        except Exception as exc:
+            print(f"WARN topic source query={query_text!r} error={exc}")
+        if len(_dedupe(out)) >= max_items:
+            break
+    return _dedupe(out)[:max_items]
 
 def _dedupe(items: list[dict]) -> list[dict]:
     seen = set()
