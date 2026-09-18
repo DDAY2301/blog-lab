@@ -72,11 +72,14 @@ jobs:
             cat "$RUNNER_TEMP/vite-preview.log"
             exit 1
           }
-          grep -Fq 'TEKOČE' "$RUNNER_TEMP/rendered-dom.html" || {
-            echo "::error::LivePulse did not render in the browser."
-            cat "$RUNNER_TEMP/vite-preview.log"
-            exit 1
-          }
+          SHOW_LIVE="$(node -e "const fs=require('fs'); const x=JSON.parse(fs.readFileSync('public/site-settings.json','utf8')); process.stdout.write(String(x.showLivePulse !== false))")"
+          if [[ "$SHOW_LIVE" == "true" ]]; then
+            grep -Fq 'TEKOČE' "$RUNNER_TEMP/rendered-dom.html" || {
+              echo "::error::LivePulse is enabled but did not render in the browser."
+              cat "$RUNNER_TEMP/vite-preview.log"
+              exit 1
+            }
+          fi
       - name: Parse Worker embedded browser JavaScript
         run: node scripts/test-worker-browser-js.mjs
       - name: Test Worker auth on a fresh device
