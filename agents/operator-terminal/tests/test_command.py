@@ -254,3 +254,38 @@ def test_template_design_stays_site(text):
 ])
 def test_additional_control_synonyms(text):
     assert infer_mode(text) == "control"
+
+
+def test_requested_rubric_is_removed_from_search_topic(tmp_path, monkeypatch):
+    rubrics = tmp_path / "site-rubrics.json"
+    rubrics.write_text(json.dumps([{"name": "Projekti", "slug": "projekti"}]), encoding="utf-8")
+    monkeypatch.setattr(command_module, "RUBRICS", rubrics)
+    rubric, cleaned = command_module._requested_rubric(
+        "Objavi članek o mladinskem projektu v rubriki Projekti"
+    )
+    assert rubric == "Projekti"
+    assert "rubriki Projekti" not in cleaned
+    assert "mladinskem projektu" in cleaned
+
+
+def test_article_command_passes_output_rubric(tmp_path, monkeypatch):
+    src = tmp_path / "src"
+    src.mkdir()
+    app = src / "App.jsx"
+    app.write_text("before", encoding="utf-8")
+    rubrics = tmp_path / "site-rubrics.json"
+    rubrics.write_text(json.dumps([{"name": "Projekti", "slug": "projekti"}]), encoding="utf-8")
+    monkeypatch.setattr(command_module, "BASE", tmp_path)
+    monkeypatch.setattr(command_module, "RUBRICS", rubrics)
+    monkeypatch.setattr(command_module, "ARTICLE_AGENT", tmp_path / "fake-agent.py")
+    captured = {}
+
+    def fake_run(args, **kwargs):
+        captured["args"] = args
+        app.write_text("after", encoding="utf-8")
+        return SimpleNamespace(returncode=0)
+
+    monkeypatch.setattr(command_module.subprocess, "run", fake_run)
+    command_module.article_command("Objavi članek o projektu v rubriki Projekti", "aktualno")
+    assert "--output-category" in captured["args"]
+    assert captured["args"][captured["args"].index("--output-category") + 1] == "Projekti"
