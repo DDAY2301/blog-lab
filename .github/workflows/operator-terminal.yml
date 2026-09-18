@@ -31,7 +31,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     env:
-      TERMINAL_PAYLOAD: ${{ inputs.payload }}
       TERMINAL_COMMAND_KEY: ${{ secrets.TERMINAL_COMMAND_KEY }}
       GITHUB_TOKEN: ${{ github.token }}
       COPILOT_GITHUB_TOKEN: ${{ secrets.COPILOT_GITHUB_TOKEN }}
