@@ -7,7 +7,7 @@ const terminalKey = Buffer.from(terminalKeyBytes).toString("base64");
 
 const env = {
   DAN_LOGIN_PASSWORD: sharedPassword,
-  MAJ_LOGIN_PASSWORD: "",
+  MAJ_LOGIN_PASSWORD: "intentionally-wrong-secondary-secret",
   TERMINAL_COMMAND_KEY: terminalKey,
   GITHUB_DISPATCH_TOKEN: "test-token"
 };
