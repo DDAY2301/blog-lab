@@ -51,6 +51,8 @@ def _requested_daily_count(low: str):
     return None
 
 def _schedule_intent(low: str) -> bool:
+    if _requested_daily_count(low) is not None:
+        return True
     schedule_terms = [
         "urnik", "vsako uro", "na vsako uro",
         "enkrat na dan", "en krat na dan", "dvakrat na dan", "dva krat na dan",
