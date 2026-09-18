@@ -7,7 +7,6 @@ PUBLISHER = (ROOT / ".github/workflows/agent-blog-lab-publisher.yml").read_text(
 
 def test_operator_workflow_does_not_expose_terminal_payload_env():
     assert "      TERMINAL_PAYLOAD:" not in OPERATOR
-    assert "GITHUB_EVENT_PATH" not in OPERATOR or True  # decrypt.py reads the runner-provided event path
 
 
 def test_operator_staging_handles_optional_paths_safely():
@@ -27,3 +26,12 @@ def test_publisher_staging_handles_optional_paths_safely():
 def test_permanent_operator_errors_do_not_retry():
     assert 'if [[ "$COMMAND_RC" -eq 78 ]]' in OPERATOR
     assert 'if [[ "$COMMAND_RC" -eq 64 ]]' in OPERATOR
+
+
+def test_operator_and_publisher_sync_with_latest_main():
+    for workflow in (OPERATOR, PUBLISHER):
+        assert "name: Sync latest main" in workflow
+        assert "git fetch origin main" in workflow
+        assert "git checkout -B main origin/main" in workflow
+        assert "git pull --rebase origin main" in workflow
+        assert "git push origin HEAD:main" in workflow
