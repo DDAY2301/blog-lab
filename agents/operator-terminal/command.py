@@ -85,10 +85,16 @@ def _article_intent(low: str) -> bool:
         return True
     return "napiši o" in low or "napisi o" in low
 
+def _publish_mode_intent(low: str) -> bool:
+    mode_word = any(term in low for term in ["automatic", "avtomats", "samodejn", "samostojn"])
+    context = any(term in low for term in ["objav", "agent", "način", "nacin", "mode", "deluje", "dela"])
+    return mode_word and context
+
 def _status_intent(low: str) -> bool:
     status_terms = [
         "status agenta", "stanje agenta", "status objavljanja", "stanje objavljanja",
         "ali agent dela", "ali agent deluje", "kaj dela agent", "preveri agenta",
+        "preveri status", "status",
     ]
     return any(term in low for term in status_terms)
 
@@ -102,7 +108,7 @@ def infer_mode(command: str) -> str:
         "draft", "osnutek", "osnut", "review",
     ]
     review_mode = ("preklopi" in low or "način" in low or "mode" in low) and "pregled" in low
-    if any(x in low for x in control_terms) or review_mode or _schedule_intent(low) or _status_intent(low):
+    if any(x in low for x in control_terms) or review_mode or _publish_mode_intent(low) or _schedule_intent(low) or _status_intent(low):
         return "control"
     if _article_intent(low):
         return "article"
