@@ -54,6 +54,9 @@ def main():
     set_status(cfg, state, "collecting", f"Pridobivanje virov: {args.category}.")
     if args.topic.strip():
         items = collect_topic(args.topic, args.category, int(cfg.get("max_source_items", 30)))
+        if not items:
+            print("INFO topic search returned no items; falling back to category sources")
+            items = collect(cfg.get("input_sources", []), args.category, int(cfg.get("max_source_items", 30)))
     else:
         items = collect(cfg.get("input_sources", []), args.category, int(cfg.get("max_source_items", 30)))
     seen = {x.get("hash") for x in processed}; fresh = [x for x in items if x.get("hash") not in seen]
