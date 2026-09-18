@@ -289,3 +289,44 @@ def test_article_command_passes_output_rubric(tmp_path, monkeypatch):
     command_module.article_command("Objavi članek o projektu v rubriki Projekti", "aktualno")
     assert "--output-category" in captured["args"]
     assert captured["args"][captured["args"].index("--output-category") + 1] == "Projekti"
+
+
+@pytest.mark.parametrize("text", [
+    "Napiši blog o današnji tekmi",
+    "Pripravi objavo o dogodku",
+    "Objavi post o tehnologiji",
+])
+def test_article_synonyms(text):
+    assert infer_mode(text) == "article"
+
+
+@pytest.mark.parametrize("command_text, expected", [
+    ("Dodaj kategorijo Projekti", "Projekti"),
+    ("Dodaj zavihek Partnerji", "Partnerji"),
+    ("Dodaj tab Novosti", "Novosti"),
+])
+def test_rubric_synonyms(tmp_path, monkeypatch, command_text, expected):
+    rubrics = tmp_path / "site-rubrics.json"
+    rubrics.write_text("[]\n", encoding="utf-8")
+    monkeypatch.setattr(command_module, "RUBRICS", rubrics)
+    assert command_module.builtin_site_command(command_text) is True
+    assert json.loads(rubrics.read_text(encoding="utf-8"))[0]["name"] == expected
+
+
+@pytest.mark.parametrize("text", [
+    "dodaj mini novice na 30 minut",
+    "osvežuj aktualne novice vsake pol ure",
+    "tekoče novice 30 min",
+])
+def test_live_pulse_synonyms(tmp_path, monkeypatch, text):
+    for rel in [
+        "src/LivePulse.jsx",
+        "agents/live-feed/update.py",
+        ".github/workflows/live-feed.yml",
+        "public/live-feed.json",
+    ]:
+        path = tmp_path / rel
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text("ok", encoding="utf-8")
+    monkeypatch.setattr(command_module, "BASE", tmp_path)
+    assert command_module.builtin_site_command(text) is True
