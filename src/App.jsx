@@ -1,6 +1,16 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import {
+  ArticleGallery,
+  ArticleHero,
+  ArticleSources,
+  ArticleVideo,
+  InlineArticleMedia,
+  MediaEditorFields,
+  isInlineMediaLine,
+  normalizeArticleMedia
+} from "./ArticleMedia";
 
 const STORAGE_KEY = "blog-lab-articles-v1";
 const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mnenja", "Vodniki", "Drugo"];
@@ -1516,6 +1526,10 @@ const emptyDraft = () => ({
   category: "Novice",
   author: "",
   status: "draft",
+  heroImage: null,
+  video: null,
+  gallery: [],
+  sources: [],
   createdAt: "",
   updatedAt: ""
 });
@@ -1579,6 +1593,11 @@ function ArticleBody({ content }) {
 
   for (let index = 0; index < lines.length; index += 1) {
     const line = lines[index];
+
+    if (isInlineMediaLine(line)) {
+      blocks.push(<InlineArticleMedia line={line} key={index} />);
+      continue;
+    }
 
     if (line.startsWith("### ")) {
       blocks.push(<h3 key={index}><InlineMarkdown text={line.slice(4)} /></h3>);
@@ -1741,7 +1760,7 @@ export default function Home() {
   }
 
   function editArticle(article) {
-    setDraft({ ...article });
+    setDraft(normalizeArticleMedia(article));
     navigate("editor");
   }
 
@@ -1771,7 +1790,7 @@ export default function Home() {
     if (!validateDraft()) return;
     const now = new Date().toISOString();
     const id = draft.id || `${slugify(draft.title)}-${Date.now().toString().slice(-5)}`;
-    const article = {
+    const article = normalizeArticleMedia({
       ...draft,
       id,
       title: draft.title.trim(),
@@ -1780,7 +1799,7 @@ export default function Home() {
       status,
       createdAt: draft.createdAt || now,
       updatedAt: now
-    };
+    });
     setArticles((current) => [article, ...current.filter((item) => item.id !== id)]);
     setDraft(article);
     setToast(status === "published" ? "Članek je objavljen." : "Osnutek je shranjen.");
@@ -1871,7 +1890,7 @@ export default function Home() {
                     openArticle(article);
                   }}
                 >
-                  <div className="card-art"><span>{article.category.slice(0, 1)}</span></div>
+                  <ArticleHero article={article} compact />
                   <div className="card-copy">
                     <div className="meta"><span>{article.category}</span><span>{readingTime(article.content)} min branja</span></div>
                     <h3>{article.title}</h3>
@@ -1965,6 +1984,7 @@ export default function Home() {
                   {CATEGORIES.map((category) => <option key={category}>{category}</option>)}
                 </select>
               </div>
+              <MediaEditorFields draft={draft} setDraft={setDraft} />
               <div className="agent-note">
                 <span className="agent-dot" />
                 <div><strong>Pripravljeno za agenta</strong><p>Polja in gumbi imajo jasne oznake za zanesljivo avtomatizacijo.</p></div>
@@ -1983,7 +2003,11 @@ export default function Home() {
             <p>{selected.excerpt}</p>
             <div className="article-byline"><strong>{selected.author}</strong><span>•</span><span>{formatDate(selected.updatedAt)}</span><span>•</span><span>{readingTime(selected.content)} min branja</span></div>
           </div>
+          <ArticleHero article={selected} />
           <ArticleBody content={selected.content} />
+          <ArticleVideo video={selected.video} />
+          <ArticleGallery items={selected.gallery} />
+          <ArticleSources items={selected.sources} />
           <div className="article-end"><span>Konec članka</span><button className="secondary" onClick={() => editArticle(selected)}>Uredi članek</button></div>
         </article>
       )}
@@ -1995,7 +2019,11 @@ export default function Home() {
             <span className="article-category">{draft.category}</span>
             <h1>{draft.title || "Naslov članka"}</h1>
             <p className="preview-excerpt">{draft.excerpt || "Kratek povzetek članka bo prikazan tukaj."}</p>
+            <ArticleHero article={draft} />
             <ArticleBody content={draft.content || "Vsebina članka bo prikazana tukaj."} />
+            <ArticleVideo video={draft.video} />
+            <ArticleGallery items={draft.gallery} />
+            <ArticleSources items={draft.sources} />
           </div>
         </div>
       )}
