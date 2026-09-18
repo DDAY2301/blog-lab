@@ -20,7 +20,36 @@ def _clean(value):
     value = re.sub(r"<[^>]+>", " ", unescape(value or ""))
     return " ".join(value.replace("\x00", "").split())
 
-def _item(source, title, link, summary, published):
+def _safe_https(value: str) -> str:
+    value = unescape(str(value or "")).strip()
+    return value[:2000] if value.lower().startswith("https://") else ""
+
+def _node_media(node, summary: str = "") -> tuple[str, str]:
+    image_url = ""
+    video_url = ""
+    raw_summary = unescape(summary or "")
+    image_match = re.search(r'<img[^>]+src=["\'](https://[^"\']+)["\']', raw_summary, re.I)
+    if image_match:
+        image_url = _safe_https(image_match.group(1))
+    youtube_match = re.search(r'https://(?:www\.)?(?:youtube\.com/watch\?[^\s"\']*v=|youtu\.be/)[^\s"\'&<]+', raw_summary, re.I)
+    if youtube_match:
+        video_url = _safe_https(youtube_match.group(0))
+
+    for el in node.iter():
+        tag = str(el.tag).lower()
+        attrs = {str(k).lower(): str(v) for k, v in el.attrib.items()}
+        candidate = _safe_https(attrs.get("url") or attrs.get("href") or "")
+        if not candidate:
+            continue
+        media_type = attrs.get("type", "").lower()
+        medium = attrs.get("medium", "").lower()
+        if not image_url and ("thumbnail" in tag or medium == "image" or media_type.startswith("image/")):
+            image_url = candidate
+        if not video_url and (medium == "video" or media_type.startswith("video/") or "youtube.com/" in candidate or "youtu.be/" in candidate):
+            video_url = candidate
+    return image_url, video_url
+
+def _item(source, title, link, summary, published, image_url="", video_url=""):
     material = f"{title}|{link}".encode("utf-8")
     return {
         "source_name": source.get("name", source["url"]),
@@ -29,6 +58,8 @@ def _item(source, title, link, summary, published):
         "url": _clean(link)[:2000],
         "summary": _clean(summary)[:4000],
         "published": _clean(published)[:200],
+        "image_url": _safe_https(image_url),
+        "video_url": _safe_https(video_url),
         "hash": hashlib.sha256(material).hexdigest(),
     }
 
@@ -52,7 +83,8 @@ def fetch_feed(source: dict, timeout: int = 15, retries: int = 3) -> list[dict]:
                     summary = _text(n, ["description", "summary"])
                     published = _text(n, ["pubDate", "date"])
                     if title and link:
-                        items.append(_item(source, title, link, summary, published))
+                        image_url, video_url = _node_media(n, summary)
+                        items.append(_item(source, title, link, summary, published, image_url, video_url))
                 return items
             nsurl = "http://www.w3.org/2005/Atom"
             for n in root.findall(f".//{{{nsurl}}}entry"):
@@ -62,7 +94,8 @@ def fetch_feed(source: dict, timeout: int = 15, retries: int = 3) -> list[dict]:
                 summary = _text(n, [f"{{{nsurl}}}summary", f"{{{nsurl}}}content"])
                 published = _text(n, [f"{{{nsurl}}}published", f"{{{nsurl}}}updated"])
                 if title and link:
-                    items.append(_item(source, title, link, summary, published))
+                    image_url, video_url = _node_media(n, summary)
+                    items.append(_item(source, title, link, summary, published, image_url, video_url))
             return items
         except Exception as exc:
             last = exc
