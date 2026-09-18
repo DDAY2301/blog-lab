@@ -257,3 +257,141 @@ def test_main_rejects_invalid_command(tmp_path, monkeypatch, command):
     monkeypatch.setattr(sys, "argv", ["command.py", "--command-file", str(path)])
     with pytest.raises(SystemExit, match="invalid command"):
         cmd.main()
+
+
+@pytest.mark.parametrize(("text", "expected"), [
+    ("objavi novo stran Projekti", "site"),
+    ("objavi novo rubriko Dogodki", "site"),
+    ("objavi članek in polepšaj izgled", "article"),
+    ("dodaj video v članek", "site"),
+    ("spremeni header", "site"),
+    ("preveri status agenta", "control"),
+    ("ali agent deluje", "control"),
+])
+def test_ambiguous_routing(text, expected):
+    assert cmd.infer_mode(text) == expected
+
+
+def test_control_status_is_non_mutating(tmp_path, monkeypatch, capsys):
+    control = tmp_path / "control.json"
+    original = {
+        "enabled": True,
+        "publish_mode": "automatic",
+        "schedule": {
+            "timezone": "Europe/Ljubljana",
+            "slots": [
+                {"time": "08:17", "category": "sport"},
+                {"time": "13:27", "category": "politika"},
+                {"time": "19:43", "category": "aktualno"},
+            ],
+        },
+    }
+    control.write_text(json.dumps(original), encoding="utf-8")
+    monkeypatch.setattr(cmd, "CONTROL", control)
+    cmd.control_command("preveri status agenta")
+    assert json.loads(control.read_text()) == original
+    assert "CONTROL_STATUS" in capsys.readouterr().out
+
+
+@pytest.mark.parametrize("text", [
+    "Spremeni urnik objav ob 09:00, 14:00 in 20:00",
+    "Termini objav naj bodo 9:30 14:30 20:30",
+])
+def test_custom_schedule_is_rejected(tmp_path, monkeypatch, text):
+    control = tmp_path / "control.json"
+    monkeypatch.setattr(cmd, "CONTROL", control)
+    with pytest.raises(SystemExit) as exc:
+        cmd.control_command(text)
+    assert exc.value.code == 64
+
+
+def test_default_explicit_schedule_is_accepted(tmp_path, monkeypatch):
+    control = tmp_path / "control.json"
+    monkeypatch.setattr(cmd, "CONTROL", control)
+    cmd.control_command("Urnik naj bo 08:17 13:27 19:43")
+    data = json.loads(control.read_text())
+    assert data["schedule_profile"] == "default-3x-daily"
+
+
+def test_add_rubric(tmp_path, monkeypatch):
+    rubrics = tmp_path / "site-rubrics.json"
+    monkeypatch.setattr(cmd, "RUBRICS", rubrics)
+    assert cmd.manage_rubric("Dodaj novo rubriko Projekti v meni") is True
+    data = json.loads(rubrics.read_text())
+    assert data == [{"name": "Projekti", "slug": "projekti"}]
+
+
+def test_add_rubric_is_idempotent(tmp_path, monkeypatch):
+    rubrics = tmp_path / "site-rubrics.json"
+    monkeypatch.setattr(cmd, "RUBRICS", rubrics)
+    cmd.manage_rubric("Dodaj novo rubriko Projekti v meni")
+    cmd.manage_rubric("Dodaj rubriko Projekti")
+    data = json.loads(rubrics.read_text())
+    assert len(data) == 1
+
+
+def test_remove_rubric(tmp_path, monkeypatch):
+    rubrics = tmp_path / "site-rubrics.json"
+    rubrics.write_text(json.dumps([{"name": "Projekti", "slug": "projekti"}]), encoding="utf-8")
+    monkeypatch.setattr(cmd, "RUBRICS", rubrics)
+    assert cmd.manage_rubric("Odstrani rubriko Projekti") is True
+    assert json.loads(rubrics.read_text()) == []
+
+
+def test_remove_missing_rubric_is_safe(tmp_path, monkeypatch):
+    rubrics = tmp_path / "site-rubrics.json"
+    rubrics.write_text("[]", encoding="utf-8")
+    monkeypatch.setattr(cmd, "RUBRICS", rubrics)
+    assert cmd.manage_rubric("Odstrani rubriko Neobstojeca") is True
+    assert json.loads(rubrics.read_text()) == []
+
+
+def test_invalid_long_rubric_name_is_rejected(tmp_path, monkeypatch):
+    rubrics = tmp_path / "site-rubrics.json"
+    monkeypatch.setattr(cmd, "RUBRICS", rubrics)
+    with pytest.raises(SystemExit):
+        cmd.manage_rubric("Dodaj rubriko " + "A" * 41)
+
+
+def test_article_in_named_rubric_passes_output_category(tmp_path, monkeypatch):
+    app = tmp_path / "src/App.jsx"
+    app.parent.mkdir(parents=True)
+    app.write_text("before")
+    rubrics = tmp_path / "site-rubrics.json"
+    rubrics.write_text(json.dumps([{"name": "Projekti", "slug": "projekti"}]), encoding="utf-8")
+    monkeypatch.setattr(cmd, "BASE", tmp_path)
+    monkeypatch.setattr(cmd, "RUBRICS", rubrics)
+    monkeypatch.setattr(cmd, "ARTICLE_AGENT", tmp_path / "agent.py")
+    captured = {}
+
+    def fake_run(args, **kwargs):
+        captured["args"] = args
+        app.write_text("after")
+        return SimpleNamespace(returncode=0)
+
+    monkeypatch.setattr(cmd.subprocess, "run", fake_run)
+    cmd.article_command("Objavi članek o Erasmus projektu v rubriki Projekti", "aktualno")
+    assert "--output-category" in captured["args"]
+    idx = captured["args"].index("--output-category")
+    assert captured["args"][idx + 1] == "Projekti"
+
+
+def test_article_unknown_rubric_does_not_invent_category(tmp_path, monkeypatch):
+    app = tmp_path / "src/App.jsx"
+    app.parent.mkdir(parents=True)
+    app.write_text("before")
+    rubrics = tmp_path / "site-rubrics.json"
+    rubrics.write_text("[]", encoding="utf-8")
+    monkeypatch.setattr(cmd, "BASE", tmp_path)
+    monkeypatch.setattr(cmd, "RUBRICS", rubrics)
+    monkeypatch.setattr(cmd, "ARTICLE_AGENT", tmp_path / "agent.py")
+    captured = {}
+
+    def fake_run(args, **kwargs):
+        captured["args"] = args
+        app.write_text("after")
+        return SimpleNamespace(returncode=0)
+
+    monkeypatch.setattr(cmd.subprocess, "run", fake_run)
+    cmd.article_command("Objavi članek o testu v rubriki Neobstojeca", "aktualno")
+    assert "--output-category" not in captured["args"]
