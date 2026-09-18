@@ -5,6 +5,7 @@ on:
     workflows:
       - "Private Operator Terminal"
       - "Blog Lab Publisher Agent"
+      - "Blog Lab Health Check"
     types: [completed]
   workflow_dispatch:
 
