@@ -55,6 +55,13 @@ def _article_intent(low: str) -> bool:
         return True
     return "napiši o" in low or "napisi o" in low
 
+def _status_intent(low: str) -> bool:
+    status_terms = [
+        "status agenta", "stanje agenta", "status objavljanja", "stanje objavljanja",
+        "ali agent dela", "ali agent deluje", "kaj dela agent", "preveri agenta",
+    ]
+    return any(term in low for term in status_terms)
+
 def infer_mode(command: str) -> str:
     low = command.lower()
     control_terms = [
@@ -63,7 +70,7 @@ def infer_mode(command: str) -> str:
         "draft", "osnutek", "osnut", "review",
     ]
     review_mode = ("preklopi" in low or "način" in low or "mode" in low) and "pregled" in low
-    if any(x in low for x in control_terms) or review_mode or _schedule_intent(low):
+    if any(x in low for x in control_terms) or review_mode or _schedule_intent(low) or _status_intent(low):
         return "control"
     if _article_intent(low):
         return "article"
@@ -92,6 +99,22 @@ def control_command(command: str) -> None:
     low = command.lower()
     schedule_requested = _schedule_intent(low)
     explicit_times = _explicit_schedule_times(low)
+    if _status_intent(low):
+        schedule = ctl.get("schedule") or {
+            "timezone": "Europe/Ljubljana",
+            "slots": [
+                {"time": "08:17", "category": "sport"},
+                {"time": "13:27", "category": "politika"},
+                {"time": "19:43", "category": "aktualno"},
+            ],
+        }
+        print(
+            "CONTROL_STATUS "
+            f"enabled={str(ctl.get('enabled', True)).lower()} "
+            f"publish_mode={ctl.get('publish_mode', 'automatic')} "
+            f"schedule={json.dumps(schedule, ensure_ascii=False, separators=(',', ':'))}"
+        )
+        return
     if schedule_requested and explicit_times and tuple(explicit_times) != DEFAULT_SCHEDULE_TIMES:
         print(
             "CONTROL_UNSUPPORTED custom schedule requested: "
