@@ -57,6 +57,11 @@ def main():
     else:
         items = collect(cfg.get("input_sources", []), args.category, int(cfg.get("max_source_items", 30)))
     seen = {x.get("hash") for x in processed}; fresh = [x for x in items if x.get("hash") not in seen]
+    # Authenticated manual topic requests use --force. If current sources were already
+    # observed by the autonomous cycle, allow reusing them for the explicit editorial
+    # request; title/QA validation still prevents an identical published article.
+    if args.topic.strip() and args.force and not fresh:
+        fresh = items
     if not fresh: set_status(cfg, state, "completed", f"Ni novih vsebin za kategorijo {args.category}."); print("NO_NEW_CONTENT"); return 0
     system_prompt = (HERE / "prompts/system.md").read_text(encoding="utf-8")
     task_prompt = (HERE / "prompts/task.md").read_text(encoding="utf-8")
@@ -70,7 +75,7 @@ def main():
         print(f"INFO AI fallback: {exc}"); article = build_digest(used_for_article, args.category, max_items=5)
     if article.get("skip"): set_status(cfg, state, "completed", article.get("reason", "Ni primerne teme.")); print("NO_SUITABLE_CONTENT"); return 0
     article["id"] = slugify(article.get("title", "")) + "-" + hashlib.sha1(used_for_article[0]["url"].encode()).hexdigest()[:8]
-    used_urls = {x.get("url") for x in processed if x.get("url")}
+    used_urls = set() if (args.topic.strip() and args.force) else {x.get("url") for x in processed if x.get("url")}
     errors = validate(article, int(cfg["min_article_chars"]), int(cfg["max_article_chars"]), existing_titles(), used_urls)
     if errors:
         diag = BASE / "logs" / f"failed-{now().strftime('%Y%m%d-%H%M%S')}.json"; diag.parent.mkdir(parents=True, exist_ok=True); diag.write_text(json.dumps({"category": args.category, "errors": errors, "article": article}, ensure_ascii=False, indent=2), encoding="utf-8")
