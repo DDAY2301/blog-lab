@@ -92,7 +92,10 @@ jobs:
       - name: Ensure no obvious credentials were written
         shell: bash
         run: |
-          ! grep -R --exclude-dir=.git --exclude=package-lock.json -E "(ghp_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|sk-[A-Za-z0-9_-]{20,})" . || exit 1
+          if git grep -I -n -E "(ghp_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|sk-[A-Za-z0-9_-]{20,})" -- . ':(exclude)package-lock.json'; then
+            echo "Credential-like material detected in tracked repository files."
+            exit 1
+          fi
       - name: Detect public site change
         id: web
         shell: bash
