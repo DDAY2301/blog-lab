@@ -59,10 +59,33 @@ def infer_mode(command: str) -> str:
         return "article"
     return "site"
 
+DEFAULT_SCHEDULE_TIMES = ("08:17", "13:27", "19:43")
+
+def _explicit_schedule_times(text: str) -> list[str]:
+    found = []
+    for hour, minute in re.findall(r"\b([01]?\d|2[0-3])[:.]([0-5]\d)\b", text):
+        value = f"{int(hour):02d}:{int(minute):02d}"
+        if value not in found:
+            found.append(value)
+    for hour in re.findall(r"\bob\s+([01]?\d|2[0-3])\s*(?:h|ih|uri|ure)\b", text, flags=re.I):
+        value = f"{int(hour):02d}:00"
+        if value not in found:
+            found.append(value)
+    return found
+
 def control_command(command: str) -> None:
     ctl = read_json(CONTROL, {"enabled": True, "publish_mode": "automatic"})
     low = command.lower()
     schedule_requested = _schedule_intent(low)
+    explicit_times = _explicit_schedule_times(low)
+    if schedule_requested and explicit_times and tuple(explicit_times) != DEFAULT_SCHEDULE_TIMES:
+        print(
+            "CONTROL_UNSUPPORTED custom schedule requested: "
+            + ", ".join(explicit_times)
+            + ". Podprt je preverjeni urnik 08:17 / 13:27 / 19:43 Europe/Ljubljana.",
+            file=sys.stderr,
+        )
+        raise SystemExit(64)
 
     if any(x in low for x in ["ustavi", "zaustavi", "izklopi", "pause", "pavza"]):
         ctl["enabled"] = False
