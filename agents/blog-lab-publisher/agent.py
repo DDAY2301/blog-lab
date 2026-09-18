@@ -65,7 +65,10 @@ def main():
     # request; title/QA validation still prevents an identical published article.
     if args.topic.strip() and args.force and not fresh:
         fresh = items
-    if not fresh: set_status(cfg, state, "completed", f"Ni novih vsebin za kategorijo {args.category}."); print("NO_NEW_CONTENT"); return 0
+    if not fresh:
+        set_status(cfg, state, "completed", f"Ni novih vsebin za kategorijo {args.category}.")
+        print("NO_NEW_CONTENT")
+        return 3 if (args.topic.strip() and args.force) else 0
     system_prompt = (HERE / "prompts/system.md").read_text(encoding="utf-8")
     task_prompt = (HERE / "prompts/task.md").read_text(encoding="utf-8")
     if args.topic.strip():
@@ -76,7 +79,10 @@ def main():
         article = generate(system_prompt, task_prompt, fresh[:8], args.category); article["fallback"] = False
     except AIUnavailable as exc:
         print(f"INFO AI fallback: {exc}"); article = build_digest(used_for_article, args.category, max_items=5)
-    if article.get("skip"): set_status(cfg, state, "completed", article.get("reason", "Ni primerne teme.")); print("NO_SUITABLE_CONTENT"); return 0
+    if article.get("skip"):
+        set_status(cfg, state, "completed", article.get("reason", "Ni primerne teme."))
+        print("NO_SUITABLE_CONTENT")
+        return 3 if (args.topic.strip() and args.force) else 0
     article["id"] = slugify(article.get("title", "")) + "-" + hashlib.sha1(used_for_article[0]["url"].encode()).hexdigest()[:8]
     used_urls = set() if (args.topic.strip() and args.force) else {x.get("url") for x in processed if x.get("url")}
     errors = validate(article, int(cfg["min_article_chars"]), int(cfg["max_article_chars"]), existing_titles(), used_urls)
