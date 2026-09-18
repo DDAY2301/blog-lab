@@ -3,6 +3,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[3]
 OPERATOR = (ROOT / ".github/workflows/operator-terminal.yml").read_text(encoding="utf-8")
 PUBLISHER = (ROOT / ".github/workflows/agent-blog-lab-publisher.yml").read_text(encoding="utf-8")
+LIVE = (ROOT / ".github/workflows/live-feed.yml").read_text(encoding="utf-8")
 
 
 def test_operator_workflow_does_not_expose_terminal_payload_env():
@@ -35,3 +36,11 @@ def test_operator_and_publisher_sync_with_latest_main():
         assert "git checkout -B main origin/main" in workflow
         assert "git pull --rebase origin main" in workflow
         assert "git push origin HEAD:main" in workflow
+
+
+def test_deploying_workflows_build_after_final_sync():
+    assert "name: Final synchronized public build" in OPERATOR
+    assert "name: Final synchronized article build" in PUBLISHER
+    assert "name: Sync latest main" in LIVE
+    assert "name: Build final synchronized site" in LIVE
+    assert "git pull --rebase origin main" in LIVE
