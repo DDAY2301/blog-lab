@@ -18,3 +18,23 @@ def test_topic_query_variants():
     assert any("cesti" in q.lower() for q in queries)
     assert any("vikend" in q.lower() and "izlet" in q.lower() for q in queries)
     assert len(queries) == len({q.lower() for q in queries})
+
+
+def test_operator_media_parses_uploaded_images_and_video():
+    from agent import operator_media
+    image_url = "https://dday2301.github.io/blog-lab/media/uploads/20260918-test-photo.webp"
+    video_url = "https://youtu.be/abc123"
+    images, video = operator_media(
+        f"Objavi članek z [naložena slika: {image_url}] in video {video_url}"
+    )
+    assert [item["url"] for item in images] == [image_url]
+    assert video["url"] == video_url
+
+
+def test_operator_media_handles_query_string_extensions():
+    from agent import operator_media
+    image_url = "https://example.com/photo.jpg?size=large"
+    video_url = "https://example.com/clip.mp4?token=test"
+    images, video = operator_media(f"{image_url} {video_url}")
+    assert images[0]["url"] == image_url
+    assert video["url"] == video_url
