@@ -27,12 +27,15 @@ def write_json(path: Path, data):
 
 def _schedule_intent(low: str) -> bool:
     schedule_terms = [
-        "urnik", "termin objav", "termini objav", "termin objave", "termini objave",
+        "urnik",
         "trikrat na dan", "tri krat na dan", "3x na dan", "3 x na dan", "3 krat na dan",
         "samostojna objava", "samodejna objava", "avtomatska objava",
         "samostojno objavljanje", "samodejno objavljanje", "avtomatsko objavljanje",
     ]
-    return any(term in low for term in schedule_terms)
+    if any(term in low for term in schedule_terms):
+        return True
+    # Slovene inflections: termin, termini, termine, terminov + objava/objave/objav.
+    return "termin" in low and "objav" in low
 
 def _site_intent(low: str) -> bool:
     site_terms = [
