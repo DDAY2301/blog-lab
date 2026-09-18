@@ -18,6 +18,44 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "aktualni-pregled-18-9-2026-b139f344",
+    "title": "Aktualni pregled: 18. 9. 2026",
+    "excerpt": "Samodejni pregled najnovejših objav za področje aktualno, sestavljen iz javno dostopnih RSS virov in neposrednih povezav do izvirnikov.",
+    "seoDescription": "Samodejni pregled najnovejših objav za področje aktualno, sestavljen iz javno dostopnih RSS virov in neposrednih povezav do izvirnikov.",
+    "content": "Danes, 18. 9. 2026, Blog Lab povzema nove objave s področja **aktualno**. Pregled je sestavljen samo iz podatkov, ki so bili objavljeni v navedenih virih; kjer RSS ne vsebuje dovolj podrobnosti, dodatnih dejstev ne ugibamo.\n\n## 1. Najnižja gledanost oddaje Marcel v desetih letih, Tarča ostaja paradni konj - Info360\n\nNajnižja gledanost oddaje Marcel v desetih letih, Tarča ostaja paradni konj Info360 Objavljeno: Tue, 01 Sep 2026 07:00:00 GMT.\n\n[Odpri izvirni vir](https://news.google.com/rss/articles/CBMiwAFBVV95cUxNY3hsMTM4TmpCN2RFLVRxSTNhaTRuR3NhNWtYOExBZDFvQjREcE85NlNUUnU4MmdCb1l4TUVUZGtMSXY3SWNheUI2bVlLMU0wLWh6WEtUbHE4MTNIZHJrR291RDFJSVQtZVZSMHVFeUdBQ3g3TE1iMEw3bTZKcjNqcW14b01hT3RLc0lJeU5qOTdxQXhkcTdrSWhKSElWS1VNT2NIZzFlaVZPdUhfSkp3QTBFZGNwVU5IN0QwTUpqNDg?oc=5)\n\n## 2. Jelka Godec, nad TV Slovenija. Poslanci se sami odločamo ali bomo v vaših oddajah sodelovali ali ne! - e-Maribor\n\nJelka Godec, nad TV Slovenija. Poslanci se sami odločamo ali bomo v vaših oddajah sodelovali ali ne! e-Maribor Objavljeno: Wed, 16 Sep 2026 05:06:48 GMT.\n\n[Odpri izvirni vir](https://news.google.com/rss/articles/CBMiuwFBVV95cUxOM1F6d0diYmRtMzZOYnFZLTlVY2ExUldmM1ZXNW9TM1Noa3FCTzNRVUF0aHBIeGlqRTRqLWUwbm45M0J0Q1IzVEtLVlFJY2YxWlFJbkJPaXlsSHo1aWdIb0RkamsySzd1X09BMktTcXlSNzFqNmVCU0FULWIycG9YZ1ktelBzcWdXcGRFaXk0b3pncHFOZkhIVnNKS0V5NngxdDlIWkwxX2p4ZEktQW53QkhkRVMxYTlVX01R?oc=5)\n\n## 3. Nov zakon - souporaba električne energije - PwC\n\nNov zakon - souporaba električne energije PwC Objavljeno: Mon, 13 Jul 2026 07:59:51 GMT.\n\n[Odpri izvirni vir](https://news.google.com/rss/articles/CBMihgFBVV95cUxPV19kYnd6MUtuQURJVTZuTFpDZGNENmRvd3NOR1Q1Tm11VXFfTzJVYzFRSUU5UldzQXJtT2RfeUVBcGFDcFQyNnYxN21QZ3lnUTdJSXJYeWdwQlpiRHNSR0g2aXR2a3kzUmp3bEN4eUdFU3ppMVQ4WnlpU1ZaRVNIOTZCRmpfUQ?oc=5)\n\n## 4. Aktualno: prodaja avtomobilov v Sloveniji: Julija je bil vsak četrti novi avtomobilov v Sloveniji električen Novice - AVTO FOKUS -\n\nAktualno: prodaja avtomobilov v Sloveniji: Julija je bil vsak četrti novi avtomobilov v Sloveniji električen Novice AVTO FOKUS - Objavljeno: Mon, 10 Aug 2026 07:00:00 GMT.\n\n[Odpri izvirni vir](https://news.google.com/rss/articles/CBMiowFBVV95cUxOQ3dCM3gyanhNUkpMRUxQaFpWWWViaEtRN211WmVhc1gzekM0WWhOQ0swUWpBaEk4ZWNCNk1FZGtIWEstR2R1MEM2WUVtVnk2MWhrc3RRWV8tTDdxa0tpYXQwNUJvcVV6UEtGZUpRaGE2TXB5WnRpbVU1NjA4UTZaWkRMeTl6cGFncnlNWVdmS1hfRnNFTE1BVU5ZMHRmUUlpQ3pV?oc=5)\n\n## 5. Pred Stevanovićevim obiskom v Srbiji znova aktualno vprašanje statusa srbske skupnosti v Sloveniji - Siol.net\n\nPred Stevanovićevim obiskom v Srbiji znova aktualno vprašanje statusa srbske skupnosti v Sloveniji Siol.net Objavljeno: Wed, 03 Jun 2026 07:00:00 GMT.\n\n[Odpri izvirni vir](https://news.google.com/rss/articles/CBMi1gFBVV95cUxPNW4xS2Z0dXdKNXdpRWp1YnJFcjRfa0k1aDMxM2stM0pmRFY0VThEMXBTNEVOMm9IRmZoazBiTkdrZWZPb09SSkpsRTF3WWI0a05jQTBRd1prYkd3ZU1wSmxENDdoWFpxNDNjRHZfUEMxZU9LdVNjdWlVLVVwYzJFWk9rSjJaSGw2QXZJcUs3MnVmVlpPYUxfSVBIbndGMHhWRVdsMEtlelFGM0c5R01Oc0M3WDhMMU5HdG91RDJCS29GdzVtQVU1bzU3ejVQXzZmTFVKV1R3?oc=5)\n\n## Kaj spremljati naprej\n\nKer se aktualne zgodbe hitro dopolnjujejo, je smiselno preveriti izvirne povezave za morebitne nove podatke, popravke ali odzive. Blog Lab bo naslednji pregled pripravil šele, ko zazna nove, še neobdelane vnose.",
+    "category": "Aktualno",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Google News Slovenija – aktualno — Najnižja gledanost oddaje Marcel v desetih letih, Tarča ostaja paradni konj - Info360",
+        "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNY3hsMTM4TmpCN2RFLVRxSTNhaTRuR3NhNWtYOExBZDFvQjREcE85NlNUUnU4MmdCb1l4TUVUZGtMSXY3SWNheUI2bVlLMU0wLWh6WEtUbHE4MTNIZHJrR291RDFJSVQtZVZSMHVFeUdBQ3g3TE1iMEw3bTZKcjNqcW14b01hT3RLc0lJeU5qOTdxQXhkcTdrSWhKSElWS1VNT2NIZzFlaVZPdUhfSkp3QTBFZGNwVU5IN0QwTUpqNDg?oc=5"
+      },
+      {
+        "label": "Google News Slovenija – aktualno — Jelka Godec, nad TV Slovenija. Poslanci se sami odločamo ali bomo v vaših oddajah sodelovali ali ne! - e-Maribor",
+        "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOM1F6d0diYmRtMzZOYnFZLTlVY2ExUldmM1ZXNW9TM1Noa3FCTzNRVUF0aHBIeGlqRTRqLWUwbm45M0J0Q1IzVEtLVlFJY2YxWlFJbkJPaXlsSHo1aWdIb0RkamsySzd1X09BMktTcXlSNzFqNmVCU0FULWIycG9YZ1ktelBzcWdXcGRFaXk0b3pncHFOZkhIVnNKS0V5NngxdDlIWkwxX2p4ZEktQW53QkhkRVMxYTlVX01R?oc=5"
+      },
+      {
+        "label": "Google News Slovenija – aktualno — Nov zakon - souporaba električne energije - PwC",
+        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPV19kYnd6MUtuQURJVTZuTFpDZGNENmRvd3NOR1Q1Tm11VXFfTzJVYzFRSUU5UldzQXJtT2RfeUVBcGFDcFQyNnYxN21QZ3lnUTdJSXJYeWdwQlpiRHNSR0g2aXR2a3kzUmp3bEN4eUdFU3ppMVQ4WnlpU1ZaRVNIOTZCRmpfUQ?oc=5"
+      },
+      {
+        "label": "Google News Slovenija – aktualno — Aktualno: prodaja avtomobilov v Sloveniji: Julija je bil vsak četrti novi avtomobilov v Sloveniji električen Novice -…",
+        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOQ3dCM3gyanhNUkpMRUxQaFpWWWViaEtRN211WmVhc1gzekM0WWhOQ0swUWpBaEk4ZWNCNk1FZGtIWEstR2R1MEM2WUVtVnk2MWhrc3RRWV8tTDdxa0tpYXQwNUJvcVV6UEtGZUpRaGE2TXB5WnRpbVU1NjA4UTZaWkRMeTl6cGFncnlNWVdmS1hfRnNFTE1BVU5ZMHRmUUlpQ3pV?oc=5"
+      },
+      {
+        "label": "Google News Slovenija – aktualno — Pred Stevanovićevim obiskom v Srbiji znova aktualno vprašanje statusa srbske skupnosti v Sloveniji - Siol.net",
+        "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPNW4xS2Z0dXdKNXdpRWp1YnJFcjRfa0k1aDMxM2stM0pmRFY0VThEMXBTNEVOMm9IRmZoazBiTkdrZWZPb09SSkpsRTF3WWI0a05jQTBRd1prYkd3ZU1wSmxENDdoWFpxNDNjRHZfUEMxZU9LdVNjdWlVLVVwYzJFWk9rSjJaSGw2QXZJcUs3MnVmVlpPYUxfSVBIbndGMHhWRVdsMEtlelFGM0c5R01Oc0M3WDhMMU5HdG91RDJCS29GdzVtQVU1bzU3ejVQXzZmTFVKV1R3?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-18T21:56:36+02:00",
+    "updatedAt": "2026-09-18T21:56:36+02:00"
+  },
+
+  {
     id: "lipica-lipizzan-unesco-heritage-guide",
     title: "Lipica and the Lipizzaner: A Living UNESCO Tradition",
     excerpt: "Explore the documented history and living breeding tradition behind Slovenia’s Lipizzaner horses, with practical advice for a respectful visit to Lipica.",
