@@ -359,7 +359,7 @@ export default {
       return json({
         ok: true,
         worker: "blog-lab",
-        version: "auth-v6-media-upload",
+        version: "auth-v6.1-terminal-js-fixed",
         ready: state.ready,
         auth_ready: authReady,
         authorized_users_ready: authReady ? 2 : 0,
