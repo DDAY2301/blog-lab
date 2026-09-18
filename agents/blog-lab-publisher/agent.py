@@ -28,12 +28,12 @@ APP = BASE / "src/App.jsx"
 VALID_CATEGORIES = {"sport", "politika", "aktualno"}
 
 def operator_media(topic: str) -> tuple[list[dict], dict | None]:
-    urls = re.findall(r'https://[^\\s<>"\\']+', topic or "")
+    urls = re.findall(r"https://[^\\s<>]+", topic or "")
     images = []
     video = None
     seen = set()
     for raw in urls:
-        url = raw.rstrip(".,);]")
+        url = raw.rstrip(".,);]\\\"'")
         low = url.lower()
         if url in seen:
             continue
