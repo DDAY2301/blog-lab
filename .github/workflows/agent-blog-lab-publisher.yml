@@ -53,7 +53,7 @@ jobs:
       MODEL_NAME: ${{ secrets.MODEL_NAME }}
       GITHUB_TOKEN: ${{ github.token }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
       - name: Sync latest main
@@ -61,12 +61,12 @@ jobs:
         run: |
           git fetch origin main
           git checkout -B main origin/main
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
           cache: pip
           cache-dependency-path: requirements-agent.txt
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: 22
           cache: npm
@@ -144,7 +144,7 @@ jobs:
         run: npm run build
       - name: Configure GitHub Pages
         if: ${{ steps.content.outputs.changed == 'true' && (github.event_name != 'workflow_dispatch' || inputs.dry_run == false) }}
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
       - name: Upload Pages artifact
         if: ${{ steps.content.outputs.changed == 'true' && (github.event_name != 'workflow_dispatch' || inputs.dry_run == false) }}
         uses: actions/upload-pages-artifact@v3
@@ -153,4 +153,4 @@ jobs:
       - name: Deploy generated article to GitHub Pages
         id: deployment
         if: ${{ steps.content.outputs.changed == 'true' && (github.event_name != 'workflow_dispatch' || inputs.dry_run == false) }}
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
