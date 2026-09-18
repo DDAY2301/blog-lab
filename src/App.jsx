@@ -2071,7 +2071,7 @@ export default function Home() {
             <button className="primary" onClick={newArticle}>{siteSettings.heroCta} <Icon name="arrow" /></button>
           </section>
 
-          <div className="home-content container">
+          <div className={`home-content container ${siteSettings.showLivePulse ? "" : "no-live-pulse"}`}>
             {siteSettings.showLivePulse && <LivePulse />}
             <section className="feed">
             <div className="section-heading">
