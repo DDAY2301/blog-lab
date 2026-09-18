@@ -66,7 +66,7 @@ def test_control_resume(tmp_path, monkeypatch):
     assert data["publish_mode"] == "automatic"
 
 
-@pytest.mark.parametrize(("request", "expected"), [
+@pytest.mark.parametrize(("command_text", "expected"), [
     ("Preklopi na draft", "draft"),
     ("Shranjuj samo osnutke", "draft"),
     ("Daj v review", "review"),
@@ -76,10 +76,10 @@ def test_control_resume(tmp_path, monkeypatch):
     ("Naj objavlja samodejno", "automatic"),
     ("Naj objavlja samostojno", "automatic"),
 ])
-def test_control_publish_modes(tmp_path, monkeypatch, request, expected):
+def test_control_publish_modes(tmp_path, monkeypatch, command_text, expected):
     control = tmp_path / "control.json"
     monkeypatch.setattr(cmd, "CONTROL", control)
-    cmd.control_command(request)
+    cmd.control_command(command_text)
     data = json.loads(control.read_text())
     assert data["publish_mode"] == expected
 
