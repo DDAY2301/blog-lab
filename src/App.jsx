@@ -2007,7 +2007,9 @@ export default function Home() {
             <button className="primary" onClick={newArticle}>Napiši prvi članek <Icon name="arrow" /></button>
           </section>
 
-          <section className="feed container">
+          <div className="home-content container">
+            <LivePulse />
+            <section className="feed">
             <div className="section-heading">
               <div>
                 <span className="kicker">ZADNJE OBJAVE</span>
@@ -2042,7 +2044,8 @@ export default function Home() {
                 </div>
               )}
             </div>
-          </section>
+            </section>
+          </div>
         </>
       )}
 
