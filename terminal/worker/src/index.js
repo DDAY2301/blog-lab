@@ -8,16 +8,16 @@ const AUTHORIZED_USERS = Object.freeze({
   "maj@klemenc.org": "MAJ_LOGIN_PASSWORD"
 });
 
+function sharedLoginPassword(env) {
+  // Both approved users intentionally use the same password.
+  // DAN_LOGIN_PASSWORD is the canonical source; MAJ_LOGIN_PASSWORD is only
+  // a backwards-compatible fallback if the canonical secret is absent.
+  return String(env.DAN_LOGIN_PASSWORD || env.MAJ_LOGIN_PASSWORD || "").trim();
+}
+
 function loginPassword(env, email) {
-  const secretName = AUTHORIZED_USERS[email];
-  if (!secretName) return "";
-  const direct = String(env[secretName] || "").trim();
-  if (direct) return direct;
-  // Both approved users intentionally share the same password.
-  // Fall back to the other configured login secret so a missing duplicate
-  // secret cannot break login on a fresh device.
-  const alternate = secretName === "DAN_LOGIN_PASSWORD" ? "MAJ_LOGIN_PASSWORD" : "DAN_LOGIN_PASSWORD";
-  return String(env[alternate] || "").trim();
+  if (!AUTHORIZED_USERS[email]) return "";
+  return sharedLoginPassword(env);
 }
 
 function securityHeaders(extra = {}) {
@@ -237,11 +237,12 @@ export default {
       return json({
         ok: true,
         worker: "blog-lab",
-        version: "auth-v3-cross-device",
+        version: "auth-v4-shared-login",
         ready: state.ready,
         auth_ready: authReady,
         authorized_users_ready: userReadiness.filter(Boolean).length,
         auth_mode: "built-in-session",
+        login_secret_mode: "shared-canonical",
         free_tier_compatible: true
       });
     }
