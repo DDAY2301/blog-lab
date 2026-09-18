@@ -25,21 +25,64 @@ def write_json(path: Path, data):
     tmp.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     tmp.replace(path)
 
+def _schedule_intent(low: str) -> bool:
+    schedule_terms = [
+        "urnik", "termin objav", "termini objav", "termin objave", "termini objave",
+        "trikrat na dan", "tri krat na dan", "3x na dan", "3 x na dan", "3 krat na dan",
+        "samostojna objava", "samodejna objava", "avtomatska objava",
+        "samostojno objavljanje", "samodejno objavljanje", "avtomatsko objavljanje",
+    ]
+    return any(term in low for term in schedule_terms)
+
 def infer_mode(command: str) -> str:
     low = command.lower()
-    if any(x in low for x in ["ustavi", "pavza", "zaustavi", "nadaljuj", "vklopi", "izklopi", "resume", "pause"]): return "control"
-    if any(x in low for x in ["članek", "clanek", "objavi", "napiši o", "napisi o", "prispevek"]): return "article"
+    if (
+        any(x in low for x in ["ustavi", "pavza", "zaustavi", "nadaljuj", "vklopi", "izklopi", "resume", "pause"])
+        or _schedule_intent(low)
+    ):
+        return "control"
+    if any(x in low for x in ["članek", "clanek", "objavi", "napiši o", "napisi o", "prispevek"]):
+        return "article"
     return "site"
 
 def control_command(command: str) -> None:
-    ctl = read_json(CONTROL, {"enabled": True})
+    ctl = read_json(CONTROL, {"enabled": True, "publish_mode": "automatic"})
     low = command.lower()
-    if any(x in low for x in ["ustavi", "zaustavi", "izklopi", "pause", "pavza"]): ctl["enabled"] = False
-    elif any(x in low for x in ["nadaljuj", "vklopi", "resume", "začni", "zacni"]): ctl["enabled"] = True
-    if "draft" in low or "osnut" in low: ctl["publish_mode"] = "draft"
-    elif "review" in low or "pregled" in low: ctl["publish_mode"] = "review"
-    elif "automatic" in low or "avtomats" in low or "samodejn" in low: ctl["publish_mode"] = "automatic"
+    schedule_requested = _schedule_intent(low)
+
+    if any(x in low for x in ["ustavi", "zaustavi", "izklopi", "pause", "pavza"]):
+        ctl["enabled"] = False
+    elif any(x in low for x in ["nadaljuj", "vklopi", "resume", "začni", "zacni"]) or schedule_requested:
+        ctl["enabled"] = True
+
+    if "draft" in low or "osnut" in low:
+        ctl["publish_mode"] = "draft"
+    elif "review" in low or "pregled" in low:
+        ctl["publish_mode"] = "review"
+    elif (
+        "automatic" in low or "avtomats" in low or "samodejn" in low
+        or "samostojn" in low or schedule_requested
+    ):
+        ctl["publish_mode"] = "automatic"
+
+    if schedule_requested:
+        ctl["schedule_profile"] = "default-3x-daily"
+        ctl["schedule"] = {
+            "timezone": "Europe/Ljubljana",
+            "slots": [
+                {"time": "08:17", "category": "sport"},
+                {"time": "13:27", "category": "politika"},
+                {"time": "19:43", "category": "aktualno"},
+            ],
+        }
+
     write_json(CONTROL, ctl)
+    print(
+        "CONTROL_OK "
+        f"enabled={str(ctl.get('enabled', True)).lower()} "
+        f"publish_mode={ctl.get('publish_mode', 'automatic')} "
+        f"schedule_profile={ctl.get('schedule_profile', 'unchanged')}"
+    )
 
 def _sha256(path: Path) -> str:
     if not path.exists():
