@@ -6,6 +6,7 @@ on:
       - "Private Operator Terminal"
       - "Blog Lab Publisher Agent"
       - "Blog Lab Health Check"
+      - "Blog Lab External Smoke Test"
     types: [completed]
   workflow_dispatch:
 
