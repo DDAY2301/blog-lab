@@ -176,3 +176,31 @@ def test_explicit_mode_overrides_auto_inference(tmp_path, monkeypatch, mode):
     monkeypatch.setattr(command_module, "control_command", lambda *a: called.append("control"))
     assert command_module.main() == 0
     assert called == [mode]
+
+
+def test_builtin_rubric_add_remove(tmp_path, monkeypatch):
+    rubrics = tmp_path / "public" / "site-rubrics.json"
+    rubrics.parent.mkdir(parents=True)
+    rubrics.write_text("[]\n", encoding="utf-8")
+    monkeypatch.setattr(command_module, "RUBRICS", rubrics)
+
+    assert command_module.builtin_site_command("Dodaj rubriko Projekti") is True
+    data = json.loads(rubrics.read_text(encoding="utf-8"))
+    assert data == [{"name": "Projekti", "slug": "projekti"}]
+
+    assert command_module.builtin_site_command("Dodaj rubriko Projekti") is True
+    assert len(json.loads(rubrics.read_text(encoding="utf-8"))) == 1
+
+    assert command_module.builtin_site_command("Odstrani rubriko Projekti") is True
+    assert json.loads(rubrics.read_text(encoding="utf-8")) == []
+
+
+def test_builtin_new_page_with_menu_suffix(tmp_path, monkeypatch):
+    rubrics = tmp_path / "public" / "site-rubrics.json"
+    rubrics.parent.mkdir(parents=True)
+    rubrics.write_text("[]\n", encoding="utf-8")
+    monkeypatch.setattr(command_module, "RUBRICS", rubrics)
+    assert command_module.builtin_site_command("Dodaj novo stran Partnerji v meni") is True
+    data = json.loads(rubrics.read_text(encoding="utf-8"))
+    assert data[0]["name"] == "Partnerji"
+    assert data[0]["slug"] == "partnerji"
