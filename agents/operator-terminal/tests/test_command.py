@@ -487,3 +487,58 @@ def test_site_settings_emphasis_eyebrow_cta_and_reset(tmp_path, monkeypatch):
     assert data["brand"] == "Blog Lab"
     assert data["heroEmphasis"] == "Objavljamo preprosto."
     assert data["showLivePulse"] is True
+
+
+@pytest.mark.parametrize("text", [
+    "Objavljaj enkrat na dan",
+    "Objavljaj dvakrat na dan",
+    "Objavljaj 4x na dan",
+    "Objavljaj štirikrat na dan",
+    "Objavljaj vsako uro",
+])
+def test_unsupported_daily_counts_are_control(text):
+    assert cmd.infer_mode(text) == "control"
+
+
+@pytest.mark.parametrize("text", [
+    "Objavljaj enkrat na dan",
+    "Objavljaj dvakrat na dan",
+    "Objavljaj 4x na dan",
+    "Objavljaj štirikrat na dan",
+    "Objavljaj vsako uro",
+])
+def test_unsupported_daily_counts_are_rejected(tmp_path, monkeypatch, text):
+    control = tmp_path / "control.json"
+    monkeypatch.setattr(cmd, "CONTROL", control)
+    with pytest.raises(SystemExit) as exc:
+        cmd.control_command(text)
+    assert exc.value.code == 64
+
+
+@pytest.mark.parametrize("text", [
+    "Objavi novo stran Projekti",
+    "Naredi novo stran Projekti",
+    "Kreiraj novo stran Projekti",
+    "Objavi novo rubriko Projekti",
+])
+def test_natural_add_page_verbs_are_builtin(tmp_path, monkeypatch, text):
+    rubrics = tmp_path / "site-rubrics.json"
+    monkeypatch.setattr(cmd, "RUBRICS", rubrics)
+    assert cmd.manage_rubric(text) is True
+    data = json.loads(rubrics.read_text())
+    assert data[0]["name"] == "Projekti"
+
+
+@pytest.mark.parametrize("text", [
+    "Naredi stran lepšo",
+    "Naredi stran lepso",
+    "Daj profesionalen izgled",
+    "Naredi premium izgled",
+])
+def test_more_design_phrases_are_builtin(tmp_path, monkeypatch, text):
+    monkeypatch.setattr(cmd, "BASE", tmp_path)
+    css = tmp_path / "src/styles.css"
+    css.parent.mkdir(parents=True)
+    css.write_text("body{}")
+    assert cmd.builtin_site_command(text) is True
+    assert cmd.DESIGN_MARKER in css.read_text()
