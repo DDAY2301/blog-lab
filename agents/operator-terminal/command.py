@@ -1,5 +1,6 @@
 from __future__ import annotations
 import argparse
+import hashlib
 import json
 import os
 import re
@@ -40,10 +41,21 @@ def control_command(command: str) -> None:
     elif "automatic" in low or "avtomats" in low or "samodejn" in low: ctl["publish_mode"] = "automatic"
     write_json(CONTROL, ctl)
 
+def _sha256(path: Path) -> str:
+    if not path.exists():
+        return ""
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
 def article_command(command: str, category: str) -> None:
+    app = BASE / "src/App.jsx"
+    before = _sha256(app)
     cmd = [sys.executable, str(ARTICLE_AGENT), "--category", category, "--topic", command, "--force"]
     result = subprocess.run(cmd, cwd=BASE, check=False)
-    if result.returncode != 0: raise SystemExit(result.returncode)
+    if result.returncode != 0:
+        raise SystemExit(result.returncode)
+    after = _sha256(app)
+    if not after or after == before:
+        raise SystemExit("Manual article request completed without publishing a new article")
 
 def site_command(command: str) -> None:
     if not shutil.which("copilot"):
