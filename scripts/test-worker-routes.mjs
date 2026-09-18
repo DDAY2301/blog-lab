@@ -75,7 +75,51 @@ response = await worker.fetch(new Request("https://example.test/?fresh=1", {
 check(response.status === 200, "Fresh-login page must render");
 check((response.headers.get("set-cookie") || "").includes("Max-Age=0"), "Fresh-login must clear cookie");
 
+
+// Bad login cases
+response = await worker.fetch(new Request("https://example.test/api/login", {
+  method: "POST",
+  headers: { "content-type": "application/json" },
+  body: JSON.stringify({ email: "unknown@example.com", password })
+}), env);
+check(response.status === 401, "Unknown email must be rejected");
+
+response = await worker.fetch(new Request("https://example.test/api/login", {
+  method: "POST",
+  headers: { "content-type": "application/json" },
+  body: JSON.stringify({ email: "dan.grmusa@gmail.com", password: "wrong-password" })
+}), env);
+check(response.status === 401, "Wrong password must be rejected");
+
+const missingLoginEnv = {
+  TERMINAL_COMMAND_KEY: env.TERMINAL_COMMAND_KEY,
+  GITHUB_DISPATCH_TOKEN: env.GITHUB_DISPATCH_TOKEN
+};
+response = await worker.fetch(new Request("https://example.test/api/login", {
+  method: "POST",
+  headers: { "content-type": "application/json" },
+  body: JSON.stringify({ email: "dan.grmusa@gmail.com", password })
+}), missingLoginEnv);
+check(response.status === 503, "Missing login secret must return 503");
+
+// Anonymous media upload must fail
+const anonymousForm = new FormData();
+anonymousForm.append("file", new File([new Uint8Array([1,2,3])], "x.png", { type: "image/png" }));
+response = await worker.fetch(new Request("https://example.test/api/media", {
+  method: "POST",
+  body: anonymousForm
+}), env);
+check(response.status === 401, "Anonymous media upload must return 401");
+
 const cookie = await login();
+
+
+response = await worker.fetch(new Request("https://example.test/api/command", {
+  method: "POST",
+  headers: { cookie, "content-type": "application/json" },
+  body: "{"
+}), env);
+check(response.status === 400, "Invalid command JSON must return 400");
 
 response = await worker.fetch(new Request("https://example.test/api/command", {
   method: "POST",
@@ -100,6 +144,38 @@ check(response.status === 202, "Valid authenticated command must dispatch");
 const accepted = await response.json();
 check(/^[0-9a-f-]{36}$/i.test(String(accepted.id || "")), "Dispatch must return request id");
 check(dispatchedRequestId === accepted.id, "GitHub dispatch must use returned request id");
+
+
+const badMedia = new FormData();
+badMedia.append("file", new File([new Uint8Array([1,2,3])], "bad.txt", { type: "text/plain" }));
+response = await worker.fetch(new Request("https://example.test/api/media", {
+  method: "POST",
+  headers: { cookie },
+  body: badMedia
+}), env);
+check(response.status === 415, "Unsupported media type must return 415");
+
+const tooLarge = new FormData();
+tooLarge.append("file", new File([new Uint8Array(5 * 1024 * 1024 + 1)], "big.png", { type: "image/png" }));
+response = await worker.fetch(new Request("https://example.test/api/media", {
+  method: "POST",
+  headers: { cookie },
+  body: tooLarge
+}), env);
+check(response.status === 413, "Oversized media must return 413");
+
+const noFile = new FormData();
+response = await worker.fetch(new Request("https://example.test/api/media", {
+  method: "POST",
+  headers: { cookie },
+  body: noFile
+}), env);
+check(response.status === 400, "Missing media file must return 400");
+
+response = await worker.fetch(new Request("https://example.test/api/status", {
+  headers: { cookie }
+}), env);
+check(response.status === 400, "Missing status id must return 400");
 
 response = await worker.fetch(new Request("https://example.test/api/status?id=not-a-uuid", {
   headers: { cookie }
