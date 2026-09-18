@@ -9,3 +9,12 @@ def test_validator_rejects_short():
 def test_publisher_inserts():
     with tempfile.TemporaryDirectory() as d:
         p=Path(d)/"App.jsx"; p.write_text("const starterArticles = [\n];",encoding="utf-8"); a={"id":"test-1","title":"Test","excerpt":"E","seoDescription":"S","content":"## Viri\nhttps://example.com","category":"Novice"}; publish_to_app(str(p),a,"Agent"); assert '"test-1"' in p.read_text(encoding="utf-8")
+
+
+def test_topic_query_variants():
+    from services.sources import _topic_queries
+    queries = _topic_queries("Objavi članek o današnjih dogajanjih na cesti in kam priporočaš vikend izlet")
+    assert queries
+    assert any("cesti" in q.lower() for q in queries)
+    assert any("vikend" in q.lower() and "izlet" in q.lower() for q in queries)
+    assert len(queries) == len({q.lower() for q in queries})
