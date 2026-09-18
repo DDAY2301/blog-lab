@@ -434,8 +434,11 @@ def manage_rubric(command: str) -> bool:
 
     if action == "add":
         if not existing:
+            if len(rubrics) >= 12:
+                print("BUILTIN_SITE_UNSUPPORTED največ 12 rubrik.", file=sys.stderr)
+                raise SystemExit(64)
             rubrics.append({"name": name, "slug": slug})
-            write_json(RUBRICS, rubrics[:12])
+            write_json(RUBRICS, rubrics)
             print(f"BUILTIN_SITE_OK rubric-added name={name}")
         else:
             print(f"BUILTIN_SITE_OK rubric-exists name={existing[0].get('name', name)}")
