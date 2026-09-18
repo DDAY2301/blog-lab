@@ -32,6 +32,37 @@ def build_digest(items: list[dict], category: str, max_items: int = 5) -> dict:
         meta = f" Objavljeno: {published}." if published else ""
         parts.append(f"## {i}. {_clean(item.get('title', 'Brez naslova'), 180)}\n\n{summary}{meta}\n\n[Odpri izvirni vir]({item.get('url', '')})")
     parts.append("## Kaj spremljati naprej\n\nKer se aktualne zgodbe hitro dopolnjujejo, je smiselno preveriti izvirne povezave za morebitne nove podatke, popravke ali odzive. Blog Lab bo naslednji pregled pripravil šele, ko zazna nove, še neobdelane vnose.")
-    parts.append("## Viri\n\n" + "\n".join(f"- [{_clean(x.get('source_name', 'Vir'), 100)} — {_clean(x.get('title', 'Objava'), 120)}]({x.get('url', '')})" for x in chosen))
     content = "\n\n".join(parts)
-    return {"title": title, "excerpt": excerpt, "seoDescription": excerpt[:158], "content": content, "category": cat_label, "tags": [cat_label.lower(), "pregled", "aktualno"], "source_urls": [x.get("url") for x in chosen], "fallback": True}
+    images = []
+    seen_images = set()
+    for item in chosen:
+        image_url = str(item.get("image_url") or "").strip()
+        if image_url and image_url not in seen_images:
+            seen_images.add(image_url)
+            images.append({
+                "url": image_url,
+                "alt": _clean(item.get("title", ""), 180),
+                "caption": _clean(item.get("source_name", ""), 100),
+            })
+    video_url = next((str(x.get("video_url") or "").strip() for x in chosen if x.get("video_url")), "")
+    sources = [
+        {
+            "label": f"{_clean(x.get('source_name', 'Vir'), 100)} — {_clean(x.get('title', 'Objava'), 120)}",
+            "url": x.get("url", ""),
+        }
+        for x in chosen if x.get("url")
+    ]
+    return {
+        "title": title,
+        "excerpt": excerpt,
+        "seoDescription": excerpt[:158],
+        "content": content,
+        "category": cat_label,
+        "tags": [cat_label.lower(), "pregled", "aktualno"],
+        "heroImage": images[0] if images else None,
+        "gallery": images[1:6],
+        "video": {"url": video_url, "title": "Povezan video"} if video_url else None,
+        "sources": sources,
+        "source_urls": [x.get("url") for x in chosen],
+        "fallback": True,
+    }
