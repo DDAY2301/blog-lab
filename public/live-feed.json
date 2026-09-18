@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-18T16:17:12.160044+00:00",
+  "updatedAt": "2026-09-18T16:20:23.830622+00:00",
   "status": "fresh",
   "items": [
     {
@@ -9,15 +9,9 @@
       "publishedAt": "2026-09-18T14:19:40+00:00"
     },
     {
-      "title": "DZ za boljše izvajanje dolgotrajne oskrbe brez glasu proti - 24ur.com",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQRjhtVUhzLWlac2pnSE5OcVVyRXE1R2JfRGlTTXFSa0RjTUltWnpTR0lJdldCNkFkMFh6TEVaZFhqd290NUxuOEp2UUNlSklFbExXdkpyT1FWcTRBWTBPV0NmTWVSYUxHZnZEaUdZRUNjOHMtYnE2ajl1cnBhOUZkZjdIMk1JRHFCT0lLdzNhMU4yWnFzRGt1UUtxclJfZUU5NkM0?oc=5",
-      "source": "24ur.com",
-      "publishedAt": "2026-09-18T12:36:37+00:00"
-    },
-    {
-      "title": "Plohe, nevihte in vremenska obremenitev: danes lahko trpi tudi počutje - svet24.si",
+      "title": "Plohe, nevihte in vremenska obremenitev: danes lahko trpi tudi počutje - Svet24.si",
       "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOejJaV212VnpkbVZsSElGZzV4NlQzNUZ5YTZ3ek11Zy1UU3lmSlh2WEg4S3JLOGJSeWV3ajQtODhldkltS1FNX2lpamlwRmQ0eFRQUUFiLUlIS3BrQV9jbTVnWEtJYnBFQUhZclo1TmZmVXFpd0thZjFwOFZCZURkampjN0NjYllrY3pYRGp3?oc=5",
-      "source": "svet24.si",
+      "source": "Svet24.si",
       "publishedAt": "2026-09-18T09:21:13+00:00"
     },
     {
@@ -57,10 +51,16 @@
       "publishedAt": "2026-09-18T14:08:26+00:00"
     },
     {
-      "title": "Kandidati za župana Maribora o Arsenovičevi odločitvi: Eden mu še ne verjame, drugi priznavajo dosežke - Mariborinfo.com",
+      "title": "Kandidati za župana Maribora o Arsenovičevi odločitvi: Eden mu še ne verjame, drugi priznavajo dosežke - mariborinfo.com",
       "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQaHBvc1VNSVhwUjVXWHlCOWQ4bWlUN3hrcVhTd0RGS0VLczl3STVzaTFYbEk2SzZYbXRuQUpZeENkRXpEX2l2d1FtY09pd1kxUEd3RUhWcEY1SEp0dWstWGNGeExyMWNRNk9ZdVFFSm11WUo4OVJIOXU5ZXIzY1AxRTc2eEh1QTh4YTZ0SG9SQ1Y4bFoxbHVEeWNSMkR0a2FRSlUyTVFWa21NbmR3QTFqUkVhTjNoQkZiSlZQSGpqeUM4SXVBZTU1VmVFSzIwT01OMTJDeDdvRmUzVDFGbVJVNA?oc=5",
-      "source": "Mariborinfo.com",
+      "source": "mariborinfo.com",
       "publishedAt": "2026-09-18T02:02:26+00:00"
+    },
+    {
+      "title": "Kaj se bo zgodilo s plačami policistov? To pravi Matoz - Žurnal24",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPWm42UmxTaWstRWotVFhyc0diYnhtTXR6N193ams4N25NVE05ZFo0dkhmMzFTLWwxMWU3WlBVTW5NbGpzeGRQR0plaE5OdW9ZTTVrVzNYZ0ZQT3VXZ3V4STJDa1psdDlLcVJfOS00aXVpZDdwUEpjeUs4NmlNaDBXVC0zUmc1QzN2R2gzUE9jSVlpQQ?oc=5",
+      "source": "Žurnal24",
+      "publishedAt": "2026-09-18T14:31:00+00:00"
     }
   ]
 }
