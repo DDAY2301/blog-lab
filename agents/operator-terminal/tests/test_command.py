@@ -460,3 +460,30 @@ def test_site_settings_rejects_empty_or_overlong_value(tmp_path, monkeypatch):
     monkeypatch.setattr(cmd, "SITE_SETTINGS", settings)
     with pytest.raises(SystemExit):
         cmd.manage_site_settings("Spremeni ime strani v " + "A" * 61)
+
+
+def test_site_settings_preimenuj_blog_lab(tmp_path, monkeypatch):
+    settings = tmp_path / "site-settings.json"
+    monkeypatch.setattr(cmd, "SITE_SETTINGS", settings)
+    assert cmd.manage_site_settings("Preimenuj Blog Lab v Dnevni Lab") is True
+    assert json.loads(settings.read_text())["brand"] == "Dnevni Lab"
+
+
+def test_site_settings_emphasis_eyebrow_cta_and_reset(tmp_path, monkeypatch):
+    settings = tmp_path / "site-settings.json"
+    monkeypatch.setattr(cmd, "SITE_SETTINGS", settings)
+
+    assert cmd.manage_site_settings("Spremeni poudarjeni naslov v Vsak dan sveže") is True
+    assert json.loads(settings.read_text())["heroEmphasis"] == "Vsak dan sveže"
+
+    assert cmd.manage_site_settings("Spremeni oznako nad naslovom v AKTUALNO") is True
+    assert json.loads(settings.read_text())["heroEyebrow"] == "AKTUALNO"
+
+    assert cmd.manage_site_settings("Spremeni gumb na naslovnici v Preberi novice") is True
+    assert json.loads(settings.read_text())["heroCta"] == "Preberi novice"
+
+    assert cmd.manage_site_settings("Ponastavi besedila strani") is True
+    data = json.loads(settings.read_text())
+    assert data["brand"] == "Blog Lab"
+    assert data["heroEmphasis"] == "Objavljamo preprosto."
+    assert data["showLivePulse"] is True
