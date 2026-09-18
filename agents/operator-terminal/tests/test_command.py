@@ -221,3 +221,21 @@ def test_custom_schedule_is_rejected_without_false_success(tmp_path, monkeypatch
         command_module.control_command("nastavi termine objave 09:00 14:00 20:00")
     assert exc.value.code == 64
     assert not control.exists()
+
+
+@pytest.mark.parametrize("text", [
+    "Objavi članek z galerijo fotografij",
+    "Pripravi članek z hero sliko in videom",
+    "Ustvari prispevek z galerijo",
+])
+def test_article_intent_wins_for_content_creation(text):
+    assert infer_mode(text) == "article"
+
+
+@pytest.mark.parametrize("text", [
+    "izboljšaj izgled članka",
+    "spremeni layout članka",
+    "dodaj galerijo na stran članka",
+])
+def test_template_design_stays_site(text):
+    assert infer_mode(text) == "site"
