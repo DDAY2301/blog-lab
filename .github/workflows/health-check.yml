@@ -41,6 +41,8 @@ jobs:
         run: pytest -q agents/operator-terminal/tests agents/blog-lab-publisher/tests
       - name: Build public site
         run: npm run build
+      - name: Test Worker auth on a fresh device
+        run: node scripts/test-worker-auth.mjs
       - name: Bundle Cloudflare Worker
         run: npx wrangler deploy --dry-run
       - name: Scan tracked files for obvious credentials
