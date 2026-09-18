@@ -8,6 +8,18 @@ const AUTHORIZED_USERS = Object.freeze({
   "maj@klemenc.org": "MAJ_LOGIN_PASSWORD"
 });
 
+function loginPassword(env, email) {
+  const secretName = AUTHORIZED_USERS[email];
+  if (!secretName) return "";
+  const direct = String(env[secretName] || "").trim();
+  if (direct) return direct;
+  // Both approved users intentionally share the same password.
+  // Fall back to the other configured login secret so a missing duplicate
+  // secret cannot break login on a fresh device.
+  const alternate = secretName === "DAN_LOGIN_PASSWORD" ? "MAJ_LOGIN_PASSWORD" : "DAN_LOGIN_PASSWORD";
+  return String(env[alternate] || "").trim();
+}
+
 function securityHeaders(extra = {}) {
   return {
     "cache-control": "no-store",
@@ -75,16 +87,27 @@ function setupState(env) {
   const missing = [];
   if (!String(env.GITHUB_DISPATCH_TOKEN || "").trim()) missing.push("GITHUB_DISPATCH_TOKEN");
   if (!String(env.TERMINAL_COMMAND_KEY || "").trim()) missing.push("TERMINAL_COMMAND_KEY");
-  if (!String(env.DAN_LOGIN_PASSWORD || "").trim()) missing.push("DAN_LOGIN_PASSWORD");
-  if (!String(env.MAJ_LOGIN_PASSWORD || "").trim()) missing.push("MAJ_LOGIN_PASSWORD");
+  const hasLoginPassword =
+    String(env.DAN_LOGIN_PASSWORD || "").trim().length >= 8 ||
+    String(env.MAJ_LOGIN_PASSWORD || "").trim().length >= 8;
+  if (!hasLoginPassword) missing.push("LOGIN_PASSWORD");
   return { ready: missing.length === 0, missing };
 }
 
 async function deriveSessionKey(env) {
-  const dan = String(env.DAN_LOGIN_PASSWORD || "");
-  const maj = String(env.MAJ_LOGIN_PASSWORD || "");
-  if (dan.length < 8 || maj.length < 8) throw new Error("Login passwords are not configured");
-  const seed = new TextEncoder().encode(`blog-lab-session-v2\n${dan}\n${maj}`);
+  const terminalKey = String(env.TERMINAL_COMMAND_KEY || "").trim();
+  let seed;
+  try {
+    const raw = terminalKey ? fromB64(terminalKey) : new Uint8Array();
+    if (raw.length === 32) {
+      seed = raw;
+    }
+  } catch {}
+  if (!seed) {
+    const fallback = loginPassword(env, "dan.grmusa@gmail.com") || loginPassword(env, "maj@klemenc.org");
+    if (fallback.length < 8) throw new Error("Login password is not configured");
+    seed = new TextEncoder().encode(`blog-lab-session-v3\n${fallback}`);
+  }
   const digest = new Uint8Array(await crypto.subtle.digest("SHA-256", seed));
   return crypto.subtle.importKey(
     "raw",
@@ -141,11 +164,11 @@ async function identity(request, env) {
 }
 
 function sessionCookie(token) {
-  return `${SESSION_COOKIE}=${token}; Path=/; Max-Age=${SESSION_TTL_SECONDS}; HttpOnly; Secure; SameSite=Strict`;
+  return `${SESSION_COOKIE}=${token}; Path=/; Max-Age=${SESSION_TTL_SECONDS}; HttpOnly; Secure; SameSite=Lax`;
 }
 
 function clearSessionCookie() {
-  return `${SESSION_COOKIE}=; Path=/; Max-Age=0; HttpOnly; Secure; SameSite=Strict`;
+  return `${SESSION_COOKIE}=; Path=/; Max-Age=0; HttpOnly; Secure; SameSite=Lax`;
 }
 
 async function encryptPayload(env, value) {
@@ -206,8 +229,10 @@ export default {
 
     if (request.method === "GET" && url.pathname === "/health") {
       const state = setupState(env);
-      const authReady = String(env.DAN_LOGIN_PASSWORD || "").length >= 8 && String(env.MAJ_LOGIN_PASSWORD || "").length >= 8;
-      return json({ ok: true, worker: "blog-lab", ready: state.ready, auth_ready: authReady, auth_mode: "built-in-session", free_tier_compatible: true });
+      const authReady =
+        loginPassword(env, "dan.grmusa@gmail.com").length >= 8 &&
+        loginPassword(env, "maj@klemenc.org").length >= 8;
+      return json({ ok: true, worker: "blog-lab", version: "auth-v3-cross-device", ready: state.ready, auth_ready: authReady, auth_mode: "built-in-session", free_tier_compatible: true });
     }
 
     if (request.method === "POST" && url.pathname === "/api/login") {
@@ -216,7 +241,7 @@ export default {
       const email = String(body?.email || "").trim().toLowerCase();
       const password = String(body?.password || "");
       const secretName = AUTHORIZED_USERS[email];
-      const expected = secretName ? String(env[secretName] || "") : "";
+      const expected = loginPassword(env, email);
       const configured = expected.length >= 8;
       const valid = Boolean(secretName && configured && password.length && timingSafeEqual(password, expected));
       if (!valid) {
