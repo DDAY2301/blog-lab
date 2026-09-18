@@ -27,6 +27,23 @@ STATUS = BASE / "public/data/agent-status.json"
 APP = BASE / "src/App.jsx"
 VALID_CATEGORIES = {"sport", "politika", "aktualno"}
 
+def operator_media(topic: str) -> tuple[list[dict], dict | None]:
+    urls = re.findall(r'https://[^\\s<>"\\']+', topic or "")
+    images = []
+    video = None
+    seen = set()
+    for raw in urls:
+        url = raw.rstrip(".,);]")
+        low = url.lower()
+        if url in seen:
+            continue
+        seen.add(url)
+        if re.search(r'\\.(?:jpe?g|png|webp|gif|avif)(?:\\?|$)', low):
+            images.append({"url": url, "alt": "", "caption": ""})
+        elif ("youtube.com/" in low or "youtu.be/" in low or re.search(r'\\.(?:mp4|webm|ogg)(?:\\?|$)', low)) and video is None:
+            video = {"url": url, "title": ""}
+    return images[:12], video
+
 def now(): return datetime.now(ZoneInfo("Europe/Ljubljana"))
 def control(): return load_json(str(CONTROL), {"enabled": True, "publish_mode": "automatic"})
 def enabled(cfg): return cfg.get("enabled", True) and control().get("enabled", True) and os.getenv("AGENT_ENABLED", "true").lower() == "true"
@@ -79,6 +96,16 @@ def main():
         article = generate(system_prompt, task_prompt, fresh[:8], args.category); article["fallback"] = False
     except AIUnavailable as exc:
         print(f"INFO AI fallback: {exc}"); article = build_digest(used_for_article, args.category, max_items=5)
+    if args.topic.strip():
+        explicit_images, explicit_video = operator_media(args.topic)
+        if explicit_images:
+            if not article.get("heroImage"):
+                article["heroImage"] = explicit_images[0]
+                explicit_images = explicit_images[1:]
+            existing_gallery = article.get("gallery") if isinstance(article.get("gallery"), list) else []
+            article["gallery"] = (existing_gallery + explicit_images)[:12]
+        if explicit_video and not article.get("video"):
+            article["video"] = explicit_video
     if article.get("skip"):
         set_status(cfg, state, "completed", article.get("reason", "Ni primerne teme."))
         print("NO_SUITABLE_CONTENT")
