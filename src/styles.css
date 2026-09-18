@@ -230,6 +230,7 @@ footer > span:first-child { color: var(--ink); font: 700 20px Georgia, serif; }
   align-items: start;
 }
 .home-content .feed { min-width: 0; }
+.home-content.no-live-pulse { grid-template-columns: minmax(0, 1fr); }
 .live-pulse {
   position: sticky;
   top: 90px;
