@@ -28,7 +28,7 @@ APP = BASE / "src/App.jsx"
 VALID_CATEGORIES = {"sport", "politika", "aktualno"}
 
 def operator_media(topic: str) -> tuple[list[dict], dict | None]:
-    urls = re.findall(r"https://[^\\s<>]+", topic or "")
+    urls = re.findall(r"https://[^\s<>]+", topic or "")
     images = []
     video = None
     seen = set()
@@ -38,9 +38,9 @@ def operator_media(topic: str) -> tuple[list[dict], dict | None]:
         if url in seen:
             continue
         seen.add(url)
-        if re.search(r'\\.(?:jpe?g|png|webp|gif|avif)(?:\\?|$)', low):
+        if re.search(r'\.(?:jpe?g|png|webp|gif|avif)(?:\?|$)', low):
             images.append({"url": url, "alt": "", "caption": ""})
-        elif ("youtube.com/" in low or "youtu.be/" in low or re.search(r'\\.(?:mp4|webm|ogg)(?:\\?|$)', low)) and video is None:
+        elif ("youtube.com/" in low or "youtu.be/" in low or re.search(r'\.(?:mp4|webm|ogg)(?:\?|$)', low)) and video is None:
             video = {"url": url, "title": ""}
     return images[:12], video
 
