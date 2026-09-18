@@ -42,14 +42,14 @@ def _schedule_intent(low: str) -> bool:
 
 def _site_intent(low: str) -> bool:
     site_terms = [
-        "stran", "spletno stran", "rubrik", "meni", "header", "footer", "navigacij",
+        "stran", "spletno stran", "rubrik", "kategor", "zavihek", "tab", "meni", "header", "footer", "navigacij",
         "layout", "dizajn", "design", "izgled", "sekcij", "stolpec", "sidebar",
         "galerij", "gumb", "logo", "favicon", "hero", "kartic", "css", "responsive",
     ]
     return any(term in low for term in site_terms)
 
 def _article_intent(low: str) -> bool:
-    article_nouns = ["članek", "clanek", "prispevek", "novico", "novica"]
+    article_nouns = ["članek", "clanek", "prispevek", "novico", "novica", "blog", "objavo", "objava", "post"]
     article_actions = ["objavi", "napiši", "napisi", "pripravi", "ustvari", "sestavi"]
     if any(noun in low for noun in article_nouns) and any(action in low for action in article_actions):
         return True
@@ -322,7 +322,7 @@ def _rubric_slug(value: str) -> str:
 def _rubric_request(command: str):
     text = " ".join(str(command or "").strip().split())
     add = re.match(
-        r"^(?:dodaj|ustvari)\s+(?:novo\s+|novo\s+spletno\s+)?(?:rubriko|stran)\s+(.+?)"
+        r"^(?:dodaj|ustvari)\s+(?:novo\s+|novo\s+spletno\s+)?(?:rubriko|stran|kategorijo|zavihek|tab)\s+(.+?)"
         r"(?:\s+(?:v|na)\s+(?:meni|navigacijo|header|glavni\s+meni))?[.!?]?$",
         text,
         flags=re.I,
@@ -330,7 +330,7 @@ def _rubric_request(command: str):
     if add:
         return "add", add.group(1).strip(" .,:;!?")
     remove = re.match(
-        r"^(?:odstrani|izbriši|izbrisi|umakni)\s+(?:rubriko|stran)\s+(.+?)[.!?]?$",
+        r"^(?:odstrani|izbriši|izbrisi|umakni)\s+(?:rubriko|stran|kategorijo|zavihek|tab)\s+(.+?)[.!?]?$",
         text,
         flags=re.I,
     )
@@ -380,8 +380,7 @@ def builtin_site_command(command: str) -> bool:
         return apply_design_upgrade()
     live_intent = (
         ("pol ure" in low or "30 min" in low or "30 minut" in low)
-        and ("mini" in low or "tekoč" in low or "aktual" in low)
-        and ("stolpec" in low or "stran" in low or "lev" in low)
+        and ("mini" in low or "tekoč" in low or "aktual" in low or "novic" in low)
     )
     if live_intent:
         required = [
