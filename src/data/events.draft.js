@@ -1,8 +1,135 @@
 // Review draft only. Not imported by the production application.
-// Verified against official sources on 2026-09-17 at 07:00 Europe/Ljubljana.
+// Rolling review draft. Sources rechecked on 2026-09-18 at 07:00 Europe/Ljubljana.
+// Production remains unchanged until the calendar model and stable views are implemented.
 // Unknown values deliberately remain null.
 
 export const draftEvents = [
+  {
+    "eventId": "sms-1-katarza-2026-09-18",
+    "title": "SMS 1: Katarza",
+    "summary": "Cankarjev dom lists this music event for Friday evening at 19:30. Ticket price, language and detailed accessibility information were not visible in the checked programme overview, so visitors should verify them on the official booking page.",
+    "category": "music",
+    "startAt": "2026-09-18T19:30:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": null
+    },
+    "ticketUrl": "https://www.cd-cc.si/",
+    "officialUrl": "https://www.cd-cc.si/",
+    "sourceName": "Cankarjev dom",
+    "languages": [],
+    "touristFriendly": null,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-18T07:00:00+02:00"
+  },
+  {
+    "eventId": "nina-ramsak-markovic-stvari-2026-09-18",
+    "title": "Nina Ramšak Marković: Stvari, ki jih ne morem povedati o stvareh",
+    "summary": "The theatre and dance programme at Cankarjev dom starts at 20:00 on Friday 18 September. The official overview confirms the performance and time; language suitability, ticket availability and price require a final check on the event page.",
+    "category": "theatre",
+    "startAt": "2026-09-18T20:00:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": false
+    },
+    "ticketUrl": "https://www.cd-cc.si/",
+    "officialUrl": "https://www.cd-cc.si/",
+    "sourceName": "Cankarjev dom",
+    "languages": [
+      "Slovenian (not independently confirmed)"
+    ],
+    "touristFriendly": null,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-18T07:00:00+02:00"
+  },
+  {
+    "eventId": "kozmos-kosovel-cankarjev-dom-2026",
+    "title": "KOZMOS KOSOVEL",
+    "summary": "Cankarjev dom's exhibition marking the centenary of Srečko Kosovel's death runs from 16 September 2026 to 9 May 2027. The official programme currently lists admission at €8; language and accessibility details should be checked before a dedicated visit.",
+    "category": "exhibition",
+    "startAt": "2026-09-16T00:00:00+02:00",
+    "endAt": "2027-05-09T23:59:00+02:00",
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": 8,
+      "currency": "EUR",
+      "label": "€8",
+      "free": false
+    },
+    "ticketUrl": "https://www.cd-cc.si/",
+    "officialUrl": "https://www.cd-cc.si/",
+    "sourceName": "Cankarjev dom",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-18T07:00:00+02:00"
+  },
+  {
+    "eventId": "castle-reading-corner-2026",
+    "title": "Castle Reading Corner",
+    "summary": "The seasonal reading space in the defensive moat below the main Castle Bridge remains open daily from 10:00 to 18:00 through 27 September. The official listing does not state a separate admission charge or accessibility details.",
+    "category": "family",
+    "startAt": "2026-06-05T10:00:00+02:00",
+    "endAt": "2026-09-27T18:00:00+02:00",
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Defensive moat, Ljubljana Castle",
+      "address": "Grajska planota 1, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": null
+    },
+    "ticketUrl": null,
+    "officialUrl": "https://www.ljubljanskigrad.si/en/castle-events/",
+    "sourceName": "Ljubljana Castle",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": true,
+    "accessibility": null,
+    "indoorOutdoor": "outdoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-18T07:00:00+02:00"
+  },
   {
     eventId: "opera-orchestra-academy-soloists-2026-09-17",
     title: "Concert of the SNG Opera and Ballet Ljubljana Orchestra with Academy of Music Soloists",
@@ -21,8 +148,8 @@ export const draftEvents = [
     familyFriendly: null,
     accessibility: null,
     indoorOutdoor: "indoor",
-    status: "confirmed",
-    lastCheckedAt: "2026-09-17T07:00:00+02:00"
+    status: "expired",
+    lastCheckedAt: "2026-09-18T07:00:00+02:00"
   },
   {
     eventId: "open-kitchen-2026-09-18",
@@ -43,7 +170,7 @@ export const draftEvents = [
     accessibility: null,
     indoorOutdoor: "outdoor",
     status: "confirmed",
-    lastCheckedAt: "2026-09-17T07:00:00+02:00"
+    lastCheckedAt: "2026-09-18T07:00:00+02:00"
   },
   {
     eventId: "mia-znidaric-colored-2026-09-18",
@@ -64,7 +191,7 @@ export const draftEvents = [
     accessibility: null,
     indoorOutdoor: "indoor",
     status: "confirmed",
-    lastCheckedAt: "2026-09-17T07:00:00+02:00"
+    lastCheckedAt: "2026-09-18T07:00:00+02:00"
   },
   {
     eventId: "artish-2026-09-19",
@@ -211,7 +338,7 @@ export const draftEvents = [
     accessibility: null,
     indoorOutdoor: "indoor",
     status: "confirmed",
-    lastCheckedAt: "2026-09-17T07:00:00+02:00"
+    lastCheckedAt: "2026-09-18T07:00:00+02:00"
   },
   {
     eventId: "open-kitchen-2026-09-25",
@@ -253,7 +380,7 @@ export const draftEvents = [
     accessibility: null,
     indoorOutdoor: "indoor",
     status: "confirmed",
-    lastCheckedAt: "2026-09-17T07:00:00+02:00"
+    lastCheckedAt: "2026-09-18T07:00:00+02:00"
   },
   {
     eventId: "castle-vineyard-picnic-2026-09-26",
@@ -274,7 +401,7 @@ export const draftEvents = [
     accessibility: null,
     indoorOutdoor: "outdoor",
     status: "confirmed",
-    lastCheckedAt: "2026-09-17T07:00:00+02:00"
+    lastCheckedAt: "2026-09-18T07:00:00+02:00"
   },
   {
     eventId: "national-gallery-tone-kralj-2026",
@@ -295,7 +422,7 @@ export const draftEvents = [
     accessibility: null,
     indoorOutdoor: "indoor",
     status: "confirmed",
-    lastCheckedAt: "2026-09-17T07:00:00+02:00"
+    lastCheckedAt: "2026-09-18T07:00:00+02:00"
   },
   {
     eventId: "national-gallery-fragments-past-2026",
@@ -316,6 +443,6 @@ export const draftEvents = [
     accessibility: null,
     indoorOutdoor: "indoor",
     status: "confirmed",
-    lastCheckedAt: "2026-09-17T07:00:00+02:00"
+    lastCheckedAt: "2026-09-18T07:00:00+02:00"
   }
 ];
