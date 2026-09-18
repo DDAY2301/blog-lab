@@ -40,6 +40,41 @@ globalThis.fetch = async (input, init = {}) => {
     });
   }
 
+  if (url.includes("/contents/public/data/agent-status.json")) {
+    const content = Buffer.from(JSON.stringify({
+      status: "completed",
+      enabled: true,
+      category: "aktualno",
+      posts_today: 2,
+      last_run: "2026-09-18T18:00:00+02:00",
+      last_success: "2026-09-18T18:00:00+02:00",
+      message: "OK"
+    }), "utf8").toString("base64");
+    return new Response(JSON.stringify({ content }), {
+      status: 200,
+      headers: { "content-type": "application/json" }
+    });
+  }
+
+  if (url.includes("/contents/data/agent-control.json")) {
+    const content = Buffer.from(JSON.stringify({
+      enabled: true,
+      publish_mode: "automatic",
+      schedule: {
+        timezone: "Europe/Ljubljana",
+        slots: [
+          { time: "08:17", category: "sport" },
+          { time: "13:27", category: "politika" },
+          { time: "19:43", category: "aktualno" }
+        ]
+      }
+    }), "utf8").toString("base64");
+    return new Response(JSON.stringify({ content }), {
+      status: 200,
+      headers: { "content-type": "application/json" }
+    });
+  }
+
   return nativeFetch(input, init);
 };
 
@@ -134,6 +169,20 @@ response = await worker.fetch(new Request("https://example.test/api/command", {
   body: JSON.stringify({ command: "x".repeat(4001) })
 }), env);
 check(response.status === 400, "Overlong command must return 400");
+
+const beforeStatusDispatch = dispatchedRequestId;
+response = await worker.fetch(new Request("https://example.test/api/command", {
+  method: "POST",
+  headers: { cookie, "content-type": "application/json" },
+  body: JSON.stringify({ command: "preveri status agenta", mode: "auto", category: "aktualno" })
+}), env);
+check(response.status === 200, "Agent status command must return immediately");
+const directStatusData = await response.json();
+check(directStatusData.local === true, "Agent status must be a local terminal result");
+check(directStatusData.result?.enabled === true, "Agent status must report enabled state");
+check(directStatusData.result?.publish_mode === "automatic", "Agent status must report publish mode");
+check(String(directStatusData.result?.summary || "").includes("08:17 sport"), "Agent status must include schedule");
+check(dispatchedRequestId === beforeStatusDispatch, "Agent status must not dispatch a workflow");
 
 response = await worker.fetch(new Request("https://example.test/api/command", {
   method: "POST",
