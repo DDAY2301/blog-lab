@@ -8,16 +8,22 @@ const AUTHORIZED_USERS = Object.freeze({
   "maj@klemenc.org": "MAJ_LOGIN_PASSWORD"
 });
 
-function sharedLoginPassword(env) {
-  // Both approved users intentionally use the same password.
-  // DAN_LOGIN_PASSWORD is the canonical source; MAJ_LOGIN_PASSWORD is only
-  // a backwards-compatible fallback if the canonical secret is absent.
-  return String(env.DAN_LOGIN_PASSWORD || env.MAJ_LOGIN_PASSWORD || "").trim();
+function configuredLoginPasswords(env) {
+  const values = [
+    String(env.DAN_LOGIN_PASSWORD || "").trim(),
+    String(env.MAJ_LOGIN_PASSWORD || "").trim()
+  ].filter((value) => value.length >= 8);
+  return [...new Set(values)];
 }
 
 function loginPassword(env, email) {
   if (!AUTHORIZED_USERS[email]) return "";
-  return sharedLoginPassword(env);
+  return configuredLoginPasswords(env)[0] || "";
+}
+
+function passwordMatchesConfiguredSecret(env, password) {
+  const candidates = configuredLoginPasswords(env);
+  return candidates.some((expected) => timingSafeEqual(password, expected));
 }
 
 function securityHeaders(extra = {}) {
@@ -87,9 +93,7 @@ function setupState(env) {
   const missing = [];
   if (!String(env.GITHUB_DISPATCH_TOKEN || "").trim()) missing.push("GITHUB_DISPATCH_TOKEN");
   if (!String(env.TERMINAL_COMMAND_KEY || "").trim()) missing.push("TERMINAL_COMMAND_KEY");
-  const hasLoginPassword =
-    String(env.DAN_LOGIN_PASSWORD || "").trim().length >= 8 ||
-    String(env.MAJ_LOGIN_PASSWORD || "").trim().length >= 8;
+  const hasLoginPassword = configuredLoginPasswords(env).length > 0;
   if (!hasLoginPassword) missing.push("LOGIN_PASSWORD");
   return { ready: missing.length === 0, missing };
 }
@@ -229,20 +233,18 @@ export default {
 
     if (request.method === "GET" && url.pathname === "/health") {
       const state = setupState(env);
-      const userReadiness = [
-        loginPassword(env, "dan.grmusa@gmail.com").length >= 8,
-        loginPassword(env, "maj@klemenc.org").length >= 8
-      ];
-      const authReady = userReadiness.every(Boolean);
+      const configuredPasswords = configuredLoginPasswords(env);
+      const authReady = configuredPasswords.length > 0;
       return json({
         ok: true,
         worker: "blog-lab",
-        version: "auth-v4-shared-login",
+        version: "auth-v5-dual-secret-compat",
         ready: state.ready,
         auth_ready: authReady,
-        authorized_users_ready: userReadiness.filter(Boolean).length,
+        authorized_users_ready: authReady ? 2 : 0,
+        configured_login_secrets: configuredPasswords.length,
         auth_mode: "built-in-session",
-        login_secret_mode: "shared-canonical",
+        login_secret_mode: "accept-either-configured-secret",
         free_tier_compatible: true
       });
     }
@@ -253,12 +255,14 @@ export default {
       const email = String(body?.email || "").trim().toLowerCase();
       const password = String(body?.password || "");
       const secretName = AUTHORIZED_USERS[email];
-      const expected = loginPassword(env, email);
-      const configured = expected.length >= 8;
-      const valid = Boolean(secretName && configured && password.length && timingSafeEqual(password, expected));
+      const configured = configuredLoginPasswords(env).length > 0;
+      const valid = Boolean(secretName && configured && password.length && passwordMatchesConfiguredSecret(env, password));
+      if (!configured) {
+        return json({ error: "Prijava na strežniku še ni konfigurirana.", code: "LOGIN_SECRET_MISSING" }, 503);
+      }
       if (!valid) {
         await new Promise((resolve) => setTimeout(resolve, 650));
-        return json({ error: "Napačen e-poštni naslov ali geslo." }, 401);
+        return json({ error: "Napačen e-poštni naslov ali geslo.", code: "INVALID_CREDENTIALS" }, 401);
       }
       let token;
       try { token = await signSession(env, email); } catch { return json({ error: "Terminal še ni pravilno konfiguriran." }, 503); }
