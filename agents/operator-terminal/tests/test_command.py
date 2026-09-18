@@ -204,3 +204,20 @@ def test_builtin_new_page_with_menu_suffix(tmp_path, monkeypatch):
     data = json.loads(rubrics.read_text(encoding="utf-8"))
     assert data[0]["name"] == "Partnerji"
     assert data[0]["slug"] == "partnerji"
+
+
+def test_default_explicit_schedule_is_supported(tmp_path, monkeypatch):
+    control = tmp_path / "agent-control.json"
+    monkeypatch.setattr(command_module, "CONTROL", control)
+    command_module.control_command("nastavi termine objave 08:17 13:27 19:43")
+    data = json.loads(control.read_text(encoding="utf-8"))
+    assert [slot["time"] for slot in data["schedule"]["slots"]] == ["08:17", "13:27", "19:43"]
+
+
+def test_custom_schedule_is_rejected_without_false_success(tmp_path, monkeypatch):
+    control = tmp_path / "agent-control.json"
+    monkeypatch.setattr(command_module, "CONTROL", control)
+    with pytest.raises(SystemExit) as exc:
+        command_module.control_command("nastavi termine objave 09:00 14:00 20:00")
+    assert exc.value.code == 64
+    assert not control.exists()
