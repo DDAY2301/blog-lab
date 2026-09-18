@@ -50,6 +50,33 @@ jobs:
           fi
       - name: Build public site
         run: npm run build
+      - name: Runtime-render public site in headless Chrome
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm run preview -- --host 127.0.0.1 --port 4173 > "$RUNNER_TEMP/vite-preview.log" 2>&1 &
+          PREVIEW_PID=$!
+          trap 'kill "$PREVIEW_PID" 2>/dev/null || true' EXIT
+          for attempt in {1..30}; do
+            if curl -fsS http://127.0.0.1:4173/blog-lab/ >/dev/null; then break; fi
+            sleep 1
+          done
+          BROWSER="$(command -v google-chrome || command -v google-chrome-stable || command -v chromium || command -v chromium-browser || true)"
+          if [[ -z "$BROWSER" ]]; then
+            echo "::error::No headless browser is available on the runner."
+            exit 1
+          fi
+          "$BROWSER" --headless --disable-gpu --no-sandbox --virtual-time-budget=5000 --dump-dom             http://127.0.0.1:4173/blog-lab/ > "$RUNNER_TEMP/rendered-dom.html"
+          grep -Fq 'Blog Lab' "$RUNNER_TEMP/rendered-dom.html" || {
+            echo "::error::React runtime did not render Blog Lab."
+            cat "$RUNNER_TEMP/vite-preview.log"
+            exit 1
+          }
+          grep -Fq 'TEKOČE' "$RUNNER_TEMP/rendered-dom.html" || {
+            echo "::error::LivePulse did not render in the browser."
+            cat "$RUNNER_TEMP/vite-preview.log"
+            exit 1
+          }
       - name: Test Worker auth on a fresh device
         run: node scripts/test-worker-auth.mjs
       - name: Bundle Cloudflare Worker
