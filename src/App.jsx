@@ -1778,6 +1778,17 @@ function ArticleBody({ content }) {
   return <div className="article-body">{blocks}</div>;
 }
 
+const DEFAULT_SITE_SETTINGS = {
+  brand: "Blog Lab",
+  heroEyebrow: "PROSTOR ZA IDEJE",
+  heroTitle: "Pišemo jasno.",
+  heroEmphasis: "Objavljamo preprosto.",
+  heroSubtitle: "Minimalna testna platforma za članke, osnutke in preizkušanje vašega agenta.",
+  heroCta: "Napiši prvi članek",
+  footerText: "Preprost prostor za dobre zgodbe.",
+  showLivePulse: true
+};
+
 function Icon({ name }) {
   const paths = {
     home: <><path d="m3 11 9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></>,
@@ -1794,6 +1805,7 @@ function Icon({ name }) {
 export default function Home() {
   const [articles, setArticles] = useState([]);
   const [rubrics, setRubrics] = useState([]);
+  const [siteSettings, setSiteSettings] = useState(DEFAULT_SITE_SETTINGS);
   const [publicCategory, setPublicCategory] = useState("");
   const [view, setView] = useState("home");
   const [draft, setDraft] = useState(emptyDraft());
@@ -1838,6 +1850,20 @@ export default function Home() {
         setRubrics(items.filter((item) => item && typeof item.name === "string").slice(0, 12));
       })
       .catch(() => { if (active) setRubrics([]); });
+    return () => { active = false; };
+  }, []);
+
+  useEffect(() => {
+    let active = true;
+    const base = import.meta.env.BASE_URL || "/";
+    fetch(`${base}site-settings.json?t=${Date.now()}`, { cache: "no-store" })
+      .then((response) => response.ok ? response.json() : DEFAULT_SITE_SETTINGS)
+      .then((data) => {
+        if (!active) return;
+        const incoming = data && typeof data === "object" ? data : {};
+        setSiteSettings({ ...DEFAULT_SITE_SETTINGS, ...incoming });
+      })
+      .catch(() => { if (active) setSiteSettings(DEFAULT_SITE_SETTINGS); });
     return () => { active = false; };
   }, []);
 
@@ -2010,9 +2036,9 @@ export default function Home() {
   return (
     <main>
       <header className="site-header">
-        <button className="brand" onClick={() => showPublicCategory("")} aria-label="Blog Lab – domov">
+        <button className="brand" onClick={() => showPublicCategory("")} aria-label={`${siteSettings.brand} – domov`}>
           <span className="brand-mark">B</span>
-          <span>Blog Lab</span>
+          <span>{siteSettings.brand}</span>
         </button>
         <nav aria-label="Glavna navigacija">
           <button className={view === "home" && !publicCategory ? "active" : ""} onClick={() => showPublicCategory("")}>
@@ -2039,14 +2065,14 @@ export default function Home() {
       {view === "home" && (
         <>
           <section className="hero">
-            <div className="eyebrow"><span /> PROSTOR ZA IDEJE</div>
-            <h1>Pišemo jasno.<br /><em>Objavljamo preprosto.</em></h1>
-            <p>Minimalna testna platforma za članke, osnutke in preizkušanje vašega agenta.</p>
-            <button className="primary" onClick={newArticle}>Napiši prvi članek <Icon name="arrow" /></button>
+            <div className="eyebrow"><span /> {siteSettings.heroEyebrow}</div>
+            <h1>{siteSettings.heroTitle}<br /><em>{siteSettings.heroEmphasis}</em></h1>
+            <p>{siteSettings.heroSubtitle}</p>
+            <button className="primary" onClick={newArticle}>{siteSettings.heroCta} <Icon name="arrow" /></button>
           </section>
 
           <div className="home-content container">
-            <LivePulse />
+            {siteSettings.showLivePulse && <LivePulse />}
             <section className="feed">
             <div className="section-heading">
               <div>
@@ -2208,7 +2234,7 @@ export default function Home() {
       {toast && <div className="toast" role="status">{toast}</div>}
 
       <footer>
-        <span>Blog Lab</span><p>Preprost prostor za dobre zgodbe.</p><span>Testna različica</span>
+        <span>{siteSettings.brand}</span><p>{siteSettings.footerText}</p><span>Testna različica</span>
       </footer>
     </main>
   );
