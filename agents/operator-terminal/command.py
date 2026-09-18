@@ -444,7 +444,7 @@ def manage_site_settings(command: str) -> bool:
 
     brand = _setting_value(command, [
         r"^(?:spremeni|nastavi)\s+(?:ime|naziv)\s+(?:strani|bloga)\s+(?:v|na)\s+(.+?)[.!?]?$",
-        r"^preimenuj\s+(?:stran|blog)\s+(?:v|na)\s+(.+?)[.!?]?$",
+        r"^preimenuj\s+(?:stran|blog|blog\s+lab)\s+(?:v|na)\s+(.+?)[.!?]?$",
     ], 60)
     if brand:
         merged["brand"] = brand
@@ -469,6 +469,38 @@ def manage_site_settings(command: str) -> bool:
         merged["heroSubtitle"] = subtitle
         write_json(SITE_SETTINGS, merged)
         print("BUILTIN_SITE_OK hero-subtitle")
+        return True
+
+    emphasis = _setting_value(command, [
+        r"^(?:spremeni|nastavi)\s+(?:poudarjen(?:i)?\s+naslov|hero\s+poudarek)\s+(?:v|na)\s+(.+?)[.!?]?$",
+    ], 100)
+    if emphasis:
+        merged["heroEmphasis"] = emphasis
+        write_json(SITE_SETTINGS, merged)
+        print("BUILTIN_SITE_OK hero-emphasis")
+        return True
+
+    eyebrow = _setting_value(command, [
+        r"^(?:spremeni|nastavi)\s+(?:eyebrow|oznako\s+nad\s+naslovom|napis\s+nad\s+naslovom)\s+(?:v|na)\s+(.+?)[.!?]?$",
+    ], 80)
+    if eyebrow:
+        merged["heroEyebrow"] = eyebrow
+        write_json(SITE_SETTINGS, merged)
+        print("BUILTIN_SITE_OK hero-eyebrow")
+        return True
+
+    cta = _setting_value(command, [
+        r"^(?:spremeni|nastavi)\s+(?:cta|glavni\s+gumb|gumb\s+na\s+naslovnici|hero\s+gumb)\s+(?:v|na)\s+(.+?)[.!?]?$",
+    ], 80)
+    if cta:
+        merged["heroCta"] = cta
+        write_json(SITE_SETTINGS, merged)
+        print("BUILTIN_SITE_OK hero-cta")
+        return True
+
+    if any(term in low for term in ["ponastavi besedila strani", "resetiraj besedila strani", "privzeta besedila strani"]):
+        write_json(SITE_SETTINGS, DEFAULT_SITE_SETTINGS.copy())
+        print("BUILTIN_SITE_OK site-settings-reset")
         return True
 
     footer = _setting_value(command, [
