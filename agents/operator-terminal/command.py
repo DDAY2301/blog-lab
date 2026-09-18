@@ -275,7 +275,7 @@ def _requested_theme(low: str):
         return "lilac"
     if "bež" in low or "bez" in low or "beige" in low:
         return "beige"
-    if "temna" in low or "dark" in low:
+    if "temn" in low or "dark" in low:
         return "dark"
     return None
 
