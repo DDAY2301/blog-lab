@@ -81,6 +81,8 @@ jobs:
         run: node scripts/test-worker-browser-js.mjs
       - name: Test Worker auth on a fresh device
         run: node scripts/test-worker-auth.mjs
+      - name: Test terminal Worker API routes
+        run: node scripts/test-worker-routes.mjs
       - name: Bundle Cloudflare Worker
         run: npx wrangler deploy --dry-run
       - name: Scan tracked files for obvious credentials
