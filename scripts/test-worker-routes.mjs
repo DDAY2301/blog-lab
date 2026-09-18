@@ -9,6 +9,8 @@ const env = {
 };
 
 let dispatchedRequestId = "";
+let failDispatch = false;
+let denyMediaWrite = false;
 
 const nativeFetch = globalThis.fetch;
 globalThis.fetch = async (input, init = {}) => {
@@ -16,9 +18,18 @@ globalThis.fetch = async (input, init = {}) => {
   const method = String(init.method || "GET").toUpperCase();
 
   if (url.includes("/actions/workflows/operator-terminal.yml/dispatches") && method === "POST") {
+    if (failDispatch) return new Response("dispatch denied", { status: 403 });
     const body = JSON.parse(String(init.body || "{}"));
     dispatchedRequestId = String(body?.inputs?.request_id || "");
     return new Response(null, { status: 204 });
+  }
+
+  if (url.includes("/contents/public/media/uploads/") && method === "PUT") {
+    if (denyMediaWrite) return new Response("contents denied", { status: 403 });
+    return new Response(JSON.stringify({ content: { path: "public/media/uploads/test.png" } }), {
+      status: 201,
+      headers: { "content-type": "application/json" }
+    });
   }
 
   if (url.includes("/actions/workflows/operator-terminal.yml/runs")) {
@@ -148,6 +159,41 @@ check(response.status === 401, "Anonymous media upload must return 401");
 
 const cookie = await login();
 
+// Missing runtime configuration must fail clearly after a valid login.
+const noKeyEnv = {
+  DAN_LOGIN_PASSWORD: password,
+  GITHUB_DISPATCH_TOKEN: env.GITHUB_DISPATCH_TOKEN
+};
+const noKeyLogin = await worker.fetch(new Request("https://example.test/api/login", {
+  method: "POST",
+  headers: { "content-type": "application/json" },
+  body: JSON.stringify({ email: "dan.grmusa@gmail.com", password })
+}), noKeyEnv);
+const noKeyCookie = (noKeyLogin.headers.get("set-cookie") || "").split(";")[0];
+response = await worker.fetch(new Request("https://example.test/api/command", {
+  method: "POST",
+  headers: { cookie: noKeyCookie, "content-type": "application/json" },
+  body: JSON.stringify({ command: "Ustavi objavljanje" })
+}), noKeyEnv);
+check(response.status === 503, "Missing terminal command key must return 503");
+
+const noTokenEnv = {
+  DAN_LOGIN_PASSWORD: password,
+  TERMINAL_COMMAND_KEY: env.TERMINAL_COMMAND_KEY
+};
+const noTokenLogin = await worker.fetch(new Request("https://example.test/api/login", {
+  method: "POST",
+  headers: { "content-type": "application/json" },
+  body: JSON.stringify({ email: "dan.grmusa@gmail.com", password })
+}), noTokenEnv);
+const noTokenCookie = (noTokenLogin.headers.get("set-cookie") || "").split(";")[0];
+response = await worker.fetch(new Request("https://example.test/api/command", {
+  method: "POST",
+  headers: { cookie: noTokenCookie, "content-type": "application/json" },
+  body: JSON.stringify({ command: "Ustavi objavljanje" })
+}), noTokenEnv);
+check(response.status === 503, "Missing GitHub dispatch token must return 503");
+
 
 response = await worker.fetch(new Request("https://example.test/api/command", {
   method: "POST",
@@ -193,6 +239,28 @@ check(response.status === 202, "Valid authenticated command must dispatch");
 const accepted = await response.json();
 check(/^[0-9a-f-]{36}$/i.test(String(accepted.id || "")), "Dispatch must return request id");
 check(dispatchedRequestId === accepted.id, "GitHub dispatch must use returned request id");
+
+failDispatch = true;
+response = await worker.fetch(new Request("https://example.test/api/command", {
+  method: "POST",
+  headers: { cookie, "content-type": "application/json" },
+  body: JSON.stringify({ command: "Ustavi objavljanje", mode: "control", category: "aktualno" })
+}), env);
+check(response.status === 502, "GitHub dispatch failure must return 502");
+failDispatch = false;
+
+denyMediaWrite = true;
+const deniedMedia = new FormData();
+deniedMedia.append("file", new File([new Uint8Array([137,80,78,71])], "denied.png", { type: "image/png" }));
+response = await worker.fetch(new Request("https://example.test/api/media", {
+  method: "POST",
+  headers: { cookie },
+  body: deniedMedia
+}), env);
+check(response.status === 503, "GitHub media write denial must return 503");
+const deniedMediaData = await response.json();
+check(deniedMediaData.code === "GITHUB_CONTENTS_WRITE_REQUIRED", "Media denial must expose permission code");
+denyMediaWrite = false;
 
 
 const badMedia = new FormData();
