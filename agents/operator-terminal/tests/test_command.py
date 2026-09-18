@@ -13,3 +13,7 @@ def test_infer_schedule_control():
 
 def test_infer_automatic_schedule_control():
     assert infer_mode("Vrni samodejno objavljanje 3x na dan") == "control"
+
+
+def test_infer_design_site():
+    assert infer_mode("dodaj in polepšaj izgled strani") == "site"
