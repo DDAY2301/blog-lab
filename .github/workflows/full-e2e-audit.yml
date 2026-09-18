@@ -1,0 +1,85 @@
+name: Blog Lab Full E2E Audit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/full-e2e-audit.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+      AGENT_ENABLED: "true"
+      PUBLISH_MODE: "automatic"
+      AI_PROVIDER: "auto"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-agent.txt
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install dependencies
+        run: |
+          pip install -r requirements-agent.txt
+          npm ci
+      - name: Run complete automated test matrix
+        run: pytest -q agents/operator-terminal/tests agents/blog-lab-publisher/tests
+      - name: Exercise all editorial categories against live sources
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf content/drafts
+          for category in sport politika aktualno; do
+            echo "=== E2E dry run: $category ==="
+            python agents/blog-lab-publisher/agent.py --category "$category" --dry-run --force
+          done
+          test "$(find content/drafts -maxdepth 1 -type f -name '*.json' | wc -l)" -ge 3
+      - name: Validate generated dry-run article structure
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          drafts=list(Path("content/drafts").glob("*.json"))
+          assert len(drafts) >= 3, f"expected >=3 drafts, got {len(drafts)}"
+          required={"title","excerpt","content","category","sources"}
+          for path in drafts:
+              data=json.loads(path.read_text(encoding="utf-8"))
+              missing=required-set(data)
+              assert not missing, f"{path}: missing {sorted(missing)}"
+              assert len(data["content"]) >= 1200, f"{path}: content too short"
+              assert data["sources"], f"{path}: no structured sources"
+          print(f"Validated {len(drafts)} generated drafts.")
+          PY
+      - name: Exercise live 30-minute feed against live source
+        run: python agents/live-feed/update.py
+      - name: Validate live feed output
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          data=json.loads(Path("public/live-feed.json").read_text(encoding="utf-8"))
+          assert data.get("status") in {"fresh","stale"}, data
+          assert len(data.get("items", [])) >= 3, data
+          for item in data["items"][:3]:
+              assert item.get("title")
+              assert str(item.get("url","")).startswith("https://")
+          print(f"Live feed contains {len(data['items'])} items.")
+          PY
+      - name: Build production frontend
+        run: npm run build
