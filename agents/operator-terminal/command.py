@@ -105,8 +105,148 @@ def _safe_agent_log(value: str, limit: int = 3500) -> str:
     text = re.sub(r"(github_pat_[A-Za-z0-9_]+|gh[pousr]_[A-Za-z0-9_]+|Bearer\\s+[A-Za-z0-9._-]+)", "[REDACTED]", text, flags=re.I)
     return text[-limit:].strip()
 
+DESIGN_MARKER = "/* Blog Lab built-in design upgrade v1 */"
+
+def _design_intent(low: str) -> bool:
+    design_terms = [
+        "polepš", "poleps", "izboljšaj izgled", "izboljsaj izgled",
+        "lepši izgled", "lepsi izgled", "modernizir", "modern design",
+        "izgled strani", "design strani", "dizajn strani",
+        "uredi izgled", "izboljšaj stran", "izboljsaj stran",
+    ]
+    return any(term in low for term in design_terms)
+
+def apply_design_upgrade() -> bool:
+    path = BASE / "src/styles.css"
+    if not path.exists():
+        return False
+    css = path.read_text(encoding="utf-8")
+    if DESIGN_MARKER in css:
+        print("BUILTIN_SITE_OK design-upgrade already installed")
+        return True
+    upgrade = r"""
+
+/* Blog Lab built-in design upgrade v1 */
+:root {
+  --surface-soft: rgba(255,255,255,.74);
+  --surface-strong: rgba(255,255,255,.94);
+  --ring: rgba(23,107,69,.14);
+}
+body {
+  background:
+    radial-gradient(circle at 10% 5%, rgba(23,107,69,.055), transparent 30rem),
+    linear-gradient(180deg, #f7f7f2 0%, #fbfbf8 45%, #f5f6f1 100%);
+}
+.site-header {
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  background: rgba(250,251,247,.86);
+  border-bottom: 1px solid rgba(204,211,204,.72);
+  box-shadow: 0 8px 30px rgba(19,31,23,.045);
+}
+.brand { letter-spacing: -.025em; }
+.hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 8% auto auto 58%;
+  width: 34rem;
+  height: 34rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(35,134,85,.14), rgba(35,134,85,0) 68%);
+  z-index: -1;
+  pointer-events: none;
+}
+.hero h1 {
+  letter-spacing: -.045em;
+  text-wrap: balance;
+}
+.hero p { max-width: 720px; }
+.section-heading {
+  align-items: end;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 18px;
+}
+.section-heading h2 { letter-spacing: -.035em; }
+.post-card {
+  background: var(--surface-strong);
+  border: 1px solid rgba(205,212,206,.82);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 16px 42px rgba(17,31,21,.055);
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+.post-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 24px 58px rgba(17,31,21,.10);
+  border-color: rgba(23,107,69,.28);
+}
+.card-copy h3 { letter-spacing: -.025em; }
+.card-copy p { line-height: 1.7; }
+.card-art {
+  background:
+    linear-gradient(135deg, rgba(23,107,69,.11), rgba(23,107,69,.025)),
+    #eef2ec;
+}
+.live-pulse {
+  background: var(--surface-soft);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-color: rgba(205,212,206,.82);
+  box-shadow: 0 18px 48px rgba(18,34,23,.075);
+}
+.live-pulse-item {
+  border-radius: 10px;
+  transition: background .16s ease, transform .16s ease;
+}
+.live-pulse-item:hover {
+  background: rgba(23,107,69,.055);
+  transform: translateX(2px);
+}
+button, .button, .primary-button, .secondary-button {
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+}
+button:hover, .button:hover, .primary-button:hover, .secondary-button:hover {
+  transform: translateY(-1px);
+}
+.article-page, .editor-main, .preview-modal {
+  background: rgba(255,255,255,.94);
+}
+.article-heading h1 {
+  letter-spacing: -.045em;
+  text-wrap: balance;
+}
+.article-body {
+  font-size: 17px;
+  line-height: 1.78;
+}
+.article-body p { max-width: 72ch; }
+.article-hero, .article-image, .video-frame {
+  box-shadow: 0 20px 48px rgba(15,30,20,.08);
+}
+footer {
+  background: rgba(248,249,245,.76);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .post-card, .live-pulse-item, button, .button, .primary-button, .secondary-button {
+    transition: none !important;
+  }
+}
+"""
+    path.write_text(css.rstrip() + upgrade + "\n", encoding="utf-8")
+    print("BUILTIN_SITE_OK design-upgrade applied")
+    return True
+
 def builtin_site_command(command: str) -> bool:
     low = command.lower()
+    if _design_intent(low):
+        return apply_design_upgrade()
     live_intent = (
         ("pol ure" in low or "30 min" in low or "30 minut" in low)
         and ("mini" in low or "tekoč" in low or "aktual" in low)
@@ -146,6 +286,9 @@ def site_command(command: str) -> None:
             print("COPILOT_DIAGNOSTIC_BEGIN", file=sys.stderr)
             print(diagnostic, file=sys.stderr)
             print("COPILOT_DIAGNOSTIC_END", file=sys.stderr)
+        if "access denied by policy settings" in diagnostic.lower():
+            print("COPILOT_POLICY_DENIED", file=sys.stderr)
+            raise SystemExit(78)
         auth_hint = ""
         if os.environ.get("COPILOT_PERSONAL_TOKEN_CONFIGURED", "").lower() != "true":
             auth_hint = " Personal repositories may require repository secret COPILOT_GITHUB_TOKEN with Copilot Requests permission."
