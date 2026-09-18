@@ -253,6 +253,142 @@ def _safe_agent_log(value: str, limit: int = 3500) -> str:
     return text[-limit:].strip()
 
 DESIGN_MARKER = "/* Blog Lab built-in design upgrade v1 */"
+THEME_START = "/* Blog Lab managed theme:start */"
+THEME_END = "/* Blog Lab managed theme:end */"
+
+def _theme_intent(low: str) -> bool:
+    terms = [
+        "barvni spekter", "barvna tema", "barve strani", "barvo strani",
+        "spremeni barve", "spremeni barv", "tema strani", "palette", "paleta",
+        "pastel modr", "pastelno modr", "pastel zelen", "pastel roza",
+        "pastel vijoli", "temna tema", "dark theme",
+    ]
+    return any(term in low for term in terms)
+
+def _requested_theme(low: str):
+    if ("pastel" in low and ("modr" in low or "blue" in low)) or "pastelno modr" in low:
+        return "pastel-blue"
+    if "modr" in low or "blue" in low:
+        return "blue"
+    if "zelen" in low or "green" in low:
+        return "green"
+    if "roza" in low or "pink" in low:
+        return "pink"
+    if "vijoli" in low or "purple" in low or "lilac" in low:
+        return "lilac"
+    if "bež" in low or "bez" in low or "beige" in low:
+        return "beige"
+    if "temna" in low or "dark" in low:
+        return "dark"
+    return None
+
+THEMES = {
+    "pastel-blue": {
+        "ink":"#243447","muted":"#65798d","paper":"#eef5fb","white":"#fbfdff",
+        "line":"#cbdbea","primary":"#7fa9d1","primary_dark":"#527fa8",
+        "mint":"#dbeaf7","accent":"#a9c8e5","shadow":"rgba(56,86,116,.10)",
+        "body1":"#eef5fb","body2":"#f8fbfe","hero1":"#e4f0fa","hero2":"#f7fbff",
+        "soft":"rgba(242,248,253,.84)"
+    },
+    "blue": {
+        "ink":"#17283a","muted":"#5b7188","paper":"#eaf2f8","white":"#ffffff",
+        "line":"#bfd0df","primary":"#4f86b6","primary_dark":"#315f88",
+        "mint":"#d6e7f4","accent":"#8db4d5","shadow":"rgba(36,77,112,.12)",
+        "body1":"#e9f2f8","body2":"#f7fafc","hero1":"#dbeaf5","hero2":"#f5f9fc",
+        "soft":"rgba(238,246,251,.86)"
+    },
+    "green": {
+        "ink":"#17211b","muted":"#66716a","paper":"#f7f5ef","white":"#fffefd",
+        "line":"#dedfd9","primary":"#176b45","primary_dark":"#0e4d31",
+        "mint":"#ddefd8","accent":"#e96f3b","shadow":"rgba(23,33,27,.09)",
+        "body1":"#f7f5ef","body2":"#fbfbf8","hero1":"#ddefd8","hero2":"#f0f3e9",
+        "soft":"rgba(255,255,255,.82)"
+    },
+    "pink": {
+        "ink":"#3b2931","muted":"#846b77","paper":"#fbf1f5","white":"#fffafd",
+        "line":"#ead3dd","primary":"#c887a4","primary_dark":"#9d5f7b",
+        "mint":"#f4dfe8","accent":"#e9a9c3","shadow":"rgba(104,60,80,.10)",
+        "body1":"#fbf1f5","body2":"#fff9fc","hero1":"#f5e2ea","hero2":"#fff9fc",
+        "soft":"rgba(255,248,252,.86)"
+    },
+    "lilac": {
+        "ink":"#332d43","muted":"#756d88","paper":"#f4f0fa","white":"#fcfaff",
+        "line":"#ddd4ea","primary":"#9b8bc4","primary_dark":"#71619c",
+        "mint":"#e7e0f4","accent":"#c0b4df","shadow":"rgba(73,60,104,.10)",
+        "body1":"#f4f0fa","body2":"#fbf9fe","hero1":"#e8e1f4","hero2":"#faf8fd",
+        "soft":"rgba(249,247,253,.86)"
+    },
+    "beige": {
+        "ink":"#332d26","muted":"#766d62","paper":"#f4efe6","white":"#fffdf8",
+        "line":"#ded4c5","primary":"#a88d68","primary_dark":"#80694d",
+        "mint":"#e9dfcf","accent":"#c8ad86","shadow":"rgba(76,61,43,.10)",
+        "body1":"#f4efe6","body2":"#fbf8f2","hero1":"#eadfce","hero2":"#faf6ef",
+        "soft":"rgba(252,249,243,.86)"
+    },
+    "dark": {
+        "ink":"#edf4f8","muted":"#a9bac7","paper":"#111820","white":"#18222c",
+        "line":"#2b3a47","primary":"#73a8d6","primary_dark":"#9bc3e6",
+        "mint":"#203445","accent":"#91bce0","shadow":"rgba(0,0,0,.28)",
+        "body1":"#111820","body2":"#17212a","hero1":"#1b2d3c","hero2":"#121b23",
+        "soft":"rgba(23,33,42,.90)"
+    },
+}
+
+def apply_theme(theme: str) -> bool:
+    palette = THEMES.get(theme)
+    if not palette:
+        return False
+    path = BASE / "src/styles.css"
+    if not path.exists():
+        return False
+    css = path.read_text(encoding="utf-8")
+    css = re.sub(
+        re.escape(THEME_START) + r".*?" + re.escape(THEME_END),
+        "",
+        css,
+        flags=re.S,
+    ).rstrip()
+    block = f"""
+{THEME_START}
+:root {{
+  --ink: {palette["ink"]};
+  --muted: {palette["muted"]};
+  --paper: {palette["paper"]};
+  --white: {palette["white"]};
+  --line: {palette["line"]};
+  --green: {palette["primary"]};
+  --green-dark: {palette["primary_dark"]};
+  --mint: {palette["mint"]};
+  --orange: {palette["accent"]};
+  --shadow: 0 16px 48px {palette["shadow"]};
+}}
+body {{
+  background:
+    radial-gradient(circle at 10% 5%, {palette["mint"]}88, transparent 32rem),
+    linear-gradient(180deg, {palette["body1"]} 0%, {palette["body2"]} 100%);
+}}
+.site-header {{ background: {palette["soft"]}; }}
+.hero {{
+  background:
+    radial-gradient(circle at 82% 22%, {palette["mint"]} 0 14%, transparent 36%),
+    linear-gradient(135deg, {palette["hero1"]} 0%, {palette["hero2"]} 100%);
+}}
+.hero::after {{ border-color: {palette["primary"]}22; }}
+.hero::before {{ background: radial-gradient(circle, {palette["primary"]}22, transparent 68%); }}
+.card-art {{
+  background: linear-gradient(145deg, {palette["mint"]}, {palette["accent"]}55);
+}}
+.card-art::after {{ border-color: {palette["primary"]}22; }}
+.article-category, .status-pill.published {{ background: {palette["mint"]}; }}
+.agent-note {{ background: {palette["mint"]}; }}
+.live-pulse {{ background: {palette["soft"]}; }}
+footer {{ background: {palette["soft"]}; }}
+{THEME_END}
+"""
+    path.write_text(css + "\n\n" + block.strip() + "\n", encoding="utf-8")
+    print(f"BUILTIN_SITE_OK theme={theme}")
+    return True
+
 
 def _design_intent(low: str) -> bool:
     design_terms = [
@@ -569,6 +705,12 @@ def builtin_site_command(command: str) -> bool:
     low = command.lower()
     if manage_site_settings(command):
         return True
+    if _theme_intent(low):
+        theme = _requested_theme(low)
+        if not theme:
+            print("BUILTIN_SITE_UNSUPPORTED tema ni prepoznana.", file=sys.stderr)
+            raise SystemExit(64)
+        return apply_theme(theme)
     if _design_intent(low):
         return apply_design_upgrade()
     if manage_rubric(command):
