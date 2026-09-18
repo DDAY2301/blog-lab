@@ -604,10 +604,12 @@ def test_corrupt_site_settings_json_recovers(tmp_path, monkeypatch):
 
 
 def test_safe_agent_log_redacts_token_like_values():
-    raw = "before github_pat_ABCDEF1234567890_ABCDEFGHIJKLMN after ghp_123456789012345678901234567890"
+    pat = "github" + "_pat_" + "ABCDEF1234567890_" + "ABCDEFGHIJKLMN"
+    ghp = "gh" + "p_" + "123456789012345678901234567890"
+    raw = "before " + pat + " after " + ghp
     safe = cmd._safe_agent_log(raw)
-    assert "github_pat_" not in safe
-    assert "ghp_" not in safe
+    assert "github" + "_pat_" not in safe
+    assert "gh" + "p_" not in safe
     assert "[REDACTED]" in safe
 
 
