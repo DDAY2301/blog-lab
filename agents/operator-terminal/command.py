@@ -57,14 +57,56 @@ def article_command(command: str, category: str) -> None:
     if not after or after == before:
         raise SystemExit("Manual article request completed without publishing a new article")
 
+def _safe_agent_log(value: str, limit: int = 3500) -> str:
+    text = str(value or "")
+    text = re.sub(r"(github_pat_[A-Za-z0-9_]+|gh[pousr]_[A-Za-z0-9_]+|Bearer\\s+[A-Za-z0-9._-]+)", "[REDACTED]", text, flags=re.I)
+    return text[-limit:].strip()
+
+def builtin_site_command(command: str) -> bool:
+    low = command.lower()
+    live_intent = (
+        ("pol ure" in low or "30 min" in low or "30 minut" in low)
+        and ("mini" in low or "tekoč" in low or "aktual" in low)
+        and ("stolpec" in low or "stran" in low or "lev" in low)
+    )
+    if live_intent:
+        required = [
+            BASE / "src/LivePulse.jsx",
+            BASE / "agents/live-feed/update.py",
+            BASE / ".github/workflows/live-feed.yml",
+            BASE / "public/live-feed.json",
+        ]
+        if all(path.exists() for path in required):
+            print("BUILTIN_SITE_OK live-pulse already installed")
+            return True
+    return False
+
 def site_command(command: str) -> None:
+    if builtin_site_command(command):
+        return
     if not shutil.which("copilot"):
         raise SystemExit("Copilot CLI is not installed")
     prompt = """You are the authenticated repository editor for DDAY2301/blog-lab. Execute the operator request below by editing the existing repository, preserving working functionality and design. Do not merely explain. You may edit normal website files under src/, public/, and the Blog Lab publisher prompts/config when relevant. The site has a structured multimedia article system in src/ArticleMedia.jsx: hero images, inline images, YouTube/direct video, galleries and structured sources. When the operator supplies media URLs, integrate them into that system instead of inventing replacements. NEVER edit .github/, terminal/, agents/operator-terminal/, AGENTS.md, requirements-agent.txt, secrets, authentication, permissions, or security controls. Do not use shell commands or network tools. Do not reveal tokens or environment variables. Keep changes minimal and production-ready.\n\nOPERATOR REQUEST:\n""" + command
     excluded = "bash,powershell,web_fetch,task,write_agent,ask_user"
-    proc = subprocess.run(["copilot", "-s", "-p", prompt, "--no-ask-user", "--no-custom-instructions", "--disable-builtin-mcps", f"--excluded-tools={excluded}", "--no-auto-update", "--no-remote", "--no-remote-export"], cwd=BASE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, timeout=240, check=False)
+    proc = subprocess.run(
+        ["copilot", "-s", "-p", prompt, "--no-ask-user", "--no-custom-instructions", "--disable-builtin-mcps", f"--excluded-tools={excluded}", "--no-auto-update", "--no-remote", "--no-remote-export"],
+        cwd=BASE,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        text=True,
+        timeout=240,
+        check=False,
+    )
     if proc.returncode != 0:
-        raise SystemExit(f"Copilot edit failed with exit code {proc.returncode}")
+        diagnostic = _safe_agent_log((proc.stderr or "") + "\n" + (proc.stdout or ""))
+        if diagnostic:
+            print("COPILOT_DIAGNOSTIC_BEGIN", file=sys.stderr)
+            print(diagnostic, file=sys.stderr)
+            print("COPILOT_DIAGNOSTIC_END", file=sys.stderr)
+        auth_hint = ""
+        if os.environ.get("COPILOT_PERSONAL_TOKEN_CONFIGURED", "").lower() != "true":
+            auth_hint = " Personal repositories may require repository secret COPILOT_GITHUB_TOKEN with Copilot Requests permission."
+        raise SystemExit(f"Copilot edit failed with exit code {proc.returncode}.{auth_hint}")
 
 def main() -> int:
     ap = argparse.ArgumentParser(); ap.add_argument("--command-file", required=True); args = ap.parse_args()
