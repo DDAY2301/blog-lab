@@ -395,3 +395,68 @@ def test_article_unknown_rubric_does_not_invent_category(tmp_path, monkeypatch):
     monkeypatch.setattr(cmd.subprocess, "run", fake_run)
     cmd.article_command("Objavi članek o testu v rubriki Neobstojeca", "aktualno")
     assert "--output-category" not in captured["args"]
+
+
+@pytest.mark.parametrize("text", [
+    "skrij tekoče",
+    "odstrani mini novice",
+    "izklopi live pulse",
+    "pokaži tekoče",
+    "prikaži mini novice",
+    "vklopi live pulse",
+])
+def test_live_pulse_settings_route_to_site(text):
+    assert cmd.infer_mode(text) == "site"
+
+
+def test_site_settings_brand(tmp_path, monkeypatch):
+    settings = tmp_path / "site-settings.json"
+    monkeypatch.setattr(cmd, "SITE_SETTINGS", settings)
+    assert cmd.manage_site_settings("Spremeni ime strani v Novi Blog") is True
+    data = json.loads(settings.read_text())
+    assert data["brand"] == "Novi Blog"
+    assert data["showLivePulse"] is True
+
+
+def test_site_settings_hero_title(tmp_path, monkeypatch):
+    settings = tmp_path / "site-settings.json"
+    monkeypatch.setattr(cmd, "SITE_SETTINGS", settings)
+    assert cmd.manage_site_settings("Spremeni glavni naslov v Aktualne zgodbe") is True
+    assert json.loads(settings.read_text())["heroTitle"] == "Aktualne zgodbe"
+
+
+def test_site_settings_subtitle(tmp_path, monkeypatch):
+    settings = tmp_path / "site-settings.json"
+    monkeypatch.setattr(cmd, "SITE_SETTINGS", settings)
+    assert cmd.manage_site_settings("Nastavi podnaslov na Dnevni pregled aktualnih dogodkov") is True
+    assert json.loads(settings.read_text())["heroSubtitle"] == "Dnevni pregled aktualnih dogodkov"
+
+
+def test_site_settings_footer(tmp_path, monkeypatch):
+    settings = tmp_path / "site-settings.json"
+    monkeypatch.setattr(cmd, "SITE_SETTINGS", settings)
+    assert cmd.manage_site_settings("Spremeni footer v Neodvisen prostor za zgodbe") is True
+    assert json.loads(settings.read_text())["footerText"] == "Neodvisen prostor za zgodbe"
+
+
+def test_site_settings_hide_show_live_pulse(tmp_path, monkeypatch):
+    settings = tmp_path / "site-settings.json"
+    monkeypatch.setattr(cmd, "SITE_SETTINGS", settings)
+    assert cmd.manage_site_settings("Skrij tekoče") is True
+    assert json.loads(settings.read_text())["showLivePulse"] is False
+    assert cmd.manage_site_settings("Pokaži tekoče") is True
+    assert json.loads(settings.read_text())["showLivePulse"] is True
+
+
+def test_site_settings_unrelated_command_returns_false(tmp_path, monkeypatch):
+    settings = tmp_path / "site-settings.json"
+    monkeypatch.setattr(cmd, "SITE_SETTINGS", settings)
+    assert cmd.manage_site_settings("Dodaj povsem novo kompleksno komponento") is False
+    assert not settings.exists()
+
+
+def test_site_settings_rejects_empty_or_overlong_value(tmp_path, monkeypatch):
+    settings = tmp_path / "site-settings.json"
+    monkeypatch.setattr(cmd, "SITE_SETTINGS", settings)
+    with pytest.raises(SystemExit):
+        cmd.manage_site_settings("Spremeni ime strani v " + "A" * 61)
