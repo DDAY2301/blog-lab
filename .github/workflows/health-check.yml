@@ -77,6 +77,8 @@ jobs:
             cat "$RUNNER_TEMP/vite-preview.log"
             exit 1
           }
+      - name: Parse Worker embedded browser JavaScript
+        run: node scripts/test-worker-browser-js.mjs
       - name: Test Worker auth on a fresh device
         run: node scripts/test-worker-auth.mjs
       - name: Bundle Cloudflare Worker
