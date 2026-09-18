@@ -5,14 +5,7 @@ const terminalKeyBytes = new Uint8Array(32);
 for (let i = 0; i < terminalKeyBytes.length; i += 1) terminalKeyBytes[i] = i + 1;
 const terminalKey = Buffer.from(terminalKeyBytes).toString("base64");
 
-const env = {
-  DAN_LOGIN_PASSWORD: sharedPassword,
-  MAJ_LOGIN_PASSWORD: "intentionally-wrong-secondary-secret",
-  TERMINAL_COMMAND_KEY: terminalKey,
-  GITHUB_DISPATCH_TOKEN: "test-token"
-};
-
-async function loginAndVerify(email) {
+async function loginAndVerify(env, email) {
   const login = await worker.fetch(new Request("https://example.test/api/login", {
     method: "POST",
     headers: { "content-type": "application/json" },
@@ -43,13 +36,32 @@ async function loginAndVerify(email) {
   }
 }
 
-await loginAndVerify("dan.grmusa@gmail.com");
-await loginAndVerify("maj@klemenc.org");
+async function runScenario(name, env) {
+  await loginAndVerify(env, "dan.grmusa@gmail.com");
+  await loginAndVerify(env, "maj@klemenc.org");
 
-const health = await worker.fetch(new Request("https://example.test/health"), env);
-const healthData = await health.json();
-if (!healthData.auth_ready || healthData.authorized_users_ready !== 2) {
-  throw new Error(`Unexpected health auth state: ${JSON.stringify(healthData)}`);
+  const health = await worker.fetch(new Request("https://example.test/health"), env);
+  const healthData = await health.json();
+  if (!healthData.auth_ready || healthData.authorized_users_ready !== 2) {
+    throw new Error(`${name}: unexpected health auth state: ${JSON.stringify(healthData)}`);
+  }
+  if (healthData.version !== "auth-v5-dual-secret-compat") {
+    throw new Error(`${name}: unexpected auth version: ${healthData.version}`);
+  }
 }
 
-console.log("Cross-device Worker auth logic passed for both authorized users.");
+await runScenario("Dan secret valid, Maj legacy secret wrong", {
+  DAN_LOGIN_PASSWORD: sharedPassword,
+  MAJ_LOGIN_PASSWORD: "intentionally-wrong-secondary-secret",
+  TERMINAL_COMMAND_KEY: terminalKey,
+  GITHUB_DISPATCH_TOKEN: "test-token"
+});
+
+await runScenario("Maj secret valid, Dan legacy secret wrong", {
+  DAN_LOGIN_PASSWORD: "intentionally-wrong-primary-secret",
+  MAJ_LOGIN_PASSWORD: sharedPassword,
+  TERMINAL_COMMAND_KEY: terminalKey,
+  GITHUB_DISPATCH_TOKEN: "test-token"
+});
+
+console.log("Fresh-device Worker auth passed with either configured shared secret.");
