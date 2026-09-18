@@ -561,3 +561,62 @@ def test_publish_mode_phrases_route_to_control(text):
 ])
 def test_generic_status_phrases_route_to_control(text):
     assert cmd.infer_mode(text) == "control"
+
+
+def test_rubric_limit_is_explicit(tmp_path, monkeypatch):
+    rubrics = tmp_path / "site-rubrics.json"
+    rubrics.write_text(json.dumps([
+        {"name": f"Rubrika {i}", "slug": f"rubrika-{i}"} for i in range(12)
+    ]), encoding="utf-8")
+    monkeypatch.setattr(cmd, "RUBRICS", rubrics)
+    with pytest.raises(SystemExit) as exc:
+        cmd.manage_rubric("Dodaj rubriko Trinajsta")
+    assert exc.value.code == 64
+    assert len(json.loads(rubrics.read_text())) == 12
+
+
+def test_corrupt_control_json_recovers(tmp_path, monkeypatch):
+    control = tmp_path / "control.json"
+    control.write_text("{broken", encoding="utf-8")
+    monkeypatch.setattr(cmd, "CONTROL", control)
+    cmd.control_command("Nadaljuj samodejno objavljanje")
+    data = json.loads(control.read_text())
+    assert data["enabled"] is True
+    assert data["publish_mode"] == "automatic"
+
+
+def test_corrupt_rubrics_json_recovers(tmp_path, monkeypatch):
+    rubrics = tmp_path / "site-rubrics.json"
+    rubrics.write_text("{broken", encoding="utf-8")
+    monkeypatch.setattr(cmd, "RUBRICS", rubrics)
+    assert cmd.manage_rubric("Dodaj rubriko Projekti") is True
+    assert json.loads(rubrics.read_text()) == [{"name": "Projekti", "slug": "projekti"}]
+
+
+def test_corrupt_site_settings_json_recovers(tmp_path, monkeypatch):
+    settings = tmp_path / "site-settings.json"
+    settings.write_text("{broken", encoding="utf-8")
+    monkeypatch.setattr(cmd, "SITE_SETTINGS", settings)
+    assert cmd.manage_site_settings("Spremeni ime strani v Test Lab") is True
+    data = json.loads(settings.read_text())
+    assert data["brand"] == "Test Lab"
+    assert data["showLivePulse"] is True
+
+
+def test_safe_agent_log_redacts_token_like_values():
+    raw = "before github_pat_ABCDEF1234567890_ABCDEFGHIJKLMN after ghp_123456789012345678901234567890"
+    safe = cmd._safe_agent_log(raw)
+    assert "github_pat_" not in safe
+    assert "ghp_" not in safe
+    assert "[REDACTED]" in safe
+
+
+def test_main_accepts_exactly_4000_chars(tmp_path, monkeypatch):
+    path = tmp_path / "command.json"
+    command = "x" * 4000
+    path.write_text(json.dumps({"command": command, "mode": "site", "category": "aktualno"}), encoding="utf-8")
+    calls = []
+    monkeypatch.setattr(cmd, "site_command", lambda value: calls.append(value))
+    monkeypatch.setattr(sys, "argv", ["command.py", "--command-file", str(path)])
+    assert cmd.main() == 0
+    assert calls == [command]
