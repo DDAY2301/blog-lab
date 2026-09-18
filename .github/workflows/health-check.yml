@@ -39,6 +39,15 @@ jobs:
         run: python -m py_compile agents/operator-terminal/*.py agents/blog-lab-publisher/agent.py agents/blog-lab-publisher/services/*.py
       - name: Run agent tests
         run: pytest -q agents/operator-terminal/tests agents/blog-lab-publisher/tests
+      - name: Check critical frontend component wiring
+        shell: bash
+        run: |
+          if grep -Fq '<LivePulse' src/App.jsx; then
+            grep -Fq 'import LivePulse from "./LivePulse";' src/App.jsx || {
+              echo "::error::LivePulse is rendered but not imported in src/App.jsx."
+              exit 1
+            }
+          fi
       - name: Build public site
         run: npm run build
       - name: Test Worker auth on a fresh device
