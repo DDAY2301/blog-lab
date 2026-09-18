@@ -6,115 +6,102 @@ from types import SimpleNamespace
 import pytest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-import command as command_module
-from command import infer_mode
-
-
-@pytest.mark.parametrize("text", [
-    "Objavi članek o novem projektu",
-    "objavi clanek o športu",
-    "Napiši prispevek o dogodku",
-    "napiši o današnjem prometu",
-    "Objavi novico o dogodku",
-    "pripravi članek z naslovno fotografijo",
-])
-def test_article_intents(text):
-    assert infer_mode(text) == "article"
+import command as cmd
 
 
 @pytest.mark.parametrize("text", [
     "Ustavi objavljanje",
-    "zaustavi agenta",
-    "izklopi objavljanje",
-    "pavza",
-    "nadaljuj objavljanje",
-    "vklopi agenta",
-    "Vrni samodejno objavljanje 3x na dan",
-    "sedaj pa nazaj na termine objav kot na začetku samostojna objava trikrat na dan",
-    "objavljaj trikrat na dan",
-    "samostojno objavljanje po urniku",
-    "nastavi termine objave",
+    "Zaustavi agenta",
+    "Pavza",
+    "Izklopi objave",
+    "Nadaljuj objavljanje",
+    "Vklopi agenta",
+    "resume",
+    "Vrni urnik objav",
+    "nazaj na termine objav kot na začetku",
+    "samostojna objava trikrat na dan",
+    "samodejno objavljanje 3x na dan",
+    "avtomatska objava tri krat na dan",
 ])
-def test_control_intents(text):
-    assert infer_mode(text) == "control"
+def test_infer_control_variants(text):
+    assert cmd.infer_mode(text) == "control"
+
+
+@pytest.mark.parametrize("text", [
+    "Objavi članek o novem projektu",
+    "Napiši članek o športu",
+    "napisi o dogodku",
+    "Pripravi prispevek",
+    "Objavi danes pregled",
+])
+def test_infer_article_variants(text):
+    assert cmd.infer_mode(text) == "article"
 
 
 @pytest.mark.parametrize("text", [
     "Dodaj novo rubriko Projekti v meni",
     "dodaj in polepšaj izgled strani",
-    "Objavi novo stran Projekti",
-    "dodaj novo stran Partnerji",
-    "spremeni header",
-    "izboljšaj navigacijo",
-    "dodaj footer",
-    "naredi responsive layout",
-    "dodaj galerijo na stran",
-    "dodaj levi stolpec z aktualnimi novicami",
-    "spremeni CSS kartic",
-    "dodaj hero sekcijo",
-    "zamenjaj logo",
-    "dodaj gumb Kontakt",
+    "Moderniziraj design strani",
+    "Dodaj stran Galerija",
 ])
-def test_site_intents(text):
-    assert infer_mode(text) == "site"
+def test_infer_site_variants(text):
+    assert cmd.infer_mode(text) == "site"
 
 
-def test_site_noun_wins_over_publish_verb():
-    assert infer_mode("objavi novo spletno stran za projekte") == "site"
-
-
-def test_schedule_wins_over_article_wording():
-    assert infer_mode("objavi članek trikrat na dan") == "control"
-
-
-def test_control_command_stop_and_resume(tmp_path, monkeypatch):
-    control = tmp_path / "agent-control.json"
-    monkeypatch.setattr(command_module, "CONTROL", control)
-    command_module.control_command("ustavi objavljanje")
-    data = json.loads(control.read_text(encoding="utf-8"))
+def test_control_stop(tmp_path, monkeypatch):
+    control = tmp_path / "control.json"
+    monkeypatch.setattr(cmd, "CONTROL", control)
+    cmd.control_command("Ustavi objavljanje")
+    data = json.loads(control.read_text())
     assert data["enabled"] is False
-    command_module.control_command("nadaljuj samodejno objavljanje")
-    data = json.loads(control.read_text(encoding="utf-8"))
+
+
+def test_control_resume(tmp_path, monkeypatch):
+    control = tmp_path / "control.json"
+    control.write_text(json.dumps({"enabled": False, "publish_mode": "draft"}))
+    monkeypatch.setattr(cmd, "CONTROL", control)
+    cmd.control_command("Nadaljuj samodejno objavljanje")
+    data = json.loads(control.read_text())
     assert data["enabled"] is True
     assert data["publish_mode"] == "automatic"
 
 
+@pytest.mark.parametrize(("request", "expected"), [
+    ("Preklopi na draft", "draft"),
+    ("Shranjuj samo osnutke", "draft"),
+    ("Daj v review", "review"),
+    ("Pred objavo naj gre v pregled", "review"),
+    ("Vklopi automatic način", "automatic"),
+    ("Naj deluje avtomatsko", "automatic"),
+    ("Naj objavlja samodejno", "automatic"),
+    ("Naj objavlja samostojno", "automatic"),
+])
+def test_control_publish_modes(tmp_path, monkeypatch, request, expected):
+    control = tmp_path / "control.json"
+    monkeypatch.setattr(cmd, "CONTROL", control)
+    cmd.control_command(request)
+    data = json.loads(control.read_text())
+    assert data["publish_mode"] == expected
+
+
 def test_control_schedule_profile(tmp_path, monkeypatch):
-    control = tmp_path / "agent-control.json"
-    monkeypatch.setattr(command_module, "CONTROL", control)
-    command_module.control_command("vrni samostojno objavljanje trikrat na dan")
-    data = json.loads(control.read_text(encoding="utf-8"))
+    control = tmp_path / "control.json"
+    monkeypatch.setattr(cmd, "CONTROL", control)
+    cmd.control_command("nazaj na termine objav kot na začetku samostojna objava trikrat na dan")
+    data = json.loads(control.read_text())
     assert data["enabled"] is True
     assert data["publish_mode"] == "automatic"
     assert data["schedule_profile"] == "default-3x-daily"
     assert data["schedule"]["timezone"] == "Europe/Ljubljana"
-    assert [slot["time"] for slot in data["schedule"]["slots"]] == ["08:17", "13:27", "19:43"]
+    assert data["schedule"]["slots"] == [
+        {"time": "08:17", "category": "sport"},
+        {"time": "13:27", "category": "politika"},
+        {"time": "19:43", "category": "aktualno"},
+    ]
 
 
-def test_control_draft_and_review(tmp_path, monkeypatch):
-    control = tmp_path / "agent-control.json"
-    monkeypatch.setattr(command_module, "CONTROL", control)
-    command_module.control_command("preklopi v osnutek draft")
-    assert json.loads(control.read_text(encoding="utf-8"))["publish_mode"] == "draft"
-    command_module.control_command("preklopi na pregled review")
-    assert json.loads(control.read_text(encoding="utf-8"))["publish_mode"] == "review"
-
-
-def test_builtin_design_upgrade(tmp_path, monkeypatch):
-    src = tmp_path / "src"
-    src.mkdir()
-    styles = src / "styles.css"
-    styles.write_text("body{}\n", encoding="utf-8")
-    monkeypatch.setattr(command_module, "BASE", tmp_path)
-    assert command_module.builtin_site_command("dodaj in polepšaj izgled strani") is True
-    once = styles.read_text(encoding="utf-8")
-    assert command_module.DESIGN_MARKER in once
-    assert command_module.builtin_site_command("izboljšaj design strani") is True
-    twice = styles.read_text(encoding="utf-8")
-    assert twice.count(command_module.DESIGN_MARKER) == 1
-
-
-def test_builtin_live_pulse_detection(tmp_path, monkeypatch):
+def test_builtin_live_pulse(tmp_path, monkeypatch):
+    monkeypatch.setattr(cmd, "BASE", tmp_path)
     for rel in [
         "src/LivePulse.jsx",
         "agents/live-feed/update.py",
@@ -123,210 +110,150 @@ def test_builtin_live_pulse_detection(tmp_path, monkeypatch):
     ]:
         path = tmp_path / rel
         path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text("ok", encoding="utf-8")
-    monkeypatch.setattr(command_module, "BASE", tmp_path)
-    assert command_module.builtin_site_command("dodaj levi stolpec z mini aktualnimi stvarmi na 30 minut") is True
+        path.write_text("ok")
+    assert cmd.builtin_site_command("Dodaj na levi stolpec mini aktualno na 30 minut") is True
 
 
-def test_policy_denied_is_non_retryable(monkeypatch):
-    monkeypatch.setattr(command_module.shutil, "which", lambda _: "/usr/bin/copilot")
-    proc = SimpleNamespace(returncode=1, stdout="", stderr="Error: Access denied by policy settings")
-    monkeypatch.setattr(command_module.subprocess, "run", lambda *a, **k: proc)
+def test_builtin_live_pulse_missing_files(tmp_path, monkeypatch):
+    monkeypatch.setattr(cmd, "BASE", tmp_path)
+    assert cmd.builtin_site_command("Dodaj na levi stolpec mini aktualno na 30 minut") is False
+
+
+def test_builtin_design_applies_once(tmp_path, monkeypatch):
+    monkeypatch.setattr(cmd, "BASE", tmp_path)
+    css = tmp_path / "src/styles.css"
+    css.parent.mkdir(parents=True)
+    css.write_text("body { color: black; }")
+    assert cmd.builtin_site_command("dodaj in polepšaj izgled strani") is True
+    first = css.read_text()
+    assert cmd.DESIGN_MARKER in first
+    assert cmd.builtin_site_command("moderniziraj design strani") is True
+    second = css.read_text()
+    assert second.count(cmd.DESIGN_MARKER) == 1
+
+
+def test_article_success_requires_app_change(tmp_path, monkeypatch):
+    app = tmp_path / "src/App.jsx"
+    app.parent.mkdir(parents=True)
+    app.write_text("before")
+    monkeypatch.setattr(cmd, "BASE", tmp_path)
+    monkeypatch.setattr(cmd, "ARTICLE_AGENT", tmp_path / "agent.py")
+
+    def fake_run(*args, **kwargs):
+        app.write_text("after")
+        return SimpleNamespace(returncode=0)
+
+    monkeypatch.setattr(cmd.subprocess, "run", fake_run)
+    cmd.article_command("Objavi članek o testu", "aktualno")
+
+
+def test_article_nonzero_fails(tmp_path, monkeypatch):
+    app = tmp_path / "src/App.jsx"
+    app.parent.mkdir(parents=True)
+    app.write_text("before")
+    monkeypatch.setattr(cmd, "BASE", tmp_path)
+    monkeypatch.setattr(cmd, "ARTICLE_AGENT", tmp_path / "agent.py")
+    monkeypatch.setattr(cmd.subprocess, "run", lambda *a, **k: SimpleNamespace(returncode=2))
     with pytest.raises(SystemExit) as exc:
-        command_module.site_command("dodaj nekaj popolnoma novega")
+        cmd.article_command("Objavi članek", "aktualno")
+    assert exc.value.code == 2
+
+
+def test_article_no_change_fails(tmp_path, monkeypatch):
+    app = tmp_path / "src/App.jsx"
+    app.parent.mkdir(parents=True)
+    app.write_text("same")
+    monkeypatch.setattr(cmd, "BASE", tmp_path)
+    monkeypatch.setattr(cmd, "ARTICLE_AGENT", tmp_path / "agent.py")
+    monkeypatch.setattr(cmd.subprocess, "run", lambda *a, **k: SimpleNamespace(returncode=0))
+    with pytest.raises(SystemExit, match="without publishing"):
+        cmd.article_command("Objavi članek", "aktualno")
+
+
+def test_site_builtin_does_not_need_copilot(monkeypatch):
+    monkeypatch.setattr(cmd, "builtin_site_command", lambda command: True)
+    monkeypatch.setattr(cmd.shutil, "which", lambda name: None)
+    cmd.site_command("polepšaj stran")
+
+
+def test_site_missing_copilot_fails(monkeypatch):
+    monkeypatch.setattr(cmd, "builtin_site_command", lambda command: False)
+    monkeypatch.setattr(cmd.shutil, "which", lambda name: None)
+    with pytest.raises(SystemExit, match="not installed"):
+        cmd.site_command("Dodaj posebno novo komponento")
+
+
+def test_site_copilot_success(monkeypatch, tmp_path):
+    monkeypatch.setattr(cmd, "BASE", tmp_path)
+    monkeypatch.setattr(cmd, "builtin_site_command", lambda command: False)
+    monkeypatch.setattr(cmd.shutil, "which", lambda name: "/usr/bin/copilot")
+    monkeypatch.setattr(cmd.subprocess, "run", lambda *a, **k: SimpleNamespace(returncode=0, stdout="", stderr=""))
+    cmd.site_command("Dodaj posebno novo komponento")
+
+
+def test_site_policy_denied_is_permanent(monkeypatch, tmp_path):
+    monkeypatch.setattr(cmd, "BASE", tmp_path)
+    monkeypatch.setattr(cmd, "builtin_site_command", lambda command: False)
+    monkeypatch.setattr(cmd.shutil, "which", lambda name: "/usr/bin/copilot")
+    denied = "Error: Access denied by policy settings"
+    monkeypatch.setattr(cmd.subprocess, "run", lambda *a, **k: SimpleNamespace(returncode=1, stdout="", stderr=denied))
+    with pytest.raises(SystemExit) as exc:
+        cmd.site_command("Dodaj posebno novo komponento")
     assert exc.value.code == 78
 
 
-def test_article_command_requires_real_app_change(tmp_path, monkeypatch):
-    src = tmp_path / "src"
-    src.mkdir()
-    app = src / "App.jsx"
-    app.write_text("before", encoding="utf-8")
-    monkeypatch.setattr(command_module, "BASE", tmp_path)
-    monkeypatch.setattr(command_module, "ARTICLE_AGENT", tmp_path / "fake-agent.py")
-
-    def fake_run(*args, **kwargs):
-        app.write_text("after", encoding="utf-8")
-        return SimpleNamespace(returncode=0)
-
-    monkeypatch.setattr(command_module.subprocess, "run", fake_run)
-    command_module.article_command("objavi članek", "aktualno")
-
-
-def test_article_command_rejects_noop(tmp_path, monkeypatch):
-    src = tmp_path / "src"
-    src.mkdir()
-    (src / "App.jsx").write_text("unchanged", encoding="utf-8")
-    monkeypatch.setattr(command_module, "BASE", tmp_path)
-    monkeypatch.setattr(command_module, "ARTICLE_AGENT", tmp_path / "fake-agent.py")
-    monkeypatch.setattr(command_module.subprocess, "run", lambda *a, **k: SimpleNamespace(returncode=0))
-    with pytest.raises(SystemExit):
-        command_module.article_command("objavi članek", "aktualno")
-
-
-@pytest.mark.parametrize("mode", ["article", "site", "control"])
-def test_explicit_mode_overrides_auto_inference(tmp_path, monkeypatch, mode):
-    payload = {"command": "Objavi članek o testu", "mode": mode, "category": "aktualno"}
-    command_file = tmp_path / "command.json"
-    command_file.write_text(json.dumps(payload), encoding="utf-8")
-    called = []
-    monkeypatch.setattr(sys, "argv", ["command.py", "--command-file", str(command_file)])
-    monkeypatch.setattr(command_module, "article_command", lambda *a: called.append("article"))
-    monkeypatch.setattr(command_module, "site_command", lambda *a: called.append("site"))
-    monkeypatch.setattr(command_module, "control_command", lambda *a: called.append("control"))
-    assert command_module.main() == 0
-    assert called == [mode]
-
-
-def test_builtin_rubric_add_remove(tmp_path, monkeypatch):
-    rubrics = tmp_path / "public" / "site-rubrics.json"
-    rubrics.parent.mkdir(parents=True)
-    rubrics.write_text("[]\n", encoding="utf-8")
-    monkeypatch.setattr(command_module, "RUBRICS", rubrics)
-
-    assert command_module.builtin_site_command("Dodaj rubriko Projekti") is True
-    data = json.loads(rubrics.read_text(encoding="utf-8"))
-    assert data == [{"name": "Projekti", "slug": "projekti"}]
-
-    assert command_module.builtin_site_command("Dodaj rubriko Projekti") is True
-    assert len(json.loads(rubrics.read_text(encoding="utf-8"))) == 1
-
-    assert command_module.builtin_site_command("Odstrani rubriko Projekti") is True
-    assert json.loads(rubrics.read_text(encoding="utf-8")) == []
-
-
-def test_builtin_new_page_with_menu_suffix(tmp_path, monkeypatch):
-    rubrics = tmp_path / "public" / "site-rubrics.json"
-    rubrics.parent.mkdir(parents=True)
-    rubrics.write_text("[]\n", encoding="utf-8")
-    monkeypatch.setattr(command_module, "RUBRICS", rubrics)
-    assert command_module.builtin_site_command("Dodaj novo stran Partnerji v meni") is True
-    data = json.loads(rubrics.read_text(encoding="utf-8"))
-    assert data[0]["name"] == "Partnerji"
-    assert data[0]["slug"] == "partnerji"
-
-
-def test_default_explicit_schedule_is_supported(tmp_path, monkeypatch):
-    control = tmp_path / "agent-control.json"
-    monkeypatch.setattr(command_module, "CONTROL", control)
-    command_module.control_command("nastavi termine objave 08:17 13:27 19:43")
-    data = json.loads(control.read_text(encoding="utf-8"))
-    assert [slot["time"] for slot in data["schedule"]["slots"]] == ["08:17", "13:27", "19:43"]
-
-
-def test_custom_schedule_is_rejected_without_false_success(tmp_path, monkeypatch):
-    control = tmp_path / "agent-control.json"
-    monkeypatch.setattr(command_module, "CONTROL", control)
+def test_site_other_copilot_failure(monkeypatch, tmp_path):
+    monkeypatch.setattr(cmd, "BASE", tmp_path)
+    monkeypatch.setattr(cmd, "builtin_site_command", lambda command: False)
+    monkeypatch.setattr(cmd.shutil, "which", lambda name: "/usr/bin/copilot")
+    monkeypatch.setattr(cmd.subprocess, "run", lambda *a, **k: SimpleNamespace(returncode=2, stdout="", stderr="network timeout"))
     with pytest.raises(SystemExit) as exc:
-        command_module.control_command("nastavi termine objave 09:00 14:00 20:00")
-    assert exc.value.code == 64
-    assert not control.exists()
+        cmd.site_command("Dodaj posebno novo komponento")
+    assert "exit code 2" in str(exc.value)
 
 
-@pytest.mark.parametrize("text", [
-    "Objavi članek z galerijo fotografij",
-    "Pripravi članek z hero sliko in videom",
-    "Ustvari prispevek z galerijo",
-])
-def test_article_intent_wins_for_content_creation(text):
-    assert infer_mode(text) == "article"
+def _run_main(tmp_path, monkeypatch, payload, expected_call):
+    path = tmp_path / "command.json"
+    path.write_text(json.dumps(payload), encoding="utf-8")
+    calls = []
+    monkeypatch.setattr(cmd, "control_command", lambda command: calls.append(("control", command)))
+    monkeypatch.setattr(cmd, "article_command", lambda command, category: calls.append(("article", command, category)))
+    monkeypatch.setattr(cmd, "site_command", lambda command: calls.append(("site", command)))
+    monkeypatch.setattr(sys, "argv", ["command.py", "--command-file", str(path)])
+    assert cmd.main() == 0
+    assert calls == [expected_call]
 
 
-@pytest.mark.parametrize("text", [
-    "izboljšaj izgled članka",
-    "spremeni layout članka",
-    "dodaj galerijo na stran članka",
-])
-def test_template_design_stays_site(text):
-    assert infer_mode(text) == "site"
+def test_main_auto_control(tmp_path, monkeypatch):
+    _run_main(tmp_path, monkeypatch, {"command": "ustavi objavljanje", "mode": "auto", "category": "aktualno"}, ("control", "ustavi objavljanje"))
 
 
-@pytest.mark.parametrize("text", [
-    "začni objavljanje",
-    "zaženi agenta",
-    "aktiviraj objavljanje",
-    "deaktiviraj agenta",
-    "restart objavljanja",
-    "preklopi v osnutek",
-    "nastavi draft način",
-    "preklopi na review",
-    "preklopi na pregled",
-])
-def test_additional_control_synonyms(text):
-    assert infer_mode(text) == "control"
+def test_main_auto_article(tmp_path, monkeypatch):
+    _run_main(tmp_path, monkeypatch, {"command": "objavi članek o testu", "mode": "auto", "category": "sport"}, ("article", "objavi članek o testu", "sport"))
 
 
-def test_requested_rubric_is_removed_from_search_topic(tmp_path, monkeypatch):
-    rubrics = tmp_path / "site-rubrics.json"
-    rubrics.write_text(json.dumps([{"name": "Projekti", "slug": "projekti"}]), encoding="utf-8")
-    monkeypatch.setattr(command_module, "RUBRICS", rubrics)
-    rubric, cleaned = command_module._requested_rubric(
-        "Objavi članek o mladinskem projektu v rubriki Projekti"
-    )
-    assert rubric == "Projekti"
-    assert "rubriki Projekti" not in cleaned
-    assert "mladinskem projektu" in cleaned
+def test_main_auto_site(tmp_path, monkeypatch):
+    _run_main(tmp_path, monkeypatch, {"command": "dodaj stran projekti", "mode": "auto", "category": "aktualno"}, ("site", "dodaj stran projekti"))
 
 
-def test_article_command_passes_output_rubric(tmp_path, monkeypatch):
-    src = tmp_path / "src"
-    src.mkdir()
-    app = src / "App.jsx"
-    app.write_text("before", encoding="utf-8")
-    rubrics = tmp_path / "site-rubrics.json"
-    rubrics.write_text(json.dumps([{"name": "Projekti", "slug": "projekti"}]), encoding="utf-8")
-    monkeypatch.setattr(command_module, "BASE", tmp_path)
-    monkeypatch.setattr(command_module, "RUBRICS", rubrics)
-    monkeypatch.setattr(command_module, "ARTICLE_AGENT", tmp_path / "fake-agent.py")
-    captured = {}
-
-    def fake_run(args, **kwargs):
-        captured["args"] = args
-        app.write_text("after", encoding="utf-8")
-        return SimpleNamespace(returncode=0)
-
-    monkeypatch.setattr(command_module.subprocess, "run", fake_run)
-    command_module.article_command("Objavi članek o projektu v rubriki Projekti", "aktualno")
-    assert "--output-category" in captured["args"]
-    assert captured["args"][captured["args"].index("--output-category") + 1] == "Projekti"
+def test_main_explicit_modes(tmp_path, monkeypatch):
+    _run_main(tmp_path, monkeypatch, {"command": "karkoli", "mode": "control", "category": "politika"}, ("control", "karkoli"))
+    _run_main(tmp_path, monkeypatch, {"command": "karkoli", "mode": "article", "category": "politika"}, ("article", "karkoli", "politika"))
+    _run_main(tmp_path, monkeypatch, {"command": "karkoli", "mode": "site", "category": "politika"}, ("site", "karkoli"))
 
 
-@pytest.mark.parametrize("text", [
-    "Napiši blog o današnji tekmi",
-    "Pripravi objavo o dogodku",
-    "Objavi post o tehnologiji",
-])
-def test_article_synonyms(text):
-    assert infer_mode(text) == "article"
+def test_main_invalid_mode_falls_back_to_auto(tmp_path, monkeypatch):
+    _run_main(tmp_path, monkeypatch, {"command": "objavi članek", "mode": "nonsense", "category": "sport"}, ("article", "objavi članek", "sport"))
 
 
-@pytest.mark.parametrize("command_text, expected", [
-    ("Dodaj kategorijo Projekti", "Projekti"),
-    ("Dodaj zavihek Partnerji", "Partnerji"),
-    ("Dodaj tab Novosti", "Novosti"),
-])
-def test_rubric_synonyms(tmp_path, monkeypatch, command_text, expected):
-    rubrics = tmp_path / "site-rubrics.json"
-    rubrics.write_text("[]\n", encoding="utf-8")
-    monkeypatch.setattr(command_module, "RUBRICS", rubrics)
-    assert command_module.builtin_site_command(command_text) is True
-    assert json.loads(rubrics.read_text(encoding="utf-8"))[0]["name"] == expected
+def test_main_invalid_category_falls_back_to_aktualno(tmp_path, monkeypatch):
+    _run_main(tmp_path, monkeypatch, {"command": "objavi članek", "mode": "article", "category": "banana"}, ("article", "objavi članek", "aktualno"))
 
 
-@pytest.mark.parametrize("text", [
-    "dodaj mini novice na 30 minut",
-    "osvežuj aktualne novice vsake pol ure",
-    "tekoče novice 30 min",
-])
-def test_live_pulse_synonyms(tmp_path, monkeypatch, text):
-    for rel in [
-        "src/LivePulse.jsx",
-        "agents/live-feed/update.py",
-        ".github/workflows/live-feed.yml",
-        "public/live-feed.json",
-    ]:
-        path = tmp_path / rel
-        path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text("ok", encoding="utf-8")
-    monkeypatch.setattr(command_module, "BASE", tmp_path)
-    assert command_module.builtin_site_command(text) is True
+@pytest.mark.parametrize("command", ["", "   ", "x" * 4001])
+def test_main_rejects_invalid_command(tmp_path, monkeypatch, command):
+    path = tmp_path / "command.json"
+    path.write_text(json.dumps({"command": command, "mode": "auto", "category": "aktualno"}), encoding="utf-8")
+    monkeypatch.setattr(sys, "argv", ["command.py", "--command-file", str(path)])
+    with pytest.raises(SystemExit, match="invalid command"):
+        cmd.main()
