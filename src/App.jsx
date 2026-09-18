@@ -15,6 +15,8 @@ const starterArticles = [
 
 That choice is useful but can also confuse first-time visitors. This guide focuses on a conventional marked ascent from the Tacen or Šmartno side, not on the exposed or protected climbing routes found elsewhere on the hill.
 
+**Current conditions, 18 September 2026:** Ljubljana's forecast includes scattered morning thunderstorms followed by mostly cloudy weather, with a high near 21°C. Do not enter the forest while thunder is audible or lightning is visible. Rain can leave roots, stones and steep soil slippery even after a storm passes; Saturday currently looks more settled, but recheck the forecast before departure.
+
 ## Is the hike suitable for you?
 
 The ordinary routes are short by Slovenian mountain standards, but they are not flat walks. Expect a sustained climb on forest paths, stones and roots. Rain can make the descent slippery, while fallen leaves may hide uneven ground in autumn.
@@ -28,6 +30,8 @@ Choose another activity if you cannot safely manage a steep descent, if thunders
 Ljubljana Tourism lists city-bus access using **LPP lines 8, 1B and 15**, depending on the chosen starting point. For the familiar Tacen approach, check the current LPP journey planner for a stop near Tacenski most and confirm the return service before leaving.
 
 Bus routes and frequencies can change. Do not rely on an old screenshot or blog timetable; search the live planner on the morning of your hike. You need an active Urbana payment method or another ticket option currently accepted by LPP.
+
+The Šmarna Gora district currently reports a **partial road closure on the Šmartno–Gameljne–Črnuče local road**, scheduled from 31 August to no later than 30 November 2026 during electrical-infrastructure work. This is not a published hiking-trail closure, but it may affect road traffic or bus timing, so allow extra time and follow local signs.
 
 From the bus stop, follow official local signs toward the marked trailhead. The many informal shortcuts visible in the forest are not automatically safe or permitted routes.
 
@@ -85,6 +89,10 @@ Uphill walkers generally need space to maintain rhythm, while faster runners sho
 
 The hike itself is free. Your predictable costs are public transport and any food or drink purchased at the summit.
 
+## Continue exploring responsibly
+
+For a longer mountain excursion in stable weather, see [Hiking Velika Planina: A Responsible Day Trip from Ljubljana](?article=velika-planina-hiking-guide-september). If wet trails rule out a forest ascent, use the largely urban [Plečnik self-guided walking route](?article=plecnik-ljubljana-self-guided-walking-tour) when city conditions are safe.
+
 ## Direct sources
 
 Information was checked on **18 September 2026**:
@@ -93,13 +101,15 @@ Information was checked on **18 September 2026**:
 - [Ljubljana Tourism: hiking routes](https://www.visitljubljana.com/en/visitors/sights-and-activities/active-holidays/hiking-trails/)
 - [Alpine Association of Slovenia: current trail closures](https://stanje-poti.pzs.si/en.php)
 - [LPP: Ljubljana city buses and journey planning](https://www.lpp.si/en)
+- [Šmarna Gora district: current local notices](https://www.smarna-gora.si/)
+- [Šmarna Gora summit webcam and local temperature](https://www.smarnagora.com/)
 
 Conditions, transport and facilities can change. Recheck the direct sources shortly before setting out.`,
     category: "Šport",
     author: "Uredništvo Blog Lab",
     status: "published",
     createdAt: "2026-09-18T08:57:58+02:00",
-    updatedAt: "2026-09-18T08:57:58+02:00",
+    updatedAt: "2026-09-18T09:00:00+02:00",
   },
 
   {
