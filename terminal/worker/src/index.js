@@ -273,6 +273,73 @@ async function storeUploadedMedia(env, file) {
   };
 }
 
+function isAgentStatusCommand(command) {
+  const low = String(command || "").toLowerCase().trim();
+  const terms = [
+    "status", "status agenta", "stanje agenta", "status objavljanja", "stanje objavljanja",
+    "ali agent dela", "ali agent deluje", "kaj dela agent", "preveri agenta", "preveri status"
+  ];
+  return terms.some((term) => low === term || low.includes(term));
+}
+
+function decodeGithubContent(value) {
+  const raw = atob(String(value || "").replace(/\\n/g, ""));
+  const bytes = Uint8Array.from(raw, (ch) => ch.charCodeAt(0));
+  return new TextDecoder().decode(bytes);
+}
+
+async function readRepoJson(path, env) {
+  try {
+    const response = await github(`/repos/${OWNER}/${REPO}/contents/${path}?ref=main`, env);
+    if (!response.ok) return null;
+    const data = await response.json();
+    if (!data?.content) return null;
+    return JSON.parse(decodeGithubContent(data.content));
+  } catch {
+    return null;
+  }
+}
+
+async function readAgentSnapshot(env) {
+  const [status, control] = await Promise.all([
+    readRepoJson("public/data/agent-status.json", env),
+    readRepoJson("data/agent-control.json", env)
+  ]);
+  const schedule = control?.schedule || {
+    timezone: "Europe/Ljubljana",
+    slots: [
+      { time: "08:17", category: "sport" },
+      { time: "13:27", category: "politika" },
+      { time: "19:43", category: "aktualno" }
+    ]
+  };
+  const enabled = control?.enabled ?? status?.enabled ?? true;
+  const publishMode = control?.publish_mode || "automatic";
+  const slotText = Array.isArray(schedule?.slots)
+    ? schedule.slots.map((slot) => `${slot.time} ${slot.category}`).join(" · ")
+    : "";
+  const parts = [
+    `agent ${enabled ? "aktiven" : "ustavljen"}`,
+    `način ${publishMode}`,
+    status?.status ? `status ${status.status}` : "",
+    Number.isFinite(status?.posts_today) ? `danes ${status.posts_today} objav` : "",
+    status?.last_success ? `zadnji uspeh ${status.last_success}` : "",
+    slotText ? `urnik ${slotText}` : ""
+  ].filter(Boolean);
+  return {
+    enabled,
+    publish_mode: publishMode,
+    status: status?.status || "unknown",
+    category: status?.category || null,
+    posts_today: status?.posts_today ?? null,
+    last_run: status?.last_run || null,
+    last_success: status?.last_success || null,
+    message: status?.message || "",
+    schedule,
+    summary: parts.join(" · ")
+  };
+}
+
 async function findRun(requestId, env) {
   try {
     const r = await github(`/repos/${OWNER}/${REPO}/actions/workflows/${WORKFLOW}/runs?event=workflow_dispatch&per_page=30`, env);
@@ -289,13 +356,13 @@ async function findRun(requestId, env) {
 
 const LOGIN_PAGE = `<!doctype html><html lang="sl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Blog Lab · Prijava</title><style>*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;background:#f7f4ee;color:#17211b;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.card{width:min(92vw,460px);padding:34px;border:1px solid #d8ddd9;border-radius:22px;background:white;box-shadow:0 24px 70px rgba(21,41,31,.12)}.mark{width:56px;height:56px;border-radius:16px;background:#167349;color:white;display:grid;place-items:center;font-size:26px;font-weight:800;margin-bottom:20px}.eyebrow{font-size:13px;font-weight:800;letter-spacing:.16em;color:#517063;text-transform:uppercase}h1{font-size:34px;line-height:1.1;margin:8px 0 10px}p{color:#637169;line-height:1.55}.field{margin-top:16px}label{display:block;font-weight:750;margin-bottom:7px}input{width:100%;height:46px;border:1px solid #cbd3ce;border-radius:11px;padding:0 13px;font-size:15px}input:focus{outline:2px solid #16734933;border-color:#167349}.actions{display:flex;gap:10px;margin-top:22px}button,a.btn{min-height:44px;padding:0 18px;border-radius:11px;border:1px solid #167349;background:#167349;color:#fff;font-weight:800;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;cursor:pointer}.btn.secondary{background:#fff;color:#167349}.error{min-height:22px;margin-top:12px;color:#a33;font-weight:650}.hint{font-size:12px;margin-top:18px;color:#7b877f}</style></head><body><main class="card"><div class="mark">B</div><div class="eyebrow">Blog Lab</div><h1>Zasebni terminal</h1><p>Prijava je dovoljena samo pooblaščenima operaterjema. Dostop deluje na brezplačnem Workerju in ne potrebuje Cloudflare Zero Trust naročnine.</p><form id="login"><div class="field"><label for="email">E-pošta</label><input id="email" type="email" autocomplete="username" required placeholder="ime@domena.si"></div><div class="field"><label for="password">Geslo</label><input id="password" type="password" autocomplete="current-password" required></div><div class="error" id="error"></div><div class="actions"><button id="submit" type="submit">Prijava</button><a class="btn secondary" href="https://dday2301.github.io/blog-lab/">Nazaj</a></div></form><div class="hint">Seja poteče po 12 urah. Geslo ni shranjeno v brskalniku ali GitHub repozitoriju. <span id="auth-version">preverjam strežnik …</span></div></main><script>const f=document.querySelector('#login'),e=document.querySelector('#error'),b=document.querySelector('#submit'),v=document.querySelector('#auth-version');fetch('/health',{cache:'no-store'}).then(r=>r.json()).then(d=>{v.textContent=d.version?'strežnik: '+d.version:'strežnik pripravljen'}).catch(()=>{v.textContent='strežnika ni mogoče preveriti'});f.addEventListener('submit',async(ev)=>{ev.preventDefault();e.textContent='';b.disabled=true;try{const r=await fetch('/api/login',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({email:document.querySelector('#email').value.trim(),password:document.querySelector('#password').value.trim()})});const d=await r.json().catch(()=>({}));if(!r.ok){e.textContent=(d.error||'Prijava ni uspela.')+(d.code?' ['+d.code+']':'');return}location.replace('/')}catch{e.textContent='Povezava s terminalom ni uspela.'}finally{b.disabled=false}});</script></body></html>`;
 
-const PAGE = `<!doctype html><html lang="sl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Blog Lab · Private Terminal</title><style>*{box-sizing:border-box}body{margin:0;background:#090b0f;color:#d7e0ea;font:15px ui-monospace,SFMono-Regular,Consolas,monospace}.wrap{max-width:1100px;margin:auto;padding:28px}.bar{display:flex;justify-content:space-between;gap:16px;align-items:center;margin-bottom:18px}.barlinks{display:flex;gap:12px;align-items:center}.bar button{background:transparent;color:#8b949e;border:1px solid #30363d;border-radius:8px;padding:8px 10px;cursor:pointer}.tag{color:#7ee787}.warn{color:#d29922}.panel{border:1px solid #30363d;background:#0d1117;border-radius:14px;overflow:hidden}.head{padding:12px 16px;border-bottom:1px solid #30363d;color:#8b949e}.screen{height:430px;overflow:auto;padding:16px;display:flex;flex-direction:column;gap:10px}.entry{border-left:2px solid #30363d;padding:8px 12px}.entry b{color:#7ee787}.entry .meta{color:#8b949e;font-size:12px;margin-top:5px}.entry.fail b{color:#ff7b72}.composer{border-top:1px solid #30363d;padding:14px}.row{display:flex;gap:10px;flex-wrap:wrap}.row select,.row textarea,.row button{background:#161b22;color:#d7e0ea;border:1px solid #30363d;border-radius:8px;padding:10px}.row textarea{width:100%;min-height:90px;resize:vertical;margin-top:10px}.row button{background:#238636;border-color:#2ea043;cursor:pointer;font-weight:700}.row button:disabled{opacity:.5}.dropzone{margin-top:10px;border:1px dashed #3d4855;border-radius:10px;padding:14px;display:flex;gap:12px;align-items:center;justify-content:space-between;color:#8b949e;cursor:pointer;transition:.15s ease;background:#0b1016}.dropzone.drag{border-color:#58a6ff;background:#101a24;color:#d7e0ea}.dropzone strong{color:#d7e0ea}.dropzone button{background:#21262d;color:#d7e0ea;border:1px solid #3d4855;border-radius:8px;padding:8px 10px;cursor:pointer}.uploads{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}.upload-chip{display:inline-flex;align-items:center;gap:7px;padding:6px 9px;border:1px solid #30363d;border-radius:999px;color:#8b949e;font-size:11px}.upload-chip.ok{color:#7ee787}.upload-chip.fail{color:#ff7b72}.hint{color:#8b949e;font-size:12px;margin-top:8px}a{color:#58a6ff}</style></head><body><div class="wrap"><div class="bar"><div><strong>Blog Lab / private-terminal</strong><div class="tag" id="who">● preverjam sejo …</div><div id="setup" class="warn"></div></div><div class="barlinks"><a href="https://dday2301.github.io/blog-lab/">blog ↗</a><button id="logout">odjava</button></div></div><div class="panel"><div class="head">private operator channel · ukazi se pošiljajo AES-GCM šifrirano</div><div class="screen" id="screen"></div><div class="composer"><div class="row"><select id="mode"><option value="auto">Samodejno</option><option value="article">Članek</option><option value="site">Sprememba strani</option><option value="control">Nadzor agenta</option></select><select id="category"><option value="aktualno">Aktualno</option><option value="sport">Šport</option><option value="politika">Politika</option></select><button id="send">IZVEDI</button><textarea id="command" placeholder="Primer: Objavi članek o današnji temi … / Dodaj rubriko Projekti … / Ustavi objavljanje …"></textarea></div><div class="dropzone" id="dropzone" tabindex="0"><div><strong>Spusti fotografije sem</strong><div>JPG, PNG, WebP ali GIF · do 5 MB na sliko</div></div><button type="button" id="pickMedia">Izberi fotografije</button><input id="mediaFiles" type="file" accept="image/jpeg,image/png,image/webp,image/gif" multiple hidden></div><div class="uploads" id="uploads"></div><div class="hint">Naložene slike se shranijo v Blog Lab media knjižnico in njihov URL se sam doda v ukaz. Terminal hrani zgodovino ukazov samo v tem brskalniku. Status izvedbe se bere iz GitHub Actions.</div></div></div></div><script>
+const PAGE = `<!doctype html><html lang="sl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Blog Lab · Private Terminal</title><style>*{box-sizing:border-box}body{margin:0;background:#090b0f;color:#d7e0ea;font:15px ui-monospace,SFMono-Regular,Consolas,monospace}.wrap{max-width:1100px;margin:auto;padding:28px}.bar{display:flex;justify-content:space-between;gap:16px;align-items:center;margin-bottom:18px}.barlinks{display:flex;gap:12px;align-items:center}.bar button{background:transparent;color:#8b949e;border:1px solid #30363d;border-radius:8px;padding:8px 10px;cursor:pointer}.tag{color:#7ee787}.warn{color:#d29922}.panel{border:1px solid #30363d;background:#0d1117;border-radius:14px;overflow:hidden}.head{padding:12px 16px;border-bottom:1px solid #30363d;color:#8b949e}.screen{height:430px;overflow:auto;padding:16px;display:flex;flex-direction:column;gap:10px}.entry{border-left:2px solid #30363d;padding:8px 12px}.entry b{color:#7ee787}.entry .detail{color:#7ee787;font-size:12px;line-height:1.5;margin-top:6px}.entry .meta{color:#8b949e;font-size:12px;margin-top:5px}.entry.fail b{color:#ff7b72}.composer{border-top:1px solid #30363d;padding:14px}.row{display:flex;gap:10px;flex-wrap:wrap}.row select,.row textarea,.row button{background:#161b22;color:#d7e0ea;border:1px solid #30363d;border-radius:8px;padding:10px}.row textarea{width:100%;min-height:90px;resize:vertical;margin-top:10px}.row button{background:#238636;border-color:#2ea043;cursor:pointer;font-weight:700}.row button:disabled{opacity:.5}.dropzone{margin-top:10px;border:1px dashed #3d4855;border-radius:10px;padding:14px;display:flex;gap:12px;align-items:center;justify-content:space-between;color:#8b949e;cursor:pointer;transition:.15s ease;background:#0b1016}.dropzone.drag{border-color:#58a6ff;background:#101a24;color:#d7e0ea}.dropzone strong{color:#d7e0ea}.dropzone button{background:#21262d;color:#d7e0ea;border:1px solid #3d4855;border-radius:8px;padding:8px 10px;cursor:pointer}.uploads{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}.upload-chip{display:inline-flex;align-items:center;gap:7px;padding:6px 9px;border:1px solid #30363d;border-radius:999px;color:#8b949e;font-size:11px}.upload-chip.ok{color:#7ee787}.upload-chip.fail{color:#ff7b72}.hint{color:#8b949e;font-size:12px;margin-top:8px}a{color:#58a6ff}</style></head><body><div class="wrap"><div class="bar"><div><strong>Blog Lab / private-terminal</strong><div class="tag" id="who">● preverjam sejo …</div><div id="setup" class="warn"></div></div><div class="barlinks"><a href="https://dday2301.github.io/blog-lab/">blog ↗</a><button id="logout">odjava</button></div></div><div class="panel"><div class="head">private operator channel · ukazi se pošiljajo AES-GCM šifrirano</div><div class="screen" id="screen"></div><div class="composer"><div class="row"><select id="mode"><option value="auto">Samodejno</option><option value="article">Članek</option><option value="site">Sprememba strani</option><option value="control">Nadzor agenta</option></select><select id="category"><option value="aktualno">Aktualno</option><option value="sport">Šport</option><option value="politika">Politika</option></select><button id="send">IZVEDI</button><textarea id="command" placeholder="Primer: Objavi članek o današnji temi … / Dodaj rubriko Projekti … / Ustavi objavljanje …"></textarea></div><div class="dropzone" id="dropzone" tabindex="0"><div><strong>Spusti fotografije sem</strong><div>JPG, PNG, WebP ali GIF · do 5 MB na sliko</div></div><button type="button" id="pickMedia">Izberi fotografije</button><input id="mediaFiles" type="file" accept="image/jpeg,image/png,image/webp,image/gif" multiple hidden></div><div class="uploads" id="uploads"></div><div class="hint">Naložene slike se shranijo v Blog Lab media knjižnico in njihov URL se sam doda v ukaz. Terminal hrani zgodovino ukazov samo v tem brskalniku. Status izvedbe se bere iz GitHub Actions.</div></div></div></div><script>
 const $=s=>document.querySelector(s),KEY='bloglab-private-terminal-v3';
 function esc(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function rows(){try{return JSON.parse(localStorage.getItem(KEY)||'[]')}catch{return []}}
 function save(x){localStorage.setItem(KEY,JSON.stringify(x.slice(-60)))}
 async function refreshRow(x){if(!x.id||x.status==='completed')return x;try{const r=await fetch('/api/status?id='+encodeURIComponent(x.id),{cache:'no-store'});if(r.status===401){location.replace('/');return x}if(r.ok){const s=await r.json();return {...x,...s}}}catch{}return x}
-async function load(){const r=await fetch('/api/me',{cache:'no-store'});if(r.status===401){location.replace('/');return}if(!r.ok){$('#who').textContent='● napaka seje';return}const me=await r.json();$('#who').textContent='● '+me.email;$('#setup').textContent=me.ready?'':'Manjka nastavitev: '+me.missing.join(', ');let list=rows();list=await Promise.all(list.map(refreshRow));save(list);$('#screen').innerHTML=list.slice().reverse().map(x=>{const fail=x.conclusion&&x.conclusion!=='success';return '<div class="entry '+(fail?'fail':'')+'"><b>&gt; '+esc(x.command)+'</b><div>'+esc(x.status||'queued')+(x.conclusion?' / '+esc(x.conclusion):'')+(x.run_url?' · <a target="_blank" rel="noreferrer" href="'+esc(x.run_url)+'">GitHub run ↗</a>':'')+'</div><div class="meta">'+esc(x.mode)+' · '+esc(x.category)+' · '+esc(x.created_at)+'</div></div>'}).join('')||'<div class="entry">Terminal je pripravljen.</div>'}
+async function load(){const r=await fetch('/api/me',{cache:'no-store'});if(r.status===401){location.replace('/');return}if(!r.ok){$('#who').textContent='● napaka seje';return}const me=await r.json();$('#who').textContent='● '+me.email;$('#setup').textContent=me.ready?'':'Manjka nastavitev: '+me.missing.join(', ');let list=rows();list=await Promise.all(list.map(refreshRow));save(list);$('#screen').innerHTML=list.slice().reverse().map(x=>{const fail=x.conclusion&&x.conclusion!=='success';return '<div class="entry '+(fail?'fail':'')+'"><b>&gt; '+esc(x.command)+'</b><div>'+esc(x.status||'queued')+(x.conclusion?' / '+esc(x.conclusion):'')+(x.run_url?' · <a target="_blank" rel="noreferrer" href="'+esc(x.run_url)+'">GitHub run ↗</a>':'')+'</div>'+(x.detail?'<div class="detail">'+esc(x.detail)+'</div>':'')+'<div class="meta">'+esc(x.mode)+' · '+esc(x.category)+' · '+esc(x.created_at)+'</div></div>'}).join('')||'<div class="entry">Terminal je pripravljen.</div>'}
 let mediaBusy=false;
 function uploadChip(name,status,text){const el=document.createElement('span');el.className='upload-chip '+status;el.textContent=(name?name+': ':'')+text;$('#uploads').prepend(el);return el}
 async function compressImage(file){
@@ -333,7 +400,7 @@ fi.onchange=()=>uploadMedia(fi.files);
 for(const ev of ['dragenter','dragover'])dz.addEventListener(ev,e=>{e.preventDefault();dz.classList.add('drag')});
 for(const ev of ['dragleave','drop'])dz.addEventListener(ev,e=>{e.preventDefault();dz.classList.remove('drag')});
 dz.addEventListener('drop',e=>uploadMedia(e.dataTransfer.files));
-$('#send').onclick=async()=>{const command=$('#command').value.trim();if(!command)return;$('#send').disabled=true;try{const body={command,mode:$('#mode').value,category:$('#category').value};const r=await fetch('/api/command',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(body)});if(r.status===401){location.replace('/');return}const d=await r.json();if(!r.ok){alert(d.error+(d.missing?'\\nManjka: '+d.missing.join(', '):''));return}const list=rows();list.push({id:d.id,command,mode:body.mode,category:body.category,created_at:new Date().toISOString(),status:'queued',conclusion:null,run_url:null});save(list);$('#command').value='';await load()}finally{$('#send').disabled=false}};
+$('#send').onclick=async()=>{const command=$('#command').value.trim();if(!command)return;$('#send').disabled=true;try{const body={command,mode:$('#mode').value,category:$('#category').value};const r=await fetch('/api/command',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(body)});if(r.status===401){location.replace('/');return}const d=await r.json();if(!r.ok){alert(d.error+(d.missing?'\\nManjka: '+d.missing.join(', '):''));return}const list=rows();if(d.local){list.push({id:null,command,mode:body.mode,category:body.category,created_at:new Date().toISOString(),status:'completed',conclusion:'success',run_url:null,detail:d.result?.summary||'Status prebran.'})}else{list.push({id:d.id,command,mode:body.mode,category:body.category,created_at:new Date().toISOString(),status:'queued',conclusion:null,run_url:null})}save(list);$('#command').value='';await load()}finally{$('#send').disabled=false}};
 $('#logout').onclick=async()=>{await fetch('/api/logout',{method:'POST'}).catch(()=>{});location.replace('/')};
 load();setInterval(load,4000);
 </script></body></html>`;
@@ -359,7 +426,7 @@ export default {
       return json({
         ok: true,
         worker: "blog-lab",
-        version: "auth-v6.1-terminal-js-fixed",
+        version: "auth-v6.2-direct-status",
         ready: state.ready,
         auth_ready: authReady,
         authorized_users_ready: authReady ? 2 : 0,
@@ -438,6 +505,9 @@ export default {
       const mode = ["auto", "article", "site", "control"].includes(body.mode) ? body.mode : "auto";
       const category = ["sport", "politika", "aktualno"].includes(body.category) ? body.category : "aktualno";
       if (!command || command.length > 4000) return json({ error: "Ukaz mora imeti 1–4000 znakov." }, 400);
+      if ((mode === "auto" || mode === "control") && isAgentStatusCommand(command)) {
+        return json({ ok: true, local: true, result: await readAgentSnapshot(env) }, 200);
+      }
       const requestId = crypto.randomUUID();
       const createdAt = new Date().toISOString();
       let privatePayload;
