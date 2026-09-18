@@ -40,6 +40,7 @@ jobs:
       MODEL_API_KEY: ${{ secrets.MODEL_API_KEY }}
       MODEL_BASE_URL: ${{ secrets.MODEL_BASE_URL }}
       MODEL_NAME: ${{ secrets.MODEL_NAME }}
+      PYTHONDONTWRITEBYTECODE: "1"
     steps:
       - uses: actions/checkout@v4
         with:
@@ -66,6 +67,12 @@ jobs:
         run: python agents/operator-terminal/decrypt.py "$RUNNER_TEMP/operator-command.json"
       - name: Execute private command
         run: python agents/operator-terminal/command.py --command-file "$RUNNER_TEMP/operator-command.json"
+      - name: Clean runner-only Python bytecode
+        shell: bash
+        run: |
+          find agents -type d -name __pycache__ -prune -exec rm -rf {} +
+          find agents -type f -name '*.pyc' -delete
+
       - name: Reject edits to protected security paths
         shell: bash
         run: |
