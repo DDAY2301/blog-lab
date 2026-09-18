@@ -31,6 +31,11 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - name: Sync latest main
+        shell: bash
+        run: |
+          git fetch origin main
+          git checkout -B main origin/main
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -40,10 +45,8 @@ jobs:
           cache: npm
       - name: Refresh live mini articles
         run: python agents/live-feed/update.py
-      - name: Install and build
-        run: |
-          npm ci
-          npm run build
+      - name: Install frontend dependencies
+        run: npm ci
       - name: Commit live feed state
         shell: bash
         run: |
@@ -57,6 +60,8 @@ jobs:
             git pull --rebase origin main
             git push origin HEAD:main
           fi
+      - name: Build final synchronized site
+        run: npm run build
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
