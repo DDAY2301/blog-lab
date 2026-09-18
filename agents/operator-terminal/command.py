@@ -34,6 +34,14 @@ def _schedule_intent(low: str) -> bool:
     ]
     return any(term in low for term in schedule_terms)
 
+def _site_intent(low: str) -> bool:
+    site_terms = [
+        "stran", "spletno stran", "rubrik", "meni", "header", "footer", "navigacij",
+        "layout", "dizajn", "design", "izgled", "sekcij", "stolpec", "sidebar",
+        "galerij", "gumb", "logo", "favicon", "hero", "kartic", "css", "responsive",
+    ]
+    return any(term in low for term in site_terms)
+
 def infer_mode(command: str) -> str:
     low = command.lower()
     if (
@@ -41,7 +49,9 @@ def infer_mode(command: str) -> str:
         or _schedule_intent(low)
     ):
         return "control"
-    if any(x in low for x in ["članek", "clanek", "objavi", "napiši o", "napisi o", "prispevek"]):
+    if _site_intent(low):
+        return "site"
+    if any(x in low for x in ["članek", "clanek", "objavi", "napiši o", "napisi o", "prispevek", "novico", "novica"]):
         return "article"
     return "site"
 
