@@ -59,6 +59,7 @@ def main():
     ap.add_argument("--force", action="store_true")
     ap.add_argument("--category", choices=sorted(VALID_CATEGORIES), default=os.getenv("RUN_CATEGORY", "aktualno"))
     ap.add_argument("--topic", default="")
+    ap.add_argument("--output-category", default="")
     args = ap.parse_args()
     cfg = yaml.safe_load((HERE / "config.yaml").read_text(encoding="utf-8"))
     state = load_json(str(STATE), {"consecutive_failures": 0, "posts_today": 0, "posts_date": None})
@@ -102,6 +103,8 @@ def main():
         article = generate(system_prompt, task_prompt, fresh[:8], args.category); article["fallback"] = False
     except AIUnavailable as exc:
         print(f"INFO AI fallback: {exc}"); article = build_digest(used_for_article, args.category, max_items=5)
+    if args.output_category.strip():
+        article["category"] = args.output_category.strip()[:40]
     if args.topic.strip():
         explicit_images, explicit_video = operator_media(args.topic)
         if explicit_images:
