@@ -7,6 +7,102 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    id: "smarna-gora-hike-ljubljana-guide",
+    title: "Hiking Šmarna Gora: Ljubljana’s Car-Free Hill Escape",
+    excerpt: "Plan a short hike from Ljubljana to Šmarna Gora using city buses, a standard marked route and practical safety advice for steep, muddy or crowded trails.",
+    seoDescription: "Hike Šmarna Gora from Ljubljana without a car: trail choices, city buses, difficulty, equipment, summit facilities and responsible visitor advice.",
+    content: `**Šmarna Gora** is Ljubljana’s most popular local hill: close enough for a half-day trip, high enough to feel like a genuine hike and reachable by city bus. Ljubljana Tourism lists the standard route via Spodnja Kuhinja at **1.94 kilometres**, **366 metres of ascent** and about **55 minutes uphill**, ending at 669 metres.
+
+That choice is useful but can also confuse first-time visitors. This guide focuses on a conventional marked ascent from the Tacen or Šmartno side, not on the exposed or protected climbing routes found elsewhere on the hill.
+
+## Is the hike suitable for you?
+
+The ordinary routes are short by Slovenian mountain standards, but they are not flat walks. Expect a sustained climb on forest paths, stones and roots. Rain can make the descent slippery, while fallen leaves may hide uneven ground in autumn.
+
+Allow roughly **two to three hours** for an unhurried return outing, including a summit break. Individual ascent times vary greatly with route, fitness, trail conditions and crowds, so do not treat a fast local time as a target.
+
+Choose another activity if you cannot safely manage a steep descent, if thunderstorms are forecast or if ice and snow exceed your experience and equipment.
+
+## Getting there without a car
+
+Ljubljana Tourism lists city-bus access using **LPP lines 8, 1B and 15**, depending on the chosen starting point. For the familiar Tacen approach, check the current LPP journey planner for a stop near Tacenski most and confirm the return service before leaving.
+
+Bus routes and frequencies can change. Do not rely on an old screenshot or blog timetable; search the live planner on the morning of your hike. You need an active Urbana payment method or another ticket option currently accepted by LPP.
+
+From the bus stop, follow official local signs toward the marked trailhead. The many informal shortcuts visible in the forest are not automatically safe or permitted routes.
+
+## Choosing a route
+
+For a first visit, select a normal waymarked hiking path and stay on it in both directions. At junctions, follow the red-and-white Slovenian mountain markings and destination signs rather than the footprints of the person ahead.
+
+Avoid choosing a path merely because it appears shorter on a phone map. Šmarna Gora also has demanding and very demanding routes, including protected sections where exposure and fixed equipment change the nature of the outing.
+
+If a sign describes your option as \`zahtevna pot\` or \`zelo zahtevna pot\`, that means **demanding** or **very demanding trail**. Turn back and use an easier marked route unless you deliberately planned for that level and possess the required skills and equipment.
+
+## What to bring
+
+- Shoes with reliable grip; smooth city trainers are a poor choice after rain.
+- Water, even though refreshments may be available at the summit.
+- A light waterproof layer and an insulating layer in cooler months.
+- A charged phone with the route saved offline.
+- A small first-aid kit and any personal medication.
+- Trekking poles if they help you control the descent.
+
+The summit inn is a welcome feature, not an emergency plan. Opening hours, payment options and available food can change, so check directly before depending on it.
+
+## At the summit
+
+The summit area includes the Church of the Mother of God and viewpoints over Ljubljana and, in clear conditions, toward surrounding mountain ranges. Share narrow viewpoints and paths patiently: the hill is a daily exercise venue for residents as well as a visitor attraction.
+
+Keep church access clear, lower your voice around worship and private events, and do not enter closed areas. If the view is obscured by cloud, do not leave the marked path in search of a better angle.
+
+## Autumn and bad-weather safety
+
+September can bring warm afternoons, cold rain and rapidly changing visibility. Before leaving, check the current forecast and the Alpine Association of Slovenia’s trail-closure page.
+
+- Do not use any officially closed trail.
+- Turn around if heavy rain, lightning, strong wind or poor visibility develops.
+- Descend before darkness unless you intentionally planned and equipped for a night hike.
+- In an emergency call **112**, but remember that mobile reception and rescue response are never guaranteed.
+
+Šmarna Gora is lower than the Alps, yet slips, heat stress and navigation errors can still happen. A popular trail is not the same as a risk-free trail.
+
+## Responsible trail behaviour
+
+Stay on marked paths to limit erosion and avoid disturbing private land. Do not cut switchbacks, leave litter, play loud music or block the trail while resting. Keep dogs under effective control and follow any posted leash requirements.
+
+Uphill walkers generally need space to maintain rhythm, while faster runners should pass only when there is room. A simple greeting and clear warning make shared trails safer.
+
+## A practical half-day plan
+
+1. Check the forecast, trail notices and live LPP connection.
+2. Take a morning bus to your selected trailhead.
+3. Photograph the route board and confirm your marked ascent.
+4. Climb at a conversational pace and pause away from junctions.
+5. Rest at the summit without relying on the inn being open.
+6. Descend the same known route if conditions or navigation are uncertain.
+7. Return to central Ljubljana by bus.
+
+The hike itself is free. Your predictable costs are public transport and any food or drink purchased at the summit.
+
+## Direct sources
+
+Information was checked on **18 September 2026**:
+
+- [Ljubljana Tourism: Šmarna Gora route via Spodnja Kuhinja](https://www.visitljubljana.com/en/visitors/sights-and-activities/active-holidays/hiking-trails/smarna-gora-route-via-spodnja-kuhinja-669-m)
+- [Ljubljana Tourism: hiking routes](https://www.visitljubljana.com/en/visitors/sights-and-activities/active-holidays/hiking-trails/)
+- [Alpine Association of Slovenia: current trail closures](https://stanje-poti.pzs.si/en.php)
+- [LPP: Ljubljana city buses and journey planning](https://www.lpp.si/en)
+
+Conditions, transport and facilities can change. Recheck the direct sources shortly before setting out.`,
+    category: "Šport",
+    author: "Uredništvo Blog Lab",
+    status: "published",
+    createdAt: "2026-09-18T08:57:58+02:00",
+    updatedAt: "2026-09-18T08:57:58+02:00",
+  },
+
+  {
     id: "bohinj-cows-ball-2026-visitor-guide",
     title: "Bohinj Cows’ Ball 2026: A Car-Light Visitor Guide",
     excerpt: "Visit Bohinj’s traditional Kravji bal in Ukanc with confirmed times, ticket prices, free event buses, parking guidance and respectful tips for experiencing living pastoral heritage.",
