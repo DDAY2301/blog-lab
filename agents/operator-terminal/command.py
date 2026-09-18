@@ -12,6 +12,7 @@ from pathlib import Path
 BASE = Path(__file__).resolve().parents[2]
 CONTROL = BASE / "data/agent-control.json"
 RUBRICS = BASE / "public/site-rubrics.json"
+SITE_SETTINGS = BASE / "public/site-settings.json"
 ARTICLE_AGENT = BASE / "agents/blog-lab-publisher/agent.py"
 VALID_MODES = {"auto", "article", "site", "control"}
 VALID_CATEGORIES = {"sport", "politika", "aktualno"}
@@ -40,6 +41,11 @@ def _schedule_intent(low: str) -> bool:
     # Slovene inflections: termin, termini, termine, terminov + objava/objave/objav.
     return "termin" in low and "objav" in low
 
+def _live_pulse_setting_intent(low: str) -> bool:
+    target = any(term in low for term in ["tekoče", "tekoce", "mini novice", "live pulse", "aktualni stolpec"])
+    action = any(term in low for term in ["skrij", "odstrani", "umakni", "pokaži", "pokazi", "prikaži", "prikazi", "vklopi", "izklopi", "dodaj"])
+    return target and action
+
 def _site_intent(low: str) -> bool:
     site_terms = [
         "stran", "spletno stran", "rubrik", "kategor", "zavihek", "tab", "meni", "header", "footer", "navigacij",
@@ -64,6 +70,8 @@ def _status_intent(low: str) -> bool:
 
 def infer_mode(command: str) -> str:
     low = command.lower()
+    if _live_pulse_setting_intent(low):
+        return "site"
     control_terms = [
         "ustavi", "pavza", "zaustavi", "nadaljuj", "vklopi", "izklopi", "resume", "pause",
         "začni", "zacni", "zaženi", "zazeni", "aktiviraj", "deaktiviraj", "restart",
@@ -395,8 +403,89 @@ def manage_rubric(command: str) -> bool:
         print(f"BUILTIN_SITE_OK rubric-not-found name={name}")
     return True
 
+DEFAULT_SITE_SETTINGS = {
+    "brand": "Blog Lab",
+    "heroEyebrow": "PROSTOR ZA IDEJE",
+    "heroTitle": "Pišemo jasno.",
+    "heroEmphasis": "Objavljamo preprosto.",
+    "heroSubtitle": "Minimalna testna platforma za članke, osnutke in preizkušanje vašega agenta.",
+    "heroCta": "Napiši prvi članek",
+    "footerText": "Preprost prostor za dobre zgodbe.",
+    "showLivePulse": True,
+}
+
+def _clean_setting_value(value: str, limit: int = 160) -> str:
+    value = " ".join(str(value or "").strip().strip('"“”\'').split())
+    if not value or len(value) > limit:
+        raise SystemExit(f"Vrednost mora imeti 1–{limit} znakov.")
+    return value
+
+def _setting_value(command: str, patterns: list[str], limit: int = 160):
+    text = " ".join(str(command or "").strip().split())
+    for pattern in patterns:
+        match = re.match(pattern, text, flags=re.I)
+        if match:
+            return _clean_setting_value(match.group(1), limit)
+    return None
+
+def manage_site_settings(command: str) -> bool:
+    low = command.lower()
+    settings = read_json(SITE_SETTINGS, DEFAULT_SITE_SETTINGS.copy())
+    if not isinstance(settings, dict):
+        settings = DEFAULT_SITE_SETTINGS.copy()
+    merged = {**DEFAULT_SITE_SETTINGS, **settings}
+
+    if _live_pulse_setting_intent(low):
+        hide = any(term in low for term in ["skrij", "odstrani", "umakni", "izklopi"])
+        merged["showLivePulse"] = not hide
+        write_json(SITE_SETTINGS, merged)
+        print(f"BUILTIN_SITE_OK live-pulse-visible={str(not hide).lower()}")
+        return True
+
+    brand = _setting_value(command, [
+        r"^(?:spremeni|nastavi)\s+(?:ime|naziv)\s+(?:strani|bloga)\s+(?:v|na)\s+(.+?)[.!?]?$",
+        r"^preimenuj\s+(?:stran|blog)\s+(?:v|na)\s+(.+?)[.!?]?$",
+    ], 60)
+    if brand:
+        merged["brand"] = brand
+        write_json(SITE_SETTINGS, merged)
+        print(f"BUILTIN_SITE_OK brand={brand}")
+        return True
+
+    hero_title = _setting_value(command, [
+        r"^(?:spremeni|nastavi)\s+(?:glavni\s+naslov|hero\s+naslov|naslov\s+hero)\s+(?:v|na)\s+(.+?)[.!?]?$",
+    ], 100)
+    if hero_title:
+        merged["heroTitle"] = hero_title
+        write_json(SITE_SETTINGS, merged)
+        print("BUILTIN_SITE_OK hero-title")
+        return True
+
+    subtitle = _setting_value(command, [
+        r"^(?:spremeni|nastavi)\s+(?:hero\s+)?podnaslov\s+(?:v|na)\s+(.+?)[.!?]?$",
+        r"^(?:spremeni|nastavi)\s+opis\s+(?:na\s+)?(?:hero|naslovnici)\s+(?:v|na)\s+(.+?)[.!?]?$",
+    ], 220)
+    if subtitle:
+        merged["heroSubtitle"] = subtitle
+        write_json(SITE_SETTINGS, merged)
+        print("BUILTIN_SITE_OK hero-subtitle")
+        return True
+
+    footer = _setting_value(command, [
+        r"^(?:spremeni|nastavi)\s+(?:footer|nogo|besedilo\s+v\s+footerju)\s+(?:v|na)\s+(.+?)[.!?]?$",
+    ], 180)
+    if footer:
+        merged["footerText"] = footer
+        write_json(SITE_SETTINGS, merged)
+        print("BUILTIN_SITE_OK footer")
+        return True
+
+    return False
+
 def builtin_site_command(command: str) -> bool:
     low = command.lower()
+    if manage_site_settings(command):
+        return True
     if manage_rubric(command):
         return True
     if _design_intent(low):
