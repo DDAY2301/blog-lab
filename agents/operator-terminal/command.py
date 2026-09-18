@@ -11,6 +11,7 @@ from pathlib import Path
 
 BASE = Path(__file__).resolve().parents[2]
 CONTROL = BASE / "data/agent-control.json"
+RUBRICS = BASE / "public/site-rubrics.json"
 ARTICLE_AGENT = BASE / "agents/blog-lab-publisher/agent.py"
 VALID_MODES = {"auto", "article", "site", "control"}
 VALID_CATEGORIES = {"sport", "politika", "aktualno"}
@@ -256,8 +257,69 @@ footer {
     print("BUILTIN_SITE_OK design-upgrade applied")
     return True
 
+def _rubric_slug(value: str) -> str:
+    value = value.lower().strip()
+    repl = {"č":"c","š":"s","ž":"z","ć":"c","đ":"d"}
+    value = "".join(repl.get(ch, ch) for ch in value)
+    return re.sub(r"[^a-z0-9]+", "-", value).strip("-")[:48]
+
+def _rubric_request(command: str):
+    text = " ".join(str(command or "").strip().split())
+    add = re.match(
+        r"^(?:dodaj|ustvari)\s+(?:novo\s+|novo\s+spletno\s+)?(?:rubriko|stran)\s+(.+?)"
+        r"(?:\s+(?:v|na)\s+(?:meni|navigacijo|header|glavni\s+meni))?[.!?]?$",
+        text,
+        flags=re.I,
+    )
+    if add:
+        return "add", add.group(1).strip(" .,:;!?")
+    remove = re.match(
+        r"^(?:odstrani|izbriši|izbrisi|umakni)\s+(?:rubriko|stran)\s+(.+?)[.!?]?$",
+        text,
+        flags=re.I,
+    )
+    if remove:
+        return "remove", remove.group(1).strip(" .,:;!?")
+    return None
+
+def manage_rubric(command: str) -> bool:
+    request = _rubric_request(command)
+    if not request:
+        return False
+    action, name = request
+    name = re.sub(r"\s+(?:v|na)\s+(?:meni|navigacijo|header|glavni\s+meni)$", "", name, flags=re.I).strip()
+    if not name or len(name) > 40:
+        raise SystemExit("Ime rubrike mora imeti 1–40 znakov.")
+    if not re.search(r"[A-Za-zČŠŽčšžĆćĐđ0-9]", name):
+        raise SystemExit("Ime rubrike ni veljavno.")
+
+    rubrics = read_json(RUBRICS, [])
+    if not isinstance(rubrics, list):
+        rubrics = []
+    slug = _rubric_slug(name)
+    existing = [r for r in rubrics if isinstance(r, dict) and str(r.get("slug", "")).lower() == slug]
+
+    if action == "add":
+        if not existing:
+            rubrics.append({"name": name, "slug": slug})
+            write_json(RUBRICS, rubrics[:12])
+            print(f"BUILTIN_SITE_OK rubric-added name={name}")
+        else:
+            print(f"BUILTIN_SITE_OK rubric-exists name={existing[0].get('name', name)}")
+        return True
+
+    filtered = [r for r in rubrics if not (isinstance(r, dict) and str(r.get("slug", "")).lower() == slug)]
+    if len(filtered) != len(rubrics):
+        write_json(RUBRICS, filtered)
+        print(f"BUILTIN_SITE_OK rubric-removed name={name}")
+    else:
+        print(f"BUILTIN_SITE_OK rubric-not-found name={name}")
+    return True
+
 def builtin_site_command(command: str) -> bool:
     low = command.lower()
+    if manage_rubric(command):
+        return True
     if _design_intent(low):
         return apply_design_upgrade()
     live_intent = (
