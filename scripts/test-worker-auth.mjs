@@ -64,7 +64,7 @@ async function runScenario(name, env) {
   if (!healthData.auth_ready || healthData.authorized_users_ready !== 2) {
     throw new Error(`${name}: unexpected health auth state: ${JSON.stringify(healthData)}`);
   }
-  if (healthData.version !== "auth-v6-media-upload") {
+  if (healthData.version !== "auth-v6.1-terminal-js-fixed") {
     throw new Error(`${name}: unexpected auth version: ${healthData.version}`);
   }
   if (healthData.media_upload_ready !== true) {
