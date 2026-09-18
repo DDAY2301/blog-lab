@@ -567,10 +567,10 @@ def builtin_site_command(command: str) -> bool:
     low = command.lower()
     if manage_site_settings(command):
         return True
-    if manage_rubric(command):
-        return True
     if _design_intent(low):
         return apply_design_upgrade()
+    if manage_rubric(command):
+        return True
     live_intent = (
         ("pol ure" in low or "30 min" in low or "30 minut" in low)
         and ("mini" in low or "tekoč" in low or "aktual" in low or "novic" in low)
