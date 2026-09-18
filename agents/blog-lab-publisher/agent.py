@@ -72,8 +72,14 @@ def main():
     if args.topic.strip():
         items = collect_topic(args.topic, args.category, int(cfg.get("max_source_items", 30)))
         if not items:
-            print("INFO topic search returned no items; falling back to category sources")
-            items = collect(cfg.get("input_sources", []), args.category, int(cfg.get("max_source_items", 30)))
+            message = "Za zahtevano temo ni bilo mogoče najti dovolj tematskih virov."
+            set_status(cfg, state, "failed", message)
+            state["last_error"] = "no_topic_sources"
+            state["consecutive_failures"] = state.get("consecutive_failures", 0) + 1
+            state["last_failure"] = now().isoformat(timespec="seconds")
+            atomic_json(str(STATE), state)
+            print("NO_TOPIC_SOURCES")
+            return 3
     else:
         items = collect(cfg.get("input_sources", []), args.category, int(cfg.get("max_source_items", 30)))
     seen = {x.get("hash") for x in processed}; fresh = [x for x in items if x.get("hash") not in seen]
