@@ -239,3 +239,18 @@ def test_article_intent_wins_for_content_creation(text):
 ])
 def test_template_design_stays_site(text):
     assert infer_mode(text) == "site"
+
+
+@pytest.mark.parametrize("text", [
+    "začni objavljanje",
+    "zaženi agenta",
+    "aktiviraj objavljanje",
+    "deaktiviraj agenta",
+    "restart objavljanja",
+    "preklopi v osnutek",
+    "nastavi draft način",
+    "preklopi na review",
+    "preklopi na pregled",
+])
+def test_additional_control_synonyms(text):
+    assert infer_mode(text) == "control"
