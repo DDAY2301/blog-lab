@@ -29,8 +29,8 @@ jobs:
           for attempt in {1..24}; do
             echo "Worker probe $attempt/24"
             body="$(curl -fsS --max-time 20 "$URL" || true)"
-            if BODY="$body" python -c 'import json,os,sys; d=json.loads(os.environ.get("BODY","{}")); ok=(d.get("ok") is True and d.get("ready") is True and d.get("auth_ready") is True and d.get("authorized_users_ready")==2 and d.get("version")=="auth-v3-cross-device"); sys.exit(0 if ok else 1)' 2>/dev/null; then
-              echo "Live Worker is ready and running auth-v3-cross-device."
+            if BODY="$body" python -c 'import json,os,sys; d=json.loads(os.environ.get("BODY","{}")); ok=(d.get("ok") is True and d.get("ready") is True and d.get("auth_ready") is True and d.get("authorized_users_ready")==2 and d.get("version")=="auth-v4-shared-login"); sys.exit(0 if ok else 1)' 2>/dev/null; then
+              echo "Live Worker is ready and running auth-v4-shared-login."
               exit 0
             fi
             sleep 10
