@@ -346,14 +346,25 @@ export default {
       const state = setupState(env);
       const configuredPasswords = configuredLoginPasswords(env);
       const authReady = configuredPasswords.length > 0;
+      let mediaUploadReady = false;
+      if (String(env.GITHUB_DISPATCH_TOKEN || "").trim()) {
+        try {
+          const repoResponse = await github(`/repos/${OWNER}/${REPO}`, env);
+          if (repoResponse.ok) {
+            const repoInfo = await repoResponse.json();
+            mediaUploadReady = Boolean(repoInfo?.permissions?.push);
+          }
+        } catch {}
+      }
       return json({
         ok: true,
         worker: "blog-lab",
-        version: "auth-v5-dual-secret-compat",
+        version: "auth-v6-media-upload",
         ready: state.ready,
         auth_ready: authReady,
         authorized_users_ready: authReady ? 2 : 0,
         configured_login_secrets: configuredPasswords.length,
+        media_upload_ready: mediaUploadReady,
         auth_mode: "built-in-session",
         login_secret_mode: "accept-either-configured-secret",
         free_tier_compatible: true
