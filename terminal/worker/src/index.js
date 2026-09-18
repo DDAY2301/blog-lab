@@ -321,7 +321,7 @@ async function uploadMedia(files){
         if(!r.ok){chip.className='upload-chip fail';chip.textContent=original.name+': '+(d.error||'upload ni uspel')+(d.code?' ['+d.code+']':'');continue}
         chip.className='upload-chip ok';chip.textContent=original.name+': pripravljeno';
         const line='[naložena slika: '+d.url+']';
-        const box=$('#command');box.value=(box.value.trim()?box.value.trim()+'\n':'')+line;
+        const box=$('#command');box.value=(box.value.trim()?box.value.trim()+'\\n':'')+line;
       }catch(err){chip.className='upload-chip fail';chip.textContent=original.name+': napaka pri uploadu'}
     }
   }finally{mediaBusy=false;$('#pickMedia').disabled=false;$('#mediaFiles').value=''}
