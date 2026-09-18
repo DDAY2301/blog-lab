@@ -5,8 +5,7 @@ const SESSION_COOKIE = "bloglab_session";
 const SESSION_TTL_SECONDS = 60 * 60 * 12;
 const AUTHORIZED_USERS = Object.freeze({
   "dan.grmusa@gmail.com": "DAN_LOGIN_PASSWORD",
-  "maj@klemenc.org": "MAJ_LOGIN_PASSWORD",
-  "maj@klemec.org": "MAJ_LOGIN_PASSWORD"
+  "maj@klemenc.org": "MAJ_LOGIN_PASSWORD"
 });
 
 function securityHeaders(extra = {}) {
