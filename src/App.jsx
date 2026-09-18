@@ -17,6 +17,108 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    id: "lipica-lipizzan-unesco-heritage-guide",
+    title: "Lipica and the Lipizzaner: A Living UNESCO Tradition",
+    excerpt: "Explore the documented history and living breeding tradition behind Slovenia’s Lipizzaner horses, with practical advice for a respectful visit to Lipica.",
+    seoDescription: "Visit Lipica responsibly: understand the 1580 stud farm, UNESCO-listed Lipizzaner breeding traditions, horse welfare and practical trip planning.",
+    content: `At Lipica, the horse is not a mascot added to a tourist site. The **Lipizzaner breeding tradition** shaped the estate, its landscape and generations of specialist knowledge. Lipica Stud Farm traces its foundation to **1580**, while UNESCO inscribed the multinational traditions of Lipizzan horse breeding on its Representative List of the Intangible Cultural Heritage of Humanity in **2022**.
+
+This guide separates the documented history from popular shorthand and explains how an international visitor can experience the working stud farm respectfully.
+
+## What is documented history?
+
+The Habsburg court established the stud farm at Lipica in 1580. The location in the Karst was selected for breeding horses for court use, and the farm became the place from which the Lipizzaner breed takes its name.
+
+Lipica is therefore historically central to the breed, but Lipizzaner culture is not exclusively Slovenian. UNESCO's 2022 inscription is shared by **Austria, Bosnia and Herzegovina, Croatia, Hungary, Italy, Romania, Slovakia and Slovenia**. The nomination recognises knowledge and social practices maintained by breeders, riders, carriage drivers, craftspeople and other communities across those countries.
+
+The inscription concerns a **living tradition**, not a claim that every stable, performance or horse is itself a UNESCO monument.
+
+## The “white horse” story: fact and simplification
+
+Adult Lipizzaners are widely recognised for their light grey appearance, so they are commonly called white horses. In equestrian terminology, most are **grey**: many foals are born dark and their coats lighten as they mature.
+
+Not every horse follows exactly the same visual path, and colour alone does not define the breed. Pedigree, breeding knowledge, conformation, health, training and long-term care matter more than the postcard image.
+
+There is no need for a legend to explain this change. It is a biological coat-colour process, while the cultural story lies in the human knowledge used to breed and care for the horses.
+
+## Why UNESCO recognised the tradition
+
+UNESCO describes Lipizzan breeding as a body of practices, knowledge and values transmitted over generations. Breeding is connected with classical riding, carriage driving, stable work, veterinary care, ceremonies and everyday relationships between people and horses.
+
+That wider meaning changes how to visit Lipica. A riding-school presentation may be visually memorable, but it is only one public expression of a much larger system. Pastures, historic stables, avenues, training spaces and the work of staff all belong to the cultural landscape.
+
+## How to Experience It Today
+
+Lipica remains a working stud farm as well as a visitor attraction. The official site publishes a daily programme that may include guided tours, horses being released to pasture, presentations, riding-school performances or carriage experiences. Activities vary by date, season, weather and horse welfare.
+
+Before travelling:
+
+1. Open the official day programme for your exact date.
+2. Check opening hours and which activities require a separate ticket or reservation.
+3. Confirm the language and time of any guided tour.
+4. Recheck the programme on the morning of the visit.
+5. Allow enough time to walk between facilities without rushing animals or staff.
+
+Do not treat an older travel article as a timetable. Lipica explicitly reserves the right to change its programme.
+
+## Getting to Lipica
+
+Lipica is in Slovenia's Karst region, near Sežana and the Italian border. Drivers should follow the current approach and parking signs rather than stopping beside pasture fences or access roads.
+
+Public transport needs more planning. Arriva has published a Sežana–Lokev–Lipica service, but routes and frequencies can change. Check the live journey planner for both directions and confirm the final return before departure. If the connection does not fit, consider an authorised taxi from Sežana or a pre-arranged tour rather than assuming that an informal transfer will be available.
+
+For a car-light trip from Ljubljana, compare current rail or coach options to Sežana with the onward local connection. Build in a generous transfer margin.
+
+## Respecting horses and a working farm
+
+Horses are sentient animals, and calm behaviour is part of a responsible visit.
+
+- Follow staff instructions, barriers and signs.
+- Do not feed or touch a horse unless staff explicitly permit it.
+- Keep voices low and avoid flash, sudden movements and loud phone audio.
+- Never enter a stable, paddock, training area or pasture without permission.
+- Supervise children closely near fences and horses.
+- Check the current policy before bringing a dog.
+- Do not fly a drone without all required permissions.
+- Accept programme changes made for weather, veterinary care or animal welfare.
+
+A cancelled appearance is not a failed heritage experience. Protecting a horse takes priority over a promised photograph.
+
+## Accessibility, weather and comfort
+
+The estate is extensive and includes outdoor routes. Wear comfortable footwear and prepare for sun, rain or Karst wind. Visitors with reduced mobility, sensory needs or other access requirements should contact Lipica before travelling and ask about the precise route, surfaces, toilets, seating and access to the day's activities.
+
+Facilities, catering and payment options can change. Check directly rather than making the visit depend on an unconfirmed service.
+
+## A thoughtful half-day plan
+
+Begin with a guided introduction to understand the farm's history and vocabulary. Continue through the historic core and landscape, then watch a scheduled presentation only if it operates that day. Leave time to observe the estate quietly instead of moving from one photo opportunity to the next.
+
+When you see a light-coated adult horse, remember the fuller story: not a mythical animal that simply “belongs” to one country, but a living breed sustained through documented, shared European knowledge.
+
+## Direct sources
+
+Information was checked on **18 September 2026**:
+
+- [UNESCO: Lipizzan horse breeding traditions](https://ich.unesco.org/en/RL/lipizzan-horse-breeding-traditions-01687)
+- [Government of Slovenia: UNESCO inscription of Lipizzan breeding traditions](https://www.gov.si/en/news/2022-12-01-lipizzan-horse-breeding-traditions-inscribed-on-the-unesco-representative-list/)
+- [Lipica Stud Farm: official visitor information and daily programme](https://www.lipica.org/)
+- [Slovenian Tourist Board: Lipica and the Lipizzaner](https://www.slovenia.info/en/places-to-go/regions/mediterranean-karst-slovenia/lipica)
+- [Arriva Slovenia: current buses and timetables](https://arriva.si/en/)
+
+Opening hours, transport and presentations can change. Recheck the official sources shortly before travel.`,
+    category: "Vodniki",
+    author: "Uredništvo Blog Lab",
+    status: "published",
+    heroImage: null,
+    video: null,
+    gallery: [],
+    sources: [],
+    createdAt: "2026-09-18T14:58:47+02:00",
+    updatedAt: "2026-09-18T14:58:47+02:00"
+  },
+
+  {
     id: "blog-lab-system-test-persistent",
     title: "Testni članek Blog Lab: trajna objava na vseh napravah",
     excerpt: "Trajna testna objava za preverjanje, da javni Blog Lab, zasebni terminal in repo-backed objave delujejo enako na vseh napravah.",
