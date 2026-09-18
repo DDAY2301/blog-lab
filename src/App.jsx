@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import LivePulse from "./LivePulse";
 import {
   ArticleGallery,
   ArticleHero,
