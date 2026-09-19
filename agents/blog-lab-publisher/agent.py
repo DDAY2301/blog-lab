@@ -13,7 +13,7 @@ import yaml
 BASE = Path(__file__).resolve().parents[2]
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
-from services.sources import collect, collect_topic
+from services.sources import collect, collect_topic, rank_topic_items
 from services.ai_provider import generate, AIUnavailable
 from services.fallback_writer import build_digest
 from services.validator import validate
@@ -209,6 +209,8 @@ def main():
     # request; title/QA validation still prevents an identical published article.
     if args.topic.strip() and args.force and not fresh:
         fresh = items
+    if args.topic.strip() and fresh:
+        fresh = rank_topic_items(args.topic, fresh)
     if not fresh:
         set_status(cfg, state, "completed", f"Ni novih vsebin za kategorijo {args.category}.")
         print("NO_NEW_CONTENT")
@@ -216,11 +218,20 @@ def main():
     system_prompt = (HERE / "prompts/system.md").read_text(encoding="utf-8")
     task_prompt = (HERE / "prompts/task.md").read_text(encoding="utf-8")
     if args.topic.strip():
-        task_prompt += "\n\nAvtorizirani urednik je zahteval temo: " + args.topic.strip() + "\nTema je uredniška zahteva, ne vir dejstev; dejstva še vedno črpaj samo iz podanih virov."
+        task_prompt += (
+            "\n\nAvtorizirani urednik je zahteval temo: " + args.topic.strip()
+            + "\nTema je uredniška zahteva, ne vir dejstev; dejstva še vedno črpaj samo iz podanih virov."
+            + "\nTo je neposredna ročna uredniška zahteva. Če podani preverjeni spletni viri skupaj podpirajo "
+              "uporaben informativni članek o temi, članek NAPIŠI. Ne vrni skip samo zato, ker tema ni breaking news, "
+              "ker viri prihajajo iz različnih vrst spletnih strani ali ker material ne zadošča za 1300 besed. "
+              "Če je dokazljivega gradiva manj, napiši krajši, vsebinsko zaokrožen članek približno 500–900 besed "
+              "in jasno omeji trditve na to, kar viri dejansko podpirajo. skip=true uporabi samo, če so najbolj "
+              "relevantni viri očitno nepovezani z zahtevano temo ali ne omogočajo niti osnovnega faktografskega članka."
+        )
     set_status(cfg, state, "generating", f"Priprava članka: {args.category}.")
-    used_for_article = fresh[:5]
+    used_for_article = fresh[:7]
     try:
-        article = generate(system_prompt, task_prompt, fresh[:8], args.category)
+        article = generate(system_prompt, task_prompt, fresh[:10], args.category)
         article["fallback"] = False
         state["writer_mode"] = str(article.pop("_writer_provider", "ai"))
     except AIUnavailable as exc:
@@ -230,6 +241,25 @@ def main():
     if args.output_category.strip():
         article["category"] = args.output_category.strip()[:40]
     article = apply_media_policy(article, used_for_article, args.topic)
+    if article.get("skip") and args.topic.strip() and args.force and len(fresh) >= 3:
+        # A manual editorial request gets one bounded second pass. The second
+        # pass may still refuse genuinely unrelated evidence, but it should not
+        # skip simply because the topic is evergreen or the article must be shorter.
+        retry_task = (
+            task_prompt
+            + "\n\nPONOVNI UREDNIŠKI POSKUS: prvi odgovor je vrnil skip, vendar je bilo najdenih "
+              f"{len(fresh)} preverjenih virov. Preglej predvsem prve vire po relevantnosti. "
+              "Če vsaj trije podpirajo zahtevano temo, napiši stvaren članek izključno iz teh dejstev. "
+              "Dovoljen je krajši format. Ne dodajaj manjkajočih dejstev in ne ugibaj."
+        )
+        try:
+            article = generate(system_prompt, retry_task, fresh[:10], args.category)
+            article["fallback"] = False
+            state["writer_mode"] = str(article.pop("_writer_provider", state.get("writer_mode", "ai")))
+            article = apply_media_policy(article, used_for_article, args.topic)
+        except AIUnavailable as exc:
+            print(f"INFO manual retry unavailable: {exc}")
+
     if article.get("skip"):
         set_status(cfg, state, "completed", article.get("reason", "Ni primerne teme."))
         print("NO_SUITABLE_CONTENT")
