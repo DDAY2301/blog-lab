@@ -5,7 +5,28 @@ const keyBytes = new Uint8Array(32).fill(7);
 const env = {
   DAN_LOGIN_PASSWORD: password,
   TERMINAL_COMMAND_KEY: Buffer.from(keyBytes).toString("base64"),
-  GITHUB_DISPATCH_TOKEN: "route-test-token"
+  GITHUB_DISPATCH_TOKEN: "route-test-token",
+  AI: {
+    async run(model, request) {
+      if (model !== "@cf/meta/llama-3.3-70b-instruct-fp8-fast") throw new Error("unexpected model");
+      if (!Array.isArray(request?.messages) || request.messages.length !== 2) throw new Error("unexpected AI messages");
+      return {
+        response: {
+          title: "Preizkus AI pisca",
+          content: "To je preverjen testni odgovor.",
+          excerpt: "Preizkus.",
+          seoDescription: "Preizkus.",
+          category: "Aktualno",
+          tags: ["test"],
+          heroImage: null,
+          gallery: [],
+          video: null,
+          sources: []
+        },
+        usage: { input_tokens: 10, output_tokens: 10 }
+      };
+    }
+  }
 };
 
 let dispatchedRequestId = "";
