@@ -303,3 +303,84 @@ def test_gdelt_rejects_non_https_results(monkeypatch):
     monkeypatch.setattr(sources, "urlopen", lambda *a, **k: FakeResponse())
     items = sources._gdelt_news("test", "aktualno", 10)
     assert [item["url"] for item in items] == ["https://good.example/story"]
+
+
+def test_topic_core_separates_subject_from_writing_instruction():
+    from services.sources import _topic_core, _topic_queries
+
+    command = (
+        "objavi članek o dogajanju v ljubljanskem nočnem življenju "
+        "in bo več teksta v samem članku"
+    )
+    core = _topic_core(command)
+    queries = _topic_queries(command)
+
+    assert core == "dogajanju v ljubljanskem nočnem življenju"
+    joined = " | ".join(queries).lower()
+    assert "več teksta" not in joined
+    assert "samem članku" not in joined
+    assert "ljubljana" in joined or "ljubljanskem" in joined
+
+
+def test_bing_web_provider_uses_general_search_rss(monkeypatch):
+    from services import sources
+
+    captured = {}
+
+    def fake_fetch(source, *args, **kwargs):
+        captured["url"] = source["url"]
+        captured["name"] = source["name"]
+        return []
+
+    monkeypatch.setattr(sources, "fetch_feed", fake_fetch)
+    sources._bing_web("Ljubljana nočno življenje", "aktualno", 10)
+
+    assert "bing.com/search" in captured["url"]
+    assert "/news/search" not in captured["url"]
+    assert "format=rss" in captured["url"]
+    assert captured["name"].startswith("Bing Web")
+
+
+def test_world_search_calls_general_web_before_gdelt(monkeypatch):
+    from services import sources
+
+    providers = []
+
+    def fake_feed(source, *args, **kwargs):
+        if "Bing Web" in source["name"]:
+            providers.append("bing_web")
+            return [{
+                "source_name": "Visit Ljubljana",
+                "category": "aktualno",
+                "title": "Ljubljana nightlife guide",
+                "url": "https://www.visitljubljana.com/test-nightlife",
+                "summary": "Guide",
+                "published": "",
+                "image_url": "",
+                "video_url": "",
+                "hash": "web-guide",
+            }]
+        if "Google News" in source["name"]:
+            providers.append("google")
+        elif "Bing News" in source["name"]:
+            providers.append("bing_news")
+        return []
+
+    def fake_gdelt(*args, **kwargs):
+        providers.append("gdelt")
+        return []
+
+    monkeypatch.setattr(sources, "fetch_feed", fake_feed)
+    monkeypatch.setattr(sources, "_gdelt_news", fake_gdelt)
+
+    items = sources.collect_topic(
+        "objavi članek o dogajanju v ljubljanskem nočnem življenju in bo več teksta v samem članku",
+        "aktualno",
+        30,
+    )
+
+    assert items
+    assert items[0]["source_name"] == "Visit Ljubljana"
+    assert "bing_web" in providers
+    if "gdelt" in providers:
+        assert providers.index("bing_web") < providers.index("gdelt")
