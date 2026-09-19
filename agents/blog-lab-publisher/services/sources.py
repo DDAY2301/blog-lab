@@ -227,7 +227,7 @@ def _bing_news(query_text: str, category: str, max_items: int) -> list[dict]:
         ),
         "type": "rss",
     }
-    return fetch_feed(source, timeout=12, retries=2)[:max_items]
+    return fetch_feed(source, timeout=10, retries=1)[:max_items]
 
 def _gdelt_news(query_text: str, category: str, max_items: int) -> list[dict]:
     # GDELT indexes news sites worldwide and does not require an API key.
@@ -247,7 +247,7 @@ def _gdelt_news(query_text: str, category: str, max_items: int) -> list[dict]:
             "Accept": "application/json",
         },
     )
-    with urlopen(req, timeout=15) as response:
+    with urlopen(req, timeout=10) as response:
         if getattr(response, "status", 200) >= 400:
             raise RuntimeError(f"HTTP {response.status}")
         raw = response.read(2_000_000)
