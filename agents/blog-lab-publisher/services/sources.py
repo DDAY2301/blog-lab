@@ -63,6 +63,7 @@ def _item(source, title, link, summary, published, image_url="", video_url="", s
         "image_url": _safe_https(image_url),
         "video_url": _safe_https(video_url),
         "hash": hashlib.sha256(material).hexdigest(),
+        "provider": _clean(source.get("provider", ""))[:80],
     }
 
 def fetch_feed(source: dict, timeout: int = 15, retries: int = 3) -> list[dict]:
@@ -272,6 +273,7 @@ def _gdelt_news(query_text: str, category: str, max_items: int) -> list[dict]:
                 "name": f"GDELT – {category}",
                 "category": category,
                 "url": url,
+                "provider": "gdelt",
             },
             title,
             link,
@@ -316,6 +318,11 @@ def _visible_html_text(html: str, limit: int = 4200) -> str:
     return text[:limit]
 
 def _direct_candidate(item: dict) -> bool:
+    # Only hydrate direct web-index results. Google/Bing News aggregator URLs
+    # may require consent/redirect logic and are already usable as indexed evidence.
+    provider = _clean(item.get("provider", "")).lower()
+    if provider not in {"bing-web", "gdelt", "direct-web"}:
+        return False
     link = _safe_https(item.get("url", ""))
     if not link:
         return False
