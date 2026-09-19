@@ -35,7 +35,7 @@ automatic_publish: true
 maximum_outputs_per_run: 1
 maximum_outputs_per_day: 3
 approval_mode: "automatic"
-ai_provider: "auto"
+ai_provider: "worker"
 min_article_chars: 1200
 max_article_chars: 10000
 max_source_items: 30

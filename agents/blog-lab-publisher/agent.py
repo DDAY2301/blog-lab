@@ -222,7 +222,7 @@ def main():
     try:
         article = generate(system_prompt, task_prompt, fresh[:8], args.category)
         article["fallback"] = False
-        state["writer_mode"] = "ai"
+        state["writer_mode"] = str(article.pop("_writer_provider", "ai"))
     except AIUnavailable as exc:
         print(f"INFO AI fallback: {exc}")
         article = build_digest(used_for_article, args.category, max_items=5)

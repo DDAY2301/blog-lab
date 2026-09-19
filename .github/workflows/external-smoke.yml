@@ -60,8 +60,30 @@ jobs:
           echo "::error::Live Cloudflare Worker did not reach the expected ready state."
           exit 1
 
+      - name: Detect writer-code change
+        id: writer-changes
+        shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          set -euo pipefail
+          if [[ "$EVENT_NAME" == "workflow_dispatch" ]]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if [[ "$EVENT_NAME" != "push" ]]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          changed="$(git show --pretty= --name-only "$GITHUB_SHA")"
+          if grep -Eq '^((terminal/worker/|agents/blog-lab-publisher/(agent\.py|services/ai_provider\.py|prompts/)|wrangler\.jsonc|terminal/worker/wrangler\.jsonc|\.github/workflows/(agent-blog-lab-publisher|operator-terminal|external-smoke)\.yml))' <<<"$changed"; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Verify Workers AI editorial writer
-        if: ${{ github.event_name != 'pull_request' }}
+        if: ${{ github.event_name == 'workflow_dispatch' || steps.writer-changes.outputs.changed == 'true' }}
         shell: bash
         env:
           WORKER_AI_TOKEN: ${{ secrets.TERMINAL_COMMAND_KEY }}
