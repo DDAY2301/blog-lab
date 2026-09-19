@@ -60,8 +60,8 @@ def build_digest(items: list[dict], category: str, max_items: int = 5) -> dict:
 
     if category == "politika":
         parts.append(
-            "Politične izjave in ocene so predstavljene kot stališča njihovih avtorjev ali medijev, "
-            "ne kot uredniška presoja Blog Laba."
+            "Pri političnih temah Blog Lab ne podpira kandidatov, strank ali političnih odločitev; "
+            "izjave in ocene so predstavljene kot stališča njihovih avtorjev ali virov, ne kot uredniška presoja."
         )
 
     for item in chosen:
