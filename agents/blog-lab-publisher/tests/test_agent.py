@@ -139,6 +139,7 @@ def test_collect_topic_falls_back_to_english_google_news(monkeypatch):
         return []
 
     monkeypatch.setattr(sources, "fetch_feed", fake_fetch)
+    monkeypatch.setattr(sources, "_gdelt_news", lambda *a, **k: [])
     items = sources.collect_topic("Objavi članek o orbitalni energiji", "aktualno", 10)
 
     assert items and items[0]["url"] == "https://example.com/story"
@@ -384,3 +385,48 @@ def test_world_search_calls_general_web_before_gdelt(monkeypatch):
     assert "bing_web" in providers
     if "gdelt" in providers:
         assert providers.index("bing_web") < providers.index("gdelt")
+
+
+def test_topic_search_sources_cover_multiple_web_indexes():
+    from services.sources import _topic_search_sources
+
+    sources = _topic_search_sources("renewable energy Slovenia", "aktualno")
+    providers = {item.get("provider") for item in sources}
+    urls = [item["url"] for item in sources]
+
+    assert {"google-news-si", "google-news-global", "bing-news", "bing-web"} <= providers
+    assert any("news.google.com/rss/search" in url for url in urls)
+    assert any("bing.com/news/search" in url and "format=rss" in url for url in urls)
+    assert any("bing.com/search" in url and "format=rss" in url for url in urls)
+
+
+def test_collect_topic_continues_when_one_provider_fails(monkeypatch):
+    from services import sources
+
+    calls = []
+
+    def fake_fetch(source, *args, **kwargs):
+        calls.append(source.get("provider"))
+        if source.get("provider") == "google-news-si":
+            raise RuntimeError("temporary provider outage")
+        if source.get("provider") == "bing-web":
+            return [{
+                "source_name": source["name"],
+                "category": "aktualno",
+                "title": "Web result",
+                "url": "https://example.org/research",
+                "summary": "Public web source",
+                "published": "",
+                "image_url": "",
+                "video_url": "",
+                "hash": "bing-web-result",
+            }]
+        return []
+
+    monkeypatch.setattr(sources, "fetch_feed", fake_fetch)
+    monkeypatch.setattr(sources, "_gdelt_news", lambda *a, **k: [])
+    items = sources.collect_topic("specialized research topic", "aktualno", 10)
+
+    assert items and items[0]["url"] == "https://example.org/research"
+    assert "google-news-si" in calls
+    assert "bing-web" in calls

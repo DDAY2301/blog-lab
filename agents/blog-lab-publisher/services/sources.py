@@ -307,69 +307,92 @@ def _dedupe_diverse(items: list[dict], max_items: int, per_source: int = 4) -> l
             break
     return out
 
+def _topic_search_sources(query_text: str, category: str) -> list[dict]:
+    encoded = quote_plus(query_text)
+    return [
+        {
+            "name": f"Google News SI – {category} – {query_text[:60]}",
+            "category": category,
+            "url": (
+                "https://news.google.com/rss/search"
+                f"?q={encoded}&hl=sl&gl=SI&ceid=SI:sl"
+            ),
+            "type": "rss",
+            "provider": "google-news-si",
+        },
+        {
+            "name": f"Google News EN – {category} – {query_text[:60]}",
+            "category": category,
+            "url": (
+                "https://news.google.com/rss/search"
+                f"?q={encoded}&hl=en-US&gl=US&ceid=US:en"
+            ),
+            "type": "rss",
+            "provider": "google-news-global",
+        },
+        {
+            "name": f"Bing News – {category} – {query_text[:60]}",
+            "category": category,
+            "url": f"https://www.bing.com/news/search?q={encoded}&format=rss",
+            "type": "rss",
+            "provider": "bing-news",
+        },
+        {
+            "name": f"Bing Web – {category} – {query_text[:60]}",
+            "category": category,
+            "url": f"https://www.bing.com/search?q={encoded}&format=rss",
+            "type": "rss",
+            "provider": "bing-web",
+        },
+    ]
+
 def collect_topic(topic: str, category: str, max_items: int = 30) -> list[dict]:
     queries = _topic_queries(topic)
     if not queries:
         return []
 
-    # Bounded world search across news + the general web.
-    # Search queries are intentionally limited per provider so a slow/rate-
-    # limited service cannot hold the terminal for many minutes.
-    providers = [
-        ("google", ("sl", "SI", "SI:sl", "Google News SI"), 3),
-        ("bing_web", None, 3),
-        ("google", ("en-US", "US", "US:en", "Google News EN"), 2),
-        ("bing_news", None, 2),
-        ("gdelt", None, 1),
-    ]
+    out = []
+    provider_hits = {}
 
-    gathered = []
-    target = max(8, min(max_items, 30))
-
-    for provider, settings, query_limit in providers:
-        provider_items = []
-        for query_text in queries[:query_limit]:
+    # Search multiple independent public indexes for every useful query variant.
+    # One provider failing must not prevent the others from contributing.
+    for query_text in queries[:6]:
+        for source in _topic_search_sources(query_text, category):
+            provider = source.get("provider", "unknown")
             try:
-                if provider == "google":
-                    hl, gl, ceid, label = settings
-                    source = {
-                        "name": f"{label} – {category} – {query_text[:60]}",
-                        "category": category,
-                        "url": (
-                            "https://news.google.com/rss/search"
-                            f"?q={quote_plus(query_text)}&hl={quote_plus(hl)}"
-                            f"&gl={quote_plus(gl)}&ceid={quote_plus(ceid)}"
-                        ),
-                        "type": "rss",
-                    }
-                    found = fetch_feed(source, timeout=10, retries=1)
-                elif provider == "bing_web":
-                    found = _bing_web(query_text, category, target)
-                elif provider == "bing_news":
-                    found = _bing_news(query_text, category, target)
-                else:
-                    # One clean GDELT query per request prevents the 429 burst
-                    # seen on shared GitHub runner IPs.
-                    found = _gdelt_news(query_text, category, target)
-                provider_items.extend(found)
+                found = fetch_feed(source, timeout=10, retries=1)
+                if found:
+                    provider_hits[provider] = provider_hits.get(provider, 0) + len(found)
+                    out.extend(found)
             except Exception as exc:
                 print(
-                    f"WARN world source provider={provider} "
+                    f"WARN topic source provider={provider} "
                     f"query={query_text!r} error={exc}"
                 )
 
-            if len(_dedupe(provider_items)) >= target:
-                break
+        # GDELT is an additional worldwide news index and returns direct article
+        # URLs. Keep it independent from RSS providers so a search-engine outage
+        # does not collapse discovery.
+        try:
+            gdelt = _gdelt_news(query_text, category, max_items)
+            if gdelt:
+                provider_hits["gdelt"] = provider_hits.get("gdelt", 0) + len(gdelt)
+                out.extend(gdelt)
+        except Exception as exc:
+            print(f"WARN topic source provider=gdelt query={query_text!r} error={exc}")
 
-        gathered.extend(provider_items)
-
-        # Keep searching at least through the general-web provider. Thereafter
-        # stop once we have a sufficiently diverse pool.
-        diverse = _dedupe_diverse(gathered, target)
-        if provider not in {"google", "bing_web"} and len(diverse) >= min(target, 12):
+        # Enough diverse URLs have been found; do not keep hammering public
+        # indexes once we already have a healthy evidence pool.
+        if len(_dedupe_diverse(out, max_items, per_source=4)) >= max_items:
             break
 
-    return _dedupe_diverse(gathered, max_items)
+    unique = _dedupe_diverse(out, max_items, per_source=4)
+    if unique:
+        summary = ",".join(
+            f"{name}:{count}" for name, count in sorted(provider_hits.items())
+        )
+        print(f"TOPIC_SOURCES_OK count={len(unique)} providers={summary}")
+    return unique
 
 def _dedupe(items: list[dict]) -> list[dict]:
     seen = set()
