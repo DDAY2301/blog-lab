@@ -18,6 +18,44 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "sportni-pregled-19-9-2026-8a936707",
+    "title": "Športni pregled: 19. 9. 2026",
+    "excerpt": "Samodejni pregled najnovejših objav za področje šport, sestavljen iz javno dostopnih RSS virov in neposrednih povezav do izvirnikov.",
+    "seoDescription": "Samodejni pregled najnovejših objav za področje šport, sestavljen iz javno dostopnih RSS virov in neposrednih povezav do izvirnikov.",
+    "content": "Danes, 19. 9. 2026, Blog Lab povzema nove objave s področja **šport**. Pregled je sestavljen samo iz podatkov, ki so bili objavljeni v navedenih virih; kjer RSS ne vsebuje dovolj podrobnosti, dodatnih dejstev ne ugibamo.\n\n## 1. Slovenija po prvem dnevu proti Izraelu vodi z 2:0 - rtvslo.si\n\nSlovenija po prvem dnevu proti Izraelu vodi z 2:0 rtvslo.si Objavljeno: Fri, 18 Sep 2026 15:36:40 GMT.\n\n[Odpri izvirni vir](https://news.google.com/rss/articles/CBMijAFBVV95cUxQMjhOZkZFalFuTzliUVQ2TVZqZVVHYjM4dHlTRWVKUEZXSjBNZkEzbTlkTUJMcDN5Y3JmU3FDMC1raG5MZ3h4VFNQVXpWU0hGbU9RTVdlaDhGOU9yaERfeVBtRDl0clpucFZsek96N1ByUHI4MGtMZTNyd0ZCNHFyNi1vQ2h3eXVFU253Rw?oc=5)\n\n## 2. Diši po kolajni: Slovenija stopnjuje formo, prihaja še Klemen Čebulj - Delo.si\n\nDiši po kolajni: Slovenija stopnjuje formo, prihaja še Klemen Čebulj Delo.si Objavljeno: Fri, 18 Sep 2026 10:00:00 GMT.\n\n[Odpri izvirni vir](https://news.google.com/rss/articles/CBMiqAFBVV95cUxQdjBESU52NlNxdkFGVUtzcDJGdzVzLTNldlhfY1lOc3lDbmxBVGdWZzZFb0djWEJfb2JDUThRbVVfWjh3Wm5WblpKREFrbE15YUxsaGN4UG14MDZsdTcyd2VfdTdyV3M4Vm0yV29TbUxJS2d1MG1Lc185NnpWYVR5QVJQaE5PazcxaHdEYUFGYng3TjRWSld3REs2V1A2Y3ZwNDFoeTZleHE?oc=5)\n\n## 3. O začetku Toura v Sloveniji - Janez Janša takole s šefom največje dirke - Ekipa\n\nO začetku Toura v Sloveniji - Janez Janša takole s šefom največje dirke Ekipa Objavljeno: Sat, 19 Sep 2026 05:26:00 GMT.\n\n[Odpri izvirni vir](https://news.google.com/rss/articles/CBMivAFBVV95cUxPUk9pZDBKY3NublNzb3JQOGswVDRYV3BPMnJ1UXVHT1NGU0RKQy0yMmo1Ni1vblhidi13N2traUYtZXdGaVE1VTkwSHFKa2ItQm92dW90Z2dBMVVHOEUzbVRLY0pnTlVjNHFEaDBPTE80eXNtcDFzWVlXSXhsNUJKTUJCTHJUeUVVc2tiZ1h5WnlydkZwS3A4RG82ZVRyYTdYamFtZUNHZDdvU01mNzAwM3dpZmIwRTFIYkhYdw?oc=5)\n\n## 4. Po Pogačarju Slovenija ostala tudi brez drugega velikega aduta, to je razlog - Žurnal24\n\nPo Pogačarju Slovenija ostala tudi brez drugega velikega aduta, to je razlog Žurnal24 Objavljeno: Sat, 19 Sep 2026 07:13:00 GMT.\n\n[Odpri izvirni vir](https://news.google.com/rss/articles/CBMiwgFBVV95cUxOQUdKSVYwbWNwRWpEdXk0OGlmN2NsSkdYT21TVWJpU3BmeDFwNnBXdjBsYS1oeTlXX1lfbm45cnZna2xjNDNuZnA4dEZSNWJrRlBrQW0wSTJpVlNnR0s4VTZtNWpQakEtQ1Q1Vl9IWnpHX01oY0RlNGFOdjVJbm5kLU5lOURCM1IwaUNkNi13X3lFS3F4X0RRWlUxT2NsaUZobmdYNl83d09feHo1bUowVUVaejZfZTh5ZHNyRzRNUktxUdIBtwFBVV95cUxOODFjb1VLSTlIRU43NHZyZkUwSUFYVWVnNVROeUwyQzQ0eVE0b2x6dk02WWduU1h6Vjc2T3Zlc3NzYkZPcDcwT1Zua1I0MWRlbVpsUDNCZ3pHV1BiTDAzTGV0VC1vOF9XUXVXam9aUDl6a0pkWEVmSDlMZnk2Y0gyLWVtam9HSzE3WVMyY1FjSzBGbkQzN3lYTlJrQTBhYTY2NV90bXNpZ0tacmVWcS1nX3lleDhSZjA?oc=5)\n\n## 5. \"Želja je, da se v prihodnjih letih prvi trije dnevi Toura odvijejo v Sloveniji\" - rtvslo.si\n\n\"Želja je, da se v prihodnjih letih prvi trije dnevi Toura odvijejo v Sloveniji\" rtvslo.si Objavljeno: Thu, 17 Sep 2026 20:03:34 GMT.\n\n[Odpri izvirni vir](https://news.google.com/rss/articles/CBMi2gFBVV95cUxNU2lPeFZJRm03ZXd4T1ZLbzU1c09HdTBYUWdCUGd3NWUybm1wS241SzVqN05kYTVOeF9XZEJZX1p1MnVwSW9ORGtQbGdBR0w0LVI5T1RyTjdxaUlnQ0pjUjRqNG9XZWw1Q2lnNXJJVHFQZGJCUUlNVGpQSlduZ3JQZmFjOUJEVHdTOUtFd25lVjU4OUh6cEFCSzF2a0s0YW9mbEpyS2xwdDZkU2hiajFwV05QQXRWRmw3cGowOGlocHRsdi1JbGxDY3h0OUdScU1WVGRDOTZBQWtXUQ?oc=5)\n\n## Kaj spremljati naprej\n\nKer se aktualne zgodbe hitro dopolnjujejo, je smiselno preveriti izvirne povezave za morebitne nove podatke, popravke ali odzive. Blog Lab bo naslednji pregled pripravil šele, ko zazna nove, še neobdelane vnose.",
+    "category": "Šport",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Google News Slovenija – šport — Slovenija po prvem dnevu proti Izraelu vodi z 2:0 - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQMjhOZkZFalFuTzliUVQ2TVZqZVVHYjM4dHlTRWVKUEZXSjBNZkEzbTlkTUJMcDN5Y3JmU3FDMC1raG5MZ3h4VFNQVXpWU0hGbU9RTVdlaDhGOU9yaERfeVBtRDl0clpucFZsek96N1ByUHI4MGtMZTNyd0ZCNHFyNi1vQ2h3eXVFU253Rw?oc=5"
+      },
+      {
+        "label": "Google News Slovenija – šport — Diši po kolajni: Slovenija stopnjuje formo, prihaja še Klemen Čebulj - Delo.si",
+        "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQdjBESU52NlNxdkFGVUtzcDJGdzVzLTNldlhfY1lOc3lDbmxBVGdWZzZFb0djWEJfb2JDUThRbVVfWjh3Wm5WblpKREFrbE15YUxsaGN4UG14MDZsdTcyd2VfdTdyV3M4Vm0yV29TbUxJS2d1MG1Lc185NnpWYVR5QVJQaE5PazcxaHdEYUFGYng3TjRWSld3REs2V1A2Y3ZwNDFoeTZleHE?oc=5"
+      },
+      {
+        "label": "Google News Slovenija – šport — O začetku Toura v Sloveniji - Janez Janša takole s šefom največje dirke - Ekipa",
+        "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPUk9pZDBKY3NublNzb3JQOGswVDRYV3BPMnJ1UXVHT1NGU0RKQy0yMmo1Ni1vblhidi13N2traUYtZXdGaVE1VTkwSHFKa2ItQm92dW90Z2dBMVVHOEUzbVRLY0pnTlVjNHFEaDBPTE80eXNtcDFzWVlXSXhsNUJKTUJCTHJUeUVVc2tiZ1h5WnlydkZwS3A4RG82ZVRyYTdYamFtZUNHZDdvU01mNzAwM3dpZmIwRTFIYkhYdw?oc=5"
+      },
+      {
+        "label": "Google News Slovenija – šport — Po Pogačarju Slovenija ostala tudi brez drugega velikega aduta, to je razlog - Žurnal24",
+        "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOQUdKSVYwbWNwRWpEdXk0OGlmN2NsSkdYT21TVWJpU3BmeDFwNnBXdjBsYS1oeTlXX1lfbm45cnZna2xjNDNuZnA4dEZSNWJrRlBrQW0wSTJpVlNnR0s4VTZtNWpQakEtQ1Q1Vl9IWnpHX01oY0RlNGFOdjVJbm5kLU5lOURCM1IwaUNkNi13X3lFS3F4X0RRWlUxT2NsaUZobmdYNl83d09feHo1bUowVUVaejZfZTh5ZHNyRzRNUktxUdIBtwFBVV95cUxOODFjb1VLSTlIRU43NHZyZkUwSUFYVWVnNVROeUwyQzQ0eVE0b2x6dk02WWduU1h6Vjc2T3Zlc3NzYkZPcDcwT1Zua1I0MWRlbVpsUDNCZ3pHV1BiTDAzTGV0VC1vOF9XUXVXam9aUDl6a0pkWEVmSDlMZnk2Y0gyLWVtam9HSzE3WVMyY1FjSzBGbkQzN3lYTlJrQTBhYTY2NV90bXNpZ0tacmVWcS1nX3lleDhSZjA?oc=5"
+      },
+      {
+        "label": "Google News Slovenija – šport — \"Želja je, da se v prihodnjih letih prvi trije dnevi Toura odvijejo v Sloveniji\" - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNU2lPeFZJRm03ZXd4T1ZLbzU1c09HdTBYUWdCUGd3NWUybm1wS241SzVqN05kYTVOeF9XZEJZX1p1MnVwSW9ORGtQbGdBR0w0LVI5T1RyTjdxaUlnQ0pjUjRqNG9XZWw1Q2lnNXJJVHFQZGJCUUlNVGpQSlduZ3JQZmFjOUJEVHdTOUtFd25lVjU4OUh6cEFCSzF2a0s0YW9mbEpyS2xwdDZkU2hiajFwV05QQXRWRmw3cGowOGlocHRsdi1JbGxDY3h0OUdScU1WVGRDOTZBQWtXUQ?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-19T13:05:14+02:00",
+    "updatedAt": "2026-09-19T13:05:14+02:00"
+  },
+
+  {
     "id": "aktualni-pregled-19-9-2026-550bfe97",
     "title": "Aktualni pregled: 19. 9. 2026",
     "excerpt": "Samodejni pregled najnovejših objav za področje aktualno, sestavljen iz javno dostopnih RSS virov in neposrednih povezav do izvirnikov.",
