@@ -528,3 +528,24 @@ def test_rank_topic_items_prefers_relevant_direct_evidence():
 
     assert ranked[0]["url"] == "https://local.example/nightlife"
     assert ranked[-1]["url"] == "https://generic.example/guide"
+
+
+def test_manual_editor_system_prompt_replaces_generic_skip_rule():
+    from agent import manual_editor_system_prompt
+
+    base = (
+        "Facts only.\n"
+        "- Če material ne zadostuje za kakovosten samostojen članek, vrni `skip=true`.\n"
+        "Never invent facts."
+    )
+    prompt = manual_editor_system_prompt(
+        base,
+        "dogajanje v ljubljanskem nočnem življenju",
+        12,
+    )
+
+    assert "Če material ne zadostuje za kakovosten samostojen članek" not in prompt
+    assert "Prednost avtorizirane ročne uredniške zahteve" in prompt
+    assert "Če vsaj trije od prvih virov" in prompt
+    assert "12 preverjenih spletnih virov" in prompt
+    assert "ničesar ne ugibaj" in prompt
