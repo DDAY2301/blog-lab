@@ -430,3 +430,68 @@ def test_collect_topic_continues_when_one_provider_fails(monkeypatch):
     assert items and items[0]["url"] == "https://example.org/research"
     assert "google-news-si" in calls
     assert "bing-web" in calls
+
+
+def test_direct_web_source_enrichment_reads_target_page(monkeypatch):
+    from services import sources
+
+    html = b"""
+    <html><head>
+      <title>Nightlife in Ljubljana</title>
+      <meta name="description" content="Independent guide to clubs, venues and evening events in Ljubljana.">
+      <meta property="og:image" content="https://example.com/night.jpg">
+    </head><body><article>
+      Ljubljana has several nightlife districts, live music venues and late-night cultural events.
+      This paragraph provides enough directly fetched page text for the publisher evidence pool.
+      Visitors should verify individual venue schedules before attending because programmes change.
+    </article></body></html>
+    """
+
+    class Headers:
+        def get(self, key, default=""):
+            return "text/html; charset=utf-8" if key.lower() == "content-type" else default
+
+    class Response:
+        status = 200
+        headers = Headers()
+        def __enter__(self): return self
+        def __exit__(self, *args): return False
+        def read(self, *args): return html
+        def geturl(self): return "https://example.com/nightlife"
+
+    monkeypatch.setattr(sources, "urlopen", lambda *a, **k: Response())
+    item = {
+        "source_name": "Bing Web – test",
+        "provider": "bing-web",
+        "category": "aktualno",
+        "title": "Search result",
+        "url": "https://example.com/nightlife",
+        "summary": "Short snippet",
+        "published": "",
+        "image_url": "",
+        "video_url": "",
+        "hash": "before",
+    }
+
+    enriched, ok = sources._enrich_direct_item(item)
+
+    assert ok is True
+    assert enriched["verified_direct"] is True
+    assert enriched["url"] == "https://example.com/nightlife"
+    assert enriched["title"] == "Nightlife in Ljubljana"
+    assert "directly fetched page text" in enriched["summary"]
+    assert enriched["image_url"] == "https://example.com/night.jpg"
+    assert enriched["source_name"] == "example.com"
+
+
+def test_direct_enrichment_skips_news_aggregator_links():
+    from services.sources import _direct_candidate
+
+    assert _direct_candidate({
+        "provider": "google-news-si",
+        "url": "https://news.google.com/rss/articles/test",
+    }) is False
+    assert _direct_candidate({
+        "provider": "bing-web",
+        "url": "https://example.org/article",
+    }) is True
