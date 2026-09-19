@@ -139,6 +139,7 @@ def test_collect_topic_falls_back_to_english_google_news(monkeypatch):
         return []
 
     monkeypatch.setattr(sources, "fetch_feed", fake_fetch)
+    monkeypatch.setattr(sources, "_gdelt_news", lambda *a, **k: [])
     items = sources.collect_topic("Objavi članek o orbitalni energiji", "aktualno", 10)
 
     assert items and items[0]["url"] == "https://example.com/story"
@@ -423,6 +424,7 @@ def test_collect_topic_continues_when_one_provider_fails(monkeypatch):
         return []
 
     monkeypatch.setattr(sources, "fetch_feed", fake_fetch)
+    monkeypatch.setattr(sources, "_gdelt_news", lambda *a, **k: [])
     items = sources.collect_topic("specialized research topic", "aktualno", 10)
 
     assert items and items[0]["url"] == "https://example.org/research"
