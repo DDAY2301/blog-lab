@@ -1,9 +1,133 @@
 // Review draft only. Not imported by the production application.
-// Rolling review draft. Sources rechecked on 2026-09-18 at 07:00 Europe/Ljubljana.
+// Rolling review draft. Sources rechecked on 2026-09-19 at 07:00 Europe/Ljubljana.
 // Production remains unchanged until the calendar model and stable views are implemented.
 // Unknown values deliberately remain null.
 
 export const draftEvents = [
+  {
+    "eventId": "flirrt-cankarjev-dom-2026-09-19",
+    "title": "Flirrt",
+    "summary": "Flirrt performs at Cankarjev dom on Saturday evening at 20:00. The official programme confirms the date and time; current price, remaining tickets and accessibility details should be checked in the linked sales flow.",
+    "category": "music",
+    "startAt": "2026-09-19T20:00:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": false
+    },
+    "ticketUrl": "https://www.cd-cc.si/",
+    "officialUrl": "https://www.cd-cc.si/",
+    "sourceName": "Cankarjev dom",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-19T07:00:00+02:00"
+  },
+  {
+    "eventId": "nina-ramsak-markovic-stvari-2026-09-19",
+    "title": "Nina Ramšak Marković: Stvari, ki jih ne morem povedati o stvareh",
+    "summary": "Cankarjev dom lists a second performance on Saturday 19 September at 20:00. The production is likely language-dependent, but exact language and surtitles were not confirmed in the programme overview and therefore remain unclassified.",
+    "category": "theatre",
+    "startAt": "2026-09-19T20:00:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": false
+    },
+    "ticketUrl": "https://www.cd-cc.si/",
+    "officialUrl": "https://www.cd-cc.si/",
+    "sourceName": "Cankarjev dom",
+    "languages": [],
+    "touristFriendly": null,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-19T07:00:00+02:00"
+  },
+  {
+    "eventId": "hana-karim-fragments-memories-2026",
+    "title": "Hana Karim: Fragments of Memories",
+    "summary": "This exhibition of ceramic paintings and objects is open at Ljubljana Castle's S Gallery from 09:00 to 20:00 through 11 October. The official overview confirms dates and hours; separate admission and accessibility details were not stated there.",
+    "category": "exhibition",
+    "startAt": "2026-06-04T09:00:00+02:00",
+    "endAt": "2026-10-11T20:00:00+02:00",
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "S Gallery, Ljubljana Castle",
+      "address": "Grajska planota 1, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": null
+    },
+    "ticketUrl": null,
+    "officialUrl": "https://www.ljubljanskigrad.si/en/castle-events/",
+    "sourceName": "Ljubljana Castle",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-19T07:00:00+02:00"
+  },
+  {
+    "eventId": "gallery-at-your-fingertips-2026",
+    "title": "Gallery at Your Fingertips",
+    "summary": "The National Gallery's tactile exhibition remains on view through 4 October. It is potentially useful for visitors seeking a multisensory museum experience, but current admission, language support and individual accessibility requirements should be confirmed directly.",
+    "category": "exhibition",
+    "startAt": "2026-06-18T00:00:00+02:00",
+    "endAt": "2026-10-04T23:59:00+02:00",
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "National Gallery of Slovenia",
+      "address": "Prešernova cesta 24, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": null
+    },
+    "ticketUrl": null,
+    "officialUrl": "https://www.ng-slo.si/en/exhibitions-and-projects",
+    "sourceName": "National Gallery of Slovenia",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": true,
+    "accessibility": "Tactile exhibition; confirm individual access needs with the gallery",
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-19T07:00:00+02:00"
+  },
   {
     "eventId": "sms-1-katarza-2026-09-18",
     "title": "SMS 1: Katarza",
@@ -169,8 +293,8 @@ export const draftEvents = [
     familyFriendly: true,
     accessibility: null,
     indoorOutdoor: "outdoor",
-    status: "confirmed",
-    lastCheckedAt: "2026-09-18T07:00:00+02:00"
+    status: "expired",
+    lastCheckedAt: "2026-09-19T07:00:00+02:00"
   },
   {
     eventId: "mia-znidaric-colored-2026-09-18",
@@ -190,8 +314,8 @@ export const draftEvents = [
     familyFriendly: null,
     accessibility: null,
     indoorOutdoor: "indoor",
-    status: "confirmed",
-    lastCheckedAt: "2026-09-18T07:00:00+02:00"
+    status: "expired",
+    lastCheckedAt: "2026-09-19T07:00:00+02:00"
   },
   {
     eventId: "artish-2026-09-19",
@@ -212,7 +336,7 @@ export const draftEvents = [
     accessibility: null,
     indoorOutdoor: "outdoor",
     status: "confirmed",
-    lastCheckedAt: "2026-09-17T07:00:00+02:00"
+    lastCheckedAt: "2026-09-19T07:00:00+02:00"
   },
   {
     eventId: "mineralfest-ljubljana-2026-09-19",
@@ -233,7 +357,7 @@ export const draftEvents = [
     accessibility: null,
     indoorOutdoor: "indoor",
     status: "confirmed",
-    lastCheckedAt: "2026-09-17T07:00:00+02:00"
+    lastCheckedAt: "2026-09-19T07:00:00+02:00"
   },
   {
     eventId: "sunday-flea-market-2026-09-20",
@@ -254,7 +378,7 @@ export const draftEvents = [
     accessibility: null,
     indoorOutdoor: "outdoor",
     status: "confirmed",
-    lastCheckedAt: "2026-09-17T07:00:00+02:00"
+    lastCheckedAt: "2026-09-19T07:00:00+02:00"
   },
   {
     eventId: "wind-orchestra-promenade-2026-09-20",
@@ -275,7 +399,7 @@ export const draftEvents = [
     accessibility: null,
     indoorOutdoor: "outdoor",
     status: "confirmed",
-    lastCheckedAt: "2026-09-17T07:00:00+02:00"
+    lastCheckedAt: "2026-09-19T07:00:00+02:00"
   },
   {
     eventId: "poljanska-fest-2026-09-20",
@@ -296,7 +420,7 @@ export const draftEvents = [
     accessibility: null,
     indoorOutdoor: "outdoor",
     status: "confirmed",
-    lastCheckedAt: "2026-09-17T07:00:00+02:00"
+    lastCheckedAt: "2026-09-19T07:00:00+02:00"
   },
   {
     eventId: "la-traviata-run-2026-09-22",
@@ -338,7 +462,7 @@ export const draftEvents = [
     accessibility: null,
     indoorOutdoor: "indoor",
     status: "confirmed",
-    lastCheckedAt: "2026-09-18T07:00:00+02:00"
+    lastCheckedAt: "2026-09-19T07:00:00+02:00"
   },
   {
     eventId: "open-kitchen-2026-09-25",
@@ -380,7 +504,7 @@ export const draftEvents = [
     accessibility: null,
     indoorOutdoor: "indoor",
     status: "confirmed",
-    lastCheckedAt: "2026-09-18T07:00:00+02:00"
+    lastCheckedAt: "2026-09-19T07:00:00+02:00"
   },
   {
     eventId: "castle-vineyard-picnic-2026-09-26",
@@ -401,7 +525,7 @@ export const draftEvents = [
     accessibility: null,
     indoorOutdoor: "outdoor",
     status: "confirmed",
-    lastCheckedAt: "2026-09-18T07:00:00+02:00"
+    lastCheckedAt: "2026-09-19T07:00:00+02:00"
   },
   {
     eventId: "national-gallery-tone-kralj-2026",
@@ -422,7 +546,7 @@ export const draftEvents = [
     accessibility: null,
     indoorOutdoor: "indoor",
     status: "confirmed",
-    lastCheckedAt: "2026-09-18T07:00:00+02:00"
+    lastCheckedAt: "2026-09-19T07:00:00+02:00"
   },
   {
     eventId: "national-gallery-fragments-past-2026",
@@ -443,6 +567,6 @@ export const draftEvents = [
     accessibility: null,
     indoorOutdoor: "indoor",
     status: "confirmed",
-    lastCheckedAt: "2026-09-18T07:00:00+02:00"
+    lastCheckedAt: "2026-09-19T07:00:00+02:00"
   }
 ];
