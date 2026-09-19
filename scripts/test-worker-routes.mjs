@@ -99,7 +99,11 @@ globalThis.fetch = async (input, init = {}) => {
 
   if (url.includes("/actions/jobs/99/logs")) {
     return new Response(
-      "2026-09-19T18:52:59Z ::error::Workers AI site edit failed: planner unavailable\n",
+      [
+        "2026-09-19T19:20:57Z \\u001b[36;1m echo \\\"::error::Copilot policy denied this non-built-in site edit.\\\" \\u001b[0m",
+        "2026-09-19T19:20:59Z NO_TOPIC_SOURCES",
+        "2026-09-19T19:21:11Z ##[error]Operator request failed after 3 validated attempts."
+      ].join("\n") + "\n",
       { status: 200, headers: { "content-type": "text/plain" } }
     );
   }
@@ -428,7 +432,8 @@ response = await worker.fetch(new Request(`https://example.test/api/status?id=${
 check(response.status === 200, "Failed workflow status lookup must succeed");
 const failedStatus = await response.json();
 check(failedStatus.conclusion === "failure", "Failed workflow must report failure");
-check(String(failedStatus.detail || "").includes("planner unavailable"), "Terminal must surface actionable failure detail from job logs");
+check(String(failedStatus.detail || "").includes("preverljivih virov"), "Terminal must surface the actual NO_TOPIC_SOURCES reason");
+check(!String(failedStatus.detail || "").toLowerCase().includes("copilot"), "Terminal must ignore misleading shell source text");
 workflowConclusion = "success";
 
 response = await worker.fetch(new Request("https://example.test/api/history", {
