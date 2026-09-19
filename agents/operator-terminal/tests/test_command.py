@@ -170,46 +170,107 @@ def test_article_no_change_fails(tmp_path, monkeypatch):
         cmd.article_command("Objavi članek", "aktualno")
 
 
-def test_site_builtin_does_not_need_copilot(monkeypatch):
+def test_site_builtin_does_not_need_workers_ai(monkeypatch):
     monkeypatch.setattr(cmd, "builtin_site_command", lambda command: True)
-    monkeypatch.setattr(cmd.shutil, "which", lambda name: None)
+    called = []
+    monkeypatch.setattr(cmd, "workers_ai_site_command", lambda command: called.append(command))
     cmd.site_command("polepšaj stran")
+    assert called == []
 
 
-def test_site_missing_copilot_fails(monkeypatch):
+def test_site_workers_ai_success(monkeypatch):
     monkeypatch.setattr(cmd, "builtin_site_command", lambda command: False)
-    monkeypatch.setattr(cmd.shutil, "which", lambda name: None)
-    with pytest.raises(SystemExit, match="not installed"):
-        cmd.site_command("Dodaj posebno novo komponento")
-
-
-def test_site_copilot_success(monkeypatch, tmp_path):
-    monkeypatch.setattr(cmd, "BASE", tmp_path)
-    monkeypatch.setattr(cmd, "builtin_site_command", lambda command: False)
-    monkeypatch.setattr(cmd.shutil, "which", lambda name: "/usr/bin/copilot")
-    monkeypatch.setattr(cmd.subprocess, "run", lambda *a, **k: SimpleNamespace(returncode=0, stdout="", stderr=""))
+    called = []
+    monkeypatch.setattr(cmd, "workers_ai_site_command", lambda command: called.append(command))
     cmd.site_command("Dodaj posebno novo komponento")
+    assert called == ["Dodaj posebno novo komponento"]
 
 
-def test_site_policy_denied_is_permanent(monkeypatch, tmp_path):
-    monkeypatch.setattr(cmd, "BASE", tmp_path)
+def test_site_workers_ai_failure_is_clear_without_copilot(monkeypatch):
     monkeypatch.setattr(cmd, "builtin_site_command", lambda command: False)
-    monkeypatch.setattr(cmd.shutil, "which", lambda name: "/usr/bin/copilot")
-    denied = "Error: Access denied by policy settings"
-    monkeypatch.setattr(cmd.subprocess, "run", lambda *a, **k: SimpleNamespace(returncode=1, stdout="", stderr=denied))
+    monkeypatch.setattr(
+        cmd,
+        "workers_ai_site_command",
+        lambda command: (_ for _ in ()).throw(cmd.SiteEditError("planner unavailable")),
+    )
+    monkeypatch.delenv("COPILOT_PERSONAL_TOKEN_CONFIGURED", raising=False)
     with pytest.raises(SystemExit) as exc:
         cmd.site_command("Dodaj posebno novo komponento")
-    assert exc.value.code == 78
+    assert "Workers AI site edit failed" in str(exc.value)
+    assert "planner unavailable" in str(exc.value)
 
 
-def test_site_other_copilot_failure(monkeypatch, tmp_path):
-    monkeypatch.setattr(cmd, "BASE", tmp_path)
+def test_site_copilot_is_only_optional_fallback(monkeypatch):
     monkeypatch.setattr(cmd, "builtin_site_command", lambda command: False)
-    monkeypatch.setattr(cmd.shutil, "which", lambda name: "/usr/bin/copilot")
-    monkeypatch.setattr(cmd.subprocess, "run", lambda *a, **k: SimpleNamespace(returncode=2, stdout="", stderr="network timeout"))
-    with pytest.raises(SystemExit) as exc:
-        cmd.site_command("Dodaj posebno novo komponento")
-    assert "exit code 2" in str(exc.value)
+    monkeypatch.setattr(
+        cmd,
+        "workers_ai_site_command",
+        lambda command: (_ for _ in ()).throw(cmd.SiteEditError("temporary workers ai error")),
+    )
+    monkeypatch.setenv("COPILOT_PERSONAL_TOKEN_CONFIGURED", "true")
+    called = []
+    monkeypatch.setattr(cmd, "_copilot_site_fallback", lambda command: called.append(command))
+    cmd.site_command("Dodaj posebno novo komponento")
+    assert called == ["Dodaj posebno novo komponento"]
+
+
+def test_apply_site_plan_exact_replace(tmp_path, monkeypatch):
+    monkeypatch.setattr(cmd, "BASE", tmp_path)
+    path = tmp_path / "src/example.jsx"
+    path.parent.mkdir(parents=True)
+    path.write_text("const title = 'Old';\n", encoding="utf-8")
+    changed = cmd._apply_site_plan({
+        "summary": "update title",
+        "edits": [{
+            "path": "src/example.jsx",
+            "action": "replace",
+            "old": "const title = 'Old';",
+            "new": "const title = 'New';",
+        }],
+    })
+    assert changed == 1
+    assert "New" in path.read_text(encoding="utf-8")
+
+
+def test_apply_site_plan_rejects_non_unique_replace(tmp_path, monkeypatch):
+    monkeypatch.setattr(cmd, "BASE", tmp_path)
+    path = tmp_path / "src/example.jsx"
+    path.parent.mkdir(parents=True)
+    path.write_text("same\nsame\n", encoding="utf-8")
+    with pytest.raises(cmd.SiteEditError, match="unikaten"):
+        cmd._apply_site_plan({
+            "edits": [{
+                "path": "src/example.jsx",
+                "action": "replace",
+                "old": "same",
+                "new": "new",
+            }],
+        })
+
+
+def test_apply_site_plan_rejects_protected_path(tmp_path, monkeypatch):
+    monkeypatch.setattr(cmd, "BASE", tmp_path)
+    with pytest.raises(cmd.SiteEditError):
+        cmd._apply_site_plan({
+            "edits": [{
+                "path": ".github/workflows/evil.yml",
+                "action": "create",
+                "new": "name: nope",
+            }],
+        })
+
+
+def test_site_context_truncates_huge_app(tmp_path, monkeypatch):
+    monkeypatch.setattr(cmd, "BASE", tmp_path)
+    src = tmp_path / "src"
+    src.mkdir(parents=True)
+    (src / "App.jsx").write_text("HEADER\n" + ("x" * 100000) + "\nFOOTER", encoding="utf-8")
+    (src / "styles.css").write_text("body{}", encoding="utf-8")
+    context = cmd._site_context("spremeni footer")
+    app = next(item for item in context if item["path"] == "src/App.jsx")
+    total = sum(len(part["content"]) for part in app["snippets"])
+    assert total <= 17000
+    assert app["complete"] is False
 
 
 def _run_main(tmp_path, monkeypatch, payload, expected_call):
