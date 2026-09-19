@@ -13,7 +13,7 @@ import {
   normalizeArticleMedia
 } from "./ArticleMedia";
 
-const STORAGE_KEY = "blog-lab-articles-v1";
+const TERMINAL_URL = "https://blog-lab.dan-grmusa.workers.dev/";
 const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mnenja", "Vodniki", "Drugo"];
 
 const starterArticles = [
@@ -2018,7 +2018,7 @@ function Icon({ name }) {
 }
 
 export default function Home() {
-  const [articles, setArticles] = useState([]);
+  const [articles, setArticles] = useState(starterArticles);
   const [rubrics, setRubrics] = useState([]);
   const [siteSettings, setSiteSettings] = useState(DEFAULT_SITE_SETTINGS);
   const [publicCategory, setPublicCategory] = useState("");
@@ -2033,26 +2033,12 @@ export default function Home() {
   const importRef = useRef(null);
 
   useEffect(() => {
-    try {
-      const stored = JSON.parse(localStorage.getItem(STORAGE_KEY) || "null");
-      if (Array.isArray(stored) && stored.length) {
-        const starterIds = new Set(starterArticles.map((article) => article.id));
-        const localOnlyArticles = stored
-          .filter((article) => !starterIds.has(article.id))
-          .map((article) => ({ ...article, localOnly: true }));
-        setArticles([...starterArticles, ...localOnlyArticles]);
-      } else {
-        setArticles(starterArticles);
-      }
-    } catch {
-      setArticles(starterArticles);
-    }
+    // Public content is repository-backed so every browser and device sees
+    // exactly the same published articles. Browser storage is never a source
+    // of truth for public content.
+    setArticles(starterArticles);
     setReady(true);
   }, []);
-
-  useEffect(() => {
-    if (ready) localStorage.setItem(STORAGE_KEY, JSON.stringify(articles));
-  }, [articles, ready]);
 
   useEffect(() => {
     let active = true;
@@ -2159,14 +2145,16 @@ export default function Home() {
     navigate("home");
   }
 
-  function newArticle() {
-    setDraft(emptyDraft());
-    navigate("editor");
+  function openEditorialTerminal() {
+    window.open(TERMINAL_URL, "_blank", "noopener,noreferrer");
   }
 
-  function editArticle(article) {
-    setDraft(normalizeArticleMedia(article));
-    navigate("editor");
+  function newArticle() {
+    openEditorialTerminal();
+  }
+
+  function editArticle() {
+    openEditorialTerminal();
   }
 
   function openArticle(article) {
@@ -2269,11 +2257,11 @@ export default function Home() {
             </button>
           ))}
           <button className={view === "dashboard" ? "active" : ""} onClick={() => navigate("dashboard")}>
-            <Icon name="file" /> Članki
+            <Icon name="file" /> Arhiv
           </button>
         </nav>
         <button className="primary small" onClick={newArticle} id="new-article-button" data-testid="new-article">
-          <span>+</span> Nov članek
+          <span>↗</span> Uredniški terminal
         </button>
       </header>
 
@@ -2331,8 +2319,8 @@ export default function Home() {
       {view === "dashboard" && (
         <section className="dashboard container">
           <div className="page-title">
-            <div><span className="kicker">UREDNIK</span><h1>Vsi članki</h1><p>Trajne objave prihajajo iz GitHub repozitorija. Lokalni osnutki so označeni posebej.</p></div>
-            <button className="primary" onClick={newArticle}>+ Nov članek</button>
+            <div><span className="kicker">UREDNIK</span><h1>Vsi članki</h1><p>Vsi prikazani članki so trajno shranjeni v GitHub repozitoriju in so enaki na vseh napravah.</p></div>
+            <button className="primary" onClick={newArticle}>Odpri uredniški terminal ↗</button>
           </div>
           <div className="stats">
             <div><strong>{articles.length}</strong><span>Vsi članki</span></div>
@@ -2359,11 +2347,10 @@ export default function Home() {
                   <h3>{article.title}</h3>
                   <p>{article.excerpt}</p>
                 </div>
-                <span className={`status-pill ${article.status}`}>{article.localOnly ? "Lokalno" : (article.status === "published" ? "Objavljeno" : "Osnutek")}</span>
+                <span className={`status-pill ${article.status}`}>{article.status === "published" ? "Objavljeno" : "Osnutek"}</span>
                 <div className="row-actions">
                   {article.status === "published" && <button onClick={() => openArticle(article)}>Odpri</button>}
-                  <button onClick={() => editArticle(article)}>Uredi</button>
-                  <button className="danger" onClick={() => removeArticle(article.id)}>Izbriši</button>
+                  <button onClick={openEditorialTerminal}>Upravljaj v terminalu ↗</button>
                 </div>
               </article>
             ))}
@@ -2426,7 +2413,7 @@ export default function Home() {
           <ArticleVideo video={selected.video} />
           <ArticleGallery items={selected.gallery} />
           <ArticleSources items={selected.sources} />
-          <div className="article-end"><span>Konec članka</span><button className="secondary" onClick={() => editArticle(selected)}>Uredi članek</button></div>
+          <div className="article-end"><span>Konec članka</span><button className="secondary" onClick={openEditorialTerminal}>Uredniški terminal ↗</button></div>
         </article>
       )}
 
