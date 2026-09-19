@@ -163,3 +163,143 @@ def test_topic_queries_drop_editorial_filler_words():
         and "dalj" not in query.lower()
         for query in queries
     )
+
+
+def test_collect_topic_uses_multiple_world_providers(monkeypatch):
+    from services import sources
+
+    feed_calls = []
+    gdelt_calls = []
+
+    def fake_feed(source, *args, **kwargs):
+        feed_calls.append(source["url"])
+        name = source["name"]
+        if "Google News SI" in name:
+            return [{
+                "source_name": "RTV Slovenija",
+                "category": "aktualno",
+                "title": "Slovenski rezultat",
+                "url": "https://rtvslo.si/test-1",
+                "summary": "Slovenski povzetek",
+                "published": "",
+                "image_url": "",
+                "video_url": "",
+                "hash": "si-1",
+            }]
+        if "Google News EN" in name:
+            return [{
+                "source_name": "Reuters",
+                "category": "aktualno",
+                "title": "Global result",
+                "url": "https://reuters.com/test-2",
+                "summary": "Global summary",
+                "published": "",
+                "image_url": "",
+                "video_url": "",
+                "hash": "en-2",
+            }]
+        if "Bing News" in name:
+            return [{
+                "source_name": "BBC",
+                "category": "aktualno",
+                "title": "Bing result",
+                "url": "https://bbc.com/test-3",
+                "summary": "Bing summary",
+                "published": "",
+                "image_url": "",
+                "video_url": "",
+                "hash": "bing-3",
+            }]
+        return []
+
+    def fake_gdelt(query_text, category, max_items):
+        gdelt_calls.append(query_text)
+        return [{
+            "source_name": "example.org",
+            "category": category,
+            "title": "GDELT result",
+            "url": "https://example.org/test-4",
+            "summary": "GDELT summary",
+            "published": "",
+            "image_url": "",
+            "video_url": "",
+            "hash": "gdelt-4",
+        }]
+
+    monkeypatch.setattr(sources, "fetch_feed", fake_feed)
+    monkeypatch.setattr(sources, "_gdelt_news", fake_gdelt)
+
+    items = sources.collect_topic("Objavi članek o globalnem energetskem trgu", "aktualno", 30)
+    names = {item["source_name"] for item in items}
+
+    assert "RTV Slovenija" in names
+    assert "Reuters" in names
+    assert any("news.google.com" in url for url in feed_calls)
+    assert any("bing.com/news/search" in url for url in feed_calls)
+    assert gdelt_calls
+
+
+def test_dedupe_diverse_limits_single_source():
+    from services.sources import _dedupe_diverse
+
+    items = []
+    for index in range(8):
+        items.append({
+            "source_name": "Same Outlet",
+            "category": "aktualno",
+            "title": f"Story {index}",
+            "url": f"https://same.example/story-{index}",
+            "summary": "",
+            "published": "",
+            "image_url": "",
+            "video_url": "",
+            "hash": f"same-{index}",
+        })
+    items.append({
+        "source_name": "Other Outlet",
+        "category": "aktualno",
+        "title": "Other story",
+        "url": "https://other.example/story",
+        "summary": "",
+        "published": "",
+        "image_url": "",
+        "video_url": "",
+        "hash": "other-1",
+    })
+
+    out = _dedupe_diverse(items, 20, per_source=3)
+    assert sum(1 for item in out if item["source_name"] == "Same Outlet") == 3
+    assert any(item["source_name"] == "Other Outlet" for item in out)
+
+
+def test_gdelt_rejects_non_https_results(monkeypatch):
+    from services import sources
+
+    class FakeResponse:
+        status = 200
+        def __enter__(self):
+            return self
+        def __exit__(self, *args):
+            return False
+        def read(self, *args):
+            return json.dumps({
+                "articles": [
+                    {
+                        "title": "HTTPS result",
+                        "url": "https://good.example/story",
+                        "domain": "good.example",
+                        "seendate": "20260919T120000Z",
+                    },
+                    {
+                        "title": "HTTP result",
+                        "url": "http://bad.example/story",
+                        "domain": "bad.example",
+                        "seendate": "20260919T120000Z",
+                    },
+                ]
+            }).encode("utf-8")
+
+    import json
+    monkeypatch.setattr(sources, "urlopen", lambda *a, **k: FakeResponse())
+    items = sources._gdelt_news("test", "aktualno", 10)
+    assert [item["url"] for item in items] == ["https://good.example/story"]
