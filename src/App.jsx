@@ -18,6 +18,44 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "aktualni-pregled-19-9-2026-550bfe97",
+    "title": "Aktualni pregled: 19. 9. 2026",
+    "excerpt": "Samodejni pregled najnovejših objav za področje aktualno, sestavljen iz javno dostopnih RSS virov in neposrednih povezav do izvirnikov.",
+    "seoDescription": "Samodejni pregled najnovejših objav za področje aktualno, sestavljen iz javno dostopnih RSS virov in neposrednih povezav do izvirnikov.",
+    "content": "Danes, 19. 9. 2026, Blog Lab povzema nove objave s področja **aktualno**. Pregled je sestavljen samo iz podatkov, ki so bili objavljeni v navedenih virih; kjer RSS ne vsebuje dovolj podrobnosti, dodatnih dejstev ne ugibamo.\n\n## 1. Nisem taka, da bi delala nekaj na pol - Ekipa\n\nNisem taka, da bi delala nekaj na pol Ekipa Objavljeno: Fri, 18 Sep 2026 08:39:26 GMT.\n\n[Odpri izvirni vir](https://news.google.com/rss/articles/CBMimAFBVV95cUxOYm5kcXBRV2lZOU1vM3RJbXo1YlhTdU9CcFMwaWtheDhyY2lRVklReHd1SU44TWswR0E3eW9YWHZvQzFNSEVaMVVvX2JPcjNFZ3ozUG83NGlENGxDQ2NISnJIelYwdjBpQnQxYWJDd2h6NzhRV1JqbFgzMXgtejIzdlZJZ2c4ZWFsUjZzMDFlYXBMb2hMaWxSbw?oc=5)\n\n## 2. Skriti biser Slovenije, kjer so turisti našli svoj raj: »Boljše lokacije za družine še nismo videli« - Dnevnik\n\nSkriti biser Slovenije, kjer so turisti našli svoj raj: »Boljše lokacije za družine še nismo videli« Dnevnik Objavljeno: Wed, 26 Aug 2026 07:00:00 GMT.\n\n[Odpri izvirni vir](https://news.google.com/rss/articles/CBMipAFBVV95cUxOS2k1X3ZzUDBUNXJxSG5Xbkh5am9oSVVTRDVieG9hUUhENU5Sa19Rb0dGZE1BTVBoNzRmWlNCUTN1OHVka0FNZDE4NnZQY0RuUzhvZkdKNnZhZzZ6N3FrbVBCak9CTC1TVGxHN1IxdHplQ25DRFFTNUpYbHJYOHFiaXdxTDlFZUViLTJJZXd0bmpTS253c1F2MnJXQVVSZU9IbjlUZA?oc=5)\n\n## 3. National Geographic: Pridite do Bleda, potem pa vozite naprej! - Žurnal24\n\nNational Geographic: Pridite do Bleda, potem pa vozite naprej! Žurnal24 Objavljeno: Thu, 02 Jul 2026 07:00:00 GMT.\n\n[Odpri izvirni vir](https://news.google.com/rss/articles/CBMiogFBVV95cUxPRllORmhoamt6alBlX096MzN3TEhnejFXSFlBTFJPQmh6Ti1NWmdicndfYUJHLXZzZUZrLUo4UmI2SWhaT1libF9kcnRuT1lJOFFDbkF1amhkbFcwWnJ4cjBUZV83bWY2TDVwUlJhRnJPS3NUYi0tMjZEczk3V21RODdyTHRMSUtSRVZpOHI4dlpFY3d4ZFhxUXNxcy11ZUFEbGfSAacBQVVfeXFMTkdOcjJfUjZLYXJnVmJPSVVBSDJaLWhOZGNWd3FfWGZiVmRmVV93SWF1WVU0YmRSSVBOU01qekc3LXNwV3plMnBCcTlFdEtPWWhhdElWYXEwQ0d2MlN6QWNwUFc2bEh1MXlqclhvdzlfQWdSQnE3bk9TeTh4dFczbTdYN2VZVHVMRVNfYWlaeEpNT3FBRmQzckw4TkpkSmtsbzQ5LVVKOTg?oc=5)\n\n## 4. Če ti trg pove, da si zamočil, sprejmeš in greš naprej - Delo.si\n\nČe ti trg pove, da si zamočil, sprejmeš in greš naprej Delo.si Objavljeno: Thu, 11 Jun 2026 07:00:00 GMT.\n\n[Odpri izvirni vir](https://news.google.com/rss/articles/CBMilwFBVV95cUxOYWtDNm1KTnRGZ0xRRkRNbGtfbnpVMG4tamN1a3I4Y2NjRWExbWZTVG9YLXRQcVF1cHVleXRZNjJEQ2hwVEt0eG1RX1NGUXZZVUtzVEM2eEg4QkJ1dHdMQTJ0WFpnX1JjOXdZSmpZMWFLNXZvam1wLXl6VnIybWQzcy1FMkg5ZEFVUmVQYkh3Y25JZkZDaEVV?oc=5)\n\n## 5. Veselje na OŠ Malečnik: Naprej o palačinkah zapeli, potem pa jih v novi kuhinji tudi pripravili (FOTO) - Maribor24.si\n\nVeselje na OŠ Malečnik: Naprej o palačinkah zapeli, potem pa jih v novi kuhinji tudi pripravili (FOTO) Maribor24.si Objavljeno: Mon, 17 Nov 2025 08:00:00 GMT.\n\n[Odpri izvirni vir](https://news.google.com/rss/articles/CBMi0gFBVV95cUxNQlI3bXM2TzJZSHlsZ2dvYlJPeWYxN1kyaVA4cERpc2luN1JRd05LWXQ2M2dCTHNDVERlQ3Y5TEVUNUltWnFCX0ZxSUtpYVBXS3M3WmJ4TEJROC0xQTRHZmMtSHhDSlBDMXVXeVFpZVVSNFdJZmxuRGtmNGw5WjJXZTU4aXkwTHlWamVmMmdhOXRDVlZjLV9tQ0FFQ196eHV3Wm9NX3FZVFF6dlNNWW9Wa0Nib284bFprMzdsZXNRS2ZFZG1PZnRBNngtd2E5WmhId0E?oc=5)\n\n## Kaj spremljati naprej\n\nKer se aktualne zgodbe hitro dopolnjujejo, je smiselno preveriti izvirne povezave za morebitne nove podatke, popravke ali odzive. Blog Lab bo naslednji pregled pripravil šele, ko zazna nove, še neobdelane vnose.",
+    "category": "Aktualno",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Google News – aktualno – potem naprej — Nisem taka, da bi delala nekaj na pol - Ekipa",
+        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOYm5kcXBRV2lZOU1vM3RJbXo1YlhTdU9CcFMwaWtheDhyY2lRVklReHd1SU44TWswR0E3eW9YWHZvQzFNSEVaMVVvX2JPcjNFZ3ozUG83NGlENGxDQ2NISnJIelYwdjBpQnQxYWJDd2h6NzhRV1JqbFgzMXgtejIzdlZJZ2c4ZWFsUjZzMDFlYXBMb2hMaWxSbw?oc=5"
+      },
+      {
+        "label": "Google News – aktualno – potem naprej — Skriti biser Slovenije, kjer so turisti našli svoj raj: »Boljše lokacije za družine še nismo videli« - Dnevnik",
+        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOS2k1X3ZzUDBUNXJxSG5Xbkh5am9oSVVTRDVieG9hUUhENU5Sa19Rb0dGZE1BTVBoNzRmWlNCUTN1OHVka0FNZDE4NnZQY0RuUzhvZkdKNnZhZzZ6N3FrbVBCak9CTC1TVGxHN1IxdHplQ25DRFFTNUpYbHJYOHFiaXdxTDlFZUViLTJJZXd0bmpTS253c1F2MnJXQVVSZU9IbjlUZA?oc=5"
+      },
+      {
+        "label": "Google News – aktualno – potem naprej — National Geographic: Pridite do Bleda, potem pa vozite naprej! - Žurnal24",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPRllORmhoamt6alBlX096MzN3TEhnejFXSFlBTFJPQmh6Ti1NWmdicndfYUJHLXZzZUZrLUo4UmI2SWhaT1libF9kcnRuT1lJOFFDbkF1amhkbFcwWnJ4cjBUZV83bWY2TDVwUlJhRnJPS3NUYi0tMjZEczk3V21RODdyTHRMSUtSRVZpOHI4dlpFY3d4ZFhxUXNxcy11ZUFEbGfSAacBQVVfeXFMTkdOcjJfUjZLYXJnVmJPSVVBSDJaLWhOZGNWd3FfWGZiVmRmVV93SWF1WVU0YmRSSVBOU01qekc3LXNwV3plMnBCcTlFdEtPWWhhdElWYXEwQ0d2MlN6QWNwUFc2bEh1MXlqclhvdzlfQWdSQnE3bk9TeTh4dFczbTdYN2VZVHVMRVNfYWlaeEpNT3FBRmQzckw4TkpkSmtsbzQ5LVVKOTg?oc=5"
+      },
+      {
+        "label": "Google News – aktualno – potem naprej — Če ti trg pove, da si zamočil, sprejmeš in greš naprej - Delo.si",
+        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOYWtDNm1KTnRGZ0xRRkRNbGtfbnpVMG4tamN1a3I4Y2NjRWExbWZTVG9YLXRQcVF1cHVleXRZNjJEQ2hwVEt0eG1RX1NGUXZZVUtzVEM2eEg4QkJ1dHdMQTJ0WFpnX1JjOXdZSmpZMWFLNXZvam1wLXl6VnIybWQzcy1FMkg5ZEFVUmVQYkh3Y25JZkZDaEVV?oc=5"
+      },
+      {
+        "label": "Google News – aktualno – potem naprej — Veselje na OŠ Malečnik: Naprej o palačinkah zapeli, potem pa jih v novi kuhinji tudi pripravili (FOTO) - Maribor24.si",
+        "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNQlI3bXM2TzJZSHlsZ2dvYlJPeWYxN1kyaVA4cERpc2luN1JRd05LWXQ2M2dCTHNDVERlQ3Y5TEVUNUltWnFCX0ZxSUtpYVBXS3M3WmJ4TEJROC0xQTRHZmMtSHhDSlBDMXVXeVFpZVVSNFdJZmxuRGtmNGw5WjJXZTU4aXkwTHlWamVmMmdhOXRDVlZjLV9tQ0FFQ196eHV3Wm9NX3FZVFF6dlNNWW9Wa0Nib284bFprMzdsZXNRS2ZFZG1PZnRBNngtd2E5WmhId0E?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-19T12:05:31+02:00",
+    "updatedAt": "2026-09-19T12:05:31+02:00"
+  },
+
+  {
     "id": "cycling-ljubljana-city-guide",
     "title": "Cycling Ljubljana: A Safe City Guide for Visitors",
     "excerpt": "Explore Ljubljana by bike with a practical beginner route, BicikeLJ advice, wet-weather precautions and simple rules for sharing streets and pedestrian areas.",
