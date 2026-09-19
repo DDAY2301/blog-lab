@@ -115,8 +115,8 @@ def collect(sources: list[dict], category: str, max_items: int = 30) -> list[dic
 
 def _topic_queries(topic: str) -> list[str]:
     text = _clean(topic or "")
+    text = re.sub(r"\[(?:hero slika|naložena slika):\s*https://[^\]]+\]", " ", text, flags=re.I)
     text = re.sub(r"https://\S+", " ", text)
-    text = re.sub(r"\[naložena slika:[^\]]+\]", " ", text, flags=re.I)
     text = " ".join(text.split()).strip(" .,:;!?")
     if not text:
         return []

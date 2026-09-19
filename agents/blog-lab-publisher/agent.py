@@ -28,7 +28,12 @@ APP = BASE / "src/App.jsx"
 VALID_CATEGORIES = {"sport", "politika", "aktualno"}
 
 def operator_media(topic: str) -> tuple[list[dict], dict | None]:
-    urls = re.findall(r"https://[^\s<>]+", topic or "")
+    text = topic or ""
+    hero_urls = [
+        match.rstrip(".,);]\\\"'")
+        for match in re.findall(r"\[hero slika:\s*(https://[^\]]+)\]", text, flags=re.I)
+    ]
+    urls = hero_urls + re.findall(r"https://[^\s<>]+", text)
     images = []
     video = None
     seen = set()
@@ -43,6 +48,67 @@ def operator_media(topic: str) -> tuple[list[dict], dict | None]:
         elif ("youtube.com/" in low or "youtu.be/" in low or re.search(r'\.(?:mp4|webm|ogg)(?:\?|$)', low)) and video is None:
             video = {"url": url, "title": ""}
     return images[:12], video
+
+def _media_url(value) -> str:
+    if isinstance(value, str):
+        return value.strip()
+    if isinstance(value, dict):
+        return str(value.get("url") or "").strip()
+    return ""
+
+def apply_media_policy(article: dict, source_items: list[dict], topic: str = "") -> dict:
+    """Apply deterministic media priority without inventing URLs.
+
+    Priority: authenticated operator uploads > AI-selected verified media >
+    image/video URLs present in the source records.
+    """
+    explicit_images, explicit_video = operator_media(topic)
+    existing_gallery = article.get("gallery") if isinstance(article.get("gallery"), list) else []
+
+    if explicit_images:
+        article["heroImage"] = explicit_images[0]
+        gallery_candidates = explicit_images[1:] + existing_gallery
+    else:
+        gallery_candidates = list(existing_gallery)
+
+    source_images = []
+    for item in source_items or []:
+        url = str(item.get("image_url") or "").strip()
+        if not url:
+            continue
+        source_images.append({
+            "url": url,
+            "alt": str(item.get("title") or "").strip()[:180],
+            "caption": str(item.get("source_name") or "").strip()[:120],
+        })
+
+    if not _media_url(article.get("heroImage")) and source_images:
+        article["heroImage"] = source_images.pop(0)
+
+    gallery_candidates.extend(source_images)
+    hero_url = _media_url(article.get("heroImage"))
+    deduped = []
+    seen = {hero_url} if hero_url else set()
+    for image in gallery_candidates:
+        url = _media_url(image)
+        if not url or url in seen:
+            continue
+        seen.add(url)
+        deduped.append(image)
+        if len(deduped) >= 12:
+            break
+    article["gallery"] = deduped
+
+    if explicit_video:
+        article["video"] = explicit_video
+    elif not _media_url(article.get("video")):
+        for item in source_items or []:
+            url = str(item.get("video_url") or "").strip()
+            if url:
+                article["video"] = {"url": url, "title": str(item.get("title") or "").strip()[:120]}
+                break
+
+    return article
 
 def now(): return datetime.now(ZoneInfo("Europe/Ljubljana"))
 def control(): return load_json(str(CONTROL), {"enabled": True, "publish_mode": "automatic"})
@@ -105,16 +171,7 @@ def main():
         print(f"INFO AI fallback: {exc}"); article = build_digest(used_for_article, args.category, max_items=5)
     if args.output_category.strip():
         article["category"] = args.output_category.strip()[:40]
-    if args.topic.strip():
-        explicit_images, explicit_video = operator_media(args.topic)
-        if explicit_images:
-            if not article.get("heroImage"):
-                article["heroImage"] = explicit_images[0]
-                explicit_images = explicit_images[1:]
-            existing_gallery = article.get("gallery") if isinstance(article.get("gallery"), list) else []
-            article["gallery"] = (existing_gallery + explicit_images)[:12]
-        if explicit_video and not article.get("video"):
-            article["video"] = explicit_video
+    article = apply_media_policy(article, used_for_article, args.topic)
     if article.get("skip"):
         set_status(cfg, state, "completed", article.get("reason", "Ni primerne teme."))
         print("NO_SUITABLE_CONTENT")
