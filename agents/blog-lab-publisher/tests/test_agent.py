@@ -495,3 +495,36 @@ def test_direct_enrichment_skips_news_aggregator_links():
         "provider": "bing-web",
         "url": "https://example.org/article",
     }) is True
+
+
+def test_rank_topic_items_prefers_relevant_direct_evidence():
+    from services.sources import rank_topic_items
+
+    items = [
+        {
+            "title": "Generic travel guide",
+            "summary": "A long unrelated guide about beaches and museums. " * 20,
+            "source_name": "generic.example",
+            "url": "https://generic.example/guide",
+            "verified_direct": True,
+        },
+        {
+            "title": "Ljubljana nočno življenje",
+            "summary": "Pregled klubov, večernih dogodkov in nočnega življenja v Ljubljani.",
+            "source_name": "local.example",
+            "url": "https://local.example/nightlife",
+            "verified_direct": True,
+        },
+        {
+            "title": "Ljubljana dogodki",
+            "summary": "Kratek koledar večernih dogodkov v Ljubljani.",
+            "source_name": "calendar.example",
+            "url": "https://calendar.example/events",
+            "verified_direct": False,
+        },
+    ]
+
+    ranked = rank_topic_items("dogajanje v ljubljanskem nočnem življenju", items)
+
+    assert ranked[0]["url"] == "https://local.example/nightlife"
+    assert ranked[-1]["url"] == "https://generic.example/guide"
