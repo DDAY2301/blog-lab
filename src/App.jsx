@@ -1995,12 +1995,12 @@ function ArticleBody({ content }) {
 
 const DEFAULT_SITE_SETTINGS = {
   brand: "Blog Lab",
-  heroEyebrow: "PROSTOR ZA IDEJE",
-  heroTitle: "Pišemo jasno.",
-  heroEmphasis: "Objavljamo preprosto.",
-  heroSubtitle: "Minimalna testna platforma za članke, osnutke in preizkušanje vašega agenta.",
-  heroCta: "Napiši prvi članek",
-  footerText: "Preprost prostor za dobre zgodbe.",
+  heroEyebrow: "NEODVISNO UREDNIŠTVO",
+  heroTitle: "Zgodbe, ki štejejo.",
+  heroEmphasis: "Jasno in brez odvečnega hrupa.",
+  heroSubtitle: "Vsak dan preverjene zgodbe, napisane z uredniškim standardom, jasnim kontekstom in neposrednimi viri.",
+  heroCta: "Odpri uredniški terminal",
+  footerText: "Preverjene zgodbe. Jasen kontekst. Neposredni viri.",
   showLivePulse: true
 };
 
@@ -2436,7 +2436,7 @@ export default function Home() {
       {toast && <div className="toast" role="status">{toast}</div>}
 
       <footer>
-        <span>{siteSettings.brand}</span><p>{siteSettings.footerText}</p><span>Testna različica</span>
+        <span>{siteSettings.brand}</span><p>{siteSettings.footerText}</p><span>Uredniška platforma</span>
       </footer>
     </main>
   );
