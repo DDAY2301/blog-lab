@@ -29,24 +29,46 @@ VALID_CATEGORIES = {"sport", "politika", "aktualno"}
 
 def operator_media(topic: str) -> tuple[list[dict], dict | None]:
     text = topic or ""
-    hero_urls = [
-        match.rstrip(".,);]\\\"'")
-        for match in re.findall(r"\[hero slika:\s*(https://[^\]]+)\]", text, flags=re.I)
-    ]
-    urls = hero_urls + re.findall(r"https://[^\s<>]+", text)
+    marker_re = re.compile(
+        r"\[(hero slika|naložena slika):\s*(https://[^|\]\s]+)(?:\s*\|\s*([^\]]{0,180}))?\]",
+        re.I,
+    )
+    marked = []
+    for role, url, caption in marker_re.findall(text):
+        marked.append((
+            role.lower(),
+            url.rstrip(".,);]\\\"'"),
+            " ".join(str(caption or "").split())[:180],
+        ))
+    marked.sort(key=lambda row: 0 if row[0] == "hero slika" else 1)
+
     images = []
     video = None
     seen = set()
-    for raw in urls:
-        url = raw.rstrip(".,);]\\\"'")
+
+    for _, url, caption in marked:
         low = url.lower()
         if url in seen:
             continue
-        seen.add(url)
         if re.search(r'\.(?:jpe?g|png|webp|gif|avif)(?:\?|$)', low):
+            seen.add(url)
+            images.append({"url": url, "alt": "", "caption": caption})
+
+    text_without_markers = marker_re.sub(" ", text)
+    for raw in re.findall(r"https://[^\s<>\]]+", text_without_markers):
+        url = raw.rstrip(".,);]\\\"'")
+        if "|" in url:
+            url = url.split("|", 1)[0].strip()
+        low = url.lower()
+        if not url or url in seen:
+            continue
+        if re.search(r'\.(?:jpe?g|png|webp|gif|avif)(?:\?|$)', low):
+            seen.add(url)
             images.append({"url": url, "alt": "", "caption": ""})
         elif ("youtube.com/" in low or "youtu.be/" in low or re.search(r'\.(?:mp4|webm|ogg)(?:\?|$)', low)) and video is None:
+            seen.add(url)
             video = {"url": url, "title": ""}
+
     return images[:12], video
 
 def _media_url(value) -> str:

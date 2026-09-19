@@ -101,3 +101,17 @@ def test_topic_query_ignores_structured_media_markers():
     joined = " ".join(queries).lower()
     assert "hero slika" not in joined
     assert "naložena slika" not in joined
+
+
+def test_operator_media_preserves_uploaded_caption():
+    from agent import operator_media
+    hero = "https://example.com/hero.jpg"
+    gallery = "https://example.com/gallery.webp"
+    images, _ = operator_media(
+        f"[naložena slika: {gallery} | Pogled z gradu]\n"
+        f"[hero slika: {hero} | Naslovna fotografija]"
+    )
+    assert images[0]["url"] == hero
+    assert images[0]["caption"] == "Naslovna fotografija"
+    assert images[1]["url"] == gallery
+    assert images[1]["caption"] == "Pogled z gradu"
