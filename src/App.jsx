@@ -18,6 +18,36 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "franja-partisan-hospital-history-guide",
+    "title": "Franja Partisan Hospital: History, Humanity and a Closed-Site Guide",
+    "excerpt": "Understand the wartime hospital hidden in Pasica Gorge, why its humanitarian legacy matters, and how to plan a responsible visit while the site remains closed.",
+    "seoDescription": "Explore the verified history of Franja Partisan Hospital near Cerkno, its European heritage significance and responsible alternatives while the site is closed.",
+    "content": "Franja Partisan Hospital is remembered not because war made the Pasica Gorge picturesque, but because medical staff, resistance members and local people created a hidden place of care under extreme conditions. The site near Cerkno is a **monument of national importance** and a holder of the **European Heritage Label**.\n\nThe physical hospital is currently **closed because of storm damage**. Do not enter the gorge, bypass barriers or treat the closure as an invitation to explore independently. This guide explains the documented history and shows how to approach the story responsibly while access remains suspended.\n\n## What is documented history?\n\nAccording to the Idrija Municipal Museum, the hospital operated in the difficult-to-access Pasica Gorge at Dolenji Novaki during the Second World War. Fourteen wooden huts supported treatment and daily life, including wards, operating facilities, an X-ray facility, kitchen, storage, laundry, a power supply and shelters.\n\nThe museum records that **578 wounded people received shelter between 23 December 1943 and 5 May 1945**. The patients included people of different nationalities, Allied airmen and wounded soldiers from the opposing side.\n\nThe hospital took the name of physician **Franja Bojc Bidovec**. Its history also includes founder and doctor Viktor Volčjak, other medical workers, orderlies, local helpers and patients whose individual experiences should not be reduced to a single heroic legend.\n\n## Why the story matters\n\nFranja is evidence of organisation, medical skill and solidarity under occupation. Its European Heritage Label recognises its contribution to a shared European history.\n\nThat recognition does not turn every wartime story into a simple moral tale. The hospital belonged to the partisan resistance environment, and its staff worked amid occupation, violence, secrecy and political conflict. A responsible visit holds two ideas together:\n\n- the historical setting was complex and traumatic;\n- saving wounded people, including individuals from different sides, carries a clear humanitarian meaning.\n\nThis distinction matters. **Humanity is the interpretation supported by the hospital's documented work; it is not permission to romanticise war.**\n\n## What visitors can see when the site reopens\n\nThe museum describes a cluster of reconstructed wooden huts compressed into the narrow gorge. Exhibits and interpretation connect the buildings with accounts of staff and patients.\n\nThe landscape is part of the experience, but it is also a source of risk. A steep gorge, water and storm damage require managed access. Only use the official entrance and follow museum instructions after a formal reopening. The Slovenian name on signs is `Partizanska bolnica Franja`.\n\n## How to experience the history while Franja is closed\n\n1. Check the [Idrija Municipal Museum homepage](https://www.muzej-idrija-cerkno.si/en/) immediately before travelling. On 19 September 2026 it clearly stated that Franja was closed because of storm damage.\n2. Visit **Cerkno Museum** instead. It is managed by the same institution and provides essential regional context.\n3. Use the museum's published materials to learn about the people behind the hospital rather than approaching the closed gorge.\n4. Plan transport to Cerkno in advance. Rural services and seasonal timetables can change, so confirm the complete return journey before departure.\n5. If Franja reopens, verify opening hours, ticket arrangements, path conditions and accessibility directly with the museum.\n\nThe museum listed Cerkno Museum hours as **Tuesday–Friday 09:00–15:00** and **Saturday, Sunday and holidays 10:00–17:00**, with Monday closed, when checked on 19 September 2026. These hours can change.\n\n## Accessibility and responsible behaviour\n\nThe original setting is a narrow natural gorge, so visitors with reduced mobility should not assume step-free access. Contact the museum before planning a future visit and ask about the actual condition of the path.\n\nAt every memorial site:\n\n- respect closures and barriers;\n- keep noise low and do not stage playful photographs in treatment or memorial spaces;\n- do not remove natural or historical material;\n- distinguish museum evidence from family stories, rumours and later political interpretations;\n- supervise children near water, rock and steep paths.\n\n## Direct sources\n\n- [Idrija Municipal Museum — current opening information and closure notice](https://www.muzej-idrija-cerkno.si/en/)\n- [Idrija Municipal Museum — Franja history and heritage significance](https://www.muzej-idrija-cerkno.si/en/obiscite-nas/top-10-zanimivosti/?zanimivost=6011)\n- [Idrija Municipal Museum — visit planning](https://www.muzej-idrija-cerkno.si/en/obiscite-nas/)\n\nSources and closure status were checked on **19 September 2026**. The closure is time-sensitive: rely on the museum's current notice, not an older travel article or map listing.",
+    "category": "Vodniki",
+    "author": "Uredništvo Blog Lab",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Idrija Municipal Museum — current opening information and closure notice",
+        "url": "https://www.muzej-idrija-cerkno.si/en/"
+      },
+      {
+        "label": "Idrija Municipal Museum — Franja history and heritage significance",
+        "url": "https://www.muzej-idrija-cerkno.si/en/obiscite-nas/top-10-zanimivosti/?zanimivost=6011"
+      },
+      {
+        "label": "Idrija Municipal Museum — visit planning",
+        "url": "https://www.muzej-idrija-cerkno.si/en/obiscite-nas/"
+      }
+    ],
+    "createdAt": "2026-09-19T14:58:52+02:00",
+    "updatedAt": "2026-09-19T14:58:52+02:00"
+  },
+
+  {
     "id": "sportni-pregled-19-9-2026-8a936707",
     "title": "Športni pregled: 19. 9. 2026",
     "excerpt": "Samodejni pregled najnovejših objav za področje šport, sestavljen iz javno dostopnih RSS virov in neposrednih povezav do izvirnikov.",
