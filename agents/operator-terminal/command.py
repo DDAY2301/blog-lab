@@ -237,7 +237,7 @@ def article_command(command: str, category: str) -> None:
     app = BASE / "src/App.jsx"
     before = _sha256(app)
     output_category, topic_command = _requested_rubric(command)
-    cmd = [sys.executable, str(ARTICLE_AGENT), "--category", category, "--topic", topic_command, "--force"]
+    cmd = [sys.executable, str(ARTICLE_AGENT), "--category", category, "--topic", topic_command, "--force", "--manual"]
     if output_category:
         cmd.extend(["--output-category", output_category])
     result = subprocess.run(cmd, cwd=BASE, check=False)

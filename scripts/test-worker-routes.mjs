@@ -35,10 +35,12 @@ globalThis.fetch = async (input, init = {}) => {
   if (url.includes("/actions/workflows/operator-terminal.yml/runs")) {
     return new Response(JSON.stringify({
       workflow_runs: dispatchedRequestId ? [{
+        id: 1,
         display_title: `Private Terminal · ${dispatchedRequestId}`,
         status: "completed",
         conclusion: "success",
         html_url: "https://github.com/DDAY2301/blog-lab/actions/runs/1",
+        created_at: "2026-09-18T15:59:00Z",
         updated_at: "2026-09-18T16:00:00Z"
       }] : []
     }), { status: 200, headers: { "content-type": "application/json" } });
@@ -305,6 +307,14 @@ response = await worker.fetch(new Request(`https://example.test/api/status?id=${
 check(response.status === 200, "Valid status lookup must succeed");
 const status = await response.json();
 check(status.status === "completed" && status.conclusion === "success", "Status must map workflow result");
+
+response = await worker.fetch(new Request("https://example.test/api/history", {
+  headers: { cookie }
+}), env);
+check(response.status === 200, "Cross-device history lookup must succeed");
+const history = await response.json();
+check(Array.isArray(history.runs), "History must return runs array");
+check(history.runs.some((run) => run.id === accepted.id), "History must include dispatched terminal request");
 
 response = await worker.fetch(new Request("https://example.test/api/logout", {
   method: "POST",
