@@ -573,7 +573,18 @@ def rank_topic_items(topic: str, items: list[dict]) -> list[dict]:
             str(item.get("summary") or ""),
             str(item.get("source_name") or ""),
         ]).lower()
-        overlap = sum(1 for term in terms if term in haystack)
+        hay_words = re.findall(r"[a-zčšžćđ0-9-]+", haystack)
+
+        def matches(term: str) -> bool:
+            term = term.lower()
+            if term in haystack:
+                return True
+            # Lightweight inflection tolerance for Slovene/Croatian forms:
+            # Ljubljana/ljubljanskem, nočno/nočnem, življenje/življenju.
+            stem = term[:5] if len(term) >= 6 else term
+            return any(word.startswith(stem) for word in hay_words)
+
+        overlap = sum(1 for term in terms if matches(term))
         direct = 1 if item.get("verified_direct") else 0
         summary_len = min(len(str(item.get("summary") or "")), 5000)
         has_media = 1 if item.get("image_url") or item.get("video_url") else 0
