@@ -371,6 +371,7 @@ def test_article_in_named_rubric_passes_output_category(tmp_path, monkeypatch):
 
     monkeypatch.setattr(cmd.subprocess, "run", fake_run)
     cmd.article_command("Objavi članek o Erasmus projektu v rubriki Projekti", "aktualno")
+    assert "--manual" in captured["args"]
     assert "--output-category" in captured["args"]
     idx = captured["args"].index("--output-category")
     assert captured["args"][idx + 1] == "Projekti"
