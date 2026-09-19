@@ -38,3 +38,66 @@ def test_operator_media_handles_query_string_extensions():
     images, video = operator_media(f"{image_url} {video_url}")
     assert images[0]["url"] == image_url
     assert video["url"] == video_url
+
+
+def test_operator_media_honors_explicit_hero_marker():
+    from agent import operator_media
+    gallery_url = "https://example.com/gallery.webp"
+    hero_url = "https://example.com/hero.jpg"
+    images, _ = operator_media(
+        f"[naložena slika: {gallery_url}]\n[hero slika: {hero_url}]"
+    )
+    assert [item["url"] for item in images] == [hero_url, gallery_url]
+
+
+def test_media_policy_uploaded_photo_overrides_generated_hero():
+    from agent import apply_media_policy
+    uploaded = "https://dday2301.github.io/blog-lab/media/uploads/operator.webp"
+    article = {
+        "heroImage": {"url": "https://example.com/ai.jpg"},
+        "gallery": [{"url": "https://example.com/gallery.jpg"}],
+        "video": None,
+    }
+    result = apply_media_policy(
+        article,
+        [{"image_url": "https://example.com/source.jpg", "title": "Vir", "source_name": "Test"}],
+        f"[hero slika: {uploaded}]",
+    )
+    assert result["heroImage"]["url"] == uploaded
+    gallery_urls = [item["url"] for item in result["gallery"]]
+    assert "https://example.com/gallery.jpg" in gallery_urls
+    assert "https://example.com/source.jpg" in gallery_urls
+
+
+def test_media_policy_uses_verified_source_media_when_article_has_none():
+    from agent import apply_media_policy
+    article = {"heroImage": None, "gallery": [], "video": None}
+    sources = [
+        {
+            "image_url": "https://example.com/one.jpg",
+            "video_url": "",
+            "title": "Prva zgodba",
+            "source_name": "Vir A",
+        },
+        {
+            "image_url": "https://example.com/two.webp",
+            "video_url": "https://example.com/clip.mp4",
+            "title": "Druga zgodba",
+            "source_name": "Vir B",
+        },
+    ]
+    result = apply_media_policy(article, sources)
+    assert result["heroImage"]["url"] == "https://example.com/one.jpg"
+    assert [item["url"] for item in result["gallery"]] == ["https://example.com/two.webp"]
+    assert result["video"]["url"] == "https://example.com/clip.mp4"
+
+
+def test_topic_query_ignores_structured_media_markers():
+    from services.sources import _topic_queries
+    queries = _topic_queries(
+        "Objavi članek o Ljubljani [hero slika: https://example.com/hero.jpg] "
+        "[naložena slika: https://example.com/extra.webp]"
+    )
+    joined = " ".join(queries).lower()
+    assert "hero slika" not in joined
+    assert "naložena slika" not in joined
