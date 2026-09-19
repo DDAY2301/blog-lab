@@ -132,6 +132,26 @@ def apply_media_policy(article: dict, source_items: list[dict], topic: str = "")
 
     return article
 
+def manual_editor_system_prompt(system_prompt: str, topic: str, source_count: int) -> str:
+    """Resolve the generic skip rule for an authenticated manual editorial request."""
+    text = str(system_prompt or "")
+    text = text.replace(
+        "- Če material ne zadostuje za kakovosten samostojen članek, vrni `skip=true`.",
+        "- Pri samodejnem uredniškem izboru lahko zavrneš temo, če gradivo res ne zadostuje.",
+    )
+    return text + (
+        "\n\n## Prednost avtorizirane ročne uredniške zahteve\n"
+        f"Urednik je izrecno zahteval temo: {topic.strip()}\n"
+        f"Na voljo je {int(source_count)} preverjenih spletnih virov, razvrščenih po relevantnosti.\n"
+        "Pri tej ročni zahtevi NE vrni skip=true samo zato, ker tema ni breaking news, "
+        "ker so viri različnih tipov ali ker ni dovolj dejstev za 800–1300 besed. "
+        "Če vsaj trije od prvih virov vsebinsko podpirajo zahtevano temo, napiši članek. "
+        "Dolžino prilagodi dokazljivemu gradivu; 450–900 besed je sprejemljivo. "
+        "Uporabljaj samo dejstva iz virov, jasno omeji negotovost in ničesar ne ugibaj. "
+        "skip=true je dovoljen samo, če so najrelevantnejši viri dejansko nepovezani s temo "
+        "ali ne vsebujejo dovolj preverljivih dejstev niti za kratek faktografski članek."
+    )
+
 def now(): return datetime.now(ZoneInfo("Europe/Ljubljana"))
 def control(): return load_json(str(CONTROL), {"enabled": True, "publish_mode": "automatic"})
 def enabled(cfg): return cfg.get("enabled", True) and control().get("enabled", True) and os.getenv("AGENT_ENABLED", "true").lower() == "true"
@@ -217,6 +237,8 @@ def main():
         return 3 if (args.topic.strip() and args.force) else 0
     system_prompt = (HERE / "prompts/system.md").read_text(encoding="utf-8")
     task_prompt = (HERE / "prompts/task.md").read_text(encoding="utf-8")
+    if args.topic.strip() and args.force:
+        system_prompt = manual_editor_system_prompt(system_prompt, args.topic, len(fresh))
     if args.topic.strip():
         task_prompt += (
             "\n\nAvtorizirani urednik je zahteval temo: " + args.topic.strip()
@@ -252,6 +274,7 @@ def main():
               "Če vsaj trije podpirajo zahtevano temo, napiši stvaren članek izključno iz teh dejstev. "
               "Dovoljen je krajši format. Ne dodajaj manjkajočih dejstev in ne ugibaj."
         )
+        print(f"MANUAL_WRITER_RETRY sources={len(fresh)}")
         try:
             article = generate(system_prompt, retry_task, fresh[:10], args.category)
             article["fallback"] = False
