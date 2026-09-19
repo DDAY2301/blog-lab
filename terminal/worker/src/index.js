@@ -485,37 +485,47 @@ function requestIdFromRun(run) {
   return match ? match[1] : "";
 }
 
-function safeFailureText(value) {
+function stripAnsi(value) {
   return String(value || "")
+    .replace(/\u001b\[[0-9;?]*[ -/]*[@-~]/g, "")
+    .replace(/\x1b\[[0-9;?]*[ -/]*[@-~]/g, "");
+}
+
+function safeFailureText(value) {
+  return stripAnsi(value)
     .replace(/github_pat_[A-Za-z0-9_]+/gi, "[REDACTED]")
     .replace(/gh[pousr]_[A-Za-z0-9_]+/gi, "[REDACTED]")
-    .replace(/Bearer\\s+[A-Za-z0-9._-]+/gi, "Bearer [REDACTED]")
+    .replace(/Bearer\s+[A-Za-z0-9._-]+/gi, "Bearer [REDACTED]")
     .replace(/[A-Za-z0-9+/=_-]{80,}/g, "[REDACTED]")
-    .replace(/\\s+/g, " ")
+    .replace(/\s+/g, " ")
     .trim()
     .slice(0, 700);
 }
 
 function failureReasonFromLog(logText) {
-  const lines = String(logText || "").split(/\\r?\\n/).map((line) => line.trim()).filter(Boolean);
-  const preferred = [
-    "Workers AI site edit failed:",
-    "WORKERS_AI_SITE_DIAGNOSTIC_END",
-    "COPILOT_POLICY_DENIED",
-    "::error::",
-    "Process completed with exit code",
-  ];
+  const lines = stripAnsi(logText)
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter(Boolean);
 
+  // First prefer explicit runtime markers emitted by Blog Lab itself.
   for (let i = lines.length - 1; i >= 0; i -= 1) {
     const line = lines[i];
+
+    if (line === "NO_TOPIC_SOURCES" || line.includes("NO_TOPIC_SOURCES")) {
+      return "Za zahtevano temo trenutno ni bilo mogoče najti dovolj preverljivih virov.";
+    }
+    if (line === "NO_NEW_CONTENT" || line.includes("NO_NEW_CONTENT")) {
+      return "Za izbrano temo trenutno ni novih neobdelanih virov.";
+    }
+    if (line.includes("ARTICLE_SOURCE_UNAVAILABLE")) {
+      return safeFailureText(line.slice(line.indexOf("ARTICLE_SOURCE_UNAVAILABLE")));
+    }
     if (line.includes("Workers AI site edit failed:")) {
       return safeFailureText(line.slice(line.indexOf("Workers AI site edit failed:")));
     }
-    if (line.includes("COPILOT_POLICY_DENIED")) {
-      return "GitHub Copilot je zavrnjen s policy nastavitvijo.";
-    }
-    if (line.includes("::error::")) {
-      return safeFailureText(line.slice(line.indexOf("::error::") + 9));
+    if (line.includes("CONTROL_UNSUPPORTED")) {
+      return safeFailureText(line.slice(line.indexOf("CONTROL_UNSUPPORTED")));
     }
   }
 
@@ -526,11 +536,20 @@ function failureReasonFromLog(logText) {
     if (detail) return safeFailureText(detail);
   }
 
-  for (const marker of preferred) {
-    const line = lines.findLast((item) => item.includes(marker));
-    if (line) return safeFailureText(line);
+  // GitHub emits real annotations as ##[error]. Ignore shell source lines such
+  // as: echo "::error::..." because they describe code, not the actual failure.
+  for (let i = lines.length - 1; i >= 0; i -= 1) {
+    const line = lines[i];
+    if (line.includes("##[error]")) {
+      const detail = line.slice(line.indexOf("##[error]") + 9);
+      if (detail && !detail.includes("Process completed with exit code")) {
+        return safeFailureText(detail);
+      }
+    }
   }
-  return "";
+
+  const exitLine = lines.findLast((line) => line.includes("Process completed with exit code"));
+  return exitLine ? safeFailureText(exitLine) : "";
 }
 
 async function runFailureDetail(runId, env) {
@@ -755,7 +774,7 @@ export default {
       return json({
         ok: true,
         worker: "blog-lab",
-        version: "auth-v6.6-diagnostics",
+        version: "auth-v6.7-routing",
         ready: state.ready,
         auth_ready: authReady,
         authorized_users_ready: authReady ? 2 : 0,
