@@ -115,3 +115,51 @@ def test_operator_media_preserves_uploaded_caption():
     assert images[0]["caption"] == "Naslovna fotografija"
     assert images[1]["url"] == gallery
     assert images[1]["caption"] == "Pogled z gradu"
+
+
+def test_collect_topic_falls_back_to_english_google_news(monkeypatch):
+    from services import sources
+
+    calls = []
+
+    def fake_fetch(source, *args, **kwargs):
+        calls.append(source["url"])
+        if "hl=en-US" in source["url"]:
+            return [{
+                "source_name": source["name"],
+                "category": "aktualno",
+                "title": "International topic result",
+                "url": "https://example.com/story",
+                "summary": "Verified summary",
+                "published": "",
+                "image_url": "",
+                "video_url": "",
+                "hash": "english-result",
+            }]
+        return []
+
+    monkeypatch.setattr(sources, "fetch_feed", fake_fetch)
+    items = sources.collect_topic("Objavi članek o orbitalni energiji", "aktualno", 10)
+
+    assert items and items[0]["url"] == "https://example.com/story"
+    assert any("hl=sl" in url for url in calls)
+    assert any("hl=en-US" in url for url in calls)
+
+
+def test_topic_queries_drop_editorial_filler_words():
+    from services.sources import _topic_queries
+
+    queries = _topic_queries(
+        "Objavi profesionalen daljši članek o orbitalni energiji in satelitih"
+    )
+    joined = " | ".join(queries).lower()
+
+    # Raw command may remain as one candidate, but broadened keyword candidates
+    # must also include the topical words without editorial filler.
+    assert any(
+        "orbitalni" in query.lower()
+        and "energiji" in query.lower()
+        and "profesionalen" not in query.lower()
+        and "dalj" not in query.lower()
+        for query in queries
+    )
