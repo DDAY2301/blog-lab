@@ -553,6 +553,34 @@ def collect_topic(topic: str, category: str, max_items: int = 30) -> list[dict]:
         print(f"TOPIC_SOURCES_OK count={len(unique)} providers={summary}")
     return unique
 
+def rank_topic_items(topic: str, items: list[dict]) -> list[dict]:
+    """Rank discovered sources for an explicit editorial topic.
+
+    Prefer lexical relevance, directly fetched pages and substantive summaries.
+    Keep the operation deterministic so the same evidence pool yields the same
+    article input ordering.
+    """
+    core = _topic_core(topic)
+    terms = {
+        word.lower()
+        for word in re.findall(r"[A-Za-zČŠŽčšžĆćĐđ0-9-]+", core)
+        if len(word) >= 4
+    }
+
+    def score(item: dict) -> tuple:
+        haystack = " ".join([
+            str(item.get("title") or ""),
+            str(item.get("summary") or ""),
+            str(item.get("source_name") or ""),
+        ]).lower()
+        overlap = sum(1 for term in terms if term in haystack)
+        direct = 1 if item.get("verified_direct") else 0
+        summary_len = min(len(str(item.get("summary") or "")), 5000)
+        has_media = 1 if item.get("image_url") or item.get("video_url") else 0
+        return (overlap, direct, summary_len, has_media)
+
+    return sorted(list(items or []), key=score, reverse=True)
+
 def _dedupe(items: list[dict]) -> list[dict]:
     seen = set()
     unique = []
