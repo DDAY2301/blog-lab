@@ -18,6 +18,44 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "politicni-pregled-19-9-2026-81290509",
+    "title": "Politični pregled: 19. 9. 2026",
+    "excerpt": "Samodejni pregled najnovejših objav za področje politika, sestavljen iz javno dostopnih RSS virov in neposrednih povezav do izvirnikov.",
+    "seoDescription": "Samodejni pregled najnovejših objav za področje politika, sestavljen iz javno dostopnih RSS virov in neposrednih povezav do izvirnikov.",
+    "content": "Danes, 19. 9. 2026, Blog Lab povzema nove objave s področja **politika**. Pregled je sestavljen samo iz podatkov, ki so bili objavljeni v navedenih virih; kjer RSS ne vsebuje dovolj podrobnosti, dodatnih dejstev ne ugibamo.\n\nPri političnih temah je poudarek na nevtralnem povzemanju objavljenih informacij. Pregled ne podpira kandidatov, strank ali političnih odločitev in ne napoveduje volilnih izidov.\n\n## 1. Duh Alice Weidel že leta vlada Sloveniji - delo.si\n\nDuh Alice Weidel že leta vlada Sloveniji delo.si Objavljeno: Sat, 19 Sep 2026 03:00:00 GMT.\n\n[Odpri izvirni vir](https://news.google.com/rss/articles/CBMiggFBVV95cUxNcFExMExXZUJFTUx2eGZyeFJaVG1FRmpJMElZUnZHVlVjNWdSVjZEekc3T1ViX0ExQWtPbEhXY2tVZ0dNNm5oS1duUDdLSWNmREFpVXhGN28xR2x0eFUtbjM1MjRydVlBaC1tMWpvNDZZR3pUajlfVlNmZ3JpNWhVcHVR?oc=5)\n\n## 2. (VIDEO) Golob o Janševem načrtu glede javnega sektorja: \"To ni nobena politika ali taktika, to je navadna hinavščina\" - Večer\n\n(VIDEO) Golob o Janševem načrtu glede javnega sektorja: \"To ni nobena politika ali taktika, to je navadna hinavščina\" Večer Objavljeno: Fri, 18 Sep 2026 08:16:00 GMT.\n\n[Odpri izvirni vir](https://news.google.com/rss/articles/CBMisAFBVV95cUxPWHRvUU54alkwTzVoTFhxQ0JDbEEzYmdsWXAxZ0dPRDh5a1ppREtnVVhPQTU3R042OE9XbE9aYURLZE85M3F3ZjRwZU8tNm50NUpvME83ZERObVdnRUN2RHhhckc3LThaNmdxWUhVcmgzZVkyMTVKVFIxdEpFLTJFU1IwMTZfNnhRWHdSUENtVWxna19NM2ZYQ1VQb2JtcUlEYWwxMTBrbHlZcHd4VWVVLQ?oc=5)\n\n## 3. Ko se politiki izogibajo javne televizije: lastni kanali in manj neprijetnih vprašanj - Dnevnik\n\nKo se politiki izogibajo javne televizije: lastni kanali in manj neprijetnih vprašanj Dnevnik Objavljeno: Tue, 15 Sep 2026 22:06:10 GMT.\n\n[Odpri izvirni vir](https://news.google.com/rss/articles/CBMiowFBVV95cUxPaXJyNzZUYzdiVzA3S3Q5S1lpVzNYVHJXNkpJYmNQbEQzRlRCVVlabE8yajhUTFZkY0c0eERrdzBudTdVN2ZRdE1VOHlPY0x2NEtmem1uQTUxdFhsSUxqaHFKVUFPR2ZfX1ZqWGxKOUFLelRaVnNsVmJEejZWX2VqM2o0ZVU5TWJIWVBkSnNZc2Z3ek0wZTRjSnU2VnpXYzg4Y1FF?oc=5)\n\n## 4. (INTERVJU) Tone Kajzer za Demokracijo: Slovenije ne prodajamo nikomur! - Najdi.si novice\n\n(INTERVJU) Tone Kajzer za Demokracijo: Slovenije ne prodajamo nikomur! Najdi.si novice Objavljeno: Sat, 19 Sep 2026 13:37:15 GMT.\n\n[Odpri izvirni vir](https://news.google.com/rss/articles/CBMi2gFBVV95cUxNUEI0MzdyeGVMN1lxYmJkUlF3WXVWcmhoRkQ1TXJHMy1aQzZxTmdDZTMtVmc1MGUycDJreHg2ZENOR0xwMVdTeG9wY21ocUpma0Z6T3U4MXlhODFVLXJoUVRpd1ByX0N4SEZPNGh1STJYY3NqNjk1bndaQ3l6ajc0WXhxQTB4VHdVQ2JUY09PbmlfNU5FMlJKLUZOM01kOVEtNTdWM2RPcjdwd3BrYnJtalloR3FFQkJWN29jenBzTGhMZVVadW01M0VscXJ4a3JmY3gyUjZSR1ROdw?oc=5)\n\n## 5. Bodo zaradi politične agende uprave in Sveta zaposleni na RTV ostali brez plač? - Info360\n\nBodo zaradi politične agende uprave in Sveta zaposleni na RTV ostali brez plač? Info360 Objavljeno: Thu, 17 Sep 2026 03:05:28 GMT.\n\n[Odpri izvirni vir](https://news.google.com/rss/articles/CBMiqwFBVV95cUxPaWdPY25ZWWJncUFsWDMtRjVEdlpEWW4zWW9OTGNYQmx2X3pDRWdNUWFVbi1zWXNab1dJRzhmVmR2OFNqaXBYZWE3TzY3V0pJVWphdW53VGFVZ1VqLUFfNlpMMktDM0pTM1lsajJDOW1rMXZXNnplOFM1WnFCcEJENm45cllNeDNmdEt0Q0hLc3ZLWHBwZ29kRWMtM1RheExyX0JLeHVhRElkejQ?oc=5)\n\n## Kaj spremljati naprej\n\nKer se aktualne zgodbe hitro dopolnjujejo, je smiselno preveriti izvirne povezave za morebitne nove podatke, popravke ali odzive. Blog Lab bo naslednji pregled pripravil šele, ko zazna nove, še neobdelane vnose.",
+    "category": "Politika",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Google News Slovenija – politika — Duh Alice Weidel že leta vlada Sloveniji - delo.si",
+        "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNcFExMExXZUJFTUx2eGZyeFJaVG1FRmpJMElZUnZHVlVjNWdSVjZEekc3T1ViX0ExQWtPbEhXY2tVZ0dNNm5oS1duUDdLSWNmREFpVXhGN28xR2x0eFUtbjM1MjRydVlBaC1tMWpvNDZZR3pUajlfVlNmZ3JpNWhVcHVR?oc=5"
+      },
+      {
+        "label": "Google News Slovenija – politika — (VIDEO) Golob o Janševem načrtu glede javnega sektorja: \"To ni nobena politika ali taktika, to je navadna hinavščina\"…",
+        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPWHRvUU54alkwTzVoTFhxQ0JDbEEzYmdsWXAxZ0dPRDh5a1ppREtnVVhPQTU3R042OE9XbE9aYURLZE85M3F3ZjRwZU8tNm50NUpvME83ZERObVdnRUN2RHhhckc3LThaNmdxWUhVcmgzZVkyMTVKVFIxdEpFLTJFU1IwMTZfNnhRWHdSUENtVWxna19NM2ZYQ1VQb2JtcUlEYWwxMTBrbHlZcHd4VWVVLQ?oc=5"
+      },
+      {
+        "label": "Google News Slovenija – politika — Ko se politiki izogibajo javne televizije: lastni kanali in manj neprijetnih vprašanj - Dnevnik",
+        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPaXJyNzZUYzdiVzA3S3Q5S1lpVzNYVHJXNkpJYmNQbEQzRlRCVVlabE8yajhUTFZkY0c0eERrdzBudTdVN2ZRdE1VOHlPY0x2NEtmem1uQTUxdFhsSUxqaHFKVUFPR2ZfX1ZqWGxKOUFLelRaVnNsVmJEejZWX2VqM2o0ZVU5TWJIWVBkSnNZc2Z3ek0wZTRjSnU2VnpXYzg4Y1FF?oc=5"
+      },
+      {
+        "label": "Google News Slovenija – politika — (INTERVJU) Tone Kajzer za Demokracijo: Slovenije ne prodajamo nikomur! - Najdi.si novice",
+        "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNUEI0MzdyeGVMN1lxYmJkUlF3WXVWcmhoRkQ1TXJHMy1aQzZxTmdDZTMtVmc1MGUycDJreHg2ZENOR0xwMVdTeG9wY21ocUpma0Z6T3U4MXlhODFVLXJoUVRpd1ByX0N4SEZPNGh1STJYY3NqNjk1bndaQ3l6ajc0WXhxQTB4VHdVQ2JUY09PbmlfNU5FMlJKLUZOM01kOVEtNTdWM2RPcjdwd3BrYnJtalloR3FFQkJWN29jenBzTGhMZVVadW01M0VscXJ4a3JmY3gyUjZSR1ROdw?oc=5"
+      },
+      {
+        "label": "Google News Slovenija – politika — Bodo zaradi politične agende uprave in Sveta zaposleni na RTV ostali brez plač? - Info360",
+        "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPaWdPY25ZWWJncUFsWDMtRjVEdlpEWW4zWW9OTGNYQmx2X3pDRWdNUWFVbi1zWXNab1dJRzhmVmR2OFNqaXBYZWE3TzY3V0pJVWphdW53VGFVZ1VqLUFfNlpMMktDM0pTM1lsajJDOW1rMXZXNnplOFM1WnFCcEJENm45cllNeDNmdEt0Q0hLc3ZLWHBwZ29kRWMtM1RheExyX0JLeHVhRElkejQ?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-19T16:34:25+02:00",
+    "updatedAt": "2026-09-19T16:34:25+02:00"
+  },
+
+  {
     "id": "franja-partisan-hospital-history-guide",
     "title": "Franja Partisan Hospital: History, Humanity and a Closed-Site Guide",
     "excerpt": "Understand the wartime hospital hidden in Pasica Gorge, why its humanitarian legacy matters, and how to plan a responsible visit while the site remains closed.",
