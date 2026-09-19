@@ -5,7 +5,28 @@ const keyBytes = new Uint8Array(32).fill(7);
 const env = {
   DAN_LOGIN_PASSWORD: password,
   TERMINAL_COMMAND_KEY: Buffer.from(keyBytes).toString("base64"),
-  GITHUB_DISPATCH_TOKEN: "route-test-token"
+  GITHUB_DISPATCH_TOKEN: "route-test-token",
+  AI: {
+    async run(model, request) {
+      if (model !== "@cf/meta/llama-3.3-70b-instruct-fp8-fast") throw new Error("unexpected model");
+      if (!Array.isArray(request?.messages) || request.messages.length !== 2) throw new Error("unexpected AI messages");
+      return {
+        response: {
+          title: "Preizkus AI pisca",
+          content: "To je preverjen testni odgovor.",
+          excerpt: "Preizkus.",
+          seoDescription: "Preizkus.",
+          category: "Aktualno",
+          tags: ["test"],
+          heroImage: null,
+          gallery: [],
+          video: null,
+          sources: []
+        },
+        usage: { input_tokens: 10, output_tokens: 10 }
+      };
+    }
+  }
 };
 
 let dispatchedRequestId = "";
@@ -116,6 +137,32 @@ response = await worker.fetch(new Request("https://example.test/api/command", {
   body: JSON.stringify({ command: "Ustavi objavljanje" })
 }), env);
 check(response.status === 401, "Anonymous command must return 401");
+
+const writerPayload = JSON.stringify({
+  system_prompt: "Piši profesionalno.",
+  task_prompt: "Napiši test.",
+  category: "aktualno",
+  source_items: [{ title: "Vir", summary: "Podatek", url: "https://example.com" }]
+});
+
+response = await worker.fetch(new Request("https://example.test/api/ai/write", {
+  method: "POST",
+  headers: { "content-type": "application/json" },
+  body: writerPayload
+}), env);
+check(response.status === 401, "Workers AI writer must reject an unauthenticated internal request");
+
+const writerHeaders = new Headers({ "content-type": "application/json" });
+writerHeaders.set("authorization", "Bearer " + env.TERMINAL_COMMAND_KEY);
+response = await worker.fetch(new Request("https://example.test/api/ai/write", {
+  method: "POST",
+  headers: writerHeaders,
+  body: writerPayload
+}), env);
+check(response.status === 200, "Workers AI writer must accept the internal service credential");
+const writerResult = await response.json();
+check(writerResult.ok === true, "Workers AI writer must report success");
+check(writerResult.article?.title === "Preizkus AI pisca", "Workers AI writer must return parsed article JSON");
 
 response = await worker.fetch(new Request("https://example.test/?fresh=1", {
   headers: { cookie: "bloglab_session=old-session" }

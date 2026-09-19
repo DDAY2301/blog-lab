@@ -64,11 +64,14 @@ async function runScenario(name, env) {
   if (!healthData.auth_ready || healthData.authorized_users_ready !== 2) {
     throw new Error(`${name}: unexpected health auth state: ${JSON.stringify(healthData)}`);
   }
-  if (healthData.version !== "auth-v6.3-global-history") {
+  if (healthData.version !== "auth-v6.4-workers-ai") {
     throw new Error(`${name}: unexpected auth version: ${healthData.version}`);
   }
   if (healthData.media_upload_ready !== true) {
     throw new Error(`${name}: media upload capability should be ready in test`);
+  }
+  if (healthData.ai_writer_ready !== false) {
+    throw new Error(`${name}: AI binding should be absent in this isolated auth test`);
   }
 }
 
