@@ -64,7 +64,7 @@ async function runScenario(name, env) {
   if (!healthData.auth_ready || healthData.authorized_users_ready !== 2) {
     throw new Error(`${name}: unexpected health auth state: ${JSON.stringify(healthData)}`);
   }
-  if (healthData.version !== "auth-v6.4-workers-ai") {
+  if (healthData.version !== "auth-v6.5-site-ai") {
     throw new Error(`${name}: unexpected auth version: ${healthData.version}`);
   }
   if (healthData.media_upload_ready !== true) {
@@ -72,6 +72,9 @@ async function runScenario(name, env) {
   }
   if (healthData.ai_writer_ready !== false) {
     throw new Error(`${name}: AI binding should be absent in this isolated auth test`);
+  }
+  if (healthData.site_editor_ready !== false) {
+    throw new Error(`${name}: site-editor binding should be absent in this isolated auth test`);
   }
 }
 
