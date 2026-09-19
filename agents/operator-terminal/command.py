@@ -89,6 +89,28 @@ def _article_intent(low: str) -> bool:
         return True
     return "napiši o" in low or "napisi o" in low
 
+def _article_configuration_intent(low: str) -> bool:
+    """Route changes to article design/writing rules to the site editor, not one-off publishing."""
+    article_scope = any(term in low for term in [
+        "član", "clan", "article", "prispevk", "objav", "blog",
+    ])
+    meta_terms = [
+        "izgled", "dizajn", "design", "layout", "tipograf", "font", "css",
+        "daljš", "daljs", "dolž", "dolz", "krajš", "krajs",
+        "besedil", "tekst", "pisanj", "writer", "profesional",
+        "strukt", "slog", "stil", "podnaslov", "vir", "source",
+        "hero", "galer", "slik", "media", "format",
+    ]
+    if not article_scope or not any(term in low for term in meta_terms):
+        return False
+
+    # Explicit one-off editorial requests such as "Napiši daljši članek o X"
+    # are still article requests when they clearly name a topic.
+    action = any(term in low for term in ["objavi", "napiši", "napisi", "pripravi", "ustvari", "sestavi"])
+    topic = any(term in f" {low} " for term in [" o ", " na temo ", " o temi ", " glede "])
+    return not (action and topic)
+
+
 def _publish_mode_intent(low: str) -> bool:
     mode_word = any(term in low for term in ["automatic", "avtomats", "samodejn", "samostojn"])
     context = any(term in low for term in ["objav", "agent", "način", "nacin", "mode", "deluje", "dela"])
@@ -114,6 +136,8 @@ def infer_mode(command: str) -> str:
     review_mode = ("preklopi" in low or "način" in low or "mode" in low) and "pregled" in low
     if any(x in low for x in control_terms) or review_mode or _publish_mode_intent(low) or _schedule_intent(low) or _status_intent(low):
         return "control"
+    if _article_configuration_intent(low):
+        return "site"
     if _article_intent(low):
         return "article"
     if _site_intent(low):
@@ -243,6 +267,13 @@ def article_command(command: str, category: str) -> None:
     if output_category:
         cmd.extend(["--output-category", output_category])
     result = subprocess.run(cmd, cwd=BASE, check=False)
+    if result.returncode == 3:
+        print(
+            "ARTICLE_SOURCE_UNAVAILABLE Za zahtevano temo trenutno ni dovolj preverljivih virov. "
+            "Ukaz ne bo samodejno ponovljen.",
+            file=sys.stderr,
+        )
+        raise SystemExit(64)
     if result.returncode != 0:
         raise SystemExit(result.returncode)
     after = _sha256(app)
@@ -1093,26 +1124,6 @@ def workers_ai_site_command(command: str) -> None:
                 print(f"WORKERS_AI_SITE_RETRY {attempt}: {_safe_agent_log(feedback, 900)}", file=sys.stderr)
     raise SiteEditError(str(last_error or "Workers AI site-editor ni uspel."))
 
-def _copilot_site_fallback(command: str) -> None:
-    if os.environ.get("COPILOT_PERSONAL_TOKEN_CONFIGURED", "").lower() != "true":
-        raise SiteEditError("Workers AI site-editor ni uspel, Copilot fallback pa ni konfiguriran.")
-    if not shutil.which("copilot"):
-        raise SiteEditError("Workers AI site-editor ni uspel, Copilot CLI pa ni nameščen.")
-    prompt = """You are the authenticated repository editor for DDAY2301/blog-lab. Execute the operator request by editing the existing repository. Never edit .github/, terminal/, agents/operator-terminal/, secrets, authentication, permissions or security controls. Keep changes minimal and production-ready.\n\nOPERATOR REQUEST:\n""" + command
-    excluded = "bash,powershell,web_fetch,task,write_agent,ask_user"
-    proc = subprocess.run(
-        ["copilot", "-s", "-p", prompt, "--no-ask-user", "--no-custom-instructions", "--disable-builtin-mcps", f"--excluded-tools={excluded}", "--no-auto-update", "--no-remote", "--no-remote-export"],
-        cwd=BASE,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
-        text=True,
-        timeout=240,
-        check=False,
-    )
-    if proc.returncode != 0:
-        diagnostic = _safe_agent_log((proc.stderr or "") + "\n" + (proc.stdout or ""))
-        raise SiteEditError(f"Copilot fallback ni uspel (exit {proc.returncode}): {diagnostic}")
-
 def site_command(command: str) -> None:
     if builtin_site_command(command):
         return
@@ -1123,9 +1134,6 @@ def site_command(command: str) -> None:
         print("WORKERS_AI_SITE_DIAGNOSTIC_BEGIN", file=sys.stderr)
         print(_safe_agent_log(str(exc), 1800), file=sys.stderr)
         print("WORKERS_AI_SITE_DIAGNOSTIC_END", file=sys.stderr)
-        if os.environ.get("COPILOT_PERSONAL_TOKEN_CONFIGURED", "").lower() == "true":
-            _copilot_site_fallback(command)
-            return
         raise SystemExit(f"Workers AI site edit failed: {exc}")
 
 def main() -> int:
