@@ -51,40 +51,6 @@ const starterArticles = [
     "updatedAt": "2026-09-19T09:02:57+02:00"
   },
   {
-    "id": "drava-cycle-route-maribor-ptuj-guide",
-    "title": "Cycling the Drava: A Car-Light Maribor–Ptuj Guide",
-    "excerpt": "Plan a scenic 30 km ride along the Drava from Maribor to Ptuj, with route choices, autumn safety checks and a carefully planned train return.",
-    "seoDescription": "Cycle the 30 km Drava Bike stage from Maribor to Ptuj with official route links, autumn safety advice and practical car-light return planning.",
-    "content": "The **Drava Cycling Route** makes it possible to link two of eastern Slovenia's most rewarding cities by bicycle. The official Drava Bike network lists the Maribor–Ptuj stage at **30 km**, with alternatives via Starše or Duplek. That makes it an appealing one-way day trip, but it still requires route checking, suitable equipment and a confirmed plan for the return.\n\nThis guide is for independent leisure cyclists who are comfortable riding beyond a city centre. It does not assume that every kilometre is traffic-free or that every train accepts bicycles.\n\n## Choose the official route before you start\n\nDrava Bike describes its Slovenian and Croatian route as six marked stages. For stage 3, both the Starše and Duplek variants are listed at 30 km.\n\nBefore departure:\n\n1. Open the [official Drava Bike route](https://dravabike.si/en/) and obtain the current map.\n2. Check the warnings section for diversions, works or temporary changes.\n3. Choose one variant and save it offline rather than switching between unverified shortcuts.\n4. Confirm daylight, weather and your return transport before leaving Maribor.\n\nFollow the signed route on the ground. Riverside geography, construction and local traffic arrangements can change; a general-purpose navigation app is not a substitute for the current official route.\n\n## What the ride is like\n\nThis is a point-to-point leisure ride between **Maribor and Ptuj**, not a closed circuit. Expect a mixture of cycle infrastructure and local roads, and be prepared for changing surfaces. Ride at a speed that leaves time for navigation, breaks and an unhurried arrival in Ptuj.\n\nThe route is promoted for leisure cycling, but “family-friendly” does not mean risk-free. Children and less confident riders need close supervision wherever the route meets or shares a road. If traffic, visibility or surface conditions exceed your ability, turn back or shorten the ride.\n\n### Equipment worth carrying\n\n- A roadworthy bicycle with working brakes and tyres suited to the planned surface\n- A correctly fitted helmet, front and rear lights, and visible clothing\n- Water, food, a spare tube or repair kit, pump and basic tools\n- A charged phone plus the downloaded route\n- A light waterproof layer and something warm for stops\n\nOn local signs, the Slovenian name to recognise is `Dravska kolesarska pot`.\n\n## Autumn conditions on 19 September 2026\n\nThe official Drava Bike page showed a forecast of approximately **14–23°C for Saturday, 19 September 2026** when checked that morning. Treat that as planning context, not a guarantee. Conditions beside the river can feel cooler, and wet leaves, mud or shaded patches can reduce grip even after rain stops.\n\nRecheck the forecast immediately before riding. Postpone the trip during thunderstorms, flooding, strong wind, poor visibility or an official closure. Never ride through floodwater or around a barrier.\n\n## A car-light return needs confirmation\n\nMaribor and Ptuj are connected by rail, so a train can make a one-way ride practical. Bicycle carriage, however, depends on the specific service, available space and current railway conditions.\n\nUse the [Slovenian Railways journey planner](https://potniski.sz.si/en/) before departure and verify that your chosen train accepts a bicycle. Buy any required bicycle ticket or supplement and leave a backup option; do not rely on the final service of the day. Rail-replacement buses may not carry ordinary bicycles.\n\nIf bicycle carriage cannot be confirmed, choose a shorter out-and-back ride from either city, arrange an authorised shuttle, or postpone the one-way plan.\n\n## How to experience both cities responsibly\n\nStart with time to enjoy Maribor rather than treating it only as a departure point. In Ptuj, secure the bicycle at a proper stand and continue on foot through the historic centre. [Visit Ptuj](https://visitptuj.eu/en/) lists cycling, transport information and visitor services.\n\nKeep to the marked route, yield to pedestrians, slow down around families and dogs, and do not enter fields or protected riverside habitat. Take all waste with you. If you stop for wine or beer, finish the cycling portion first—alcohol and riding do not mix.\n\n## Direct sources\n\n- [Drava Bike — official route, stages, map and warnings](https://dravabike.si/en/)\n- [Visit Maribor — official destination information](https://www.visitmaribor.si/en/)\n- [Visit Ptuj — cycling and visitor information](https://visitptuj.eu/en/)\n- [Slovenian Railways — timetable and current travel information](https://potniski.sz.si/en/)\n\nInformation and links were checked on **19 September 2026**. Route warnings, forecasts and bicycle carriage rules can change, so verify them again on the day of travel.",
-    "category": "Šport",
-    "author": "Uredništvo Blog Lab",
-    "status": "published",
-    "heroImage": null,
-    "video": null,
-    "gallery": [],
-    "sources": [
-      {
-        "label": "Drava Bike — official route, stages, map and warnings",
-        "url": "https://dravabike.si/en/"
-      },
-      {
-        "label": "Visit Maribor — official destination information",
-        "url": "https://www.visitmaribor.si/en/"
-      },
-      {
-        "label": "Visit Ptuj — cycling and visitor information",
-        "url": "https://visitptuj.eu/en/"
-      },
-      {
-        "label": "Slovenian Railways — timetable and current travel information",
-        "url": "https://potniski.sz.si/en/"
-      }
-    ],
-    "createdAt": "2026-09-19T09:01:20+02:00",
-    "updatedAt": "2026-09-19T09:01:20+02:00"
-  },
-
-  {
     "id": "aktualni-pregled-18-9-2026-b139f344",
     "title": "Aktualni pregled: 18. 9. 2026",
     "excerpt": "Samodejni pregled najnovejših objav za področje aktualno, sestavljen iz javno dostopnih RSS virov in neposrednih povezav do izvirnikov.",
