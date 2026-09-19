@@ -131,6 +131,9 @@ def _topic_queries(topic: str) -> list[str]:
         "objavi", "objava", "članek", "clanek", "napiši", "napisi", "prispevek",
         "dodaj", "prosim", "lahko", "naj", "bodi", "naredi", "sedaj", "zdaj",
         "kjer", "kako", "kam", "nekaj", "zelo", "tudi", "samo", "stran",
+        "novem", "novi", "novo", "aktualno", "aktualen", "aktualna", "aktualni",
+        "profesionalen", "profesionalno", "daljši", "daljsi", "daljše", "daljse",
+        "boljši", "boljsi", "boljše", "boljse", "dober", "dobra", "dobro",
     }
     words = [
         w for w in re.findall(r"[A-Za-zČŠŽčšžĆćĐđ0-9-]+", text)
@@ -139,6 +142,10 @@ def _topic_queries(topic: str) -> list[str]:
     if words:
         candidates.append(" ".join(words[:7]))
         candidates.append(" ".join(words[:4]))
+        if len(words) >= 3:
+            candidates.append(" ".join(words[-3:]))
+        if len(words) >= 2:
+            candidates.append(" ".join(words[:2]))
 
     out = []
     seen = set()
@@ -153,20 +160,45 @@ def collect_topic(topic: str, category: str, max_items: int = 30) -> list[dict]:
     queries = _topic_queries(topic)
     if not queries:
         return []
+
+    # Prefer Slovenian Google News. If it yields nothing at all, retry the same
+    # editorial topic against a broader English index. This increases coverage
+    # for international/niche manual requests without ever publishing
+    # source-less claims.
+    locales = [
+        ("sl", "SI", "SI:sl", "SI"),
+        ("en-US", "US", "US:en", "EN"),
+    ]
     out = []
-    for query_text in queries:
-        source = {
-            "name": f"Google News – {category} – {query_text[:60]}",
-            "category": category,
-            "url": f"https://news.google.com/rss/search?q={quote_plus(query_text)}&hl=sl&gl=SI&ceid=SI:sl",
-            "type": "rss",
-        }
-        try:
-            out.extend(fetch_feed(source))
-        except Exception as exc:
-            print(f"WARN topic source query={query_text!r} error={exc}")
-        if len(_dedupe(out)) >= max_items:
+
+    for hl, gl, ceid, locale_label in locales:
+        locale_out = []
+        for query_text in queries:
+            source = {
+                "name": f"Google News {locale_label} – {category} – {query_text[:60]}",
+                "category": category,
+                "url": (
+                    "https://news.google.com/rss/search"
+                    f"?q={quote_plus(query_text)}&hl={quote_plus(hl)}"
+                    f"&gl={quote_plus(gl)}&ceid={quote_plus(ceid)}"
+                ),
+                "type": "rss",
+            }
+            try:
+                locale_out.extend(fetch_feed(source))
+            except Exception as exc:
+                print(
+                    f"WARN topic source locale={locale_label} "
+                    f"query={query_text!r} error={exc}"
+                )
+            if len(_dedupe(locale_out)) >= max_items:
+                break
+
+        locale_out = _dedupe(locale_out)
+        if locale_out:
+            out.extend(locale_out)
             break
+
     return _dedupe(out)[:max_items]
 
 def _dedupe(items: list[dict]) -> list[dict]:
