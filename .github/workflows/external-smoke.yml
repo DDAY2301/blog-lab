@@ -44,10 +44,10 @@ jobs:
               and d.get("media_upload_ready") is True
           )
           if os.environ.get("EVENT_NAME") == "pull_request":
-              version_ok = d.get("version") in {"auth-v6.4-workers-ai", "auth-v6.5-site-ai"}
+              version_ok = d.get("version") in {"auth-v6.5-site-ai", "auth-v6.6-diagnostics"}
               ai_ok = True
           else:
-              version_ok = d.get("version") == "auth-v6.5-site-ai"
+              version_ok = d.get("version") == "auth-v6.6-diagnostics"
               ai_ok = d.get("ai_writer_ready") is True and d.get("site_editor_ready") is True
           sys.exit(0 if (base and version_ok and ai_ok) else 1)
           PY
