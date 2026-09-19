@@ -39,6 +39,7 @@ jobs:
       PUBLISH_MODE: ${{ vars.PUBLISH_MODE || 'automatic' }}
       AI_PROVIDER: ${{ vars.AI_PROVIDER || 'worker' }}
       WORKER_AI_URL: "https://blog-lab.dan-grmusa.workers.dev/api/ai/write"
+      WORKER_SITE_AI_URL: "https://blog-lab.dan-grmusa.workers.dev/api/ai/edit"
       WORKER_AI_TOKEN: ${{ secrets.TERMINAL_COMMAND_KEY }}
       MODEL_API_KEY: ${{ secrets.MODEL_API_KEY }}
       MODEL_BASE_URL: ${{ secrets.MODEL_BASE_URL }}
