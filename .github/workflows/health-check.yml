@@ -3,6 +3,8 @@ name: Blog Lab Health Check
 on:
   push:
     branches: [main]
+  pull_request:
+    branches: [main]
   schedule:
     - cron: "11 */6 * * *"
   workflow_dispatch:
