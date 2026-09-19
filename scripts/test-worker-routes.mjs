@@ -138,6 +138,32 @@ response = await worker.fetch(new Request("https://example.test/api/command", {
 }), env);
 check(response.status === 401, "Anonymous command must return 401");
 
+const writerPayload = JSON.stringify({
+  system_prompt: "Piši profesionalno.",
+  task_prompt: "Napiši test.",
+  category: "aktualno",
+  source_items: [{ title: "Vir", summary: "Podatek", url: "https://example.com" }]
+});
+
+response = await worker.fetch(new Request("https://example.test/api/ai/write", {
+  method: "POST",
+  headers: { "content-type": "application/json" },
+  body: writerPayload
+}), env);
+check(response.status === 401, "Workers AI writer must reject an unauthenticated internal request");
+
+const writerHeaders = new Headers({ "content-type": "application/json" });
+writerHeaders.set("authorization", "Bearer " + env.TERMINAL_COMMAND_KEY);
+response = await worker.fetch(new Request("https://example.test/api/ai/write", {
+  method: "POST",
+  headers: writerHeaders,
+  body: writerPayload
+}), env);
+check(response.status === 200, "Workers AI writer must accept the internal service credential");
+const writerResult = await response.json();
+check(writerResult.ok === true, "Workers AI writer must report success");
+check(writerResult.article?.title === "Preizkus AI pisca", "Workers AI writer must return parsed article JSON");
+
 response = await worker.fetch(new Request("https://example.test/?fresh=1", {
   headers: { cookie: "bloglab_session=old-session" }
 }), env);
