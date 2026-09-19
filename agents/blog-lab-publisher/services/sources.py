@@ -4,6 +4,7 @@ from html import unescape
 import json
 import re
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from urllib.parse import quote_plus, urlparse
 from urllib.request import Request, urlopen
 from xml.etree import ElementTree as ET
@@ -281,6 +282,155 @@ def _gdelt_news(query_text: str, category: str, max_items: int) -> list[dict]:
         ))
     return out[:max_items]
 
+DIRECT_SKIP_HOSTS = {
+    "news.google.com",
+    "google.com",
+    "www.google.com",
+    "bing.com",
+    "www.bing.com",
+}
+
+def _meta_content(html: str, key: str) -> str:
+    key_re = re.escape(key)
+    patterns = [
+        rf'<meta[^>]+(?:name|property)=["\']{key_re}["\'][^>]+content=["\']([^"\']+)["\']',
+        rf'<meta[^>]+content=["\']([^"\']+)["\'][^>]+(?:name|property)=["\']{key_re}["\']',
+    ]
+    for pattern in patterns:
+        match = re.search(pattern, html, flags=re.I)
+        if match:
+            return _clean(match.group(1))
+    return ""
+
+def _visible_html_text(html: str, limit: int = 4200) -> str:
+    text = re.sub(r"(?is)<(?:script|style|svg|noscript|template|nav|footer)[^>]*>.*?</(?:script|style|svg|noscript|template|nav|footer)>", " ", html)
+    article = re.search(r"(?is)<article\b[^>]*>(.*?)</article>", text)
+    if article:
+        text = article.group(1)
+    else:
+        main = re.search(r"(?is)<main\b[^>]*>(.*?)</main>", text)
+        if main:
+            text = main.group(1)
+    text = re.sub(r"(?is)<!--.*?-->", " ", text)
+    text = _clean(text)
+    return text[:limit]
+
+def _direct_candidate(item: dict) -> bool:
+    link = _safe_https(item.get("url", ""))
+    if not link:
+        return False
+    try:
+        host = (urlparse(link).hostname or "").lower()
+    except Exception:
+        return False
+    return bool(host and host not in DIRECT_SKIP_HOSTS)
+
+def _enrich_direct_item(item: dict, timeout: int = 6) -> tuple[dict, bool]:
+    if not _direct_candidate(item):
+        return item, False
+    link = _safe_https(item.get("url", ""))
+    req = Request(
+        link,
+        headers={
+            "User-Agent": USER_AGENT,
+            "Accept": "text/html,application/xhtml+xml;q=0.9,*/*;q=0.5",
+        },
+    )
+    try:
+        with urlopen(req, timeout=timeout) as response:
+            if getattr(response, "status", 200) >= 400:
+                return item, False
+            content_type = str(response.headers.get("content-type", "")).lower()
+            if "html" not in content_type:
+                return item, False
+            raw = response.read(700_000)
+            final_url = _safe_https(getattr(response, "geturl", lambda: link)())
+    except Exception:
+        return item, False
+
+    html = raw.decode("utf-8", errors="replace")
+    title = (
+        _meta_content(html, "og:title")
+        or _meta_content(html, "twitter:title")
+    )
+    if not title:
+        match = re.search(r"(?is)<title[^>]*>(.*?)</title>", html)
+        title = _clean(match.group(1)) if match else ""
+
+    description = (
+        _meta_content(html, "description")
+        or _meta_content(html, "og:description")
+        or _meta_content(html, "twitter:description")
+    )
+    body_text = _visible_html_text(html)
+    summary_parts = []
+    for part in [description, body_text]:
+        part = _clean(part)
+        if part and part not in summary_parts:
+            summary_parts.append(part)
+    summary = " ".join(summary_parts).strip()[:5000]
+
+    if len(summary) < 120:
+        return item, False
+
+    enriched = dict(item)
+    if final_url:
+        enriched["url"] = final_url
+    if title and len(title) >= 8:
+        enriched["title"] = title[:500]
+    enriched["summary"] = summary
+    image = _safe_https(
+        _meta_content(html, "og:image")
+        or _meta_content(html, "twitter:image")
+    )
+    if image:
+        enriched["image_url"] = image
+
+    try:
+        host = (urlparse(enriched["url"]).hostname or "").lower().removeprefix("www.")
+    except Exception:
+        host = ""
+    generic = _clean(enriched.get("source_name", "")).lower()
+    if host and (not generic or generic.startswith(("bing web", "bing news", "gdelt"))):
+        enriched["source_name"] = host[:200]
+
+    enriched["verified_direct"] = True
+    enriched["hash"] = hashlib.sha256(
+        f"{enriched.get('title','')}|{enriched.get('url','')}".encode("utf-8")
+    ).hexdigest()
+    return enriched, True
+
+def _enrich_direct_sources(items: list[dict], max_checks: int = 14) -> list[dict]:
+    if not items:
+        return []
+
+    indexed = list(enumerate(items))
+    candidates = [(idx, item) for idx, item in indexed if _direct_candidate(item)][:max_checks]
+    if not candidates:
+        return items
+
+    enriched_by_index = {}
+    verified = 0
+    with ThreadPoolExecutor(max_workers=min(6, len(candidates))) as pool:
+        future_map = {
+            pool.submit(_enrich_direct_item, item): idx
+            for idx, item in candidates
+        }
+        for future in as_completed(future_map):
+            idx = future_map[future]
+            try:
+                enriched, ok = future.result()
+            except Exception:
+                continue
+            enriched_by_index[idx] = enriched
+            verified += 1 if ok else 0
+
+    out = []
+    for idx, item in indexed:
+        out.append(enriched_by_index.get(idx, item))
+    print(f"TOPIC_DIRECT_OK checked={len(candidates)} enriched={verified}")
+    return out
+
 def _source_key(item: dict) -> str:
     source = _clean(item.get("source_name", "")).lower()
     if source and not source.startswith(("google news", "bing news", "gdelt")):
@@ -387,6 +537,8 @@ def collect_topic(topic: str, category: str, max_items: int = 30) -> list[dict]:
             break
 
     unique = _dedupe_diverse(out, max_items, per_source=4)
+    unique = _enrich_direct_sources(unique, max_checks=min(14, max_items))
+    unique = _dedupe_diverse(unique, max_items, per_source=4)
     if unique:
         summary = ",".join(
             f"{name}:{count}" for name, count in sorted(provider_hits.items())
