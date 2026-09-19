@@ -32,12 +32,21 @@ def _copilot(prompt: str) -> dict:
         raise AIUnavailable("Copilot nima GitHub žetona.")
     excluded = "bash,powershell,apply_patch,create,edit,view,list_agents,read_agent,task,write_agent,ask_user,glob,grep,skill,web_fetch"
     cmd = ["copilot", "-s", "-p", prompt, "--no-ask-user", "--no-custom-instructions", "--disable-builtin-mcps", f"--excluded-tools={excluded}", "--no-auto-update", "--no-remote", "--no-remote-export"]
+    env = os.environ.copy()
+    copilot_token = os.getenv("COPILOT_GITHUB_TOKEN", "").strip()
+    if copilot_token:
+        # Prefer the dedicated Copilot-capable token when configured. The CLI
+        # reads GH_TOKEN/GITHUB_TOKEN; keeping this subprocess-local avoids
+        # changing credentials used by git/GitHub Actions itself.
+        env["GH_TOKEN"] = copilot_token
+        env["GITHUB_TOKEN"] = copilot_token
     try:
-        proc = subprocess.run(cmd, capture_output=True, text=True, timeout=150, check=False)
+        proc = subprocess.run(cmd, capture_output=True, text=True, timeout=150, check=False, env=env)
     except Exception as exc:
         raise AIUnavailable(f"Copilot CLI se ni zagnal: {exc}") from exc
     if proc.returncode != 0:
-        raise AIUnavailable(f"Copilot CLI ni uspel (exit {proc.returncode}).")
+        diagnostic = " ".join((proc.stderr or proc.stdout or "").split())[-500:]
+        raise AIUnavailable(f"Copilot CLI ni uspel (exit {proc.returncode}): {diagnostic}")
     try:
         return _extract_json(proc.stdout)
     except Exception as exc:
