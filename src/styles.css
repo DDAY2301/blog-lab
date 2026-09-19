@@ -594,3 +594,171 @@ footer { background: rgba(242,248,253,.84); }
 @media (prefers-reduced-motion: reduce) {
   .source-row, .source-arrow { transition: none !important; }
 }
+
+
+/* Blog Lab professional article reading system v3 */
+.article-page {
+  width: min(100%, 1080px);
+  margin: 0 auto;
+  padding: clamp(28px, 5vw, 72px) clamp(18px, 5vw, 56px) 72px;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--white) 98%, transparent), color-mix(in srgb, var(--paper) 18%, var(--white)));
+  border-left: 1px solid color-mix(in srgb, var(--line) 60%, transparent);
+  border-right: 1px solid color-mix(in srgb, var(--line) 60%, transparent);
+  box-shadow: 0 30px 90px rgba(18, 31, 23, .06);
+}
+.article-page > .back {
+  margin-bottom: clamp(30px, 5vw, 62px);
+}
+.article-heading {
+  max-width: 900px;
+  margin: 0 auto 34px;
+  text-align: left;
+}
+.article-heading .article-category {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 12px;
+  border-radius: 999px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 850;
+}
+.article-heading h1 {
+  max-width: 18ch;
+  margin: 18px 0 18px;
+  font: 760 clamp(42px, 7vw, 76px)/.98 Georgia, "Times New Roman", serif;
+  letter-spacing: -.052em;
+  text-wrap: balance;
+}
+.article-heading > p {
+  max-width: 66ch;
+  margin: 0;
+  color: color-mix(in srgb, var(--ink) 74%, var(--muted));
+  font: 400 clamp(18px, 2.25vw, 23px)/1.55 Georgia, "Times New Roman", serif;
+}
+.article-byline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  align-items: center;
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid color-mix(in srgb, var(--line) 74%, transparent);
+  color: var(--muted);
+  font-size: 12px;
+}
+.article-byline strong {
+  color: var(--ink);
+  font-weight: 760;
+}
+.article-page > .article-hero {
+  max-width: 960px;
+  margin: 36px auto 48px;
+  border-radius: 24px;
+  box-shadow: 0 26px 66px rgba(19, 34, 24, .12);
+}
+.article-page > .article-hero img {
+  max-height: 680px;
+}
+.article-body {
+  max-width: 740px;
+  margin: 0 auto;
+  color: color-mix(in srgb, var(--ink) 93%, #000);
+  font: 400 18px/1.84 Georgia, "Times New Roman", serif;
+  text-rendering: optimizeLegibility;
+}
+.article-body > p {
+  max-width: none;
+  margin: 0 0 1.55em;
+}
+.article-body > p:first-of-type {
+  font-size: 1.08em;
+  line-height: 1.76;
+}
+.article-body > p:first-of-type::first-letter {
+  float: left;
+  margin: .07em .10em 0 0;
+  color: var(--green-dark);
+  font-size: 3.35em;
+  line-height: .77;
+  font-weight: 760;
+}
+.article-body h2 {
+  margin: 2.35em 0 .72em;
+  padding-top: .22em;
+  color: var(--ink);
+  font: 760 clamp(28px, 4vw, 39px)/1.08 Georgia, "Times New Roman", serif;
+  letter-spacing: -.035em;
+  text-wrap: balance;
+}
+.article-body h3 {
+  margin: 2em 0 .65em;
+  color: var(--ink);
+  font: 760 23px/1.2 Georgia, "Times New Roman", serif;
+  letter-spacing: -.018em;
+}
+.article-body ul,
+.article-body ol {
+  margin: 1.3em 0 1.7em;
+  padding-left: 1.35em;
+}
+.article-body li {
+  margin: .56em 0;
+  padding-left: .25em;
+}
+.article-body blockquote {
+  margin: 2em 0;
+  padding: 4px 0 4px 24px;
+  border-left: 3px solid var(--green);
+  color: color-mix(in srgb, var(--ink) 78%, var(--muted));
+  font-size: 1.08em;
+  font-style: italic;
+}
+.article-body a {
+  color: var(--green-dark);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  text-decoration-color: color-mix(in srgb, var(--green) 42%, transparent);
+}
+.article-body a:hover {
+  text-decoration-color: var(--green);
+}
+.article-body strong {
+  color: var(--ink);
+  font-weight: 760;
+}
+.article-page > .article-video,
+.article-page > .article-gallery,
+.article-page > .article-sources {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.article-end {
+  max-width: 900px;
+  margin: 54px auto 0;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+@media (max-width: 720px) {
+  .article-page {
+    border-left: 0;
+    border-right: 0;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  .article-heading h1 {
+    max-width: 100%;
+    font-size: clamp(38px, 12vw, 56px);
+  }
+  .article-body {
+    font-size: 17px;
+    line-height: 1.78;
+  }
+  .article-body > p:first-of-type::first-letter {
+    font-size: 2.8em;
+  }
+}
