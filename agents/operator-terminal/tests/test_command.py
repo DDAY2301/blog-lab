@@ -740,3 +740,69 @@ def test_unknown_theme_is_explicitly_rejected(tmp_path, monkeypatch):
     with pytest.raises(SystemExit) as exc:
         cmd.builtin_site_command("spremeni barvno temo v koralno")
     assert exc.value.code == 64
+
+
+def test_site_quality_guard_rejects_duplicate_article_selector(tmp_path, monkeypatch):
+    monkeypatch.setattr(cmd, "BASE", tmp_path)
+    styles = tmp_path / "src/styles.css"
+    styles.parent.mkdir(parents=True)
+    styles.write_text(
+        "/* Blog Lab professional article reading system v3 */\n"
+        ".article-page { width: min(100%, 1080px); }\n"
+        ".article-body { max-width: 740px; }\n",
+        encoding="utf-8",
+    )
+    with pytest.raises(cmd.SiteEditError, match="CSS quality guard"):
+        cmd._apply_site_plan({
+            "summary": "bad override",
+            "edits": [{
+                "path": "src/styles.css",
+                "action": "append",
+                "new": ".article-page { max-width: 800px; }",
+            }],
+        })
+
+
+def test_site_quality_guard_allows_editing_existing_article_rule(tmp_path, monkeypatch):
+    monkeypatch.setattr(cmd, "BASE", tmp_path)
+    styles = tmp_path / "src/styles.css"
+    styles.parent.mkdir(parents=True)
+    styles.write_text(
+        "/* Blog Lab professional article reading system v3 */\n"
+        ".article-page { width: min(100%, 1080px); }\n"
+        ".article-body { max-width: 740px; }\n",
+        encoding="utf-8",
+    )
+    changed = cmd._apply_site_plan({
+        "summary": "refine existing rule",
+        "edits": [{
+            "path": "src/styles.css",
+            "action": "replace",
+            "old": ".article-body { max-width: 740px; }",
+            "new": ".article-body { max-width: 760px; }",
+        }],
+    })
+    assert changed == 1
+    assert ".article-body { max-width: 760px; }" in styles.read_text(encoding="utf-8")
+
+
+def test_site_context_includes_writer_prompts_for_article_length_request(tmp_path, monkeypatch):
+    monkeypatch.setattr(cmd, "BASE", tmp_path)
+    files = {
+        "src/App.jsx": "export default function App(){ return null }",
+        "src/styles.css": "body{}",
+        "agents/blog-lab-publisher/prompts/system.md": "SYSTEM RULES",
+        "agents/blog-lab-publisher/prompts/task.md": "TASK RULES",
+        "agents/blog-lab-publisher/config.yaml": "ai_provider: worker\n",
+        "src/ArticleMedia.jsx": "export function ArticleMedia(){ return null }",
+    }
+    for rel, content in files.items():
+        path = tmp_path / rel
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(content, encoding="utf-8")
+
+    context = cmd._site_context("Naredi članke daljše in besedilo bolj profesionalno")
+    paths = [item["path"] for item in context]
+    assert "agents/blog-lab-publisher/prompts/system.md" in paths
+    assert "agents/blog-lab-publisher/prompts/task.md" in paths
+    assert "agents/blog-lab-publisher/config.yaml" in paths
