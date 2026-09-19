@@ -136,7 +136,22 @@ def now(): return datetime.now(ZoneInfo("Europe/Ljubljana"))
 def control(): return load_json(str(CONTROL), {"enabled": True, "publish_mode": "automatic"})
 def enabled(cfg): return cfg.get("enabled", True) and control().get("enabled", True) and os.getenv("AGENT_ENABLED", "true").lower() == "true"
 def set_status(cfg, state, value, message="", output=None):
-    atomic_json(str(STATUS), {"agent": cfg["agent_name"], "status": value, "enabled": enabled(cfg), "category": state.get("current_category"), "last_run": now().isoformat(timespec="seconds"), "last_success": state.get("last_success"), "last_output": output or state.get("last_output"), "next_run": None, "message": message, "posts_today": state.get("posts_today", 0), "last_error": state.get("last_error")})
+    atomic_json(str(STATUS), {
+        "agent": cfg["agent_name"],
+        "status": value,
+        "enabled": enabled(cfg),
+        "category": state.get("current_category"),
+        "last_run": now().isoformat(timespec="seconds"),
+        "last_success": state.get("last_success"),
+        "last_output": output or state.get("last_output"),
+        "next_run": None,
+        "message": message,
+        "posts_today": state.get("posts_today", 0),
+        "scheduled_posts_today": state.get("scheduled_posts_today", 0),
+        "manual_posts_today": state.get("manual_posts_today", 0),
+        "writer_mode": state.get("writer_mode", "unknown"),
+        "last_error": state.get("last_error"),
+    })
 def existing_titles() -> set[str]:
     if not APP.exists(): return set()
     text = APP.read_text(encoding="utf-8", errors="ignore")
@@ -145,18 +160,35 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--force", action="store_true")
+    ap.add_argument("--manual", action="store_true", help="Manual/editorial request; does not consume scheduled daily quota")
     ap.add_argument("--category", choices=sorted(VALID_CATEGORIES), default=os.getenv("RUN_CATEGORY", "aktualno"))
     ap.add_argument("--topic", default="")
     ap.add_argument("--output-category", default="")
     args = ap.parse_args()
     cfg = yaml.safe_load((HERE / "config.yaml").read_text(encoding="utf-8"))
-    state = load_json(str(STATE), {"consecutive_failures": 0, "posts_today": 0, "posts_date": None})
+    state = load_json(str(STATE), {
+        "consecutive_failures": 0,
+        "posts_today": 0,
+        "scheduled_posts_today": 0,
+        "manual_posts_today": 0,
+        "posts_date": None,
+    })
     processed = load_json(str(PROCESSED), [])
     today = now().date().isoformat()
-    if state.get("posts_date") != today: state["posts_date"], state["posts_today"] = today, 0
+    if state.get("posts_date") != today:
+        state["posts_date"] = today
+        state["posts_today"] = 0
+        state["scheduled_posts_today"] = 0
+        state["manual_posts_today"] = 0
+    state.setdefault("scheduled_posts_today", 0)
+    state.setdefault("manual_posts_today", 0)
     state["current_category"] = args.category
+    manual_request = bool(args.manual or args.topic.strip())
     if not enabled(cfg): set_status(cfg, state, "paused", "Agent je izklopljen."); print("AGENT_DISABLED"); return 0
-    if state["posts_today"] >= int(cfg.get("maximum_outputs_per_day", 3)) and not args.force: set_status(cfg, state, "completed", "Dosežena je dnevna omejitev objav."); print("DAILY_LIMIT"); return 0
+    if not manual_request and state["scheduled_posts_today"] >= int(cfg.get("maximum_outputs_per_day", 3)):
+        set_status(cfg, state, "completed", "Dosežena je dnevna omejitev samodejnih objav.")
+        print("DAILY_LIMIT")
+        return 0
     set_status(cfg, state, "collecting", f"Pridobivanje virov: {args.category}.")
     if args.topic.strip():
         items = collect_topic(args.topic, args.category, int(cfg.get("max_source_items", 30)))
@@ -188,9 +220,13 @@ def main():
     set_status(cfg, state, "generating", f"Priprava članka: {args.category}.")
     used_for_article = fresh[:5]
     try:
-        article = generate(system_prompt, task_prompt, fresh[:8], args.category); article["fallback"] = False
+        article = generate(system_prompt, task_prompt, fresh[:8], args.category)
+        article["fallback"] = False
+        state["writer_mode"] = "ai"
     except AIUnavailable as exc:
-        print(f"INFO AI fallback: {exc}"); article = build_digest(used_for_article, args.category, max_items=5)
+        print(f"INFO AI fallback: {exc}")
+        article = build_digest(used_for_article, args.category, max_items=5)
+        state["writer_mode"] = "fallback"
     if args.output_category.strip():
         article["category"] = args.output_category.strip()[:40]
     article = apply_media_policy(article, used_for_article, args.topic)
@@ -210,6 +246,17 @@ def main():
     set_status(cfg, state, "publishing", "Objavljanje preverjenega članka."); publish_to_app(str(APP), article, cfg["agent_name"])
     for item in used_for_article: processed.append({**item, "processed_at": now().isoformat(timespec="seconds"), "output_id": article["id"]})
     atomic_json(str(PROCESSED), processed[-750:])
-    state.update({"last_success": now().isoformat(timespec="seconds"), "last_output": article["id"], "last_error": None, "consecutive_failures": 0, "posts_date": today, "posts_today": state.get("posts_today", 0) + 1, "agent_version": "2.1.0", "current_category": args.category})
+    state.update({
+        "last_success": now().isoformat(timespec="seconds"),
+        "last_output": article["id"],
+        "last_error": None,
+        "consecutive_failures": 0,
+        "posts_date": today,
+        "posts_today": state.get("posts_today", 0) + 1,
+        "scheduled_posts_today": state.get("scheduled_posts_today", 0) + (0 if manual_request else 1),
+        "manual_posts_today": state.get("manual_posts_today", 0) + (1 if manual_request else 0),
+        "agent_version": "2.2.0",
+        "current_category": args.category,
+    })
     atomic_json(str(STATE), state); set_status(cfg, state, "completed", "Članek je uspešno pripravljen za objavo.", article["id"]); print(f"PUBLISHED:{article['id']}"); return 0
 if __name__ == "__main__": raise SystemExit(main())
