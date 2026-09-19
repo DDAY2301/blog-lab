@@ -43,6 +43,9 @@ def test_infer_article_variants(text):
     "dodaj in polepšaj izgled strani",
     "Moderniziraj design strani",
     "Dodaj stran Galerija",
+    "Naredi članke daljše in bolj profesionalne",
+    "Izboljšaj pisanje člankov",
+    "Spremeni izgled člankov in tipografijo",
 ])
 def test_infer_site_variants(text):
     assert cmd.infer_mode(text) == "site"
@@ -159,6 +162,19 @@ def test_article_nonzero_fails(tmp_path, monkeypatch):
     assert exc.value.code == 2
 
 
+def test_article_no_sources_becomes_permanent_terminal_error(tmp_path, monkeypatch, capsys):
+    app = tmp_path / "src/App.jsx"
+    app.parent.mkdir(parents=True)
+    app.write_text("before")
+    monkeypatch.setattr(cmd, "BASE", tmp_path)
+    monkeypatch.setattr(cmd, "ARTICLE_AGENT", tmp_path / "agent.py")
+    monkeypatch.setattr(cmd.subprocess, "run", lambda *a, **k: SimpleNamespace(returncode=3))
+    with pytest.raises(SystemExit) as exc:
+        cmd.article_command("Objavi članek o zelo ozki temi", "aktualno")
+    assert exc.value.code == 64
+    assert "ARTICLE_SOURCE_UNAVAILABLE" in capsys.readouterr().err
+
+
 def test_article_no_change_fails(tmp_path, monkeypatch):
     app = tmp_path / "src/App.jsx"
     app.parent.mkdir(parents=True)
@@ -198,20 +214,6 @@ def test_site_workers_ai_failure_is_clear_without_copilot(monkeypatch):
         cmd.site_command("Dodaj posebno novo komponento")
     assert "Workers AI site edit failed" in str(exc.value)
     assert "planner unavailable" in str(exc.value)
-
-
-def test_site_copilot_is_only_optional_fallback(monkeypatch):
-    monkeypatch.setattr(cmd, "builtin_site_command", lambda command: False)
-    monkeypatch.setattr(
-        cmd,
-        "workers_ai_site_command",
-        lambda command: (_ for _ in ()).throw(cmd.SiteEditError("temporary workers ai error")),
-    )
-    monkeypatch.setenv("COPILOT_PERSONAL_TOKEN_CONFIGURED", "true")
-    called = []
-    monkeypatch.setattr(cmd, "_copilot_site_fallback", lambda command: called.append(command))
-    cmd.site_command("Dodaj posebno novo komponento")
-    assert called == ["Dodaj posebno novo komponento"]
 
 
 def test_apply_site_plan_exact_replace(tmp_path, monkeypatch):
@@ -323,7 +325,9 @@ def test_main_rejects_invalid_command(tmp_path, monkeypatch, command):
 @pytest.mark.parametrize(("text", "expected"), [
     ("objavi novo stran Projekti", "site"),
     ("objavi novo rubriko Dogodki", "site"),
-    ("objavi članek in polepšaj izgled", "article"),
+    ("objavi članek in polepšaj izgled", "site"),
+    ("naredi članke daljše in besedilo bolj profesionalno", "site"),
+    ("napiši daljši članek o gospodarstvu", "article"),
     ("dodaj video v članek", "site"),
     ("spremeni header", "site"),
     ("preveri status agenta", "control"),
