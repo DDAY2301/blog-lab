@@ -3,7 +3,6 @@ name: Blog Lab Self-Heal Watchdog
 on:
   workflow_run:
     workflows:
-      - "Private Operator Terminal"
       - "Blog Lab Publisher Agent"
       - "Blog Lab Health Check"
       - "Blog Lab External Smoke Test"
