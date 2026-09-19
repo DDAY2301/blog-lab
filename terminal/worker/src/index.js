@@ -322,7 +322,9 @@ async function readAgentSnapshot(env) {
     `agent ${enabled ? "aktiven" : "ustavljen"}`,
     `način ${publishMode}`,
     status?.status ? `status ${status.status}` : "",
-    Number.isFinite(status?.posts_today) ? `danes ${status.posts_today} objav` : "",
+    Number.isFinite(status?.scheduled_posts_today) ? `samodejno danes ${status.scheduled_posts_today}/3` : "",
+    Number.isFinite(status?.manual_posts_today) && status.manual_posts_today ? `ročno danes ${status.manual_posts_today}` : "",
+    status?.writer_mode ? `pisec ${status.writer_mode}` : "",
     status?.last_success ? `zadnji uspeh ${status.last_success}` : "",
     slotText ? `urnik ${slotText}` : ""
   ].filter(Boolean);
@@ -332,6 +334,9 @@ async function readAgentSnapshot(env) {
     status: status?.status || "unknown",
     category: status?.category || null,
     posts_today: status?.posts_today ?? null,
+    scheduled_posts_today: status?.scheduled_posts_today ?? null,
+    manual_posts_today: status?.manual_posts_today ?? null,
+    writer_mode: status?.writer_mode || "unknown",
     last_run: status?.last_run || null,
     last_success: status?.last_success || null,
     message: status?.message || "",
