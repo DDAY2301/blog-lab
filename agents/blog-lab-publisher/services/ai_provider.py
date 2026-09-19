@@ -48,7 +48,10 @@ def _copilot(prompt: str) -> dict:
         diagnostic = " ".join((proc.stderr or proc.stdout or "").split())[-500:]
         raise AIUnavailable(f"Copilot CLI ni uspel (exit {proc.returncode}): {diagnostic}")
     try:
-        return _extract_json(proc.stdout)
+        article = _extract_json(proc.stdout)
+        if isinstance(article, dict):
+            article["_writer_provider"] = "copilot"
+        return article
     except Exception as exc:
         raise AIUnavailable(f"Copilot ni vrnil veljavnega JSON-a: {exc}") from exc
 
@@ -84,6 +87,7 @@ def _workers_ai(system_prompt: str, user_prompt: str, source_items: list[dict], 
     if not isinstance(article, dict):
         detail = data.get("code") if isinstance(data, dict) else ""
         raise AIUnavailable(f"Workers AI writer ni vrnil članka{': ' + str(detail) if detail else ''}.")
+    article["_writer_provider"] = "workers_ai"
     return article
 
 
@@ -98,7 +102,10 @@ def _openai_compatible(system_prompt: str, user_prompt: str) -> dict:
     try:
         with urlopen(req, timeout=60) as r:
             data = json.loads(r.read().decode("utf-8"))
-        return _extract_json(data["choices"][0]["message"]["content"])
+        article = _extract_json(data["choices"][0]["message"]["content"])
+        if isinstance(article, dict):
+            article["_writer_provider"] = "external"
+        return article
     except Exception as exc:
         raise AIUnavailable(f"Zunanji AI API ni uspel: {exc}") from exc
 
