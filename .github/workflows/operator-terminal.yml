@@ -21,7 +21,6 @@ permissions:
   contents: write
   pages: write
   id-token: write
-  copilot-requests: write
 
 jobs:
   execute:
@@ -33,8 +32,6 @@ jobs:
     env:
       TERMINAL_COMMAND_KEY: ${{ secrets.TERMINAL_COMMAND_KEY }}
       GITHUB_TOKEN: ${{ github.token }}
-      COPILOT_GITHUB_TOKEN: ${{ secrets.COPILOT_GITHUB_TOKEN }}
-      COPILOT_PERSONAL_TOKEN_CONFIGURED: ${{ secrets.COPILOT_GITHUB_TOKEN != '' }}
       AGENT_ENABLED: ${{ vars.AGENT_ENABLED || 'true' }}
       PUBLISH_MODE: ${{ vars.PUBLISH_MODE || 'automatic' }}
       AI_PROVIDER: ${{ vars.AI_PROVIDER || 'worker' }}
@@ -67,7 +64,6 @@ jobs:
         run: |
           pip install -r requirements-agent.txt
           npm ci
-          npm install -g @github/copilot@latest
       - name: Test protected operator code
         run: |
           python -m py_compile agents/operator-terminal/*.py agents/blog-lab-publisher/agent.py agents/blog-lab-publisher/services/*.py
@@ -90,12 +86,8 @@ jobs:
               echo "Operator request validated on attempt $attempt."
               exit 0
             fi
-            if [[ "$COMMAND_RC" -eq 78 ]]; then
-              echo "::error::Copilot policy denied this non-built-in site edit. Not retrying a permanent policy error."
-              exit 78
-            fi
             if [[ "$COMMAND_RC" -eq 64 ]]; then
-              echo "::error::The command requested a known unsupported configuration. Not retrying."
+              echo "::error::The request cannot be completed safely with the currently available sources/configuration. Not retrying."
               exit 64
             fi
             if [[ "$attempt" -ge 3 ]]; then
