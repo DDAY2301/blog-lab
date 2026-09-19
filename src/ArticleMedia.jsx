@@ -207,19 +207,44 @@ export function ArticleGallery({ items }) {
   );
 }
 
+function sourceHost(value) {
+  try {
+    return new URL(value).hostname.replace(/^www\./i, "");
+  } catch {
+    return "zunanji vir";
+  }
+}
+
 export function ArticleSources({ items }) {
   const sources = (Array.isArray(items) ? items : []).map(normalizeSource).filter(Boolean);
   if (!sources.length) return null;
   return (
-    <section className="article-sources">
-      <div className="media-section-heading"><span>VIRI</span><h2>Uporabljeni viri</h2></div>
-      <ul>
-        {sources.map((source, index) => (
-          <li key={`${source.url}-${index}`}>
-            <a href={source.url} target="_blank" rel="noopener noreferrer">{source.label}</a>
-          </li>
-        ))}
-      </ul>
+    <section className="article-sources" aria-labelledby="article-sources-title">
+      <div className="sources-surface">
+        <div className="media-section-heading sources-heading">
+          <span>VIRI</span>
+          <h2 id="article-sources-title">Uporabljeni viri</h2>
+          <p>Izvirne povezave, uporabljene pri pripravi članka.</p>
+        </div>
+        <div className="sources-grid">
+          {sources.map((source, index) => (
+            <a
+              className="source-row"
+              href={source.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              key={`${source.url}-${index}`}
+            >
+              <span className="source-index">{String(index + 1).padStart(2, "0")}</span>
+              <span className="source-copy">
+                <strong>{source.label}</strong>
+                <small>{sourceHost(source.url)}</small>
+              </span>
+              <span className="source-arrow" aria-hidden="true">↗</span>
+            </a>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }
