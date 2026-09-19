@@ -485,6 +485,54 @@ function requestIdFromRun(run) {
   return match ? match[1] : "";
 }
 
+function safeFailureText(value) {
+  return String(value || "")
+    .replace(/github_pat_[A-Za-z0-9_]+/gi, "[REDACTED]")
+    .replace(/gh[pousr]_[A-Za-z0-9_]+/gi, "[REDACTED]")
+    .replace(/Bearer\\s+[A-Za-z0-9._-]+/gi, "Bearer [REDACTED]")
+    .replace(/[A-Za-z0-9+/=_-]{80,}/g, "[REDACTED]")
+    .replace(/\\s+/g, " ")
+    .trim()
+    .slice(0, 700);
+}
+
+function failureReasonFromLog(logText) {
+  const lines = String(logText || "").split(/\\r?\\n/).map((line) => line.trim()).filter(Boolean);
+  const preferred = [
+    "Workers AI site edit failed:",
+    "WORKERS_AI_SITE_DIAGNOSTIC_END",
+    "COPILOT_POLICY_DENIED",
+    "::error::",
+    "Process completed with exit code",
+  ];
+
+  for (let i = lines.length - 1; i >= 0; i -= 1) {
+    const line = lines[i];
+    if (line.includes("Workers AI site edit failed:")) {
+      return safeFailureText(line.slice(line.indexOf("Workers AI site edit failed:")));
+    }
+    if (line.includes("COPILOT_POLICY_DENIED")) {
+      return "GitHub Copilot je zavrnjen s policy nastavitvijo.";
+    }
+    if (line.includes("::error::")) {
+      return safeFailureText(line.slice(line.indexOf("::error::") + 9));
+    }
+  }
+
+  const begin = lines.findLastIndex((line) => line.includes("WORKERS_AI_SITE_DIAGNOSTIC_BEGIN"));
+  const end = lines.findLastIndex((line) => line.includes("WORKERS_AI_SITE_DIAGNOSTIC_END"));
+  if (begin >= 0 && end > begin) {
+    const detail = lines.slice(begin + 1, end).join(" ");
+    if (detail) return safeFailureText(detail);
+  }
+
+  for (const marker of preferred) {
+    const line = lines.findLast((item) => item.includes(marker));
+    if (line) return safeFailureText(line);
+  }
+  return "";
+}
+
 async function runFailureDetail(runId, env) {
   try {
     const response = await github(`/repos/${OWNER}/${REPO}/actions/runs/${runId}/jobs?per_page=50`, env);
@@ -492,6 +540,15 @@ async function runFailureDetail(runId, env) {
     const data = await response.json();
     const failedJob = (data.jobs || []).find((job) => job.conclusion === "failure");
     if (!failedJob) return "";
+
+    try {
+      const logs = await github(`/repos/${OWNER}/${REPO}/actions/jobs/${failedJob.id}/logs`, env);
+      if (logs.ok) {
+        const reason = failureReasonFromLog(await logs.text());
+        if (reason) return `Napaka: ${reason}`;
+      }
+    } catch {}
+
     const failedSteps = (failedJob.steps || [])
       .filter((step) => step.conclusion === "failure")
       .map((step) => step.name)
@@ -698,7 +755,7 @@ export default {
       return json({
         ok: true,
         worker: "blog-lab",
-        version: "auth-v6.5-site-ai",
+        version: "auth-v6.6-diagnostics",
         ready: state.ready,
         auth_ready: authReady,
         authorized_users_ready: authReady ? 2 : 0,
