@@ -321,7 +321,7 @@ def _topic_search_sources(query_text: str, category: str) -> list[dict]:
             "provider": "google-news-si",
         },
         {
-            "name": f"Google News Global – {category} – {query_text[:60]}",
+            "name": f"Google News EN – {category} – {query_text[:60]}",
             "category": category,
             "url": (
                 "https://news.google.com/rss/search"
@@ -354,30 +354,39 @@ def collect_topic(topic: str, category: str, max_items: int = 30) -> list[dict]:
     out = []
     provider_hits = {}
 
-    # Search across multiple independent indexes instead of failing after a
-    # single provider. This keeps the article grounded in public URLs while
-    # giving narrow/international topics a much wider discovery surface.
-    for query_text in queries:
+    # Search multiple independent public indexes for every useful query variant.
+    # One provider failing must not prevent the others from contributing.
+    for query_text in queries[:6]:
         for source in _topic_search_sources(query_text, category):
+            provider = source.get("provider", "unknown")
             try:
-                found = fetch_feed(source)
+                found = fetch_feed(source, timeout=10, retries=1)
                 if found:
-                    provider = source.get("provider", "unknown")
                     provider_hits[provider] = provider_hits.get(provider, 0) + len(found)
                     out.extend(found)
             except Exception as exc:
                 print(
-                    f"WARN topic source provider={source.get('provider')} "
+                    f"WARN topic source provider={provider} "
                     f"query={query_text!r} error={exc}"
                 )
 
-            unique = _dedupe(out)
-            if len(unique) >= max_items:
-                break
-        if len(_dedupe(out)) >= max_items:
+        # GDELT is an additional worldwide news index and returns direct article
+        # URLs. Keep it independent from RSS providers so a search-engine outage
+        # does not collapse discovery.
+        try:
+            gdelt = _gdelt_news(query_text, category, max_items)
+            if gdelt:
+                provider_hits["gdelt"] = provider_hits.get("gdelt", 0) + len(gdelt)
+                out.extend(gdelt)
+        except Exception as exc:
+            print(f"WARN topic source provider=gdelt query={query_text!r} error={exc}")
+
+        # Enough diverse URLs have been found; do not keep hammering public
+        # indexes once we already have a healthy evidence pool.
+        if len(_dedupe_diverse(out, max_items, per_source=4)) >= max_items:
             break
 
-    unique = _dedupe(out)[:max_items]
+    unique = _dedupe_diverse(out, max_items, per_source=4)
     if unique:
         summary = ",".join(
             f"{name}:{count}" for name, count in sorted(provider_hits.items())
