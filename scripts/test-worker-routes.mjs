@@ -47,6 +47,7 @@ const env = {
 let dispatchedRequestId = "";
 let failDispatch = false;
 let denyMediaWrite = false;
+let workflowConclusion = "success";
 
 const nativeFetch = globalThis.fetch;
 globalThis.fetch = async (input, init = {}) => {
@@ -74,12 +75,33 @@ globalThis.fetch = async (input, init = {}) => {
         id: 1,
         display_title: `Private Terminal · ${dispatchedRequestId}`,
         status: "completed",
-        conclusion: "success",
+        conclusion: workflowConclusion,
         html_url: "https://github.com/DDAY2301/blog-lab/actions/runs/1",
         created_at: "2026-09-18T15:59:00Z",
         updated_at: "2026-09-18T16:00:00Z"
       }] : []
     }), { status: 200, headers: { "content-type": "application/json" } });
+  }
+
+  if (url.includes("/actions/runs/1/jobs")) {
+    return new Response(JSON.stringify({
+      jobs: workflowConclusion === "failure" ? [{
+        id: 99,
+        name: "execute",
+        conclusion: "failure",
+        steps: [{
+          name: "Execute private command with bounded recovery",
+          conclusion: "failure"
+        }]
+      }] : []
+    }), { status: 200, headers: { "content-type": "application/json" } });
+  }
+
+  if (url.includes("/actions/jobs/99/logs")) {
+    return new Response(
+      "2026-09-19T18:52:59Z ::error::Workers AI site edit failed: planner unavailable\n",
+      { status: 200, headers: { "content-type": "text/plain" } }
+    );
   }
 
   if (url === "https://api.github.com/repos/DDAY2301/blog-lab") {
@@ -398,6 +420,16 @@ response = await worker.fetch(new Request(`https://example.test/api/status?id=${
 check(response.status === 200, "Valid status lookup must succeed");
 const status = await response.json();
 check(status.status === "completed" && status.conclusion === "success", "Status must map workflow result");
+
+workflowConclusion = "failure";
+response = await worker.fetch(new Request(`https://example.test/api/status?id=${accepted.id}`, {
+  headers: { cookie }
+}), env);
+check(response.status === 200, "Failed workflow status lookup must succeed");
+const failedStatus = await response.json();
+check(failedStatus.conclusion === "failure", "Failed workflow must report failure");
+check(String(failedStatus.detail || "").includes("planner unavailable"), "Terminal must surface actionable failure detail from job logs");
+workflowConclusion = "success";
 
 response = await worker.fetch(new Request("https://example.test/api/history", {
   headers: { cookie }
