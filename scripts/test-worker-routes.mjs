@@ -10,6 +10,21 @@ const env = {
     async run(model, request) {
       if (model !== "@cf/meta/llama-3.3-70b-instruct-fp8-fast") throw new Error("unexpected model");
       if (!Array.isArray(request?.messages) || request.messages.length !== 2) throw new Error("unexpected AI messages");
+      const userMessage = String(request.messages[1]?.content || "");
+      if (userMessage.includes("REPOSITORY CONTEXT")) {
+        return {
+          response: {
+            summary: "Preizkus site editorja",
+            edits: [{
+              path: "src/Test.jsx",
+              action: "replace",
+              old: "Old",
+              new: "New"
+            }]
+          },
+          usage: { input_tokens: 10, output_tokens: 10 }
+        };
+      }
       return {
         response: {
           title: "Preizkus AI pisca",
@@ -163,6 +178,35 @@ check(response.status === 200, "Workers AI writer must accept the internal servi
 const writerResult = await response.json();
 check(writerResult.ok === true, "Workers AI writer must report success");
 check(writerResult.article?.title === "Preizkus AI pisca", "Workers AI writer must return parsed article JSON");
+
+const sitePayload = JSON.stringify({
+  system_prompt: "Vrni JSON edit plan.",
+  request: "Spremeni Old v New.",
+  context: [{
+    path: "src/Test.jsx",
+    complete: true,
+    snippets: [{ label: "full", content: "Old" }]
+  }]
+});
+
+response = await worker.fetch(new Request("https://example.test/api/ai/edit", {
+  method: "POST",
+  headers: { "content-type": "application/json" },
+  body: sitePayload
+}), env);
+check(response.status === 401, "Workers AI site editor must reject an unauthenticated internal request");
+
+const siteHeaders = new Headers({ "content-type": "application/json" });
+siteHeaders.set("authorization", "Bearer " + env.TERMINAL_COMMAND_KEY);
+response = await worker.fetch(new Request("https://example.test/api/ai/edit", {
+  method: "POST",
+  headers: siteHeaders,
+  body: sitePayload
+}), env);
+check(response.status === 200, "Workers AI site editor must accept the internal service credential");
+const siteResult = await response.json();
+check(siteResult.ok === true, "Workers AI site editor must report success");
+check(Array.isArray(siteResult.plan?.edits) && siteResult.plan.edits.length === 1, "Site editor must return an edit plan");
 
 response = await worker.fetch(new Request("https://example.test/?fresh=1", {
   headers: { cookie: "bloglab_session=old-session" }
