@@ -3,6 +3,8 @@ name: Blog Lab External Smoke Test
 on:
   push:
     branches: [main]
+  pull_request:
+    branches: [main]
   schedule:
     - cron: "23 * * * *"
   workflow_dispatch:
