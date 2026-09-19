@@ -370,11 +370,15 @@ function mediaMarkerLines(){
   const heroIndex=Math.max(0,uploadedMedia.findIndex(x=>x.hero));
   return uploadedMedia.map((item,index)=>'['+(index===heroIndex?'hero slika':'naložena slika')+': '+item.url+']');
 }
+function isMediaMarker(line){
+  const value=String(line||'').trim().toLowerCase();
+  return (value.startsWith('[hero slika: https://')||value.startsWith('[naložena slika: https://'))&&value.endsWith(']');
+}
 function syncMediaCommand(){
-  const box=$('#command');
-  const cleaned=box.value.split('\n').filter(line=>!/^\[(?:hero slika|naložena slika):\s*https:\/\/[^\]]+\]$/i.test(line.trim())).join('\n').trim();
-  const media=mediaMarkerLines().join('\n');
-  box.value=(cleaned+(cleaned&&media?'\n':'')+media).trim();
+  const box=$('#command'),nl=String.fromCharCode(10);
+  const cleaned=box.value.split(nl).filter(line=>!isMediaMarker(line)).join(nl).trim();
+  const media=mediaMarkerLines().join(nl);
+  box.value=(cleaned+(cleaned&&media?nl:'')+media).trim();
 }
 function renderMedia(){
   const manager=$('#mediaManager'),grid=$('#mediaGrid');
