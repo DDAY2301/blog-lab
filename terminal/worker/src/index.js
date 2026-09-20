@@ -765,7 +765,7 @@ function localCommandIntent(command) {
   const scores = { control: 0, article: 0, site: 0 };
 
   const controlActions = ["ustavi","nadaljuj","vklopi","izklopi","zazeni","status","urnik","preveri"];
-  const articleActions = ["objavi","napisi","ustvari"];
+  const articleActions = ["objavi","napisi","ustvari","dodaj"];
   const articleNouns = ["clanek","novica","blog"];
   const siteActions = ["uredi","spremeni","izboljsaj","polepsaj","dodaj","odstrani","nalozi","premakni","kopiraj","preimenuj"];
   const siteNouns = ["stran","rubrika","meni","navigacija","header","footer","hero","sidebar","galerija","slika","video","dizajn","css","responsive","logo","favicon","font","seo","meta"];

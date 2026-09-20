@@ -268,7 +268,7 @@ def _site_intent(low: str) -> bool:
 
 def _article_intent(low: str) -> bool:
     article_nouns = ["članek", "clanek", "clanak", "prispevek", "novico", "novica", "vijest", "vest", "blog", "objavo", "objava", "post", "article"]
-    article_actions = ["objavi", "napiši", "napisi", "pripravi", "ustvari", "sestavi", "napravi", "write", "publish", "create", "generate"]
+    article_actions = ["objavi", "napiši", "napisi", "pripravi", "ustvari", "sestavi", "napravi", "dodaj", "add", "insert", "write", "publish", "create", "generate"]
     site_targets = ["footer", "header", "hero", "meni", "navigacij", "rubrik", "kategor", "stran", "css", "layout"]
     has_noun = any(noun in low for noun in article_nouns)
     has_action = any(action in low for action in article_actions)
