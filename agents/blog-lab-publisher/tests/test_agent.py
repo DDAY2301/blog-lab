@@ -344,7 +344,7 @@ def test_bing_web_provider_uses_general_search_rss(monkeypatch):
     assert captured["name"].startswith("Bing Web")
 
 
-def test_world_search_calls_general_web_before_gdelt(monkeypatch):
+def test_world_search_calls_general_web_and_gdelt(monkeypatch):
     from services import sources
 
     providers = []
@@ -386,8 +386,7 @@ def test_world_search_calls_general_web_before_gdelt(monkeypatch):
     assert items
     assert items[0]["source_name"] == "Visit Ljubljana"
     assert "bing_web" in providers
-    if "gdelt" in providers:
-        assert providers.index("bing_web") < providers.index("gdelt")
+    assert "gdelt" in providers
 
 
 def test_topic_search_sources_cover_multiple_web_indexes():
@@ -625,3 +624,33 @@ def test_direct_enrichment_accepts_duckduckgo_results():
         "provider": "duckduckgo-web",
         "url": "https://example.org/article",
     }) is True
+
+
+def test_collect_topic_submits_web_indexes_in_parallel(monkeypatch):
+    from services import sources
+    import threading
+
+    entered = []
+    gate = threading.Event()
+
+    def blocking_feed(source, *args, **kwargs):
+        entered.append(source.get("provider"))
+        if len(entered) >= 2:
+            gate.set()
+        gate.wait(timeout=1)
+        return []
+
+    def blocking_gdelt(*args, **kwargs):
+        entered.append("gdelt")
+        gate.set()
+        return []
+
+    monkeypatch.setattr(sources, "fetch_feed", blocking_feed)
+    monkeypatch.setattr(sources, "_gdelt_news", blocking_gdelt)
+    monkeypatch.setattr(sources, "_duckduckgo_web", lambda *a, **k: [])
+
+    sources.collect_topic("parallel search topic", "aktualno", 5)
+
+    assert "google-news-si" in entered
+    assert "google-news-global" in entered
+    assert "gdelt" in entered
