@@ -541,9 +541,10 @@ def main():
               "relevantni viri očitno nepovezani z zahtevano temo ali ne omogočajo niti osnovnega faktografskega članka."
         )
     set_status(cfg, state, "generating", f"Priprava članka: {args.category}.")
-    used_for_article = fresh[:7]
+    evidence_pool = fresh
+    used_for_article = evidence_pool[:7]
     try:
-        article = generate(system_prompt, task_prompt, fresh[:10], args.category)
+        article = generate(system_prompt, task_prompt, evidence_pool[:10], args.category)
         article["fallback"] = False
         state["writer_mode"] = str(article.pop("_writer_provider", "ai"))
     except AIUnavailable as exc:
@@ -569,7 +570,7 @@ def main():
         )
         print(f"MANUAL_WRITER_RETRY sources={len(fresh)}")
         try:
-            article = generate(system_prompt, retry_task, fresh[:10], args.category)
+            article = generate(system_prompt, retry_task, evidence_pool[:10], args.category)
             article["fallback"] = False
             state["writer_mode"] = str(article.pop("_writer_provider", state.get("writer_mode", "ai")))
             article = prepare_article_candidate(
@@ -596,7 +597,7 @@ def main():
               "Ne ugibaj in ne dodajaj dejstev, ki jih viri ne podpirajo."
         )
         try:
-            article = generate(system_prompt, retry_task, fresh[:10], args.category)
+            article = generate(system_prompt, retry_task, evidence_pool[:10], args.category)
             article["fallback"] = False
             state["writer_mode"] = str(article.pop("_writer_provider", state.get("writer_mode", "ai")))
             article = prepare_article_candidate(article, used_for_article, args.topic, args.output_category)
@@ -604,19 +605,86 @@ def main():
             print(f"INFO automatic retry unavailable: {exc}")
 
     if article.get("skip") and not manual_request:
-        print("AUTO_FALLBACK_AFTER_SKIP")
-        article = prepare_article_candidate(
-            build_digest(used_for_article, args.category, max_items=min(7, len(used_for_article))),
-            used_for_article,
-            args.topic,
-            args.output_category,
-        )
-        state["writer_mode"] = "fallback"
+        seed_title = str((evidence_pool[0] if evidence_pool else {}).get("title") or "").strip()
+        expanded = expand_automatic_evidence(seed_title, args.category, cfg)
+        if expanded:
+            evidence_pool = expanded
+            used_for_article = evidence_pool[:7]
+            expansion_task = (
+                task_prompt
+                + "\n\nDOKAZNI PONOVNI POSKUS: prejšnji izbor ni dal primernega članka. "
+                  "Spodnji viri so bili dodatno poiskani za eno konkretno zgodbo. "
+                  "Napiši samo tisto, kar ti viri dejansko podpirajo; brez ugibanja in brez združevanja drugih tem."
+            )
+            try:
+                article = generate(system_prompt, expansion_task, evidence_pool[:10], args.category)
+                article["fallback"] = False
+                state["writer_mode"] = str(article.pop("_writer_provider", state.get("writer_mode", "ai")))
+            except AIUnavailable as exc:
+                print(f"INFO evidence expansion writer unavailable: {exc}")
+                article = build_digest(used_for_article, args.category, max_items=min(5, len(used_for_article)))
+                state["writer_mode"] = "fallback"
+            article = prepare_article_candidate(
+                article,
+                used_for_article,
+                args.topic,
+                args.output_category,
+            )
 
     if article.get("skip"):
         set_status(cfg, state, "waiting", article.get("reason", "Ni primerne teme; slot ostaja odprt."))
         print("NO_SUITABLE_CONTENT")
         return 3 if (args.topic.strip() and args.force) else 0
+
+    if not manual_request:
+        evidence_ok, matched_evidence, evidence_reason = article_evidence(article, evidence_pool)
+        if not evidence_ok:
+            print(f"AUTOMATIC_EVIDENCE_RETRY reason={evidence_reason}")
+            expanded = expand_automatic_evidence(
+                str(article.get("title") or ""),
+                args.category,
+                cfg,
+            )
+            if expanded:
+                evidence_pool = expanded
+                used_for_article = evidence_pool[:7]
+                evidence_task = (
+                    task_prompt
+                    + "\n\nDOKAZNA RAZŠIRITEV: napiši članek samo o temi iz teh dodatno poiskanih virov. "
+                      "Vsaka konkretna trditev mora izhajati iz vsebine podanih virov. "
+                      "Ne dopolnjuj manjkajočih dejstev iz splošnega znanja in ne mešaj drugih športnih/političnih zgodb."
+                )
+                try:
+                    article = generate(system_prompt, evidence_task, evidence_pool[:10], args.category)
+                    article["fallback"] = False
+                    state["writer_mode"] = str(article.pop("_writer_provider", state.get("writer_mode", "ai")))
+                except AIUnavailable as exc:
+                    print(f"INFO evidence writer unavailable: {exc}")
+                    article = build_digest(
+                        used_for_article,
+                        args.category,
+                        max_items=min(5, len(used_for_article)),
+                    )
+                    state["writer_mode"] = "fallback"
+                article = prepare_article_candidate(
+                    article,
+                    used_for_article,
+                    args.topic,
+                    args.output_category,
+                )
+                if not article.get("skip"):
+                    evidence_ok, matched_evidence, evidence_reason = article_evidence(article, evidence_pool)
+
+        if not evidence_ok:
+            set_status(
+                cfg,
+                state,
+                "waiting",
+                f"Samodejna objava čaka na močnejše preverljive vire ({evidence_reason}).",
+            )
+            print(f"AUTOMATIC_EVIDENCE_INSUFFICIENT:{evidence_reason}")
+            return 0
+        used_for_article = matched_evidence
 
     article["id"] = slugify(article.get("title", "")) + "-" + hashlib.sha1(used_for_article[0]["url"].encode()).hexdigest()[:8]
     errors = validate(article, min_chars, max_chars, titles, used_urls)
@@ -625,7 +693,7 @@ def main():
         print("QA_ERRORS_INITIAL " + ",".join(errors))
         repair_prompt = qa_repair_task(task_prompt, errors, min_chars, max_chars)
         try:
-            repaired = generate(system_prompt, repair_prompt, fresh[:10], args.category)
+            repaired = generate(system_prompt, repair_prompt, evidence_pool[:10], args.category)
             repaired["fallback"] = False
             state["writer_mode"] = str(repaired.pop("_writer_provider", state.get("writer_mode", "ai")))
             repaired = prepare_article_candidate(repaired, used_for_article, args.topic, args.output_category)
@@ -660,6 +728,20 @@ def main():
             else:
                 errors = fallback_errors
 
+    if not errors and not manual_request:
+        final_evidence_ok, final_evidence, final_evidence_reason = article_evidence(article, evidence_pool)
+        if not final_evidence_ok:
+            set_status(
+                cfg,
+                state,
+                "waiting",
+                f"QA je uspel, vendar dokazna podlaga ni dovolj močna ({final_evidence_reason}).",
+            )
+            print(f"AUTOMATIC_FINAL_EVIDENCE_REJECTED:{final_evidence_reason}")
+            return 0
+        used_for_article = final_evidence
+        article["id"] = slugify(article.get("title", "")) + "-" + hashlib.sha1(used_for_article[0]["url"].encode()).hexdigest()[:8]
+
     if errors:
         diag = BASE / "logs" / f"failed-{now().strftime('%Y%m%d-%H%M%S')}.json"
         diag.parent.mkdir(parents=True, exist_ok=True)
@@ -689,7 +771,7 @@ def main():
         "posts_today": state.get("posts_today", 0) + 1,
         "scheduled_posts_today": state.get("scheduled_posts_today", 0) + (0 if manual_request else 1),
         "manual_posts_today": state.get("manual_posts_today", 0) + (1 if manual_request else 0),
-        "agent_version": "2.4.0",
+        "agent_version": "2.5.0",
         "current_category": args.category,
     })
     if args.scheduled_slot and not manual_request:
