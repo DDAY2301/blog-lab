@@ -289,7 +289,7 @@ def _article_configuration_intent(low: str) -> bool:
         "daljš", "daljs", "dolž", "dolz", "krajš", "krajs",
         "besedil", "tekst", "pisanj", "writer", "profesional",
         "strukt", "slog", "stil", "podnaslov", "vir", "source",
-        "hero", "galer", "slik", "media", "format",
+        "hero", "galer", "slik", "video", "posnet", "media", "format",
     ]
     if not article_scope or not any(term in low for term in meta_terms):
         return False
@@ -326,6 +326,8 @@ def infer_mode(command: str) -> str:
     review_mode = ("preklopi" in low or "način" in low or "mode" in low) and "pregled" in low
     if any(x in low for x in control_terms) or review_mode or _publish_mode_intent(low) or _schedule_intent(low) or _status_intent(low):
         return "control"
+    if re.search(r"\bdodaj\s+(?:sedaj\s+)?(?:clanek|novica|blog)\s+(?:o|about|glede)\b", low):
+        return "article"
     if _article_configuration_intent(low):
         return "site"
     if _article_intent(low):

@@ -782,8 +782,11 @@ function localCommandIntent(command) {
   if (siteNouns.some((x) => tokens.has(x))) scores.site += 4;
   if (siteActions.some((x) => tokens.has(x))) scores.site += 2;
 
+  const articleTopic = articleActions.some((x) => tokens.has(x))
+    && /\b(o|about|regarding|glede)\b/.test(normalized);
   const articleConfig = articleNouns.some((x) => tokens.has(x))
-    && ["dizajn","css","font","slika","galerija","izboljsaj","polepsaj","spremeni","dolzina","slog","besedilo","pisanje","naslov"].some((x) => tokens.has(x));
+    && ["dizajn","css","font","slika","galerija","video","izboljsaj","polepsaj","spremeni","dolzina","slog","besedilo","pisanje","naslov"].some((x) => tokens.has(x))
+    && !articleTopic;
   if (articleConfig) scores.site += 6;
   if (tokens.has("stran") && articleActions.some((x) => tokens.has(x))) scores.site += 5;
 
