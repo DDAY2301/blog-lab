@@ -60,5 +60,17 @@
     "updated_at": "2026-09-20T14:35:21Z",
     "attempts": 0,
     "reason": "je objave in potem nadaljuj po nastavljenih parametrih objavljanja' error=<urlopen error timed out> WARN topic source provider=gdelt query='dodaj današnje objave' error=<urlopen error _ssl.c:993: The handshake operation timed out> WARN topic source provider=duckduckgo-web query='dodaj današnje objave' error=<urlopen error timed out> WARN topic source provider=gdelt query='potem nadaljuj po nastavljenih parametrih objavljanja' error=<urlopen error _ssl.c:993: The handshake operation timed out> WARN topic source provider=duckduckgo-web query='potem nadaljuj po nastavljenih parametrih objavljanja' error=<urlopen error timed out> WARN topic source provider=gdelt query='današnje objave potem nadaljuj nastavljenih parametrih' error=<urlopen error _ssl.c:993: The handshake operation timed out> WARN topic source provider=duckduckgo-web query='današnje objave potem nadaljuj nastavljenih parametrih' error=<urlopen error timed out> WARN topic source provider=gdelt query='današnje objave potem nadaljuj' error=<urlopen error _ssl.c:993: The handshake operation timed out> WARN topic source provider=duckduckgo-web query='današnje objave potem nadaljuj' error=<urlopen error timed out> TOPIC_DIRECT_OK checked=14 enriched=8 TOPIC_SOURCES_OK count=20 providers=bing-web:47 ARTICLE_AI_UNAVAILABLE Workers AI writer ni uspel: HTTP Error 502: Bad Gateway ARTICLE_AI_UNAVAILABLE AI pisec ali uredniški pregled trenutno ni na voljo. Zaradi kakovosti ročni članek ni bil objavljen in ne bo nadomeščen z nepovezanim fallbackom. INTENT_ROUTE requested=article resolved=article autocorrected=true"
+  },
+  {
+    "id": "34c4a395-e521-4ec3-9ba0-2e9f8e49f4b0",
+    "status": "pending",
+    "command": "dodaj vse objave ki manjkajo od danes",
+    "mode": "article",
+    "category": "aktualno",
+    "actor": "dan.grmusa@gmail.com",
+    "created_at": "2026-09-20T14:37:29Z",
+    "updated_at": "2026-09-20T14:37:29Z",
+    "attempts": 0,
+    "reason": "WARN topic source provider=google-news-si query='dodaj vse objave ki manjkajo od danes' error=Vir ni dosegljiv: https://news.google.com/rss/search?q=dodaj+vse+objave+ki+manjkajo+od+danes&hl=sl&gl=SI&ceid=SI:sl: HTTP Error 503: Service Unavailable WARN topic source provider=google-news-global query='dodaj vse objave ki manjkajo od danes' error=Vir ni dosegljiv: https://news.google.com/rss/search?q=dodaj+vse+objave+ki+manjkajo+od+danes&hl=en-US&gl=US&ceid=US:en: HTTP Error 503: Service Unavailable WARN topic source provider=gdelt query='dodaj vse objave ki manjkajo od danes' error=Expecting value: line 1 column 1 (char 0) WARN topic source provider=google-news-si query='objave manjkajo danes' error=Vir ni dosegljiv: https://news.google.com/rss/search?q=objave+manjkajo+danes&hl=sl&gl=SI&ceid=SI:sl: HTTP Error 503: Service Unavailable WARN topic source provider=google-news-global query='objave manjkajo danes' error=Vir ni dosegljiv: https://news.google.com/rss/search?q=objave+manjkajo+danes&hl=en-US&gl=US&ceid=US:en: HTTP Error 503: Service Unavailable TOPIC_DIRECT_OK checked=8 enriched=3 TOPIC_SOURCES_OK count=8 providers=bing-web:20 ARTICLE_AI_UNAVAILABLE Workers AI writer ni uspel: HTTP Error 502: Bad Gateway ARTICLE_AI_UNAVAILABLE AI pisec ali uredniški pregled trenutno ni na voljo. Zaradi kakovosti ročni članek ni bil objavljen in ne bo nadomeščen z nepovezanim fallbackom. INTENT_ROUTE requested=article resolved=article autocorrected=true"
   }
 ]
