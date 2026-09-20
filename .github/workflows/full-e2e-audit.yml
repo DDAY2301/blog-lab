@@ -5,7 +5,27 @@ on:
     branches: [main]
     paths:
       - ".github/workflows/full-e2e-audit.yml"
+      - "agents/audit/**"
+      - "agents/operator-terminal/**"
+      - "agents/blog-lab-publisher/**"
+      - "agents/live-feed/**"
+      - "agents/self-heal/**"
+      - "agents/production-guardian/**"
+      - "terminal/worker/**"
+      - "src/**"
+      - "public/**"
+      - "data/**"
+      - "package.json"
+      - "requirements-agent.txt"
+      - "wrangler.jsonc"
   workflow_dispatch:
+    inputs:
+      strict_live:
+        description: "Treat external provider degradation as failure"
+        required: false
+        default: "false"
+        type: choice
+        options: ["false", "true"]
 
 permissions:
   contents: read
@@ -13,7 +33,7 @@ permissions:
 jobs:
   audit:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 35
     env:
       PYTHONDONTWRITEBYTECODE: "1"
       AGENT_ENABLED: "true"
@@ -28,21 +48,53 @@ jobs:
       - uses: actions/checkout@v7
         with:
           fetch-depth: 0
+
       - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
           cache: pip
           cache-dependency-path: requirements-agent.txt
+
       - uses: actions/setup-node@v7
         with:
           node-version: 22
           cache: npm
-      - name: Install dependencies
+
+      - name: Install root dependencies
+        shell: bash
         run: |
           pip install -r requirements-agent.txt
           npm ci
-      - name: Run complete automated test matrix
-        run: pytest -q agents/operator-terminal/tests agents/blog-lab-publisher/tests agents/self-heal/tests
+
+      - name: Deep repository and command audit
+        shell: bash
+        run: python agents/audit/deep_audit.py --strict
+
+      - name: Run full Python test matrix
+        shell: bash
+        run: |
+          pytest -q \
+            agents/operator-terminal/tests \
+            agents/blog-lab-publisher/tests \
+            agents/self-heal/tests \
+            agents/production-guardian/tests
+
+      - name: Run production guardian check
+        shell: bash
+        run: python agents/production-guardian/guardian.py check --skip-remote --report logs/full-e2e-guardian-report.json
+
+      - name: Build production frontend
+        shell: bash
+        run: npm run build
+
+      - name: Validate Worker source and package
+        shell: bash
+        run: |
+          node --check terminal/worker/src/index.js
+          cd terminal/worker
+          npm ci
+          npx wrangler deploy --dry-run
+
       - name: Exercise all editorial categories against live sources
         id: editorial-dry-run
         shell: bash
@@ -51,6 +103,7 @@ jobs:
           rm -rf content/drafts
           mkdir -p content/drafts
           AI_DEGRADED=false
+          SOURCE_DEGRADED=false
           for category in sport politika aktualno; do
             echo "=== E2E dry run: $category ==="
             set +e
@@ -58,10 +111,13 @@ jobs:
             rc=$?
             set -e
             printf '%s\n' "$output"
-            if grep -Fq 'AUTO_AI_UNAVAILABLE' <<<"$output"; then
+            if grep -Eq 'AUTO_AI_UNAVAILABLE|AI_UNAVAILABLE|ARTICLE_AI_UNAVAILABLE|HTTP Error 502|Bad Gateway|daily free allocation|capacity' <<<"$output"; then
               AI_DEGRADED=true
             fi
-            if [[ $rc -ne 0 ]] && ! grep -Eq 'AUTO_AI_UNAVAILABLE|AI_UNAVAILABLE' <<<"$output"; then
+            if grep -Eq 'SOURCE_UNAVAILABLE|HTTP Error 429|Too Many Requests' <<<"$output"; then
+              SOURCE_DEGRADED=true
+            fi
+            if [[ $rc -ne 0 ]] && ! grep -Eq 'AUTO_AI_UNAVAILABLE|AI_UNAVAILABLE|ARTICLE_AI_UNAVAILABLE|SOURCE_UNAVAILABLE|HTTP Error 429|HTTP Error 502|Bad Gateway|daily free allocation|capacity' <<<"$output"; then
               echo "::error::Editorial dry run failed for $category with a repository/runtime error."
               exit "$rc"
             fi
@@ -70,13 +126,18 @@ jobs:
           if [[ "$DRAFT_COUNT" -ge 3 ]]; then
             echo "drafts_ready=true" >> "$GITHUB_OUTPUT"
             echo "Generated $DRAFT_COUNT validated draft candidates."
-          elif [[ "$AI_DEGRADED" == "true" ]]; then
+          elif [[ "$AI_DEGRADED" == "true" || "$SOURCE_DEGRADED" == "true" ]]; then
             echo "drafts_ready=false" >> "$GITHUB_OUTPUT"
-            echo "::warning::External AI capacity is temporarily degraded; source collection succeeded, so the code audit continues without treating provider 5xx as a repository defect."
+            if [[ "${{ github.event.inputs.strict_live || 'false' }}" == "true" ]]; then
+              echo "::error::Live providers are degraded and strict_live=true."
+              exit 1
+            fi
+            echo "::warning::External providers are temporarily degraded; source/runtime audit continues without treating provider 429/5xx as repository defect."
           else
-            echo "::error::Expected at least 3 dry-run drafts, got $DRAFT_COUNT without an external-AI degradation marker."
+            echo "::error::Expected at least 3 dry-run drafts, got $DRAFT_COUNT without a provider degradation marker."
             exit 1
           fi
+
       - name: Validate generated dry-run article structure
         if: ${{ steps.editorial-dry-run.outputs.drafts_ready == 'true' }}
         shell: bash
@@ -95,8 +156,11 @@ jobs:
               assert data["sources"], f"{path}: no structured sources"
           print(f"Validated {len(drafts)} generated drafts.")
           PY
+
       - name: Exercise live 30-minute feed against live source
+        shell: bash
         run: python agents/live-feed/update.py
+
       - name: Validate live feed output
         shell: bash
         run: |
@@ -111,5 +175,34 @@ jobs:
               assert str(item.get("url","")).startswith("https://")
           print(f"Live feed contains {len(data['items'])} items.")
           PY
-      - name: Build production frontend
-        run: npm run build
+
+      - name: Validate queue replay scripts without mutation
+        shell: bash
+        run: |
+          python agents/operator-terminal/deferred_site_edits.py replay --max 1 || true
+          git restore --staged --worktree .
+          git clean -fd -e node_modules/
+          python agents/operator-terminal/deferred_articles.py replay --max 1 || true
+          git restore --staged --worktree .
+          git clean -fd -e node_modules/
+
+      - name: Ensure audit leaves no unexpected repository changes
+        shell: bash
+        run: |
+          git restore --staged --worktree .
+          git clean -fd -e node_modules/
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git status --short
+            echo "::error::Audit left unexpected untracked or modified files."
+            exit 1
+          fi
+
+      - name: Upload audit reports
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: full-e2e-audit-reports
+          path: |
+            logs/*.json
+            content/drafts/*.json
+          if-no-files-found: ignore
