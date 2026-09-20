@@ -1,6 +1,12 @@
 name: Blog Lab Deferred Articles
 
 on:
+  push:
+    branches: ["main"]
+    paths:
+      - "data/deferred-articles.json"
+      - "agents/operator-terminal/deferred_articles.py"
+      - ".github/workflows/deferred-articles.yml"
   schedule:
     - cron: "29 * * * *"
   workflow_dispatch:
