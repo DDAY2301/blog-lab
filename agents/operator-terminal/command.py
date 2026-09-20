@@ -1,5 +1,6 @@
 from __future__ import annotations
 import argparse
+from difflib import get_close_matches
 import hashlib
 import json
 import os
@@ -7,6 +8,7 @@ import re
 import shutil
 import subprocess
 import sys
+import unicodedata
 from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
@@ -18,6 +20,83 @@ SITE_SETTINGS = BASE / "public/site-settings.json"
 ARTICLE_AGENT = BASE / "agents/blog-lab-publisher/agent.py"
 VALID_MODES = {"auto", "article", "site", "control"}
 VALID_CATEGORIES = {"sport", "politika", "aktualno"}
+
+# Intent vocabulary is used only to understand what the operator means.
+# Literal names, article topics and values remain untouched.
+INTENT_TOKEN_ALIASES = {
+    "objavi":"objavi","objava":"objavi","publish":"objavi","published":"objavi",
+    "napisi":"napisi","write":"napisi","pripravi":"pripravi","prepare":"pripravi",
+    "ustvari":"ustvari","kreiraj":"ustvari","create":"ustvari","generate":"ustvari",
+    "uredi":"uredi","edit":"uredi","modify":"uredi","change":"spremeni",
+    "spremeni":"spremeni","zamenjaj":"spremeni","replace":"spremeni",
+    "izboljsaj":"izboljsaj","improve":"izboljsaj","enhance":"izboljsaj",
+    "polepsaj":"polepsaj","prettier":"polepsaj","nicer":"polepsaj","beautify":"polepsaj",
+    "naredi":"naredi","make":"naredi","dodaj":"dodaj","add":"dodaj","insert":"dodaj",
+    "odstrani":"odstrani","remove":"odstrani","delete":"odstrani","izbrisi":"odstrani","umakni":"odstrani",
+    "skrij":"skrij","hide":"skrij","pokazi":"pokazi","show":"pokazi",
+    "ustavi":"ustavi","zaustavi":"ustavi","stop":"ustavi","pause":"pavza","pavza":"pavza",
+    "nadaljuj":"nadaljuj","resume":"nadaljuj","continue":"nadaljuj",
+    "vklopi":"vklopi","enable":"vklopi","izklopi":"izklopi","disable":"izklopi",
+    "zazeni":"zazeni","start":"zazeni","restart":"restart","aktiviraj":"aktiviraj","deaktiviraj":"deaktiviraj",
+    "samodejno":"samodejno","avtomatsko":"samodejno","automatic":"samodejno","samostojno":"samodejno","autonomous":"samodejno",
+    "osnutek":"osnutek","draft":"osnutek","pregled":"pregled","review":"pregled",
+    "status":"status","state":"status","urnik":"urnik","schedule":"urnik","termin":"termin",
+    "clanek":"clanek","clanka":"clanek","clanku":"clanek","clanki":"clanek",
+    "article":"clanek","articles":"clanek","prispevek":"clanek","post":"clanek",
+    "novica":"novica","novico":"novica","news":"novica","blog":"blog",
+    "stran":"stran","strani":"stran","page":"stran","website":"stran","site":"stran",
+    "rubrika":"rubrika","rubriko":"rubrika","category":"kategorija","kategorija":"kategorija","kategorijo":"kategorija",
+    "zavihek":"zavihek","tab":"zavihek","meni":"meni","menu":"meni","navigacija":"navigacija","navigation":"navigacija",
+    "header":"header","footer":"footer","hero":"hero","sidebar":"sidebar",
+    "galerija":"galerija","gallery":"galerija","slika":"slika","slike":"slika","image":"slika","images":"slika",
+    "fotografija":"slika","photo":"slika","photos":"slika","video":"video","posnetek":"video",
+    "dizajn":"dizajn","design":"dizajn","izgled":"izgled","layout":"layout",
+    "barva":"barva","barve":"barva","color":"barva","colour":"barva","tema":"tema","theme":"tema","paleta":"paleta","palette":"paleta",
+    "responsive":"responsive","mobilno":"responsive","mobile":"responsive","favicon":"favicon","logo":"logo","css":"css","font":"font",
+    "naslov":"naslov","title":"naslov","podnaslov":"podnaslov","subtitle":"podnaslov",
+    "besedilo":"besedilo","tekst":"besedilo","text":"besedilo","pisanje":"pisanje","writer":"pisanje","profesionalno":"profesionalno",
+    "source":"vir","sources":"vir","vir":"vir","viri":"vir","agent":"agent","objavljanje":"objavljanje",
+    "live":"live","pulse":"pulse",
+}
+INTENT_VOCABULARY = tuple(INTENT_TOKEN_ALIASES.keys())
+
+
+def _fold_intent_text(value: str) -> str:
+    normalized = unicodedata.normalize("NFKD", str(value or "").lower())
+    normalized = "".join(ch for ch in normalized if not unicodedata.combining(ch))
+    normalized = normalized.replace("đ", "d").replace("ð", "d")
+    return " ".join(re.findall(r"[a-z0-9]+", normalized))
+
+
+def _correct_intent_token(token: str) -> str:
+    if token in INTENT_TOKEN_ALIASES:
+        return INTENT_TOKEN_ALIASES[token]
+    if len(token) < 4:
+        return token
+    cutoff = 0.86 if len(token) == 4 else 0.78
+    matches = get_close_matches(token, INTENT_VOCABULARY, n=1, cutoff=cutoff)
+    if not matches:
+        return token
+    candidate = matches[0]
+    if token[0] != candidate[0] and len(token) < 8:
+        return token
+    return INTENT_TOKEN_ALIASES[candidate]
+
+
+def _normalized_intent(command: str) -> str:
+    folded = _fold_intent_text(command)
+    return " ".join(_correct_intent_token(token) for token in folded.split())
+
+
+def _intent_text(command: str) -> str:
+    raw = str(command or "").lower()
+    corrected = _normalized_intent(command)
+    return raw if not corrected else raw + "\n" + corrected
+
+
+def _intent_was_corrected(command: str) -> bool:
+    return _fold_intent_text(command) != _normalized_intent(command)
+
 
 def read_json(path: Path, default):
     try:
@@ -125,7 +204,7 @@ def _status_intent(low: str) -> bool:
     return any(term in low for term in status_terms)
 
 def infer_mode(command: str) -> str:
-    low = command.lower()
+    low = _intent_text(command)
     if _live_pulse_setting_intent(low):
         return "site"
     control_terms = [
@@ -162,7 +241,7 @@ def _explicit_schedule_times(text: str) -> list[str]:
 
 def control_command(command: str) -> None:
     ctl = read_json(CONTROL, {"enabled": True, "publish_mode": "automatic"})
-    low = command.lower()
+    low = _intent_text(command)
     schedule_requested = _schedule_intent(low)
     requested_daily_count = _requested_daily_count(low)
     explicit_times = _explicit_schedule_times(low)
@@ -653,7 +732,7 @@ def _setting_value(command: str, patterns: list[str], limit: int = 160):
     return None
 
 def manage_site_settings(command: str) -> bool:
-    low = command.lower()
+    low = _intent_text(command)
     settings = read_json(SITE_SETTINGS, DEFAULT_SITE_SETTINGS.copy())
     if not isinstance(settings, dict):
         settings = DEFAULT_SITE_SETTINGS.copy()
@@ -739,7 +818,7 @@ def manage_site_settings(command: str) -> bool:
     return False
 
 def builtin_site_command(command: str) -> bool:
-    low = command.lower()
+    low = _intent_text(command)
     if manage_site_settings(command):
         return True
     if _theme_intent(low):
