@@ -18,6 +18,40 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "23-septembra-od-leta-2000-praznujemo-dan-slovenskega-sporta-becf2d35",
+    "title": "23. septembra od leta 2000 praznujemo Dan slovenskega športa",
+    "excerpt": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »23. septembra od leta 2000 praznujemo Dan slovenskega športa«.",
+    "seoDescription": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »23. septembra od leta 2000 praznujemo Dan slovenskega športa«.",
+    "content": "**Šport, 20. 9. 2026.** 23. septembra od leta 2000 praznujemo Dan slovenskega športa Olimpijski Komite Slovenije\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Olimpijski Komite Slovenije. Objavljeno: Sun, 20 Sep 2026 12:29:11 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiywFBVV95cUxQNFRyRWxCOGpZbFRhTFkwandHeXBFRXlDSVRFeE1NUEk3Y0ljSmU5RzJmbVFaRzRDVkVPdnhITlk0V3dmWkxyZGRxRXRLT0h4dGJaWWUxLVpGXy1tWmYxY1YxMkNoNkxEZGk3M0hWd1RYN3NTaVpDOUx5MzhWNDVFSWE4bXR6QzVuenFEdTR1eldvazk3RmlCVUwzblBRWGpKckc5YWlIN0FsSWlPWnlrVnNPc2dpalA5S0N0VnVkdkZaQU9BTVlHbDdMOA?oc=5)\n\n## Dopolnitev vira 2: Delo.si\n\nIzhodišče vira: Poleg Slovenije se za evropsko prvenstvo zanima veliko držav - Delo.si.\n\nPoleg Slovenije se za evropsko prvenstvo zanima veliko držav Delo.si\n\n Vir: Delo.si. Objavljeno: Fri, 18 Sep 2026 07:46:01 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMimgFBVV95cUxONm5TMzN0ekY3bUZoWTI5eTVGemNQek5TNURPaGtTQVp4WWk1QlZNemVPWC1nZG1hbHotMEZTdlZ5elRqT3R1S2RZWGhKb1E5VGpwUGcwTFBha196TDJwdERyZGJnakxSdVBDUkZ1WjhYQ3NNbVhZa0xDX3JkY3N0S1RHNzRWejdSYWJHdW4tMzdrR1NWaUhJWnl3?oc=5)\n\n## Dopolnitev vira 3: Delo.si\n\nIzhodišče vira: Luka Dončić zapustil Slovenijo, sprejel bo velikanski izziv - Delo.si.\n\nLuka Dončić zapustil Slovenijo, sprejel bo velikanski izziv Delo.si\n\n Vir: Delo.si. Objavljeno: Sun, 20 Sep 2026 07:20:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMikAFBVV95cUxPZkh4WEdOemZkNFJVSVR3d1lobFAyeFJyZUd5bldXbmNmb3hNbzdRaHk0YUtPbUVfVXVtdUp2a25lT043d0NXaC1MQ3dKMEgyeVpDTUwwMy1BNXlGMEVEY3pEdlYxWWhSNkIzUmU2SkkxdDVwTmVlMHIwc3pPQ3F6OWNYbHZkVmw1QWk4YlVRTGg?oc=5)\n\n## Dopolnitev vira 4: Šport TV\n\nIzhodišče vira: Znova diši po slovenskem začetku dirke po Franciji - Šport TV.\n\nZnova diši po slovenskem začetku dirke po Franciji Šport TV\n\n Vir: Šport TV. Objavljeno: Thu, 17 Sep 2026 17:26:30 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMigAFBVV95cUxPYm9NMmdKZGMtbjZRMkNNNkJBZjB5LXh5bGMwaUxlZUdQTWdpeEw5U1RBSWJ0SEs0b1BjTmF4VjQwQVhIaXQ3dlhndUh4V1RIdG5VV2RCVHN5LWJmeV9VeUphZG9jNXFybWxXc29pYU1DbjdfTVVZeklqWWRhMG9wbg?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Šport",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Olimpijski Komite Slovenije — 23. septembra od leta 2000 praznujemo Dan slovenskega športa - Olimpijski Komite Slovenije",
+        "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQNFRyRWxCOGpZbFRhTFkwandHeXBFRXlDSVRFeE1NUEk3Y0ljSmU5RzJmbVFaRzRDVkVPdnhITlk0V3dmWkxyZGRxRXRLT0h4dGJaWWUxLVpGXy1tWmYxY1YxMkNoNkxEZGk3M0hWd1RYN3NTaVpDOUx5MzhWNDVFSWE4bXR6QzVuenFEdTR1eldvazk3RmlCVUwzblBRWGpKckc5YWlIN0FsSWlPWnlrVnNPc2dpalA5S0N0VnVkdkZaQU9BTVlHbDdMOA?oc=5"
+      },
+      {
+        "label": "Delo.si — Poleg Slovenije se za evropsko prvenstvo zanima veliko držav - Delo.si",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxONm5TMzN0ekY3bUZoWTI5eTVGemNQek5TNURPaGtTQVp4WWk1QlZNemVPWC1nZG1hbHotMEZTdlZ5elRqT3R1S2RZWGhKb1E5VGpwUGcwTFBha196TDJwdERyZGJnakxSdVBDUkZ1WjhYQ3NNbVhZa0xDX3JkY3N0S1RHNzRWejdSYWJHdW4tMzdrR1NWaUhJWnl3?oc=5"
+      },
+      {
+        "label": "Delo.si — Luka Dončić zapustil Slovenijo, sprejel bo velikanski izziv - Delo.si",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPZkh4WEdOemZkNFJVSVR3d1lobFAyeFJyZUd5bldXbmNmb3hNbzdRaHk0YUtPbUVfVXVtdUp2a25lT043d0NXaC1MQ3dKMEgyeVpDTUwwMy1BNXlGMEVEY3pEdlYxWWhSNkIzUmU2SkkxdDVwTmVlMHIwc3pPQ3F6OWNYbHZkVmw1QWk4YlVRTGg?oc=5"
+      },
+      {
+        "label": "Šport TV — Znova diši po slovenskem začetku dirke po Franciji - Šport TV",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPYm9NMmdKZGMtbjZRMkNNNkJBZjB5LXh5bGMwaUxlZUdQTWdpeEw5U1RBSWJ0SEs0b1BjTmF4VjQwQVhIaXQ3dlhndUh4V1RIdG5VV2RCVHN5LWJmeV9VeUphZG9jNXFybWxXc29pYU1DbjdfTVVZeklqWWRhMG9wbg?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-20T16:57:18+02:00",
+    "updatedAt": "2026-09-20T16:57:18+02:00"
+  },
+
+  {
     "id": "odbojka-m-italija-slovenija-evropsko-prvenstvo-2026-skupina-a-508b7209",
     "title": "Odbojka (M): Italija - Slovenija, Evropsko prvenstvo 2026, Skupina A",
     "excerpt": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Odbojka (M): Italija - Slovenija, Evropsko prvenstvo 2026, Skupina A«.",
