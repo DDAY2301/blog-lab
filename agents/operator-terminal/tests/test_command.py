@@ -1267,3 +1267,16 @@ def test_auto_site_ai_does_not_call_unconfigured_fallbacks(monkeypatch):
     )
     assert plan["_provider"] == "workers_ai"
     assert calls == ["worker"]
+
+
+def test_article_ai_unavailable_is_nonretryable(tmp_path, monkeypatch, capsys):
+    app = tmp_path / "src/App.jsx"
+    app.parent.mkdir(parents=True)
+    app.write_text("before")
+    monkeypatch.setattr(cmd, "BASE", tmp_path)
+    monkeypatch.setattr(cmd, "ARTICLE_AGENT", tmp_path / "agent.py")
+    monkeypatch.setattr(cmd.subprocess, "run", lambda *a, **k: SimpleNamespace(returncode=4))
+    with pytest.raises(SystemExit) as exc:
+        cmd.article_command("Objavi članek o dogodku", "aktualno")
+    assert exc.value.code == 64
+    assert "ARTICLE_AI_UNAVAILABLE" in capsys.readouterr().err
