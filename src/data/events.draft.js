@@ -1,5 +1,5 @@
 // Review draft only. Not imported by the production application.
-// Rolling review draft. Sources rechecked on 2026-09-19 at 07:00 Europe/Ljubljana.
+// Rolling review draft. Sources rechecked on 2026-09-20 at 07:00 Europe/Ljubljana.
 // Production remains unchanged until the calendar model and stable views are implemented.
 // Unknown values deliberately remain null.
 
@@ -32,8 +32,8 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "confirmed",
-    "lastCheckedAt": "2026-09-19T07:00:00+02:00"
+    "status": "expired",
+    "lastCheckedAt": "2026-09-20T07:00:00+02:00"
   },
   {
     "eventId": "nina-ramsak-markovic-stvari-2026-09-19",
@@ -63,8 +63,8 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "confirmed",
-    "lastCheckedAt": "2026-09-19T07:00:00+02:00"
+    "status": "expired",
+    "lastCheckedAt": "2026-09-20T07:00:00+02:00"
   },
   {
     "eventId": "hana-karim-fragments-memories-2026",
@@ -95,7 +95,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-19T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-20T07:00:00+02:00"
   },
   {
     "eventId": "gallery-at-your-fingertips-2026",
@@ -126,7 +126,7 @@ export const draftEvents = [
     "accessibility": "Tactile exhibition; confirm individual access needs with the gallery",
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-19T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-20T07:00:00+02:00"
   },
   {
     "eventId": "sms-1-katarza-2026-09-18",
@@ -221,7 +221,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-18T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-20T07:00:00+02:00"
   },
   {
     "eventId": "castle-reading-corner-2026",
@@ -252,7 +252,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-18T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-20T07:00:00+02:00"
   },
   {
     eventId: "opera-orchestra-academy-soloists-2026-09-17",
@@ -335,8 +335,8 @@ export const draftEvents = [
     familyFriendly: true,
     accessibility: null,
     indoorOutdoor: "outdoor",
-    status: "confirmed",
-    lastCheckedAt: "2026-09-19T07:00:00+02:00"
+    status: "expired",
+    lastCheckedAt: "2026-09-20T07:00:00+02:00"
   },
   {
     eventId: "mineralfest-ljubljana-2026-09-19",
@@ -356,8 +356,8 @@ export const draftEvents = [
     familyFriendly: true,
     accessibility: null,
     indoorOutdoor: "indoor",
-    status: "confirmed",
-    lastCheckedAt: "2026-09-19T07:00:00+02:00"
+    status: "expired",
+    lastCheckedAt: "2026-09-20T07:00:00+02:00"
   },
   {
     eventId: "sunday-flea-market-2026-09-20",
@@ -378,7 +378,7 @@ export const draftEvents = [
     accessibility: null,
     indoorOutdoor: "outdoor",
     status: "confirmed",
-    lastCheckedAt: "2026-09-19T07:00:00+02:00"
+    lastCheckedAt: "2026-09-20T07:00:00+02:00"
   },
   {
     eventId: "wind-orchestra-promenade-2026-09-20",
@@ -399,7 +399,7 @@ export const draftEvents = [
     accessibility: null,
     indoorOutdoor: "outdoor",
     status: "confirmed",
-    lastCheckedAt: "2026-09-19T07:00:00+02:00"
+    lastCheckedAt: "2026-09-20T07:00:00+02:00"
   },
   {
     eventId: "poljanska-fest-2026-09-20",
@@ -420,7 +420,7 @@ export const draftEvents = [
     accessibility: null,
     indoorOutdoor: "outdoor",
     status: "confirmed",
-    lastCheckedAt: "2026-09-19T07:00:00+02:00"
+    lastCheckedAt: "2026-09-20T07:00:00+02:00"
   },
   {
     eventId: "la-traviata-run-2026-09-22",
@@ -546,7 +546,7 @@ export const draftEvents = [
     accessibility: null,
     indoorOutdoor: "indoor",
     status: "confirmed",
-    lastCheckedAt: "2026-09-19T07:00:00+02:00"
+    lastCheckedAt: "2026-09-20T07:00:00+02:00"
   },
   {
     eventId: "national-gallery-fragments-past-2026",
@@ -567,6 +567,161 @@ export const draftEvents = [
     accessibility: null,
     indoorOutdoor: "indoor",
     status: "confirmed",
-    lastCheckedAt: "2026-09-19T07:00:00+02:00"
+    lastCheckedAt: "2026-09-20T07:00:00+02:00"
+  },
+  {
+    "eventId": "revelations-national-gallery-2026",
+    "title": "Revelations: Matej Sternen, The Poppies",
+    "summary": "The National Gallery's current Revelations display is open from 10 September to 2 December 2026. Current admission, daily opening hours and accessibility should be checked on the gallery visit page before arrival.",
+    "category": "exhibition",
+    "startAt": "2026-09-10T00:00:00+02:00",
+    "endAt": "2026-12-02T23:59:00+01:00",
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "National Gallery of Slovenia",
+      "address": "Prešernova cesta 24, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": null
+    },
+    "ticketUrl": null,
+    "officialUrl": "https://www.ng-slo.si/en/exhibitions-and-projects",
+    "sourceName": "National Gallery of Slovenia",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": null,
+    "accessibility": "The gallery publishes a dedicated accessibility section; confirm individual requirements directly",
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-20T07:00:00+02:00"
+  },
+  {
+    "eventId": "artish-2026-09-26",
+    "title": "ARTish",
+    "summary": "The free exhibition-sales festival returns to Gallusovo nabrežje on Saturday 26 September from 10:00 to 17:00. It is an easy tourist-friendly stop for locally made art and design; the riverside setting is outdoors.",
+    "category": "market",
+    "startAt": "2026-09-26T10:00:00+02:00",
+    "endAt": "2026-09-26T17:00:00+02:00",
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Gallusovo nabrežje",
+      "address": "Gallusovo nabrežje, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": 0,
+      "currency": "EUR",
+      "label": "Free admission",
+      "free": true
+    },
+    "ticketUrl": null,
+    "officialUrl": "https://www.visitljubljana.com/en/visitors/events",
+    "sourceName": "Ljubljana Tourism",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": true,
+    "accessibility": null,
+    "indoorOutdoor": "outdoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-20T07:00:00+02:00"
+  },
+  {
+    "eventId": "salome-mgl-2026-09-23-1930",
+    "title": "Salome",
+    "summary": "Ljubljana City Theatre lists Salome on the Main Stage on Wednesday 23 September at 19:30. The performance is language-dependent; international visitors should confirm the performance language, surtitles, price and access requirements before booking.",
+    "category": "theatre",
+    "startAt": "2026-09-23T19:30:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Mestno gledališče ljubljansko",
+      "address": "Čopova ulica 14, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": false
+    },
+    "ticketUrl": "https://www.mgl.si/en/schedule/",
+    "officialUrl": "https://www.mgl.si/en/schedule/",
+    "sourceName": "Mestno gledališče ljubljansko",
+    "languages": [],
+    "touristFriendly": null,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-20T07:00:00+02:00"
+  },
+  {
+    "eventId": "salome-mgl-2026-09-24-1930",
+    "title": "Salome",
+    "summary": "Ljubljana City Theatre schedules another Main Stage performance for Thursday 24 September at 19:30. Language, surtitles, current ticket availability and accessibility were not confirmed in the programme overview.",
+    "category": "theatre",
+    "startAt": "2026-09-24T19:30:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Mestno gledališče ljubljansko",
+      "address": "Čopova ulica 14, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": false
+    },
+    "ticketUrl": "https://www.mgl.si/en/schedule/",
+    "officialUrl": "https://www.mgl.si/en/schedule/",
+    "sourceName": "Mestno gledališče ljubljansko",
+    "languages": [],
+    "touristFriendly": null,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-20T07:00:00+02:00"
+  },
+  {
+    "eventId": "salome-mgl-2026-09-25-1930",
+    "title": "Salome",
+    "summary": "The Friday 25 September performance of Salome begins at 19:30 on Ljubljana City Theatre's Main Stage. Confirm language support, exact price, remaining tickets and access needs in the theatre's live sales flow.",
+    "category": "theatre",
+    "startAt": "2026-09-25T19:30:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Mestno gledališče ljubljansko",
+      "address": "Čopova ulica 14, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": false
+    },
+    "ticketUrl": "https://www.mgl.si/en/schedule/",
+    "officialUrl": "https://www.mgl.si/en/schedule/",
+    "sourceName": "Mestno gledališče ljubljansko",
+    "languages": [],
+    "touristFriendly": null,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-20T07:00:00+02:00"
   }
 ];
