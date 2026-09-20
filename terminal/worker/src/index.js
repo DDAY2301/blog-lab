@@ -2,6 +2,8 @@ const OWNER = "DDAY2301";
 const REPO = "blog-lab";
 const WORKFLOW = "operator-terminal.yml";
 const PUBLISHER_WORKFLOW = "agent-blog-lab-publisher.yml";
+const ARTICLE_AI_MODEL = "@cf/meta/llama-3.3-70b-instruct-fp8-fast";
+const SITE_AI_MODEL = "@cf/meta/llama-3.1-8b-instruct-fast";
 const SESSION_COOKIE = "bloglab_session";
 const SESSION_TTL_SECONDS = 60 * 60 * 12;
 const AUTHORIZED_USERS = Object.freeze({
@@ -307,7 +309,7 @@ async function generateArticleWithWorkersAi(env, body) {
 
   let result;
   try {
-    result = await env.AI.run("@cf/meta/llama-3.3-70b-instruct-fp8-fast", {
+    result = await env.AI.run(ARTICLE_AI_MODEL, {
       messages: [
         { role: "system", content: systemPrompt },
         { role: "user", content: userPrompt },
@@ -339,7 +341,7 @@ async function generateArticleWithWorkersAi(env, body) {
   return {
     ok: true,
     article,
-    model: "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+    model: ARTICLE_AI_MODEL,
     usage: result?.usage || null,
   };
 }
@@ -366,7 +368,7 @@ async function generateSiteEditWithWorkersAi(env, body) {
 
   let result;
   try {
-    result = await env.AI.run("@cf/meta/llama-3.3-70b-instruct-fp8-fast", {
+    result = await env.AI.run(SITE_AI_MODEL, {
       messages: [
         { role: "system", content: systemPrompt },
         { role: "user", content: userPrompt },
@@ -393,7 +395,7 @@ async function generateSiteEditWithWorkersAi(env, body) {
   return {
     ok: true,
     plan,
-    model: "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+    model: SITE_AI_MODEL,
     usage: result?.usage || null,
   };
 }
@@ -850,6 +852,8 @@ export default {
         media_upload_ready: mediaUploadReady,
         ai_writer_ready: Boolean(env.AI && typeof env.AI.run === "function"),
         site_editor_ready: Boolean(env.AI && typeof env.AI.run === "function"),
+        article_ai_model: ARTICLE_AI_MODEL,
+        site_ai_model: SITE_AI_MODEL,
         publisher_scheduler_ready: Boolean(String(env.GITHUB_DISPATCH_TOKEN || "").trim()),
         auth_mode: "built-in-session",
         login_secret_mode: "accept-either-configured-secret",
