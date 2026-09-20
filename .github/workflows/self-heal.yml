@@ -1,0 +1,277 @@
+name: Blog Lab Self Heal
+
+on:
+  workflow_run:
+    workflows:
+      - "Private Operator Terminal"
+      - "Blog Lab Publisher Agent"
+    types: [completed]
+  schedule:
+    - cron: "11 * * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: blog-lab-self-heal
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  actions: read
+  copilot-requests: write
+
+jobs:
+  diagnose-and-repair:
+    if: \${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'failure' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      GITHUB_TOKEN: \${{ github.token }}
+      COPILOT_GITHUB_TOKEN: \${{ secrets.COPILOT_GITHUB_TOKEN }}
+      WORKER_AI_TOKEN: \${{ secrets.TERMINAL_COMMAND_KEY }}
+      SELF_HEAL_WORKER_URL: "https://blog-lab.dan-grmusa.workers.dev/api/ai/repair"
+      MODEL_API_KEY: \${{ secrets.MODEL_API_KEY }}
+      MODEL_BASE_URL: \${{ secrets.MODEL_BASE_URL }}
+      MODEL_NAME: \${{ secrets.MODEL_NAME }}
+      SELF_HEAL_PROVIDER: "auto"
+      CLOUDFLARE_API_TOKEN: \${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: \${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      PYTHONDONTWRITEBYTECODE: "1"
+
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Sync latest main
+        shell: bash
+        run: |
+          git fetch origin main
+          git checkout -B main origin/main
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-agent.txt
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install validation and repair dependencies
+        shell: bash
+        run: |
+          pip install -r requirements-agent.txt
+          npm ci
+          npm --prefix terminal/worker ci
+          npm install -g @github/copilot@latest
+
+      - name: Collect failure and health diagnostics
+        id: diagnose
+        shell: bash
+        env:
+          FAILED_RUN_ID: \${{ github.event.workflow_run.id }}
+          EVENT_NAME: \${{ github.event_name }}
+        run: |
+          set +e
+          DIAG="$RUNNER_TEMP/self-heal-diagnostic.txt"
+          : > "$DIAG"
+          NEEDS_REPAIR=false
+          DEPLOY_DRIFT=false
+
+          echo "Blog Lab self-heal diagnostic" >> "$DIAG"
+          echo "event=$EVENT_NAME" >> "$DIAG"
+          echo "sha=$(git rev-parse HEAD)" >> "$DIAG"
+
+          if [[ "$EVENT_NAME" == "workflow_run" && -n "$FAILED_RUN_ID" ]]; then
+            echo "" >> "$DIAG"
+            echo "=== FAILED WORKFLOW LOG ===" >> "$DIAG"
+            gh run view "$FAILED_RUN_ID" --log-failed >> "$DIAG" 2>&1
+            NEEDS_REPAIR=true
+          fi
+
+          echo "" >> "$DIAG"
+          echo "=== LOCAL VALIDATION ===" >> "$DIAG"
+
+          node --check terminal/worker/src/index.js >> "$DIAG" 2>&1
+          [[ $? -eq 0 ]] || NEEDS_REPAIR=true
+
+          python -m py_compile agents/operator-terminal/*.py agents/blog-lab-publisher/agent.py agents/blog-lab-publisher/services/*.py agents/self-heal/*.py >> "$DIAG" 2>&1
+          [[ $? -eq 0 ]] || NEEDS_REPAIR=true
+
+          pytest -q agents/operator-terminal/tests agents/blog-lab-publisher/tests agents/self-heal/tests >> "$DIAG" 2>&1
+          [[ $? -eq 0 ]] || NEEDS_REPAIR=true
+
+          npm run build >> "$DIAG" 2>&1
+          [[ $? -eq 0 ]] || NEEDS_REPAIR=true
+
+          (
+            cd terminal/worker
+            npx wrangler deploy --dry-run
+          ) >> "$DIAG" 2>&1
+          [[ $? -eq 0 ]] || NEEDS_REPAIR=true
+
+          echo "" >> "$DIAG"
+          echo "=== PRODUCTION HEALTH ===" >> "$DIAG"
+          WORKER_HEALTH="$(curl -fsS --max-time 20 'https://blog-lab.dan-grmusa.workers.dev/health' 2>>"$DIAG")"
+          WORKER_RC=$?
+          if [[ $WORKER_RC -ne 0 || -z "$WORKER_HEALTH" ]]; then
+            echo "WORKER_HEALTH_UNREACHABLE rc=$WORKER_RC" >> "$DIAG"
+            DEPLOY_DRIFT=true
+          else
+            echo "$WORKER_HEALTH" >> "$DIAG"
+            export WORKER_HEALTH
+            python - <<'PY' >> "$DIAG" 2>&1
+import json, os, re
+from pathlib import Path
+health = json.loads(os.environ["WORKER_HEALTH"])
+source = Path("terminal/worker/src/index.js").read_text(encoding="utf-8")
+match = re.search(r'version:\s*"([^"]+)"', source)
+expected = match.group(1) if match else ""
+actual = str(health.get("version") or "")
+ready = bool(health.get("ready"))
+print(f"EXPECTED_WORKER_VERSION={expected}")
+print(f"ACTUAL_WORKER_VERSION={actual}")
+print(f"WORKER_READY={str(ready).lower()}")
+if not ready or (expected and actual != expected):
+    raise SystemExit(42)
+PY
+            [[ $? -eq 0 ]] || DEPLOY_DRIFT=true
+          fi
+
+          curl -fsS --max-time 20 'https://dday2301.github.io/blog-lab/' -o /dev/null >> "$DIAG" 2>&1
+          if [[ $? -ne 0 ]]; then
+            echo "PUBLIC_SITE_UNREACHABLE" >> "$DIAG"
+            NEEDS_REPAIR=true
+          fi
+
+          echo "needs_repair=$NEEDS_REPAIR" >> "$GITHUB_OUTPUT"
+          echo "deploy_drift=$DEPLOY_DRIFT" >> "$GITHUB_OUTPUT"
+          echo "diagnostic=$DIAG" >> "$GITHUB_OUTPUT"
+
+          echo "needs_repair=$NEEDS_REPAIR"
+          echo "deploy_drift=$DEPLOY_DRIFT"
+          tail -n 160 "$DIAG"
+
+      - name: Redeploy Worker when production is stale
+        id: redeploy
+        if: \${{ steps.diagnose.outputs.deploy_drift == 'true' && env.CLOUDFLARE_API_TOKEN != '' && env.CLOUDFLARE_ACCOUNT_ID != '' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd terminal/worker
+          npx wrangler deploy
+
+      - name: Verify Worker after redeploy
+        if: \${{ steps.redeploy.outcome == 'success' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          for attempt in 1 2 3 4 5 6; do
+            HEALTH="$(curl -fsS --max-time 20 'https://blog-lab.dan-grmusa.workers.dev/health' || true)"
+            if [[ -n "$HEALTH" ]]; then
+              export HEALTH
+              if python - <<'PY'
+import json, os, re
+from pathlib import Path
+health = json.loads(os.environ["HEALTH"])
+source = Path("terminal/worker/src/index.js").read_text(encoding="utf-8")
+match = re.search(r'version:\s*"([^"]+)"', source)
+expected = match.group(1) if match else ""
+raise SystemExit(0 if health.get("ready") is True and (not expected or health.get("version") == expected) else 1)
+PY
+              then
+                echo "Production Worker is synchronized."
+                exit 0
+              fi
+            fi
+            sleep 10
+          done
+          echo "::error::Worker redeploy completed but production health/version is still stale."
+          exit 1
+
+      - name: Run autonomous repair engine
+        id: repair
+        if: \${{ steps.diagnose.outputs.needs_repair == 'true' }}
+        shell: bash
+        run: |
+          set +e
+          python agents/self-heal/repair.py \
+            --diagnostic "\${{ steps.diagnose.outputs.diagnostic }}" \
+            --result "$RUNNER_TEMP/self-heal-result.json" \
+            --max-attempts 3
+          RC=$?
+          echo "exit_code=$RC" >> "$GITHUB_OUTPUT"
+          if [[ "$RC" -eq 64 ]]; then
+            echo "::warning::No configured AI repair provider was available or the problem requires external configuration."
+            exit 0
+          fi
+          exit "$RC"
+
+      - name: Reject protected-path changes
+        if: \${{ steps.repair.outputs.exit_code == '0' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          CHANGED="$(
+            git diff --name-only
+            git ls-files --others --exclude-standard
+          )"
+          if printf '%s\n' "$CHANGED" | grep -Eq '^(\.github/|agents/operator-terminal/|agents/self-heal/|AGENTS\.md$|requirements-agent\.txt$|\.env)'; then
+            echo "::error::Self-heal attempted to modify a protected path."
+            printf '%s\n' "$CHANGED"
+            exit 1
+          fi
+
+      - name: Reject credential-like changes
+        if: \${{ steps.repair.outputs.exit_code == '0' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git grep -I -n -E "(ghp_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|sk-[A-Za-z0-9_-]{20,})" -- . ':(exclude)package-lock.json'; then
+            echo "::error::Credential-like material detected."
+            exit 1
+          fi
+
+      - name: Commit validated autonomous repair
+        id: commit
+        if: \${{ steps.repair.outputs.exit_code == '0' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet && [[ -z "$(git status --porcelain)" ]]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "Repair engine reported success but no repository change remains."
+            exit 0
+          fi
+
+          CHANGED="$(git status --porcelain)"
+          echo "$CHANGED"
+          if printf '%s\n' "$CHANGED" | grep -Eq 'terminal/worker/|wrangler\.jsonc'; then
+            echo "worker_changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "worker_changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+          git config user.name "blog-lab-self-heal[bot]"
+          git config user.email "blog-lab-self-heal[bot]@users.noreply.github.com"
+          git add -A -- src public agents/blog-lab-publisher terminal/worker/src package.json wrangler.jsonc terminal/worker/package.json terminal/worker/wrangler.jsonc
+          git commit -m "Self-heal: repair verified Blog Lab failure"
+          git pull --rebase origin main
+          git push origin HEAD:main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Deploy repaired Worker when credentials are available
+        if: \${{ steps.commit.outputs.changed == 'true' && steps.commit.outputs.worker_changed == 'true' && env.CLOUDFLARE_API_TOKEN != '' && env.CLOUDFLARE_ACCOUNT_ID != '' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd terminal/worker
+          npx wrangler deploy
+
+      - name: Explain missing direct Cloudflare deployment credentials
+        if: \${{ steps.diagnose.outputs.deploy_drift == 'true' && env.CLOUDFLARE_API_TOKEN == '' }}
+        shell: bash
+        run: |
+          echo "::warning::Production Worker is stale/unreachable and GitHub has no CLOUDFLARE_API_TOKEN. Cloudflare Git Builds may still deploy the pushed commit; otherwise add CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID as repository secrets for direct self-healing deployment."
