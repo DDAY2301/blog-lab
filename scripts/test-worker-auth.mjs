@@ -64,7 +64,7 @@ async function runScenario(name, env) {
   if (!healthData.auth_ready || healthData.authorized_users_ready !== 2) {
     throw new Error(`${name}: unexpected health auth state: ${JSON.stringify(healthData)}`);
   }
-  if (healthData.version !== "auth-v6.7-routing") {
+  if (healthData.version !== "auth-v6.8-cron-catchup") {
     throw new Error(`${name}: unexpected auth version: ${healthData.version}`);
   }
   if (healthData.media_upload_ready !== true) {
@@ -75,6 +75,9 @@ async function runScenario(name, env) {
   }
   if (healthData.site_editor_ready !== false) {
     throw new Error(`${name}: site-editor binding should be absent in this isolated auth test`);
+  }
+  if (healthData.publisher_scheduler_ready !== true) {
+    throw new Error(`${name}: publisher scheduler should be ready when GitHub dispatch token is configured`);
   }
 }
 
