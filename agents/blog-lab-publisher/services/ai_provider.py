@@ -147,7 +147,20 @@ If evidence is insufficient for a material claim, pass must be false.
 
     # The Workers /api/ai/write endpoint intentionally validates article
     # shapes, so grounding review uses generic JSON-capable providers.
-    if provider in {"auto", "external", "model"}:
+    if provider in {"auto", "github_models", "github-models", "models"}:
+        try:
+            result = _github_models(system_prompt, user_prompt)
+            result.pop("_writer_provider", None)
+            return _normalize_grounding_review(result)
+        except AIUnavailable as exc:
+            errors.append(str(exc))
+            if provider in {"github_models", "github-models", "models"}:
+                raise
+
+    if provider in {"auto", "external", "model"} and all(
+        os.getenv(name, "").strip()
+        for name in ("MODEL_API_KEY", "MODEL_BASE_URL", "MODEL_NAME")
+    ):
         try:
             result = _openai_compatible(system_prompt, user_prompt)
             result.pop("_writer_provider", None)
@@ -157,7 +170,9 @@ If evidence is insufficient for a material claim, pass must be false.
             if provider in {"external", "model"}:
                 raise
 
-    if provider in {"auto", "copilot"}:
+    if provider in {"auto", "copilot"} and (
+        provider == "copilot" or os.getenv("COPILOT_GITHUB_TOKEN", "").strip()
+    ):
         try:
             result = _copilot(system_prompt + "\n\n" + user_prompt)
             result.pop("_writer_provider", None)
@@ -185,6 +200,43 @@ def _normalize_grounding_review(result: dict) -> dict:
         "issues": [str(x).strip()[:300] for x in issues if str(x).strip()][:10],
         "unsupported_claims": [str(x).strip()[:300] for x in unsupported if str(x).strip()][:10],
     }
+
+
+def _github_models(system_prompt: str, user_prompt: str) -> dict:
+    token = os.getenv("GITHUB_TOKEN", "").strip()
+    model = os.getenv("GITHUB_MODELS_MODEL", "openai/gpt-4.1").strip() or "openai/gpt-4.1"
+    if not token:
+        raise AIUnavailable("GitHub Models nima GITHUB_TOKEN.")
+
+    payload = {
+        "model": model,
+        "messages": [
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_prompt},
+        ],
+        "temperature": 0.22,
+        "response_format": {"type": "json_object"},
+    }
+    req = Request(
+        "https://models.github.ai/inference/chat/completions",
+        data=json.dumps(payload, ensure_ascii=False).encode("utf-8"),
+        headers={
+            "Authorization": f"Bearer {token}",
+            "Content-Type": "application/json",
+            "Accept": "application/vnd.github+json",
+            "User-Agent": "BlogLabPublisher/2.7",
+        },
+        method="POST",
+    )
+    try:
+        with urlopen(req, timeout=120) as response:
+            data = json.loads(response.read().decode("utf-8"))
+        article = _extract_json(data["choices"][0]["message"]["content"])
+        if isinstance(article, dict):
+            article["_writer_provider"] = "github_models"
+        return article
+    except Exception as exc:
+        raise AIUnavailable(f"GitHub Models ni uspel: {exc}") from exc
 
 
 def _openai_compatible(system_prompt: str, user_prompt: str) -> dict:
@@ -221,7 +273,18 @@ def generate(system_prompt: str, task_prompt: str, source_items: list[dict], cat
             if provider in {"worker", "workers_ai"}:
                 raise
 
-    if provider in {"auto", "external", "model"}:
+    if provider in {"auto", "github_models", "github-models", "models"}:
+        try:
+            return _github_models(system_prompt, user_prompt)
+        except AIUnavailable as exc:
+            errors.append(str(exc))
+            if provider in {"github_models", "github-models", "models"}:
+                raise
+
+    if provider in {"auto", "external", "model"} and all(
+        os.getenv(name, "").strip()
+        for name in ("MODEL_API_KEY", "MODEL_BASE_URL", "MODEL_NAME")
+    ):
         try:
             return _openai_compatible(system_prompt, user_prompt)
         except AIUnavailable as exc:
@@ -229,7 +292,9 @@ def generate(system_prompt: str, task_prompt: str, source_items: list[dict], cat
             if provider in {"external", "model"}:
                 raise
 
-    if provider in {"auto", "copilot"}:
+    if provider in {"auto", "copilot"} and (
+        provider == "copilot" or os.getenv("COPILOT_GITHUB_TOKEN", "").strip()
+    ):
         try:
             return _copilot(system_prompt + "\n\n" + user_prompt)
         except AIUnavailable as exc:
