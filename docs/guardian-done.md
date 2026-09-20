@@ -1,3 +1,0 @@
-# Guardian Done
-
-Done.
