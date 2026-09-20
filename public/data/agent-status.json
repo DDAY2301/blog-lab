@@ -1,28 +1,27 @@
 {
   "agent": "Blog Lab Publisher",
-  "status": "waiting",
+  "status": "completed",
   "enabled": true,
   "category": "aktualno",
-  "last_run": "2026-09-20T20:58:45+02:00",
-  "last_success": "2026-09-20T16:59:34+02:00",
-  "last_output": "politika-si-odpira-vrata-v-medije-vlada-kriticne-medije-s-profesionalnimi-novinarji-dojema-eeca644f",
+  "last_run": "2026-09-20T21:00:40+02:00",
+  "last_success": "2026-09-20T21:00:40+02:00",
+  "last_output": "anja-rakusa-brus-pomemben-argument-za-mojo-kandidaturo-je-izkusnja-z-aktualno-vlado-ki-str-2c38f7cd",
   "next_run": null,
-  "message": "Fallback QA ni uspel: ze_uporabljen_vir",
-  "posts_today": 3,
-  "scheduled_posts_today": 2,
+  "message": "Članek je uspešno pripravljen za objavo.",
+  "posts_today": 4,
+  "scheduled_posts_today": 3,
   "manual_posts_today": 1,
   "writer_mode": "local_evidence_ai",
   "scheduled_slots_done": [
     "2026-09-20|08:17|sport",
-    "2026-09-20|13:27|politika"
-  ],
-  "scheduled_slots_deferred": [
+    "2026-09-20|13:27|politika",
     "2026-09-20|19:43|aktualno"
   ],
+  "scheduled_slots_deferred": [],
   "last_editorial_hold": {
     "slot": "2026-09-20|19:43|aktualno",
     "reason": "ze_uporabljen_vir",
     "at": "2026-09-20T20:58:28+02:00"
   },
-  "last_error": "ze_uporabljen_vir"
+  "last_error": null
 }

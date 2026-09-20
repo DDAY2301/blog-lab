@@ -558,7 +558,17 @@ def main():
             return 3
     else:
         items = collect_automatic_sources(cfg, args.category)
-    seen = {x.get("hash") for x in processed}; fresh = [x for x in items if x.get("hash") not in seen]
+    seen = {x.get("hash") for x in processed}
+    used_processed_urls = {
+        str(x.get("url") or "").strip()
+        for x in processed
+        if str(x.get("url") or "").strip()
+    }
+    fresh = [
+        x for x in items
+        if x.get("hash") not in seen
+        and str(x.get("url") or "").strip() not in used_processed_urls
+    ]
     # Authenticated manual topic requests use --force. If current sources were already
     # observed by the autonomous cycle, allow reusing them for the explicit editorial
     # request; title/QA validation still prevents an identical published article.
