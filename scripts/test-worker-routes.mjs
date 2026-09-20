@@ -8,9 +8,12 @@ const env = {
   GITHUB_DISPATCH_TOKEN: "route-test-token",
   AI: {
     async run(model, request) {
-      if (model !== "@cf/meta/llama-3.3-70b-instruct-fp8-fast") throw new Error("unexpected model");
       if (!Array.isArray(request?.messages) || request.messages.length !== 2) throw new Error("unexpected AI messages");
       const userMessage = String(request.messages[1]?.content || "");
+      const expectedModel = userMessage.includes("REPOSITORY CONTEXT")
+        ? "@cf/meta/llama-3.1-8b-instruct-fast"
+        : "@cf/meta/llama-3.3-70b-instruct-fp8-fast";
+      if (model !== expectedModel) throw new Error("unexpected model: " + model);
       if (userMessage.includes("NESTED_RESPONSE_TEST")) {
         return {
           response: {
@@ -246,6 +249,7 @@ check(response.status === 200, "Workers AI writer must accept the internal servi
 const writerResult = await response.json();
 check(writerResult.ok === true, "Workers AI writer must report success");
 check(writerResult.article?.title === "Preizkus AI pisca", "Workers AI writer must return parsed article JSON");
+check(writerResult.model === "@cf/meta/llama-3.3-70b-instruct-fp8-fast", "Article writer must keep the quality 70B model");
 
 const nestedWriterPayload = JSON.stringify({
   system_prompt: "Vrni veljaven JSON članek.",
@@ -290,6 +294,7 @@ check(response.status === 200, "Workers AI site editor must accept the internal 
 const siteResult = await response.json();
 check(siteResult.ok === true, "Workers AI site editor must report success");
 check(Array.isArray(siteResult.plan?.edits) && siteResult.plan.edits.length === 1, "Site editor must return an edit plan");
+check(siteResult.model === "@cf/meta/llama-3.1-8b-instruct-fast", "Site editor must use the fast 8B model");
 
 response = await worker.fetch(new Request("https://example.test/?fresh=1", {
   headers: { cookie: "bloglab_session=old-session" }
