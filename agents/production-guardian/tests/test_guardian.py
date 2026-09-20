@@ -18,7 +18,8 @@ def test_redact_removes_token_like_values():
     fake_bearer = "Bearer " + "abcdefghijklmnopqrstuvwxyz" + "1234567890"
     fake_github_token = "gh" + "p_" + "abcdefghijklmnopqrstuvwxyz123456"
     text = guardian.redact(fake_bearer + " and " + fake_github_token)
-    assert "Bearer [REDACTED]" in text
+    assert text.count("[REDACTED]") == 2
+    assert "Bearer " not in text
     assert "ghp_" not in text
 
 
