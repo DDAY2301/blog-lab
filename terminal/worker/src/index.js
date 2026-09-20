@@ -801,7 +801,7 @@ export default {
       return json({
         ok: true,
         worker: "blog-lab",
-        version: "auth-v6.8-cron-catchup",
+        version: "auth-v6.9-scheduler-probe",
         ready: state.ready,
         auth_ready: authReady,
         authorized_users_ready: authReady ? 2 : 0,
@@ -814,6 +814,22 @@ export default {
         login_secret_mode: "accept-either-configured-secret",
         free_tier_compatible: true
       });
+    }
+
+    if (request.method === "POST" && url.pathname === "/api/scheduler/catch-up") {
+      if (!(await internalWriterAuthorized(request, env))) {
+        return json({ error: "Nepooblaščen interni scheduler klic.", code: "SCHEDULER_UNAUTHORIZED" }, 401);
+      }
+      try {
+        await dispatchPublisherCatchup(env);
+        return json({ ok: true, mode: "catch_up" }, 202);
+      } catch (error) {
+        return json({
+          error: "Publisher catch-up dispatch ni uspel.",
+          code: "SCHEDULER_DISPATCH_FAILED",
+          detail: String(error?.message || error || "").slice(0, 300)
+        }, 502);
+      }
     }
 
     if (request.method === "POST" && url.pathname === "/api/ai/write") {
