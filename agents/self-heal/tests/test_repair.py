@@ -89,3 +89,20 @@ def test_context_prefers_file_from_diagnostic(tmp_path, monkeypatch):
         path.write_text(content, encoding="utf-8")
     context = repair.build_context("Build failed in src/styles.css:12")
     assert context[0]["path"] == "src/styles.css"
+
+
+def test_repair_rejects_worker_auth_changes(tmp_path, monkeypatch):
+    monkeypatch.setattr(repair, "BASE", tmp_path)
+    path = tmp_path / "terminal/worker/src/index.js"
+    path.parent.mkdir(parents=True)
+    path.write_text("function verifySession() { return true; }\n", encoding="utf-8")
+    context = [{"path": "terminal/worker/src/index.js", "complete": True, "content": path.read_text()}]
+    with pytest.raises(repair.RepairError, match="authentication"):
+        repair.apply_plan({
+            "edits": [{
+                "path": "terminal/worker/src/index.js",
+                "action": "replace",
+                "old": "function verifySession() { return true; }",
+                "new": "function verifySession() { return false; }",
+            }]
+        }, context)
