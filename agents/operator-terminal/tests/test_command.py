@@ -1399,3 +1399,29 @@ def test_turn_agent_off_routes_to_control_and_disables(tmp_path, monkeypatch):
     assert cmd.infer_mode("turn agent off") == "control"
     cmd.control_command("turn agent off")
     assert json.loads(control.read_text(encoding="utf-8"))["enabled"] is False
+
+
+@pytest.mark.parametrize(("text", "expected"), [
+    ("ugasi agnta molim", "control"),
+    ("proveri sttaus agenta", "control"),
+    ("pokreni objavljivajne", "control"),
+    ("napisi clnak o lokalnom dogadjaju", "article"),
+    ("objavi claanak o tehnologiji", "article"),
+    ("uredi stranicu i dodaj galerju", "site"),
+    ("redizajn sajta za mobilni", "site"),
+    ("fix the webiste navigation", "site"),
+    ("create an artcle about science", "article"),
+    ("shut dwon agent", "control"),
+])
+def test_multilingual_and_heavy_typo_intent_routing(text, expected):
+    assert cmd.infer_mode(text) == expected
+
+
+@pytest.mark.parametrize(("text", "needle"), [
+    ("provjeri status agenta", "preveri status agent"),
+    ("uredi stranicu", "uredi stran"),
+    ("redesign the website", "izboljsaj dizajn stran"),
+    ("turn agent off", "izklopi agent"),
+])
+def test_phrase_alias_normalization(text, needle):
+    assert needle in cmd._normalized_intent(text)
