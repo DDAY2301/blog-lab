@@ -1,0 +1,111 @@
+name: One-shot publish aktualno catch-up
+
+on:
+  push:
+    paths:
+      - ".github/workflows/one-shot-publish-aktualno-catchup.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+  copilot-requests: write
+
+concurrency:
+  group: blog-lab-publisher
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    env:
+      AGENT_ENABLED: true
+      PUBLISH_MODE: automatic
+      AI_PROVIDER: auto
+      WORKER_AI_URL: https://blog-lab.dan-grmusa.workers.dev/api/ai/write
+      WORKER_AI_TOKEN: ${{ secrets.TERMINAL_COMMAND_KEY }}
+      MODEL_API_KEY: ${{ secrets.MODEL_API_KEY }}
+      MODEL_BASE_URL: ${{ secrets.MODEL_BASE_URL }}
+      MODEL_NAME: ${{ secrets.MODEL_NAME }}
+      GITHUB_TOKEN: ${{ github.token }}
+      COPILOT_GITHUB_TOKEN: ${{ secrets.COPILOT_GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - name: Sync latest main
+        shell: bash
+        run: |
+          git fetch origin main
+          git checkout -B main origin/main
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-agent.txt
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install dependencies
+        run: |
+          pip install -r requirements-agent.txt
+          npm ci
+          npm install -g @github/copilot@latest
+      - name: Run tests
+        run: |
+          python -m py_compile agents/blog-lab-publisher/agent.py agents/blog-lab-publisher/services/*.py
+          pytest -q agents/blog-lab-publisher/tests/test_ai_provider_availability.py agents/blog-lab-publisher/tests/test_local_evidence_ai.py
+      - name: Publish missing aktualno slot
+        shell: bash
+        run: |
+          python agents/blog-lab-publisher/agent.py --category aktualno --scheduled-slot "2026-09-20|19:43|aktualno"
+          if git diff --quiet -- src/App.jsx; then
+            echo "Agent did not write article; running deterministic fallback."
+            python agents/blog-lab-publisher/autonomous_fallback.py --category aktualno --scheduled-slot "2026-09-20|19:43|aktualno"
+          fi
+      - name: Build public site
+        run: npm run build
+      - name: Scan credentials
+        shell: bash
+        run: |
+          if git grep -I -n -E "(ghp_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|sk-[A-Za-z0-9_-]{20,})" -- . ':(exclude)package-lock.json'; then
+            exit 1
+          fi
+      - name: Commit article/state and remove workflow
+        id: commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -f .github/workflows/one-shot-publish-aktualno-catchup.yml
+          git config user.name "blog-lab-publisher[bot]"
+          git config user.email "blog-lab-publisher[bot]@users.noreply.github.com"
+          git add -A -- src/App.jsx data public/data content/drafts logs .github/workflows/one-shot-publish-aktualno-catchup.yml
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git commit -m "Agent: publish aktualno catch-up"
+          git pull --rebase origin main
+          git push origin HEAD:main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+      - name: Final build after sync
+        if: ${{ steps.commit.outputs.changed == 'true' }}
+        run: npm run build
+      - name: Configure GitHub Pages
+        if: ${{ steps.commit.outputs.changed == 'true' }}
+        uses: actions/configure-pages@v6
+      - name: Upload Pages artifact
+        if: ${{ steps.commit.outputs.changed == 'true' }}
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+      - name: Deploy Pages
+        id: deployment
+        if: ${{ steps.commit.outputs.changed == 'true' }}
+        uses: actions/deploy-pages@v5
