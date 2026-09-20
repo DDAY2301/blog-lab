@@ -77,11 +77,13 @@ jobs:
         shell: bash
         run: |
           set -u
+          LOG="$RUNNER_TEMP/operator-command.log"
+          : > "$LOG"
           for attempt in 1 2 3; do
             echo "Operator attempt $attempt/3"
             set +e
-            python agents/operator-terminal/command.py --command-file "$RUNNER_TEMP/operator-command.json"
-            COMMAND_RC=$?
+            python agents/operator-terminal/command.py --command-file "$RUNNER_TEMP/operator-command.json" 2>&1 | tee "$LOG"
+            COMMAND_RC=${PIPESTATUS[0]}
             set -e
             if [[ "$COMMAND_RC" -eq 0 ]] \
               && pytest -q agents/blog-lab-publisher/tests \
@@ -90,6 +92,14 @@ jobs:
               exit 0
             fi
             if [[ "$COMMAND_RC" -eq 64 ]]; then
+              if grep -Eqi 'SITE_AI_CAPACITY_UNAVAILABLE|AI capacity unavailable|Workers AI kvota|Workers AI quota|daily free allocation' "$LOG"; then
+                echo "::warning::Workers AI site-editor capacity is unavailable. Queuing this site edit for automatic replay instead of failing the terminal request."
+                python agents/operator-terminal/deferred_site_edits.py append \
+                  --command-file "$RUNNER_TEMP/operator-command.json" \
+                  --request-id "${{ inputs.request_id }}" \
+                  --reason "$(tail -c 1400 "$LOG")"
+                exit 0
+              fi
               echo "::error::The request cannot be completed safely with the currently available sources/configuration. Not retrying."
               exit 64
             fi
