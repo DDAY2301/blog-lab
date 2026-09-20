@@ -840,3 +840,99 @@ def test_collect_automatic_sources_filters_broad_noise(monkeypatch):
         "https://sport.example.si/derbi",
         "https://example.com/tennis-final",
     ]
+
+
+def test_automatic_story_pool_keeps_one_coherent_story():
+    import agent
+
+    items = [
+        {
+            "title": "Tour de France bi se lahko začel v Sloveniji",
+            "summary": "Organizatorji govorijo o možnosti slovenskega začetka dirke.",
+            "url": "https://example.com/tour-a",
+            "verified_direct": True,
+            "provider": "bing-news",
+        },
+        {
+            "title": "Slovenski začetek Tour de France dobiva podporo",
+            "summary": "Pogovori o začetku Tour de France v Sloveniji se nadaljujejo.",
+            "url": "https://example.com/tour-b",
+            "verified_direct": True,
+            "provider": "bing-news",
+        },
+        {
+            "title": "Košarkarska liga se vrača prihodnji teden",
+            "summary": "Klubi se pripravljajo na novo košarkarsko sezono.",
+            "url": "https://example.com/basket",
+            "verified_direct": True,
+            "provider": "bing-news",
+        },
+    ]
+
+    pool = agent.automatic_story_pool(items, "sport", max_items=6)
+    urls = [item["url"] for item in pool]
+    assert "https://example.com/tour-a" in urls
+    assert "https://example.com/tour-b" in urls
+    assert "https://example.com/basket" not in urls
+
+
+def test_automatic_story_pool_prefers_direct_evidence():
+    import agent
+
+    items = [
+        {
+            "title": "Slovenija vodi po prvem dnevu",
+            "summary": "Kratek RSS povzetek brez širšega konteksta.",
+            "url": "https://example.com/rss",
+            "verified_direct": False,
+            "provider": "",
+        },
+        {
+            "title": "Davisov pokal: Slovenija vodi po prvem dnevu",
+            "summary": (
+                "Neposredno preverjena stran opisuje Davisov pokal, potek dvoboja, "
+                "rezultat prvega dne in izjave po tekmah."
+            ),
+            "url": "https://example.com/direct",
+            "verified_direct": True,
+            "provider": "bing-news",
+        },
+    ]
+
+    pool = agent.automatic_story_pool(items, "sport", max_items=6)
+    assert pool[0]["url"] == "https://example.com/direct"
+
+
+def test_article_used_items_marks_only_cited_sources_processed():
+    import agent
+
+    pool = [
+        {"url": "https://example.com/a", "title": "A"},
+        {"url": "https://example.com/b", "title": "B"},
+        {"url": "https://example.com/c", "title": "C"},
+    ]
+    article = {
+        "sources": [
+            {"label": "B", "url": "https://example.com/b"},
+            {"label": "C", "url": "https://example.com/c"},
+        ]
+    }
+    assert [item["url"] for item in agent.article_used_items(article, pool)] == [
+        "https://example.com/b",
+        "https://example.com/c",
+    ]
+
+
+def test_grounding_repair_task_contains_review_and_draft():
+    import agent
+
+    article = {"title": "Test", "content": "Unsupported competition claim."}
+    review = {
+        "issues": ["Competition format is not in sources."],
+        "unsupported_claims": ["first world group"],
+    }
+    prompt = agent.grounding_repair_task("TASK", article, review)
+    assert "DEJSTVENI QA POPRAVEK" in prompt
+    assert "Competition format is not in sources." in prompt
+    assert "first world group" in prompt
+    assert "Unsupported competition claim." in prompt
