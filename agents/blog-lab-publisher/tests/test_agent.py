@@ -969,3 +969,31 @@ def test_fallback_digest_does_not_repeat_lead_summary():
     ]
     article = build_digest(items, "sport", max_items=2)
     assert article["content"].count(lead) == 1
+
+
+def test_defer_scheduled_slot_is_idempotent_and_records_reason(monkeypatch):
+    import agent
+
+    state = {"scheduled_slots_deferred": []}
+    fixed = agent.datetime(2026, 9, 20, 10, 45, tzinfo=agent.ZoneInfo("Europe/Ljubljana"))
+    monkeypatch.setattr(agent, "now", lambda: fixed)
+
+    agent.defer_scheduled_slot(state, "2026-09-20|08:17|sport", "ponavljanje")
+    agent.defer_scheduled_slot(state, "2026-09-20|08:17|sport", "ponavljanje")
+
+    assert state["scheduled_slots_deferred"] == ["2026-09-20|08:17|sport"]
+    assert state["last_editorial_hold"]["reason"] == "ponavljanje"
+
+
+def test_mark_scheduled_slot_done_removes_deferred_marker():
+    import agent
+
+    slot = "2026-09-20|08:17|sport"
+    state = {
+        "scheduled_slots_done": [],
+        "scheduled_slots_deferred": [slot],
+    }
+    agent.mark_scheduled_slot_done(state, slot)
+
+    assert state["scheduled_slots_done"] == [slot]
+    assert state["scheduled_slots_deferred"] == []
