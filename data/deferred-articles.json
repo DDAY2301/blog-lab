@@ -1,0 +1,14 @@
+[
+  {
+    "id": "909bc731-7633-4656-bfec-4b8c8609c044",
+    "status": "pending",
+    "command": "dodaj sedaj članek kako se je odvijalo dogakjanje tega vikenda",
+    "mode": "article",
+    "category": "aktualno",
+    "actor": "terminal",
+    "created_at": "2026-09-20T12:11:32Z",
+    "updated_at": "2026-09-20T12:16:00Z",
+    "attempts": 1,
+    "reason": "Workers AI writer returned HTTP 502 after sources were found; queued for automatic replay."
+  }
+]
