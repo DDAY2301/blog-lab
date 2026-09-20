@@ -1,0 +1,13 @@
+{
+  "category": "sport",
+  "errors": [
+    "ponavljanje"
+  ],
+  "article": {
+    "/skip": true,
+    "razlog": "Viri ne zagotavljajo dovolj podatkov za samostojen članek.",
+    "fallback": false,
+    "gallery": [],
+    "id": "objava-7b2ee46f"
+  }
+}
