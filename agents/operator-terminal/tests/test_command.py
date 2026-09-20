@@ -810,3 +810,183 @@ def test_site_context_includes_writer_prompts_for_article_length_request(tmp_pat
     assert "agents/blog-lab-publisher/prompts/system.md" in paths
     assert "agents/blog-lab-publisher/prompts/task.md" in paths
     assert "agents/blog-lab-publisher/config.yaml" in paths
+
+
+def test_apply_site_plan_context_disambiguates_repeated_css_anchor(tmp_path, monkeypatch):
+    monkeypatch.setattr(cmd, "BASE", tmp_path)
+    path = tmp_path / "src/styles.css"
+    path.parent.mkdir(parents=True)
+    path.write_text(
+        ".one { color: red; gap: 8px; }\n"
+        ".two { color: blue; gap: 8px; }\n"
+        ".three { color: green; gap: 8px; }\n"
+        ".four { color: black; gap: 8px; }\n",
+        encoding="utf-8",
+    )
+    changed = cmd._apply_site_plan({
+        "edits": [{
+            "path": "src/styles.css",
+            "action": "replace",
+            "old": "gap: 8px;",
+            "new": "gap: 12px;",
+            "before": ".two { color: blue; ",
+        }],
+    })
+    value = path.read_text(encoding="utf-8")
+    assert changed == 1
+    assert ".two { color: blue; gap: 12px; }" in value
+    assert value.count("gap: 8px;") == 3
+
+
+def test_apply_site_plan_occurrence_disambiguates_repeated_anchor(tmp_path, monkeypatch):
+    monkeypatch.setattr(cmd, "BASE", tmp_path)
+    path = tmp_path / "src/example.jsx"
+    path.parent.mkdir(parents=True)
+    path.write_text("same\nsame\nsame\n", encoding="utf-8")
+    changed = cmd._apply_site_plan({
+        "edits": [{
+            "path": "src/example.jsx",
+            "action": "replace",
+            "old": "same",
+            "new": "middle",
+            "occurrence": 2,
+        }],
+    })
+    assert changed == 1
+    assert path.read_text(encoding="utf-8") == "same\nmiddle\nsame\n"
+
+
+def test_apply_site_plan_replace_all_is_explicit_and_bounded(tmp_path, monkeypatch):
+    monkeypatch.setattr(cmd, "BASE", tmp_path)
+    path = tmp_path / "src/styles.css"
+    path.parent.mkdir(parents=True)
+    path.write_text("gap: 8px;\ngap: 8px;\n", encoding="utf-8")
+    changed = cmd._apply_site_plan({
+        "edits": [{
+            "path": "src/styles.css",
+            "action": "replace_all",
+            "old": "gap: 8px;",
+            "new": "gap: 10px;",
+        }],
+    })
+    assert changed == 1
+    assert path.read_text(encoding="utf-8").count("gap: 10px;") == 2
+
+
+def test_apply_site_plan_rewrite_requires_complete_context(tmp_path, monkeypatch):
+    monkeypatch.setattr(cmd, "BASE", tmp_path)
+    path = tmp_path / "src/Small.jsx"
+    path.parent.mkdir(parents=True)
+    path.write_text("export default 1;\n", encoding="utf-8")
+    plan = {
+        "edits": [{
+            "path": "src/Small.jsx",
+            "action": "rewrite",
+            "new": "export default 2;",
+        }],
+    }
+    with pytest.raises(cmd.SiteEditError, match="complete"):
+        cmd._apply_site_plan(plan, [{"path": "src/Small.jsx", "complete": False, "snippets": []}])
+    changed = cmd._apply_site_plan(
+        plan,
+        [{"path": "src/Small.jsx", "complete": True, "snippets": [{"label": "full", "content": "export default 1;"}]}],
+    )
+    assert changed == 1
+    assert path.read_text(encoding="utf-8") == "export default 2;\n"
+
+
+def test_ambiguous_replace_error_includes_match_locations(tmp_path, monkeypatch):
+    monkeypatch.setattr(cmd, "BASE", tmp_path)
+    path = tmp_path / "src/styles.css"
+    path.parent.mkdir(parents=True)
+    path.write_text(".a { gap: 8px; }\n.b { gap: 8px; }\n", encoding="utf-8")
+    with pytest.raises(cmd.SiteEditError) as exc:
+        cmd._apply_site_plan({
+            "edits": [{
+                "path": "src/styles.css",
+                "action": "replace",
+                "old": "gap: 8px;",
+                "new": "gap: 12px;",
+            }],
+        })
+    message = str(exc.value)
+    assert "najden 2x" in message
+    assert "line 1" in message and "line 2" in message
+    assert "before/after" in message
+
+
+def test_site_context_discovers_relevant_component_outside_fixed_list(tmp_path, monkeypatch):
+    monkeypatch.setattr(cmd, "BASE", tmp_path)
+    files = {
+        "src/App.jsx": "export default function App(){ return null }",
+        "src/styles.css": "body{}",
+        "src/components/NewsletterPanel.jsx": "export function NewsletterPanel(){ return <section>newsletter signup</section> }",
+        "src/components/Unrelated.jsx": "export function Unrelated(){ return null }",
+    }
+    for rel, content in files.items():
+        path = tmp_path / rel
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(content, encoding="utf-8")
+
+    context = cmd._site_context("uredi newsletter signup komponento")
+    paths = [item["path"] for item in context]
+    assert "src/components/NewsletterPanel.jsx" in paths
+
+
+def test_site_context_can_include_index_html_for_favicon_request(tmp_path, monkeypatch):
+    monkeypatch.setattr(cmd, "BASE", tmp_path)
+    for rel, content in {
+        "src/App.jsx": "export default function App(){ return null }",
+        "src/styles.css": "body{}",
+        "index.html": "<html><head><title>Blog Lab</title></head></html>",
+    }.items():
+        path = tmp_path / rel
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(content, encoding="utf-8")
+
+    context = cmd._site_context("spremeni favicon in meta naslov strani")
+    assert "index.html" in [item["path"] for item in context]
+
+
+def test_workers_ai_site_command_self_corrects_ambiguous_replace(tmp_path, monkeypatch):
+    monkeypatch.setattr(cmd, "BASE", tmp_path)
+    path = tmp_path / "src/styles.css"
+    path.parent.mkdir(parents=True)
+    path.write_text(
+        ".a { gap: 8px; }\n"
+        ".b { gap: 8px; }\n"
+        ".c { gap: 8px; }\n"
+        ".d { gap: 8px; }\n",
+        encoding="utf-8",
+    )
+    (tmp_path / "src/App.jsx").write_text("export default function App(){ return null }", encoding="utf-8")
+
+    plans = [
+        {
+            "summary": "ambiguous first plan",
+            "edits": [{"path": "src/styles.css", "action": "replace", "old": "gap: 8px;", "new": "gap: 12px;"}],
+        },
+        {
+            "summary": "corrected plan",
+            "edits": [{
+                "path": "src/styles.css",
+                "action": "replace",
+                "old": "gap: 8px;",
+                "new": "gap: 12px;",
+                "before": ".c { ",
+            }],
+        },
+    ]
+    feedbacks = []
+
+    def fake_request(command, context, feedback=""):
+        feedbacks.append(feedback)
+        return plans.pop(0)
+
+    monkeypatch.setattr(cmd, "_site_ai_request", fake_request)
+    cmd.workers_ai_site_command("spremeni razmik v tretjem CSS pravilu")
+
+    value = path.read_text(encoding="utf-8")
+    assert ".c { gap: 12px; }" in value
+    assert len(feedbacks) == 2
+    assert "najden 4x" in feedbacks[1]
