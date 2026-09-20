@@ -11,6 +11,25 @@ const env = {
       if (model !== "@cf/meta/llama-3.3-70b-instruct-fp8-fast") throw new Error("unexpected model");
       if (!Array.isArray(request?.messages) || request.messages.length !== 2) throw new Error("unexpected AI messages");
       const userMessage = String(request.messages[1]?.content || "");
+      if (userMessage.includes("NESTED_RESPONSE_TEST")) {
+        return {
+          response: {
+            article: {
+              title: "Nested AI članek",
+              content: "Nested odgovor je bil pravilno razvit.",
+              excerpt: "Nested preizkus.",
+              seoDescription: "Nested preizkus.",
+              category: "Aktualno",
+              tags: ["test"],
+              heroImage: null,
+              gallery: [],
+              video: null,
+              sources: []
+            }
+          },
+          usage: { input_tokens: 10, output_tokens: 10 }
+        };
+      }
       if (userMessage.includes("REPOSITORY CONTEXT")) {
         return {
           response: {
@@ -227,6 +246,21 @@ check(response.status === 200, "Workers AI writer must accept the internal servi
 const writerResult = await response.json();
 check(writerResult.ok === true, "Workers AI writer must report success");
 check(writerResult.article?.title === "Preizkus AI pisca", "Workers AI writer must return parsed article JSON");
+
+const nestedWriterPayload = JSON.stringify({
+  system_prompt: "Vrni veljaven JSON članek.",
+  task_prompt: "NESTED_RESPONSE_TEST",
+  category: "aktualno",
+  source_items: [{ title: "Vir", summary: "Podatek", url: "https://example.com/nested" }]
+});
+response = await worker.fetch(new Request("https://example.test/api/ai/write", {
+  method: "POST",
+  headers: writerHeaders,
+  body: nestedWriterPayload
+}), env);
+check(response.status === 200, "Workers AI writer must accept a nested article object");
+const nestedWriterResult = await response.json();
+check(nestedWriterResult.article?.title === "Nested AI članek", "Workers AI writer must unwrap nested article payloads");
 
 const sitePayload = JSON.stringify({
   system_prompt: "Vrni JSON edit plan.",
