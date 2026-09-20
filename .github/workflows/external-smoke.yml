@@ -39,7 +39,7 @@ jobs:
               raise SystemExit("Worker version marker not found")
           print(match.group(1))
           PY
-)"
+          )"
           echo "Expected Worker version: $EXPECTED_VERSION"
           for attempt in {1..24}; do
             echo "Worker probe $attempt/24"
