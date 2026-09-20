@@ -36,7 +36,7 @@ INTENT_TOKEN_ALIASES = {
     "skrij":"skrij","hide":"skrij","pokazi":"pokazi","show":"pokazi",
     "ustavi":"ustavi","zaustavi":"ustavi","stop":"ustavi","pause":"pavza","pavza":"pavza",
     "nadaljuj":"nadaljuj","resume":"nadaljuj","continue":"nadaljuj",
-    "vklopi":"vklopi","enable":"vklopi","izklopi":"izklopi","disable":"izklopi",
+    "vklopi":"vklopi","enable":"vklopi","on":"vklopi","izklopi":"izklopi","disable":"izklopi","off":"izklopi",
     "zazeni":"zazeni","start":"zazeni","restart":"restart","aktiviraj":"aktiviraj","deaktiviraj":"deaktiviraj",
     "samodejno":"samodejno","avtomatsko":"samodejno","automatic":"samodejno","samostojno":"samodejno","autonomous":"samodejno",
     "osnutek":"osnutek","draft":"osnutek","pregled":"pregled","review":"pregled",
@@ -158,13 +158,20 @@ def _site_intent(low: str) -> bool:
         "stran", "spletno stran", "rubrik", "kategor", "zavihek", "tab", "meni", "header", "footer", "navigacij",
         "layout", "dizajn", "design", "izgled", "sekcij", "stolpec", "sidebar",
         "galerij", "gumb", "logo", "favicon", "hero", "kartic", "css", "responsive",
+        "barv", "tema", "palet", "font", "tipograf", "slik", "fotograf", "video",
     ]
     return any(term in low for term in site_terms)
 
 def _article_intent(low: str) -> bool:
     article_nouns = ["članek", "clanek", "prispevek", "novico", "novica", "blog", "objavo", "objava", "post"]
     article_actions = ["objavi", "napiši", "napisi", "pripravi", "ustvari", "sestavi"]
-    if any(noun in low for noun in article_nouns) and any(action in low for action in article_actions):
+    site_targets = ["footer", "header", "hero", "meni", "navigacij", "rubrik", "kategor", "stran", "css", "layout"]
+    has_noun = any(noun in low for noun in article_nouns)
+    has_action = any(action in low for action in article_actions)
+    has_topic = any(marker in f" {low} " for marker in [" o ", " na temo ", " o temi ", " glede ", " about ", " regarding "])
+    if has_noun and (has_action or has_topic):
+        return True
+    if has_action and has_topic and not any(target in low for target in site_targets):
         return True
     return "napiši o" in low or "napisi o" in low
 
@@ -186,7 +193,7 @@ def _article_configuration_intent(low: str) -> bool:
     # Explicit one-off editorial requests such as "Napiši daljši članek o X"
     # are still article requests when they clearly name a topic.
     action = any(term in low for term in ["objavi", "napiši", "napisi", "pripravi", "ustvari", "sestavi"])
-    topic = any(term in f" {low} " for term in [" o ", " na temo ", " o temi ", " glede "])
+    topic = any(term in f" {low} " for term in [" o ", " na temo ", " o temi ", " glede ", " about ", " regarding "])
     return not (action and topic)
 
 
@@ -823,10 +830,10 @@ def builtin_site_command(command: str) -> bool:
         return True
     if _theme_intent(low):
         theme = _requested_theme(low)
-        if not theme:
-            print("BUILTIN_SITE_UNSUPPORTED tema ni prepoznana.", file=sys.stderr)
-            raise SystemExit(64)
-        return apply_theme(theme)
+        if theme:
+            return apply_theme(theme)
+        # Unknown/free-form palettes are valid site-edit requests; let the AI
+        # planner handle them instead of rejecting an otherwise understandable command.
     if _design_intent(low):
         return apply_design_upgrade()
     if manage_rubric(command):
