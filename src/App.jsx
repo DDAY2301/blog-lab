@@ -18,6 +18,43 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "drava-cycle-route-maribor-ptuj-guide",
+    "title": "Cycling the Drava: A Car-Light Maribor–Ptuj Guide",
+    "excerpt": "Ride the official 30 km Drava Bike stage from Maribor to Ptuj, with route choices, current-condition checks, safer planning and a carefully verified train-return strategy.",
+    "seoDescription": "Plan the 30 km Drava cycle route from Maribor to Ptuj: official route options, bike and weather checks, safety advice and a car-light train return.",
+    "content": "The official Drava Bike route makes it possible to link two of eastern Slovenia’s most rewarding cities on a **30-kilometre cycling stage**. The route page lists two alternatives between Maribor and Ptuj—via **Starše** or **Duplek**—so this is not a single line that every rider should follow automatically.\n\nThis guide is for independent leisure cyclists who want a one-way ride and a possible rail return. It is not a promise of a traffic-free path: expect a mixture of cycle infrastructure, local roads and changing surfaces, and make the current official map your source of truth.\n\n## Choose the official route before you start\n\nThe Slovenian and Croatian section of Drava Bike is divided into six marked stages. Maribor–Ptuj is stage 3, listed as:\n\n1. **Via Starše — 30 km**\n2. **Via Duplek — 30 km**\n\nDownload or open the [official Drava Bike map](https://dravabike.si/en/) before departure. Do not choose a branch only because it looks shorter in a general navigation app. Temporary works, river conditions and local diversions can make a saved route outdated.\n\nThe official site displayed active warnings for other Drava Bike sections when checked on **20 September 2026**. That is a useful reminder to read the live warnings page even when your planned stage is not named in the alert.\n\n## What the ride is like\n\nThe broad direction follows the Drava east from Maribor towards Ptuj, but the ride is not a closed racing circuit. You may meet residents, farm vehicles, walkers and other cyclists. Slow down where sight lines narrow and follow road signs whenever the route joins public roads.\n\nThe official route describes the wider Drava Bike journey as suitable for families and leisure cyclists. That does not mean every rider, child or trailer will find every section easy. Fitness, traffic confidence, surface conditions and weather all matter.\n\nAllow generous time for stops rather than treating 30 km as a fixed schedule. Maribor and Ptuj both reward a slower visit, and an unhurried pace leaves room to turn back or change plans if conditions deteriorate.\n\n## Weather and seasonal planning\n\nThe Drava Bike page showed a warm forecast of roughly **12–28°C for 20 September 2026**, followed by cooler days. A website forecast is not a guarantee for the river corridor.\n\nCheck the [official ARSO forecast](https://meteo.arso.gov.si/met/en/) on the morning of the ride. Postpone the trip for thunderstorms, strong wind, flooding, poor visibility or any official warning. In early autumn, carry a light waterproof and an extra layer even when the afternoon looks warm.\n\nDaylight is shortening. Set a turnaround time and avoid relying on an unfamiliar river route after dark.\n\n## Bike, equipment and skills\n\nA serviced trekking, touring, gravel or suitable city bike is a sensible starting point. Before leaving, check brakes, tyres, chain and lights.\n\nCarry:\n\n- a helmet and high-visibility detail;\n- water and food;\n- a spare tube or repair kit, pump and basic tool;\n- a charged phone plus an offline copy of the official route;\n- identification, payment card and some cash;\n- a light waterproof layer and sun protection;\n- front and rear lights, even for a daytime plan.\n\nThe Slovenian route name is `Dravska kolesarska pot`. It can help when asking locally for directions, but route signs and the current official map take priority over informal advice.\n\n## A car-light plan\n\nMaribor and Ptuj both have railway stations. A train can make a one-way ride practical, but **bicycle carriage is not automatic on every service**.\n\nUse the [Slovenian Railways timetable](https://potniski.sz.si/en/) for the exact travel date and check that the chosen train accepts bicycles. Confirm available space, any bicycle supplement and current disruption notices. Rail-replacement buses may have different bicycle rules or no usable capacity.\n\nA robust plan is:\n\n1. Check the outbound and return timetable before leaving accommodation.\n2. Confirm bicycle carriage for the specific train, not just the route.\n3. Keep enough time to reach the station without rushing.\n4. Identify an earlier fallback service.\n5. Do not make the final train of the day your only rescue plan.\n\nIf you are uncertain about carriage conditions, ask Slovenian Railways before the ride or plan a return by bicycle only if your fitness, daylight and weather make the extra distance realistic.\n\n## Experiencing Maribor and Ptuj responsibly\n\nStart only after you have checked the bicycle, weather and route. In Maribor, use marked cycling infrastructure and ride slowly in shared pedestrian areas. In Ptuj, dismount where signs or crowded old-town spaces require it.\n\nVisit Ptuj’s official tourism site includes cycling and mobility information, while Visit Maribor provides destination planning for the starting city. Opening hours for attractions and food stops change seasonally, so verify them separately rather than assuming they match your cycling schedule.\n\nOn the route:\n\n- keep right and signal turns;\n- give pedestrians space and use a bell early, not aggressively;\n- close any gate you legitimately pass through;\n- do not enter fields, riverbanks or construction areas to shortcut;\n- take litter with you;\n- respect wildlife and avoid loud music;\n- never ride through a signed closure.\n\n## Direct sources and last check\n\nInformation was checked on **20 September 2026**:\n\n- [Drava Bike — official route, stages, map, warnings and transport](https://dravabike.si/en/)\n- [Visit Maribor — official destination information](https://www.visitmaribor.si/en/)\n- [Visit Ptuj — cycling, mobility and destination information](https://visitptuj.eu/en/)\n- [Slovenian Railways — live timetable and passenger notices](https://potniski.sz.si/en/)\n- [ARSO — official Slovenian weather service](https://meteo.arso.gov.si/met/en/)\n\nRecheck the official route warnings, weather and exact train service immediately before departure.",
+    "category": "Šport",
+    "author": "Uredništvo Blog Lab",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Drava Bike — Official route and stage map",
+        "url": "https://dravabike.si/en/"
+      },
+      {
+        "label": "Visit Maribor — Official destination information",
+        "url": "https://www.visitmaribor.si/en/"
+      },
+      {
+        "label": "Visit Ptuj — Cycling and mobility information",
+        "url": "https://visitptuj.eu/en/"
+      },
+      {
+        "label": "Slovenian Railways — Timetable and passenger notices",
+        "url": "https://potniski.sz.si/en/"
+      },
+      {
+        "label": "ARSO — Official weather service",
+        "url": "https://meteo.arso.gov.si/met/en/"
+      }
+    ],
+    "createdAt": "2026-09-20T09:02:24+02:00",
+    "updatedAt": "2026-09-20T09:02:24+02:00"
+  },
+  {
     "id": "rakov-skocjan-hiking-guide",
     "title": "Rakov Škocjan: A Safety-First Hiking Guide to Slovenia’s Natural Bridges",
     "excerpt": "Walk a five-kilometre karst trail between Rakov Škocjan’s natural bridges, with current logging warnings, responsible-visit rules and transport advice from Ljubljana.",
