@@ -270,7 +270,7 @@ jobs:
           exit "$RC"
 
       - name: Reject protected-path changes
-        if: ${{ steps.repair.outputs.exit_code == '0' }}
+        if: ${{ steps.repair.outcome == 'success' && steps.repair.outputs.exit_code == '0' }}
         shell: bash
         run: |
           set -euo pipefail
@@ -285,7 +285,7 @@ jobs:
           fi
 
       - name: Reject credential-like changes
-        if: ${{ steps.repair.outputs.exit_code == '0' }}
+        if: ${{ steps.repair.outcome == 'success' && steps.repair.outputs.exit_code == '0' }}
         shell: bash
         run: |
           set -euo pipefail
@@ -296,7 +296,7 @@ jobs:
 
       - name: Commit validated autonomous repair
         id: commit
-        if: ${{ steps.repair.outputs.exit_code == '0' }}
+        if: ${{ steps.repair.outcome == 'success' && steps.repair.outputs.exit_code == '0' }}
         shell: bash
         run: |
           set -euo pipefail
