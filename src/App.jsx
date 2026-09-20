@@ -18,6 +18,32 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "slovenija-uspesno-napreduje-v-davisovem-pokalu-18827754",
+    "title": "Slovenija uspešno napreduje v Davisovem pokalu",
+    "excerpt": "Slovenija je v teku Davisovega pokala dosegla pomembne zmage in se približuje napredovanju v prvo svetovno skupino.",
+    "seoDescription": "Slovenija napreduje v Davisovem pokalu z zmago nad Češko in drugimi uspehi.",
+    "content": "Slovenija je v teku Davisovega pokala dosegla pomembne zmage in se približuje napredovanju v prvo svetovno skupino. Ekipa je že dokazala, da dviguje formo, kar jim je omogočilo zmago nad Češko in druge uspehe. \n## Zgodnji uspehi\nSlovenija se je v zgodnjih krogih Davisovega pokala izkazala kot moštvo, ki je zmožno doseči visoke rezultate. Zmaga nad Češko je bila ena izmed njihovih najpomembnejših zmag, saj jim je ta zmaga omogočila napredovanje v naslednji krog. \n## Trenutna situacija\nTrenutno se Slovenija nahaja v skupini A Evropskega prvenstva 2026, kjer se borijo za napredovanje v prvo svetovno skupino. Ekipa je že kazala svojo moč in odločenost, kar jim je omogočilo, da se uvrstijo med najboljše ekipe v tej skupini. \n## Prihodnji izzivi\nSlovenija bo v prihodnosti srečala še več izzivov, saj bodo morale tekmovali proti še močnejšim ekipam. Vendar pa ekipa kaže veliko volje in odločenosti, kar jim bo omogočilo, da se borijo za najboljše mesto v prvi svetovni skupini. \n## Zaključek\nSlovenija je v teku Davisovega pokala dosegla pomembne zmage in se približuje napredovanju v prvo svetovno skupino. Ekipa je dokazala, da dviguje formo, kar jim je omogočilo zmago nad Češko in druge uspehe. Prihodnji izzivi bodo še težji, vendar pa ekipa kaže veliko volje in odločenosti, kar jim bo omogočilo, da se borijo za najboljše mesto v prvi svetovni skupini.",
+    "category": "sport",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNYXRxcGJ0dWJwaUh2ckE5V1g5MlloVU1FVmlXZm1sLUNWYTNFWWUtUW5Ia0EtYzNWb25wQ056dkNSUEFWZFVvZnhObGdrSnZMVnRNbVZyY1BmU0drcTRRMDJwb29EOHRmWmNCZklUcVQydDgwN3k4VVlZODVGZnNVWWdHX25NVnczTzFKOEgwTmdoUQ"
+      },
+      {
+        "label": "24ur.com",
+        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQX3dWNDgyUEoyX3FVTHNtX2I4Mm4wYmZCcWk4Ul9zZndwRVhFM1RHR3gxaDBMOEw0VVVfT3poMk9aQkNKWVc1VHhfN1h5UGlfeGRHaXgzMUJXMXhidVRTbjYxN2NSc19YVHRiNWZCRzlJbW5Ha0ZSb2hqU1Q0YUFTOFpRMUlFZnVlcnc"
+      }
+    ],
+    "createdAt": "2026-09-20T10:04:29+02:00",
+    "updatedAt": "2026-09-20T10:04:29+02:00"
+  },
+
+  {
     "id": "nocno-zivljenje-v-ljubljani-1ae9f6e3",
     "title": "Nočno življenje v Ljubljani",
     "excerpt": "Ljubljana ponuja bogato nočno življenje, od barov do klubov.",
