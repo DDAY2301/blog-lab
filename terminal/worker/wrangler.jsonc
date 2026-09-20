@@ -7,5 +7,6 @@
   "preview_urls": false,
   "keep_vars": true,
   "ai": { "binding": "AI" },
+  "triggers": { "crons": ["7,22,37,52 * * * *"] },
   "observability": { "enabled": true }
 }
