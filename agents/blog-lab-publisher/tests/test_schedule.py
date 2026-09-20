@@ -102,3 +102,51 @@ def test_slot_marked_done_without_scheduled_post_is_reopened():
     assert result["run"] is True
     assert result["category"] == "sport"
     assert result["slot"] == "2026-09-20|08:17|sport"
+
+
+def test_deferred_morning_slot_does_not_repeat_before_next_slot():
+    state = {
+        "posts_date": "2026-09-20",
+        "scheduled_posts_today": 0,
+        "scheduled_slots_done": [],
+        "scheduled_slots_deferred": ["2026-09-20|08:17|sport"],
+    }
+    result = resolve_due_slot(CONTROL, state, at(10, 30))
+    assert result["run"] is False
+    assert result["reason"] == "nothing_due"
+
+
+def test_deferred_morning_slot_does_not_block_politics():
+    state = {
+        "posts_date": "2026-09-20",
+        "scheduled_posts_today": 0,
+        "scheduled_slots_done": [],
+        "scheduled_slots_deferred": ["2026-09-20|08:17|sport"],
+    }
+    result = resolve_due_slot(CONTROL, state, at(14, 0))
+    assert result["run"] is True
+    assert result["category"] == "politika"
+    assert result["slot"] == "2026-09-20|13:27|politika"
+
+
+def test_deferred_slot_from_previous_day_is_ignored():
+    state = {
+        "posts_date": "2026-09-19",
+        "scheduled_posts_today": 0,
+        "scheduled_slots_deferred": ["2026-09-19|08:17|sport"],
+    }
+    result = resolve_due_slot(CONTROL, state, at(9, 0))
+    assert result["run"] is True
+    assert result["category"] == "sport"
+
+
+def test_completed_count_migration_skips_deferred_slot():
+    state = {
+        "posts_date": "2026-09-20",
+        "scheduled_posts_today": 1,
+        "scheduled_slots_done": [],
+        "scheduled_slots_deferred": ["2026-09-20|08:17|sport"],
+    }
+    result = resolve_due_slot(CONTROL, state, at(20, 0))
+    assert result["run"] is True
+    assert result["category"] == "aktualno"

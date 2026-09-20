@@ -39,6 +39,7 @@ def resolve_due_slot(control: dict, state: dict, current: datetime | None = None
     slots = schedule.get("slots") or []
     today = current.date().isoformat()
     done = set(state.get("scheduled_slots_done") or [])
+    deferred = set(state.get("scheduled_slots_deferred") or []) if state.get("posts_date") == today else set()
 
     # completed slot IDs represent actual successful scheduled publications.
     # Reconcile any legacy/bad state where a slot was marked done without a
@@ -52,7 +53,8 @@ def resolve_due_slot(control: dict, state: dict, current: datetime | None = None
         # Migration safety: before scheduled_slots_done existed, preserve the
         # meaning of scheduled_posts_today by treating the first N slots as done.
         if actual_count and len(done) < actual_count:
-            done = set(ordered_today[:actual_count])
+            eligible = [slot_id for slot_id in ordered_today if slot_id not in deferred]
+            done = set(eligible[:actual_count])
 
     now_minutes = current.hour * 60 + current.minute
     for slot in slots:
@@ -65,7 +67,7 @@ def resolve_due_slot(control: dict, state: dict, current: datetime | None = None
         if not category or not (0 <= hour <= 23 and 0 <= minute <= 59):
             continue
         sid = _slot_id(today, slot)
-        if sid in done:
+        if sid in done or sid in deferred:
             continue
         if now_minutes >= hour * 60 + minute:
             return {

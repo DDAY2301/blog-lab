@@ -173,6 +173,8 @@ def set_status(cfg, state, value, message="", output=None):
         "manual_posts_today": state.get("manual_posts_today", 0),
         "writer_mode": state.get("writer_mode", "unknown"),
         "scheduled_slots_done": state.get("scheduled_slots_done", []),
+        "scheduled_slots_deferred": state.get("scheduled_slots_deferred", []),
+        "last_editorial_hold": state.get("last_editorial_hold"),
         "last_error": state.get("last_error"),
     })
 def mark_scheduled_slot_done(state: dict, slot_id: str) -> None:
@@ -183,6 +185,23 @@ def mark_scheduled_slot_done(state: dict, slot_id: str) -> None:
     if slot_id not in done:
         done.append(slot_id)
     state["scheduled_slots_done"] = done[-12:]
+    deferred = [item for item in (state.get("scheduled_slots_deferred") or []) if item != slot_id]
+    state["scheduled_slots_deferred"] = deferred[-12:]
+
+
+def defer_scheduled_slot(state: dict, slot_id: str, reason: str) -> None:
+    slot_id = str(slot_id or "").strip()
+    if not slot_id:
+        return
+    deferred = list(state.get("scheduled_slots_deferred") or [])
+    if slot_id not in deferred:
+        deferred.append(slot_id)
+    state["scheduled_slots_deferred"] = deferred[-12:]
+    state["last_editorial_hold"] = {
+        "slot": slot_id,
+        "reason": str(reason or "editorial_qa")[:240],
+        "at": now().isoformat(timespec="seconds"),
+    }
 
 
 AUTO_SEARCH_QUERIES = {
@@ -511,9 +530,13 @@ def main():
         state["scheduled_posts_today"] = 0
         state["manual_posts_today"] = 0
         state["scheduled_slots_done"] = []
+        state["scheduled_slots_deferred"] = []
+        state["last_editorial_hold"] = None
     state.setdefault("scheduled_posts_today", 0)
     state.setdefault("manual_posts_today", 0)
     state.setdefault("scheduled_slots_done", [])
+    state.setdefault("scheduled_slots_deferred", [])
+    state.setdefault("last_editorial_hold", None)
     state["current_category"] = args.category
     manual_request = bool(args.manual or args.topic.strip())
     if not enabled(cfg): set_status(cfg, state, "paused", "Agent je izklopljen."); print("AGENT_DISABLED"); return 0
@@ -768,12 +791,15 @@ def main():
         # automatic slot open and let a later catch-up use fresher evidence,
         # without triggering the self-heal workflow to repeat the same draft.
         state["consecutive_failures"] = 0
+        state["last_error"] = None
+        if args.scheduled_slot:
+            defer_scheduled_slot(state, args.scheduled_slot, ",".join(errors))
         atomic_json(str(STATE), state)
         set_status(
             cfg,
             state,
             "waiting",
-            "QA je zadržal samodejni osnutek; slot ostaja odprt za nove ali boljše vire.",
+            "QA je zadržal samodejni osnutek; termin je odložen, naslednji dnevni termini ostajajo aktivni.",
         )
         print("QA_DEFERRED " + ",".join(errors))
         return 0
