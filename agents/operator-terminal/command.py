@@ -1129,24 +1129,25 @@ def _replace_targeted(current: str, old: str, new: str, edit: dict, rel: str) ->
 
     before = str(edit.get("before") or "")
     after = str(edit.get("after") or "")
-    candidates = list(positions)
+    contextual: list[tuple[int, int]] = []
 
-    if before:
-        filtered = []
-        for pos in candidates:
-            prefix = current[max(0, pos - max(2400, len(before) + 120)):pos]
-            if prefix.endswith(before) or before in prefix:
-                filtered.append(pos)
-        candidates = filtered
-
-    if after:
-        filtered = []
-        for pos in candidates:
-            suffix_start = pos + len(old)
-            suffix = current[suffix_start:min(len(current), suffix_start + max(2400, len(after) + 120))]
-            if suffix.startswith(after) or after in suffix:
-                filtered.append(pos)
-        candidates = filtered
+    if before or after:
+        for pos in positions:
+            score = 0
+            if before:
+                window_start = max(0, pos - max(2400, len(before) + 120))
+                before_pos = current.rfind(before, window_start, pos)
+                if before_pos < 0:
+                    continue
+                score += pos - (before_pos + len(before))
+            if after:
+                suffix_start = pos + len(old)
+                window_end = min(len(current), suffix_start + max(2400, len(after) + 120))
+                after_pos = current.find(after, suffix_start, window_end)
+                if after_pos < 0:
+                    continue
+                score += after_pos - suffix_start
+            contextual.append((score, pos))
 
     occurrence = edit.get("occurrence")
     if occurrence not in (None, ""):
@@ -1159,17 +1160,21 @@ def _replace_targeted(current: str, old: str, new: str, edit: dict, rel: str) ->
                 f"occurrence {occurrence} je izven obsega; anchor je najden {len(positions)}x v {rel}"
             )
         selected = positions[index]
-        if candidates and selected not in candidates:
+        if contextual and selected not in {pos for _, pos in contextual}:
             raise SiteEditError(
                 f"occurrence {occurrence} se ne ujema s podanim before/after kontekstom v {rel}"
             )
-        candidates = [selected]
+        return current[:selected] + new + current[selected + len(old):]
 
-    if len(candidates) != 1:
-        raise SiteEditError(_anchor_diagnostic(current, old, positions, rel))
+    if contextual:
+        contextual.sort(key=lambda item: item[0])
+        best_score = contextual[0][0]
+        best = [pos for score, pos in contextual if score == best_score]
+        if len(best) == 1:
+            pos = best[0]
+            return current[:pos] + new + current[pos + len(old):]
 
-    pos = candidates[0]
-    return current[:pos] + new + current[pos + len(old):]
+    raise SiteEditError(_anchor_diagnostic(current, old, positions, rel))
 
 
 ARTICLE_CSS_GUARD_SELECTORS = (
