@@ -715,9 +715,10 @@ def test_fallback_digest_can_pass_standard_qa_with_verified_sources():
             "title": f"Športna zgodba {index}",
             "url": f"https://example.com/sport-{index}",
             "summary": (
-                "Preverjen vir opisuje športni dogodek, potek tekmovanja, odzive udeležencev "
-                "in okoliščine, ki so pomembne za razumevanje zgodbe. "
-            ) * 3,
+                f"Preverjen vir {index} opisuje športni dogodek, njegov potek in odzive udeležencev. "
+                f"Za zgodbo {index} navaja tudi okoliščine, ki pomagajo razumeti dogajanje. "
+                f"Dodatna preverljiva informacija {index} dopolnjuje kontekst brez ugibanja."
+            ),
             "published": "2026-09-20",
             "image_url": "",
             "video_url": "",
