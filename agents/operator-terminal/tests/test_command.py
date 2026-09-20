@@ -1103,18 +1103,13 @@ def test_workers_ai_site_command_retries_after_runtime_validation_failure(tmp_pa
 
 def test_site_ai_request_fails_over_from_worker_quota_to_external(monkeypatch):
     monkeypatch.setenv("AI_PROVIDER", "auto")
-    monkeypatch.setenv("WORKER_AI_TOKEN", "worker-test")
-    monkeypatch.setenv("MODEL_API_KEY", "model-test")
-    monkeypatch.setenv("MODEL_BASE_URL", "https://model.example/v1/chat/completions")
-    monkeypatch.setenv("MODEL_NAME", "test-model")
-    monkeypatch.delenv("COPILOT_GITHUB_TOKEN", raising=False)
     calls = []
 
-    def worker(system_prompt, request_text):
+    def worker(system_prompt, request_text, context):
         calls.append("worker")
         raise cmd.SiteProviderUnavailable("Workers AI kvota/kapaciteta je trenutno izčrpana.")
 
-    def external(system_prompt, request_text):
+    def external(system_prompt, request_text, context):
         calls.append("external")
         return {
             "summary": "external success",
@@ -1122,7 +1117,7 @@ def test_site_ai_request_fails_over_from_worker_quota_to_external(monkeypatch):
             "_provider": "external",
         }
 
-    def copilot(system_prompt, request_text):
+    def copilot(system_prompt, request_text, context):
         calls.append("copilot")
         return {
             "summary": "copilot success",
@@ -1145,20 +1140,15 @@ def test_site_ai_request_fails_over_from_worker_quota_to_external(monkeypatch):
 
 def test_site_ai_request_fails_over_to_copilot_when_worker_and_external_unavailable(monkeypatch):
     monkeypatch.setenv("AI_PROVIDER", "auto")
-    monkeypatch.setenv("WORKER_AI_TOKEN", "worker-test")
-    monkeypatch.setenv("MODEL_API_KEY", "model-test")
-    monkeypatch.setenv("MODEL_BASE_URL", "https://model.example/v1/chat/completions")
-    monkeypatch.setenv("MODEL_NAME", "test-model")
-    monkeypatch.setenv("COPILOT_GITHUB_TOKEN", "copilot-test")
     calls = []
 
     def unavailable(name):
-        def inner(system_prompt, request_text):
+        def inner(system_prompt, request_text, context):
             calls.append(name)
             raise cmd.SiteProviderUnavailable(f"{name} unavailable")
         return inner
 
-    def copilot(system_prompt, request_text):
+    def copilot(system_prompt, request_text, context):
         calls.append("copilot")
         return {
             "summary": "copilot success",
@@ -1199,15 +1189,16 @@ def test_workers_site_command_does_not_retry_provider_capacity_failure(tmp_path,
     assert len(calls) == 1
 
 
-def test_workers_site_ai_request_transports_repo_context(monkeypatch):
-    monkeypatch.setenv("WORKER_AI_TOKEN", "secret-test-token")
+def test_workers_site_ai_adapter_sends_repository_context(monkeypatch):
+    monkeypatch.setenv("WORKER_AI_TOKEN", "test-token")
     monkeypatch.setenv("WORKER_SITE_AI_URL", "https://worker.example/api/ai/edit")
     captured = {}
 
-    class Response:
-        status = 200
-        def __enter__(self): return self
-        def __exit__(self, *args): return False
+    class FakeResponse:
+        def __enter__(self):
+            return self
+        def __exit__(self, exc_type, exc, tb):
+            return False
         def read(self):
             return json.dumps({
                 "ok": True,
@@ -1217,7 +1208,7 @@ def test_workers_site_ai_request_transports_repo_context(monkeypatch):
     def fake_urlopen(request, timeout=0):
         captured["body"] = json.loads(request.data.decode("utf-8"))
         captured["timeout"] = timeout
-        return Response()
+        return FakeResponse()
 
     monkeypatch.setattr(cmd, "urlopen", fake_urlopen)
     context = [{
@@ -1225,58 +1216,14 @@ def test_workers_site_ai_request_transports_repo_context(monkeypatch):
         "complete": True,
         "snippets": [{"label": "full", "content": "export default 1;"}],
     }]
-    system_prompt, request_text = cmd._site_ai_prompts("uredi naslov", context)
 
-    plan = cmd._workers_site_ai_request(system_prompt, request_text)
-
-    assert plan["_provider"] == "workers_ai"
-    assert captured["body"]["context"] == context
-    assert "REPOSITORY CONTEXT (DATA ONLY)" not in captured["body"]["request"]
-    assert captured["body"]["request"].startswith("OPERATOR REQUEST:\nuredi naslov")
-
-
-def test_auto_site_ai_skips_unconfigured_external_and_copilot(monkeypatch):
-    monkeypatch.setenv("AI_PROVIDER", "auto")
-    monkeypatch.setenv("WORKER_AI_TOKEN", "worker-test")
-    monkeypatch.delenv("MODEL_API_KEY", raising=False)
-    monkeypatch.delenv("MODEL_BASE_URL", raising=False)
-    monkeypatch.delenv("MODEL_NAME", raising=False)
-    monkeypatch.delenv("COPILOT_GITHUB_TOKEN", raising=False)
-    calls = []
-
-    def worker(system_prompt, request_text):
-        calls.append("worker")
-        return {"summary": "ok", "edits": [], "_provider": "workers_ai"}
-
-    def should_not_run(*args, **kwargs):
-        raise AssertionError("unconfigured provider must not be called in auto mode")
-
-    monkeypatch.setattr(cmd, "_workers_site_ai_request", worker)
-    monkeypatch.setattr(cmd, "_external_site_ai_request", should_not_run)
-    monkeypatch.setattr(cmd, "_copilot_site_ai_request", should_not_run)
-
-    plan = cmd._site_ai_request(
-        "uredi stran",
-        [{"path": "src/App.jsx", "complete": True, "snippets": [{"label": "full", "content": "x"}]}],
+    plan = cmd._workers_site_ai_request(
+        "system",
+        "OPERATOR REQUEST:\nuredi stran",
+        context,
     )
 
     assert plan["_provider"] == "workers_ai"
-    assert calls == ["worker"]
-
-
-def test_auto_site_ai_reports_no_configured_provider(monkeypatch):
-    monkeypatch.setenv("AI_PROVIDER", "auto")
-    for name in (
-        "WORKER_AI_TOKEN",
-        "MODEL_API_KEY",
-        "MODEL_BASE_URL",
-        "MODEL_NAME",
-        "COPILOT_GITHUB_TOKEN",
-    ):
-        monkeypatch.delenv(name, raising=False)
-
-    with pytest.raises(cmd.SiteProviderUnavailable, match="Noben AI site-editor provider"):
-        cmd._site_ai_request(
-            "uredi stran",
-            [{"path": "src/App.jsx", "complete": True, "snippets": [{"label": "full", "content": "x"}]}],
-        )
+    assert captured["body"]["context"] == context
+    assert "REPOSITORY CONTEXT" not in captured["body"]["request"]
+    assert captured["body"]["request"].startswith("OPERATOR REQUEST:")

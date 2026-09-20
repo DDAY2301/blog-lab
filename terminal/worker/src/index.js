@@ -812,9 +812,13 @@ fi.onchange=()=>uploadMedia(fi.files);
 for(const ev of ['dragenter','dragover'])dz.addEventListener(ev,e=>{e.preventDefault();dz.classList.add('drag')});
 for(const ev of ['dragleave','drop'])dz.addEventListener(ev,e=>{e.preventDefault();dz.classList.remove('drag')});
 dz.addEventListener('drop',e=>uploadMedia(e.dataTransfer.files));
-$('#send').onclick=async()=>{const command=$('#command').value.trim();if(!command)return;$('#send').disabled=true;try{const body={command,mode:$('#mode').value,category:$('#category').value};const r=await fetch('/api/command',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(body)});if(r.status===401){location.replace('/');return}const d=await r.json();if(!r.ok){alert(d.error+(d.missing?'\\nManjka: '+d.missing.join(', '):''));return}const list=rows();if(d.local){list.push({id:null,command,mode:body.mode,category:body.category,created_at:new Date().toISOString(),status:'completed',conclusion:'success',run_url:null,detail:d.result?.summary||'Status prebran.'})}else{list.push({id:d.id,command,mode:body.mode,category:body.category,created_at:new Date().toISOString(),status:'queued',conclusion:null,run_url:null})}save(list);$('#command').value='';clearMedia();await load()}finally{$('#send').disabled=false}};
+$('#send').onclick=async()=>{const command=$('#command').value.trim();if(!command)return;$('#send').disabled=true;try{const body={command,mode:$('#mode').value,category:$('#category').value};const r=await fetch('/api/command',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(body)});if(r.status===401){location.replace('/');return}const d=await r.json();if(!r.ok){alert(d.error+(d.missing?'\\nManjka: '+d.missing.join(', '):''));return}const list=rows();if(d.local){list.push({id:null,command,mode:body.mode,category:body.category,created_at:new Date().toISOString(),status:'completed',conclusion:'success',run_url:null,detail:d.result?.summary||'Status prebran.'})}else{list.push({id:d.id,command,mode:body.mode,category:body.category,created_at:new Date().toISOString(),status:'queued',conclusion:null,run_url:null})}save(list);$('#command').value='';clearMedia();await load();kickPoll()}finally{$('#send').disabled=false}};
 $('#logout').onclick=async()=>{await fetch('/api/logout',{method:'POST'}).catch(()=>{});location.replace('/')};
-load();setInterval(load,4000);
+let pollTimer=null;
+function hasActiveRuns(){return rows().some(x=>x.id&&x.status!=='completed'&&x.status!=='unknown')}
+async function pollLoop(){await load();pollTimer=setTimeout(pollLoop,hasActiveRuns()?1500:7000)}
+function kickPoll(){if(pollTimer)clearTimeout(pollTimer);pollTimer=setTimeout(pollLoop,150)}
+pollLoop();
 </script></body></html>`;
 
 export default {
