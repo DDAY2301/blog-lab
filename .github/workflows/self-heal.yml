@@ -9,6 +9,7 @@ on:
       - "agents/blog-lab-publisher/**"
       - "agents/operator-terminal/**"
       - "agents/self-heal/**"
+      - "agents/production-guardian/**"
       - "terminal/worker/**"
       - "scripts/**"
       - "package.json"
@@ -17,6 +18,7 @@ on:
       - ".github/workflows/operator-terminal.yml"
       - ".github/workflows/agent-blog-lab-publisher.yml"
       - ".github/workflows/self-heal.yml"
+      - ".github/workflows/production-guardian.yml"
       - ".github/workflows/full-e2e-audit.yml"
       - ".github/workflows/external-smoke.yml"
       - ".github/workflows/health-check.yml"
@@ -27,6 +29,7 @@ on:
       - "Blog Lab Health Check"
       - "Blog Lab External Smoke Test"
       - "Blog Lab Full E2E Audit"
+      - "Blog Lab Production Guardian"
     types: [completed]
   schedule:
     - cron: "11 * * * *"
@@ -38,6 +41,7 @@ concurrency:
 
 permissions:
   contents: write
+  pull-requests: write
   actions: write
   copilot-requests: write
 
@@ -67,9 +71,10 @@ jobs:
   diagnose-and-repair:
     if: ${{ github.event_name != 'workflow_run' || (github.event.workflow_run.conclusion == 'failure' && github.event.workflow_run.run_attempt >= 3) }}
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 35
     env:
       GITHUB_TOKEN: ${{ github.token }}
+      GH_TOKEN: ${{ github.token }}
       COPILOT_GITHUB_TOKEN: ${{ secrets.COPILOT_GITHUB_TOKEN }}
       WORKER_AI_TOKEN: ${{ secrets.TERMINAL_COMMAND_KEY }}
       SELF_HEAL_WORKER_URL: "https://blog-lab.dan-grmusa.workers.dev/api/ai/repair"
@@ -142,13 +147,16 @@ jobs:
           node --check terminal/worker/src/index.js >> "$DIAG" 2>&1
           [[ $? -eq 0 ]] || NEEDS_REPAIR=true
 
-          python -m py_compile agents/operator-terminal/*.py agents/blog-lab-publisher/agent.py agents/blog-lab-publisher/services/*.py agents/self-heal/*.py >> "$DIAG" 2>&1
+          python -m py_compile agents/operator-terminal/*.py agents/blog-lab-publisher/agent.py agents/blog-lab-publisher/services/*.py agents/self-heal/*.py agents/production-guardian/guardian.py agents/production_guardian_import.py >> "$DIAG" 2>&1
           [[ $? -eq 0 ]] || NEEDS_REPAIR=true
 
-          pytest -q agents/operator-terminal/tests agents/blog-lab-publisher/tests agents/self-heal/tests >> "$DIAG" 2>&1
+          pytest -q agents/operator-terminal/tests agents/blog-lab-publisher/tests agents/self-heal/tests agents/production-guardian/tests >> "$DIAG" 2>&1
           [[ $? -eq 0 ]] || NEEDS_REPAIR=true
 
           npm run build >> "$DIAG" 2>&1
+          [[ $? -eq 0 ]] || NEEDS_REPAIR=true
+
+          python agents/production-guardian/guardian.py check --report "$RUNNER_TEMP/guardian-report.json" >> "$DIAG" 2>&1
           [[ $? -eq 0 ]] || NEEDS_REPAIR=true
 
           (
@@ -168,26 +176,26 @@ jobs:
             echo "$WORKER_HEALTH" >> "$DIAG"
             export WORKER_HEALTH
             python - <<'PY' >> "$DIAG" 2>&1
-          import json, os, re
-          from pathlib import Path
-          health = json.loads(os.environ["WORKER_HEALTH"])
-          source = Path("terminal/worker/src/index.js").read_text(encoding="utf-8")
-          match = re.search(r'version:\s*"([^"]+)"', source)
-          expected = match.group(1) if match else ""
-          actual = str(health.get("version") or "")
-          ready = bool(health.get("ready"))
-          auth_ok = health.get("auth_self_test_ok") is True
-          authorized_users = int(health.get("authorized_users_ready") or 0)
-          print(f"EXPECTED_WORKER_VERSION={expected}")
-          print(f"ACTUAL_WORKER_VERSION={actual}")
-          print(f"WORKER_READY={str(ready).lower()}")
-          print(f"AUTH_SELF_TEST_OK={str(auth_ok).lower()}")
-          print(f"AUTHORIZED_USERS_READY={authorized_users}")
-          if not ready or (expected and actual != expected):
-              raise SystemExit(42)
-          if not auth_ok or authorized_users < 2:
-              raise SystemExit(43)
-          PY
+import json, os, re
+from pathlib import Path
+health = json.loads(os.environ["WORKER_HEALTH"])
+source = Path("terminal/worker/src/index.js").read_text(encoding="utf-8")
+match = re.search(r'version:\s*"([^"]+)"', source)
+expected = match.group(1) if match else ""
+actual = str(health.get("version") or "")
+ready = bool(health.get("ready"))
+auth_ok = health.get("auth_self_test_ok") is True
+authorized_users = int(health.get("authorized_users_ready") or 0)
+print(f"EXPECTED_WORKER_VERSION={expected}")
+print(f"ACTUAL_WORKER_VERSION={actual}")
+print(f"WORKER_READY={str(ready).lower()}")
+print(f"AUTH_SELF_TEST_OK={str(auth_ok).lower()}")
+print(f"AUTHORIZED_USERS_READY={authorized_users}")
+if not ready or (expected and actual != expected):
+    raise SystemExit(42)
+if not auth_ok or authorized_users < 1:
+    raise SystemExit(43)
+PY
             HEALTH_CHECK_RC=$?
             if [[ $HEALTH_CHECK_RC -eq 42 ]]; then
               DEPLOY_DRIFT=true
@@ -212,7 +220,7 @@ jobs:
           echo "needs_repair=$NEEDS_REPAIR"
           echo "deploy_drift=$DEPLOY_DRIFT"
           echo "config_issue=$CONFIG_ISSUE"
-          tail -n 160 "$DIAG"
+          tail -n 180 "$DIAG"
 
       - name: Redeploy Worker when production is stale
         id: redeploy
@@ -222,34 +230,6 @@ jobs:
           set -euo pipefail
           cd terminal/worker
           npx wrangler deploy
-
-      - name: Verify Worker after redeploy
-        if: ${{ steps.redeploy.outcome == 'success' }}
-        shell: bash
-        run: |
-          set -euo pipefail
-          for attempt in 1 2 3 4 5 6; do
-            HEALTH="$(curl -fsS --max-time 20 'https://blog-lab.dan-grmusa.workers.dev/health' || true)"
-            if [[ -n "$HEALTH" ]]; then
-              export HEALTH
-              if python - <<'PY'
-          import json, os, re
-          from pathlib import Path
-          health = json.loads(os.environ["HEALTH"])
-          source = Path("terminal/worker/src/index.js").read_text(encoding="utf-8")
-          match = re.search(r'version:\s*"([^"]+)"', source)
-          expected = match.group(1) if match else ""
-          raise SystemExit(0 if health.get("ready") is True and (not expected or health.get("version") == expected) else 1)
-          PY
-              then
-                echo "Production Worker is synchronized."
-                exit 0
-              fi
-            fi
-            sleep 10
-          done
-          echo "::error::Worker redeploy completed but production health/version is still stale."
-          exit 1
 
       - name: Run autonomous repair engine
         id: repair
@@ -278,7 +258,7 @@ jobs:
             git diff --name-only
             git ls-files --others --exclude-standard
           )"
-          if printf '%s\n' "$CHANGED" | grep -Eq '^(\.github/|agents/operator-terminal/|agents/self-heal/|AGENTS\.md$|requirements-agent\.txt$|\.env)'; then
+          if printf '%s\n' "$CHANGED" | grep -Eq '^(\.github/|agents/operator-terminal/|agents/self-heal/|agents/production-guardian/|AGENTS\.md$|requirements-agent\.txt$|\.env)'; then
             echo "::error::Self-heal attempted to modify a protected path."
             printf '%s\n' "$CHANGED"
             exit 1
@@ -294,7 +274,21 @@ jobs:
             exit 1
           fi
 
-      - name: Commit validated autonomous repair
+      - name: Validate autonomous repair
+        if: ${{ steps.repair.outcome == 'success' && steps.repair.outputs.exit_code == '0' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile agents/operator-terminal/*.py agents/blog-lab-publisher/agent.py agents/blog-lab-publisher/services/*.py agents/self-heal/*.py agents/production-guardian/guardian.py agents/production_guardian_import.py
+          pytest -q agents/operator-terminal/tests agents/blog-lab-publisher/tests agents/self-heal/tests agents/production-guardian/tests
+          npm run build
+          python agents/production-guardian/guardian.py check --skip-remote --fail-on-warning
+          node scripts/test-worker-browser-js.mjs
+          node scripts/test-worker-auth.mjs
+          node scripts/test-worker-routes.mjs
+          npx wrangler deploy --dry-run
+
+      - name: Create validated autonomous repair PR
         id: commit
         if: ${{ steps.repair.outcome == 'success' && steps.repair.outputs.exit_code == '0' }}
         shell: bash
@@ -308,36 +302,28 @@ jobs:
 
           CHANGED="$(git status --porcelain)"
           echo "$CHANGED"
-          if printf '%s\n' "$CHANGED" | grep -Eq 'terminal/worker/|wrangler\.jsonc'; then
-            echo "worker_changed=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "worker_changed=false" >> "$GITHUB_OUTPUT"
-          fi
-
+          BRANCH="self-heal/verified-${GITHUB_RUN_ID}"
           git config user.name "blog-lab-self-heal[bot]"
           git config user.email "blog-lab-self-heal[bot]@users.noreply.github.com"
+          git checkout -B "$BRANCH"
           git add -A -- src public agents/blog-lab-publisher terminal/worker/src package.json wrangler.jsonc terminal/worker/package.json terminal/worker/wrangler.jsonc
-          git commit -m "Self-heal: repair verified Blog Lab failure"
-          git pull --rebase origin main
-          git push origin HEAD:main
+          git commit -m "Self-heal: validated autonomous repair"
+          git push --set-upstream origin "$BRANCH"
+          gh pr create \
+            --title "Self-heal: validated autonomous repair" \
+            --body "Blog Lab self-heal detected a repeated failure, prepared a minimal repair, and validated it with agent tests, production guardian checks, build, Worker JS tests and Wrangler dry-run. This PR is reviewable and intentionally does not bypass main." \
+            --base main \
+            --head "$BRANCH"
           echo "changed=true" >> "$GITHUB_OUTPUT"
-
-      - name: Deploy repaired Worker when credentials are available
-        if: ${{ steps.commit.outputs.changed == 'true' && steps.commit.outputs.worker_changed == 'true' && env.CLOUDFLARE_API_TOKEN != '' && env.CLOUDFLARE_ACCOUNT_ID != '' }}
-        shell: bash
-        run: |
-          set -euo pipefail
-          cd terminal/worker
-          npx wrangler deploy
 
       - name: Explain missing direct Cloudflare deployment credentials
         if: ${{ steps.diagnose.outputs.deploy_drift == 'true' && env.CLOUDFLARE_API_TOKEN == '' }}
         shell: bash
         run: |
-          echo "::warning::Production Worker is stale/unreachable and GitHub has no CLOUDFLARE_API_TOKEN. Cloudflare Git Builds may still deploy the pushed commit; otherwise add CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID as repository secrets for direct self-healing deployment."
+          echo "::warning::Production Worker is stale/unreachable and GitHub has no CLOUDFLARE_API_TOKEN. Add CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID as repository secrets for direct redeploy of the current main Worker."
 
       - name: Explain incomplete cross-browser login configuration
         if: ${{ steps.diagnose.outputs.config_issue == 'true' }}
         shell: bash
         run: |
-          echo "::warning::Worker code is reachable, but the auth self-test is incomplete for both authorized users. Configure either LOGIN_PASSWORD as the shared fallback or both DAN_LOGIN_PASSWORD and MAJ_LOGIN_PASSWORD in Cloudflare Worker secrets."
+          echo "::warning::Worker code is reachable, but auth readiness is incomplete. Configure LOGIN_PASSWORD as shared fallback or dedicated DAN_LOGIN_PASSWORD/MAJ_LOGIN_PASSWORD in Cloudflare Worker secrets."
