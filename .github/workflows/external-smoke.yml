@@ -94,16 +94,220 @@ jobs:
             exit 1
           fi
           payload='{"system_prompt":"Vrni samo veljaven JSON objekt z naslovom title in poljem content. Piši v slovenščini.","task_prompt":"Napiši eno kratko, stvarno poved iz podanega vira.","category":"aktualno","source_items":[{"title":"Preizkus uredniškega sistema","summary":"Blog Lab preverja delovanje strežniškega AI pisca.","url":"https://example.com/test","source_name":"Sistemski preizkus"}]}'
-          body="$(curl -fsS --max-time 120             -X POST             -H "Authorization: Bearer $WORKER_AI_TOKEN"             -H "Content-Type: application/json"             --data "$payload"             https://blog-lab.dan-grmusa.workers.dev/api/ai/write)"
+          response="$(curl -sS --max-time 120 -w 
+      - name: Verify production scheduler dispatch bridge
+        if: ${{ github.event_name == 'workflow_dispatch' || steps.writer-changes.outputs.changed == 'true' }}
+        shell: bash
+        env:
+          INTERNAL_SCHEDULER_TOKEN: ${{ secrets.TERMINAL_COMMAND_KEY }}
+        run: |
+          set -euo pipefail
+          if [[ -z "$INTERNAL_SCHEDULER_TOKEN" ]]; then
+            echo "::error::TERMINAL_COMMAND_KEY is required for the scheduler production probe."
+            exit 1
+          fi
+          body="$(curl -fsS --max-time 40             -X POST             -H "Authorization: Bearer $INTERNAL_SCHEDULER_TOKEN"             https://blog-lab.dan-grmusa.workers.dev/api/scheduler/catch-up)"
           BODY="$body" python - <<'PY'
           import json, os, sys
           d = json.loads(os.environ["BODY"])
-          article = d.get("article") or {}
-          ok = d.get("ok") is True and isinstance(article, dict) and bool(article.get("title")) and bool(article.get("content"))
-          if not ok:
+          if d.get("ok") is not True or d.get("mode") != "catch_up":
               print(d)
               sys.exit(1)
-          print("Workers AI editorial writer responded successfully.")
+          print("Production scheduler dispatch bridge responded successfully.")
+          PY
+
+      - name: Verify private terminal login page is externally reachable
+        shell: bash
+        run: |
+          set -euo pipefail
+          body="$(curl -fsS --max-time 20 https://blog-lab.dan-grmusa.workers.dev/)"
+          grep -Fq 'id="login"' <<<"$body"
+          grep -Fq 'Zasebni terminal' <<<"$body"
+          if grep -Fq 'maj@klemenc.org' <<<"$body"; then
+            echo "::error::Login page exposes an authorized email."
+            exit 1
+          fi
+
+      - name: Wait for live GitHub Pages deployment
+        shell: bash
+        run: |
+          set -euo pipefail
+          URL="https://dday2301.github.io/blog-lab/"
+          for attempt in {1..24}; do
+            echo "Pages probe $attempt/24"
+            body="$(curl -fsS --max-time 20 "$URL" || true)"
+            if grep -Fq 'Blog Lab' <<<"$body"; then
+              echo "Public Blog Lab is reachable."
+              exit 0
+            fi
+            sleep 10
+          done
+          echo "::error::Public GitHub Pages site is not reachable."
+          exit 1
+
+      - name: Verify persistent production article source
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -Fq 'blog-lab-system-test-persistent' src/App.jsx
+          grep -Fq 'Testni članek Blog Lab: trajna objava na vseh napravah' src/App.jsx
+\n%{http_code}' \
+            -X POST \
+            -H "Authorization: Bearer $WORKER_AI_TOKEN" \
+            -H "Content-Type: application/json" \
+            --data "$payload" \
+            https://blog-lab.dan-grmusa.workers.dev/api/ai/write)"
+          status="${response##*
+      - name: Verify production scheduler dispatch bridge
+        if: ${{ github.event_name == 'workflow_dispatch' || steps.writer-changes.outputs.changed == 'true' }}
+        shell: bash
+        env:
+          INTERNAL_SCHEDULER_TOKEN: ${{ secrets.TERMINAL_COMMAND_KEY }}
+        run: |
+          set -euo pipefail
+          if [[ -z "$INTERNAL_SCHEDULER_TOKEN" ]]; then
+            echo "::error::TERMINAL_COMMAND_KEY is required for the scheduler production probe."
+            exit 1
+          fi
+          body="$(curl -fsS --max-time 40             -X POST             -H "Authorization: Bearer $INTERNAL_SCHEDULER_TOKEN"             https://blog-lab.dan-grmusa.workers.dev/api/scheduler/catch-up)"
+          BODY="$body" python - <<'PY'
+          import json, os, sys
+          d = json.loads(os.environ["BODY"])
+          if d.get("ok") is not True or d.get("mode") != "catch_up":
+              print(d)
+              sys.exit(1)
+          print("Production scheduler dispatch bridge responded successfully.")
+          PY
+
+      - name: Verify private terminal login page is externally reachable
+        shell: bash
+        run: |
+          set -euo pipefail
+          body="$(curl -fsS --max-time 20 https://blog-lab.dan-grmusa.workers.dev/)"
+          grep -Fq 'id="login"' <<<"$body"
+          grep -Fq 'Zasebni terminal' <<<"$body"
+          if grep -Fq 'maj@klemenc.org' <<<"$body"; then
+            echo "::error::Login page exposes an authorized email."
+            exit 1
+          fi
+
+      - name: Wait for live GitHub Pages deployment
+        shell: bash
+        run: |
+          set -euo pipefail
+          URL="https://dday2301.github.io/blog-lab/"
+          for attempt in {1..24}; do
+            echo "Pages probe $attempt/24"
+            body="$(curl -fsS --max-time 20 "$URL" || true)"
+            if grep -Fq 'Blog Lab' <<<"$body"; then
+              echo "Public Blog Lab is reachable."
+              exit 0
+            fi
+            sleep 10
+          done
+          echo "::error::Public GitHub Pages site is not reachable."
+          exit 1
+
+      - name: Verify persistent production article source
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -Fq 'blog-lab-system-test-persistent' src/App.jsx
+          grep -Fq 'Testni članek Blog Lab: trajna objava na vseh napravah' src/App.jsx
+\n'}"
+          body="${response%
+      - name: Verify production scheduler dispatch bridge
+        if: ${{ github.event_name == 'workflow_dispatch' || steps.writer-changes.outputs.changed == 'true' }}
+        shell: bash
+        env:
+          INTERNAL_SCHEDULER_TOKEN: ${{ secrets.TERMINAL_COMMAND_KEY }}
+        run: |
+          set -euo pipefail
+          if [[ -z "$INTERNAL_SCHEDULER_TOKEN" ]]; then
+            echo "::error::TERMINAL_COMMAND_KEY is required for the scheduler production probe."
+            exit 1
+          fi
+          body="$(curl -fsS --max-time 40             -X POST             -H "Authorization: Bearer $INTERNAL_SCHEDULER_TOKEN"             https://blog-lab.dan-grmusa.workers.dev/api/scheduler/catch-up)"
+          BODY="$body" python - <<'PY'
+          import json, os, sys
+          d = json.loads(os.environ["BODY"])
+          if d.get("ok") is not True or d.get("mode") != "catch_up":
+              print(d)
+              sys.exit(1)
+          print("Production scheduler dispatch bridge responded successfully.")
+          PY
+
+      - name: Verify private terminal login page is externally reachable
+        shell: bash
+        run: |
+          set -euo pipefail
+          body="$(curl -fsS --max-time 20 https://blog-lab.dan-grmusa.workers.dev/)"
+          grep -Fq 'id="login"' <<<"$body"
+          grep -Fq 'Zasebni terminal' <<<"$body"
+          if grep -Fq 'maj@klemenc.org' <<<"$body"; then
+            echo "::error::Login page exposes an authorized email."
+            exit 1
+          fi
+
+      - name: Wait for live GitHub Pages deployment
+        shell: bash
+        run: |
+          set -euo pipefail
+          URL="https://dday2301.github.io/blog-lab/"
+          for attempt in {1..24}; do
+            echo "Pages probe $attempt/24"
+            body="$(curl -fsS --max-time 20 "$URL" || true)"
+            if grep -Fq 'Blog Lab' <<<"$body"; then
+              echo "Public Blog Lab is reachable."
+              exit 0
+            fi
+            sleep 10
+          done
+          echo "::error::Public GitHub Pages site is not reachable."
+          exit 1
+
+      - name: Verify persistent production article source
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -Fq 'blog-lab-system-test-persistent' src/App.jsx
+          grep -Fq 'Testni članek Blog Lab: trajna objava na vseh napravah' src/App.jsx
+\n'*}"
+          BODY="$body" STATUS="$status" python - <<'PY'
+          import json, os, sys
+          status = int(os.environ.get("STATUS", "0") or 0)
+          try:
+              d = json.loads(os.environ.get("BODY", "{}"))
+          except Exception:
+              print("Invalid Workers AI smoke response")
+              sys.exit(1)
+
+          if status == 200:
+              article = d.get("article") or {}
+              ok = d.get("ok") is True and isinstance(article, dict) and bool(article.get("title")) and bool(article.get("content"))
+              if not ok:
+                  print(d)
+                  sys.exit(1)
+              print("Workers AI editorial writer responded successfully.")
+              sys.exit(0)
+
+          text = json.dumps(d, ensure_ascii=False).lower()
+          quota = (
+              status in {429, 502, 503}
+              and (
+                  "4006" in text
+                  or "daily free allocation" in text
+                  or "quota" in text
+                  or "capacity" in text
+              )
+          )
+          if quota:
+              print("::warning::Workers AI is quota/capacity degraded; Actions provider failover remains available.")
+              print(d)
+              sys.exit(0)
+
+          print(d)
+          sys.exit(1)
           PY
 
       - name: Verify production scheduler dispatch bridge
