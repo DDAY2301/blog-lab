@@ -279,7 +279,7 @@ def source_has_substantive_evidence(item: dict) -> bool:
     summary = " ".join(str(item.get("summary") or "").split())
     if item.get("verified_direct"):
         return len(summary) >= 160
-    if len(summary) < 140:
+    if len(summary) < 75:
         return False
 
     title_words = set(_evidence_words(title))
@@ -291,7 +291,7 @@ def source_has_substantive_evidence(item: dict) -> bool:
     ]
     # A feed summary that merely repeats the headline plus outlet is not evidence
     # for a factual article, even when the string happens to be long.
-    return len(set(extra)) >= 7
+    return len(set(extra)) >= 6
 
 
 def automatic_source_usable(item: dict, category: str, *, trusted_primary: bool = False) -> bool:
