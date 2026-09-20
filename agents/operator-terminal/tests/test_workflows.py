@@ -57,3 +57,10 @@ def test_publisher_has_heartbeat_catchup_scheduler():
 def test_publisher_no_longer_relies_on_runtime_dst_filter():
     assert 'OFFSET="$(TZ=Europe/Ljubljana date +%z)"' not in PUBLISHER
     assert 'schedule=$EVENT_SCHEDULE run=$RUN' not in PUBLISHER
+
+
+def test_publisher_supports_cloudflare_catchup_dispatch():
+    assert "catch_up:" in PUBLISHER
+    assert 'INPUT_CATCH_UP: ${{ inputs.catch_up }}' in PUBLISHER
+    assert '"$INPUT_CATCH_UP" != "true"' in PUBLISHER
+    assert 'inputs.catch_up' in PUBLISHER

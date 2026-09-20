@@ -1,6 +1,7 @@
 const OWNER = "DDAY2301";
 const REPO = "blog-lab";
 const WORKFLOW = "operator-terminal.yml";
+const PUBLISHER_WORKFLOW = "agent-blog-lab-publisher.yml";
 const SESSION_COOKIE = "bloglab_session";
 const SESSION_TTL_SECONDS = 60 * 60 * 12;
 const AUTHORIZED_USERS = Object.freeze({
@@ -197,6 +198,32 @@ async function github(path, env, init = {}) {
   headers.set("user-agent", "BlogLabPrivateTerminal/3.0");
   headers.set("authorization", `Bearer ${token}`);
   return fetch(`https://api.github.com${path}`, { ...init, headers });
+}
+
+async function dispatchPublisherCatchup(env) {
+  const response = await github(
+    `/repos/${OWNER}/${REPO}/actions/workflows/${PUBLISHER_WORKFLOW}/dispatches`,
+    env,
+    {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        ref: "main",
+        inputs: {
+          category: "aktualno",
+          dry_run: false,
+          force: false,
+          catch_up: true
+        }
+      })
+    }
+  );
+  if (!response.ok) {
+    const detail = await response.text().catch(() => "");
+    throw new Error(`Publisher catch-up dispatch failed: HTTP ${response.status} ${detail.slice(0, 240)}`);
+  }
+  console.log("PUBLISHER_CATCHUP_DISPATCHED");
+  return true;
 }
 
 async function internalWriterAuthorized(request, env) {
@@ -774,7 +801,7 @@ export default {
       return json({
         ok: true,
         worker: "blog-lab",
-        version: "auth-v6.7-routing",
+        version: "auth-v6.8-cron-catchup",
         ready: state.ready,
         auth_ready: authReady,
         authorized_users_ready: authReady ? 2 : 0,
@@ -782,6 +809,7 @@ export default {
         media_upload_ready: mediaUploadReady,
         ai_writer_ready: Boolean(env.AI && typeof env.AI.run === "function"),
         site_editor_ready: Boolean(env.AI && typeof env.AI.run === "function"),
+        publisher_scheduler_ready: Boolean(String(env.GITHUB_DISPATCH_TOKEN || "").trim()),
         auth_mode: "built-in-session",
         login_secret_mode: "accept-either-configured-secret",
         free_tier_compatible: true
@@ -903,5 +931,14 @@ export default {
     }
 
     return new Response("Not found", { status: 404, headers: securityHeaders() });
+  },
+
+  async scheduled(controller, env, ctx) {
+    const task = dispatchPublisherCatchup(env);
+    if (ctx && typeof ctx.waitUntil === "function") {
+      ctx.waitUntil(task);
+      return;
+    }
+    await task;
   }
 };

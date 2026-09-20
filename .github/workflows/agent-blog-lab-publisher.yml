@@ -30,6 +30,11 @@ on:
         required: false
         default: false
         type: boolean
+      catch_up:
+        description: "Interni catch-up scheduler"
+        required: false
+        default: false
+        type: boolean
 
 concurrency:
   group: blog-lab-publisher
@@ -59,9 +64,10 @@ jobs:
         env:
           EVENT_NAME: ${{ github.event_name }}
           INPUT_CATEGORY: ${{ inputs.category }}
+          INPUT_CATCH_UP: ${{ inputs.catch_up }}
         run: |
           set -euo pipefail
-          if [[ "$EVENT_NAME" == "workflow_dispatch" ]]; then
+          if [[ "$EVENT_NAME" == "workflow_dispatch" && "$INPUT_CATCH_UP" != "true" ]]; then
             echo "run=true" >> "$GITHUB_OUTPUT"
             echo "category=${INPUT_CATEGORY:-aktualno}" >> "$GITHUB_OUTPUT"
             echo "slot=" >> "$GITHUB_OUTPUT"
@@ -131,13 +137,13 @@ jobs:
         shell: bash
         run: |
           ARGS=(--category "$RUN_CATEGORY")
-          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.catch_up }}" != "true" ]]; then
             ARGS+=(--manual)
           elif [[ -n "$RUN_SCHEDULE_SLOT" ]]; then
             ARGS+=(--scheduled-slot "$RUN_SCHEDULE_SLOT")
           fi
-          if [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.dry_run }}" == "true" ]]; then ARGS+=(--dry-run); fi
-          if [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.force }}" == "true" ]]; then ARGS+=(--force); fi
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.catch_up }}" != "true" && "${{ inputs.dry_run }}" == "true" ]]; then ARGS+=(--dry-run); fi
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.catch_up }}" != "true" && "${{ inputs.force }}" == "true" ]]; then ARGS+=(--force); fi
           python agents/blog-lab-publisher/agent.py "${ARGS[@]}"
       - name: Verify frontend build
         run: npm run build

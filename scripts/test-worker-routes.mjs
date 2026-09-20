@@ -45,6 +45,7 @@ const env = {
 };
 
 let dispatchedRequestId = "";
+let publisherCatchupPayload = null;
 let failDispatch = false;
 let denyMediaWrite = false;
 let workflowConclusion = "success";
@@ -58,6 +59,11 @@ globalThis.fetch = async (input, init = {}) => {
     if (failDispatch) return new Response("dispatch denied", { status: 403 });
     const body = JSON.parse(String(init.body || "{}"));
     dispatchedRequestId = String(body?.inputs?.request_id || "");
+    return new Response(null, { status: 204 });
+  }
+
+  if (url.includes("/actions/workflows/agent-blog-lab-publisher.yml/dispatches") && method === "POST") {
+    publisherCatchupPayload = JSON.parse(String(init.body || "{}"));
     return new Response(null, { status: 204 });
   }
 
@@ -275,6 +281,18 @@ response = await worker.fetch(new Request("https://example.test/api/media", {
   body: anonymousForm
 }), env);
 check(response.status === 401, "Anonymous media upload must return 401");
+
+const scheduledPromises = [];
+await worker.scheduled(
+  { scheduledTime: Date.parse("2026-09-20T07:22:00Z"), cron: "7,22,37,52 * * * *" },
+  env,
+  { waitUntil(promise) { scheduledPromises.push(Promise.resolve(promise)); } }
+);
+await Promise.all(scheduledPromises);
+check(publisherCatchupPayload?.ref === "main", "Cloudflare scheduled handler must dispatch publisher on main");
+check(publisherCatchupPayload?.inputs?.catch_up === true, "Scheduled publisher dispatch must use catch_up mode");
+check(publisherCatchupPayload?.inputs?.dry_run === false, "Scheduled publisher dispatch must not be dry-run");
+check(publisherCatchupPayload?.inputs?.force === false, "Scheduled publisher dispatch must not force manual mode");
 
 const cookie = await login();
 
