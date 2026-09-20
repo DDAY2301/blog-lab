@@ -12,5 +12,17 @@
     "reason": "AI writer capacity/provider unavailable; will retry later.",
     "last_attempt_at": "2026-09-20T12:15:17Z",
     "last_log": "WARN topic source provider=gdelt query='dodaj sedaj članek kako se je odvijalo dogakjanje tega vikenda' error=<urlopen error _ssl.c:993: The handshake operation timed out> WARN topic source provider=gdelt query='odvijalo dogakjanje tega vikenda' error=<urlopen error _ssl.c:993: The handshake operation timed out> WARN topic source provider=gdelt query='dogakjanje tega vikenda' error=<urlopen error _ssl.c:993: The handshake operation timed out> TOPIC_DIRECT_OK checked=11 enriched=10 TOPIC_SOURCES_OK count=12 providers=bing-web:30 ARTICLE_AI_UNAVAILABLE Workers AI writer ni uspel: HTTP Error 502: Bad Gateway INTENT_ROUTE requested=article resolved=article autocorrected=false ARTICLE_AI_UNAVAILABLE AI pisec ali uredniški pregled trenutno ni na voljo. Zaradi kakovosti ročni članek ni bil objavljen in ne bo nadomeščen z nepovezanim fallbackom."
+  },
+  {
+    "id": "a9bc12cf-a839-4165-81a3-b5ae65c96d28",
+    "status": "pending",
+    "command": "dodaj sedaj članek kako se je odvijalo dogakjanje tega vikenda",
+    "mode": "article",
+    "category": "aktualno",
+    "actor": "dan.grmusa@gmail.com",
+    "created_at": "2026-09-20T12:41:01Z",
+    "updated_at": "2026-09-20T12:41:01Z",
+    "attempts": 0,
+    "reason": "WARN topic source provider=gdelt query='dodaj sedaj članek kako se je odvijalo dogakjanje tega vikenda' error=<urlopen error _ssl.c:993: The handshake operation timed out> WARN topic source provider=gdelt query='odvijalo dogakjanje tega vikenda' error=<urlopen error _ssl.c:993: The handshake operation timed out> WARN topic source provider=gdelt query='dogakjanje tega vikenda' error=<urlopen error _ssl.c:993: The handshake operation timed out> TOPIC_DIRECT_OK checked=12 enriched=2 TOPIC_SOURCES_OK count=12 providers=bing-web:30 ARTICLE_AI_UNAVAILABLE Workers AI writer ni uspel: HTTP Error 502: Bad Gateway ARTICLE_AI_UNAVAILABLE AI pisec ali uredniški pregled trenutno ni na voljo. Zaradi kakovosti ročni članek ni bil objavljen in ne bo nadomeščen z nepovezanim fallbackom. INTENT_ROUTE requested=article resolved=article autocorrected=false"
   }
 ]
