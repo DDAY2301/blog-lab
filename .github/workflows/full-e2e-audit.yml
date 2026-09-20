@@ -37,7 +37,7 @@ jobs:
           pip install -r requirements-agent.txt
           npm ci
       - name: Run complete automated test matrix
-        run: pytest -q agents/operator-terminal/tests agents/blog-lab-publisher/tests
+        run: pytest -q agents/operator-terminal/tests agents/blog-lab-publisher/tests agents/self-heal/tests
       - name: Exercise all editorial categories against live sources
         shell: bash
         run: |
