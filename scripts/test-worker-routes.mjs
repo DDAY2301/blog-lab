@@ -3,7 +3,9 @@ import worker from "../terminal/worker/src/index.js";
 const password = "route-test-password";
 const keyBytes = new Uint8Array(32).fill(7);
 const env = {
+  LOGIN_PASSWORD: password,
   DAN_LOGIN_PASSWORD: password,
+  MAJ_LOGIN_PASSWORD: password,
   TERMINAL_COMMAND_KEY: Buffer.from(keyBytes).toString("base64"),
   GITHUB_DISPATCH_TOKEN: "route-test-token",
   AI: {
