@@ -361,7 +361,12 @@ def main():
             article = generate(system_prompt, retry_task, fresh[:10], args.category)
             article["fallback"] = False
             state["writer_mode"] = str(article.pop("_writer_provider", state.get("writer_mode", "ai")))
-            article = apply_media_policy(article, used_for_article, args.topic)
+            article = prepare_article_candidate(
+                article,
+                used_for_article,
+                args.topic,
+                args.output_category,
+            )
         except AIUnavailable as exc:
             print(f"INFO manual retry unavailable: {exc}")
 
