@@ -27,17 +27,26 @@ function configuredLoginPasswords(env) {
   return [...new Set(values)];
 }
 
-function loginPassword(env, email) {
+function loginPasswordCandidates(env, email) {
   const secretName = AUTHORIZED_USERS[email];
-  if (!secretName) return "";
-  // Prefer the user's dedicated secret. LOGIN_PASSWORD remains a backwards-
-  // compatible shared fallback so fresh browsers can authenticate even when
-  // the deployment still uses the original single-secret configuration.
-  return validLoginSecret(env[secretName]) || sharedLoginPassword(env);
+  if (!secretName) return [];
+  const values = [
+    validLoginSecret(env[secretName]),
+    sharedLoginPassword(env)
+  ].filter(Boolean);
+  return [...new Set(values)];
+}
+
+function loginPassword(env, email) {
+  return loginPasswordCandidates(env, email)[0] || "";
 }
 
 function configuredAuthorizedUserCount(env) {
-  return Object.keys(AUTHORIZED_USERS).filter((email) => Boolean(loginPassword(env, email))).length;
+  return Object.keys(AUTHORIZED_USERS).filter((email) => loginPasswordCandidates(env, email).length > 0).length;
+}
+
+function passwordMatchesLogin(env, email, password) {
+  return loginPasswordCandidates(env, email).some((expected) => timingSafeEqual(password, expected));
 }
 
 function securityHeaders(extra = {}) {
@@ -1128,7 +1137,7 @@ export default {
       return json({
         ok: true,
         worker: "blog-lab",
-        version: "auth-v6.13-cross-browser-login",
+        version: "auth-v6.14-cross-browser-login",
         ready: state.ready,
         auth_ready: authReady,
         authorized_users_ready: configuredAuthorizedUserCount(env),
@@ -1199,7 +1208,7 @@ export default {
       const secretName = AUTHORIZED_USERS[email];
       const expectedPassword = loginPassword(env, email);
       const configured = configuredAuthorizedUserCount(env) > 0;
-      const valid = Boolean(secretName && expectedPassword && password.length && timingSafeEqual(password, expectedPassword));
+      const valid = Boolean(secretName && expectedPassword && password.length && passwordMatchesLogin(env, email, password));
       if (!configured) {
         return json({ error: "Prijava na strežniku še ni konfigurirana.", code: "LOGIN_SECRET_MISSING" }, 503);
       }
