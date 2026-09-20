@@ -74,7 +74,7 @@ INTENT_TOKEN_ALIASES.update({
     "objavljivanje":"objavljanje","objavljivanja":"objavljanje",
     "preuredi":"uredi","redesign":"izboljsaj","redizajn":"izboljsaj",
     "fix":"uredi","repair":"uredi","popravi":"uredi","popraviti":"uredi",
-    "check":"preveri","verify":"preveri","inspect":"preveri",
+    "check":"preveri","verify":"preveri","inspect":"preveri","shut":"ustavi",
     "upload":"nalozi","nalozi":"nalozi","naloži":"nalozi",
     "move":"premakni","premakni":"premakni","copy":"kopiraj","kopiraj":"kopiraj",
     "rename":"preimenuj","preimenuj":"preimenuj",
