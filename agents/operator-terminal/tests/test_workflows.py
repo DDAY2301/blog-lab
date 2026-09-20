@@ -77,3 +77,10 @@ def test_publisher_uses_auto_provider_failover():
     assert 'AI_PROVIDER: "auto"' in PUBLISHER
     assert 'copilot-requests: write' in PUBLISHER
     assert 'npm install -g @github/copilot@latest' in PUBLISHER
+
+
+def test_ai_workflows_enable_github_models_fallback():
+    for workflow in (OPERATOR, PUBLISHER):
+        assert "models: read" in workflow
+        assert 'GITHUB_MODELS_MODEL: "openai/gpt-4.1"' in workflow
+        assert 'GITHUB_TOKEN: ${{ github.token }}' in workflow
