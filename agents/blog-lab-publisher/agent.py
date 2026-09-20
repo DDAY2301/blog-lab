@@ -170,8 +170,19 @@ def set_status(cfg, state, value, message="", output=None):
         "scheduled_posts_today": state.get("scheduled_posts_today", 0),
         "manual_posts_today": state.get("manual_posts_today", 0),
         "writer_mode": state.get("writer_mode", "unknown"),
+        "scheduled_slots_done": state.get("scheduled_slots_done", []),
         "last_error": state.get("last_error"),
     })
+def mark_scheduled_slot_done(state: dict, slot_id: str) -> None:
+    slot_id = str(slot_id or "").strip()
+    if not slot_id:
+        return
+    done = list(state.get("scheduled_slots_done") or [])
+    if slot_id not in done:
+        done.append(slot_id)
+    state["scheduled_slots_done"] = done[-12:]
+
+
 def existing_titles() -> set[str]:
     if not APP.exists(): return set()
     text = APP.read_text(encoding="utf-8", errors="ignore")
@@ -181,6 +192,7 @@ def main():
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--force", action="store_true")
     ap.add_argument("--manual", action="store_true", help="Manual/editorial request; does not consume scheduled daily quota")
+    ap.add_argument("--scheduled-slot", default="", help="Resolved automatic schedule slot id for catch-up tracking")
     ap.add_argument("--category", choices=sorted(VALID_CATEGORIES), default=os.getenv("RUN_CATEGORY", "aktualno"))
     ap.add_argument("--topic", default="")
     ap.add_argument("--output-category", default="")
@@ -200,8 +212,10 @@ def main():
         state["posts_today"] = 0
         state["scheduled_posts_today"] = 0
         state["manual_posts_today"] = 0
+        state["scheduled_slots_done"] = []
     state.setdefault("scheduled_posts_today", 0)
     state.setdefault("manual_posts_today", 0)
+    state.setdefault("scheduled_slots_done", [])
     state["current_category"] = args.category
     manual_request = bool(args.manual or args.topic.strip())
     if not enabled(cfg): set_status(cfg, state, "paused", "Agent je izklopljen."); print("AGENT_DISABLED"); return 0
@@ -232,6 +246,9 @@ def main():
     if args.topic.strip() and fresh:
         fresh = rank_topic_items(args.topic, fresh)
     if not fresh:
+        if args.scheduled_slot and not manual_request:
+            mark_scheduled_slot_done(state, args.scheduled_slot)
+            atomic_json(str(STATE), state)
         set_status(cfg, state, "completed", f"Ni novih vsebin za kategorijo {args.category}.")
         print("NO_NEW_CONTENT")
         return 3 if (args.topic.strip() and args.force) else 0
@@ -284,6 +301,9 @@ def main():
             print(f"INFO manual retry unavailable: {exc}")
 
     if article.get("skip"):
+        if args.scheduled_slot and not manual_request:
+            mark_scheduled_slot_done(state, args.scheduled_slot)
+            atomic_json(str(STATE), state)
         set_status(cfg, state, "completed", article.get("reason", "Ni primerne teme."))
         print("NO_SUITABLE_CONTENT")
         return 3 if (args.topic.strip() and args.force) else 0
@@ -308,8 +328,10 @@ def main():
         "posts_today": state.get("posts_today", 0) + 1,
         "scheduled_posts_today": state.get("scheduled_posts_today", 0) + (0 if manual_request else 1),
         "manual_posts_today": state.get("manual_posts_today", 0) + (1 if manual_request else 0),
-        "agent_version": "2.2.0",
+        "agent_version": "2.3.0",
         "current_category": args.category,
     })
+    if args.scheduled_slot and not manual_request:
+        mark_scheduled_slot_done(state, args.scheduled_slot)
     atomic_json(str(STATE), state); set_status(cfg, state, "completed", "Članek je uspešno pripravljen za objavo.", article["id"]); print(f"PUBLISHED:{article['id']}"); return 0
 if __name__ == "__main__": raise SystemExit(main())
