@@ -17,7 +17,6 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 from services.sources import collect, collect_topic, rank_topic_items
 from services.ai_provider import generate, review_grounding, AIUnavailable
-from services.fallback_writer import build_digest
 from services.validator import validate
 from services.publisher import publish_to_app, slugify
 from services.state import load_json, atomic_json
