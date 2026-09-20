@@ -24,5 +24,17 @@
     "updated_at": "2026-09-20T12:41:01Z",
     "attempts": 0,
     "reason": "WARN topic source provider=gdelt query='dodaj sedaj članek kako se je odvijalo dogakjanje tega vikenda' error=<urlopen error _ssl.c:993: The handshake operation timed out> WARN topic source provider=gdelt query='odvijalo dogakjanje tega vikenda' error=<urlopen error _ssl.c:993: The handshake operation timed out> WARN topic source provider=gdelt query='dogakjanje tega vikenda' error=<urlopen error _ssl.c:993: The handshake operation timed out> TOPIC_DIRECT_OK checked=12 enriched=2 TOPIC_SOURCES_OK count=12 providers=bing-web:30 ARTICLE_AI_UNAVAILABLE Workers AI writer ni uspel: HTTP Error 502: Bad Gateway ARTICLE_AI_UNAVAILABLE AI pisec ali uredniški pregled trenutno ni na voljo. Zaradi kakovosti ročni članek ni bil objavljen in ne bo nadomeščen z nepovezanim fallbackom. INTENT_ROUTE requested=article resolved=article autocorrected=false"
+  },
+  {
+    "id": "5a0804f5-0f5e-4b81-89c5-c2cf39e60fba",
+    "status": "pending",
+    "command": "naredi ki smo jih zamudili danes in prejšnje dni",
+    "mode": "article",
+    "category": "aktualno",
+    "actor": "dan.grmusa@gmail.com",
+    "created_at": "2026-09-20T14:29:20Z",
+    "updated_at": "2026-09-20T14:29:20Z",
+    "attempts": 0,
+    "reason": "WARN topic source provider=gdelt query='naredi ki smo jih zamudili danes in prejšnje dni' error=HTTP Error 429: Too Many Requests WARN topic source provider=gdelt query='naredi ki smo jih zamudili danes' error=HTTP Error 429: Too Many Requests WARN topic source provider=gdelt query='prejšnje dni' error=HTTP Error 429: Too Many Requests WARN topic source provider=gdelt query='zamudili danes prejšnje' error=HTTP Error 429: Too Many Requests TOPIC_DIRECT_OK checked=8 enriched=6 TOPIC_SOURCES_OK count=30 providers=bing-web:40,google-news-si:74 ARTICLE_AI_UNAVAILABLE Workers AI writer ni uspel: HTTP Error 502: Bad Gateway ARTICLE_AI_UNAVAILABLE AI pisec ali uredniški pregled trenutno ni na voljo. Zaradi kakovosti ročni članek ni bil objavljen in ne bo nadomeščen z nepovezanim fallbackom. INTENT_ROUTE requested=article resolved=article autocorrected=false"
   }
 ]
