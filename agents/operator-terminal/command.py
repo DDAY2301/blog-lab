@@ -1132,8 +1132,11 @@ Rules:
 - If a previous plan was rejected, use the diagnostic to choose a more precise anchor or a safe alternate edit; do not repeat the same ambiguous patch.
 - If the request cannot be completed safely from the provided context, return {"summary":"reason","edits":[]}.
 """
+    normalized_hint = _normalized_intent(command)
     request_text = (
-        "OPERATOR REQUEST:\n" + command
+        "OPERATOR REQUEST (literal user text; preserve names and values exactly):\n" + command
+        + "\n\nNORMALIZED INTENT HINT (routing aid only; never use it to rewrite literal names or values):\n"
+        + normalized_hint
         + "\n\nAllowed existing paths: " + ", ".join(allowed)
     )
     if feedback:
@@ -1740,7 +1743,13 @@ def main() -> int:
     if not command or len(command) > 4000: raise SystemExit("invalid command")
     if mode not in VALID_MODES: mode = "auto"
     if category not in VALID_CATEGORIES: category = "aktualno"
-    if mode == "auto": mode = infer_mode(command)
+    requested_mode = mode
+    if mode == "auto":
+        mode = infer_mode(command)
+    print(
+        f"INTENT_ROUTE requested={requested_mode} resolved={mode} "
+        f"autocorrected={str(_intent_was_corrected(command)).lower()}"
+    )
     if mode == "control": control_command(command)
     elif mode == "article": article_command(command, category)
     elif mode == "site": site_command(command)
