@@ -8,9 +8,19 @@ const env = {
   GITHUB_DISPATCH_TOKEN: "route-test-token",
   AI: {
     async run(model, request) {
-      if (model !== "@cf/meta/llama-3.3-70b-instruct-fp8-fast") throw new Error("unexpected model");
+      if (model !== "@cf/zai-org/glm-4.7-flash") throw new Error("unexpected model");
       if (!Array.isArray(request?.messages) || request.messages.length !== 2) throw new Error("unexpected AI messages");
       const userMessage = String(request.messages[1]?.content || "");
+      if (request?.max_tokens === 900) {
+        return {
+          response: {
+            pass: true,
+            issues: [],
+            unsupported_claims: []
+          },
+          usage: { input_tokens: 10, output_tokens: 5 }
+        };
+      }
       if (userMessage.includes("NESTED_RESPONSE_TEST")) {
         return {
           response: {
@@ -261,6 +271,26 @@ response = await worker.fetch(new Request("https://example.test/api/ai/write", {
 check(response.status === 200, "Workers AI writer must accept a nested article object");
 const nestedWriterResult = await response.json();
 check(nestedWriterResult.article?.title === "Nested AI članek", "Workers AI writer must unwrap nested article payloads");
+
+const reviewPayload = JSON.stringify({
+  system_prompt: "Preveri trditve proti virom in vrni JSON.",
+  user_prompt: "Članek in preverjeni viri."
+});
+response = await worker.fetch(new Request("https://example.test/api/ai/review", {
+  method: "POST",
+  headers: { "content-type": "application/json" },
+  body: reviewPayload
+}), env);
+check(response.status === 401, "Workers AI review must reject an unauthenticated request");
+
+response = await worker.fetch(new Request("https://example.test/api/ai/review", {
+  method: "POST",
+  headers: writerHeaders,
+  body: reviewPayload
+}), env);
+check(response.status === 200, "Workers AI review must accept the internal credential");
+const reviewResult = await response.json();
+check(reviewResult.ok === true && reviewResult.review?.pass === true, "Workers AI review must return review JSON");
 
 const sitePayload = JSON.stringify({
   system_prompt: "Vrni JSON edit plan.",
