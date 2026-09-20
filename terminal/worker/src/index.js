@@ -527,8 +527,8 @@ const COMMAND_TOKEN_ALIASES = Object.freeze({
   ustvari:"ustvari", create:"ustvari", generate:"ustvari", napravi:"ustvari", izradi:"ustvari",
   uredi:"uredi", edit:"uredi", modify:"uredi", fix:"uredi", popravi:"uredi", preuredi:"uredi",
   spremeni:"spremeni", change:"spremeni", replace:"spremeni", zamenjaj:"spremeni",
-  izboljsaj:"izboljsaj", improve:"izboljsaj", enhance:"izboljsaj", redesign:"izboljsaj", redizajn:"izboljsaj",
-  polepsaj:"polepsaj", beautify:"polepsaj", prettier:"polepsaj",
+  izboljsaj:"izboljsaj", improve:"izboljsaj", imrpove:"izboljsaj", enhance:"izboljsaj", redesign:"izboljsaj", redizajn:"izboljsaj",
+  polepsaj:"polepsaj", polespaj:"polepsaj", beautify:"polepsaj", prettier:"polepsaj",
   dodaj:"dodaj", add:"dodaj", insert:"dodaj",
   odstrani:"odstrani", remove:"odstrani", delete:"odstrani", izbrisi:"odstrani", ukloni:"odstrani", obrisi:"odstrani",
   ustavi:"ustavi", stop:"ustavi", pause:"ustavi", pavza:"ustavi", zaustavi:"ustavi", ugasi:"ustavi", shut:"ustavi",
@@ -536,12 +536,12 @@ const COMMAND_TOKEN_ALIASES = Object.freeze({
   vklopi:"vklopi", enable:"vklopi", ukljuci:"vklopi", izklopi:"izklopi", disable:"izklopi", iskljuci:"izklopi",
   zazeni:"zazeni", start:"zazeni", restart:"zazeni", pokreni:"zazeni", off:"izklopi", on:"vklopi",
   preveri:"preveri", check:"preveri", verify:"preveri", inspect:"preveri", proveri:"preveri", provjeri:"preveri",
-  status:"status", state:"status",
+  status:"status", state:"status", sttaus:"status", statsu:"status",
   urnik:"urnik", schedule:"urnik", raspored:"urnik",
-  agent:"agent", agenta:"agent", publishing:"objavljanje", objavljanje:"objavljanje",
+  agent:"agent", agenta:"agent", agnta:"agent", agnet:"agent", publishing:"objavljanje", objavljanje:"objavljanje",
   clanek:"clanek", članek:"clanek", clanka:"clanek", article:"clanek", artcle:"clanek", clanak:"clanek", članak:"clanek",
   post:"clanek", blog:"clanek", prispevek:"clanek", novica:"novica", news:"novica", vijest:"novica", vest:"novica",
-  stran:"stran", strani:"stran", page:"stran", site:"stran", website:"stran", webiste:"stran", sajt:"stran", stranica:"stran",
+  stran:"stran", strani:"stran", strna:"stran", page:"stran", site:"stran", website:"stran", webiste:"stran", sajt:"stran", stranica:"stran",
   rubrika:"rubrika", category:"rubrika", kategorija:"rubrika", meni:"meni", menu:"meni", navigation:"navigacija", navigacija:"navigacija",
   header:"header", footer:"footer", hero:"hero", sidebar:"sidebar", galerija:"galerija", gallery:"galerija",
   slika:"slika", slike:"slika", image:"slika", images:"slika", fotografija:"slika", photo:"slika", video:"video",
@@ -613,7 +613,7 @@ function correctCommandToken(token) {
       best = candidate;
     }
   }
-  const threshold = token.length <= 4 ? 0.78 : (token.length <= 6 ? 0.70 : 0.62);
+  const threshold = token.length <= 4 ? 0.82 : (token.length <= 6 ? 0.72 : 0.75);
   if (bestScore < threshold) return token;
   if (token[0] !== best[0] && token.length < 8) return token;
   return COMMAND_TOKEN_ALIASES[best] || token;
