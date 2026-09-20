@@ -662,12 +662,16 @@ def test_automatic_sources_merge_feed_and_webwide(monkeypatch):
     feed_item = {
         "url": "https://news.example/feed",
         "hash": "feed-1",
-        "title": "Feed story",
+        "title": "Slovenska nogometna liga prinaša derbi",
+        "summary": "Nogometna tekma bo ta konec tedna, kluba pa sta predstavila priprave in pričakovanja.",
+        "provider": "",
     }
     web_item = {
         "url": "https://web.example/story",
         "hash": "web-1",
-        "title": "Web story",
+        "title": "Tennis tournament reaches the final",
+        "summary": "The tennis tournament reaches its final after two competitive semifinal matches and strong performances.",
+        "provider": "bing-news",
     }
     calls = []
     monkeypatch.setattr(agent, "collect", lambda *a, **k: [feed_item])
