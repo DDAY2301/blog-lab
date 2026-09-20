@@ -5,12 +5,12 @@
   "posts_date": "2026-09-20",
   "posts_today": 3,
   "last_output": "politika-si-odpira-vrata-v-medije-vlada-kriticne-medije-s-profesionalnimi-novinarji-dojema-eeca644f",
-  "last_error": "ponavljanje",
+  "last_error": "ze_uporabljen_vir",
   "agent_version": "2.8.0-autonomous-fallback",
   "current_category": "aktualno",
   "scheduled_posts_today": 2,
   "manual_posts_today": 1,
-  "writer_mode": "unavailable",
+  "writer_mode": "local_evidence_ai",
   "scheduled_slots_done": [
     "2026-09-20|08:17|sport",
     "2026-09-20|13:27|politika"
@@ -20,7 +20,7 @@
   ],
   "last_editorial_hold": {
     "slot": "2026-09-20|19:43|aktualno",
-    "reason": "ai_unavailable",
-    "at": "2026-09-20T20:53:02+02:00"
+    "reason": "ze_uporabljen_vir",
+    "at": "2026-09-20T20:58:28+02:00"
   }
 }
