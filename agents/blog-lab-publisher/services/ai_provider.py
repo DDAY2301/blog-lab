@@ -4,6 +4,7 @@ import os
 import shutil
 import subprocess
 from urllib.request import Request, urlopen
+from urllib.error import HTTPError
 
 class AIUnavailable(RuntimeError):
     pass
@@ -104,6 +105,13 @@ def _workers_ai(system_prompt: str, user_prompt: str, source_items: list[dict], 
     try:
         with urlopen(req, timeout=120) as response:
             data = json.loads(response.read().decode("utf-8"))
+    except HTTPError as exc:
+        detail = ""
+        try:
+            detail = exc.read().decode("utf-8", errors="replace")
+        except Exception:
+            detail = ""
+        raise AIUnavailable(f"Workers AI writer ni uspel: HTTP {exc.code}: {detail[:700]}") from exc
     except Exception as exc:
         raise AIUnavailable(f"Workers AI writer ni uspel: {exc}") from exc
 
@@ -145,6 +153,13 @@ def _workers_review(system_prompt: str, user_prompt: str) -> dict:
     try:
         with urlopen(req, timeout=90) as response:
             data = json.loads(response.read().decode("utf-8"))
+    except HTTPError as exc:
+        detail = ""
+        try:
+            detail = exc.read().decode("utf-8", errors="replace")
+        except Exception:
+            detail = ""
+        raise AIUnavailable(f"Workers AI review ni uspel: HTTP {exc.code}: {detail[:700]}") from exc
     except Exception as exc:
         raise AIUnavailable(f"Workers AI review ni uspel: {exc}") from exc
 

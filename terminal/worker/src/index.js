@@ -342,19 +342,114 @@ function nonRetryableWorkersAiError(error) {
   );
 }
 
-async function runWorkersAiWithRetry(env, request, attempts = 3) {
-  let lastError;
+function aiGatewayOptions(env, purpose = "general", cacheKey = "") {
+  const id = String(env.AI_GATEWAY_ID || env.WORKERS_AI_GATEWAY_ID || "").trim();
+  if (!id) return undefined;
+  const cacheTtl = Math.max(0, Math.min(Number(env.AI_GATEWAY_CACHE_TTL || 900) || 0, 86400));
+  return {
+    gateway: {
+      id,
+      skipCache: String(env.AI_GATEWAY_SKIP_CACHE || "").toLowerCase() === "true",
+      cacheTtl,
+      cacheKey: cacheKey || undefined,
+      collectLog: true,
+      metadata: { app: "blog-lab", purpose }
+    }
+  };
+}
+
+function workersAiModelCandidates(env) {
+  const raw = String(env.WORKERS_AI_MODELS || "").trim();
+  const configured = raw
+    ? raw.split(/[\n,]+/).map((x) => x.trim()).filter(Boolean)
+    : [];
+  const defaults = [
+    "@cf/zai-org/glm-4.7-flash",
+    "@cf/meta/llama-3.1-8b-instruct-fp8",
+    "@cf/google/gemma-3-12b-it",
+    "@cf/meta/llama-3.1-8b-instruct-fast"
+  ];
+  return [...new Set([...configured, ...defaults])].slice(0, 8);
+}
+
+function sanitizeAiError(error) {
+  const message = String(error?.message || error || "").replace(/\s+/g, " ").trim();
+  const name = String(error?.name || "Error").slice(0, 80);
+  const code = String(error?.code || error?.cause?.code || "").slice(0, 80);
+  return { name, code: code || undefined, message: message.slice(0, 500) };
+}
+
+async function runWorkersAiWithRetry(env, request, attempts = 3, options = {}) {
+  const errors = [];
   const total = Math.max(1, Math.min(Number(attempts) || 1, 3));
-  for (let attempt = 1; attempt <= total; attempt += 1) {
-    try {
-      return await env.AI.run("@cf/zai-org/glm-4.7-flash", request);
-    } catch (error) {
-      lastError = error;
-      if (attempt >= total || nonRetryableWorkersAiError(error)) throw error;
-      await new Promise((resolve) => setTimeout(resolve, attempt * 180));
+  const purpose = options.purpose || "general";
+  const cacheKey = options.cacheKey || `${purpose}:${JSON.stringify(request).slice(0, 800)}`;
+  const gatewayOptions = aiGatewayOptions(env, purpose, cacheKey);
+  for (const model of workersAiModelCandidates(env)) {
+    for (let attempt = 1; attempt <= total; attempt += 1) {
+      try {
+        const result = await env.AI.run(model, request, gatewayOptions);
+        if (result && typeof result === "object") {
+          try { Object.defineProperty(result, "_bloglab_model", { value: model, enumerable: false }); } catch {}
+          try { Object.defineProperty(result, "_bloglab_gateway_log_id", { value: env.AI?.aiGatewayLogId || null, enumerable: false }); } catch {}
+          try { Object.defineProperty(result, "_bloglab_attempts", { value: { model, attempt, errors }, enumerable: false }); } catch {}
+        }
+        return result;
+      } catch (error) {
+        const detail = { model, attempt, ...sanitizeAiError(error) };
+        errors.push(detail);
+        if (nonRetryableWorkersAiError(error)) {
+          const nonRetry = new Error(`Workers AI non-retryable failure on ${model}: ${detail.message}`);
+          nonRetry.aiErrors = errors;
+          nonRetry.aiLastModel = model;
+          throw nonRetry;
+        }
+        if (attempt < total) await new Promise((resolve) => setTimeout(resolve, attempt * 220));
+      }
     }
   }
-  throw lastError || new Error("Workers AI inference failed");
+  const last = errors[errors.length - 1] || { message: "unknown Workers AI failure" };
+  const failed = new Error(`Workers AI inference failed after ${errors.length} attempts. Last ${last.model || "model"}: ${last.message}`);
+  failed.aiErrors = errors;
+  failed.aiLastModel = last.model || null;
+  throw failed;
+}
+
+async function diagnoseWorkersAi(env) {
+  const available = Boolean(env.AI && typeof env.AI.run === "function");
+  const models = workersAiModelCandidates(env);
+  const gateway = Boolean(String(env.AI_GATEWAY_ID || env.WORKERS_AI_GATEWAY_ID || "").trim());
+  const results = [];
+  if (!available) return { ok: false, available, gateway, models, results, code: "AI_BINDING_MISSING" };
+  for (const model of models.slice(0, 4)) {
+    const started = Date.now();
+    try {
+      const result = await env.AI.run(
+        model,
+        {
+          messages: [
+            { role: "system", content: "Return only compact JSON." },
+            { role: "user", content: "Return {\"ok\":true,\"service\":\"blog-lab\"}." }
+          ],
+          response_format: { type: "json_object" },
+          max_tokens: 80,
+          temperature: 0
+        },
+        aiGatewayOptions(env, "diagnostics", `diagnostics:${model}`)
+      );
+      results.push({
+        model,
+        ok: true,
+        ms: Date.now() - started,
+        gateway_log_id: env.AI?.aiGatewayLogId || null,
+        keys: result && typeof result === "object" ? Object.keys(result).slice(0, 8) : []
+      });
+      return { ok: true, available, gateway, models, results };
+    } catch (error) {
+      results.push({ model, ok: false, ms: Date.now() - started, ...sanitizeAiError(error), gateway_log_id: env.AI?.aiGatewayLogId || null });
+    }
+  }
+  return { ok: false, available, gateway, models, results, code: "ALL_MODELS_FAILED" };
 }
 
 async function generateArticleWithWorkersAi(env, body) {
@@ -388,14 +483,16 @@ async function generateArticleWithWorkersAi(env, body) {
       max_tokens: 2800,
       temperature: 0.32,
       repetition_penalty: 1.08,
-    });
+    }, 2, { purpose: "article-write", cacheKey: `article:${category}:${sourceJson.slice(0, 400)}` });
   } catch (error) {
     return {
       ok: false,
       status: 502,
       error: "Workers AI generiranje ni uspelo.",
       code: "AI_INFERENCE_FAILED",
-      detail: String(error?.message || error || "").slice(0, 300),
+      detail: String(error?.message || error || "").slice(0, 500),
+      attempts: Array.isArray(error?.aiErrors) ? error.aiErrors.slice(-8) : [],
+      last_model: error?.aiLastModel || null,
     };
   }
 
@@ -411,7 +508,9 @@ async function generateArticleWithWorkersAi(env, body) {
   return {
     ok: true,
     article,
-    model: "@cf/zai-org/glm-4.7-flash",
+    model: result?._bloglab_model || "workers-ai",
+    ai_gateway_log_id: result?._bloglab_gateway_log_id || null,
+    ai_attempts: result?._bloglab_attempts || null,
     usage: result?.usage || null,
   };
 }
@@ -442,14 +541,16 @@ async function generateReviewWithWorkersAi(env, body) {
       max_tokens: 900,
       temperature: 0.05,
       repetition_penalty: 1.04,
-    });
+    }, 2, { purpose: "article-review", cacheKey: `review:${userPrompt.slice(0, 400)}` });
   } catch (error) {
     return {
       ok: false,
       status: 502,
       error: "Workers AI review ni uspel.",
       code: "AI_REVIEW_INFERENCE_FAILED",
-      detail: String(error?.message || error || "").slice(0, 300),
+      detail: String(error?.message || error || "").slice(0, 500),
+      attempts: Array.isArray(error?.aiErrors) ? error.aiErrors.slice(-8) : [],
+      last_model: error?.aiLastModel || null,
     };
   }
 
@@ -460,7 +561,9 @@ async function generateReviewWithWorkersAi(env, body) {
   return {
     ok: true,
     review,
-    model: "@cf/zai-org/glm-4.7-flash",
+    model: result?._bloglab_model || "workers-ai",
+    ai_gateway_log_id: result?._bloglab_gateway_log_id || null,
+    ai_attempts: result?._bloglab_attempts || null,
     usage: result?.usage || null,
   };
 }
@@ -496,14 +599,16 @@ async function generateSiteEditWithWorkersAi(env, body) {
       max_tokens: 2800,
       temperature: 0.20,
       repetition_penalty: 1.06,
-    });
+    }, 2, { purpose: "site-edit", cacheKey: `site:${requestText.slice(0, 400)}` });
   } catch (error) {
     return {
       ok: false,
       status: 502,
       error: "Workers AI site-editor ni uspel.",
       code: "SITE_AI_INFERENCE_FAILED",
-      detail: String(error?.message || error || "").slice(0, 300),
+      detail: String(error?.message || error || "").slice(0, 500),
+      attempts: Array.isArray(error?.aiErrors) ? error.aiErrors.slice(-8) : [],
+      last_model: error?.aiLastModel || null,
     };
   }
 
@@ -514,7 +619,9 @@ async function generateSiteEditWithWorkersAi(env, body) {
   return {
     ok: true,
     plan,
-    model: "@cf/zai-org/glm-4.7-flash",
+    model: result?._bloglab_model || "workers-ai",
+    ai_gateway_log_id: result?._bloglab_gateway_log_id || null,
+    ai_attempts: result?._bloglab_attempts || null,
     usage: result?.usage || null,
   };
 }
@@ -553,14 +660,16 @@ async function generateRepairWithWorkersAi(env, body) {
       max_tokens: 3200,
       temperature: 0.05,
       repetition_penalty: 1.04,
-    });
+    }, 2, { purpose: "self-heal", cacheKey: `repair:${requestText.slice(0, 400)}` });
   } catch (error) {
     return {
       ok: false,
       status: 502,
       error: "Workers AI self-heal diagnostika ni uspela.",
       code: "REPAIR_AI_INFERENCE_FAILED",
-      detail: String(error?.message || error || "").slice(0, 300),
+      detail: String(error?.message || error || "").slice(0, 500),
+      attempts: Array.isArray(error?.aiErrors) ? error.aiErrors.slice(-8) : [],
+      last_model: error?.aiLastModel || null,
     };
   }
 
@@ -576,7 +685,9 @@ async function generateRepairWithWorkersAi(env, body) {
   return {
     ok: true,
     plan,
-    model: "@cf/zai-org/glm-4.7-flash",
+    model: result?._bloglab_model || "workers-ai",
+    ai_gateway_log_id: result?._bloglab_gateway_log_id || null,
+    ai_attempts: result?._bloglab_attempts || null,
     usage: result?.usage || null,
   };
 }
@@ -837,7 +948,7 @@ async function resolveCommandIntent(command, env, allowAi = true) {
       response_format: { type: "json_object" },
       max_tokens: 180,
       temperature: 0.02
-    });
+    }, 1, { purpose: "intent-classifier", cacheKey: `intent:${String(command || "").slice(0, 300)}` });
     const parsed = articleJsonFromAiResult(result);
     const mode = String(parsed?.mode || "").toLowerCase();
     if (!["article","site","control"].includes(mode)) return local;
@@ -1253,7 +1364,7 @@ export default {
       return json({
         ok: true,
         worker: "blog-lab",
-        version: "auth-v6.17-ai-resilience",
+        version: "auth-v6.18-ai-diagnostics-fallback",
         ready: state.ready,
         auth_ready: authReady,
         auth_self_test_ok: authTest.ok,
@@ -1268,7 +1379,10 @@ export default {
         publisher_scheduler_ready: Boolean(String(env.GITHUB_DISPATCH_TOKEN || "").trim()),
         auth_mode: "built-in-session",
         login_secret_mode: "accept-either-configured-secret",
-        free_tier_compatible: true
+        free_tier_compatible: true,
+        ai_gateway_configured: Boolean(String(env.AI_GATEWAY_ID || env.WORKERS_AI_GATEWAY_ID || "").trim()),
+        ai_gateway_cache_ttl: Number(env.AI_GATEWAY_CACHE_TTL || 900) || 900,
+        ai_model_fallbacks: workersAiModelCandidates(env)
       });
     }
 
@@ -1286,6 +1400,14 @@ export default {
           detail: String(error?.message || error || "").slice(0, 300)
         }, 502);
       }
+    }
+
+    if (request.method === "GET" && url.pathname === "/api/ai/diagnostics") {
+      if (!(await internalWriterAuthorized(request, env))) {
+        return json({ error: "Nepooblaščen interni AI diagnostics klic.", code: "AI_UNAUTHORIZED" }, 401);
+      }
+      const result = await diagnoseWorkersAi(env);
+      return json(result, result.ok ? 200 : 502);
     }
 
     if (request.method === "POST" && url.pathname === "/api/ai/write") {
