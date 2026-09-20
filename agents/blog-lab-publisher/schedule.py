@@ -40,12 +40,19 @@ def resolve_due_slot(control: dict, state: dict, current: datetime | None = None
     today = current.date().isoformat()
     done = set(state.get("scheduled_slots_done") or [])
 
-    # Migration safety: before scheduled_slots_done existed, preserve the meaning
-    # of scheduled_posts_today by treating the first N slots as already handled.
-    if state.get("posts_date") == today and not done:
-        count = max(0, int(state.get("scheduled_posts_today") or 0))
-        for slot in slots[:count]:
-            done.add(_slot_id(today, slot))
+    # completed slot IDs represent actual successful scheduled publications.
+    # Reconcile any legacy/bad state where a slot was marked done without a
+    # corresponding scheduled post count.
+    if state.get("posts_date") == today:
+        actual_count = max(0, int(state.get("scheduled_posts_today") or 0))
+        ordered_today = [_slot_id(today, slot) for slot in slots]
+        trusted = [slot_id for slot_id in ordered_today if slot_id in done][:actual_count]
+        done = set(trusted)
+
+        # Migration safety: before scheduled_slots_done existed, preserve the
+        # meaning of scheduled_posts_today by treating the first N slots as done.
+        if actual_count and len(done) < actual_count:
+            done = set(ordered_today[:actual_count])
 
     now_minutes = current.hour * 60 + current.minute
     for slot in slots:
