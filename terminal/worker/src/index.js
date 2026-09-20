@@ -233,10 +233,31 @@ async function internalWriterAuthorized(request, env) {
   return Boolean(token && expected && timingSafeEqual(token, expected));
 }
 
-function articleJsonFromAiResult(result) {
-  if (result && typeof result.response === "object" && !Array.isArray(result.response)) {
-    return result.response;
+function unwrapAiObject(value, depth = 0) {
+  if (!value || typeof value !== "object" || Array.isArray(value) || depth > 4) return null;
+
+  const preferred = ["article", "plan", "result", "data", "output", "response"];
+  for (const key of preferred) {
+    const nested = value[key];
+    if (nested && typeof nested === "object" && !Array.isArray(nested)) {
+      const unwrapped = unwrapAiObject(nested, depth + 1);
+      if (unwrapped) return unwrapped;
+    }
   }
+  return value;
+}
+
+function articleJsonFromAiResult(result) {
+  const objectCandidates = [
+    result?.response,
+    result?.choices?.[0]?.message,
+    result,
+  ];
+  for (const value of objectCandidates) {
+    const parsed = unwrapAiObject(value);
+    if (parsed) return parsed;
+  }
+
   const candidates = [
     result?.response,
     result?.choices?.[0]?.message?.content,
@@ -246,11 +267,22 @@ function articleJsonFromAiResult(result) {
     if (typeof value !== "string") continue;
     const text = value.trim().replace(/^\`\`\`json\s*/i, "").replace(/\`\`\`$/i, "").trim();
     try {
-      const parsed = JSON.parse(text);
-      if (parsed && typeof parsed === "object" && !Array.isArray(parsed)) return parsed;
+      const decoded = JSON.parse(text);
+      const parsed = unwrapAiObject(decoded);
+      if (parsed) return parsed;
     } catch {}
   }
   return null;
+}
+
+function looksLikeArticle(article) {
+  if (!article || typeof article !== "object" || Array.isArray(article)) return false;
+  if (article.skip === true) return true;
+  return Boolean(
+    String(article.title || "").trim()
+    || String(article.content || "").trim()
+    || Array.isArray(article.sources)
+  );
 }
 
 async function generateArticleWithWorkersAi(env, body) {
@@ -296,8 +328,13 @@ async function generateArticleWithWorkersAi(env, body) {
   }
 
   const article = articleJsonFromAiResult(result);
-  if (!article) {
-    return { ok: false, status: 502, error: "Workers AI ni vrnil veljavnega JSON članka.", code: "AI_JSON_INVALID" };
+  if (!looksLikeArticle(article)) {
+    return {
+      ok: false,
+      status: 502,
+      error: "Workers AI je vrnil JSON, vendar brez pričakovane strukture članka.",
+      code: "AI_ARTICLE_SHAPE_INVALID"
+    };
   }
   return {
     ok: true,
@@ -801,7 +838,7 @@ export default {
       return json({
         ok: true,
         worker: "blog-lab",
-        version: "auth-v6.9-scheduler-probe",
+        version: "auth-v6.10-runtime-resilience",
         ready: state.ready,
         auth_ready: authReady,
         authorized_users_ready: authReady ? 2 : 0,
