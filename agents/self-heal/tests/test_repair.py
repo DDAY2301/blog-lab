@@ -63,13 +63,14 @@ def test_apply_plan_rejects_secret_like_material(tmp_path, monkeypatch):
     path.parent.mkdir(parents=True)
     path.write_text("const x = 1;\n", encoding="utf-8")
     context = [{"path": "src/App.jsx", "complete": True, "content": path.read_text()}]
+    fake_secret = "ghp_" + ("A" * 28)
     with pytest.raises(repair.RepairError, match="credential-like"):
         repair.apply_plan({
             "edits": [{
                 "path": "src/App.jsx",
                 "action": "replace",
                 "old": "1",
-                "new": "ghp_ABCDEFGHIJKLMNOPQRSTUVWXYZ123456",
+                "new": fake_secret,
             }]
         }, context)
 
