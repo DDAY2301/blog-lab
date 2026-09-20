@@ -94,7 +94,57 @@ jobs:
             exit 1
           fi
           payload='{"system_prompt":"Vrni samo veljaven JSON objekt z naslovom title in poljem content. Piši v slovenščini.","task_prompt":"Napiši eno kratko, stvarno poved iz podanega vira.","category":"aktualno","source_items":[{"title":"Preizkus uredniškega sistema","summary":"Blog Lab preverja delovanje strežniškega AI pisca.","url":"https://example.com/test","source_name":"Sistemski preizkus"}]}'
-          response="$(curl -sS --max-time 120 -w 
+          tmp_body="$(mktemp)"
+          trap 'rm -f "$tmp_body"' EXIT
+          status="$(curl -sS --max-time 120 -o "$tmp_body" -w '%{http_code}' \
+            -X POST \
+            -H "Authorization: Bearer $WORKER_AI_TOKEN" \
+            -H "Content-Type: application/json" \
+            --data "$payload" \
+            https://blog-lab.dan-grmusa.workers.dev/api/ai/write)"
+          body="$(cat "$tmp_body")"
+          BODY="$body" STATUS="$status" python - <<'PY'
+          import json, os, sys
+          status = int(os.environ.get("STATUS", "0") or 0)
+          try:
+              d = json.loads(os.environ.get("BODY", "{}"))
+          except Exception:
+              print("Invalid Workers AI smoke response")
+              sys.exit(1)
+
+          if status == 200:
+              article = d.get("article") or {}
+              ok = (
+                  d.get("ok") is True
+                  and isinstance(article, dict)
+                  and bool(article.get("title"))
+                  and bool(article.get("content"))
+              )
+              if not ok:
+                  print(d)
+                  sys.exit(1)
+              print("Workers AI editorial writer responded successfully.")
+              sys.exit(0)
+
+          text = json.dumps(d, ensure_ascii=False).lower()
+          quota = (
+              status in {429, 502, 503}
+              and (
+                  "4006" in text
+                  or "daily free allocation" in text
+                  or "quota" in text
+                  or "capacity" in text
+              )
+          )
+          if quota:
+              print("::warning::Workers AI is quota/capacity degraded; Actions provider failover remains available.")
+              print(d)
+              sys.exit(0)
+
+          print(d)
+          sys.exit(1)
+          PY
+
       - name: Verify production scheduler dispatch bridge
         if: ${{ github.event_name == 'workflow_dispatch' || steps.writer-changes.outputs.changed == 'true' }}
         shell: bash
