@@ -45,3 +45,15 @@ def test_deploying_workflows_build_after_final_sync():
     assert "name: Sync latest main" in LIVE
     assert "name: Build final synchronized site" in LIVE
     assert "git pull --rebase origin main" in LIVE
+
+
+def test_publisher_has_heartbeat_catchup_scheduler():
+    assert 'cron: "7,22,37,52 * * * *"' in PUBLISHER
+    assert "agents/blog-lab-publisher/schedule.py --github-output" in PUBLISHER
+    assert "scheduled-slot" in PUBLISHER
+    assert "needs.plan.outputs.slot" in PUBLISHER
+
+
+def test_publisher_no_longer_relies_on_runtime_dst_filter():
+    assert 'OFFSET="$(TZ=Europe/Ljubljana date +%z)"' not in PUBLISHER
+    assert 'schedule=$EVENT_SCHEDULE run=$RUN' not in PUBLISHER
