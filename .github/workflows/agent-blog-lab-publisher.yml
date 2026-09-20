@@ -179,7 +179,12 @@ jobs:
             git status --short
             exit 1
           fi
-          git commit -m "Agent: publish $RUN_CATEGORY Blog Lab update"
+          if [[ "${{ steps.content.outputs.changed }}" == "true" ]]; then
+            COMMIT_MESSAGE="Agent: publish $RUN_CATEGORY Blog Lab update"
+          else
+            COMMIT_MESSAGE="Agent: update $RUN_CATEGORY publisher state"
+          fi
+          git commit -m "$COMMIT_MESSAGE"
           git pull --rebase origin main
           git push origin HEAD:main
           echo "changed=true" >> "$GITHUB_OUTPUT"

@@ -104,19 +104,38 @@ def build_digest(items: list[dict], category: str, max_items: int = 5) -> dict:
     if lead_item.get("url"):
         parts.append(f"{lead_meta} [Odpri izvirni vir]({lead_item.get('url', '')})")
 
+    corroborating = []
     for item in chosen[1:]:
         section_title = _section_title(item.get("title", ""))
         summary = _unique_summary(item.get("summary", ""), seen_sentences)
-        if not summary:
-            summary = "Ta vir potrjuje isto osrednjo zgodbo, vendar v razpoložljivem zapisu ne dodaja novih preverljivih podrobnosti."
         published = _clean(item.get("published", ""), 100)
         source_name = _clean(item.get("source_name", "vir"), 100)
         meta = f" Vir: {source_name}."
         if published:
             meta += f" Objavljeno: {published}."
+
+        if not summary:
+            if item.get("url"):
+                corroborating.append(
+                    f"- [{source_name} — {section_title}]({item.get('url', '')})"
+                )
+            continue
+
         parts.append(
             f"## {section_title}\n\n{summary}\n\n{meta} "
             f"[Odpri izvirni vir]({item.get('url', '')})"
+        )
+
+    if corroborating:
+        parts.append(
+            "## Dodatni potrditveni viri\n\n"
+            "Naslednji viri sodijo v isto osrednjo zgodbo, vendar njihovi razpoložljivi povzetki "
+            "ne dodajajo novih preverljivih dejstev, zato jih Blog Lab ne ponavlja kot umetno nove odstavke. "
+            "Več objav o istem dogodku lahko pomaga preveriti, da zgodba ni osamljen zapis, ne pomeni pa, da je "
+            "vsaka podrobnost samodejno potrjena. Zato so spodaj ohranjene neposredne povezave, dodatne trditve pa "
+            "niso dodane brez jasne podpore v virih. Ta pristop daje prednost sledljivosti pred navideznim obsegom "
+            "besedila in preprečuje, da bi ponovljeni povzetki izgledali kot nova dejstva.\n\n"
+            + "\n".join(corroborating)
         )
 
     parts.append(
