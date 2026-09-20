@@ -1,0 +1,186 @@
+name: One-off login hardening
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  patch-login:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - name: Patch Worker login diagnostics
+        shell: python
+        run: |
+          from pathlib import Path
+          path = Path('terminal/worker/src/index.js')
+          text = path.read_text(encoding='utf-8')
+
+          def replace_once(old, new):
+              global text
+              if old not in text:
+                  raise SystemExit(f'Missing patch target:\n{old[:240]}')
+              text = text.replace(old, new, 1)
+
+          replace_once(
+          '''function loginPassword(env, email) {
+  return loginPasswordCandidates(env, email)[0] || "";
+}
+
+function configuredAuthorizedUserCount(env) {''',
+          '''function loginPassword(env, email) {
+  return loginPasswordCandidates(env, email)[0] || "";
+}
+
+function authDiagnosticForEmail(env, rawEmail = "") {
+  const email = String(rawEmail || "").trim().toLowerCase();
+  const secretName = AUTHORIZED_USERS[email] || "";
+  const candidates = secretName ? loginPasswordCandidates(env, email) : [];
+  return {
+    email_known: Boolean(secretName),
+    email,
+    user_secret_name: secretName || null,
+    user_secret_configured: candidates.length > 0,
+    accepted_secret_count: candidates.length,
+    shared_login_secret_ready: Boolean(sharedLoginPassword(env)),
+    authorized_users_ready: configuredAuthorizedUserCount(env),
+    session_key_ready: Boolean(String(env.TERMINAL_COMMAND_KEY || "").trim()) || configuredLoginPasswords(env).length > 0,
+  };
+}
+
+function configuredAuthorizedUserCount(env) {''')
+
+          replace_once(
+          '''        free_tier_compatible: true,
+        ai_gateway_configured:''',
+          '''        free_tier_compatible: true,
+        maj_login_ready: loginPasswordCandidates(env, "maj@klemenc.org").length > 0,
+        dan_login_ready: loginPasswordCandidates(env, "dan.grmusa@gmail.com").length > 0,
+        clean_login_url: "https://blog-lab.dan-grmusa.workers.dev/login",
+        ai_gateway_configured:''')
+
+          replace_once(
+          '''    if (request.method === "POST" && url.pathname === "/api/login") {''',
+          '''    if (request.method === "GET" && url.pathname === "/api/login-diagnostics") {
+      const email = String(url.searchParams.get("email") || "").trim().toLowerCase();
+      const diagnostic = authDiagnosticForEmail(env, email);
+      return json({
+        ok: true,
+        worker: "blog-lab",
+        version: "auth-v6.19-login-hardening",
+        ...diagnostic,
+        server_time: new Date().toISOString(),
+        hint: diagnostic.email_known
+          ? (diagnostic.user_secret_configured ? "EMAIL_CONFIGURED" : "EMAIL_SECRET_MISSING")
+          : "EMAIL_NOT_AUTHORIZED"
+      });
+    }
+
+    if (request.method === "POST" && url.pathname === "/api/login") {''')
+
+          replace_once(
+          '''      const secretName = AUTHORIZED_USERS[email];
+      const expectedPassword = loginPassword(env, email);
+      const configured = configuredAuthorizedUserCount(env) > 0;
+      const valid = Boolean(secretName && expectedPassword && password.length && passwordMatchesLogin(env, email, password));
+      if (!configured) {
+        return json({ error: "Prijava na strežniku še ni konfigurirana.", code: "LOGIN_SECRET_MISSING" }, 503);
+      }
+      if (!valid) {
+        await new Promise((resolve) => setTimeout(resolve, 650));
+        return json({ error: "Napačen e-poštni naslov ali geslo.", code: "INVALID_CREDENTIALS" }, 401);
+      }
+      let token;
+      try { token = await signSession(env, email); } catch { return json({ error: "Terminal še ni pravilno konfiguriran." }, 503); }
+      return json({ ok: true, email }, 200, { "set-cookie": sessionCookie(token) });''',
+          '''      const secretName = AUTHORIZED_USERS[email];
+      const expectedPassword = loginPassword(env, email);
+      const configured = configuredAuthorizedUserCount(env) > 0;
+      if (!configured) {
+        return json({ error: "Prijava na strežniku še ni konfigurirana.", code: "LOGIN_SECRET_MISSING" }, 503);
+      }
+      if (!secretName) {
+        await new Promise((resolve) => setTimeout(resolve, 650));
+        return json({ error: "Ta e-poštni naslov ni na seznamu dovoljenih operaterjev.", code: "EMAIL_NOT_AUTHORIZED" }, 401);
+      }
+      if (!expectedPassword) {
+        return json({
+          error: "Geslo za tega operaterja ni nastavljeno v Cloudflare Secretih.",
+          code: "USER_LOGIN_SECRET_MISSING",
+          secret_name: secretName
+        }, 503);
+      }
+      if (!password.length || !passwordMatchesLogin(env, email, password)) {
+        await new Promise((resolve) => setTimeout(resolve, 650));
+        return json({
+          error: "Geslo za ta e-poštni naslov ni pravilno. Uporabi zadnje geslo, ki je nastavljeno v Cloudflare Secretih.",
+          code: "INVALID_PASSWORD_FOR_CONFIGURED_USER",
+          email_known: true,
+          user_secret_configured: true
+        }, 401);
+      }
+      let token;
+      try { token = await signSession(env, email); } catch { return json({ error: "Terminal še ni pravilno konfiguriran.", code: "SESSION_SIGN_FAILED" }, 503); }
+      return json({ ok: true, email, redirect: "/" }, 200, { "set-cookie": sessionCookie(token) });''')
+
+          replace_once(
+          '''    if (request.method === "POST" && url.pathname === "/api/logout") {
+      return json({ ok: true }, 200, { "set-cookie": clearSessionCookie() });
+    }
+
+    const user = await identity(request, env);
+
+    if (request.method === "GET" && url.pathname === "/") {
+      if (url.searchParams.get("fresh") === "1") {
+        return html(LOGIN_PAGE, 200, { "set-cookie": clearSessionCookie() });
+      }
+      return html(user ? PAGE : LOGIN_PAGE);
+    }''',
+          '''    if (request.method === "POST" && url.pathname === "/api/logout") {
+      return json({ ok: true }, 200, { "set-cookie": clearSessionCookie() });
+    }
+
+    if (request.method === "GET" && url.pathname === "/logout") {
+      const next = url.searchParams.get("next") || "/login";
+      return new Response(null, {
+        status: 302,
+        headers: securityHeaders({
+          "location": next.startsWith("/") ? next : "/login",
+          "set-cookie": clearSessionCookie()
+        })
+      });
+    }
+
+    const user = await identity(request, env);
+
+    if (request.method === "GET" && (url.pathname === "/" || url.pathname === "/login")) {
+      if (url.pathname === "/login" || url.searchParams.get("fresh") === "1") {
+        return html(LOGIN_PAGE, 200, { "set-cookie": clearSessionCookie() });
+      }
+      return html(user ? PAGE : LOGIN_PAGE);
+    }''')
+
+          replace_once('''auth-v6.18-ai-diagnostics-fallback''', '''auth-v6.19-login-hardening''')
+
+          path.write_text(text, encoding='utf-8')
+      - name: Validate Worker syntax and login markers
+        run: |
+          node --check terminal/worker/src/index.js
+          grep -q 'auth-v6.19-login-hardening' terminal/worker/src/index.js
+          grep -q '/api/login-diagnostics' terminal/worker/src/index.js
+          grep -q 'INVALID_PASSWORD_FOR_CONFIGURED_USER' terminal/worker/src/index.js
+          grep -q 'maj_login_ready' terminal/worker/src/index.js
+      - name: Commit patch and remove one-off workflow
+        run: |
+          git config user.name "blog-lab-login-fix[bot]"
+          git config user.email "blog-lab-login-fix[bot]@users.noreply.github.com"
+          git add terminal/worker/src/index.js
+          git rm .github/workflows/_oneoff-login-hardening.yml
+          git commit -m "Worker: harden Maj login diagnostics"
+          git pull --rebase origin main
+          git push origin HEAD:main
