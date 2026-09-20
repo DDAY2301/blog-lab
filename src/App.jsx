@@ -18,64 +18,6 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
-    "id": "equipamentos-de-combate-a-inc-ndio-5062ab1c",
-    "title": "Equipamentos de Combate a Incêndio",
-    "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Equipamentos de Combate a Incêndio«.",
-    "seoDescription": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Equipamentos de Combate a Incêndio«.",
-    "content": "**Aktualno, 20. 9. 2026.** Equipamentos de Combate a Incêndio. Dispomos de uma linha completa de equipamentos de combate a incêndio. Prevenção e combate a incêndio é na Firex! Extintores Portas corta fogo Iluminação Hidrantes Sprinklers Alarmes Conexões Placas de sinalização Abrigo para EPIs Abrigos para Extintores Abrigos para Extintor Chapa de Aço Abrigos para Extintor Chapa de Aço Inox Abrigos para Extintor em Fibra de Vidro Abrigos para Extintor em Polipropileno Abrigos para Mangueiras Abrigos para Mangueira Chapa de Aço Abrigos para Mangueira Chapa de Aço Inox Abrigos para Mangueira Fibra de vidro Requadro para Mangueira de Incêndio Abrigos para Mangotinho Chapa de Aço Alarme de Incêndio Convencional Acionador de Alarme de…\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: firex.com.br. Objavljeno: Sat, 19 Sep 2026 06:35:00 GMT. [Odpri izvirni vir](https://www.firex.com.br/)\n\n## Завантажте найшвидший ніж будь-коли Firefox\n\nОтримайте Firefox для Windows, Mac або Linux. Firefox – це вільний браузер від Mozilla, некомерційної компанії, відданої захисту здорового інтернету й приватності. Браузер Firefox Отримайте браузер, який захищає все важливе Швидкий, надійний і приватний — для спокійного користування інтернетом. Set Firefox as your default browser. Завантажити Firefox Firefox більше не підтримується на Windows 8.1 і давніших. Завантажте Firefox ESR (випуск розширеної підтримки), щоб використовувати Firefox. Завантажити 64-розрядий Firefox ESR Завантажити 32-розрядий Firefox ESR Завантажити іншу збірку Firefox більше не підтримується на macOS 10.14 і давніших. Завантажити Firefox ESR Положення про приватність Firefox Параметри…\n\n Vir: firefox.com. Objavljeno: Sat, 19 Sep 2026 09:12:00 GMT. [Odpri izvirni vir](https://www.firefox.com/uk/)\n\n## Search in Windows 11 File Explorer\n\nThis tutorial will show you how to use advanced search options and filters while searching for files in Windows 11 File Explorer. The Search Box in File... Jan 21, 2024 Replies: 36 \" data-success=\"Embed code HTML copied to clipboard.\" class=\"\"> This tutorial will show you how to use advanced search options and filters while searching for files in Windows 11 File Explorer. The Search Box in File Explorer allows you to find and view all your files and folders in one place. As you type in the Search Box, Windows Search will automatically start a simple search through the index by default to match your typed text with folder names, files names, the contents of files, and file properties. It will then display the…\n\n Vir: elevenforum.com. Objavljeno: Sat, 19 Sep 2026 07:03:00 GMT. [Odpri izvirni vir](https://www.elevenforum.com/t/search-in-windows-11-file-explorer.21789/)\n\n## Show or Hide Navigation Pane in File Explorer in Windows 11\n\nThis tutorial will show you how to show or hide the navigation pane in File Explorer for your account in Windows 11. The navigation pane is the far left... Nov 5, 2021 Replies: 5 \" data-success=\"Embed code HTML copied to clipboard.\" class=\"\"> This tutorial will show you how to show or hide the navigation pane in File Explorer for your account in Windows 11. The navigation pane is the far left pane in File Explorer used to find files, folders, and drives on your PC or network. Starting with Windows 11 build 25136 and build 22621.160 , Microsoft is introducing a refreshed layout of the left navigation pane in File Explorer which makes it easy for you to navigate to folders that matter to you. The updated…\n\n Vir: elevenforum.com. Objavljeno: Sun, 20 Sep 2026 00:21:00 GMT. [Odpri izvirni vir](https://www.elevenforum.com/t/show-or-hide-navigation-pane-in-file-explorer-in-windows-11.2537/)\n\n## Explorateur de fichiers dans Windows | Microsoft Support\n\nRecherchez et ouvrez Explorateur de fichiers dans Windows, puis personnalisez Accès rapide en épinglant et en supprimant des fichiers et des dossiers. Explorateur de fichiers dans Windows S’applique à Windows 11 Windows 10 Obtenir de l’aide sur Copilot Comment trouver les commandes du menu contextuel de Windows 10 ? Comment puis-je supprimer un fichier dans l'Explorateur de fichiers ? Comment utiliser le menu contextuel de l'Explorateur de fichiers ? Windows Explorateur de fichiers vous aide à rechercher, ouvrir, organiser et gérer des fichiers et des dossiers sur votre PC et dans le cloud. Windows 11 Windows 10 Pour ouvrir Explorateur de fichiers dans Windows 11, sélectionnez-la dans la barre des tâches ou…\n\n Vir: support.microsoft.com. Objavljeno: Sun, 20 Sep 2026 08:14:00 GMT. [Odpri izvirni vir](https://support.microsoft.com/fr-fr/windows/experience/fileexplorer/file-explorer-in-windows)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
-    "category": "Aktualno",
-    "author": "Blog Lab Publisher",
-    "status": "published",
-    "heroImage": {
-      "url": "https://www.firefox.com/media/img/firefox/download/desktop/meta-img-global.fb0291b70586.png",
-      "alt": "Завантажте найшвидший ніж будь-коли Firefox",
-      "caption": "firefox.com"
-    },
-    "video": null,
-    "gallery": [
-      {
-        "url": "https://www.elevenforum.com/data/covers/thread/o/21/21789.jpg?1724507225",
-        "alt": "Search in Windows 11 File Explorer",
-        "caption": "elevenforum.com"
-      },
-      {
-        "url": "https://www.elevenforum.com/data/covers/thread/o/2/2537.jpg?1733428911",
-        "alt": "Show or Hide Navigation Pane in File Explorer in Windows 11",
-        "caption": "elevenforum.com"
-      },
-      {
-        "url": "https://store-images.s-microsoft.com/image/apps.7279.14473293538384797.bcb417dc-ffbe-444e-9589-e6a25f04ad52.156eed19-aa35-4e69-96a7-c11abd7f887d",
-        "alt": "Mozilla Firefox - Free download and install on Windows | Microsoft Store",
-        "caption": "apps.microsoft.com"
-      }
-    ],
-    "sources": [
-      {
-        "label": "firex.com.br — Equipamentos de Combate a Incêndio - Equipamentos de Prevenção de Incêndio",
-        "url": "https://www.firex.com.br/"
-      },
-      {
-        "label": "firefox.com — Завантажте найшвидший ніж будь-коли Firefox",
-        "url": "https://www.firefox.com/uk/"
-      },
-      {
-        "label": "elevenforum.com — Search in Windows 11 File Explorer",
-        "url": "https://www.elevenforum.com/t/search-in-windows-11-file-explorer.21789/"
-      },
-      {
-        "label": "elevenforum.com — Show or Hide Navigation Pane in File Explorer in Windows 11",
-        "url": "https://www.elevenforum.com/t/show-or-hide-navigation-pane-in-file-explorer-in-windows-11.2537/"
-      },
-      {
-        "label": "support.microsoft.com — Explorateur de fichiers dans Windows | Microsoft Support",
-        "url": "https://support.microsoft.com/fr-fr/windows/experience/fileexplorer/file-explorer-in-windows"
-      }
-    ],
-    "createdAt": "2026-09-20T10:55:24+02:00",
-    "updatedAt": "2026-09-20T10:55:24+02:00"
-  },
-
-  {
     "id": "slovenija-po-24-letih-znova-v-finalu-evropskega-prvenstva-u18-za-zlato-na-sport-tv-proti-i-7b2ee46f",
     "title": "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji!",
     "excerpt": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji!«.",
