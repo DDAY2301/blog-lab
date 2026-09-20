@@ -1,0 +1,93 @@
+name: Intent routing regression fix
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/intent-routing-regression-fix.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Patch media-to-article routing regression
+        shell: bash
+        run: |
+          set -euo pipefail
+          node <<'NODE'
+          const fs = require('fs');
+
+          function replaceOnce(path, from, to) {
+            let text = fs.readFileSync(path, 'utf8');
+            if (!text.includes(from)) {
+              throw new Error(`Pattern not found in ${path}: ${from}`);
+            }
+            text = text.replace(from, to);
+            fs.writeFileSync(path, text);
+          }
+
+          replaceOnce(
+            'agents/operator-terminal/command.py',
+            '"hero", "galer", "slik", "media", "format",',
+            '"hero", "galer", "slik", "video", "posnet", "media", "format",'
+          );
+
+          replaceOnce(
+            'terminal/worker/src/index.js',
+            '  const articleConfig = articleNouns.some((x) => tokens.has(x))\n    && ["dizajn","css","font","slika","galerija","izboljsaj","polepsaj","spremeni","dolzina","slog","besedilo","pisanje","naslov"].some((x) => tokens.has(x));',
+            '  const articleTopic = articleActions.some((x) => tokens.has(x))\n    && /\\b(o|about|regarding|glede)\\b/.test(normalized);\n  const articleConfig = articleNouns.some((x) => tokens.has(x))\n    && ["dizajn","css","font","slika","galerija","video","izboljsaj","polepsaj","spremeni","dolzina","slog","besedilo","pisanje","naslov"].some((x) => tokens.has(x))\n    && !articleTopic;'
+          );
+          NODE
+
+      - name: Smoke validate routing matrix
+        shell: bash
+        run: |
+          python - <<'PY'
+          import importlib.util
+          import pathlib
+          import sys
+          path = pathlib.Path('agents/operator-terminal/command.py').resolve()
+          spec = importlib.util.spec_from_file_location('cmd', path)
+          mod = importlib.util.module_from_spec(spec)
+          sys.modules['cmd'] = mod
+          spec.loader.exec_module(mod)
+          cases = {
+              'dodaj sedaj članek kako se je odvijalo dogajanje tega vikenda': 'article',
+              'dodaj video v članek': 'site',
+              'dodaj članek o video igrah': 'article',
+              'dodaj drag and drop images in lepši design': 'site',
+          }
+          for text, expected in cases.items():
+              got = mod.infer_mode(text)
+              assert got == expected, (text, got, expected)
+          print('python routing smoke ok')
+          PY
+          node --check terminal/worker/src/index.js
+
+      - name: Run protected operator tests
+        shell: bash
+        run: |
+          python -m py_compile agents/operator-terminal/*.py agents/blog-lab-publisher/agent.py agents/blog-lab-publisher/services/*.py
+          pytest -q agents/operator-terminal/tests agents/blog-lab-publisher/tests
+
+      - name: Commit regression fix
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ -z "$(git status --porcelain)" ]]; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add agents/operator-terminal/command.py terminal/worker/src/index.js
+          git commit -m "Fix media-to-article routing regression"
+          git push
