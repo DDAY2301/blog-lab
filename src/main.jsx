@@ -5,6 +5,7 @@ import LanguageTools from "./LanguageTools.jsx";
 import PrivateTerminalAccess from "./PrivateTerminalAccess.jsx";
 import "./styles.css";
 import "./production.css";
+import "./language-tools.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
