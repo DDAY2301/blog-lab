@@ -9,22 +9,35 @@ const AUTHORIZED_USERS = Object.freeze({
   "maj@klemenc.org": "MAJ_LOGIN_PASSWORD"
 });
 
+function validLoginSecret(value) {
+  const secret = String(value || "").trim();
+  return secret.length >= 8 ? secret : "";
+}
+
+function sharedLoginPassword(env) {
+  return validLoginSecret(env.LOGIN_PASSWORD);
+}
+
 function configuredLoginPasswords(env) {
   const values = [
-    String(env.DAN_LOGIN_PASSWORD || "").trim(),
-    String(env.MAJ_LOGIN_PASSWORD || "").trim()
-  ].filter((value) => value.length >= 8);
+    validLoginSecret(env.DAN_LOGIN_PASSWORD),
+    validLoginSecret(env.MAJ_LOGIN_PASSWORD),
+    sharedLoginPassword(env)
+  ].filter(Boolean);
   return [...new Set(values)];
 }
 
 function loginPassword(env, email) {
-  if (!AUTHORIZED_USERS[email]) return "";
-  return configuredLoginPasswords(env)[0] || "";
+  const secretName = AUTHORIZED_USERS[email];
+  if (!secretName) return "";
+  // Prefer the user's dedicated secret. LOGIN_PASSWORD remains a backwards-
+  // compatible shared fallback so fresh browsers can authenticate even when
+  // the deployment still uses the original single-secret configuration.
+  return validLoginSecret(env[secretName]) || sharedLoginPassword(env);
 }
 
-function passwordMatchesConfiguredSecret(env, password) {
-  const candidates = configuredLoginPasswords(env);
-  return candidates.some((expected) => timingSafeEqual(password, expected));
+function configuredAuthorizedUserCount(env) {
+  return Object.keys(AUTHORIZED_USERS).filter((email) => Boolean(loginPassword(env, email))).length;
 }
 
 function securityHeaders(extra = {}) {
@@ -1115,11 +1128,12 @@ export default {
       return json({
         ok: true,
         worker: "blog-lab",
-        version: "auth-v6.12-command-understanding",
+        version: "auth-v6.13-cross-browser-login",
         ready: state.ready,
         auth_ready: authReady,
-        authorized_users_ready: authReady ? 2 : 0,
+        authorized_users_ready: configuredAuthorizedUserCount(env),
         configured_login_secrets: configuredPasswords.length,
+        shared_login_secret_ready: Boolean(sharedLoginPassword(env)),
         media_upload_ready: mediaUploadReady,
         ai_writer_ready: Boolean(env.AI && typeof env.AI.run === "function"),
         ai_review_ready: Boolean(env.AI && typeof env.AI.run === "function"),
@@ -1183,8 +1197,9 @@ export default {
       const email = String(body?.email || "").trim().toLowerCase();
       const password = String(body?.password || "").trim();
       const secretName = AUTHORIZED_USERS[email];
-      const configured = configuredLoginPasswords(env).length > 0;
-      const valid = Boolean(secretName && configured && password.length && passwordMatchesConfiguredSecret(env, password));
+      const expectedPassword = loginPassword(env, email);
+      const configured = configuredAuthorizedUserCount(env) > 0;
+      const valid = Boolean(secretName && expectedPassword && password.length && timingSafeEqual(password, expectedPassword));
       if (!configured) {
         return json({ error: "Prijava na strežniku še ni konfigurirana.", code: "LOGIN_SECRET_MISSING" }, 503);
       }
