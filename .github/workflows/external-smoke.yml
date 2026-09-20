@@ -44,11 +44,11 @@ jobs:
               and d.get("media_upload_ready") is True
           )
           if os.environ.get("EVENT_NAME") == "pull_request":
-              version_ok = d.get("version") in {"auth-v6.6-diagnostics", "auth-v6.7-routing"}
+              version_ok = d.get("version") in {"auth-v6.7-routing", "auth-v6.8-cron-catchup"}
               ai_ok = True
           else:
-              version_ok = d.get("version") == "auth-v6.7-routing"
-              ai_ok = d.get("ai_writer_ready") is True and d.get("site_editor_ready") is True
+              version_ok = d.get("version") == "auth-v6.8-cron-catchup"
+              ai_ok = d.get("ai_writer_ready") is True and d.get("site_editor_ready") is True and d.get("publisher_scheduler_ready") is True
           sys.exit(0 if (base and version_ok and ai_ok) else 1)
           PY
             then
