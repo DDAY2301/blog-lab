@@ -48,5 +48,17 @@
     "updated_at": "2026-09-20T14:32:54Z",
     "attempts": 0,
     "reason": "WARN topic source provider=gdelt query='kje so današnje objave' error=HTTP Error 429: Too Many Requests WARN topic source provider=gdelt query='današnje objave' error=HTTP Error 429: Too Many Requests TOPIC_DIRECT_OK checked=4 enriched=4 TOPIC_SOURCES_OK count=30 providers=bing-news:6,bing-web:20,google-news-global:2,google-news-si:75 ARTICLE_AI_UNAVAILABLE Workers AI writer ni uspel: HTTP Error 502: Bad Gateway ARTICLE_AI_UNAVAILABLE AI pisec ali uredniški pregled trenutno ni na voljo. Zaradi kakovosti ročni članek ni bil objavljen in ne bo nadomeščen z nepovezanim fallbackom. INTENT_ROUTE requested=article resolved=article autocorrected=true"
+  },
+  {
+    "id": "b20046c5-e5df-48db-b5ac-621780d14831",
+    "status": "pending",
+    "command": "dodaj današnje objave in potem nadaljuj po nastavljenih parametrih objavljanja",
+    "mode": "article",
+    "category": "aktualno",
+    "actor": "dan.grmusa@gmail.com",
+    "created_at": "2026-09-20T14:35:21Z",
+    "updated_at": "2026-09-20T14:35:21Z",
+    "attempts": 0,
+    "reason": "je objave in potem nadaljuj po nastavljenih parametrih objavljanja' error=<urlopen error timed out> WARN topic source provider=gdelt query='dodaj današnje objave' error=<urlopen error _ssl.c:993: The handshake operation timed out> WARN topic source provider=duckduckgo-web query='dodaj današnje objave' error=<urlopen error timed out> WARN topic source provider=gdelt query='potem nadaljuj po nastavljenih parametrih objavljanja' error=<urlopen error _ssl.c:993: The handshake operation timed out> WARN topic source provider=duckduckgo-web query='potem nadaljuj po nastavljenih parametrih objavljanja' error=<urlopen error timed out> WARN topic source provider=gdelt query='današnje objave potem nadaljuj nastavljenih parametrih' error=<urlopen error _ssl.c:993: The handshake operation timed out> WARN topic source provider=duckduckgo-web query='današnje objave potem nadaljuj nastavljenih parametrih' error=<urlopen error timed out> WARN topic source provider=gdelt query='današnje objave potem nadaljuj' error=<urlopen error _ssl.c:993: The handshake operation timed out> WARN topic source provider=duckduckgo-web query='današnje objave potem nadaljuj' error=<urlopen error timed out> TOPIC_DIRECT_OK checked=14 enriched=8 TOPIC_SOURCES_OK count=20 providers=bing-web:47 ARTICLE_AI_UNAVAILABLE Workers AI writer ni uspel: HTTP Error 502: Bad Gateway ARTICLE_AI_UNAVAILABLE AI pisec ali uredniški pregled trenutno ni na voljo. Zaradi kakovosti ročni članek ni bil objavljen in ne bo nadomeščen z nepovezanim fallbackom. INTENT_ROUTE requested=article resolved=article autocorrected=true"
   }
 ]
