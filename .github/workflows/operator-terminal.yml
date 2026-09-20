@@ -21,6 +21,7 @@ permissions:
   contents: write
   pages: write
   id-token: write
+  actions: write
   copilot-requests: write
 
 jobs:
@@ -73,7 +74,23 @@ jobs:
           pytest -q agents/operator-terminal/tests agents/blog-lab-publisher/tests
       - name: Decrypt private command
         run: python agents/operator-terminal/decrypt.py "$RUNNER_TEMP/operator-command.json"
+      - name: Handle deterministic schedule/catch-up command
+        id: compound
+        shell: bash
+        run: |
+          set +e
+          python agents/operator-terminal/compound_control.py \
+            --command-file "$RUNNER_TEMP/operator-command.json" \
+            --github-output "$GITHUB_OUTPUT" \
+            --dispatch
+          COMPOUND_RC=$?
+          set -e
+          if [[ "$COMPOUND_RC" -eq 0 || "$COMPOUND_RC" -eq 78 ]]; then
+            exit 0
+          fi
+          exit "$COMPOUND_RC"
       - name: Execute private command with bounded recovery
+        if: ${{ steps.compound.outputs.handled != 'true' }}
         shell: bash
         run: |
           set -u
