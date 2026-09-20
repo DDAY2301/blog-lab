@@ -1,4 +1,4 @@
-Iz novih virov izberi eno zgodbo ali jasno povezano temo, ki je dovolj dobro podprta za samostojen članek.
+Iz vseh virov izberi eno zgodbo ali jasno povezano temo, ki je dovolj dobro podprta za samostojen članek, in vključi vse objave, ki manjkajo iz prejšnjih dni.
 
 Napiši profesionalen uredniški članek približno 800–1300 besed. Prednost ima kakovost pred dolžino. Če viri ne omogočajo tako dolgega besedila brez ponavljanja ali ugibanja, napiši krajši, vendar vsebinsko zaokrožen članek oziroma vrni skip=true.
 
