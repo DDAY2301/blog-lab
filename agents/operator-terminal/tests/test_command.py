@@ -1195,7 +1195,7 @@ def test_workers_site_command_does_not_retry_provider_capacity_failure(tmp_path,
 
     monkeypatch.setattr(cmd, "_site_ai_request", fail_once)
 
-    with pytest.raises(cmd.SiteEditError, match="capacity unavailable"):
+    with pytest.raises(cmd.SiteProviderUnavailable, match="capacity unavailable"):
         cmd.workers_ai_site_command("uredi stran")
 
     assert len(calls) == 1
@@ -1280,3 +1280,22 @@ def test_article_ai_unavailable_is_nonretryable(tmp_path, monkeypatch, capsys):
         cmd.article_command("Objavi članek o dogodku", "aktualno")
     assert exc.value.code == 64
     assert "ARTICLE_AI_UNAVAILABLE" in capsys.readouterr().err
+
+
+def test_site_command_marks_provider_outage_nonretryable(monkeypatch, capsys):
+    monkeypatch.setattr(
+        cmd,
+        "builtin_site_command",
+        lambda command: False,
+    )
+    monkeypatch.setattr(
+        cmd,
+        "workers_ai_site_command",
+        lambda command: (_ for _ in ()).throw(
+            cmd.SiteProviderUnavailable("Workers AI quota exhausted")
+        ),
+    )
+    with pytest.raises(SystemExit) as exc:
+        cmd.site_command("uredi izgled strani")
+    assert exc.value.code == 64
+    assert "SITE_AI_CAPACITY_UNAVAILABLE" in capsys.readouterr().err
