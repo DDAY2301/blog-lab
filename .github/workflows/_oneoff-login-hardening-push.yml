@@ -1,0 +1,55 @@
+name: One-off login hardening push
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/login-hardening-trigger.txt'
+
+permissions:
+  contents: write
+
+jobs:
+  patch-login:
+    if: github.actor != 'blog-lab-login-fix[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - name: Patch Maj login hardening
+        shell: python
+        run: |
+          from pathlib import Path
+          p = Path('terminal/worker/src/index.js')
+          s = p.read_text(encoding='utf-8')
+          def r(old, new):
+              global s
+              if old not in s:
+                  raise SystemExit('missing target: ' + old[:120])
+              s = s.replace(old, new, 1)
+          r('''function loginPassword(env, email) {\n  return loginPasswordCandidates(env, email)[0] || "";\n}\n\nfunction configuredAuthorizedUserCount(env) {''', '''function loginPassword(env, email) {\n  return loginPasswordCandidates(env, email)[0] || "";\n}\n\nfunction authDiagnosticForEmail(env, rawEmail = "") {\n  const email = String(rawEmail || "").trim().toLowerCase();\n  const secretName = AUTHORIZED_USERS[email] || "";\n  const candidates = secretName ? loginPasswordCandidates(env, email) : [];\n  return {\n    email_known: Boolean(secretName),\n    email,\n    user_secret_name: secretName || null,\n    user_secret_configured: candidates.length > 0,\n    accepted_secret_count: candidates.length,\n    shared_login_secret_ready: Boolean(sharedLoginPassword(env)),\n    authorized_users_ready: configuredAuthorizedUserCount(env),\n    session_key_ready: Boolean(String(env.TERMINAL_COMMAND_KEY || "").trim()) || configuredLoginPasswords(env).length > 0\n  };\n}\n\nfunction configuredAuthorizedUserCount(env) {''')
+          r('''        free_tier_compatible: true,\n        ai_gateway_configured:''', '''        free_tier_compatible: true,\n        maj_login_ready: loginPasswordCandidates(env, "maj@klemenc.org").length > 0,\n        dan_login_ready: loginPasswordCandidates(env, "dan.grmusa@gmail.com").length > 0,\n        clean_login_url: "https://blog-lab.dan-grmusa.workers.dev/login",\n        ai_gateway_configured:''')
+          r('''    if (request.method === "POST" && url.pathname === "/api/login") {''', '''    if (request.method === "GET" && url.pathname === "/api/login-diagnostics") {\n      const email = String(url.searchParams.get("email") || "").trim().toLowerCase();\n      const diagnostic = authDiagnosticForEmail(env, email);\n      return json({\n        ok: true,\n        worker: "blog-lab",\n        version: "auth-v6.19-login-hardening",\n        ...diagnostic,\n        server_time: new Date().toISOString(),\n        hint: diagnostic.email_known\n          ? (diagnostic.user_secret_configured ? "EMAIL_CONFIGURED" : "EMAIL_SECRET_MISSING")\n          : "EMAIL_NOT_AUTHORIZED"\n      });\n    }\n\n    if (request.method === "POST" && url.pathname === "/api/login") {''')
+          old_login = '''      const secretName = AUTHORIZED_USERS[email];\n      const expectedPassword = loginPassword(env, email);\n      const configured = configuredAuthorizedUserCount(env) > 0;\n      const valid = Boolean(secretName && expectedPassword && password.length && passwordMatchesLogin(env, email, password));\n      if (!configured) {\n        return json({ error: "Prijava na strežniku še ni konfigurirana.", code: "LOGIN_SECRET_MISSING" }, 503);\n      }\n      if (!valid) {\n        await new Promise((resolve) => setTimeout(resolve, 650));\n        return json({ error: "Napačen e-poštni naslov ali geslo.", code: "INVALID_CREDENTIALS" }, 401);\n      }\n      let token;\n      try { token = await signSession(env, email); } catch { return json({ error: "Terminal še ni pravilno konfiguriran." }, 503); }\n      return json({ ok: true, email }, 200, { "set-cookie": sessionCookie(token) });'''
+          new_login = '''      const secretName = AUTHORIZED_USERS[email];\n      const expectedPassword = loginPassword(env, email);\n      const configured = configuredAuthorizedUserCount(env) > 0;\n      if (!configured) {\n        return json({ error: "Prijava na strežniku še ni konfigurirana.", code: "LOGIN_SECRET_MISSING" }, 503);\n      }\n      if (!secretName) {\n        await new Promise((resolve) => setTimeout(resolve, 650));\n        return json({ error: "Ta e-poštni naslov ni na seznamu dovoljenih operaterjev.", code: "EMAIL_NOT_AUTHORIZED" }, 401);\n      }\n      if (!expectedPassword) {\n        return json({ error: "Geslo za tega operaterja ni nastavljeno v Cloudflare Secretih.", code: "USER_LOGIN_SECRET_MISSING", secret_name: secretName }, 503);\n      }\n      if (!password.length || !passwordMatchesLogin(env, email, password)) {\n        await new Promise((resolve) => setTimeout(resolve, 650));\n        return json({ error: "Geslo za ta e-poštni naslov ni pravilno. Uporabi zadnje geslo, ki je nastavljeno v Cloudflare Secretih.", code: "INVALID_PASSWORD_FOR_CONFIGURED_USER", email_known: true, user_secret_configured: true }, 401);\n      }\n      let token;\n      try { token = await signSession(env, email); } catch { return json({ error: "Terminal še ni pravilno konfiguriran.", code: "SESSION_SIGN_FAILED" }, 503); }\n      return json({ ok: true, email, redirect: "/" }, 200, { "set-cookie": sessionCookie(token) });'''
+          r(old_login, new_login)
+          r('''    if (request.method === "POST" && url.pathname === "/api/logout") {\n      return json({ ok: true }, 200, { "set-cookie": clearSessionCookie() });\n    }\n\n    const user = await identity(request, env);\n\n    if (request.method === "GET" && url.pathname === "/") {\n      if (url.searchParams.get("fresh") === "1") {\n        return html(LOGIN_PAGE, 200, { "set-cookie": clearSessionCookie() });\n      }\n      return html(user ? PAGE : LOGIN_PAGE);\n    }''', '''    if (request.method === "POST" && url.pathname === "/api/logout") {\n      return json({ ok: true }, 200, { "set-cookie": clearSessionCookie() });\n    }\n\n    if (request.method === "GET" && url.pathname === "/logout") {\n      const next = url.searchParams.get("next") || "/login";\n      return new Response(null, { status: 302, headers: securityHeaders({ "location": next.startsWith("/") ? next : "/login", "set-cookie": clearSessionCookie() }) });\n    }\n\n    const user = await identity(request, env);\n\n    if (request.method === "GET" && (url.pathname === "/" || url.pathname === "/login")) {\n      if (url.pathname === "/login" || url.searchParams.get("fresh") === "1") {\n        return html(LOGIN_PAGE, 200, { "set-cookie": clearSessionCookie() });\n      }\n      return html(user ? PAGE : LOGIN_PAGE);\n    }''')
+          r('auth-v6.18-ai-diagnostics-fallback', 'auth-v6.19-login-hardening')
+          p.write_text(s, encoding='utf-8')
+      - name: Validate
+        run: |
+          node --check terminal/worker/src/index.js
+          grep -q 'auth-v6.19-login-hardening' terminal/worker/src/index.js
+          grep -q '/api/login-diagnostics' terminal/worker/src/index.js
+          grep -q 'INVALID_PASSWORD_FOR_CONFIGURED_USER' terminal/worker/src/index.js
+          grep -q 'maj_login_ready' terminal/worker/src/index.js
+      - name: Commit and clean
+        run: |
+          git config user.name "blog-lab-login-fix[bot]"
+          git config user.email "blog-lab-login-fix[bot]@users.noreply.github.com"
+          git add terminal/worker/src/index.js
+          git rm -f .github/workflows/_oneoff-login-hardening.yml .github/workflows/_oneoff-login-hardening-push.yml
+          git commit -m "Worker: harden Maj login diagnostics"
+          git pull --rebase origin main
+          git push origin HEAD:main
