@@ -1,0 +1,162 @@
+name: Blog Lab Production Guardian
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "src/**"
+      - "public/**"
+      - "agents/**"
+      - "terminal/worker/**"
+      - "scripts/**"
+      - "package.json"
+      - "package-lock.json"
+      - "wrangler.jsonc"
+      - "requirements-agent.txt"
+      - ".github/workflows/**"
+  pull_request:
+    branches: [main]
+  workflow_run:
+    workflows:
+      - "Blog Lab Health Check"
+      - "Blog Lab External Smoke Test"
+      - "Blog Lab Full E2E Audit"
+      - "Blog Lab Self Heal"
+    types: [completed]
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+    inputs:
+      strict_remote:
+        description: "Treat live public/Worker health warnings as failures"
+        required: false
+        default: "true"
+        type: choice
+        options: ["true", "false"]
+      repair:
+        description: "Run deterministic guardian repair and open a PR if changes are produced"
+        required: false
+        default: "true"
+        type: choice
+        options: ["true", "false"]
+
+concurrency:
+  group: blog-lab-production-guardian-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+  actions: read
+
+jobs:
+  guardian:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-agent.txt
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          pip install -r requirements-agent.txt
+          npm ci
+
+      - name: Run production guardian check
+        id: guardian_check
+        shell: bash
+        continue-on-error: true
+        env:
+          STRICT_REMOTE_INPUT: ${{ github.event.inputs.strict_remote || 'true' }}
+        run: |
+          set -euo pipefail
+          mkdir -p logs "$RUNNER_TEMP/guardian"
+          STRICT_FLAG="--strict-remote"
+          if [[ "$STRICT_REMOTE_INPUT" == "false" || "${{ github.event_name }}" == "pull_request" ]]; then
+            STRICT_FLAG=""
+          fi
+          python agents/production-guardian/guardian.py check \
+            $STRICT_FLAG \
+            --report "$RUNNER_TEMP/guardian/report.json" \
+            --markdown "$RUNNER_TEMP/guardian/report.md"
+
+      - name: Upload guardian report
+        if: always()
+        uses: actions/upload-artifact@v5
+        with:
+          name: production-guardian-report
+          path: |
+            ${{ runner.temp }}/guardian/report.json
+            ${{ runner.temp }}/guardian/report.md
+          if-no-files-found: ignore
+
+      - name: Run deterministic guardian repair
+        id: deterministic_repair
+        if: ${{ github.event_name != 'pull_request' && (github.event.inputs.repair || 'true') == 'true' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          python agents/production-guardian/guardian.py repair --json
+          if [[ -n "$(git status --porcelain)" ]]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git status --short
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Validate repaired repository
+        if: ${{ steps.deterministic_repair.outputs.changed == 'true' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile agents/operator-terminal/*.py agents/blog-lab-publisher/agent.py agents/blog-lab-publisher/services/*.py agents/self-heal/*.py agents/production-guardian/guardian.py agents/production_guardian_import.py
+          pytest -q agents/operator-terminal/tests agents/blog-lab-publisher/tests agents/self-heal/tests agents/production-guardian/tests
+          npm run build
+          npm run test:guardian
+          node scripts/test-worker-browser-js.mjs
+          node scripts/test-worker-auth.mjs
+          node scripts/test-worker-routes.mjs
+          npx wrangler deploy --dry-run
+
+      - name: Open validated guardian PR
+        if: ${{ steps.deterministic_repair.outputs.changed == 'true' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          BRANCH="production-guardian/auto-${GITHUB_RUN_ID}"
+          git config user.name "blog-lab-guardian[bot]"
+          git config user.email "blog-lab-guardian[bot]@users.noreply.github.com"
+          git checkout -B "$BRANCH"
+          git add -A -- package.json public/guardian-manifest.json logs/.gitkeep
+          git commit -m "Guardian: apply deterministic production hygiene repair"
+          git push --set-upstream origin "$BRANCH"
+          gh pr create \
+            --title "Guardian: validated production hygiene repair" \
+            --body "Production Guardian detected missing deterministic hygiene changes and applied them after validation. This PR is intentionally reviewable and does not bypass tests or protected-path rules." \
+            --base main \
+            --head "$BRANCH"
+
+      - name: Fail when guardian detected an unresolved production issue
+        if: ${{ steps.guardian_check.outcome == 'failure' && steps.deterministic_repair.outputs.changed != 'true' }}
+        shell: bash
+        run: |
+          echo "::error::Production Guardian found an unresolved issue. See the uploaded production-guardian-report artifact."
+          exit 1
