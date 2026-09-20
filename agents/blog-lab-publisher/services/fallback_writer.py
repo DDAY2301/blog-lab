@@ -19,14 +19,14 @@ def _clean(text: str, limit: int = 720) -> str:
 
 def _headline(title: str, category_label: str) -> str:
     title = _clean(title, 115)
-    title = re.sub(r"s+-s+[^-]{2,45}$", "", title).strip()
+    title = re.sub(r"\s+-\s+[^-]{2,45}$", "", title).strip()
     if not title:
         return f"{category_label}: zgodbe dneva"
     return title
 
 def _section_title(title: str) -> str:
     clean = _clean(title, 105)
-    clean = re.sub(r"s+-s+[^-]{2,45}$", "", clean).strip()
+    clean = re.sub(r"\s+-\s+[^-]{2,45}$", "", clean).strip()
     return clean or "Nova zgodba"
 
 def build_digest(items: list[dict], category: str, max_items: int = 5) -> dict:
