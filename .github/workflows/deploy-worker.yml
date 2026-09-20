@@ -24,6 +24,7 @@ jobs:
     env:
       CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      EXPECTED_WORKER_VERSION: auth-v6.19-login-hardening
     steps:
       - uses: actions/checkout@v7
 
@@ -50,10 +51,12 @@ jobs:
         shell: bash
         run: |
           node --check terminal/worker/src/index.js
-          if ! grep -q 'auth-v6.17-ai-resilience' terminal/worker/src/index.js; then
-            echo "::error::Expected Worker version marker not found."
+          if ! grep -q "$EXPECTED_WORKER_VERSION" terminal/worker/src/index.js; then
+            echo "::error::Expected Worker version marker not found: $EXPECTED_WORKER_VERSION"
             exit 1
           fi
+          grep -q '/api/login-diagnostics' terminal/worker/src/index.js
+          grep -q 'maj_login_ready' terminal/worker/src/index.js
 
       - name: Deploy Worker to Cloudflare
         working-directory: terminal/worker
@@ -63,8 +66,9 @@ jobs:
         shell: bash
         run: |
           python - <<'PY'
-          import json, sys, time, urllib.request
+          import json, os, sys, time, urllib.request
           url = 'https://blog-lab.dan-grmusa.workers.dev/health'
+          expected = os.environ.get('EXPECTED_WORKER_VERSION')
           last = ''
           for _ in range(12):
               try:
@@ -72,9 +76,14 @@ jobs:
                       data = json.loads(r.read().decode('utf-8'))
                   version = data.get('version')
                   print(json.dumps(data, ensure_ascii=False, indent=2))
-                  if version == 'auth-v6.17-ai-resilience' and data.get('auth_self_test_ok') is True and int(data.get('authorized_users_ready') or 0) >= 1:
+                  if (
+                      version == expected
+                      and data.get('auth_self_test_ok') is True
+                      and int(data.get('authorized_users_ready') or 0) >= 2
+                      and data.get('maj_login_ready') is True
+                  ):
                       sys.exit(0)
-                  last = f'version={version} auth_self_test_ok={data.get("auth_self_test_ok")} authorized_users_ready={data.get("authorized_users_ready")}'
+                  last = f'version={version} auth_self_test_ok={data.get("auth_self_test_ok")} authorized_users_ready={data.get("authorized_users_ready")} maj_login_ready={data.get("maj_login_ready")}'
               except Exception as exc:
                   last = str(exc)
               time.sleep(5)
