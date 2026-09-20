@@ -177,6 +177,29 @@ async function verifySession(env, token) {
   }
 }
 
+async function authSelfTest(env) {
+  try {
+    const emails = Object.keys(AUTHORIZED_USERS);
+    const results = [];
+    for (const email of emails) {
+      const configured = loginPasswordCandidates(env, email).length > 0;
+      if (!configured) {
+        results.push({ email, configured: false, session_ok: false });
+        continue;
+      }
+      const token = await signSession(env, email);
+      const verified = await verifySession(env, token);
+      results.push({ email, configured: true, session_ok: verified?.email === email });
+    }
+    return {
+      ok: results.every((item) => item.configured && item.session_ok),
+      users: results,
+    };
+  } catch {
+    return { ok: false, users: [] };
+  }
+}
+
 function cookieValue(request, name) {
   const cookies = String(request.headers.get("cookie") || "").split(";");
   for (const part of cookies) {
@@ -1186,6 +1209,7 @@ export default {
       const state = setupState(env);
       const configuredPasswords = configuredLoginPasswords(env);
       const authReady = configuredPasswords.length > 0;
+      const authTest = await authSelfTest(env);
       let mediaUploadReady = false;
       if (String(env.GITHUB_DISPATCH_TOKEN || "").trim()) {
         try {
@@ -1199,9 +1223,10 @@ export default {
       return json({
         ok: true,
         worker: "blog-lab",
-        version: "auth-v6.15-self-heal",
+        version: "auth-v6.16-self-heal-authcheck",
         ready: state.ready,
         auth_ready: authReady,
+        auth_self_test_ok: authTest.ok,
         authorized_users_ready: configuredAuthorizedUserCount(env),
         configured_login_secrets: configuredPasswords.length,
         shared_login_secret_ready: Boolean(sharedLoginPassword(env)),
