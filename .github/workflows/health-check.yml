@@ -38,9 +38,11 @@ jobs:
           pip install -r requirements-agent.txt
           npm ci
       - name: Compile agent code
-        run: python -m py_compile agents/operator-terminal/*.py agents/blog-lab-publisher/agent.py agents/blog-lab-publisher/services/*.py agents/self-heal/*.py
+        run: python -m py_compile agents/operator-terminal/*.py agents/blog-lab-publisher/agent.py agents/blog-lab-publisher/services/*.py agents/self-heal/*.py agents/production-guardian/guardian.py agents/production_guardian_import.py
       - name: Run agent tests
-        run: pytest -q agents/operator-terminal/tests agents/blog-lab-publisher/tests agents/self-heal/tests
+        run: pytest -q agents/operator-terminal/tests agents/blog-lab-publisher/tests agents/self-heal/tests agents/production-guardian/tests
+      - name: Run production guardian static check
+        run: python agents/production-guardian/guardian.py check --skip-remote --fail-on-warning --report logs/guardian-health-report.json
       - name: Check critical frontend component wiring
         shell: bash
         run: |
@@ -68,7 +70,7 @@ jobs:
             echo "::error::No headless browser is available on the runner."
             exit 1
           fi
-          "$BROWSER" --headless --disable-gpu --no-sandbox --virtual-time-budget=5000 --dump-dom             http://127.0.0.1:4173/blog-lab/ > "$RUNNER_TEMP/rendered-dom.html"
+          "$BROWSER" --headless --disable-gpu --no-sandbox --virtual-time-budget=5000 --dump-dom http://127.0.0.1:4173/blog-lab/ > "$RUNNER_TEMP/rendered-dom.html"
           grep -Fq 'Blog Lab' "$RUNNER_TEMP/rendered-dom.html" || {
             echo "::error::React runtime did not render Blog Lab."
             cat "$RUNNER_TEMP/vite-preview.log"
