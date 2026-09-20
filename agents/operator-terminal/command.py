@@ -1186,6 +1186,63 @@ ARTICLE_CSS_GUARD_SELECTORS = (
     ".article-end {",
 )
 
+def _validate_site_runtime(staged: dict[Path, str]) -> None:
+    for path, value in staged.items():
+        suffix = path.suffix.lower()
+        rel = path.relative_to(BASE).as_posix()
+        if suffix == ".json":
+            try:
+                json.loads(value)
+            except json.JSONDecodeError as exc:
+                raise SiteEditError(f"JSON validation failed in {rel}: {exc}") from exc
+
+    frontend_changed = any(
+        path.relative_to(BASE).as_posix().startswith(("src/", "public/"))
+        or path.relative_to(BASE).as_posix() == "index.html"
+        for path in staged
+    )
+    package = BASE / "package.json"
+    if not frontend_changed or not package.exists() or not shutil.which("npm"):
+        return
+
+    try:
+        proc = subprocess.run(
+            ["npm", "run", "build"],
+            cwd=BASE,
+            capture_output=True,
+            text=True,
+            timeout=150,
+            check=False,
+        )
+    except (OSError, subprocess.TimeoutExpired) as exc:
+        raise SiteEditError(f"Frontend build validator se ni mogel zagnati: {exc}") from exc
+
+    if proc.returncode != 0:
+        detail = "\n".join(
+            part.strip()
+            for part in [proc.stdout or "", proc.stderr or ""]
+            if part.strip()
+        )
+        detail = detail[-1800:]
+        raise SiteEditError(
+            "Frontend build po patchu ni uspel; spremembe so bile povrnjene. "
+            + (detail or f"npm exit {proc.returncode}")
+        )
+
+
+def _rollback_site_files(original: dict[Path, str | None]) -> None:
+    for path, before in original.items():
+        try:
+            if before is None:
+                if path.exists():
+                    path.unlink()
+            else:
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text(before, encoding="utf-8")
+        except OSError as exc:
+            raise SiteEditError(f"Rollback ni uspel za {path}: {exc}") from exc
+
+
 def _validate_site_quality(original: dict[Path, str | None], staged: dict[Path, str]) -> None:
     styles = BASE / "src/styles.css"
     if styles not in staged:
@@ -1203,7 +1260,12 @@ def _validate_site_quality(original: dict[Path, str | None], staged: dict[Path, 
                 "spremeni obstoječe pravilo namesto dodajanja novega override bloka."
             )
 
-def _apply_site_plan(plan: dict, context: list[dict] | None = None) -> int:
+def _apply_site_plan(
+    plan: dict,
+    context: list[dict] | None = None,
+    *,
+    validate_runtime: bool = False,
+) -> int:
     edits = plan.get("edits")
     if not isinstance(edits, list) or len(edits) > 12:
         raise SiteEditError("Edit plan mora vsebovati največ 12 sprememb.")
@@ -1305,6 +1367,18 @@ def _apply_site_plan(plan: dict, context: list[dict] | None = None) -> int:
 
     if changed == 0:
         raise SiteEditError("Edit plan ni povzročil nobene spremembe.")
+
+    if validate_runtime:
+        try:
+            _validate_site_runtime({
+                path: value
+                for path, value in staged.items()
+                if original.get(path) != value
+            })
+        except SiteEditError:
+            _rollback_site_files(original)
+            raise
+
     return changed
 
 def workers_ai_site_command(command: str) -> None:
@@ -1314,7 +1388,7 @@ def workers_ai_site_command(command: str) -> None:
     for attempt in range(1, 4):
         try:
             plan = _site_ai_request(command, context, feedback)
-            changed = _apply_site_plan(plan, context)
+            changed = _apply_site_plan(plan, context, validate_runtime=True)
             summary = str(plan.get("summary") or "site edit").strip()
             print(f"WORKERS_AI_SITE_OK files={changed} attempts={attempt} summary={summary[:240]}")
             return
