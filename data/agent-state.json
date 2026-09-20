@@ -7,17 +7,18 @@
   "last_output": "nocno-zivljenje-v-ljubljani-1ae9f6e3",
   "last_error": null,
   "agent_version": "2.5.0",
-  "current_category": "sport",
+  "current_category": "politika",
   "scheduled_posts_today": 0,
   "manual_posts_today": 1,
   "writer_mode": "unavailable",
   "scheduled_slots_done": [],
   "scheduled_slots_deferred": [
-    "2026-09-20|08:17|sport"
+    "2026-09-20|08:17|sport",
+    "2026-09-20|13:27|politika"
   ],
   "last_editorial_hold": {
-    "slot": "2026-09-20|08:17|sport",
+    "slot": "2026-09-20|13:27|politika",
     "reason": "ai_unavailable",
-    "at": "2026-09-20T11:28:06+02:00"
+    "at": "2026-09-20T14:07:47+02:00"
   }
 }
