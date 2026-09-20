@@ -969,3 +969,52 @@ def test_fallback_digest_does_not_repeat_lead_summary():
     ]
     article = build_digest(items, "sport", max_items=2)
     assert article["content"].count(lead) == 1
+
+
+def test_workers_ai_nested_article_unwrap_helper():
+    from services.ai_provider import _looks_like_article, _unwrap_mapping
+
+    nested = {
+        "result": {
+            "data": {
+                "article": {
+                    "title": "Nested naslov",
+                    "content": "Vsebina",
+                    "sources": [],
+                }
+            }
+        }
+    }
+    article = _unwrap_mapping(nested)
+    assert article["title"] == "Nested naslov"
+    assert _looks_like_article(article) is True
+    assert _looks_like_article({}) is False
+
+
+def test_fallback_collapses_duplicate_corroboration_without_repetition_error():
+    from services.fallback_writer import build_digest
+
+    repeated = (
+        "Slovenija je po napetem dvoboju napredovala v finale evropskega prvenstva, "
+        "odločilni trenutki pa so prišli v končnici tekme."
+    )
+    items = []
+    for index in range(5):
+        items.append({
+            "source_name": f"Vir {index}",
+            "category": "sport",
+            "title": f"Vir {index} o istem finalu",
+            "url": f"https://example.com/final-{index}",
+            "summary": repeated,
+            "published": "2026-09-20",
+            "image_url": "",
+            "video_url": "",
+            "hash": f"repeat-{index}",
+        })
+
+    article = build_digest(items, "sport", max_items=5)
+    errors = validate(article, 0, 10000, set(), set())
+
+    assert "ponavljanje" not in errors
+    assert article["content"].count(repeated) == 1
+    assert "Dodatni potrditveni viri" in article["content"]
