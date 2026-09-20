@@ -1,0 +1,14 @@
+[
+  {
+    "id": "0ee8931d-7111-4e9c-9a5f-592fe0e8e429",
+    "status": "pending",
+    "command": "v članek o živalskem vrtu v ljubljani dodaj fotografije, nato se vrni na časovnico objavljanja člankov",
+    "mode": "site",
+    "category": "aktualno",
+    "actor": "dan.grmusa@gmail.com",
+    "created_at": "2026-09-20T13:47:50Z",
+    "updated_at": "2026-09-20T13:47:50Z",
+    "attempts": 0,
+    "reason": "SITE_AI_PROVIDER_UNAVAILABLE Workers AI: Workers AI kvota/kapaciteta je trenutno izčrpana. WORKERS_AI_SITE_DIAGNOSTIC_BEGIN AI capacity unavailable: Workers AI kvota/kapaciteta je trenutno izčrpana. WORKERS_AI_SITE_DIAGNOSTIC_END SITE_AI_CAPACITY_UNAVAILABLE AI model trenutno ni na voljo; ukaz ni bil delno uporabljen in se v istem runu ne bo nesmiselno ponavljal. INTENT_ROUTE requested=site resolved=site autocorrected=true"
+  }
+]
