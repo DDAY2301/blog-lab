@@ -18,6 +18,44 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "politika-si-odpira-vrata-v-medije-vlada-kriticne-medije-s-profesionalnimi-novinarji-dojema-eeca644f",
+    "title": "Politika si odpira vrata v medije: \"Vlada kritične medije s profesionalnimi novinarji dojema kot sovražnike…",
+    "excerpt": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Politika si odpira vrata v medije: \"Vlada kritične medije s profesionalnimi novinarji dojema kot sovražnike…«.",
+    "seoDescription": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Politika si odpira vrata v medije: \"Vlada kritične medije s profesionalnimi n",
+    "content": "**Politika, 20. 9. 2026.** Politika si odpira vrata v medije: \"Vlada kritične medije s profesionalnimi novinarji dojema kot sovražnike oblasti\" Večer\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nPri političnih temah Blog Lab ne podpira kandidatov, strank ali političnih odločitev; izjave in ocene so predstavljene kot stališča njihovih avtorjev ali virov, ne kot uredniška presoja.\n\nVir: Večer. Objavljeno: Thu, 27 Aug 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMi5AFBVV95cUxQQXpscDRpWVZUM3huT1ViaGczb3kxNjNyVlhuYkxGbUYwMkgxMzRWTVlqYVg3ejF2ZElpUVZwQVM0QnUzSWFRLW14a0ZYUUZZSkFFTkFxRnVTX0FDU1V3cWtaU2Y1ZDJhMHNmMWxnWWw0aFF4ZG1BeGZJLWJ0NWRqU2dPV0s4dkkxR3lEUHQ2azE2eV9hUDkzSzZCdkptR1dzTElWN1ZxbTN6WTIxNDY5c2ZSN3lQMXJxQm5jQjhmcTJzWWQ5N19QYWFPcE1idy1wb2FWQTlCSHAxeEN1QTRuMk1qelg?oc=5)\n\n## Dopolnitev vira 2: rtvslo.si\n\nIzhodišče vira: Vlada da pečat zunanji politiki, a težnja k mednarodnemu pravu in človekovim pravicam naj ostane. - rtvslo.si.\n\nVlada da pečat zunanji politiki, a težnja k mednarodnemu pravu in človekovim pravicam naj ostane. rtvslo.si\n\n Vir: rtvslo.si. Objavljeno: Wed, 09 Sep 2026 10:03:07 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMi2wFBVV95cUxQY3JQWHJGQjlaYWlIajVNWnJWbE9iS01Ydk9FMXRrWmUtX3pxdUZjWTNkRW5SSEc2bnI3SEJQVlk4cF9ZWk9oUm5aY1JTazZUOHllOHhtNVFnRVgxbWUtZHBQQnp4RmJHd1JWNHY2b3VJZ2xDXzhER2JvcHNZZ2dfSjZnaG91b0h1UWJLbFJIS3hfUWE3RFpQTkJKZzdmSjZSbmhpaUhVNzFoU3l6UHN2QjZtU3BJWTc5SnJvQ2pMZ3lDYUMxaUxyV083Uy1nRlNFWHlmRmpTYzh2ekU?oc=5)\n\n## Dopolnitev vira 3: Slovenske novice\n\nIzhodišče vira: Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice.\n\nJanša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) Slovenske novice\n\n Vir: Slovenske novice. Objavljeno: Thu, 27 Aug 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMi7AFBVV95cUxPYVRmbnVGUnhNc2cwdk1Rc1J1UFZYYUhMQk51TWR5ZXYxVTR3RXY4V1dxd0NTdEdLTnp0Nkp2Z3dDMUNiRWNhRWVrQThQTnFiR2hJcEhjb0VXOUllaHR1alFQT2N0RGZiRzc1dnZGUGRQUko1NkhJX2xyak1sOW9BSjF2QlFIa2tLTTFRNEl6aDVUYXVwVmE2Y2VveGRuV19GMUpuM1ZKSW00ZjhMd2gxdDdUMkF1ZkJOeEQ0NHdEYl9wbzhwcE9hMGMwck9JZGtiT1Bna3hYMDNZa1BicXNSTDNDRExEdENyREw2cg?oc=5)\n\n## Dopolnitev vira 4: rtvslo.si\n\nIzhodišče vira: Kajzer: Zunanja politika se osredotoča na okvire, v katerih ima Slovenija možnosti vplivanja - rtvslo.si.\n\nKajzer: Zunanja politika se osredotoča na okvire, v katerih ima Slovenija možnosti vplivanja rtvslo.si\n\n Vir: rtvslo.si. Objavljeno: Tue, 01 Sep 2026 18:15:47 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiyAFBVV95cUxPZHdORGVzV0tCcTM4ZlNVWXFHS2s5QjRXODJNM3Z5aUVlYXVZdmxZRXRsaW1OUkoxYUpHckhVLUJNV2Q0bGlfLWFkZUZHeTF3bW55RkhHTEpfSFg0QWRwYUpNMEIyZXFmQ2dqRkNsYm96Qjk0MEljbmJ4aUNRaUgzOGlveGMwY2plT0ZZR3Nfc0Zta0hkLUlZaWJVMnRpRkd0UTRBcHZfTW45MUU5Y0sybXM3ZkxvVnZ6OEtBclI1RGkybmJWZ0ZzWg?oc=5)\n\n## Dopolnitev vira 5: N1 Slovenija\n\nIzhodišče vira: Z univerz opozorila, da se politiki sistematično izogibajo in ignorirajo novinarje RTVS - N1 Slovenija.\n\nZ univerz opozorila, da se politiki sistematično izogibajo in ignorirajo novinarje RTVS N1 Slovenija\n\n Vir: N1 Slovenija. Objavljeno: Mon, 14 Sep 2026 13:48:47 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiUEFVX3lxTFB4bXlURjB4SWhSRWI0Y003WVhLZHJDWUJNb2NIQ21IT1RTcmt1YklLenZpemlWOEVhRHB5MkJnTTNDUUxQUzJHQ1BnTlBRY2ZV?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Politika",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Večer — Politika si odpira vrata v medije: \"Vlada kritične medije s profesionalnimi novinarji dojema kot sovražnike oblasti\" -…",
+        "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQQXpscDRpWVZUM3huT1ViaGczb3kxNjNyVlhuYkxGbUYwMkgxMzRWTVlqYVg3ejF2ZElpUVZwQVM0QnUzSWFRLW14a0ZYUUZZSkFFTkFxRnVTX0FDU1V3cWtaU2Y1ZDJhMHNmMWxnWWw0aFF4ZG1BeGZJLWJ0NWRqU2dPV0s4dkkxR3lEUHQ2azE2eV9hUDkzSzZCdkptR1dzTElWN1ZxbTN6WTIxNDY5c2ZSN3lQMXJxQm5jQjhmcTJzWWQ5N19QYWFPcE1idy1wb2FWQTlCSHAxeEN1QTRuMk1qelg?oc=5"
+      },
+      {
+        "label": "rtvslo.si — Vlada da pečat zunanji politiki, a težnja k mednarodnemu pravu in človekovim pravicam naj ostane. - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQY3JQWHJGQjlaYWlIajVNWnJWbE9iS01Ydk9FMXRrWmUtX3pxdUZjWTNkRW5SSEc2bnI3SEJQVlk4cF9ZWk9oUm5aY1JTazZUOHllOHhtNVFnRVgxbWUtZHBQQnp4RmJHd1JWNHY2b3VJZ2xDXzhER2JvcHNZZ2dfSjZnaG91b0h1UWJLbFJIS3hfUWE3RFpQTkJKZzdmSjZSbmhpaUhVNzFoU3l6UHN2QjZtU3BJWTc5SnJvQ2pMZ3lDYUMxaUxyV083Uy1nRlNFWHlmRmpTYzh2ekU?oc=5"
+      },
+      {
+        "label": "Slovenske novice — Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
+        "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPYVRmbnVGUnhNc2cwdk1Rc1J1UFZYYUhMQk51TWR5ZXYxVTR3RXY4V1dxd0NTdEdLTnp0Nkp2Z3dDMUNiRWNhRWVrQThQTnFiR2hJcEhjb0VXOUllaHR1alFQT2N0RGZiRzc1dnZGUGRQUko1NkhJX2xyak1sOW9BSjF2QlFIa2tLTTFRNEl6aDVUYXVwVmE2Y2VveGRuV19GMUpuM1ZKSW00ZjhMd2gxdDdUMkF1ZkJOeEQ0NHdEYl9wbzhwcE9hMGMwck9JZGtiT1Bna3hYMDNZa1BicXNSTDNDRExEdENyREw2cg?oc=5"
+      },
+      {
+        "label": "rtvslo.si — Kajzer: Zunanja politika se osredotoča na okvire, v katerih ima Slovenija možnosti vplivanja - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPZHdORGVzV0tCcTM4ZlNVWXFHS2s5QjRXODJNM3Z5aUVlYXVZdmxZRXRsaW1OUkoxYUpHckhVLUJNV2Q0bGlfLWFkZUZHeTF3bW55RkhHTEpfSFg0QWRwYUpNMEIyZXFmQ2dqRkNsYm96Qjk0MEljbmJ4aUNRaUgzOGlveGMwY2plT0ZZR3Nfc0Zta0hkLUlZaWJVMnRpRkd0UTRBcHZfTW45MUU5Y0sybXM3ZkxvVnZ6OEtBclI1RGkybmJWZ0ZzWg?oc=5"
+      },
+      {
+        "label": "N1 Slovenija — Z univerz opozorila, da se politiki sistematično izogibajo in ignorirajo novinarje RTVS - N1 Slovenija",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFB4bXlURjB4SWhSRWI0Y003WVhLZHJDWUJNb2NIQ21IT1RTcmt1YklLenZpemlWOEVhRHB5MkJnTTNDUUxQUzJHQ1BnTlBRY2ZV?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-20T16:59:34+02:00",
+    "updatedAt": "2026-09-20T16:59:34+02:00"
+  },
+
+  {
     "id": "23-septembra-od-leta-2000-praznujemo-dan-slovenskega-sporta-becf2d35",
     "title": "23. septembra od leta 2000 praznujemo Dan slovenskega športa",
     "excerpt": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »23. septembra od leta 2000 praznujemo Dan slovenskega športa«.",
