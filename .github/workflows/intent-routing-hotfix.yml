@@ -1,0 +1,80 @@
+name: One-shot intent routing hotfix
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/intent-routing-hotfix.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Patch add-article intent routing
+        shell: bash
+        run: |
+          set -euo pipefail
+          node <<'NODE'
+          const fs = require('fs');
+
+          function replaceOnce(path, from, to) {
+            let text = fs.readFileSync(path, 'utf8');
+            if (!text.includes(from)) {
+              throw new Error(`Pattern not found in ${path}: ${from}`);
+            }
+            text = text.replace(from, to);
+            fs.writeFileSync(path, text);
+          }
+
+          replaceOnce(
+            'terminal/worker/src/index.js',
+            'const articleActions = ["objavi","napisi","ustvari"];',
+            'const articleActions = ["objavi","napisi","ustvari","dodaj"];'
+          );
+
+          replaceOnce(
+            'agents/operator-terminal/command.py',
+            'article_actions = ["objavi", "napiši", "napisi", "pripravi", "ustvari", "sestavi", "napravi", "write", "publish", "create", "generate"]',
+            'article_actions = ["objavi", "napiši", "napisi", "pripravi", "ustvari", "sestavi", "napravi", "dodaj", "add", "insert", "write", "publish", "create", "generate"]'
+          );
+          NODE
+
+      - name: Smoke validate routing patch
+        shell: bash
+        run: |
+          python - <<'PY'
+          import importlib.util
+          import pathlib
+          import sys
+          path = pathlib.Path('agents/operator-terminal/command.py').resolve()
+          spec = importlib.util.spec_from_file_location('cmd', path)
+          mod = importlib.util.module_from_spec(spec)
+          sys.modules['cmd'] = mod
+          spec.loader.exec_module(mod)
+          assert mod.infer_mode('dodaj sedaj članek kako se je odvijalo dogajanje tega vikenda') == 'article'
+          assert mod.infer_mode('dodaj drag and drop images in lepši design') == 'site'
+          print('intent routing smoke ok')
+          PY
+          node --check terminal/worker/src/index.js
+
+      - name: Commit routing fix
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ -z "$(git status --porcelain)" ]]; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add terminal/worker/src/index.js agents/operator-terminal/command.py
+          git commit -m "Fix add article intent routing"
+          git push
