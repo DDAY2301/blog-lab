@@ -997,3 +997,47 @@ def test_mark_scheduled_slot_done_removes_deferred_marker():
 
     assert state["scheduled_slots_done"] == [slot]
     assert state["scheduled_slots_deferred"] == []
+
+
+def test_story_pool_does_not_merge_unrelated_european_final_stories():
+    import agent
+
+    items = [
+        {
+            "title": "Slovenija po 24 letih znova v finalu evropskega prvenstva U18 proti Italiji",
+            "summary": "Mladinska reprezentanca se je uvrstila v finale.",
+            "url": "https://example.com/u18-final",
+            "verified_direct": True,
+            "provider": "google-news-si",
+        },
+        {
+            "title": "Slovenija začela izločilne boje evropskega prvenstva v odbojki",
+            "summary": "Odbojkarska reprezentanca je začela izločilni del.",
+            "url": "https://example.com/volleyball",
+            "verified_direct": True,
+            "provider": "google-news-si",
+        },
+        {
+            "title": "Mlada Slovenka na evropskem prestolu",
+            "summary": "Posameznica je osvojila evropski naslov v drugi športni disciplini.",
+            "url": "https://example.com/individual",
+            "verified_direct": True,
+            "provider": "google-news-si",
+        },
+    ]
+
+    pool = agent.automatic_story_pool(items, "sport", max_items=6)
+    assert len(pool) == 1
+
+
+def test_story_tokens_remove_generic_competition_words():
+    import agent
+
+    tokens = agent._story_tokens({
+        "title": "Slovenija v finalu evropskega prvenstva proti Italiji za zlato"
+    })
+    assert not any(token.startswith("sloven") for token in tokens)
+    assert not any(token.startswith("evrop") for token in tokens)
+    assert not any(token.startswith("prven") for token in tokens)
+    assert not any(token.startswith("final") for token in tokens)
+    assert not any(token.startswith("italij") for token in tokens)
