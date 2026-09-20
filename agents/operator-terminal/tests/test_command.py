@@ -1105,11 +1105,11 @@ def test_site_ai_request_fails_over_from_worker_quota_to_external(monkeypatch):
     monkeypatch.setenv("AI_PROVIDER", "auto")
     calls = []
 
-    def worker(system_prompt, request_text):
+    def worker(system_prompt, request_text, context):
         calls.append("worker")
         raise cmd.SiteProviderUnavailable("Workers AI kvota/kapaciteta je trenutno izčrpana.")
 
-    def external(system_prompt, request_text):
+    def external(system_prompt, request_text, context):
         calls.append("external")
         return {
             "summary": "external success",
@@ -1117,7 +1117,7 @@ def test_site_ai_request_fails_over_from_worker_quota_to_external(monkeypatch):
             "_provider": "external",
         }
 
-    def copilot(system_prompt, request_text):
+    def copilot(system_prompt, request_text, context):
         calls.append("copilot")
         return {
             "summary": "copilot success",
@@ -1143,12 +1143,12 @@ def test_site_ai_request_fails_over_to_copilot_when_worker_and_external_unavaila
     calls = []
 
     def unavailable(name):
-        def inner(system_prompt, request_text):
+        def inner(system_prompt, request_text, context):
             calls.append(name)
             raise cmd.SiteProviderUnavailable(f"{name} unavailable")
         return inner
 
-    def copilot(system_prompt, request_text):
+    def copilot(system_prompt, request_text, context):
         calls.append("copilot")
         return {
             "summary": "copilot success",
@@ -1187,3 +1187,43 @@ def test_workers_site_command_does_not_retry_provider_capacity_failure(tmp_path,
         cmd.workers_ai_site_command("uredi stran")
 
     assert len(calls) == 1
+
+
+def test_workers_site_ai_adapter_sends_repository_context(monkeypatch):
+    monkeypatch.setenv("WORKER_AI_TOKEN", "test-token")
+    monkeypatch.setenv("WORKER_SITE_AI_URL", "https://worker.example/api/ai/edit")
+    captured = {}
+
+    class FakeResponse:
+        def __enter__(self):
+            return self
+        def __exit__(self, exc_type, exc, tb):
+            return False
+        def read(self):
+            return json.dumps({
+                "ok": True,
+                "plan": {"summary": "ok", "edits": []},
+            }).encode("utf-8")
+
+    def fake_urlopen(request, timeout=0):
+        captured["body"] = json.loads(request.data.decode("utf-8"))
+        captured["timeout"] = timeout
+        return FakeResponse()
+
+    monkeypatch.setattr(cmd, "urlopen", fake_urlopen)
+    context = [{
+        "path": "src/App.jsx",
+        "complete": True,
+        "snippets": [{"label": "full", "content": "export default 1;"}],
+    }]
+
+    plan = cmd._workers_site_ai_request(
+        "system",
+        "OPERATOR REQUEST:\nuredi stran",
+        context,
+    )
+
+    assert plan["_provider"] == "workers_ai"
+    assert captured["body"]["context"] == context
+    assert "REPOSITORY CONTEXT" not in captured["body"]["request"]
+    assert captured["body"]["request"].startswith("OPERATOR REQUEST:")
