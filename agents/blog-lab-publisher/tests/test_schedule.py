@@ -1,6 +1,10 @@
 from datetime import datetime
+from pathlib import Path
+import sys
 from zoneinfo import ZoneInfo
 
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
 from schedule import resolve_due_slot
 
 TZ = ZoneInfo("Europe/Ljubljana")
