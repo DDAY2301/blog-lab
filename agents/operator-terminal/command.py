@@ -58,6 +58,96 @@ INTENT_TOKEN_ALIASES = {
     "source":"vir","sources":"vir","vir":"vir","viri":"vir","agent":"agent","objavljanje":"objavljanje",
     "live":"live","pulse":"pulse",
 }
+# Extra natural-language coverage. These aliases are only routing hints:
+# the original command is always preserved for article topics, names and values.
+INTENT_TOKEN_ALIASES.update({
+    "napravi":"naredi","izradi":"naredi","napravite":"naredi",
+    "ukloni":"odstrani","ukloni":"odstrani","obrisi":"odstrani","obriši":"odstrani",
+    "ugasi":"izklopi","iskljuci":"izklopi","isključi":"izklopi",
+    "pokreni":"zazeni","pokrenite":"zazeni","ukljuci":"vklopi","uključi":"vklopi",
+    "nastavi":"nadaljuj","produzi":"nadaljuj","produži":"nadaljuj",
+    "provjeri":"preveri","proveri":"preveri","provjeriti":"preveri","proveriti":"preveri",
+    "clanak":"clanek","članak":"clanek","clanci":"clanek","članci":"clanek",
+    "vijest":"novica","vest":"novica","vijesti":"novica","vesti":"novica",
+    "stranica":"stran","stranicu":"stran","sajt":"stran","websiteu":"stran","webstranica":"stran",
+    "raspored":"urnik","rasporedu":"urnik",
+    "objavljivanje":"objavljanje","objavljivanja":"objavljanje",
+    "preuredi":"uredi","redesign":"izboljsaj","redizajn":"izboljsaj",
+    "fix":"uredi","repair":"uredi","popravi":"uredi","popraviti":"uredi",
+    "check":"preveri","verify":"preveri","inspect":"preveri",
+    "upload":"nalozi","nalozi":"nalozi","naloži":"nalozi",
+    "move":"premakni","premakni":"premakni","copy":"kopiraj","kopiraj":"kopiraj",
+    "rename":"preimenuj","preimenuj":"preimenuj",
+})
+
+INTENT_PREFIX_ALIASES = (
+    ("objavlj", "objavljanje"),
+    ("zaustav", "ustavi"),
+    ("ustav", "ustavi"),
+    ("nadalj", "nadaljuj"),
+    ("izklop", "izklopi"),
+    ("vklop", "vklopi"),
+    ("iskljuc", "izklopi"),
+    ("ukljuc", "vklopi"),
+    ("pokren", "zazeni"),
+    ("provjer", "preveri"),
+    ("prover", "preveri"),
+    ("prever", "preveri"),
+    ("urej", "uredi"),
+    ("preured", "uredi"),
+    ("spremen", "spremeni"),
+    ("zamen", "spremeni"),
+    ("izboljs", "izboljsaj"),
+    ("poleps", "polepsaj"),
+    ("odstran", "odstrani"),
+    ("uklon", "odstrani"),
+    ("obris", "odstrani"),
+    ("rubrik", "rubrika"),
+    ("kategor", "kategorija"),
+    ("galer", "galerija"),
+    ("fotograf", "slika"),
+    ("stranic", "stran"),
+)
+
+INTENT_PHRASE_ALIASES = (
+    ("turn agent off", "izklopi agent"),
+    ("turn off agent", "izklopi agent"),
+    ("shut down agent", "ustavi agent"),
+    ("stop publishing", "ustavi objavljanje"),
+    ("pause publishing", "pavza objavljanje"),
+    ("turn agent on", "vklopi agent"),
+    ("turn on agent", "vklopi agent"),
+    ("resume publishing", "nadaljuj objavljanje"),
+    ("check agent status", "preveri status agent"),
+    ("check status", "preveri status"),
+    ("what is agent doing", "status agent"),
+    ("write an article", "napisi clanek"),
+    ("write article", "napisi clanek"),
+    ("create an article", "ustvari clanek"),
+    ("create article", "ustvari clanek"),
+    ("publish article", "objavi clanek"),
+    ("publish post", "objavi clanek"),
+    ("create post", "ustvari clanek"),
+    ("edit website", "uredi stran"),
+    ("edit the website", "uredi stran"),
+    ("fix website", "uredi stran"),
+    ("fix the website", "uredi stran"),
+    ("redesign website", "izboljsaj dizajn stran"),
+    ("redesign the website", "izboljsaj dizajn stran"),
+    ("make website prettier", "polepsaj stran"),
+    ("make the website prettier", "polepsaj stran"),
+    ("uredi spletno stran", "uredi stran"),
+    ("popravi spletno stran", "uredi stran"),
+    ("ugasi agenta", "izklopi agent"),
+    ("pokreni agenta", "zazeni agent"),
+    ("proveri status agenta", "preveri status agent"),
+    ("provjeri status agenta", "preveri status agent"),
+    ("napisi clanak", "napisi clanek"),
+    ("objavi clanak", "objavi clanek"),
+    ("uredi stranicu", "uredi stran"),
+    ("uredi sajt", "uredi stran"),
+)
+
 INTENT_VOCABULARY = tuple(INTENT_TOKEN_ALIASES.keys())
 
 
@@ -71,9 +161,14 @@ def _fold_intent_text(value: str) -> str:
 def _correct_intent_token(token: str) -> str:
     if token in INTENT_TOKEN_ALIASES:
         return INTENT_TOKEN_ALIASES[token]
+    for prefix, canonical in INTENT_PREFIX_ALIASES:
+        if len(token) >= max(5, len(prefix)) and token.startswith(prefix):
+            return canonical
     if len(token) < 4:
         return token
-    cutoff = 0.86 if len(token) == 4 else 0.78
+    # Short words require a close match; longer words tolerate transposed,
+    # omitted and duplicated letters more aggressively.
+    cutoff = 0.88 if len(token) == 4 else (0.80 if len(token) <= 6 else 0.72)
     matches = get_close_matches(token, INTENT_VOCABULARY, n=1, cutoff=cutoff)
     if not matches:
         return token
@@ -85,6 +180,13 @@ def _correct_intent_token(token: str) -> str:
 
 def _normalized_intent(command: str) -> str:
     folded = _fold_intent_text(command)
+    padded = f" {folded} "
+    # Resolve common natural multi-word commands before token-level typo repair.
+    for source, target in INTENT_PHRASE_ALIASES:
+        source_folded = _fold_intent_text(source)
+        if source_folded:
+            padded = padded.replace(f" {source_folded} ", f" {target} ")
+    folded = " ".join(padded.split())
     return " ".join(_correct_intent_token(token) for token in folded.split())
 
 
@@ -155,16 +257,18 @@ def _live_pulse_setting_intent(low: str) -> bool:
 
 def _site_intent(low: str) -> bool:
     site_terms = [
-        "stran", "spletno stran", "rubrik", "kategor", "zavihek", "tab", "meni", "header", "footer", "navigacij",
+        "stran", "spletno stran", "sajt", "stranic", "rubrik", "kategor", "zavihek", "tab", "meni", "header", "footer", "navigacij",
         "layout", "dizajn", "design", "izgled", "sekcij", "stolpec", "sidebar",
         "galerij", "gumb", "logo", "favicon", "hero", "kartic", "css", "responsive",
         "barv", "tema", "palet", "font", "tipograf", "slik", "fotograf", "video",
+        "komponent", "obrazec", "form", "button", "link", "povezav", "upload", "nalozi",
+        "premakni", "kopiraj", "preimenuj", "mobile", "desktop", "seo", "meta",
     ]
     return any(term in low for term in site_terms)
 
 def _article_intent(low: str) -> bool:
-    article_nouns = ["članek", "clanek", "prispevek", "novico", "novica", "blog", "objavo", "objava", "post"]
-    article_actions = ["objavi", "napiši", "napisi", "pripravi", "ustvari", "sestavi"]
+    article_nouns = ["članek", "clanek", "clanak", "prispevek", "novico", "novica", "vijest", "vest", "blog", "objavo", "objava", "post", "article"]
+    article_actions = ["objavi", "napiši", "napisi", "pripravi", "ustvari", "sestavi", "napravi", "write", "publish", "create", "generate"]
     site_targets = ["footer", "header", "hero", "meni", "navigacij", "rubrik", "kategor", "stran", "css", "layout"]
     has_noun = any(noun in low for noun in article_nouns)
     has_action = any(action in low for action in article_actions)
