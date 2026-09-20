@@ -18,6 +18,44 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "slovenija-po-24-letih-znova-v-finalu-evropskega-prvenstva-u18-za-zlato-na-sport-tv-proti-i-7b2ee46f",
+    "title": "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji!",
+    "excerpt": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji!«.",
+    "seoDescription": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport",
+    "content": "**Šport, 20. 9. 2026.** Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! Šport TV\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Šport TV. Objavljeno: Sun, 02 Aug 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMivgFBVV95cUxPeHhldDVwLWdCYUhzOXhiQ0l5Zml6Qml0UG42R3pFSTFzX1BFV1NNOS1mLVdUNWJRMFdTMjZfbk9wODgwdG9Oa3k1azZSTHBHZzNhZEJPdUZLd1hrZDVpNDJPcWRQdFBCcVFzVjJHNkNKMWRwMXF0anNGZXU1RmZxbVBfaXlSa3ltLXFxUUlTOXBGbjUwR3R4NXJzMFdyYTQtdDg1bkdzbVBOdWV0R09NdlhNb0lZb1NVNmt2bHhR?oc=5)\n\n## Kot v sanjah: Slovenija že drugič v dveh tednih evropski prvak! (VIDEO)\n\nKot v sanjah: Slovenija že drugič v dveh tednih evropski prvak! (VIDEO) Šport TV\n\n Vir: Šport TV. Objavljeno: Sun, 02 Aug 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMilwFBVV95cUxOdWVtNEd6ZXg0S25KU2g1M3RHVGhLNDZFbW1IVWo4ekxKNXhoOThBdDFXMGZLaTVlZjFWWkFsYVhfRDd0S005UDhKZzBDc2tNUFNJT0lWcHVyemdFS0t6bHo0c0xlbDdnRWhhZDZtOTVfZHlsQnQwblZfMUt5V3EtZ1pUZ1JlUTRkYy04dnhkWTBRUi1SNXAw?oc=5)\n\n## Mlada Slovenka na evropskem prestolu: \"Pred prvo me je vedno strah, nato pa …\"\n\nMlada Slovenka na evropskem prestolu: \"Pred prvo me je vedno strah, nato pa …\" Žurnal24\n\n Vir: Žurnal24. Objavljeno: Sun, 20 Sep 2026 04:48:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiwgFBVV95cUxPX2haSWR2alJrQ3U5QnpJckplX0QwZWMtaVBON2xWNjRlSDZQN01PWDhkRU0wMDJUdjh0d3ZIZ1hDX05CR2pVVGc3ejAySGplUzhXbFZSZ1JhdFZOVHVHNG9KT2xySGh3cmgtR1ZJdjJmUkxaTWFaSjF0MVhIVjFqdjZPMC1QTXgwT0xSU3hudHRUQ0FxbDMzM2VQUDdGbmZaaEJGRnpYcVZ3bDdNVE14TzFOc3RoMlZ2UHBpSFlsOWMwd9IBxwFBVV95cUxPYS1YeXpueG1TbVhxUDNQcXB2YzIzZHM3eTNZeW16aTJMVWx0OHRZOHZsejBneEdDVVhUeWYzREhpWmxtLW52eVVTSlNWX293V2hqZTBXYUlNOU8yUWNBbWRvREZxT0pUaC1fbUN5dVNudXZCYnpIUnAwNkVjMmVLMFNlaF9QYjlydloyV1NLcjdJXzhETDlGcUVxbjhBMkJ6enFXTmR3ZUdGZWVqS01HNGlCcWhVcUM1SmY5MkY3OThxYXlOdWo0?oc=5)\n\n## Slovenija je dobro začela izločilne boje na evropskem prvenstvu v odbojki\n\nSlovenija je dobro začela izločilne boje na evropskem prvenstvu v odbojki rtvslo.si\n\n Vir: rtvslo.si. Objavljeno: Fri, 18 Sep 2026 06:49:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiugFBVV95cUxPT2tLd0VQaThZaXJrVnh2SU1Rd3NHc2JJQUl4N3Q2V0w0bFduQks4M0JORjVTR2JDOGdTamJMSmI0UjlDNld6ZFdaTFMzX3dNakpteF9TbW80U1RBbWVGVHpDRk5qR0F5OXgzRnZVLW4xRWJtd3dnY0dPUzdjZzg0XzgyNGtQaUtROURvV1g5eERMXzh0YlloelBrTF8tRW1iMUd3THhWeXZEMEJvMHFQdDNJRU9mOGh3ZVE?oc=5)\n\n## Odbojka (M): Italija - Slovenija, Evropsko prvenstvo 2026, Skupina A\n\nOdbojka (M): Italija - Slovenija, Evropsko prvenstvo 2026, Skupina A Siol.net\n\n Vir: Siol.net. Objavljeno: Sun, 20 Sep 2026 01:48:09 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMi1wFBVV95cUxNdDlTU0hlTksyeFlzRHZVMWtGc0pOQmVVdEVxWnI0OGxkU25vUXJEbkJ6Z3hjS0RNNzNpMk5naWhheTROMnhCenMwOTd1X0J0QzlFM0dsOXhFeVJGbTFZMGtUc25QQVBDbjkzOTc3LWdoM1RLMzczU2M5OExyX0xPeFU1czM3MjYtZjlEcWtTaHZ5TlN6X0hFdmw5Y0NmVU9uR2V4TDBxUWVYWnl2NjhBdVZsU3FTb2s4VmVVQzI3ZnhsQlJjQTZoVHg1d3E5ZElxYjgxV280cw?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Šport",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Šport TV — Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
+        "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPeHhldDVwLWdCYUhzOXhiQ0l5Zml6Qml0UG42R3pFSTFzX1BFV1NNOS1mLVdUNWJRMFdTMjZfbk9wODgwdG9Oa3k1azZSTHBHZzNhZEJPdUZLd1hrZDVpNDJPcWRQdFBCcVFzVjJHNkNKMWRwMXF0anNGZXU1RmZxbVBfaXlSa3ltLXFxUUlTOXBGbjUwR3R4NXJzMFdyYTQtdDg1bkdzbVBOdWV0R09NdlhNb0lZb1NVNmt2bHhR?oc=5"
+      },
+      {
+        "label": "Šport TV — Kot v sanjah: Slovenija že drugič v dveh tednih evropski prvak! (VIDEO) - Šport TV",
+        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOdWVtNEd6ZXg0S25KU2g1M3RHVGhLNDZFbW1IVWo4ekxKNXhoOThBdDFXMGZLaTVlZjFWWkFsYVhfRDd0S005UDhKZzBDc2tNUFNJT0lWcHVyemdFS0t6bHo0c0xlbDdnRWhhZDZtOTVfZHlsQnQwblZfMUt5V3EtZ1pUZ1JlUTRkYy04dnhkWTBRUi1SNXAw?oc=5"
+      },
+      {
+        "label": "Žurnal24 — Mlada Slovenka na evropskem prestolu: \"Pred prvo me je vedno strah, nato pa …\" - Žurnal24",
+        "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPX2haSWR2alJrQ3U5QnpJckplX0QwZWMtaVBON2xWNjRlSDZQN01PWDhkRU0wMDJUdjh0d3ZIZ1hDX05CR2pVVGc3ejAySGplUzhXbFZSZ1JhdFZOVHVHNG9KT2xySGh3cmgtR1ZJdjJmUkxaTWFaSjF0MVhIVjFqdjZPMC1QTXgwT0xSU3hudHRUQ0FxbDMzM2VQUDdGbmZaaEJGRnpYcVZ3bDdNVE14TzFOc3RoMlZ2UHBpSFlsOWMwd9IBxwFBVV95cUxPYS1YeXpueG1TbVhxUDNQcXB2YzIzZHM3eTNZeW16aTJMVWx0OHRZOHZsejBneEdDVVhUeWYzREhpWmxtLW52eVVTSlNWX293V2hqZTBXYUlNOU8yUWNBbWRvREZxT0pUaC1fbUN5dVNudXZCYnpIUnAwNkVjMmVLMFNlaF9QYjlydloyV1NLcjdJXzhETDlGcUVxbjhBMkJ6enFXTmR3ZUdGZWVqS01HNGlCcWhVcUM1SmY5MkY3OThxYXlOdWo0?oc=5"
+      },
+      {
+        "label": "rtvslo.si — Slovenija je dobro začela izločilne boje na evropskem prvenstvu v odbojki - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPT2tLd0VQaThZaXJrVnh2SU1Rd3NHc2JJQUl4N3Q2V0w0bFduQks4M0JORjVTR2JDOGdTamJMSmI0UjlDNld6ZFdaTFMzX3dNakpteF9TbW80U1RBbWVGVHpDRk5qR0F5OXgzRnZVLW4xRWJtd3dnY0dPUzdjZzg0XzgyNGtQaUtROURvV1g5eERMXzh0YlloelBrTF8tRW1iMUd3THhWeXZEMEJvMHFQdDNJRU9mOGh3ZVE?oc=5"
+      },
+      {
+        "label": "Siol.net — Odbojka (M): Italija - Slovenija, Evropsko prvenstvo 2026, Skupina A - Siol.net",
+        "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNdDlTU0hlTksyeFlzRHZVMWtGc0pOQmVVdEVxWnI0OGxkU25vUXJEbkJ6Z3hjS0RNNzNpMk5naWhheTROMnhCenMwOTd1X0J0QzlFM0dsOXhFeVJGbTFZMGtUc25QQVBDbjkzOTc3LWdoM1RLMzczU2M5OExyX0xPeFU1czM3MjYtZjlEcWtTaHZ5TlN6X0hFdmw5Y0NmVU9uR2V4TDBxUWVYWnl2NjhBdVZsU3FTb2s4VmVVQzI3ZnhsQlJjQTZoVHg1d3E5ZElxYjgxV280cw?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-20T10:38:26+02:00",
+    "updatedAt": "2026-09-20T10:38:26+02:00"
+  },
+
+  {
     "id": "nocno-zivljenje-v-ljubljani-1ae9f6e3",
     "title": "Nočno življenje v Ljubljani",
     "excerpt": "Ljubljana ponuja bogato nočno življenje, od barov do klubov.",
