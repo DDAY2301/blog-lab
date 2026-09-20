@@ -269,8 +269,15 @@ def article_command(command: str, category: str) -> None:
     result = subprocess.run(cmd, cwd=BASE, check=False)
     if result.returncode == 3:
         print(
-            "ARTICLE_SOURCE_UNAVAILABLE Za zahtevano temo trenutno ni dovolj preverljivih virov. "
+            "ARTICLE_SOURCE_UNAVAILABLE Za zahtevano temo trenutno ni dovolj relevantnih in preverljivih virov. "
             "Ukaz ne bo samodejno ponovljen.",
+            file=sys.stderr,
+        )
+        raise SystemExit(64)
+    if result.returncode == 4:
+        print(
+            "ARTICLE_AI_UNAVAILABLE AI pisec ali uredniški pregled trenutno ni na voljo. "
+            "Zaradi kakovosti ročni članek ni bil objavljen in ne bo nadomeščen z nepovezanim fallbackom.",
             file=sys.stderr,
         )
         raise SystemExit(64)
