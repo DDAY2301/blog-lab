@@ -18,6 +18,43 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "rakov-skocjan-hiking-guide",
+    "title": "Rakov Škocjan: A Safety-First Hiking Guide to Slovenia’s Natural Bridges",
+    "excerpt": "Walk a five-kilometre karst trail between Rakov Škocjan’s natural bridges, with current logging warnings, responsible-visit rules and transport advice from Ljubljana.",
+    "seoDescription": "Plan a Rakov Škocjan hike: 5 km trail, natural bridges, access from Ljubljana, current 2026 logging warning, safety and responsible visitor advice.",
+    "content": "Rakov Škocjan is a forested karst valley between Cerknica and Planina where the Rak stream appears, disappears and passes beneath two natural stone bridges. For visitors based in Ljubljana, it offers a quieter nature trip than Slovenia’s best-known alpine destinations—but it still requires preparation.\n\nThe official **Rakov Škocjan Educational Trail** is approximately **5 kilometres** long and mostly lies between 500 and 600 metres above sea level. Its information boards explain how a former cave ceiling collapsed, leaving the Big and Small Natural Bridges.\n\n## Important current warning\n\n**Checked on 20 September 2026:** the Slovenian Forest Service and Notranjska Regional Park report tree felling and timber removal at individual points beside the road and educational trail from **15 September to 31 December 2026**.\n\nDo not enter an active work area. Follow temporary signs and workers’ instructions, expect short interruptions, and turn back if the safe route is unclear. Falling trees, branches and forestry machinery are not hazards to walk around for a photograph.\n\nThe Cerknica-area forecast checked for 20 September indicated increasing cloud, with temperatures around 11–25°C. Conditions in the shaded valley can feel cooler and wetter. Recheck the [official ARSO forecast](https://meteo.arso.gov.si/met/en/) before departure.\n\n## What you will see\n\n### Big Natural Bridge\n\nThe western end of the valley is marked by the Big Natural Bridge, a surviving section of the former cave roof. View it only from maintained paths and designated viewpoints. Limestone edges can be slippery, especially after rain.\n\n### The Rak stream and valley floor\n\nThe Rak is supplied by underground karst water. Its level and visible course change with rainfall and wider water conditions, so photographs from another season may not match your visit. Flooded or muddy ground is a reason to alter the walk, not to force a crossing.\n\n### Church ruins and forest\n\nNear the trail are the remains of the Church of St Cantianus. The surrounding fir-and-beech forest is ecologically rich and particularly attractive in autumn. Leave plants, stones and archaeological remains in place.\n\n### Small Natural Bridge\n\nThe 42-metre-high Small Natural Bridge stands above the eastern cave system. Stay behind barriers and on the maintained route. Do not enter caves or scramble below the bridge when water, darkness, loose rock or official restrictions make access unsafe.\n\n## Route planning\n\nThe park publishes a downloadable GPX file and elevation profile for the five-kilometre educational trail. Download the official track before leaving mobile coverage, but treat signs and temporary forestry instructions as more authoritative than a saved route.\n\nAllow roughly **two to three hours** for a relaxed circuit with stops. This is a planning estimate, not an official walking time; mud, photography, children and work-area diversions can make the visit longer.\n\nA simple plan is:\n\n1. Begin at an authorised parking or access point.\n2. Follow the marked educational trail rather than informal shortcuts.\n3. Visit the natural bridges and interpretation points only where access remains open.\n4. Return by the marked route before dusk.\n\nAvoid combining the outing with unsupported cave exploration. A forest walk and a cave visit require different equipment, permissions and risk assessment.\n\n## Getting there from Ljubljana\n\nNotranjska Regional Park describes the wider area as about an hour’s drive from Ljubljana. Drivers should use official roads and designated parking only; motor vehicles are prohibited in the natural environment.\n\nFor a car-light journey, trains run towards **Rakek**, while buses connect Ljubljana with **Cerknica**. These services do not necessarily deliver you to the Rakov Škocjan trailhead. Check the live [Slovenian Railways timetable](https://potniski.sz.si/en/) or [Ljubljana Bus Station](https://www.ap-ljubljana.si/en/) and arrange the final connection in advance. Do not assume a taxi or local transfer will be waiting.\n\nIf public transport and the final transfer do not align, visit the Lake Cerknica Visitor Centre or choose an organised excursion instead of attempting a long roadside walk.\n\n## Equipment and suitability\n\nWear shoes with dependable grip. Carry water, a light waterproof layer, a charged phone, an offline map and basic first aid. In autumn, add warm clothing and a small light even for a daytime visit.\n\nThe route is mostly gentle in profile, but natural surfaces, roots, mud, steps and temporary forestry work can limit accessibility. Visitors using wheelchairs, pushchairs or mobility aids should contact the park before travelling for current, section-specific advice.\n\nChildren should remain close to an adult near water, cliffs, caves and work zones. Keep dogs on a leash to protect wildlife and other visitors.\n\n## Responsible behaviour\n\nRakov Škocjan is protected nature, not an adventure park.\n\n- Stay on marked and maintained trails.\n- Park only in designated areas.\n- Take all waste away.\n- Do not light fires or camp outside designated areas.\n- Keep noise low and do not disturb wildlife.\n- Do not pick plants or collect rocks.\n- Respect private property and temporary closures.\n- Never cross forestry barriers or approach working machinery.\n\nFor another water-shaped landscape nearby, read [Paddling Lake Cerknica: When the Disappearing Lake Allows It](?article=paddling-lake-cerknica-guide). If you prefer an alpine day trip, compare the conditions with [Hiking Velika Planina: A Responsible Day Trip from Ljubljana](?article=hiking-velika-planina-guide).\n\n## Sources and last update\n\nInformation was last checked on **20 September 2026**:\n\n- [Notranjska Regional Park: Rakov Škocjan Educational Trail](https://notranjski-park.si/en/activities/hiking/rakov-skocjan-educational-trail)\n- [Notranjska Regional Park: current tree-logging notice](https://notranjski-park.si/en/latest/news/tree-logging-in-rakov-skocjan)\n- [Notranjska Regional Park: how to reach the area](https://notranjski-park.si/en/plan-your-trip/how-to-reach-us)\n- [Notranjska Regional Park: rules of conduct](https://notranjski-park.si/en/plan-your-trip/rules-of-conduct)\n- [ARSO: official Slovenian weather service](https://meteo.arso.gov.si/met/en/)\n\nConditions, access and public transport can change. Check the park notice, weather and live timetable again on the day of travel.",
+    "category": "Vodniki",
+    "author": "Uredništvo Blog Lab",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Notranjska Regional Park — Rakov Škocjan Educational Trail",
+        "url": "https://notranjski-park.si/en/activities/hiking/rakov-skocjan-educational-trail"
+      },
+      {
+        "label": "Notranjska Regional Park — Tree logging notice",
+        "url": "https://notranjski-park.si/en/latest/news/tree-logging-in-rakov-skocjan"
+      },
+      {
+        "label": "Notranjska Regional Park — How to reach us",
+        "url": "https://notranjski-park.si/en/plan-your-trip/how-to-reach-us"
+      },
+      {
+        "label": "Notranjska Regional Park — Rules of conduct",
+        "url": "https://notranjski-park.si/en/plan-your-trip/rules-of-conduct"
+      },
+      {
+        "label": "ARSO — Official weather service",
+        "url": "https://meteo.arso.gov.si/met/en/"
+      }
+    ],
+    "createdAt": "2026-09-20T08:59:45+02:00",
+    "updatedAt": "2026-09-20T08:59:45+02:00"
+  },
+  {
     "id": "politicni-pregled-19-9-2026-81290509",
     "title": "Politični pregled: 19. 9. 2026",
     "excerpt": "Samodejni pregled najnovejših objav za področje politika, sestavljen iz javno dostopnih RSS virov in neposrednih povezav do izvirnikov.",
