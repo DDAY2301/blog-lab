@@ -50,6 +50,14 @@ def _extract_json(text: str) -> dict:
             return json.loads(text[start:end + 1])
         raise
 
+
+def _copilot_token_ready() -> bool:
+    return bool(
+        os.getenv("COPILOT_GITHUB_TOKEN", "").strip()
+        or os.getenv("GITHUB_TOKEN", "").strip()
+        or os.getenv("GH_TOKEN", "").strip()
+    )
+
 def _copilot(prompt: str) -> dict:
     if not shutil.which("copilot"):
         raise AIUnavailable("Copilot CLI ni nameščen.")
@@ -65,6 +73,11 @@ def _copilot(prompt: str) -> dict:
         # changing credentials used by git/GitHub Actions itself.
         env["GH_TOKEN"] = copilot_token
         env["GITHUB_TOKEN"] = copilot_token
+    else:
+        github_token = os.getenv("GITHUB_TOKEN", "").strip() or os.getenv("GH_TOKEN", "").strip()
+        if github_token:
+            env.setdefault("GH_TOKEN", github_token)
+            env.setdefault("GITHUB_TOKEN", github_token)
     try:
         proc = subprocess.run(cmd, capture_output=True, text=True, timeout=150, check=False, env=env)
     except Exception as exc:
@@ -207,7 +220,7 @@ If evidence is insufficient for a material claim, pass must be false.
         os.getenv(name, "").strip()
         for name in ("MODEL_API_KEY", "MODEL_BASE_URL", "MODEL_NAME")
     )
-    copilot_ready = bool(os.getenv("COPILOT_GITHUB_TOKEN", "").strip())
+    copilot_ready = _copilot_token_ready()
 
     if provider in {"auto", "external", "model"} and external_ready:
         try:
@@ -295,7 +308,7 @@ def generate(system_prompt: str, task_prompt: str, source_items: list[dict], cat
             if provider in {"external", "model"}:
                 raise
 
-    copilot_ready = bool(os.getenv("COPILOT_GITHUB_TOKEN", "").strip())
+    copilot_ready = _copilot_token_ready()
     if provider in {"auto", "copilot"} and (provider == "copilot" or copilot_ready):
         try:
             return _copilot(system_prompt + "\n\n" + user_prompt)
