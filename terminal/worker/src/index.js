@@ -531,10 +531,10 @@ const COMMAND_TOKEN_ALIASES = Object.freeze({
   polepsaj:"polepsaj", beautify:"polepsaj", prettier:"polepsaj",
   dodaj:"dodaj", add:"dodaj", insert:"dodaj",
   odstrani:"odstrani", remove:"odstrani", delete:"odstrani", izbrisi:"odstrani", ukloni:"odstrani", obrisi:"odstrani",
-  ustavi:"ustavi", stop:"ustavi", pause:"ustavi", pavza:"ustavi", zaustavi:"ustavi", ugasi:"ustavi",
+  ustavi:"ustavi", stop:"ustavi", pause:"ustavi", pavza:"ustavi", zaustavi:"ustavi", ugasi:"ustavi", shut:"ustavi",
   nadaljuj:"nadaljuj", resume:"nadaljuj", continue:"nadaljuj", nastavi:"nadaljuj", produzi:"nadaljuj",
   vklopi:"vklopi", enable:"vklopi", ukljuci:"vklopi", izklopi:"izklopi", disable:"izklopi", iskljuci:"izklopi",
-  zazeni:"zazeni", start:"zazeni", restart:"zazeni", pokreni:"zazeni",
+  zazeni:"zazeni", start:"zazeni", restart:"zazeni", pokreni:"zazeni", off:"izklopi", on:"vklopi",
   preveri:"preveri", check:"preveri", verify:"preveri", inspect:"preveri", proveri:"preveri", provjeri:"preveri",
   status:"status", state:"status",
   urnik:"urnik", schedule:"urnik", raspored:"urnik",
@@ -548,6 +548,8 @@ const COMMAND_TOKEN_ALIASES = Object.freeze({
   dizajn:"dizajn", design:"dizajn", desgin:"dizajn", izgled:"dizajn", layout:"dizajn", css:"css", responsive:"responsive",
   mobile:"responsive", mobilno:"responsive", logo:"logo", favicon:"favicon", font:"font", seo:"seo", meta:"meta",
   naslov:"naslov", title:"naslov", besedilo:"besedilo", text:"besedilo", writer:"pisanje", pisanje:"pisanje",
+  naredi:"naredi", make:"naredi", daljse:"dolzina", daljši:"dolzina", krajse:"dolzina", krajši:"dolzina",
+  profesionalno:"slog", professional:"slog", struktura:"slog", structure:"slog", stil:"slog", style:"slog", tipografija:"font",
   upload:"nalozi", nalozi:"nalozi", move:"premakni", premakni:"premakni", copy:"kopiraj", kopiraj:"kopiraj",
   rename:"preimenuj", preimenuj:"preimenuj"
 });
@@ -557,7 +559,7 @@ const COMMAND_PREFIX_ALIASES = Object.freeze([
   ["izklop","izklopi"],["vklop","vklopi"],["iskljuc","izklopi"],["ukljuc","vklopi"],["pokren","zazeni"],
   ["prever","preveri"],["prover","preveri"],["provjer","preveri"],["spremen","spremeni"],["izboljs","izboljsaj"],
   ["poleps","polepsaj"],["odstran","odstrani"],["uklon","odstrani"],["obris","odstrani"],
-  ["rubrik","rubrika"],["kategor","rubrika"],["galer","galerija"],["fotograf","slika"],["stranic","stran"]
+  ["rubrik","rubrika"],["kategor","rubrika"],["galer","galerija"],["fotograf","slika"],["stranic","stran"],["clank","clanek"]
 ]);
 
 function foldCommandText(value) {
@@ -647,7 +649,7 @@ function localCommandIntent(command) {
   if (siteActions.some((x) => tokens.has(x))) scores.site += 2;
 
   const articleConfig = articleNouns.some((x) => tokens.has(x))
-    && ["dizajn","css","font","slika","galerija","izboljsaj","polepsaj","spremeni"].some((x) => tokens.has(x));
+    && ["dizajn","css","font","slika","galerija","izboljsaj","polepsaj","spremeni","dolzina","slog","besedilo","pisanje","naslov"].some((x) => tokens.has(x));
   if (articleConfig) scores.site += 6;
   if (tokens.has("stran") && articleActions.some((x) => tokens.has(x))) scores.site += 5;
 
@@ -1258,6 +1260,9 @@ export default {
         ? await resolveCommandIntent(command, env, true)
         : { ...localCommandIntent(command), mode, confidence: 1, ai_used: false };
       const resolvedMode = mode === "auto" ? interpretation.mode : mode;
+      const dispatchMode = mode === "auto"
+        ? ((interpretation.ai_used || interpretation.confidence >= 0.80) ? interpretation.mode : "auto")
+        : mode;
       if ((resolvedMode === "control" || mode === "control") && isAgentStatusCommand(command)) {
         return json({ ok: true, local: true, interpretation, result: await readAgentSnapshot(env) }, 200);
       }
@@ -1265,7 +1270,7 @@ export default {
       const createdAt = new Date().toISOString();
       let privatePayload;
       try {
-        privatePayload = await encryptPayload(env, { request_id: requestId, command, mode: resolvedMode, category, actor: user.email, created_at: createdAt });
+        privatePayload = await encryptPayload(env, { request_id: requestId, command, mode: dispatchMode, category, actor: user.email, created_at: createdAt });
       } catch {
         return json({ error: "Šifriranje ukaza ni pravilno konfigurirano." }, 503);
       }
@@ -1278,7 +1283,7 @@ export default {
         const text = await dispatch.text().catch(() => "");
         return json({ error: "GitHub workflow se ni zagnal.", status: dispatch.status, detail: text.slice(0, 300) }, 502);
       }
-      return json({ ok: true, id: requestId, interpretation: { mode: resolvedMode, action: interpretation.action, confidence: interpretation.confidence, corrected: interpretation.corrected, ai_used: interpretation.ai_used } }, 202);
+      return json({ ok: true, id: requestId, interpretation: { mode: resolvedMode, dispatch_mode: dispatchMode, action: interpretation.action, confidence: interpretation.confidence, corrected: interpretation.corrected, ai_used: interpretation.ai_used } }, 202);
     }
 
     return new Response("Not found", { status: 404, headers: securityHeaders() });
