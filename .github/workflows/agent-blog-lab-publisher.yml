@@ -1,9 +1,9 @@
 name: Blog Lab Publisher Agent
 
 on:
-  # GitHub cron is UTC. Each local Ljubljana slot has a CET and CEST
-  # candidate; the lightweight plan job below enables only the one that
-  # matches the current Europe/Ljubljana UTC offset.
+  # Exact CET/CEST candidates are kept for near-on-time runs. The heartbeat is
+  # the reliability layer: if GitHub delays or drops an exact cron, a later
+  # heartbeat catches the first overdue Ljubljana slot that is still unfinished.
   schedule:
     - cron: "17 6 * * *"
     - cron: "17 7 * * *"
@@ -11,6 +11,7 @@ on:
     - cron: "27 12 * * *"
     - cron: "43 17 * * *"
     - cron: "43 18 * * *"
+    - cron: "7,22,37,52 * * * *"
   workflow_dispatch:
     inputs:
       category:
@@ -43,40 +44,33 @@ permissions:
 jobs:
   plan:
     runs-on: ubuntu-latest
-    timeout-minutes: 2
+    timeout-minutes: 3
     outputs:
       run: ${{ steps.plan.outputs.run }}
       category: ${{ steps.plan.outputs.category }}
+      slot: ${{ steps.plan.outputs.slot }}
+      slot_time: ${{ steps.plan.outputs.slot_time }}
+      reason: ${{ steps.plan.outputs.reason }}
     steps:
+      - uses: actions/checkout@v7
       - id: plan
-        name: Resolve Ljubljana slot
+        name: Resolve due Ljubljana slot
         shell: bash
         env:
           EVENT_NAME: ${{ github.event_name }}
-          EVENT_SCHEDULE: ${{ github.event.schedule }}
           INPUT_CATEGORY: ${{ inputs.category }}
         run: |
           set -euo pipefail
           if [[ "$EVENT_NAME" == "workflow_dispatch" ]]; then
             echo "run=true" >> "$GITHUB_OUTPUT"
             echo "category=${INPUT_CATEGORY:-aktualno}" >> "$GITHUB_OUTPUT"
+            echo "slot=" >> "$GITHUB_OUTPUT"
+            echo "slot_time=" >> "$GITHUB_OUTPUT"
+            echo "reason=manual_dispatch" >> "$GITHUB_OUTPUT"
             exit 0
           fi
 
-          OFFSET="$(TZ=Europe/Ljubljana date +%z)"
-          RUN=false
-          CATEGORY=aktualno
-          case "$EVENT_SCHEDULE" in
-            "17 6 * * *") [[ "$OFFSET" == "+0200" ]] && RUN=true; CATEGORY=sport ;;
-            "17 7 * * *") [[ "$OFFSET" == "+0100" ]] && RUN=true; CATEGORY=sport ;;
-            "27 11 * * *") [[ "$OFFSET" == "+0200" ]] && RUN=true; CATEGORY=politika ;;
-            "27 12 * * *") [[ "$OFFSET" == "+0100" ]] && RUN=true; CATEGORY=politika ;;
-            "43 17 * * *") [[ "$OFFSET" == "+0200" ]] && RUN=true; CATEGORY=aktualno ;;
-            "43 18 * * *") [[ "$OFFSET" == "+0100" ]] && RUN=true; CATEGORY=aktualno ;;
-          esac
-          echo "run=$RUN" >> "$GITHUB_OUTPUT"
-          echo "category=$CATEGORY" >> "$GITHUB_OUTPUT"
-          echo "Ljubljana offset=$OFFSET schedule=$EVENT_SCHEDULE run=$RUN category=$CATEGORY"
+          python3 agents/blog-lab-publisher/schedule.py --github-output "$GITHUB_OUTPUT"
 
   run-agent:
     needs: plan
@@ -129,13 +123,19 @@ jobs:
         shell: bash
         run: |
           CATEGORY="${{ needs.plan.outputs.category }}"
+          SLOT="${{ needs.plan.outputs.slot }}"
           echo "RUN_CATEGORY=$CATEGORY" >> "$GITHUB_ENV"
-          echo "Selected Ljubljana category: $CATEGORY"
+          echo "RUN_SCHEDULE_SLOT=$SLOT" >> "$GITHUB_ENV"
+          echo "Selected Ljubljana category: $CATEGORY · slot: ${SLOT:-manual}"
       - name: Run autonomous publisher
         shell: bash
         run: |
           ARGS=(--category "$RUN_CATEGORY")
-          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then ARGS+=(--manual); fi
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            ARGS+=(--manual)
+          elif [[ -n "$RUN_SCHEDULE_SLOT" ]]; then
+            ARGS+=(--scheduled-slot "$RUN_SCHEDULE_SLOT")
+          fi
           if [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.dry_run }}" == "true" ]]; then ARGS+=(--dry-run); fi
           if [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.force }}" == "true" ]]; then ARGS+=(--force); fi
           python agents/blog-lab-publisher/agent.py "${ARGS[@]}"
