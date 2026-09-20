@@ -267,6 +267,33 @@ def _automatic_category_match(item: dict, category: str) -> bool:
     return True
 
 
+def _evidence_words(value: str) -> list[str]:
+    return [
+        word.lower()
+        for word in re.findall(r"[A-Za-zČŠŽčšžĆćĐđ0-9-]{3,}", str(value or ""))
+    ]
+
+
+def source_has_substantive_evidence(item: dict) -> bool:
+    title = " ".join(str(item.get("title") or "").split())
+    summary = " ".join(str(item.get("summary") or "").split())
+    if item.get("verified_direct"):
+        return len(summary) >= 160
+    if len(summary) < 140:
+        return False
+
+    title_words = set(_evidence_words(title))
+    source_words = set(_evidence_words(str(item.get("source_name") or "")))
+    summary_words = _evidence_words(summary)
+    extra = [
+        word for word in summary_words
+        if word not in title_words and word not in source_words
+    ]
+    # A feed summary that merely repeats the headline plus outlet is not evidence
+    # for a factual article, even when the string happens to be long.
+    return len(set(extra)) >= 7
+
+
 def automatic_source_usable(item: dict, category: str, *, trusted_primary: bool = False) -> bool:
     title = str(item.get("title") or "").strip()
     summary = str(item.get("summary") or "").strip()
@@ -279,21 +306,82 @@ def automatic_source_usable(item: dict, category: str, *, trusted_primary: bool 
     if _automatic_generic_result(item):
         return False
 
-    # The configured category RSS is already a trusted scoped search. Global
-    # discovery needs an additional semantic category gate.
     if not trusted_primary:
         provider = str(item.get("provider") or "").lower()
         localized_search = provider == "google-news-si"
         if not localized_search and not _automatic_category_match(item, category):
             return False
 
-    # Do not let the fallback writer turn a headline-only search result into an
-    # apparently substantive article.
-    minimum_summary = 45 if trusted_primary else 80
-    if len(summary) < minimum_summary and not item.get("verified_direct"):
-        return False
-    return True
+    return source_has_substantive_evidence(item)
 
+
+def _source_identity(value: str) -> str:
+    try:
+        parsed = urlparse(str(value or "").strip())
+        if parsed.scheme != "https" or not parsed.netloc:
+            return ""
+        return f"{parsed.scheme.lower()}://{parsed.netloc.lower()}{parsed.path.rstrip('/')}"
+    except Exception:
+        return ""
+
+
+def article_evidence(article: dict, candidates: list[dict]) -> tuple[bool, list[dict], str]:
+    sources = article.get("sources") if isinstance(article.get("sources"), list) else []
+    requested = []
+    for source in sources:
+        if not isinstance(source, dict):
+            continue
+        identity = _source_identity(source.get("url"))
+        if identity and identity not in requested:
+            requested.append(identity)
+    if not requested:
+        return False, [], "article_has_no_sources"
+
+    by_identity = {}
+    for item in candidates or []:
+        identity = _source_identity(item.get("url"))
+        if identity and identity not in by_identity:
+            by_identity[identity] = item
+
+    if any(identity not in by_identity for identity in requested):
+        return False, [], "article_source_not_in_evidence_pool"
+
+    matched = [by_identity[identity] for identity in requested]
+    if any(not source_has_substantive_evidence(item) for item in matched):
+        return False, matched, "headline_only_evidence"
+
+    evidence_chars = sum(len(str(item.get("summary") or "")) for item in matched)
+    has_deep_direct = any(
+        item.get("verified_direct") and len(str(item.get("summary") or "")) >= 650
+        for item in matched
+    )
+    if evidence_chars < 500 and not has_deep_direct:
+        return False, matched, f"insufficient_evidence_chars:{evidence_chars}"
+    if len(matched) < 2 and not has_deep_direct:
+        return False, matched, "needs_two_sources_or_one_deep_direct_source"
+    return True, matched, "ok"
+
+
+def expand_automatic_evidence(title: str, category: str, cfg: dict) -> list[dict]:
+    title = " ".join(str(title or "").split()).strip()
+    if len(title) < 8:
+        return []
+    limit = int(cfg.get("max_source_items", 30))
+    try:
+        found = collect_topic(title, category, limit)
+    except Exception as exc:
+        print(f"WARN automatic evidence expansion failed: {exc}")
+        return []
+    usable = [
+        item for item in found
+        if automatic_source_usable(item, category, trusted_primary=False)
+    ]
+    ranked = rank_topic_items(title, usable)
+    print(
+        f"AUTO_EVIDENCE_EXPANSION title={title[:90]!r} "
+        f"usable={len(usable)}/{len(found)}"
+    )
+    return ranked[:limit]
 
 def _merge_source_groups(*groups: list[dict], limit: int = 30) -> list[dict]:
     out = []
@@ -329,7 +417,14 @@ def collect_automatic_sources(cfg: dict, category: str) -> list[dict]:
         if automatic_source_usable(item, category, trusted_primary=False)
     ]
 
-    merged = _merge_source_groups(primary, broad, limit=limit)
+    merged = _merge_source_groups(broad, primary, limit=limit)
+    merged.sort(
+        key=lambda item: (
+            1 if item.get("verified_direct") else 0,
+            min(len(str(item.get("summary") or "")), 5000),
+        ),
+        reverse=True,
+    )
     print(
         f"AUTO_SOURCES category={category} "
         f"primary={len(primary)}/{len(primary_raw)} "
