@@ -364,6 +364,10 @@ STORY_STOPWORDS = {
     "novo", "proti", "pred", "med", "after", "with", "from", "this", "that",
     "team", "match", "game", "news", "today", "league", "sport",
 }
+STORY_GENERIC_PREFIXES = (
+    "sloven", "evrop", "prven", "final", "zmag", "italij", "svetov",
+    "reprez", "naslov", "zlato", "prvak",
+)
 
 
 def _story_tokens(item: dict) -> set[str]:
@@ -372,7 +376,7 @@ def _story_tokens(item: dict) -> set[str]:
     words = re.findall(r"[a-z0-9čšžćđ-]{4,}", title)
     tokens = set()
     for word in words:
-        if word in STORY_STOPWORDS:
+        if word in STORY_STOPWORDS or any(word.startswith(prefix) for prefix in STORY_GENERIC_PREFIXES):
             continue
         stem = word[:7] if len(word) >= 8 else word
         tokens.add(stem)
@@ -410,9 +414,10 @@ def automatic_story_pool(items: list[dict], category: str, max_items: int = 6) -
             if other_index == index:
                 continue
             shared = tokens & other
-            # Two shared title concepts, or one distinctive long concept,
-            # is enough to treat two source records as the same story.
-            if len(shared) >= 2 or any(len(token) >= 7 for token in shared):
+            # Require at least two non-generic shared title concepts. A lone
+            # word such as "European", "final" or "Slovenia" must never merge
+            # unrelated competitions into one evidence pool.
+            if len(shared) >= 2:
                 members.append(other_index)
         direct = 1 if candidates[index].get("verified_direct") else 0
         localized = 1 if str(candidates[index].get("provider") or "") == "google-news-si" else 0
@@ -598,9 +603,22 @@ def main():
         article["fallback"] = False
         state["writer_mode"] = str(article.pop("_writer_provider", "ai"))
     except AIUnavailable as exc:
-        print(f"INFO AI fallback: {exc}")
-        article = build_digest(used_for_article, args.category, max_items=5)
-        state["writer_mode"] = "fallback"
+        print(f"AI_WRITER_UNAVAILABLE {exc}")
+        state["writer_mode"] = "unavailable"
+        if manual_request:
+            state["last_error"] = "ai_writer_unavailable"
+            state["consecutive_failures"] = state.get("consecutive_failures", 0) + 1
+            state["last_failure"] = now().isoformat(timespec="seconds")
+            atomic_json(str(STATE), state)
+            set_status(cfg, state, "failed", "AI pisec ni dosegljiv; ročna zahteva ni bila objavljena.")
+            return 2
+        state["last_error"] = None
+        state["consecutive_failures"] = 0
+        if args.scheduled_slot:
+            defer_scheduled_slot(state, args.scheduled_slot, "ai_writer_unavailable")
+        atomic_json(str(STATE), state)
+        set_status(cfg, state, "waiting", "AI pisec ni dosegljiv; samodejni termin je odložen brez fallback objave.")
+        return 0
     article = prepare_article_candidate(
         article,
         used_for_article,
@@ -655,14 +673,15 @@ def main():
             print(f"INFO automatic retry unavailable: {exc}")
 
     if article.get("skip") and not manual_request:
-        print("AUTO_FALLBACK_AFTER_SKIP")
-        article = prepare_article_candidate(
-            build_digest(used_for_article, args.category, max_items=min(7, len(used_for_article))),
-            used_for_article,
-            args.topic,
-            args.output_category,
-        )
-        state["writer_mode"] = "fallback"
+        reason = str(article.get("reason") or "writer_skip")[:240]
+        state["last_error"] = None
+        state["consecutive_failures"] = 0
+        if args.scheduled_slot:
+            defer_scheduled_slot(state, args.scheduled_slot, reason)
+        atomic_json(str(STATE), state)
+        set_status(cfg, state, "waiting", "AI ni našel dovolj dobre zgodbe; termin je odložen brez fallback objave.")
+        print("AUTO_DEFERRED_AFTER_SKIP " + reason)
+        return 0
 
     if article.get("skip"):
         set_status(cfg, state, "waiting", article.get("reason", "Ni primerne teme; slot ostaja odprt."))
@@ -692,26 +711,7 @@ def main():
         except AIUnavailable as exc:
             print(f"INFO QA repair unavailable: {exc}")
 
-    if errors:
-        print("QA_FALLBACK_ATTEMPT " + ",".join(errors))
-        fallback = prepare_article_candidate(
-            build_digest(used_for_article, args.category, max_items=min(7, len(used_for_article))),
-            used_for_article,
-            args.topic,
-            args.output_category,
-        )
-        if not fallback.get("skip"):
-            fallback["id"] = slugify(fallback.get("title", "")) + "-" + hashlib.sha1(used_for_article[0]["url"].encode()).hexdigest()[:8]
-            fallback_errors = validate(fallback, min_chars, max_chars, titles, used_urls, allowed_urls)
-            print("QA_ERRORS_FALLBACK " + (",".join(fallback_errors) if fallback_errors else "none"))
-            if not fallback_errors:
-                article = fallback
-                errors = []
-                state["writer_mode"] = "fallback"
-            else:
-                errors = fallback_errors
-
-    if not errors and state.get("writer_mode") != "fallback":
+    if not errors:
         grounding_errors = []
         try:
             review = review_grounding(article, evidence_pool, args.category)
@@ -762,9 +762,8 @@ def main():
                     else:
                         print("GROUNDING_REPAIR_QA_FAIL " + ",".join(repaired_errors))
         except AIUnavailable as exc:
-            # If an AI-written article cannot be fact-checked, fail closed for
-            # automatic publication. A source-derived fallback remains available
-            # only through the deterministic QA fallback path above.
+            # If an AI-written article cannot be fact-checked, fail closed.
+            # Automatic publishing never falls back to an unreviewed digest.
             grounding_errors = ["grounding_unavailable"]
             print(f"GROUNDING_REVIEW_UNAVAILABLE {exc}")
 
