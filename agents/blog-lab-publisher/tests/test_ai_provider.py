@@ -7,20 +7,15 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from services import ai_provider
 
 
-def test_review_grounding_normalizes_external_response(monkeypatch):
+def test_review_grounding_normalizes_workers_response(monkeypatch):
     monkeypatch.setenv("AI_PROVIDER", "auto")
-    monkeypatch.delenv("GITHUB_TOKEN", raising=False)
-    monkeypatch.setenv("MODEL_API_KEY", "model-test")
-    monkeypatch.setenv("MODEL_BASE_URL", "https://model.example/v1/chat/completions")
-    monkeypatch.setenv("MODEL_NAME", "test-model")
     monkeypatch.setattr(
         ai_provider,
-        "_openai_compatible",
+        "_workers_review",
         lambda *args, **kwargs: {
             "pass": "false",
             "issues": ["Unsupported group-stage claim"],
             "unsupported_claims": ["group A"],
-            "_writer_provider": "external",
         },
     )
     result = ai_provider.review_grounding(
@@ -33,30 +28,29 @@ def test_review_grounding_normalizes_external_response(monkeypatch):
     assert result["unsupported_claims"] == ["group A"]
 
 
-def test_review_grounding_fails_over_from_external_to_copilot(monkeypatch):
+def test_review_grounding_fails_over_from_workers_to_external(monkeypatch):
     monkeypatch.setenv("AI_PROVIDER", "auto")
-    monkeypatch.delenv("GITHUB_TOKEN", raising=False)
     monkeypatch.setenv("MODEL_API_KEY", "model-test")
     monkeypatch.setenv("MODEL_BASE_URL", "https://model.example/v1/chat/completions")
     monkeypatch.setenv("MODEL_NAME", "test-model")
-    monkeypatch.setenv("COPILOT_GITHUB_TOKEN", "copilot-test")
+    monkeypatch.delenv("COPILOT_GITHUB_TOKEN", raising=False)
     calls = []
+
+    def workers(*args, **kwargs):
+        calls.append("workers")
+        raise ai_provider.AIUnavailable("worker review unavailable")
 
     def external(*args, **kwargs):
         calls.append("external")
-        raise ai_provider.AIUnavailable("external unavailable")
-
-    def copilot(*args, **kwargs):
-        calls.append("copilot")
         return {
             "pass": True,
             "issues": [],
             "unsupported_claims": [],
-            "_writer_provider": "copilot",
+            "_writer_provider": "external",
         }
 
+    monkeypatch.setattr(ai_provider, "_workers_review", workers)
     monkeypatch.setattr(ai_provider, "_openai_compatible", external)
-    monkeypatch.setattr(ai_provider, "_copilot", copilot)
 
     result = ai_provider.review_grounding(
         {"title": "Test", "content": "Claim"},
@@ -65,48 +59,12 @@ def test_review_grounding_fails_over_from_external_to_copilot(monkeypatch):
     )
 
     assert result["pass"] is True
-    assert calls == ["external", "copilot"]
+    assert calls == ["workers", "external"]
 
 
-def test_generate_fails_over_from_workers_to_github_models(monkeypatch):
-    monkeypatch.setenv("AI_PROVIDER", "auto")
-    monkeypatch.setenv("GITHUB_TOKEN", "actions-token")
-    monkeypatch.delenv("MODEL_API_KEY", raising=False)
-    monkeypatch.delenv("MODEL_BASE_URL", raising=False)
-    monkeypatch.delenv("MODEL_NAME", raising=False)
-    monkeypatch.delenv("COPILOT_GITHUB_TOKEN", raising=False)
-    calls = []
-
-    def workers(*args, **kwargs):
-        calls.append("workers")
-        raise ai_provider.AIUnavailable("worker quota")
-
-    def github_models(*args, **kwargs):
-        calls.append("github_models")
-        return {
-            "title": "Test article",
-            "content": "Grounded content",
-            "sources": [{"url": "https://example.com/a"}],
-            "_writer_provider": "github_models",
-        }
-
-    monkeypatch.setattr(ai_provider, "_workers_ai", workers)
-    monkeypatch.setattr(ai_provider, "_github_models", github_models)
-
-    article = ai_provider.generate(
-        "system",
-        "task",
-        [{"url": "https://example.com/a", "summary": "Evidence"}],
-        "aktualno",
-    )
-
-    assert article["_writer_provider"] == "github_models"
-    assert calls == ["workers", "github_models"]
-
-
-def test_github_models_writer_adapter(monkeypatch):
-    monkeypatch.setenv("GITHUB_TOKEN", "actions-token")
-    monkeypatch.setenv("GITHUB_MODELS_MODEL", "openai/gpt-4.1")
+def test_workers_review_adapter(monkeypatch):
+    monkeypatch.setenv("WORKER_AI_TOKEN", "test-token")
+    monkeypatch.setenv("WORKER_AI_REVIEW_URL", "https://worker.example/api/ai/review")
     captured = {}
 
     class FakeResponse:
@@ -114,15 +72,12 @@ def test_github_models_writer_adapter(monkeypatch):
         def __exit__(self, *args): return False
         def read(self):
             return json.dumps({
-                "choices": [{
-                    "message": {
-                        "content": json.dumps({
-                            "title": "Verified story",
-                            "content": "Evidence-based content",
-                            "sources": [{"url": "https://example.com/source"}],
-                        })
-                    }
-                }]
+                "ok": True,
+                "review": {
+                    "pass": True,
+                    "issues": [],
+                    "unsupported_claims": [],
+                },
             }).encode("utf-8")
 
     def fake_urlopen(request, timeout=0):
@@ -132,17 +87,52 @@ def test_github_models_writer_adapter(monkeypatch):
         return FakeResponse()
 
     monkeypatch.setattr(ai_provider, "urlopen", fake_urlopen)
-    article = ai_provider._github_models("system", "user")
+    result = ai_provider._workers_review("system", "review this")
 
-    assert article["_writer_provider"] == "github_models"
-    assert captured["url"] == "https://models.github.ai/inference/chat/completions"
-    assert captured["body"]["model"] == "openai/gpt-4.1"
-    assert captured["authorization"] == "Bearer actions-token"
+    assert result["pass"] is True
+    assert captured["url"] == "https://worker.example/api/ai/review"
+    assert captured["body"]["system_prompt"] == "system"
+    assert captured["body"]["user_prompt"] == "review this"
+    assert captured["authorization"] == "Bearer test-token"
 
 
-def test_review_grounding_prefers_github_models_in_auto(monkeypatch):
+def test_generate_fails_over_from_workers_to_configured_external(monkeypatch):
     monkeypatch.setenv("AI_PROVIDER", "auto")
-    monkeypatch.setenv("GITHUB_TOKEN", "actions-token")
+    monkeypatch.setenv("MODEL_API_KEY", "model-test")
+    monkeypatch.setenv("MODEL_BASE_URL", "https://model.example/v1/chat/completions")
+    monkeypatch.setenv("MODEL_NAME", "test-model")
+    monkeypatch.delenv("COPILOT_GITHUB_TOKEN", raising=False)
+    calls = []
+
+    def workers(*args, **kwargs):
+        calls.append("workers")
+        raise ai_provider.AIUnavailable("worker quota")
+
+    def external(*args, **kwargs):
+        calls.append("external")
+        return {
+            "title": "Test article",
+            "content": "Grounded content",
+            "sources": [{"url": "https://example.com/a"}],
+            "_writer_provider": "external",
+        }
+
+    monkeypatch.setattr(ai_provider, "_workers_ai", workers)
+    monkeypatch.setattr(ai_provider, "_openai_compatible", external)
+
+    article = ai_provider.generate(
+        "system",
+        "task",
+        [{"url": "https://example.com/a", "summary": "Evidence"}],
+        "aktualno",
+    )
+
+    assert article["_writer_provider"] == "external"
+    assert calls == ["workers", "external"]
+
+
+def test_generate_does_not_call_unconfigured_external_or_copilot(monkeypatch):
+    monkeypatch.setenv("AI_PROVIDER", "auto")
     monkeypatch.delenv("MODEL_API_KEY", raising=False)
     monkeypatch.delenv("MODEL_BASE_URL", raising=False)
     monkeypatch.delenv("MODEL_NAME", raising=False)
@@ -150,18 +140,28 @@ def test_review_grounding_prefers_github_models_in_auto(monkeypatch):
 
     monkeypatch.setattr(
         ai_provider,
-        "_github_models",
-        lambda *args, **kwargs: {
-            "pass": True,
-            "issues": [],
-            "unsupported_claims": [],
-            "_writer_provider": "github_models",
-        },
+        "_workers_ai",
+        lambda *a, **k: (_ for _ in ()).throw(ai_provider.AIUnavailable("worker quota")),
+    )
+    monkeypatch.setattr(
+        ai_provider,
+        "_openai_compatible",
+        lambda *a, **k: (_ for _ in ()).throw(AssertionError("external must not run")),
+    )
+    monkeypatch.setattr(
+        ai_provider,
+        "_copilot",
+        lambda *a, **k: (_ for _ in ()).throw(AssertionError("copilot must not run")),
     )
 
-    result = ai_provider.review_grounding(
-        {"title": "Test", "content": "Claim"},
-        [{"url": "https://example.com/a", "summary": "Evidence"}],
-        "sport",
-    )
-    assert result["pass"] is True
+    try:
+        ai_provider.generate(
+            "system",
+            "task",
+            [{"url": "https://example.com/a", "summary": "Evidence"}],
+            "aktualno",
+        )
+    except ai_provider.AIUnavailable as exc:
+        assert "worker quota" in str(exc)
+    else:
+        raise AssertionError("AIUnavailable expected")
