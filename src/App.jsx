@@ -18,6 +18,44 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "kbs-b68c2196",
+    "title": "월드뉴스 | KBS 뉴스",
+    "excerpt": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »월드뉴스 | KBS 뉴스«.",
+    "seoDescription": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »월드뉴스 | KBS 뉴스«.",
+    "content": "**Šport, 20. 9. 2026.** 무단 전재, 재배포 및 이용 (AI 학습 포함) 금지.\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\n## 월드뉴스 | KBS 뉴스\n\n무단 전재, 재배포 및 이용 (AI 학습 포함) 금지.\n\n Vir: Bing Web – sport – Slovenija šport danes. Objavljeno: Wed, 09 Sep 2026 05:35:00 GMT. [Odpri izvirni vir](https://news.kbs.co.kr/news/pc/program/program.do?bcd=0026)\n\n## 월드뉴스\n\n각 방송사에서 월드뉴스라는 타이틀로 방송되는 국제뉴스 프로그램의 총칭. 2. KBS NEWS [편집] 2.1. KBS 월드뉴스 (1TV) [편집] 자세한 내용은 KBS 뉴스 930 문서를 참고하십시오. 2.2. KBS 뉴스월드 [편집] 자세한 내용은 KBS 뉴스월드 문서를 참고하십시오. 2.3. KBS 월드뉴스 (2TV) [편집] 자세한 내용은 KBS 월드뉴스 문서를 참고하십시오.\n\n Vir: Bing Web – sport – Slovenija šport danes. Objavljeno: Sat, 12 Sep 2026 21:52:00 GMT. [Odpri izvirni vir](https://namu.wiki/w/%EC%9B%94%EB%93%9C%EB%89%B4%EC%8A%A4)\n\n## 세계 | 연합뉴스\n\n세계 | 특파원, 특파원르포, 미국/북미, 중국, 일본, 아시아/호주, 유럽, 중남미, 중동/아프리카, 국제기구, PRNewswire/AsiaNet, 월드포토 기사입니다 트럼프의 '백악관 출입금지' 현실화…CNN 등 출입 거부당해 백악관기자協 \"CNN 등 출입금지, 수정헌법 1조 위반…복원해야\" [특파원시선] 트럼프의 '언론 전쟁'과 美 수정헌법 1조\n\n Vir: yna.co.kr. Objavljeno: Sat, 19 Sep 2026 05:44:00 GMT. [Odpri izvirni vir](https://www.yna.co.kr/international/index)\n\n## Google 뉴스 - 세계\n\nGoogle 뉴스을 (를) 사용하여 ‘세계’ 주제에 관한 전체 기사를 읽고, 동영상을 보고, 다양한 콘텐츠를 탐색해 보세요.\n\n Vir: Bing Web – sport – Slovenija šport danes. Objavljeno: Sat, 19 Sep 2026 06:56:00 GMT. [Odpri izvirni vir](https://news.google.com/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRGx1YlY4U0FtdHZHZ0pMVWlnQVAB?hl=ko&ceid=KR%3Ako)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Šport",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": {
+      "url": "https://r.yna.co.kr/global/home/v01/img/yonhapnews_logo_600x325_kr05.jpg",
+      "alt": "세계 | 연합뉴스",
+      "caption": "yna.co.kr"
+    },
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Bing Web – sport – Slovenija šport danes — 월드뉴스 | KBS 뉴스",
+        "url": "https://news.kbs.co.kr/news/pc/program/program.do?bcd=0026"
+      },
+      {
+        "label": "Bing Web – sport – Slovenija šport danes — 월드뉴스 - 나무위키",
+        "url": "https://namu.wiki/w/%EC%9B%94%EB%93%9C%EB%89%B4%EC%8A%A4"
+      },
+      {
+        "label": "yna.co.kr — 세계 | 연합뉴스",
+        "url": "https://www.yna.co.kr/international/index"
+      },
+      {
+        "label": "Bing Web – sport – Slovenija šport danes — Google 뉴스 - 세계 - 최신 뉴스",
+        "url": "https://news.google.com/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRGx1YlY4U0FtdHZHZ0pMVWlnQVAB?hl=ko&ceid=KR%3Ako"
+      }
+    ],
+    "createdAt": "2026-09-20T09:52:02+02:00",
+    "updatedAt": "2026-09-20T09:52:02+02:00"
+  },
+
+  {
     "id": "nocno-zivljenje-v-ljubljani-1ae9f6e3",
     "title": "Nočno življenje v Ljubljani",
     "excerpt": "Ljubljana ponuja bogato nočno življenje, od barov do klubov.",
