@@ -31,14 +31,14 @@ jobs:
           set -euo pipefail
           URL="https://blog-lab.dan-grmusa.workers.dev/health"
           EXPECTED_VERSION="$(python - <<'PY'
-import re
-from pathlib import Path
-source = Path("terminal/worker/src/index.js").read_text(encoding="utf-8")
-match = re.search(r'version:\s*"([^"]+)"', source)
-if not match:
-    raise SystemExit("Worker version marker not found")
-print(match.group(1))
-PY
+          import re
+          from pathlib import Path
+          source = Path("terminal/worker/src/index.js").read_text(encoding="utf-8")
+          match = re.search(r'version:\s*"([^"]+)"', source)
+          if not match:
+              raise SystemExit("Worker version marker not found")
+          print(match.group(1))
+          PY
 )"
           echo "Expected Worker version: $EXPECTED_VERSION"
           for attempt in {1..24}; do
