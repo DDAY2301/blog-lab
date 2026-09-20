@@ -655,6 +655,68 @@ def collect_topic(topic: str, category: str, max_items: int = 30) -> list[dict]:
         print(f"TOPIC_SOURCES_OK count={len(unique)} providers={summary}")
     return unique
 
+TOPIC_GENERIC_TERMS = {
+    "danes", "danasnjem", "današnjem", "danasnji", "današnji", "aktualno",
+    "aktualne", "novice", "novica", "dogajanje", "dogajanju", "dogaja",
+    "clanek", "članek", "prispevek", "objava", "objavi", "napisi", "napiši",
+    "pripravi", "ustvari", "sestavi", "prosim", "tema", "temo", "glede",
+    "center", "centru", "sredisce", "središče",
+}
+
+
+def _topic_rank_terms(topic: str) -> set[str]:
+    core = _topic_core(topic)
+    terms = set()
+    for word in re.findall(r"[A-Za-zČŠŽčšžĆćĐđ0-9-]+", core):
+        low = word.lower()
+        if len(low) < 4 or low in TOPIC_GENERIC_TERMS:
+            continue
+        terms.add(low)
+    return terms
+
+
+def topic_relevance_score(topic: str, item: dict) -> int:
+    terms = _topic_rank_terms(topic)
+    if not terms:
+        return 0
+    haystack = " ".join([
+        str(item.get("title") or ""),
+        str(item.get("summary") or ""),
+        str(item.get("source_name") or ""),
+    ]).lower()
+    hay_words = re.findall(r"[a-zčšžćđ0-9-]+", haystack)
+
+    score = 0
+    for term in terms:
+        if term in haystack:
+            score += 2
+            continue
+        stem = term[:5] if len(term) >= 6 else term
+        if any(word.startswith(stem) for word in hay_words):
+            score += 1
+    return score
+
+
+def filter_topic_items(topic: str, items: list[dict], *, minimum_score: int = 1) -> list[dict]:
+    """Keep only evidence that has an explicit lexical connection to the requested topic.
+
+    Manual editorial requests must fail closed when search providers return broad or
+    unrelated pages. Ranking alone is not enough because a list of all-zero scores
+    still has a first item.
+    """
+    scored = []
+    for index, item in enumerate(items or []):
+        relevance = topic_relevance_score(topic, item)
+        if relevance < minimum_score:
+            continue
+        direct = 1 if item.get("verified_direct") else 0
+        localized = 1 if str(item.get("provider") or "").lower() == "google-news-si" else 0
+        summary_len = min(len(str(item.get("summary") or "")), 5000)
+        scored.append((relevance, localized, direct, summary_len, -index, item))
+    scored.sort(reverse=True, key=lambda row: row[:-1])
+    return [row[-1] for row in scored]
+
+
 def rank_topic_items(topic: str, items: list[dict]) -> list[dict]:
     """Rank discovered sources for an explicit editorial topic.
 
@@ -662,35 +724,13 @@ def rank_topic_items(topic: str, items: list[dict]) -> list[dict]:
     Keep the operation deterministic so the same evidence pool yields the same
     article input ordering.
     """
-    core = _topic_core(topic)
-    terms = {
-        word.lower()
-        for word in re.findall(r"[A-Za-zČŠŽčšžĆćĐđ0-9-]+", core)
-        if len(word) >= 4
-    }
-
     def score(item: dict) -> tuple:
-        haystack = " ".join([
-            str(item.get("title") or ""),
-            str(item.get("summary") or ""),
-            str(item.get("source_name") or ""),
-        ]).lower()
-        hay_words = re.findall(r"[a-zčšžćđ0-9-]+", haystack)
-
-        def matches(term: str) -> bool:
-            term = term.lower()
-            if term in haystack:
-                return True
-            # Lightweight inflection tolerance for Slovene/Croatian forms:
-            # Ljubljana/ljubljanskem, nočno/nočnem, življenje/življenju.
-            stem = term[:5] if len(term) >= 6 else term
-            return any(word.startswith(stem) for word in hay_words)
-
-        overlap = sum(1 for term in terms if matches(term))
+        overlap = topic_relevance_score(topic, item)
         direct = 1 if item.get("verified_direct") else 0
+        localized = 1 if str(item.get("provider") or "").lower() == "google-news-si" else 0
         summary_len = min(len(str(item.get("summary") or "")), 5000)
         has_media = 1 if item.get("image_url") or item.get("video_url") else 0
-        return (overlap, direct, summary_len, has_media)
+        return (overlap, localized, direct, summary_len, has_media)
 
     return sorted(list(items or []), key=score, reverse=True)
 
