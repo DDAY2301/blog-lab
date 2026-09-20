@@ -29,6 +29,19 @@ function validateHtmlScripts(name, raw) {
 }
 
 validateHtmlScripts("LOGIN_PAGE", extractTemplate("LOGIN_PAGE", "`;\n\nconst PAGE"));
-validateHtmlScripts("PAGE", extractTemplate("PAGE", "`;\n\nexport default"));
+const pageRaw = extractTemplate("PAGE", "`;\n\nexport default");
+validateHtmlScripts("PAGE", pageRaw);
+
+const pageHtml = renderTemplate(pageRaw);
+for (const required of [
+  'id="command"',
+  'spellcheck="true"',
+  'autocorrect="on"',
+  'autocapitalize="sentences"',
+]) {
+  if (!pageHtml.includes(required)) {
+    throw new Error(`Private terminal command input is missing ${required}`);
+  }
+}
 
 console.log("Worker embedded browser JavaScript parses successfully.");
