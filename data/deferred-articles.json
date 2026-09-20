@@ -36,5 +36,17 @@
     "updated_at": "2026-09-20T14:29:20Z",
     "attempts": 0,
     "reason": "WARN topic source provider=gdelt query='naredi ki smo jih zamudili danes in prejšnje dni' error=HTTP Error 429: Too Many Requests WARN topic source provider=gdelt query='naredi ki smo jih zamudili danes' error=HTTP Error 429: Too Many Requests WARN topic source provider=gdelt query='prejšnje dni' error=HTTP Error 429: Too Many Requests WARN topic source provider=gdelt query='zamudili danes prejšnje' error=HTTP Error 429: Too Many Requests TOPIC_DIRECT_OK checked=8 enriched=6 TOPIC_SOURCES_OK count=30 providers=bing-web:40,google-news-si:74 ARTICLE_AI_UNAVAILABLE Workers AI writer ni uspel: HTTP Error 502: Bad Gateway ARTICLE_AI_UNAVAILABLE AI pisec ali uredniški pregled trenutno ni na voljo. Zaradi kakovosti ročni članek ni bil objavljen in ne bo nadomeščen z nepovezanim fallbackom. INTENT_ROUTE requested=article resolved=article autocorrected=false"
+  },
+  {
+    "id": "901ee508-d020-412b-aa99-6853743e2fe4",
+    "status": "pending",
+    "command": "kje so današnje objave",
+    "mode": "article",
+    "category": "aktualno",
+    "actor": "dan.grmusa@gmail.com",
+    "created_at": "2026-09-20T14:32:54Z",
+    "updated_at": "2026-09-20T14:32:54Z",
+    "attempts": 0,
+    "reason": "WARN topic source provider=gdelt query='kje so današnje objave' error=HTTP Error 429: Too Many Requests WARN topic source provider=gdelt query='današnje objave' error=HTTP Error 429: Too Many Requests TOPIC_DIRECT_OK checked=4 enriched=4 TOPIC_SOURCES_OK count=30 providers=bing-news:6,bing-web:20,google-news-global:2,google-news-si:75 ARTICLE_AI_UNAVAILABLE Workers AI writer ni uspel: HTTP Error 502: Bad Gateway ARTICLE_AI_UNAVAILABLE AI pisec ali uredniški pregled trenutno ni na voljo. Zaradi kakovosti ročni članek ni bil objavljen in ne bo nadomeščen z nepovezanim fallbackom. INTENT_ROUTE requested=article resolved=article autocorrected=true"
   }
 ]
