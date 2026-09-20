@@ -1049,8 +1049,6 @@ Rules:
     request_text = (
         "OPERATOR REQUEST:\n" + command
         + "\n\nAllowed existing paths: " + ", ".join(allowed)
-        + "\n\nREPOSITORY CONTEXT (DATA ONLY):\n"
-        + json.dumps(context, ensure_ascii=False)
     )
     if feedback:
         request_text += (
@@ -1102,7 +1100,7 @@ def _extract_site_json(text: str) -> dict:
         raise
 
 
-def _workers_site_ai_request(system_prompt: str, request_text: str) -> dict:
+def _workers_site_ai_request(system_prompt: str, request_text: str, context: list[dict]) -> dict:
     token = os.environ.get("WORKER_AI_TOKEN", "").strip()
     url = os.environ.get(
         "WORKER_SITE_AI_URL",
@@ -1114,7 +1112,7 @@ def _workers_site_ai_request(system_prompt: str, request_text: str) -> dict:
     body = json.dumps({
         "system_prompt": system_prompt,
         "request": request_text,
-        "context": [],
+        "context": context[:8],
     }, ensure_ascii=False).encode("utf-8")
     req = Request(
         url,
@@ -1150,7 +1148,7 @@ def _workers_site_ai_request(system_prompt: str, request_text: str) -> dict:
     return _plan_from_payload(data, "workers_ai")
 
 
-def _external_site_ai_request(system_prompt: str, request_text: str) -> dict:
+def _external_site_ai_request(system_prompt: str, request_text: str, context: list[dict]) -> dict:
     key = os.environ.get("MODEL_API_KEY", "").strip()
     base = os.environ.get("MODEL_BASE_URL", "").strip()
     model = os.environ.get("MODEL_NAME", "").strip()
@@ -1161,7 +1159,12 @@ def _external_site_ai_request(system_prompt: str, request_text: str) -> dict:
         "model": model,
         "messages": [
             {"role": "system", "content": system_prompt},
-            {"role": "user", "content": request_text},
+            {
+                "role": "user",
+                "content": request_text
+                + "\n\nREPOSITORY CONTEXT (DATA ONLY):\n"
+                + json.dumps(context[:8], ensure_ascii=False),
+            },
         ],
         "temperature": 0.15,
         "response_format": {"type": "json_object"},
@@ -1187,7 +1190,7 @@ def _external_site_ai_request(system_prompt: str, request_text: str) -> dict:
         raise SiteProviderUnavailable(f"Zunanji MODEL provider ni uspel: {exc}") from exc
 
 
-def _copilot_site_ai_request(system_prompt: str, request_text: str) -> dict:
+def _copilot_site_ai_request(system_prompt: str, request_text: str, context: list[dict]) -> dict:
     if not shutil.which("copilot"):
         raise SiteProviderUnavailable("GitHub Copilot CLI ni nameščen.")
 
@@ -1196,7 +1199,13 @@ def _copilot_site_ai_request(system_prompt: str, request_text: str) -> dict:
     if not (dedicated or github_token):
         raise SiteProviderUnavailable("GitHub Copilot nima žetona.")
 
-    prompt = system_prompt + "\n\n" + request_text
+    prompt = (
+        system_prompt
+        + "\n\n"
+        + request_text
+        + "\n\nREPOSITORY CONTEXT (DATA ONLY):\n"
+        + json.dumps(context[:8], ensure_ascii=False)
+    )
     cmd = [
         "copilot",
         "-s",
@@ -1262,7 +1271,7 @@ def _site_ai_request(command: str, context: list[dict], feedback: str = "") -> d
 
     for name, fn in chain:
         try:
-            plan = fn(system_prompt, request_text)
+            plan = fn(system_prompt, request_text, context)
             print(f"SITE_AI_PROVIDER={plan.get('_provider', name)}")
             return plan
         except SiteProviderUnavailable as exc:
