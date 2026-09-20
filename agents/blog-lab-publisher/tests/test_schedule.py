@@ -42,6 +42,7 @@ def test_missed_morning_slot_is_caught_up_later():
 def test_completed_slot_is_not_repeated():
     state = {
         "posts_date": "2026-09-20",
+        "scheduled_posts_today": 1,
         "scheduled_slots_done": ["2026-09-20|08:17|sport"],
     }
     result = resolve_due_slot(CONTROL, state, at(9, 30))
@@ -51,6 +52,7 @@ def test_completed_slot_is_not_repeated():
 def test_next_due_slot_runs_after_previous_is_done():
     state = {
         "posts_date": "2026-09-20",
+        "scheduled_posts_today": 1,
         "scheduled_slots_done": ["2026-09-20|08:17|sport"],
     }
     result = resolve_due_slot(CONTROL, state, at(14, 0))
@@ -72,6 +74,7 @@ def test_old_counter_migrates_to_first_completed_slots():
 def test_all_due_slots_done_returns_nothing_due():
     state = {
         "posts_date": "2026-09-20",
+        "scheduled_posts_today": 3,
         "scheduled_slots_done": [
             "2026-09-20|08:17|sport",
             "2026-09-20|13:27|politika",
