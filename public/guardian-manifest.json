@@ -1,0 +1,38 @@
+{
+  "name": "Blog Lab Production Guardian",
+  "version": "guardian-v1.0-final",
+  "mode": "safe-autoupdate",
+  "principle": "Detect problems automatically, repair only through validated tests and pull requests unless a human enables direct deployment credentials.",
+  "production": {
+    "publicSite": "https://dday2301.github.io/blog-lab/",
+    "privateTerminal": "https://blog-lab.dan-grmusa.workers.dev/",
+    "workerHealth": "https://blog-lab.dan-grmusa.workers.dev/health"
+  },
+  "capabilities": [
+    "repository structure checks",
+    "public site smoke check",
+    "Cloudflare Worker health/version drift detection",
+    "cross-browser login readiness check",
+    "terminal command-understanding readiness check",
+    "credential-like text scan",
+    "deterministic repo hygiene repair",
+    "AI-assisted self-heal with protected-path and secret gates",
+    "validated pull-request based auto-update",
+    "manual workflow_dispatch emergency check"
+  ],
+  "protectedPaths": [
+    ".github/",
+    "agents/operator-terminal/",
+    "agents/self-heal/",
+    "AGENTS.md",
+    "requirements-agent.txt",
+    ".env*"
+  ],
+  "workflows": [
+    "Blog Lab Health Check",
+    "Blog Lab External Smoke Test",
+    "Blog Lab Full E2E Audit",
+    "Blog Lab Self Heal",
+    "Blog Lab Production Guardian"
+  ]
+}
