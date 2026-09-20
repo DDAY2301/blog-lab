@@ -119,6 +119,41 @@ def _workers_ai(system_prompt: str, user_prompt: str, source_items: list[dict], 
     return article
 
 
+def _workers_review(system_prompt: str, user_prompt: str) -> dict:
+    token = os.getenv("WORKER_AI_TOKEN", "").strip()
+    url = os.getenv(
+        "WORKER_AI_REVIEW_URL",
+        "https://blog-lab.dan-grmusa.workers.dev/api/ai/review",
+    ).strip()
+    if not token:
+        raise AIUnavailable("Workers AI review interni žeton ni konfiguriran.")
+
+    payload = {
+        "system_prompt": system_prompt,
+        "user_prompt": user_prompt,
+    }
+    req = Request(
+        url,
+        data=json.dumps(payload, ensure_ascii=False).encode("utf-8"),
+        headers={
+            "Authorization": f"Bearer {token}",
+            "Content-Type": "application/json",
+            "User-Agent": "BlogLabPublisher/2.7",
+        },
+        method="POST",
+    )
+    try:
+        with urlopen(req, timeout=90) as response:
+            data = json.loads(response.read().decode("utf-8"))
+    except Exception as exc:
+        raise AIUnavailable(f"Workers AI review ni uspel: {exc}") from exc
+
+    review = data.get("review") if isinstance(data, dict) else None
+    if not isinstance(review, dict):
+        raise AIUnavailable("Workers AI review ni vrnil veljavnega JSON-a.")
+    return review
+
+
 def review_grounding(article: dict, source_items: list[dict], category: str) -> dict:
     """Run one strict evidence-grounding review through the available non-mutating AI providers."""
     system_prompt = """You are a strict editorial fact-checker for a Slovenian newsroom.
@@ -145,8 +180,14 @@ If evidence is insufficient for a material claim, pass must be false.
     errors = []
     provider = os.getenv("AI_PROVIDER", "auto").lower()
 
-    # Workers /api/ai/write validates article shapes, so fact-checking uses
-    # only configured generic JSON-capable providers.
+    if provider in {"auto", "worker", "workers_ai"}:
+        try:
+            return _normalize_grounding_review(_workers_review(system_prompt, user_prompt))
+        except AIUnavailable as exc:
+            errors.append(str(exc))
+            if provider in {"worker", "workers_ai"}:
+                raise
+
     external_ready = all(
         os.getenv(name, "").strip()
         for name in ("MODEL_API_KEY", "MODEL_BASE_URL", "MODEL_NAME")
