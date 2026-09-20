@@ -724,3 +724,115 @@ def test_fallback_digest_can_pass_standard_qa_with_verified_sources():
     errors = validate(article, 1200, 10000, set(), set())
 
     assert errors == []
+
+
+def test_automatic_source_rejects_non_latin_unrelated_sport_result():
+    from agent import automatic_source_usable
+
+    item = {
+        "title": "월드뉴스 | KBS 뉴스",
+        "summary": "무단 전재, 재배포 및 이용 금지.",
+        "url": "https://news.kbs.co.kr/news/pc/program/program.do?bcd=0026",
+        "provider": "bing-web",
+    }
+    assert automatic_source_usable(item, "sport", trusted_primary=False) is False
+
+
+def test_automatic_source_rejects_generic_google_topic_page():
+    from agent import automatic_source_usable
+
+    item = {
+        "title": "Google News - World",
+        "summary": "Browse world stories, videos and other content from Google News.",
+        "url": "https://news.google.com/topics/example",
+        "provider": "bing-web",
+    }
+    assert automatic_source_usable(item, "sport", trusted_primary=False) is False
+
+
+def test_automatic_source_accepts_relevant_english_sport_result():
+    from agent import automatic_source_usable
+
+    item = {
+        "title": "Champions League match ends with late winning goal",
+        "summary": (
+            "The football match produced a late goal after a competitive second half, "
+            "with the coach and players reacting after the final whistle."
+        ),
+        "url": "https://example.com/sport/champions-league-match",
+        "provider": "bing-news",
+    }
+    assert automatic_source_usable(item, "sport", trusted_primary=False) is True
+
+
+def test_automatic_source_accepts_localized_google_news_sport_result():
+    from agent import automatic_source_usable
+
+    item = {
+        "title": "Dončić z odlično predstavo do nove zmage",
+        "summary": (
+            "Slovenski košarkar je dosegel pomembne točke, njegova ekipa pa je v končnici "
+            "tekme potrdila zmago."
+        ),
+        "url": "https://example.si/sport/doncic-zmaga",
+        "provider": "google-news-si",
+    }
+    assert automatic_source_usable(item, "sport", trusted_primary=False) is True
+
+
+def test_automatic_source_rejects_unrelated_latin_broad_result_for_sport():
+    from agent import automatic_source_usable
+
+    item = {
+        "title": "World news and international affairs",
+        "summary": (
+            "A general overview of diplomatic events, media developments and international "
+            "affairs from several regions."
+        ),
+        "url": "https://example.com/world",
+        "provider": "bing-web",
+    }
+    assert automatic_source_usable(item, "sport", trusted_primary=False) is False
+
+
+def test_collect_automatic_sources_filters_broad_noise(monkeypatch):
+    import agent
+
+    primary = [{
+        "title": "Slovenska liga prinaša nov derbi",
+        "summary": "Nogometna tekma bo odigrana ta konec tedna, kluba pa sta objavila priprave.",
+        "url": "https://sport.example.si/derbi",
+        "hash": "primary-1",
+        "provider": "",
+    }]
+    broad = [
+        {
+            "title": "월드뉴스 | KBS 뉴스",
+            "summary": "무단 전재, 재배포 및 이용 금지.",
+            "url": "https://news.kbs.co.kr/world",
+            "hash": "bad-1",
+            "provider": "bing-web",
+        },
+        {
+            "title": "Tennis final decided in three sets",
+            "summary": (
+                "The tennis final went to a deciding set before the winner closed out "
+                "the match with a break of serve."
+            ),
+            "url": "https://example.com/tennis-final",
+            "hash": "good-2",
+            "provider": "bing-news",
+        },
+    ]
+    monkeypatch.setattr(agent, "collect", lambda *a, **k: primary)
+    monkeypatch.setattr(agent, "collect_topic", lambda *a, **k: broad)
+
+    out = agent.collect_automatic_sources(
+        {"input_sources": [], "max_source_items": 30},
+        "sport",
+    )
+
+    assert [item["url"] for item in out] == [
+        "https://sport.example.si/derbi",
+        "https://example.com/tennis-final",
+    ]
