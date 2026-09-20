@@ -762,11 +762,47 @@ def main():
                     else:
                         print("GROUNDING_REPAIR_QA_FAIL " + ",".join(repaired_errors))
         except AIUnavailable as exc:
-            # If an AI-written article cannot be fact-checked, fail closed for
-            # automatic publication. A source-derived fallback remains available
-            # only through the deterministic QA fallback path above.
-            grounding_errors = ["grounding_unavailable"]
             print(f"GROUNDING_REVIEW_UNAVAILABLE {exc}")
+            # AI capacity must not block the whole newsroom. Fall back to a
+            # deterministic article built only from the already verified source
+            # pool, then run the same structural/source QA on that output.
+            source_fallback = prepare_article_candidate(
+                build_digest(
+                    used_for_article,
+                    args.category,
+                    max_items=min(7, len(used_for_article)),
+                ),
+                used_for_article,
+                args.topic,
+                args.output_category,
+            )
+            if not source_fallback.get("skip"):
+                source_fallback["id"] = (
+                    slugify(source_fallback.get("title", ""))
+                    + "-"
+                    + hashlib.sha1(used_for_article[0]["url"].encode()).hexdigest()[:8]
+                )
+                source_fallback_errors = validate(
+                    source_fallback,
+                    min_chars,
+                    max_chars,
+                    titles,
+                    used_urls,
+                    allowed_urls,
+                )
+                if not source_fallback_errors:
+                    article = source_fallback
+                    state["writer_mode"] = "fallback"
+                    grounding_errors = []
+                    print("GROUNDING_FALLBACK_PASS")
+                else:
+                    grounding_errors = ["grounding_unavailable"] + source_fallback_errors
+                    print(
+                        "GROUNDING_FALLBACK_QA_FAIL "
+                        + ",".join(source_fallback_errors)
+                    )
+            else:
+                grounding_errors = ["grounding_unavailable"]
 
         if grounding_errors:
             errors = grounding_errors
@@ -820,7 +856,7 @@ def main():
         "posts_today": state.get("posts_today", 0) + 1,
         "scheduled_posts_today": state.get("scheduled_posts_today", 0) + (0 if manual_request else 1),
         "manual_posts_today": state.get("manual_posts_today", 0) + (1 if manual_request else 0),
-        "agent_version": "2.5.0",
+        "agent_version": "2.6.0",
         "current_category": args.category,
     })
     if args.scheduled_slot and not manual_request:
