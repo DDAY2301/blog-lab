@@ -55,10 +55,18 @@ def _headline(title: str, category_label: str) -> str:
         return f"{category_label}: zgodbe dneva"
     return title
 
-def _section_title(title: str) -> str:
-    clean = _clean(title, 105)
-    clean = re.sub(r"\s+-\s+[^-]{2,45}$", "", clean).strip()
-    return clean or "Nova zgodba"
+def _section_title(item: dict, index: int) -> str:
+    """Use compact non-repeating headings for fallback digest sections.
+
+    Search/news snippets often repeat the full headline as the whole summary.
+    If we also use that headline as a Markdown heading, the validator correctly
+    flags a repeated long sentence. A short source-oriented heading keeps the
+    article readable without duplicating the same long claim.
+    """
+    source = _clean(item.get("source_name", "vir"), 70)
+    if source and source.lower() != "vir":
+        return f"Dopolnitev vira {index}: {source}"
+    return f"Dopolnitev vira {index}"
 
 def build_digest(items: list[dict], category: str, max_items: int = 5) -> dict:
     now = datetime.now(ZoneInfo("Europe/Ljubljana"))
@@ -105,8 +113,9 @@ def build_digest(items: list[dict], category: str, max_items: int = 5) -> dict:
         parts.append(f"{lead_meta} [Odpri izvirni vir]({lead_item.get('url', '')})")
 
     corroborating = []
-    for item in chosen[1:]:
-        section_title = _section_title(item.get("title", ""))
+    for idx, item in enumerate(chosen[1:], start=2):
+        section_title = _section_title(item, idx)
+        source_headline = _clean(item.get("title", ""), 180)
         summary = _unique_summary(item.get("summary", ""), seen_sentences)
         published = _clean(item.get("published", ""), 100)
         source_name = _clean(item.get("source_name", "vir"), 100)
@@ -117,12 +126,15 @@ def build_digest(items: list[dict], category: str, max_items: int = 5) -> dict:
         if not summary:
             if item.get("url"):
                 corroborating.append(
-                    f"- [{source_name} — {section_title}]({item.get('url', '')})"
+                    f"- [{source_name} — {source_headline or 'objava'}]({item.get('url', '')})"
                 )
             continue
 
+        # Keep the headline as context in a short label, then use the unique
+        # summary once. Do not repeat the full headline as both heading and body.
+        headline_context = f"Izhodišče vira: {source_headline}." if source_headline else ""
         parts.append(
-            f"## {section_title}\n\n{summary}\n\n{meta} "
+            f"## {section_title}\n\n{headline_context}\n\n{summary}\n\n{meta} "
             f"[Odpri izvirni vir]({item.get('url', '')})"
         )
 
