@@ -41,6 +41,22 @@ function loginPassword(env, email) {
   return loginPasswordCandidates(env, email)[0] || "";
 }
 
+function authDiagnosticForEmail(env, rawEmail = "") {
+  const email = String(rawEmail || "").trim().toLowerCase();
+  const secretName = AUTHORIZED_USERS[email] || "";
+  const candidates = secretName ? loginPasswordCandidates(env, email) : [];
+  return {
+    email_known: Boolean(secretName),
+    email,
+    user_secret_name: secretName || null,
+    user_secret_configured: candidates.length > 0,
+    accepted_secret_count: candidates.length,
+    shared_login_secret_ready: Boolean(sharedLoginPassword(env)),
+    authorized_users_ready: configuredAuthorizedUserCount(env),
+    session_key_ready: Boolean(String(env.TERMINAL_COMMAND_KEY || "").trim()) || configuredLoginPasswords(env).length > 0
+  };
+}
+
 function configuredAuthorizedUserCount(env) {
   return Object.keys(AUTHORIZED_USERS).filter((email) => loginPasswordCandidates(env, email).length > 0).length;
 }
@@ -1364,7 +1380,7 @@ export default {
       return json({
         ok: true,
         worker: "blog-lab",
-        version: "auth-v6.18-ai-diagnostics-fallback",
+        version: "auth-v6.19-login-hardening",
         ready: state.ready,
         auth_ready: authReady,
         auth_self_test_ok: authTest.ok,
@@ -1380,6 +1396,9 @@ export default {
         auth_mode: "built-in-session",
         login_secret_mode: "accept-either-configured-secret",
         free_tier_compatible: true,
+        maj_login_ready: loginPasswordCandidates(env, "maj@klemenc.org").length > 0,
+        dan_login_ready: loginPasswordCandidates(env, "dan.grmusa@gmail.com").length > 0,
+        clean_login_url: "https://blog-lab.dan-grmusa.workers.dev/login",
         ai_gateway_configured: Boolean(String(env.AI_GATEWAY_ID || env.WORKERS_AI_GATEWAY_ID || "").trim()),
         ai_gateway_cache_ttl: Number(env.AI_GATEWAY_CACHE_TTL || 900) || 900,
         ai_model_fallbacks: workersAiModelCandidates(env)
@@ -1450,6 +1469,21 @@ export default {
       return json(result, result.ok ? 200 : (result.status || 500));
     }
 
+    if (request.method === "GET" && url.pathname === "/api/login-diagnostics") {
+      const email = String(url.searchParams.get("email") || "").trim().toLowerCase();
+      const diagnostic = authDiagnosticForEmail(env, email);
+      return json({
+        ok: true,
+        worker: "blog-lab",
+        version: "auth-v6.19-login-hardening",
+        ...diagnostic,
+        server_time: new Date().toISOString(),
+        hint: diagnostic.email_known
+          ? (diagnostic.user_secret_configured ? "EMAIL_CONFIGURED" : "EMAIL_SECRET_MISSING")
+          : "EMAIL_NOT_AUTHORIZED"
+      });
+    }
+
     if (request.method === "POST" && url.pathname === "/api/login") {
       let body;
       try { body = await request.json(); } catch { return json({ error: "Neveljavna prijavna zahteva." }, 400); }
@@ -1458,27 +1492,38 @@ export default {
       const secretName = AUTHORIZED_USERS[email];
       const expectedPassword = loginPassword(env, email);
       const configured = configuredAuthorizedUserCount(env) > 0;
-      const valid = Boolean(secretName && expectedPassword && password.length && passwordMatchesLogin(env, email, password));
       if (!configured) {
         return json({ error: "Prijava na strežniku še ni konfigurirana.", code: "LOGIN_SECRET_MISSING" }, 503);
       }
-      if (!valid) {
+      if (!secretName) {
         await new Promise((resolve) => setTimeout(resolve, 650));
-        return json({ error: "Napačen e-poštni naslov ali geslo.", code: "INVALID_CREDENTIALS" }, 401);
+        return json({ error: "Ta e-poštni naslov ni na seznamu dovoljenih operaterjev.", code: "EMAIL_NOT_AUTHORIZED" }, 401);
+      }
+      if (!expectedPassword) {
+        return json({ error: "Geslo za tega operaterja ni nastavljeno v Cloudflare Secretih.", code: "USER_LOGIN_SECRET_MISSING", secret_name: secretName }, 503);
+      }
+      if (!password.length || !passwordMatchesLogin(env, email, password)) {
+        await new Promise((resolve) => setTimeout(resolve, 650));
+        return json({ error: "Geslo za ta e-poštni naslov ni pravilno. Uporabi zadnje geslo, ki je nastavljeno v Cloudflare Secretih.", code: "INVALID_PASSWORD_FOR_CONFIGURED_USER", email_known: true, user_secret_configured: true }, 401);
       }
       let token;
-      try { token = await signSession(env, email); } catch { return json({ error: "Terminal še ni pravilno konfiguriran." }, 503); }
-      return json({ ok: true, email }, 200, { "set-cookie": sessionCookie(token) });
+      try { token = await signSession(env, email); } catch { return json({ error: "Terminal še ni pravilno konfiguriran.", code: "SESSION_SIGN_FAILED" }, 503); }
+      return json({ ok: true, email, redirect: "/" }, 200, { "set-cookie": sessionCookie(token) });
     }
 
     if (request.method === "POST" && url.pathname === "/api/logout") {
       return json({ ok: true }, 200, { "set-cookie": clearSessionCookie() });
     }
 
+    if (request.method === "GET" && url.pathname === "/logout") {
+      const next = url.searchParams.get("next") || "/login";
+      return new Response(null, { status: 302, headers: securityHeaders({ "location": next.startsWith("/") ? next : "/login", "set-cookie": clearSessionCookie() }) });
+    }
+
     const user = await identity(request, env);
 
-    if (request.method === "GET" && url.pathname === "/") {
-      if (url.searchParams.get("fresh") === "1") {
+    if (request.method === "GET" && (url.pathname === "/" || url.pathname === "/login")) {
+      if (url.pathname === "/login" || url.searchParams.get("fresh") === "1") {
         return html(LOGIN_PAGE, 200, { "set-cookie": clearSessionCookie() });
       }
       return html(user ? PAGE : LOGIN_PAGE);
