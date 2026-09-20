@@ -5,7 +5,7 @@ import json
 import re
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from urllib.parse import quote_plus, urlparse
+from urllib.parse import parse_qs, quote_plus, unquote, urlparse
 from urllib.request import Request, urlopen
 from xml.etree import ElementTree as ET
 
@@ -284,6 +284,95 @@ def _gdelt_news(query_text: str, category: str, max_items: int) -> list[dict]:
         ))
     return out[:max_items]
 
+
+def _duckduckgo_result_url(value: str) -> str:
+    """Resolve DuckDuckGo HTML redirect links to the public result URL."""
+    href = unescape(str(value or "")).strip()
+    if href.startswith("//"):
+        href = "https:" + href
+    if href.startswith("/"):
+        href = "https://duckduckgo.com" + href
+    if not href.lower().startswith("https://"):
+        return ""
+    try:
+        parsed = urlparse(href)
+        host = (parsed.hostname or "").lower()
+        if host.endswith("duckduckgo.com") and parsed.path.startswith("/l/"):
+            target = parse_qs(parsed.query).get("uddg", [""])[0]
+            target = unquote(target)
+            return _safe_https(target)
+    except Exception:
+        return ""
+    return _safe_https(href)
+
+def _duckduckgo_web(query_text: str, category: str, max_items: int) -> list[dict]:
+    """Search DuckDuckGo's official non-JavaScript HTML results.
+
+    DuckDuckGo documents HTML/Lite versions for browsers without JavaScript.
+    We only retain normal HTTPS result URLs plus visible result snippets.
+    """
+    url = "https://html.duckduckgo.com/html/?q=" + quote_plus(query_text)
+    req = Request(
+        url,
+        headers={
+            "User-Agent": USER_AGENT,
+            "Accept": "text/html,application/xhtml+xml;q=0.9,*/*;q=0.5",
+        },
+    )
+    with urlopen(req, timeout=12) as response:
+        if getattr(response, "status", 200) >= 400:
+            raise RuntimeError(f"HTTP {response.status}")
+        raw = response.read(1_800_000)
+    html = raw.decode("utf-8", errors="replace")
+
+    # Each result block contains a result__a link and usually result__snippet.
+    blocks = re.split(r'(?i)<div[^>]+class=["\'][^"\']*result[^"\']*["\']', html)
+    out = []
+    for block in blocks[1:]:
+        link_match = re.search(
+            r'(?is)<a[^>]+class=["\'][^"\']*result__a[^"\']*["\'][^>]+href=["\']([^"\']+)["\'][^>]*>(.*?)</a>',
+            block,
+        )
+        if not link_match:
+            # Some responses put href before class.
+            link_match = re.search(
+                r'(?is)<a[^>]+href=["\']([^"\']+)["\'][^>]+class=["\'][^"\']*result__a[^"\']*["\'][^>]*>(.*?)</a>',
+                block,
+            )
+        if not link_match:
+            continue
+        link = _duckduckgo_result_url(link_match.group(1))
+        title = _clean(link_match.group(2))
+        if not link or not title:
+            continue
+
+        snippet_match = re.search(
+            r'(?is)<(?:a|div)[^>]+class=["\'][^"\']*result__snippet[^"\']*["\'][^>]*>(.*?)</(?:a|div)>',
+            block,
+        )
+        summary = _clean(snippet_match.group(1)) if snippet_match else ""
+        try:
+            host = (urlparse(link).hostname or "").lower().removeprefix("www.")
+        except Exception:
+            host = ""
+
+        out.append(_item(
+            {
+                "name": f"DuckDuckGo Web – {category}",
+                "category": category,
+                "url": url,
+                "provider": "duckduckgo-web",
+            },
+            title,
+            link,
+            summary or title,
+            "",
+            source_name=host or "DuckDuckGo Web",
+        ))
+        if len(out) >= max_items:
+            break
+    return out
+
 DIRECT_SKIP_HOSTS = {
     "news.google.com",
     "google.com",
@@ -321,7 +410,7 @@ def _direct_candidate(item: dict) -> bool:
     # Only hydrate direct web-index results. Google/Bing News aggregator URLs
     # may require consent/redirect logic and are already usable as indexed evidence.
     provider = _clean(item.get("provider", "")).lower()
-    if provider not in {"bing-web", "gdelt", "direct-web"}:
+    if provider not in {"bing-web", "duckduckgo-web", "gdelt", "direct-web"}:
         return False
     link = _safe_https(item.get("url", ""))
     if not link:
@@ -537,6 +626,16 @@ def collect_topic(topic: str, category: str, max_items: int = 30) -> list[dict]:
                 out.extend(gdelt)
         except Exception as exc:
             print(f"WARN topic source provider=gdelt query={query_text!r} error={exc}")
+
+        # DuckDuckGo's non-JavaScript search broadens discovery beyond news
+        # indexes and Bing. Returned links are resolved to their direct HTTPS URL.
+        try:
+            ddg = _duckduckgo_web(query_text, category, min(max_items, 12))
+            if ddg:
+                provider_hits["duckduckgo-web"] = provider_hits.get("duckduckgo-web", 0) + len(ddg)
+                out.extend(ddg)
+        except Exception as exc:
+            print(f"WARN topic source provider=duckduckgo-web query={query_text!r} error={exc}")
 
         # Enough diverse URLs have been found; do not keep hammering public
         # indexes once we already have a healthy evidence pool.
