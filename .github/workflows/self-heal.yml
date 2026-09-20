@@ -168,26 +168,26 @@ jobs:
             echo "$WORKER_HEALTH" >> "$DIAG"
             export WORKER_HEALTH
             python - <<'PY' >> "$DIAG" 2>&1
-import json, os, re
-from pathlib import Path
-health = json.loads(os.environ["WORKER_HEALTH"])
-source = Path("terminal/worker/src/index.js").read_text(encoding="utf-8")
-match = re.search(r'version:\s*"([^"]+)"', source)
-expected = match.group(1) if match else ""
-actual = str(health.get("version") or "")
-ready = bool(health.get("ready"))
-auth_ok = health.get("auth_self_test_ok") is True
-authorized_users = int(health.get("authorized_users_ready") or 0)
-print(f"EXPECTED_WORKER_VERSION={expected}")
-print(f"ACTUAL_WORKER_VERSION={actual}")
-print(f"WORKER_READY={str(ready).lower()}")
-print(f"AUTH_SELF_TEST_OK={str(auth_ok).lower()}")
-print(f"AUTHORIZED_USERS_READY={authorized_users}")
-if not ready or (expected and actual != expected):
-    raise SystemExit(42)
-if not auth_ok or authorized_users < 2:
-    raise SystemExit(43)
-PY
+          import json, os, re
+          from pathlib import Path
+          health = json.loads(os.environ["WORKER_HEALTH"])
+          source = Path("terminal/worker/src/index.js").read_text(encoding="utf-8")
+          match = re.search(r'version:\s*"([^"]+)"', source)
+          expected = match.group(1) if match else ""
+          actual = str(health.get("version") or "")
+          ready = bool(health.get("ready"))
+          auth_ok = health.get("auth_self_test_ok") is True
+          authorized_users = int(health.get("authorized_users_ready") or 0)
+          print(f"EXPECTED_WORKER_VERSION={expected}")
+          print(f"ACTUAL_WORKER_VERSION={actual}")
+          print(f"WORKER_READY={str(ready).lower()}")
+          print(f"AUTH_SELF_TEST_OK={str(auth_ok).lower()}")
+          print(f"AUTHORIZED_USERS_READY={authorized_users}")
+          if not ready or (expected and actual != expected):
+              raise SystemExit(42)
+          if not auth_ok or authorized_users < 2:
+              raise SystemExit(43)
+          PY
             HEALTH_CHECK_RC=$?
             if [[ $HEALTH_CHECK_RC -eq 42 ]]; then
               DEPLOY_DRIFT=true
@@ -233,14 +233,14 @@ PY
             if [[ -n "$HEALTH" ]]; then
               export HEALTH
               if python - <<'PY'
-import json, os, re
-from pathlib import Path
-health = json.loads(os.environ["HEALTH"])
-source = Path("terminal/worker/src/index.js").read_text(encoding="utf-8")
-match = re.search(r'version:\s*"([^"]+)"', source)
-expected = match.group(1) if match else ""
-raise SystemExit(0 if health.get("ready") is True and (not expected or health.get("version") == expected) else 1)
-PY
+          import json, os, re
+          from pathlib import Path
+          health = json.loads(os.environ["HEALTH"])
+          source = Path("terminal/worker/src/index.js").read_text(encoding="utf-8")
+          match = re.search(r'version:\s*"([^"]+)"', source)
+          expected = match.group(1) if match else ""
+          raise SystemExit(0 if health.get("ready") is True and (not expected or health.get("version") == expected) else 1)
+          PY
               then
                 echo "Production Worker is synchronized."
                 exit 0
