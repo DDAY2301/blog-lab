@@ -1,6 +1,21 @@
 name: Blog Lab Self Heal
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - "src/**"
+      - "public/**"
+      - "agents/blog-lab-publisher/**"
+      - "agents/operator-terminal/**"
+      - "agents/self-heal/**"
+      - "terminal/worker/**"
+      - "package.json"
+      - "wrangler.jsonc"
+      - "requirements-agent.txt"
+      - ".github/workflows/operator-terminal.yml"
+      - ".github/workflows/agent-blog-lab-publisher.yml"
+      - ".github/workflows/self-heal.yml"
   workflow_run:
     workflows:
       - "Private Operator Terminal"
