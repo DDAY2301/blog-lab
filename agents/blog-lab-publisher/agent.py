@@ -362,9 +362,23 @@ def _story_tokens(item: dict) -> set[str]:
 
 def automatic_story_pool(items: list[dict], category: str, max_items: int = 6) -> list[dict]:
     """Choose one coherent automatic story instead of feeding unrelated headlines to the writer."""
-    candidates = list(items or [])[:18]
-    if not candidates:
+    raw_candidates = list(items or [])[:24]
+    if not raw_candidates:
         return []
+
+    # Directly fetched pages usually contain far more evidence than RSS-only
+    # headlines, so prefer them while preserving stable order within each tier.
+    candidates = [
+        item for _, item in sorted(
+            enumerate(raw_candidates),
+            key=lambda pair: (
+                0 if pair[1].get("verified_direct") else 1,
+                0 if str(pair[1].get("provider") or "") == "google-news-si" else 1,
+                -min(len(str(pair[1].get("summary") or "")), 5000),
+                pair[0],
+            ),
+        )
+    ][:18]
 
     token_sets = [_story_tokens(item) for item in candidates]
     best_index = 0
