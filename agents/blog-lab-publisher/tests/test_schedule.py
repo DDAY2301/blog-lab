@@ -129,6 +129,49 @@ def test_deferred_morning_slot_does_not_block_politics():
     assert result["slot"] == "2026-09-20|13:27|politika"
 
 
+def test_ai_unavailable_deferred_slot_is_retried():
+    state = {
+        "posts_date": "2026-09-20",
+        "scheduled_posts_today": 0,
+        "scheduled_slots_done": [],
+        "scheduled_slots_deferred": ["2026-09-20|08:17|sport"],
+        "writer_mode": "unavailable",
+        "last_error": "manual_ai_unavailable",
+        "last_editorial_hold": {
+            "slot": "2026-09-20|08:17|sport",
+            "reason": "ai_unavailable",
+            "at": "2026-09-20T09:00:00+02:00",
+        },
+    }
+    result = resolve_due_slot(CONTROL, state, at(10, 30))
+    assert result["run"] is True
+    assert result["category"] == "sport"
+    assert result["slot"] == "2026-09-20|08:17|sport"
+
+
+def test_today_production_ai_unavailable_state_catches_first_missed_slot():
+    state = {
+        "posts_date": "2026-09-20",
+        "scheduled_posts_today": 0,
+        "scheduled_slots_done": [],
+        "scheduled_slots_deferred": [
+            "2026-09-20|08:17|sport",
+            "2026-09-20|13:27|politika",
+        ],
+        "writer_mode": "unavailable",
+        "last_error": "manual_ai_unavailable",
+        "last_editorial_hold": {
+            "slot": "2026-09-20|13:27|politika",
+            "reason": "ai_unavailable",
+            "at": "2026-09-20T14:08:30+02:00",
+        },
+    }
+    result = resolve_due_slot(CONTROL, state, at(16, 40))
+    assert result["run"] is True
+    assert result["category"] == "sport"
+    assert result["slot"] == "2026-09-20|08:17|sport"
+
+
 def test_deferred_slot_from_previous_day_is_ignored():
     state = {
         "posts_date": "2026-09-19",
