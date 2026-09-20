@@ -1,0 +1,14 @@
+[
+  {
+    "id": "02371c51-9263-4f77-aec9-458d0e771914",
+    "created_at": "2026-09-20T12:09:03Z",
+    "actor": "dan.grmusa@gmail.com",
+    "command": "izvedi objave 3 na dan po časovnici zdaj pa napiši vse članke ki smo jih spustili zaradi popravkov na strani",
+    "handled_reason": "schedule_and_article_catchup",
+    "publisher_dispatches": [
+      "sport",
+      "politika",
+      "aktualno"
+    ]
+  }
+]
