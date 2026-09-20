@@ -123,7 +123,7 @@ jobs:
         run: npm ci
       - name: Test agent
         run: |
-          python -m py_compile agents/blog-lab-publisher/agent.py agents/blog-lab-publisher/services/*.py
+          python -m py_compile agents/blog-lab-publisher/agent.py agents/blog-lab-publisher/autonomous_fallback.py agents/blog-lab-publisher/services/*.py
           pytest -q agents/blog-lab-publisher/tests
       - name: Select editorial category
         shell: bash
@@ -145,6 +145,16 @@ jobs:
           if [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.catch_up }}" != "true" && "${{ inputs.dry_run }}" == "true" ]]; then ARGS+=(--dry-run); fi
           if [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.catch_up }}" != "true" && "${{ inputs.force }}" == "true" ]]; then ARGS+=(--force); fi
           python agents/blog-lab-publisher/agent.py "${ARGS[@]}"
+      - name: Run deterministic fallback if no article was written
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.catch_up == true }}
+        shell: bash
+        run: |
+          if git diff --quiet -- src/App.jsx; then
+            echo "No article content change detected; running deterministic autonomous fallback."
+            python agents/blog-lab-publisher/autonomous_fallback.py --category "$RUN_CATEGORY" --scheduled-slot "$RUN_SCHEDULE_SLOT"
+          else
+            echo "Article content already changed; fallback not needed."
+          fi
       - name: Verify frontend build
         run: npm run build
       - name: Ensure no obvious credentials were written
