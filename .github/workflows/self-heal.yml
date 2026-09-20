@@ -94,6 +94,7 @@ jobs:
           : > "$DIAG"
           NEEDS_REPAIR=false
           DEPLOY_DRIFT=false
+          CONFIG_ISSUE=false
 
           echo "Blog Lab self-heal diagnostic" >> "$DIAG"
           echo "event=$EVENT_NAME" >> "$DIAG"
@@ -146,13 +147,26 @@ match = re.search(r'version:\s*"([^"]+)"', source)
 expected = match.group(1) if match else ""
 actual = str(health.get("version") or "")
 ready = bool(health.get("ready"))
+auth_ok = health.get("auth_self_test_ok") is True
+authorized_users = int(health.get("authorized_users_ready") or 0)
 print(f"EXPECTED_WORKER_VERSION={expected}")
 print(f"ACTUAL_WORKER_VERSION={actual}")
 print(f"WORKER_READY={str(ready).lower()}")
+print(f"AUTH_SELF_TEST_OK={str(auth_ok).lower()}")
+print(f"AUTHORIZED_USERS_READY={authorized_users}")
 if not ready or (expected and actual != expected):
     raise SystemExit(42)
+if not auth_ok or authorized_users < 2:
+    raise SystemExit(43)
 PY
-            [[ $? -eq 0 ]] || DEPLOY_DRIFT=true
+            HEALTH_CHECK_RC=$?
+            if [[ $HEALTH_CHECK_RC -eq 42 ]]; then
+              DEPLOY_DRIFT=true
+            elif [[ $HEALTH_CHECK_RC -eq 43 ]]; then
+              CONFIG_ISSUE=true
+            elif [[ $HEALTH_CHECK_RC -ne 0 ]]; then
+              DEPLOY_DRIFT=true
+            fi
           fi
 
           curl -fsS --max-time 20 'https://dday2301.github.io/blog-lab/' -o /dev/null >> "$DIAG" 2>&1
@@ -163,10 +177,12 @@ PY
 
           echo "needs_repair=$NEEDS_REPAIR" >> "$GITHUB_OUTPUT"
           echo "deploy_drift=$DEPLOY_DRIFT" >> "$GITHUB_OUTPUT"
+          echo "config_issue=$CONFIG_ISSUE" >> "$GITHUB_OUTPUT"
           echo "diagnostic=$DIAG" >> "$GITHUB_OUTPUT"
 
           echo "needs_repair=$NEEDS_REPAIR"
           echo "deploy_drift=$DEPLOY_DRIFT"
+          echo "config_issue=$CONFIG_ISSUE"
           tail -n 160 "$DIAG"
 
       - name: Redeploy Worker when production is stale
@@ -290,3 +306,9 @@ PY
         shell: bash
         run: |
           echo "::warning::Production Worker is stale/unreachable and GitHub has no CLOUDFLARE_API_TOKEN. Cloudflare Git Builds may still deploy the pushed commit; otherwise add CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID as repository secrets for direct self-healing deployment."
+
+      - name: Explain incomplete cross-browser login configuration
+        if: ${{ steps.diagnose.outputs.config_issue == 'true' }}
+        shell: bash
+        run: |
+          echo "::warning::Worker code is reachable, but the auth self-test is incomplete for both authorized users. Configure either LOGIN_PASSWORD as the shared fallback or both DAN_LOGIN_PASSWORD and MAJ_LOGIN_PASSWORD in Cloudflare Worker secrets."
