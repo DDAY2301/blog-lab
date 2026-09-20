@@ -30,25 +30,46 @@ jobs:
         run: |
           set -euo pipefail
           URL="https://blog-lab.dan-grmusa.workers.dev/health"
+          EXPECTED_VERSION="$(python - <<'PY'
+import re
+from pathlib import Path
+source = Path("terminal/worker/src/index.js").read_text(encoding="utf-8")
+match = re.search(r'version:\s*"([^"]+)"', source)
+if not match:
+    raise SystemExit("Worker version marker not found")
+print(match.group(1))
+PY
+)"
+          echo "Expected Worker version: $EXPECTED_VERSION"
           for attempt in {1..24}; do
             echo "Worker probe $attempt/24"
             body="$(curl -fsS --max-time 20 "$URL" || true)"
-            if BODY="$body" EVENT_NAME="$EVENT_NAME" python - <<'PY' 2>/dev/null
+            if BODY="$body" EVENT_NAME="$EVENT_NAME" EXPECTED_VERSION="$EXPECTED_VERSION" python - <<'PY' 2>/dev/null
           import json, os, sys
           d = json.loads(os.environ.get("BODY", "{}"))
           base = (
               d.get("ok") is True
               and d.get("ready") is True
               and d.get("auth_ready") is True
+              and d.get("auth_self_test_ok") is True
               and d.get("authorized_users_ready") == 2
               and d.get("media_upload_ready") is True
           )
+          expected = os.environ.get("EXPECTED_VERSION", "")
           if os.environ.get("EVENT_NAME") == "pull_request":
-              version_ok = d.get("version") in {"auth-v6.10-runtime-resilience", "auth-v6.11-quality-capacity"}
+              # A pull request is not deployed to the production Worker, so only
+              # require a healthy current production version.
+              version_ok = str(d.get("version") or "").startswith("auth-v6.")
               ai_ok = True
           else:
-              version_ok = d.get("version") == "auth-v6.11-quality-capacity"
-              ai_ok = d.get("ai_writer_ready") is True and d.get("ai_review_ready") is True and d.get("site_editor_ready") is True and d.get("publisher_scheduler_ready") is True
+              version_ok = bool(expected) and d.get("version") == expected
+              ai_ok = (
+                  d.get("ai_writer_ready") is True
+                  and d.get("ai_review_ready") is True
+                  and d.get("site_editor_ready") is True
+                  and d.get("self_heal_ai_ready") is True
+                  and d.get("publisher_scheduler_ready") is True
+              )
           sys.exit(0 if (base and version_ok and ai_ok) else 1)
           PY
             then
@@ -76,7 +97,7 @@ jobs:
             exit 0
           fi
           changed="$(git show --pretty= --name-only "$GITHUB_SHA")"
-          if grep -Eq '^((terminal/worker/|agents/blog-lab-publisher/(agent\.py|services/ai_provider\.py|prompts/)|wrangler\.jsonc|terminal/worker/wrangler\.jsonc|\.github/workflows/(agent-blog-lab-publisher|operator-terminal|external-smoke)\.yml))' <<<"$changed"; then
+          if grep -Eq '^((terminal/worker/|agents/(blog-lab-publisher|self-heal)/|scripts/test-worker-|wrangler\.jsonc|terminal/worker/wrangler\.jsonc|\.github/workflows/(agent-blog-lab-publisher|operator-terminal|external-smoke|self-heal|health-check)\.yml))' <<<"$changed"; then
             echo "changed=true" >> "$GITHUB_OUTPUT"
           else
             echo "changed=false" >> "$GITHUB_OUTPUT"
