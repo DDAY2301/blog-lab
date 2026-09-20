@@ -10,8 +10,14 @@
   "current_category": "sport",
   "scheduled_posts_today": 0,
   "manual_posts_today": 1,
-  "writer_mode": "workers_ai",
+  "writer_mode": "unavailable",
   "scheduled_slots_done": [],
-  "scheduled_slots_deferred": [],
-  "last_editorial_hold": null
+  "scheduled_slots_deferred": [
+    "2026-09-20|08:17|sport"
+  ],
+  "last_editorial_hold": {
+    "slot": "2026-09-20|08:17|sport",
+    "reason": "ai_unavailable",
+    "at": "2026-09-20T11:28:06+02:00"
+  }
 }
