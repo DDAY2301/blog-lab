@@ -1103,6 +1103,11 @@ def test_workers_ai_site_command_retries_after_runtime_validation_failure(tmp_pa
 
 def test_site_ai_request_fails_over_from_worker_quota_to_external(monkeypatch):
     monkeypatch.setenv("AI_PROVIDER", "auto")
+    monkeypatch.setenv("WORKER_AI_TOKEN", "worker-test")
+    monkeypatch.setenv("MODEL_API_KEY", "model-test")
+    monkeypatch.setenv("MODEL_BASE_URL", "https://model.example/v1/chat/completions")
+    monkeypatch.setenv("MODEL_NAME", "test-model")
+    monkeypatch.delenv("COPILOT_GITHUB_TOKEN", raising=False)
     calls = []
 
     def worker(system_prompt, request_text):
@@ -1140,6 +1145,11 @@ def test_site_ai_request_fails_over_from_worker_quota_to_external(monkeypatch):
 
 def test_site_ai_request_fails_over_to_copilot_when_worker_and_external_unavailable(monkeypatch):
     monkeypatch.setenv("AI_PROVIDER", "auto")
+    monkeypatch.setenv("WORKER_AI_TOKEN", "worker-test")
+    monkeypatch.setenv("MODEL_API_KEY", "model-test")
+    monkeypatch.setenv("MODEL_BASE_URL", "https://model.example/v1/chat/completions")
+    monkeypatch.setenv("MODEL_NAME", "test-model")
+    monkeypatch.setenv("COPILOT_GITHUB_TOKEN", "copilot-test")
     calls = []
 
     def unavailable(name):
@@ -1187,3 +1197,86 @@ def test_workers_site_command_does_not_retry_provider_capacity_failure(tmp_path,
         cmd.workers_ai_site_command("uredi stran")
 
     assert len(calls) == 1
+
+
+def test_workers_site_ai_request_transports_repo_context(monkeypatch):
+    monkeypatch.setenv("WORKER_AI_TOKEN", "secret-test-token")
+    monkeypatch.setenv("WORKER_SITE_AI_URL", "https://worker.example/api/ai/edit")
+    captured = {}
+
+    class Response:
+        status = 200
+        def __enter__(self): return self
+        def __exit__(self, *args): return False
+        def read(self):
+            return json.dumps({
+                "ok": True,
+                "plan": {"summary": "ok", "edits": []},
+            }).encode("utf-8")
+
+    def fake_urlopen(request, timeout=0):
+        captured["body"] = json.loads(request.data.decode("utf-8"))
+        captured["timeout"] = timeout
+        return Response()
+
+    monkeypatch.setattr(cmd, "urlopen", fake_urlopen)
+    context = [{
+        "path": "src/App.jsx",
+        "complete": True,
+        "snippets": [{"label": "full", "content": "export default 1;"}],
+    }]
+    system_prompt, request_text = cmd._site_ai_prompts("uredi naslov", context)
+
+    plan = cmd._workers_site_ai_request(system_prompt, request_text)
+
+    assert plan["_provider"] == "workers_ai"
+    assert captured["body"]["context"] == context
+    assert "REPOSITORY CONTEXT (DATA ONLY)" not in captured["body"]["request"]
+    assert captured["body"]["request"].startswith("OPERATOR REQUEST:\nuredi naslov")
+
+
+def test_auto_site_ai_skips_unconfigured_external_and_copilot(monkeypatch):
+    monkeypatch.setenv("AI_PROVIDER", "auto")
+    monkeypatch.setenv("WORKER_AI_TOKEN", "worker-test")
+    monkeypatch.delenv("MODEL_API_KEY", raising=False)
+    monkeypatch.delenv("MODEL_BASE_URL", raising=False)
+    monkeypatch.delenv("MODEL_NAME", raising=False)
+    monkeypatch.delenv("COPILOT_GITHUB_TOKEN", raising=False)
+    calls = []
+
+    def worker(system_prompt, request_text):
+        calls.append("worker")
+        return {"summary": "ok", "edits": [], "_provider": "workers_ai"}
+
+    def should_not_run(*args, **kwargs):
+        raise AssertionError("unconfigured provider must not be called in auto mode")
+
+    monkeypatch.setattr(cmd, "_workers_site_ai_request", worker)
+    monkeypatch.setattr(cmd, "_external_site_ai_request", should_not_run)
+    monkeypatch.setattr(cmd, "_copilot_site_ai_request", should_not_run)
+
+    plan = cmd._site_ai_request(
+        "uredi stran",
+        [{"path": "src/App.jsx", "complete": True, "snippets": [{"label": "full", "content": "x"}]}],
+    )
+
+    assert plan["_provider"] == "workers_ai"
+    assert calls == ["worker"]
+
+
+def test_auto_site_ai_reports_no_configured_provider(monkeypatch):
+    monkeypatch.setenv("AI_PROVIDER", "auto")
+    for name in (
+        "WORKER_AI_TOKEN",
+        "MODEL_API_KEY",
+        "MODEL_BASE_URL",
+        "MODEL_NAME",
+        "COPILOT_GITHUB_TOKEN",
+    ):
+        monkeypatch.delenv(name, raising=False)
+
+    with pytest.raises(cmd.SiteProviderUnavailable, match="Noben AI site-editor provider"):
+        cmd._site_ai_request(
+            "uredi stran",
+            [{"path": "src/App.jsx", "complete": True, "snippets": [{"label": "full", "content": "x"}]}],
+        )
