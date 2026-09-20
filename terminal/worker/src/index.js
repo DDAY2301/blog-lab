@@ -330,6 +330,33 @@ function looksLikeArticle(article) {
   );
 }
 
+function nonRetryableWorkersAiError(error) {
+  const text = String(error?.message || error || "").toLowerCase();
+  return (
+    text.includes("4006")
+    || text.includes("daily free allocation")
+    || text.includes("quota")
+    || text.includes("invalid request")
+    || text.includes("authentication")
+    || text.includes("unauthorized")
+  );
+}
+
+async function runWorkersAiWithRetry(env, request, attempts = 3) {
+  let lastError;
+  const total = Math.max(1, Math.min(Number(attempts) || 1, 3));
+  for (let attempt = 1; attempt <= total; attempt += 1) {
+    try {
+      return await env.AI.run("@cf/zai-org/glm-4.7-flash", request);
+    } catch (error) {
+      lastError = error;
+      if (attempt >= total || nonRetryableWorkersAiError(error)) throw error;
+      await new Promise((resolve) => setTimeout(resolve, attempt * 180));
+    }
+  }
+  throw lastError || new Error("Workers AI inference failed");
+}
+
 async function generateArticleWithWorkersAi(env, body) {
   if (!env.AI || typeof env.AI.run !== "function") {
     return { ok: false, status: 503, error: "Workers AI binding ni na voljo.", code: "AI_BINDING_MISSING" };
@@ -352,7 +379,7 @@ async function generateArticleWithWorkersAi(env, body) {
 
   let result;
   try {
-    result = await env.AI.run("@cf/zai-org/glm-4.7-flash", {
+    result = await runWorkersAiWithRetry(env, {
       messages: [
         { role: "system", content: systemPrompt },
         { role: "user", content: userPrompt },
@@ -406,7 +433,7 @@ async function generateReviewWithWorkersAi(env, body) {
 
   let result;
   try {
-    result = await env.AI.run("@cf/zai-org/glm-4.7-flash", {
+    result = await runWorkersAiWithRetry(env, {
       messages: [
         { role: "system", content: systemPrompt },
         { role: "user", content: userPrompt },
@@ -460,7 +487,7 @@ async function generateSiteEditWithWorkersAi(env, body) {
 
   let result;
   try {
-    result = await env.AI.run("@cf/zai-org/glm-4.7-flash", {
+    result = await runWorkersAiWithRetry(env, {
       messages: [
         { role: "system", content: systemPrompt },
         { role: "user", content: userPrompt },
@@ -517,7 +544,7 @@ async function generateRepairWithWorkersAi(env, body) {
 
   let result;
   try {
-    result = await env.AI.run("@cf/zai-org/glm-4.7-flash", {
+    result = await runWorkersAiWithRetry(env, {
       messages: [
         { role: "system", content: systemPrompt },
         { role: "user", content: userPrompt },
@@ -793,7 +820,7 @@ async function resolveCommandIntent(command, env, allowAi = true) {
   const local = localCommandIntent(command);
   if (!allowAi || local.confidence >= 0.86 || !env.AI || typeof env.AI.run !== "function") return local;
   try {
-    const result = await env.AI.run("@cf/zai-org/glm-4.7-flash", {
+    const result = await runWorkersAiWithRetry(env, {
       messages: [
         {
           role: "system",
@@ -1223,7 +1250,7 @@ export default {
       return json({
         ok: true,
         worker: "blog-lab",
-        version: "auth-v6.16-self-heal-authcheck",
+        version: "auth-v6.17-ai-resilience",
         ready: state.ready,
         auth_ready: authReady,
         auth_self_test_ok: authTest.ok,
