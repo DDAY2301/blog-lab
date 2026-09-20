@@ -10,18 +10,23 @@ on:
       - "agents/operator-terminal/**"
       - "agents/self-heal/**"
       - "terminal/worker/**"
+      - "scripts/**"
       - "package.json"
       - "wrangler.jsonc"
       - "requirements-agent.txt"
       - ".github/workflows/operator-terminal.yml"
       - ".github/workflows/agent-blog-lab-publisher.yml"
       - ".github/workflows/self-heal.yml"
+      - ".github/workflows/full-e2e-audit.yml"
+      - ".github/workflows/external-smoke.yml"
+      - ".github/workflows/health-check.yml"
   workflow_run:
     workflows:
       - "Private Operator Terminal"
       - "Blog Lab Publisher Agent"
       - "Blog Lab Health Check"
       - "Blog Lab External Smoke Test"
+      - "Blog Lab Full E2E Audit"
     types: [completed]
   schedule:
     - cron: "11 * * * *"
