@@ -10,5 +10,17 @@
       "politika",
       "aktualno"
     ]
+  },
+  {
+    "id": "be15ca58-db55-4b2c-8da9-92ac668df09a",
+    "created_at": "2026-09-20T13:55:13Z",
+    "actor": "dan.grmusa@gmail.com",
+    "command": "nadaljuj z rutinskimi objavami in vrni vse članke ki smo jih zamudili",
+    "handled_reason": "schedule_and_article_catchup",
+    "publisher_dispatches": [
+      "sport",
+      "politika",
+      "aktualno"
+    ]
   }
 ]
