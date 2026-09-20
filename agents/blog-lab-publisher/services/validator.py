@@ -37,7 +37,33 @@ def _source_urls(article: dict) -> list[str]:
             urls.append(str(item["url"]).strip())
     return urls
 
-def validate(article: dict, min_chars: int, max_chars: int, used_titles: set[str], used_urls: set[str]) -> list[str]:
+def _normalized_sentence(value: str) -> str:
+    value = re.sub(r"\[[^\]]+\]\([^\)]+\)", " ", str(value or ""))
+    value = re.sub(r"[*_#>\-]+", " ", value)
+    value = re.sub(r"\s+", " ", value).strip().lower()
+    return value
+
+
+def _has_repeated_long_sentence(content: str) -> bool:
+    seen = set()
+    for raw in re.split(r"(?<=[.!?])\s+|\n+", str(content or "")):
+        sentence = _normalized_sentence(raw)
+        if len(sentence) < 75:
+            continue
+        if sentence in seen:
+            return True
+        seen.add(sentence)
+    return False
+
+
+def _has_generic_heading(content: str) -> bool:
+    return bool(re.search(
+        r"(?im)^#{2,4}\s*(?:uvod|zaključek|zakljucek|povzetek)\s*$",
+        str(content or ""),
+    ))
+
+
+def validate(article: dict, min_chars: int, max_chars: int, used_titles: set[str], used_urls: set[str], allowed_urls: set[str] | None = None) -> list[str]:
     errors = []
     if article.get("skip"):
         return ["SKIP"]
@@ -65,6 +91,12 @@ def validate(article: dict, min_chars: int, max_chars: int, used_titles: set[str
         if url in used_urls:
             errors.append("ze_uporabljen_vir")
 
+    if allowed_urls is not None:
+        allowed = {str(url).strip() for url in allowed_urls if str(url or "").strip()}
+        for url in source_urls:
+            if url not in allowed:
+                errors.append("vir_ni_v_podlagi")
+
     for url in _media_urls(article):
         if url.startswith("/"):
             continue
@@ -74,6 +106,10 @@ def validate(article: dict, min_chars: int, max_chars: int, used_titles: set[str
     lower = content.lower()
     if "<script" in lower or "javascript:" in lower or "data:text/html" in lower:
         errors.append("nevarna_vsebina")
+    if _has_repeated_long_sentence(content):
+        errors.append("ponavljanje")
+    if _has_generic_heading(content):
+        errors.append("genericni_podnaslov")
     if len(str(article.get("excerpt", ""))) > 240:
         errors.append("predolg_povzetek")
     if len(article.get("gallery", []) if isinstance(article.get("gallery"), list) else []) > 12:

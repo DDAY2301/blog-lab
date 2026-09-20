@@ -12,9 +12,13 @@ Uredniška pravila:
 - ne piši kot seznam RSS zadetkov;
 - ne številči virov kot glavne vsebine članka;
 - ne ponavljaj naslovov virov kot podnaslovov, razen če je to res naravno;
-- združi informacije več virov v koherentno pripoved, kadar govorijo o isti zgodbi;
+- združi informacije več virov v koherentno pripoved samo kadar jasno govorijo o isti zgodbi; če gre za različne dogodke, izberi enega in ostale pusti zunaj članka;
+- vsak materialni podatek (rezultat, datum, skupina, krog, uvrstitev, izjava, število, napredovanje) mora biti neposredno podprt z enim od uporabljenih virov;
+- ne sklepaj o formatu tekmovanja ali nadaljnjih fazah, če to ni izrecno navedeno v virih;
 - če se viri razlikujejo, jasno in nevtralno opiši razliko;
 - ne uporabljaj senzacionalističnega jezika, praznih fraz ali umetnega SEO polnila;
+- ne uporabljaj generičnih podnaslovov »Uvod«, »Zaključek« ali »Povzetek«;
+- ne ponavljaj uvodnega stavka ali iste ugotovitve v zaključnem odstavku;
 - uporabljaj konkretne samostalnike in glagole, ne generičnih formulacij;
 - pomembne trditve naj bodo sledljive virom.
 

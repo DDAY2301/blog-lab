@@ -17,6 +17,22 @@ def _clean(text: str, limit: int = 720) -> str:
         text = text[:limit - 1].rsplit(" ", 1)[0] + "…"
     return text
 
+def _summary(text: str, limit: int = 720) -> str:
+    cleaned = _clean(text, 4000)
+    if not cleaned:
+        return ""
+    pieces = re.split(r"(?<=[.!?])\s+", cleaned)
+    out = []
+    seen = set()
+    for piece in pieces:
+        normalized = re.sub(r"\s+", " ", piece).strip().lower()
+        if not normalized or normalized in seen:
+            continue
+        seen.add(normalized)
+        out.append(piece.strip())
+    return _clean(" ".join(out), limit)
+
+
 def _headline(title: str, category_label: str) -> str:
     title = _clean(title, 115)
     title = re.sub(r"\s+-\s+[^-]{2,45}$", "", title).strip()
@@ -38,7 +54,7 @@ def build_digest(items: list[dict], category: str, max_items: int = 5) -> dict:
 
     lead_item = chosen[0]
     title = _headline(lead_item.get("title", ""), cat_label)
-    lead_summary = _clean(lead_item.get("summary", ""))
+    lead_summary = _summary(lead_item.get("summary", ""))
     if not lead_summary:
         lead_summary = (
             "Najpomembnejši razpoložljivi vir objavlja novo zgodbo, vendar RSS zapis "
@@ -66,7 +82,7 @@ def build_digest(items: list[dict], category: str, max_items: int = 5) -> dict:
 
     for item in chosen:
         section_title = _section_title(item.get("title", ""))
-        summary = _clean(item.get("summary", ""))
+        summary = _summary(item.get("summary", ""))
         if not summary:
             summary = (
                 "Vir je objavil novo vsebino s tem naslovom, vendar javni RSS zapis ne vsebuje "

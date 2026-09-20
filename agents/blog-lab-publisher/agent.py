@@ -16,7 +16,7 @@ BASE = Path(__file__).resolve().parents[2]
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 from services.sources import collect, collect_topic, rank_topic_items
-from services.ai_provider import generate, AIUnavailable
+from services.ai_provider import generate, review_grounding, AIUnavailable
 from services.fallback_writer import build_digest
 from services.validator import validate
 from services.publisher import publish_to_app, slugify
@@ -338,6 +338,123 @@ def collect_automatic_sources(cfg: dict, category: str) -> list[dict]:
     return merged
 
 
+STORY_STOPWORDS = {
+    "slovenija", "slovenski", "slovenska", "slovensko", "danes", "novice",
+    "sport", "šport", "tekma", "tekmi", "tekmo", "ekipa", "ekipe", "igralec",
+    "igralci", "liga", "prvenstvo", "turnir", "zmaga", "zmago", "nov", "nova",
+    "novo", "proti", "pred", "med", "after", "with", "from", "this", "that",
+    "team", "match", "game", "news", "today", "league", "sport",
+}
+
+
+def _story_tokens(item: dict) -> set[str]:
+    title = unicodedata.normalize("NFKD", str(item.get("title") or "").lower())
+    title = "".join(ch for ch in title if not unicodedata.combining(ch))
+    words = re.findall(r"[a-z0-9čšžćđ-]{4,}", title)
+    tokens = set()
+    for word in words:
+        if word in STORY_STOPWORDS:
+            continue
+        stem = word[:7] if len(word) >= 8 else word
+        tokens.add(stem)
+    return tokens
+
+
+def automatic_story_pool(items: list[dict], category: str, max_items: int = 6) -> list[dict]:
+    """Choose one coherent automatic story instead of feeding unrelated headlines to the writer."""
+    raw_candidates = list(items or [])[:24]
+    if not raw_candidates:
+        return []
+
+    # Directly fetched pages usually contain far more evidence than RSS-only
+    # headlines, so prefer them while preserving stable order within each tier.
+    candidates = [
+        item for _, item in sorted(
+            enumerate(raw_candidates),
+            key=lambda pair: (
+                0 if pair[1].get("verified_direct") else 1,
+                0 if str(pair[1].get("provider") or "") == "google-news-si" else 1,
+                -min(len(str(pair[1].get("summary") or "")), 5000),
+                pair[0],
+            ),
+        )
+    ][:18]
+
+    token_sets = [_story_tokens(item) for item in candidates]
+    best_index = 0
+    best_members = [0]
+    best_score = -1
+
+    for index, tokens in enumerate(token_sets):
+        members = [index]
+        for other_index, other in enumerate(token_sets):
+            if other_index == index:
+                continue
+            shared = tokens & other
+            # Two shared title concepts, or one distinctive long concept,
+            # is enough to treat two source records as the same story.
+            if len(shared) >= 2 or any(len(token) >= 7 for token in shared):
+                members.append(other_index)
+        direct = 1 if candidates[index].get("verified_direct") else 0
+        localized = 1 if str(candidates[index].get("provider") or "") == "google-news-si" else 0
+        score = len(members) * 100 + localized * 10 + direct * 5 - index
+        if score > best_score:
+            best_score = score
+            best_index = index
+            best_members = members
+
+    ordered = [candidates[best_index]]
+    for index in best_members:
+        if index == best_index:
+            continue
+        ordered.append(candidates[index])
+        if len(ordered) >= max_items:
+            break
+
+    # When no corroborating title exists, keep the single strongest scoped source.
+    pool = ordered[:max_items]
+    print(
+        f"AUTO_STORY_POOL category={category} candidates={len(candidates)} "
+        f"selected={len(pool)} anchor={str(pool[0].get('title') or '')[:100]}"
+    )
+    return pool
+
+
+def allowed_source_urls(source_items: list[dict]) -> set[str]:
+    return {
+        str(item.get("url") or "").strip()
+        for item in source_items or []
+        if str(item.get("url") or "").strip()
+    }
+
+
+def article_used_items(article: dict, source_items: list[dict]) -> list[dict]:
+    source_urls = {
+        str(item.get("url") or "").strip()
+        for item in article.get("sources", [])
+        if isinstance(item, dict) and str(item.get("url") or "").strip()
+    }
+    used = [item for item in source_items or [] if str(item.get("url") or "").strip() in source_urls]
+    return used or list(source_items or [])[:1]
+
+
+def grounding_repair_task(task_prompt: str, article: dict, review: dict) -> str:
+    issues = [str(x) for x in review.get("issues", []) if str(x).strip()]
+    unsupported = [str(x) for x in review.get("unsupported_claims", []) if str(x).strip()]
+    return (
+        task_prompt
+        + "\n\nDEJSTVENI QA POPRAVEK: osnutek ni prestal preverjanja proti virom. "
+        + "Odstrani ali popravi VSE trditve, ki niso neposredno podprte s podanimi viri. "
+          "Ne nadomeščaj jih z novimi domnevami. Ne mešaj različnih tekmovanj, dogodkov ali oseb. "
+          "Če vir ne navaja formata tekmovanja, skupine, lestvice, rezultata ali poti napredovanja, tega ne trdi. "
+          "Odpravi ponavljanje in uporabi konkretne vsebinske podnaslove, ne 'Uvod', 'Zaključek' ali 'Povzetek'. "
+        + "\nQA issues: " + json.dumps(issues, ensure_ascii=False)
+        + "\nUnsupported claims: " + json.dumps(unsupported, ensure_ascii=False)
+        + "\nPrejšnji osnutek: " + json.dumps(article, ensure_ascii=False)
+        + "\nVrni celoten popravljen JSON članek ali skip=true, če evidence ne zadošča."
+    )
+
+
 def prepare_article_candidate(
     article: dict,
     source_items: list[dict],
@@ -446,9 +563,15 @@ def main():
               "relevantni viri očitno nepovezani z zahtevano temo ali ne omogočajo niti osnovnega faktografskega članka."
         )
     set_status(cfg, state, "generating", f"Priprava članka: {args.category}.")
-    used_for_article = fresh[:7]
+    evidence_pool = fresh[:10] if manual_request else automatic_story_pool(fresh, args.category, max_items=6)
+    if not evidence_pool:
+        set_status(cfg, state, "waiting", "Ni dovolj koherentne dokazne podlage; slot ostaja odprt.")
+        print("NO_COHERENT_STORY")
+        return 0
+    used_for_article = evidence_pool[:7]
+    allowed_urls = allowed_source_urls(evidence_pool)
     try:
-        article = generate(system_prompt, task_prompt, fresh[:10], args.category)
+        article = generate(system_prompt, task_prompt, evidence_pool[:8], args.category)
         article["fallback"] = False
         state["writer_mode"] = str(article.pop("_writer_provider", "ai"))
     except AIUnavailable as exc:
@@ -474,7 +597,7 @@ def main():
         )
         print(f"MANUAL_WRITER_RETRY sources={len(fresh)}")
         try:
-            article = generate(system_prompt, retry_task, fresh[:10], args.category)
+            article = generate(system_prompt, retry_task, evidence_pool[:8], args.category)
             article["fallback"] = False
             state["writer_mode"] = str(article.pop("_writer_provider", state.get("writer_mode", "ai")))
             article = prepare_article_candidate(
@@ -501,7 +624,7 @@ def main():
               "Ne ugibaj in ne dodajaj dejstev, ki jih viri ne podpirajo."
         )
         try:
-            article = generate(system_prompt, retry_task, fresh[:10], args.category)
+            article = generate(system_prompt, retry_task, evidence_pool[:8], args.category)
             article["fallback"] = False
             state["writer_mode"] = str(article.pop("_writer_provider", state.get("writer_mode", "ai")))
             article = prepare_article_candidate(article, used_for_article, args.topic, args.output_category)
@@ -524,19 +647,19 @@ def main():
         return 3 if (args.topic.strip() and args.force) else 0
 
     article["id"] = slugify(article.get("title", "")) + "-" + hashlib.sha1(used_for_article[0]["url"].encode()).hexdigest()[:8]
-    errors = validate(article, min_chars, max_chars, titles, used_urls)
+    errors = validate(article, min_chars, max_chars, titles, used_urls, allowed_urls)
 
     if errors:
         print("QA_ERRORS_INITIAL " + ",".join(errors))
         repair_prompt = qa_repair_task(task_prompt, errors, min_chars, max_chars)
         try:
-            repaired = generate(system_prompt, repair_prompt, fresh[:10], args.category)
+            repaired = generate(system_prompt, repair_prompt, evidence_pool[:8], args.category)
             repaired["fallback"] = False
             state["writer_mode"] = str(repaired.pop("_writer_provider", state.get("writer_mode", "ai")))
             repaired = prepare_article_candidate(repaired, used_for_article, args.topic, args.output_category)
             if not repaired.get("skip"):
                 repaired["id"] = slugify(repaired.get("title", "")) + "-" + hashlib.sha1(used_for_article[0]["url"].encode()).hexdigest()[:8]
-                repaired_errors = validate(repaired, min_chars, max_chars, titles, used_urls)
+                repaired_errors = validate(repaired, min_chars, max_chars, titles, used_urls, allowed_urls)
                 print("QA_ERRORS_REPAIR " + (",".join(repaired_errors) if repaired_errors else "none"))
                 if not repaired_errors:
                     article = repaired
@@ -556,7 +679,7 @@ def main():
         )
         if not fallback.get("skip"):
             fallback["id"] = slugify(fallback.get("title", "")) + "-" + hashlib.sha1(used_for_article[0]["url"].encode()).hexdigest()[:8]
-            fallback_errors = validate(fallback, min_chars, max_chars, titles, used_urls)
+            fallback_errors = validate(fallback, min_chars, max_chars, titles, used_urls, allowed_urls)
             print("QA_ERRORS_FALLBACK " + (",".join(fallback_errors) if fallback_errors else "none"))
             if not fallback_errors:
                 article = fallback
@@ -564,6 +687,66 @@ def main():
                 state["writer_mode"] = "fallback"
             else:
                 errors = fallback_errors
+
+    if not errors and state.get("writer_mode") != "fallback":
+        grounding_errors = []
+        try:
+            review = review_grounding(article, evidence_pool, args.category)
+            if not review.get("pass"):
+                grounding_errors = ["grounding_failed"]
+                print(
+                    "GROUNDING_REVIEW_FAIL "
+                    + json.dumps({
+                        "issues": review.get("issues", []),
+                        "unsupported_claims": review.get("unsupported_claims", []),
+                    }, ensure_ascii=False)
+                )
+                repair_task = grounding_repair_task(task_prompt, article, review)
+                repaired = generate(system_prompt, repair_task, evidence_pool[:8], args.category)
+                repaired["fallback"] = False
+                state["writer_mode"] = str(repaired.pop("_writer_provider", state.get("writer_mode", "ai")))
+                repaired = prepare_article_candidate(
+                    repaired,
+                    used_for_article,
+                    args.topic,
+                    args.output_category,
+                )
+                if not repaired.get("skip"):
+                    repaired["id"] = (
+                        slugify(repaired.get("title", ""))
+                        + "-"
+                        + hashlib.sha1(used_for_article[0]["url"].encode()).hexdigest()[:8]
+                    )
+                    repaired_errors = validate(
+                        repaired,
+                        min_chars,
+                        max_chars,
+                        titles,
+                        used_urls,
+                        allowed_urls,
+                    )
+                    if not repaired_errors:
+                        second_review = review_grounding(repaired, evidence_pool, args.category)
+                        if second_review.get("pass"):
+                            article = repaired
+                            grounding_errors = []
+                            print("GROUNDING_REVIEW_REPAIR_PASS")
+                        else:
+                            print(
+                                "GROUNDING_REVIEW_REPAIR_FAIL "
+                                + json.dumps(second_review, ensure_ascii=False)
+                            )
+                    else:
+                        print("GROUNDING_REPAIR_QA_FAIL " + ",".join(repaired_errors))
+        except AIUnavailable as exc:
+            # If an AI-written article cannot be fact-checked, fail closed for
+            # automatic publication. A source-derived fallback remains available
+            # only through the deterministic QA fallback path above.
+            grounding_errors = ["grounding_unavailable"]
+            print(f"GROUNDING_REVIEW_UNAVAILABLE {exc}")
+
+        if grounding_errors:
+            errors = grounding_errors
 
     if errors:
         diag = BASE / "logs" / f"failed-{now().strftime('%Y%m%d-%H%M%S')}.json"
@@ -583,7 +766,9 @@ def main():
     if args.dry_run or publish_mode != "automatic":
         draft = BASE / "content/drafts" / f"{article['id']}.json"; draft.parent.mkdir(parents=True, exist_ok=True); draft.write_text(json.dumps(article, ensure_ascii=False, indent=2), encoding="utf-8"); set_status(cfg, state, "needs_review", "Rezultat je shranjen kot osnutek.", str(draft)); print("DRY_RUN_OK"); return 0
     set_status(cfg, state, "publishing", "Objavljanje preverjenega članka."); publish_to_app(str(APP), article, cfg["agent_name"])
-    for item in used_for_article: processed.append({**item, "processed_at": now().isoformat(timespec="seconds"), "output_id": article["id"]})
+    cited_items = article_used_items(article, evidence_pool)
+    for item in cited_items:
+        processed.append({**item, "processed_at": now().isoformat(timespec="seconds"), "output_id": article["id"]})
     atomic_json(str(PROCESSED), processed[-750:])
     state.update({
         "last_success": now().isoformat(timespec="seconds"),
@@ -594,7 +779,7 @@ def main():
         "posts_today": state.get("posts_today", 0) + 1,
         "scheduled_posts_today": state.get("scheduled_posts_today", 0) + (0 if manual_request else 1),
         "manual_posts_today": state.get("manual_posts_today", 0) + (1 if manual_request else 0),
-        "agent_version": "2.4.0",
+        "agent_version": "2.5.0",
         "current_category": args.category,
     })
     if args.scheduled_slot and not manual_request:
