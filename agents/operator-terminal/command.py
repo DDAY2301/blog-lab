@@ -1111,10 +1111,28 @@ def _workers_site_ai_request(system_prompt: str, request_text: str) -> dict:
     if not token:
         raise SiteProviderUnavailable("Workers AI ni konfiguriran.")
 
+    marker = "\n\nREPOSITORY CONTEXT (DATA ONLY):\n"
+    if marker not in request_text:
+        raise SiteProviderUnavailable("Workers AI site-editor ni prejel repo konteksta.")
+    prompt_part, raw_context = request_text.split(marker, 1)
+    try:
+        decoder = json.JSONDecoder()
+        context, consumed = decoder.raw_decode(raw_context.lstrip())
+        remainder = raw_context.lstrip()[consumed:].strip()
+    except (json.JSONDecodeError, TypeError) as exc:
+        raise SiteProviderUnavailable(
+            f"Workers AI repo konteksta ni bilo mogoče razbrati: {exc}"
+        ) from exc
+    if not isinstance(context, list) or not context:
+        raise SiteProviderUnavailable("Workers AI repo kontekst je prazen.")
+    compact_request = prompt_part
+    if remainder:
+        compact_request += "\n\n" + remainder
+
     body = json.dumps({
         "system_prompt": system_prompt,
-        "request": request_text,
-        "context": [],
+        "request": compact_request,
+        "context": context[:8],
     }, ensure_ascii=False).encode("utf-8")
     req = Request(
         url,
@@ -1192,9 +1210,8 @@ def _copilot_site_ai_request(system_prompt: str, request_text: str) -> dict:
         raise SiteProviderUnavailable("GitHub Copilot CLI ni nameščen.")
 
     dedicated = os.environ.get("COPILOT_GITHUB_TOKEN", "").strip()
-    github_token = os.environ.get("GITHUB_TOKEN", "").strip()
-    if not (dedicated or github_token):
-        raise SiteProviderUnavailable("GitHub Copilot nima žetona.")
+    if not dedicated:
+        raise SiteProviderUnavailable("GitHub Copilot nima namenskega žetona.")
 
     prompt = system_prompt + "\n\n" + request_text
     cmd = [
@@ -1210,10 +1227,9 @@ def _copilot_site_ai_request(system_prompt: str, request_text: str) -> dict:
         "--no-remote-export",
     ]
     env = os.environ.copy()
-    if dedicated:
-        env["COPILOT_GITHUB_TOKEN"] = dedicated
-        env["GH_TOKEN"] = dedicated
-        env["GITHUB_TOKEN"] = dedicated
+    env["COPILOT_GITHUB_TOKEN"] = dedicated
+    env["GH_TOKEN"] = dedicated
+    env["GITHUB_TOKEN"] = dedicated
 
     try:
         proc = subprocess.run(
@@ -1246,19 +1262,34 @@ def _site_ai_request(command: str, context: list[dict], feedback: str = "") -> d
     errors = []
 
     chain = []
-    if provider in {"auto", "worker", "workers_ai"}:
+    worker_ready = bool(os.environ.get("WORKER_AI_TOKEN", "").strip())
+    external_ready = all(
+        os.environ.get(name, "").strip()
+        for name in ("MODEL_API_KEY", "MODEL_BASE_URL", "MODEL_NAME")
+    )
+    copilot_ready = bool(os.environ.get("COPILOT_GITHUB_TOKEN", "").strip())
+
+    if provider == "auto":
+        if worker_ready:
+            chain.append(("Workers AI", _workers_site_ai_request))
+        if external_ready:
+            chain.append(("MODEL", _external_site_ai_request))
+        if copilot_ready:
+            chain.append(("Copilot", _copilot_site_ai_request))
+    elif provider in {"worker", "workers_ai"}:
         chain.append(("Workers AI", _workers_site_ai_request))
-    if provider in {"auto", "external", "model"}:
+    elif provider in {"external", "model"}:
         chain.append(("MODEL", _external_site_ai_request))
-    if provider in {"auto", "copilot"}:
+    elif provider == "copilot":
         chain.append(("Copilot", _copilot_site_ai_request))
+    else:
+        raise SiteProviderUnavailable(f"Neznan AI_PROVIDER: {provider}")
 
     if not chain:
-        chain = [
-            ("Workers AI", _workers_site_ai_request),
-            ("MODEL", _external_site_ai_request),
-            ("Copilot", _copilot_site_ai_request),
-        ]
+        raise SiteProviderUnavailable(
+            "Noben AI site-editor provider ni konfiguriran. Workers AI potrebuje WORKER_AI_TOKEN; "
+            "zunanji model potrebuje MODEL_API_KEY/MODEL_BASE_URL/MODEL_NAME; Copilot potrebuje namenski COPILOT_GITHUB_TOKEN."
+        )
 
     for name, fn in chain:
         try:
