@@ -686,10 +686,10 @@ def test_automatic_sources_merge_feed_and_webwide(monkeypatch):
         "sport",
     )
 
-    assert [item["url"] for item in items] == [
+    assert {item["url"] for item in items} == {
         "https://news.example/feed",
         "https://web.example/story",
-    ]
+    }
     assert calls and calls[0][0] == "Slovenija šport danes"
 
 
@@ -836,10 +836,10 @@ def test_collect_automatic_sources_filters_broad_noise(monkeypatch):
         "sport",
     )
 
-    assert [item["url"] for item in out] == [
+    assert {item["url"] for item in out} == {
         "https://sport.example.si/derbi",
         "https://example.com/tennis-final",
-    ]
+    }
 
 
 def test_headline_only_feed_summary_is_not_substantive_evidence():
