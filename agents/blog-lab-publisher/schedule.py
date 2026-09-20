@@ -64,6 +64,7 @@ def resolve_due_slot(control: dict, state: dict, current: datetime | None = None
     schedule = control.get("schedule") or {}
     slots = schedule.get("slots") or []
     today = current.date().isoformat()
+    explicit_done_field = "scheduled_slots_done" in state
     done = set(state.get("scheduled_slots_done") or [])
     deferred = set(state.get("scheduled_slots_deferred") or []) if state.get("posts_date") == today else set()
     if deferred and _transient_writer_hold(state):
@@ -71,19 +72,19 @@ def resolve_due_slot(control: dict, state: dict, current: datetime | None = None
         deferred = set()
 
     # completed slot IDs represent actual successful scheduled publications.
-    # Reconcile any legacy/bad state where a slot was marked done without a
-    # corresponding scheduled post count.
+    # If explicit slot IDs exist, trust them over counters. Counters can drift
+    # after partial failures; slot IDs are the source of truth for catch-up.
     if state.get("posts_date") == today:
-        actual_count = max(0, int(state.get("scheduled_posts_today") or 0))
         ordered_today = [_slot_id(today, slot) for slot in slots]
-        trusted = [slot_id for slot_id in ordered_today if slot_id in done][:actual_count]
-        done = set(trusted)
-
-        # Migration safety: before scheduled_slots_done existed, preserve the
-        # meaning of scheduled_posts_today by treating the first N slots as done.
-        if actual_count and len(done) < actual_count:
+        if explicit_done_field:
+            done = {slot_id for slot_id in ordered_today if slot_id in done}
+        else:
+            # Migration safety for very old state files from before
+            # scheduled_slots_done existed: preserve scheduled_posts_today by
+            # treating the first N non-deferred slots as done.
+            actual_count = max(0, int(state.get("scheduled_posts_today") or 0))
             eligible = [slot_id for slot_id in ordered_today if slot_id not in deferred]
-            done = set(eligible[:actual_count])
+            done = set(eligible[:actual_count]) if actual_count else set()
 
     now_minutes = current.hour * 60 + current.minute
     for slot in slots:
