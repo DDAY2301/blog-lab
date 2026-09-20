@@ -183,6 +183,71 @@ def mark_scheduled_slot_done(state: dict, slot_id: str) -> None:
     state["scheduled_slots_done"] = done[-12:]
 
 
+AUTO_SEARCH_QUERIES = {
+    "sport": "Slovenija šport danes",
+    "politika": "Slovenija politika danes",
+    "aktualno": "Slovenija aktualne novice danes",
+}
+
+
+def _merge_source_groups(*groups: list[dict], limit: int = 30) -> list[dict]:
+    out = []
+    seen = set()
+    for group in groups:
+        for item in group or []:
+            key = str(item.get("url") or item.get("hash") or "").strip()
+            if not key or key in seen:
+                continue
+            seen.add(key)
+            out.append(item)
+            if len(out) >= limit:
+                return out
+    return out
+
+
+def collect_automatic_sources(cfg: dict, category: str) -> list[dict]:
+    limit = int(cfg.get("max_source_items", 30))
+    primary = collect(cfg.get("input_sources", []), category, limit)
+    broad_query = AUTO_SEARCH_QUERIES.get(category, f"Slovenija {category} danes")
+    try:
+        broad = collect_topic(broad_query, category, limit)
+    except Exception as exc:
+        print(f"WARN automatic web-wide source search failed: {exc}")
+        broad = []
+    merged = _merge_source_groups(primary, broad, limit=limit)
+    print(
+        f"AUTO_SOURCES category={category} primary={len(primary)} "
+        f"webwide={len(broad)} merged={len(merged)}"
+    )
+    return merged
+
+
+def prepare_article_candidate(
+    article: dict,
+    source_items: list[dict],
+    topic: str,
+    output_category: str,
+) -> dict:
+    article = dict(article or {})
+    if output_category.strip():
+        article["category"] = output_category.strip()[:40]
+    article = apply_media_policy(article, source_items, topic)
+    return article
+
+
+def qa_repair_task(task_prompt: str, errors: list[str], min_chars: int, max_chars: int) -> str:
+    return (
+        task_prompt
+        + "\n\nQA POPRAVEK: prejšnji osnutek ni prestal avtomatske validacije. "
+        + "Napake: " + ", ".join(errors)
+        + f". Vrni celoten popravljen JSON članek. Content mora imeti med {min_chars} in {max_chars} znakov. "
+          "Obvezno vrni title, excerpt, seoDescription, content, category, tags in sources. "
+          "excerpt mora biti največ 240 znakov. sources naj vsebuje samo HTTPS URL-je iz podanih virov. "
+          "Ne izmišljaj URL-jev, citatov ali dejstev. Če je naslov podvojen, izberi stvaren drugačen naslov. "
+          "Ne vračaj skip=true samo zaradi dolžine; besedilo prilagodi dejansko podprtim informacijam."
+    )
+
+
 def existing_titles() -> set[str]:
     if not APP.exists(): return set()
     text = APP.read_text(encoding="utf-8", errors="ignore")
@@ -236,7 +301,7 @@ def main():
             print("NO_TOPIC_SOURCES")
             return 3
     else:
-        items = collect(cfg.get("input_sources", []), args.category, int(cfg.get("max_source_items", 30)))
+        items = collect_automatic_sources(cfg, args.category)
     seen = {x.get("hash") for x in processed}; fresh = [x for x in items if x.get("hash") not in seen]
     # Authenticated manual topic requests use --force. If current sources were already
     # observed by the autonomous cycle, allow reusing them for the explicit editorial
@@ -246,10 +311,7 @@ def main():
     if args.topic.strip() and fresh:
         fresh = rank_topic_items(args.topic, fresh)
     if not fresh:
-        if args.scheduled_slot and not manual_request:
-            mark_scheduled_slot_done(state, args.scheduled_slot)
-            atomic_json(str(STATE), state)
-        set_status(cfg, state, "completed", f"Ni novih vsebin za kategorijo {args.category}.")
+        set_status(cfg, state, "waiting", f"Ni novih vsebin za kategorijo {args.category}; slot ostaja odprt za naslednji catch-up.")
         print("NO_NEW_CONTENT")
         return 3 if (args.topic.strip() and args.force) else 0
     system_prompt = (HERE / "prompts/system.md").read_text(encoding="utf-8")
@@ -277,9 +339,12 @@ def main():
         print(f"INFO AI fallback: {exc}")
         article = build_digest(used_for_article, args.category, max_items=5)
         state["writer_mode"] = "fallback"
-    if args.output_category.strip():
-        article["category"] = args.output_category.strip()[:40]
-    article = apply_media_policy(article, used_for_article, args.topic)
+    article = prepare_article_candidate(
+        article,
+        used_for_article,
+        args.topic,
+        args.output_category,
+    )
     if article.get("skip") and args.topic.strip() and args.force and len(fresh) >= 3:
         # A manual editorial request gets one bounded second pass. The second
         # pass may still refuse genuinely unrelated evidence, but it should not
@@ -300,19 +365,99 @@ def main():
         except AIUnavailable as exc:
             print(f"INFO manual retry unavailable: {exc}")
 
+    min_chars = int(cfg["min_article_chars"])
+    max_chars = int(cfg["max_article_chars"])
+    used_urls = set() if (args.topic.strip() and args.force) else {x.get("url") for x in processed if x.get("url")}
+    titles = existing_titles()
+
+    if article.get("skip") and not manual_request:
+        print(f"AUTO_WRITER_RETRY reason={str(article.get('reason') or '')[:240]}")
+        retry_task = (
+            task_prompt
+            + "\n\nSAMODEJNI PONOVNI POSKUS: prvi osnutek je vrnil skip. "
+              "Iz podanih preverljivih virov izberi najbolje podprto konkretno zgodbo in napiši uporaben "
+              "faktografski članek. Če gradiva ni za dolg članek, napiši krajši, vendar zaokrožen članek. "
+              "Ne ugibaj in ne dodajaj dejstev, ki jih viri ne podpirajo."
+        )
+        try:
+            article = generate(system_prompt, retry_task, fresh[:10], args.category)
+            article["fallback"] = False
+            state["writer_mode"] = str(article.pop("_writer_provider", state.get("writer_mode", "ai")))
+            article = prepare_article_candidate(article, used_for_article, args.topic, args.output_category)
+        except AIUnavailable as exc:
+            print(f"INFO automatic retry unavailable: {exc}")
+
+    if article.get("skip") and not manual_request:
+        print("AUTO_FALLBACK_AFTER_SKIP")
+        article = prepare_article_candidate(
+            build_digest(used_for_article, args.category, max_items=min(7, len(used_for_article))),
+            used_for_article,
+            args.topic,
+            args.output_category,
+        )
+        state["writer_mode"] = "fallback"
+
     if article.get("skip"):
-        if args.scheduled_slot and not manual_request:
-            mark_scheduled_slot_done(state, args.scheduled_slot)
-            atomic_json(str(STATE), state)
-        set_status(cfg, state, "completed", article.get("reason", "Ni primerne teme."))
+        set_status(cfg, state, "waiting", article.get("reason", "Ni primerne teme; slot ostaja odprt."))
         print("NO_SUITABLE_CONTENT")
         return 3 if (args.topic.strip() and args.force) else 0
+
     article["id"] = slugify(article.get("title", "")) + "-" + hashlib.sha1(used_for_article[0]["url"].encode()).hexdigest()[:8]
-    used_urls = set() if (args.topic.strip() and args.force) else {x.get("url") for x in processed if x.get("url")}
-    errors = validate(article, int(cfg["min_article_chars"]), int(cfg["max_article_chars"]), existing_titles(), used_urls)
+    errors = validate(article, min_chars, max_chars, titles, used_urls)
+
     if errors:
-        diag = BASE / "logs" / f"failed-{now().strftime('%Y%m%d-%H%M%S')}.json"; diag.parent.mkdir(parents=True, exist_ok=True); diag.write_text(json.dumps({"category": args.category, "errors": errors, "article": article}, ensure_ascii=False, indent=2), encoding="utf-8")
-        state["last_error"] = ",".join(errors); state["consecutive_failures"] = state.get("consecutive_failures", 0) + 1; state["last_failure"] = now().isoformat(timespec="seconds"); atomic_json(str(STATE), state); set_status(cfg, state, "failed", "QA ni uspel."); return 2
+        print("QA_ERRORS_INITIAL " + ",".join(errors))
+        repair_prompt = qa_repair_task(task_prompt, errors, min_chars, max_chars)
+        try:
+            repaired = generate(system_prompt, repair_prompt, fresh[:10], args.category)
+            repaired["fallback"] = False
+            state["writer_mode"] = str(repaired.pop("_writer_provider", state.get("writer_mode", "ai")))
+            repaired = prepare_article_candidate(repaired, used_for_article, args.topic, args.output_category)
+            if not repaired.get("skip"):
+                repaired["id"] = slugify(repaired.get("title", "")) + "-" + hashlib.sha1(used_for_article[0]["url"].encode()).hexdigest()[:8]
+                repaired_errors = validate(repaired, min_chars, max_chars, titles, used_urls)
+                print("QA_ERRORS_REPAIR " + (",".join(repaired_errors) if repaired_errors else "none"))
+                if not repaired_errors:
+                    article = repaired
+                    errors = []
+                else:
+                    errors = repaired_errors
+        except AIUnavailable as exc:
+            print(f"INFO QA repair unavailable: {exc}")
+
+    if errors:
+        print("QA_FALLBACK_ATTEMPT " + ",".join(errors))
+        fallback = prepare_article_candidate(
+            build_digest(used_for_article, args.category, max_items=min(7, len(used_for_article))),
+            used_for_article,
+            args.topic,
+            args.output_category,
+        )
+        if not fallback.get("skip"):
+            fallback["id"] = slugify(fallback.get("title", "")) + "-" + hashlib.sha1(used_for_article[0]["url"].encode()).hexdigest()[:8]
+            fallback_errors = validate(fallback, min_chars, max_chars, titles, used_urls)
+            print("QA_ERRORS_FALLBACK " + (",".join(fallback_errors) if fallback_errors else "none"))
+            if not fallback_errors:
+                article = fallback
+                errors = []
+                state["writer_mode"] = "fallback"
+            else:
+                errors = fallback_errors
+
+    if errors:
+        diag = BASE / "logs" / f"failed-{now().strftime('%Y%m%d-%H%M%S')}.json"
+        diag.parent.mkdir(parents=True, exist_ok=True)
+        diag.write_text(
+            json.dumps({"category": args.category, "errors": errors, "article": article}, ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
+        state["last_error"] = ",".join(errors)
+        state["consecutive_failures"] = state.get("consecutive_failures", 0) + 1
+        state["last_failure"] = now().isoformat(timespec="seconds")
+        atomic_json(str(STATE), state)
+        set_status(cfg, state, "failed", "QA ni uspel; slot ostaja odprt za naslednji catch-up.")
+        print("QA_FAILED_FINAL " + ",".join(errors))
+        return 2
     ctl = control(); publish_mode = ctl.get("publish_mode") or os.getenv("PUBLISH_MODE", "automatic").lower()
     if args.dry_run or publish_mode != "automatic":
         draft = BASE / "content/drafts" / f"{article['id']}.json"; draft.parent.mkdir(parents=True, exist_ok=True); draft.write_text(json.dumps(article, ensure_ascii=False, indent=2), encoding="utf-8"); set_status(cfg, state, "needs_review", "Rezultat je shranjen kot osnutek.", str(draft)); print("DRY_RUN_OK"); return 0
@@ -328,7 +473,7 @@ def main():
         "posts_today": state.get("posts_today", 0) + 1,
         "scheduled_posts_today": state.get("scheduled_posts_today", 0) + (0 if manual_request else 1),
         "manual_posts_today": state.get("manual_posts_today", 0) + (1 if manual_request else 0),
-        "agent_version": "2.3.0",
+        "agent_version": "2.4.0",
         "current_category": args.category,
     })
     if args.scheduled_slot and not manual_request:
