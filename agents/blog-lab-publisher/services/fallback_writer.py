@@ -130,7 +130,11 @@ def build_digest(items: list[dict], category: str, max_items: int = 5) -> dict:
         parts.append(
             "## Dodatni potrditveni viri\n\n"
             "Naslednji viri sodijo v isto osrednjo zgodbo, vendar njihovi razpoložljivi povzetki "
-            "ne dodajajo novih preverljivih dejstev, zato jih Blog Lab ne ponavlja kot umetno nove odstavke.\n\n"
+            "ne dodajajo novih preverljivih dejstev, zato jih Blog Lab ne ponavlja kot umetno nove odstavke. "
+            "Več objav o istem dogodku lahko pomaga preveriti, da zgodba ni osamljen zapis, ne pomeni pa, da je "
+            "vsaka podrobnost samodejno potrjena. Zato so spodaj ohranjene neposredne povezave, dodatne trditve pa "
+            "niso dodane brez jasne podpore v virih. Ta pristop daje prednost sledljivosti pred navideznim obsegom "
+            "besedila in preprečuje, da bi ponovljeni povzetki izgledali kot nova dejstva.\n\n"
             + "\n".join(corroborating)
         )
 
