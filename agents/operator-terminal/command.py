@@ -1616,8 +1616,10 @@ def workers_ai_site_command(command: str) -> None:
                 f"attempts={attempt} summary={summary[:240]}"
             )
             return
-        except SiteProviderUnavailable as exc:
-            raise SiteEditError(str(exc)) from exc
+        except SiteProviderUnavailable:
+            # Capacity/quota/provider outages cannot be repaired by generating a
+            # different patch plan inside the same workflow run.
+            raise
         except SiteEditError as exc:
             last_error = exc
             feedback = str(exc)
@@ -1634,6 +1636,16 @@ def site_command(command: str) -> None:
     try:
         workers_ai_site_command(command)
         return
+    except SiteProviderUnavailable as exc:
+        print("WORKERS_AI_SITE_DIAGNOSTIC_BEGIN", file=sys.stderr)
+        print(_safe_agent_log(str(exc), 1800), file=sys.stderr)
+        print("WORKERS_AI_SITE_DIAGNOSTIC_END", file=sys.stderr)
+        print(
+            "SITE_AI_CAPACITY_UNAVAILABLE AI model trenutno ni na voljo; "
+            "ukaz ni bil delno uporabljen in se v istem runu ne bo nesmiselno ponavljal.",
+            file=sys.stderr,
+        )
+        raise SystemExit(64)
     except SiteEditError as exc:
         print("WORKERS_AI_SITE_DIAGNOSTIC_BEGIN", file=sys.stderr)
         print(_safe_agent_log(str(exc), 1800), file=sys.stderr)
