@@ -593,54 +593,57 @@ def _topic_search_sources(query_text: str, category: str) -> list[dict]:
     ]
 
 def collect_topic(topic: str, category: str, max_items: int = 30) -> list[dict]:
-    queries = _topic_queries(topic)
+    queries = _topic_queries(topic)[:6]
     if not queries:
         return []
 
-    out = []
     provider_hits = {}
+    tasks = []
 
-    # Search multiple independent public indexes for every useful query variant.
-    # One provider failing must not prevent the others from contributing.
-    for query_text in queries[:6]:
-        for source in _topic_search_sources(query_text, category):
-            provider = source.get("provider", "unknown")
+    # Run independent public search indexes concurrently. A single slow or
+    # unavailable provider should not make the whole terminal command wait for
+    # each timeout in sequence.
+    with ThreadPoolExecutor(max_workers=10) as pool:
+        order = 0
+        for query_text in queries:
+            for source in _topic_search_sources(query_text, category):
+                provider = source.get("provider", "unknown")
+                future = pool.submit(fetch_feed, source, 10, 1)
+                tasks.append((order, provider, query_text, future))
+                order += 1
+
+            tasks.append((
+                order,
+                "gdelt",
+                query_text,
+                pool.submit(_gdelt_news, query_text, category, max_items),
+            ))
+            order += 1
+
+            tasks.append((
+                order,
+                "duckduckgo-web",
+                query_text,
+                pool.submit(_duckduckgo_web, query_text, category, min(max_items, 12)),
+            ))
+            order += 1
+
+        # Futures already run in parallel; consuming them in submission order
+        # keeps source ordering deterministic across runs.
+        out = []
+        for _, provider, query_text, future in sorted(tasks, key=lambda item: item[0]):
             try:
-                found = fetch_feed(source, timeout=10, retries=1)
-                if found:
-                    provider_hits[provider] = provider_hits.get(provider, 0) + len(found)
-                    out.extend(found)
+                found = future.result()
             except Exception as exc:
                 print(
                     f"WARN topic source provider={provider} "
                     f"query={query_text!r} error={exc}"
                 )
-
-        # GDELT is an additional worldwide news index and returns direct article
-        # URLs. Keep it independent from RSS providers so a search-engine outage
-        # does not collapse discovery.
-        try:
-            gdelt = _gdelt_news(query_text, category, max_items)
-            if gdelt:
-                provider_hits["gdelt"] = provider_hits.get("gdelt", 0) + len(gdelt)
-                out.extend(gdelt)
-        except Exception as exc:
-            print(f"WARN topic source provider=gdelt query={query_text!r} error={exc}")
-
-        # DuckDuckGo's non-JavaScript search broadens discovery beyond news
-        # indexes and Bing. Returned links are resolved to their direct HTTPS URL.
-        try:
-            ddg = _duckduckgo_web(query_text, category, min(max_items, 12))
-            if ddg:
-                provider_hits["duckduckgo-web"] = provider_hits.get("duckduckgo-web", 0) + len(ddg)
-                out.extend(ddg)
-        except Exception as exc:
-            print(f"WARN topic source provider=duckduckgo-web query={query_text!r} error={exc}")
-
-        # Enough diverse URLs have been found; do not keep hammering public
-        # indexes once we already have a healthy evidence pool.
-        if len(_dedupe_diverse(out, max_items, per_source=4)) >= max_items:
-            break
+                continue
+            if not found:
+                continue
+            provider_hits[provider] = provider_hits.get(provider, 0) + len(found)
+            out.extend(found)
 
     unique = _dedupe_diverse(out, max_items, per_source=4)
     unique = _enrich_direct_sources(unique, max_checks=min(14, max_items))
