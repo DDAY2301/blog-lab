@@ -17,7 +17,6 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 from services.sources import collect, collect_topic, filter_topic_items, rank_topic_items
 from services.ai_provider import generate, review_grounding, AIUnavailable
-from services.fallback_writer import build_digest
 from services.validator import validate
 from services.publisher import publish_to_app, slugify
 from services.state import load_json, atomic_json
@@ -612,9 +611,20 @@ def main():
             )
             print(f"ARTICLE_AI_UNAVAILABLE {exc}")
             return 4
-        print(f"INFO AI fallback: {exc}")
-        article = build_digest(used_for_article, args.category, max_items=5)
-        state["writer_mode"] = "fallback"
+        print(f"AUTO_AI_UNAVAILABLE {exc}")
+        state["writer_mode"] = "unavailable"
+        state["last_error"] = None
+        state["consecutive_failures"] = 0
+        if args.scheduled_slot:
+            defer_scheduled_slot(state, args.scheduled_slot, "ai_unavailable")
+        atomic_json(str(STATE), state)
+        set_status(
+            cfg,
+            state,
+            "waiting",
+            "AI pisec trenutno ni na voljo; samodejni termin je zadržan brez objave nekakovostnega fallbacka.",
+        )
+        return 0
     article = prepare_article_candidate(
         article,
         used_for_article,
@@ -668,18 +678,20 @@ def main():
         except AIUnavailable as exc:
             print(f"INFO automatic retry unavailable: {exc}")
 
-    if article.get("skip") and not manual_request:
-        print("AUTO_FALLBACK_AFTER_SKIP")
-        article = prepare_article_candidate(
-            build_digest(used_for_article, args.category, max_items=min(7, len(used_for_article))),
-            used_for_article,
-            args.topic,
-            args.output_category,
-        )
-        state["writer_mode"] = "fallback"
-
     if article.get("skip"):
-        set_status(cfg, state, "waiting", article.get("reason", "Ni primerne teme; slot ostaja odprt."))
+        if not manual_request and args.scheduled_slot:
+            defer_scheduled_slot(
+                state,
+                args.scheduled_slot,
+                str(article.get("reason") or "writer_skip")[:300],
+            )
+            atomic_json(str(STATE), state)
+        set_status(
+            cfg,
+            state,
+            "waiting",
+            article.get("reason", "Ni dovolj kakovostne podlage za objavo."),
+        )
         print("NO_SUITABLE_CONTENT")
         return 3 if (args.topic.strip() and args.force) else 0
 
@@ -706,26 +718,7 @@ def main():
         except AIUnavailable as exc:
             print(f"INFO QA repair unavailable: {exc}")
 
-    if errors and not manual_request:
-        print("QA_FALLBACK_ATTEMPT " + ",".join(errors))
-        fallback = prepare_article_candidate(
-            build_digest(used_for_article, args.category, max_items=min(7, len(used_for_article))),
-            used_for_article,
-            args.topic,
-            args.output_category,
-        )
-        if not fallback.get("skip"):
-            fallback["id"] = slugify(fallback.get("title", "")) + "-" + hashlib.sha1(used_for_article[0]["url"].encode()).hexdigest()[:8]
-            fallback_errors = validate(fallback, min_chars, max_chars, titles, used_urls, allowed_urls)
-            print("QA_ERRORS_FALLBACK " + (",".join(fallback_errors) if fallback_errors else "none"))
-            if not fallback_errors:
-                article = fallback
-                errors = []
-                state["writer_mode"] = "fallback"
-            else:
-                errors = fallback_errors
-
-    if not errors and state.get("writer_mode") != "fallback":
+    if not errors:
         grounding_errors = []
         try:
             review = review_grounding(article, evidence_pool, args.category)
@@ -777,50 +770,8 @@ def main():
                         print("GROUNDING_REPAIR_QA_FAIL " + ",".join(repaired_errors))
         except AIUnavailable as exc:
             print(f"GROUNDING_REVIEW_UNAVAILABLE {exc}")
-            if manual_request:
-                # A human-triggered article must never degrade into an unrelated
-                # deterministic digest merely because the AI reviewer is down.
-                grounding_errors = ["grounding_unavailable"]
-            else:
-                # Automatic slots may use a deterministic digest, but only from
-                # the already category-filtered/coherent evidence pool.
-                source_fallback = prepare_article_candidate(
-                    build_digest(
-                        used_for_article,
-                        args.category,
-                        max_items=min(7, len(used_for_article)),
-                    ),
-                    used_for_article,
-                    args.topic,
-                    args.output_category,
-                )
-                if not source_fallback.get("skip"):
-                    source_fallback["id"] = (
-                        slugify(source_fallback.get("title", ""))
-                        + "-"
-                        + hashlib.sha1(used_for_article[0]["url"].encode()).hexdigest()[:8]
-                    )
-                    source_fallback_errors = validate(
-                        source_fallback,
-                        min_chars,
-                        max_chars,
-                        titles,
-                        used_urls,
-                        allowed_urls,
-                    )
-                    if not source_fallback_errors:
-                        article = source_fallback
-                        state["writer_mode"] = "fallback"
-                        grounding_errors = []
-                        print("GROUNDING_FALLBACK_PASS")
-                    else:
-                        grounding_errors = ["grounding_unavailable"] + source_fallback_errors
-                        print(
-                            "GROUNDING_FALLBACK_QA_FAIL "
-                            + ",".join(source_fallback_errors)
-                        )
-                else:
-                    grounding_errors = ["grounding_unavailable"]
+            grounding_errors = ["grounding_unavailable"]
+
 
         if grounding_errors:
             errors = grounding_errors
