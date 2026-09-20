@@ -33,6 +33,21 @@ def _summary(text: str, limit: int = 720) -> str:
     return _clean(" ".join(out), limit)
 
 
+def _unique_summary(text: str, seen_sentences: set[str], limit: int = 720) -> str:
+    cleaned = _summary(text, 4000)
+    if not cleaned:
+        return ""
+    pieces = re.split(r"(?<=[.!?])\s+", cleaned)
+    out = []
+    for piece in pieces:
+        normalized = re.sub(r"\s+", " ", piece).strip().lower()
+        if not normalized or normalized in seen_sentences:
+            continue
+        seen_sentences.add(normalized)
+        out.append(piece.strip())
+    return _clean(" ".join(out), limit)
+
+
 def _headline(title: str, category_label: str) -> str:
     title = _clean(title, 115)
     title = re.sub(r"\s+-\s+[^-]{2,45}$", "", title).strip()
@@ -54,7 +69,8 @@ def build_digest(items: list[dict], category: str, max_items: int = 5) -> dict:
 
     lead_item = chosen[0]
     title = _headline(lead_item.get("title", ""), cat_label)
-    lead_summary = _summary(lead_item.get("summary", ""))
+    seen_sentences: set[str] = set()
+    lead_summary = _unique_summary(lead_item.get("summary", ""), seen_sentences)
     if not lead_summary:
         lead_summary = (
             "Najpomembnejši razpoložljivi vir objavlja novo zgodbo, vendar RSS zapis "
@@ -80,14 +96,19 @@ def build_digest(items: list[dict], category: str, max_items: int = 5) -> dict:
             "izjave in ocene so predstavljene kot stališča njihovih avtorjev ali virov, ne kot uredniška presoja."
         )
 
-    for item in chosen:
+    lead_source_name = _clean(lead_item.get("source_name", "vir"), 100)
+    lead_published = _clean(lead_item.get("published", ""), 100)
+    lead_meta = f"Vir: {lead_source_name}."
+    if lead_published:
+        lead_meta += f" Objavljeno: {lead_published}."
+    if lead_item.get("url"):
+        parts.append(f"{lead_meta} [Odpri izvirni vir]({lead_item.get('url', '')})")
+
+    for item in chosen[1:]:
         section_title = _section_title(item.get("title", ""))
-        summary = _summary(item.get("summary", ""))
+        summary = _unique_summary(item.get("summary", ""), seen_sentences)
         if not summary:
-            summary = (
-                "Vir je objavil novo vsebino s tem naslovom, vendar javni RSS zapis ne vsebuje "
-                "dovolj vsebine za zanesljivo dodatno razlago."
-            )
+            summary = "Ta vir potrjuje isto osrednjo zgodbo, vendar v razpoložljivem zapisu ne dodaja novih preverljivih podrobnosti."
         published = _clean(item.get("published", ""), 100)
         source_name = _clean(item.get("source_name", "vir"), 100)
         meta = f" Vir: {source_name}."

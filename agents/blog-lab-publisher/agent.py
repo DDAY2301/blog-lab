@@ -756,12 +756,27 @@ def main():
             encoding="utf-8",
         )
         state["last_error"] = ",".join(errors)
-        state["consecutive_failures"] = state.get("consecutive_failures", 0) + 1
-        state["last_failure"] = now().isoformat(timespec="seconds")
+        if manual_request:
+            state["consecutive_failures"] = state.get("consecutive_failures", 0) + 1
+            state["last_failure"] = now().isoformat(timespec="seconds")
+            atomic_json(str(STATE), state)
+            set_status(cfg, state, "failed", "QA ni uspel pri ročni uredniški zahtevi.")
+            print("QA_FAILED_FINAL " + ",".join(errors))
+            return 2
+
+        # Editorial insufficiency is not an infrastructure failure. Keep the
+        # automatic slot open and let a later catch-up use fresher evidence,
+        # without triggering the self-heal workflow to repeat the same draft.
+        state["consecutive_failures"] = 0
         atomic_json(str(STATE), state)
-        set_status(cfg, state, "failed", "QA ni uspel; slot ostaja odprt za naslednji catch-up.")
-        print("QA_FAILED_FINAL " + ",".join(errors))
-        return 2
+        set_status(
+            cfg,
+            state,
+            "waiting",
+            "QA je zadržal samodejni osnutek; slot ostaja odprt za nove ali boljše vire.",
+        )
+        print("QA_DEFERRED " + ",".join(errors))
+        return 0
     ctl = control(); publish_mode = ctl.get("publish_mode") or os.getenv("PUBLISH_MODE", "automatic").lower()
     if args.dry_run or publish_mode != "automatic":
         draft = BASE / "content/drafts" / f"{article['id']}.json"; draft.parent.mkdir(parents=True, exist_ok=True); draft.write_text(json.dumps(article, ensure_ascii=False, indent=2), encoding="utf-8"); set_status(cfg, state, "needs_review", "Rezultat je shranjen kot osnutek.", str(draft)); print("DRY_RUN_OK"); return 0

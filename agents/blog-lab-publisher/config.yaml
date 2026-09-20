@@ -36,6 +36,6 @@ maximum_outputs_per_run: 1
 maximum_outputs_per_day: 3
 approval_mode: "automatic"
 ai_provider: "worker"
-min_article_chars: 1200
+min_article_chars: 900
 max_article_chars: 10000
 max_source_items: 30

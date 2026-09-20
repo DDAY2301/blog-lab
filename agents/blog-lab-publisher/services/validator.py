@@ -1,6 +1,6 @@
 from __future__ import annotations
 import re
-from urllib.parse import urlparse
+from urllib.parse import parse_qsl, urlencode, urlparse, urlunparse
 
 REQUIRED = ("title", "excerpt", "seoDescription", "content", "category", "tags")
 
@@ -10,6 +10,30 @@ def _safe_external_url(value: str) -> bool:
         return parsed.scheme == "https" and bool(parsed.netloc)
     except Exception:
         return False
+
+TRACKING_QUERY_KEYS = {
+    "oc", "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content",
+    "gclid", "fbclid", "mc_cid", "mc_eid",
+}
+
+
+def _canonical_url(value: str) -> str:
+    try:
+        parsed = urlparse(str(value or "").strip())
+        if parsed.scheme != "https" or not parsed.netloc:
+            return ""
+        host = parsed.netloc.lower()
+        path = re.sub(r"/+$", "", parsed.path or "") or "/"
+        query = [
+            (key, val)
+            for key, val in parse_qsl(parsed.query, keep_blank_values=True)
+            if key.lower() not in TRACKING_QUERY_KEYS
+        ]
+        query.sort()
+        return urlunparse(("https", host, path, "", urlencode(query), ""))
+    except Exception:
+        return ""
+
 
 def _media_urls(article: dict) -> list[str]:
     urls = []
@@ -92,9 +116,13 @@ def validate(article: dict, min_chars: int, max_chars: int, used_titles: set[str
             errors.append("ze_uporabljen_vir")
 
     if allowed_urls is not None:
-        allowed = {str(url).strip() for url in allowed_urls if str(url or "").strip()}
+        allowed = {
+            _canonical_url(url)
+            for url in allowed_urls
+            if _canonical_url(url)
+        }
         for url in source_urls:
-            if url not in allowed:
+            if _canonical_url(url) not in allowed:
                 errors.append("vir_ni_v_podlagi")
 
     for url in _media_urls(article):

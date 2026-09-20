@@ -937,3 +937,35 @@ def test_grounding_repair_task_contains_review_and_draft():
     assert "Competition format is not in sources." in prompt
     assert "first world group" in prompt
     assert "Unsupported competition claim." in prompt
+
+
+def test_fallback_digest_does_not_repeat_lead_summary():
+    from services.fallback_writer import build_digest
+
+    lead = "Slovenija je po prvem dnevu dvoboja povedla z 2:0."
+    items = [
+        {
+            "source_name": "Vir A",
+            "category": "sport",
+            "title": "Slovenija povedla po prvem dnevu",
+            "url": "https://example.com/a",
+            "summary": lead,
+            "published": "2026-09-20",
+            "image_url": "",
+            "video_url": "",
+            "hash": "a",
+        },
+        {
+            "source_name": "Vir B",
+            "category": "sport",
+            "title": "Drugi vir potrjuje vodstvo",
+            "url": "https://example.com/b",
+            "summary": "Drugi vir potrjuje rezultat in dodaja odziv po zaključku prvega dne.",
+            "published": "2026-09-20",
+            "image_url": "",
+            "video_url": "",
+            "hash": "b",
+        },
+    ]
+    article = build_digest(items, "sport", max_items=2)
+    assert article["content"].count(lead) == 1
