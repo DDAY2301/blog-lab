@@ -10,7 +10,7 @@ Dovoljena operaterja sta fiksno omejena na:
 - `dan.grmusa@gmail.com`
 - `maj@klemenc.org`
 
-Vsak uporablja svoje geslo, shranjeno samo kot Cloudflare Worker secret. Po uspešni prijavi Worker ustvari podpisano `HttpOnly`, `Secure`, `SameSite=Strict` sejo z veljavnostjo 12 ur. Seja je podpisana s ključem, izpeljanim iz `TERMINAL_COMMAND_KEY` prek HKDF/HMAC in se ne shranjuje v GitHub repo.
+Vsak lahko uporablja svoje geslo, shranjeno samo kot Cloudflare Worker secret. Za združljivost s starejšo namestitvijo je podprt tudi skupni `LOGIN_PASSWORD`; če je nastavljen namenski uporabniški secret, ima ta prednost. Po uspešni prijavi Worker ustvari podpisano `HttpOnly`, `Secure`, `SameSite=Lax` sejo z veljavnostjo 12 ur. Seja je podpisana s HMAC ključem, izpeljanim iz `TERMINAL_COMMAND_KEY`, in se ne shranjuje v GitHub repo.
 
 ## Potrebni Cloudflare Worker secrets
 
@@ -18,6 +18,7 @@ Vsak uporablja svoje geslo, shranjeno samo kot Cloudflare Worker secret. Po uspe
 - `TERMINAL_COMMAND_KEY` — base64 zapis natanko 32 naključnih bajtov.
 - `DAN_LOGIN_PASSWORD` — močno geslo za `dan.grmusa@gmail.com`, najmanj 16 znakov.
 - `MAJ_LOGIN_PASSWORD` — močno geslo za `maj@klemenc.org`, najmanj 16 znakov.
+- `LOGIN_PASSWORD` — opcijski skupni kompatibilni fallback za obe dovoljeni e-pošti; uporablja se samo, če ga želiš ohraniti iz stare konfiguracije.
 
 V GitHub Actions secrets mora biti isti `TERMINAL_COMMAND_KEY`.
 
@@ -55,3 +56,20 @@ Varnostne poti `.github/`, `terminal/`, `agents/operator-terminal/`, `AGENTS.md`
 ## Deployment source of truth
 
 Cloudflare deploya iz root-a repozitorija. `wrangler.jsonc` v root-u je produkcijski source of truth in kaže na `terminal/worker/src/index.js`; zato Cloudflare Root directory ostane `/`.
+
+
+## Samodejno odkrivanje in popravilo napak
+
+Repo vsebuje `.github/workflows/self-heal.yml` in `agents/self-heal/repair.py`.
+
+Self-heal se zažene:
+- po neuspehu Private Operator Terminal ali Blog Lab Publisher Agent workflowa;
+- ob relevantnih pushih na `main`;
+- vsako uro kot produkcijski watchdog;
+- ročno prek GitHub Actions.
+
+Preverja Python sintakso, operator/publisher/self-heal teste, Vite build, Worker JavaScript sintakso, Wrangler dry-run, javno stran in Worker `/health`. Ob programski napaki zbere diagnostic log, poišče najmanjši popravek prek razpoložljive AI verige, spremembo uporabi samo v dovoljenih poteh, ponovno izvede vse validatorje in šele nato commitne na `main`. Če validator pade, se sprememba povrne.
+
+Self-heal ne sme sam spreminjati `.github/`, `agents/operator-terminal/`, `agents/self-heal/`, skrivnosti ali credentialov. S tem watchdog ne more odstraniti lastnih varnostnih omejitev.
+
+Če je produkcijski Worker zastarel in sta v GitHub Secrets nastavljena `CLOUDFLARE_API_TOKEN` ter `CLOUDFLARE_ACCOUNT_ID`, ga watchdog lahko neposredno ponovno deploya. Brez teh secretov ostane Cloudflare Git Builds primarni deployment mehanizem.
