@@ -38,9 +38,9 @@ jobs:
           pip install -r requirements-agent.txt
           npm ci
       - name: Compile agent code
-        run: python -m py_compile agents/operator-terminal/*.py agents/blog-lab-publisher/agent.py agents/blog-lab-publisher/services/*.py
+        run: python -m py_compile agents/operator-terminal/*.py agents/blog-lab-publisher/agent.py agents/blog-lab-publisher/services/*.py agents/self-heal/*.py
       - name: Run agent tests
-        run: pytest -q agents/operator-terminal/tests agents/blog-lab-publisher/tests
+        run: pytest -q agents/operator-terminal/tests agents/blog-lab-publisher/tests agents/self-heal/tests
       - name: Check critical frontend component wiring
         shell: bash
         run: |
