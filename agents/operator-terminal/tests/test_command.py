@@ -736,14 +736,12 @@ def test_theme_variants(tmp_path, monkeypatch, text, theme):
     assert cmd._requested_theme(text.lower()) == theme
 
 
-def test_unknown_theme_is_explicitly_rejected(tmp_path, monkeypatch):
+def test_unknown_theme_falls_through_to_ai_site_planner(tmp_path, monkeypatch):
     monkeypatch.setattr(cmd, "BASE", tmp_path)
     css = tmp_path / "src/styles.css"
     css.parent.mkdir(parents=True)
     css.write_text("body{}", encoding="utf-8")
-    with pytest.raises(SystemExit) as exc:
-        cmd.builtin_site_command("spremeni barvno temo v koralno")
-    assert exc.value.code == 64
+    assert cmd.builtin_site_command("spremeni barvno temo v koralno") is False
 
 
 def test_site_quality_guard_rejects_duplicate_article_selector(tmp_path, monkeypatch):
@@ -1380,3 +1378,24 @@ def test_main_reports_privacy_safe_intent_routing(tmp_path, monkeypatch, capsys)
     assert "resolved=article" in output
     assert "autocorrected=true" in output
     assert "wrtie artcle about test" not in output
+
+
+@pytest.mark.parametrize("text", [
+    "article about današnji promet v Ljubljani",
+    "write something about današnji šport",
+    "wrtie something about lokalnem dogodku",
+    "please create article regarding nova razstava",
+])
+def test_natural_article_phrasing_routes_to_article(text):
+    assert cmd.infer_mode(text) == "article"
+
+
+def test_turn_agent_off_routes_to_control_and_disables(tmp_path, monkeypatch):
+    control = tmp_path / "data/agent-control.json"
+    control.parent.mkdir(parents=True)
+    control.write_text(json.dumps({"enabled": True, "publish_mode": "automatic"}), encoding="utf-8")
+    monkeypatch.setattr(cmd, "CONTROL", control)
+
+    assert cmd.infer_mode("turn agent off") == "control"
+    cmd.control_command("turn agent off")
+    assert json.loads(control.read_text(encoding="utf-8"))["enabled"] is False
