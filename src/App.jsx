@@ -78,7 +78,7 @@ const starterArticles = [
       }
     ],
     "createdAt": "2026-09-20T09:02:24+02:00",
-    "updatedAt": "2026-09-20T09:02:24+02:00"
+    "updatedAt": "2026-09-20T09:10:00+02:00"
   },
   {
     "id": "rakov-skocjan-hiking-guide",
