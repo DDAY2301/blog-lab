@@ -654,3 +654,73 @@ def test_collect_topic_submits_web_indexes_in_parallel(monkeypatch):
     assert "google-news-si" in entered
     assert "google-news-global" in entered
     assert "gdelt" in entered
+
+
+def test_automatic_sources_merge_feed_and_webwide(monkeypatch):
+    import agent
+
+    feed_item = {
+        "url": "https://news.example/feed",
+        "hash": "feed-1",
+        "title": "Feed story",
+    }
+    web_item = {
+        "url": "https://web.example/story",
+        "hash": "web-1",
+        "title": "Web story",
+    }
+    calls = []
+    monkeypatch.setattr(agent, "collect", lambda *a, **k: [feed_item])
+    monkeypatch.setattr(
+        agent,
+        "collect_topic",
+        lambda query, category, limit: calls.append((query, category, limit)) or [web_item, feed_item],
+    )
+
+    items = agent.collect_automatic_sources(
+        {"input_sources": [], "max_source_items": 30},
+        "sport",
+    )
+
+    assert [item["url"] for item in items] == [
+        "https://news.example/feed",
+        "https://web.example/story",
+    ]
+    assert calls and calls[0][0] == "Slovenija šport danes"
+
+
+def test_qa_repair_prompt_contains_validation_requirements():
+    from agent import qa_repair_task
+
+    prompt = qa_repair_task("Osnovna naloga.", ["prekratek", "brez_virov"], 1200, 10000)
+
+    assert "prekratek" in prompt
+    assert "brez_virov" in prompt
+    assert "1200" in prompt and "10000" in prompt
+    assert "HTTPS URL-je iz podanih virov" in prompt
+
+
+def test_fallback_digest_can_pass_standard_qa_with_verified_sources():
+    from services.fallback_writer import build_digest
+
+    items = []
+    for index in range(5):
+        items.append({
+            "source_name": f"Vir {index}",
+            "category": "sport",
+            "title": f"Športna zgodba {index}",
+            "url": f"https://example.com/sport-{index}",
+            "summary": (
+                "Preverjen vir opisuje športni dogodek, potek tekmovanja, odzive udeležencev "
+                "in okoliščine, ki so pomembne za razumevanje zgodbe. "
+            ) * 3,
+            "published": "2026-09-20",
+            "image_url": "",
+            "video_url": "",
+            "hash": f"sport-{index}",
+        })
+
+    article = build_digest(items, "sport", max_items=5)
+    errors = validate(article, 1200, 10000, set(), set())
+
+    assert errors == []
