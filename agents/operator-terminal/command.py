@@ -789,7 +789,7 @@ SITE_AI_ALLOWED_EXACT = {
     "index.html",
 }
 SITE_AI_ALLOWED_SUFFIXES = {
-    ".js", ".jsx", ".css", ".json", ".md", ".yaml", ".yml", ".svg",
+    ".js", ".jsx", ".css", ".json", ".md", ".yaml", ".yml", ".svg", ".html",
 }
 
 class SiteEditError(RuntimeError):
