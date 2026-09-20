@@ -74,3 +74,19 @@ def test_rejects_generic_editorial_heading():
         "sources": [{"label": "Vir", "url": "https://example.com/a"}],
     }
     assert "genericni_podnaslov" in validate(article, 100, 10000, set(), set())
+
+
+def test_source_provenance_ignores_tracking_query_variants():
+    allowed = "https://news.google.com/rss/articles/abc123?oc=5&utm_source=test"
+    cited = "https://news.google.com/rss/articles/abc123"
+    article = {
+        "title": "Sleden vir",
+        "excerpt": "Povzetek",
+        "seoDescription": "Opis",
+        "content": ("Preverjena vsebina z dovolj različnimi stavki. " * 35),
+        "category": "Šport",
+        "tags": ["šport"],
+        "sources": [{"label": "Vir", "url": cited}],
+    }
+    errors = validate(article, 100, 10000, set(), set(), {allowed})
+    assert "vir_ni_v_podlagi" not in errors
