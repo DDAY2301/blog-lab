@@ -686,10 +686,10 @@ def test_automatic_sources_merge_feed_and_webwide(monkeypatch):
         "sport",
     )
 
-    assert [item["url"] for item in items] == [
+    assert {item["url"] for item in items} == {
         "https://news.example/feed",
         "https://web.example/story",
-    ]
+    }
     assert calls and calls[0][0] == "Slovenija šport danes"
 
 
@@ -836,7 +836,135 @@ def test_collect_automatic_sources_filters_broad_noise(monkeypatch):
         "sport",
     )
 
-    assert [item["url"] for item in out] == [
+    assert {item["url"] for item in out} == {
         "https://sport.example.si/derbi",
         "https://example.com/tennis-final",
+    }
+
+
+def test_headline_only_feed_summary_is_not_substantive_evidence():
+    from agent import source_has_substantive_evidence
+
+    item = {
+        "title": "Slovenija korak do napredovanja v prvo svetovno skupino Davisovega pokala - 24ur.com",
+        "summary": "Slovenija korak do napredovanja v prvo svetovno skupino Davisovega pokala 24ur.com",
+        "source_name": "24ur.com",
+        "verified_direct": False,
+    }
+    assert source_has_substantive_evidence(item) is False
+
+
+def test_direct_page_with_real_body_is_substantive_evidence():
+    from agent import source_has_substantive_evidence
+
+    item = {
+        "title": "Slovenija do pomembne zmage",
+        "summary": (
+            "Slovenska reprezentanca je v soboto dobila prvi dve tekmi. "
+            "Selektor je po dvobojih poudaril boljši servis in mirnost v odločilnih točkah. "
+            "Naslednji dvoboj bo odločal o napredovanju, organizatorji pa so objavili tudi urnik."
+        ),
+        "source_name": "example.si",
+        "verified_direct": True,
+    }
+    assert source_has_substantive_evidence(item) is True
+
+
+def test_article_evidence_matches_source_urls_without_tracking_query():
+    from agent import article_evidence
+
+    candidates = [
+        {
+            "url": "https://example.si/story?oc=5",
+            "title": "Prva športna zgodba",
+            "summary": "A" * 320,
+            "source_name": "Example",
+            "verified_direct": True,
+        },
+        {
+            "url": "https://second.example/story?utm_source=test",
+            "title": "Druga športna zgodba",
+            "summary": "B" * 320,
+            "source_name": "Second",
+            "verified_direct": True,
+        },
     ]
+    article = {
+        "title": "Športna zgodba",
+        "sources": [
+            {"url": "https://example.si/story"},
+            {"url": "https://second.example/story"},
+        ],
+    }
+    ok, matched, reason = article_evidence(article, candidates)
+    assert ok is True
+    assert len(matched) == 2
+    assert reason == "ok"
+
+
+def test_article_evidence_rejects_source_not_in_input_pool():
+    from agent import article_evidence
+
+    candidates = [{
+        "url": "https://example.si/story",
+        "title": "Relevantna zgodba",
+        "summary": "C" * 800,
+        "source_name": "Example",
+        "verified_direct": True,
+    }]
+    article = {
+        "title": "Relevantna zgodba",
+        "sources": [{"url": "https://invented.example/not-in-input"}],
+    }
+    ok, matched, reason = article_evidence(article, candidates)
+    assert ok is False
+    assert matched == []
+    assert reason == "article_source_not_in_evidence_pool"
+
+
+def test_article_evidence_accepts_one_deep_verified_direct_source():
+    from agent import article_evidence
+
+    candidates = [{
+        "url": "https://example.si/deep",
+        "title": "Podrobna športna analiza",
+        "summary": "D" * 900,
+        "source_name": "Example",
+        "verified_direct": True,
+    }]
+    article = {
+        "title": "Podrobna športna analiza",
+        "sources": [{"url": "https://example.si/deep"}],
+    }
+    ok, matched, reason = article_evidence(article, candidates)
+    assert ok is True
+    assert len(matched) == 1
+    assert reason == "ok"
+
+
+def test_article_evidence_rejects_headline_only_sources_even_if_two():
+    from agent import article_evidence
+
+    candidates = [
+        {
+            "url": "https://one.example/a",
+            "title": "Slovenija vodi z 2:0 - One",
+            "summary": "Slovenija vodi z 2:0 One",
+            "source_name": "One",
+            "verified_direct": False,
+        },
+        {
+            "url": "https://two.example/b",
+            "title": "Slovenija blizu napredovanja - Two",
+            "summary": "Slovenija blizu napredovanja Two",
+            "source_name": "Two",
+            "verified_direct": False,
+        },
+    ]
+    article = {
+        "title": "Slovenija blizu napredovanja",
+        "sources": [{"url": item["url"]} for item in candidates],
+    }
+    ok, _, reason = article_evidence(article, candidates)
+    assert ok is False
+    assert reason == "headline_only_evidence"
