@@ -307,13 +307,13 @@ async function generateArticleWithWorkersAi(env, body) {
 
   let result;
   try {
-    result = await env.AI.run("@cf/meta/llama-3.3-70b-instruct-fp8-fast", {
+    result = await env.AI.run("@cf/zai-org/glm-4.7-flash", {
       messages: [
         { role: "system", content: systemPrompt },
         { role: "user", content: userPrompt },
       ],
       response_format: { type: "json_object" },
-      max_tokens: 3600,
+      max_tokens: 2800,
       temperature: 0.32,
       repetition_penalty: 1.08,
     });
@@ -339,7 +339,7 @@ async function generateArticleWithWorkersAi(env, body) {
   return {
     ok: true,
     article,
-    model: "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+    model: "@cf/zai-org/glm-4.7-flash",
     usage: result?.usage || null,
   };
 }
@@ -366,13 +366,13 @@ async function generateSiteEditWithWorkersAi(env, body) {
 
   let result;
   try {
-    result = await env.AI.run("@cf/meta/llama-3.3-70b-instruct-fp8-fast", {
+    result = await env.AI.run("@cf/zai-org/glm-4.7-flash", {
       messages: [
         { role: "system", content: systemPrompt },
         { role: "user", content: userPrompt },
       ],
       response_format: { type: "json_object" },
-      max_tokens: 4200,
+      max_tokens: 2800,
       temperature: 0.20,
       repetition_penalty: 1.06,
     });
@@ -393,7 +393,7 @@ async function generateSiteEditWithWorkersAi(env, body) {
   return {
     ok: true,
     plan,
-    model: "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+    model: "@cf/zai-org/glm-4.7-flash",
     usage: result?.usage || null,
   };
 }
