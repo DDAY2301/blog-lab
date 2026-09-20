@@ -5,6 +5,8 @@ import json
 import os
 import re
 import sys
+import unicodedata
+from urllib.parse import urlparse
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -190,6 +192,109 @@ AUTO_SEARCH_QUERIES = {
 }
 
 
+AUTO_CATEGORY_TERMS = {
+    "sport": (
+        "šport", "sport", "nogomet", "football", "soccer", "košark", "basket",
+        "tenis", "tennis", "koles", "cycling", "atlet", "hokej", "hockey",
+        "smuč", "ski", "rokomet", "handball", "odboj", "volley", "liga", "league",
+        "prvenst", "championship", "tekm", "match", "igral", "player", "trener",
+        "coach", "gol", "goal", "racing", "race", "formula", "moto", "nba",
+        "uefa", "fifa", "olimp", "olymp", "medal", "turnir", "tournament",
+    ),
+    "politika": (
+        "politika", "politic", "vlada", "government", "parlament", "parliament",
+        "volit", "election", "minister", "predsed", "president", "zakon", "law",
+        "strank", "party", "koalic", "coalition", "opozic", "opposition",
+        "državni zbor", "national assembly", "evropska unija", "european union",
+    ),
+}
+
+
+def _mostly_latin(text: str, minimum_ratio: float = 0.55) -> bool:
+    letters = [ch for ch in str(text or "") if ch.isalpha()]
+    if len(letters) < 12:
+        return True
+    latin = 0
+    for ch in letters:
+        try:
+            if "LATIN" in unicodedata.name(ch):
+                latin += 1
+        except ValueError:
+            pass
+    return (latin / len(letters)) >= minimum_ratio
+
+
+def _automatic_generic_result(item: dict) -> bool:
+    try:
+        parsed = urlparse(str(item.get("url") or ""))
+        host = (parsed.hostname or "").lower().removeprefix("www.")
+        path = (parsed.path or "").lower()
+    except Exception:
+        return True
+
+    if host in {"namu.wiki", "duckduckgo.com", "www.duckduckgo.com"}:
+        return True
+    if host == "news.google.com" and ("/topics/" in path or "/search" in path):
+        return True
+    if host.endswith("bing.com") and ("/search" in path or "/news/search" in path):
+        return True
+    return False
+
+
+def _automatic_category_match(item: dict, category: str) -> bool:
+    text = " ".join([
+        str(item.get("title") or ""),
+        str(item.get("summary") or ""),
+    ]).lower()
+    if category in AUTO_CATEGORY_TERMS:
+        return any(term in text for term in AUTO_CATEGORY_TERMS[category])
+
+    # "Aktualno" is intentionally broad, but the autonomous Slovenian slot
+    # should still be anchored to Slovenia/local sources when using global web search.
+    if category == "aktualno":
+        provider = str(item.get("provider") or "").lower()
+        try:
+            host = (urlparse(str(item.get("url") or "")).hostname or "").lower()
+        except Exception:
+            host = ""
+        return (
+            provider == "google-news-si"
+            or host.endswith(".si")
+            or "slovenij" in text
+            or "slovenia" in text
+            or "ljubljan" in text
+        )
+    return True
+
+
+def automatic_source_usable(item: dict, category: str, *, trusted_primary: bool = False) -> bool:
+    title = str(item.get("title") or "").strip()
+    summary = str(item.get("summary") or "").strip()
+    combined = f"{title} {summary}".strip()
+
+    if len(title) < 8:
+        return False
+    if not _mostly_latin(combined):
+        return False
+    if _automatic_generic_result(item):
+        return False
+
+    # The configured category RSS is already a trusted scoped search. Global
+    # discovery needs an additional semantic category gate.
+    if not trusted_primary:
+        provider = str(item.get("provider") or "").lower()
+        localized_search = provider == "google-news-si"
+        if not localized_search and not _automatic_category_match(item, category):
+            return False
+
+    # Do not let the fallback writer turn a headline-only search result into an
+    # apparently substantive article.
+    minimum_summary = 45 if trusted_primary else 80
+    if len(summary) < minimum_summary and not item.get("verified_direct"):
+        return False
+    return True
+
+
 def _merge_source_groups(*groups: list[dict], limit: int = 30) -> list[dict]:
     out = []
     seen = set()
@@ -207,17 +312,28 @@ def _merge_source_groups(*groups: list[dict], limit: int = 30) -> list[dict]:
 
 def collect_automatic_sources(cfg: dict, category: str) -> list[dict]:
     limit = int(cfg.get("max_source_items", 30))
-    primary = collect(cfg.get("input_sources", []), category, limit)
+    primary_raw = collect(cfg.get("input_sources", []), category, limit)
+    primary = [
+        item for item in primary_raw
+        if automatic_source_usable(item, category, trusted_primary=True)
+    ]
+
     broad_query = AUTO_SEARCH_QUERIES.get(category, f"Slovenija {category} danes")
     try:
-        broad = collect_topic(broad_query, category, limit)
+        broad_raw = collect_topic(broad_query, category, limit)
     except Exception as exc:
         print(f"WARN automatic web-wide source search failed: {exc}")
-        broad = []
+        broad_raw = []
+    broad = [
+        item for item in broad_raw
+        if automatic_source_usable(item, category, trusted_primary=False)
+    ]
+
     merged = _merge_source_groups(primary, broad, limit=limit)
     print(
-        f"AUTO_SOURCES category={category} primary={len(primary)} "
-        f"webwide={len(broad)} merged={len(merged)}"
+        f"AUTO_SOURCES category={category} "
+        f"primary={len(primary)}/{len(primary_raw)} "
+        f"webwide={len(broad)}/{len(broad_raw)} merged={len(merged)}"
     )
     return merged
 
