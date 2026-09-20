@@ -27,7 +27,7 @@ def test_publisher_staging_handles_optional_paths_safely():
 def test_permanent_operator_errors_do_not_retry():
     assert 'if [[ "$COMMAND_RC" -eq 64 ]]' in OPERATOR
     assert 'if [[ "$COMMAND_RC" -eq 78 ]]' not in OPERATOR
-    assert "@github/copilot" not in OPERATOR
+    assert "@github/copilot" in OPERATOR
 
 
 def test_operator_and_publisher_sync_with_latest_main():
