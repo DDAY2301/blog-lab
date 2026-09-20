@@ -11,6 +11,14 @@ CONTROL = BASE / "data/agent-control.json"
 STATE = BASE / "data/agent-state.json"
 TZ = ZoneInfo("Europe/Ljubljana")
 
+TRANSIENT_DEFER_REASONS = {
+    "ai_unavailable",
+    "manual_ai_unavailable",
+    "provider_unavailable",
+    "grounding_unavailable",
+    "grounding_review_unavailable",
+}
+
 
 def _load(path: Path, default):
     try:
@@ -21,6 +29,24 @@ def _load(path: Path, default):
 
 def _slot_id(day: str, slot: dict) -> str:
     return f"{day}|{slot.get('time','')}|{slot.get('category','')}"
+
+
+def _transient_writer_hold(state: dict) -> bool:
+    """True when a deferred slot came from temporary writer/provider outage.
+
+    Such holds must never be treated as completed publications. They are retried
+    by the next heartbeat/catch-up so the product remains autonomous even when
+    an AI provider has a short outage or a secret is missing.
+    """
+    last_error = str(state.get("last_error") or "").lower()
+    writer_mode = str(state.get("writer_mode") or "").lower()
+    hold = state.get("last_editorial_hold") if isinstance(state.get("last_editorial_hold"), dict) else {}
+    reason = str(hold.get("reason") or "").lower()
+    return (
+        writer_mode in {"unavailable", "provider_unavailable"}
+        or any(token in last_error for token in TRANSIENT_DEFER_REASONS)
+        or any(token in reason for token in TRANSIENT_DEFER_REASONS)
+    )
 
 
 def resolve_due_slot(control: dict, state: dict, current: datetime | None = None) -> dict:
@@ -40,6 +66,9 @@ def resolve_due_slot(control: dict, state: dict, current: datetime | None = None
     today = current.date().isoformat()
     done = set(state.get("scheduled_slots_done") or [])
     deferred = set(state.get("scheduled_slots_deferred") or []) if state.get("posts_date") == today else set()
+    if deferred and _transient_writer_hold(state):
+        # Retry provider/AI outages; only true editorial/QA holds stay deferred.
+        deferred = set()
 
     # completed slot IDs represent actual successful scheduled publications.
     # Reconcile any legacy/bad state where a slot was marked done without a
