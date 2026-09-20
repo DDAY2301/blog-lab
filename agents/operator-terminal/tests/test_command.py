@@ -736,14 +736,12 @@ def test_theme_variants(tmp_path, monkeypatch, text, theme):
     assert cmd._requested_theme(text.lower()) == theme
 
 
-def test_unknown_theme_is_explicitly_rejected(tmp_path, monkeypatch):
+def test_unknown_theme_falls_through_to_ai_site_planner(tmp_path, monkeypatch):
     monkeypatch.setattr(cmd, "BASE", tmp_path)
     css = tmp_path / "src/styles.css"
     css.parent.mkdir(parents=True)
     css.write_text("body{}", encoding="utf-8")
-    with pytest.raises(SystemExit) as exc:
-        cmd.builtin_site_command("spremeni barvno temo v koralno")
-    assert exc.value.code == 64
+    assert cmd.builtin_site_command("spremeni barvno temo v koralno") is False
 
 
 def test_site_quality_guard_rejects_duplicate_article_selector(tmp_path, monkeypatch):
@@ -1299,3 +1297,105 @@ def test_site_command_marks_provider_outage_nonretryable(monkeypatch, capsys):
         cmd.site_command("uredi izgled strani")
     assert exc.value.code == 64
     assert "SITE_AI_CAPACITY_UNAVAILABLE" in capsys.readouterr().err
+
+
+@pytest.mark.parametrize(("text", "expected"), [
+    ("polespaj strna prosim", "site"),
+    ("wrtie artcle about ljubljana", "article"),
+    ("publsih post o današnjem športu", "article"),
+    ("izklpoi agenta", "control"),
+    ("sttaus agenta", "control"),
+    ("schdeule automatic publishing", "control"),
+    ("make website prettier", "site"),
+    ("imrpove desgin of page", "site"),
+])
+def test_intent_autocorrect_routes_common_typos(text, expected):
+    assert cmd.infer_mode(text) == expected
+
+
+def test_intent_autocorrect_folds_diacritics_and_english_aliases():
+    normalized = cmd._normalized_intent("NAPIŠI ARTICLE in polepšaj WEBSITE")
+    assert "napisi" in normalized
+    assert "clanek" in normalized
+    assert "polepsaj" in normalized
+    assert "stran" in normalized
+
+
+def test_intent_autocorrect_preserves_literal_command_text_in_ai_prompt():
+    command = "Spremeni ime strani v Project Clanak X"
+    context = [{
+        "path": "src/App.jsx",
+        "complete": True,
+        "snippets": [{"label": "full", "content": "export default 1;"}],
+    }]
+    _, request = cmd._site_ai_prompts(command, context)
+    assert command in request
+    assert "NORMALIZED INTENT HINT" in request
+    assert "preserve names and values exactly" in request
+
+
+def test_fuzzy_control_command_can_disable_agent(tmp_path, monkeypatch):
+    control = tmp_path / "data/agent-control.json"
+    control.parent.mkdir(parents=True)
+    control.write_text(
+        json.dumps({"enabled": True, "publish_mode": "automatic"}),
+        encoding="utf-8",
+    )
+    monkeypatch.setattr(cmd, "CONTROL", control)
+
+    cmd.control_command("izklpoi agenta")
+
+    data = json.loads(control.read_text(encoding="utf-8"))
+    assert data["enabled"] is False
+
+
+def test_fuzzy_design_command_is_handled_by_builtin(tmp_path, monkeypatch):
+    monkeypatch.setattr(cmd, "BASE", tmp_path)
+    css = tmp_path / "src/styles.css"
+    css.parent.mkdir(parents=True)
+    css.write_text("body{}", encoding="utf-8")
+
+    assert cmd.builtin_site_command("polespaj strna prosim") is True
+    assert cmd.DESIGN_MARKER in css.read_text(encoding="utf-8")
+
+
+def test_intent_autocorrect_does_not_force_unknown_topic_into_control():
+    assert cmd.infer_mode("Objavi članek o Liverpoolu in Evertonu") == "article"
+
+
+def test_main_reports_privacy_safe_intent_routing(tmp_path, monkeypatch, capsys):
+    path = tmp_path / "command.json"
+    path.write_text(
+        json.dumps({"command": "wrtie artcle about test", "mode": "auto", "category": "aktualno"}),
+        encoding="utf-8",
+    )
+    monkeypatch.setattr(cmd, "article_command", lambda command, category: None)
+    monkeypatch.setattr(sys, "argv", ["command.py", "--command-file", str(path)])
+
+    assert cmd.main() == 0
+    output = capsys.readouterr().out
+    assert "INTENT_ROUTE" in output
+    assert "resolved=article" in output
+    assert "autocorrected=true" in output
+    assert "wrtie artcle about test" not in output
+
+
+@pytest.mark.parametrize("text", [
+    "article about današnji promet v Ljubljani",
+    "write something about današnji šport",
+    "wrtie something about lokalnem dogodku",
+    "please create article regarding nova razstava",
+])
+def test_natural_article_phrasing_routes_to_article(text):
+    assert cmd.infer_mode(text) == "article"
+
+
+def test_turn_agent_off_routes_to_control_and_disables(tmp_path, monkeypatch):
+    control = tmp_path / "data/agent-control.json"
+    control.parent.mkdir(parents=True)
+    control.write_text(json.dumps({"enabled": True, "publish_mode": "automatic"}), encoding="utf-8")
+    monkeypatch.setattr(cmd, "CONTROL", control)
+
+    assert cmd.infer_mode("turn agent off") == "control"
+    cmd.control_command("turn agent off")
+    assert json.loads(control.read_text(encoding="utf-8"))["enabled"] is False
