@@ -168,7 +168,7 @@ def _correct_intent_token(token: str) -> str:
         return token
     # Short words require a close match; longer words tolerate transposed,
     # omitted and duplicated letters more aggressively.
-    cutoff = 0.88 if len(token) == 4 else (0.80 if len(token) <= 6 else 0.72)
+    cutoff = 0.88 if len(token) == 4 else 0.80
     matches = get_close_matches(token, INTENT_VOCABULARY, n=1, cutoff=cutoff)
     if not matches:
         return token
