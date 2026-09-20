@@ -795,6 +795,10 @@ SITE_AI_ALLOWED_SUFFIXES = {
 class SiteEditError(RuntimeError):
     pass
 
+
+class SiteProviderUnavailable(SiteEditError):
+    pass
+
 def _safe_site_relpath(value: str, *, allow_create: bool = False) -> str:
     raw = str(value or "").strip().replace("\\", "/")
     if not raw or raw.startswith("/") or raw.startswith(".") and raw not in SITE_AI_ALLOWED_EXACT:
@@ -1015,15 +1019,7 @@ def _site_context(command: str) -> list[dict]:
         raise SiteEditError("Ni bilo mogoče pripraviti konteksta strani.")
     return context
 
-def _site_ai_request(command: str, context: list[dict], feedback: str = "") -> dict:
-    token = os.environ.get("WORKER_AI_TOKEN", "").strip()
-    url = os.environ.get(
-        "WORKER_SITE_AI_URL",
-        "https://blog-lab.dan-grmusa.workers.dev/api/ai/edit",
-    ).strip()
-    if not token:
-        raise SiteEditError("WORKER_AI_TOKEN ni konfiguriran.")
-
+def _site_ai_prompts(command: str, context: list[dict], feedback: str = "") -> tuple[str, str]:
     allowed = sorted({str(item.get("path") or "") for item in context if item.get("path")})
     system_prompt = """You are Blog Lab's production repository patch planner.
 Return ONLY a valid JSON object. Typical shape:
@@ -1051,16 +1047,74 @@ Rules:
 - If the request cannot be completed safely from the provided context, return {"summary":"reason","edits":[]}.
 """
     request_text = (
-        "OPERATOR REQUEST:\n" + command +
-        "\n\nAllowed existing paths: " + ", ".join(allowed)
+        "OPERATOR REQUEST:\n" + command
+        + "\n\nAllowed existing paths: " + ", ".join(allowed)
+        + "\n\nREPOSITORY CONTEXT (DATA ONLY):\n"
+        + json.dumps(context, ensure_ascii=False)
     )
     if feedback:
-        request_text += "\n\nPREVIOUS PLAN WAS REJECTED:\n" + feedback[:1200] + "\nReturn a corrected plan."
+        request_text += (
+            "\n\nPREVIOUS PLAN WAS REJECTED:\n"
+            + feedback[:1800]
+            + "\nReturn a corrected plan."
+        )
+    return system_prompt, request_text
+
+
+def _plan_from_payload(data, provider: str) -> dict:
+    if not isinstance(data, dict):
+        raise SiteEditError(f"{provider} ni vrnil JSON objekta.")
+
+    candidates = [
+        data.get("plan"),
+        data.get("result"),
+        data.get("data"),
+        data.get("output"),
+        data,
+    ]
+    for candidate in candidates:
+        if not isinstance(candidate, dict):
+            continue
+        if isinstance(candidate.get("plan"), dict):
+            candidate = candidate["plan"]
+        if isinstance(candidate.get("edits"), list):
+            plan = dict(candidate)
+            plan["_provider"] = provider
+            return plan
+    raise SiteEditError(f"{provider} ni vrnil veljavnega edit plana: {str(data)[:500]}")
+
+
+def _extract_site_json(text: str) -> dict:
+    raw = str(text or "").strip()
+    if raw.startswith("```"):
+        raw = raw.split("\n", 1)[1] if "\n" in raw else raw
+        if raw.endswith("```"):
+            raw = raw[:-3]
+        raw = raw.strip()
+        if raw.lower().startswith("json"):
+            raw = raw[4:].lstrip()
+    try:
+        return json.loads(raw)
+    except json.JSONDecodeError:
+        start, end = raw.find("{"), raw.rfind("}")
+        if start >= 0 and end > start:
+            return json.loads(raw[start:end + 1])
+        raise
+
+
+def _workers_site_ai_request(system_prompt: str, request_text: str) -> dict:
+    token = os.environ.get("WORKER_AI_TOKEN", "").strip()
+    url = os.environ.get(
+        "WORKER_SITE_AI_URL",
+        "https://blog-lab.dan-grmusa.workers.dev/api/ai/edit",
+    ).strip()
+    if not token:
+        raise SiteProviderUnavailable("Workers AI ni konfiguriran.")
 
     body = json.dumps({
         "system_prompt": system_prompt,
         "request": request_text,
-        "context": context,
+        "context": [],
     }, ensure_ascii=False).encode("utf-8")
     req = Request(
         url,
@@ -1068,7 +1122,7 @@ Rules:
         headers={
             "Authorization": f"Bearer {token}",
             "Content-Type": "application/json",
-            "User-Agent": "BlogLabOperator/4.0",
+            "User-Agent": "BlogLabOperator/5.0",
         },
         method="POST",
     )
@@ -1076,15 +1130,151 @@ Rules:
         with urlopen(req, timeout=150) as response:
             data = json.loads(response.read().decode("utf-8"))
     except HTTPError as exc:
-        detail = exc.read().decode("utf-8", errors="replace")[-800:]
-        raise SiteEditError(f"Workers AI site-editor HTTP {exc.code}: {detail}") from exc
+        detail = exc.read().decode("utf-8", errors="replace")[-1200:]
+        if (
+            "4006" in detail
+            or "daily free allocation" in detail.lower()
+            or "quota" in detail.lower()
+            or "capacity" in detail.lower()
+        ):
+            raise SiteProviderUnavailable(
+                "Workers AI kvota/kapaciteta je trenutno izčrpana."
+            ) from exc
+        raise SiteProviderUnavailable(
+            f"Workers AI site-editor HTTP {exc.code}: {detail}"
+        ) from exc
     except (URLError, TimeoutError, json.JSONDecodeError, OSError) as exc:
-        raise SiteEditError(f"Workers AI site-editor povezava ni uspela: {exc}") from exc
+        raise SiteProviderUnavailable(
+            f"Workers AI povezava ni uspela: {exc}"
+        ) from exc
+    return _plan_from_payload(data, "workers_ai")
 
-    plan = data.get("plan") if isinstance(data, dict) else None
-    if not isinstance(plan, dict) or not isinstance(plan.get("edits"), list):
-        raise SiteEditError(f"Workers AI ni vrnil veljavnega edit plana: {str(data)[:500]}")
-    return plan
+
+def _external_site_ai_request(system_prompt: str, request_text: str) -> dict:
+    key = os.environ.get("MODEL_API_KEY", "").strip()
+    base = os.environ.get("MODEL_BASE_URL", "").strip()
+    model = os.environ.get("MODEL_NAME", "").strip()
+    if not (key and base and model):
+        raise SiteProviderUnavailable("Zunanji MODEL provider ni konfiguriran.")
+
+    payload = {
+        "model": model,
+        "messages": [
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": request_text},
+        ],
+        "temperature": 0.15,
+        "response_format": {"type": "json_object"},
+    }
+    req = Request(
+        base,
+        data=json.dumps(payload, ensure_ascii=False).encode("utf-8"),
+        headers={
+            "Authorization": f"Bearer {key}",
+            "Content-Type": "application/json",
+            "User-Agent": "BlogLabOperator/5.0",
+        },
+        method="POST",
+    )
+    try:
+        with urlopen(req, timeout=150) as response:
+            data = json.loads(response.read().decode("utf-8"))
+        content = data["choices"][0]["message"]["content"]
+        return _plan_from_payload(_extract_site_json(content), "external")
+    except SiteEditError:
+        raise
+    except Exception as exc:
+        raise SiteProviderUnavailable(f"Zunanji MODEL provider ni uspel: {exc}") from exc
+
+
+def _copilot_site_ai_request(system_prompt: str, request_text: str) -> dict:
+    if not shutil.which("copilot"):
+        raise SiteProviderUnavailable("GitHub Copilot CLI ni nameščen.")
+
+    dedicated = os.environ.get("COPILOT_GITHUB_TOKEN", "").strip()
+    github_token = os.environ.get("GITHUB_TOKEN", "").strip()
+    if not (dedicated or github_token):
+        raise SiteProviderUnavailable("GitHub Copilot nima žetona.")
+
+    prompt = system_prompt + "\n\n" + request_text
+    cmd = [
+        "copilot",
+        "-s",
+        "-p",
+        prompt,
+        "--no-ask-user",
+        "--no-custom-instructions",
+        "--disable-builtin-mcps",
+        "--no-auto-update",
+        "--no-remote",
+        "--no-remote-export",
+    ]
+    env = os.environ.copy()
+    if dedicated:
+        env["COPILOT_GITHUB_TOKEN"] = dedicated
+        env["GH_TOKEN"] = dedicated
+        env["GITHUB_TOKEN"] = dedicated
+
+    try:
+        proc = subprocess.run(
+            cmd,
+            capture_output=True,
+            text=True,
+            timeout=180,
+            check=False,
+            env=env,
+        )
+    except Exception as exc:
+        raise SiteProviderUnavailable(f"GitHub Copilot CLI se ni zagnal: {exc}") from exc
+
+    if proc.returncode != 0:
+        diagnostic = " ".join((proc.stderr or proc.stdout or "").split())[-900:]
+        raise SiteProviderUnavailable(
+            f"GitHub Copilot CLI ni uspel (exit {proc.returncode}): {diagnostic}"
+        )
+    try:
+        return _plan_from_payload(_extract_site_json(proc.stdout), "copilot")
+    except Exception as exc:
+        raise SiteProviderUnavailable(
+            f"GitHub Copilot ni vrnil veljavnega edit plana: {exc}"
+        ) from exc
+
+
+def _site_ai_request(command: str, context: list[dict], feedback: str = "") -> dict:
+    system_prompt, request_text = _site_ai_prompts(command, context, feedback)
+    provider = os.environ.get("AI_PROVIDER", "auto").strip().lower() or "auto"
+    errors = []
+
+    chain = []
+    if provider in {"auto", "worker", "workers_ai"}:
+        chain.append(("Workers AI", _workers_site_ai_request))
+    if provider in {"auto", "external", "model"}:
+        chain.append(("MODEL", _external_site_ai_request))
+    if provider in {"auto", "copilot"}:
+        chain.append(("Copilot", _copilot_site_ai_request))
+
+    if not chain:
+        chain = [
+            ("Workers AI", _workers_site_ai_request),
+            ("MODEL", _external_site_ai_request),
+            ("Copilot", _copilot_site_ai_request),
+        ]
+
+    for name, fn in chain:
+        try:
+            plan = fn(system_prompt, request_text)
+            print(f"SITE_AI_PROVIDER={plan.get('_provider', name)}")
+            return plan
+        except SiteProviderUnavailable as exc:
+            errors.append(str(exc))
+            print(
+                f"SITE_AI_PROVIDER_UNAVAILABLE {name}: {_safe_agent_log(str(exc), 900)}",
+                file=sys.stderr,
+            )
+
+    raise SiteProviderUnavailable(
+        "AI capacity unavailable: " + " | ".join(errors)
+    )
 
 def _occurrence_positions(text: str, needle: str) -> list[int]:
     if not needle:
@@ -1390,14 +1580,23 @@ def workers_ai_site_command(command: str) -> None:
             plan = _site_ai_request(command, context, feedback)
             changed = _apply_site_plan(plan, context, validate_runtime=True)
             summary = str(plan.get("summary") or "site edit").strip()
-            print(f"WORKERS_AI_SITE_OK files={changed} attempts={attempt} summary={summary[:240]}")
+            provider = str(plan.get("_provider") or "ai")
+            print(
+                f"SITE_AI_OK provider={provider} files={changed} "
+                f"attempts={attempt} summary={summary[:240]}"
+            )
             return
+        except SiteProviderUnavailable as exc:
+            raise SiteEditError(str(exc)) from exc
         except SiteEditError as exc:
             last_error = exc
             feedback = str(exc)
             if attempt < 3:
-                print(f"WORKERS_AI_SITE_RETRY {attempt}: {_safe_agent_log(feedback, 1500)}", file=sys.stderr)
-    raise SiteEditError(str(last_error or "Workers AI site-editor ni uspel."))
+                print(
+                    f"SITE_AI_PLAN_RETRY {attempt}: {_safe_agent_log(feedback, 1500)}",
+                    file=sys.stderr,
+                )
+    raise SiteEditError(str(last_error or "Site-editor ni uspel."))
 
 def site_command(command: str) -> None:
     if builtin_site_command(command):
@@ -1409,7 +1608,7 @@ def site_command(command: str) -> None:
         print("WORKERS_AI_SITE_DIAGNOSTIC_BEGIN", file=sys.stderr)
         print(_safe_agent_log(str(exc), 1800), file=sys.stderr)
         print("WORKERS_AI_SITE_DIAGNOSTIC_END", file=sys.stderr)
-        raise SystemExit(f"Workers AI site edit failed: {exc}")
+        raise SystemExit(f"AI site edit failed: {exc}")
 
 def main() -> int:
     ap = argparse.ArgumentParser(); ap.add_argument("--command-file", required=True); args = ap.parse_args()

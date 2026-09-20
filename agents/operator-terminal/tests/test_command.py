@@ -212,7 +212,7 @@ def test_site_workers_ai_failure_is_clear_without_copilot(monkeypatch):
     monkeypatch.delenv("COPILOT_PERSONAL_TOKEN_CONFIGURED", raising=False)
     with pytest.raises(SystemExit) as exc:
         cmd.site_command("Dodaj posebno novo komponento")
-    assert "Workers AI site edit failed" in str(exc.value)
+    assert "AI site edit failed" in str(exc.value)
     assert "planner unavailable" in str(exc.value)
 
 
@@ -1099,3 +1099,91 @@ def test_workers_ai_site_command_retries_after_runtime_validation_failure(tmp_pa
     assert path.read_text(encoding="utf-8") == "const label = 'good';\n"
     assert len(validations) == 2
     assert "synthetic syntax error" in feedbacks[1]
+
+
+def test_site_ai_request_fails_over_from_worker_quota_to_external(monkeypatch):
+    monkeypatch.setenv("AI_PROVIDER", "auto")
+    calls = []
+
+    def worker(system_prompt, request_text):
+        calls.append("worker")
+        raise cmd.SiteProviderUnavailable("Workers AI kvota/kapaciteta je trenutno izčrpana.")
+
+    def external(system_prompt, request_text):
+        calls.append("external")
+        return {
+            "summary": "external success",
+            "edits": [],
+            "_provider": "external",
+        }
+
+    def copilot(system_prompt, request_text):
+        calls.append("copilot")
+        return {
+            "summary": "copilot success",
+            "edits": [],
+            "_provider": "copilot",
+        }
+
+    monkeypatch.setattr(cmd, "_workers_site_ai_request", worker)
+    monkeypatch.setattr(cmd, "_external_site_ai_request", external)
+    monkeypatch.setattr(cmd, "_copilot_site_ai_request", copilot)
+
+    plan = cmd._site_ai_request(
+        "uredi stran",
+        [{"path": "src/App.jsx", "complete": True, "snippets": [{"label": "full", "content": "x"}]}],
+    )
+
+    assert plan["_provider"] == "external"
+    assert calls == ["worker", "external"]
+
+
+def test_site_ai_request_fails_over_to_copilot_when_worker_and_external_unavailable(monkeypatch):
+    monkeypatch.setenv("AI_PROVIDER", "auto")
+    calls = []
+
+    def unavailable(name):
+        def inner(system_prompt, request_text):
+            calls.append(name)
+            raise cmd.SiteProviderUnavailable(f"{name} unavailable")
+        return inner
+
+    def copilot(system_prompt, request_text):
+        calls.append("copilot")
+        return {
+            "summary": "copilot success",
+            "edits": [],
+            "_provider": "copilot",
+        }
+
+    monkeypatch.setattr(cmd, "_workers_site_ai_request", unavailable("worker"))
+    monkeypatch.setattr(cmd, "_external_site_ai_request", unavailable("external"))
+    monkeypatch.setattr(cmd, "_copilot_site_ai_request", copilot)
+
+    plan = cmd._site_ai_request(
+        "uredi stran",
+        [{"path": "src/App.jsx", "complete": True, "snippets": [{"label": "full", "content": "x"}]}],
+    )
+
+    assert plan["_provider"] == "copilot"
+    assert calls == ["worker", "external", "copilot"]
+
+
+def test_workers_site_command_does_not_retry_provider_capacity_failure(tmp_path, monkeypatch):
+    monkeypatch.setattr(cmd, "BASE", tmp_path)
+    src = tmp_path / "src"
+    src.mkdir(parents=True)
+    (src / "App.jsx").write_text("export default 1;\n", encoding="utf-8")
+    (src / "styles.css").write_text("body{}\n", encoding="utf-8")
+
+    calls = []
+    def fail_once(command, context, feedback=""):
+        calls.append(feedback)
+        raise cmd.SiteProviderUnavailable("AI capacity unavailable")
+
+    monkeypatch.setattr(cmd, "_site_ai_request", fail_once)
+
+    with pytest.raises(cmd.SiteEditError, match="capacity unavailable"):
+        cmd.workers_ai_site_command("uredi stran")
+
+    assert len(calls) == 1
