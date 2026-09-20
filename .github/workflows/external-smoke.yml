@@ -44,10 +44,10 @@ jobs:
               and d.get("media_upload_ready") is True
           )
           if os.environ.get("EVENT_NAME") == "pull_request":
-              version_ok = d.get("version") in {"auth-v6.7-routing", "auth-v6.8-cron-catchup"}
+              version_ok = d.get("version") in {"auth-v6.8-cron-catchup", "auth-v6.9-scheduler-probe"}
               ai_ok = True
           else:
-              version_ok = d.get("version") == "auth-v6.8-cron-catchup"
+              version_ok = d.get("version") == "auth-v6.9-scheduler-probe"
               ai_ok = d.get("ai_writer_ready") is True and d.get("site_editor_ready") is True and d.get("publisher_scheduler_ready") is True
           sys.exit(0 if (base and version_ok and ai_ok) else 1)
           PY
@@ -104,6 +104,27 @@ jobs:
               print(d)
               sys.exit(1)
           print("Workers AI editorial writer responded successfully.")
+          PY
+
+      - name: Verify production scheduler dispatch bridge
+        if: ${{ github.event_name == 'workflow_dispatch' || steps.writer-changes.outputs.changed == 'true' }}
+        shell: bash
+        env:
+          INTERNAL_SCHEDULER_TOKEN: ${{ secrets.TERMINAL_COMMAND_KEY }}
+        run: |
+          set -euo pipefail
+          if [[ -z "$INTERNAL_SCHEDULER_TOKEN" ]]; then
+            echo "::error::TERMINAL_COMMAND_KEY is required for the scheduler production probe."
+            exit 1
+          fi
+          body="$(curl -fsS --max-time 40             -X POST             -H "Authorization: Bearer $INTERNAL_SCHEDULER_TOKEN"             https://blog-lab.dan-grmusa.workers.dev/api/scheduler/catch-up)"
+          BODY="$body" python - <<'PY'
+          import json, os, sys
+          d = json.loads(os.environ["BODY"])
+          if d.get("ok") is not True or d.get("mode") != "catch_up":
+              print(d)
+              sys.exit(1)
+          print("Production scheduler dispatch bridge responded successfully.")
           PY
 
       - name: Verify private terminal login page is externally reachable
