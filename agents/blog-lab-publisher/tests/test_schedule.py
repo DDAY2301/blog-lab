@@ -87,3 +87,15 @@ def test_disabled_or_nonautomatic_does_not_run():
     review = {**CONTROL, "publish_mode": "review"}
     assert resolve_due_slot(disabled, {}, at(9, 0))["run"] is False
     assert resolve_due_slot(review, {}, at(9, 0))["run"] is False
+
+
+def test_slot_marked_done_without_scheduled_post_is_reopened():
+    state = {
+        "posts_date": "2026-09-20",
+        "scheduled_posts_today": 0,
+        "scheduled_slots_done": ["2026-09-20|08:17|sport"],
+    }
+    result = resolve_due_slot(CONTROL, state, at(9, 40))
+    assert result["run"] is True
+    assert result["category"] == "sport"
+    assert result["slot"] == "2026-09-20|08:17|sport"
