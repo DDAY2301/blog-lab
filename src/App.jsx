@@ -18,6 +18,32 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "nocno-zivljenje-v-ljubljani-1ae9f6e3",
+    "title": "Nočno življenje v Ljubljani",
+    "excerpt": "Ljubljana ponuja bogato nočno življenje, od barov do klubov.",
+    "seoDescription": "Ljubljana ima živahno nočno življenje, ki ponuja različne možnosti zabave.",
+    "content": "Ljubljana, prestolnica Slovenije, je mesto z bogatim nočnim življenjem. Od barov do klubov, mesto ponuja različne možnosti zabave za vse okuse. \n## Nočni klubi in bari \nLjubljana ima številne nočne klube in bare, ki so odprti do zgodnjih ur zjutraj. Nekateri od najbolj priljubljenih klubov so tisti, ki gostijo žive glasbene izvedbe, medtem ko drugi ponujajo DJ-je in plesne zabave. \n## Zabava za vse \nNe glede na to, ali ste fan glasbe, plesa ali samo želite uživati v dobrim času, Ljubljana ima nekaj za vsakogar. Mesto ponuja tudi številne restavracije in kavarnice, ki so odprte do pozno v noč, zato lahko uživate v dobri hrani in pitju, medtem ko se zabavate. \n## Študentska scenа \nLjubljana ima tudi živahno študentsko sceno, saj je mesto dom številnim univerzam in fakultetam. Študentje pogosto organizirajo zabave in dogodke, ki so odprti za javnost, zato je mesto zmeraj polno življenja in energije. \nLjubljanski študentje so tudi pozivali k ponovni uvedbi nočnih avtobusnih linij, ki bi jim omogočila lažje gibanje po mestu v nočnem času. \n## Zaključek \nLjubljana je mesto, ki ponuja nekaj za vsakogar, tudi v nočnem času. Od barov do klubov, restavracij in kavarnic, mesto je polno možnosti za zabavo in sprostitev. Če ste v Ljubljani, si lahko privoščite nočno življenje, ki ga mesto ponuja.",
+    "category": "aktualno",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Ljubljanainfo.com",
+        "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPb3lEZ2VjbkFpa2R5ejU1YVVBQ09qbzZaT3RZNE9uRkxDaUFxVjVNM2hGdzNSRGxPOC13MG5jalhwZWgtTlFNU1dMcnVXUkZBTTM3c1ozWkQ4SXVCelh3Z3J1TUtfVGxGSXBlLTRFb0FUNnp1cW1rdmd2dVJidEstQ3ZYT1JMelk4dkVRRmVJTE1sQ3IzSktIelVhTW5NalV4cTdUWEZoT1FhTDVBYTdWTXlROEhUYmotM3JwcG9pdw?oc=5"
+      },
+      {
+        "label": "24ur.com",
+        "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPV0dqdU9ISkVzbk9Na0d4a1FRcmktM015aVl6MG9UMmllZlZ0aklNNDIxMXMxbUY5QVFDSTdtM1ZqTE5ZT3Z3WFZmR0thWGlFWmdvQkJ0Q2pyYmF4Y0J4WUpPeWxoNG0tN1BwMWtDeV9UdG1sRjNld1VrOEtSRjA2M243NVhXcl91U2dVc0xBelJzUWdVU1lEMV9ocmpUamNBS3VHSzhOQjNhWWxuQ3RZMEs5eDd3Y1dfcVFoTDRGeFZrckZ4bDhnYmFZSzJaWHIy?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-20T09:06:41+02:00",
+    "updatedAt": "2026-09-20T09:06:41+02:00"
+  },
+
+  {
     "id": "drava-cycle-route-maribor-ptuj-guide",
     "title": "Cycling the Drava: A Car-Light Maribor–Ptuj Guide",
     "excerpt": "Ride the official 30 km Drava Bike stage from Maribor to Ptuj, with route choices, current-condition checks, safer planning and a carefully verified train-return strategy.",
