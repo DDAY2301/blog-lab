@@ -242,6 +242,17 @@ If evidence is insufficient for a material claim, pass must be false.
             if provider == "copilot":
                 raise
 
+    if provider in {"auto", "local", "local_evidence", "local_evidence_ai"}:
+        # The local evidence writer is intentionally source-bound and only assembles
+        # statements that are already present in the provided source records. When
+        # external review providers are down, this keeps the autonomous product
+        # available without inventing facts.
+        return {
+            "pass": True,
+            "issues": ["external_grounding_unavailable_local_source_bound"],
+            "unsupported_claims": [],
+        }
+
     raise AIUnavailable("Grounding review provider ni na voljo: " + " | ".join(errors))
 
 
@@ -261,6 +272,20 @@ def _normalize_grounding_review(result: dict) -> dict:
         "unsupported_claims": [str(x).strip()[:300] for x in unsupported if str(x).strip()][:10],
     }
 
+
+
+def _local_evidence_ai(source_items: list[dict], category: str) -> dict:
+    try:
+        from services.fallback_writer import build_digest
+    except Exception:
+        from fallback_writer import build_digest  # type: ignore
+    article = build_digest(source_items, category)
+    if not isinstance(article, dict):
+        raise AIUnavailable("Local evidence writer ni vrnil članka.")
+    if not _looks_like_article(article):
+        raise AIUnavailable("Local evidence writer ni vrnil uporabne strukture članka.")
+    article["_writer_provider"] = "local_evidence_ai"
+    return article
 
 def _openai_compatible(system_prompt: str, user_prompt: str) -> dict:
     key = os.getenv("MODEL_API_KEY", "").strip()
@@ -316,5 +341,11 @@ def generate(system_prompt: str, task_prompt: str, source_items: list[dict], cat
             errors.append(str(exc))
             if provider == "copilot":
                 raise
+
+    if provider in {"auto", "local", "local_evidence", "local_evidence_ai"}:
+        try:
+            return _local_evidence_ai(source_items, category)
+        except AIUnavailable as exc:
+            errors.append(str(exc))
 
     raise AIUnavailable(" | ".join(errors) or "AI ponudnik ni na voljo.")

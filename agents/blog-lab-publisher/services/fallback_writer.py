@@ -130,11 +130,11 @@ def build_digest(items: list[dict], category: str, max_items: int = 5) -> dict:
                 )
             continue
 
-        # Keep the headline as context in a short label, then use the unique
-        # summary once. Do not repeat the full headline as both heading and body.
-        headline_context = f"Izhodišče vira: {source_headline}." if source_headline else ""
+        # Use the unique summary once. Full headlines from RSS records often
+        # duplicate the summary verbatim, so avoid repeating them as a separate
+        # long sentence that would correctly fail the repetition validator.
         parts.append(
-            f"## {section_title}\n\n{headline_context}\n\n{summary}\n\n{meta} "
+            f"## {section_title}\n\n{summary}\n\n{meta} "
             f"[Odpri izvirni vir]({item.get('url', '')})"
         )
 
