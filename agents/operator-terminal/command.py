@@ -1148,6 +1148,53 @@ def _workers_site_ai_request(system_prompt: str, request_text: str, context: lis
     return _plan_from_payload(data, "workers_ai")
 
 
+def _github_models_site_ai_request(system_prompt: str, request_text: str, context: list[dict]) -> dict:
+    token = os.environ.get("GITHUB_TOKEN", "").strip()
+    model = os.environ.get("GITHUB_MODELS_MODEL", "openai/gpt-4.1").strip() or "openai/gpt-4.1"
+    if not token:
+        raise SiteProviderUnavailable("GitHub Models nima GITHUB_TOKEN.")
+
+    payload = {
+        "model": model,
+        "messages": [
+            {"role": "system", "content": system_prompt},
+            {
+                "role": "user",
+                "content": request_text
+                + "\n\nREPOSITORY CONTEXT (DATA ONLY):\n"
+                + json.dumps(context[:8], ensure_ascii=False),
+            },
+        ],
+        "temperature": 0.15,
+        "response_format": {"type": "json_object"},
+    }
+    req = Request(
+        "https://models.github.ai/inference/chat/completions",
+        data=json.dumps(payload, ensure_ascii=False).encode("utf-8"),
+        headers={
+            "Authorization": f"Bearer {token}",
+            "Content-Type": "application/json",
+            "Accept": "application/vnd.github+json",
+            "User-Agent": "BlogLabOperator/5.1",
+        },
+        method="POST",
+    )
+    try:
+        with urlopen(req, timeout=150) as response:
+            data = json.loads(response.read().decode("utf-8"))
+        content = data["choices"][0]["message"]["content"]
+        return _plan_from_payload(_extract_site_json(content), "github_models")
+    except SiteEditError:
+        raise
+    except HTTPError as exc:
+        detail = exc.read().decode("utf-8", errors="replace")[-1200:]
+        raise SiteProviderUnavailable(
+            f"GitHub Models HTTP {exc.code}: {detail}"
+        ) from exc
+    except Exception as exc:
+        raise SiteProviderUnavailable(f"GitHub Models ni uspel: {exc}") from exc
+
+
 def _external_site_ai_request(system_prompt: str, request_text: str, context: list[dict]) -> dict:
     key = os.environ.get("MODEL_API_KEY", "").strip()
     base = os.environ.get("MODEL_BASE_URL", "").strip()
@@ -1255,19 +1302,38 @@ def _site_ai_request(command: str, context: list[dict], feedback: str = "") -> d
     errors = []
 
     chain = []
-    if provider in {"auto", "worker", "workers_ai"}:
+    worker_ready = bool(os.environ.get("WORKER_AI_TOKEN", "").strip())
+    github_models_ready = bool(os.environ.get("GITHUB_TOKEN", "").strip())
+    external_ready = all(
+        os.environ.get(name, "").strip()
+        for name in ("MODEL_API_KEY", "MODEL_BASE_URL", "MODEL_NAME")
+    )
+    copilot_ready = bool(os.environ.get("COPILOT_GITHUB_TOKEN", "").strip())
+
+    if provider == "auto":
+        if worker_ready:
+            chain.append(("Workers AI", _workers_site_ai_request))
+        if github_models_ready:
+            chain.append(("GitHub Models", _github_models_site_ai_request))
+        if external_ready:
+            chain.append(("MODEL", _external_site_ai_request))
+        if copilot_ready:
+            chain.append(("Copilot", _copilot_site_ai_request))
+    elif provider in {"worker", "workers_ai"}:
         chain.append(("Workers AI", _workers_site_ai_request))
-    if provider in {"auto", "external", "model"}:
+    elif provider in {"github_models", "github-models", "models"}:
+        chain.append(("GitHub Models", _github_models_site_ai_request))
+    elif provider in {"external", "model"}:
         chain.append(("MODEL", _external_site_ai_request))
-    if provider in {"auto", "copilot"}:
+    elif provider == "copilot":
         chain.append(("Copilot", _copilot_site_ai_request))
+    else:
+        raise SiteProviderUnavailable(f"Neznan AI_PROVIDER: {provider}")
 
     if not chain:
-        chain = [
-            ("Workers AI", _workers_site_ai_request),
-            ("MODEL", _external_site_ai_request),
-            ("Copilot", _copilot_site_ai_request),
-        ]
+        raise SiteProviderUnavailable(
+            "Noben AI site-editor provider ni konfiguriran."
+        )
 
     for name, fn in chain:
         try:
