@@ -92,7 +92,7 @@ jobs:
         run: |
           node --check terminal/worker/src/index.js
           cd terminal/worker
-          npm ci
+          npm install --no-package-lock --no-audit --no-fund
           npx wrangler deploy --dry-run
 
       - name: Exercise all editorial categories against live sources
