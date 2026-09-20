@@ -140,6 +140,7 @@ def test_collect_topic_falls_back_to_english_google_news(monkeypatch):
 
     monkeypatch.setattr(sources, "fetch_feed", fake_fetch)
     monkeypatch.setattr(sources, "_gdelt_news", lambda *a, **k: [])
+    monkeypatch.setattr(sources, "_duckduckgo_web", lambda *a, **k: [])
     items = sources.collect_topic("Objavi članek o orbitalni energiji", "aktualno", 10)
 
     assert items and items[0]["url"] == "https://example.com/story"
@@ -229,6 +230,7 @@ def test_collect_topic_uses_multiple_world_providers(monkeypatch):
 
     monkeypatch.setattr(sources, "fetch_feed", fake_feed)
     monkeypatch.setattr(sources, "_gdelt_news", fake_gdelt)
+    monkeypatch.setattr(sources, "_duckduckgo_web", lambda *a, **k: [])
 
     items = sources.collect_topic("Objavi članek o globalnem energetskem trgu", "aktualno", 30)
     names = {item["source_name"] for item in items}
@@ -373,6 +375,7 @@ def test_world_search_calls_general_web_before_gdelt(monkeypatch):
 
     monkeypatch.setattr(sources, "fetch_feed", fake_feed)
     monkeypatch.setattr(sources, "_gdelt_news", fake_gdelt)
+    monkeypatch.setattr(sources, "_duckduckgo_web", lambda *a, **k: [])
 
     items = sources.collect_topic(
         "objavi članek o dogajanju v ljubljanskem nočnem življenju in bo več teksta v samem članku",
@@ -425,6 +428,7 @@ def test_collect_topic_continues_when_one_provider_fails(monkeypatch):
 
     monkeypatch.setattr(sources, "fetch_feed", fake_fetch)
     monkeypatch.setattr(sources, "_gdelt_news", lambda *a, **k: [])
+    monkeypatch.setattr(sources, "_duckduckgo_web", lambda *a, **k: [])
     items = sources.collect_topic("specialized research topic", "aktualno", 10)
 
     assert items and items[0]["url"] == "https://example.org/research"
@@ -549,3 +553,75 @@ def test_manual_editor_system_prompt_replaces_generic_skip_rule():
     assert "Če vsaj trije od prvih virov" in prompt
     assert "12 preverjenih spletnih virov" in prompt
     assert "ničesar ne ugibaj" in prompt
+
+
+def test_duckduckgo_web_parses_direct_https_results(monkeypatch):
+    from services import sources
+
+    html = b"""
+    <html><body>
+      <div class="result results_links results_links_deep web-result">
+        <h2 class="result__title">
+          <a rel="nofollow" class="result__a"
+             href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fexample.org%2Fresearch%3Fa%3D1">
+             Independent research page
+          </a>
+        </h2>
+        <a class="result__snippet">A substantive public-web search snippet about the requested topic.</a>
+      </div>
+    </body></html>
+    """
+
+    class Response:
+        status = 200
+        def __enter__(self): return self
+        def __exit__(self, *args): return False
+        def read(self, *args): return html
+
+    monkeypatch.setattr(sources, "urlopen", lambda *a, **k: Response())
+
+    items = sources._duckduckgo_web("specialized research topic", "aktualno", 10)
+
+    assert len(items) == 1
+    assert items[0]["url"] == "https://example.org/research?a=1"
+    assert items[0]["provider"] == "duckduckgo-web"
+    assert items[0]["source_name"] == "example.org"
+    assert "substantive public-web search snippet" in items[0]["summary"].lower()
+
+
+def test_collect_topic_includes_duckduckgo_general_web(monkeypatch):
+    from services import sources
+
+    monkeypatch.setattr(sources, "fetch_feed", lambda *a, **k: [])
+    monkeypatch.setattr(sources, "_gdelt_news", lambda *a, **k: [])
+    monkeypatch.setattr(
+        sources,
+        "_duckduckgo_web",
+        lambda query, category, limit: [{
+            "source_name": "example.net",
+            "category": category,
+            "title": "General web result",
+            "url": "https://example.net/topic",
+            "summary": "Independent result from a general web index.",
+            "published": "",
+            "image_url": "",
+            "video_url": "",
+            "hash": "ddg-general",
+            "provider": "duckduckgo-web",
+        }],
+    )
+
+    items = sources.collect_topic("very niche topic", "aktualno", 10)
+
+    assert items
+    assert items[0]["url"] == "https://example.net/topic"
+    assert items[0]["provider"] == "duckduckgo-web"
+
+
+def test_direct_enrichment_accepts_duckduckgo_results():
+    from services.sources import _direct_candidate
+
+    assert _direct_candidate({
+        "provider": "duckduckgo-web",
+        "url": "https://example.org/article",
+    }) is True
