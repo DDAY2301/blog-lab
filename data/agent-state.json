@@ -1,19 +1,17 @@
 {
-  "last_success": "2026-09-20T10:55:24+02:00",
+  "last_success": "2026-09-20T10:38:26+02:00",
   "last_failure": null,
   "consecutive_failures": 0,
   "posts_date": "2026-09-20",
-  "posts_today": 3,
-  "last_output": "equipamentos-de-combate-a-inc-ndio-5062ab1c",
+  "posts_today": 2,
+  "last_output": "slovenija-po-24-letih-znova-v-finalu-evropskega-prvenstva-u18-za-zlato-na-sport-tv-proti-i-7b2ee46f",
   "last_error": null,
   "agent_version": "2.5.0",
-  "current_category": "aktualno",
+  "current_category": "sport",
   "scheduled_posts_today": 1,
-  "manual_posts_today": 2,
+  "manual_posts_today": 1,
   "writer_mode": "fallback",
   "scheduled_slots_done": [
     "2026-09-20|08:17|sport"
-  ],
-  "scheduled_slots_deferred": [],
-  "last_editorial_hold": null
+  ]
 }
