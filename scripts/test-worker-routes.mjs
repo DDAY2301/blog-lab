@@ -192,6 +192,23 @@ const writerPayload = JSON.stringify({
   source_items: [{ title: "Vir", summary: "Podatek", url: "https://example.com" }]
 });
 
+response = await worker.fetch(new Request("https://example.test/api/scheduler/catch-up", {
+  method: "POST"
+}), env);
+check(response.status === 401, "Scheduler catch-up probe must reject an unauthenticated internal request");
+
+publisherCatchupPayload = null;
+const schedulerHeaders = new Headers();
+schedulerHeaders.set("authorization", "Bearer " + env.TERMINAL_COMMAND_KEY);
+response = await worker.fetch(new Request("https://example.test/api/scheduler/catch-up", {
+  method: "POST",
+  headers: schedulerHeaders
+}), env);
+check(response.status === 202, "Scheduler catch-up probe must accept the internal service credential");
+const schedulerProbe = await response.json();
+check(schedulerProbe.ok === true && schedulerProbe.mode === "catch_up", "Scheduler catch-up probe must report dispatch success");
+check(publisherCatchupPayload?.inputs?.catch_up === true, "Scheduler probe must dispatch publisher in catch_up mode");
+
 response = await worker.fetch(new Request("https://example.test/api/ai/write", {
   method: "POST",
   headers: { "content-type": "application/json" },
