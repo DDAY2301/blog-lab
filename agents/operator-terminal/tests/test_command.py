@@ -990,3 +990,112 @@ def test_workers_ai_site_command_self_corrects_ambiguous_replace(tmp_path, monke
     assert ".c { gap: 12px; }" in value
     assert len(feedbacks) == 2
     assert "najden 4x" in feedbacks[1]
+
+
+def test_transactional_site_plan_rolls_back_existing_file_on_runtime_failure(tmp_path, monkeypatch):
+    monkeypatch.setattr(cmd, "BASE", tmp_path)
+    path = tmp_path / "src/App.jsx"
+    path.parent.mkdir(parents=True)
+    path.write_text("const value = 'old';\n", encoding="utf-8")
+
+    def fail_runtime(staged):
+        assert "new" in next(iter(staged.values()))
+        raise cmd.SiteEditError("build failed")
+
+    monkeypatch.setattr(cmd, "_validate_site_runtime", fail_runtime)
+
+    with pytest.raises(cmd.SiteEditError, match="build failed"):
+        cmd._apply_site_plan({
+            "edits": [{
+                "path": "src/App.jsx",
+                "action": "replace",
+                "old": "'old'",
+                "new": "'new'",
+            }],
+        }, validate_runtime=True)
+
+    assert path.read_text(encoding="utf-8") == "const value = 'old';\n"
+
+
+def test_transactional_site_plan_removes_created_file_on_runtime_failure(tmp_path, monkeypatch):
+    monkeypatch.setattr(cmd, "BASE", tmp_path)
+    (tmp_path / "src").mkdir(parents=True)
+
+    monkeypatch.setattr(
+        cmd,
+        "_validate_site_runtime",
+        lambda staged: (_ for _ in ()).throw(cmd.SiteEditError("invalid build")),
+    )
+
+    path = tmp_path / "src/NewPanel.jsx"
+    with pytest.raises(cmd.SiteEditError, match="invalid build"):
+        cmd._apply_site_plan({
+            "edits": [{
+                "path": "src/NewPanel.jsx",
+                "action": "create",
+                "new": "export default function NewPanel(){ return null }",
+            }],
+        }, validate_runtime=True)
+
+    assert not path.exists()
+
+
+def test_runtime_validator_rejects_invalid_json_without_npm(tmp_path, monkeypatch):
+    monkeypatch.setattr(cmd, "BASE", tmp_path)
+    path = tmp_path / "public/site-settings.json"
+    path.parent.mkdir(parents=True)
+    path.write_text("{}\n", encoding="utf-8")
+
+    with pytest.raises(cmd.SiteEditError, match="JSON validation failed"):
+        cmd._validate_site_runtime({path: "{not-json}"})
+
+
+def test_workers_ai_site_command_retries_after_runtime_validation_failure(tmp_path, monkeypatch):
+    monkeypatch.setattr(cmd, "BASE", tmp_path)
+    src = tmp_path / "src"
+    src.mkdir(parents=True)
+    path = src / "App.jsx"
+    path.write_text("const label = 'old';\n", encoding="utf-8")
+    (src / "styles.css").write_text("body{}\n", encoding="utf-8")
+
+    plans = [
+        {
+            "summary": "first patch",
+            "edits": [{
+                "path": "src/App.jsx",
+                "action": "replace",
+                "old": "'old'",
+                "new": "'broken'",
+            }],
+        },
+        {
+            "summary": "repaired patch",
+            "edits": [{
+                "path": "src/App.jsx",
+                "action": "replace",
+                "old": "'old'",
+                "new": "'good'",
+            }],
+        },
+    ]
+    feedbacks = []
+    validations = []
+
+    def fake_request(command, context, feedback=""):
+        feedbacks.append(feedback)
+        return plans.pop(0)
+
+    def fake_runtime(staged):
+        content = next(iter(staged.values()))
+        validations.append(content)
+        if "'broken'" in content:
+            raise cmd.SiteEditError("Frontend build failed: synthetic syntax error")
+
+    monkeypatch.setattr(cmd, "_site_ai_request", fake_request)
+    monkeypatch.setattr(cmd, "_validate_site_runtime", fake_runtime)
+
+    cmd.workers_ai_site_command("spremeni label")
+
+    assert path.read_text(encoding="utf-8") == "const label = 'good';\n"
+    assert len(validations) == 2
+    assert "synthetic syntax error" in feedbacks[1]
