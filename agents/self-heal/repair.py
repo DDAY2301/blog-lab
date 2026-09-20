@@ -46,6 +46,23 @@ SECRET_PATTERNS = (
     re.compile(r"Bearer\s+[A-Za-z0-9._-]{24,}", re.I),
 )
 
+SECURITY_CRITICAL_MARKERS = (
+    "AUTHORIZED_USERS",
+    "configuredLoginPasswords",
+    "loginPasswordCandidates",
+    "loginPassword",
+    "passwordMatchesLogin",
+    "deriveSessionKey",
+    "signSession",
+    "verifySession",
+    "internalWriterAuthorized",
+    "encryptPayload",
+    "TERMINAL_COMMAND_KEY",
+    "GITHUB_DISPATCH_TOKEN",
+    "sessionCookie",
+    "clearSessionCookie",
+)
+
 
 class RepairError(RuntimeError):
     pass
@@ -425,6 +442,15 @@ def apply_plan(plan: dict, context: list[dict]) -> tuple[int, dict[Path, str | N
         if len(new) > MAX_EDIT_CHARS:
             raise RepairError(f"repair edit too large: {rel}")
         _assert_no_secrets(new, rel)
+        if rel == "terminal/worker/src/index.js":
+            security_probe = new
+            if action == "replace":
+                security_probe = str(edit.get("old") or "") + "\n" + new
+            if any(marker in security_probe for marker in SECURITY_CRITICAL_MARKERS):
+                raise RepairError(
+                    "autonomous repair is not allowed to modify Worker authentication, "
+                    "session signing, encryption or secret-handling code"
+                )
 
         if action == "replace":
             old = str(edit.get("old") or "")
