@@ -1,0 +1,83 @@
+name: Deploy Blog Lab Worker
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "terminal/worker/**"
+      - "wrangler.jsonc"
+      - "terminal/worker/wrangler.jsonc"
+      - ".github/workflows/deploy-worker.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: blog-lab-worker-deploy
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: terminal/worker/package-lock.json
+
+      - name: Check Cloudflare deployment secrets
+        shell: bash
+        run: |
+          if [[ -z "${CLOUDFLARE_API_TOKEN:-}" || -z "${CLOUDFLARE_ACCOUNT_ID:-}" ]]; then
+            echo "::error::Missing CLOUDFLARE_API_TOKEN or CLOUDFLARE_ACCOUNT_ID GitHub secrets. Worker was NOT deployed."
+            echo "Add both secrets, then rerun this workflow manually."
+            exit 1
+          fi
+
+      - name: Install Worker dependencies
+        working-directory: terminal/worker
+        run: npm ci
+
+      - name: Validate Worker source
+        shell: bash
+        run: |
+          node --check terminal/worker/src/index.js
+          if ! grep -q 'auth-v6.17-ai-resilience' terminal/worker/src/index.js; then
+            echo "::error::Expected Worker version marker not found."
+            exit 1
+          fi
+
+      - name: Deploy Worker to Cloudflare
+        working-directory: terminal/worker
+        run: npx wrangler deploy
+
+      - name: Verify live Worker health
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, sys, time, urllib.request
+          url = 'https://blog-lab.dan-grmusa.workers.dev/health'
+          last = ''
+          for _ in range(12):
+              try:
+                  with urllib.request.urlopen(url, timeout=20) as r:
+                      data = json.loads(r.read().decode('utf-8'))
+                  version = data.get('version')
+                  print(json.dumps(data, ensure_ascii=False, indent=2))
+                  if version == 'auth-v6.17-ai-resilience' and data.get('auth_self_test_ok') is True and int(data.get('authorized_users_ready') or 0) >= 1:
+                      sys.exit(0)
+                  last = f'version={version} auth_self_test_ok={data.get("auth_self_test_ok")} authorized_users_ready={data.get("authorized_users_ready")}'
+              except Exception as exc:
+                  last = str(exc)
+              time.sleep(5)
+          print('Live Worker health verification failed:', last, file=sys.stderr)
+          sys.exit(1)
+          PY
