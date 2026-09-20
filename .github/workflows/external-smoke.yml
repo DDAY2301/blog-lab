@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: blog-lab-external-smoke
+  group: blog-lab-external-smoke-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 
 permissions:
