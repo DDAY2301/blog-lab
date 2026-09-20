@@ -1,6 +1,6 @@
 {
   "name": "Blog Lab Production Guardian",
-  "version": "guardian-v1.1-deferred-ai-recovery",
+  "version": "guardian-v1.0-final",
   "mode": "safe-autoupdate",
   "principle": "Detect problems automatically, repair only through validated tests and pull requests unless a human enables direct deployment credentials.",
   "production": {
@@ -17,7 +17,6 @@
     "credential-like text scan",
     "deterministic repo hygiene repair",
     "AI-assisted self-heal with protected-path and secret gates",
-    "Workers AI capacity fallback with deferred site-edit replay",
     "validated pull-request based auto-update",
     "manual workflow_dispatch emergency check"
   ],
@@ -29,15 +28,11 @@
     "requirements-agent.txt",
     ".env*"
   ],
-  "deferredQueues": {
-    "siteEdits": "data/deferred-site-edits.json"
-  },
   "workflows": [
     "Blog Lab Health Check",
     "Blog Lab External Smoke Test",
     "Blog Lab Full E2E Audit",
     "Blog Lab Self Heal",
-    "Blog Lab Production Guardian",
-    "Blog Lab Deferred Site Edits"
+    "Blog Lab Production Guardian"
   ]
 }
