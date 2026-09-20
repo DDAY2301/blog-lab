@@ -1195,7 +1195,7 @@ def test_workers_site_command_does_not_retry_provider_capacity_failure(tmp_path,
 
     monkeypatch.setattr(cmd, "_site_ai_request", fail_once)
 
-    with pytest.raises(cmd.SiteEditError, match="capacity unavailable"):
+    with pytest.raises(cmd.SiteProviderUnavailable, match="capacity unavailable"):
         cmd.workers_ai_site_command("uredi stran")
 
     assert len(calls) == 1
@@ -1241,10 +1241,9 @@ def test_workers_site_ai_adapter_sends_repository_context(monkeypatch):
     assert captured["body"]["request"].startswith("OPERATOR REQUEST:")
 
 
-def test_site_ai_request_fails_over_from_worker_to_github_models(monkeypatch):
+def test_auto_site_ai_does_not_call_unconfigured_fallbacks(monkeypatch):
     monkeypatch.setenv("AI_PROVIDER", "auto")
     monkeypatch.setenv("WORKER_AI_TOKEN", "worker-test")
-    monkeypatch.setenv("GITHUB_TOKEN", "github-actions-test")
     monkeypatch.delenv("MODEL_API_KEY", raising=False)
     monkeypatch.delenv("MODEL_BASE_URL", raising=False)
     monkeypatch.delenv("MODEL_NAME", raising=False)
@@ -1253,21 +1252,12 @@ def test_site_ai_request_fails_over_from_worker_to_github_models(monkeypatch):
 
     def worker(system_prompt, request_text, context):
         calls.append("worker")
-        raise cmd.SiteProviderUnavailable("Workers AI capacity unavailable")
-
-    def github_models(system_prompt, request_text, context):
-        calls.append("github_models")
-        return {
-            "summary": "github models success",
-            "edits": [],
-            "_provider": "github_models",
-        }
+        return {"summary": "ok", "edits": [], "_provider": "workers_ai"}
 
     def should_not_run(*args, **kwargs):
-        raise AssertionError("later provider should not run")
+        raise AssertionError("unconfigured provider must not run")
 
     monkeypatch.setattr(cmd, "_workers_site_ai_request", worker)
-    monkeypatch.setattr(cmd, "_github_models_site_ai_request", github_models)
     monkeypatch.setattr(cmd, "_external_site_ai_request", should_not_run)
     monkeypatch.setattr(cmd, "_copilot_site_ai_request", should_not_run)
 
@@ -1275,48 +1265,37 @@ def test_site_ai_request_fails_over_from_worker_to_github_models(monkeypatch):
         "uredi stran",
         [{"path": "src/App.jsx", "complete": True, "snippets": [{"label": "full", "content": "x"}]}],
     )
+    assert plan["_provider"] == "workers_ai"
+    assert calls == ["worker"]
 
-    assert plan["_provider"] == "github_models"
-    assert calls == ["worker", "github_models"]
+
+def test_article_ai_unavailable_is_nonretryable(tmp_path, monkeypatch, capsys):
+    app = tmp_path / "src/App.jsx"
+    app.parent.mkdir(parents=True)
+    app.write_text("before")
+    monkeypatch.setattr(cmd, "BASE", tmp_path)
+    monkeypatch.setattr(cmd, "ARTICLE_AGENT", tmp_path / "agent.py")
+    monkeypatch.setattr(cmd.subprocess, "run", lambda *a, **k: SimpleNamespace(returncode=4))
+    with pytest.raises(SystemExit) as exc:
+        cmd.article_command("Objavi članek o dogodku", "aktualno")
+    assert exc.value.code == 64
+    assert "ARTICLE_AI_UNAVAILABLE" in capsys.readouterr().err
 
 
-def test_github_models_site_adapter_uses_builtin_actions_token(monkeypatch):
-    monkeypatch.setenv("GITHUB_TOKEN", "actions-token")
-    monkeypatch.setenv("GITHUB_MODELS_MODEL", "openai/gpt-4.1")
-    captured = {}
-
-    class FakeResponse:
-        def __enter__(self): return self
-        def __exit__(self, *args): return False
-        def read(self):
-            return json.dumps({
-                "choices": [{
-                    "message": {
-                        "content": json.dumps({
-                            "summary": "ok",
-                            "edits": [],
-                        })
-                    }
-                }]
-            }).encode("utf-8")
-
-    def fake_urlopen(request, timeout=0):
-        captured["url"] = request.full_url
-        captured["body"] = json.loads(request.data.decode("utf-8"))
-        captured["authorization"] = request.headers.get("Authorization")
-        return FakeResponse()
-
-    monkeypatch.setattr(cmd, "urlopen", fake_urlopen)
-    context = [{
-        "path": "src/App.jsx",
-        "complete": True,
-        "snippets": [{"label": "full", "content": "export default 1;"}],
-    }]
-
-    plan = cmd._github_models_site_ai_request("system", "OPERATOR REQUEST:\nuredi stran", context)
-
-    assert plan["_provider"] == "github_models"
-    assert captured["url"] == "https://models.github.ai/inference/chat/completions"
-    assert captured["body"]["model"] == "openai/gpt-4.1"
-    assert "REPOSITORY CONTEXT" in captured["body"]["messages"][1]["content"]
-    assert captured["authorization"] == "Bearer actions-token"
+def test_site_command_marks_provider_outage_nonretryable(monkeypatch, capsys):
+    monkeypatch.setattr(
+        cmd,
+        "builtin_site_command",
+        lambda command: False,
+    )
+    monkeypatch.setattr(
+        cmd,
+        "workers_ai_site_command",
+        lambda command: (_ for _ in ()).throw(
+            cmd.SiteProviderUnavailable("Workers AI quota exhausted")
+        ),
+    )
+    with pytest.raises(SystemExit) as exc:
+        cmd.site_command("uredi izgled strani")
+    assert exc.value.code == 64
+    assert "SITE_AI_CAPACITY_UNAVAILABLE" in capsys.readouterr().err

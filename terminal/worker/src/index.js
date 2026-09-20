@@ -307,13 +307,13 @@ async function generateArticleWithWorkersAi(env, body) {
 
   let result;
   try {
-    result = await env.AI.run("@cf/meta/llama-3.3-70b-instruct-fp8-fast", {
+    result = await env.AI.run("@cf/zai-org/glm-4.7-flash", {
       messages: [
         { role: "system", content: systemPrompt },
         { role: "user", content: userPrompt },
       ],
       response_format: { type: "json_object" },
-      max_tokens: 3600,
+      max_tokens: 2800,
       temperature: 0.32,
       repetition_penalty: 1.08,
     });
@@ -339,7 +339,56 @@ async function generateArticleWithWorkersAi(env, body) {
   return {
     ok: true,
     article,
-    model: "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+    model: "@cf/zai-org/glm-4.7-flash",
+    usage: result?.usage || null,
+  };
+}
+
+
+async function generateReviewWithWorkersAi(env, body) {
+  if (!env.AI || typeof env.AI.run !== "function") {
+    return { ok: false, status: 503, error: "Workers AI binding ni na voljo.", code: "AI_BINDING_MISSING" };
+  }
+
+  const systemPrompt = String(body?.system_prompt || "").trim();
+  const userPrompt = String(body?.user_prompt || "").trim();
+  if (!systemPrompt || !userPrompt) {
+    return { ok: false, status: 400, error: "Manjka review prompt.", code: "AI_REVIEW_INPUT_INVALID" };
+  }
+  if (systemPrompt.length > 14000 || userPrompt.length > 50000) {
+    return { ok: false, status: 413, error: "Review prompt je predolg.", code: "AI_REVIEW_PROMPT_TOO_LARGE" };
+  }
+
+  let result;
+  try {
+    result = await env.AI.run("@cf/zai-org/glm-4.7-flash", {
+      messages: [
+        { role: "system", content: systemPrompt },
+        { role: "user", content: userPrompt },
+      ],
+      response_format: { type: "json_object" },
+      max_tokens: 900,
+      temperature: 0.05,
+      repetition_penalty: 1.04,
+    });
+  } catch (error) {
+    return {
+      ok: false,
+      status: 502,
+      error: "Workers AI review ni uspel.",
+      code: "AI_REVIEW_INFERENCE_FAILED",
+      detail: String(error?.message || error || "").slice(0, 300),
+    };
+  }
+
+  const review = articleJsonFromAiResult(result);
+  if (!review || typeof review !== "object" || Array.isArray(review) || !("pass" in review)) {
+    return { ok: false, status: 502, error: "Workers AI ni vrnil veljavnega review JSON-a.", code: "AI_REVIEW_SHAPE_INVALID" };
+  }
+  return {
+    ok: true,
+    review,
+    model: "@cf/zai-org/glm-4.7-flash",
     usage: result?.usage || null,
   };
 }
@@ -366,13 +415,13 @@ async function generateSiteEditWithWorkersAi(env, body) {
 
   let result;
   try {
-    result = await env.AI.run("@cf/meta/llama-3.3-70b-instruct-fp8-fast", {
+    result = await env.AI.run("@cf/zai-org/glm-4.7-flash", {
       messages: [
         { role: "system", content: systemPrompt },
         { role: "user", content: userPrompt },
       ],
       response_format: { type: "json_object" },
-      max_tokens: 4200,
+      max_tokens: 2800,
       temperature: 0.20,
       repetition_penalty: 1.06,
     });
@@ -393,7 +442,7 @@ async function generateSiteEditWithWorkersAi(env, body) {
   return {
     ok: true,
     plan,
-    model: "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+    model: "@cf/zai-org/glm-4.7-flash",
     usage: result?.usage || null,
   };
 }
@@ -842,13 +891,14 @@ export default {
       return json({
         ok: true,
         worker: "blog-lab",
-        version: "auth-v6.10-runtime-resilience",
+        version: "auth-v6.11-quality-capacity",
         ready: state.ready,
         auth_ready: authReady,
         authorized_users_ready: authReady ? 2 : 0,
         configured_login_secrets: configuredPasswords.length,
         media_upload_ready: mediaUploadReady,
         ai_writer_ready: Boolean(env.AI && typeof env.AI.run === "function"),
+        ai_review_ready: Boolean(env.AI && typeof env.AI.run === "function"),
         site_editor_ready: Boolean(env.AI && typeof env.AI.run === "function"),
         publisher_scheduler_ready: Boolean(String(env.GITHUB_DISPATCH_TOKEN || "").trim()),
         auth_mode: "built-in-session",
@@ -880,6 +930,16 @@ export default {
       let body;
       try { body = await request.json(); } catch { return json({ error: "Neveljaven JSON.", code: "AI_JSON_BODY_INVALID" }, 400); }
       const result = await generateArticleWithWorkersAi(env, body);
+      return json(result, result.ok ? 200 : (result.status || 500));
+    }
+
+    if (request.method === "POST" && url.pathname === "/api/ai/review") {
+      if (!(await internalWriterAuthorized(request, env))) {
+        return json({ error: "Nepooblaščen interni review klic.", code: "AI_UNAUTHORIZED" }, 401);
+      }
+      let body;
+      try { body = await request.json(); } catch { return json({ error: "Neveljaven JSON.", code: "AI_JSON_BODY_INVALID" }, 400); }
+      const result = await generateReviewWithWorkersAi(env, body);
       return json(result, result.ok ? 200 : (result.status || 500));
     }
 

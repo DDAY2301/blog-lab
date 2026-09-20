@@ -1046,3 +1046,53 @@ def test_fallback_collapses_duplicate_corroboration_without_repetition_error():
     assert "ponavljanje" not in errors
     assert article["content"].count(repeated) == 1
     assert "Dodatni potrditveni viri" in article["content"]
+
+
+def test_manual_topic_filter_rejects_firex_firefox_windows_noise():
+    from services.sources import filter_topic_items
+
+    items = [
+        {
+            "title": "Equipamentos de Combate a Incêndio",
+            "summary": "Extintores portas corta fogo hidrantes sprinklers.",
+            "source_name": "firex.com.br",
+            "url": "https://www.firex.com.br/",
+            "provider": "bing-web",
+            "hash": "firex",
+        },
+        {
+            "title": "Завантажте Firefox",
+            "summary": "Firefox browser download and privacy information.",
+            "source_name": "firefox.com",
+            "url": "https://www.firefox.com/uk/",
+            "provider": "bing-web",
+            "hash": "firefox",
+        },
+        {
+            "title": "Search in Windows 11 File Explorer",
+            "summary": "Tutorial for finding files and folders in Windows 11.",
+            "source_name": "elevenforum.com",
+            "url": "https://www.elevenforum.com/t/search-in-windows-11-file-explorer.21789/",
+            "provider": "bing-web",
+            "hash": "windows",
+        },
+    ]
+
+    assert filter_topic_items("današnjem dogajanju v centru", items) == []
+
+
+def test_manual_topic_filter_keeps_explicit_location_topic():
+    from services.sources import filter_topic_items
+
+    items = [{
+        "title": "Nočno življenje v Ljubljani in dogodki v centru",
+        "summary": "Pregled večernega dogajanja, klubov in dogodkov v središču Ljubljane.",
+        "source_name": "lokalni vir",
+        "url": "https://example.si/ljubljana",
+        "provider": "google-news-si",
+        "hash": "ljubljana",
+    }]
+
+    filtered = filter_topic_items("nočno življenje v Ljubljani", items)
+    assert len(filtered) == 1
+    assert filtered[0]["url"] == "https://example.si/ljubljana"
