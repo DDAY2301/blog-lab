@@ -504,6 +504,19 @@ def repair(diagnostic: str, max_attempts: int = 3) -> dict:
     last_error: Exception | None = None
     for attempt in range(1, max_attempts + 1):
         plan = request_plan(diagnostic, context, feedback)
+        if not isinstance(plan.get("edits"), list):
+            raise RepairError("repair provider returned invalid edits")
+        if not plan.get("edits"):
+            return {
+                "ok": False,
+                "no_code_repair": True,
+                "attempt": attempt,
+                "changed_files": 0,
+                "summary": str(plan.get("summary") or "No safe repository change is required.")[:500],
+                "root_cause": str(plan.get("root_cause") or "")[:900],
+                "provider": str(plan.get("_provider") or "unknown"),
+                "validation": "",
+            }
         original: dict[Path, str | None] = {}
         try:
             changed, original = apply_plan(plan, context)
@@ -547,9 +560,12 @@ def main() -> int:
         return 1
 
     payload = json.dumps(result, ensure_ascii=False, indent=2)
-    print("SELF_HEAL_OK " + json.dumps({k: v for k, v in result.items() if k != "validation"}, ensure_ascii=False))
     if args.result:
         Path(args.result).write_text(payload + "\n", encoding="utf-8")
+    if result.get("no_code_repair"):
+        print("SELF_HEAL_NO_CODE_REPAIR " + json.dumps({k: v for k, v in result.items() if k != "validation"}, ensure_ascii=False))
+        return 64
+    print("SELF_HEAL_OK " + json.dumps({k: v for k, v in result.items() if k != "validation"}, ensure_ascii=False))
     return 0
 
 
