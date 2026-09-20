@@ -8,6 +8,30 @@ from urllib.request import Request, urlopen
 class AIUnavailable(RuntimeError):
     pass
 
+def _unwrap_mapping(value, depth: int = 0):
+    if not isinstance(value, dict) or depth > 4:
+        return None
+    for key in ("article", "result", "data", "output", "response"):
+        nested = value.get(key)
+        if isinstance(nested, dict):
+            unwrapped = _unwrap_mapping(nested, depth + 1)
+            if isinstance(unwrapped, dict):
+                return unwrapped
+    return value
+
+
+def _looks_like_article(value: dict | None) -> bool:
+    if not isinstance(value, dict):
+        return False
+    if value.get("skip") is True:
+        return True
+    return bool(
+        str(value.get("title") or "").strip()
+        or str(value.get("content") or "").strip()
+        or isinstance(value.get("sources"), list)
+    )
+
+
 def _extract_json(text: str) -> dict:
     text = (text or "").strip()
     if text.startswith("```"):
@@ -83,10 +107,14 @@ def _workers_ai(system_prompt: str, user_prompt: str, source_items: list[dict], 
     except Exception as exc:
         raise AIUnavailable(f"Workers AI writer ni uspel: {exc}") from exc
 
-    article = data.get("article") if isinstance(data, dict) else None
-    if not isinstance(article, dict):
+    article = _unwrap_mapping(data.get("article")) if isinstance(data, dict) else None
+    if not _looks_like_article(article):
         detail = data.get("code") if isinstance(data, dict) else ""
-        raise AIUnavailable(f"Workers AI writer ni vrnil članka{': ' + str(detail) if detail else ''}.")
+        raise AIUnavailable(
+            "Workers AI writer ni vrnil uporabne strukture članka"
+            + (f": {detail}" if detail else "")
+            + "."
+        )
     article["_writer_provider"] = "workers_ai"
     return article
 
