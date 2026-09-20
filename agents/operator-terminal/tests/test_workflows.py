@@ -64,3 +64,16 @@ def test_publisher_supports_cloudflare_catchup_dispatch():
     assert 'INPUT_CATCH_UP: ${{ inputs.catch_up }}' in PUBLISHER
     assert '"$INPUT_CATCH_UP" != "true"' in PUBLISHER
     assert 'inputs.catch_up' in PUBLISHER
+
+
+def test_operator_terminal_enables_fast_ai_failover():
+    assert 'copilot-requests: write' in OPERATOR
+    assert 'AI_PROVIDER: "auto"' in OPERATOR
+    assert 'COPILOT_GITHUB_TOKEN:' in OPERATOR
+    assert 'npm install -g @github/copilot@latest' in OPERATOR
+
+
+def test_publisher_uses_auto_provider_failover():
+    assert 'AI_PROVIDER: "auto"' in PUBLISHER
+    assert 'copilot-requests: write' in PUBLISHER
+    assert 'npm install -g @github/copilot@latest' in PUBLISHER
