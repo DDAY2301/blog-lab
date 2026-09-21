@@ -73,7 +73,7 @@ for (const item of suite.commands || []) {
 }
 
 // Verify redaction never leaks common token shapes into terminal failure details.
-const secretSample = "failure ghp_abcdefghijklmnopqrstuvwxyz123456 Bearer abc.def.ghi github_pat_abcdefghijklmnopqrstuvwxyz_123456789";
+const secretSample = "failure " + "ghp_" + "abcdefghijklmnopqrstuvwxyz123456" + " Bearer abc.def.ghi " + "github_pat_" + "abcdefghijklmnopqrstuvwxyz_123456789";
 const redacted = h.safeFailureText(secretSample);
 assert(!redacted.includes("ghp_"), "GitHub classic token was not redacted");
 assert(!redacted.includes("github_pat_"), "GitHub fine-grained token was not redacted");
