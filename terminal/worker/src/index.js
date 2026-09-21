@@ -625,6 +625,7 @@ function terminalDomainAnswer() {
 }
 
 async function terminalOperationalAnswer(env, message, email) {
+  if (isHelpCommand(message)) return terminalCommandHelp();
   if (shouldUsePublicationOperationalCheck(message)) return terminalPublicationOperationalAnswer(env, message, email);
   if (shouldUseDomainOperationalAnswer(message)) return terminalDomainAnswer(env, message, email);
   if (shouldUseTerminalDiagnostics(message)) return terminalDiagnosticsAnswer(env, message, email);
@@ -1164,7 +1165,9 @@ const COMMAND_TOKEN_ALIASES = Object.freeze({
   naredi:"naredi", make:"naredi", daljse:"dolzina", daljši:"dolzina", krajse:"dolzina", krajši:"dolzina",
   profesionalno:"slog", professional:"slog", struktura:"slog", structure:"slog", stil:"slog", style:"slog", tipografija:"font",
   upload:"nalozi", nalozi:"nalozi", move:"premakni", premakni:"premakni", copy:"kopiraj", kopiraj:"kopiraj",
-  rename:"preimenuj", preimenuj:"preimenuj"
+  rename:"preimenuj", preimenuj:"preimenuj",
+  pomoc:"pomoc", pomoč:"pomoc", help:"pomoc", commands:"komande", command:"komande", komande:"komande", ukazi:"komande",
+  zmoreš:"zmore", zmores:"zmore", capabilities:"zmore"
 });
 
 const COMMAND_PREFIX_ALIASES = Object.freeze([
@@ -1209,6 +1212,39 @@ function commandEditDistance(a, b) {
 
 const COMMAND_VOCABULARY = Object.keys(COMMAND_TOKEN_ALIASES);
 
+const TERMINAL_COMMAND_CATALOG = Object.freeze([
+  { group:"Nadzor", examples:["status agenta","ustavi agenta","nadaljuj objavljanje","preklopi na automatic/draft/review"] },
+  { group:"Urnik", examples:["preveri urnik","nastavi 3x na dan","preveri zakaj manjka današnja objava"] },
+  { group:"Članki", examples:["objavi članek o …","napiši novico o …","objavi članek v rubriki …"] },
+  { group:"Stran", examples:["uredi spletno stran","izboljšaj navigacijo","spremeni header/footer/hero"] },
+  { group:"Dizajn", examples:["spremeni barvno temo v modro","izboljšaj tipografijo člankov","naredi mobile layout boljši"] },
+  { group:"Mediji", examples:["dodaj galerijo","uredi slike članka","dodaj video sekcijo"] },
+  { group:"Rubrike", examples:["dodaj rubriko …","uredi meni","preimenuj kategorijo …"] },
+  { group:"SEO", examples:["uredi SEO/meta","spremeni favicon","izboljšaj naslov strani"] },
+  { group:"Diagnostika", examples:["preveri terminal in chatbot","preveri Cloudflare Worker","preveri workflow napake"] },
+  { group:"DNS", examples:["pripravi DNS za bloglab.eu","pokaži CNAME in A zapise"] },
+  { group:"Self-heal", examples:["preveri zakaj ni objave in popravi","testiraj terminal agenta in chatbot ter popravi probleme"] }
+]);
+
+function isHelpCommand(command) {
+  const normalized = " " + normalizedCommandIntent(command) + " ";
+  return normalized.includes(" pomoc ")
+    || normalized.includes(" komande ")
+    || normalized.includes(" zmore ")
+    || normalized.includes(" kaj znas ")
+    || normalized.includes(" kaj lahko ")
+    || normalized.includes(" what can you do ");
+}
+
+function terminalCommandHelp() {
+  const lines = ["Blog Lab terminal podpira naslednje skupine ukazov:"];
+  for (const item of TERMINAL_COMMAND_CATALOG) {
+    lines.push(item.group + ": " + item.examples.join(" · "));
+  }
+  lines.push("Ukaze lahko pišeš v SL/EN/HR/SRB; router tolerira tudi pogoste tipkarske napake.");
+  return { mode:"terminal_command_help", text:lines.join("\n"), catalog:TERMINAL_COMMAND_CATALOG };
+}
+
 function correctCommandToken(token) {
   if (COMMAND_TOKEN_ALIASES[token]) return COMMAND_TOKEN_ALIASES[token];
   for (const [prefix, canonical] of COMMAND_PREFIX_ALIASES) {
@@ -1243,7 +1279,7 @@ function localCommandIntent(command) {
   const tokens = new Set(normalized.split(" ").filter(Boolean));
   const scores = { control: 0, article: 0, site: 0 };
 
-  const controlActions = ["ustavi","nadaljuj","vklopi","izklopi","zazeni","status","urnik","preveri"];
+  const controlActions = ["ustavi","nadaljuj","vklopi","izklopi","zazeni","status","urnik","preveri","pomoc","komande","zmore"];
   const articleActions = ["objavi","napisi","ustvari","dodaj"];
   const articleNouns = ["clanek","novica","blog"];
   const siteActions = ["uredi","spremeni","izboljsaj","polepsaj","dodaj","odstrani","nalozi","premakni","kopiraj","preimenuj"];
@@ -1253,6 +1289,7 @@ function localCommandIntent(command) {
   if (tokens.has("agent") || tokens.has("objavljanje")) scores.control += 2;
   if (tokens.has("status")) scores.control += 5;
   if (tokens.has("urnik")) scores.control += 4;
+  if (tokens.has("pomoc") || tokens.has("komande") || tokens.has("zmore")) scores.control += 8;
 
   if (articleNouns.some((x) => tokens.has(x))) scores.article += 4;
   if (articleActions.some((x) => tokens.has(x))) scores.article += 2;
@@ -1280,7 +1317,8 @@ function localCommandIntent(command) {
   if (ranked[0][1] === ranked[1][1]) confidence = Math.min(confidence, 0.58);
 
   let action = "general";
-  if (tokens.has("status") || padded.includes("preveri agent")) action = "status";
+  if (tokens.has("pomoc") || tokens.has("komande") || tokens.has("zmore") || padded.includes(" kaj znas ")) action = "help";
+  else if (tokens.has("status") || padded.includes("preveri agent")) action = "status";
   else if (tokens.has("urnik")) action = "schedule";
   else if (tokens.has("ustavi") || tokens.has("izklopi")) action = "stop";
   else if (tokens.has("nadaljuj") || tokens.has("vklopi") || tokens.has("zazeni")) action = "start";
@@ -1934,6 +1972,10 @@ export default {
       return json({ email: user.email, ...setupState(env) });
     }
 
+    if (request.method === "GET" && url.pathname === "/api/commands") {
+      return json({ ok:true, ...terminalCommandHelp() });
+    }
+
     if (request.method === "POST" && url.pathname === "/api/interpret") {
       let body;
       try { body = await request.json(); } catch { return json({ error: "Neveljaven JSON." }, 400); }
@@ -1993,6 +2035,10 @@ export default {
       const dispatchMode = mode === "auto"
         ? ((interpretation.ai_used || interpretation.confidence >= 0.80) ? interpretation.mode : "auto")
         : mode;
+      if ((resolvedMode === "control" || mode === "control") && isHelpCommand(command)) {
+        const help = terminalCommandHelp();
+        return json({ ok:true, local:true, interpretation:{...interpretation, mode:"control", action:"help"}, result:{ summary:help.text, catalog:help.catalog } }, 200);
+      }
       if ((resolvedMode === "control" || mode === "control") && isAgentStatusCommand(command)) {
         return json({ ok: true, local: true, interpretation, result: await readAgentSnapshot(env) }, 200);
       }
