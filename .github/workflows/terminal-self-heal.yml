@@ -4,6 +4,12 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "17,47 * * * *"
+  workflow_run:
+    workflows:
+      - "Blog Lab Terminal Agent Command Suite"
+      - "Deploy Blog Lab Worker"
+    types:
+      - completed
 
 concurrency:
   group: blog-lab-terminal-self-heal
@@ -15,6 +21,7 @@ permissions:
 
 jobs:
   self-heal:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'failure' }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
     env:
