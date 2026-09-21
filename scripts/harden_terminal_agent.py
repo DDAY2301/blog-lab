@@ -2,8 +2,9 @@ from pathlib import Path
 
 path = Path("terminal/worker/src/index.js")
 text = path.read_text(encoding="utf-8")
-text = text.replace("auth-v6.20-resilience", "auth-v6.23-command-idempotency")
-text = text.replace("auth-v6.22-terminal-stability", "auth-v6.23-command-idempotency")
+text = text.replace("auth-v6.20-resilience", "auth-v6.24-product-onboarding")
+text = text.replace("auth-v6.22-terminal-stability", "auth-v6.24-product-onboarding")
+text = text.replace("auth-v6.23-command-idempotency", "auth-v6.24-product-onboarding")
 
 
 github_old = r'''async function github(path, env, init = {}) {
