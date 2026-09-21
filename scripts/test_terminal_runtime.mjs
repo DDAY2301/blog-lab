@@ -24,6 +24,11 @@ const hookNames = [
   "isHelpCommand",
   "terminalCommandHelp",
   "terminalChatAssistant",
+  "normalizeTrialEmail",
+  "escapeHtml",
+  "verifyTrialSession",
+  "signTrialSession",
+  "demoCommandResult",
   "storeUploadedMedia",
   "safeMediaStem",
 ];
@@ -129,6 +134,29 @@ assert(String(outageAnswer?.text || "").includes("Pomočnik je prejel vprašanje
 assert(!/Draft 1|Refining the Response|Opening:/i.test(String(outageAnswer?.text || "")), "Chatbot outage leaked planning text");
 assert(Date.now() - outageStarted < 4000, "Non-retryable chatbot AI outage took too long");
 
+const demoArticle = h.demoCommandResult("napiši članek o trajnostni mobilnosti");
+assert(demoArticle?.simulated === true, "Public demo must stay simulated");
+assert(demoArticle?.mode === "article", "Public demo article routing failed");
+assert(Array.isArray(demoArticle?.steps) && demoArticle.steps.length >= 3, "Public demo execution plan missing");
+
+const trialEnv = { TERMINAL_COMMAND_KEY: Buffer.alloc(32, 7).toString("base64") };
+const trialToken = await h.signTrialSession(trialEnv, {
+  name: "Demo User",
+  email: "Demo@Example.com",
+  organization: "Example",
+  use_case: "content",
+  frequency: "daily",
+  workspace: "Demo Workspace",
+  workspace_id: "trial-test"
+});
+const trialProfile = await h.verifyTrialSession(trialEnv, trialToken);
+assert(trialProfile?.email === "demo@example.com", "Trial session email normalization failed");
+assert(trialProfile?.workspace === "Demo Workspace", "Trial session profile roundtrip failed");
+assert(await h.verifyTrialSession(trialEnv, trialToken + "tampered") === null, "Tampered trial session was accepted");
+assert(h.normalizeTrialEmail("not-an-email") === "", "Invalid trial email accepted");
+assert(!h.escapeHtml("<script>alert(1)</script>").includes("<script>"), "Trial HTML escaping failed");
+
+
 // A stalled dependency must be bounded instead of hanging the chatbot indefinitely.
 let timeoutGuard = false;
 const timeoutStarted = Date.now();
@@ -157,5 +185,8 @@ console.log(JSON.stringify({
   media_type_guard: "ok",
   media_size_guard: "ok",
   chatbot_ai_outage_fallback: "ok",
+  public_demo_isolation: "ok",
+  trial_session_roundtrip: "ok",
+  trial_session_tamper_guard: "ok",
   timeout_guard: "ok"
 }, null, 2));
