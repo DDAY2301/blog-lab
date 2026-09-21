@@ -84,7 +84,7 @@ if "function terminalChatAssistant" not in text:
     text = text.replace(marker, helper + "\n" + marker, 1)
 
 route = r'''
-    if (url.pathname === "/api/chat" && request.method === "POST") {
+    if (request.method === "POST" && url.pathname === "/api/chat") {
       const user = await identity(request, env);
       if (!user) return json({ ok: false, error: "UNAUTHORIZED" }, 401);
       const body = await request.json().catch(() => ({}));
@@ -97,17 +97,10 @@ route = r'''
 '''
 
 if 'url.pathname === "/api/chat"' not in text:
-    for marker in [
-        'if (url.pathname === "/api/ai/write"',
-        'if (url.pathname === "/api/ai/diagnostics"',
-        'if (url.pathname === "/api/login"',
-        'if (url.pathname === "/health"',
-    ]:
-        if marker in text:
-            text = text.replace(marker, route + "\n    " + marker, 1)
-            break
-    else:
-        raise SystemExit("Cannot find router insertion marker")
+    marker = '    if (request.method === "POST" && url.pathname === "/api/media") {'
+    if marker not in text:
+        raise SystemExit("Cannot find /api/media router insertion marker")
+    text = text.replace(marker, route + "\n" + marker, 1)
 
 overlay = r'''
 <style>
