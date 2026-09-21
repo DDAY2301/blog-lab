@@ -2543,17 +2543,51 @@ function articleOutline(article) {
     .slice(0, 7);
 }
 
+const ARTICLE_VISUAL_TEMPLATES = {
+  newsroom: { label: "Newsroom", kicker: "JAVNE ZADEVE" },
+  pulse: { label: "Pulse", kicker: "V RITMU DOGAJANJA" },
+  afterdark: { label: "After Dark", kicker: "URBANO & KULTURA" },
+  studio: { label: "Studio", kicker: "IDEJE & TEHNOLOGIJA" },
+  fieldnote: { label: "Field Note", kicker: "NA TERENU" },
+  magazine: { label: "Magazine", kicker: "FEATURE" },
+};
+
+function articleTemplateKey(article) {
+  const explicit = String(article?.visualTemplate || "").toLowerCase();
+  if (ARTICLE_VISUAL_TEMPLATES[explicit]) return explicit;
+
+  const haystack = [
+    article?.category,
+    article?.title,
+    Array.isArray(article?.tags) ? article.tags.join(" ") : "",
+  ].join(" ").toLowerCase();
+
+  if (/šport|sport|nogomet|košark|tenis|koles|tekma|liga|hokej|smuč/.test(haystack)) return "pulse";
+  if (/noč|night|glasb|koncert|festival|klub|kultur|film|restavr|kulinar|umetnost|moda/.test(haystack)) return "afterdark";
+  if (/tehnolog|umetna inteligenca|\bai\b|startup|znanost|digital|software|gospodar|financ|inovacij/.test(haystack)) return "studio";
+  if (/potov|izlet|narava|planin|gora|jezero|morje|hrana|recept|muzej|grad|dedišč|vodnik/.test(haystack)) return "fieldnote";
+  if (/politik|vlada|minister|parlament|volit|zakon|občina|predsednik|držav/.test(haystack)) return "newsroom";
+  return "magazine";
+}
+
+function articleTemplateMeta(article) {
+  return ARTICLE_VISUAL_TEMPLATES[articleTemplateKey(article)] || ARTICLE_VISUAL_TEMPLATES.magazine;
+}
+
 function ArticleTemplate({ selected, navigate, openEditorialTerminal }) {
   const sourceCount = Array.isArray(selected.sources) ? selected.sources.length : 0;
   const outline = articleOutline(selected);
+  const templateKey = articleTemplateKey(selected);
+  const templateMeta = articleTemplateMeta(selected);
   return (
-    <article className="article-page article-page--premium">
+    <article className={`article-page article-page--premium article-template article-template--${templateKey}`}>
       <button className="back article-back" onClick={() => navigate("home")}>← Vse objave</button>
       <header className="article-heading article-heading--premium">
         <div className="article-kicker-row">
           <span className="article-category">{selected.category}</span>
-          <span className="article-template-badge">Uredniški članek</span>
+          <span className="article-template-badge">{templateMeta.label}</span>
         </div>
+        <span className="article-template-kicker">{templateMeta.kicker}</span>
         <h1>{selected.title}</h1>
         <p>{selected.excerpt}</p>
         <div className="article-byline article-byline--premium"><strong>{selected.author}</strong><span>•</span><span>{formatDate(selected.updatedAt)}</span><span>•</span><span>{readingTime(selected.content)} min branja</span></div>
@@ -2957,7 +2991,7 @@ export default function Home() {
             <div className="post-grid">
               {visiblePublished.length ? visiblePublished.slice(0, 12).map((article, index) => (
                 <a
-                  className={`post-card ${index === 0 ? "featured" : ""}`}
+                  className={`post-card article-card--${articleTemplateKey(article)} ${index === 0 ? "featured" : ""}`}
                   href={`?article=${encodeURIComponent(article.id)}`}
                   key={article.id}
                   onClick={(event) => {
