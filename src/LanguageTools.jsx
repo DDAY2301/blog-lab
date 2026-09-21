@@ -64,6 +64,7 @@ const LANGUAGES = [
 ];
 
 const STORAGE_KEY = "blog-lab-language";
+const COLLAPSE_STORAGE_KEY = "blog-lab-language-tools-collapsed";
 const SCRIPT_ID = "blog-lab-google-translate-script";
 const ELEMENT_ID = "google_translate_element";
 
@@ -73,6 +74,11 @@ function safeInitialLanguage() {
   const saved = window.localStorage.getItem(STORAGE_KEY);
   const preferred = fromUrl || saved || "sl";
   return LANGUAGES.some((item) => item.code === preferred) ? preferred : "sl";
+}
+
+function safeInitialCollapsed() {
+  if (typeof window === "undefined") return false;
+  return window.localStorage.getItem(COLLAPSE_STORAGE_KEY) === "1";
 }
 
 function expireGoogleTranslateCookies() {
@@ -161,6 +167,7 @@ function applyGoogleTranslate(targetCode) {
 
 export default function LanguageTools() {
   const [language, setLanguage] = useState(safeInitialLanguage);
+  const [isCollapsed, setIsCollapsed] = useState(safeInitialCollapsed);
   const [translatorReady, setTranslatorReady] = useState(false);
   const retryRef = useRef(null);
   const mutationTimerRef = useRef(null);
@@ -181,6 +188,10 @@ export default function LanguageTools() {
     document.documentElement.lang = language;
     window.localStorage.setItem(STORAGE_KEY, language);
   }, [language]);
+
+  useEffect(() => {
+    window.localStorage.setItem(COLLAPSE_STORAGE_KEY, isCollapsed ? "1" : "0");
+  }, [isCollapsed]);
 
   useEffect(() => {
     const url = new URL(window.location.href);
@@ -252,43 +263,59 @@ export default function LanguageTools() {
   }
 
   return (
-    <aside className="language-tools" aria-label={active.aria}>
+    <aside className={`language-tools ${isCollapsed ? "is-collapsed" : ""}`} aria-label={active.aria}>
       <div className="language-tools__topline">
-        <span>{active.title}</span>
-        <strong>{active.short}</strong>
-      </div>
-      <div className="language-tools__buttons" role="list" aria-label={active.aria}>
-        {LANGUAGES.map((item) => (
+        <span>{isCollapsed ? active.short : active.title}</span>
+        <div className="language-tools__top-actions">
+          <strong>{active.short}</strong>
           <button
-            key={item.code}
             type="button"
-            className={item.code === language ? "active" : ""}
-            onClick={() => chooseLanguage(item.code)}
-            aria-pressed={item.code === language}
-            title={item.nativeName}
+            className="language-tools__collapse"
+            onClick={() => setIsCollapsed((value) => !value)}
+            aria-expanded={!isCollapsed}
+            title={isCollapsed ? "Odpri prevajalnik" : "Zmanjšaj prevajalnik"}
           >
-            {item.short}
+            {isCollapsed ? "+" : "–"}
           </button>
-        ))}
+        </div>
       </div>
-      <p>{active.intro}</p>
-      <div className="language-tools__actions">
-        {language === "sl" ? (
-          <span>{active.activeLabel}</span>
-        ) : (
-          <button type="button" onClick={() => applyGoogleTranslate(active.googleCode)}>
-            {active.activeLabel} · prevede stran
-          </button>
-        )}
-        {language !== "sl" && (
-          <button type="button" className="secondary" onClick={resetOriginal}>
-            SL izvirnik
-          </button>
-        )}
-      </div>
-      <small>
-        {translatorReady ? active.statusTranslated : active.statusLoading} {active.note}
-      </small>
+
+      {!isCollapsed && (
+        <>
+          <div className="language-tools__buttons" role="list" aria-label={active.aria}>
+            {LANGUAGES.map((item) => (
+              <button
+                key={item.code}
+                type="button"
+                className={item.code === language ? "active" : ""}
+                onClick={() => chooseLanguage(item.code)}
+                aria-pressed={item.code === language}
+                title={item.nativeName}
+              >
+                {item.short}
+              </button>
+            ))}
+          </div>
+          <p>{active.intro}</p>
+          <div className="language-tools__actions">
+            {language === "sl" ? (
+              <span>{active.activeLabel}</span>
+            ) : (
+              <button type="button" onClick={() => applyGoogleTranslate(active.googleCode)}>
+                {active.activeLabel} · prevede stran
+              </button>
+            )}
+            {language !== "sl" && (
+              <button type="button" className="secondary" onClick={resetOriginal}>
+                SL izvirnik
+              </button>
+            )}
+          </div>
+          <small>
+            {translatorReady ? active.statusTranslated : active.statusLoading} {active.note}
+          </small>
+        </>
+      )}
     </aside>
   );
 }
