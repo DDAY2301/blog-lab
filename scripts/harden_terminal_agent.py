@@ -465,5 +465,58 @@ if "const clientRequestId = String(body.client_request_id" not in text:
         raise SystemExit("terminal idempotency server marker not found")
     text = text.replace(idempotency_server_old, idempotency_server_new, 1)
 
+
+# Keep browser control/status polling recoverable after network stalls.
+ui_timeout_replacements = [
+    (
+        r'''const r=await fetch('/api/interpret',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({command:value})});''',
+        r'''const r=await fetchTimed('/api/interpret',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({command:value})},8000);''',
+    ),
+    (
+        r'''const r=await fetch('/api/status?id='+encodeURIComponent(x.id),{cache:'no-store'});''',
+        r'''const r=await fetchTimed('/api/status?id='+encodeURIComponent(x.id),{cache:'no-store'},8000);''',
+    ),
+    (
+        r'''async function load(){const r=await fetch('/api/me',{cache:'no-store'});''',
+        r'''async function load(){const r=await fetchTimed('/api/me',{cache:'no-store'},8000);''',
+    ),
+    (
+        r'''const hr=await fetch('/api/history',{cache:'no-store'});''',
+        r'''const hr=await fetchTimed('/api/history',{cache:'no-store'},8000);''',
+    ),
+    (
+        r'''const r=await fetch('/api/media',{method:'POST',body:form});''',
+        r'''const r=await fetchTimed('/api/media',{method:'POST',body:form},35000);''',
+    ),
+    (
+        r'''$('#logout').onclick=async()=>{await fetch('/api/logout',{method:'POST'}).catch(()=>{});location.replace('/')};''',
+        r'''$('#logout').onclick=async()=>{await fetchTimed('/api/logout',{method:'POST'},8000).catch(()=>{});location.replace('/')};''',
+    ),
+    (
+        r'''async function pollLoop(){await load();pollTimer=setTimeout(pollLoop,hasActiveRuns()?3000:12000)}''',
+        r'''async function pollLoop(){try{await load()}catch{}finally{pollTimer=setTimeout(pollLoop,hasActiveRuns()?3000:12000)}}''',
+    ),
+]
+for old_value, new_value in ui_timeout_replacements:
+    if old_value in text:
+        text = text.replace(old_value, new_value, 1)
+
+login_timeout_old = r'''const f=document.querySelector('#login'),e=document.querySelector('#error'),b=document.querySelector('#submit'),v=document.querySelector('#auth-version');fetch('/health',{cache:'no-store'})'''
+login_timeout_new = r'''const f=document.querySelector('#login'),e=document.querySelector('#error'),b=document.querySelector('#submit'),v=document.querySelector('#auth-version');const ft=(u,o={},ms=12000)=>{const c=new AbortController(),t=setTimeout(()=>c.abort(),ms);return fetch(u,{...o,signal:c.signal}).finally(()=>clearTimeout(t))};ft('/health',{cache:'no-store'},8000)'''
+if "const ft=(u,o={},ms=12000)" not in text:
+    if login_timeout_old not in text:
+        raise SystemExit("login timeout helper marker not found")
+    text = text.replace(login_timeout_old, login_timeout_new, 1)
+
+login_request_old = r'''const r=await fetch('/api/login',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({email:document.querySelector('#email').value.trim(),password:document.querySelector('#password').value.trim()})});'''
+login_request_new = r'''const r=await ft('/api/login',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({email:document.querySelector('#email').value.trim(),password:document.querySelector('#password').value.trim()})},15000);'''
+if "const r=await ft('/api/login'" not in text:
+    if login_request_old not in text:
+        raise SystemExit("login request timeout marker not found")
+    text = text.replace(login_request_old, login_request_new, 1)
+
+if "fetchTimed('/api/interpret'" not in text or "try{await load()}catch{}finally" not in text:
+    raise SystemExit("terminal UI network recovery markers missing after hardening")
+
 path.write_text(text, encoding="utf-8")
 print("Terminal agent hardening applied")
