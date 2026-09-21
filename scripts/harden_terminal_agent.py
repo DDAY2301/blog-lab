@@ -42,20 +42,20 @@ function terminalIntentWords(message) {
 
 function shouldUsePublicationOperationalCheck(message) {
   const lower = terminalIntentWords(message);
-  const hasPublication = /objav|clan|publisher|guardian|learning|urnik|slot|samodejn/.test(lower);
-  const hasAction = /preglej|preveri|resi|resit|popravi|problem|zakaj|delovanje|status|test/.test(lower);
+  const hasPublication = /objav|clan|article|post|publish|publisher|guardian|learning|urnik|raspored|schedule|slot|samodejn|automatic/.test(lower);
+  const hasAction = /preglej|preveri|provjer|prover|check|verify|resi|resit|repair|fix|popravi|problem|zakaj|why|delovanje|status|test|diagnos/.test(lower);
   return hasPublication && hasAction;
 }
 
 function shouldUseDomainOperationalAnswer(message) {
   const lower = terminalIntentWords(message);
-  return /(dns|domena|bloglab\.eu|neoserv|github pages|cname|a zapis|terminal\.bloglab)/.test(lower);
+  return /(dns|domain|domena|bloglab\.eu|neoserv|github pages|cname|a zapis|a record|terminal\.bloglab)/.test(lower);
 }
 
 function shouldUseTerminalDiagnostics(message) {
   const lower = terminalIntentWords(message);
-  return /(terminal|chatbot|pomocnik|worker|cloudflare|dispatch|workflow|komand|ukaz|test)/.test(lower)
-    && /(preveri|test|diagnost|status|delovanje|popravi|resi|problem)/.test(lower);
+  return /(terminal|chatbot|pomocnik|assistant|worker|cloudflare|github|dispatch|workflow|komand|ukaz|command|api|health|timeout|502|test)/.test(lower)
+    && /(preveri|provjer|prover|check|verify|test|diagnos|status|delovanje|working|popravi|fix|repair|resi|problem)/.test(lower);
 }
 
 function ljubljanaNowParts() {
@@ -191,8 +191,8 @@ function terminalDomainAnswer() {
 
 async function terminalOperationalAnswer(env, message, email) {
   if (shouldUsePublicationOperationalCheck(message)) return terminalPublicationOperationalAnswer(env, message, email);
-  if (shouldUseTerminalDiagnostics(message)) return terminalDiagnosticsAnswer(env, message, email);
   if (shouldUseDomainOperationalAnswer(message)) return terminalDomainAnswer(env, message, email);
+  if (shouldUseTerminalDiagnostics(message)) return terminalDiagnosticsAnswer(env, message, email);
   return null;
 }
 '''
