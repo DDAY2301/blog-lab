@@ -1,0 +1,9 @@
+{
+  "status": "pending-first-learning-run",
+  "updated_at": null,
+  "loop_count": 0,
+  "categories_checked": ["sport", "politika", "aktualno"],
+  "recent_article_count": 0,
+  "recent_failure_count": 0,
+  "mode": "continuous_24h"
+}
