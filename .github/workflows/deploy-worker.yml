@@ -1,4 +1,5 @@
 name: Deploy Blog Lab Worker
+# BLOG_LAB_DISPATCH_TOKEN is synced to the Worker secret GITHUB_DISPATCH_TOKEN.
 
 on:
   push:
