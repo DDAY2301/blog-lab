@@ -14,24 +14,16 @@ permissions:
 
 concurrency:
   group: one-shot-publisher-fallback-fix
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   fix-and-publish:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 15
     env:
       PYTHONDONTWRITEBYTECODE: "1"
       AGENT_ENABLED: true
       PUBLISH_MODE: automatic
-      AI_PROVIDER: auto
-      WORKER_AI_URL: https://blog-lab.dan-grmusa.workers.dev/api/ai/write
-      WORKER_AI_TOKEN: ${{ secrets.TERMINAL_COMMAND_KEY }}
-      MODEL_API_KEY: ${{ secrets.MODEL_API_KEY }}
-      MODEL_BASE_URL: ${{ secrets.MODEL_BASE_URL }}
-      MODEL_NAME: ${{ secrets.MODEL_NAME }}
-      GITHUB_TOKEN: ${{ github.token }}
-      COPILOT_GITHUB_TOKEN: ${{ secrets.COPILOT_GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v7
         with:
@@ -80,16 +72,12 @@ jobs:
 
       - name: Compile publisher
         run: |
-          python -m py_compile agents/blog-lab-publisher/agent.py agents/blog-lab-publisher/autonomous_fallback.py agents/blog-lab-publisher/services/*.py agents/blog-lab-publisher/schedule.py
+          python -m py_compile agents/blog-lab-publisher/autonomous_fallback.py agents/blog-lab-publisher/services/*.py agents/blog-lab-publisher/schedule.py
 
-      - name: Publish missed 08:17 sport slot
+      - name: Publish missed 08:17 sport slot with deterministic fallback
         shell: bash
         run: |
-          python agents/blog-lab-publisher/agent.py --category sport --scheduled-slot "2026-09-21|08:17|sport"
-          if git diff --quiet -- src/App.jsx; then
-            echo "No article content change detected; running deterministic fallback."
-            python agents/blog-lab-publisher/autonomous_fallback.py --category sport --scheduled-slot "2026-09-21|08:17|sport"
-          fi
+          python agents/blog-lab-publisher/autonomous_fallback.py --category sport --scheduled-slot "2026-09-21|08:17|sport"
 
       - name: Build and scan
         shell: bash
