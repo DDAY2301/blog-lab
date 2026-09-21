@@ -1837,7 +1837,7 @@ export default {
       return json({
         ok: true,
         worker: "blog-lab",
-        version: "auth-v6.22-terminal-stability",
+        version: "auth-v6.23-command-idempotency",
         ready: state.ready,
         auth_ready: authReady,
         auth_self_test_ok: authTest.ok,
@@ -1932,7 +1932,7 @@ export default {
       return json({
         ok: true,
         worker: "blog-lab",
-        version: "auth-v6.22-terminal-stability",
+        version: "auth-v6.23-command-idempotency",
         ...diagnostic,
         server_time: new Date().toISOString(),
         hint: diagnostic.email_known
