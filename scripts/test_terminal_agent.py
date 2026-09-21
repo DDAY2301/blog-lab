@@ -28,6 +28,9 @@ required_markers = [
     'internalWriterAuthorized',
     'TERMINAL_COMMAND_KEY',
     'GITHUB_DISPATCH_TOKEN',
+    'GITHUB_NETWORK_TIMEOUT',
+    'terminal_operational_timeout',
+    'auth-v6.21-terminal-stability',
 ]
 
 missing = [marker for marker in required_markers if marker not in text]
