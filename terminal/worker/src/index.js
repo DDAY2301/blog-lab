@@ -1167,7 +1167,10 @@ const COMMAND_TOKEN_ALIASES = Object.freeze({
   upload:"nalozi", nalozi:"nalozi", move:"premakni", premakni:"premakni", copy:"kopiraj", kopiraj:"kopiraj",
   rename:"preimenuj", preimenuj:"preimenuj",
   pomoc:"pomoc", pomoč:"pomoc", help:"pomoc", commands:"komande", command:"komande", komande:"komande", ukazi:"komande",
-  zmoreš:"zmore", zmores:"zmore", capabilities:"zmore"
+  zmoreš:"zmore", zmores:"zmore", capabilities:"zmore",
+  draft:"draft", osnutek:"draft", osnutek:"draft", review:"review", pregled:"review",
+  automatic:"automatic", avtomatsko:"automatic", samodejno:"automatic", samostojno:"automatic",
+  preklopi:"preklopi", switch:"preklopi", mode:"mode", nacin:"mode", način:"mode"
 });
 
 const COMMAND_PREFIX_ALIASES = Object.freeze([
@@ -1279,7 +1282,7 @@ function localCommandIntent(command) {
   const tokens = new Set(normalized.split(" ").filter(Boolean));
   const scores = { control: 0, article: 0, site: 0 };
 
-  const controlActions = ["ustavi","nadaljuj","vklopi","izklopi","zazeni","status","urnik","preveri","pomoc","komande","zmore"];
+  const controlActions = ["ustavi","nadaljuj","vklopi","izklopi","zazeni","status","urnik","preveri","pomoc","komande","zmore","preklopi"];
   const articleActions = ["objavi","napisi","ustvari","dodaj"];
   const articleNouns = ["clanek","novica","blog"];
   const siteActions = ["uredi","spremeni","izboljsaj","polepsaj","dodaj","odstrani","nalozi","premakni","kopiraj","preimenuj"];
@@ -1290,6 +1293,10 @@ function localCommandIntent(command) {
   if (tokens.has("status")) scores.control += 5;
   if (tokens.has("urnik")) scores.control += 4;
   if (tokens.has("pomoc") || tokens.has("komande") || tokens.has("zmore")) scores.control += 8;
+  if (
+    ["draft","review","automatic"].some((x) => tokens.has(x))
+    && ["agent","objavljanje","mode","preklopi"].some((x) => tokens.has(x))
+  ) scores.control += 7;
 
   if (articleNouns.some((x) => tokens.has(x))) scores.article += 4;
   if (articleActions.some((x) => tokens.has(x))) scores.article += 2;
@@ -1320,6 +1327,7 @@ function localCommandIntent(command) {
   if (tokens.has("pomoc") || tokens.has("komande") || tokens.has("zmore") || padded.includes(" kaj znas ")) action = "help";
   else if (tokens.has("status") || padded.includes("preveri agent")) action = "status";
   else if (tokens.has("urnik")) action = "schedule";
+  else if (["draft","review","automatic"].some((x) => tokens.has(x))) action = "publish_mode";
   else if (tokens.has("ustavi") || tokens.has("izklopi")) action = "stop";
   else if (tokens.has("nadaljuj") || tokens.has("vklopi") || tokens.has("zazeni")) action = "start";
   else if (mode === "article") action = "article";
