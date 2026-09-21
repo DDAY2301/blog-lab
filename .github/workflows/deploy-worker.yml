@@ -55,6 +55,9 @@ jobs:
           fi
           grep -q '/api/login-diagnostics' terminal/worker/src/index.js
           grep -q 'maj_login_ready' terminal/worker/src/index.js
+          grep -q 'url.pathname === "/api/chat"' terminal/worker/src/index.js
+          grep -q 'terminalChatAssistant' terminal/worker/src/index.js
+          grep -q 'terminalChatbotDock' terminal/worker/src/index.js
 
       - name: Deploy Worker to Cloudflare
         working-directory: terminal/worker
