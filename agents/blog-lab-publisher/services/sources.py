@@ -679,10 +679,13 @@ def topic_relevance_score(topic: str, item: dict) -> int:
     terms = _topic_rank_terms(topic)
     if not terms:
         return 0
+    # IMPORTANT: source_name is metadata about the search/outlet, not evidence
+    # that the returned page itself matches the topic. Search adapters such as
+    # "Bing Web – aktualno – <user query>" include the original query in
+    # source_name; counting it made every unrelated Bing result appear relevant.
     haystack = " ".join([
         str(item.get("title") or ""),
         str(item.get("summary") or ""),
-        str(item.get("source_name") or ""),
     ]).lower()
     hay_words = re.findall(r"[a-zčšžćđ0-9-]+", haystack)
 
