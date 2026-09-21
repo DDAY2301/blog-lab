@@ -14,7 +14,7 @@ on:
         type: string
 
 concurrency:
-  group: private-operator-terminal
+  group: blog-lab-terminal-mutations
   cancel-in-progress: false
 
 permissions:
