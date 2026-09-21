@@ -6,6 +6,20 @@ root = Path(__file__).resolve().parents[1]
 worker = root / "terminal" / "worker" / "src" / "index.js"
 text = worker.read_text(encoding="utf-8")
 
+product_platform = (root / "src" / "ProductPlatform.jsx").read_text(encoding="utf-8")
+product_styles = (root / "src" / "product-platform.css").read_text(encoding="utf-8")
+for marker in [
+    "Od ukaza do objave.",
+    "Ustvari demo račun",
+    "/api/public/product-status",
+    "/demo",
+    "/join",
+]:
+    if marker not in product_platform:
+        raise SystemExit(f"Product presentation marker missing: {marker}")
+if ".product-feature-grid" not in product_styles or ".product-onboarding" not in product_styles:
+    raise SystemExit("Product presentation styles are incomplete")
+
 required_markers = [
     'url.pathname === "/api/chat"',
     'url.pathname === "/api/command"',
@@ -33,6 +47,19 @@ required_markers = [
     'auth-v6.24-product-onboarding',
     'TERMINAL_COMMAND_CATALOG',
     'url.pathname === "/api/commands"',
+    "auth-v6.24-product-onboarding",
+    "demoCommandResult",
+    "verifyTrialSession",
+    "signTrialSession",
+    "url.pathname === \"/app\"",
+    "url.pathname === \"/join\"",
+    "url.pathname === \"/demo\"",
+    "url.pathname === \"/api/trial/logout\"",
+    "url.pathname === \"/api/trial/me\"",
+    "url.pathname === \"/api/trial/register\"",
+    "url.pathname === \"/api/demo/command\"",
+    "url.pathname === \"/api/public/product-status\"",
+    "TRIAL_SESSION_COOKIE = \"bloglab_trial_session\"",
     "showCommandCatalog",
     "id=\"helpCommands\"",
     "MESSAGE_TOO_LONG",
