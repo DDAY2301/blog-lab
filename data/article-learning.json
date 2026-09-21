@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-21T12:27:50+02:00",
-  "loop_count": 20,
+  "updated_at": "2026-09-21T12:28:40+02:00",
+  "loop_count": 21,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-21T12:27:32+02:00",
+      "last_learning_run": "2026-09-21T12:28:19+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -39,12 +39,12 @@
       ],
       "source_health": {
         "news.google.com": {
-          "score": 2.498,
-          "seen": 600,
-          "last_seen": "2026-09-21T12:27:32+02:00",
-          "last_title": "Poleg Slovenije se za evropsko prvenstvo zanima veliko držav - Delo.si",
+          "score": 2.51,
+          "seen": 630,
+          "last_seen": "2026-09-21T12:28:19+02:00",
+          "last_title": "Ekipno prvenstvo Slovenije za člane (1.dan) - Radio Krka",
           "last_provider": "",
-          "published": 320,
+          "published": 336,
           "last_output_id": "s-tribune-sportni-trenutki-zaradi-katerih-se-mi-se-danes-najezijo-dlake-aeb6d43b"
         }
       },
@@ -58,7 +58,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-21T12:27:41+02:00",
+      "last_learning_run": "2026-09-21T12:28:29+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -80,12 +80,12 @@
       ],
       "source_health": {
         "news.google.com": {
-          "score": 2.578,
-          "seen": 600,
-          "last_seen": "2026-09-21T12:27:41+02:00",
-          "last_title": "Tone Kajzer: Zunanja politika na dobri poti. Tanja Fajon: Kajzer dobro začrtal usmeritve. - rtvslo.si",
+          "score": 2.524,
+          "seen": 630,
+          "last_seen": "2026-09-21T12:28:29+02:00",
+          "last_title": "Tamari Vonti se je povsem utrgalo: ljudi prepričuje, da smo sredi državnega udara - Nova24TV",
           "last_provider": "",
-          "published": 200,
+          "published": 210,
           "last_output_id": "politika-si-odpira-vrata-v-medije-vlada-kriticne-medije-s-profesionalnimi-novinarji-dojema-eeca644f"
         }
       },
@@ -99,7 +99,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-21T12:27:50+02:00",
+      "last_learning_run": "2026-09-21T12:28:40+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -126,31 +126,31 @@
       "source_health": {
         "news.google.com": {
           "score": 2.526,
-          "seen": 600,
-          "last_seen": "2026-09-21T12:27:50+02:00",
-          "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - novomesto.si",
+          "seen": 630,
+          "last_seen": "2026-09-21T12:28:40+02:00",
+          "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 300,
+          "published": 315,
           "last_output_id": "anja-rakusa-brus-pomemben-argument-za-mojo-kandidaturo-je-izkusnja-z-aktualno-vlado-ki-str-2c38f7cd"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 80,
+          "published": 84,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "accounts.google.com": {
-          "score": 2.471,
-          "published": 20,
+          "score": 2.477,
+          "published": 21,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
-          "score": 2.471,
-          "published": 20,
+          "score": 2.477,
+          "published": 21,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "tripadvisor.com": {
-          "score": 2.471,
-          "published": 20,
+          "score": 2.477,
+          "published": 21,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         }
       },
