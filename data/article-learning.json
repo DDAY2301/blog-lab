@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-21T15:23:27+02:00",
-  "loop_count": 54,
+  "updated_at": "2026-09-21T15:24:15+02:00",
+  "loop_count": 55,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-21T15:23:04+02:00",
+      "last_learning_run": "2026-09-21T15:23:53+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -40,11 +40,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.468,
-          "seen": 1620,
-          "last_seen": "2026-09-21T15:23:04+02:00",
-          "last_title": "Slovenska atletska asa v boju za ugledni evropski priznanji - 24ur.com",
+          "seen": 1650,
+          "last_seen": "2026-09-21T15:23:53+02:00",
+          "last_title": "Poslanci na preizkušnji: preverili bodo njihovo telesno zmogljivost - Siol.net",
           "last_provider": "",
-          "published": 864,
+          "published": 880,
           "last_output_id": "s-tribune-sportni-trenutki-zaradi-katerih-se-mi-se-danes-najezijo-dlake-aeb6d43b"
         }
       },
@@ -53,12 +53,12 @@
         "news.google.com": [
           "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
           "Osmina finala: Slovenci favoriti, a vlada precejšnja mera previdnosti - rtvslo.si",
-          "Luka Dončić zapustil Slovenijo, sprejel bo velikanski izziv - delo.si"
+          "Luka Dončić zapustil Slovenijo, sprejel bo velikanski izziv - Delo.si"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-21T15:23:15+02:00",
+      "last_learning_run": "2026-09-21T15:24:04+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -81,25 +81,25 @@
       "source_health": {
         "news.google.com": {
           "score": 2.511,
-          "seen": 1620,
-          "last_seen": "2026-09-21T15:23:15+02:00",
+          "seen": 1650,
+          "last_seen": "2026-09-21T15:24:04+02:00",
           "last_title": "Nataša Pirc Musar: Ne bom tiho, ko zunanja politika ne bo skladna z ustavnimi vrednotami države - Slovenske novice",
           "last_provider": "",
-          "published": 630,
+          "published": 645,
           "last_output_id": "okoljski-ekonomist-sonnenschein-politika-ministra-za-energetiko-ni-v-interesu-javnosti-001b0a7e"
         }
       },
       "current_source_count": 30,
       "example_titles": {
         "news.google.com": [
-          "Janša diplomatom: Zunanjo politiko vodi vlada, samo to je uradna politika Slovenije - siol.net",
+          "Janša diplomatom: Zunanjo politiko vodi vlada, samo to je uradna politika Slovenije - Siol.net",
           "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer",
           "(INTERVJU) V novi reviji Demokracija: Minister Tone Kajzer: Slovenije ne prodajamo nikomur. Slovenija je suverena država in slovenska zunanj"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-21T15:23:27+02:00",
+      "last_learning_run": "2026-09-21T15:24:15+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -132,61 +132,61 @@
       "source_health": {
         "news.google.com": {
           "score": 2.515,
-          "seen": 1620,
-          "last_seen": "2026-09-21T15:23:27+02:00",
+          "seen": 1650,
+          "last_seen": "2026-09-21T15:24:15+02:00",
           "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 872,
+          "published": 889,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 31,
+          "published": 32,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 31,
+          "published": 32,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 54,
+          "published": 55,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 216,
+          "published": 220,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 54,
+          "published": 55,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 31,
+          "published": 32,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 40,
+          "published": 42,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 54,
+          "published": 55,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "differentiatedteaching.com": {
-          "score": 2.471,
-          "published": 20,
+          "score": 2.477,
+          "published": 21,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "kachelmannwetter.com": {
-          "score": 2.471,
-          "published": 20,
+          "score": 2.477,
+          "published": 21,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         }
       },
