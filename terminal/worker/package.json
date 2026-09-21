@@ -5,12 +5,16 @@
   "type": "module",
   "scripts": {
     "dev": "wrangler dev",
-    "deploy": "wrangler deploy"
+    "deploy": "wrangler deploy",
+    "check": "node --check src/index.js"
   },
   "dependencies": {
-    "jose": "^6.2.12"
+    "jose": "6.2.12"
   },
   "devDependencies": {
-    "wrangler": "^4.40.0"
+    "wrangler": "4.40.0"
+  },
+  "engines": {
+    "node": ">=20 <23"
   }
 }
