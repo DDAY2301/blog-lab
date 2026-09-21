@@ -1265,7 +1265,7 @@ function correctCommandToken(token) {
   let best = token;
   let bestScore = 0;
   for (const candidate of COMMAND_VOCABULARY) {
-    if (Math.abs(candidate.length - token.length) > 3) continue;
+    if (Math.abs(candidate.length - token.length) > 2) continue;
     const distance = commandEditDistance(token, candidate);
     const score = 1 - distance / Math.max(token.length, candidate.length);
     if (score > bestScore) {
