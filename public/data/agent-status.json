@@ -1,13 +1,13 @@
 {
   "agent": "Blog Lab Publisher",
-  "status": "completed",
+  "status": "failed",
   "enabled": true,
   "category": "aktualno",
-  "last_run": "2026-09-21T19:54:06+02:00",
+  "last_run": "2026-09-21T20:56:52+02:00",
   "last_success": "2026-09-21T19:54:06+02:00",
   "last_output": "zaposlena-na-rtv-zgrozena-vesna-milek-ne-bo-delala-za-ljubezen-ampak-denar-8d955705",
   "next_run": null,
-  "message": "Članek je uspešno pripravljen za objavo.",
+  "message": "Za zahtevano temo ni bilo mogoče najti dovolj relevantnih in preverljivih virov.",
   "posts_today": 9,
   "scheduled_posts_today": 3,
   "manual_posts_today": 6,
@@ -19,5 +19,5 @@
   ],
   "scheduled_slots_deferred": [],
   "last_editorial_hold": null,
-  "last_error": null
+  "last_error": "no_topic_sources"
 }
