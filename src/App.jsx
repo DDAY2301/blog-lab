@@ -20,6 +20,28 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d",
+    "title": "Tabla de azúcares de las frutas: la cantidad de azúcar que contiene ...",
+    "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Tabla de azúcares de las frutas: la cantidad de azúcar que contiene ...«.",
+    "seoDescription": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Tabla de azúcares de las frutas: la cantidad de azúcar que contiene ...«.",
+    "content": "**Aktualno, 21. 9. 2026.** Plátanos y uvas, las frutas con más azúcar Como podrás comprobar en la tabla de azúcares de las frutas que verás a continuación, entre las frutas con más contenido en azúcar (entre 17 y 13 g/100 g) destacan el plátano y las uvas, seguidas del caqui, el lichi, la granada y el mango.\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Bing Web – aktualno – izbriši slovenščini sloveniji. Objavljeno: Mon, 26 Jan 2026 09:27:00 GMT. [Odpri izvirni vir](https://www.sabervivirtv.com/nutricion/esta-es-la-cantidad-de-azucar-que-tienen-las-frutas-ordenadas-de-mas-a-menos_8168)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Aktualno",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Bing Web – aktualno – izbriši slovenščini sloveniji — Tabla de azúcares de las frutas: la cantidad de azúcar que contiene ...",
+        "url": "https://www.sabervivirtv.com/nutricion/esta-es-la-cantidad-de-azucar-que-tienen-las-frutas-ordenadas-de-mas-a-menos_8168"
+      }
+    ],
+    "createdAt": "2026-09-21T16:35:26+02:00",
+    "updatedAt": "2026-09-21T16:35:26+02:00"
+  },
+
+  {
     "id": "duckduckgo-287dab86",
     "title": "DuckDuckGo",
     "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »DuckDuckGo«.",

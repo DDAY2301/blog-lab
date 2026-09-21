@@ -917,5 +917,19 @@
     "provider": "google-news-si",
     "processed_at": "2026-09-21T16:26:47+02:00",
     "output_id": "duckduckgo-287dab86"
+  },
+  {
+    "source_name": "Bing Web – aktualno – izbriši slovenščini sloveniji",
+    "category": "aktualno",
+    "title": "Tabla de azúcares de las frutas: la cantidad de azúcar que contiene ...",
+    "url": "https://www.sabervivirtv.com/nutricion/esta-es-la-cantidad-de-azucar-que-tienen-las-frutas-ordenadas-de-mas-a-menos_8168",
+    "summary": "Plátanos y uvas, las frutas con más azúcar Como podrás comprobar en la tabla de azúcares de las frutas que verás a continuación, entre las frutas con más contenido en azúcar (entre 17 y 13 g/100 g) destacan el plátano y las uvas, seguidas del caqui, el lichi, la granada y el mango.",
+    "published": "Mon, 26 Jan 2026 09:27:00 GMT",
+    "image_url": "",
+    "video_url": "",
+    "hash": "354623d786d0607c818a4175aea0f707eb5632f1236000fe77dffde7d0cf1d72",
+    "provider": "bing-web",
+    "processed_at": "2026-09-21T16:35:26+02:00",
+    "output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
   }
 ]
