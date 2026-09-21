@@ -10,109 +10,103 @@ on:
 permissions:
   contents: write
 
-env:
-  ARTICLE_TEMPLATE_FIX_VERSION: article-template-v1
-
 jobs:
   patch-test-commit:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v7
-
       - uses: actions/setup-node@v7
         with:
           node-version: 22
           cache: npm
 
-      - name: Patch article data and template
+      - name: Patch article template and bad restaurant post
         shell: bash
         run: |
           set -euo pipefail
           python - <<'PY'
           from pathlib import Path
-          import textwrap
+          app = Path('src/App.jsx')
+          text = app.read_text(encoding='utf-8')
 
-          app_path = Path('src/App.jsx')
-          text = app_path.read_text(encoding='utf-8')
-
-          new_first_article = r'''  {
+          article = r'''  {
     id: "sign-in-to-your-account-4b374c63",
     aliases: ["sign-in-to-your-account-4b374c6"],
     title: "10 idej za dober obisk restavracij v Ljubljani v 2026",
-    excerpt: "Praktičen, preverljiv in uporaben vodič po ljubljanski kulinarični sceni: od fine dininga in sodobnih bistrojev do lokalnih okusov, tržnice in pametnega načrtovanja rezervacije.",
-    seoDescription: "Vodnik po restavracijah v Ljubljani v 2026 z nevtralnim izborom, priporočili za različne priložnosti in povezavami do Visit Ljubljana, Michelin, Gault&Millau in Taste Slovenia.",
+    excerpt: "Praktičen vodič po ljubljanski kulinarični sceni: kako izbrati pravi lokal za večerjo, kosilo, goste iz tujine ali sproščen mestni obisk.",
+    seoDescription: "Vodnik po restavracijah v Ljubljani v 2026 z javnimi viri Visit Ljubljana, Michelin, Gault&Millau in Taste Slovenia.",
     content: `# 10 idej za dober obisk restavracij v Ljubljani v 2026
 
-Ljubljana je v zadnjih letih postala mesto, kjer se tradicionalna slovenska kuhinja, sodobni bistroji, fine dining in sproščena mestna prehrana mešajo precej bolj naravno, kot bi pričakoval nekdo, ki mesto obišče samo za en vikend. Dober obisk restavracije zato ni več samo vprašanje, katera je “najboljša”, ampak kaj iščeš: mirno večerjo, poslovno kosilo, lokalno izkušnjo, razgled, degustacijski meni ali hitro kakovostno hrano med sprehodom po centru.
+Ljubljana ima dovolj močno kulinarično sceno, da izbira restavracije ne sme temeljiti samo na prvem naključnem seznamu. Boljši pristop je preprost: najprej določi priložnost, nato preveri zanesljive javne vire in šele na koncu rezerviraj konkreten termin.
 
-Ta vodič ni lestvica in ne trdi, da obstaja ena sama pravilna izbira. Namen je bolj praktičen: pokazati, kako pametno izbrati restavracijo v Ljubljani v letu 2026, katere javne vire je smiselno preveriti in kako se izogniti temu, da končaš v napačnem lokalu za svojo priložnost.
+Ta članek ni lestvica in ne razglaša ene “najboljše” restavracije. Namen je bolj uporaben: pokazati, kako izbrati dober lokal v Ljubljani glede na namen obiska, čas, družbo in pričakovanja.
 
-## 1. Za posebno večerjo glej vodnike, ne samo oglasov
+## 1. Za posebno večerjo začni pri vodnikih
 
-Če iščeš večerjo za obletnico, poslovnega gosta ali resnejšo kulinarično izkušnjo, začni pri javnih gastronomskih vodnikih. Michelinov izbor za Slovenijo 2026 in Gault&Millau Slovenija 2026 sta uporabna zato, ker ne temeljita samo na naključnih spletnih ocenah, ampak na uredniškem oziroma inšpektorskem izboru.
+Za obletnico, poslovnega gosta ali degustacijski večer preveri Michelinov izbor za Slovenijo 2026 in Gault&Millau Slovenija 2026. Taki vodniki so koristni, ker dajejo širši uredniški okvir, ne samo posameznih spletnih ocen.
 
-Pri takih restavracijah je pomembno preveriti meni, ceno degustacije, razpoložljive termine in pravila odpovedi. Veliko razočaranj nastane ne zato, ker bi bila restavracija slaba, ampak ker gost pričakuje hiter sproščen obrok, pride pa v lokal, kjer je izkušnja počasnejša, bolj vodena in dražja.
+Pred rezervacijo preveri ceno menija, trajanje večerje, odpiralni čas in pravila odpovedi. Veliko slabih izkušenj nastane zato, ker gost pričakuje hiter obrok, izbere pa lokal, ki je zasnovan kot počasnejša kulinarična izkušnja.
 
-## 2. Za prvi obisk mesta izberi lokacijo, ne samo imena
+## 2. Za prvi obisk mesta naj šteje tudi lokacija
 
-Če si v Ljubljani samo en dan, je praktično izbrati restavracijo v centru, ob Ljubljanici, pri tržnici ali blizu poti, ki jo že imaš v načrtu. Visit Ljubljana ima uporaben pregled restavracij in gostiln, ki ga je smiselno uporabiti kot osnovni zemljevid ponudbe.
+Če je obisk Ljubljane kratek, izberi restavracijo, ki se ujema s potjo po mestu. Center, okolica tržnice, Ljubljanica in staro mestno jedro so praktične izbire, ker omogočajo večerjo brez dodatne logistike.
 
-Pred rezervacijo preveri tudi odpiralni čas. Nekatere dobre restavracije imajo drugačen ritem med tednom, ob nedeljah ali v času praznikov. Za turista je lokacija pogosto enako pomembna kot ocena.
+Visit Ljubljana ima pregleden seznam restavracij in gostiln, ki je uporaben kot osnovni zemljevid ponudbe. Po njem lažje ločiš fine dining, tradicionalne gostilne, bistroje, mednarodno kuhinjo in bolj sproščene lokale.
 
-## 3. Za lokalni občutek poišči Taste Ljubljana
+## 3. Za lokalno izkušnjo preveri Taste Ljubljana
 
-Projekt Taste Ljubljana izpostavlja jedi in okuse, povezane z mestno kulinarično dediščino. To je dober začetek, če ne želiš samo generičnega kosila, ampak nekaj, kar ima povezavo z Ljubljano, tržnico, lokalnimi sestavinami ali starejšimi mestnimi recepti.
+Taste Ljubljana izpostavlja jedi in okuse, povezane z mestno kulinarično dediščino. To je dobra smer, kadar želiš gostu pokazati nekaj bolj lokalnega kot samo generično evropsko restavracijo.
 
-Tak pristop je posebej uporaben za goste iz tujine. Namesto da jih pelješ v restavracijo, ki bi lahko stala v katerem koli evropskem mestu, izbereš lokal ali izkušnjo, kjer je zgodba mesta del obroka.
+Tak obisk je posebej primeren za tuje goste, ker obrok dobi zgodbo: tržnica, lokalne sestavine, mestni recepti in sodobna interpretacija slovenske kuhinje.
 
-## 4. Za bolj sproščeno izbiro glej bistroje in sezonske menije
+## 4. Za sproščen večer so bistroji pogosto najboljši kompromis
 
-Ljubljana ima močan srednji segment: bistroje, vinske bare, mestne gostilne in lokale s sezonsko karto. Ti so pogosto najboljši kompromis med kakovostjo, ceno in sproščenostjo. Za tak obisk ni nujno, da iščeš najvišje ocenjeni lokal; bolj pomembno je, ali meni ustreza tvojemu večeru.
+Ljubljana ima dober srednji segment: bistroje, vinske bare, mestne gostilne in lokale s sezonsko karto. Ti so pogosto najbolj uporabna izbira za večer s prijatelji, zmenek ali kakovostno večerjo brez pretirane formalnosti.
 
-Dober znak je kratka karta, jasen opis jedi, sezonske sestavine in normalna komunikacija ob rezervaciji. Če meni izgleda predolg in nepovezan, to ni nujno slabo, je pa znak, da moraš še enkrat preveriti, kaj lokal dejansko najbolje dela.
+Pri izbiri glej kratek meni, sezonske jedi, jasno komunikacijo in občutek, da lokal ve, kaj dela. Dolg meni ni nujno slab, vendar zahteva več preverjanja.
 
-## 5. Za kosilo preveri dnevne menije in razdaljo
+## 5. Za kosilo štejejo hitrost, razdalja in zanesljivost
 
-Za kosilo med delovnikom ni vedno najboljša izbira ista kot za večerjo. Takrat štejejo hitrost, dostopnost, cena in možnost rezervacije. Ljubljanski center je dovolj majhen, da lahko v 10 do 15 minutah hoje zamenjaš več različnih območij, vendar se to med dežjem, poleti ali s skupino hitro spremeni.
+Za delovno kosilo ni nujno najboljša ista restavracija kot za sobotno večerjo. Takrat štejejo bližina, hitrost, možnost rezervacije, jasen dnevni meni in dovolj mirno okolje za pogovor.
 
-Najbolj praktično je imeti tri možnosti: eno zelo blizu, eno bolj kakovostno in eno rezervno. To je posebej uporabno za poslovne sestanke ali obiske, kjer zamuda hitro pokvari izkušnjo.
+Najbolj praktično je imeti tri možnosti: eno zelo blizu, eno bolj kakovostno in eno rezervno. To posebej pomaga pri poslovnih sestankih ali obisku ljudi, ki mesta ne poznajo.
 
 ## 6. Za petek in soboto rezerviraj prej
 
-Pri bolj obiskanih lokalih je rezervacija ključna. Petek zvečer, sobota zvečer in termini okoli dogodkov v centru se hitro napolnijo. Če gre za skupino, rezerviraj še prej in napiši, ali gre za poslovno srečanje, rojstni dan, večerjo v dvoje ali hiter obrok pred dogodkom.
+Petek in sobota zvečer se hitro napolnita, posebno v centru in ob dogodkih. Pri skupinah rezerviraj prej in povej namen obiska: poslovno kosilo, rojstni dan, večerja v dvoje ali hiter obrok pred dogodkom.
 
-Dober lokal ti bo običajno lažje svetoval, če jasno poveš namen obiska. To ni formalnost, ampak praktična informacija za mizo, ritem strežbe in predlagan meni.
+Dober lokal bo s temi informacijami lažje predlagal mizo, ritem strežbe in primeren meni.
 
-## 7. Ne mešaj fine dininga in “najboljše pice” v isto primerjavo
+## 7. Ne primerjaj vseh lokalov v isti koš
 
-Ena pogosta napaka pri člankih o restavracijah je, da v isti seznam vržejo fine dining, pico, brunch, azijsko kuhinjo, tradicionalno gostilno in bar s prigrizki. Tak seznam lahko izgleda zanimivo, ampak bralcu ne pomaga veliko.
+Fine dining, pica, brunch, tradicionalna gostilna, azijski bistro in bar s prigrizki niso ista kategorija. Zato so seznami “top 10” koristni samo, če veš, za kakšno priložnost izbiraš.
 
-Boljše vprašanje je: za kakšno priložnost izbiraš? Za zmenek, družino, hitro kosilo, tuje goste, degustacijo, nedeljsko kosilo ali večer s prijatelji. Ko veš namen, se izbor zoži in odločitev postane boljša.
+Boljše vprašanje je: kaj potrebujem danes? Miren ambient, hitro kosilo, lokalno zgodbo, razgled, degustacijo ali sproščen lokal po sprehodu?
 
-## 8. Preveri vire, potem pa še zadnje informacije pri lokalu
+## 8. Najprej javni viri, potem uradni podatki lokala
 
-Javni vodniki so dober začetek, niso pa vedno zadnja operativna informacija. Restavracije menjajo odpiralne čase, menije, chef ekipe, dopuste in sistem rezervacij. Zato je najbolj varno, da po izboru preveriš še uradno stran restavracije ali njen rezervacijski kanal.
+Javni turistični in gastronomski viri so dober začetek, vendar niso vedno zadnja operativna informacija. Restavracije spreminjajo menije, delovni čas, dopuste in rezervacijske sisteme.
 
-To je posebej pomembno pri člankih, ki obljubljajo “najboljših 10”. Tak naslov je lahko uporaben za orientacijo, ne sme pa nadomestiti zadnjega preverjanja pred obiskom.
+Zato po izboru vedno preveri še uradno stran restavracije ali rezervacijski kanal. To je najvarnejši način, da članek uporabiš kot orientacijo, ne kot zastarel zemljevid.
 
-## 9. Za obiskovalce je tržnica del izkušnje
+## 9. Tržnica je del kulinaričnega obiska
 
-Ljubljanska tržnica in okolica sta pomemben del mestne prehranske izkušnje. Tudi če na koncu večerjaš v restavraciji, je sprehod čez tržnico dober način, da razumeš lokalni ritem, sestavine in mestno kulinariko. Visit Ljubljana posebej izpostavlja kulinarične projekte, ki povezujejo mesto, tržnico, lokalne dobavitelje in restavracije.
+Za obiskovalce Ljubljane je osrednja tržnica pogosto del izkušnje. Tudi če večerjaš drugje, sprehod skozi tržnico pomaga razumeti lokalne sestavine, ritem mesta in povezavo med kulinariko in javnim prostorom.
 
-Za gosta, ki Ljubljane ne pozna, je to pogosto bolj zapomnljivo kot samo ena večerja.
+To je razlog, da so kulinarične izkušnje v Ljubljani pogosto bolj zanimive, kadar vključujejo tudi mesto, ne samo mizo.
 
 ## 10. Najboljša izbira je tista, ki ustreza tvojemu večeru
 
-Namesto ene dokončne lestvice je bolj pošteno uporabiti odločanje po scenariju. Za posebno večerjo preveri Michelin in Gault&Millau. Za lokalno zgodbo preveri Taste Ljubljana. Za hiter mestni obisk uporabi Visit Ljubljana kot zemljevid ponudbe. Za konkretno rezervacijo pa na koncu vedno preveri aktualne podatke pri restavraciji.
+Za posebno večerjo preveri Michelin in Gault&Millau. Za lokalno zgodbo preveri Taste Ljubljana. Za pregled ponudbe uporabi Visit Ljubljana. Za končno odločitev pa preveri aktualne podatke pri restavraciji.
 
-Tako dobiš boljši rezultat kot z naključnim klikom na prvi seznam. Ljubljana ima dovolj močno kulinarično sceno, da se splača izbrati premišljeno.
+Tako dobiš boljši rezultat kot z naključnim klikom na prvi seznam. Ljubljana ima dovolj izbire, da se splača izbrati premišljeno.
 
 ## Viri
 
-- Visit Ljubljana, pregled restavracij in gostiln: https://www.visitljubljana.com/sl/obiskovalci/kulinarika/restavracije
-- Visit Ljubljana, Ljubljanska kakovost in Gault&Millau izbor: https://www.visitljubljana.com/sl/obiskovalci/kulinarika/ljubljanska-kakovost-najboljse-restavracije
-- Visit Ljubljana, Gault&Millau Slovenija 2026 – restavracije v mestu in okolici: https://www.visitljubljana.com/sl/obiskovalci/aktualno/pisma-iz-ljubljane/april-2026/gault-and-millau-slovenija-2026-najboljse-restavracije-v-mestu-in-njegovi-okolici
+- Visit Ljubljana, restavracije in gostilne: https://www.visitljubljana.com/sl/obiskovalci/kulinarika/restavracije
+- Visit Ljubljana, Ljubljanska kakovost: https://www.visitljubljana.com/sl/obiskovalci/kulinarika/ljubljanska-kakovost-najboljse-restavracije
+- Visit Ljubljana, Gault&Millau Slovenija 2026: https://www.visitljubljana.com/sl/obiskovalci/aktualno/pisma-iz-ljubljane/april-2026/gault-and-millau-slovenija-2026-najboljse-restavracije-v-mestu-in-njegovi-okolici
 - Michelin, The MICHELIN Guide Slovenia 2026 Edition: https://www.michelin.com/en/publications/products-and-services/the-michelin-guide-slovenia-2026-edition
 - Taste Slovenia, Gault&Millau v Sloveniji: https://www.tasteslovenia.si/sl/okusite-odlicnost/gault-millau-v-sloveniji
 - Visit Ljubljana, Taste Ljubljana: https://www.visitljubljana.com/en/about-ljubljana-tourism/projects/taste-ljubljana`,
@@ -124,8 +118,8 @@ Tako dobiš boljši rezultat kot z naključnim klikom na prvi seznam. Ljubljana 
     gallery: [],
     sources: [
       { label: "Visit Ljubljana — Restavracije in gostilne", url: "https://www.visitljubljana.com/sl/obiskovalci/kulinarika/restavracije" },
-      { label: "Visit Ljubljana — Ljubljanska kakovost: najboljše restavracije", url: "https://www.visitljubljana.com/sl/obiskovalci/kulinarika/ljubljanska-kakovost-najboljse-restavracije" },
-      { label: "Visit Ljubljana — Gault&Millau Slovenija 2026«, mesto in okolica", url: "https://www.visitljubljana.com/sl/obiskovalci/aktualno/pisma-iz-ljubljane/april-2026/gault-and-millau-slovenija-2026-najboljse-restavracije-v-mestu-in-njegovi-okolici" },
+      { label: "Visit Ljubljana — Ljubljanska kakovost", url: "https://www.visitljubljana.com/sl/obiskovalci/kulinarika/ljubljanska-kakovost-najboljse-restavracije" },
+      { label: "Visit Ljubljana — Gault&Millau Slovenija 2026", url: "https://www.visitljubljana.com/sl/obiskovalci/aktualno/pisma-iz-ljubljane/april-2026/gault-and-millau-slovenija-2026-najboljse-restavracije-v-mestu-in-njegovi-okolici" },
       { label: "Michelin — The MICHELIN Guide Slovenia 2026 Edition", url: "https://www.michelin.com/en/publications/products-and-services/the-michelin-guide-slovenia-2026-edition" },
       { label: "Taste Slovenia — Gault&Millau v Sloveniji", url: "https://www.tasteslovenia.si/sl/okusite-odlicnost/gault-millau-v-sloveniji" },
       { label: "Visit Ljubljana — Taste Ljubljana", url: "https://www.visitljubljana.com/en/about-ljubljana-tourism/projects/taste-ljubljana" }
@@ -134,15 +128,15 @@ Tako dobiš boljši rezultat kot z naključnim klikom na prvi seznam. Ljubljana 
     updatedAt: "2026-09-21T12:32:31+02:00"
   },'''
 
-          target_start = '  {\n    "id": "sign-in-to-your-account-4b374c63"'
-          if target_start in text:
-              start = text.index(target_start)
+          start_marker = '  {\n    "id": "sign-in-to-your-account-4b374c63"'
+          if start_marker in text:
+              start = text.index(start_marker)
               end = text.index('\n\n  {\n    "id": "s-tribune-sportni-trenutki', start)
-              text = text[:start] + new_first_article + text[end:]
+              text = text[:start] + article + text[end:]
           elif '10 idej za dober obisk restavracij v Ljubljani v 2026' not in text:
-              raise SystemExit('Could not locate bad first article for replacement')
+              raise SystemExit('bad article object not found')
 
-          helper_insert = r'''
+          helpers = r'''
 function normalizeArticleLookup(value) {
   return String(value || "").trim().toLowerCase();
 }
@@ -158,111 +152,53 @@ function resolveSelectedArticle(articles, requestedId) {
 }
 
 function plainArticleText(value) {
-  return String(value || "")
-    .replace(/```[\s\S]*?```/g, " ")
-    .replace(/\[[^\]]+\]\([^\)]+\)/g, "$1")
-    .replace(/[#>*_`~-]/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
+  return String(value || "").replace(/```[\s\S]*?```/g, " ").replace(/\[[^\]]+\]\([^\)]+\)/g, "$1").replace(/[#>*_`~-]/g, " ").replace(/\s+/g, " ").trim();
 }
 
 function articleBodyContent(article) {
-  const sourceCount = Array.isArray(article?.sources) ? article.sources.length : 0;
-  const title = plainArticleText(article?.title).toLowerCase();
   const lines = String(article?.content || "").split("\n");
+  const title = plainArticleText(article?.title).toLowerCase();
   while (lines.length && !lines[0].trim()) lines.shift();
   if (lines[0]?.startsWith("# ")) {
-    const firstTitle = plainArticleText(lines[0].slice(2)).toLowerCase();
-    if (firstTitle && (firstTitle === title || title.includes(firstTitle) || firstTitle.includes(title))) {
+    const first = plainArticleText(lines[0].slice(2)).toLowerCase();
+    if (first && (first === title || title.includes(first) || first.includes(title))) {
       lines.shift();
       while (lines.length && !lines[0].trim()) lines.shift();
     }
   }
-  if (sourceCount) {
-    const sourceIndex = lines.findIndex((line) => /^##\s+viri\s*$/i.test(line.trim()));
-    if (sourceIndex >= 0) lines.splice(sourceIndex);
+  if (Array.isArray(article?.sources) && article.sources.length) {
+    const idx = lines.findIndex((line) => /^##\s+viri\s*$/i.test(line.trim()));
+    if (idx >= 0) lines.splice(idx);
   }
   return lines.join("\n").trim();
 }
 
 function articleDigest(article) {
-  const body = articleBodyContent(article);
-  const paragraphs = body
-    .split(/\n{2,}/)
-    .map((part) => plainArticleText(part))
-    .filter((part) => part && !/^viri$/i.test(part) && !/^vir\b/i.test(part))
-    .slice(0, 2);
-  return paragraphs.join(" ") || article?.excerpt || "Članek je pripravljen v pregledni obliki z jasnim kontekstom, povzetkom in viri.";
+  return articleBodyContent(article).split(/\n{2,}/).map(plainArticleText).filter((p) => p && !/^vir\b/i.test(p)).slice(0, 2).join(" ") || article?.excerpt || "Pregleden uredniški članek z jasnim kontekstom in viri.";
 }
 
 function articleOutline(article) {
-  return String(article?.content || "")
-    .split("\n")
-    .filter((line) => /^##\s+/.test(line.trim()))
-    .map((line) => line.replace(/^##\s+/, "").trim())
-    .filter((line) => line && !/^viri$/i.test(line))
-    .slice(0, 7);
+  return String(article?.content || "").split("\n").filter((line) => /^##\s+/.test(line.trim())).map((line) => line.replace(/^##\s+/, "").trim()).filter((line) => line && !/^viri$/i.test(line)).slice(0, 7);
 }
 
 function ArticleTemplate({ selected, navigate, openEditorialTerminal }) {
   const sourceCount = Array.isArray(selected.sources) ? selected.sources.length : 0;
   const outline = articleOutline(selected);
-  const digest = articleDigest(selected);
-  const cleanContent = articleBodyContent(selected);
-
   return (
     <article className="article-page article-page--premium">
       <button className="back article-back" onClick={() => navigate("home")}>← Vse objave</button>
       <header className="article-heading article-heading--premium">
-        <div className="article-kicker-row">
-          <span className="article-category">{selected.category}</span>
-          <span className="article-template-badge">Uredniški članek</span>
-        </div>
+        <div className="article-kicker-row"><span className="article-category">{selected.category}</span><span className="article-template-badge">Uredniški članek</span></div>
         <h1>{selected.title}</h1>
         <p>{selected.excerpt}</p>
-        <div className="article-byline article-byline--premium">
-          <strong>{selected.author}</strong>
-          <span>•</span>
-          <span>{formatDate(selected.updatedAt)}</span>
-          <span>•</span>
-          <span>{readingTime(selected.content)} min branja</span>
-        </div>
-        <div className="article-metrics" aria-label="Podatki o članku">
-          <div><strong>{readingTime(selected.content)}</strong><span>min branja</span></div>
-          <div><strong>{outline.length || "—"}</strong><span>sklopov</span></div>
-          <div><strong>{sourceCount || "—"}</strong><span>virov</span></div>
-        </div>
+        <div className="article-byline article-byline--premium"><strong>{selected.author}</strong><span>•</span><span>{formatDate(selected.updatedAt)}</span><span>•</span><span>{readingTime(selected.content)} min branja</span></div>
+        <div className="article-metrics" aria-label="Podatki o članku"><div><strong>{readingTime(selected.content)}</strong><span>min branja</span></div><div><strong>{outline.length || "—"}</strong><span>sklopov</span></div><div><strong>{sourceCount || "—"}</strong><span>virov</span></div></div>
       </header>
-
       <ArticleHero article={selected} />
-
       <div className="article-layout article-layout--premium">
-        <aside className="article-side-panel" aria-label="Pregled članka">
-          <div className="article-side-card">
-            <span className="kicker">V ČLANKU</span>
-            {outline.length ? (
-              <ol>
-                {outline.map((item) => <li key={item}>{item}</li>)}
-              </ol>
-            ) : (
-              <p>Članek je strukturiran kot kratek uredniški pregled.</p>
-            )}
-          </div>
-          <div className="article-side-card muted-card">
-            <span className="kicker">PREVERJANJE</span>
-            <p>{sourceCount ? `Dodani so ${sourceCount} javno preverljivi viri.` : "Pri članku ni dodanih posebnih zunanjih virov."}</p>
-          </div>
-        </aside>
-
-        <div className="article-main-copy">
-          <section className="article-summary-card">
-            <span className="kicker">HITER POVZETEK</span>
-            <p>{digest}</p>
-          </section>
-          <ArticleBody content={cleanContent} />
-        </div>
+        <aside className="article-side-panel" aria-label="Pregled članka"><div className="article-side-card"><span className="kicker">V ČLANKU</span>{outline.length ? <ol>{outline.map((item) => <li key={item}>{item}</li>)}</ol> : <p>Članek je strukturiran kot kratek uredniški pregled.</p>}</div><div className="article-side-card muted-card"><span className="kicker">PREVERJANJE</span><p>{sourceCount ? `Dodani so ${sourceCount} javno preverljivi viri.` : "Pri članku ni dodanih posebnih zunanjih virov."}</p></div></aside>
+        <div className="article-main-copy"><section className="article-summary-card"><span className="kicker">HITER POVZETEK</span><p>{articleDigest(selected)}</p></section><ArticleBody content={articleBodyContent(selected)} /></div>
       </div>
-
       <ArticleVideo video={selected.video} />
       <ArticleGallery items={selected.gallery} />
       <ArticleSources items={selected.sources} />
@@ -272,16 +208,11 @@ function ArticleTemplate({ selected, navigate, openEditorialTerminal }) {
 }
 
 '''
-          marker = 'function ArticleBody({ content }) {'
           if 'function resolveSelectedArticle' not in text:
-              text = text.replace(marker, helper_insert + marker, 1)
+              text = text.replace('function ArticleBody({ content }) {', helpers + 'function ArticleBody({ content }) {', 1)
 
-          text = text.replace(
-              '  const selected = articles.find((article) => article.id === selectedId);',
-              '  const selected = resolveSelectedArticle(articles, selectedId);'
-          )
-
-          old_sync = '''      const requestedId = new URLSearchParams(window.location.search).get("article");
+          text = text.replace('  const selected = articles.find((article) => article.id === selectedId);', '  const selected = resolveSelectedArticle(articles, selectedId);')
+          old = '''      const requestedId = new URLSearchParams(window.location.search).get("article");
       if (requestedId && articles.some((article) => article.id === requestedId)) {
         setSelectedId(requestedId);
         setView("article");
@@ -289,7 +220,7 @@ function ArticleTemplate({ selected, navigate, openEditorialTerminal }) {
         setSelectedId("");
         setView("home");
       }'''
-          new_sync = '''      const requestedId = new URLSearchParams(window.location.search).get("article");
+          new = '''      const requestedId = new URLSearchParams(window.location.search).get("article");
       const matchedArticle = resolveSelectedArticle(articles, requestedId);
       if (matchedArticle) {
         setSelectedId(matchedArticle.id);
@@ -298,267 +229,43 @@ function ArticleTemplate({ selected, navigate, openEditorialTerminal }) {
         setSelectedId("");
         setView("home");
       }'''
-          if old_sync in text:
-              text = text.replace(old_sync, new_sync, 1)
-          elif new_sync not in text:
-              raise SystemExit('Could not patch URL article resolver')
+          if old in text:
+              text = text.replace(old, new, 1)
+          elif new not in text:
+              raise SystemExit('URL resolver block not found')
 
-          article_block_start = '      {view === "article" && selected && (\n        <article className="article-page">'
-          if article_block_start in text:
-              start = text.index(article_block_start)
-              end = text.index('\n\n      {preview && (', start)
-              replacement = '      {view === "article" && selected && (\n        <ArticleTemplate selected={selected} navigate={navigate} openEditorialTerminal={openEditorialTerminal} />\n      )}'
-              text = text[:start] + replacement + text[end:]
+          block_start = '      {view === "article" && selected && (\n        <article className="article-page">'
+          if block_start in text:
+              s = text.index(block_start)
+              e = text.index('\n\n      {preview && (', s)
+              text = text[:s] + '      {view === "article" && selected && (\n        <ArticleTemplate selected={selected} navigate={navigate} openEditorialTerminal={openEditorialTerminal} />\n      )}' + text[e:]
           elif '<ArticleTemplate selected={selected}' not in text:
-              raise SystemExit('Could not patch article render block')
-
-          app_path.write_text(text, encoding='utf-8')
+              raise SystemExit('article page block not found')
+          app.write_text(text, encoding='utf-8')
 
           css_path = Path('src/styles.css')
           css = css_path.read_text(encoding='utf-8')
-          css_marker = '/* Blog Lab article template upgrade v1 */'
-          css_add = r'''
+          add = r'''
 
 /* Blog Lab article template upgrade v1 */
-.article-page--premium {
-  width: min(1120px, calc(100% - 48px));
-  background: transparent;
-}
-.article-back {
-  margin-bottom: 18px;
-}
-.article-heading--premium {
-  position: relative;
-  overflow: hidden;
-  padding: clamp(34px, 6vw, 64px);
-  border: 1px solid color-mix(in srgb, var(--line) 72%, transparent);
-  border-radius: 34px;
-  background:
-    radial-gradient(circle at 88% 8%, color-mix(in srgb, var(--mint) 78%, transparent), transparent 34%),
-    linear-gradient(145deg, color-mix(in srgb, var(--white) 98%, transparent), color-mix(in srgb, var(--paper) 86%, var(--white)));
-  box-shadow: 0 26px 70px rgba(20, 41, 61, .10);
-}
-.article-heading--premium::after {
-  content: "";
-  position: absolute;
-  right: -80px;
-  bottom: -130px;
-  width: 300px;
-  height: 300px;
-  border: 54px solid color-mix(in srgb, var(--green) 18%, transparent);
-  border-radius: 50%;
-  pointer-events: none;
-}
-.article-heading--premium > * {
-  position: relative;
-  z-index: 1;
-}
-.article-kicker-row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 10px;
-}
-.article-template-badge {
-  display: inline-flex;
-  align-items: center;
-  min-height: 28px;
-  padding: 0 11px;
-  border: 1px solid color-mix(in srgb, var(--green) 24%, transparent);
-  border-radius: 999px;
-  color: color-mix(in srgb, var(--green-dark) 82%, var(--ink));
-  background: rgba(255,255,255,.62);
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-}
-.article-byline--premium {
-  margin-top: 20px;
-  color: var(--muted);
-}
-.article-metrics {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 10px;
-  margin-top: 30px;
-  max-width: 560px;
-}
-.article-metrics div {
-  padding: 16px 18px;
-  border: 1px solid color-mix(in srgb, var(--line) 76%, transparent);
-  border-radius: 18px;
-  background: rgba(255,255,255,.62);
-}
-.article-metrics strong {
-  display: block;
-  font: 800 27px/1 Georgia, serif;
-  color: var(--green-dark);
-}
-.article-metrics span {
-  display: block;
-  margin-top: 6px;
-  color: var(--muted);
-  font-size: 12px;
-  font-weight: 750;
-  text-transform: uppercase;
-  letter-spacing: .08em;
-}
-.article-layout--premium {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 300px;
-  gap: clamp(24px, 4vw, 44px);
-  align-items: start;
-  margin-top: 34px;
-}
-.article-main-copy {
-  min-width: 0;
-  padding: clamp(26px, 4vw, 44px);
-  border: 1px solid color-mix(in srgb, var(--line) 78%, transparent);
-  border-radius: 30px;
-  background: rgba(255,255,255,.88);
-  box-shadow: 0 18px 52px rgba(24, 48, 70, .07);
-}
-.article-summary-card {
-  margin-bottom: 34px;
-  padding: clamp(20px, 3vw, 28px);
-  border-left: 5px solid var(--green);
-  border-radius: 22px;
-  background: linear-gradient(135deg, color-mix(in srgb, var(--mint) 60%, white), rgba(255,255,255,.76));
-}
-.article-summary-card p {
-  margin: 10px 0 0;
-  color: var(--ink);
-  font-size: clamp(18px, 2vw, 21px);
-  line-height: 1.66;
-  max-width: 72ch;
-}
-.article-side-panel {
-  position: sticky;
-  top: 96px;
-  display: grid;
-  gap: 14px;
-  order: 2;
-}
-.article-side-card {
-  padding: 22px;
-  border: 1px solid color-mix(in srgb, var(--line) 78%, transparent);
-  border-radius: 24px;
-  background: rgba(255,255,255,.84);
-  box-shadow: 0 14px 42px rgba(24, 48, 70, .055);
-}
-.article-side-card ol {
-  margin: 14px 0 0;
-  padding-left: 20px;
-  color: var(--ink);
-}
-.article-side-card li {
-  margin: 0 0 10px;
-  line-height: 1.42;
-  font-size: 14px;
-}
-.article-side-card p {
-  margin: 12px 0 0;
-  color: var(--muted);
-  line-height: 1.58;
-  font-size: 14px;
-}
-.article-side-card.muted-card {
-  background: color-mix(in srgb, var(--paper) 72%, white);
-}
-.article-body h1 {
-  display: none;
-}
-.article-body h2 {
-  margin-top: 42px;
-  margin-bottom: 13px;
-  font: 800 clamp(27px, 3vw, 38px)/1.12 Georgia, serif;
-  letter-spacing: -.028em;
-}
-.article-body h3 {
-  margin-top: 30px;
-  margin-bottom: 10px;
-  font-size: 23px;
-  letter-spacing: -.018em;
-}
-.article-body p {
-  max-width: 76ch;
-  font-size: 18px;
-  line-height: 1.86;
-}
-.article-body ul,
-.article-body ol {
-  max-width: 76ch;
-  padding-left: 1.4rem;
-  font-size: 17px;
-  line-height: 1.76;
-}
-.article-body li {
-  margin-bottom: 9px;
-}
-.article-end {
-  margin-top: 36px;
-}
-@media (max-width: 960px) {
-  .article-layout--premium {
-    grid-template-columns: 1fr;
-  }
-  .article-side-panel {
-    position: static;
-    order: -1;
-  }
-  .article-side-card ol {
-    columns: 2;
-  }
-}
-@media (max-width: 640px) {
-  .article-page--premium {
-    width: min(100% - 28px, 1120px);
-    padding-top: 34px;
-  }
-  .article-heading--premium,
-  .article-main-copy {
-    border-radius: 22px;
-    padding: 22px;
-  }
-  .article-heading--premium h1 {
-    font-size: clamp(34px, 10vw, 48px);
-  }
-  .article-metrics {
-    grid-template-columns: 1fr;
-  }
-  .article-side-card ol {
-    columns: 1;
-  }
-  .article-body p {
-    font-size: 16.5px;
-    line-height: 1.78;
-  }
-}
+.article-page--premium{width:min(1120px,calc(100% - 48px));background:transparent}.article-back{margin-bottom:18px}.article-heading--premium{position:relative;overflow:hidden;padding:clamp(34px,6vw,64px);border:1px solid color-mix(in srgb,var(--line) 72%,transparent);border-radius:34px;background:radial-gradient(circle at 88% 8%,color-mix(in srgb,var(--mint) 78%,transparent),transparent 34%),linear-gradient(145deg,color-mix(in srgb,var(--white) 98%,transparent),color-mix(in srgb,var(--paper) 86%,var(--white)));box-shadow:0 26px 70px rgba(20,41,61,.10)}.article-heading--premium::after{content:"";position:absolute;right:-80px;bottom:-130px;width:300px;height:300px;border:54px solid color-mix(in srgb,var(--green) 18%,transparent);border-radius:50%;pointer-events:none}.article-heading--premium>*{position:relative;z-index:1}.article-kicker-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px}.article-template-badge{display:inline-flex;align-items:center;min-height:28px;padding:0 11px;border:1px solid color-mix(in srgb,var(--green) 24%,transparent);border-radius:999px;color:color-mix(in srgb,var(--green-dark) 82%,var(--ink));background:rgba(255,255,255,.62);font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.article-byline--premium{margin-top:20px;color:var(--muted)}.article-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:30px;max-width:560px}.article-metrics div{padding:16px 18px;border:1px solid color-mix(in srgb,var(--line) 76%,transparent);border-radius:18px;background:rgba(255,255,255,.62)}.article-metrics strong{display:block;font:800 27px/1 Georgia,serif;color:var(--green-dark)}.article-metrics span{display:block;margin-top:6px;color:var(--muted);font-size:12px;font-weight:750;text-transform:uppercase;letter-spacing:.08em}.article-layout--premium{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:clamp(24px,4vw,44px);align-items:start;margin-top:34px}.article-main-copy{min-width:0;padding:clamp(26px,4vw,44px);border:1px solid color-mix(in srgb,var(--line) 78%,transparent);border-radius:30px;background:rgba(255,255,255,.88);box-shadow:0 18px 52px rgba(24,48,70,.07)}.article-summary-card{margin-bottom:34px;padding:clamp(20px,3vw,28px);border-left:5px solid var(--green);border-radius:22px;background:linear-gradient(135deg,color-mix(in srgb,var(--mint) 60%,white),rgba(255,255,255,.76))}.article-summary-card p{margin:10px 0 0;color:var(--ink);font-size:clamp(18px,2vw,21px);line-height:1.66;max-width:72ch}.article-side-panel{position:sticky;top:96px;display:grid;gap:14px;order:2}.article-side-card{padding:22px;border:1px solid color-mix(in srgb,var(--line) 78%,transparent);border-radius:24px;background:rgba(255,255,255,.84);box-shadow:0 14px 42px rgba(24,48,70,.055)}.article-side-card ol{margin:14px 0 0;padding-left:20px;color:var(--ink)}.article-side-card li{margin:0 0 10px;line-height:1.42;font-size:14px}.article-side-card p{margin:12px 0 0;color:var(--muted);line-height:1.58;font-size:14px}.article-side-card.muted-card{background:color-mix(in srgb,var(--paper) 72%,white)}.article-body h1{display:none}.article-body h2{margin-top:42px;margin-bottom:13px;font:800 clamp(27px,3vw,38px)/1.12 Georgia,serif;letter-spacing:-.028em}.article-body h3{margin-top:30px;margin-bottom:10px;font-size:23px;letter-spacing:-.018em}.article-body p{max-width:76ch;font-size:18px;line-height:1.86}.article-body ul,.article-body ol{max-width:76ch;padding-left:1.4rem;font-size:17px;line-height:1.76}.article-body li{margin-bottom:9px}.article-end{margin-top:36px}@media(max-width:960px){.article-layout--premium{grid-template-columns:1fr}.article-side-panel{position:static;order:-1}.article-side-card ol{columns:2}}@media(max-width:640px){.article-page--premium{width:min(100% - 28px,1120px);padding-top:34px}.article-heading--premium,.article-main-copy{border-radius:22px;padding:22px}.article-heading--premium h1{font-size:clamp(34px,10vw,48px)}.article-metrics{grid-template-columns:1fr}.article-side-card ol{columns:1}.article-body p{font-size:16.5px;line-height:1.78}}
 '''
-          if css_marker not in css:
-              css = css.rstrip() + css_add + "\n"
-              css_path.write_text(css, encoding='utf-8')
+          if 'Blog Lab article template upgrade v1' not in css:
+              css_path.write_text(css.rstrip() + add, encoding='utf-8')
           PY
 
       - name: Install dependencies
         run: npm ci
-
       - name: Build site
         run: npm run build
-
       - name: Guardian check
         run: npm run guardian:check
-
-      - name: Verify patched article template
-        shell: bash
+      - name: Verify patch
         run: |
-          set -euo pipefail
           grep -q "10 idej za dober obisk restavracij v Ljubljani v 2026" src/App.jsx
-          grep -q "ArticleTemplate" src/App.jsx
-          grep -q "article-template-v1\|Blog Lab article template upgrade v1" src/styles.css
+          grep -q "function ArticleTemplate" src/App.jsx
           grep -q "sign-in-to-your-account-4b374c6" src/App.jsx
-
+          grep -q "Blog Lab article template upgrade v1" src/styles.css
       - name: Commit patch
         shell: bash
         run: |
@@ -567,7 +274,7 @@ function ArticleTemplate({ selected, navigate, openEditorialTerminal }) {
           git config user.email "blog-lab-maintenance[bot]@users.noreply.github.com"
           git add src/App.jsx src/styles.css
           if git diff --cached --quiet; then
-            echo "No article template changes to commit."
+            echo "No changes to commit."
             exit 0
           fi
           git commit -m "Improve article template and repair bad restaurant post"
