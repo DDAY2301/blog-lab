@@ -242,8 +242,7 @@
     {
       "name": "compound_catchup_sl",
       "text": "izvedi objave 3 na dan po časovnici zdaj pa napiši vse članke ki smo jih spustili zaradi popravkov na strani",
-      "expected_path": "github_workflow_dispatch",
-      "operator_mode": "control"
+      "expected_path": "github_workflow_dispatch"
     },
     {
       "name": "compound_catchup_en",
