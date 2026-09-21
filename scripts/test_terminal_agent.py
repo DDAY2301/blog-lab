@@ -30,7 +30,7 @@ required_markers = [
     'GITHUB_DISPATCH_TOKEN',
     'GITHUB_NETWORK_TIMEOUT',
     'terminal_operational_timeout',
-    'auth-v6.22-terminal-stability',
+    'auth-v6.23-command-idempotency',
     'TERMINAL_COMMAND_CATALOG',
     'url.pathname === "/api/commands"',
     "clearPendingRequest",
