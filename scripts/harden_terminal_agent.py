@@ -2,6 +2,90 @@ from pathlib import Path
 
 path = Path("terminal/worker/src/index.js")
 text = path.read_text(encoding="utf-8")
+text = text.replace("auth-v6.20-resilience", "auth-v6.21-terminal-stability")
+
+
+github_old = r'''async function github(path, env, init = {}) {
+  const token = String(env.GITHUB_DISPATCH_TOKEN || "").trim();
+  if (!token) throw new Error("GITHUB_DISPATCH_TOKEN missing");
+  const headers = new Headers(init.headers || {});
+  headers.set("accept", "application/vnd.github+json");
+  headers.set("x-github-api-version", "2022-11-28");
+  headers.set("user-agent", "BlogLabPrivateTerminal/3.0");
+  headers.set("authorization", `Bearer ${token}`);
+  return fetch(`https://api.github.com${path}`, { ...init, headers });
+}'''
+github_new = r'''async function github(path, env, init = {}) {
+  const token = String(env.GITHUB_DISPATCH_TOKEN || "").trim();
+  if (!token) {
+    return new Response(JSON.stringify({ message: "GITHUB_DISPATCH_TOKEN missing" }), {
+      status: 503,
+      headers: { "content-type": "application/json" }
+    });
+  }
+  const headers = new Headers(init.headers || {});
+  headers.set("accept", "application/vnd.github+json");
+  headers.set("x-github-api-version", "2022-11-28");
+  headers.set("user-agent", "BlogLabPrivateTerminal/3.1");
+  headers.set("authorization", `Bearer ${token}`);
+  const method = String(init.method || "GET").toUpperCase();
+  const maxAttempts = method === "GET" || method === "HEAD" ? 2 : 1;
+  let lastError = "";
+  for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 10000);
+    try {
+      const response = await fetch(`https://api.github.com${path}`, {
+        ...init,
+        headers,
+        signal: controller.signal
+      });
+      if (
+        response.ok
+        || attempt >= maxAttempts
+        || ![429, 500, 502, 503, 504].includes(response.status)
+      ) {
+        return response;
+      }
+      await response.arrayBuffer().catch(() => null);
+      await new Promise((resolve) => setTimeout(resolve, 250 * attempt));
+    } catch (error) {
+      lastError = String(error?.message || error || "GitHub request failed").slice(0, 240);
+      if (attempt < maxAttempts) {
+        await new Promise((resolve) => setTimeout(resolve, 250 * attempt));
+        continue;
+      }
+    } finally {
+      clearTimeout(timer);
+    }
+  }
+  return new Response(JSON.stringify({
+    message: lastError || "GitHub request timed out",
+    code: "GITHUB_NETWORK_TIMEOUT"
+  }), {
+    status: 599,
+    headers: { "content-type": "application/json" }
+  });
+}'''
+if "GITHUB_NETWORK_TIMEOUT" not in text:
+    if github_old not in text:
+        raise SystemExit("GitHub helper marker not found")
+    text = text.replace(github_old, github_new, 1)
+
+
+health_old = r'''      let mediaUploadReady = false;
+      if (String(env.GITHUB_DISPATCH_TOKEN || "").trim()) {
+        try {
+          const repoResponse = await github(`/repos/${OWNER}/${REPO}`, env);
+          if (repoResponse.ok) {
+            const repoInfo = await repoResponse.json();
+            mediaUploadReady = Boolean(repoInfo?.permissions?.push);
+          }
+        } catch {}
+      }'''
+health_new = r'''      const mediaUploadReady = Boolean(String(env.GITHUB_DISPATCH_TOKEN || "").trim());'''
+if health_old in text:
+    text = text.replace(health_old, health_new, 1)
 
 insert_after = '''function terminalChatFallback(message, error = null) {
   const question = String(message || "").trim();
@@ -205,12 +289,25 @@ if "function terminalOperationalAnswer(" not in text:
 old = '''async function terminalChatAssistant(env, message, email) {
   const system = ['''
 new = '''async function terminalChatAssistant(env, message, email) {
-  const operational = await terminalOperationalAnswer(env, message, email);
+  let operational = null;
+  try {
+    operational = await withTimeout(
+      terminalOperationalAnswer(env, message, email),
+      12000,
+      "terminal_operational_timeout"
+    );
+  } catch (error) {
+    return {
+      mode: "fallback",
+      text: terminalChatFallback(message, error),
+      error: sanitizeAiError(error)
+    };
+  }
   if (operational) return operational;
   const system = ['''
 if old in text and "const operational = await terminalOperationalAnswer" not in text:
     text = text.replace(old, new, 1)
-elif "const operational = await terminalOperationalAnswer" not in text:
+elif "terminal_operational_timeout" not in text:
     raise SystemExit("terminalChatAssistant marker not found")
 
 old_ai = '''    const result = await runWorkersAiWithRetry(env, request, 2, {
