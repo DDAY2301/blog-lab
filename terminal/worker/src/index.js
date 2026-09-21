@@ -275,7 +275,7 @@ async function signTrialSession(env, profile) {
   }));
   const key = await deriveSessionKey(env);
   const signature = new Uint8Array(await crypto.subtle.sign("HMAC", key, new TextEncoder().encode(payload)));
-  return \`\${payload}.\${b64url(signature)}\`;
+  return `${payload}.${b64url(signature)}`;
 }
 
 async function verifyTrialSession(env, token) {
@@ -315,11 +315,11 @@ async function trialIdentity(request, env) {
 }
 
 function trialSessionCookie(token) {
-  return \`\${TRIAL_SESSION_COOKIE}=\${token}; Path=/; Max-Age=\${TRIAL_TTL_SECONDS}; HttpOnly; Secure; SameSite=Lax\`;
+  return `${TRIAL_SESSION_COOKIE}=${token}; Path=/; Max-Age=${TRIAL_TTL_SECONDS}; HttpOnly; Secure; SameSite=Lax`;
 }
 
 function clearTrialSessionCookie() {
-  return \`\${TRIAL_SESSION_COOKIE}=; Path=/; Max-Age=0; HttpOnly; Secure; SameSite=Lax\`;
+  return `${TRIAL_SESSION_COOKIE}=; Path=/; Max-Age=0; HttpOnly; Secure; SameSite=Lax`;
 }
 
 function demoCommandResult(command) {
@@ -363,13 +363,13 @@ function demoCommandResult(command) {
     confidence: intent.confidence,
     corrected: intent.corrected,
     simulated: true,
-    summary: \`Demo je ukaz razumel kot \${mode} / \${action}. V javnem demu se produkcijska akcija ne izvede.\`,
+    summary: `Demo je ukaz razumel kot ${mode} / ${action}. V javnem demu se produkcijska akcija ne izvede.`,
     steps: plans[mode] || plans.control
   };
 }
 
 function publicDemoPage() {
-  return \`<!doctype html><html lang="sl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  return `<!doctype html><html lang="sl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Blog Lab · Interaktivni demo</title>
 <style>
 :root{font-family:Inter,system-ui,sans-serif;color:#e8f1f8;background:#0c1620}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% 10%,#173b56 0,transparent 32rem),#0c1620}.wrap{width:min(1040px,calc(100% - 32px));margin:auto;padding:34px 0 70px}.top{display:flex;justify-content:space-between;align-items:center;gap:16px}.brand{font:700 22px Georgia,serif}.badge{font-size:11px;padding:8px 10px;border:1px solid #31506a;border-radius:99px;color:#94b9d5}.hero{padding:80px 0 42px;max-width:760px}.hero span{font-size:11px;letter-spacing:.16em;color:#7fb0d5}.hero h1{font:700 clamp(44px,7vw,72px)/.98 Georgia,serif;letter-spacing:-.05em;margin:15px 0}.hero p{color:#9fb2c1;line-height:1.7;font-size:18px}.demo{display:grid;grid-template-columns:1fr 360px;gap:18px}.panel{border:1px solid #25394b;border-radius:18px;background:#111f2b;overflow:hidden;box-shadow:0 30px 70px #0006}.panel h2{font:700 17px Georgia,serif;margin:0;padding:18px 20px;border-bottom:1px solid #25394b}.body{padding:20px}.examples{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}.examples button{border:1px solid #31506a;background:#142838;color:#bdd3e3;border-radius:99px;padding:8px 10px;cursor:pointer}textarea{width:100%;min-height:140px;border:1px solid #31506a;background:#09131c;color:#fff;border-radius:12px;padding:15px;resize:vertical;outline:none}button.go{width:100%;margin-top:10px;border:0;border-radius:11px;padding:13px;background:#7fa9d1;color:#0e1b26;font-weight:800;cursor:pointer}.output{min-height:340px;white-space:pre-wrap;color:#a9bdcb;font:13px/1.65 ui-monospace,monospace}.output strong{color:#7fe0a8}.safe{padding:18px;border:1px solid #26485b;border-radius:14px;background:#102331;color:#9fc1d5;font-size:13px;line-height:1.6}.links{display:flex;gap:10px;margin-top:18px}.links a{color:#a9cbe4;text-decoration:none}@media(max-width:800px){.demo{grid-template-columns:1fr}.hero{padding-top:55px}}
@@ -384,11 +384,11 @@ function publicDemoPage() {
 const q=document.getElementById('cmd'),o=document.getElementById('out'),b=document.getElementById('run');
 document.querySelectorAll('[data-cmd]').forEach(x=>x.onclick=()=>{q.value=x.dataset.cmd;q.focus()});
 b.onclick=async()=>{const command=q.value.trim();if(!command)return;b.disabled=true;o.textContent='Razvrščam ukaz ...';try{const r=await fetch('/api/demo/command',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({command})});const d=await r.json();if(!r.ok)throw new Error(d.error||'Napaka');const lines=[d.summary,'','Koraki:'].concat((d.steps||[]).map((x,i)=>(i+1)+'. '+x));o.textContent=lines.join('\\n')}catch(e){o.textContent='Demo napaka: '+e.message}finally{b.disabled=false}};
-</script></body></html>\`;
+</script></body></html>`;
 }
 
 function trialJoinPage() {
-  return \`<!doctype html><html lang="sl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  return `<!doctype html><html lang="sl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Blog Lab · Demo račun</title>
 <style>
 :root{font-family:Inter,system-ui,sans-serif;color:#203247;background:#edf4fa}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% 0,#d7e9f6,transparent 34rem),#edf4fa}.wrap{width:min(920px,calc(100% - 28px));margin:auto;padding:42px 0 70px}.brand{font:700 22px Georgia,serif}.grid{display:grid;grid-template-columns:1fr 430px;gap:54px;align-items:center;padding-top:70px}.copy span{font-size:11px;font-weight:900;letter-spacing:.16em;color:#527fa8}.copy h1{font:700 clamp(42px,6vw,66px)/1 Georgia,serif;letter-spacing:-.05em;margin:14px 0 20px}.copy p{color:#667c90;line-height:1.7}.note{margin-top:25px;padding:16px;border:1px solid #c9d9e6;border-radius:13px;background:#f8fbfd;color:#63798c;font-size:13px;line-height:1.6}.card{padding:28px;border:1px solid #c9d9e6;border-radius:20px;background:#fff;box-shadow:0 26px 70px #44627e1c}.steps{display:flex;gap:6px;margin-bottom:22px}.steps i{height:5px;flex:1;border-radius:99px;background:#dce7ef}.steps i.on{background:#6d9dc7}label{display:block;font-size:12px;font-weight:800;margin:14px 0 7px}input,select{width:100%;height:45px;border:1px solid #c8d7e3;border-radius:10px;padding:0 12px;background:#fff}button{width:100%;height:47px;margin-top:20px;border:0;border-radius:11px;background:#527fa8;color:#fff;font-weight:800;cursor:pointer}.error{min-height:18px;margin-top:12px;color:#a34949;font-size:12px}.terms{display:flex;gap:9px;margin-top:14px;color:#6f8294;font-size:11px;line-height:1.45}.terms input{width:16px;height:16px;margin:1px 0 0}.back{display:inline-block;margin-top:16px;color:#527fa8;text-decoration:none;font-size:13px}@media(max-width:800px){.grid{grid-template-columns:1fr;padding-top:45px}}
@@ -405,7 +405,7 @@ function trialJoinPage() {
 <script>
 const f=document.getElementById('form'),e=document.getElementById('error');
 f.onsubmit=async(ev)=>{ev.preventDefault();e.textContent='';const data=Object.fromEntries(new FormData(f));data.terms=Boolean(new FormData(f).get('terms'));try{const r=await fetch('/api/trial/register',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(data)});const d=await r.json();if(!r.ok)throw new Error(d.error||'Registracija ni uspela');location.href='/app'}catch(err){e.textContent=err.message}};
-</script></body></html>\`;
+</script></body></html>`;
 }
 
 function trialAppPage(profile) {
@@ -415,13 +415,13 @@ function trialAppPage(profile) {
   const workspace = escapeHtml(profile.workspace || "Moj Blog Lab");
   const useCase = escapeHtml(profile.use_case || "content");
   const frequency = escapeHtml(profile.frequency || "manual");
-  return \`<!doctype html><html lang="sl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>\${workspace} · Blog Lab</title><style>
+  return `<!doctype html><html lang="sl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>${workspace} · Blog Lab</title><style>
 :root{font-family:Inter,system-ui,sans-serif;color:#243447;background:#eff5fa}*{box-sizing:border-box}body{margin:0}.top{height:68px;padding:0 4vw;display:flex;align-items:center;justify-content:space-between;background:#fff;border-bottom:1px solid #d4e0ea}.brand{font:700 20px Georgia,serif}.top button{border:1px solid #c8d8e4;background:#fff;border-radius:9px;padding:9px 12px;cursor:pointer}.wrap{width:min(1080px,calc(100% - 32px));margin:auto;padding:56px 0}.welcome span{font-size:11px;letter-spacing:.16em;font-weight:900;color:#628aad}.welcome h1{font:700 clamp(38px,5vw,58px)/1 Georgia,serif;letter-spacing:-.04em;margin:12px 0}.welcome p{color:#6b7e90}.grid{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;margin-top:34px}.card{background:#fff;border:1px solid #d4e0ea;border-radius:17px;padding:24px}.card h2{font:700 22px Georgia,serif;margin-top:0}.check{display:grid;grid-template-columns:30px 1fr;gap:10px 12px;margin-top:20px}.check b{display:grid;place-items:center;width:28px;height:28px;background:#e1f2e8;color:#278358;border-radius:50%;font-size:12px}.check p{margin:5px 0 16px;color:#607588}.profile{display:grid;gap:13px}.row{display:flex;justify-content:space-between;gap:16px;padding-bottom:12px;border-bottom:1px solid #e5ebf0}.row span{color:#7c8e9e;font-size:12px}.row strong{text-align:right;font-size:13px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.actions a{display:inline-flex;text-decoration:none;padding:11px 15px;border-radius:10px;background:#527fa8;color:#fff;font-weight:800;font-size:13px}.actions a.alt{background:#fff;color:#527fa8;border:1px solid #c8d8e4}.safe{margin-top:18px;padding:14px;border-radius:12px;background:#f0f6fa;color:#61788c;font-size:12px;line-height:1.6}@media(max-width:760px){.grid{grid-template-columns:1fr}}</style></head><body>
-<header class="top"><div class="brand">Blog Lab · Demo workspace</div><button id="logout">Odjava</button></header><main class="wrap"><section class="welcome"><span>ONBOARDING COMPLETE</span><h1>Dobrodošel, \${name}.</h1><p>Delovni prostor <strong>\${workspace}</strong> je pripravljen za varen produktni demo.</p></section>
+<header class="top"><div class="brand">Blog Lab · Demo workspace</div><button id="logout">Odjava</button></header><main class="wrap"><section class="welcome"><span>ONBOARDING COMPLETE</span><h1>Dobrodošel, ${name}.</h1><p>Delovni prostor <strong>${workspace}</strong> je pripravljen za varen produktni demo.</p></section>
 <div class="grid"><section class="card"><h2>Prvi koraki</h2><div class="check"><b>✓</b><p>Profil in demo račun sta ustvarjena.</p><b>✓</b><p>Primer uporabe in ritem objav sta določena.</p><b>✓</b><p>Produkcijski dostop je varno ločen od demo računa.</p><b>4</b><p>Odpri demo terminal in preizkusi članek, site-edit ali statusni ukaz.</p></div><div class="actions"><a href="/demo">Odpri demo terminal →</a><a class="alt" href="/join">Ponovi onboarding</a></div><div class="safe">Ta račun ne more sprožiti GitHub workflowa, objaviti članka ali spremeniti produkcijske strani. Plačljiva aktivacija bo dodana v monetizacijski fazi.</div></section>
-<aside class="card"><h2>Tvoj profil</h2><div class="profile"><div class="row"><span>E-pošta</span><strong>\${email}</strong></div><div class="row"><span>Organizacija</span><strong>\${org}</strong></div><div class="row"><span>Use case</span><strong>\${useCase}</strong></div><div class="row"><span>Objavljanje</span><strong>\${frequency}</strong></div><div class="row"><span>Workspace</span><strong>\${workspace}</strong></div></div></aside></div></main>
-<script>document.getElementById('logout').onclick=async()=>{await fetch('/api/trial/logout',{method:'POST'}).catch(()=>{});location.href='/join'}</script></body></html>\`;
+<aside class="card"><h2>Tvoj profil</h2><div class="profile"><div class="row"><span>E-pošta</span><strong>${email}</strong></div><div class="row"><span>Organizacija</span><strong>${org}</strong></div><div class="row"><span>Use case</span><strong>${useCase}</strong></div><div class="row"><span>Objavljanje</span><strong>${frequency}</strong></div><div class="row"><span>Workspace</span><strong>${workspace}</strong></div></div></aside></div></main>
+<script>document.getElementById('logout').onclick=async()=>{await fetch('/api/trial/logout',{method:'POST'}).catch(()=>{});location.href='/join'}</script></body></html>`;
 }
 
 async function encryptPayload(env, value) {
