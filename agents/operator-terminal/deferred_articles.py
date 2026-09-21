@@ -25,10 +25,16 @@ def load_queue() -> list[dict]:
         return []
 
 
+def compact_queue(items: list[dict], history_limit: int = 120) -> list[dict]:
+    pending = [item for item in items if item.get("status") == "pending"]
+    finished = [item for item in items if item.get("status") != "pending"]
+    return pending + finished[-max(20, history_limit):]
+
+
 def save_queue(items: list[dict]) -> None:
     QUEUE.parent.mkdir(parents=True, exist_ok=True)
     tmp = QUEUE.with_suffix(".json.tmp")
-    tmp.write_text(json.dumps(items, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    tmp.write_text(json.dumps(compact_queue(items), ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     tmp.replace(QUEUE)
 
 
@@ -123,14 +129,22 @@ def replay(max_items: int) -> int:
         entry["attempts"] = int(entry.get("attempts") or 0) + 1
         entry["last_attempt_at"] = utc_now()
         command_file = command_file_for(entry, workdir)
-        proc = subprocess.run(
-            [sys.executable, str(COMMAND), "--command-file", str(command_file)],
-            cwd=BASE,
-            text=True,
-            capture_output=True,
-            check=False,
-            timeout=900,
-        )
+        try:
+            proc = subprocess.run(
+                [sys.executable, str(COMMAND), "--command-file", str(command_file)],
+                cwd=BASE,
+                text=True,
+                capture_output=True,
+                check=False,
+                timeout=900,
+            )
+        except subprocess.TimeoutExpired:
+            entry["status"] = "pending"
+            entry["reason"] = "Transient execution timeout; will retry later."
+            entry["updated_at"] = utc_now()
+            still_pending += 1
+            print(f"DEFERRED_ARTICLE_TIMEOUT id={entry.get('id')} attempts={entry.get('attempts')}")
+            continue
         log = compact_reason((proc.stdout or "") + "\n" + (proc.stderr or ""), limit=2600)
         entry["last_log"] = log
         entry["updated_at"] = utc_now()
