@@ -31,6 +31,8 @@ required_markers = [
     'GITHUB_NETWORK_TIMEOUT',
     'terminal_operational_timeout',
     'auth-v6.22-terminal-stability',
+    'TERMINAL_COMMAND_CATALOG',
+    'url.pathname === "/api/commands"',
 ]
 
 missing = [marker for marker in required_markers if marker not in text]
@@ -40,8 +42,8 @@ if missing:
 suite_path = root / "data" / "terminal-command-test-suite.json"
 suite = json.loads(suite_path.read_text(encoding="utf-8"))
 commands = suite.get("commands") or []
-if len(commands) < 25:
-    raise SystemExit("Terminal command suite is too small; expected at least 25 behavioral cases")
+if len(commands) < 70:
+    raise SystemExit("Terminal command suite is too small; expected at least 70 behavioral cases")
 
 allowed_paths = {
     "operational_publication_check",
@@ -49,6 +51,7 @@ allowed_paths = {
     "operational_domain_dns",
     "local_agent_status",
     "github_workflow_dispatch",
+    "local_command_help",
 }
 allowed_modes = {"article", "site", "control"}
 names = set()
