@@ -8,6 +8,11 @@ on:
     branches: ["main"]
     paths:
       - "terminal/worker/**"
+      - ".github/workflows/terminal-deferred-recovery.yml"
+      - "agents/operator-terminal/deferred_site_edits.py"
+      - "agents/operator-terminal/deferred_articles.py"
+      - "agents/operator-terminal/compound_control.py"
+      - "agents/operator-terminal/command.py"
       - "scripts/patch_worker_dispatch_diagnostics.py"
       - "scripts/harden_terminal_agent.py"
       - "scripts/test_terminal_agent.py"
