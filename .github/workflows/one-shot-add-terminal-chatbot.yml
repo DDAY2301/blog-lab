@@ -50,8 +50,8 @@ jobs:
             echo "No chatbot changes to commit."
             exit 0
           fi
-          git commit -m "Worker: add private terminal chatbot assistant"
+          git commit -m "Worker: place chatbot inside terminal UI"
           git pull --rebase origin main
           git push origin HEAD:main
 
-# retrigger: 2026-09-21T10:59+02:00
+# retrigger: 2026-09-21T11:02+02:00
