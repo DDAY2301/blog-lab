@@ -40,7 +40,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     env:
-      EXPECTED_WORKER_VERSION: auth-v6.23-command-idempotency
+      EXPECTED_WORKER_VERSION: auth-v6.24-product-onboarding
     steps:
       - uses: actions/checkout@v7
 
