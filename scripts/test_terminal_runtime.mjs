@@ -20,6 +20,7 @@ const hookNames = [
   "cleanTerminalChatAnswer",
   "terminalChatFallback",
   "safeFailureText",
+  "withTimeout",
 ];
 
 for (const name of hookNames) {
@@ -43,8 +44,8 @@ function assert(condition, message) {
 
 function routeFor(text) {
   if (h.shouldUsePublicationOperationalCheck(text)) return { path: "operational_publication_check" };
-  if (h.shouldUseTerminalDiagnostics(text)) return { path: "operational_terminal_diagnostics" };
   if (h.shouldUseDomainOperationalAnswer(text)) return { path: "operational_domain_dns" };
+  if (h.shouldUseTerminalDiagnostics(text)) return { path: "operational_terminal_diagnostics" };
   const intent = h.localCommandIntent(text);
   if (intent.mode === "control" && h.isAgentStatusCommand(text)) {
     return { path: "local_agent_status", intent };
@@ -84,6 +85,17 @@ assert(cleaned.includes("Pomočnik je prejel vprašanje"), "Planning leak did no
 assert(h.foldCommandText("ČLANEK – ŽE") === "clanek ze", "Diacritic folding regression");
 assert(h.normalizedCommandIntent("wrtie artcle") === "napisi clanek", "Typo normalization regression");
 
+// A stalled dependency must be bounded instead of hanging the chatbot indefinitely.
+let timeoutGuard = false;
+const timeoutStarted = Date.now();
+try {
+  await h.withTimeout(new Promise(() => {}), 10, "runtime_timeout_guard");
+} catch (error) {
+  timeoutGuard = String(error?.message || error).includes("runtime_timeout_guard");
+}
+assert(timeoutGuard, "withTimeout did not reject a stalled dependency");
+assert(Date.now() - timeoutStarted < 1800, "withTimeout exceeded the bounded runtime window");
+
 if (failures.length) {
   console.error(JSON.stringify({ ok:false, failures }, null, 2));
   process.exit(1);
@@ -95,5 +107,6 @@ console.log(JSON.stringify({
   suite_version: suite.version,
   redaction: "ok",
   planning_leak_sanitizer: "ok",
-  typo_normalization: "ok"
+  typo_normalization: "ok",
+  timeout_guard: "ok"
 }, null, 2));
