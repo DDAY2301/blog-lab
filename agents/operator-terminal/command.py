@@ -173,6 +173,11 @@ def _correct_intent_token(token: str) -> str:
     if not matches:
         return token
     candidate = matches[0]
+    # Do not aggressively rewrite literal topic/value words into much shorter
+    # command verbs (for example renewable -> enable). Common typos such as
+    # artcle/article and webiste/website still remain within this distance.
+    if abs(len(token) - len(candidate)) > 2:
+        return token
     if token[0] != candidate[0] and len(token) < 8:
         return token
     return INTENT_TOKEN_ALIASES[candidate]
