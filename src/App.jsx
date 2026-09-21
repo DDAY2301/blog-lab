@@ -2563,7 +2563,7 @@ function articleTemplateKey(article) {
   ].join(" ").toLowerCase();
 
   if (/šport|sport|nogomet|košark|tenis|koles|tekma|liga|hokej|smuč/.test(haystack)) return "pulse";
-  if (/noč|night|glasb|koncert|festival|klub|kultur|film|restavr|kulinar|umetnost|moda/.test(haystack)) return "afterdark";
+  if (/nočno življenje|nocno zivljenje|nightlife|glasb|koncert|festival|klub|kultur|film|restavr|kulinar|umetnost|moda/.test(haystack)) return "afterdark";
   if (/tehnolog|umetna inteligenca|\bai\b|startup|znanost|digital|software|gospodar|financ|inovacij/.test(haystack)) return "studio";
   if (/potov|izlet|narava|planin|gora|jezero|morje|hrana|recept|muzej|grad|dedišč|vodnik/.test(haystack)) return "fieldnote";
   if (/politik|vlada|minister|parlament|volit|zakon|občina|predsednik|držav/.test(haystack)) return "newsroom";
