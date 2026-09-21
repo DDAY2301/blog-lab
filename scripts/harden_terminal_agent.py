@@ -518,5 +518,48 @@ if "const r=await ft('/api/login'" not in text:
 if "fetchTimed('/api/interpret'" not in text or "try{await load()}catch{}finally" not in text:
     raise SystemExit("terminal UI network recovery markers missing after hardening")
 
+
+command_help_button_old = r'''<select id="category"><option value="aktualno">Aktualno</option><option value="sport">Šport</option><option value="politika">Politika</option></select><button id="send">IZVEDI</button>'''
+command_help_button_new = r'''<select id="category"><option value="aktualno">Aktualno</option><option value="sport">Šport</option><option value="politika">Politika</option></select><button id="helpCommands" type="button">KOMANDE</button><button id="send">IZVEDI</button>'''
+if 'id="helpCommands"' not in text:
+    if command_help_button_old not in text:
+        raise SystemExit("terminal command help button marker not found")
+    text = text.replace(command_help_button_old, command_help_button_new, 1)
+
+command_help_function_anchor = r'''let commandCheckTimer=null,commandCheckSeq=0;
+function modeLabel'''
+command_help_function_new = r'''let commandCheckTimer=null,commandCheckSeq=0;
+async function showCommandCatalog(){
+  const btn=$('#helpCommands');if(btn)btn.disabled=true;
+  try{
+    const r=await fetchTimed('/api/commands',{cache:'no-store'},8000);
+    if(r.status===401){location.replace('/');return}
+    const d=await r.json().catch(()=>({}));
+    if(!r.ok)throw new Error(d.error||('HTTP '+r.status));
+    const list=rows();
+    list.push({id:null,command:'pomoč / komande',mode:'control',category:'aktualno',created_at:new Date().toISOString(),status:'completed',conclusion:'success',run_url:null,detail:d.text||'Katalog ukazov ni na voljo.'});
+    save(list);await load();
+  }catch(err){alert('Kataloga komand ni mogoče prikazati: '+(err&&err.message?err.message:String(err)))}
+  finally{if(btn)btn.disabled=false}
+}
+function modeLabel'''
+if "async function showCommandCatalog()" not in text:
+    if command_help_function_anchor not in text:
+        raise SystemExit("terminal command help function marker not found")
+    text = text.replace(command_help_function_anchor, command_help_function_new, 1)
+
+command_help_click_old = r'''$('#command').addEventListener('input',scheduleCommandCheck);'''
+command_help_click_new = r'''$('#command').addEventListener('input',scheduleCommandCheck);
+$('#helpCommands').onclick=showCommandCatalog;'''
+if "$('#helpCommands').onclick=showCommandCatalog;" not in text:
+    if command_help_click_old not in text:
+        raise SystemExit("terminal command help click marker not found")
+    text = text.replace(command_help_click_old, command_help_click_new, 1)
+
+detail_style_old = r'''.entry .detail{color:#7ee787;font-size:12px;line-height:1.5;margin-top:6px}'''
+detail_style_new = r'''.entry .detail{color:#7ee787;font-size:12px;line-height:1.5;margin-top:6px;white-space:pre-wrap}'''
+if "white-space:pre-wrap" not in text and detail_style_old in text:
+    text = text.replace(detail_style_old, detail_style_new, 1)
+
 path.write_text(text, encoding="utf-8")
 print("Terminal agent hardening applied")
