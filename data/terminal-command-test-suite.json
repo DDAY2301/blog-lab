@@ -1,36 +1,202 @@
 {
-  "version": "terminal-agent-hardening-1",
-  "purpose": "Static command suite for terminal agent and chatbot resilience checks.",
+  "version": "terminal-agent-hardening-2",
+  "purpose": "Behavioral command suite for terminal agent/chatbot routing, typo tolerance and multilingual resilience.",
   "commands": [
     {
-      "name": "publication_repair",
+      "name": "publication_repair_sl",
       "text": "preglej delovanje objav in reši probleme če jih najdeš",
       "expected_path": "operational_publication_check"
     },
     {
-      "name": "missing_publication",
+      "name": "missing_publication_sl",
       "text": "preveri zakaj ni današnje objave in popravi",
       "expected_path": "operational_publication_check"
     },
     {
-      "name": "terminal_diagnostics",
+      "name": "publisher_test_sl",
+      "text": "testiraj publisher in guardian ter popravi težave z objavami",
+      "expected_path": "operational_publication_check"
+    },
+    {
+      "name": "publication_check_en",
+      "text": "check why the scheduled article was not published and fix the publisher",
+      "expected_path": "operational_publication_check"
+    },
+    {
+      "name": "publication_check_hr",
+      "text": "provjeri zašto nema današnje objave i popravi publisher",
+      "expected_path": "operational_publication_check"
+    },
+    {
+      "name": "publication_check_sr",
+      "text": "proveri problem sa objavama i rasporedom i popravi",
+      "expected_path": "operational_publication_check"
+    },
+    {
+      "name": "terminal_diagnostics_sl",
       "text": "testiraj terminal agenta in chatbot ter popravi probleme",
       "expected_path": "operational_terminal_diagnostics"
     },
     {
-      "name": "domain_dns",
+      "name": "worker_diagnostics_sl",
+      "text": "preveri Cloudflare Worker health in workflow napake",
+      "expected_path": "operational_terminal_diagnostics"
+    },
+    {
+      "name": "dispatch_diagnostics_en",
+      "text": "diagnose terminal workflow dispatch timeout and fix the problem",
+      "expected_path": "operational_terminal_diagnostics"
+    },
+    {
+      "name": "chatbot_diagnostics_hr",
+      "text": "provjeri chatbot i terminal, pronađi problem i popravi",
+      "expected_path": "operational_terminal_diagnostics"
+    },
+    {
+      "name": "chatbot_diagnostics_sr",
+      "text": "proveri da li terminal chatbot radi i reši problem",
+      "expected_path": "operational_terminal_diagnostics"
+    },
+    {
+      "name": "domain_dns_sl",
       "text": "pripravi DNS navodila za bloglab.eu in GitHub Pages",
       "expected_path": "operational_domain_dns"
     },
     {
-      "name": "article_publish",
-      "text": "objavi članek o zanimivih restavracijah v Ljubljani z nevtralnimi viri",
-      "expected_path": "github_workflow_dispatch"
+      "name": "domain_dns_en",
+      "text": "show the CNAME and A records for bloglab.eu GitHub Pages",
+      "expected_path": "operational_domain_dns"
     },
     {
-      "name": "site_edit",
-      "text": "izboljšaj vizualni del člankov in ne dovoli javnega pisanja",
-      "expected_path": "github_workflow_dispatch"
+      "name": "domain_dns_hr",
+      "text": "pokaži DNS zapise za bloglab.eu i terminal.bloglab.eu",
+      "expected_path": "operational_domain_dns"
+    },
+    {
+      "name": "status_sl",
+      "text": "preveri status agenta",
+      "expected_path": "local_agent_status",
+      "expected_mode": "control",
+      "expected_action": "status"
+    },
+    {
+      "name": "status_typo",
+      "text": "sttaus agnta",
+      "expected_path": "local_agent_status",
+      "expected_mode": "control",
+      "expected_action": "status"
+    },
+    {
+      "name": "status_en",
+      "text": "check agent status",
+      "expected_path": "local_agent_status",
+      "expected_mode": "control",
+      "expected_action": "status"
+    },
+    {
+      "name": "schedule_sl",
+      "text": "preveri urnik agenta",
+      "expected_path": "local_agent_status",
+      "expected_mode": "control",
+      "expected_action": "schedule"
+    },
+    {
+      "name": "article_publish_sl",
+      "text": "objavi članek o zanimivih restavracijah v Ljubljani z nevtralnimi viri",
+      "expected_path": "github_workflow_dispatch",
+      "expected_mode": "article",
+      "expected_action": "article"
+    },
+    {
+      "name": "article_write_en",
+      "text": "write an article about renewable energy in Slovenia",
+      "expected_path": "github_workflow_dispatch",
+      "expected_mode": "article",
+      "expected_action": "article"
+    },
+    {
+      "name": "article_typo_en",
+      "text": "wrtie artcle about local technology companies",
+      "expected_path": "github_workflow_dispatch",
+      "expected_mode": "article",
+      "expected_action": "article"
+    },
+    {
+      "name": "article_hr",
+      "text": "napravi članak o mladim poduzetnicima u Zagrebu",
+      "expected_path": "github_workflow_dispatch",
+      "expected_mode": "article",
+      "expected_action": "article"
+    },
+    {
+      "name": "article_sr",
+      "text": "napravi clanak o omladinskim projektima u Beogradu",
+      "expected_path": "github_workflow_dispatch",
+      "expected_mode": "article",
+      "expected_action": "article"
+    },
+    {
+      "name": "site_edit_sl",
+      "text": "izboljšaj vizualni del strani in ne dovoli javnega pisanja",
+      "expected_path": "github_workflow_dispatch",
+      "expected_mode": "site",
+      "expected_action": "site_edit"
+    },
+    {
+      "name": "site_nav_en",
+      "text": "improve website navigation and mobile layout",
+      "expected_path": "github_workflow_dispatch",
+      "expected_mode": "site",
+      "expected_action": "site_edit"
+    },
+    {
+      "name": "site_typo_en",
+      "text": "imrpove webiste desgin and header",
+      "expected_path": "github_workflow_dispatch",
+      "expected_mode": "site",
+      "expected_action": "site_edit"
+    },
+    {
+      "name": "site_hr",
+      "text": "uredi stranicu, meni i galeriju fotografija",
+      "expected_path": "github_workflow_dispatch",
+      "expected_mode": "site",
+      "expected_action": "site_edit"
+    },
+    {
+      "name": "site_article_design",
+      "text": "izboljšaj dizajn člankov in tipografijo na strani",
+      "expected_path": "github_workflow_dispatch",
+      "expected_mode": "site",
+      "expected_action": "site_edit"
+    },
+    {
+      "name": "control_stop_sl",
+      "text": "ustavi agenta in objavljanje",
+      "expected_path": "github_workflow_dispatch",
+      "expected_mode": "control",
+      "expected_action": "stop"
+    },
+    {
+      "name": "control_start_en",
+      "text": "restart agent publishing",
+      "expected_path": "github_workflow_dispatch",
+      "expected_mode": "control",
+      "expected_action": "start"
+    },
+    {
+      "name": "control_stop_hr",
+      "text": "zaustavi agent i objavljivanje",
+      "expected_path": "github_workflow_dispatch",
+      "expected_mode": "control",
+      "expected_action": "stop"
+    },
+    {
+      "name": "control_resume_sr",
+      "text": "nastavi agent publishing",
+      "expected_path": "github_workflow_dispatch",
+      "expected_mode": "control",
+      "expected_action": "start"
     }
   ]
 }
