@@ -2,6 +2,8 @@ name: Blog Lab Terminal Idempotency Fire Drill
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "37 3 * * 0"
 
 concurrency:
   group: blog-lab-terminal-idempotency-fire-drill
