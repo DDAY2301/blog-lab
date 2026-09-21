@@ -1779,10 +1779,21 @@ for(const ev of ['dragleave','drop'])dz.addEventListener(ev,e=>{e.preventDefault
 dz.addEventListener('drop',e=>uploadMedia(e.dataTransfer.files));
 $('#send').onclick=async()=>{const command=$('#command').value.trim();if(!command)return;$('#send').disabled=true;let clientRequestId='';try{const body={command,mode:$('#mode').value,category:$('#category').value};clientRequestId=requestIdForBody(body);body.client_request_id=clientRequestId;const r=await fetchTimed('/api/command',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(body)},18000);if(r.status===401){clearPendingRequest(clientRequestId);location.replace('/');return}const d=await r.json();if(!r.ok){clearPendingRequest(clientRequestId);const parts=[d.error||'Ukaz ni uspel.'];if(d.status)parts.push('HTTP status: '+d.status);if(d.code)parts.push('Koda: '+d.code);if(d.hint)parts.push('Namig: '+d.hint);if(d.detail)parts.push('GitHub odgovor: '+String(d.detail).slice(0,900));if(d.missing&&d.missing.length)parts.push('Manjka: '+d.missing.join(', '));alert(parts.join('\\n'));return}clearPendingRequest(clientRequestId);const list=rows();if(d.local){list.push({id:null,command,mode:d.interpretation?.mode||body.mode,category:body.category,created_at:new Date().toISOString(),status:'completed',conclusion:'success',run_url:null,detail:d.result?.summary||'Status prebran.'})}else{const understood=d.interpretation?('Razumljeno kot '+modeLabel(d.interpretation.mode)+(d.interpretation.corrected?' · typo-corrected':'')+(d.interpretation.ai_used?' · AI fallback':'')):'';list.push({id:d.id,command,mode:d.interpretation?.mode||body.mode,category:body.category,created_at:new Date().toISOString(),status:'queued',conclusion:null,run_url:null,detail:understood})}save(list);$('#command').value='';scheduleCommandCheck();clearMedia();await load();kickPoll()}catch(err){alert(err&&err.name==='AbortError'?'Terminal se ni odzval pravočasno. Ukaz ni potrjen; preveri stanje in ga po potrebi pošlji ponovno.':'Povezava s terminalom ni uspela: '+(err&&err.message?err.message:String(err)))}finally{$('#send').disabled=false}};
 $('#logout').onclick=async()=>{await fetchTimed('/api/logout',{method:'POST'},8000).catch(()=>{});location.replace('/')};
-let pollTimer=null;
+let pollTimer=null,pollRunning=false,pollAgain=false;
 function hasActiveRuns(){return rows().some(x=>x.id&&x.status!=='completed'&&x.status!=='unknown')}
-async function pollLoop(){try{await load()}catch{}finally{pollTimer=setTimeout(pollLoop,hasActiveRuns()?3000:12000)}}
-function kickPoll(){if(pollTimer)clearTimeout(pollTimer);pollTimer=setTimeout(pollLoop,150)}
+async function pollLoop(){
+  if(pollRunning){pollAgain=true;return}
+  pollRunning=true;
+  try{await load()}catch{}
+  finally{
+    pollRunning=false;
+    if(pollTimer)clearTimeout(pollTimer);
+    const delay=pollAgain?150:(hasActiveRuns()?3000:12000);
+    pollAgain=false;
+    pollTimer=setTimeout(pollLoop,delay);
+  }
+}
+function kickPoll(){pollAgain=true;if(!pollRunning){if(pollTimer)clearTimeout(pollTimer);pollTimer=setTimeout(pollLoop,150)}}
 pollLoop();
 </script>
 <style>
