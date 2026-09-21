@@ -148,6 +148,9 @@ function terminalIntentWords(message) {
 
 function shouldUsePublicationOperationalCheck(message) {
   const lower = terminalIntentWords(message);
+  const explicitExecution = /napisi vse|napiši vse|write all|publish all|catch ?up|nadoknad|objavi vse|izvedi objav/.test(lower)
+    && /clan|article|post|objav|novic/.test(lower);
+  if (explicitExecution) return false;
   const hasPublication = /objav|clan|article|post|publish|publisher|guardian|learning|urnik|raspored|schedule|slot|samodejn|automatic/.test(lower);
   const hasAction = /preglej|preveri|provjer|prover|check|verify|resi|resit|repair|fix|popravi|problem|zakaj|why|delovanje|status|test|diagnos/.test(lower);
   return hasPublication && hasAction;
