@@ -64,8 +64,8 @@ for item in commands:
         raise SystemExit(f"Unknown expected_path for {name}: {item.get('expected_path')}")
     if item.get("expected_mode") and item["expected_mode"] not in allowed_modes:
         raise SystemExit(f"Unknown expected_mode for {name}: {item['expected_mode']}")
-    if not item.get("text") or len(item.get("text", "")) < 8:
-        raise SystemExit(f"Invalid short command case: {name}")
+    if not item.get("text") or len(item.get("text", "").strip()) < 3:
+        raise SystemExit(f"Invalid command case: {name}")
 
 expected = {item.get("expected_path") for item in commands}
 for path in allowed_paths:
