@@ -8,13 +8,15 @@ import urllib.parse
 BASE = os.environ.get("WORKER_URL", "https://blog-lab.dan-grmusa.workers.dev").rstrip("/")
 EXPECTED_VERSION = os.environ.get("EXPECTED_WORKER_VERSION", "").strip()
 
-def call(path, method="GET", payload=None, timeout=20):
+def call(path, method="GET", payload=None, timeout=20, extra_headers=None):
     data = None
     headers = {
         "User-Agent": "BlogLabTerminalLiveContract/2.0",
         "Accept": "application/json,text/plain,text/html,*/*",
         "Cache-Control": "no-cache",
     }
+    if extra_headers:
+        headers.update(extra_headers)
     if payload is not None:
         data = json.dumps(payload).encode("utf-8")
         headers["Content-Type"] = "application/json"
@@ -63,6 +65,57 @@ for attempt in range(1, attempts + 1):
             time.sleep(5 if EXPECTED_VERSION else 2)
 if health is None:
     raise SystemExit(f"Live health contract failed: {last_error}")
+
+status, public_headers, public_body = call("/api/public/product-status")
+require(status == 200, f"public product status returned HTTP {status}")
+public_status = json.loads(public_body)
+require(public_status.get("demo_ready") is True, "public demo is not ready")
+require(public_status.get("trial_signup_ready") is True, "trial signup is not ready")
+if EXPECTED_VERSION:
+    require(public_status.get("version") == EXPECTED_VERSION, "public product status version mismatch")
+require(str(public_headers.get("Access-Control-Allow-Origin") or public_headers.get("access-control-allow-origin") or "") == "*", "public product status CORS missing")
+public_product_status_checked = True
+
+status, _, demo_html = call("/demo")
+require(status == 200, f"/demo returned HTTP {status}")
+require("SAFE PUBLIC DEMO" in demo_html and "SIMULIRAJ IZVEDBO" in demo_html, "public demo page contract missing")
+
+status, _, join_html = call("/join")
+require(status == 200, f"/join returned HTTP {status}")
+require("7-DNEVNI DEMO RAČUN" in join_html and "USTVARI DEMO RAČUN" in join_html, "trial onboarding page contract missing")
+
+status, _, demo_body = call("/api/demo/command", method="POST", payload={"command": "napiši članek o trajnostni mobilnosti"})
+require(status == 200, f"demo command returned HTTP {status}")
+demo_data = json.loads(demo_body)
+require(demo_data.get("simulated") is True, "public demo command is not isolated simulation")
+require(demo_data.get("mode") == "article", "public demo article routing changed")
+
+trial_email = f"live-contract-{int(time.time())}@example.invalid"
+status, trial_headers, trial_body = call("/api/trial/register", method="POST", payload={
+    "name": "Live Contract",
+    "email": trial_email,
+    "organization": "Blog Lab Test",
+    "use_case": "content",
+    "frequency": "daily",
+    "workspace": "Live Contract Workspace",
+    "terms": True,
+})
+require(status == 201, f"trial registration returned HTTP {status}: {trial_body[:300]}")
+trial_cookie_raw = str(trial_headers.get("Set-Cookie") or trial_headers.get("set-cookie") or "")
+require("bloglab_trial_session=" in trial_cookie_raw, "trial session cookie missing")
+trial_cookie = trial_cookie_raw.split(";", 1)[0]
+
+status, _, trial_me_body = call("/api/trial/me", extra_headers={"Cookie": trial_cookie})
+require(status == 200, f"trial /me returned HTTP {status}")
+trial_me = json.loads(trial_me_body)
+require(trial_me.get("profile", {}).get("email") == trial_email, "trial session profile mismatch")
+
+status, _, app_html = call("/app", extra_headers={"Cookie": trial_cookie})
+require(status == 200 and "ONBOARDING COMPLETE" in app_html, "trial workspace page contract missing")
+
+status, _, isolated_body = call("/api/command", method="POST", payload={"command": "preveri status agenta"}, extra_headers={"Cookie": trial_cookie})
+require(status == 401, f"trial account reached operator API: HTTP {status}")
+trial_isolation_checked = True
 
 status, root_headers, root = call("/")
 require(status == 200, f"login page returned HTTP {status}")
@@ -126,4 +179,8 @@ print(json.dumps({
     "login_diagnostics_checked": login_diagnostics_checked,
     "invalid_login_rejected": True,
     "security_headers": "ok",
+    "public_product_status_checked": public_product_status_checked,
+    "public_demo_checked": True,
+    "trial_onboarding_checked": True,
+    "trial_operator_isolation_checked": trial_isolation_checked,
 }, ensure_ascii=False, indent=2))
