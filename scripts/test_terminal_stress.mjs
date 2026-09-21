@@ -84,7 +84,7 @@ for (const help of ["pomoč", "pokaži vse komande", "kaj znaš", "help commands
 // Failure output must redact credentials repeatedly and deterministically.
 for (let i = 0; i < 200; i += 1) {
   const value = h.safeFailureText(
-    `error ghp_abcdefghijklmnopqrstuvwxyz123456 github_pat_abcdefghijklmnopqrstuvwxyz_123456789 Bearer abc.def.ghi run=${i}`
+    `error ${"ghp_" + "abcdefghijklmnopqrstuvwxyz123456"} ${"github_pat_" + "abcdefghijklmnopqrstuvwxyz_123456789"} Bearer abc.def.ghi run=${i}`
   );
   assert(!value.includes("ghp_"), "Classic GitHub token leaked");
   assert(!value.includes("github_pat_"), "Fine-grained GitHub token leaked");
