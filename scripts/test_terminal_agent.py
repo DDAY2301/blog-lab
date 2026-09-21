@@ -33,6 +33,10 @@ required_markers = [
     'auth-v6.22-terminal-stability',
     'TERMINAL_COMMAND_CATALOG',
     'url.pathname === "/api/commands"',
+    "clearPendingRequest",
+    "requestIdForBody",
+    "client_request_id",
+    "PENDING_KEY='bloglab-terminal-pending-v1'",
 ]
 
 missing = [marker for marker in required_markers if marker not in text]
@@ -143,6 +147,7 @@ for marker in [
     "bounded recovery",
     "Destroy decrypted command",
     "Test terminal execution contract",
+    "Check terminal request idempotency",
 ]:
     if marker not in operator:
         raise SystemExit(f"Operator workflow safety marker missing: {marker}")
