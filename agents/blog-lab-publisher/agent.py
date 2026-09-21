@@ -20,6 +20,7 @@ from services.ai_provider import generate, review_grounding, AIUnavailable
 from services.validator import validate
 from services.publisher import publish_to_app, slugify
 from services.state import load_json, atomic_json
+from services.learning import learning_source_ok, rank_sources_with_learning
 
 STATE = BASE / "data/agent-state.json"
 CONTROL = BASE / "data/agent-control.json"
@@ -347,7 +348,11 @@ def collect_automatic_sources(cfg: dict, category: str) -> list[dict]:
         if automatic_source_usable(item, category, trusted_primary=False)
     ]
 
-    merged = _merge_source_groups(primary, broad, limit=limit)
+    merged = [
+        item for item in _merge_source_groups(primary, broad, limit=limit)
+        if learning_source_ok(item, category)
+    ]
+    merged = rank_sources_with_learning(merged, category)[:limit]
     print(
         f"AUTO_SOURCES category={category} "
         f"primary={len(primary)}/{len(primary_raw)} "

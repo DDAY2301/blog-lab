@@ -35,6 +35,7 @@ from agent import (  # noqa: E402
 from services.fallback_writer import build_digest  # noqa: E402
 from services.publisher import publish_to_app, slugify  # noqa: E402
 from services.validator import validate  # noqa: E402
+from services.learning import learning_source_ok, rank_sources_with_learning  # noqa: E402
 
 
 CATEGORY_TERMS = {
@@ -91,6 +92,8 @@ def _category_relevant(item: dict, category: str) -> bool:
     # daily news anchors. They caused a physics biography to be published in the
     # sports slot, so block them before the article writer sees them.
     if any(host == bad or host.endswith("." + bad) for bad in BAD_AUTONOMOUS_HOSTS):
+        return False
+    if not learning_source_ok(item, category):
         return False
 
     terms = CATEGORY_TERMS.get(category)
@@ -171,13 +174,13 @@ def run(category: str, scheduled_slot: str = "", dry_run: bool = False) -> int:
         print("FALLBACK_DAILY_LIMIT")
         return 0
 
-    items = _filter_category_pool(collect_automatic_sources(cfg, category), category)
+    items = rank_sources_with_learning(_filter_category_pool(collect_automatic_sources(cfg, category), category), category)
     seen_hashes = {x.get("hash") for x in processed}
     fresh = [x for x in items if x.get("hash") not in seen_hashes]
     source_pool = fresh or items
-    source_pool = _filter_category_pool(source_pool, category)
+    source_pool = rank_sources_with_learning(_filter_category_pool(source_pool, category), category)
     evidence_pool = automatic_story_pool(source_pool, category, max_items=6)
-    evidence_pool = _filter_category_pool(evidence_pool, category)
+    evidence_pool = rank_sources_with_learning(_filter_category_pool(evidence_pool, category), category)
     if not evidence_pool:
         state["last_error"] = "fallback_no_category_evidence"
         atomic_json(str(STATE), state)
@@ -252,7 +255,7 @@ def run(category: str, scheduled_slot: str = "", dry_run: bool = False) -> int:
         "posts_today": state.get("posts_today", 0) + 1,
         "scheduled_posts_today": state.get("scheduled_posts_today", 0) + 1,
         "manual_posts_today": state.get("manual_posts_today", 0),
-        "agent_version": "2.9.0-category-guarded-fallback",
+        "agent_version": "3.0.0-learning-guarded-fallback",
         "current_category": category,
         "writer_mode": "deterministic_fallback",
         "last_editorial_hold": None,
