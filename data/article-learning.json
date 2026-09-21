@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-21T12:30:28+02:00",
-  "loop_count": 23,
+  "updated_at": "2026-09-21T12:38:10+02:00",
+  "loop_count": 24,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-21T12:30:06+02:00",
+      "last_learning_run": "2026-09-21T12:37:44+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -40,11 +40,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.493,
-          "seen": 690,
-          "last_seen": "2026-09-21T12:30:06+02:00",
+          "seen": 720,
+          "last_seen": "2026-09-21T12:37:44+02:00",
           "last_title": "Proti Srbiji tudi z mislijo na poškodovanega kapetana Tineta Urnauta - rtvslo.si",
           "last_provider": "",
-          "published": 368,
+          "published": 384,
           "last_output_id": "s-tribune-sportni-trenutki-zaradi-katerih-se-mi-se-danes-najezijo-dlake-aeb6d43b"
         }
       },
@@ -58,7 +58,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-21T12:30:17+02:00",
+      "last_learning_run": "2026-09-21T12:37:55+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -80,12 +80,12 @@
       ],
       "source_health": {
         "news.google.com": {
-          "score": 2.524,
-          "seen": 690,
-          "last_seen": "2026-09-21T12:30:17+02:00",
-          "last_title": "Tamari Vonti se je povsem utrgalo: ljudi prepričuje, da smo sredi državnega udara - Nova24TV",
+          "score": 2.574,
+          "seen": 720,
+          "last_seen": "2026-09-21T12:37:55+02:00",
+          "last_title": "Tone Kajzer: Zunanja politika na dobri poti. Tanja Fajon: Kajzer dobro začrtal usmeritve. - rtvslo.si",
           "last_provider": "",
-          "published": 230,
+          "published": 240,
           "last_output_id": "politika-si-odpira-vrata-v-medije-vlada-kriticne-medije-s-profesionalnimi-novinarji-dojema-eeca644f"
         }
       },
@@ -94,12 +94,12 @@
         "news.google.com": [
           "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si",
           "Na Radiu Ognjišče zadnje predvolilno soočenje: v ospredju prisluhi, zdravstvo, zunanja politika in sprava - Radio Ognjišče",
-          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer"
+          "Opozicija udarila po Kajzerju: Slovenska zunanja politika je servis izaelske vlade - Dnevnik"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-21T12:30:28+02:00",
+      "last_learning_run": "2026-09-21T12:38:10+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -121,37 +121,55 @@
         "marshalls.com",
         "accounts.google.com",
         "movies.youtube.com",
-        "tripadvisor.com"
+        "tripadvisor.com",
+        "account.microsoft.com",
+        "account.revealcellcam.com",
+        "myaccount.microsoft.com"
       ],
       "source_health": {
         "news.google.com": {
-          "score": 2.526,
-          "seen": 690,
-          "last_seen": "2026-09-21T12:30:28+02:00",
+          "score": 2.517,
+          "seen": 720,
+          "last_seen": "2026-09-21T12:38:10+02:00",
           "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 345,
-          "last_output_id": "anja-rakusa-brus-pomemben-argument-za-mojo-kandidaturo-je-izkusnja-z-aktualno-vlado-ki-str-2c38f7cd"
+          "published": 362,
+          "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 92,
+          "published": 96,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "accounts.google.com": {
-          "score": 2.486,
-          "published": 23,
+          "score": 2.489,
+          "published": 24,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
-          "score": 2.486,
-          "published": 23,
+          "score": 2.489,
+          "published": 24,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "tripadvisor.com": {
-          "score": 2.486,
-          "published": 23,
+          "score": 2.489,
+          "published": 24,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
+        },
+        "account.microsoft.com": {
+          "score": 0.5,
+          "published": 1,
+          "last_output_id": "sign-in-to-your-account-4b374c63"
+        },
+        "account.revealcellcam.com": {
+          "score": 0.5,
+          "published": 1,
+          "last_output_id": "sign-in-to-your-account-4b374c63"
+        },
+        "myaccount.microsoft.com": {
+          "score": 0.5,
+          "published": 1,
+          "last_output_id": "sign-in-to-your-account-4b374c63"
         }
       },
       "current_source_count": 30,
@@ -165,6 +183,12 @@
     }
   },
   "recent_articles": [
+    {
+      "id": "sign-in-to-your-account-4b374c63",
+      "title": "Sign in to your account",
+      "category": "Aktualno",
+      "createdAt": "2026-09-21T12:32:31+02:00"
+    },
     {
       "id": "s-tribune-sportni-trenutki-zaradi-katerih-se-mi-se-danes-najezijo-dlake-aeb6d43b",
       "title": "S tribune: Športni trenutki, zaradi katerih se mi še danes naježijo dlake",
@@ -230,12 +254,6 @@
       "title": "Politični pregled: 19. 9. 2026",
       "category": "Politika",
       "createdAt": "2026-09-19T16:34:25+02:00"
-    },
-    {
-      "id": "franja-partisan-hospital-history-guide",
-      "title": "Franja Partisan Hospital: History, Humanity and a Closed-Site Guide",
-      "category": "Vodniki",
-      "createdAt": "2026-09-19T14:58:52+02:00"
     }
   ],
   "recent_failures": [
