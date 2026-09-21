@@ -1,0 +1,57 @@
+{
+  "version": "1.0.0-continuous-learning",
+  "mode": "continuous_24h",
+  "updated_at": "pending-first-learning-run",
+  "loop_count": 0,
+  "global_writing_rules": [
+    "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
+    "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
+    "Vsaka trditev, ki ni splošno znana, mora izhajati iz vira v članku.",
+    "Ne zapolnjuj manjkajočih dejstev z ugibanjem ali generičnimi stavki.",
+    "Ne ponavljaj dolgih povedi, podnaslovov ali skoraj enakih odstavkov."
+  ],
+  "global_news_rules": [
+    "Prednost imajo sveži slovenski viri z dovolj dolgim povzetkom ali neposredno preverjeno vsebino.",
+    "Če vir večkrat sproži napačno kategorijo, se njegova ocena zniža in ga fallback ne uporablja več.",
+    "Če ni dovolj dokazov za članek, je bolje počakati kot objaviti napačno temo."
+  ],
+  "blocked_hosts": [],
+  "categories": {
+    "sport": {
+      "learning_mode": "continuous_24h",
+      "writing_rules": [
+        "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
+        "Ne objavljaj biografij, enciklopedij ali univerzitetnih profilov kot športne novice.",
+        "Prednost imajo slovenski športni viri, klubi, zveze, tekme, rezultati in športna infrastruktura."
+      ],
+      "blocked_hosts": ["en.wikipedia.org", "wikipedia.org", "stanford.edu", "sitp.stanford.edu", "physics.stanford.edu", "theoreticalminimum.com"],
+      "preferred_hosts": [],
+      "source_health": {}
+    },
+    "politika": {
+      "learning_mode": "continuous_24h",
+      "writing_rules": [
+        "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
+        "Loči dokumentirana dejstva od izjav akterjev in mnenjskih interpretacij.",
+        "Vsak politični članek mora imeti preverljive vire in jasen časovni okvir."
+      ],
+      "blocked_hosts": ["en.wikipedia.org", "wikipedia.org"],
+      "preferred_hosts": [],
+      "source_health": {}
+    },
+    "aktualno": {
+      "learning_mode": "continuous_24h",
+      "writing_rules": [
+        "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
+        "Ne mešaj nepovezanih naslovov v en članek; raje izberi eno zgodbo z najboljšimi viri.",
+        "Če so viri šibki, objavi kratek faktografski pregled namesto napihnjene zgodbe."
+      ],
+      "blocked_hosts": ["en.wikipedia.org", "wikipedia.org"],
+      "preferred_hosts": [],
+      "source_health": {}
+    }
+  },
+  "recent_articles": [],
+  "recent_failures": [],
+  "failure_summary": {}
+}
