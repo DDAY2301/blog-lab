@@ -1,7 +1,32 @@
 {
-  "version": "terminal-agent-hardening-2",
-  "purpose": "Behavioral command suite for terminal agent/chatbot routing, typo tolerance and multilingual resilience.",
+  "version": "terminal-agent-hardening-3",
+  "purpose": "Comprehensive supported-command regression suite for terminal, chatbot, operator routing, multilingual typos, operational diagnostics and self-heal.",
   "commands": [
+    {
+      "name": "help_sl",
+      "text": "pomoč",
+      "expected_path": "local_command_help"
+    },
+    {
+      "name": "help_commands_sl",
+      "text": "pokaži vse komande",
+      "expected_path": "local_command_help"
+    },
+    {
+      "name": "help_capabilities_sl",
+      "text": "kaj znaš",
+      "expected_path": "local_command_help"
+    },
+    {
+      "name": "help_en",
+      "text": "help commands",
+      "expected_path": "local_command_help"
+    },
+    {
+      "name": "help_capabilities_en",
+      "text": "what can you do",
+      "expected_path": "local_command_help"
+    },
     {
       "name": "publication_repair_sl",
       "text": "preglej delovanje objav in reši probleme če jih najdeš",
@@ -15,6 +40,11 @@
     {
       "name": "publisher_test_sl",
       "text": "testiraj publisher in guardian ter popravi težave z objavami",
+      "expected_path": "operational_publication_check"
+    },
+    {
+      "name": "schedule_sl",
+      "text": "preveri urnik agenta",
       "expected_path": "operational_publication_check"
     },
     {
@@ -58,6 +88,11 @@
       "expected_path": "operational_terminal_diagnostics"
     },
     {
+      "name": "api_diagnostics_en",
+      "text": "check terminal API health and fix timeout problems",
+      "expected_path": "operational_terminal_diagnostics"
+    },
+    {
       "name": "domain_dns_sl",
       "text": "pripravi DNS navodila za bloglab.eu in GitHub Pages",
       "expected_path": "operational_domain_dns"
@@ -73,11 +108,17 @@
       "expected_path": "operational_domain_dns"
     },
     {
+      "name": "domain_dns_neoserv",
+      "text": "preveri domeno bloglab.eu in Neoserv DNS",
+      "expected_path": "operational_domain_dns"
+    },
+    {
       "name": "status_sl",
       "text": "preveri status agenta",
       "expected_path": "local_agent_status",
       "expected_mode": "control",
-      "expected_action": "status"
+      "expected_action": "status",
+      "operator_mode": "control"
     },
     {
       "name": "status_typo",
@@ -91,26 +132,163 @@
       "text": "check agent status",
       "expected_path": "local_agent_status",
       "expected_mode": "control",
-      "expected_action": "status"
+      "expected_action": "status",
+      "operator_mode": "control"
     },
     {
-      "name": "schedule_sl",
-      "text": "preveri urnik agenta",
-      "expected_path": "operational_publication_check"
+      "name": "status_hr",
+      "text": "provjeri status agenta",
+      "expected_path": "local_agent_status",
+      "expected_mode": "control",
+      "expected_action": "status",
+      "operator_mode": "control"
+    },
+    {
+      "name": "status_sr",
+      "text": "proveri status agenta",
+      "expected_path": "local_agent_status",
+      "expected_mode": "control",
+      "expected_action": "status",
+      "operator_mode": "control"
+    },
+    {
+      "name": "control_stop_sl",
+      "text": "ustavi agenta in objavljanje",
+      "expected_path": "github_workflow_dispatch",
+      "expected_mode": "control",
+      "expected_action": "stop",
+      "operator_mode": "control"
+    },
+    {
+      "name": "control_stop_en",
+      "text": "stop publishing and turn agent off",
+      "expected_path": "github_workflow_dispatch",
+      "expected_mode": "control",
+      "expected_action": "stop",
+      "operator_mode": "control"
+    },
+    {
+      "name": "control_stop_hr",
+      "text": "zaustavi agent i objavljivanje",
+      "expected_path": "github_workflow_dispatch",
+      "expected_mode": "control",
+      "expected_action": "stop",
+      "operator_mode": "control"
+    },
+    {
+      "name": "control_start_sl",
+      "text": "nadaljuj objavljanje in vklopi agenta",
+      "expected_path": "github_workflow_dispatch",
+      "expected_mode": "control",
+      "expected_action": "start",
+      "operator_mode": "control"
+    },
+    {
+      "name": "control_start_en",
+      "text": "restart agent publishing",
+      "expected_path": "github_workflow_dispatch",
+      "expected_mode": "control",
+      "expected_action": "start",
+      "operator_mode": "control"
+    },
+    {
+      "name": "control_resume_sr",
+      "text": "nastavi agent publishing",
+      "expected_path": "github_workflow_dispatch",
+      "expected_mode": "control",
+      "expected_action": "start",
+      "operator_mode": "control"
+    },
+    {
+      "name": "control_draft_sl",
+      "text": "preklopi agent na draft način",
+      "expected_path": "github_workflow_dispatch",
+      "expected_mode": "control",
+      "expected_action": "publish_mode",
+      "operator_mode": "control"
+    },
+    {
+      "name": "control_review_sl",
+      "text": "preklopi objavljanje na review mode",
+      "expected_path": "github_workflow_dispatch",
+      "expected_mode": "control",
+      "expected_action": "publish_mode",
+      "operator_mode": "control"
+    },
+    {
+      "name": "control_automatic_sl",
+      "text": "preklopi objavljanje na automatic mode",
+      "expected_path": "github_workflow_dispatch",
+      "expected_mode": "control",
+      "expected_action": "publish_mode",
+      "operator_mode": "control"
+    },
+    {
+      "name": "control_schedule_set",
+      "text": "nastavi objavljanje 3x na dan po urniku",
+      "expected_path": "github_workflow_dispatch",
+      "expected_mode": "control",
+      "expected_action": "schedule",
+      "operator_mode": "control"
+    },
+    {
+      "name": "control_custom_schedule",
+      "text": "nastavi urnik objav ob 09:00 14:00 20:00",
+      "expected_path": "github_workflow_dispatch",
+      "expected_mode": "control",
+      "expected_action": "schedule",
+      "operator_mode": "control"
+    },
+    {
+      "name": "compound_catchup_sl",
+      "text": "izvedi objave 3 na dan po časovnici zdaj pa napiši vse članke ki smo jih spustili zaradi popravkov na strani",
+      "expected_path": "github_workflow_dispatch",
+      "operator_mode": "control"
+    },
+    {
+      "name": "compound_catchup_en",
+      "text": "keep 3 posts per day on schedule and write all missed articles now after the site repair",
+      "expected_path": "github_workflow_dispatch"
     },
     {
       "name": "article_publish_sl",
       "text": "objavi članek o zanimivih restavracijah v Ljubljani z nevtralnimi viri",
       "expected_path": "github_workflow_dispatch",
       "expected_mode": "article",
-      "expected_action": "article"
+      "expected_action": "article",
+      "operator_mode": "article"
+    },
+    {
+      "name": "article_write_sl",
+      "text": "napiši daljši članek o obnovljivih virih energije v Sloveniji",
+      "expected_path": "github_workflow_dispatch",
+      "expected_mode": "article",
+      "expected_action": "article",
+      "operator_mode": "article"
+    },
+    {
+      "name": "article_news_sl",
+      "text": "ustvari novico o današnjem dogodku v Ljubljani",
+      "expected_path": "github_workflow_dispatch",
+      "expected_mode": "article",
+      "expected_action": "article",
+      "operator_mode": "article"
     },
     {
       "name": "article_write_en",
       "text": "write an article about renewable energy in Slovenia",
       "expected_path": "github_workflow_dispatch",
       "expected_mode": "article",
-      "expected_action": "article"
+      "expected_action": "article",
+      "operator_mode": "article"
+    },
+    {
+      "name": "article_publish_en",
+      "text": "publish news about a technology conference in Ljubljana",
+      "expected_path": "github_workflow_dispatch",
+      "expected_mode": "article",
+      "expected_action": "article",
+      "operator_mode": "article"
     },
     {
       "name": "article_typo_en",
@@ -124,28 +302,32 @@
       "text": "napravi članak o mladim poduzetnicima u Zagrebu",
       "expected_path": "github_workflow_dispatch",
       "expected_mode": "article",
-      "expected_action": "article"
+      "expected_action": "article",
+      "operator_mode": "article"
     },
     {
       "name": "article_sr",
       "text": "napravi clanak o omladinskim projektima u Beogradu",
       "expected_path": "github_workflow_dispatch",
       "expected_mode": "article",
-      "expected_action": "article"
+      "expected_action": "article",
+      "operator_mode": "article"
     },
     {
       "name": "site_edit_sl",
       "text": "izboljšaj vizualni del strani in ne dovoli javnega pisanja",
       "expected_path": "github_workflow_dispatch",
       "expected_mode": "site",
-      "expected_action": "site_edit"
+      "expected_action": "site_edit",
+      "operator_mode": "site"
     },
     {
       "name": "site_nav_en",
       "text": "improve website navigation and mobile layout",
       "expected_path": "github_workflow_dispatch",
       "expected_mode": "site",
-      "expected_action": "site_edit"
+      "expected_action": "site_edit",
+      "operator_mode": "site"
     },
     {
       "name": "site_typo_en",
@@ -159,42 +341,184 @@
       "text": "uredi stranicu, meni i galeriju fotografija",
       "expected_path": "github_workflow_dispatch",
       "expected_mode": "site",
-      "expected_action": "site_edit"
+      "expected_action": "site_edit",
+      "operator_mode": "site"
     },
     {
       "name": "site_article_design",
       "text": "izboljšaj dizajn člankov in tipografijo na strani",
       "expected_path": "github_workflow_dispatch",
       "expected_mode": "site",
-      "expected_action": "site_edit"
+      "expected_action": "site_edit",
+      "operator_mode": "site"
     },
     {
-      "name": "control_stop_sl",
-      "text": "ustavi agenta in objavljanje",
+      "name": "site_article_length_rules",
+      "text": "spremeni dolžino in strukturo člankov na strani",
       "expected_path": "github_workflow_dispatch",
-      "expected_mode": "control",
-      "expected_action": "stop"
+      "expected_mode": "site",
+      "expected_action": "site_edit",
+      "operator_mode": "site"
     },
     {
-      "name": "control_start_en",
-      "text": "restart agent publishing",
+      "name": "site_theme_blue",
+      "text": "spremeni barvno temo strani v pastelno modro",
       "expected_path": "github_workflow_dispatch",
-      "expected_mode": "control",
-      "expected_action": "start"
+      "expected_mode": "site",
+      "expected_action": "site_edit",
+      "operator_mode": "site"
     },
     {
-      "name": "control_stop_hr",
-      "text": "zaustavi agent i objavljivanje",
+      "name": "site_theme_dark",
+      "text": "change website theme to dark",
       "expected_path": "github_workflow_dispatch",
-      "expected_mode": "control",
-      "expected_action": "stop"
+      "expected_mode": "site",
+      "expected_action": "site_edit",
+      "operator_mode": "site"
     },
     {
-      "name": "control_resume_sr",
-      "text": "nastavi agent publishing",
+      "name": "site_footer",
+      "text": "uredi footer strani in dodaj povezavo na kontakt",
       "expected_path": "github_workflow_dispatch",
-      "expected_mode": "control",
-      "expected_action": "start"
+      "expected_mode": "site",
+      "expected_action": "site_edit",
+      "operator_mode": "site"
+    },
+    {
+      "name": "site_header",
+      "text": "spremeni header in navigacijo strani",
+      "expected_path": "github_workflow_dispatch",
+      "expected_mode": "site",
+      "expected_action": "site_edit",
+      "operator_mode": "site"
+    },
+    {
+      "name": "site_hero",
+      "text": "izboljšaj hero sekcijo spletne strani",
+      "expected_path": "github_workflow_dispatch",
+      "expected_mode": "site",
+      "expected_action": "site_edit",
+      "operator_mode": "site"
+    },
+    {
+      "name": "site_mobile",
+      "text": "popravi responsive mobile layout",
+      "expected_path": "github_workflow_dispatch",
+      "expected_mode": "site",
+      "expected_action": "site_edit",
+      "operator_mode": "site"
+    },
+    {
+      "name": "site_gallery",
+      "text": "dodaj galerijo fotografij na stran",
+      "expected_path": "github_workflow_dispatch",
+      "expected_mode": "site",
+      "expected_action": "site_edit",
+      "operator_mode": "site"
+    },
+    {
+      "name": "site_upload_image",
+      "text": "naloži sliko in jo dodaj v hero",
+      "expected_path": "github_workflow_dispatch",
+      "expected_mode": "site",
+      "expected_action": "site_edit",
+      "operator_mode": "site"
+    },
+    {
+      "name": "site_move_image",
+      "text": "premakni hero sliko nad naslov",
+      "expected_path": "github_workflow_dispatch",
+      "expected_mode": "site",
+      "expected_action": "site_edit",
+      "operator_mode": "site"
+    },
+    {
+      "name": "site_video",
+      "text": "dodaj video sekcijo na stran",
+      "expected_path": "github_workflow_dispatch",
+      "expected_mode": "site",
+      "expected_action": "site_edit",
+      "operator_mode": "site"
+    },
+    {
+      "name": "site_add_rubric",
+      "text": "dodaj rubriko Projekti v meni",
+      "expected_path": "github_workflow_dispatch",
+      "expected_mode": "site",
+      "expected_action": "site_edit",
+      "operator_mode": "site"
+    },
+    {
+      "name": "site_add_category_en",
+      "text": "add category Projects to the menu",
+      "expected_path": "github_workflow_dispatch",
+      "expected_mode": "site",
+      "expected_action": "site_edit",
+      "operator_mode": "site"
+    },
+    {
+      "name": "site_rename_menu",
+      "text": "preimenuj meni Aktualno v Novice",
+      "expected_path": "github_workflow_dispatch",
+      "expected_mode": "site",
+      "expected_action": "site_edit",
+      "operator_mode": "site"
+    },
+    {
+      "name": "site_remove_sidebar",
+      "text": "odstrani sidebar iz strani",
+      "expected_path": "github_workflow_dispatch",
+      "expected_mode": "site",
+      "expected_action": "site_edit",
+      "operator_mode": "site"
+    },
+    {
+      "name": "site_hide_live",
+      "text": "skrij live pulse na strani",
+      "expected_path": "github_workflow_dispatch",
+      "expected_mode": "site",
+      "expected_action": "site_edit",
+      "operator_mode": "site"
+    },
+    {
+      "name": "site_show_live",
+      "text": "pokaži tekoče mini novice na strani",
+      "expected_path": "github_workflow_dispatch",
+      "expected_mode": "site",
+      "expected_action": "site_edit",
+      "operator_mode": "site"
+    },
+    {
+      "name": "site_seo",
+      "text": "izboljšaj SEO in meta opis strani",
+      "expected_path": "github_workflow_dispatch",
+      "expected_mode": "site",
+      "expected_action": "site_edit",
+      "operator_mode": "site"
+    },
+    {
+      "name": "site_favicon",
+      "text": "spremeni favicon strani",
+      "expected_path": "github_workflow_dispatch",
+      "expected_mode": "site",
+      "expected_action": "site_edit",
+      "operator_mode": "site"
+    },
+    {
+      "name": "site_title",
+      "text": "spremeni naslov strani v Blog Lab Slovenija",
+      "expected_path": "github_workflow_dispatch",
+      "expected_mode": "site",
+      "expected_action": "site_edit",
+      "operator_mode": "site"
+    },
+    {
+      "name": "site_form",
+      "text": "dodaj kontaktni obrazec in gumb",
+      "expected_path": "github_workflow_dispatch",
+      "expected_mode": "site",
+      "expected_action": "site_edit",
+      "operator_mode": "site"
     }
   ]
 }
