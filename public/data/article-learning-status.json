@@ -1,9 +1,13 @@
 {
-  "status": "pending-first-learning-run",
-  "updated_at": null,
-  "loop_count": 0,
-  "categories_checked": ["sport", "politika", "aktualno"],
-  "recent_article_count": 0,
-  "recent_failure_count": 0,
-  "mode": "continuous_24h"
+  "status": "learning_completed",
+  "updated_at": "2026-09-21T10:24:54+02:00",
+  "loop_count": 1,
+  "categories_checked": [
+    "sport",
+    "politika",
+    "aktualno"
+  ],
+  "recent_article_count": 17,
+  "recent_failure_count": 9,
+  "mode": "continuous"
 }
