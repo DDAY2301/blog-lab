@@ -89,6 +89,7 @@ require(status == 401, f"invalid password returned HTTP {status}, expected 401")
 require("set-cookie" not in {str(k).lower() for k in headers}, "invalid login unexpectedly created a session cookie")
 
 protected = [
+    ("GET", "/api/commands", None),
     ("POST", "/api/chat", {"message": "test"}),
     ("POST", "/api/interpret", {"command": "test"}),
     ("POST", "/api/command", {"command": "test"}),
