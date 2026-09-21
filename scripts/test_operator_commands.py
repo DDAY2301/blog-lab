@@ -6,6 +6,7 @@ import io
 import json
 from pathlib import Path
 import tempfile
+import uuid
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -26,6 +27,7 @@ command = load_module("bloglab_operator_command_test", "agents/operator-terminal
 compound = load_module("bloglab_compound_control_test", "agents/operator-terminal/compound_control.py")
 deferred_articles = load_module("bloglab_deferred_articles_test", "agents/operator-terminal/deferred_articles.py")
 deferred_site = load_module("bloglab_deferred_site_test", "agents/operator-terminal/deferred_site_edits.py")
+request_guard = load_module("bloglab_request_guard_test", "agents/operator-terminal/request_guard.py")
 
 
 def require(condition, message: str):
@@ -57,6 +59,7 @@ with tempfile.TemporaryDirectory(prefix="bloglab-operator-test-") as temp:
     original_catchup_log = compound.CATCHUP_LOG
     original_article_queue = deferred_articles.QUEUE
     original_site_queue = deferred_site.QUEUE
+    original_request_ledger = request_guard.LEDGER
 
     try:
         control_path = tmp / "agent-control.json"
@@ -181,12 +184,43 @@ with tempfile.TemporaryDirectory(prefix="bloglab-operator-test-") as temp:
         require(len(site_items) == 1, "deferred site queue did not de-duplicate request ID")
         require(deferred_site.is_capacity_log("SITE_AI_CAPACITY_UNAVAILABLE"), "site capacity classifier failed")
 
+        # Terminal request IDs must be idempotent across repeated workflow dispatches.
+        request_guard.LEDGER = tmp / "terminal-request-ledger.json"
+        rid = "11111111-1111-4111-8111-111111111111"
+        require(request_guard.is_processed(rid) is False, "fresh terminal request was incorrectly marked duplicate")
+        request_guard.mark(rid)
+        require(request_guard.is_processed(rid) is True, "processed terminal request was not recorded")
+        request_guard.mark(rid)
+        ledger_items = json.loads(request_guard.LEDGER.read_text(encoding="utf-8"))
+        require(len(ledger_items) == 1, "terminal request ledger did not de-duplicate request ID")
+
+        try:
+            request_guard.is_processed("not-a-uuid")
+        except SystemExit:
+            pass
+        else:
+            raise AssertionError("terminal request guard accepted an invalid request ID")
+
+        many = [
+            {
+                "id": str(uuid.uuid4()),
+                "processed_at": "2026-09-21T00:00:00Z",
+                "workflow_run_id": "",
+                "workflow_run_attempt": "",
+            }
+            for _ in range(request_guard.MAX_ENTRIES + 20)
+        ]
+        request_guard.save_ledger(many)
+        compacted = json.loads(request_guard.LEDGER.read_text(encoding="utf-8"))
+        require(len(compacted) == request_guard.MAX_ENTRIES, "terminal request ledger did not compact history")
+
     finally:
         command.CONTROL = original_control
         compound.CONTROL = original_compound_control
         compound.CATCHUP_LOG = original_catchup_log
         deferred_articles.QUEUE = original_article_queue
         deferred_site.QUEUE = original_site_queue
+        request_guard.LEDGER = original_request_ledger
 
 
 print(json.dumps({
@@ -197,4 +231,5 @@ print(json.dumps({
     "unsafe_site_paths_rejected": 5,
     "compound_control": "ok",
     "deferred_queue_dedup": "ok",
+    "request_idempotency": "ok",
 }, ensure_ascii=False, indent=2))
