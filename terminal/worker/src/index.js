@@ -2046,7 +2046,7 @@ export default {
       return json({
         ok: true,
         worker: "blog-lab",
-        version: "auth-v6.23-command-idempotency",
+        version: "auth-v6.24-product-onboarding",
         ready: state.ready,
         auth_ready: authReady,
         auth_self_test_ok: authTest.ok,
@@ -2069,6 +2069,96 @@ export default {
         ai_gateway_cache_ttl: Number(env.AI_GATEWAY_CACHE_TTL || 900) || 900,
         ai_model_fallbacks: workersAiModelCandidates(env)
       });
+    }
+
+    if (request.method === "GET" && url.pathname === "/api/public/product-status") {
+      const state = setupState(env);
+      return json({
+        ok: true,
+        product: "blog-lab",
+        version: "auth-v6.24-product-onboarding",
+        demo_ready: true,
+        trial_signup_ready: true,
+        terminal_ready: state.ready,
+        ai_ready: Boolean(env.AI && typeof env.AI.run === "function"),
+        self_heal_ready: true
+      }, 200, {
+        "access-control-allow-origin": "*",
+        "access-control-allow-methods": "GET",
+        "access-control-allow-headers": "content-type"
+      });
+    }
+
+    if (request.method === "OPTIONS" && url.pathname === "/api/public/product-status") {
+      return new Response(null, { status: 204, headers: securityHeaders({
+        "access-control-allow-origin": "*",
+        "access-control-allow-methods": "GET",
+        "access-control-allow-headers": "content-type"
+      }) });
+    }
+
+    if (request.method === "GET" && url.pathname === "/demo") {
+      return html(publicDemoPage());
+    }
+
+    if (request.method === "POST" && url.pathname === "/api/demo/command") {
+      let body;
+      try { body = await request.json(); } catch { return json({ error: "Neveljaven JSON." }, 400); }
+      const command = String(body?.command || "").trim();
+      if (!command) return json({ error: "Vpiši ukaz." }, 400);
+      if (command.length > 1200) return json({ error: "Demo ukaz je lahko dolg največ 1200 znakov." }, 413);
+      return json({ ok: true, ...demoCommandResult(command) });
+    }
+
+    if (request.method === "GET" && url.pathname === "/join") {
+      return html(trialJoinPage(), 200, { "set-cookie": clearTrialSessionCookie() });
+    }
+
+    if (request.method === "POST" && url.pathname === "/api/trial/register") {
+      let body;
+      try { body = await request.json(); } catch { return json({ error: "Neveljaven registracijski zahtevek." }, 400); }
+      const name = cleanTrialField(body?.name, 80);
+      const email = normalizeTrialEmail(body?.email);
+      const organization = cleanTrialField(body?.organization, 100);
+      const useCase = ["content", "agency", "ngo", "business", "other"].includes(body?.use_case) ? body.use_case : "content";
+      const frequency = ["daily", "3x-daily", "weekly", "manual"].includes(body?.frequency) ? body.frequency : "manual";
+      const workspace = cleanTrialField(body?.workspace, 80) || "Moj Blog Lab";
+      if (!body?.terms) return json({ error: "Za demo račun moraš potrditi pogoje demo uporabe.", code: "TRIAL_TERMS_REQUIRED" }, 400);
+      if (name.length < 2) return json({ error: "Vpiši ime z vsaj 2 znakoma.", code: "TRIAL_NAME_REQUIRED" }, 400);
+      if (!email) return json({ error: "Vpiši veljaven e-poštni naslov.", code: "TRIAL_EMAIL_INVALID" }, 400);
+      const profile = {
+        name,
+        email,
+        organization,
+        use_case: useCase,
+        frequency,
+        workspace,
+        workspace_id: "trial-" + crypto.randomUUID().slice(0, 12)
+      };
+      let token;
+      try { token = await signTrialSession(env, profile); }
+      catch { return json({ error: "Demo seja trenutno ni na voljo.", code: "TRIAL_SESSION_FAILED" }, 503); }
+      return json({
+        ok: true,
+        redirect: "/app",
+        profile: { ...profile, email }
+      }, 201, { "set-cookie": trialSessionCookie(token) });
+    }
+
+    if (request.method === "GET" && url.pathname === "/api/trial/me") {
+      const trial = await trialIdentity(request, env);
+      if (!trial) return json({ ok: false, error: "TRIAL_SESSION_REQUIRED" }, 401);
+      return json({ ok: true, profile: trial });
+    }
+
+    if (request.method === "POST" && url.pathname === "/api/trial/logout") {
+      return json({ ok: true }, 200, { "set-cookie": clearTrialSessionCookie() });
+    }
+
+    if (request.method === "GET" && url.pathname === "/app") {
+      const trial = await trialIdentity(request, env);
+      if (!trial) return new Response(null, { status: 302, headers: securityHeaders({ location: "/join" }) });
+      return html(trialAppPage(trial));
     }
 
     if (request.method === "POST" && url.pathname === "/api/scheduler/catch-up") {
@@ -2141,7 +2231,7 @@ export default {
       return json({
         ok: true,
         worker: "blog-lab",
-        version: "auth-v6.23-command-idempotency",
+        version: "auth-v6.24-product-onboarding",
         ...diagnostic,
         server_time: new Date().toISOString(),
         hint: diagnostic.email_known
