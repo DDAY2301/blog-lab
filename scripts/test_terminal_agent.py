@@ -95,7 +95,7 @@ gate = 'if (!user) return json({ error: "Prijava je potrebna." }, 401);'
 gate_pos = text.find(gate)
 if gate_pos < 0:
     raise SystemExit("Authenticated-user gate missing")
-for route in ["/api/interpret", "/api/chat", "/api/media", "/api/status", "/api/history", "/api/command"]:
+for route in ["/api/commands", "/api/interpret", "/api/chat", "/api/media", "/api/status", "/api/history", "/api/command"]:
     route_pos = text.find(f'url.pathname === "{route}"')
     if route_pos < gate_pos:
         raise SystemExit(f"Authenticated route appears before auth gate: {route}")
@@ -104,6 +104,21 @@ for route in ["/api/interpret", "/api/chat", "/api/media", "/api/status", "/api/
 obsolete = root / ".github" / "workflows" / "one-shot-terminal-operational-chat.yml"
 if obsolete.exists():
     raise SystemExit("Obsolete one-shot terminal workflow still exists")
+
+self_heal = (root / ".github" / "workflows" / "terminal-self-heal.yml").read_text(encoding="utf-8")
+for marker in [
+    'cron: "17,47 * * * *"',
+    "Reapply deterministic terminal repairs",
+    "Reject unexpected self-heal mutations",
+    "Full deterministic terminal validation",
+    "Commit verified deterministic repair",
+    "Request deploy when live contract is unhealthy",
+    "Verify repaired live Worker",
+    "python scripts/test_operator_commands.py",
+    "node scripts/test_terminal_stress.mjs",
+]:
+    if marker not in self_heal:
+        raise SystemExit(f"Terminal self-heal marker missing: {marker}")
 
 operator = (root / ".github" / "workflows" / "operator-terminal.yml").read_text(encoding="utf-8")
 for marker in [
@@ -122,5 +137,5 @@ print(json.dumps({
     "suite_version": suite.get("version"),
     "authorized_users": sorted(emails),
     "protected_internal_routes": 6,
-    "authenticated_terminal_routes": 6,
+    "authenticated_terminal_routes": 7,
 }, ensure_ascii=False, indent=2))
