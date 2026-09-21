@@ -18,6 +18,35 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "ljubljana-marshes-pile-dwellings-history",
+    "title": "Ljubljana Marshes Pile Dwellers: The Hidden UNESCO History",
+    "excerpt": "Discover the prehistoric pile dwellings beneath Ljubljana Marshes, what archaeology really proves, and where visitors can explore this hidden UNESCO story.",
+    "seoDescription": "Explore Ljubljana Marshes pile dwellings, Slovenia's hidden UNESCO archaeology, the ancient wooden wheel and practical places to learn more.",
+    "content": "Just beyond Ljubljana's southern edge lies a UNESCO story that is easy to miss: prehistoric settlements preserved beneath the wetlands. The **Ljubljana Marshes pile dwellings** are not a reconstructed village waiting above the water. Their importance lies mainly underground, where waterlogged conditions protected wood and other organic material that normally disappears.\n\n## Why the Ljubljana Marshes are part of UNESCO history\n\nIn 2011, UNESCO inscribed the transnational property **Prehistoric Pile Dwellings around the Alps**. It brings together 111 archaeological sites in six countries, dating broadly from about 5000 to 500 BC. Slovenia contributes two component sites near Ig on the Ljubljana Marshes.\n\nUNESCO values these places because exceptionally preserved remains help researchers reconstruct early farming communities, building methods, transport, trade and daily life. The Slovene sites belong to a much larger Alpine network; they should not be presented as an isolated “lost city.”\n\n### Fact, reconstruction and popular image\n\nThe phrase *pile dwelling* often produces a neat picture of huts permanently standing above an open lake. Archaeology is more complicated. Shorelines and water levels changed, settlements belonged to different periods, and surviving piles do not by themselves prove that every house always stood above deep water.\n\nWhat is certain is that people drove wooden posts into wet ground and built settlements in this landscape. Reconstructions are useful interpretation, but they are **models based on evidence**, not intact prehistoric villages.\n\n## The wooden wheel: what can safely be said\n\nA wooden wheel with an axle was discovered at the Stare Gmajne site in the Ljubljana Marshes in 2002. Scientific dating places it in the fourth millennium BC, more than five millennia ago. It is widely presented by Ljubljana's museum and heritage institutions as the world's oldest known wooden wheel with an axle.\n\nThat wording needs care. “Oldest known” describes the current archaeological record, not proof that the first wheel was invented in Slovenia. New discoveries or revised dating can change such rankings. The find is nevertheless extraordinary because wood rarely survives for so long, and the wheel-and-axle combination reveals sophisticated woodworking and transport technology.\n\n## How to explore the story as a visitor\n\n### Start at the City Museum of Ljubljana\n\nThe [City Museum of Ljubljana](https://mgml.si/en/city-museum/) is the most convenient introduction in the city centre. Its archaeological collections place the marsh finds within Ljubljana's longer history. Check the museum's current exhibition information before going; individual objects may be moved for conservation or temporary displays.\n\n### Continue to Ig and the marsh landscape\n\nThe protected archaeological components are near Ig, south of Ljubljana. They are primarily research and conservation sites, not conventional monuments with large visible ruins. For interpretation of the landscape and pile-dweller life, check the current programme at [Morostig](https://www.morostig.si/), the House of Nature and Pile Dwellers in Ig.\n\nDo not enter fenced, cultivated or waterlogged ground in search of posts or artefacts. Archaeological material belongs in its context, and removing even a small object destroys information.\n\n### Plan a respectful half-day\n\nA sensible visit combines the museum in Ljubljana with an organised or officially marked experience in the marshes. Before leaving:\n\n- confirm opening times and whether advance booking is required;\n- check the latest bus connection rather than relying on an old timetable;\n- wear waterproof footwear after rain and remain on permitted paths;\n- use binoculars and keep distance from wildlife;\n- take all litter away and avoid disturbing wetland vegetation.\n\nThe marshes are a living protected landscape as well as an archaeological archive. A quiet walk can be rewarding, but the UNESCO remains themselves are deliberately subtle.\n\n## Why this history matters\n\nThe waterlogged ground preserved evidence that connects technology, farming and environmental change. The wheel is the headline object, yet the broader story is more revealing: generations of communities adapted to a shifting wetland and participated in cultural networks stretching across the Alpine region.\n\nFor another layer of Ljubljana's identity, compare this evidence-based prehistory with the city's legendary symbolism in [Why Ljubljana Has Dragons](?article=why-ljubljana-has-dragons). To explore a much later transformation of the capital, follow [Plečnik's self-guided UNESCO walking tour](?article=plecnik-ljubljana-self-guided-walking-tour).\n\n## Direct sources\n\n- [UNESCO World Heritage Centre: Prehistoric Pile Dwellings around the Alps](https://whc.unesco.org/en/list/1363/)\n- [City Museum of Ljubljana](https://mgml.si/en/city-museum/)\n- [Morostig: House of Nature and Pile Dwellers](https://www.morostig.si/)\n- Anton Velušček (ed.), *Stare Gmajne Pile-Dwelling Settlement and Its Era*, Institute of Archaeology at ZRC SAZU, 2009.\n\nHistorical claims and visitor information were last checked on **21 September 2026**. Recheck museum displays, opening times and transport before visiting.",
+    "category": "Vodniki",
+    "author": "Uredništvo Blog Lab",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "UNESCO — Prehistoric Pile Dwellings around the Alps",
+        "url": "https://whc.unesco.org/en/list/1363/"
+      },
+      {
+        "label": "City Museum of Ljubljana",
+        "url": "https://mgml.si/en/city-museum/"
+      },
+      {
+        "label": "Morostig — House of Nature and Pile Dwellers",
+        "url": "https://www.morostig.si/"
+      }
+    ],
+    "createdAt": "2026-09-21T09:04:28+02:00",
+    "updatedAt": "2026-09-21T09:04:28+02:00"
+  },
+  {
     "id": "cycling-bohinj-family-car-light-guide",
     "title": "Cycling Bohinj: A Family-Friendly Car-Light Guide",
     "excerpt": "Plan a gentle ride through the Bohinj valleys with practical guidance on route character, bike-and-train access, equipment and respectful cycling.",
