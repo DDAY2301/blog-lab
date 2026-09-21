@@ -13,6 +13,9 @@ on:
       - "scripts/test_terminal_agent.py"
       - "scripts/test_terminal_runtime.mjs"
       - "scripts/test_terminal_live.py"
+      - ".github/workflows/terminal-self-heal.yml"
+      - "scripts/test_terminal_stress.mjs"
+      - "scripts/test_operator_commands.py"
       - "data/terminal-command-test-suite.json"
       - ".github/workflows/terminal-agent-command-suite.yml"
 
@@ -51,6 +54,12 @@ jobs:
 
       - name: Runtime terminal command behavior suite
         run: node scripts/test_terminal_runtime.mjs
+
+      - name: Execution-level operator command suite
+        run: python scripts/test_operator_commands.py
+
+      - name: Terminal stress and resilience suite
+        run: node scripts/test_terminal_stress.mjs
 
       - name: Live Worker contract probe
         id: live
