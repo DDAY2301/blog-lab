@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-21T16:09:22+02:00",
-  "loop_count": 61,
+  "updated_at": "2026-09-21T16:20:01+02:00",
+  "loop_count": 62,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-21T16:08:58+02:00",
+      "last_learning_run": "2026-09-21T16:18:38+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -39,26 +39,20 @@
       ],
       "source_health": {
         "news.google.com": {
-          "score": 2.483,
+          "score": 2.498,
           "seen": 1830,
           "last_seen": "2026-09-21T16:08:58+02:00",
           "last_title": "Šeškovo poškodbo takole proslavljajo - z Otoka nor in sramoten prizor - Ekipa",
           "last_provider": "",
-          "published": 976,
+          "published": 992,
           "last_output_id": "s-tribune-sportni-trenutki-zaradi-katerih-se-mi-se-danes-najezijo-dlake-aeb6d43b"
         }
       },
-      "current_source_count": 30,
-      "example_titles": {
-        "news.google.com": [
-          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
-          "Čebulj se je hitro vklopil v slovensko izbrano vrsto - rtvslo.si",
-          "Slovenija želi nadaljevati niz zmag proti Srbiji - Dnevnik"
-        ]
-      }
+      "current_source_count": 0,
+      "example_titles": {}
     },
     "politika": {
-      "last_learning_run": "2026-09-21T16:09:10+02:00",
+      "last_learning_run": "2026-09-21T16:19:23+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -80,26 +74,20 @@
       ],
       "source_health": {
         "news.google.com": {
-          "score": 2.523,
+          "score": 2.502,
           "seen": 1830,
           "last_seen": "2026-09-21T16:09:10+02:00",
           "last_title": "Tone Kajzer: Zunanja politika na dobri poti. Tanja Fajon: Kajzer dobro začrtal usmeritve. - rtvslo.si",
           "last_provider": "",
-          "published": 735,
+          "published": 750,
           "last_output_id": "okoljski-ekonomist-sonnenschein-politika-ministra-za-energetiko-ni-v-interesu-javnosti-001b0a7e"
         }
       },
-      "current_source_count": 30,
-      "example_titles": {
-        "news.google.com": [
-          "Janša diplomatom: Zunanjo politiko vodi vlada, samo to je uradna politika Slovenije - Siol.net",
-          "Nataša Pirc Musar: Ne bom tiho, ko zunanja politika ne bo skladna z ustavnimi vrednotami države - Slovenske novice",
-          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer"
-        ]
-      }
+      "current_source_count": 0,
+      "example_titles": {}
     },
     "aktualno": {
-      "last_learning_run": "2026-09-21T16:09:22+02:00",
+      "last_learning_run": "2026-09-21T16:20:01+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -131,73 +119,67 @@
       ],
       "source_health": {
         "news.google.com": {
-          "score": 2.515,
+          "score": 2.502,
           "seen": 1830,
           "last_seen": "2026-09-21T16:09:22+02:00",
           "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 991,
+          "published": 1008,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 38,
+          "published": 39,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 38,
+          "published": 39,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 61,
+          "published": 62,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 244,
+          "published": 248,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 61,
+          "published": 62,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 38,
+          "published": 39,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 54,
+          "published": 56,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 61,
+          "published": 62,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "differentiatedteaching.com": {
-          "score": 2.494,
-          "published": 27,
+          "score": 2.495,
+          "published": 28,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "kachelmannwetter.com": {
-          "score": 2.494,
-          "published": 27,
+          "score": 2.495,
+          "published": 28,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         }
       },
-      "current_source_count": 30,
-      "example_titles": {
-        "news.google.com": [
-          "Kučan napadel Janšo! »Kaj se je zgodilo s 'črno kocko', kdo je imel za to interese, to so vprašanja, ki bodo zahtevala odgovor« - Slovenske ",
-          "(AKTUALNO) V novi številki revije Demokracija preberite: Izključujejo in zavirajo razvoj! Janša: Osamosvojitvena Slovenija ne bo nikoli več ",
-          "(AKTUALNO) Hudo bolni slovenski otroci ostajajo brez dostopa do zdravila, odobrenega s strani evropske agencije EMA - DEMOKRACIJA.SI"
-        ]
-      }
+      "current_source_count": 0,
+      "example_titles": {}
     }
   },
   "recent_articles": [
