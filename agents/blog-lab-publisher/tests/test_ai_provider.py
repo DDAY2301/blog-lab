@@ -131,18 +131,30 @@ def test_generate_fails_over_from_workers_to_configured_external(monkeypatch):
     assert calls == ["workers", "external"]
 
 
-def test_generate_does_not_call_unconfigured_external_or_copilot(monkeypatch):
+def test_generate_uses_local_fallback_when_remote_providers_unavailable(monkeypatch):
     monkeypatch.setenv("AI_PROVIDER", "auto")
     monkeypatch.delenv("MODEL_API_KEY", raising=False)
     monkeypatch.delenv("MODEL_BASE_URL", raising=False)
     monkeypatch.delenv("MODEL_NAME", raising=False)
     monkeypatch.delenv("COPILOT_GITHUB_TOKEN", raising=False)
+    monkeypatch.delenv("GITHUB_TOKEN", raising=False)
+    monkeypatch.delenv("GH_TOKEN", raising=False)
+    calls = []
 
-    monkeypatch.setattr(
-        ai_provider,
-        "_workers_ai",
-        lambda *a, **k: (_ for _ in ()).throw(ai_provider.AIUnavailable("worker quota")),
-    )
+    def workers(*args, **kwargs):
+        calls.append("workers")
+        raise ai_provider.AIUnavailable("worker quota")
+
+    def local(source_items, category):
+        calls.append("local")
+        return {
+            "title": "Local fallback article",
+            "content": "Grounded content from local evidence fallback.",
+            "sources": [{"url": "https://example.com/a"}],
+            "_writer_provider": "local_evidence_ai",
+        }
+
+    monkeypatch.setattr(ai_provider, "_workers_ai", workers)
     monkeypatch.setattr(
         ai_provider,
         "_openai_compatible",
@@ -151,17 +163,16 @@ def test_generate_does_not_call_unconfigured_external_or_copilot(monkeypatch):
     monkeypatch.setattr(
         ai_provider,
         "_copilot",
-        lambda *a, **k: (_ for _ in ()).throw(AssertionError("copilot must not run")),
+        lambda *a, **k: (_ for _ in ()).throw(AssertionError("copilot must not run without a token")),
+    )
+    monkeypatch.setattr(ai_provider, "_local_evidence_ai", local)
+
+    article = ai_provider.generate(
+        "system",
+        "task",
+        [{"url": "https://example.com/a", "summary": "Evidence"}],
+        "aktualno",
     )
 
-    try:
-        ai_provider.generate(
-            "system",
-            "task",
-            [{"url": "https://example.com/a", "summary": "Evidence"}],
-            "aktualno",
-        )
-    except ai_provider.AIUnavailable as exc:
-        assert "worker quota" in str(exc)
-    else:
-        raise AssertionError("AIUnavailable expected")
+    assert article["_writer_provider"] == "local_evidence_ai"
+    assert calls == ["workers", "local"]
