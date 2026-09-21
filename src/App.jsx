@@ -19,6 +19,44 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "okoljski-ekonomist-sonnenschein-politika-ministra-za-energetiko-ni-v-interesu-javnosti-001b0a7e",
+    "title": "Okoljski ekonomist Sonnenschein: Politika ministra za energetiko ni v interesu javnosti",
+    "excerpt": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Okoljski ekonomist Sonnenschein: Politika ministra za energetiko ni v interesu javnosti«.",
+    "seoDescription": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Okoljski ekonomist Sonnenschein: Politika ministra za energetiko ni v interes",
+    "content": "**Politika, 21. 9. 2026.** Okoljski ekonomist Sonnenschein: Politika ministra za energetiko ni v interesu javnosti Dnevnik\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nPri političnih temah Blog Lab ne podpira kandidatov, strank ali političnih odločitev; izjave in ocene so predstavljene kot stališča njihovih avtorjev ali virov, ne kot uredniška presoja.\n\nVir: Dnevnik. Objavljeno: Tue, 08 Sep 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMi0AFBVV95cUxOTTNKaGtUS0hNNm04N3lRaW4yRDY4OXlaZHhnTk9RR1JOM0pFb0hxclppUjgzaV90ZXBPVXhGaUFqUjU0NWVFSmkyczNuQjZ3M1lhOGc4WEw2MHdCWXFVRkI2S0lUUmdsZ3ZZYnpockUyUEJfdkpCWi1nMkxzRlBIUTM0TjBneGNWSV8zMWJWMGNTS1ppMTBuODVwR2h4NjdDcVhhZjVZcUJUU1lES01oZVgxbVI5dW1nVDllQ2p3a19pNjkwWTVpT3FqX1I3Mkt3?oc=5)\n\n## Dopolnitev vira 2: Siol.net\n\nJanša diplomatom: Zunanjo politiko vodi vlada, samo to je uradna politika Slovenije Siol.net\n\n Vir: Siol.net. Objavljeno: Thu, 27 Aug 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMirAFBVV95cUxPdTJvcm1MQndkZENmSFN2ejJJcml3NXZTalNUbFV6Z2RCdXprdWhkWk44T19fcjRxb2xMcExQSWVjM3VtS1BZdE5jeG1VMGFSWlo2ZkRfcWVuSkl5T2lyY2tBRC1vUDB2VHBIeUwxZ2JOeDZEZ0Jtam9nWERnby1scldfUGVtS1NqZ2NOdnVoWGF4N1dhbG5YdzlFZHRpdURBZFdrNEx2S3FMQXNx?oc=5)\n\n## Dopolnitev vira 3: Večer\n\nPirc Musar: \"Ne bom tiho, ko slovenska zunanja politika ne bo skladna z ustavnimi vrednotami naše države\" Večer\n\n Vir: Večer. Objavljeno: Fri, 28 Aug 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMi1AFBVV95cUxOLXgxVHdiQjEzOEVJZGpoYy1xSnR0UFM5WWkxcUpqTFdIV3VoTkNWUHpaaEx0c1MzZ3hjckwtZkNSd2NTNmxuV0R2T3ZoZ0cyMU1oTkdDUklDem1KaFZuRHh6aTY4WHdhT3llUWtrbHRqejRtd1V4bDIxV3h5cUkyZndjRGJVTHQtVTJMNm5kNTJYWDVkVGZLOXMwSWVlelZSQ0lOUjcyUW5nci1SUnhHaVhRUm5ETEh6SnZjdFNJVk5WaWN3WnRXTGdWMTNYbklYWjk5SA?oc=5)\n\n## Dopolnitev vira 4: N1 Slovenija\n\nJanša diplomatom: Zunanjo politiko vodi vlada in samo to je uradna politika Slovenije N1 Slovenija\n\n Vir: N1 Slovenija. Objavljeno: Thu, 27 Aug 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMivAFBVV95cUxNRmhkMkxxYUI3cE5sYmxSbHNRbjRVSHFRQ0RGaTYwdVY0UVRDa2J2UWpPUFpQWUZ4SUppcWdMTE4tSHBVWTNSb2hEdVBVbGJxYmZYSzhJUXBhV1I4bDNwUWo2TmNhdW1TcWRYck5zSHVrY2d3cTluZGdsbmVxcVlIMEtlVkp0OEFfcHl4dllmbUNqNTU1M09lZ2p4NS1jVXYyYld0VnJUWHR2TjVrMTdRaldjU3Y3UnpDeFRWbw?oc=5)\n\n## Dopolnitev vira 5: Zanima.me\n\nPolitiki, droge, razuzdane zabave in seks v Sloveniji: kaj o tem lahko pove Luka Mesec? Zanima.me\n\n Vir: Zanima.me. Objavljeno: Sun, 20 Sep 2026 18:26:10 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiqgFBVV95cUxNVDdkMzFYUGswWkFZQ3huVjRjSjZsRE5FV3IzTUhjdV9GOGg5WEExLVlPQXNIcEN3azlIUWp0dlltVlR2V0hjaDFSUEtGazh5X2h4NjFDaGFHZEc4VF9VSm9kX1RadHB2OU5BVGdDM1VkSnFOS29qR2RJVS1wX3FVSzhsZVNsTXg2TGVLTlY0NFNybmRYUzNwMHFTTm1iUDhwT2VnblctV3drQQ?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Politika",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Dnevnik — Okoljski ekonomist Sonnenschein: Politika ministra za energetiko ni v interesu javnosti - Dnevnik",
+        "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOTTNKaGtUS0hNNm04N3lRaW4yRDY4OXlaZHhnTk9RR1JOM0pFb0hxclppUjgzaV90ZXBPVXhGaUFqUjU0NWVFSmkyczNuQjZ3M1lhOGc4WEw2MHdCWXFVRkI2S0lUUmdsZ3ZZYnpockUyUEJfdkpCWi1nMkxzRlBIUTM0TjBneGNWSV8zMWJWMGNTS1ppMTBuODVwR2h4NjdDcVhhZjVZcUJUU1lES01oZVgxbVI5dW1nVDllQ2p3a19pNjkwWTVpT3FqX1I3Mkt3?oc=5"
+      },
+      {
+        "label": "Siol.net — Janša diplomatom: Zunanjo politiko vodi vlada, samo to je uradna politika Slovenije - Siol.net",
+        "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPdTJvcm1MQndkZENmSFN2ejJJcml3NXZTalNUbFV6Z2RCdXprdWhkWk44T19fcjRxb2xMcExQSWVjM3VtS1BZdE5jeG1VMGFSWlo2ZkRfcWVuSkl5T2lyY2tBRC1vUDB2VHBIeUwxZ2JOeDZEZ0Jtam9nWERnby1scldfUGVtS1NqZ2NOdnVoWGF4N1dhbG5YdzlFZHRpdURBZFdrNEx2S3FMQXNx?oc=5"
+      },
+      {
+        "label": "Večer — Pirc Musar: \"Ne bom tiho, ko slovenska zunanja politika ne bo skladna z ustavnimi vrednotami naše države\" - Večer",
+        "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOLXgxVHdiQjEzOEVJZGpoYy1xSnR0UFM5WWkxcUpqTFdIV3VoTkNWUHpaaEx0c1MzZ3hjckwtZkNSd2NTNmxuV0R2T3ZoZ0cyMU1oTkdDUklDem1KaFZuRHh6aTY4WHdhT3llUWtrbHRqejRtd1V4bDIxV3h5cUkyZndjRGJVTHQtVTJMNm5kNTJYWDVkVGZLOXMwSWVlelZSQ0lOUjcyUW5nci1SUnhHaVhRUm5ETEh6SnZjdFNJVk5WaWN3WnRXTGdWMTNYbklYWjk5SA?oc=5"
+      },
+      {
+        "label": "N1 Slovenija — Janša diplomatom: Zunanjo politiko vodi vlada in samo to je uradna politika Slovenije - N1 Slovenija",
+        "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNRmhkMkxxYUI3cE5sYmxSbHNRbjRVSHFRQ0RGaTYwdVY0UVRDa2J2UWpPUFpQWUZ4SUppcWdMTE4tSHBVWTNSb2hEdVBVbGJxYmZYSzhJUXBhV1I4bDNwUWo2TmNhdW1TcWRYck5zSHVrY2d3cTluZGdsbmVxcVlIMEtlVkp0OEFfcHl4dllmbUNqNTU1M09lZ2p4NS1jVXYyYld0VnJUWHR2TjVrMTdRaldjU3Y3UnpDeFRWbw?oc=5"
+      },
+      {
+        "label": "Zanima.me — Politiki, droge, razuzdane zabave in seks v Sloveniji: kaj o tem lahko pove Luka Mesec? - Zanima.me",
+        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNVDdkMzFYUGswWkFZQ3huVjRjSjZsRE5FV3IzTUhjdV9GOGg5WEExLVlPQXNIcEN3azlIUWp0dlltVlR2V0hjaDFSUEtGazh5X2h4NjFDaGFHZEc4VF9VSm9kX1RadHB2OU5BVGdDM1VkSnFOS29qR2RJVS1wX3FVSzhsZVNsTXg2TGVLTlY0NFNybmRYUzNwMHFTTm1iUDhwT2VnblctV3drQQ?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-21T13:40:14+02:00",
+    "updatedAt": "2026-09-21T13:40:14+02:00"
+  },
+
+  {
     "id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762",
     "title": "Kako brati vremensko napoved brez panike",
     "excerpt": "Praktičen slovenski vodič za razumevanje vremenske napovedi, radarja in opozoril, da lažje načrtujemo dan brez nepotrebnega pretiravanja.",
