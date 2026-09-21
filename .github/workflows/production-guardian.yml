@@ -80,6 +80,32 @@ jobs:
           pip install -r requirements-agent.txt
           npm ci
 
+      - name: Apply protected public publishing lock
+        if: ${{ github.event_name == 'push' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ ! -f scripts/lock_public_editor_and_chat.py ]]; then
+            echo "No public lock script present."
+            exit 0
+          fi
+          python scripts/lock_public_editor_and_chat.py
+          node --check terminal/worker/src/index.js
+          grep -q 'PUBLIC_WRITE_LOCK_NOTICE' src/App.jsx
+          grep -q 'false && view === "editor"' src/App.jsx
+          grep -q 'Objavljanje zaklenjeno' src/App.jsx
+          grep -q 'function cleanTerminalChatAnswer' terminal/worker/src/index.js
+          npm run build
+          if git diff --quiet -- src/App.jsx src/styles.css terminal/worker/src/index.js; then
+            echo "Protected publishing lock already applied."
+            exit 0
+          fi
+          git config user.name "blog-lab-guard[bot]"
+          git config user.email "blog-lab-guard[bot]@users.noreply.github.com"
+          git add src/App.jsx src/styles.css terminal/worker/src/index.js
+          git commit -m "Lock public publishing and clean terminal chatbot"
+          git push
+
       - name: Run production guardian check
         id: guardian_check
         shell: bash
