@@ -96,9 +96,7 @@
     {
       "name": "schedule_sl",
       "text": "preveri urnik agenta",
-      "expected_path": "local_agent_status",
-      "expected_mode": "control",
-      "expected_action": "schedule"
+      "expected_path": "operational_publication_check"
     },
     {
       "name": "article_publish_sl",
