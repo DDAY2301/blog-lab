@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-21T18:08:23+02:00",
-  "loop_count": 89,
+  "updated_at": "2026-09-21T18:09:12+02:00",
+  "loop_count": 90,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-21T18:07:59+02:00",
+      "last_learning_run": "2026-09-21T18:08:49+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -40,11 +40,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.496,
-          "seen": 2640,
-          "last_seen": "2026-09-21T18:07:59+02:00",
+          "seen": 2670,
+          "last_seen": "2026-09-21T18:08:49+02:00",
           "last_title": "V sredo bo Slovenija praznovala dan slovenskega športa - tv3m.si",
           "last_provider": "",
-          "published": 1424,
+          "published": 1440,
           "last_output_id": "s-tribune-sportni-trenutki-zaradi-katerih-se-mi-se-danes-najezijo-dlake-aeb6d43b"
         }
       },
@@ -58,7 +58,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-21T18:08:11+02:00",
+      "last_learning_run": "2026-09-21T18:09:01+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -81,11 +81,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.518,
-          "seen": 2640,
-          "last_seen": "2026-09-21T18:08:11+02:00",
+          "seen": 2670,
+          "last_seen": "2026-09-21T18:09:01+02:00",
           "last_title": "Nataša Pirc Musar: Ne bom tiho, ko zunanja politika ne bo skladna z ustavnimi vrednotami države - Slovenske novice",
           "last_provider": "",
-          "published": 1155,
+          "published": 1170,
           "last_output_id": "okoljski-ekonomist-sonnenschein-politika-ministra-za-energetiko-ni-v-interesu-javnosti-001b0a7e"
         }
       },
@@ -99,7 +99,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-21T18:08:23+02:00",
+      "last_learning_run": "2026-09-21T18:09:12+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -133,76 +133,76 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 2640,
-          "last_seen": "2026-09-21T18:08:23+02:00",
+          "seen": 2670,
+          "last_seen": "2026-09-21T18:09:12+02:00",
           "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 1544,
+          "published": 1570,
           "last_output_id": "foto-od-ponedeljka-velika-novost-na-ljubljanski-zelezniski-postaji-prihaja-vseh-sedem-novi-2460c4fe"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 66,
+          "published": 67,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 66,
+          "published": 67,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 89,
+          "published": 90,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 55,
+          "published": 56,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 55,
+          "published": 56,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 356,
+          "published": 360,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 89,
+          "published": 90,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 66,
+          "published": 67,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 46,
+          "published": 48,
           "last_output_id": "duckduckgo-287dab86"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 110,
+          "published": 112,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 89,
+          "published": 90,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 46,
+          "published": 48,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
-          "score": 2.486,
-          "published": 23,
+          "score": 2.489,
+          "published": 24,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         }
       },
