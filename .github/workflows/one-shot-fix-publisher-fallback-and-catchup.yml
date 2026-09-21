@@ -1,4 +1,4 @@
-name: One-shot publisher fallback fix and sport catch-up
+name: One-shot sport catch-up content only
 
 on:
   push:
@@ -10,14 +10,13 @@ permissions:
   contents: write
   pages: write
   id-token: write
-  copilot-requests: write
 
 concurrency:
   group: one-shot-publisher-fallback-fix
   cancel-in-progress: true
 
 jobs:
-  fix-and-publish:
+  publish-content:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     env:
@@ -35,25 +34,6 @@ jobs:
           git fetch origin main
           git checkout -B main origin/main
 
-      - name: Patch publisher fallback condition safely
-        shell: bash
-        run: |
-          set -euo pipefail
-          python3 - <<'PY'
-          from pathlib import Path
-          path = Path('.github/workflows/agent-blog-lab-publisher.yml')
-          text = path.read_text(encoding='utf-8')
-          old = "        if: " + "$" + "{{ github.event_name != 'workflow_dispatch' || inputs.catch_up == true }}\n"
-          new = "        if: " + "$" + "{{ github.event_name != 'workflow_dispatch' || inputs.dry_run == false }}\n"
-          if old in text:
-              text = text.replace(old, new, 1)
-          elif new in text:
-              pass
-          else:
-              raise SystemExit('Fallback condition target not found')
-          path.write_text(text, encoding='utf-8')
-          PY
-
       - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
@@ -70,7 +50,7 @@ jobs:
           pip install -r requirements-agent.txt
           npm ci
 
-      - name: Compile publisher
+      - name: Compile fallback publisher
         run: |
           python -m py_compile agents/blog-lab-publisher/autonomous_fallback.py agents/blog-lab-publisher/services/*.py agents/blog-lab-publisher/schedule.py
 
@@ -87,20 +67,19 @@ jobs:
             exit 1
           fi
 
-      - name: Cleanup caches and commit
+      - name: Commit article and state only
         shell: bash
         run: |
           set -euo pipefail
           find . -type d -name __pycache__ -prune -exec rm -rf {} +
           find . -type d -name .pytest_cache -prune -exec rm -rf {} +
-          rm -f .github/workflows/one-shot-fix-publisher-fallback-and-catchup.yml
           git config user.name "blog-lab-publisher[bot]"
           git config user.email "blog-lab-publisher[bot]@users.noreply.github.com"
-          git add -A
+          git add -A -- src/App.jsx data public/data content/drafts logs
           if git diff --cached --quiet; then
-            echo "No changes to commit."
+            echo "No article/state changes to commit."
             exit 0
           fi
-          git commit -m "Fix publisher fallback and publish missed sport slot"
+          git commit -m "Agent: publish missed sport slot"
           git pull --rebase origin main
           git push origin HEAD:main
