@@ -15,10 +15,31 @@ github_old = r'''async function github(path, env, init = {}) {
   headers.set("authorization", `Bearer ${token}`);
   return fetch(`https://api.github.com${path}`, { ...init, headers });
 }'''
+github_current = r'''async function github(path, env, init = {}) {
+  const token = String(env.GITHUB_DISPATCH_TOKEN || "").trim();
+  if (!token) throw new Error("GITHUB_DISPATCH_TOKEN missing");
+  const headers = new Headers(init.headers || {});
+  headers.set("accept", "application/vnd.github+json");
+  headers.set("x-github-api-version", "2022-11-28");
+  headers.set("user-agent", "BlogLabPrivateTerminal/3.1");
+  headers.set("authorization", `Bearer ${token}`);
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), GITHUB_API_TIMEOUT_MS);
+  try {
+    return await fetch(`https://api.github.com${path}`, { ...init, headers, signal: controller.signal });
+  } catch (error) {
+    if (controller.signal.aborted) {
+      throw new Error(`GitHub API timeout after ${GITHUB_API_TIMEOUT_MS}ms for ${path}`);
+    }
+    throw error;
+  } finally {
+    clearTimeout(timer);
+  }
+}'''
 github_new = r'''async function github(path, env, init = {}) {
   const token = String(env.GITHUB_DISPATCH_TOKEN || "").trim();
   if (!token) {
-    return new Response(JSON.stringify({ message: "GITHUB_DISPATCH_TOKEN missing" }), {
+    return new Response(JSON.stringify({ message: "GITHUB_DISPATCH_TOKEN missing", code: "GITHUB_TOKEN_MISSING" }), {
       status: 503,
       headers: { "content-type": "application/json" }
     });
@@ -26,20 +47,16 @@ github_new = r'''async function github(path, env, init = {}) {
   const headers = new Headers(init.headers || {});
   headers.set("accept", "application/vnd.github+json");
   headers.set("x-github-api-version", "2022-11-28");
-  headers.set("user-agent", "BlogLabPrivateTerminal/3.1");
+  headers.set("user-agent", "BlogLabPrivateTerminal/3.2");
   headers.set("authorization", `Bearer ${token}`);
   const method = String(init.method || "GET").toUpperCase();
   const maxAttempts = method === "GET" || method === "HEAD" ? 2 : 1;
   let lastError = "";
   for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
     const controller = new AbortController();
-    const timer = setTimeout(() => controller.abort(), 10000);
+    const timer = setTimeout(() => controller.abort(), GITHUB_API_TIMEOUT_MS);
     try {
-      const response = await fetch(`https://api.github.com${path}`, {
-        ...init,
-        headers,
-        signal: controller.signal
-      });
+      const response = await fetch(`https://api.github.com${path}`, { ...init, headers, signal: controller.signal });
       if (
         response.ok
         || attempt >= maxAttempts
@@ -50,7 +67,9 @@ github_new = r'''async function github(path, env, init = {}) {
       await response.arrayBuffer().catch(() => null);
       await new Promise((resolve) => setTimeout(resolve, 250 * attempt));
     } catch (error) {
-      lastError = String(error?.message || error || "GitHub request failed").slice(0, 240);
+      lastError = controller.signal.aborted
+        ? `GitHub API timeout after ${GITHUB_API_TIMEOUT_MS}ms for ${path}`
+        : String(error?.message || error || "GitHub request failed").slice(0, 240);
       if (attempt < maxAttempts) {
         await new Promise((resolve) => setTimeout(resolve, 250 * attempt));
         continue;
@@ -60,7 +79,7 @@ github_new = r'''async function github(path, env, init = {}) {
     }
   }
   return new Response(JSON.stringify({
-    message: lastError || "GitHub request timed out",
+    message: lastError || "GitHub request failed",
     code: "GITHUB_NETWORK_TIMEOUT"
   }), {
     status: 599,
@@ -68,9 +87,12 @@ github_new = r'''async function github(path, env, init = {}) {
   });
 }'''
 if "GITHUB_NETWORK_TIMEOUT" not in text:
-    if github_old not in text:
+    if github_old in text:
+        text = text.replace(github_old, github_new, 1)
+    elif github_current in text:
+        text = text.replace(github_current, github_new, 1)
+    else:
         raise SystemExit("GitHub helper marker not found")
-    text = text.replace(github_old, github_new, 1)
 
 
 health_old = r'''      let mediaUploadReady = false;
