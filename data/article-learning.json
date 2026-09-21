@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-21T21:53:20+02:00",
-  "loop_count": 123,
+  "updated_at": "2026-09-21T21:54:05+02:00",
+  "loop_count": 124,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-21T21:52:59+02:00",
+      "last_learning_run": "2026-09-21T21:53:44+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -39,12 +39,12 @@
       ],
       "source_health": {
         "news.google.com": {
-          "score": 2.485,
-          "seen": 3660,
-          "last_seen": "2026-09-21T21:52:59+02:00",
-          "last_title": "Slovenija ima prvega predsednika krovne biatlonske zveze - rtvslo.si",
+          "score": 2.496,
+          "seen": 3690,
+          "last_seen": "2026-09-21T21:53:44+02:00",
+          "last_title": "23. september, dan slovenskega športa - morel.si",
           "last_provider": "",
-          "published": 1968,
+          "published": 1984,
           "last_output_id": "s-tribune-sportni-trenutki-zaradi-katerih-se-mi-se-danes-najezijo-dlake-aeb6d43b"
         }
       },
@@ -53,12 +53,12 @@
         "news.google.com": [
           "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
           "Kot v sanjah: Slovenija že drugič v dveh tednih evropski prvak! (VIDEO) - Šport TV",
-          "Slovenija želi nadaljevati niz zmag proti Srbiji - Dnevnik"
+          "Slovenija želi nadaljevati niz zmag proti Srbiji - dnevnik.si"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-21T21:53:09+02:00",
+      "last_learning_run": "2026-09-21T21:53:55+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -81,11 +81,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.522,
-          "seen": 3660,
-          "last_seen": "2026-09-21T21:53:09+02:00",
+          "seen": 3690,
+          "last_seen": "2026-09-21T21:53:55+02:00",
           "last_title": "Pirc Musar: \"Ne bom tiho, ko slovenska zunanja politika ne bo skladna z ustavnimi vrednotami naše države\" - Večer",
           "last_provider": "",
-          "published": 1665,
+          "published": 1680,
           "last_output_id": "okoljski-ekonomist-sonnenschein-politika-ministra-za-energetiko-ni-v-interesu-javnosti-001b0a7e"
         }
       },
@@ -99,7 +99,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-21T21:53:20+02:00",
+      "last_learning_run": "2026-09-21T21:54:05+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -133,96 +133,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 3660,
-          "last_seen": "2026-09-21T21:53:20+02:00",
-          "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
+          "seen": 3690,
+          "last_seen": "2026-09-21T21:54:05+02:00",
+          "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - novomesto.si",
           "last_provider": "",
-          "published": 2658,
+          "published": 2694,
           "last_output_id": "zaposlena-na-rtv-zgrozena-vesna-milek-ne-bo-delala-za-ljubezen-ampak-denar-8d955705"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 100,
+          "published": 101,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 100,
+          "published": 101,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 123,
+          "published": 124,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 89,
+          "published": 90,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 89,
+          "published": 90,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 492,
+          "published": 496,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 123,
+          "published": 124,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 100,
+          "published": 101,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 114,
+          "published": 116,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 57,
+          "published": 58,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 178,
+          "published": 180,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 123,
+          "published": 124,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 114,
+          "published": 116,
           "last_output_id": "duckduckgo-287dab86"
         },
         "definitions.net": {
-          "score": 2.491,
-          "published": 25,
+          "score": 2.493,
+          "published": 26,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "en.wiktionary.org": {
-          "score": 2.491,
-          "published": 25,
+          "score": 2.493,
+          "published": 26,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
-          "score": 2.491,
-          "published": 25,
+          "score": 2.493,
+          "published": 26,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "youtube.com": {
-          "score": 2.491,
-          "published": 25,
+          "score": 2.493,
+          "published": 26,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         }
       },
@@ -231,7 +231,7 @@
         "news.google.com": [
           "(AKTUALNO) V novi številki revije Demokracija preberite: Izključujejo in zavirajo razvoj! Janša: Osamosvojitvena Slovenija ne bo nikoli več ",
           "(AKTUALNO) Hudo bolni slovenski otroci ostajajo brez dostopa do zdravila, odobrenega s strani evropske agencije EMA - DEMOKRACIJA.SI",
-          "Najnižja gledanost oddaje Marcel v desetih letih, Tarča ostaja paradni konj - info360.si"
+          "Najnižja gledanost oddaje Marcel v desetih letih, Tarča ostaja paradni konj - Info360"
         ]
       }
     }
