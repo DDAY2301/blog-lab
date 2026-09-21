@@ -1480,7 +1480,59 @@ function hasActiveRuns(){return rows().some(x=>x.id&&x.status!=='completed'&&x.s
 async function pollLoop(){await load();pollTimer=setTimeout(pollLoop,hasActiveRuns()?1500:7000)}
 function kickPoll(){if(pollTimer)clearTimeout(pollTimer);pollTimer=setTimeout(pollLoop,150)}
 pollLoop();
-</script></body></html>`;
+</script>
+<style>
+#terminalChatbotToggle{position:fixed;right:22px;bottom:22px;z-index:80;border:1px solid #2b6b44;background:#1aa54a;color:#fff;padding:12px 16px;border-radius:999px;font-weight:800;box-shadow:0 12px 32px rgba(0,0,0,.35);cursor:pointer}
+#terminalChatbotDock{position:fixed;right:22px;bottom:78px;width:min(420px,calc(100vw - 44px));max-height:70vh;z-index:81;background:#0b1118;border:1px solid #2c3b4a;border-radius:18px;box-shadow:0 22px 60px rgba(0,0,0,.52);display:none;overflow:hidden;color:#dbeafe}
+#terminalChatbotDock.open{display:flex;flex-direction:column}
+#terminalChatbotHead{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;border-bottom:1px solid #253244;background:#0f1722}
+#terminalChatbotHead strong{color:#86efac}
+#terminalChatbotClose{background:#111827;color:#cbd5e1;border:1px solid #334155;border-radius:10px;padding:6px 9px;cursor:pointer}
+#terminalChatbotMessages{padding:14px 16px;overflow:auto;max-height:42vh;font-size:14px;line-height:1.45;white-space:pre-wrap}
+.terminal-chat-msg{margin:0 0 12px;padding:10px 12px;border-radius:12px;border:1px solid #253244;background:#0f1722}
+.terminal-chat-msg.user{background:#102033;border-color:#1f4972;color:#bfdbfe}
+.terminal-chat-msg.bot{background:#0f1d14;border-color:#245a35;color:#d1fae5}
+#terminalChatbotInput{margin:0 14px 12px;width:calc(100% - 28px);min-height:90px;resize:vertical;background:#060b12;border:1px solid #334155;border-radius:12px;color:#e5e7eb;padding:10px;font:inherit}
+#terminalChatbotSend{margin:0 14px 14px;background:#22c55e;color:#06210f;border:0;border-radius:12px;padding:11px 14px;font-weight:900;cursor:pointer}
+#terminalChatbotSend:disabled{opacity:.55;cursor:wait}
+</style>
+<button id="terminalChatbotToggle" type="button">AI pomočnik</button>
+<section id="terminalChatbotDock" aria-label="AI pomočnik terminala">
+  <div id="terminalChatbotHead"><strong>AI pomočnik za kompleksne zadeve</strong><button id="terminalChatbotClose" type="button">zapri</button></div>
+  <div id="terminalChatbotMessages"><div class="terminal-chat-msg bot">Vprašaj me za DNS bloglab.eu, objave, napake v workflowih, Cloudflare Worker, 24/7 delovanje ali kako poslati pravilen ukaz agentu.</div></div>
+  <textarea id="terminalChatbotInput" placeholder="Npr. Povej mi točne DNS nastavitve za bloglab.eu in preveri kaj manjka za 24/7 delovanje..."></textarea>
+  <button id="terminalChatbotSend" type="button">Vprašaj pomočnika</button>
+</section>
+<script>
+(function(){
+  var toggle=document.getElementById('terminalChatbotToggle');
+  var dock=document.getElementById('terminalChatbotDock');
+  var close=document.getElementById('terminalChatbotClose');
+  var input=document.getElementById('terminalChatbotInput');
+  var send=document.getElementById('terminalChatbotSend');
+  var messages=document.getElementById('terminalChatbotMessages');
+  if(!toggle||!dock||!input||!send||!messages)return;
+  function add(kind,text){var node=document.createElement('div');node.className='terminal-chat-msg '+kind;node.textContent=text;messages.appendChild(node);messages.scrollTop=messages.scrollHeight;}
+  toggle.addEventListener('click',function(){dock.classList.toggle('open'); if(dock.classList.contains('open')) input.focus();});
+  close.addEventListener('click',function(){dock.classList.remove('open');});
+  async function ask(){
+    var text=input.value.trim();
+    if(!text)return;
+    input.value=''; add('user',text); send.disabled=true; send.textContent='Razmišljam ...';
+    try{
+      var res=await fetch('/api/chat',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({message:text})});
+      var data=await res.json().catch(function(){return {};});
+      if(!res.ok||!data.ok) throw new Error(data.error||('HTTP '+res.status));
+      add('bot',(data.mode==='fallback'?'[fallback] ':'')+(data.text||'Ni odgovora.'));
+    }catch(err){add('bot','Napaka pomočnika: '+(err&&err.message?err.message:String(err)));}
+    finally{send.disabled=false; send.textContent='Vprašaj pomočnika';}
+  }
+  send.addEventListener('click',ask);
+  input.addEventListener('keydown',function(e){if((e.ctrlKey||e.metaKey)&&e.key==='Enter')ask();});
+})();
+</script>
+
+</body></html>`;
 
 export default {
   async fetch(request, env) {
