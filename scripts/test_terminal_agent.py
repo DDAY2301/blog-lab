@@ -119,6 +119,17 @@ obsolete = root / ".github" / "workflows" / "one-shot-terminal-operational-chat.
 if obsolete.exists():
     raise SystemExit("Obsolete one-shot terminal workflow still exists")
 
+hardener = (root / "scripts" / "harden_terminal_agent.py").read_text(encoding="utf-8")
+for marker in [
+    "terminal command help button marker",
+    "terminal command help function marker",
+    "terminal command help click marker",
+    "terminal idempotency header marker",
+    "terminal idempotency server marker",
+]:
+    if marker not in hardener:
+        raise SystemExit(f"Terminal hardener repair marker missing: {marker}")
+
 self_heal = (root / ".github" / "workflows" / "terminal-self-heal.yml").read_text(encoding="utf-8")
 for marker in [
     'cron: "17,47 * * * *"',
