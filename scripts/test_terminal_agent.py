@@ -30,7 +30,7 @@ required_markers = [
     'GITHUB_DISPATCH_TOKEN',
     'GITHUB_NETWORK_TIMEOUT',
     'terminal_operational_timeout',
-    'auth-v6.21-terminal-stability',
+    'auth-v6.22-terminal-stability',
 ]
 
 missing = [marker for marker in required_markers if marker not in text]
