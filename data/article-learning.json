@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-21T16:22:33+02:00",
-  "loop_count": 64,
+  "updated_at": "2026-09-21T16:23:20+02:00",
+  "loop_count": 65,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-21T16:22:10+02:00",
+      "last_learning_run": "2026-09-21T16:22:59+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -39,12 +39,12 @@
       ],
       "source_health": {
         "news.google.com": {
-          "score": 2.481,
-          "seen": 1890,
-          "last_seen": "2026-09-21T16:22:10+02:00",
-          "last_title": "Srbom preti negativni rekord: \"Raztrgali\" bomo na igrišču - siol.net",
+          "score": 2.475,
+          "seen": 1920,
+          "last_seen": "2026-09-21T16:22:59+02:00",
+          "last_title": "Srbom preti negativni rekord: \"Raztrgali\" bomo na igrišču - Siol.net",
           "last_provider": "",
-          "published": 1024,
+          "published": 1040,
           "last_output_id": "s-tribune-sportni-trenutki-zaradi-katerih-se-mi-se-danes-najezijo-dlake-aeb6d43b"
         }
       },
@@ -58,7 +58,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-21T16:22:21+02:00",
+      "last_learning_run": "2026-09-21T16:23:09+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -81,25 +81,25 @@
       "source_health": {
         "news.google.com": {
           "score": 2.522,
-          "seen": 1890,
-          "last_seen": "2026-09-21T16:22:21+02:00",
+          "seen": 1920,
+          "last_seen": "2026-09-21T16:23:09+02:00",
           "last_title": "Slovenska meščanska politika v razcepu – naslonitev na sile osi pred okupacijo Slovenije - rtvslo.si",
           "last_provider": "",
-          "published": 780,
+          "published": 795,
           "last_output_id": "okoljski-ekonomist-sonnenschein-politika-ministra-za-energetiko-ni-v-interesu-javnosti-001b0a7e"
         }
       },
       "current_source_count": 30,
       "example_titles": {
         "news.google.com": [
-          "Janša diplomatom: Zunanjo politiko vodi vlada, samo to je uradna politika Slovenije - siol.net",
+          "Janša diplomatom: Zunanjo politiko vodi vlada, samo to je uradna politika Slovenije - Siol.net",
           "Nataša Pirc Musar: Ne bom tiho, ko zunanja politika ne bo skladna z ustavnimi vrednotami države - Slovenske novice",
-          "Interpelacija zaradi obrata v zunanji politiki, ki krši mednarodno pravo - Delo.si"
+          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-21T16:22:33+02:00",
+      "last_learning_run": "2026-09-21T16:23:20+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -121,73 +121,73 @@
         "account.microsoft.com",
         "account.revealcellcam.com",
         "accounts.google.com",
+        "differentiatedteaching.com",
+        "kachelmannwetter.com",
         "marshalls.com",
         "movies.youtube.com",
         "myaccount.microsoft.com",
         "seaofthieves.com",
-        "tripadvisor.com",
-        "differentiatedteaching.com",
-        "kachelmannwetter.com"
+        "tripadvisor.com"
       ],
       "source_health": {
         "news.google.com": {
           "score": 2.515,
-          "seen": 1890,
-          "last_seen": "2026-09-21T16:22:33+02:00",
+          "seen": 1920,
+          "last_seen": "2026-09-21T16:23:20+02:00",
           "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 1042,
+          "published": 1059,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 41,
+          "published": 42,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 41,
+          "published": 42,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 64,
+          "published": 65,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
+        },
+        "differentiatedteaching.com": {
+          "score": 2.498,
+          "published": 31,
+          "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
+        },
+        "kachelmannwetter.com": {
+          "score": 2.498,
+          "published": 31,
+          "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 256,
+          "published": 260,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 64,
+          "published": 65,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 41,
+          "published": 42,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 60,
+          "published": 62,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 64,
+          "published": 65,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
-        },
-        "differentiatedteaching.com": {
-          "score": 2.497,
-          "published": 30,
-          "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
-        },
-        "kachelmannwetter.com": {
-          "score": 2.497,
-          "published": 30,
-          "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         }
       },
       "current_source_count": 30,
