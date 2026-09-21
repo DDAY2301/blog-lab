@@ -18,6 +18,55 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "leonard-susskind-leinweber-institute-for-theoretical-physics-3f240bfe",
+    "title": "Leonard Susskind | Leinweber Institute for Theoretical Physics",
+    "excerpt": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Leonard Susskind | Leinweber Institute for Theoretical Physics«.",
+    "seoDescription": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Leonard Susskind | Leinweber Institute for Theoretical Physics«.",
+    "content": "**Šport, 21. 9. 2026.** Leonard Susskind is the Felix Bloch professor of Theoretical physics at Stanford University. His research interests include string theory, quantum field theory, quantum statistical mechanics and quantum cosmology. He is a member of the National Academy of Sciences of the USA, and the American Academy of Arts and Sciences, an associate member of the faculty of Canada's Perimeter Institute for Theoretical Physics, and a distinguished professor of the Korea Institute for Advanced Study. Main content start Leonard Susskind\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: sitp.stanford.edu. Objavljeno: Sun, 20 Sep 2026 11:05:00 GMT. [Odpri izvirni vir](https://sitp.stanford.edu/people/leonard-susskind)\n\n## Dopolnitev vira 2: en.wikipedia.org\n\nLeonard Susskind 36 languages Afrikaans العربية مصرى Azərbaycanca تۆرکجه বাংলা Català Čeština Dansk Deutsch Ελληνικά Esperanto Español Eesti فارسی Français עברית हिन्दी Italiano 日本語 한국어 Nederlands ਪੰਜਾਬੀ Polski Português Română Русский Simple English Slovenčina Slovenščina Српски / srpski Svenska Türkçe Українська اردو 中文 Edit links From Wikipedia, the free encyclopedia American theoretical physicist (born 1940) \"},\"birth_place\":{\"wt\":\"[[New York City]], U.S.\"},\"death_date\":{\"wt\":\"\"},\"death_place\":{\"wt\":\"\"},\"fields\":{\"wt\":\"[[Physics]], [[mathematics]]\"},\"workplaces\":{\"wt\":\"[[Yeshiva University]] [[Tel Aviv University]] [[Stanford University]] [[Stanford Institute for Theoretical Physics]] [[Korea Institute…\n\n Vir: en.wikipedia.org. Objavljeno: Mon, 21 Sep 2026 03:05:00 GMT. [Odpri izvirni vir](https://en.wikipedia.org/wiki/Leonard_Susskind)\n\n## Dopolnitev vira 3: theoreticalminimum.com\n\nThe Theoretical Minimum | Skip to main content The Theoretical Minimum Search form Search A number of years ago I became aware of the large number of physics enthusiasts out there who have no venue to learn modern physics and cosmology. Fat advanced textbooks are not suitable to people who have no teacher to ask questions of, and the popular literature does not go deeply enough to satisfy these curious people. So I started a series of courses on modern physics at Stanford University where I am a professor of physics. The courses are specifically aimed at people who know, or once knew, a bit of algebra and calculus, but are more or less beginners. Home The Theoretical Minimum is a series of Stanford Continuing…\n\n Vir: theoreticalminimum.com. Objavljeno: Sun, 20 Sep 2026 21:00:00 GMT. [Odpri izvirni vir](https://theoreticalminimum.com/)\n\n## Dopolnitev vira 4: physics.stanford.edu\n\nMain content start Leonard Susskind Felix Bloch Professor of Physics Department: Physics Ph.D., Cornell University, Physics (1965) B.S., City College of New York, Physics (1962)\n\n Vir: physics.stanford.edu. Objavljeno: Mon, 21 Sep 2026 01:03:00 GMT. [Odpri izvirni vir](https://physics.stanford.edu/people/leonard-susskind)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Šport",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": {
+      "url": "https://sitp.stanford.edu/sites/sitp/files/styles/metatags_image_1200x628/public/media/capx/leonard-susskind-square1509542228706.jpg.webp?h=b4e301e9&itok=8sCjXkH2",
+      "alt": "Leonard Susskind | Leinweber Institute for Theoretical Physics",
+      "caption": "sitp.stanford.edu"
+    },
+    "video": null,
+    "gallery": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/b/b8/LeonardSusskindStanfordNov2013.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+        "alt": "Leonard Susskind - Wikipedia",
+        "caption": "en.wikipedia.org"
+      },
+      {
+        "url": "https://physics.stanford.edu/sites/physics/files/styles/metatags_image_1200x628/public/media/capx/leonard-susskind-square1509542228706.jpg.webp?h=b4e301e9&itok=5aYs_67F",
+        "alt": "Leonard Susskind | Physics Department",
+        "caption": "physics.stanford.edu"
+      }
+    ],
+    "sources": [
+      {
+        "label": "sitp.stanford.edu — Leonard Susskind | Leinweber Institute for Theoretical Physics",
+        "url": "https://sitp.stanford.edu/people/leonard-susskind"
+      },
+      {
+        "label": "en.wikipedia.org — Leonard Susskind - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Leonard_Susskind"
+      },
+      {
+        "label": "theoreticalminimum.com — The Theoretical Minimum |",
+        "url": "https://theoreticalminimum.com/"
+      },
+      {
+        "label": "physics.stanford.edu — Leonard Susskind | Physics Department",
+        "url": "https://physics.stanford.edu/people/leonard-susskind"
+      }
+    ],
+    "createdAt": "2026-09-21T10:01:36+02:00",
+    "updatedAt": "2026-09-21T10:01:36+02:00"
+  },
+
+  {
     "id": "ljubljana-marshes-pile-dwellings-history",
     "title": "Ljubljana Marshes Pile Dwellers: The Hidden UNESCO History",
     "excerpt": "Discover the prehistoric pile dwellings beneath Ljubljana Marshes, what archaeology really proves, and where visitors can explore this hidden UNESCO story.",

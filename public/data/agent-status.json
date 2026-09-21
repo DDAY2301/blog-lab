@@ -2,26 +2,20 @@
   "agent": "Blog Lab Publisher",
   "status": "completed",
   "enabled": true,
-  "category": "aktualno",
-  "last_run": "2026-09-20T21:00:40+02:00",
-  "last_success": "2026-09-20T21:00:40+02:00",
-  "last_output": "anja-rakusa-brus-pomemben-argument-za-mojo-kandidaturo-je-izkusnja-z-aktualno-vlado-ki-str-2c38f7cd",
+  "category": "sport",
+  "last_run": "2026-09-21T10:01:36+02:00",
+  "last_success": "2026-09-21T10:01:36+02:00",
+  "last_output": "leonard-susskind-leinweber-institute-for-theoretical-physics-3f240bfe",
   "next_run": null,
-  "message": "Članek je uspešno pripravljen za objavo.",
-  "posts_today": 4,
-  "scheduled_posts_today": 3,
-  "manual_posts_today": 1,
-  "writer_mode": "local_evidence_ai",
+  "message": "Fallback članek je objavljen brez zunanjega AI providerja.",
+  "posts_today": 1,
+  "scheduled_posts_today": 1,
+  "manual_posts_today": 0,
+  "writer_mode": "deterministic_fallback",
   "scheduled_slots_done": [
-    "2026-09-20|08:17|sport",
-    "2026-09-20|13:27|politika",
-    "2026-09-20|19:43|aktualno"
+    "2026-09-21|08:17|sport"
   ],
   "scheduled_slots_deferred": [],
-  "last_editorial_hold": {
-    "slot": "2026-09-20|19:43|aktualno",
-    "reason": "ze_uporabljen_vir",
-    "at": "2026-09-20T20:58:28+02:00"
-  },
+  "last_editorial_hold": null,
   "last_error": null
 }
