@@ -21,6 +21,7 @@ from services.validator import validate
 from services.publisher import publish_to_app, slugify
 from services.state import load_json, atomic_json
 from services.learning import learning_source_ok, rank_sources_with_learning
+from services.article_templates import apply_article_template, template_prompt
 
 STATE = BASE / "data/agent-state.json"
 CONTROL = BASE / "data/agent-control.json"
@@ -525,6 +526,11 @@ def prepare_article_candidate(
     if output_category.strip():
         article["category"] = output_category.strip()[:40]
     article = apply_media_policy(article, source_items, topic)
+    article = apply_article_template(
+        article,
+        output_category.strip() or str(article.get("category") or ""),
+        topic,
+    )
     return article
 
 
@@ -624,6 +630,7 @@ def main():
         return 3 if (args.topic.strip() and args.force) else 0
     system_prompt = (HERE / "prompts/system.md").read_text(encoding="utf-8")
     task_prompt = (HERE / "prompts/task.md").read_text(encoding="utf-8")
+    task_prompt += template_prompt(args.category, args.topic)
     if args.topic.strip() and args.force:
         system_prompt = manual_editor_system_prompt(system_prompt, args.topic, len(fresh))
     if args.topic.strip():
