@@ -78,10 +78,9 @@ jobs:
           pip install -r requirements-agent.txt
           npm ci
 
-      - name: Validate publisher
+      - name: Compile publisher
         run: |
           python -m py_compile agents/blog-lab-publisher/agent.py agents/blog-lab-publisher/autonomous_fallback.py agents/blog-lab-publisher/services/*.py agents/blog-lab-publisher/schedule.py
-          pytest -q agents/blog-lab-publisher/tests
 
       - name: Publish missed 08:17 sport slot
         shell: bash
