@@ -108,6 +108,9 @@ if obsolete.exists():
 self_heal = (root / ".github" / "workflows" / "terminal-self-heal.yml").read_text(encoding="utf-8")
 for marker in [
     'cron: "17,47 * * * *"',
+    '"Blog Lab Terminal Agent Command Suite"',
+    '"Deploy Blog Lab Worker"',
+    "github.event.workflow_run.conclusion == 'failure'",
     "Reapply deterministic terminal repairs",
     "Reject unexpected self-heal mutations",
     "Full deterministic terminal validation",
