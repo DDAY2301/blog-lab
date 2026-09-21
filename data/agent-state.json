@@ -1,19 +1,20 @@
 {
-  "last_success": "2026-09-21T19:10:00+02:00",
+  "last_success": "2026-09-21T19:54:06+02:00",
   "last_failure": "2026-09-21T12:56:19+02:00",
   "consecutive_failures": 0,
   "posts_date": "2026-09-21",
-  "posts_today": 8,
-  "last_output": "what-does-potem-mean-9df2e44a",
+  "posts_today": 9,
+  "last_output": "zaposlena-na-rtv-zgrozena-vesna-milek-ne-bo-delala-za-ljubezen-ampak-denar-8d955705",
   "last_error": null,
   "agent_version": "2.7.0",
   "current_category": "aktualno",
-  "scheduled_posts_today": 2,
+  "scheduled_posts_today": 3,
   "manual_posts_today": 6,
   "writer_mode": "local_evidence_ai",
   "scheduled_slots_done": [
     "2026-09-21|08:17|sport",
-    "2026-09-21|13:27|politika"
+    "2026-09-21|13:27|politika",
+    "2026-09-21|19:43|aktualno"
   ],
   "scheduled_slots_deferred": [],
   "last_editorial_hold": null
