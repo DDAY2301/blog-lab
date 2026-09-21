@@ -32,6 +32,7 @@ jobs:
     env:
       CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      GITHUB_DISPATCH_TOKEN: ${{ secrets.GITHUB_DISPATCH_TOKEN }}
       EXPECTED_WORKER_VERSION: auth-v6.24-product-onboarding
     steps:
       - uses: actions/checkout@v7
@@ -47,6 +48,20 @@ jobs:
             echo "::error::Missing CLOUDFLARE_API_TOKEN or CLOUDFLARE_ACCOUNT_ID GitHub secrets. Worker was NOT deployed."
             exit 1
           fi
+
+      - name: Check GitHub dispatch secret
+        shell: bash
+        run: |
+          if [[ -z "${GITHUB_DISPATCH_TOKEN:-}" ]]; then
+            echo "::error::Missing GITHUB_DISPATCH_TOKEN repository secret."
+            exit 1
+          fi
+
+      - name: Sync GitHub dispatch token to Worker
+        working-directory: terminal/worker
+        shell: bash
+        run: |
+          printf '%s' "$GITHUB_DISPATCH_TOKEN" | npx --yes wrangler@4.40.0 secret put GITHUB_DISPATCH_TOKEN
 
       - name: Apply Worker dispatch diagnostics patch
         shell: bash
