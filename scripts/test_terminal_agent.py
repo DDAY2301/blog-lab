@@ -120,12 +120,26 @@ for marker in [
     if marker not in self_heal:
         raise SystemExit(f"Terminal self-heal marker missing: {marker}")
 
+deferred_recovery = (root / ".github" / "workflows" / "terminal-deferred-recovery.yml").read_text(encoding="utf-8")
+for marker in [
+    'cron: "52 * * * *"',
+    "Replay deferred article requests",
+    "Replay deferred site-edit requests",
+    "Reject protected recovery mutations",
+    "Validate recovered repository",
+    "Commit verified deferred recovery",
+    "Deploy recovered site",
+]:
+    if marker not in deferred_recovery:
+        raise SystemExit(f"Deferred terminal recovery marker missing: {marker}")
+
 operator = (root / ".github" / "workflows" / "operator-terminal.yml").read_text(encoding="utf-8")
 for marker in [
     "Reject edits to protected security paths",
     "Ensure no obvious credentials were written",
     "bounded recovery",
     "Destroy decrypted command",
+    "Test terminal execution contract",
 ]:
     if marker not in operator:
         raise SystemExit(f"Operator workflow safety marker missing: {marker}")
