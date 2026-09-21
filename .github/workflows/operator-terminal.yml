@@ -59,9 +59,29 @@ jobs:
         id: request_guard
         shell: bash
         run: |
+          set -euo pipefail
           python agents/operator-terminal/request_guard.py check \
             --request-id "${{ inputs.request_id }}" \
             --github-output "$GITHUB_OUTPUT"
+
+          # Second line of defence: a previous successful workflow with the
+          # same opaque request ID proves the side effect already completed,
+          # even if a later ledger commit was interrupted.
+          set +e
+          PREVIOUS_SUCCESS="$(
+            gh run list --repo "$GITHUB_REPOSITORY" --workflow operator-terminal.yml --limit 100 \
+              --json databaseId,displayTitle,status,conclusion \
+            | jq --arg rid "${{ inputs.request_id }}" --argjson current "$GITHUB_RUN_ID" \
+                '[.[] | select(.databaseId != $current and (.displayTitle | contains($rid)) and .status == "completed" and .conclusion == "success")] | length'
+          )"
+          GH_RC=$?
+          set -e
+          if [[ "$GH_RC" -eq 0 && "${PREVIOUS_SUCCESS:-0}" -gt 0 ]]; then
+            echo "duplicate=true" >> "$GITHUB_OUTPUT"
+            echo "TERMINAL_REQUEST_HISTORY_GUARD previous_success=$PREVIOUS_SUCCESS"
+          elif [[ "$GH_RC" -ne 0 ]]; then
+            echo "::warning::GitHub run-history duplicate check unavailable; repository ledger remains active."
+          fi
 
       - name: Duplicate request summary
         if: ${{ steps.request_guard.outputs.duplicate == 'true' }}
