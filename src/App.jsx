@@ -20,6 +20,78 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "what-does-potem-mean-9df2e44a",
+    "title": "What does potem mean?",
+    "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »What does potem mean?«.",
+    "seoDescription": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »What does potem mean?«.",
+    "content": "**Aktualno, 21. 9. 2026.** Definition of potem in the Definitions.net dictionary. Meaning of potem. What does potem mean? Information and translations of potem in the most comprehensive dictionary definitions resource on the web. Login STANDS4 Network Abbreviations.com Anagrams.net Biographies.net Calculators.net Convert.net Definitions.net Grammar.com Literature.com Lyrics.com Phrases.com Poetry.com Quotes.net References.net Rhymes.com Scripts.com Symbols.com Synonyms.com USZip.com Term » Definition Word in Definition Translations # A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Random New Words Term Word in Definition Translations Vocabulary What does potem mean? Definitions for potem potem This dictionary definitions page…\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: definitions.net. Objavljeno: Thu, 10 Sep 2026 11:03:00 GMT. [Odpri izvirni vir](https://www.definitions.net/definition/potem)\n\n## Dopolnitev vira 2: en.wiktionary.org\n\npotem 19 languages Azərbaycanca Čeština Deutsch Ελληνικά Español Eesti Euskara Suomi Français Magyar Kurdî Malagasy Polski Русский Srpskohrvatski / српскохрватски Slovenščina Svenska Тоҷикӣ 中文 From Wiktionary, the free dictionary See also: potém Latin [ edit ] Verb [ edit ] pōtem first-person singular present active subjunctive of pōtō Old Czech [ edit ] Pronunciation [ edit ] IPA ( key ) : ( 13 th CE ) /ˈpotɛm/ IPA ( key ) : ( 15 th CE ) /ˈpotɛm/ Adverb [ edit ] potem alternative form of potom Conjunction [ edit ] potem alternative form of potom References [ edit ] Jan Gebauer ( 1903–1916 ), “ potem ”, in Slovník staročeský (in Czech), Prague: Česká grafická společnost \"unie\" , Česká akademie císaře…\n\n Vir: en.wiktionary.org. Objavljeno: Sun, 20 Sep 2026 05:58:00 GMT. [Odpri izvirni vir](https://en.wiktionary.org/wiki/potem)\n\n## Dopolnitev vira 3: youtube.com\n\nif (window.ytcsi) {window.ytcsi.tick('bc', null, '');}var ytimg={count:0,preload:function(src){var img=new Image;var count=++ytimg.count;ytimg[count\n\n Vir: youtube.com. Objavljeno: Tue, 08 Sep 2026 07:02:00 GMT. [Odpri izvirni vir](https://www.youtube.com/watch?app=desktop&v=OxFesVtHpp8)\n\n## Dopolnitev vira 4: Bing Web – aktualno – potem nadaljuj po nastavljenih parametrih…\n\nPOTEM gene: integrated information on diseases, variants, publications, expression, function, pathways and interactions, from 193 sources on GeneCards.\n\n Vir: Bing Web – aktualno – potem nadaljuj po nastavljenih parametrih objavljanja. Objavljeno: Thu, 17 Sep 2026 08:03:00 GMT. [Odpri izvirni vir](https://www.genecards.org/card/POTEM)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Aktualno",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "definitions.net — What does potem mean?",
+        "url": "https://www.definitions.net/definition/potem"
+      },
+      {
+        "label": "en.wiktionary.org — potem - Wiktionary, the free dictionary",
+        "url": "https://en.wiktionary.org/wiki/potem"
+      },
+      {
+        "label": "youtube.com — Potem | Full Audiobook | Guillaume Musso - YouTube",
+        "url": "https://www.youtube.com/watch?app=desktop&v=OxFesVtHpp8"
+      },
+      {
+        "label": "Bing Web – aktualno – potem nadaljuj po nastavljenih parametrih objavljanja — POTEM Gene - GeneCards",
+        "url": "https://www.genecards.org/card/POTEM"
+      }
+    ],
+    "createdAt": "2026-09-21T19:10:00+02:00",
+    "updatedAt": "2026-09-21T19:10:00+02:00"
+  },
+
+  {
+    "id": "twitter-od-danes-uvedel-flite-objave-ki-izginejo-po-24-urah-d95444fe",
+    "title": "Twitter od danes uvedel \"flite\", objave, ki izginejo po 24 urah",
+    "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Twitter od danes uvedel \"flite\", objave, ki izginejo po 24 urah«.",
+    "seoDescription": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Twitter od danes uvedel \"flite\", objave, ki izginejo po 24 urah«.",
+    "content": "**Aktualno, 21. 9. 2026.** Twitter od danes uvedel \"flite\", objave, ki izginejo po 24 urah Metropolitan.si\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Metropolitan.si. Objavljeno: Tue, 17 Nov 2020 08:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMimwFBVV95cUxPcHVwbnBkOU9panVxaEIwRmQ1M3FLTnY1a3F0ajhubHZrZnMtcXAya1pUakNTa0swWTF1Ukk1MUNWWlIwRUlTU1hBSXh2T29BUkE2eEh5VC1Id0tzNmgyZEN6RGJLMkNIdkpHaHZmMWpnLXh6ZXVEenRZOGlzSlhsdkFhZkJtREhUTGxhYU1QRE1hZGxaZ3gydDI3WQ?oc=5)\n\n## Dopolnitev vira 2: NaDlani.si\n\nAlenka Bratušek ganila: objava, ki odpira spomin na pokojno sestro Vesno: \"Draga moja Vesna...\" (FOTO) NaDlani.si\n\n Vir: NaDlani.si. Objavljeno: Mon, 15 Dec 2025 08:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMi0AFBVV95cUxNMExiOElsUTJmdHZmaUcxcFd1WVlqeVd5bDZCd1cyc1JlSl92U2hKYkx3Ym9YNzQwaTd3UjdZeUx2X0V2RlFRbFdxQ2szQkxmVUxLRThOUlcxNlEzb053YWRCVUdmcW5xcnNBZS0zZ0E0WTM5ZEFfVHQtaVJEQXJDTUZlejJUZmhOWDVqcE1fT3JTVkppNEFKOGMzcnFLNVJESThUNHRNMHRiZ3ZGRnl6TjZ0Q0JmX3RhbFBVUEZUR1hNM3oyeWl0aUFkMmNkSHF0?oc=5)\n\n## Dopolnitev vira 3: Slovenske novice\n\nKdaj se bo končal vročinski val? Če upate, da kmalu, vas bo objava WMO spravila v slabo voljo Slovenske novice\n\n Vir: Slovenske novice. Objavljeno: Wed, 24 Jun 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMizwFBVV95cUxOaTFzeDhnVW9yS2VwS2VmUTljTWdhQ0dadXpEMUJUcjE0MDJlcEl3a0RnOEdZUTdaT1g2eFZkRHNXdzBHLWhGdzRKaktBcV92TFM4R2NWcHlsTXVvVEdrX2xVbWhORlhkcHNaQVVHRFlZaEgwNnBybEhoa1VCTEhBZDJEMlZIM3FNakozaE0zZWtHa1lXYkc0LUtlcWxRSExxX1J3a0tCbmNWaEhScTh0ZVVlUE90Q3ZhYUU2M0szMXVyZEFRS1l6Zmd2MDlDeG8?oc=5)\n\n## Dopolnitev vira 4: Forbes Slovenija\n\nDrugi največji lastnik krškega Kostaka objavil prevzemno ponudbo Forbes Slovenija\n\n Vir: Forbes Slovenija. Objavljeno: Fri, 19 Dec 2025 10:25:56 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMinAFBVV95cUxPdnBuSXF5cl9YY1FzS3c3YTZSVW5pTERCczJzVEpYYUlKck9HV28wVGpaWkVFXzltM0hLNUxPRFZMZUhGc3Fzb1RFSC02U2t1UFNTTUFoV19oYlJsU1JLbVVKR3hGclFBOGQ1dTZ1eXFkdjRRVTVjclQ1RDBlX0lLOUpEZFhCMnppbUZjSXlhOVFtRWRIUWxETklSNnI?oc=5)\n\n## Dopolnitev vira 5: NaDlani.si\n\nOsmrtnice: Kako jih napisati in kje objaviti NaDlani.si\n\n Vir: NaDlani.si. Objavljeno: Wed, 25 Sep 2024 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiV0FVX3lxTE1XR0p6THdIX3Jkamh6eTFRQklRMEpTVnBnMnNsYnN0UGNnbFZhNVVEbkx6SC1yLUllOUJmdHlWMDhiU08wQjFSQUgxZTlJRmh0bUFvLUxKVQ?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Aktualno",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Metropolitan.si — Twitter od danes uvedel \"flite\", objave, ki izginejo po 24 urah - Metropolitan.si",
+        "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPcHVwbnBkOU9panVxaEIwRmQ1M3FLTnY1a3F0ajhubHZrZnMtcXAya1pUakNTa0swWTF1Ukk1MUNWWlIwRUlTU1hBSXh2T29BUkE2eEh5VC1Id0tzNmgyZEN6RGJLMkNIdkpHaHZmMWpnLXh6ZXVEenRZOGlzSlhsdkFhZkJtREhUTGxhYU1QRE1hZGxaZ3gydDI3WQ?oc=5"
+      },
+      {
+        "label": "NaDlani.si — Alenka Bratušek ganila: objava, ki odpira spomin na pokojno sestro Vesno: \"Draga moja Vesna...\" (FOTO) - NaDlani.si",
+        "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNMExiOElsUTJmdHZmaUcxcFd1WVlqeVd5bDZCd1cyc1JlSl92U2hKYkx3Ym9YNzQwaTd3UjdZeUx2X0V2RlFRbFdxQ2szQkxmVUxLRThOUlcxNlEzb053YWRCVUdmcW5xcnNBZS0zZ0E0WTM5ZEFfVHQtaVJEQXJDTUZlejJUZmhOWDVqcE1fT3JTVkppNEFKOGMzcnFLNVJESThUNHRNMHRiZ3ZGRnl6TjZ0Q0JmX3RhbFBVUEZUR1hNM3oyeWl0aUFkMmNkSHF0?oc=5"
+      },
+      {
+        "label": "Slovenske novice — Kdaj se bo končal vročinski val? Če upate, da kmalu, vas bo objava WMO spravila v slabo voljo - Slovenske novice",
+        "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOaTFzeDhnVW9yS2VwS2VmUTljTWdhQ0dadXpEMUJUcjE0MDJlcEl3a0RnOEdZUTdaT1g2eFZkRHNXdzBHLWhGdzRKaktBcV92TFM4R2NWcHlsTXVvVEdrX2xVbWhORlhkcHNaQVVHRFlZaEgwNnBybEhoa1VCTEhBZDJEMlZIM3FNakozaE0zZWtHa1lXYkc0LUtlcWxRSExxX1J3a0tCbmNWaEhScTh0ZVVlUE90Q3ZhYUU2M0szMXVyZEFRS1l6Zmd2MDlDeG8?oc=5"
+      },
+      {
+        "label": "Forbes Slovenija — Drugi največji lastnik krškega Kostaka objavil prevzemno ponudbo - Forbes Slovenija",
+        "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPdnBuSXF5cl9YY1FzS3c3YTZSVW5pTERCczJzVEpYYUlKck9HV28wVGpaWkVFXzltM0hLNUxPRFZMZUhGc3Fzb1RFSC02U2t1UFNTTUFoV19oYlJsU1JLbVVKR3hGclFBOGQ1dTZ1eXFkdjRRVTVjclQ1RDBlX0lLOUpEZFhCMnppbUZjSXlhOVFtRWRIUWxETklSNnI?oc=5"
+      },
+      {
+        "label": "NaDlani.si — Osmrtnice: Kako jih napisati in kje objaviti - NaDlani.si",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1XR0p6THdIX3Jkamh6eTFRQklRMEpTVnBnMnNsYnN0UGNnbFZhNVVEbkx6SC1yLUllOUJmdHlWMDhiU08wQjFSQUgxZTlJRmh0bUFvLUxKVQ?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-21T19:08:40+02:00",
+    "updatedAt": "2026-09-21T19:08:40+02:00"
+  },
+
+  {
     "id": "foto-od-ponedeljka-velika-novost-na-ljubljanski-zelezniski-postaji-prihaja-vseh-sedem-novi-2460c4fe",
     "title": "FOTO: Od ponedeljka velika novost na ljubljanski železniški postaji - prihaja vseh sedem novih peronov -…",
     "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »FOTO: Od ponedeljka velika novost na ljubljanski železniški postaji - prihaja vseh sedem novih peronov -…«.",
