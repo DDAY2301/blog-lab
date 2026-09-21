@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-21T16:24:12+02:00",
-  "loop_count": 66,
+  "updated_at": "2026-09-21T16:38:23+02:00",
+  "loop_count": 67,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-21T16:23:50+02:00",
+      "last_learning_run": "2026-09-21T16:38:01+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -40,11 +40,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.473,
-          "seen": 1950,
-          "last_seen": "2026-09-21T16:23:50+02:00",
+          "seen": 1980,
+          "last_seen": "2026-09-21T16:38:01+02:00",
           "last_title": "Šeškovo poškodbo takole proslavljajo - z Otoka nor in sramoten prizor - ekipa.svet24.si",
           "last_provider": "",
-          "published": 1056,
+          "published": 1072,
           "last_output_id": "s-tribune-sportni-trenutki-zaradi-katerih-se-mi-se-danes-najezijo-dlake-aeb6d43b"
         }
       },
@@ -58,7 +58,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-21T16:24:01+02:00",
+      "last_learning_run": "2026-09-21T16:38:12+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -80,12 +80,12 @@
       ],
       "source_health": {
         "news.google.com": {
-          "score": 2.522,
-          "seen": 1950,
-          "last_seen": "2026-09-21T16:24:01+02:00",
-          "last_title": "Slovenska meščanska politika v razcepu – naslonitev na sile osi pred okupacijo Slovenije - rtvslo.si",
+          "score": 2.515,
+          "seen": 1980,
+          "last_seen": "2026-09-21T16:38:12+02:00",
+          "last_title": "Nataša Pirc Musar: Ne bom tiho, ko zunanja politika ne bo skladna z ustavnimi vrednotami države - Slovenske novice",
           "last_provider": "",
-          "published": 810,
+          "published": 825,
           "last_output_id": "okoljski-ekonomist-sonnenschein-politika-ministra-za-energetiko-ni-v-interesu-javnosti-001b0a7e"
         }
       },
@@ -93,13 +93,13 @@
       "example_titles": {
         "news.google.com": [
           "Janša diplomatom: Zunanjo politiko vodi vlada, samo to je uradna politika Slovenije - Siol.net",
-          "Nataša Pirc Musar: Ne bom tiho, ko zunanja politika ne bo skladna z ustavnimi vrednotami države - Slovenske novice",
-          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer"
+          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer",
+          "(INTERVJU) V novi reviji Demokracija: Minister Tone Kajzer: Slovenije ne prodajamo nikomur. Slovenija je suverena država in slovenska zunanj"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-21T16:24:12+02:00",
+      "last_learning_run": "2026-09-21T16:38:23+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -127,67 +127,83 @@
         "movies.youtube.com",
         "myaccount.microsoft.com",
         "seaofthieves.com",
-        "tripadvisor.com"
+        "tripadvisor.com",
+        "reddit.com"
       ],
       "source_health": {
         "news.google.com": {
-          "score": 2.515,
-          "seen": 1950,
-          "last_seen": "2026-09-21T16:24:12+02:00",
+          "score": 2.512,
+          "seen": 1980,
+          "last_seen": "2026-09-21T16:38:23+02:00",
           "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 1076,
-          "last_output_id": "sign-in-to-your-account-4b374c63"
+          "published": 1094,
+          "last_output_id": "duckduckgo-287dab86"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 43,
+          "published": 44,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 43,
+          "published": 44,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 66,
+          "published": 67,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 32,
+          "published": 33,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 32,
+          "published": 33,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 264,
+          "published": 268,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 66,
+          "published": 67,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 43,
+          "published": 44,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 64,
+          "published": 66,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 66,
+          "published": 67,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
+        },
+        "reddit.com": {
+          "score": 0.9,
+          "published": 2,
+          "last_output_id": "duckduckgo-287dab86"
+        },
+        "zhihu.com": {
+          "score": 0.9,
+          "published": 2,
+          "last_output_id": "duckduckgo-287dab86"
+        },
+        "sabervivirtv.com": {
+          "score": 0.5,
+          "published": 1,
+          "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         }
       },
       "current_source_count": 30,
@@ -201,6 +217,18 @@
     }
   },
   "recent_articles": [
+    {
+      "id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d",
+      "title": "Tabla de azúcares de las frutas: la cantidad de azúcar que contiene ...",
+      "category": "Aktualno",
+      "createdAt": "2026-09-21T16:35:26+02:00"
+    },
+    {
+      "id": "duckduckgo-287dab86",
+      "title": "DuckDuckGo",
+      "category": "Aktualno",
+      "createdAt": "2026-09-21T16:26:47+02:00"
+    },
     {
       "id": "okoljski-ekonomist-sonnenschein-politika-ministra-za-energetiko-ni-v-interesu-javnosti-001b0a7e",
       "title": "Okoljski ekonomist Sonnenschein: Politika ministra za energetiko ni v interesu javnosti",
@@ -260,18 +288,6 @@
       "title": "Odbojka (M): Italija - Slovenija, Evropsko prvenstvo 2026, Skupina A",
       "category": "Šport",
       "createdAt": "2026-09-20T16:56:15+02:00"
-    },
-    {
-      "id": "nocno-zivljenje-v-ljubljani-1ae9f6e3",
-      "title": "Nočno življenje v Ljubljani",
-      "category": "aktualno",
-      "createdAt": "2026-09-20T09:06:41+02:00"
-    },
-    {
-      "id": "drava-cycle-route-maribor-ptuj-guide",
-      "title": "Cycling the Drava: A Car-Light Maribor–Ptuj Guide",
-      "category": "Šport",
-      "createdAt": "2026-09-20T09:02:24+02:00"
     }
   ],
   "recent_failures": [
