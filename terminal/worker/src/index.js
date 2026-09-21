@@ -1166,6 +1166,10 @@ const COMMAND_TOKEN_ALIASES = Object.freeze({
   profesionalno:"slog", professional:"slog", struktura:"slog", structure:"slog", stil:"slog", style:"slog", tipografija:"font",
   upload:"nalozi", nalozi:"nalozi", move:"premakni", premakni:"premakni", copy:"kopiraj", kopiraj:"kopiraj",
   rename:"preimenuj", preimenuj:"preimenuj",
+  skrij:"skrij", hide:"skrij", pokazi:"pokazi", pokaži:"pokazi", show:"pokazi",
+  tema:"tema", theme:"tema", barva:"barva", color:"barva", colour:"barva", paleta:"paleta", palette:"paleta",
+  gumb:"gumb", button:"gumb", obrazec:"obrazec", form:"obrazec", povezava:"link", link:"link",
+  live:"live", pulse:"live", tekoce:"live", tekoče:"live",
   pomoc:"pomoc", pomoč:"pomoc", help:"pomoc", commands:"komande", command:"komande", komande:"komande", ukazi:"komande",
   zmoreš:"zmore", zmores:"zmore", capabilities:"zmore",
   draft:"draft", osnutek:"draft", osnutek:"draft", review:"review", pregled:"review",
@@ -1178,7 +1182,8 @@ const COMMAND_PREFIX_ALIASES = Object.freeze([
   ["izklop","izklopi"],["vklop","vklopi"],["iskljuc","izklopi"],["ukljuc","vklopi"],["pokren","zazeni"],
   ["prever","preveri"],["prover","preveri"],["provjer","preveri"],["spremen","spremeni"],["izboljs","izboljsaj"],
   ["poleps","polepsaj"],["odstran","odstrani"],["uklon","odstrani"],["obris","odstrani"],
-  ["rubrik","rubrika"],["kategor","rubrika"],["galer","galerija"],["fotograf","slika"],["stranic","stran"],["clank","clanek"]
+  ["rubrik","rubrika"],["kategor","rubrika"],["galer","galerija"],["fotograf","slika"],["stranic","stran"],["clank","clanek"],
+  ["tipograf","font"],["dolz","dolzina"],["besedil","besedilo"],["pisanj","pisanje"],["palet","paleta"]
 ]);
 
 function foldCommandText(value) {
@@ -1285,8 +1290,8 @@ function localCommandIntent(command) {
   const controlActions = ["ustavi","nadaljuj","vklopi","izklopi","zazeni","status","urnik","preveri","pomoc","komande","zmore","preklopi"];
   const articleActions = ["objavi","napisi","ustvari","dodaj"];
   const articleNouns = ["clanek","novica","blog"];
-  const siteActions = ["uredi","spremeni","izboljsaj","polepsaj","dodaj","odstrani","nalozi","premakni","kopiraj","preimenuj"];
-  const siteNouns = ["stran","rubrika","meni","navigacija","header","footer","hero","sidebar","galerija","slika","video","dizajn","css","responsive","logo","favicon","font","seo","meta"];
+  const siteActions = ["uredi","spremeni","izboljsaj","polepsaj","dodaj","odstrani","nalozi","premakni","kopiraj","preimenuj","skrij","pokazi"];
+  const siteNouns = ["stran","rubrika","meni","navigacija","header","footer","hero","sidebar","galerija","slika","video","dizajn","css","responsive","logo","favicon","font","seo","meta","tema","barva","paleta","gumb","obrazec","link","live"];
 
   if (controlActions.some((x) => tokens.has(x))) scores.control += 3;
   if (tokens.has("agent") || tokens.has("objavljanje")) scores.control += 2;
