@@ -15,7 +15,7 @@ import yaml
 BASE = Path(__file__).resolve().parents[2]
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
-from services.sources import collect, collect_topic, filter_topic_items, rank_topic_items
+from services.sources import collect, collect_topic, filter_topic_items, rank_topic_items, topic_relevance_score
 from services.ai_provider import generate, review_grounding, AIUnavailable
 from services.validator import validate
 from services.publisher import publish_to_app, slugify
@@ -153,6 +153,43 @@ def manual_editor_system_prompt(system_prompt: str, topic: str, source_count: in
         "skip=true je dovoljen samo, če so najrelevantnejši viri dejansko nepovezani s temo "
         "ali ne vsebujejo dovolj preverljivih dejstev niti za kratek faktografski članek."
     )
+
+
+GENERIC_SEARCH_TITLES = {
+    "duckduckgo", "google", "bing", "reddit", "youtube", "wikipedia",
+}
+
+def manual_topic_alignment_errors(topic: str, article: dict, source_items: list[dict]) -> list[str]:
+    """Reject manual articles that drift away from the authenticated editor's topic."""
+    topic = str(topic or "").strip()
+    if not topic:
+        return []
+
+    title = str(article.get("title") or "").strip()
+    excerpt = str(article.get("excerpt") or "").strip()
+    content = str(article.get("content") or "").strip()
+
+    article_probe = {
+        "title": title,
+        "summary": (excerpt + " " + content[:1200]).strip(),
+    }
+    article_score = topic_relevance_score(topic, article_probe)
+    source_scores = [topic_relevance_score(topic, item) for item in (source_items or [])]
+    best_source_score = max(source_scores, default=0)
+
+    errors = []
+    if article_score < 2:
+        errors.append("tema_ni_v_clanku")
+    if best_source_score < 2:
+        errors.append("tema_ni_v_virih")
+
+    normalized_title = re.sub(r"[^a-z0-9]+", " ", title.lower()).strip()
+    if normalized_title in GENERIC_SEARCH_TITLES:
+        topic_low = topic.lower()
+        if normalized_title not in topic_low:
+            errors.append("genericni_naslov_iskalnika")
+
+    return errors
 
 def now(): return datetime.now(ZoneInfo("Europe/Ljubljana"))
 def control(): return load_json(str(CONTROL), {"enabled": True, "publish_mode": "automatic"})
@@ -712,6 +749,9 @@ def main():
 
     article["id"] = slugify(article.get("title", "")) + "-" + hashlib.sha1(used_for_article[0]["url"].encode()).hexdigest()[:8]
     errors = validate(article, min_chars, max_chars, titles, used_urls, allowed_urls)
+    if manual_request and args.topic.strip():
+        errors.extend(manual_topic_alignment_errors(args.topic, article, evidence_pool))
+        errors = list(dict.fromkeys(errors))
 
     if errors:
         print("QA_ERRORS_INITIAL " + ",".join(errors))
@@ -724,6 +764,9 @@ def main():
             if not repaired.get("skip"):
                 repaired["id"] = slugify(repaired.get("title", "")) + "-" + hashlib.sha1(used_for_article[0]["url"].encode()).hexdigest()[:8]
                 repaired_errors = validate(repaired, min_chars, max_chars, titles, used_urls, allowed_urls)
+                if manual_request and args.topic.strip():
+                    repaired_errors.extend(manual_topic_alignment_errors(args.topic, repaired, evidence_pool))
+                    repaired_errors = list(dict.fromkeys(repaired_errors))
                 print("QA_ERRORS_REPAIR " + (",".join(repaired_errors) if repaired_errors else "none"))
                 if not repaired_errors:
                     article = repaired
@@ -770,6 +813,9 @@ def main():
                         used_urls,
                         allowed_urls,
                     )
+                    if manual_request and args.topic.strip():
+                        repaired_errors.extend(manual_topic_alignment_errors(args.topic, repaired, evidence_pool))
+                        repaired_errors = list(dict.fromkeys(repaired_errors))
                     if not repaired_errors:
                         second_review = review_grounding(repaired, evidence_pool, args.category)
                         if second_review.get("pass"):
