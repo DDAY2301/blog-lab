@@ -72,6 +72,9 @@ jobs:
         run: |
           python -m py_compile agents/operator-terminal/*.py agents/blog-lab-publisher/agent.py agents/blog-lab-publisher/services/*.py
           pytest -q agents/operator-terminal/tests agents/blog-lab-publisher/tests
+
+      - name: Test terminal execution contract
+        run: python scripts/test_operator_commands.py
       - name: Decrypt private command
         run: python agents/operator-terminal/decrypt.py "$RUNNER_TEMP/operator-command.json"
       - name: Handle deterministic schedule/catch-up command
