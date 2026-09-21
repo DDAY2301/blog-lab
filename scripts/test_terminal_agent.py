@@ -150,6 +150,17 @@ for marker in [
     if marker not in deferred_recovery:
         raise SystemExit(f"Deferred terminal recovery marker missing: {marker}")
 
+idempotency_fire_drill = (root / ".github" / "workflows" / "terminal-idempotency-fire-drill.yml").read_text(encoding="utf-8")
+for marker in [
+    "workflow_dispatch:",
+    "Dispatch identical request twice",
+    "Verify ledger contains request exactly once",
+]:
+    if marker not in idempotency_fire_drill:
+        raise SystemExit(f"Terminal idempotency fire-drill marker missing: {marker}")
+if "\n  push:" in idempotency_fire_drill:
+    raise SystemExit("Terminal idempotency fire drill must remain manual-only after proof")
+
 operator = (root / ".github" / "workflows" / "operator-terminal.yml").read_text(encoding="utf-8")
 for marker in [
     "Reject edits to protected security paths",
@@ -158,6 +169,11 @@ for marker in [
     "Destroy decrypted command",
     "Test terminal execution contract",
     "Check terminal request idempotency",
+    "blog-lab-terminal-mutations",
+    "TERMINAL_REQUEST_HISTORY_GUARD",
+    "request_guard.py mark",
+    "Duplicate request summary",
+    "request_guard.py check",
 ]:
     if marker not in operator:
         raise SystemExit(f"Operator workflow safety marker missing: {marker}")
