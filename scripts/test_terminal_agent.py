@@ -164,6 +164,7 @@ for marker in [
 idempotency_fire_drill = (root / ".github" / "workflows" / "terminal-idempotency-fire-drill.yml").read_text(encoding="utf-8")
 for marker in [
     "workflow_dispatch:",
+    'cron: "37 3 * * 0"',
     "Dispatch identical request twice",
     "Verify ledger contains request exactly once",
 ]:
