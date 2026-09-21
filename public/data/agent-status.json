@@ -1,21 +1,21 @@
 {
   "agent": "Blog Lab Publisher",
-  "status": "completed",
+  "status": "failed",
   "enabled": true,
   "category": "aktualno",
-  "last_run": "2026-09-21T12:32:31+02:00",
-  "last_success": "2026-09-21T12:32:31+02:00",
-  "last_output": "sign-in-to-your-account-4b374c63",
+  "last_run": "2026-09-21T12:56:19+02:00",
+  "last_success": "2026-09-21T12:53:45+02:00",
+  "last_output": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762",
   "next_run": null,
-  "message": "Članek je uspešno pripravljen za objavo.",
-  "posts_today": 2,
+  "message": "QA ni uspel pri ročni uredniški zahtevi.",
+  "posts_today": 3,
   "scheduled_posts_today": 1,
-  "manual_posts_today": 1,
+  "manual_posts_today": 2,
   "writer_mode": "local_evidence_ai",
   "scheduled_slots_done": [
     "2026-09-21|08:17|sport"
   ],
   "scheduled_slots_deferred": [],
   "last_editorial_hold": null,
-  "last_error": null
+  "last_error": "prekratek"
 }

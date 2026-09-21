@@ -19,6 +19,44 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762",
+    "title": "Kachelmannwetter | Wetter HD: Radar, Vorhersage uvm.",
+    "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Kachelmannwetter | Wetter HD: Radar, Vorhersage uvm.«.",
+    "seoDescription": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Kachelmannwetter | Wetter HD: Radar, Vorhersage uvm.«.",
+    "content": "**Aktualno, 21. 9. 2026.** Aktuelle Wetterdaten Sehen Sie hier die stündlich aktualisierten Werte von offiziellen Wetterstationen in ganz Europa. Egal ob Temperatur, Wind, Niederschlag, Sonnenscheindauer oder viele weitere Parameter, lassen Sie sich anzeigen, wo welche Daten gemessen wurden.\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Bing Web – aktualno – odvijalo dogakjanje tega vikenda. Objavljeno: Sun, 20 Sep 2026 20:38:00 GMT. [Odpri izvirni vir](https://kachelmannwetter.com/de)\n\n## Dopolnitev vira 2: Bing Web – aktualno – dogakjanje tega vikenda\n\nEverything you need to set sail is already at your fingertips, so you’re free to chart your own path across the waves. Enjoy thrilling stories, dangerous sea creatures and hauls of hidden treasure that help shape your own unique pirate legend.\n\n Vir: Bing Web – aktualno – dogakjanje tega vikenda. Objavljeno: Wed, 23 Mar 2022 10:44:00 GMT. [Odpri izvirni vir](https://www.seaofthieves.com/game-info)\n\n## Dopolnitev vira 3: Bing Web – aktualno – dogakjanje tega vikenda\n\nRegular free updates come to Sea of Thieves each month, adding characters, content, mechanics and rewards. Follow the unfolding lore of the world and take on new challenges!\n\n Vir: Bing Web – aktualno – dogakjanje tega vikenda. Objavljeno: Sun, 06 Sep 2026 04:48:00 GMT. [Odpri izvirni vir](https://www.seaofthieves.com/)\n\n## Dopolnitev vira 4: differentiatedteaching.com\n\nThis Esperanza Rising novel study guide is perfect for 4th grade through 6th grade students because it engages but requires more than just regurgitating the plot. The lessons focus on comprehension and text-based vocabulary. / Reading & Literacy / Esperanza Rising Novel Study: Activities to Engage All Readers Novel Studies & Book Clubs Esperanza Rising Novel Study: Activities to Engage All Readers June 30, 2021 May 18, 2026 Finding meaningful historical fiction that students can connect with on a deeper level can be challenging when you’ve got struggling or reluctant learners. That’s one reason I love using Esperanza Rising as part of my classroom novel units. This book is perfect for a whole-class novel…\n\n Vir: differentiatedteaching.com. Objavljeno: Sun, 20 Sep 2026 09:32:00 GMT. [Odpri izvirni vir](https://www.differentiatedteaching.com/esperanza-rising-novel-study/)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Aktualno",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": {
+      "url": "https://emtpbuwfw9g.exactdn.com/wp-content/uploads/2019/04/Boxcar-Children-Novel-StudyIMG_2935.jpg",
+      "alt": "Esperanza Rising Novel Study: Comprehension Questions & Vocabulary Activities",
+      "caption": "differentiatedteaching.com"
+    },
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Bing Web – aktualno – odvijalo dogakjanje tega vikenda — Kachelmannwetter | Wetter HD: Radar, Vorhersage uvm.",
+        "url": "https://kachelmannwetter.com/de"
+      },
+      {
+        "label": "Bing Web – aktualno – dogakjanje tega vikenda — Welcome to Sea of Thieves",
+        "url": "https://www.seaofthieves.com/game-info"
+      },
+      {
+        "label": "Bing Web – aktualno – dogakjanje tega vikenda — Sea of Thieves - Welcome to Sea of Thieves on Xbox, Windows ...",
+        "url": "https://www.seaofthieves.com/"
+      },
+      {
+        "label": "differentiatedteaching.com — Esperanza Rising Novel Study: Comprehension Questions & Vocabulary Activities",
+        "url": "https://www.differentiatedteaching.com/esperanza-rising-novel-study/"
+      }
+    ],
+    "createdAt": "2026-09-21T12:53:45+02:00",
+    "updatedAt": "2026-09-21T12:53:45+02:00"
+  },
+
+  {
     "id": "sign-in-to-your-account-4b374c63",
     "aliases": ["sign-in-to-your-account-4b374c6"],
     "title": "10 idej za dober obisk restavracij v Ljubljani v 2026",

@@ -1,17 +1,18 @@
 [
   {
     "id": "909bc731-7633-4656-bfec-4b8c8609c044",
-    "status": "pending",
+    "status": "resolved",
     "command": "dodaj sedaj članek kako se je odvijalo dogakjanje tega vikenda",
     "mode": "article",
     "category": "aktualno",
     "actor": "terminal",
     "created_at": "2026-09-20T12:11:32Z",
-    "updated_at": "2026-09-20T16:18:24Z",
-    "attempts": 3,
+    "updated_at": "2026-09-21T10:53:46Z",
+    "attempts": 4,
     "reason": "AI writer capacity/provider unavailable; will retry later.",
-    "last_attempt_at": "2026-09-20T16:18:11Z",
-    "last_log": "WARN topic source provider=gdelt query='dodaj sedaj članek kako se je odvijalo dogakjanje tega vikenda' error=<urlopen error _ssl.c:993: The handshake operation timed out> WARN topic source provider=bing-news query='odvijalo dogakjanje tega vikenda' error=Vir ni dosegljiv: https://www.bing.com/news/search?q=odvijalo+dogakjanje+tega+vikenda&format=rss: not well-formed (invalid token): line 1, column 41 WARN topic source provider=gdelt query='odvijalo dogakjanje tega vikenda' error=<urlopen error _ssl.c:993: The handshake operation timed out> WARN topic source provider=gdelt query='dogakjanje tega vikenda' error=<urlopen error _ssl.c:993: The handshake operation timed out> TOPIC_DIRECT_OK checked=12 enriched=6 TOPIC_SOURCES_OK count=12 providers=bing-web:31 ARTICLE_AI_UNAVAILABLE Workers AI writer ni uspel: HTTP 502: {\"ok\":false,\"status\":502,\"error\":\"Workers AI generiranje ni uspelo.\",\"code\":\"AI_INFERENCE_FAILED\",\"detail\":\"Workers AI non-retryable failure on @cf/zai-org/glm-4.7-flash: 4006: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage.\",\"attempts\":[{\"model\":\"@cf/zai-org/glm-4.7-flash\",\"attempt\":1,\"name\":\"AiError\",\"message\":\"4006: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage.\"}],\"last_model\":\"@cf/zai-org/glm-4.7-flash\"} INTENT_ROUTE requested=article resolved=article autocorrected=false ARTICLE_AI_UNAVAILABLE AI pisec ali uredniški pregled trenutno ni na voljo. Zaradi kakovosti ročni članek ni bil objavljen in ne bo nadomeščen z nepovezanim fallbackom."
+    "last_attempt_at": "2026-09-21T10:51:46Z",
+    "last_log": "WARN topic source provider=bing-news query='dodaj sedaj članek kako se je odvijalo dogakjanje tega vikenda' error=Vir ni dosegljiv: https://www.bing.com/news/search?q=dodaj+sedaj+%C4%8Dlanek+kako+se+je+odvijalo+dogakjanje+tega+vikenda&format=rss: not well-formed (invalid token): line 1, column 41 WARN topic source provider=gdelt query='dodaj sedaj članek kako se je odvijalo dogakjanje tega vikenda' error=HTTP Error 429: Too Many Requests WARN topic source provider=gdelt query='odvijalo dogakjanje tega vikenda' error=HTTP Error 429: Too Many Requests WARN topic source provider=bing-news query='dogakjanje tega vikenda' error=Vir ni dosegljiv: https://www.bing.com/news/search?q=dogakjanje+tega+vikenda&format=rss: not well-formed (invalid token): line 1, column 41 WARN topic source provider=gdelt query='dogakjanje tega vikenda' error=HTTP Error 429: Too Many Requests TOPIC_DIRECT_OK checked=12 enriched=9 TOPIC_SOURCES_OK count=12 providers=bing-web:30 PUBLISHED:kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762 INTENT_ROUTE requested=article resolved=article autocorrected=false",
+    "resolved_at": "2026-09-21T10:53:46Z"
   },
   {
     "id": "a9bc12cf-a839-4165-81a3-b5ae65c96d28",
@@ -30,15 +31,18 @@
   },
   {
     "id": "5a0804f5-0f5e-4b81-89c5-c2cf39e60fba",
-    "status": "pending",
+    "status": "failed",
     "command": "naredi ki smo jih zamudili danes in prejšnje dni",
     "mode": "article",
     "category": "aktualno",
     "actor": "dan.grmusa@gmail.com",
     "created_at": "2026-09-20T14:29:20Z",
-    "updated_at": "2026-09-20T14:29:20Z",
-    "attempts": 0,
-    "reason": "WARN topic source provider=gdelt query='naredi ki smo jih zamudili danes in prejšnje dni' error=HTTP Error 429: Too Many Requests WARN topic source provider=gdelt query='naredi ki smo jih zamudili danes' error=HTTP Error 429: Too Many Requests WARN topic source provider=gdelt query='prejšnje dni' error=HTTP Error 429: Too Many Requests WARN topic source provider=gdelt query='zamudili danes prejšnje' error=HTTP Error 429: Too Many Requests TOPIC_DIRECT_OK checked=8 enriched=6 TOPIC_SOURCES_OK count=30 providers=bing-web:40,google-news-si:74 ARTICLE_AI_UNAVAILABLE Workers AI writer ni uspel: HTTP Error 502: Bad Gateway ARTICLE_AI_UNAVAILABLE AI pisec ali uredniški pregled trenutno ni na voljo. Zaradi kakovosti ročni članek ni bil objavljen in ne bo nadomeščen z nepovezanim fallbackom. INTENT_ROUTE requested=article resolved=article autocorrected=false"
+    "updated_at": "2026-09-21T10:56:19Z",
+    "attempts": 1,
+    "reason": "WARN topic source provider=bing-news query='naredi ki smo jih zamudili danes in prejšnje dni' error=Vir ni dosegljiv: https://www.bing.com/news/search?q=naredi+ki+smo+jih+zamudili+danes+in+prej%C5%A1nje+dni&format=rss: not well-formed (invalid token): line 1, column 41 WARN topic source provider=gdelt query='naredi ki smo jih zamudili danes in prejšnje dni' error=HTTP Error 429: Too Many Requests WARN topic source provider=gdelt query='naredi ki smo jih zamudili danes' error=HTTP Error 429: Too Many Requests WARN topic source provider=bing-news query='prejšnje dni' error=Vir ni dosegljiv: https://www.bing.com/news/search?q=prej%C5%A1nje+dni&format=rss: not well-formed (invalid token): line 1, column 41 WARN topic source provider=gdelt query='prejšnje dni' error=HTTP Error 429: Too Many Requests WARN topic source provider=bing-news query='zamudili danes prejšnje' error=Vir ni dosegljiv: https://www.bing.com/news/search?q=zamudili+danes+prej%C5%A1nje&format=rss: not well-formed (invalid token): line 1, column 41 WARN topic source provider=gdelt query='zamudili danes prejšnje' error=HTTP Error 429: Too Many Requests TOPIC_DIRECT_OK checked=8 enriched=8 TOPIC_SOURCES_OK count=30 providers=bing-web:35,google-news-si:70 QA_ERRORS_INITIAL prekratek QA_ERRORS_REPAIR prekratek QA_FAILED_FINAL prekratek INTENT_ROUTE requested=article resolved=article autocorrected=false",
+    "last_attempt_at": "2026-09-21T10:53:46Z",
+    "last_log": "WARN topic source provider=bing-news query='naredi ki smo jih zamudili danes in prejšnje dni' error=Vir ni dosegljiv: https://www.bing.com/news/search?q=naredi+ki+smo+jih+zamudili+danes+in+prej%C5%A1nje+dni&format=rss: not well-formed (invalid token): line 1, column 41 WARN topic source provider=gdelt query='naredi ki smo jih zamudili danes in prejšnje dni' error=HTTP Error 429: Too Many Requests WARN topic source provider=gdelt query='naredi ki smo jih zamudili danes' error=HTTP Error 429: Too Many Requests WARN topic source provider=bing-news query='prejšnje dni' error=Vir ni dosegljiv: https://www.bing.com/news/search?q=prej%C5%A1nje+dni&format=rss: not well-formed (invalid token): line 1, column 41 WARN topic source provider=gdelt query='prejšnje dni' error=HTTP Error 429: Too Many Requests WARN topic source provider=bing-news query='zamudili danes prejšnje' error=Vir ni dosegljiv: https://www.bing.com/news/search?q=zamudili+danes+prej%C5%A1nje&format=rss: not well-formed (invalid token): line 1, column 41 WARN topic source provider=gdelt query='zamudili danes prejšnje' error=HTTP Error 429: Too Many Requests TOPIC_DIRECT_OK checked=8 enriched=8 TOPIC_SOURCES_OK count=30 providers=bing-web:35,google-news-si:70 QA_ERRORS_INITIAL prekratek QA_ERRORS_REPAIR prekratek QA_FAILED_FINAL prekratek INTENT_ROUTE requested=article resolved=article autocorrected=false",
+    "failed_at": "2026-09-21T10:56:19Z"
   },
   {
     "id": "901ee508-d020-412b-aa99-6853743e2fe4",
