@@ -4,9 +4,9 @@ const WORKFLOW = "operator-terminal.yml";
 const PUBLISHER_WORKFLOW = "agent-blog-lab-publisher.yml";
 const SESSION_COOKIE = "bloglab_session";
 const SESSION_TTL_SECONDS = 60 * 60 * 12;
-const GITHUB_API_TIMEOUT_MS = 12000;
+const GITHUB_API_TIMEOUT_MS = 6000;
 const HISTORY_RUN_LIMIT = 12;
-const FAILURE_DETAIL_LIMIT = 5;
+const FAILURE_DETAIL_LIMIT = 0;
 const AUTHORIZED_USERS = Object.freeze({
   "dan.grmusa@gmail.com": "DAN_LOGIN_PASSWORD",
   "maj@klemenc.org": "MAJ_LOGIN_PASSWORD"
@@ -1708,7 +1708,7 @@ $('#send').onclick=async()=>{const command=$('#command').value.trim();if(!comman
 $('#logout').onclick=async()=>{await fetch('/api/logout',{method:'POST'}).catch(()=>{});location.replace('/')};
 let pollTimer=null;
 function hasActiveRuns(){return rows().some(x=>x.id&&x.status!=='completed'&&x.status!=='unknown')}
-async function pollLoop(){await load();pollTimer=setTimeout(pollLoop,hasActiveRuns()?1500:7000)}
+async function pollLoop(){await load();pollTimer=setTimeout(pollLoop,hasActiveRuns()?3000:12000)}
 function kickPoll(){if(pollTimer)clearTimeout(pollTimer);pollTimer=setTimeout(pollLoop,150)}
 pollLoop();
 </script>
