@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-21T12:08:50+02:00",
-  "loop_count": 16,
+  "updated_at": "2026-09-21T12:09:39+02:00",
+  "loop_count": 17,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-21T12:08:28+02:00",
+      "last_learning_run": "2026-09-21T12:09:19+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -40,11 +40,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 480,
-          "last_seen": "2026-09-21T12:08:28+02:00",
+          "seen": 510,
+          "last_seen": "2026-09-21T12:09:19+02:00",
           "last_title": "Poleg Slovenije se za evropsko prvenstvo zanima veliko držav - Delo.si",
           "last_provider": "",
-          "published": 256,
+          "published": 272,
           "last_output_id": "s-tribune-sportni-trenutki-zaradi-katerih-se-mi-se-danes-najezijo-dlake-aeb6d43b"
         }
       },
@@ -58,7 +58,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-21T12:08:39+02:00",
+      "last_learning_run": "2026-09-21T12:09:28+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -80,12 +80,12 @@
       ],
       "source_health": {
         "news.google.com": {
-          "score": 2.577,
-          "seen": 480,
-          "last_seen": "2026-09-21T12:08:39+02:00",
+          "score": 2.578,
+          "seen": 510,
+          "last_seen": "2026-09-21T12:09:28+02:00",
           "last_title": "Tone Kajzer: Zunanja politika na dobri poti. Tanja Fajon: Kajzer dobro začrtal usmeritve. - rtvslo.si",
           "last_provider": "",
-          "published": 160,
+          "published": 170,
           "last_output_id": "politika-si-odpira-vrata-v-medije-vlada-kriticne-medije-s-profesionalnimi-novinarji-dojema-eeca644f"
         }
       },
@@ -93,13 +93,13 @@
       "example_titles": {
         "news.google.com": [
           "Janša diplomatom: Zunanjo politiko vodi vlada, samo to je uradna politika Slovenije - Siol.net",
-          "Nataša Pirc Musar: Ne bom tiho, ko zunanja politika ne bo skladna z ustavnimi vrednotami države - slovenskenovice.delo.si",
+          "Nataša Pirc Musar: Ne bom tiho, ko zunanja politika ne bo skladna z ustavnimi vrednotami države - Slovenske novice",
           "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-21T12:08:50+02:00",
+      "last_learning_run": "2026-09-21T12:09:39+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -126,31 +126,31 @@
       "source_health": {
         "news.google.com": {
           "score": 2.526,
-          "seen": 480,
-          "last_seen": "2026-09-21T12:08:50+02:00",
-          "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
+          "seen": 510,
+          "last_seen": "2026-09-21T12:09:39+02:00",
+          "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - novomesto.si",
           "last_provider": "",
-          "published": 240,
+          "published": 255,
           "last_output_id": "anja-rakusa-brus-pomemben-argument-za-mojo-kandidaturo-je-izkusnja-z-aktualno-vlado-ki-str-2c38f7cd"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 64,
+          "published": 68,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "accounts.google.com": {
-          "score": 2.43,
-          "published": 16,
+          "score": 2.444,
+          "published": 17,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
-          "score": 2.43,
-          "published": 16,
+          "score": 2.444,
+          "published": 17,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "tripadvisor.com": {
-          "score": 2.43,
-          "published": 16,
+          "score": 2.444,
+          "published": 17,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         }
       },
@@ -158,7 +158,7 @@
       "example_titles": {
         "news.google.com": [
           "(AKTUALNO) V novi številki revije Demokracija preberite: Izključujejo in zavirajo razvoj! Janša: Osamosvojitvena Slovenija ne bo nikoli več ",
-          "(AKTUALNO) Hudo bolni slovenski otroci ostajajo brez dostopa do zdravila, odobrenega s strani evropske agencije EMA - DEMOKRACIJA.SI",
+          "(AKTUALNO) Hudo bolni slovenski otroci ostajajo brez dostopa do zdravila, odobrenega s strani evropske agencije EMA - Demokracija",
           "Najnižja gledanost oddaje Marcel v desetih letih, Tarča ostaja paradni konj - Info360"
         ]
       }
