@@ -19,6 +19,44 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "sign-in-to-your-account-4b374c63",
+    "title": "Sign in to your account",
+    "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Sign in to your account«.",
+    "seoDescription": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Sign in to your account«.",
+    "content": "**Aktualno, 21. 9. 2026.** Access and manage your Microsoft account, subscriptions, and settings all in one place.\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Bing Web – aktualno – 10ih najboljših restavracijah v Ljubljani. Objavljeno: Sun, 20 Sep 2026 07:38:00 GMT. [Odpri izvirni vir](https://myaccount.microsoft.com/)\n\n## Dopolnitev vira 2: Bing Web – aktualno – 10ih najboljših restavracijah v Ljubljani\n\nGet access to free online versions of Outlook, Word, Excel, and PowerPoint.\n\n Vir: Bing Web – aktualno – 10ih najboljših restavracijah v Ljubljani. Objavljeno: Sun, 20 Sep 2026 21:42:00 GMT. [Odpri izvirni vir](https://account.microsoft.com/account)\n\n## Dopolnitev vira 3: Bing Web – aktualno – najboljših restavracijah Ljubljani\n\nTactacam's REVEAL Cellular Camera is the ultimate remote scouting tool. The camera is ideal for locations with limited access\n\n Vir: Bing Web – aktualno – najboljših restavracijah Ljubljani. Objavljeno: Sat, 19 Sep 2026 13:37:00 GMT. [Odpri izvirni vir](https://account.revealcellcam.com/)\n\n## Dopolnitev vira 4: Dnevnik\n\nLestvica: 10 najboljših restavracij v Ljubljani Dnevnik\n\n Vir: Dnevnik. Objavljeno: Sun, 16 Aug 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMigAFBVV95cUxOLUx4RmhibzVxMFVvNnAyQ0E0SWZEV19DbkE2NHhuVG1aNGFyWlF4bHVFSmh6cnJZRUluOERWWDF6X0VwX1ZDRld3SzVvT3VkYlZsSW1uSmFYcmtOV1F0elpSUzZzRWluR041am5uRFk0QXdGdnlBNnVFNXNBbEFZOQ?oc=5)\n\n## Dopolnitev vira 5: Dnevnik\n\nMojmir Šiftar, kuharski mojster: Če stažiraš v najboljših restavracijah, še ne pomeni, da znaš kuhati Dnevnik\n\n Vir: Dnevnik. Objavljeno: Tue, 17 Jun 2025 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMi8gFBVV95cUxPTVZfYnpMSWNUbjhPSWRKTHBBMUJ3UnpiVExhVmJwZlZ0R2tfeDl2V19TdHVFOVBaUGRMUXJGWmV1dWJlRmNBNDRuQVlSM2NLOWtIZ01QQ010Z0RFMXp0Y0FuT0F2anluWk5zUGxCUVBPU254Zm5nRlBEM1Y2alJmTHh6SG9oek1OeW5oWmJSTDZWQVVBM2Y4VFhiRGx0QkpmejFBenB1OWxwZHhFaThlZnBITGZRZWRwclpVVE9GX0FfTkxoeXpEMEx3a1ZNZWhMblQxVGs3MzNPZ2tpeHYwOXZyQWd6WXdZejd5eTJzc0Vtdw?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Aktualno",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Bing Web – aktualno – 10ih najboljših restavracijah v Ljubljani — Sign in to your account",
+        "url": "https://myaccount.microsoft.com/"
+      },
+      {
+        "label": "Bing Web – aktualno – 10ih najboljših restavracijah v Ljubljani — Microsoft account | Sign In or Create Your Account Today – Microsoft",
+        "url": "https://account.microsoft.com/account"
+      },
+      {
+        "label": "Bing Web – aktualno – najboljših restavracijah Ljubljani — Tactacam Reveal",
+        "url": "https://account.revealcellcam.com/"
+      },
+      {
+        "label": "Dnevnik — Lestvica: 10 najboljših restavracij v Ljubljani - Dnevnik",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOLUx4RmhibzVxMFVvNnAyQ0E0SWZEV19DbkE2NHhuVG1aNGFyWlF4bHVFSmh6cnJZRUluOERWWDF6X0VwX1ZDRld3SzVvT3VkYlZsSW1uSmFYcmtOV1F0elpSUzZzRWluR041am5uRFk0QXdGdnlBNnVFNXNBbEFZOQ?oc=5"
+      },
+      {
+        "label": "Dnevnik — Mojmir Šiftar, kuharski mojster: Če stažiraš v najboljših restavracijah, še ne pomeni, da znaš kuhati - Dnevnik",
+        "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPTVZfYnpMSWNUbjhPSWRKTHBBMUJ3UnpiVExhVmJwZlZ0R2tfeDl2V19TdHVFOVBaUGRMUXJGWmV1dWJlRmNBNDRuQVlSM2NLOWtIZ01QQ010Z0RFMXp0Y0FuT0F2anluWk5zUGxCUVBPU254Zm5nRlBEM1Y2alJmTHh6SG9oek1OeW5oWmJSTDZWQVVBM2Y4VFhiRGx0QkpmejFBenB1OWxwZHhFaThlZnBITGZRZWRwclpVVE9GX0FfTkxoeXpEMEx3a1ZNZWhMblQxVGs3MzNPZ2tpeHYwOXZyQWd6WXdZejd5eTJzc0Vtdw?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-21T12:32:31+02:00",
+    "updatedAt": "2026-09-21T12:32:31+02:00"
+  },
+
+  {
     "id": "s-tribune-sportni-trenutki-zaradi-katerih-se-mi-se-danes-najezijo-dlake-aeb6d43b",
     "title": "S tribune: Športni trenutki, zaradi katerih se mi še danes naježijo dlake",
     "excerpt": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »S tribune: Športni trenutki, zaradi katerih se mi še danes naježijo dlake«.",
