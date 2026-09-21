@@ -20,6 +20,48 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "duckduckgo-287dab86",
+    "title": "DuckDuckGo",
+    "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »DuckDuckGo«.",
+    "seoDescription": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »DuckDuckGo«.",
+    "content": "**Aktualno, 21. 9. 2026.** We like to keep the DuckDuckGo subreddit friendly, suitable for children (13+), and free of political discussion that risks leading to personal insults. We recommend /r/politics for anything related to politics. Rude, vulgar, and/or politically charged posts or replies are subject to removal and may lead to further moderation action. Thanks!\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Bing Web – aktualno – Naredi članek o nočnem nebu ljubljane. Objavljeno: Sat, 17 Aug 2024 04:14:00 GMT. [Odpri izvirni vir](https://www.reddit.com/r/duckduckgo/top/)\n\n## Dopolnitev vira 2: Bing Web – aktualno – Naredi članek o nočnem nebu ljubljane\n\nHi! To start off, DuckDuckGo is “safe” - much safer (and more private!) compared to Google or Bing in its raw form. There are however many alternatives to choose, but if you are just getting started on your internet privacy journey, DuckDuckGo is a great and simple search engine to get started with.\n\n Vir: Bing Web – aktualno – Naredi članek o nočnem nebu ljubljane. Objavljeno: Tue, 18 Jun 2024 06:51:00 GMT. [Odpri izvirni vir](https://www.reddit.com/r/privacy/comments/14op32s/how_safe_is_duckduckgo/)\n\n## Dopolnitev vira 3: Bing Web – aktualno – Naredi članek o nočnem nebu ljubljane\n\n其中以下几个是我自己开发的： ddgs-web-search : 调用python ddgs 包进行网络搜索（调用DuckDuckGo API），不需要 API Key，已发布clawhub。 deep-research和deep-research-executor ： 用来做深度研究（制定研究计划、搜索网络信息、撰写报告,也已发布clawhub） runninghub-api : 简单封装了调用Runninghub 工作流API。 ai-agent-portrait ...\n\n Vir: Bing Web – aktualno – Naredi članek o nočnem nebu ljubljane. Objavljeno: Sat, 19 Sep 2026 14:56:00 GMT. [Odpri izvirni vir](https://www.zhihu.com/question/2019693913921835490)\n\n## Dopolnitev vira 4: Bing Web – aktualno – Naredi članek o nočnem nebu ljubljane\n\nDuckDuckGo是专注隐私、反追踪以及避免信息过滤的搜索引擎，使用多方来源优化搜索结果，并加强内容的关联度。\n\n Vir: Bing Web – aktualno – Naredi članek o nočnem nebu ljubljane. Objavljeno: Mon, 21 Sep 2026 13:13:00 GMT. [Odpri izvirni vir](https://www.zhihu.com/topic/19594248/hot)\n\n## Dopolnitev vira 5: Ljubljanainfo.com\n\nGlavna zvezda na nočnem nebu kmalu Jupiter, kdaj boste lahko opazovali veliko oranžno kroglo? Ljubljanainfo.com\n\n Vir: Ljubljanainfo.com. Objavljeno: Fri, 09 Sep 2022 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiuwFBVV95cUxOUGVCUmVUOGdPenI4V2lJR0VOMGZIUFB2MkYxT1gtQWxXZFhlaU1xODVfbzY2Q2JvZzR2VnItbUFFZG9sNmRERjdSVzAwdE9vUDNoUjBJTzBOTGNBUnVrXzMxOHVlVVgyVmZuSlZHNGxRdmxfRmFCcHU5cWdmSW0xT1YyTVM1Tjlxc2xVcDFra1Z1RGZXZTlNWnp3OG9aZDJEcS1vMnlMNzh5dDA2ejRLNlZjWTltVzV3al9z?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Aktualno",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": {
+      "url": "https://dday2301.github.io/blog-lab/media/uploads/20260921142152-61282e85-images.jpg",
+      "alt": "",
+      "caption": ""
+    },
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Bing Web – aktualno – Naredi članek o nočnem nebu ljubljane — DuckDuckGo - Reddit",
+        "url": "https://www.reddit.com/r/duckduckgo/top/"
+      },
+      {
+        "label": "Bing Web – aktualno – Naredi članek o nočnem nebu ljubljane — how safe is duckduckgo? : r/privacy - Reddit",
+        "url": "https://www.reddit.com/r/privacy/comments/14op32s/how_safe_is_duckduckgo/"
+      },
+      {
+        "label": "Bing Web – aktualno – Naredi članek o nočnem nebu ljubljane — 你的openclaw都装了哪些skill？ - 知乎",
+        "url": "https://www.zhihu.com/question/2019693913921835490"
+      },
+      {
+        "label": "Bing Web – aktualno – Naredi članek o nočnem nebu ljubljane — DuckDuckGo - 知乎",
+        "url": "https://www.zhihu.com/topic/19594248/hot"
+      },
+      {
+        "label": "Ljubljanainfo.com — Glavna zvezda na nočnem nebu kmalu Jupiter, kdaj boste lahko opazovali veliko oranžno kroglo? - Ljubljanainfo.com",
+        "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOUGVCUmVUOGdPenI4V2lJR0VOMGZIUFB2MkYxT1gtQWxXZFhlaU1xODVfbzY2Q2JvZzR2VnItbUFFZG9sNmRERjdSVzAwdE9vUDNoUjBJTzBOTGNBUnVrXzMxOHVlVVgyVmZuSlZHNGxRdmxfRmFCcHU5cWdmSW0xT1YyTVM1Tjlxc2xVcDFra1Z1RGZXZTlNWnp3OG9aZDJEcS1vMnlMNzh5dDA2ejRLNlZjWTltVzV3al9z?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-21T16:26:47+02:00",
+    "updatedAt": "2026-09-21T16:26:47+02:00"
+  },
+
+  {
     "id": "okoljski-ekonomist-sonnenschein-politika-ministra-za-energetiko-ni-v-interesu-javnosti-001b0a7e",
     "title": "Okoljski ekonomist Sonnenschein: Politika ministra za energetiko ni v interesu javnosti",
     "excerpt": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Okoljski ekonomist Sonnenschein: Politika ministra za energetiko ni v interesu javnosti«.",
