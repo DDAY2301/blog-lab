@@ -1,0 +1,157 @@
+name: Blog Lab Deferred Terminal Recovery
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "52 * * * *"
+
+concurrency:
+  group: blog-lab-deferred-terminal-recovery
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+  copilot-requests: write
+
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+      AGENT_ENABLED: "true"
+      PUBLISH_MODE: "automatic"
+      AI_PROVIDER: "auto"
+      WORKER_AI_URL: "https://blog-lab.dan-grmusa.workers.dev/api/ai/write"
+      WORKER_SITE_AI_URL: "https://blog-lab.dan-grmusa.workers.dev/api/ai/edit"
+      WORKER_AI_TOKEN: ${{ secrets.TERMINAL_COMMAND_KEY }}
+      MODEL_API_KEY: ${{ secrets.MODEL_API_KEY }}
+      MODEL_BASE_URL: ${{ secrets.MODEL_BASE_URL }}
+      MODEL_NAME: ${{ secrets.MODEL_NAME }}
+      GITHUB_TOKEN: ${{ github.token }}
+      COPILOT_GITHUB_TOKEN: ${{ secrets.COPILOT_GITHUB_TOKEN }}
+
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Sync latest main
+        shell: bash
+        run: |
+          git fetch origin main
+          git checkout -B main origin/main
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-agent.txt
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install recovery dependencies
+        run: |
+          pip install -r requirements-agent.txt
+          npm ci
+          npm install -g @github/copilot@latest
+
+      - name: Validate terminal recovery code
+        run: |
+          python -m py_compile agents/operator-terminal/command.py agents/operator-terminal/deferred_articles.py agents/operator-terminal/deferred_site_edits.py
+          python scripts/test_operator_commands.py
+
+      - name: Replay deferred article requests
+        run: python agents/operator-terminal/deferred_articles.py replay --max 2
+
+      - name: Replay deferred site-edit requests
+        run: python agents/operator-terminal/deferred_site_edits.py replay --max 1
+
+      - name: Clean runner bytecode
+        shell: bash
+        run: |
+          find agents -type d -name __pycache__ -prune -exec rm -rf {} +
+          find agents -type f -name '*.pyc' -delete
+
+      - name: Reject protected recovery mutations
+        shell: bash
+        run: |
+          CHANGED="$(
+            git diff --name-only
+            git ls-files --others --exclude-standard
+          )"
+          if printf '%s\n' "$CHANGED" | grep -Eq '^(\.github/|terminal/|agents/operator-terminal/|AGENTS\.md$|requirements-agent\.txt$|\.env)'; then
+            echo "::error::Deferred recovery modified a protected path."
+            printf '%s\n' "$CHANGED"
+            exit 1
+          fi
+
+      - name: Detect public site change
+        id: web
+        shell: bash
+        run: |
+          if git diff --quiet -- src public; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Validate recovered repository
+        shell: bash
+        run: |
+          if git diff --quiet && [[ -z "$(git status --porcelain)" ]]; then
+            echo "No deferred recovery changes."
+            exit 0
+          fi
+          python scripts/test_operator_commands.py
+          npm run build
+          if git grep -I -n -E "(ghp_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|sk-[A-Za-z0-9_-]{20,})" -- . ':(exclude)package-lock.json'; then
+            echo "::error::Credential-like material detected."
+            exit 1
+          fi
+
+      - name: Commit verified deferred recovery
+        shell: bash
+        run: |
+          if git diff --quiet && [[ -z "$(git status --porcelain)" ]]; then
+            exit 0
+          fi
+          git config user.name "blog-lab-recovery[bot]"
+          git config user.email "blog-lab-recovery[bot]@users.noreply.github.com"
+          git add -A -- src public data agents/blog-lab-publisher/config.yaml agents/blog-lab-publisher/prompts
+          for optional_path in content/drafts logs; do
+            if [[ -e "$optional_path" ]]; then
+              git add -A -- "$optional_path"
+            fi
+          done
+          if git diff --cached --quiet; then
+            echo "::error::Recovery produced only non-permitted changes."
+            git status --short
+            exit 1
+          fi
+          git commit -m "Recovery: replay deferred terminal requests"
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+      - name: Final synchronized build
+        if: ${{ steps.web.outputs.changed == 'true' }}
+        run: npm run build
+
+      - name: Configure Pages
+        if: ${{ steps.web.outputs.changed == 'true' }}
+        uses: actions/configure-pages@v6
+
+      - name: Upload Pages artifact
+        if: ${{ steps.web.outputs.changed == 'true' }}
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+      - name: Deploy recovered site
+        if: ${{ steps.web.outputs.changed == 'true' }}
+        uses: actions/deploy-pages@v5
