@@ -23,6 +23,8 @@ const hookNames = [
   "withTimeout",
   "isHelpCommand",
   "terminalCommandHelp",
+  "storeUploadedMedia",
+  "safeMediaStem",
 ];
 
 for (const name of hookNames) {
@@ -93,6 +95,26 @@ assert(help?.mode === "terminal_command_help", "Terminal help mode changed");
 assert(Array.isArray(help?.catalog) && help.catalog.length >= 10, "Terminal command catalog is incomplete");
 assert(String(help?.text || "").includes("Nadzor"), "Terminal help text is missing command groups");
 
+const unsafeName = h.safeMediaStem("../../<script>alert(1)</script>.png");
+assert(!/[<>/\\]/.test(unsafeName), "Unsafe media filename characters survived sanitization");
+assert(unsafeName.length > 0 && unsafeName.length <= 50, "Sanitized media stem length is invalid");
+
+const unsupportedMedia = await h.storeUploadedMedia({}, {
+  type: "text/html",
+  size: 128,
+  name: "payload.html",
+  async arrayBuffer() { return new ArrayBuffer(128); }
+});
+assert(unsupportedMedia?.status === 415 && unsupportedMedia?.code === "UNSUPPORTED_MEDIA_TYPE", "Unsupported media type guard failed");
+
+const oversizedMedia = await h.storeUploadedMedia({}, {
+  type: "image/png",
+  size: 5 * 1024 * 1024 + 1,
+  name: "huge.png",
+  async arrayBuffer() { return new ArrayBuffer(1); }
+});
+assert(oversizedMedia?.status === 413 && oversizedMedia?.code === "MEDIA_TOO_LARGE", "Oversized media guard failed");
+
 // A stalled dependency must be bounded instead of hanging the chatbot indefinitely.
 let timeoutGuard = false;
 const timeoutStarted = Date.now();
@@ -117,5 +139,8 @@ console.log(JSON.stringify({
   planning_leak_sanitizer: "ok",
   typo_normalization: "ok",
   command_help_catalog: "ok",
+  media_filename_sanitizer: "ok",
+  media_type_guard: "ok",
+  media_size_guard: "ok",
   timeout_guard: "ok"
 }, null, 2));
