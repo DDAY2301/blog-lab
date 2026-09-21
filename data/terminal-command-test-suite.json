@@ -1,0 +1,36 @@
+{
+  "version": "terminal-agent-hardening-1",
+  "purpose": "Static command suite for terminal agent and chatbot resilience checks.",
+  "commands": [
+    {
+      "name": "publication_repair",
+      "text": "preglej delovanje objav in reši probleme če jih najdeš",
+      "expected_path": "operational_publication_check"
+    },
+    {
+      "name": "missing_publication",
+      "text": "preveri zakaj ni današnje objave in popravi",
+      "expected_path": "operational_publication_check"
+    },
+    {
+      "name": "terminal_diagnostics",
+      "text": "testiraj terminal agenta in chatbot ter popravi probleme",
+      "expected_path": "operational_terminal_diagnostics"
+    },
+    {
+      "name": "domain_dns",
+      "text": "pripravi DNS navodila za bloglab.eu in GitHub Pages",
+      "expected_path": "operational_domain_dns"
+    },
+    {
+      "name": "article_publish",
+      "text": "objavi članek o zanimivih restavracijah v Ljubljani z nevtralnimi viri",
+      "expected_path": "github_workflow_dispatch"
+    },
+    {
+      "name": "site_edit",
+      "text": "izboljšaj vizualni del člankov in ne dovoli javnega pisanja",
+      "expected_path": "github_workflow_dispatch"
+    }
+  ]
+}
