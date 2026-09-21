@@ -23,6 +23,7 @@ const hookNames = [
   "withTimeout",
   "isHelpCommand",
   "terminalCommandHelp",
+  "terminalChatAssistant",
   "storeUploadedMedia",
   "safeMediaStem",
 ];
@@ -115,6 +116,19 @@ const oversizedMedia = await h.storeUploadedMedia({}, {
 });
 assert(oversizedMedia?.status === 413 && oversizedMedia?.code === "MEDIA_TOO_LARGE", "Oversized media guard failed");
 
+const outageStarted = Date.now();
+const outageAnswer = await h.terminalChatAssistant({
+  AI: {
+    async run() {
+      throw new Error("daily free allocation quota exceeded");
+    }
+  }
+}, "hello terminal", "test@example.com");
+assert(outageAnswer?.mode === "fallback", "Chatbot AI outage did not return fallback mode");
+assert(String(outageAnswer?.text || "").includes("Pomočnik je prejel vprašanje"), "Chatbot outage fallback text missing");
+assert(!/Draft 1|Refining the Response|Opening:/i.test(String(outageAnswer?.text || "")), "Chatbot outage leaked planning text");
+assert(Date.now() - outageStarted < 4000, "Non-retryable chatbot AI outage took too long");
+
 // A stalled dependency must be bounded instead of hanging the chatbot indefinitely.
 let timeoutGuard = false;
 const timeoutStarted = Date.now();
@@ -142,5 +156,6 @@ console.log(JSON.stringify({
   media_filename_sanitizer: "ok",
   media_type_guard: "ok",
   media_size_guard: "ok",
+  chatbot_ai_outage_fallback: "ok",
   timeout_guard: "ok"
 }, null, 2));
