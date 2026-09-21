@@ -2,11 +2,6 @@ name: Blog Lab Terminal Idempotency Fire Drill
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
-    paths:
-      - ".github/workflows/terminal-idempotency-fire-drill.yml"
 
 concurrency:
   group: blog-lab-terminal-idempotency-fire-drill
