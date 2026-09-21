@@ -21,6 +21,8 @@ const hookNames = [
   "terminalChatFallback",
   "safeFailureText",
   "withTimeout",
+  "isHelpCommand",
+  "terminalCommandHelp",
 ];
 
 for (const name of hookNames) {
@@ -43,6 +45,7 @@ function assert(condition, message) {
 }
 
 function routeFor(text) {
+  if (h.isHelpCommand(text)) return { path: "local_command_help" };
   if (h.shouldUsePublicationOperationalCheck(text)) return { path: "operational_publication_check" };
   if (h.shouldUseDomainOperationalAnswer(text)) return { path: "operational_domain_dns" };
   if (h.shouldUseTerminalDiagnostics(text)) return { path: "operational_terminal_diagnostics" };
@@ -85,6 +88,11 @@ assert(cleaned.includes("Pomočnik je prejel vprašanje"), "Planning leak did no
 assert(h.foldCommandText("ČLANEK – ŽE") === "clanek ze", "Diacritic folding regression");
 assert(h.normalizedCommandIntent("wrtie artcle") === "napisi clanek", "Typo normalization regression");
 
+const help = h.terminalCommandHelp();
+assert(help?.mode === "terminal_command_help", "Terminal help mode changed");
+assert(Array.isArray(help?.catalog) && help.catalog.length >= 10, "Terminal command catalog is incomplete");
+assert(String(help?.text || "").includes("Nadzor"), "Terminal help text is missing command groups");
+
 // A stalled dependency must be bounded instead of hanging the chatbot indefinitely.
 let timeoutGuard = false;
 const timeoutStarted = Date.now();
@@ -108,5 +116,6 @@ console.log(JSON.stringify({
   redaction: "ok",
   planning_leak_sanitizer: "ok",
   typo_normalization: "ok",
+  command_help_catalog: "ok",
   timeout_guard: "ok"
 }, null, 2));
