@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-21T19:56:07+02:00",
-  "loop_count": 104,
+  "updated_at": "2026-09-21T20:08:27+02:00",
+  "loop_count": 105,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-21T19:55:39+02:00",
+      "last_learning_run": "2026-09-21T20:08:02+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -40,25 +40,25 @@
       "source_health": {
         "news.google.com": {
           "score": 2.468,
-          "seen": 3090,
-          "last_seen": "2026-09-21T19:55:39+02:00",
-          "last_title": "Ruby osvojila Šampionat Slovenije 2026, zmaga v spominski dirki Franca Zorka ostala pri Zorkovih - Prlekija-on.net",
+          "seen": 3120,
+          "last_seen": "2026-09-21T20:08:02+02:00",
+          "last_title": "Srbi pred Slovenijo priznali nekaj neverjetnega: Poglejte, kaj nam delajo! - ekipa.svet24.si",
           "last_provider": "",
-          "published": 1664,
+          "published": 1680,
           "last_output_id": "s-tribune-sportni-trenutki-zaradi-katerih-se-mi-se-danes-najezijo-dlake-aeb6d43b"
         }
       },
       "current_source_count": 30,
       "example_titles": {
         "news.google.com": [
-          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
+          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - sport-tv.si",
           "Zmagovalec tekme Slovenija - Srbija v četrtfinalu z Belgijo - rtvslo.si",
-          "Slovenija želi nadaljevati niz zmag proti Srbiji - dnevnik.si"
+          "Slovenija želi nadaljevati niz zmag proti Srbiji - Dnevnik"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-21T19:55:56+02:00",
+      "last_learning_run": "2026-09-21T20:08:12+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -81,11 +81,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.519,
-          "seen": 3090,
-          "last_seen": "2026-09-21T19:55:56+02:00",
-          "last_title": "Nataša Pirc Musar: Slovenija si zasluži povezanost v politiki - dnevnik.si",
+          "seen": 3120,
+          "last_seen": "2026-09-21T20:08:12+02:00",
+          "last_title": "Nataša Pirc Musar: Slovenija si zasluži povezanost v politiki - Dnevnik",
           "last_provider": "",
-          "published": 1380,
+          "published": 1395,
           "last_output_id": "okoljski-ekonomist-sonnenschein-politika-ministra-za-energetiko-ni-v-interesu-javnosti-001b0a7e"
         }
       },
@@ -99,7 +99,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-21T19:56:07+02:00",
+      "last_learning_run": "2026-09-21T20:08:27+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -133,105 +133,105 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 3090,
-          "last_seen": "2026-09-21T19:56:07+02:00",
+          "seen": 3120,
+          "last_seen": "2026-09-21T20:08:27+02:00",
           "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 1974,
+          "published": 2010,
           "last_output_id": "zaposlena-na-rtv-zgrozena-vesna-milek-ne-bo-delala-za-ljubezen-ampak-denar-8d955705"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 81,
+          "published": 82,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 81,
+          "published": 82,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 104,
+          "published": 105,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 70,
+          "published": 71,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 70,
+          "published": 71,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 416,
+          "published": 420,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 104,
+          "published": 105,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 81,
+          "published": 82,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 76,
+          "published": 78,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 38,
+          "published": 39,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 140,
+          "published": 142,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 104,
+          "published": 105,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 76,
+          "published": 78,
           "last_output_id": "duckduckgo-287dab86"
         },
         "definitions.net": {
-          "score": 1.845,
-          "published": 6,
+          "score": 1.976,
+          "published": 7,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "en.wiktionary.org": {
-          "score": 1.845,
-          "published": 6,
+          "score": 1.976,
+          "published": 7,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
-          "score": 1.845,
-          "published": 6,
+          "score": 1.976,
+          "published": 7,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "youtube.com": {
-          "score": 1.845,
-          "published": 6,
+          "score": 1.976,
+          "published": 7,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         }
       },
       "current_source_count": 30,
       "example_titles": {
         "news.google.com": [
+          "Kučan napadel Janšo! »Kaj se je zgodilo s 'črno kocko', kdo je imel za to interese, to so vprašanja, ki bodo zahtevala odgovor« - Slovenske ",
           "(AKTUALNO) V novi številki revije Demokracija preberite: Izključujejo in zavirajo razvoj! Janša: Osamosvojitvena Slovenija ne bo nikoli več ",
-          "(AKTUALNO) Hudo bolni slovenski otroci ostajajo brez dostopa do zdravila, odobrenega s strani evropske agencije EMA - DEMOKRACIJA.SI",
-          "Najnižja gledanost oddaje Marcel v desetih letih, Tarča ostaja paradni konj - Info360"
+          "(AKTUALNO) Varuhinja človekovih pravic Simona Drenik Bavdek: Pravica do dostojnega pokopa temeljna človekova pravica - DEMOKRACIJA.SI"
         ]
       }
     }
