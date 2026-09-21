@@ -8,6 +8,9 @@ on:
       - "wrangler.jsonc"
       - "terminal/worker/wrangler.jsonc"
       - "scripts/patch_worker_dispatch_diagnostics.py"
+      - "scripts/harden_terminal_agent.py"
+      - "scripts/test_terminal_agent.py"
+      - "data/terminal-command-test-suite.json"
       - ".github/workflows/deploy-worker.yml"
   workflow_dispatch:
 
@@ -45,6 +48,14 @@ jobs:
         shell: bash
         run: python scripts/patch_worker_dispatch_diagnostics.py
 
+      - name: Apply terminal agent hardening
+        shell: bash
+        run: python scripts/harden_terminal_agent.py
+
+      - name: Run terminal command suite checks
+        shell: bash
+        run: python scripts/test_terminal_agent.py
+
       - name: Install Worker dependencies
         working-directory: terminal/worker
         run: npm install --no-package-lock --no-audit --no-fund
@@ -58,6 +69,9 @@ jobs:
           grep -q 'maj_login_ready' terminal/worker/src/index.js
           grep -q 'url.pathname === "/api/chat"' terminal/worker/src/index.js
           grep -q 'terminalChatAssistant' terminal/worker/src/index.js
+          grep -q 'terminalOperationalAnswer' terminal/worker/src/index.js
+          grep -q 'operational_publication_check' terminal/worker/src/index.js
+          grep -q 'operational_terminal_diagnostics' terminal/worker/src/index.js
           grep -q 'terminalChatbotDock' terminal/worker/src/index.js
           grep -q 'GITHUB_WORKFLOW_DISPATCH_FAILED' terminal/worker/src/index.js
           grep -q 'GitHub odgovor:' terminal/worker/src/index.js
