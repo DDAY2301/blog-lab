@@ -88,6 +88,14 @@ jobs:
           grep -q 'terminalChatbotDock' terminal/worker/src/index.js
           grep -q 'GITHUB_WORKFLOW_DISPATCH_FAILED' terminal/worker/src/index.js
           grep -q 'GitHub odgovor:' terminal/worker/src/index.js
+          grep -q 'url.pathname === "/api/commands"' terminal/worker/src/index.js
+          grep -q 'id="helpCommands"' terminal/worker/src/index.js
+          grep -q "PENDING_KEY='bloglab-terminal-pending-v1'" terminal/worker/src/index.js
+          grep -q 'client_request_id' terminal/worker/src/index.js
+          grep -q 'pollRunning=false,pollAgain=false' terminal/worker/src/index.js
+          grep -q 'terminal_chat_ai_timeout' terminal/worker/src/index.js
+          grep -q 'workers_ai_model_timeout' terminal/worker/src/index.js
+          grep -q 'MAX_MEDIA_BYTES = 5 \* 1024 \* 1024' terminal/worker/src/index.js
 
       - name: Deploy Worker to Cloudflare
         working-directory: terminal/worker
