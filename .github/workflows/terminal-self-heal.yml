@@ -1,0 +1,118 @@
+name: Blog Lab Terminal Self Heal
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17,47 * * * *"
+
+concurrency:
+  group: blog-lab-terminal-self-heal
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  self-heal:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      EXPECTED_WORKER_VERSION: auth-v6.22-terminal-stability
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Sync latest main
+        shell: bash
+        run: |
+          git fetch origin main
+          git checkout -B main origin/main
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Reapply deterministic terminal repairs
+        shell: bash
+        run: |
+          set -euo pipefail
+          python scripts/patch_worker_dispatch_diagnostics.py
+          python scripts/harden_terminal_agent.py
+
+      - name: Reject unexpected self-heal mutations
+        shell: bash
+        run: |
+          set -euo pipefail
+          CHANGED="$(git diff --name-only)"
+          if [[ -n "$CHANGED" ]] && printf '%s\n' "$CHANGED" | grep -Ev '^terminal/worker/src/index\.js$' >/dev/null; then
+            echo "::error::Self-heal attempted to change an unexpected path."
+            printf '%s\n' "$CHANGED"
+            exit 1
+          fi
+
+      - name: Full deterministic terminal validation
+        shell: bash
+        run: |
+          set -euo pipefail
+          python scripts/test_terminal_agent.py
+          python scripts/test_operator_commands.py
+          node --check terminal/worker/src/index.js
+          node scripts/test_terminal_runtime.mjs
+          node scripts/test_terminal_stress.mjs
+
+      - name: Detect deterministic repair
+        id: repair
+        shell: bash
+        run: |
+          if git diff --quiet -- terminal/worker/src/index.js; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit verified deterministic repair
+        if: ${{ steps.repair.outputs.changed == 'true' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "blog-lab-terminal-healer[bot]"
+          git config user.email "blog-lab-terminal-healer[bot]@users.noreply.github.com"
+          git add terminal/worker/src/index.js
+          git commit -m "Self-heal: restore terminal Worker invariants"
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+      - name: Probe live Worker
+        id: live
+        continue-on-error: true
+        run: python scripts/test_terminal_live.py
+
+      - name: Request deploy when live contract is unhealthy
+        if: ${{ steps.live.outcome == 'failure' && steps.repair.outputs.changed != 'true' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "::warning::Live Worker contract is unhealthy; requesting verified redeploy."
+          gh workflow run deploy-worker.yml --repo "$GITHUB_REPOSITORY" --ref main
+
+      - name: Verify repaired live Worker
+        if: ${{ steps.live.outcome == 'failure' || steps.repair.outputs.changed == 'true' }}
+        shell: bash
+        run: |
+          sleep 10
+          python scripts/test_terminal_live.py
+
+      - name: Self-heal summary
+        if: ${{ always() }}
+        shell: bash
+        run: |
+          echo "deterministic_repair=${{ steps.repair.outputs.changed || 'unknown' }}"
+          echo "initial_live_probe=${{ steps.live.outcome || 'not-run' }}"
