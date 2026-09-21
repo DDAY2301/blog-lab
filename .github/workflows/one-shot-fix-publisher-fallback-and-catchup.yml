@@ -1,4 +1,4 @@
-name: One-shot sport catch-up content only
+name: One-shot repair wrong sports article and guarded catch-up
 
 on:
   push:
@@ -16,7 +16,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  publish-content:
+  repair-and-publish:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     env:
@@ -50,11 +50,97 @@ jobs:
           pip install -r requirements-agent.txt
           npm ci
 
-      - name: Compile fallback publisher
+      - name: Remove wrong-category Susskind article and reset sport slot
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          bad_id = "leonard-susskind-leinweber-institute-for-theoretical-physics-3f240bfe"
+          app = Path("src/App.jsx")
+          text = app.read_text(encoding="utf-8")
+
+          def remove_article(src: str, article_id: str) -> str:
+              needle = f'"id": "{article_id}"'
+              idx = src.find(needle)
+              if idx < 0:
+                  return src
+              start = src.rfind("\n  {", 0, idx)
+              if start < 0:
+                  start = src.rfind("{", 0, idx)
+              obj_start = src.find("{", start)
+              depth = 0
+              in_str = False
+              esc = False
+              end = None
+              for pos in range(obj_start, len(src)):
+                  ch = src[pos]
+                  if in_str:
+                      if esc:
+                          esc = False
+                      elif ch == "\\":
+                          esc = True
+                      elif ch == '"':
+                          in_str = False
+                      continue
+                  if ch == '"':
+                      in_str = True
+                  elif ch == "{":
+                      depth += 1
+                  elif ch == "}":
+                      depth -= 1
+                      if depth == 0:
+                          end = pos + 1
+                          break
+              if end is None:
+                  raise RuntimeError("Could not find end of bad article object")
+              j = end
+              if j < len(src) and src[j] == ",":
+                  j += 1
+              while j < len(src) and src[j] in " \t\r\n":
+                  j += 1
+              prefix = src[:start]
+              if not prefix.endswith("\n"):
+                  prefix += "\n"
+              return prefix + src[j:]
+
+          new_text = remove_article(text, bad_id)
+          if new_text != text:
+              app.write_text(new_text, encoding="utf-8")
+              print("REMOVED_BAD_ARTICLE", bad_id)
+          else:
+              print("BAD_ARTICLE_NOT_FOUND", bad_id)
+
+          processed_path = Path("data/processed-items.json")
+          if processed_path.exists():
+              processed = json.loads(processed_path.read_text(encoding="utf-8") or "[]")
+              processed = [item for item in processed if item.get("output_id") != bad_id]
+              processed_path.write_text(json.dumps(processed, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+          state_path = Path("data/agent-state.json")
+          state = json.loads(state_path.read_text(encoding="utf-8"))
+          state.update({
+              "posts_date": "2026-09-21",
+              "posts_today": 0,
+              "scheduled_posts_today": 0,
+              "manual_posts_today": state.get("manual_posts_today", 0),
+              "last_output": None,
+              "last_error": "removed_wrong_category_article",
+              "current_category": "sport",
+              "writer_mode": "repairing_category_guard",
+              "scheduled_slots_done": [],
+              "scheduled_slots_deferred": [],
+              "last_editorial_hold": None,
+          })
+          state_path.write_text(json.dumps(state, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+          PY
+
+      - name: Compile guarded fallback publisher
         run: |
           python -m py_compile agents/blog-lab-publisher/autonomous_fallback.py agents/blog-lab-publisher/services/*.py agents/blog-lab-publisher/schedule.py
 
-      - name: Publish missed 08:17 sport slot with deterministic fallback
+      - name: Run guarded sport catch-up
         shell: bash
         run: |
           python agents/blog-lab-publisher/autonomous_fallback.py --category sport --scheduled-slot "2026-09-21|08:17|sport"
@@ -67,7 +153,7 @@ jobs:
             exit 1
           fi
 
-      - name: Commit article and state only
+      - name: Commit repaired article and state only
         shell: bash
         run: |
           set -euo pipefail
@@ -85,6 +171,6 @@ jobs:
             echo "No article/state changes to commit."
             exit 0
           fi
-          git commit -m "Agent: publish missed sport slot"
+          git commit -m "Agent: repair wrong sport article and rerun guarded catch-up"
           git pull --rebase origin main
           git push origin HEAD:main
