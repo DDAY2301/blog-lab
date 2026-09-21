@@ -73,7 +73,7 @@ KEYWORDS = {
         "prvenstvo", "igralec", "trener", "formula", "hokej", "smuč", "atlet",
     ),
     "afterdark": (
-        "noč", "night", "glasb", "koncert", "festival", "klub", "kultur", "film",
+        "nočno življenje", "nocno zivljenje", "nightlife", "glasb", "koncert", "festival", "klub", "kultur", "film",
         "gledali", "restavr", "bar", "chef", "kulinar", "umetnost", "design", "moda",
     ),
     "studio": (
