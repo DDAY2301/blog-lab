@@ -4,6 +4,16 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "52 * * * *"
+  push:
+    branches:
+      - main
+    paths:
+      - "agents/operator-terminal/command.py"
+      - "agents/operator-terminal/deferred_articles.py"
+      - "agents/operator-terminal/deferred_site_edits.py"
+      - "scripts/test_operator_commands.py"
+      - ".github/workflows/terminal-deferred-recovery.yml"
+      - "requirements-agent.txt"
 
 concurrency:
   group: blog-lab-deferred-terminal-recovery
@@ -67,18 +77,22 @@ jobs:
           python scripts/test_operator_commands.py
 
       - name: Replay deferred article requests
+        if: ${{ github.event_name != 'push' }}
         run: python agents/operator-terminal/deferred_articles.py replay --max 2
 
       - name: Replay deferred site-edit requests
+        if: ${{ github.event_name != 'push' }}
         run: python agents/operator-terminal/deferred_site_edits.py replay --max 1
 
       - name: Clean runner bytecode
+        if: ${{ github.event_name != 'push' }}
         shell: bash
         run: |
           find agents -type d -name __pycache__ -prune -exec rm -rf {} +
           find agents -type f -name '*.pyc' -delete
 
       - name: Reject protected recovery mutations
+        if: ${{ github.event_name != 'push' }}
         shell: bash
         run: |
           CHANGED="$(
@@ -92,6 +106,7 @@ jobs:
           fi
 
       - name: Detect public site change
+        if: ${{ github.event_name != 'push' }}
         id: web
         shell: bash
         run: |
@@ -102,6 +117,7 @@ jobs:
           fi
 
       - name: Validate recovered repository
+        if: ${{ github.event_name != 'push' }}
         shell: bash
         run: |
           if git diff --quiet && [[ -z "$(git status --porcelain)" ]]; then
@@ -116,6 +132,7 @@ jobs:
           fi
 
       - name: Commit verified deferred recovery
+        if: ${{ github.event_name != 'push' }}
         shell: bash
         run: |
           if git diff --quiet && [[ -z "$(git status --porcelain)" ]]; then
@@ -139,19 +156,19 @@ jobs:
           git push origin HEAD:main
 
       - name: Final synchronized build
-        if: ${{ steps.web.outputs.changed == 'true' }}
+        if: ${{ github.event_name != 'push' && steps.web.outputs.changed == 'true' }}
         run: npm run build
 
       - name: Configure Pages
-        if: ${{ steps.web.outputs.changed == 'true' }}
+        if: ${{ github.event_name != 'push' && steps.web.outputs.changed == 'true' }}
         uses: actions/configure-pages@v6
 
       - name: Upload Pages artifact
-        if: ${{ steps.web.outputs.changed == 'true' }}
+        if: ${{ github.event_name != 'push' && steps.web.outputs.changed == 'true' }}
         uses: actions/upload-pages-artifact@v3
         with:
           path: dist
 
       - name: Deploy recovered site
-        if: ${{ steps.web.outputs.changed == 'true' }}
+        if: ${{ github.event_name != 'push' && steps.web.outputs.changed == 'true' }}
         uses: actions/deploy-pages@v5
