@@ -43,7 +43,7 @@ jobs:
           git fetch origin main
           git checkout -B main origin/main
 
-      - name: Patch publisher fallback condition
+      - name: Patch publisher fallback condition safely
         shell: bash
         run: |
           set -euo pipefail
@@ -51,11 +51,14 @@ jobs:
           from pathlib import Path
           path = Path('.github/workflows/agent-blog-lab-publisher.yml')
           text = path.read_text(encoding='utf-8')
-          old = "        if: ${{ github.event_name != 'workflow_dispatch' || inputs.catch_up == true }}\n"
-          new = "        if: ${{ github.event_name != 'workflow_dispatch' || inputs.dry_run == false }}\n"
-          if old not in text:
+          old = "        if: " + "$" + "{{ github.event_name != 'workflow_dispatch' || inputs.catch_up == true }}\n"
+          new = "        if: " + "$" + "{{ github.event_name != 'workflow_dispatch' || inputs.dry_run == false }}\n"
+          if old in text:
+              text = text.replace(old, new, 1)
+          elif new in text:
+              pass
+          else:
               raise SystemExit('Fallback condition target not found')
-          text = text.replace(old, new, 1)
           path.write_text(text, encoding='utf-8')
           PY
 
