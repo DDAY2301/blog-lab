@@ -242,13 +242,13 @@ def audit_workflows(audit: Audit) -> None:
         if rel.endswith("deploy-worker.yml"):
             text = path.read_text(encoding="utf-8")
             audit.require("CLOUDFLARE_API_TOKEN" in text and "CLOUDFLARE_ACCOUNT_ID" in text, "worker deploy checks Cloudflare secrets")
-            audit.require("Verify live Worker health" in text, "worker deploy verifies live health")
+            audit.require("Verify live Worker contract" in text, "worker deploy verifies live health")
 
 
 def audit_worker(audit: Audit) -> None:
     source = read_text("terminal/worker/src/index.js")
     for marker in [
-        "auth-v6.19-login-hardening",
+        "auth-v6.24-product-onboarding",
         "DAN_LOGIN_PASSWORD",
         "MAJ_LOGIN_PASSWORD",
         "GITHUB_DISPATCH_TOKEN",
