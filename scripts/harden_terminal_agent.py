@@ -2,7 +2,7 @@ from pathlib import Path
 
 path = Path("terminal/worker/src/index.js")
 text = path.read_text(encoding="utf-8")
-text = text.replace("auth-v6.20-resilience", "auth-v6.21-terminal-stability")
+text = text.replace("auth-v6.20-resilience", "auth-v6.22-terminal-stability")
 
 
 github_old = r'''async function github(path, env, init = {}) {
@@ -337,6 +337,52 @@ if old_dispatch in text:
     text = text.replace(old_dispatch, new_dispatch, 1)
 elif "GITHUB_WORKFLOW_DISPATCH_FAILED" not in text:
     raise SystemExit("dispatch diagnostic marker not found")
+
+
+ai_retry_old = r'''    || text.includes("invalid request")
+    || text.includes("authentication")'''
+ai_retry_new = r'''    || text.includes("authentication")'''
+if ai_retry_old in text:
+    text = text.replace(ai_retry_old, ai_retry_new, 1)
+
+ai_deadline_old = r'''  const gatewayOptions = aiGatewayOptions(env, purpose, cacheKey);
+  for (const model of workersAiModelCandidates(env)) {
+    for (let attempt = 1; attempt <= total; attempt += 1) {
+      try {
+        const result = await env.AI.run(model, request, gatewayOptions);'''
+ai_deadline_new = r'''  const gatewayOptions = aiGatewayOptions(env, purpose, cacheKey);
+  const deadline = Date.now() + Math.max(5000, Math.min(Number(options.timeoutMs || 30000) || 30000, 45000));
+  for (const model of workersAiModelCandidates(env)) {
+    for (let attempt = 1; attempt <= total; attempt += 1) {
+      const remaining = deadline - Date.now();
+      if (remaining <= 1000) break;
+      try {
+        const result = await withTimeout(
+          env.AI.run(model, request, gatewayOptions),
+          Math.min(12000, Math.max(1000, remaining)),
+          "workers_ai_model_timeout"
+        );'''
+if "workers_ai_model_timeout" not in text:
+    if ai_deadline_old not in text:
+        raise SystemExit("Workers AI retry marker not found")
+    text = text.replace(ai_deadline_old, ai_deadline_new, 1)
+
+recent_runs_old = r'''    for (const run of data.workflow_runs || []) {'''
+recent_runs_new = r'''    for (const run of (data.workflow_runs || []).slice(0, 12)) {'''
+if recent_runs_old in text:
+    text = text.replace(recent_runs_old, recent_runs_new, 1)
+
+failure_detail_old = r'''        detail: run.conclusion === "failure" ? await runFailureDetail(run.id, env) : ""'''
+failure_detail_new = r'''        detail: run.conclusion === "failure"
+          ? (out.length < 4 ? await runFailureDetail(run.id, env) : "GitHub run failed.")
+          : ""'''
+if failure_detail_old in text:
+    text = text.replace(failure_detail_old, failure_detail_new, 1)
+
+poll_old = r'''async function refreshRow(x){if(!x.id||x.status==='completed')return x;try{const r=await fetch('/api/status?id='+encodeURIComponent(x.id),{cache:'no-store'});if(r.status===401){location.replace('/');return x}if(r.ok){const s=await r.json();return {...x,...s}}}catch{}return x}'''
+poll_new = r'''async function refreshRow(x){if(!x.id||x.status==='completed'||x.status==='unknown')return x;try{const r=await fetch('/api/status?id='+encodeURIComponent(x.id),{cache:'no-store'});if(r.status===401){location.replace('/');return x}if(r.ok){const s=await r.json();const age=Date.now()-Date.parse(x.created_at||0);if(s.status==='queued'&&!s.run_url&&Number.isFinite(age)&&age>12*60*1000){return {...x,...s,status:'unknown',detail:'GitHub run po 12 minutah ni bil najden. Ukaz lahko varno pošlješ ponovno.'}}return {...x,...s}}}catch{}return x}'''
+if poll_old in text:
+    text = text.replace(poll_old, poll_new, 1)
 
 path.write_text(text, encoding="utf-8")
 print("Terminal agent hardening applied")
