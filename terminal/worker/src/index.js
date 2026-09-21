@@ -4,6 +4,9 @@ const WORKFLOW = "operator-terminal.yml";
 const PUBLISHER_WORKFLOW = "agent-blog-lab-publisher.yml";
 const SESSION_COOKIE = "bloglab_session";
 const SESSION_TTL_SECONDS = 60 * 60 * 12;
+const GITHUB_API_TIMEOUT_MS = 12000;
+const HISTORY_RUN_LIMIT = 12;
+const FAILURE_DETAIL_LIMIT = 5;
 const AUTHORIZED_USERS = Object.freeze({
   "dan.grmusa@gmail.com": "DAN_LOGIN_PASSWORD",
   "maj@klemenc.org": "MAJ_LOGIN_PASSWORD"
@@ -256,9 +259,20 @@ async function github(path, env, init = {}) {
   const headers = new Headers(init.headers || {});
   headers.set("accept", "application/vnd.github+json");
   headers.set("x-github-api-version", "2022-11-28");
-  headers.set("user-agent", "BlogLabPrivateTerminal/3.0");
+  headers.set("user-agent", "BlogLabPrivateTerminal/3.1");
   headers.set("authorization", `Bearer ${token}`);
-  return fetch(`https://api.github.com${path}`, { ...init, headers });
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), GITHUB_API_TIMEOUT_MS);
+  try {
+    return await fetch(`https://api.github.com${path}`, { ...init, headers, signal: controller.signal });
+  } catch (error) {
+    if (controller.signal.aborted) {
+      throw new Error(`GitHub API timeout after ${GITHUB_API_TIMEOUT_MS}ms for ${path}`);
+    }
+    throw error;
+  } finally {
+    clearTimeout(timer);
+  }
 }
 
 async function dispatchPublisherCatchup(env) {
@@ -1295,11 +1309,11 @@ async function findRun(requestId, env) {
 
 async function recentRuns(env) {
   try {
-    const response = await github(`/repos/${OWNER}/${REPO}/actions/workflows/${WORKFLOW}/runs?event=workflow_dispatch&per_page=25`, env);
+    const response = await github(`/repos/${OWNER}/${REPO}/actions/workflows/${WORKFLOW}/runs?event=workflow_dispatch&per_page=${HISTORY_RUN_LIMIT}`, env);
     if (!response.ok) return [];
     const data = await response.json();
     const out = [];
-    for (const run of data.workflow_runs || []) {
+    for (const [index, run] of (data.workflow_runs || []).slice(0, HISTORY_RUN_LIMIT).entries()) {
       const id = requestIdFromRun(run);
       if (!id) continue;
       out.push({
@@ -1312,7 +1326,9 @@ async function recentRuns(env) {
         run_url: run.html_url,
         created_at: run.created_at,
         updated_at: run.updated_at,
-        detail: run.conclusion === "failure" ? await runFailureDetail(run.id, env) : ""
+        detail: run.conclusion === "failure"
+          ? (index < FAILURE_DETAIL_LIMIT ? await runFailureDetail(run.id, env) : "Napaka v starejšem runu; odpri GitHub run za podrobnosti.")
+          : ""
       });
     }
     return out;
@@ -1548,7 +1564,7 @@ export default {
       return json({
         ok: true,
         worker: "blog-lab",
-        version: "auth-v6.19-login-hardening",
+        version: "auth-v6.20-resilience",
         ready: state.ready,
         auth_ready: authReady,
         auth_self_test_ok: authTest.ok,
@@ -1643,7 +1659,7 @@ export default {
       return json({
         ok: true,
         worker: "blog-lab",
-        version: "auth-v6.19-login-hardening",
+        version: "auth-v6.20-resilience",
         ...diagnostic,
         server_time: new Date().toISOString(),
         hint: diagnostic.email_known
@@ -1789,7 +1805,10 @@ export default {
   },
 
   async scheduled(controller, env, ctx) {
-    const task = dispatchPublisherCatchup(env);
+    const task = dispatchPublisherCatchup(env).catch((error) => {
+      console.error("PUBLISHER_CATCHUP_SCHEDULE_FAILED", sanitizeAiError(error));
+      return false;
+    });
     if (ctx && typeof ctx.waitUntil === "function") {
       ctx.waitUntil(task);
       return;
