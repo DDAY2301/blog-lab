@@ -1,0 +1,119 @@
+name: Blog Lab Terminal Idempotency Fire Drill
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/terminal-idempotency-fire-drill.yml"
+
+concurrency:
+  group: blog-lab-terminal-idempotency-fire-drill
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  actions: write
+
+jobs:
+  fire-drill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+      TERMINAL_COMMAND_KEY: ${{ secrets.TERMINAL_COMMAND_KEY }}
+
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Check encryption secret
+        shell: bash
+        run: |
+          if [[ -z "${TERMINAL_COMMAND_KEY:-}" ]]; then
+            echo "::error::TERMINAL_COMMAND_KEY is missing."
+            exit 1
+          fi
+
+      - name: Build one encrypted no-op status request
+        id: payload
+        shell: bash
+        run: |
+          node <<'NODE'
+          const crypto = require('crypto');
+          const fs = require('fs');
+          const keyText = String(process.env.TERMINAL_COMMAND_KEY || '');
+          const key = Buffer.from(keyText, 'base64');
+          if (key.length !== 32) throw new Error('TERMINAL_COMMAND_KEY must decode to 32 bytes');
+          const requestId = crypto.randomUUID();
+          const createdAt = new Date().toISOString();
+          const body = {
+            request_id: requestId,
+            command: 'preveri status agenta',
+            mode: 'control',
+            category: 'aktualno',
+            actor: 'idempotency-fire-drill',
+            created_at: createdAt,
+          };
+          const iv = crypto.randomBytes(12);
+          const cipher = crypto.createCipheriv('aes-256-gcm', key, iv);
+          const encrypted = Buffer.concat([cipher.update(JSON.stringify(body), 'utf8'), cipher.final()]);
+          const tag = cipher.getAuthTag();
+          const payload = Buffer.concat([iv, encrypted, tag]).toString('base64url');
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, 'request_id=' + requestId + '\n');
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, 'payload=' + payload + '\n');
+          console.log('Prepared fire-drill request ' + requestId);
+          NODE
+
+      - name: Dispatch identical request twice
+        shell: bash
+        run: |
+          set -euo pipefail
+          RID="${{ steps.payload.outputs.request_id }}"
+          PAYLOAD="${{ steps.payload.outputs.payload }}"
+          gh workflow run operator-terminal.yml --repo "$GITHUB_REPOSITORY" --ref main -f request_id="$RID" -f payload="$PAYLOAD"
+          gh workflow run operator-terminal.yml --repo "$GITHUB_REPOSITORY" --ref main -f request_id="$RID" -f payload="$PAYLOAD"
+          echo "Dispatched duplicate pair for $RID"
+
+      - name: Wait for both operator runs
+        id: wait
+        shell: bash
+        run: |
+          set -euo pipefail
+          RID="${{ steps.payload.outputs.request_id }}"
+          for attempt in $(seq 1 90); do
+            DATA="$(gh run list --repo "$GITHUB_REPOSITORY" --workflow operator-terminal.yml --limit 40 --json databaseId,displayTitle,status,conclusion)"
+            MATCHES="$(printf '%s' "$DATA" | jq --arg rid "$RID" '[.[] | select(.displayTitle | contains($rid))]')"
+            COUNT="$(printf '%s' "$MATCHES" | jq 'length')"
+            COMPLETE="$(printf '%s' "$MATCHES" | jq '[.[] | select(.status == "completed")] | length')"
+            if [[ "$COUNT" -ge 2 && "$COMPLETE" -ge 2 ]]; then
+              FAIL="$(printf '%s' "$MATCHES" | jq '[.[] | select(.conclusion != "success")] | length')"
+              if [[ "$FAIL" -ne 0 ]]; then
+                printf '%s\n' "$MATCHES"
+                echo "::error::One or more duplicate fire-drill runs failed."
+                exit 1
+              fi
+              printf '%s\n' "$MATCHES"
+              echo "Both duplicate runs completed successfully."
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "::error::Timed out waiting for duplicate operator runs."
+          exit 1
+
+      - name: Verify ledger contains request exactly once
+        shell: bash
+        run: |
+          set -euo pipefail
+          RID="${{ steps.payload.outputs.request_id }}"
+          git fetch origin main
+          LEDGER="$(git show origin/main:data/terminal-request-ledger.json)"
+          COUNT="$(printf '%s' "$LEDGER" | jq --arg rid "$RID" '[.[] | select(.id == $rid)] | length')"
+          if [[ "$COUNT" -ne 1 ]]; then
+            echo "::error::Expected request ID exactly once in ledger, got $COUNT."
+            exit 1
+          fi
+          echo "Idempotency ledger verified for $RID"
