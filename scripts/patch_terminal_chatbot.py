@@ -155,13 +155,18 @@ overlay = r'''
 </script>
 '''
 
-if "terminalChatbotDock" not in text:
-    if "</body>" not in text:
-        raise SystemExit("Cannot find </body> for chatbot UI insertion")
-    text = text.replace("</body>", overlay + "\n</body>", 1)
+page_start = text.find('const PAGE = `')
+page_end = text.find('\n\nexport default', page_start)
+page_segment = text[page_start:page_end if page_end != -1 else len(text)]
+if "terminalChatbotDock" not in page_segment:
+    marker = "pollLoop();\n</script></body></html>`;"
+    if marker not in text:
+        raise SystemExit("Cannot find terminal PAGE closing marker")
+    replacement = "pollLoop();\n</script>" + overlay + "\n</body></html>`;"
+    text = text.replace(marker, replacement, 1)
 
 if text == original:
     print("No terminal chatbot changes needed")
 else:
     path.write_text(text, encoding="utf-8")
-    print("Patched terminal chatbot endpoint and UI")
+    print("Patched terminal chatbot endpoint and terminal UI")
