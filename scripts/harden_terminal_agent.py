@@ -515,7 +515,31 @@ if "const r=await ft('/api/login'" not in text:
         raise SystemExit("login request timeout marker not found")
     text = text.replace(login_request_old, login_request_new, 1)
 
-if "fetchTimed('/api/interpret'" not in text or "try{await load()}catch{}finally" not in text:
+poll_block_guarded = r'''let pollTimer=null;
+function hasActiveRuns(){return rows().some(x=>x.id&&x.status!=='completed'&&x.status!=='unknown')}
+async function pollLoop(){try{await load()}catch{}finally{pollTimer=setTimeout(pollLoop,hasActiveRuns()?3000:12000)}}
+function kickPoll(){if(pollTimer)clearTimeout(pollTimer);pollTimer=setTimeout(pollLoop,150)}'''
+poll_block_single_flight = r'''let pollTimer=null,pollRunning=false,pollAgain=false;
+function hasActiveRuns(){return rows().some(x=>x.id&&x.status!=='completed'&&x.status!=='unknown')}
+async function pollLoop(){
+  if(pollRunning){pollAgain=true;return}
+  pollRunning=true;
+  try{await load()}catch{}
+  finally{
+    pollRunning=false;
+    if(pollTimer)clearTimeout(pollTimer);
+    const delay=pollAgain?150:(hasActiveRuns()?3000:12000);
+    pollAgain=false;
+    pollTimer=setTimeout(pollLoop,delay);
+  }
+}
+function kickPoll(){pollAgain=true;if(!pollRunning){if(pollTimer)clearTimeout(pollTimer);pollTimer=setTimeout(pollLoop,150)}}'''
+if "let pollTimer=null,pollRunning=false,pollAgain=false;" not in text:
+    if poll_block_guarded not in text:
+        raise SystemExit("terminal single-flight polling marker not found")
+    text = text.replace(poll_block_guarded, poll_block_single_flight, 1)
+
+if "fetchTimed('/api/interpret'" not in text or "let pollTimer=null,pollRunning=false,pollAgain=false;" not in text:
     raise SystemExit("terminal UI network recovery markers missing after hardening")
 
 
