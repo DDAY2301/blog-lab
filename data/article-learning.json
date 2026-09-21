@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-21T16:54:17+02:00",
-  "loop_count": 73,
+  "updated_at": "2026-09-21T16:59:17+02:00",
+  "loop_count": 74,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-21T16:53:50+02:00",
+      "last_learning_run": "2026-09-21T16:58:48+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -39,12 +39,12 @@
       ],
       "source_health": {
         "news.google.com": {
-          "score": 2.476,
-          "seen": 2160,
-          "last_seen": "2026-09-21T16:53:50+02:00",
-          "last_title": "Želja je jasna: Tour de France v Sloveniji - delo.si",
+          "score": 2.473,
+          "seen": 2190,
+          "last_seen": "2026-09-21T16:58:48+02:00",
+          "last_title": "Šeškovo poškodbo takole proslavljajo - z Otoka nor in sramoten prizor - Ekipa",
           "last_provider": "",
-          "published": 1168,
+          "published": 1184,
           "last_output_id": "s-tribune-sportni-trenutki-zaradi-katerih-se-mi-se-danes-najezijo-dlake-aeb6d43b"
         }
       },
@@ -52,13 +52,13 @@
       "example_titles": {
         "news.google.com": [
           "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
-          "Čebulj se je hitro vklopil v slovensko izbrano vrsto - rtvslo.si",
+          "Pravkar Belgija - Češka; ob 21. uri Slovenija - Srbija - rtvslo.si",
           "Slovenija želi nadaljevati niz zmag proti Srbiji - Dnevnik"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-21T16:54:00+02:00",
+      "last_learning_run": "2026-09-21T16:58:59+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -81,11 +81,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.519,
-          "seen": 2160,
-          "last_seen": "2026-09-21T16:54:00+02:00",
+          "seen": 2190,
+          "last_seen": "2026-09-21T16:58:59+02:00",
           "last_title": "Nataša Pirc Musar: Slovenija si zasluži povezanost v politiki - Dnevnik",
           "last_provider": "",
-          "published": 915,
+          "published": 930,
           "last_output_id": "okoljski-ekonomist-sonnenschein-politika-ministra-za-energetiko-ni-v-interesu-javnosti-001b0a7e"
         }
       },
@@ -93,13 +93,13 @@
       "example_titles": {
         "news.google.com": [
           "Janša diplomatom: Zunanjo politiko vodi vlada, samo to je uradna politika Slovenije - siol.net",
-          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - vecer.com",
+          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer",
           "(INTERVJU) V novi reviji Demokracija: Minister Tone Kajzer: Slovenije ne prodajamo nikomur. Slovenija je suverena država in slovenska zunanj"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-21T16:54:17+02:00",
+      "last_learning_run": "2026-09-21T16:59:17+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -133,76 +133,76 @@
       "source_health": {
         "news.google.com": {
           "score": 2.512,
-          "seen": 2160,
-          "last_seen": "2026-09-21T16:54:17+02:00",
+          "seen": 2190,
+          "last_seen": "2026-09-21T16:59:17+02:00",
           "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 1202,
+          "published": 1220,
           "last_output_id": "duckduckgo-287dab86"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 50,
+          "published": 51,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 50,
+          "published": 51,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 73,
+          "published": 74,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 39,
+          "published": 40,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 39,
+          "published": 40,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 292,
+          "published": 296,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 73,
+          "published": 74,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 50,
+          "published": 51,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 78,
+          "published": 80,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 73,
+          "published": 74,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "reddit.com": {
-          "score": 2.39,
-          "published": 14,
+          "score": 2.43,
+          "published": 16,
           "last_output_id": "duckduckgo-287dab86"
         },
         "zhihu.com": {
-          "score": 2.39,
-          "published": 14,
+          "score": 2.43,
+          "published": 16,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
-          "score": 1.976,
-          "published": 7,
+          "score": 2.081,
+          "published": 8,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         }
       },
