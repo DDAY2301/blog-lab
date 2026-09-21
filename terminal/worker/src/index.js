@@ -255,24 +255,53 @@ async function encryptPayload(env, value) {
 
 async function github(path, env, init = {}) {
   const token = String(env.GITHUB_DISPATCH_TOKEN || "").trim();
-  if (!token) throw new Error("GITHUB_DISPATCH_TOKEN missing");
+  if (!token) {
+    return new Response(JSON.stringify({ message: "GITHUB_DISPATCH_TOKEN missing", code: "GITHUB_TOKEN_MISSING" }), {
+      status: 503,
+      headers: { "content-type": "application/json" }
+    });
+  }
   const headers = new Headers(init.headers || {});
   headers.set("accept", "application/vnd.github+json");
   headers.set("x-github-api-version", "2022-11-28");
-  headers.set("user-agent", "BlogLabPrivateTerminal/3.1");
+  headers.set("user-agent", "BlogLabPrivateTerminal/3.2");
   headers.set("authorization", `Bearer ${token}`);
-  const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), GITHUB_API_TIMEOUT_MS);
-  try {
-    return await fetch(`https://api.github.com${path}`, { ...init, headers, signal: controller.signal });
-  } catch (error) {
-    if (controller.signal.aborted) {
-      throw new Error(`GitHub API timeout after ${GITHUB_API_TIMEOUT_MS}ms for ${path}`);
+  const method = String(init.method || "GET").toUpperCase();
+  const maxAttempts = method === "GET" || method === "HEAD" ? 2 : 1;
+  let lastError = "";
+  for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), GITHUB_API_TIMEOUT_MS);
+    try {
+      const response = await fetch(`https://api.github.com${path}`, { ...init, headers, signal: controller.signal });
+      if (
+        response.ok
+        || attempt >= maxAttempts
+        || ![429, 500, 502, 503, 504].includes(response.status)
+      ) {
+        return response;
+      }
+      await response.arrayBuffer().catch(() => null);
+      await new Promise((resolve) => setTimeout(resolve, 250 * attempt));
+    } catch (error) {
+      lastError = controller.signal.aborted
+        ? `GitHub API timeout after ${GITHUB_API_TIMEOUT_MS}ms for ${path}`
+        : String(error?.message || error || "GitHub request failed").slice(0, 240);
+      if (attempt < maxAttempts) {
+        await new Promise((resolve) => setTimeout(resolve, 250 * attempt));
+        continue;
+      }
+    } finally {
+      clearTimeout(timer);
     }
-    throw error;
-  } finally {
-    clearTimeout(timer);
   }
+  return new Response(JSON.stringify({
+    message: lastError || "GitHub request failed",
+    code: "GITHUB_NETWORK_TIMEOUT"
+  }), {
+    status: 599,
+    headers: { "content-type": "application/json" }
+  });
 }
 
 async function dispatchPublisherCatchup(env) {
@@ -366,7 +395,6 @@ function nonRetryableWorkersAiError(error) {
     text.includes("4006")
     || text.includes("daily free allocation")
     || text.includes("quota")
-    || text.includes("invalid request")
     || text.includes("authentication")
     || text.includes("unauthorized")
   );
@@ -428,6 +456,179 @@ function terminalChatFallback(message, error = null) {
   parts.push("Ukaz, ki ga lahko pošlješ terminalu: opiši cilj jasno, npr. 'preveri zakaj ni današnje objave in popravi', ali 'pripravi DNS navodila za bloglab.eu'.");
   if (error) parts.push("Opomba: AI model trenutno ni vrnil odgovora, zato je prikazan varni fallback odgovor.");
   return parts.join("\n\n");
+}
+
+
+
+function withTimeout(promise, ms, label = "timeout") {
+  let timer;
+  const timeout = new Promise((_, reject) => {
+    timer = setTimeout(() => reject(new Error(label)), Math.max(1000, Number(ms) || 10000));
+  });
+  return Promise.race([promise, timeout]).finally(() => clearTimeout(timer));
+}
+
+function terminalIntentWords(message) {
+  return String(message || "")
+    .toLowerCase()
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "");
+}
+
+function shouldUsePublicationOperationalCheck(message) {
+  const lower = terminalIntentWords(message);
+  const hasPublication = /objav|clan|article|post|publish|publisher|guardian|learning|urnik|raspored|schedule|slot|samodejn|automatic/.test(lower);
+  const hasAction = /preglej|preveri|provjer|prover|check|verify|resi|resit|repair|fix|popravi|problem|zakaj|why|delovanje|status|test|diagnos/.test(lower);
+  return hasPublication && hasAction;
+}
+
+function shouldUseDomainOperationalAnswer(message) {
+  const lower = terminalIntentWords(message);
+  return /(dns|domain|domena|bloglab\.eu|neoserv|github pages|cname|a zapis|a record|terminal\.bloglab)/.test(lower);
+}
+
+function shouldUseTerminalDiagnostics(message) {
+  const lower = terminalIntentWords(message);
+  return /(terminal|chatbot|pomocnik|assistant|worker|cloudflare|github|dispatch|workflow|komand|ukaz|command|api|health|timeout|502|test)/.test(lower)
+    && /(preveri|provjer|prover|check|verify|test|diagnos|status|delovanje|working|popravi|fix|repair|resi|problem)/.test(lower);
+}
+
+function ljubljanaNowParts() {
+  const parts = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Europe/Ljubljana",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false
+  }).formatToParts(new Date()).reduce((acc, part) => {
+    acc[part.type] = part.value;
+    return acc;
+  }, {});
+  return {
+    date: `${parts.year}-${parts.month}-${parts.day}`,
+    time: `${parts.hour}:${parts.minute}`
+  };
+}
+
+function slotId(date, slot) {
+  return `${date}|${slot.time}|${slot.category}`;
+}
+
+function defaultSchedule() {
+  return {
+    timezone: "Europe/Ljubljana",
+    slots: [
+      { time: "08:17", category: "sport" },
+      { time: "13:27", category: "politika" },
+      { time: "19:43", category: "aktualno" }
+    ]
+  };
+}
+
+function safeArray(value) {
+  return Array.isArray(value) ? value : [];
+}
+
+function publicationOperationalText({ state, status, learning, control, dueSlots, missingSlots, dispatched, dispatchError, now }) {
+  const done = safeArray(state?.scheduled_slots_done);
+  const deferred = safeArray(state?.scheduled_slots_deferred);
+  const schedule = control?.schedule || defaultSchedule();
+  const lines = [];
+  lines.push("Operativni pregled objav je izveden neposredno iz repozitorija.");
+  lines.push(`Čas Ljubljana: ${now.date} ${now.time}`);
+  lines.push(`Agent: ${control?.enabled === false ? "ustavljen" : "aktiven"} · način: ${control?.publish_mode || "automatic"}`);
+  lines.push(`Status: ${status?.status || state?.last_error || "unknown"} · pisec: ${status?.writer_mode || state?.writer_mode || "unknown"}`);
+  lines.push(`Danes: skupaj ${state?.posts_today ?? status?.posts_today ?? "?"}, samodejno ${state?.scheduled_posts_today ?? status?.scheduled_posts_today ?? "?"}, ročno ${state?.manual_posts_today ?? status?.manual_posts_today ?? "?"}.`);
+  lines.push(`Urnik: ${safeArray(schedule.slots).map((slot) => `${slot.time} ${slot.category}`).join(" · ")}`);
+  lines.push(`Zapadli sloti: ${dueSlots.length ? dueSlots.map((slot) => `${slot.time} ${slot.category}`).join(" · ") : "še ni zapadlih slotov"}.`);
+  lines.push(`Opravljeni sloti: ${done.length ? done.join(" · ") : "nič"}.`);
+  if (deferred.length) lines.push(`Deferred: ${deferred.join(" · ")}.`);
+  lines.push(`Learning: ${learning?.status || "unknown"}${learning?.updated_at ? ` · ${learning.updated_at}` : ""}.`);
+  if (missingSlots.length || deferred.length || status?.status === "failed" || state?.last_error) {
+    if (dispatched) {
+      lines.push("Popravek: sprožil sem publisher catch-up/guardian pot. Če je GitHub v queue, počakaj nekaj minut in ponovno preveri status.");
+    } else if (dispatchError) {
+      lines.push("Popravek ni bil sprožen: " + dispatchError);
+    } else {
+      lines.push("Popravek ni potreben ali trenutno ni varnega missed/deferred slota za catch-up.");
+    }
+  } else {
+    lines.push("Rezultat: ni zaznane blokade objav. Naslednji zapadli slot bo prevzel Publisher/Guardian.");
+  }
+  return lines.join("\n");
+}
+
+async function terminalPublicationOperationalAnswer(env) {
+  const now = ljubljanaNowParts();
+  const [state, status, learning, control] = await Promise.all([
+    readRepoJson("data/agent-state.json", env),
+    readRepoJson("public/data/agent-status.json", env),
+    readRepoJson("public/data/article-learning-status.json", env),
+    readRepoJson("data/agent-control.json", env)
+  ]);
+  const schedule = control?.schedule || defaultSchedule();
+  const dueSlots = safeArray(schedule.slots).filter((slot) => String(slot.time || "") <= now.time);
+  const done = safeArray(state?.scheduled_slots_done);
+  const deferred = safeArray(state?.scheduled_slots_deferred);
+  const missingSlots = dueSlots.filter((slot) => !done.includes(slotId(now.date, slot)));
+  let dispatched = false;
+  let dispatchError = "";
+  const shouldDispatch = Boolean(missingSlots.length || deferred.length || status?.status === "failed" || state?.last_error);
+  if (shouldDispatch) {
+    try {
+      await withTimeout(dispatchPublisherCatchup(env), 9000, "publisher_catchup_dispatch_timeout");
+      dispatched = true;
+    } catch (error) {
+      dispatchError = sanitizeAiError(error).message || String(error || "dispatch failed");
+    }
+  }
+  return {
+    mode: "operational_publication_check",
+    text: publicationOperationalText({ state: state || {}, status: status || {}, learning: learning || {}, control: control || {}, dueSlots, missingSlots, dispatched, dispatchError, now })
+  };
+}
+
+async function terminalDiagnosticsAnswer(env) {
+  const [snapshot, runs] = await Promise.all([
+    readAgentSnapshot(env).catch(() => null),
+    recentRuns(env).catch(() => [])
+  ]);
+  const latest = safeArray(runs).slice(0, 5).map((run) => `${run.status}/${run.conclusion || "-"} ${run.created_at || ""}`).join(" · ");
+  return {
+    mode: "operational_terminal_diagnostics",
+    text: [
+      "Terminal diagnostika:",
+      `Setup: ${setupState(env).ready ? "ready" : "missing " + setupState(env).missing.join(", ")}`,
+      snapshot?.summary ? `Agent: ${snapshot.summary}` : "Agent: snapshot ni na voljo",
+      latest ? `Zadnji terminal runi: ${latest}` : "Zadnji terminal runi: ni podatkov",
+      "Varovalke: /api/chat ima lokalni fallback, /api/command vrača GitHub dispatch status/detail/hint, publisher ima catch-up pot."
+    ].join("\n")
+  };
+}
+
+function terminalDomainAnswer() {
+  return {
+    mode: "operational_domain_dns",
+    text: [
+      "DNS za obstoječo GitHub Pages stran:",
+      "A @ 185.199.108.153",
+      "A @ 185.199.109.153",
+      "A @ 185.199.110.153",
+      "A @ 185.199.111.153",
+      "CNAME www dday2301.github.io",
+      "V GitHub Pages mora biti custom domain bloglab.eu. Ko DNS check uspe, vklopi Enforce HTTPS.",
+      "Terminal ostane na Cloudflare Workerju; za terminal.bloglab.eu bomo dodali ločen Worker custom domain, ko javni blog stabilno deluje."
+    ].join("\n")
+  };
+}
+
+async function terminalOperationalAnswer(env, message, email) {
+  if (shouldUsePublicationOperationalCheck(message)) return terminalPublicationOperationalAnswer(env, message, email);
+  if (shouldUseDomainOperationalAnswer(message)) return terminalDomainAnswer(env, message, email);
+  if (shouldUseTerminalDiagnostics(message)) return terminalDiagnosticsAnswer(env, message, email);
+  return null;
 }
 
 
@@ -496,6 +697,21 @@ function terminalChatTextFromResult(result, originalMessage = "") {
 }
 
 async function terminalChatAssistant(env, message, email) {
+  let operational = null;
+  try {
+    operational = await withTimeout(
+      terminalOperationalAnswer(env, message, email),
+      12000,
+      "terminal_operational_timeout"
+    );
+  } catch (error) {
+    return {
+      mode: "fallback",
+      text: terminalChatFallback(message, error),
+      error: sanitizeAiError(error)
+    };
+  }
+  if (operational) return operational;
   const system = [
     "Si zasebni Blog Lab terminal pomočnik.",
     "Odgovarjaj v slovenščini, praktično in operativno.",
@@ -512,10 +728,10 @@ async function terminalChatAssistant(env, message, email) {
     temperature: 0.2
   };
   try {
-    const result = await runWorkersAiWithRetry(env, request, 2, {
+    const result = await withTimeout(runWorkersAiWithRetry(env, request, 2, {
       purpose: "terminal_chat",
       cacheKey: "terminal-chat-" + b64urlText(String(message || "").slice(0, 400)).slice(0, 80)
-    });
+    }), 14000, "terminal_chat_ai_timeout");
     const answer = terminalChatTextFromResult(result, message);
     if (answer) return { mode: "workers_ai", text: answer, model: result?.model || result?.last_model || null };
     return { mode: "fallback", text: terminalChatFallback(message, new Error("empty_ai_response")) };
@@ -530,10 +746,17 @@ async function runWorkersAiWithRetry(env, request, attempts = 3, options = {}) {
   const purpose = options.purpose || "general";
   const cacheKey = options.cacheKey || `${purpose}:${JSON.stringify(request).slice(0, 800)}`;
   const gatewayOptions = aiGatewayOptions(env, purpose, cacheKey);
+  const deadline = Date.now() + Math.max(5000, Math.min(Number(options.timeoutMs || 30000) || 30000, 45000));
   for (const model of workersAiModelCandidates(env)) {
     for (let attempt = 1; attempt <= total; attempt += 1) {
+      const remaining = deadline - Date.now();
+      if (remaining <= 1000) break;
       try {
-        const result = await env.AI.run(model, request, gatewayOptions);
+        const result = await withTimeout(
+          env.AI.run(model, request, gatewayOptions),
+          Math.min(12000, Math.max(1000, remaining)),
+          "workers_ai_model_timeout"
+        );
         if (result && typeof result === "object") {
           try { Object.defineProperty(result, "_bloglab_model", { value: model, enumerable: false }); } catch {}
           try { Object.defineProperty(result, "_bloglab_gateway_log_id", { value: env.AI?.aiGatewayLogId || null, enumerable: false }); } catch {}
@@ -1369,7 +1592,7 @@ function scheduleCommandCheck(){
 }
 function rows(){try{return JSON.parse(localStorage.getItem(KEY)||'[]')}catch{return []}}
 function save(x){localStorage.setItem(KEY,JSON.stringify(x.slice(-60)))}
-async function refreshRow(x){if(!x.id||x.status==='completed')return x;try{const r=await fetch('/api/status?id='+encodeURIComponent(x.id),{cache:'no-store'});if(r.status===401){location.replace('/');return x}if(r.ok){const s=await r.json();return {...x,...s}}}catch{}return x}
+async function refreshRow(x){if(!x.id||x.status==='completed'||x.status==='unknown')return x;try{const r=await fetch('/api/status?id='+encodeURIComponent(x.id),{cache:'no-store'});if(r.status===401){location.replace('/');return x}if(r.ok){const s=await r.json();const age=Date.now()-Date.parse(x.created_at||0);if(s.status==='queued'&&!s.run_url&&Number.isFinite(age)&&age>12*60*1000){return {...x,...s,status:'unknown',detail:'GitHub run po 12 minutah ni bil najden. Ukaz lahko varno pošlješ ponovno.'}}return {...x,...s}}}catch{}return x}
 async function load(){const r=await fetch('/api/me',{cache:'no-store'});if(r.status===401){location.replace('/');return}if(!r.ok){$('#who').textContent='● napaka seje';return}const me=await r.json();$('#who').textContent='● '+me.email;$('#setup').textContent=me.ready?'':'Manjka nastavitev: '+me.missing.join(', ');let list=rows();list=await Promise.all(list.map(refreshRow));try{const hr=await fetch('/api/history',{cache:'no-store'});if(hr.ok){const hd=await hr.json();const byId=new Map(list.filter(x=>x.id).map(x=>[x.id,x]));for(const cloud of hd.runs||[]){const local=byId.get(cloud.id);if(local){Object.assign(local,cloud,{command:local.command||cloud.command,mode:local.mode||cloud.mode,category:local.category||cloud.category,created_at:local.created_at||cloud.created_at})}else{list.push(cloud);byId.set(cloud.id,cloud)}}}}catch{}list=list.slice(-60);save(list);$('#screen').innerHTML=list.slice().reverse().map(x=>{const fail=x.conclusion&&x.conclusion!=='success';return '<div class="entry '+(fail?'fail':'')+'"><b>&gt; '+esc(x.command)+'</b><div>'+esc(x.status||'queued')+(x.conclusion?' / '+esc(x.conclusion):'')+(x.run_url?' · <a target="_blank" rel="noreferrer" href="'+esc(x.run_url)+'">GitHub run ↗</a>':'')+'</div>'+(x.detail?'<div class="detail">'+esc(x.detail)+'</div>':'')+'<div class="meta">'+esc(x.mode)+' · '+esc(x.category)+' · '+esc(x.created_at)+'</div></div>'}).join('')||'<div class="entry">Terminal je pripravljen.</div>'}
 let mediaBusy=false,uploadedMedia=[];
 function uploadChip(name,status,text){const el=document.createElement('span');el.className='upload-chip '+status;el.textContent=(name?name+': ':'')+text;$('#uploads').prepend(el);return el}
@@ -1481,7 +1704,7 @@ fi.onchange=()=>uploadMedia(fi.files);
 for(const ev of ['dragenter','dragover'])dz.addEventListener(ev,e=>{e.preventDefault();dz.classList.add('drag')});
 for(const ev of ['dragleave','drop'])dz.addEventListener(ev,e=>{e.preventDefault();dz.classList.remove('drag')});
 dz.addEventListener('drop',e=>uploadMedia(e.dataTransfer.files));
-$('#send').onclick=async()=>{const command=$('#command').value.trim();if(!command)return;$('#send').disabled=true;try{const body={command,mode:$('#mode').value,category:$('#category').value};const r=await fetch('/api/command',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(body)});if(r.status===401){location.replace('/');return}const d=await r.json();if(!r.ok){alert(d.error+(d.missing?'\\nManjka: '+d.missing.join(', '):''));return}const list=rows();if(d.local){list.push({id:null,command,mode:d.interpretation?.mode||body.mode,category:body.category,created_at:new Date().toISOString(),status:'completed',conclusion:'success',run_url:null,detail:d.result?.summary||'Status prebran.'})}else{const understood=d.interpretation?('Razumljeno kot '+modeLabel(d.interpretation.mode)+(d.interpretation.corrected?' · typo-corrected':'')+(d.interpretation.ai_used?' · AI fallback':'')):'';list.push({id:d.id,command,mode:d.interpretation?.mode||body.mode,category:body.category,created_at:new Date().toISOString(),status:'queued',conclusion:null,run_url:null,detail:understood})}save(list);$('#command').value='';scheduleCommandCheck();clearMedia();await load();kickPoll()}finally{$('#send').disabled=false}};
+$('#send').onclick=async()=>{const command=$('#command').value.trim();if(!command)return;$('#send').disabled=true;try{const body={command,mode:$('#mode').value,category:$('#category').value};const r=await fetch('/api/command',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(body)});if(r.status===401){location.replace('/');return}const d=await r.json();if(!r.ok){const parts=[d.error||'Ukaz ni uspel.'];if(d.status)parts.push('HTTP status: '+d.status);if(d.code)parts.push('Koda: '+d.code);if(d.hint)parts.push('Namig: '+d.hint);if(d.detail)parts.push('GitHub odgovor: '+String(d.detail).slice(0,900));if(d.missing&&d.missing.length)parts.push('Manjka: '+d.missing.join(', '));alert(parts.join('\\n'));return}const list=rows();if(d.local){list.push({id:null,command,mode:d.interpretation?.mode||body.mode,category:body.category,created_at:new Date().toISOString(),status:'completed',conclusion:'success',run_url:null,detail:d.result?.summary||'Status prebran.'})}else{const understood=d.interpretation?('Razumljeno kot '+modeLabel(d.interpretation.mode)+(d.interpretation.corrected?' · typo-corrected':'')+(d.interpretation.ai_used?' · AI fallback':'')):'';list.push({id:d.id,command,mode:d.interpretation?.mode||body.mode,category:body.category,created_at:new Date().toISOString(),status:'queued',conclusion:null,run_url:null,detail:understood})}save(list);$('#command').value='';scheduleCommandCheck();clearMedia();await load();kickPoll()}finally{$('#send').disabled=false}};
 $('#logout').onclick=async()=>{await fetch('/api/logout',{method:'POST'}).catch(()=>{});location.replace('/')};
 let pollTimer=null;
 function hasActiveRuns(){return rows().some(x=>x.id&&x.status!=='completed'&&x.status!=='unknown')}
@@ -1551,20 +1774,11 @@ export default {
       const configuredPasswords = configuredLoginPasswords(env);
       const authReady = configuredPasswords.length > 0;
       const authTest = await authSelfTest(env);
-      let mediaUploadReady = false;
-      if (String(env.GITHUB_DISPATCH_TOKEN || "").trim()) {
-        try {
-          const repoResponse = await github(`/repos/${OWNER}/${REPO}`, env);
-          if (repoResponse.ok) {
-            const repoInfo = await repoResponse.json();
-            mediaUploadReady = Boolean(repoInfo?.permissions?.push);
-          }
-        } catch {}
-      }
+      const mediaUploadReady = Boolean(String(env.GITHUB_DISPATCH_TOKEN || "").trim());
       return json({
         ok: true,
         worker: "blog-lab",
-        version: "auth-v6.20-resilience",
+        version: "auth-v6.22-terminal-stability",
         ready: state.ready,
         auth_ready: authReady,
         auth_self_test_ok: authTest.ok,
@@ -1659,7 +1873,7 @@ export default {
       return json({
         ok: true,
         worker: "blog-lab",
-        version: "auth-v6.20-resilience",
+        version: "auth-v6.22-terminal-stability",
         ...diagnostic,
         server_time: new Date().toISOString(),
         hint: diagnostic.email_known
@@ -1796,7 +2010,15 @@ export default {
       });
       if (!dispatch.ok) {
         const text = await dispatch.text().catch(() => "");
-        return json({ error: "GitHub workflow se ni zagnal.", status: dispatch.status, detail: text.slice(0, 300) }, 502);
+        const detail = text.slice(0, 900);
+        const hint = dispatch.status === 401 || dispatch.status === 403
+          ? "GITHUB_DISPATCH_TOKEN nima dovoljenja za Actions workflow dispatch ali repo write."
+          : dispatch.status === 404
+          ? "Workflow operator-terminal.yml ali repozitorij ni dostopen s tem tokenom."
+          : dispatch.status === 422
+          ? "GitHub je zavrnil workflow_dispatch payload/ref; preveri main branch in workflow inputs."
+          : "GitHub dispatch endpoint je vrnil napako.";
+        return json({ error: "GitHub workflow se ni zagnal.", code: "GITHUB_WORKFLOW_DISPATCH_FAILED", status: dispatch.status, detail, hint, workflow: WORKFLOW, request_id: requestId }, 502);
       }
       return json({ ok: true, id: requestId, interpretation: { mode: resolvedMode, dispatch_mode: dispatchMode, action: interpretation.action, confidence: interpretation.confidence, corrected: interpretation.corrected, ai_used: interpretation.ai_used } }, 202);
     }
