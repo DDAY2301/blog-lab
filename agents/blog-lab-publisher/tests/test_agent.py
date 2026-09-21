@@ -1096,3 +1096,86 @@ def test_manual_topic_filter_keeps_explicit_location_topic():
     filtered = filter_topic_items("nočno življenje v Ljubljani", items)
     assert len(filtered) == 1
     assert filtered[0]["url"] == "https://example.si/ljubljana"
+
+
+def test_topic_relevance_does_not_trust_search_query_in_source_name():
+    from services.sources import filter_topic_items, topic_relevance_score
+
+    unrelated = {
+        "title": "DuckDuckGo - Reddit",
+        "summary": "Privacy discussion about a search engine and subreddit moderation.",
+        "source_name": "Bing Web – aktualno – Naredi članek o nočnem nebu ljubljane",
+        "url": "https://www.reddit.com/r/duckduckgo/top/",
+        "provider": "bing-web",
+        "hash": "duck-noise",
+    }
+
+    assert topic_relevance_score("Naredi članek o nočnem nebu ljubljane", unrelated) == 0
+    assert filter_topic_items("Naredi članek o nočnem nebu ljubljane", [unrelated]) == []
+
+
+def test_topic_relevance_keeps_real_night_sky_source():
+    from services.sources import filter_topic_items
+
+    relevant = {
+        "title": "Nočno nebo nad Ljubljano: Jupiter bo dobro viden",
+        "summary": "Astronomski pregled opazovanja Jupitra in nočnega neba v Ljubljani.",
+        "source_name": "Lokalni portal",
+        "url": "https://example.si/nocno-nebo-ljubljana",
+        "provider": "google-news-si",
+        "hash": "sky-good",
+    }
+
+    filtered = filter_topic_items("Naredi članek o nočnem nebu ljubljane", [relevant])
+    assert len(filtered) == 1
+
+
+def test_manual_alignment_rejects_generic_search_engine_article():
+    from agent import manual_topic_alignment_errors
+
+    article = {
+        "title": "DuckDuckGo",
+        "excerpt": "Aktualno: pregled informacij.",
+        "content": "Besedilo govori o zasebnosti iskalnika DuckDuckGo in moderiranju spletnih skupnosti.",
+    }
+    evidence = [{
+        "title": "DuckDuckGo - Reddit",
+        "summary": "Privacy discussion about DuckDuckGo.",
+        "source_name": "Bing Web – aktualno – Naredi članek o nočnem nebu ljubljane",
+        "url": "https://www.reddit.com/r/duckduckgo/top/",
+        "provider": "bing-web",
+        "hash": "duck-noise",
+    }]
+
+    errors = manual_topic_alignment_errors(
+        "Naredi članek o nočnem nebu ljubljane",
+        article,
+        evidence,
+    )
+    assert "tema_ni_v_clanku" in errors
+    assert "tema_ni_v_virih" in errors
+    assert "genericni_naslov_iskalnika" in errors
+
+
+def test_manual_alignment_accepts_requested_topic():
+    from agent import manual_topic_alignment_errors
+
+    article = {
+        "title": "Nočno nebo nad Ljubljano: kaj lahko opazujemo",
+        "excerpt": "Vodnik po opazovanju nočnega neba v Ljubljani.",
+        "content": "Ljubljansko nočno nebo ponuja opazovanje planetov in svetlejših zvezd.",
+    }
+    evidence = [{
+        "title": "Nočno nebo nad Ljubljano in opazovanje Jupitra",
+        "summary": "Pregled opazovanja nočnega neba v Ljubljani.",
+        "source_name": "Lokalni portal",
+        "url": "https://example.si/ljubljana-nebo",
+        "provider": "google-news-si",
+        "hash": "sky-good",
+    }]
+
+    assert manual_topic_alignment_errors(
+        "Naredi članek o nočnem nebu ljubljane",
+        article,
+        evidence,
+    ) == []
