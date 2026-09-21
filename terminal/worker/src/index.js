@@ -416,7 +416,50 @@ function terminalChatFallback(message, error = null) {
   return parts.join("\n\n");
 }
 
-function terminalChatTextFromResult(result) {
+
+function extractTerminalAnswerObject(value, depth = 0) {
+  if (!value || depth > 5) return "";
+  if (typeof value === "string") return value;
+  if (typeof value !== "object") return "";
+  const keys = ["answer", "text", "content", "message", "response", "output", "result", "data"];
+  for (const key of keys) {
+    const candidate = extractTerminalAnswerObject(value[key], depth + 1);
+    if (candidate) return candidate;
+  }
+  const choice = value.choices?.[0]?.message?.content || value.choices?.[0]?.text;
+  if (typeof choice === "string" && choice.trim()) return choice;
+  return "";
+}
+
+function cleanTerminalChatAnswer(text, originalMessage = "") {
+  let out = String(text || "").trim();
+  for (let i = 0; i < 3; i += 1) {
+    const compact = out.trim();
+    if (!compact.startsWith("{") && !compact.startsWith("[")) break;
+    try {
+      const decoded = JSON.parse(compact);
+      const nested = extractTerminalAnswerObject(decoded);
+      if (!nested || nested === out) break;
+      out = nested.trim();
+    } catch {
+      break;
+    }
+  }
+  out = out
+    .replace(/\\n/g, "\n")
+    .replace(/\\"/g, '"')
+    .replace(/^```(?:json|text|markdown)?\s*/i, "")
+    .replace(/```$/i, "")
+    .replace(/\r/g, "")
+    .trim();
+  const planningLeak = /(Draft \d|Refining the Response|Opening:|Since I'?m not connected|Better\):|Persona-aligned|contentReference)/i;
+  if (planningLeak.test(out)) {
+    return terminalChatFallback(originalMessage, new Error("planning_leak_cleaned"));
+  }
+  return out.slice(0, 2400).trim();
+}
+
+function terminalChatTextFromResult(result, originalMessage = "") {
   const candidates = [
     result?.response?.response,
     result?.response?.answer,
@@ -428,11 +471,11 @@ function terminalChatTextFromResult(result) {
     result?.text,
   ];
   for (const value of candidates) {
-    if (typeof value === "string" && value.trim()) return value.trim();
+    if (typeof value === "string" && value.trim()) return cleanTerminalChatAnswer(value, originalMessage);
   }
   try {
     const jsonText = JSON.stringify(result?.response || result || {}, null, 2);
-    return jsonText && jsonText !== "{}" ? jsonText.slice(0, 2400) : "";
+    return jsonText && jsonText !== "{}" ? cleanTerminalChatAnswer(jsonText, originalMessage) : "";
   } catch {
     return "";
   }
@@ -459,7 +502,7 @@ async function terminalChatAssistant(env, message, email) {
       purpose: "terminal_chat",
       cacheKey: "terminal-chat-" + b64urlText(String(message || "").slice(0, 400)).slice(0, 80)
     });
-    const answer = terminalChatTextFromResult(result);
+    const answer = terminalChatTextFromResult(result, message);
     if (answer) return { mode: "workers_ai", text: answer, model: result?.model || result?.last_model || null };
     return { mode: "fallback", text: terminalChatFallback(message, new Error("empty_ai_response")) };
   } catch (error) {
@@ -1279,57 +1322,6 @@ async function recentRuns(env) {
 }
 
 const LOGIN_PAGE = `<!doctype html><html lang="sl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Blog Lab · Prijava</title><style>*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;background:#f7f4ee;color:#17211b;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.card{width:min(92vw,460px);padding:34px;border:1px solid #d8ddd9;border-radius:22px;background:white;box-shadow:0 24px 70px rgba(21,41,31,.12)}.mark{width:56px;height:56px;border-radius:16px;background:#167349;color:white;display:grid;place-items:center;font-size:26px;font-weight:800;margin-bottom:20px}.eyebrow{font-size:13px;font-weight:800;letter-spacing:.16em;color:#517063;text-transform:uppercase}h1{font-size:34px;line-height:1.1;margin:8px 0 10px}p{color:#637169;line-height:1.55}.field{margin-top:16px}label{display:block;font-weight:750;margin-bottom:7px}input{width:100%;height:46px;border:1px solid #cbd3ce;border-radius:11px;padding:0 13px;font-size:15px}input:focus{outline:2px solid #16734933;border-color:#167349}.actions{display:flex;gap:10px;margin-top:22px}button,a.btn{min-height:44px;padding:0 18px;border-radius:11px;border:1px solid #167349;background:#167349;color:#fff;font-weight:800;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;cursor:pointer}.btn.secondary{background:#fff;color:#167349}.error{min-height:22px;margin-top:12px;color:#a33;font-weight:650}.hint{font-size:12px;margin-top:18px;color:#7b877f}</style></head><body><main class="card"><div class="mark">B</div><div class="eyebrow">Blog Lab</div><h1>Zasebni terminal</h1><p>Prijava je dovoljena samo pooblaščenima operaterjema. Dostop deluje na brezplačnem Workerju in ne potrebuje Cloudflare Zero Trust naročnine.</p><form id="login"><div class="field"><label for="email">E-pošta</label><input id="email" type="email" autocomplete="username" required placeholder="ime@domena.si"></div><div class="field"><label for="password">Geslo</label><input id="password" type="password" autocomplete="current-password" required></div><div class="error" id="error"></div><div class="actions"><button id="submit" type="submit">Prijava</button><a class="btn secondary" href="https://dday2301.github.io/blog-lab/">Nazaj</a></div></form><div class="hint">Seja poteče po 12 urah. Geslo ni shranjeno v brskalniku ali GitHub repozitoriju. <span id="auth-version">preverjam strežnik …</span></div></main><script>const f=document.querySelector('#login'),e=document.querySelector('#error'),b=document.querySelector('#submit'),v=document.querySelector('#auth-version');fetch('/health',{cache:'no-store'}).then(r=>r.json()).then(d=>{v.textContent=d.version?'strežnik: '+d.version:'strežnik pripravljen'}).catch(()=>{v.textContent='strežnika ni mogoče preveriti'});f.addEventListener('submit',async(ev)=>{ev.preventDefault();e.textContent='';b.disabled=true;try{const r=await fetch('/api/login',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({email:document.querySelector('#email').value.trim(),password:document.querySelector('#password').value.trim()})});const d=await r.json().catch(()=>({}));if(!r.ok){e.textContent=(d.error||'Prijava ni uspela.')+(d.code?' ['+d.code+']':'');return}location.replace('/')}catch{e.textContent='Povezava s terminalom ni uspela.'}finally{b.disabled=false}});</script>
-<style>
-#terminalChatbotToggle{position:fixed;right:22px;bottom:22px;z-index:80;border:1px solid #2b6b44;background:#1aa54a;color:#fff;padding:12px 16px;border-radius:999px;font-weight:800;box-shadow:0 12px 32px rgba(0,0,0,.35);cursor:pointer}
-#terminalChatbotDock{position:fixed;right:22px;bottom:78px;width:min(420px,calc(100vw - 44px));max-height:70vh;z-index:81;background:#0b1118;border:1px solid #2c3b4a;border-radius:18px;box-shadow:0 22px 60px rgba(0,0,0,.52);display:none;overflow:hidden;color:#dbeafe}
-#terminalChatbotDock.open{display:flex;flex-direction:column}
-#terminalChatbotHead{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;border-bottom:1px solid #253244;background:#0f1722}
-#terminalChatbotHead strong{color:#86efac}
-#terminalChatbotClose{background:#111827;color:#cbd5e1;border:1px solid #334155;border-radius:10px;padding:6px 9px;cursor:pointer}
-#terminalChatbotMessages{padding:14px 16px;overflow:auto;max-height:42vh;font-size:14px;line-height:1.45;white-space:pre-wrap}
-.terminal-chat-msg{margin:0 0 12px;padding:10px 12px;border-radius:12px;border:1px solid #253244;background:#0f1722}
-.terminal-chat-msg.user{background:#102033;border-color:#1f4972;color:#bfdbfe}
-.terminal-chat-msg.bot{background:#0f1d14;border-color:#245a35;color:#d1fae5}
-#terminalChatbotInput{margin:0 14px 12px;width:calc(100% - 28px);min-height:90px;resize:vertical;background:#060b12;border:1px solid #334155;border-radius:12px;color:#e5e7eb;padding:10px;font:inherit}
-#terminalChatbotSend{margin:0 14px 14px;background:#22c55e;color:#06210f;border:0;border-radius:12px;padding:11px 14px;font-weight:900;cursor:pointer}
-#terminalChatbotSend:disabled{opacity:.55;cursor:wait}
-</style>
-<button id="terminalChatbotToggle" type="button">AI pomočnik</button>
-<section id="terminalChatbotDock" aria-label="AI pomočnik terminala">
-  <div id="terminalChatbotHead"><strong>AI pomočnik za kompleksne zadeve</strong><button id="terminalChatbotClose" type="button">zapri</button></div>
-  <div id="terminalChatbotMessages"><div class="terminal-chat-msg bot">Vprašaj me za DNS bloglab.eu, objave, napake v workflowih, Cloudflare Worker, 24/7 delovanje ali kako poslati pravilen ukaz agentu.</div></div>
-  <textarea id="terminalChatbotInput" placeholder="Npr. Povej mi točne DNS nastavitve za bloglab.eu in preveri kaj manjka za 24/7 delovanje..."></textarea>
-  <button id="terminalChatbotSend" type="button">Vprašaj pomočnika</button>
-</section>
-<script>
-(function(){
-  var toggle=document.getElementById('terminalChatbotToggle');
-  var dock=document.getElementById('terminalChatbotDock');
-  var close=document.getElementById('terminalChatbotClose');
-  var input=document.getElementById('terminalChatbotInput');
-  var send=document.getElementById('terminalChatbotSend');
-  var messages=document.getElementById('terminalChatbotMessages');
-  if(!toggle||!dock||!input||!send||!messages)return;
-  function add(kind,text){var node=document.createElement('div');node.className='terminal-chat-msg '+kind;node.textContent=text;messages.appendChild(node);messages.scrollTop=messages.scrollHeight;}
-  toggle.addEventListener('click',function(){dock.classList.toggle('open'); if(dock.classList.contains('open')) input.focus();});
-  close.addEventListener('click',function(){dock.classList.remove('open');});
-  async function ask(){
-    var text=input.value.trim();
-    if(!text)return;
-    input.value=''; add('user',text); send.disabled=true; send.textContent='Razmišljam ...';
-    try{
-      var res=await fetch('/api/chat',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({message:text})});
-      var data=await res.json().catch(function(){return {};});
-      if(!res.ok||!data.ok) throw new Error(data.error||('HTTP '+res.status));
-      add('bot',(data.mode==='fallback'?'[fallback] ':'')+(data.text||'Ni odgovora.'));
-    }catch(err){add('bot','Napaka pomočnika: '+(err&&err.message?err.message:String(err)));}
-    finally{send.disabled=false; send.textContent='Vprašaj pomočnika';}
-  }
-  send.addEventListener('click',ask);
-  input.addEventListener('keydown',function(e){if((e.ctrlKey||e.metaKey)&&e.key==='Enter')ask();});
-})();
-</script>
-
 </body></html>`;
 
 const PAGE = `<!doctype html><html lang="sl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Blog Lab · Private Terminal</title><style>*{box-sizing:border-box}body{margin:0;background:#090b0f;color:#d7e0ea;font:15px ui-monospace,SFMono-Regular,Consolas,monospace}.wrap{max-width:1100px;margin:auto;padding:28px}.bar{display:flex;justify-content:space-between;gap:16px;align-items:center;margin-bottom:18px}.barlinks{display:flex;gap:12px;align-items:center}.bar button{background:transparent;color:#8b949e;border:1px solid #30363d;border-radius:8px;padding:8px 10px;cursor:pointer}.tag{color:#7ee787}.warn{color:#d29922}.panel{border:1px solid #30363d;background:#0d1117;border-radius:14px;overflow:hidden}.head{padding:12px 16px;border-bottom:1px solid #30363d;color:#8b949e}.screen{height:430px;overflow:auto;padding:16px;display:flex;flex-direction:column;gap:10px}.entry{border-left:2px solid #30363d;padding:8px 12px}.entry b{color:#7ee787}.entry .detail{color:#7ee787;font-size:12px;line-height:1.5;margin-top:6px}.entry .meta{color:#8b949e;font-size:12px;margin-top:5px}.entry.fail b{color:#ff7b72}.composer{border-top:1px solid #30363d;padding:14px}.row{display:flex;gap:10px;flex-wrap:wrap}.row select,.row textarea,.row button{background:#161b22;color:#d7e0ea;border:1px solid #30363d;border-radius:8px;padding:10px}.row textarea{width:100%;min-height:90px;resize:vertical;margin-top:10px}.row button{background:#238636;border-color:#2ea043;cursor:pointer;font-weight:700}.row button:disabled{opacity:.5}.dropzone{margin-top:12px;border:1px dashed #465463;border-radius:14px;padding:18px;display:flex;gap:16px;align-items:center;justify-content:space-between;color:#8b949e;cursor:pointer;transition:.18s ease;background:linear-gradient(145deg,#0b1016,#101720);box-shadow:inset 0 1px 0 rgba(255,255,255,.025)}.dropzone.drag,.dropzone:hover{border-color:#58a6ff;background:linear-gradient(145deg,#0e1823,#101d2a);color:#d7e0ea;box-shadow:0 0 0 3px rgba(88,166,255,.08)}.dropzone strong{color:#f0f6fc;font-size:13px}.dropzone .drop-copy{display:grid;gap:4px}.dropzone .drop-copy span{font-size:11px;line-height:1.45}.dropzone button{background:#21262d;color:#d7e0ea;border:1px solid #3d4855;border-radius:9px;padding:9px 12px;cursor:pointer;font-weight:700}.dropzone button:hover{border-color:#58a6ff}.uploads{display:flex;gap:8px;flex-wrap:wrap;margin-top:9px}.upload-chip{display:inline-flex;align-items:center;gap:7px;padding:6px 9px;border:1px solid #30363d;border-radius:999px;color:#8b949e;font-size:11px;background:#0d1117}.upload-chip.ok{color:#7ee787;border-color:#274f35}.upload-chip.fail{color:#ff7b72;border-color:#5b2a2a}.media-manager{display:none;margin-top:12px}.media-manager.active{display:block}.media-manager-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px;color:#8b949e;font-size:11px}.media-manager-head strong{color:#d7e0ea}.media-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}.media-card{position:relative;overflow:hidden;border:1px solid #30363d;border-radius:12px;background:#0b1016;box-shadow:0 8px 22px rgba(0,0,0,.16)}.media-card.hero{border-color:#2ea043;box-shadow:0 0 0 1px rgba(46,160,67,.18),0 8px 22px rgba(0,0,0,.16)}.media-thumb{aspect-ratio:4/3;background:#161b22;overflow:hidden}.media-thumb img{display:block;width:100%;height:100%;object-fit:cover}.media-badge{position:absolute;top:7px;left:7px;padding:4px 7px;border-radius:999px;background:rgba(13,17,23,.86);border:1px solid #3d4855;color:#8b949e;font-size:9px;font-weight:800;letter-spacing:.08em}.media-card.hero .media-badge{background:#174f2b;border-color:#2ea043;color:#b7f5c7}.media-meta{padding:8px 9px}.media-name{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#d7e0ea;font-size:10px;margin-bottom:7px}.media-caption{width:100%;margin:0 0 7px;padding:7px 8px;border:1px solid #30363d;border-radius:7px;background:#0d1117;color:#d7e0ea;font-size:10px;outline:0}.media-caption:focus{border-color:#58a6ff;box-shadow:0 0 0 2px rgba(88,166,255,.08)}.media-caption::placeholder{color:#6e7681}.media-actions{display:flex;gap:5px;flex-wrap:wrap}.media-actions button{border:1px solid #30363d;background:#161b22;color:#8b949e;border-radius:7px;padding:5px 7px;font-size:10px;cursor:pointer}.media-actions button:hover{color:#d7e0ea;border-color:#58a6ff}.media-actions .danger:hover{color:#ff7b72;border-color:#ff7b72}.hint{color:#8b949e;font-size:12px;margin-top:9px;line-height:1.5}.command-check{margin-top:8px;padding:9px 11px;border:1px solid #30363d;border-radius:9px;background:#0b1016;color:#8b949e;font-size:11px;line-height:1.4}.command-check.ok{border-color:#274f35;color:#7ee787}.command-check.thinking{border-color:#3b4d64;color:#79c0ff}.command-check.warn{border-color:#5b4b25;color:#d29922}a{color:#58a6ff}</style></head><body><div class="wrap"><div class="bar"><div><strong>Blog Lab / private-terminal</strong><div class="tag" id="who">● preverjam sejo …</div><div id="setup" class="warn"></div></div><div class="barlinks"><a href="https://dday2301.github.io/blog-lab/">blog ↗</a><button id="logout">odjava</button></div></div><div class="panel"><div class="head">private operator channel · ukazi se pošiljajo AES-GCM šifrirano</div><div class="screen" id="screen"></div><div class="composer"><div class="row"><select id="mode"><option value="auto">Samodejno</option><option value="article">Članek</option><option value="site">Sprememba strani</option><option value="control">Nadzor agenta</option></select><select id="category"><option value="aktualno">Aktualno</option><option value="sport">Šport</option><option value="politika">Politika</option></select><button id="send">IZVEDI</button><textarea id="command" lang="sl" spellcheck="true" autocorrect="on" autocapitalize="sentences" autocomplete="off" placeholder="Primer: Objavi članek o današnji temi … / Dodaj rubriko Projekti … / Ustavi objavljanje …"></textarea></div><div id="commandCheck" class="command-check">✓ Write check je vključen · razumem tudi tipkarske napake, naravne ukaze ter SL/EN/HR/SRB izraze.</div><div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Naloži fotografije"><div class="drop-copy"><strong>Spusti fotografije sem</strong><span>JPG, PNG, WebP ali GIF · do 5 MB na sliko · največ 12 slik</span></div><button type="button" id="pickMedia">Izberi fotografije</button><input id="mediaFiles" type="file" accept="image/jpeg,image/png,image/webp,image/gif" multiple hidden></div><div class="uploads" id="uploads"></div><div class="media-manager" id="mediaManager"><div class="media-manager-head"><strong>Fotografije za članek</strong><span>Prva oziroma označena HERO slika bo naslovna.</span></div><div class="media-grid" id="mediaGrid"></div></div><div class="hint">Slike se shranijo v Blog Lab media knjižnico. Lahko izbereš HERO sliko, spremeniš vrstni red ali sliko odstraniš. Agent bo izbrane fotografije sam uporabil v hero delu in galeriji članka. Terminal uporablja spellcheck in typo-tolerant zaznavanje namena ukaza (SL/EN), nato združi lokalne opise ukazov z izvedbami iz GitHub Actions, zato je stanje izvedb vidno tudi na drugih napravah.</div></div></div></div><script>
@@ -1483,12 +1475,12 @@ pollLoop();
 </script>
 <style>
 #terminalChatbotToggle{position:fixed;right:22px;bottom:22px;z-index:80;border:1px solid #2b6b44;background:#1aa54a;color:#fff;padding:12px 16px;border-radius:999px;font-weight:800;box-shadow:0 12px 32px rgba(0,0,0,.35);cursor:pointer}
-#terminalChatbotDock{position:fixed;right:22px;bottom:78px;width:min(420px,calc(100vw - 44px));max-height:70vh;z-index:81;background:#0b1118;border:1px solid #2c3b4a;border-radius:18px;box-shadow:0 22px 60px rgba(0,0,0,.52);display:none;overflow:hidden;color:#dbeafe}
+#terminalChatbotDock{position:fixed;right:22px;bottom:78px;width:min(460px,calc(100vw - 44px));max-height:72vh;z-index:81;background:#0b1118;border:1px solid #2c3b4a;border-radius:18px;box-shadow:0 22px 60px rgba(0,0,0,.52);display:none;overflow:hidden;color:#dbeafe}
 #terminalChatbotDock.open{display:flex;flex-direction:column}
 #terminalChatbotHead{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;border-bottom:1px solid #253244;background:#0f1722}
 #terminalChatbotHead strong{color:#86efac}
 #terminalChatbotClose{background:#111827;color:#cbd5e1;border:1px solid #334155;border-radius:10px;padding:6px 9px;cursor:pointer}
-#terminalChatbotMessages{padding:14px 16px;overflow:auto;max-height:42vh;font-size:14px;line-height:1.45;white-space:pre-wrap}
+#terminalChatbotMessages{padding:14px 16px;overflow:auto;max-height:44vh;font-size:14px;line-height:1.55;white-space:pre-wrap;user-select:text}
 .terminal-chat-msg{margin:0 0 12px;padding:10px 12px;border-radius:12px;border:1px solid #253244;background:#0f1722}
 .terminal-chat-msg.user{background:#102033;border-color:#1f4972;color:#bfdbfe}
 .terminal-chat-msg.bot{background:#0f1d14;border-color:#245a35;color:#d1fae5}
@@ -1498,7 +1490,7 @@ pollLoop();
 </style>
 <button id="terminalChatbotToggle" type="button">AI pomočnik</button>
 <section id="terminalChatbotDock" aria-label="AI pomočnik terminala">
-  <div id="terminalChatbotHead"><strong>AI pomočnik za kompleksne zadeve</strong><button id="terminalChatbotClose" type="button">zapri</button></div>
+  <div id="terminalChatbotHead"><strong>AI pomočnik</strong><button id="terminalChatbotClose" type="button">zapri</button></div>
   <div id="terminalChatbotMessages"><div class="terminal-chat-msg bot">Vprašaj me za DNS bloglab.eu, objave, napake v workflowih, Cloudflare Worker, 24/7 delovanje ali kako poslati pravilen ukaz agentu.</div></div>
   <textarea id="terminalChatbotInput" placeholder="Npr. Povej mi točne DNS nastavitve za bloglab.eu in preveri kaj manjka za 24/7 delovanje..."></textarea>
   <button id="terminalChatbotSend" type="button">Vprašaj pomočnika</button>

@@ -14,6 +14,7 @@ import {
 } from "./ArticleMedia";
 
 const TERMINAL_URL = "https://blog-lab.dan-grmusa.workers.dev/";
+const PUBLIC_WRITE_LOCK_NOTICE = "Javno pisanje in lokalno objavljanje sta zaklenjena. Objave se dodajajo samo prek zasebnega terminala, publisher agenta in odobrenega workflowa.";
 const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mnenja", "Vodniki", "Drugo"];
 
 const starterArticles = [
@@ -2429,7 +2430,7 @@ export default function Home() {
     if (description) {
       description.setAttribute(
         "content",
-        selectedArticle?.seoDescription || "Blog Lab – preprosta platforma za pisanje in objavljanje člankov."
+        selectedArticle?.seoDescription || "Blog Lab – javni bralni blog. Objavljanje je zaklenjeno na zasebni uredniški terminal."
       );
     }
   }, [articles, selectedId]);
@@ -2501,6 +2502,8 @@ export default function Home() {
   }
 
   function validateDraft() {
+    setToast(PUBLIC_WRITE_LOCK_NOTICE);
+    return false;
     if (!draft.title.trim()) {
       setToast("Dodajte naslov članka.");
       return false;
@@ -2513,6 +2516,9 @@ export default function Home() {
   }
 
   function saveArticle(status) {
+    setToast(PUBLIC_WRITE_LOCK_NOTICE);
+    openEditorialTerminal();
+    return;
     if (!validateDraft()) return;
     const now = new Date().toISOString();
     const id = draft.id || `${slugify(draft.title)}-${Date.now().toString().slice(-5)}`;
@@ -2534,6 +2540,9 @@ export default function Home() {
   }
 
   function removeArticle(id) {
+    setToast(PUBLIC_WRITE_LOCK_NOTICE);
+    openEditorialTerminal();
+    return;
     const target = articles.find((item) => item.id === id);
     if (!target || !window.confirm(`Izbrišem članek »${target.title}«?`)) return;
     setArticles((current) => current.filter((item) => item.id !== id));
@@ -2541,6 +2550,9 @@ export default function Home() {
   }
 
   function exportArticles() {
+    setToast("Izvoz javnih podatkov je zaklenjen. Upravljanje vsebine poteka samo prek zasebnega terminala.");
+    openEditorialTerminal();
+    return;
     const blob = new Blob([JSON.stringify(articles, null, 2)], { type: "application/json" });
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
@@ -2552,6 +2564,9 @@ export default function Home() {
   }
 
   function importArticles(event) {
+    setToast(PUBLIC_WRITE_LOCK_NOTICE);
+    openEditorialTerminal();
+    return;
     const file = event.target.files?.[0];
     if (!file) return;
     const reader = new FileReader();
@@ -2639,8 +2654,8 @@ export default function Home() {
               )) : (
                 <div className="empty-state">
                   <h3>{publicCategory ? `V rubriki ${publicCategory} še ni objav.` : "Še ni objavljenih člankov."}</h3>
-                  <p>{publicCategory ? "Ko bo objavljen članek v tej kategoriji, se bo prikazal tukaj." : "Ustvarite članek in ga objavite — prikazal se bo tukaj."}</p>
-                  <button className="secondary" onClick={newArticle}>Ustvari članek</button>
+                  <p>{publicCategory ? "Ko bo objavljen članek v tej kategoriji, se bo prikazal tukaj." : "Objave se dodajajo samo prek zasebnega uredniškega terminala, publisher agenta in odobrenega workflowa."}</p>
+                  <button className="secondary" onClick={openEditorialTerminal}>Odpri uredniški terminal ↗</button>
                 </div>
               )}
             </div>
@@ -2652,7 +2667,7 @@ export default function Home() {
       {view === "dashboard" && (
         <section className="dashboard container">
           <div className="page-title">
-            <div><span className="kicker">UREDNIK</span><h1>Vsi članki</h1><p>Vsi prikazani članki so trajno shranjeni v GitHub repozitoriju in so enaki na vseh napravah.</p></div>
+            <div><span className="kicker">ARHIV</span><h1>Vsi članki</h1><p>Javna stran je samo za branje. Objavljanje, urejanje in vzdrževanje potekajo izključno prek zasebnega terminala, publisher agenta in zaščitenih workflowov.</p></div>
             <button className="primary" onClick={newArticle}>Odpri uredniški terminal ↗</button>
           </div>
           <div className="stats">
@@ -2665,10 +2680,10 @@ export default function Home() {
             <div className="filters">
               {["Vse", "Objavljeno", "Osnutki"].map((item) => <button className={filter === item ? "active" : ""} key={item} onClick={() => setFilter(item)}>{item}</button>)}
             </div>
-            <div className="data-actions">
-              <button className="icon-button" onClick={exportArticles} title="Izvozi JSON"><Icon name="export" /></button>
-              <button className="text-button" onClick={() => importRef.current?.click()}>Uvozi</button>
-              <input ref={importRef} type="file" accept="application/json" hidden onChange={importArticles} />
+            <div className="data-actions locked-publish-note" title="Objavljanje je dovoljeno samo v zasebnem terminalu">
+              <span className="lock-dot" />
+              <span>Objavljanje zaklenjeno</span>
+              <button className="text-button" onClick={openEditorialTerminal}>Terminal ↗</button>
             </div>
           </div>
           <div className="article-list">
@@ -2692,7 +2707,7 @@ export default function Home() {
         </section>
       )}
 
-      {view === "editor" && (
+      {false && view === "editor" && (
         <section className="editor-shell">
           <div className="editor-topbar">
             <button className="back" onClick={() => navigate("dashboard")}>← Nazaj na članke</button>

@@ -762,3 +762,28 @@ footer { background: rgba(242,248,253,.84); }
     font-size: 2.8em;
   }
 }
+
+
+/* locked public publishing guard */
+.locked-publish-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(21, 98, 68, .2);
+  background: rgba(21, 98, 68, .08);
+  color: var(--muted, #64756b);
+  font-size: 13px;
+  font-weight: 700;
+}
+.locked-publish-note .lock-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #159447;
+  box-shadow: 0 0 0 4px rgba(21, 148, 71, .12);
+}
+.locked-publish-note .text-button {
+  margin-left: 2px;
+}
