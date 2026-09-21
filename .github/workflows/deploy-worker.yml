@@ -7,6 +7,7 @@ on:
       - "terminal/worker/**"
       - "wrangler.jsonc"
       - "terminal/worker/wrangler.jsonc"
+      - "scripts/patch_worker_dispatch_diagnostics.py"
       - ".github/workflows/deploy-worker.yml"
   workflow_dispatch:
 
@@ -40,6 +41,10 @@ jobs:
             exit 1
           fi
 
+      - name: Apply Worker dispatch diagnostics patch
+        shell: bash
+        run: python scripts/patch_worker_dispatch_diagnostics.py
+
       - name: Install Worker dependencies
         working-directory: terminal/worker
         run: npm install --no-package-lock --no-audit --no-fund
@@ -54,6 +59,8 @@ jobs:
           grep -q 'url.pathname === "/api/chat"' terminal/worker/src/index.js
           grep -q 'terminalChatAssistant' terminal/worker/src/index.js
           grep -q 'terminalChatbotDock' terminal/worker/src/index.js
+          grep -q 'GITHUB_WORKFLOW_DISPATCH_FAILED' terminal/worker/src/index.js
+          grep -q 'GitHub odgovor:' terminal/worker/src/index.js
 
       - name: Deploy Worker to Cloudflare
         working-directory: terminal/worker
