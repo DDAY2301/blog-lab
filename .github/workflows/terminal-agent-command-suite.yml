@@ -13,6 +13,8 @@ on:
       - "agents/operator-terminal/deferred_articles.py"
       - "agents/operator-terminal/compound_control.py"
       - "agents/operator-terminal/command.py"
+      - ".github/workflows/operator-terminal.yml"
+      - "agents/operator-terminal/request_guard.py"
       - "scripts/patch_worker_dispatch_diagnostics.py"
       - "scripts/harden_terminal_agent.py"
       - "scripts/test_terminal_agent.py"
