@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-21T12:46:16+02:00",
-  "loop_count": 27,
+  "updated_at": "2026-09-21T12:47:08+02:00",
+  "loop_count": 28,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-21T12:45:54+02:00",
+      "last_learning_run": "2026-09-21T12:46:44+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -40,11 +40,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.495,
-          "seen": 810,
-          "last_seen": "2026-09-21T12:45:54+02:00",
+          "seen": 840,
+          "last_seen": "2026-09-21T12:46:44+02:00",
           "last_title": "Odbojka (M): Italija - Slovenija, Evropsko prvenstvo 2026, Skupina A - Siol.net",
           "last_provider": "",
-          "published": 432,
+          "published": 448,
           "last_output_id": "s-tribune-sportni-trenutki-zaradi-katerih-se-mi-se-danes-najezijo-dlake-aeb6d43b"
         }
       },
@@ -58,7 +58,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-21T12:46:05+02:00",
+      "last_learning_run": "2026-09-21T12:46:56+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -81,11 +81,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.578,
-          "seen": 810,
-          "last_seen": "2026-09-21T12:46:05+02:00",
+          "seen": 840,
+          "last_seen": "2026-09-21T12:46:56+02:00",
           "last_title": "Slovenska meščanska politika v razcepu – naslonitev na sile osi pred okupacijo Slovenije - rtvslo.si",
           "last_provider": "",
-          "published": 270,
+          "published": 280,
           "last_output_id": "politika-si-odpira-vrata-v-medije-vlada-kriticne-medije-s-profesionalnimi-novinarji-dojema-eeca644f"
         }
       },
@@ -99,7 +99,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-21T12:46:16+02:00",
+      "last_learning_run": "2026-09-21T12:47:08+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -129,46 +129,46 @@
       "source_health": {
         "news.google.com": {
           "score": 2.515,
-          "seen": 810,
-          "last_seen": "2026-09-21T12:46:16+02:00",
+          "seen": 840,
+          "last_seen": "2026-09-21T12:47:08+02:00",
           "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 413,
+          "published": 430,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 108,
+          "published": 112,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "accounts.google.com": {
-          "score": 2.494,
-          "published": 27,
+          "score": 2.495,
+          "published": 28,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
-          "score": 2.494,
-          "published": 27,
+          "score": 2.495,
+          "published": 28,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "tripadvisor.com": {
-          "score": 2.494,
-          "published": 27,
+          "score": 2.495,
+          "published": 28,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "account.microsoft.com": {
-          "score": 1.476,
-          "published": 4,
+          "score": 1.681,
+          "published": 5,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
-          "score": 1.476,
-          "published": 4,
+          "score": 1.681,
+          "published": 5,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "myaccount.microsoft.com": {
-          "score": 1.476,
-          "published": 4,
+          "score": 1.681,
+          "published": 5,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         }
       },
