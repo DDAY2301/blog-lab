@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-21T13:51:17+02:00",
-  "loop_count": 40,
+  "updated_at": "2026-09-21T14:33:23+02:00",
+  "loop_count": 41,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-21T13:50:56+02:00",
+      "last_learning_run": "2026-09-21T14:33:02+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -39,12 +39,12 @@
       ],
       "source_health": {
         "news.google.com": {
-          "score": 2.468,
-          "seen": 1200,
-          "last_seen": "2026-09-21T13:50:56+02:00",
-          "last_title": "Slovenija ima prvega predsednika krovne biatlonske zveze - rtvslo.si",
+          "score": 2.485,
+          "seen": 1230,
+          "last_seen": "2026-09-21T14:33:02+02:00",
+          "last_title": "Šeškovo poškodbo takole proslavljajo - z Otoka nor in sramoten prizor - Ekipa",
           "last_provider": "",
-          "published": 640,
+          "published": 656,
           "last_output_id": "s-tribune-sportni-trenutki-zaradi-katerih-se-mi-se-danes-najezijo-dlake-aeb6d43b"
         }
       },
@@ -52,13 +52,13 @@
       "example_titles": {
         "news.google.com": [
           "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
-          "Čebulj se je hitro vklopil v slovensko izbrano vrsto - rtvslo.si",
+          "Osmina finala: Slovenci favoriti, a vlada precejšnja mera previdnosti - rtvslo.si",
           "Luka Dončić zapustil Slovenijo, sprejel bo velikanski izziv - Delo.si"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-21T13:51:06+02:00",
+      "last_learning_run": "2026-09-21T14:33:13+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -80,26 +80,26 @@
       ],
       "source_health": {
         "news.google.com": {
-          "score": 2.515,
-          "seen": 1200,
-          "last_seen": "2026-09-21T13:51:06+02:00",
-          "last_title": "Nataša Pirc Musar: Ne bom tiho, ko zunanja politika ne bo skladna z ustavnimi vrednotami države - Slovenske novice",
+          "score": 2.522,
+          "seen": 1230,
+          "last_seen": "2026-09-21T14:33:13+02:00",
+          "last_title": "Tone Kajzer: Zunanja politika na dobri poti. Tanja Fajon: Kajzer dobro začrtal usmeritve. - rtvslo.si",
           "last_provider": "",
-          "published": 420,
+          "published": 435,
           "last_output_id": "okoljski-ekonomist-sonnenschein-politika-ministra-za-energetiko-ni-v-interesu-javnosti-001b0a7e"
         }
       },
       "current_source_count": 30,
       "example_titles": {
         "news.google.com": [
-          "Janša diplomatom: Zunanjo politiko vodi vlada, samo to je uradna politika Slovenije - Siol.net",
-          "Opozicija udarila po Kajzerju: Slovenska zunanja politika je servis izraelske vlade - Dnevnik",
-          "Opozicija vložila interpelacijo zoper zunanjega ministra Kajzerja - 24ur.com"
+          "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si",
+          "Na Radiu Ognjišče zadnje predvolilno soočenje: v ospredju prisluhi, zdravstvo, zunanja politika in sprava - Radio Ognjišče",
+          "Opozicija udarila po Kajzerju: Slovenska zunanja politika je servis izraelske vlade - Dnevnik"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-21T13:51:17+02:00",
+      "last_learning_run": "2026-09-21T14:33:23+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -132,61 +132,61 @@
       "source_health": {
         "news.google.com": {
           "score": 2.515,
-          "seen": 1200,
-          "last_seen": "2026-09-21T13:51:17+02:00",
+          "seen": 1230,
+          "last_seen": "2026-09-21T14:33:23+02:00",
           "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 634,
+          "published": 651,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 40,
+          "published": 41,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 160,
+          "published": 164,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 40,
+          "published": 41,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 40,
+          "published": 41,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "account.microsoft.com": {
-          "score": 2.444,
-          "published": 17,
+          "score": 2.455,
+          "published": 18,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
-          "score": 2.444,
-          "published": 17,
+          "score": 2.455,
+          "published": 18,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "myaccount.microsoft.com": {
-          "score": 2.444,
-          "published": 17,
+          "score": 2.455,
+          "published": 18,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "seaofthieves.com": {
-          "score": 2.329,
-          "published": 12,
+          "score": 2.39,
+          "published": 14,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "differentiatedteaching.com": {
-          "score": 1.845,
-          "published": 6,
+          "score": 1.976,
+          "published": 7,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "kachelmannwetter.com": {
-          "score": 1.845,
-          "published": 6,
+          "score": 1.976,
+          "published": 7,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         }
       },
