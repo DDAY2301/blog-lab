@@ -16,7 +16,7 @@ on:
       - "requirements-agent.txt"
 
 concurrency:
-  group: blog-lab-deferred-terminal-recovery
+  group: blog-lab-terminal-mutations
   cancel-in-progress: false
 
 permissions:
