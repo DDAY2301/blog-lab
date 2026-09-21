@@ -54,30 +54,49 @@ jobs:
         run: |
           git fetch origin main
           git checkout -B main origin/main
+
+      - name: Check terminal request idempotency
+        id: request_guard
+        shell: bash
+        run: |
+          python agents/operator-terminal/request_guard.py check \
+            --request-id "${{ inputs.request_id }}" \
+            --github-output "$GITHUB_OUTPUT"
+
+      - name: Duplicate request summary
+        if: ${{ steps.request_guard.outputs.duplicate == 'true' }}
+        run: echo "Duplicate terminal request ${{ inputs.request_id }} already completed; execution skipped."
       - uses: actions/setup-python@v7
+        if: ${{ steps.request_guard.outputs.duplicate != 'true' }}
         with:
           python-version: "3.12"
           cache: pip
           cache-dependency-path: requirements-agent.txt
       - uses: actions/setup-node@v7
+        if: ${{ steps.request_guard.outputs.duplicate != 'true' }}
         with:
           node-version: 22
           cache: npm
       - name: Install dependencies
+        if: ${{ steps.request_guard.outputs.duplicate != 'true' }}
         run: |
           pip install -r requirements-agent.txt
           npm ci
           npm install -g @github/copilot@latest
       - name: Test protected operator code
+        if: ${{ steps.request_guard.outputs.duplicate != 'true' }}
         run: |
           python -m py_compile agents/operator-terminal/*.py agents/blog-lab-publisher/agent.py agents/blog-lab-publisher/services/*.py
           pytest -q agents/operator-terminal/tests agents/blog-lab-publisher/tests
 
       - name: Test terminal execution contract
+        if: ${{ steps.request_guard.outputs.duplicate != 'true' }}
         run: python scripts/test_operator_commands.py
       - name: Decrypt private command
+        if: ${{ steps.request_guard.outputs.duplicate != 'true' }}
         run: python agents/operator-terminal/decrypt.py "$RUNNER_TEMP/operator-command.json"
       - name: Handle deterministic schedule/catch-up command
+        if: ${{ steps.request_guard.outputs.duplicate != 'true' }}
         id: compound
         shell: bash
         run: |
@@ -93,7 +112,7 @@ jobs:
           fi
           exit "$COMPOUND_RC"
       - name: Execute private command with bounded recovery
-        if: ${{ steps.compound.outputs.handled != 'true' }}
+        if: ${{ steps.request_guard.outputs.duplicate != 'true' && steps.compound.outputs.handled != 'true' }}
         shell: bash
         run: |
           set -u
@@ -142,12 +161,14 @@ jobs:
           done
 
       - name: Clean runner-only Python bytecode
+        if: ${{ steps.request_guard.outputs.duplicate != 'true' }}
         shell: bash
         run: |
           find agents -type d -name __pycache__ -prune -exec rm -rf {} +
           find agents -type f -name '*.pyc' -delete
 
       - name: Reject edits to protected security paths
+        if: ${{ steps.request_guard.outputs.duplicate != 'true' }}
         shell: bash
         run: |
           CHANGED="$(
@@ -160,18 +181,25 @@ jobs:
             exit 1
           fi
       - name: Ensure no obvious credentials were written
+        if: ${{ steps.request_guard.outputs.duplicate != 'true' }}
         shell: bash
         run: |
           if git grep -I -n -E "(ghp_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|sk-[A-Za-z0-9_-]{20,})" -- . ':(exclude)package-lock.json'; then
             echo "Credential-like material detected in tracked repository files."
             exit 1
           fi
+      - name: Mark terminal request processed
+        if: ${{ steps.request_guard.outputs.duplicate != 'true' }}
+        run: python agents/operator-terminal/request_guard.py mark --request-id "${{ inputs.request_id }}"
+
       - name: Detect public site change
+        if: ${{ steps.request_guard.outputs.duplicate != 'true' }}
         id: web
         shell: bash
         run: |
           if git diff --quiet -- src public; then echo "changed=false" >> "$GITHUB_OUTPUT"; else echo "changed=true" >> "$GITHUB_OUTPUT"; fi
       - name: Commit verified changes
+        if: ${{ steps.request_guard.outputs.duplicate != 'true' }}
         shell: bash
         run: |
           if git diff --quiet && [[ -z "$(git status --porcelain)" ]]; then echo "No repository changes."; exit 0; fi
@@ -192,18 +220,18 @@ jobs:
           git pull --rebase origin main
           git push origin HEAD:main
       - name: Final synchronized public build
-        if: ${{ steps.web.outputs.changed == 'true' }}
+        if: ${{ steps.request_guard.outputs.duplicate != 'true' && steps.web.outputs.changed == 'true' }}
         run: npm run build
       - name: Configure Pages
-        if: ${{ steps.web.outputs.changed == 'true' }}
+        if: ${{ steps.request_guard.outputs.duplicate != 'true' && steps.web.outputs.changed == 'true' }}
         uses: actions/configure-pages@v6
       - name: Upload Pages artifact
-        if: ${{ steps.web.outputs.changed == 'true' }}
+        if: ${{ steps.request_guard.outputs.duplicate != 'true' && steps.web.outputs.changed == 'true' }}
         uses: actions/upload-pages-artifact@v3
         with:
           path: dist
       - name: Deploy Pages
-        if: ${{ steps.web.outputs.changed == 'true' }}
+        if: ${{ steps.request_guard.outputs.duplicate != 'true' && steps.web.outputs.changed == 'true' }}
         id: deployment
         uses: actions/deploy-pages@v5
       - name: Destroy decrypted command
