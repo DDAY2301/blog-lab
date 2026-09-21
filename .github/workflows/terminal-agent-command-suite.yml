@@ -1,0 +1,69 @@
+name: Blog Lab Terminal Agent Command Suite
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "7 * * * *"
+  push:
+    branches: ["main"]
+    paths:
+      - "terminal/worker/**"
+      - "scripts/harden_terminal_agent.py"
+      - "scripts/test_terminal_agent.py"
+      - "data/terminal-command-test-suite.json"
+      - ".github/workflows/terminal-agent-command-suite.yml"
+
+concurrency:
+  group: blog-lab-terminal-agent-command-suite
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  terminal-agent-command-suite:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      - name: Apply terminal hardening overlay for tests
+        run: python scripts/harden_terminal_agent.py
+
+      - name: Static terminal command suite
+        run: python scripts/test_terminal_agent.py
+
+      - name: Worker JavaScript syntax check
+        run: node --check terminal/worker/src/index.js
+
+      - name: Live Worker health probe
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, sys, urllib.request
+          url = "https://blog-lab.dan-grmusa.workers.dev/health"
+          req = urllib.request.Request(url, headers={
+              "User-Agent": "BlogLabTerminalCommandSuite/1.0",
+              "Accept": "application/json,text/plain,*/*",
+              "Cache-Control": "no-cache",
+          })
+          with urllib.request.urlopen(req, timeout=25) as r:
+              data = json.loads(r.read().decode("utf-8"))
+          print(json.dumps(data, ensure_ascii=False, indent=2))
+          required = [
+              data.get("ok") is True,
+              data.get("auth_self_test_ok") is True,
+              int(data.get("authorized_users_ready") or 0) >= 2,
+              data.get("maj_login_ready") is True,
+          ]
+          if not all(required):
+              print("Terminal live health probe failed", file=sys.stderr)
+              sys.exit(1)
+          PY
+
+      - name: Verify no obsolete one-shot workflow remains
+        run: test ! -e .github/workflows/one-shot-terminal-operational-chat.yml
