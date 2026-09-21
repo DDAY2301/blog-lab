@@ -8,9 +8,6 @@
     "deploy": "wrangler deploy",
     "check": "node --check src/index.js"
   },
-  "dependencies": {
-    "jose": "6.2.12"
-  },
   "devDependencies": {
     "wrangler": "4.40.0"
   },
