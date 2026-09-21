@@ -409,5 +409,60 @@ poll_new = r'''async function refreshRow(x){if(!x.id||x.status==='completed'||x.
 if poll_old in text:
     text = text.replace(poll_old, poll_new, 1)
 
+
+# Restore retry-safe command idempotency if a future Worker edit removes it.
+idempotency_header_old = r'''const $=s=>document.querySelector(s),KEY='bloglab-private-terminal-v3';
+async function fetchTimed'''
+idempotency_header_new = r'''const $=s=>document.querySelector(s),KEY='bloglab-private-terminal-v3',PENDING_KEY='bloglab-terminal-pending-v1';
+function pendingRequests(){try{const now=Date.now(),x=JSON.parse(localStorage.getItem(PENDING_KEY)||'[]');return Array.isArray(x)?x.filter(v=>v&&v.id&&v.sig&&now-Number(v.at||0)<20*60*1000).slice(-10):[]}catch{return []}}
+function requestSignature(body){return JSON.stringify([body.command,body.mode,body.category])}
+function requestIdForBody(body){const sig=requestSignature(body),items=pendingRequests(),found=items.find(x=>x.sig===sig);if(found){localStorage.setItem(PENDING_KEY,JSON.stringify(items));return found.id}const id=crypto.randomUUID(),next=[...items,{id,sig,at:Date.now()}].slice(-10);localStorage.setItem(PENDING_KEY,JSON.stringify(next));return id}
+function clearPendingRequest(id){try{localStorage.setItem(PENDING_KEY,JSON.stringify(pendingRequests().filter(x=>x.id!==id)))}catch{}}
+async function fetchTimed'''
+if "PENDING_KEY='bloglab-terminal-pending-v1'" not in text:
+    if idempotency_header_old not in text:
+        raise SystemExit("terminal idempotency header marker not found")
+    text = text.replace(idempotency_header_old, idempotency_header_new, 1)
+
+idempotency_send_old = r'''$('#send').onclick=async()=>{const command=$('#command').value.trim();if(!command)return;$('#send').disabled=true;try{const body={command,mode:$('#mode').value,category:$('#category').value};const r='''
+idempotency_send_new = r'''$('#send').onclick=async()=>{const command=$('#command').value.trim();if(!command)return;$('#send').disabled=true;let clientRequestId='';try{const body={command,mode:$('#mode').value,category:$('#category').value};clientRequestId=requestIdForBody(body);body.client_request_id=clientRequestId;const r='''
+if "clientRequestId=requestIdForBody(body)" not in text:
+    if idempotency_send_old not in text:
+        raise SystemExit("terminal idempotency send marker not found")
+    text = text.replace(idempotency_send_old, idempotency_send_new, 1)
+
+idempotency_401_old = r'''if(r.status===401){location.replace('/');return}const d=await r.json();'''
+idempotency_401_new = r'''if(r.status===401){clearPendingRequest(clientRequestId);location.replace('/');return}const d=await r.json();'''
+if "clearPendingRequest(clientRequestId);location.replace('/')" not in text:
+    if idempotency_401_old not in text:
+        raise SystemExit("terminal idempotency 401 marker not found")
+    text = text.replace(idempotency_401_old, idempotency_401_new, 1)
+
+idempotency_error_old = r'''if(!r.ok){const parts=[d.error||'Ukaz ni uspel.'];'''
+idempotency_error_new = r'''if(!r.ok){clearPendingRequest(clientRequestId);const parts=[d.error||'Ukaz ni uspel.'];'''
+if "if(!r.ok){clearPendingRequest(clientRequestId);" not in text:
+    if idempotency_error_old not in text:
+        raise SystemExit("terminal idempotency error marker not found")
+    text = text.replace(idempotency_error_old, idempotency_error_new, 1)
+
+idempotency_success_old = r'''alert(parts.join('\\n'));return}const list=rows();'''
+idempotency_success_new = r'''alert(parts.join('\\n'));return}clearPendingRequest(clientRequestId);const list=rows();'''
+if "clearPendingRequest(clientRequestId);const list=rows();" not in text:
+    if idempotency_success_old not in text:
+        raise SystemExit("terminal idempotency success marker not found")
+    text = text.replace(idempotency_success_old, idempotency_success_new, 1)
+
+idempotency_server_old = r'''      const requestId = crypto.randomUUID();
+      const createdAt = new Date().toISOString();'''
+idempotency_server_new = r'''      const clientRequestId = String(body.client_request_id || "").trim().toLowerCase();
+      const requestId = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(clientRequestId)
+        ? clientRequestId
+        : crypto.randomUUID();
+      const createdAt = new Date().toISOString();'''
+if "const clientRequestId = String(body.client_request_id" not in text:
+    if idempotency_server_old not in text:
+        raise SystemExit("terminal idempotency server marker not found")
+    text = text.replace(idempotency_server_old, idempotency_server_new, 1)
+
 path.write_text(text, encoding="utf-8")
 print("Terminal agent hardening applied")
