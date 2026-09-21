@@ -20,6 +20,36 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "cene-ram-a-ssd-jev-in-graficnih-kartic-spet-rastejo-kaj-se-dogaja-875ba7e6",
+    "title": "Cene RAM-a, SSD-jev in grafičnih kartic spet rastejo, kaj se dogaja?",
+    "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Cene RAM-a, SSD-jev in grafičnih kartic spet rastejo, kaj se dogaja?«.",
+    "seoDescription": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Cene RAM-a, SSD-jev in grafičnih kartic spet rastejo, kaj se dogaja?«.",
+    "content": "**Aktualno, 21. 9. 2026.** Cene RAM-a, SSD-jev in grafičnih kartic spet rastejo, kaj se dogaja? Računalniške novice\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Računalniške novice. Objavljeno: Sun, 23 Nov 2025 08:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMinwFBVV95cUxOVExYaFVCakFnSUF5emhHTml3Uk9zTV93dFRaWkpHWFRDY1Y1MkRRVjhVYXVlcUNENVJxc0s3WFRpZTJkVkkwY3NpZEg5SWtHM29TMm1QazJNVnY4OFpnNHFhRUVPeFk5bFlTZV94bXhoLU14VktDUTZOSkswNXVCdHpYeGFDMzlMT1l6NHhLVXpRX1kxUmN1T2lCbm9jazA?oc=5)\n\n## Dopolnitev vira 2: monitor.si\n\nRevolucija v svetu grafičnih kartic s pomnilniki terabajtne zmogljivosti monitor.si\n\n Vir: monitor.si. Objavljeno: Sun, 30 Aug 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMirwFBVV95cUxQZU5xU3d5Ull3dE9EOG1ZQU5mSVR5RFN4T2Q4azZoT29CWHdFejFaVnl6dV9MVzZRXzh2RmdyMUdXbTh3dkJHUmxQSUNXdngyS1VzdF9vTloxTFcwY01WamQ5bVh1NDEtanJ5NVNyalU0SUFSYWd1Q2hQYzhqUk03cUFDTGRNa1M3NDlqT3lqMk9EbGN1Y3ZPY0pQX2poQlFrSW5wTW1rb0RSY3Y4VmJF?oc=5)\n\n## Dopolnitev vira 3: monitor.si\n\nTest grafičnih kartic - Igričarjem se (znova) smeji monitor.si\n\n Vir: monitor.si. Objavljeno: Fri, 05 Jul 2019 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMikAFBVV95cUxQWDJXdEFKNmJ0LXFoUUNsWUlJcGM0UDd4REZ4OEZQaE5PQ2FIOE90aHNGT20ycmdiY0pDUkp2eWpvNzZFaS1nc1ZydVVRUmFyTHR2eG4xLVYzTmlONnJaZWpJSU9SWkhjQlYwUFJQWmR6RG8xSTV4NDdjdjlxMWEwVUFFa2RjSFBsQ21TcUdQMmI?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Aktualno",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Računalniške novice — Cene RAM-a, SSD-jev in grafičnih kartic spet rastejo, kaj se dogaja? - Računalniške novice",
+        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOVExYaFVCakFnSUF5emhHTml3Uk9zTV93dFRaWkpHWFRDY1Y1MkRRVjhVYXVlcUNENVJxc0s3WFRpZTJkVkkwY3NpZEg5SWtHM29TMm1QazJNVnY4OFpnNHFhRUVPeFk5bFlTZV94bXhoLU14VktDUTZOSkswNXVCdHpYeGFDMzlMT1l6NHhLVXpRX1kxUmN1T2lCbm9jazA?oc=5"
+      },
+      {
+        "label": "monitor.si — Revolucija v svetu grafičnih kartic s pomnilniki terabajtne zmogljivosti - monitor.si",
+        "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQZU5xU3d5Ull3dE9EOG1ZQU5mSVR5RFN4T2Q4azZoT29CWHdFejFaVnl6dV9MVzZRXzh2RmdyMUdXbTh3dkJHUmxQSUNXdngyS1VzdF9vTloxTFcwY01WamQ5bVh1NDEtanJ5NVNyalU0SUFSYWd1Q2hQYzhqUk03cUFDTGRNa1M3NDlqT3lqMk9EbGN1Y3ZPY0pQX2poQlFrSW5wTW1rb0RSY3Y4VmJF?oc=5"
+      },
+      {
+        "label": "monitor.si — Test grafičnih kartic - Igričarjem se (znova) smeji - monitor.si",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQWDJXdEFKNmJ0LXFoUUNsWUlJcGM0UDd4REZ4OEZQaE5PQ2FIOE90aHNGT20ycmdiY0pDUkp2eWpvNzZFaS1nc1ZydVVRUmFyTHR2eG4xLVYzTmlONnJaZWpJSU9SWkhjQlYwUFJQWmR6RG8xSTV4NDdjdjlxMWEwVUFFa2RjSFBsQ21TcUdQMmI?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-21T17:16:16+02:00",
+    "updatedAt": "2026-09-21T17:16:16+02:00"
+  },
+
+  {
     "id": "okoljski-ekonomist-sonnenschein-politika-ministra-za-energetiko-ni-v-interesu-javnosti-001b0a7e",
     "title": "Okoljski ekonomist Sonnenschein: Politika ministra za energetiko ni v interesu javnosti",
     "excerpt": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Okoljski ekonomist Sonnenschein: Politika ministra za energetiko ni v interesu javnosti«.",

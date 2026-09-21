@@ -931,5 +931,47 @@
     "provider": "bing-web",
     "processed_at": "2026-09-21T16:35:26+02:00",
     "output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
+  },
+  {
+    "source_name": "Računalniške novice",
+    "category": "aktualno",
+    "title": "Cene RAM-a, SSD-jev in grafičnih kartic spet rastejo, kaj se dogaja? - Računalniške novice",
+    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOVExYaFVCakFnSUF5emhHTml3Uk9zTV93dFRaWkpHWFRDY1Y1MkRRVjhVYXVlcUNENVJxc0s3WFRpZTJkVkkwY3NpZEg5SWtHM29TMm1QazJNVnY4OFpnNHFhRUVPeFk5bFlTZV94bXhoLU14VktDUTZOSkswNXVCdHpYeGFDMzlMT1l6NHhLVXpRX1kxUmN1T2lCbm9jazA?oc=5",
+    "summary": "Cene RAM-a, SSD-jev in grafičnih kartic spet rastejo, kaj se dogaja? Računalniške novice",
+    "published": "Sun, 23 Nov 2025 08:00:00 GMT",
+    "image_url": "",
+    "video_url": "",
+    "hash": "4846d30b89bddd6b5ea667ad64375f3c4303f2ec4ae5171c3c4c3359c52ab46b",
+    "provider": "google-news-si",
+    "processed_at": "2026-09-21T17:16:16+02:00",
+    "output_id": "cene-ram-a-ssd-jev-in-graficnih-kartic-spet-rastejo-kaj-se-dogaja-875ba7e6"
+  },
+  {
+    "source_name": "monitor.si",
+    "category": "aktualno",
+    "title": "Revolucija v svetu grafičnih kartic s pomnilniki terabajtne zmogljivosti - monitor.si",
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQZU5xU3d5Ull3dE9EOG1ZQU5mSVR5RFN4T2Q4azZoT29CWHdFejFaVnl6dV9MVzZRXzh2RmdyMUdXbTh3dkJHUmxQSUNXdngyS1VzdF9vTloxTFcwY01WamQ5bVh1NDEtanJ5NVNyalU0SUFSYWd1Q2hQYzhqUk03cUFDTGRNa1M3NDlqT3lqMk9EbGN1Y3ZPY0pQX2poQlFrSW5wTW1rb0RSY3Y4VmJF?oc=5",
+    "summary": "Revolucija v svetu grafičnih kartic s pomnilniki terabajtne zmogljivosti monitor.si",
+    "published": "Sun, 30 Aug 2026 07:00:00 GMT",
+    "image_url": "",
+    "video_url": "",
+    "hash": "0ed9550c51bbd279f19b29f8f27c99d04df1acb8d5858817fc2a6daf9f58b230",
+    "provider": "google-news-si",
+    "processed_at": "2026-09-21T17:16:16+02:00",
+    "output_id": "cene-ram-a-ssd-jev-in-graficnih-kartic-spet-rastejo-kaj-se-dogaja-875ba7e6"
+  },
+  {
+    "source_name": "monitor.si",
+    "category": "aktualno",
+    "title": "Test grafičnih kartic - Igričarjem se (znova) smeji - monitor.si",
+    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQWDJXdEFKNmJ0LXFoUUNsWUlJcGM0UDd4REZ4OEZQaE5PQ2FIOE90aHNGT20ycmdiY0pDUkp2eWpvNzZFaS1nc1ZydVVRUmFyTHR2eG4xLVYzTmlONnJaZWpJSU9SWkhjQlYwUFJQWmR6RG8xSTV4NDdjdjlxMWEwVUFFa2RjSFBsQ21TcUdQMmI?oc=5",
+    "summary": "Test grafičnih kartic - Igričarjem se (znova) smeji monitor.si",
+    "published": "Fri, 05 Jul 2019 07:00:00 GMT",
+    "image_url": "",
+    "video_url": "",
+    "hash": "d5c0257d65fca491a6c1dbc49318b2b74390194fd636e34306767b4aa93bf96e",
+    "provider": "google-news-si",
+    "processed_at": "2026-09-21T17:16:16+02:00",
+    "output_id": "cene-ram-a-ssd-jev-in-graficnih-kartic-spet-rastejo-kaj-se-dogaja-875ba7e6"
   }
 ]
