@@ -20,37 +20,97 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 const starterArticles = [
   {
     "id": "sign-in-to-your-account-4b374c63",
-    "title": "Sign in to your account",
-    "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Sign in to your account«.",
-    "seoDescription": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Sign in to your account«.",
-    "content": "**Aktualno, 21. 9. 2026.** Access and manage your Microsoft account, subscriptions, and settings all in one place.\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Bing Web – aktualno – 10ih najboljših restavracijah v Ljubljani. Objavljeno: Sun, 20 Sep 2026 07:38:00 GMT. [Odpri izvirni vir](https://myaccount.microsoft.com/)\n\n## Dopolnitev vira 2: Bing Web – aktualno – 10ih najboljših restavracijah v Ljubljani\n\nGet access to free online versions of Outlook, Word, Excel, and PowerPoint.\n\n Vir: Bing Web – aktualno – 10ih najboljših restavracijah v Ljubljani. Objavljeno: Sun, 20 Sep 2026 21:42:00 GMT. [Odpri izvirni vir](https://account.microsoft.com/account)\n\n## Dopolnitev vira 3: Bing Web – aktualno – najboljših restavracijah Ljubljani\n\nTactacam's REVEAL Cellular Camera is the ultimate remote scouting tool. The camera is ideal for locations with limited access\n\n Vir: Bing Web – aktualno – najboljših restavracijah Ljubljani. Objavljeno: Sat, 19 Sep 2026 13:37:00 GMT. [Odpri izvirni vir](https://account.revealcellcam.com/)\n\n## Dopolnitev vira 4: Dnevnik\n\nLestvica: 10 najboljših restavracij v Ljubljani Dnevnik\n\n Vir: Dnevnik. Objavljeno: Sun, 16 Aug 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMigAFBVV95cUxOLUx4RmhibzVxMFVvNnAyQ0E0SWZEV19DbkE2NHhuVG1aNGFyWlF4bHVFSmh6cnJZRUluOERWWDF6X0VwX1ZDRld3SzVvT3VkYlZsSW1uSmFYcmtOV1F0elpSUzZzRWluR041am5uRFk0QXdGdnlBNnVFNXNBbEFZOQ?oc=5)\n\n## Dopolnitev vira 5: Dnevnik\n\nMojmir Šiftar, kuharski mojster: Če stažiraš v najboljših restavracijah, še ne pomeni, da znaš kuhati Dnevnik\n\n Vir: Dnevnik. Objavljeno: Tue, 17 Jun 2025 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMi8gFBVV95cUxPTVZfYnpMSWNUbjhPSWRKTHBBMUJ3UnpiVExhVmJwZlZ0R2tfeDl2V19TdHVFOVBaUGRMUXJGWmV1dWJlRmNBNDRuQVlSM2NLOWtIZ01QQ010Z0RFMXp0Y0FuT0F2anluWk5zUGxCUVBPU254Zm5nRlBEM1Y2alJmTHh6SG9oek1OeW5oWmJSTDZWQVVBM2Y4VFhiRGx0QkpmejFBenB1OWxwZHhFaThlZnBITGZRZWRwclpVVE9GX0FfTkxoeXpEMEx3a1ZNZWhMblQxVGs3MzNPZ2tpeHYwOXZyQWd6WXdZejd5eTJzc0Vtdw?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "aliases": ["sign-in-to-your-account-4b374c6"],
+    "title": "10 idej za dober obisk restavracij v Ljubljani v 2026",
+    "excerpt": "Praktičen vodič po ljubljanski kulinarični sceni: kako izbrati pravi lokal za večerjo, kosilo, goste iz tujine ali sproščen mestni obisk.",
+    "seoDescription": "Vodnik po restavracijah v Ljubljani v 2026 z javnimi viri Visit Ljubljana, Michelin, Gault&Millau in Taste Slovenia.",
+    "content": `# 10 idej za dober obisk restavracij v Ljubljani v 2026
+
+Ljubljana ima dovolj močno kulinarično sceno, da izbira restavracije ne sme temeljiti samo na prvem naključnem seznamu. Boljši pristop je preprost: najprej določi priložnost, nato preveri zanesljive javne vire in šele na koncu rezerviraj konkreten termin.
+
+Ta članek ni lestvica in ne trdi, da obstaja ena sama pravilna izbira. Namen je bolj uporaben: pokazati, kako izbrati dober lokal v Ljubljani glede na namen obiska, čas, družbo in pričakovanja.
+
+## 1. Za posebno večerjo začni pri vodnikih
+
+Za obletnico, poslovnega gosta ali degustacijski večer preveri Michelinov izbor za Slovenijo in Gault&Millau Slovenija. Taki vodniki so koristni, ker dajejo širši uredniški okvir, ne samo posameznih spletnih ocen.
+
+Pred rezervacijo preveri ceno menija, trajanje večerje, odpiralni čas in pravila odpovedi. Veliko slabih izkušenj nastane zato, ker gost pričakuje hiter obrok, izbere pa lokal, ki je zasnovan kot počasnejša kulinarična izkušnja.
+
+## 2. Za prvi obisk mesta naj šteje tudi lokacija
+
+Če je obisk Ljubljane kratek, izberi restavracijo, ki se ujema s potjo po mestu. Center, okolica tržnice, Ljubljanica in staro mestno jedro so praktične izbire, ker omogočajo večerjo brez dodatne logistike.
+
+Visit Ljubljana ima pregleden seznam restavracij in gostiln, ki je uporaben kot osnovni zemljevid ponudbe. Po njem lažje ločiš fine dining, tradicionalne gostilne, bistroje, mednarodno kuhinjo in bolj sproščene lokale.
+
+## 3. Za lokalno izkušnjo preveri Taste Ljubljana
+
+Taste Ljubljana izpostavlja jedi in okuse, povezane z mestno kulinarično dediščino. To je dobra smer, kadar želiš gostu pokazati nekaj bolj lokalnega kot samo generično evropsko restavracijo.
+
+Tak obisk je posebej primeren za tuje goste, ker obrok dobi zgodbo: tržnica, lokalne sestavine, mestni recepti in sodobna interpretacija slovenske kuhinje.
+
+## 4. Za sproščen večer so bistroji pogosto najboljši kompromis
+
+Ljubljana ima dober srednji segment: bistroje, vinske bare, mestne gostilne in lokale s sezonsko karto. Ti so pogosto najbolj uporabna izbira za večer s prijatelji, zmenek ali kakovostno večerjo brez pretirane formalnosti.
+
+Pri izbiri glej kratek meni, sezonske jedi, jasno komunikacijo in občutek, da lokal ve, kaj dela. Dolg meni ni nujno slab, vendar zahteva več preverjanja.
+
+## 5. Za kosilo štejejo hitrost, razdalja in zanesljivost
+
+Za delovno kosilo ni nujno najboljša ista restavracija kot za sobotno večerjo. Takrat štejejo bližina, hitrost, možnost rezervacije, jasen dnevni meni in dovolj mirno okolje za pogovor.
+
+Najbolj praktično je imeti tri možnosti: eno zelo blizu, eno bolj kakovostno in eno rezervno. To posebej pomaga pri poslovnih sestankih ali obisku ljudi, ki mesta ne poznajo.
+
+## 6. Za petek in soboto rezerviraj prej
+
+Petek in sobota zvečer se hitro napolnita, posebno v centru in ob dogodkih. Pri skupinah rezerviraj prej in povej namen obiska: poslovno kosilo, rojstni dan, večerja v dvoje ali hiter obrok pred dogodkom.
+
+Dober lokal bo s temi informacijami lažje predlagal mizo, ritem strežbe in primeren meni.
+
+## 7. Ne primerjaj vseh lokalov v isti koš
+
+Fine dining, pica, brunch, tradicionalna gostilna, azijski bistro in bar s prigrizki niso ista kategorija. Zato so seznami “top 10” koristni samo, če veš, za kakšno priložnost izbiraš.
+
+Boljše vprašanje je: kaj potrebujem danes? Miren ambient, hitro kosilo, lokalno zgodbo, razgled, degustacijo ali sproščen lokal po sprehodu?
+
+## 8. Najprej javni viri, potem uradni podatki lokala
+
+Javni turistični in gastronomski viri so dober začetek, vendar niso vedno zadnja operativna informacija. Restavracije spreminjajo menije, delovni čas, dopuste in rezervacijske sisteme.
+
+Zato po izboru vedno preveri še uradno stran restavracije ali rezervacijski kanal. To je najvarnejši način, da članek uporabiš kot orientacijo, ne kot zastarel zemljevid.
+
+## 9. Tržnica je del kulinaričnega obiska
+
+Za obiskovalce Ljubljane je osrednja tržnica pogosto del izkušnje. Tudi če večerjaš drugje, sprehod skozi tržnico pomaga razumeti lokalne sestavine, ritem mesta in povezavo med kulinariko in javnim prostorom.
+
+To je razlog, da so kulinarične izkušnje v Ljubljani pogosto bolj zanimive, kadar vključujejo tudi mesto, ne samo mizo.
+
+## 10. Najboljša izbira je tista, ki ustreza tvojemu večeru
+
+Za posebno večerjo preveri Michelin in Gault&Millau. Za lokalno zgodbo preveri Taste Ljubljana. Za pregled ponudbe uporabi Visit Ljubljana. Za končno odločitev pa preveri aktualne podatke pri restavraciji.
+
+Tako dobiš boljši rezultat kot z naključnim klikom na prvi seznam. Ljubljana ima dovolj izbire, da se splača izbrati premišljeno.
+
+## Viri
+
+- Visit Ljubljana, restavracije in gostilne: https://www.visitljubljana.com/sl/obiskovalci/kulinarika/restavracije
+- Visit Ljubljana, Ljubljanska kakovost: https://www.visitljubljana.com/sl/obiskovalci/kulinarika/ljubljanska-kakovost-najboljse-restavracije
+- Visit Ljubljana, Gault&Millau Slovenija 2026: https://www.visitljubljana.com/sl/obiskovalci/aktualno/pisma-iz-ljubljane/april-2026/gault-and-millau-slovenija-2026-najboljse-restavracije-v-mestu-in-njegovi-okolici
+- Michelin, The MICHELIN Guide Slovenia 2026 Edition: https://www.michelin.com/en/publications/products-and-services/the-michelin-guide-slovenia-2026-edition
+- Taste Slovenia, Gault&Millau v Sloveniji: https://www.tasteslovenia.si/sl/okusite-odlicnost/gault-millau-v-sloveniji
+- Visit Ljubljana, Taste Ljubljana: https://www.visitljubljana.com/en/about-ljubljana-tourism/projects/taste-ljubljana`,
     "category": "Aktualno",
-    "author": "Blog Lab Publisher",
+    "author": "Uredništvo Blog Lab",
     "status": "published",
     "heroImage": null,
     "video": null,
     "gallery": [],
     "sources": [
-      {
-        "label": "Bing Web – aktualno – 10ih najboljših restavracijah v Ljubljani — Sign in to your account",
-        "url": "https://myaccount.microsoft.com/"
-      },
-      {
-        "label": "Bing Web – aktualno – 10ih najboljših restavracijah v Ljubljani — Microsoft account | Sign In or Create Your Account Today – Microsoft",
-        "url": "https://account.microsoft.com/account"
-      },
-      {
-        "label": "Bing Web – aktualno – najboljših restavracijah Ljubljani — Tactacam Reveal",
-        "url": "https://account.revealcellcam.com/"
-      },
-      {
-        "label": "Dnevnik — Lestvica: 10 najboljših restavracij v Ljubljani - Dnevnik",
-        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOLUx4RmhibzVxMFVvNnAyQ0E0SWZEV19DbkE2NHhuVG1aNGFyWlF4bHVFSmh6cnJZRUluOERWWDF6X0VwX1ZDRld3SzVvT3VkYlZsSW1uSmFYcmtOV1F0elpSUzZzRWluR041am5uRFk0QXdGdnlBNnVFNXNBbEFZOQ?oc=5"
-      },
-      {
-        "label": "Dnevnik — Mojmir Šiftar, kuharski mojster: Če stažiraš v najboljših restavracijah, še ne pomeni, da znaš kuhati - Dnevnik",
-        "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPTVZfYnpMSWNUbjhPSWRKTHBBMUJ3UnpiVExhVmJwZlZ0R2tfeDl2V19TdHVFOVBaUGRMUXJGWmV1dWJlRmNBNDRuQVlSM2NLOWtIZ01QQ010Z0RFMXp0Y0FuT0F2anluWk5zUGxCUVBPU254Zm5nRlBEM1Y2alJmTHh6SG9oek1OeW5oWmJSTDZWQVVBM2Y4VFhiRGx0QkpmejFBenB1OWxwZHhFaThlZnBITGZRZWRwclpVVE9GX0FfTkxoeXpEMEx3a1ZNZWhMblQxVGs3MzNPZ2tpeHYwOXZyQWd6WXdZejd5eTJzc0Vtdw?oc=5"
-      }
+      { "label": "Visit Ljubljana — Restavracije in gostilne", "url": "https://www.visitljubljana.com/sl/obiskovalci/kulinarika/restavracije" },
+      { "label": "Visit Ljubljana — Ljubljanska kakovost", "url": "https://www.visitljubljana.com/sl/obiskovalci/kulinarika/ljubljanska-kakovost-najboljse-restavracije" },
+      { "label": "Visit Ljubljana — Gault&Millau Slovenija 2026", "url": "https://www.visitljubljana.com/sl/obiskovalci/aktualno/pisma-iz-ljubljane/april-2026/gault-and-millau-slovenija-2026-najboljse-restavracije-v-mestu-in-njegovi-okolici" },
+      { "label": "Michelin — The MICHELIN Guide Slovenia 2026 Edition", "url": "https://www.michelin.com/en/publications/products-and-services/the-michelin-guide-slovenia-2026-edition" },
+      { "label": "Taste Slovenia — Gault&Millau v Sloveniji", "url": "https://www.tasteslovenia.si/sl/okusite-odlicnost/gault-millau-v-sloveniji" },
+      { "label": "Visit Ljubljana — Taste Ljubljana", "url": "https://www.visitljubljana.com/en/about-ljubljana-tourism/projects/taste-ljubljana" }
     ],
     "createdAt": "2026-09-21T12:32:31+02:00",
     "updatedAt": "2026-09-21T12:32:31+02:00"
@@ -2308,6 +2368,112 @@ function InlineMarkdown({ text }) {
   return parts;
 }
 
+
+function normalizeArticleLookup(value) {
+  return String(value || "").trim().toLowerCase();
+}
+
+function resolveSelectedArticle(articles, requestedId) {
+  const wanted = normalizeArticleLookup(requestedId);
+  if (!wanted) return null;
+  return articles.find((article) => {
+    const id = normalizeArticleLookup(article.id);
+    const aliases = Array.isArray(article.aliases) ? article.aliases.map(normalizeArticleLookup) : [];
+    return id === wanted || aliases.includes(wanted) || id.startsWith(wanted) || wanted.startsWith(id);
+  }) || null;
+}
+
+function plainArticleText(value) {
+  return String(value || "")
+    .replace(/```[\s\S]*?```/g, " ")
+    .replace(/\[([^\]]+)\]\(https?:\/\/[^)\s]+\)/g, "$1")
+    .replace(/[#>*_`~-]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function articleBodyContent(article) {
+  const lines = String(article?.content || "").split("\n");
+  const title = plainArticleText(article?.title).toLowerCase();
+  while (lines.length && !lines[0].trim()) lines.shift();
+  if (lines[0]?.startsWith("# ")) {
+    const firstTitle = plainArticleText(lines[0].slice(2)).toLowerCase();
+    if (firstTitle && (firstTitle === title || title.includes(firstTitle) || firstTitle.includes(title))) {
+      lines.shift();
+      while (lines.length && !lines[0].trim()) lines.shift();
+    }
+  }
+  if (Array.isArray(article?.sources) && article.sources.length) {
+    const sourceIndex = lines.findIndex((line) => /^##\s+viri\s*$/i.test(line.trim()));
+    if (sourceIndex >= 0) lines.splice(sourceIndex);
+  }
+  return lines.join("\n").trim();
+}
+
+function articleDigest(article) {
+  const body = articleBodyContent(article);
+  return body
+    .split(/\n{2,}/)
+    .map(plainArticleText)
+    .filter((part) => part && !/^viri$/i.test(part) && !/^vir\b/i.test(part))
+    .slice(0, 2)
+    .join(" ") || article?.excerpt || "Pregleden uredniški članek z jasnim kontekstom, povzetkom in viri.";
+}
+
+function articleOutline(article) {
+  return String(article?.content || "")
+    .split("\n")
+    .filter((line) => /^##\s+/.test(line.trim()))
+    .map((line) => line.replace(/^##\s+/, "").trim())
+    .filter((line) => line && !/^viri$/i.test(line))
+    .slice(0, 7);
+}
+
+function ArticleTemplate({ selected, navigate, openEditorialTerminal }) {
+  const sourceCount = Array.isArray(selected.sources) ? selected.sources.length : 0;
+  const outline = articleOutline(selected);
+  return (
+    <article className="article-page article-page--premium">
+      <button className="back article-back" onClick={() => navigate("home")}>← Vse objave</button>
+      <header className="article-heading article-heading--premium">
+        <div className="article-kicker-row">
+          <span className="article-category">{selected.category}</span>
+          <span className="article-template-badge">Uredniški članek</span>
+        </div>
+        <h1>{selected.title}</h1>
+        <p>{selected.excerpt}</p>
+        <div className="article-byline article-byline--premium"><strong>{selected.author}</strong><span>•</span><span>{formatDate(selected.updatedAt)}</span><span>•</span><span>{readingTime(selected.content)} min branja</span></div>
+        <div className="article-metrics" aria-label="Podatki o članku">
+          <div><strong>{readingTime(selected.content)}</strong><span>min branja</span></div>
+          <div><strong>{outline.length || "—"}</strong><span>sklopov</span></div>
+          <div><strong>{sourceCount || "—"}</strong><span>virov</span></div>
+        </div>
+      </header>
+      <ArticleHero article={selected} />
+      <div className="article-layout article-layout--premium">
+        <aside className="article-side-panel" aria-label="Pregled članka">
+          <div className="article-side-card">
+            <span className="kicker">V ČLANKU</span>
+            {outline.length ? <ol>{outline.map((item) => <li key={item}>{item}</li>)}</ol> : <p>Članek je strukturiran kot kratek uredniški pregled.</p>}
+          </div>
+          <div className="article-side-card muted-card">
+            <span className="kicker">PREVERJANJE</span>
+            <p>{sourceCount ? `Dodani so ${sourceCount} javno preverljivi viri.` : "Pri članku ni dodanih posebnih zunanjih virov."}</p>
+          </div>
+        </aside>
+        <div className="article-main-copy">
+          <section className="article-summary-card"><span className="kicker">HITER POVZETEK</span><p>{articleDigest(selected)}</p></section>
+          <ArticleBody content={articleBodyContent(selected)} />
+        </div>
+      </div>
+      <ArticleVideo video={selected.video} />
+      <ArticleGallery items={selected.gallery} />
+      <ArticleSources items={selected.sources} />
+      <div className="article-end"><span>Konec članka</span><button className="secondary" onClick={openEditorialTerminal}>Uredniški terminal ↗</button></div>
+    </article>
+  );
+}
+
 function ArticleBody({ content }) {
   const lines = content.split("\n");
   const blocks = [];
@@ -2446,8 +2612,9 @@ export default function Home() {
 
     function syncViewFromUrl() {
       const requestedId = new URLSearchParams(window.location.search).get("article");
-      if (requestedId && articles.some((article) => article.id === requestedId)) {
-        setSelectedId(requestedId);
+      const matchedArticle = resolveSelectedArticle(articles, requestedId);
+      if (matchedArticle) {
+        setSelectedId(matchedArticle.id);
         setView("article");
       } else {
         setSelectedId("");
@@ -2461,7 +2628,7 @@ export default function Home() {
   }, [articles, ready]);
 
   useEffect(() => {
-    const selectedArticle = articles.find((article) => article.id === selectedId);
+    const selectedArticle = resolveSelectedArticle(articles, selectedId);
     const description = document.querySelector('meta[name="description"]');
 
     document.title = selectedArticle ? `${selectedArticle.title} | Blog Lab` : "Blog Lab";
@@ -2498,7 +2665,7 @@ export default function Home() {
       .sort((a, b) => new Date(b.updatedAt) - new Date(a.updatedAt));
   }, [articles, filter, query]);
 
-  const selected = articles.find((article) => article.id === selectedId);
+  const selected = resolveSelectedArticle(articles, selectedId);
 
   function navigate(nextView) {
     if (nextView !== "article") {
@@ -2786,21 +2953,7 @@ export default function Home() {
       )}
 
       {view === "article" && selected && (
-        <article className="article-page">
-          <button className="back" onClick={() => navigate("home")}>← Vse objave</button>
-          <div className="article-heading">
-            <span className="article-category">{selected.category}</span>
-            <h1>{selected.title}</h1>
-            <p>{selected.excerpt}</p>
-            <div className="article-byline"><strong>{selected.author}</strong><span>•</span><span>{formatDate(selected.updatedAt)}</span><span>•</span><span>{readingTime(selected.content)} min branja</span></div>
-          </div>
-          <ArticleHero article={selected} />
-          <ArticleBody content={selected.content} />
-          <ArticleVideo video={selected.video} />
-          <ArticleGallery items={selected.gallery} />
-          <ArticleSources items={selected.sources} />
-          <div className="article-end"><span>Konec članka</span><button className="secondary" onClick={openEditorialTerminal}>Uredniški terminal ↗</button></div>
-        </article>
+        <ArticleTemplate selected={selected} navigate={navigate} openEditorialTerminal={openEditorialTerminal} />
       )}
 
       {preview && (
