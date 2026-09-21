@@ -120,7 +120,13 @@ def choose_article_template(category: str, topic: str = "", title: str = "") -> 
         score = 0
         for term in terms:
             folded = _fold(term).strip()
-            if folded and folded in haystack:
+            if not folded:
+                continue
+            if len(folded) <= 3:
+                matched = bool(re.search(rf"(?<!\\w){re.escape(folded)}(?!\\w)", haystack))
+            else:
+                matched = folded in haystack
+            if matched:
                 score += 2 if len(folded) >= 7 else 1
         scores[key] = score
 
