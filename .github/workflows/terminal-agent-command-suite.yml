@@ -27,7 +27,9 @@ permissions:
 jobs:
   terminal-agent-command-suite:
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 10
+    env:
+      EXPECTED_WORKER_VERSION: auth-v6.21-terminal-stability
     steps:
       - uses: actions/checkout@v7
 
@@ -55,17 +57,15 @@ jobs:
         continue-on-error: true
         run: python scripts/test_terminal_live.py
 
-      - name: Request Worker self-heal redeploy
+      - name: Self-heal live Worker and re-probe
         if: ${{ steps.live.outcome == 'failure' }}
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh workflow run deploy-worker.yml --repo "$GITHUB_REPOSITORY" --ref main
-
-      - name: Fail when live Worker contract is broken
-        if: ${{ steps.live.outcome == 'failure' }}
         run: |
-          echo "::error::Live terminal contract failed. A Worker redeploy was requested automatically."
-          exit 1
+          echo "::warning::Live terminal contract failed; requesting Worker redeploy."
+          gh workflow run deploy-worker.yml --repo "$GITHUB_REPOSITORY" --ref main
+          sleep 10
+          python scripts/test_terminal_live.py
 
       - name: Verify no obsolete one-shot workflow remains
         run: test ! -e .github/workflows/one-shot-terminal-operational-chat.yml
