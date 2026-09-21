@@ -2043,7 +2043,7 @@ export default {
       const dispatchMode = mode === "auto"
         ? ((interpretation.ai_used || interpretation.confidence >= 0.80) ? interpretation.mode : "auto")
         : mode;
-      if ((resolvedMode === "control" || mode === "control") && isHelpCommand(command)) {
+      if (isHelpCommand(command)) {
         const help = terminalCommandHelp();
         return json({ ok:true, local:true, interpretation:{...interpretation, mode:"control", action:"help"}, result:{ summary:help.text, catalog:help.catalog } }, 200);
       }
