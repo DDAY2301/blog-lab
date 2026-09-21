@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import LivePulse from "./LivePulse";
+import ProductPlatform from "./ProductPlatform";
 import {
   ArticleGallery,
   ArticleHero,
@@ -2922,6 +2923,9 @@ export default function Home() {
               {rubric.name}
             </button>
           ))}
+          <button className={view === "platform" ? "active" : ""} onClick={() => navigate("platform")}>
+            Platforma
+          </button>
           <button className={view === "dashboard" ? "active" : ""} onClick={() => navigate("dashboard")}>
             <Icon name="file" /> Arhiv
           </button>
@@ -2980,6 +2984,10 @@ export default function Home() {
             </section>
           </div>
         </>
+      )}
+
+      {view === "platform" && (
+        <ProductPlatform terminalUrl={TERMINAL_URL} />
       )}
 
       {view === "dashboard" && (
