@@ -1,0 +1,106 @@
+name: One-shot integrate publisher learning
+
+on:
+  push:
+    paths:
+      - ".github/workflows/one-shot-integrate-learning.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: one-shot-integrate-publisher-learning
+  cancel-in-progress: true
+
+jobs:
+  patch-learning:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Sync latest main
+        shell: bash
+        run: |
+          git fetch origin main
+          git checkout -B main origin/main
+
+      - name: Integrate learning memory into publisher
+        shell: python
+        run: |
+          from pathlib import Path
+
+          changed = []
+
+          auto = Path("agents/blog-lab-publisher/autonomous_fallback.py")
+          text = auto.read_text(encoding="utf-8")
+          original = text
+          text = text.replace(
+              "from services.validator import validate  # noqa: E402\n",
+              "from services.validator import validate  # noqa: E402\nfrom services.learning import learning_source_ok, rank_sources_with_learning  # noqa: E402\n",
+          )
+          text = text.replace(
+              "    if any(host == bad or host.endswith(\".\" + bad) for bad in BAD_AUTONOMOUS_HOSTS):\n        return False\n\n    terms = CATEGORY_TERMS.get(category)\n",
+              "    if any(host == bad or host.endswith(\".\" + bad) for bad in BAD_AUTONOMOUS_HOSTS):\n        return False\n    if not learning_source_ok(item, category):\n        return False\n\n    terms = CATEGORY_TERMS.get(category)\n",
+          )
+          text = text.replace(
+              "    items = _filter_category_pool(collect_automatic_sources(cfg, category), category)\n",
+              "    items = rank_sources_with_learning(_filter_category_pool(collect_automatic_sources(cfg, category), category), category)\n",
+          )
+          text = text.replace(
+              "    source_pool = _filter_category_pool(source_pool, category)\n    evidence_pool = automatic_story_pool(source_pool, category, max_items=6)\n    evidence_pool = _filter_category_pool(evidence_pool, category)\n",
+              "    source_pool = rank_sources_with_learning(_filter_category_pool(source_pool, category), category)\n    evidence_pool = automatic_story_pool(source_pool, category, max_items=6)\n    evidence_pool = rank_sources_with_learning(_filter_category_pool(evidence_pool, category), category)\n",
+          )
+          text = text.replace(
+              '        "agent_version": "2.9.0-category-guarded-fallback",\n',
+              '        "agent_version": "3.0.0-learning-guarded-fallback",\n',
+          )
+          if text != original:
+              auto.write_text(text, encoding="utf-8")
+              changed.append(str(auto))
+
+          agent = Path("agents/blog-lab-publisher/agent.py")
+          text = agent.read_text(encoding="utf-8")
+          original = text
+          text = text.replace(
+              "from services.state import load_json, atomic_json\n",
+              "from services.state import load_json, atomic_json\nfrom services.learning import learning_source_ok, rank_sources_with_learning\n",
+          )
+          text = text.replace(
+              "    merged = _merge_source_groups(primary, broad, limit=limit)\n",
+              "    merged = [\n        item for item in _merge_source_groups(primary, broad, limit=limit)\n        if learning_source_ok(item, category)\n    ]\n    merged = rank_sources_with_learning(merged, category)[:limit]\n",
+          )
+          if text != original:
+              agent.write_text(text, encoding="utf-8")
+              changed.append(str(agent))
+
+          if not changed:
+              raise SystemExit("No publisher learning integration changes were applied")
+          print("Patched:", ", ".join(changed))
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-agent.txt
+
+      - name: Validate Python
+        run: |
+          pip install -r requirements-agent.txt
+          python -m py_compile agents/blog-lab-publisher/agent.py agents/blog-lab-publisher/autonomous_fallback.py agents/blog-lab-publisher/learning_loop.py agents/blog-lab-publisher/services/*.py
+
+      - name: Commit learning integration
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "blog-lab-learning[bot]"
+          git config user.email "blog-lab-learning[bot]@users.noreply.github.com"
+          git add agents/blog-lab-publisher/agent.py agents/blog-lab-publisher/autonomous_fallback.py
+          git commit -m "Integrate learning memory into publisher source selection"
+          git pull --rebase origin main
+          git push origin HEAD:main
