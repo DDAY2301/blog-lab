@@ -8,6 +8,7 @@ on:
     branches: ["main"]
     paths:
       - "terminal/worker/**"
+      - "scripts/patch_worker_dispatch_diagnostics.py"
       - "scripts/harden_terminal_agent.py"
       - "scripts/test_terminal_agent.py"
       - "data/terminal-command-test-suite.json"
@@ -30,6 +31,9 @@ jobs:
       - uses: actions/setup-node@v7
         with:
           node-version: 22
+
+      - name: Apply dispatch diagnostics overlay for tests
+        run: python scripts/patch_worker_dispatch_diagnostics.py
 
       - name: Apply terminal hardening overlay for tests
         run: python scripts/harden_terminal_agent.py
