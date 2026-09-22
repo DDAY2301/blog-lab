@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-22T13:09:21+02:00",
-  "loop_count": 262,
+  "updated_at": "2026-09-22T13:23:47+02:00",
+  "loop_count": 263,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-22T13:08:54+02:00",
+      "last_learning_run": "2026-09-22T13:23:13+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -39,12 +39,12 @@
       ],
       "source_health": {
         "news.google.com": {
-          "score": 2.493,
-          "seen": 7800,
-          "last_seen": "2026-09-22T13:08:54+02:00",
-          "last_title": "Srbi ogorčeni: Slovenec nas je dodatno ponižal s temi petimi besedami - Ekipa",
+          "score": 2.495,
+          "seen": 7830,
+          "last_seen": "2026-09-22T13:23:13+02:00",
+          "last_title": "Hude skrbi za Boštjana Cesarja: Slovenija pred štirimi tekmami! Kaj bo s Slovenijo? - NaDlani.si",
           "last_provider": "",
-          "published": 4407,
+          "published": 4428,
           "last_output_id": "poljaki-gladko-boljsi-slovenci-po-porazu-0-3-v-boj-za-bron-proti-japoncem-88391181"
         }
       },
@@ -52,13 +52,13 @@
       "example_titles": {
         "news.google.com": [
           "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
-          "Kot v sanjah: Slovenija že drugič v dveh tednih evropski prvak! (VIDEO) - Šport TV",
+          "Poljaki gladko boljši, Slovenci po porazu 0:3 v boj za bron proti Japoncem - rtvslo.si",
           "Slovenija z izjemno predstavo in vrnitvijo Čebulja gladko odpravila Srbijo - rtvslo.si"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-22T13:09:09+02:00",
+      "last_learning_run": "2026-09-22T13:23:30+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -80,26 +80,26 @@
       ],
       "source_health": {
         "news.google.com": {
-          "score": 2.504,
-          "seen": 7800,
-          "last_seen": "2026-09-22T13:09:09+02:00",
-          "last_title": "Nataša Pirc Musar: Ne bom tiho, ko zunanja politika ne bo skladna z ustavnimi vrednotami države - Slovenske novice",
+          "score": 2.507,
+          "seen": 7830,
+          "last_seen": "2026-09-22T13:23:30+02:00",
+          "last_title": "Tone Kajzer: Zunanja politika na dobri poti. Tanja Fajon: Kajzer dobro začrtal usmeritve. - rtvslo.si",
           "last_provider": "",
-          "published": 3840,
+          "published": 3860,
           "last_output_id": "zgodba-sonje-debelak-zaposlene-v-modi-mi-lan-dva-dni-pred-stecajem-odplacala-dolg-ki-ni-bi-0447136d"
         }
       },
       "current_source_count": 30,
       "example_titles": {
         "news.google.com": [
-          "Janša diplomatom: Zunanjo politiko vodi vlada, samo to je uradna politika Slovenije - siol.net",
-          "Odločitev je padla: Po 19 letih zapušča stranko SDS - Žurnal24",
-          "Novi v politiki: Volt Slovenija gre na lokalne volitve tudi na Ptuju - Svet24.si"
+          "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - metropolitan.si",
+          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
+          "Odločitev je padla: Po 19 letih zapušča stranko SDS - Žurnal24"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-22T13:09:21+02:00",
+      "last_learning_run": "2026-09-22T13:23:47+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -133,96 +133,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 7800,
-          "last_seen": "2026-09-22T13:09:21+02:00",
+          "seen": 7830,
+          "last_seen": "2026-09-22T13:23:47+02:00",
           "last_title": "Društvo Izgubljeni otroci Slovenije odprlo nove prostore - Novice - Aktualno - novomesto.si",
           "last_provider": "",
-          "published": 7662,
+          "published": 7698,
           "last_output_id": "zaposlena-na-rtv-zgrozena-vesna-milek-ne-bo-delala-za-ljubezen-ampak-denar-8d955705"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 239,
+          "published": 240,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 239,
+          "published": 240,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 262,
+          "published": 263,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 164,
+          "published": 165,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 228,
+          "published": 229,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 164,
+          "published": 165,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 164,
+          "published": 165,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 228,
+          "published": 229,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 1048,
+          "published": 1052,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 262,
+          "published": 263,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 239,
+          "published": 240,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 392,
+          "published": 394,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 196,
+          "published": 197,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 456,
+          "published": 458,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 262,
+          "published": 263,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 164,
+          "published": 165,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 392,
+          "published": 394,
           "last_output_id": "duckduckgo-287dab86"
         }
       },
