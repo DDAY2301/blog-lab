@@ -20,6 +20,48 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "zgodba-sonje-debelak-zaposlene-v-modi-mi-lan-dva-dni-pred-stecajem-odplacala-dolg-ki-ni-bi-0447136d",
+    "title": "(Zgodba Sonje Debelak, zaposlene v Modi Mi&lan) Dva dni pred stečajem odplačala dolg, ki ni bil njen, sedaj pa je…",
+    "excerpt": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »(Zgodba Sonje Debelak, zaposlene v Modi Mi&lan) Dva dni pred stečajem odplačala dolg, ki ni bil njen, sedaj pa je…«.",
+    "seoDescription": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »(Zgodba Sonje Debelak, zaposlene v Modi Mi&lan) Dva dni pred stečajem odplača",
+    "content": "**Politika, 22. 9. 2026.** (Zgodba Sonje Debelak, zaposlene v Modi Mi&lan) Dva dni pred stečajem odplačala dolg, ki ni bil njen, sedaj pa je ostala brez vsega Svet24.si\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nPri političnih temah Blog Lab ne podpira kandidatov, strank ali političnih odločitev; izjave in ocene so predstavljene kot stališča njihovih avtorjev ali virov, ne kot uredniška presoja.\n\nVir: Svet24.si. Objavljeno: Thu, 18 Jan 2024 08:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMikwJBVV95cUxPRFpDWklkbHREcTRIZnAwS2hxVTREWThLalUtQVRkNVd4QWpoMEw5RUpJTmoxZl9JT2NhR2dsazlXR0x6VUZGRUZnazlCV2JDVlE4VHpYNmFvRkxGOHZMMGhPTk15d19lallUZ19jVDhUeW8xSTFTV3hSQnF3RHlUb0pnSktydmYtcHFyeVp1b3d3Wlc3amx3Z3FOMlhmSDVyOGJBejNTTXhpZ2Y4VEkyUWRzNUlvXzMxT2swVl9DMjhyejhUYnRNUlRXcVpUbTJfODltRmpVRmpxSlBwWVdDRWJHZG1mX1JyQTNBTEFfdlNXNlpQM3dwbzYyeHF2dEkwaTUwOXFjOUczSDZNUlNsY2NnMA?oc=5)\n\n## Dopolnitev vira 2: N1 Slovenija\n\nPoslanec Resnice, ki dolguje delavcem in državi, tudi pod drobnogledom KPK N1 Slovenija\n\n Vir: N1 Slovenija. Objavljeno: Thu, 02 Jul 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMirAFBVV95cUxNTzVPQzNTbllYemJ3YThWQ3RRdHRMSmQxelJnSFFURmE0SU9yd3piVExSRmJrNnFhTHdVU1F2dTB5VWM0dGl1NldfZFRCY2VhMFlCWnVaRHA1c2NRLTFGUzRZaEhTR01zQXZOelJBWmY3U3BkaTRQSEUwY2RBbDFrY2wwUzIzQ2hCaFNhUjRsclJCOTdQd0tPR01Hb21kMmwxNWNMRktBZDlKa0tw?oc=5)\n\n## Dopolnitev vira 3: Slovenske novice\n\nOčetov dolg vzel otroški dodatek Slovenske novice\n\n Vir: Slovenske novice. Objavljeno: Mon, 18 Nov 2013 08:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiiAFBVV95cUxNd3RNb3BuNWFkcmlLRWY1VnJLb3Uya0FmNnVMeGs0SmJqVlZSUEk3QXFPY2M0eVZtT3oydHA5Rk1kUlJPektLQ01ZWjJ3RHg5SnpncEhSWlZ1dDFDRVUyV3VzWWlraVBYNlQyLUNiT2RVUnVkcFdiV1lhVFNBUVllbjlGREE2UDdj?oc=5)\n\n## Dopolnitev vira 4: DEMOKRACIJA.SI\n\nOsupljivo nepregledno dolg seznam imenovanj in razrešitev Šarčeve vlade! Skoraj na vsaki seji vlade kadrovski cunami; celo v dneh, ko je bil v odstopu! DEMOKRACIJA.SI\n\n Vir: DEMOKRACIJA.SI. Objavljeno: Tue, 12 May 2020 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMickFVX3lxTE1iN2ZDdnVJbEdIM2xoRkp1bkpHMlBWbEtoeGpkUlgtYTlXRDJtS19qUGctWEJrUzFWTlVudUR6NFBCMGNvb3F1cURxU3lLNVQ3a3lPTEU5NXdOSDR0YkVCR0tXbFRVeFhXX2RnLUZkN2dFZw?oc=5)\n\n## Dopolnitev vira 5: Svet24.si\n\nAnaliza trga dela v Sloveniji: to je 15 poklicev, pri katerih je pomanjkanje delovne sile kritično Svet24.si\n\n Vir: Svet24.si. Objavljeno: Tue, 18 Feb 2025 08:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiogFBVV95cUxNb2VWQ3dvOTR6YjVCM3VNVGd5eldOenNhdW9XVGtfWTVKX0xscFI5R0hCVkRYZEloeWpsa1RieHd1QTJJRHZzRHFwRzEtdEd6eEZIbm9oVzlsRDNLTDJPYnB2MVhjYXNzdzBNYzgtM1RBRm4tRGxRdTBKSkp4UG5YNlliS0lXSmZUNXpFUmlheFI1Yk1VQWQ4bHpZR0lGejl0eVE?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Politika",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": {
+      "url": "https://dday2301.github.io/blog-lab/media/uploads/20260922085428-e6eb3a9b-images.jpg",
+      "alt": "",
+      "caption": ""
+    },
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Svet24.si — (Zgodba Sonje Debelak, zaposlene v Modi Mi&lan) Dva dni pred stečajem odplačala dolg, ki ni bil njen, sedaj pa je…",
+        "url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxPRFpDWklkbHREcTRIZnAwS2hxVTREWThLalUtQVRkNVd4QWpoMEw5RUpJTmoxZl9JT2NhR2dsazlXR0x6VUZGRUZnazlCV2JDVlE4VHpYNmFvRkxGOHZMMGhPTk15d19lallUZ19jVDhUeW8xSTFTV3hSQnF3RHlUb0pnSktydmYtcHFyeVp1b3d3Wlc3amx3Z3FOMlhmSDVyOGJBejNTTXhpZ2Y4VEkyUWRzNUlvXzMxT2swVl9DMjhyejhUYnRNUlRXcVpUbTJfODltRmpVRmpxSlBwWVdDRWJHZG1mX1JyQTNBTEFfdlNXNlpQM3dwbzYyeHF2dEkwaTUwOXFjOUczSDZNUlNsY2NnMA?oc=5"
+      },
+      {
+        "label": "N1 Slovenija — Poslanec Resnice, ki dolguje delavcem in državi, tudi pod drobnogledom KPK - N1 Slovenija",
+        "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNTzVPQzNTbllYemJ3YThWQ3RRdHRMSmQxelJnSFFURmE0SU9yd3piVExSRmJrNnFhTHdVU1F2dTB5VWM0dGl1NldfZFRCY2VhMFlCWnVaRHA1c2NRLTFGUzRZaEhTR01zQXZOelJBWmY3U3BkaTRQSEUwY2RBbDFrY2wwUzIzQ2hCaFNhUjRsclJCOTdQd0tPR01Hb21kMmwxNWNMRktBZDlKa0tw?oc=5"
+      },
+      {
+        "label": "Slovenske novice — Očetov dolg vzel otroški dodatek - Slovenske novice",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNd3RNb3BuNWFkcmlLRWY1VnJLb3Uya0FmNnVMeGs0SmJqVlZSUEk3QXFPY2M0eVZtT3oydHA5Rk1kUlJPektLQ01ZWjJ3RHg5SnpncEhSWlZ1dDFDRVUyV3VzWWlraVBYNlQyLUNiT2RVUnVkcFdiV1lhVFNBUVllbjlGREE2UDdj?oc=5"
+      },
+      {
+        "label": "DEMOKRACIJA.SI — Osupljivo nepregledno dolg seznam imenovanj in razrešitev Šarčeve vlade! Skoraj na vsaki seji vlade kadrovski cunami;…",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1iN2ZDdnVJbEdIM2xoRkp1bkpHMlBWbEtoeGpkUlgtYTlXRDJtS19qUGctWEJrUzFWTlVudUR6NFBCMGNvb3F1cURxU3lLNVQ3a3lPTEU5NXdOSDR0YkVCR0tXbFRVeFhXX2RnLUZkN2dFZw?oc=5"
+      },
+      {
+        "label": "Svet24.si — Analiza trga dela v Sloveniji: to je 15 poklicev, pri katerih je pomanjkanje delovne sile kritično - Svet24.si",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNb2VWQ3dvOTR6YjVCM3VNVGd5eldOenNhdW9XVGtfWTVKX0xscFI5R0hCVkRYZEloeWpsa1RieHd1QTJJRHZzRHFwRzEtdEd6eEZIbm9oVzlsRDNLTDJPYnB2MVhjYXNzdzBNYzgtM1RBRm4tRGxRdTBKSkp4UG5YNlliS0lXSmZUNXpFUmlheFI1Yk1VQWQ4bHpZR0lGejl0eVE?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-22T10:58:43+02:00",
+    "updatedAt": "2026-09-22T10:58:43+02:00"
+  },
+
+  {
     "id": "secovlje-salt-pans-nature-park-guide",
     "title": "Sečovlje Salt Pans: A Nature-First Day Trip from Ljubljana",
     "excerpt": "Plan a responsible visit to Slovenia's coastal salt pans with wildlife etiquette, route choices, current access checks and car-free travel guidance.",
