@@ -1,20 +1,18 @@
 {
-  "last_success": "2026-09-21T19:54:06+02:00",
+  "last_success": "2026-09-22T08:24:15+02:00",
   "last_failure": "2026-09-21T20:56:52+02:00",
-  "consecutive_failures": 2,
-  "posts_date": "2026-09-21",
-  "posts_today": 9,
-  "last_output": "zaposlena-na-rtv-zgrozena-vesna-milek-ne-bo-delala-za-ljubezen-ampak-denar-8d955705",
-  "last_error": "no_topic_sources",
+  "consecutive_failures": 0,
+  "posts_date": "2026-09-22",
+  "posts_today": 1,
+  "last_output": "poljaki-gladko-boljsi-slovenci-po-porazu-0-3-v-boj-za-bron-proti-japoncem-88391181",
+  "last_error": null,
   "agent_version": "2.7.0",
-  "current_category": "aktualno",
-  "scheduled_posts_today": 3,
-  "manual_posts_today": 6,
+  "current_category": "sport",
+  "scheduled_posts_today": 1,
+  "manual_posts_today": 0,
   "writer_mode": "local_evidence_ai",
   "scheduled_slots_done": [
-    "2026-09-21|08:17|sport",
-    "2026-09-21|13:27|politika",
-    "2026-09-21|19:43|aktualno"
+    "2026-09-22|08:17|sport"
   ],
   "scheduled_slots_deferred": [],
   "last_editorial_hold": null

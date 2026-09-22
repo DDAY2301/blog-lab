@@ -20,6 +20,44 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "poljaki-gladko-boljsi-slovenci-po-porazu-0-3-v-boj-za-bron-proti-japoncem-88391181",
+    "title": "Poljaki gladko boljši, Slovenci po porazu 0:3 v boj za bron proti Japoncem",
+    "excerpt": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Poljaki gladko boljši, Slovenci po porazu 0:3 v boj za bron proti Japoncem«.",
+    "seoDescription": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Poljaki gladko boljši, Slovenci po porazu 0:3 v boj za bron proti Japoncem«.",
+    "content": "**Šport, 22. 9. 2026.** Poljaki gladko boljši, Slovenci po porazu 0:3 v boj za bron proti Japoncem rtvslo.si\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: rtvslo.si. Objavljeno: Sat, 01 Aug 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMitwFBVV95cUxOWXgzUmJFaWt0Sk55LXpqTkp0d093bVlBYnhJaXlXM0lOVWxvLXFuYk9sY1dpMEdVZ3NpNEZ5Q09yYXdKS05LWnNzRTJMR2dDald5ZDFkYmhVN0dWV1NZRmFCTkxPc2diUTM1R2RFSjBWZFpSZVlRLXoyZHdReHpoQWltbXlmVVBzQllrNk9CeVdhelNMU1hGN0hOR3VyTUMySkY5dlBtdVdXeXV4UXJvc1ZHYTRGaWM?oc=5)\n\n## Dopolnitev vira 2: rtvslo.si\n\nSlovenija z izjemno predstavo blokerjev in vrnitvijo Čebulja gladko odpravila Srbijo rtvslo.si\n\n Vir: rtvslo.si. Objavljeno: Mon, 21 Sep 2026 22:04:19 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMi3gFBVV95cUxNdWdWaXZCNTlQYnFFNUZEdzlyS1N6b2ZYNjh6eEVMTEtDa1VERWlZcEg5V0dXaWoxeENLQ1laNnJnN2ZnSjJsSV9MWUd4UVVib1hRcVFhOUZjU3NkaWhWbll6dE9KZlQtalIteDZkblpTdU9RdmNCTHJnd1ZIUjgxQ05sRk8xd3NhR0pqT0htV0ozbGR5X2kxRzl2aGRuM2N2SFhvNW9zcnVWNGNGVlFXMExwaDJkY3paN3QxbkdlbWRlTUoyM3ZUd25FWHhha1dwSHBPVVFCT2lGbTlfNnc?oc=5)\n\n## Dopolnitev vira 3: rtvslo.si\n\nSlovenija z izjemno predstavo in vrnitvijo Čebulja gladko odpravila Srbijo rtvslo.si\n\n Vir: rtvslo.si. Objavljeno: Mon, 21 Sep 2026 20:26:15 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMi0AFBVV95cUxNd19QSHFTWHBIcGtMTVRkRHRrTWkyQk8tdmp1NFZfTUJZejFBdFdlelM3SDd4RmVDWFYwdjk1cElfYUpYYjd2b2FManVYeEcyTXBiQnBmUEhEY3NvZ0ZGdVhkeEJHLTQ5VElDTU1sNFZrX2JTclpLY2RJSkZZbTFndTVOWGpLbXl4R3RzbUlHbElBZVFlYXZaZVJsTkEtbGFEYjhaYndsbmdQNlB1bGtzdm1LejJkVWhTa2UxS2RCVW9rWTlIZ2lMM3NBeUlZeFcy?oc=5)\n\n## Dopolnitev vira 5: NaDlani.si\n\nOdlični Slovenci preko Srbov do četrtfinala, lažje se diha NaDlani.si\n\n Vir: NaDlani.si. Objavljeno: Tue, 22 Sep 2026 04:05:08 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMikAFBVV95cUxOMHdyWE50RjRmdmkwTVJmX2RxZWxRZWZTYml4cXVqRWVJcThUN1hnZURYX2g4TDV3a0phekU5SmtkUXdEY2p3dmpGSzN2NzhtNC1DYWhRNUxKUm8xZlgydkxlQk92Z2dWMGtyUll0QXphTklXVTg3VU1NQU5tWTdEbVczVmZaeWY5czFIemhiMlA?oc=5)\n\n## Dodatni potrditveni viri\n\nNaslednji viri sodijo v isto osrednjo zgodbo, vendar njihovi razpoložljivi povzetki ne dodajajo novih preverljivih dejstev, zato jih Blog Lab ne ponavlja kot umetno nove odstavke. Več objav o istem dogodku lahko pomaga preveriti, da zgodba ni osamljen zapis, ne pomeni pa, da je vsaka podrobnost samodejno potrjena. Zato so spodaj ohranjene neposredne povezave, dodatne trditve pa niso dodane brez jasne podpore v virih. Ta pristop daje prednost sledljivosti pred navideznim obsegom besedila in preprečuje, da bi ponovljeni povzetki izgledali kot nova dejstva.\n\n- [rtvslo.si — Slovenija z izjemno predstavo in vrnitvijo Čebulja gladko odpravila Srbijo - rtvslo.si](https://news.google.com/rss/articles/CBMiugFBVV95cUxNNVQwaHQtN2xwcUdKMWJ3TlNmM0M3RlZFZkN4SkRJaGlNNDhicHFFMnNZaU5mM2tzaXJocWltN3V3S3BkVkpwTXgwVFE2dS1qaVIxaTZNN1hfUEYzOUFNOXJCeU5rUDhTNU1fQ0lTbzVWQXFJZGFBRlNBSzl6eWNFYno5c2NEU2VuOEFQUlhvNlV3THlmbExORzhFZlM4YXVpUy1IZHJXa2lBVFdra0pYQkZWQXJvQ1FIQVE?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Šport",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "rtvslo.si — Poljaki gladko boljši, Slovenci po porazu 0:3 v boj za bron proti Japoncem - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOWXgzUmJFaWt0Sk55LXpqTkp0d093bVlBYnhJaXlXM0lOVWxvLXFuYk9sY1dpMEdVZ3NpNEZ5Q09yYXdKS05LWnNzRTJMR2dDald5ZDFkYmhVN0dWV1NZRmFCTkxPc2diUTM1R2RFSjBWZFpSZVlRLXoyZHdReHpoQWltbXlmVVBzQllrNk9CeVdhelNMU1hGN0hOR3VyTUMySkY5dlBtdVdXeXV4UXJvc1ZHYTRGaWM?oc=5"
+      },
+      {
+        "label": "rtvslo.si — Slovenija z izjemno predstavo blokerjev in vrnitvijo Čebulja gladko odpravila Srbijo - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNdWdWaXZCNTlQYnFFNUZEdzlyS1N6b2ZYNjh6eEVMTEtDa1VERWlZcEg5V0dXaWoxeENLQ1laNnJnN2ZnSjJsSV9MWUd4UVVib1hRcVFhOUZjU3NkaWhWbll6dE9KZlQtalIteDZkblpTdU9RdmNCTHJnd1ZIUjgxQ05sRk8xd3NhR0pqT0htV0ozbGR5X2kxRzl2aGRuM2N2SFhvNW9zcnVWNGNGVlFXMExwaDJkY3paN3QxbkdlbWRlTUoyM3ZUd25FWHhha1dwSHBPVVFCT2lGbTlfNnc?oc=5"
+      },
+      {
+        "label": "rtvslo.si — Slovenija z izjemno predstavo in vrnitvijo Čebulja gladko odpravila Srbijo - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNd19QSHFTWHBIcGtMTVRkRHRrTWkyQk8tdmp1NFZfTUJZejFBdFdlelM3SDd4RmVDWFYwdjk1cElfYUpYYjd2b2FManVYeEcyTXBiQnBmUEhEY3NvZ0ZGdVhkeEJHLTQ5VElDTU1sNFZrX2JTclpLY2RJSkZZbTFndTVOWGpLbXl4R3RzbUlHbElBZVFlYXZaZVJsTkEtbGFEYjhaYndsbmdQNlB1bGtzdm1LejJkVWhTa2UxS2RCVW9rWTlIZ2lMM3NBeUlZeFcy?oc=5"
+      },
+      {
+        "label": "rtvslo.si — Slovenija z izjemno predstavo in vrnitvijo Čebulja gladko odpravila Srbijo - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNNVQwaHQtN2xwcUdKMWJ3TlNmM0M3RlZFZkN4SkRJaGlNNDhicHFFMnNZaU5mM2tzaXJocWltN3V3S3BkVkpwTXgwVFE2dS1qaVIxaTZNN1hfUEYzOUFNOXJCeU5rUDhTNU1fQ0lTbzVWQXFJZGFBRlNBSzl6eWNFYno5c2NEU2VuOEFQUlhvNlV3THlmbExORzhFZlM4YXVpUy1IZHJXa2lBVFdra0pYQkZWQXJvQ1FIQVE?oc=5"
+      },
+      {
+        "label": "NaDlani.si — Odlični Slovenci preko Srbov do četrtfinala, lažje se diha - NaDlani.si",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOMHdyWE50RjRmdmkwTVJmX2RxZWxRZWZTYml4cXVqRWVJcThUN1hnZURYX2g4TDV3a0phekU5SmtkUXdEY2p3dmpGSzN2NzhtNC1DYWhRNUxKUm8xZlgydkxlQk92Z2dWMGtyUll0QXphTklXVTg3VU1NQU5tWTdEbVczVmZaeWY5czFIemhiMlA?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-22T08:24:15+02:00",
+    "updatedAt": "2026-09-22T08:24:15+02:00"
+  },
+
+  {
     "id": "zaposlena-na-rtv-zgrozena-vesna-milek-ne-bo-delala-za-ljubezen-ampak-denar-8d955705",
     "title": "Zaposlena na RTV zgrožena: Vesna Milek ne bo delala za ljubezen, ampak denar!",
     "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Zaposlena na RTV zgrožena: Vesna Milek ne bo delala za ljubezen, ampak denar!«.",
