@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-22T08:49:09+02:00",
-  "loop_count": 225,
+  "updated_at": "2026-09-22T08:53:36+02:00",
+  "loop_count": 226,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-22T08:48:45+02:00",
+      "last_learning_run": "2026-09-22T08:53:13+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -40,11 +40,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.494,
-          "seen": 6690,
-          "last_seen": "2026-09-22T08:48:45+02:00",
+          "seen": 6720,
+          "last_seen": "2026-09-22T08:53:13+02:00",
           "last_title": "Boleč udarec za Slovenijo: \"Igralca takšnega kova je nemogoče nadomestiti\" - Žurnal24",
           "last_provider": "",
-          "published": 3630,
+          "published": 3651,
           "last_output_id": "poljaki-gladko-boljsi-slovenci-po-porazu-0-3-v-boj-za-bron-proti-japoncem-88391181"
         }
       },
@@ -58,7 +58,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-22T08:48:56+02:00",
+      "last_learning_run": "2026-09-22T08:53:25+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -80,26 +80,26 @@
       ],
       "source_health": {
         "news.google.com": {
-          "score": 2.505,
-          "seen": 6690,
-          "last_seen": "2026-09-22T08:48:56+02:00",
-          "last_title": "Napovedali konec kvazi zelenega prehoda, zdaj presenečajo z odgovori - Žurnal24",
+          "score": 2.522,
+          "seen": 6720,
+          "last_seen": "2026-09-22T08:53:25+02:00",
+          "last_title": "Tone Kajzer: Zunanja politika na dobri poti. Tanja Fajon: Kajzer dobro začrtal usmeritve. - rtvslo.si",
           "last_provider": "",
-          "published": 3195,
+          "published": 3210,
           "last_output_id": "okoljski-ekonomist-sonnenschein-politika-ministra-za-energetiko-ni-v-interesu-javnosti-001b0a7e"
         }
       },
       "current_source_count": 30,
       "example_titles": {
         "news.google.com": [
+          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
           "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si",
-          "Novi v politiki: Volt Slovenija gre na lokalne volitve tudi na Ptuju - Svet24.si",
-          "Opozicija nad Kajzerja, SDS udarila nazaj: Interpelacija služi Moskvi in Teheranu! - Dnevnik"
+          "Novi v politiki: Volt Slovenija gre na lokalne volitve tudi na Ptuju - svet24.si"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-22T08:49:09+02:00",
+      "last_learning_run": "2026-09-22T08:53:36+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -133,96 +133,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 6690,
-          "last_seen": "2026-09-22T08:49:09+02:00",
+          "seen": 6720,
+          "last_seen": "2026-09-22T08:53:36+02:00",
           "last_title": "Društvo Izgubljeni otroci Slovenije odprlo nove prostore - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 6330,
+          "published": 6366,
           "last_output_id": "zaposlena-na-rtv-zgrozena-vesna-milek-ne-bo-delala-za-ljubezen-ampak-denar-8d955705"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 202,
+          "published": 203,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 202,
+          "published": 203,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 225,
+          "published": 226,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 127,
+          "published": 128,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 191,
+          "published": 192,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 127,
+          "published": 128,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 127,
+          "published": 128,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 191,
+          "published": 192,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 900,
+          "published": 904,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 225,
+          "published": 226,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 202,
+          "published": 203,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 318,
+          "published": 320,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 159,
+          "published": 160,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 382,
+          "published": 384,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 225,
+          "published": 226,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 127,
+          "published": 128,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 318,
+          "published": 320,
           "last_output_id": "duckduckgo-287dab86"
         }
       },
