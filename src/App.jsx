@@ -20,6 +20,39 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "secovlje-salt-pans-nature-park-guide",
+    "title": "Sečovlje Salt Pans: A Nature-First Day Trip from Ljubljana",
+    "excerpt": "Plan a responsible visit to Slovenia's coastal salt pans with wildlife etiquette, route choices, current access checks and car-free travel guidance.",
+    "seoDescription": "Visit Sečovlje Salt Pans from Ljubljana: official access checks, wildlife etiquette, walking and cycling guidance, weather and public transport tips.",
+    "content": "The Sečovlje Salt Pans combine a working cultural landscape with one of Slovenia's most distinctive coastal wetlands. For visitors based in Ljubljana, the park works best as a carefully planned full-day trip rather than a quick stop between Piran and another attraction.\n\nOn **22 September 2026**, the park reported clear conditions and no precipitation, while the coastal forecast was sunny with a daytime high near 24°C. Weather changes quickly, so use the live park station and forecast only as a final-day check—not as a promise for a later visit.\n\n## What makes the salt pans special\n\nSečovlje Salina Nature Park protects salt-marsh habitats shaped by the meeting of land and sea. Salt-tolerant plants, shallow basins and mudflats support specialised wildlife, especially birds. Traditional salt production is part of the landscape's cultural value, but this is first and foremost a protected working wetland.\n\nThe park's official guidance allows individual exploration on foot or by bicycle, as well as guided visits. A guided tour is the better choice if you want interpretation of salt making, habitats and conservation rather than simply a scenic walk.\n\n## Choose the right area before travelling\n\nThe salt pans are not one compact attraction with a single obvious entrance. **Lera** and **Fontanigge** offer different visitor experiences and access arrangements. Check the [official park visiting information](https://www.kpss.si/en) before departure and enter the area you actually intend to visit into your route planner.\n\n### Lera\n\nLera is the practical choice for a first visit focused on active salt production, interpretation and shorter walking routes. Confirm current opening hours, admission and guided-tour availability on the park's official price and opening-hours page.\n\n### Fontanigge\n\nFontanigge is the more extensive landscape associated with abandoned salt fields and the Salt-Making Museum area. Distances are greater, shade is limited and services can be sparse. The park announced that rental bicycles in Fontanigge became available again on **4 August 2026**, but availability should still be reconfirmed on the day.\n\n## Wildlife-first visitor rules\n\nA quiet visitor usually sees more wildlife and causes less disturbance.\n\n- Stay on authorised paths and obey staff instructions.\n- Never enter salt basins, cross barriers or approach nests.\n- Keep voices low and disable music speakers.\n- Use binoculars instead of moving closer to birds.\n- Do not pick salt-tolerant plants or collect natural material.\n- Keep food packed away and take every piece of rubbish out.\n- Ask the park directly about current pet rules before bringing a dog.\n- Drones should not be used without explicit permission and all legally required authorisations.\n\nEarly morning and later afternoon can offer softer light and more comfortable temperatures, but access is governed by official opening hours.\n\n## What to bring\n\nThe flat terrain may look easy, yet sun, glare, wind and limited shade make preparation important.\n\n- drinking water;\n- hat, sunscreen and sunglasses;\n- closed, comfortable footwear;\n- windproof or light rain layer;\n- binoculars and a charged phone;\n- insect protection in warmer periods.\n\nThere may be exposed sections unsuitable for visitors who struggle with heat or long unshaded distances. Contact the park in advance for current wheelchair access, adapted toilets and route surfaces; do not assume that every path is step-free.\n\n## Reaching the coast without a car\n\nUse the [official Arriva journey planner](https://arriva.si/en/timetables/) for the Ljubljana–coast connection, then plan the final local segment separately. Do not rely on a saved timetable because seasonal services and road works can change connections.\n\nArriva reported traffic changes and possible delays on coastal routes around Piran on **21 September 2026**. Build extra transfer time into the plan and check same-day notices. For a lower-stress itinerary, combine the park with either Piran or Portorož, not both plus several distant attractions.\n\n## A realistic day plan\n\n1. Confirm the park area, opening hours and admission before leaving Ljubljana.\n2. Travel to the coast early and complete the salt-pans visit before the warmest part of the day.\n3. Allow time for slow wildlife observation rather than treating the paths as a race.\n4. Continue to Piran or Portorož only if your return connection leaves a safe buffer.\n5. Recheck service notices before starting the journey back.\n\nFamilies can enjoy the landscape, but adults should supervise children closely around water, channels and working areas. The experience is most suitable for children comfortable with quiet walking and observation.\n\nFor another wetland landscape closer to Ljubljana, read [Ljubljana Marshes Pile Dwellers](?article=ljubljana-marshes-pile-dwellings-history). If you prefer an inland karst excursion, see the [Rakov Škocjan hiking guide](?article=rakov-skocjan-hiking-guide).\n\n## Direct sources\n\n- [Sečovlje Salina Nature Park: official visiting information, live conditions and notices](https://www.kpss.si/en)\n- [Portorož and Piran official destination website](https://www.portoroz.si/en/)\n- [Arriva Slovenia: timetables](https://arriva.si/en/timetables/)\n- [Arriva Slovenia: current service notices](https://arriva.si/aktualno/arhiv-novic-in-obvestil/)\n- [ARSO weather portal](https://meteo.arso.gov.si/met/en/)\n\nAccess notices, transport disruption information and coastal conditions were last checked on **22 September 2026**. Recheck every live source before departure.",
+    "category": "Vodniki",
+    "author": "Uredništvo Blog Lab",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Sečovlje Salina Nature Park",
+        "url": "https://www.kpss.si/en"
+      },
+      {
+        "label": "Portorož and Piran official tourism",
+        "url": "https://www.portoroz.si/en/"
+      },
+      {
+        "label": "Arriva Slovenia — Timetables",
+        "url": "https://arriva.si/en/timetables/"
+      },
+      {
+        "label": "ARSO — Weather",
+        "url": "https://meteo.arso.gov.si/met/en/"
+      }
+    ],
+    "createdAt": "2026-09-22T08:59:58+02:00",
+    "updatedAt": "2026-09-22T08:59:58+02:00"
+  },
+  {
     "id": "poljaki-gladko-boljsi-slovenci-po-porazu-0-3-v-boj-za-bron-proti-japoncem-88391181",
     "title": "Poljaki gladko boljši, Slovenci po porazu 0:3 v boj za bron proti Japoncem",
     "excerpt": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Poljaki gladko boljši, Slovenci po porazu 0:3 v boj za bron proti Japoncem«.",
