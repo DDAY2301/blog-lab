@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-22T13:24:34+02:00",
-  "loop_count": 264,
+  "updated_at": "2026-09-22T13:37:57+02:00",
+  "loop_count": 265,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-22T13:24:13+02:00",
+      "last_learning_run": "2026-09-22T13:37:35+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -39,12 +39,12 @@
       ],
       "source_health": {
         "news.google.com": {
-          "score": 2.495,
-          "seen": 7860,
-          "last_seen": "2026-09-22T13:24:13+02:00",
-          "last_title": "Hude skrbi za Boštjana Cesarja: Slovenija pred štirimi tekmami! Kaj bo s Slovenijo? - NaDlani.si",
+          "score": 2.493,
+          "seen": 7890,
+          "last_seen": "2026-09-22T13:37:35+02:00",
+          "last_title": "Srbi ogorčeni: Slovenec nas je dodatno ponižal s temi petimi besedami - Ekipa",
           "last_provider": "",
-          "published": 4449,
+          "published": 4470,
           "last_output_id": "poljaki-gladko-boljsi-slovenci-po-porazu-0-3-v-boj-za-bron-proti-japoncem-88391181"
         }
       },
@@ -58,7 +58,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-22T13:24:23+02:00",
+      "last_learning_run": "2026-09-22T13:37:46+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -80,26 +80,26 @@
       ],
       "source_health": {
         "news.google.com": {
-          "score": 2.507,
-          "seen": 7860,
-          "last_seen": "2026-09-22T13:24:23+02:00",
-          "last_title": "Tone Kajzer: Zunanja politika na dobri poti. Tanja Fajon: Kajzer dobro začrtal usmeritve. - rtvslo.si",
+          "score": 2.502,
+          "seen": 7890,
+          "last_seen": "2026-09-22T13:37:46+02:00",
+          "last_title": "Pirc Musar: \"Ne bom tiho, ko slovenska zunanja politika ne bo skladna z ustavnimi vrednotami naše države\" - Večer",
           "last_provider": "",
-          "published": 3880,
-          "last_output_id": "zgodba-sonje-debelak-zaposlene-v-modi-mi-lan-dva-dni-pred-stecajem-odplacala-dolg-ki-ni-bi-0447136d"
+          "published": 3905,
+          "last_output_id": "jansa-vlada-bo-vodila-pragmaticno-zunanjo-politiko-enako-pricakuje-od-drugih-62238c9b"
         }
       },
       "current_source_count": 30,
       "example_titles": {
         "news.google.com": [
-          "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - metropolitan.si",
           "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
+          "Na Radiu Ognjišče zadnje predvolilno soočenje: v ospredju prisluhi, zdravstvo, zunanja politika in sprava - Radio Ognjišče",
           "Odločitev je padla: Po 19 letih zapušča stranko SDS - Žurnal24"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-22T13:24:34+02:00",
+      "last_learning_run": "2026-09-22T13:37:57+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -133,96 +133,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 7860,
-          "last_seen": "2026-09-22T13:24:34+02:00",
-          "last_title": "Društvo Izgubljeni otroci Slovenije odprlo nove prostore - Novice - Aktualno - novomesto.si",
+          "seen": 7890,
+          "last_seen": "2026-09-22T13:37:57+02:00",
+          "last_title": "Društvo Izgubljeni otroci Slovenije odprlo nove prostore - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 7734,
+          "published": 7770,
           "last_output_id": "zaposlena-na-rtv-zgrozena-vesna-milek-ne-bo-delala-za-ljubezen-ampak-denar-8d955705"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 241,
+          "published": 242,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 241,
+          "published": 242,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 264,
+          "published": 265,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 166,
+          "published": 167,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 230,
+          "published": 231,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 166,
+          "published": 167,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 166,
+          "published": 167,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 230,
+          "published": 231,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 1056,
+          "published": 1060,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 264,
+          "published": 265,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 241,
+          "published": 242,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 396,
+          "published": 398,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 198,
+          "published": 199,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 460,
+          "published": 462,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 264,
+          "published": 265,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 166,
+          "published": 167,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 396,
+          "published": 398,
           "last_output_id": "duckduckgo-287dab86"
         }
       },
@@ -237,6 +237,12 @@
     }
   },
   "recent_articles": [
+    {
+      "id": "jansa-vlada-bo-vodila-pragmaticno-zunanjo-politiko-enako-pricakuje-od-drugih-62238c9b",
+      "title": "Janša: Vlada bo vodila pragmatično zunanjo politiko, enako pričakuje od drugih",
+      "category": "Politika",
+      "createdAt": "2026-09-22T13:36:56+02:00"
+    },
     {
       "id": "zgodba-sonje-debelak-zaposlene-v-modi-mi-lan-dva-dni-pred-stecajem-odplacala-dolg-ki-ni-bi-0447136d",
       "title": "(Zgodba Sonje Debelak, zaposlene v Modi Mi&lan) Dva dni pred stečajem odplačala dolg, ki ni bil njen, sedaj pa je…",
@@ -302,12 +308,6 @@
       "title": "10 idej za dober obisk restavracij v Ljubljani v 2026",
       "category": "Aktualno",
       "createdAt": "2026-09-21T12:32:31+02:00"
-    },
-    {
-      "id": "s-tribune-sportni-trenutki-zaradi-katerih-se-mi-se-danes-najezijo-dlake-aeb6d43b",
-      "title": "S tribune: Športni trenutki, zaradi katerih se mi še danes naježijo dlake",
-      "category": "Šport",
-      "createdAt": "2026-09-21T10:04:45+02:00"
     }
   ],
   "recent_failures": [
