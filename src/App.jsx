@@ -20,6 +20,44 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "jansa-vlada-bo-vodila-pragmaticno-zunanjo-politiko-enako-pricakuje-od-drugih-62238c9b",
+    "title": "Janša: Vlada bo vodila pragmatično zunanjo politiko, enako pričakuje od drugih",
+    "excerpt": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Janša: Vlada bo vodila pragmatično zunanjo politiko, enako pričakuje od drugih«.",
+    "seoDescription": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Janša: Vlada bo vodila pragmatično zunanjo politiko, enako pričakuje od drugi",
+    "content": "**Politika, 22. 9. 2026.** Janša: Vlada bo vodila pragmatično zunanjo politiko, enako pričakuje od drugih Dnevnik\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nPri političnih temah Blog Lab ne podpira kandidatov, strank ali političnih odločitev; izjave in ocene so predstavljene kot stališča njihovih avtorjev ali virov, ne kot uredniška presoja.\n\nVir: Dnevnik. Objavljeno: Fri, 28 Aug 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMivAFBVV95cUxPeWY0RnpuTEgxWnhiS0h4ZHVSVnZhaVlkMTQtWkNja3MxX3FOdEdKb1ZyNW5ubHcwWk82QUNGN1padFdZZ3NMNDBxR1hYSVNZTUpMMExnOGNkZ29PV2M3QU4xNjh0RDl2R0FWQ012N0xJZW5RZGJKc25ORl9OMTQtS1lnZUpnZWJLanpyZ3ZtRkwzUHRTSHdwcm9VMHdaREJmTjBJWjgyWExmQ18zSnhoRFJkTWIwNVFIVUJzVg?oc=5)\n\n## Dopolnitev vira 2: rtvslo.si\n\nPirc Musar: \"Ne bom tiho, ko zunanja politika ne bo skladna z ustavnimi vrednotami naše države\" rtvslo.si\n\n Vir: rtvslo.si. Objavljeno: Fri, 28 Aug 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiygFBVV95cUxQWm1jLXpEWnRzX1F4VFd3eF9qZXJ2UE9qc2ZBbXVsSWUwckJ6TEU5TVFaWEUyOTRHUkRORmt3cEpqQzJtOXNIV3U3bDVLTnlmTkdNWmtwWkFEUDVtWWFaMUs0bEhZcXozeG5ScGM0VFR1NEt5ZW4zR3JnZE8ydFBmZ0dWSVZTTVh2Z19ybjdiVXdGNm16YzlZTDdxZGFUeVdhUzY0bVhEbm9aYks0UjJoQmJ0dm50bTVCTGhxMXc0dkFJMmdXMHk1cndB?oc=5)\n\n## Dopolnitev vira 3: rtvslo.si\n\nTone Kajzer: Zunanja politika na dobri poti. Tanja Fajon: Kajzer dobro začrtal usmeritve. rtvslo.si\n\n Vir: rtvslo.si. Objavljeno: Tue, 09 Jun 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiwgFBVV95cUxPalBWNnE0VklkcWxhNkRGUFktc0NwUEtOV0RiMFg5ZWRoOG9HYVFXWXAxYUhyMEYyZ09YVTF1TzFVa1N4TzR4WXVrYXVkYlhwTnZoYkd4TmdDZ3kwbUdFUUR5LWJXZUJ4Q0ZUTGRUNHBsNzE0c2RHdG5DbnowM0xzV2xIODZTZ0lRTWh1NGVoQnhHVlpVb1NDUE1sTHFOX1FTOUM0eGx3MWNGY1JYSi1YMmlGdzhBT3lxb2lMc2F3Wl9EQQ?oc=5)\n\n## Dopolnitev vira 4: rtvslo.si\n\nSlovenska meščanska politika v razcepu – naslonitev na sile osi pred okupacijo Slovenije rtvslo.si\n\n Vir: rtvslo.si. Objavljeno: Sun, 31 May 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMi-wFBVV95cUxNeXFrNTN5UlR2b1VZRmpBbXFwWGFJUXA0RW9mYXhFdnBjV29nZG1iUmc3MGpKazAzS1REMGlpNWV3S0x5ZnJmV0c2RWpoWTZYUjktZ3B3TjFfbUd6cE4ybEVrUmhwWTlPSS1pNVRnd21RVS1DeDg2Q0xpUFp2c1ZTQ1NlWXJsSE53LWl3OThOYjZKUWx0cVV2WklaVkhBQmRzRjFjeF9STW10NXhzZ2RHcmdmU3c5RWxQWERUQW9GYlhuYndsRWJyQkJILUhqd3FHd2FELWw5VDlpTDZrMTRrM19kRmV0LXN6aXdaRXZTRDBTRURxSVIteW5Vaw?oc=5)\n\n## Dopolnitev vira 5: rtvslo.si\n\nNove prioritete stanovanjske politike, odslej stanovanja tudi prek nakupa ali obnove rtvslo.si\n\n Vir: rtvslo.si. Objavljeno: Sat, 12 Sep 2026 13:19:19 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMivwFBVV95cUxQaTF3UEFnTDB1Y0NCamFwbnF1QkU1TW1feVNNSzFrbGt0VGFGckhlSTltbWd3WGZQY3N1WktPVnk1Y1JMYlU0YWlfUW10TE5CMndFZG1id1VyZ25MVHZzd0l2dnUyUXRiTm1SbXJTejBWaWljSDlaUXFyT2Y2SnFuOHRPYUlyTXoybHFXVkFaMDZQcTRzc05UM1NxUG05Uk9rVmhPcWYtcGVtYUc5ZzNxdUZzSm1yZURCb2RBQW9Ccw?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Politika",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Dnevnik — Janša: Vlada bo vodila pragmatično zunanjo politiko, enako pričakuje od drugih - Dnevnik",
+        "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPeWY0RnpuTEgxWnhiS0h4ZHVSVnZhaVlkMTQtWkNja3MxX3FOdEdKb1ZyNW5ubHcwWk82QUNGN1padFdZZ3NMNDBxR1hYSVNZTUpMMExnOGNkZ29PV2M3QU4xNjh0RDl2R0FWQ012N0xJZW5RZGJKc25ORl9OMTQtS1lnZUpnZWJLanpyZ3ZtRkwzUHRTSHdwcm9VMHdaREJmTjBJWjgyWExmQ18zSnhoRFJkTWIwNVFIVUJzVg?oc=5"
+      },
+      {
+        "label": "rtvslo.si — Pirc Musar: \"Ne bom tiho, ko zunanja politika ne bo skladna z ustavnimi vrednotami naše države\" - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQWm1jLXpEWnRzX1F4VFd3eF9qZXJ2UE9qc2ZBbXVsSWUwckJ6TEU5TVFaWEUyOTRHUkRORmt3cEpqQzJtOXNIV3U3bDVLTnlmTkdNWmtwWkFEUDVtWWFaMUs0bEhZcXozeG5ScGM0VFR1NEt5ZW4zR3JnZE8ydFBmZ0dWSVZTTVh2Z19ybjdiVXdGNm16YzlZTDdxZGFUeVdhUzY0bVhEbm9aYks0UjJoQmJ0dm50bTVCTGhxMXc0dkFJMmdXMHk1cndB?oc=5"
+      },
+      {
+        "label": "rtvslo.si — Tone Kajzer: Zunanja politika na dobri poti. Tanja Fajon: Kajzer dobro začrtal usmeritve. - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPalBWNnE0VklkcWxhNkRGUFktc0NwUEtOV0RiMFg5ZWRoOG9HYVFXWXAxYUhyMEYyZ09YVTF1TzFVa1N4TzR4WXVrYXVkYlhwTnZoYkd4TmdDZ3kwbUdFUUR5LWJXZUJ4Q0ZUTGRUNHBsNzE0c2RHdG5DbnowM0xzV2xIODZTZ0lRTWh1NGVoQnhHVlpVb1NDUE1sTHFOX1FTOUM0eGx3MWNGY1JYSi1YMmlGdzhBT3lxb2lMc2F3Wl9EQQ?oc=5"
+      },
+      {
+        "label": "rtvslo.si — Slovenska meščanska politika v razcepu – naslonitev na sile osi pred okupacijo Slovenije - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxNeXFrNTN5UlR2b1VZRmpBbXFwWGFJUXA0RW9mYXhFdnBjV29nZG1iUmc3MGpKazAzS1REMGlpNWV3S0x5ZnJmV0c2RWpoWTZYUjktZ3B3TjFfbUd6cE4ybEVrUmhwWTlPSS1pNVRnd21RVS1DeDg2Q0xpUFp2c1ZTQ1NlWXJsSE53LWl3OThOYjZKUWx0cVV2WklaVkhBQmRzRjFjeF9STW10NXhzZ2RHcmdmU3c5RWxQWERUQW9GYlhuYndsRWJyQkJILUhqd3FHd2FELWw5VDlpTDZrMTRrM19kRmV0LXN6aXdaRXZTRDBTRURxSVIteW5Vaw?oc=5"
+      },
+      {
+        "label": "rtvslo.si — Nove prioritete stanovanjske politike, odslej stanovanja tudi prek nakupa ali obnove - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQaTF3UEFnTDB1Y0NCamFwbnF1QkU1TW1feVNNSzFrbGt0VGFGckhlSTltbWd3WGZQY3N1WktPVnk1Y1JMYlU0YWlfUW10TE5CMndFZG1id1VyZ25MVHZzd0l2dnUyUXRiTm1SbXJTejBWaWljSDlaUXFyT2Y2SnFuOHRPYUlyTXoybHFXVkFaMDZQcTRzc05UM1NxUG05Uk9rVmhPcWYtcGVtYUc5ZzNxdUZzSm1yZURCb2RBQW9Ccw?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-22T13:36:56+02:00",
+    "updatedAt": "2026-09-22T13:36:56+02:00"
+  },
+
+  {
     "id": "zgodba-sonje-debelak-zaposlene-v-modi-mi-lan-dva-dni-pred-stecajem-odplacala-dolg-ki-ni-bi-0447136d",
     "title": "(Zgodba Sonje Debelak, zaposlene v Modi Mi&lan) Dva dni pred stečajem odplačala dolg, ki ni bil njen, sedaj pa je…",
     "excerpt": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »(Zgodba Sonje Debelak, zaposlene v Modi Mi&lan) Dva dni pred stečajem odplačala dolg, ki ni bil njen, sedaj pa je…«.",
