@@ -20,6 +20,44 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "aktualno-strateska-povezava-etrela-in-vietnamskega-vinfasta-se-zacenja-v-sloveniji-novice--40d62851",
+    "title": "Aktualno: Strateška povezava Etrela in vietnamskega Vinfasta se začenja v Sloveniji Novice - AVTO FOKUS -",
+    "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Aktualno: Strateška povezava Etrela in vietnamskega Vinfasta se začenja v Sloveniji Novice - AVTO FOKUS -«.",
+    "seoDescription": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Aktualno: Strateška povezava Etrela in vietnamskega Vinfasta se začenja v Slo",
+    "content": "**Aktualno, 22. 9. 2026.** Aktualno: Strateška povezava Etrela in vietnamskega Vinfasta se začenja v Sloveniji Novice AVTO FOKUS -\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: AVTO FOKUS -. Objavljeno: Wed, 20 May 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiYEFVX3lxTFBaWnFYc1F6WkU0dUlOaDFfelEyLXIwWDZ0cnFLbVgtX0VrSWkxY3hJeG1jSUNIT0hLSjdlX2tKbS13bjJKMWhJaXU1bHZXSzZQSm4wVU9KWWx4aENvLWx2Xw?oc=5)\n\n## Dopolnitev vira 2: Najdi.si novice\n\nJanša v Ankari na NATU popravljal ugled Slovenije, Urška pa stopila v diplomatsko ospredje Najdi.si novice\n\n Vir: Najdi.si novice. Objavljeno: Thu, 09 Jul 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMi9gFBVV95cUxPVmxQeUF0VWdERlNzdXlJSWRWWWJqVktGS3J5TzFlRXZ1cWlVZjJ1ZzV2UThLTnhJaS1IZzNKcFN1VVB5MXZHSXBNbEZiRlc3ODNXX096WDdZdzNHbWNvY2FNbWFEVVMyRG5vRlJnSjhpX3c4cGtjQzBqWUFnQXp3Zm5KUk53MzVaMWdBRmdMTUxoT0wtMWZtNUFGelpISmZoaWlQS2lNMlpUTEpPbG5hRjZlajJNdlFka3dEQ3FudTZNYmlNYnZCcVBWNVo0NWRQNGVDbGtjNG5PXzdzdVh3bWNLd0ZRTmpTOFRtLXRjVUFfOUpvV3c?oc=5)\n\n## Dopolnitev vira 3: Mestna občina Novo mesto\n\nDruštvo Izgubljeni otroci Slovenije odprlo nove prostore - Novice - Aktualno Mestna občina Novo mesto\n\n Vir: Mestna občina Novo mesto. Objavljeno: Fri, 03 Jul 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMitwFBVV95cUxOMXI4cC1hZVBkYjlaQ1Z5YUJpQU11eHpPNURoaUpHM1c5SGpldE9QV2hBRTFaNUhFQ3pfUXY3VHJXMk5Icml5MEhPNkRWcURCZU04VDNYRWhuelpqRkhsaGU4RXBKMmVlTFJjUlNfTlpoVXNlbHA0RDJzc1J3TUpQOW9STUhtcEFsc3NmZzB6dl8xR2xKZ093STQweTAwbzlqdU5QQVRULUI3UXEtWkZDUktYWXhjV2M?oc=5)\n\n## Dopolnitev vira 4: 24ur.com\n\nCeljski sejem z novim konceptom: MIS od leta 2026 vsako leto z aktualno tematiko industrije 24ur.com\n\n Vir: 24ur.com. Objavljeno: Mon, 13 Apr 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMizgFBVV95cUxQNmpzSlBUYnJQa01iQlZqQ2lWbVNiSGFHNEhsLXduSmRSQUFWaEJ5al9xbmhPcTh5My04YVFzdExKX0dPeEdjbzFtaExnenBiYjFxMzRhMkJ1RURVSFFINGJUN19kSkhmck13ZWVoSzNFYlc3bUVobWY3R2NlVkRRVGpCbFV0dXBhWmI5MVFuMkQ5cTNzRE96cWhVdlQyTUdOWGIzcEp3cjlRWGlPR3pQMGw1cm5Ed0hFX3N3ZnpQWE96RkphZVhaeFhkV2JsQQ?oc=5)\n\n## Dopolnitev vira 5: Mestna občina Novo mesto\n\nObjavljen je nov razpis za projekt PONI JV Slovenija - Novice - Aktualno Mestna občina Novo mesto\n\n Vir: Mestna občina Novo mesto. Objavljeno: Thu, 27 Nov 2025 08:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMisgFBVV95cUxNT2ltVGNBOWtOYUFjS18wUE8tVHp6WUJSV3VDZEo0WFhRc2ZXcUdERGRpMGl4ZTUtWUhBS2NNVXpRbmZsVEZEc3Q4eTFQbGY4NEhEYkFrcXVFeEV5R2N5S3E3RVdmTFpEc1I4RE9yQXoyNmNMVDJKMnAtOXJQTldoVnJDeFgtXzRnanVDU0NHRy1ZR1ZNWnk0Y2JvUkNkQzB0Q3BQNlo3TFAtSmY2QzU1bGh3?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Aktualno",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "AVTO FOKUS - — Aktualno: Strateška povezava Etrela in vietnamskega Vinfasta se začenja v Sloveniji Novice - AVTO FOKUS -",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBaWnFYc1F6WkU0dUlOaDFfelEyLXIwWDZ0cnFLbVgtX0VrSWkxY3hJeG1jSUNIT0hLSjdlX2tKbS13bjJKMWhJaXU1bHZXSzZQSm4wVU9KWWx4aENvLWx2Xw?oc=5"
+      },
+      {
+        "label": "Najdi.si novice — Janša v Ankari na NATU popravljal ugled Slovenije, Urška pa stopila v diplomatsko ospredje - Najdi.si novice",
+        "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxPVmxQeUF0VWdERlNzdXlJSWRWWWJqVktGS3J5TzFlRXZ1cWlVZjJ1ZzV2UThLTnhJaS1IZzNKcFN1VVB5MXZHSXBNbEZiRlc3ODNXX096WDdZdzNHbWNvY2FNbWFEVVMyRG5vRlJnSjhpX3c4cGtjQzBqWUFnQXp3Zm5KUk53MzVaMWdBRmdMTUxoT0wtMWZtNUFGelpISmZoaWlQS2lNMlpUTEpPbG5hRjZlajJNdlFka3dEQ3FudTZNYmlNYnZCcVBWNVo0NWRQNGVDbGtjNG5PXzdzdVh3bWNLd0ZRTmpTOFRtLXRjVUFfOUpvV3c?oc=5"
+      },
+      {
+        "label": "Mestna občina Novo mesto — Društvo Izgubljeni otroci Slovenije odprlo nove prostore - Novice - Aktualno - Mestna občina Novo mesto",
+        "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOMXI4cC1hZVBkYjlaQ1Z5YUJpQU11eHpPNURoaUpHM1c5SGpldE9QV2hBRTFaNUhFQ3pfUXY3VHJXMk5Icml5MEhPNkRWcURCZU04VDNYRWhuelpqRkhsaGU4RXBKMmVlTFJjUlNfTlpoVXNlbHA0RDJzc1J3TUpQOW9STUhtcEFsc3NmZzB6dl8xR2xKZ093STQweTAwbzlqdU5QQVRULUI3UXEtWkZDUktYWXhjV2M?oc=5"
+      },
+      {
+        "label": "24ur.com — Celjski sejem z novim konceptom: MIS od leta 2026 vsako leto z aktualno tematiko industrije - 24ur.com",
+        "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQNmpzSlBUYnJQa01iQlZqQ2lWbVNiSGFHNEhsLXduSmRSQUFWaEJ5al9xbmhPcTh5My04YVFzdExKX0dPeEdjbzFtaExnenBiYjFxMzRhMkJ1RURVSFFINGJUN19kSkhmck13ZWVoSzNFYlc3bUVobWY3R2NlVkRRVGpCbFV0dXBhWmI5MVFuMkQ5cTNzRE96cWhVdlQyTUdOWGIzcEp3cjlRWGlPR3pQMGw1cm5Ed0hFX3N3ZnpQWE96RkphZVhaeFhkV2JsQQ?oc=5"
+      },
+      {
+        "label": "Mestna občina Novo mesto — Objavljen je nov razpis za projekt PONI JV Slovenija - Novice - Aktualno - Mestna občina Novo mesto",
+        "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNT2ltVGNBOWtOYUFjS18wUE8tVHp6WUJSV3VDZEo0WFhRc2ZXcUdERGRpMGl4ZTUtWUhBS2NNVXpRbmZsVEZEc3Q4eTFQbGY4NEhEYkFrcXVFeEV5R2N5S3E3RVdmTFpEc1I4RE9yQXoyNmNMVDJKMnAtOXJQTldoVnJDeFgtXzRnanVDU0NHRy1ZR1ZNWnk0Y2JvUkNkQzB0Q3BQNlo3TFAtSmY2QzU1bGh3?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-22T19:54:30+02:00",
+    "updatedAt": "2026-09-22T19:54:30+02:00"
+  },
+
+  {
     "id": "jansa-vlada-bo-vodila-pragmaticno-zunanjo-politiko-enako-pricakuje-od-drugih-62238c9b",
     "title": "Janša: Vlada bo vodila pragmatično zunanjo politiko, enako pričakuje od drugih",
     "excerpt": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Janša: Vlada bo vodila pragmatično zunanjo politiko, enako pričakuje od drugih«.",
