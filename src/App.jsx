@@ -20,6 +20,44 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "poslanica-predsednice-republike-ob-dnevu-slovenskega-sporta-1a0240e7",
+    "title": "Poslanica predsednice republike ob dnevu slovenskega športa",
+    "excerpt": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Poslanica predsednice republike ob dnevu slovenskega športa«.",
+    "seoDescription": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Poslanica predsednice republike ob dnevu slovenskega športa«.",
+    "content": "**Šport, 23. 9. 2026.** Poslanica predsednice republike ob dnevu slovenskega športa morel.si\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: morel.si. Objavljeno: Tue, 22 Sep 2026 20:44:08 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMioAFBVV95cUxQRFFIaFhfQ0ZtX291eGotMDByWnZqUUNUV2tSSm83Uks5NE9pd0JVR1JnU1lXenhkMzhfNnNBaW1GT1dJVnhrd1lvLURZdjl1TFlJcEpiQ3kwZ25xSlk0ZkcwVFUxNTRwcFNMQ290Q29zZ3FzZmxhUVVtSHVZbE1ienRGZ21naE80MzJxdG9lYlRoX2xKNUpNN2NnZ21LV1RG?oc=5)\n\n## Dopolnitev vira 2: N1 Slovenija\n\nObeležujemo dan slovenskega športa, ki nas uči, da do cilja ni bližnjic N1 Slovenija\n\n Vir: N1 Slovenija. Objavljeno: Wed, 23 Sep 2026 05:31:13 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiqAFBVV95cUxQdGFDMkRjTWJSbTNVaUhZWHFBNDBYQkYzby05VE5IUjBhazluMjV2S1RIbm5aaC1ucllQUEZxd2IteFZTamV3cjFNcEZoQ1NEWWQ0QmZiblpuYlJZZEZMdFNHcDdDc1I1Uld3c2syNjN5YnRPNjdJdEJnelE3VUlOM2x4UzJxanZ2N2RYSVAwZ3ZWbmloT0RUOU5wRDNqempRSVFzV0VtRmg?oc=5)\n\n## Dopolnitev vira 3: Delo.si\n\nSlovenski judo obrnil nov list: kaj obljublja novi predsednik? Delo.si\n\n Vir: Delo.si. Objavljeno: Tue, 22 Sep 2026 20:23:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMioAFBVV95cUxPVUZ0NHc2QXJ1UmNJdGt3c2QxWmVqTjQ5OC01Y2ozSnduRl9HVmVRemdYZU04S1lqR3hQUWd2M3JxUEs5RC04Wl81bXFqRG8ybnpIemVqZUxrb0NiNDFaUGt4dXJ3RnktVTFUSDhiWElBQ09NOGxSLXRZWDFXUDRSSEc0enlDZE8waWRLSTJ0d18tVmktWjlBZk1zN25BNnk4?oc=5)\n\n## Dopolnitev vira 4: rtvslo.si\n\nDan slovenskega športa s pozivom k redni telesni dejavnosti rtvslo.si\n\n Vir: rtvslo.si. Objavljeno: Wed, 23 Sep 2026 05:30:52 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMisAFBVV95cUxPNFNCcXRlRmtGUVlDZTNXc2VSTDh3ZjZJazhuMGRLcjBIaUZraFpLM1RDTmhBdWRXY0VvZDh3bHp1bkd4b0VXMW15VnQyRDA5ckc2RXdVejFkcEYwQ3cwMExLSU5JSHlKU0JqZjlwZ3ZLQnM3eEd6WV9adU9tN3ljdzhmWW9FdHR4SWFsek9CRnJYYUN1MERaR01TOFh6RVE5dHloQUJDX1kzWDBKN0NDMA?oc=5)\n\n## Dopolnitev vira 5: rtvslo.si\n\nDenis Vodopivec novi predsednik Judo zveze Slovenije rtvslo.si\n\n Vir: rtvslo.si. Objavljeno: Tue, 22 Sep 2026 19:55:01 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMipwFBVV95cUxQMkxscmtJWUxPMHV3Q3cwQlN5V0paWEdoMFNRcER0eEtObW0wblVsaVBVbVBxNXpiVGlCTGk1cHQ3VGZrOWE1VU80QnJBNWdnMWh4OGRfc1d6VUVmcms4VW8zbS04emlMN0ltbHBXQVc1ZWpjaGJPd0RvNTkxaEwtVmdtV1h2MWdCc2RZcjE1QUM2eDhYempod1FzWE42SFNIWHhwZ1dRZw?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Šport",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "morel.si — Poslanica predsednice republike ob dnevu slovenskega športa - morel.si",
+        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQRFFIaFhfQ0ZtX291eGotMDByWnZqUUNUV2tSSm83Uks5NE9pd0JVR1JnU1lXenhkMzhfNnNBaW1GT1dJVnhrd1lvLURZdjl1TFlJcEpiQ3kwZ25xSlk0ZkcwVFUxNTRwcFNMQ290Q29zZ3FzZmxhUVVtSHVZbE1ienRGZ21naE80MzJxdG9lYlRoX2xKNUpNN2NnZ21LV1RG?oc=5"
+      },
+      {
+        "label": "N1 Slovenija — Obeležujemo dan slovenskega športa, ki nas uči, da do cilja ni bližnjic - N1 Slovenija",
+        "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQdGFDMkRjTWJSbTNVaUhZWHFBNDBYQkYzby05VE5IUjBhazluMjV2S1RIbm5aaC1ucllQUEZxd2IteFZTamV3cjFNcEZoQ1NEWWQ0QmZiblpuYlJZZEZMdFNHcDdDc1I1Uld3c2syNjN5YnRPNjdJdEJnelE3VUlOM2x4UzJxanZ2N2RYSVAwZ3ZWbmloT0RUOU5wRDNqempRSVFzV0VtRmg?oc=5"
+      },
+      {
+        "label": "Delo.si — Slovenski judo obrnil nov list: kaj obljublja novi predsednik? - Delo.si",
+        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPVUZ0NHc2QXJ1UmNJdGt3c2QxWmVqTjQ5OC01Y2ozSnduRl9HVmVRemdYZU04S1lqR3hQUWd2M3JxUEs5RC04Wl81bXFqRG8ybnpIemVqZUxrb0NiNDFaUGt4dXJ3RnktVTFUSDhiWElBQ09NOGxSLXRZWDFXUDRSSEc0enlDZE8waWRLSTJ0d18tVmktWjlBZk1zN25BNnk4?oc=5"
+      },
+      {
+        "label": "rtvslo.si — Dan slovenskega športa s pozivom k redni telesni dejavnosti - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPNFNCcXRlRmtGUVlDZTNXc2VSTDh3ZjZJazhuMGRLcjBIaUZraFpLM1RDTmhBdWRXY0VvZDh3bHp1bkd4b0VXMW15VnQyRDA5ckc2RXdVejFkcEYwQ3cwMExLSU5JSHlKU0JqZjlwZ3ZLQnM3eEd6WV9adU9tN3ljdzhmWW9FdHR4SWFsek9CRnJYYUN1MERaR01TOFh6RVE5dHloQUJDX1kzWDBKN0NDMA?oc=5"
+      },
+      {
+        "label": "rtvslo.si — Denis Vodopivec novi predsednik Judo zveze Slovenije - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQMkxscmtJWUxPMHV3Q3cwQlN5V0paWEdoMFNRcER0eEtObW0wblVsaVBVbVBxNXpiVGlCTGk1cHQ3VGZrOWE1VU80QnJBNWdnMWh4OGRfc1d6VUVmcms4VW8zbS04emlMN0ltbHBXQVc1ZWpjaGJPd0RvNTkxaEwtVmdtV1h2MWdCc2RZcjE1QUM2eDhYempod1FzWE42SFNIWHhwZ1dRZw?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-23T08:24:32+02:00",
+    "updatedAt": "2026-09-23T08:24:32+02:00"
+  },
+
+  {
     "id": "aktualno-strateska-povezava-etrela-in-vietnamskega-vinfasta-se-zacenja-v-sloveniji-novice--40d62851",
     "title": "Aktualno: Strateška povezava Etrela in vietnamskega Vinfasta se začenja v Sloveniji Novice - AVTO FOKUS -",
     "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Aktualno: Strateška povezava Etrela in vietnamskega Vinfasta se začenja v Sloveniji Novice - AVTO FOKUS -«.",
