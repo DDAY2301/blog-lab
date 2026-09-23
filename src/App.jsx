@@ -20,6 +20,39 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "running-ljubljana-tivoli-roznik-guide",
+    "title": "Running in Ljubljana: A Tivoli and Rožnik Guide for Visitors",
+    "excerpt": "Choose a safe city run through Tivoli Park and Rožnik with flexible distances, trail etiquette, weather checks and practical access from central Ljubljana.",
+    "seoDescription": "Run Ljubljana safely with flexible Tivoli Park and Rožnik routes, terrain guidance, weather checks, trail etiquette and visitor-friendly access.",
+    "content": "Ljubljana is compact enough for visitors to reach a good running route without a car. Tivoli Park offers broad, mostly gentle paths close to the centre, while the wooded slopes of Rožnik add hills and natural surfaces. Together they allow anything from a short recovery jog to a longer mixed-terrain session.\n\nOn **23 September 2026**, Ljubljana began with sunny conditions near 7°C, with a forecast high around 20°C. That is comfortable running weather for many people, but the forecast is only a same-day reference. Check [ARSO's warnings and precipitation radar](https://meteo.arso.gov.si/met/en/) immediately before setting out.\n\n## Choose the route that matches your ability\n\nThere is no need to force one fixed circuit. GPS distances vary with the paths selected, so use the following as flexible route types rather than exact race courses.\n\n### Easy park run: approximately 3–5 km\n\nStart near the eastern side of Tivoli Park and remain on the broad park avenues. Build an out-and-back route around the central lawns and established paths, turning around before fatigue changes your form.\n\nThis is the most suitable option for:\n\n- an easy morning jog;\n- runners unfamiliar with hills or forest trails;\n- visitors who want straightforward navigation;\n- a damp day when steep woodland paths may be slippery.\n\nThe main park is generally easier than Rožnik, but path works, events and maintenance can still create temporary diversions.\n\n### Mixed park and woodland run: approximately 5–8 km\n\nContinue west from Tivoli onto the established paths of Rožnik. Expect sustained inclines, descents, roots, stones, mud after rain and frequent walkers. Slow to walking pace where visibility is limited or paths are crowded.\n\nChoose this only if you are comfortable on uneven terrain. A road-running pace is not a useful target in the forest.\n\n### Longer run\n\nExperienced runners can extend toward Šišenski hrib or make additional loops in Tivoli. Use a reliable offline map and keep enough energy for the return. Avoid creating shortcuts between marked or established paths.\n\n## Tivoli and Rožnik are shared public spaces\n\nThe woodland is a protected landscape and not a private training ground.\n\n- Give walkers, children and slower users generous space.\n- Slow down before blind bends and on narrow descents.\n- Keep dogs, wildlife and cyclists in view without assuming how they will move.\n- Do not run across planted areas or create new tracks.\n- Take all litter and energy-gel packaging with you.\n- Keep music quiet enough to hear traffic, bells and warnings.\n- In darkness, use a light and reflective clothing, but avoid dazzling other users.\n\nIf paths are saturated, remain on firm surfaced routes in Tivoli. Running through deep mud widens paths and damages vegetation.\n\n## Getting there from central Ljubljana\n\nTivoli is within walking or warm-up distance of the city centre. Visitors staying farther away can use [LPP's current network and arrivals information](https://www.lpp.si/en/). Check the live route rather than memorising a bus number, because works and diversions can change stops.\n\nUseful starting areas include the park's eastern entrances near the city centre. Agree on a precise meeting point if running with someone; “Tivoli” covers a large area.\n\n## Safety checklist before every run\n\n1. Check ARSO warnings, temperature and precipitation radar.\n2. Select a route you can shorten easily.\n3. Save your accommodation address and an offline map.\n4. Carry water in warm weather; fountains cannot be assumed operational year-round.\n5. Wear footwear appropriate for the planned surface.\n6. Tell someone where you are going if running alone.\n7. Use emergency number **112** for urgent medical or rescue assistance in Slovenia.\n\nAfter strong wind, thunderstorms, snow or freezing conditions, avoid wooded routes until you have checked local notices and can assess fallen branches, ice and surface conditions.\n\n## Families, beginners and accessibility\n\nTivoli's broad avenues are the most practical choice for beginners, running with a child or pushing a suitable sports stroller. Individual gradients, surfaces and temporary works vary, so inspect the intended section rather than assuming a complete step-free circuit.\n\nRožnik is not a fully accessible extension: gradients and natural surfaces can be demanding. Visitors with mobility requirements should remain on suitable park paths and verify current access locally.\n\n## A simple visitor workout\n\nFor a low-risk session:\n\n- walk briskly for 8–10 minutes from the centre;\n- jog easily for 20–30 minutes on Tivoli's established paths;\n- finish with 5–10 minutes of walking;\n- add Rožnik only if conditions and ability support it.\n\nThe goal is to enjoy Ljubljana, not to complete a prescribed distance. For a wheeled alternative, use the [safe Ljubljana cycling guide](?article=cycling-ljubljana-city-guide). For a hill hike rather than a run, see the [Šmarna Gora guide](?article=smarna-gora-hike-ljubljana-guide).\n\n## Direct sources\n\n- [Ljubljana Tourism](https://www.visitljubljana.com/en/visitors/sights-and-activities/)\n- [City of Ljubljana](https://www.ljubljana.si/en/)\n- [ARSO: forecasts, radar and weather warnings](https://meteo.arso.gov.si/met/en/)\n- [LPP: public transport information](https://www.lpp.si/en/)\n\nWeather and public-access information were last checked on **23 September 2026**. Recheck official warnings and local notices before every run.",
+    "category": "Šport",
+    "author": "Uredništvo Blog Lab",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Ljubljana Tourism — Sights and activities",
+        "url": "https://www.visitljubljana.com/en/visitors/sights-and-activities/"
+      },
+      {
+        "label": "City of Ljubljana",
+        "url": "https://www.ljubljana.si/en/"
+      },
+      {
+        "label": "ARSO — Weather and warnings",
+        "url": "https://meteo.arso.gov.si/met/en/"
+      },
+      {
+        "label": "LPP — Public transport",
+        "url": "https://www.lpp.si/en/"
+      }
+    ],
+    "createdAt": "2026-09-23T09:02:29+02:00",
+    "updatedAt": "2026-09-23T09:02:29+02:00"
+  },
+  {
     "id": "poslanica-predsednice-republike-ob-dnevu-slovenskega-sporta-1a0240e7",
     "title": "Poslanica predsednice republike ob dnevu slovenskega športa",
     "excerpt": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Poslanica predsednice republike ob dnevu slovenskega športa«.",
