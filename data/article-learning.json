@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-23T15:53:51+02:00",
-  "loop_count": 502,
+  "updated_at": "2026-09-23T15:54:37+02:00",
+  "loop_count": 503,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-23T15:53:30+02:00",
+      "last_learning_run": "2026-09-23T15:54:16+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -43,11 +43,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 14940,
-          "last_seen": "2026-09-23T15:53:30+02:00",
+          "seen": 14970,
+          "last_seen": "2026-09-23T15:54:16+02:00",
           "last_title": "Krka na uvodu državnega prvenstva prepričljivo odpravila Šenčur - rtvslo.si",
           "last_provider": "",
-          "published": 9797,
+          "published": 9823,
           "last_output_id": "poslanica-predsednice-republike-ob-dnevu-slovenskega-sporta-1a0240e7"
         },
         "blackfriday.com": {
@@ -82,7 +82,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-23T15:53:41+02:00",
+      "last_learning_run": "2026-09-23T15:54:26+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -105,11 +105,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 14940,
-          "last_seen": "2026-09-23T15:53:41+02:00",
-          "last_title": "Opozicija na nogah: \"Minister se igra z življenji naših najmlajših!\" - Žurnal24",
+          "seen": 14970,
+          "last_seen": "2026-09-23T15:54:26+02:00",
+          "last_title": "Kajzer in Janša diplomate nagovorila za zaprtimi vrati - 24ur.com",
           "last_provider": "",
-          "published": 9960,
+          "published": 9990,
           "last_output_id": "interpelacija-zaradi-obrata-v-zunanji-politiki-ki-krsi-mednarodno-pravo-72c19f1e"
         }
       },
@@ -123,7 +123,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-23T15:53:51+02:00",
+      "last_learning_run": "2026-09-23T15:54:37+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -157,105 +157,105 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 14940,
-          "last_seen": "2026-09-23T15:53:51+02:00",
-          "last_title": "Slovenija med državami, ki bi prepovedale družbena omrežja mlajšim od 16 let - Info360",
+          "seen": 14970,
+          "last_seen": "2026-09-23T15:54:37+02:00",
+          "last_title": "Slovenija med državami, ki bi prepovedale družbena omrežja mlajšim od 16 let - info360.si",
           "last_provider": "",
-          "published": 17197,
+          "published": 17238,
           "last_output_id": "aktualno-strateska-povezava-etrela-in-vietnamskega-vinfasta-se-zacenja-v-sloveniji-novice--40d62851"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 479,
+          "published": 480,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 479,
+          "published": 480,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 502,
+          "published": 503,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 404,
+          "published": 405,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 468,
+          "published": 469,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 404,
+          "published": 405,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 404,
+          "published": 405,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 468,
+          "published": 469,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 2008,
+          "published": 2012,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 502,
+          "published": 503,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 479,
+          "published": 480,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 872,
+          "published": 874,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 436,
+          "published": 437,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 936,
+          "published": 938,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 502,
+          "published": 503,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 404,
+          "published": 405,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 872,
+          "published": 874,
           "last_output_id": "duckduckgo-287dab86"
         }
       },
       "current_source_count": 30,
       "example_titles": {
         "news.google.com": [
-          "Kakšno podnebno politiko bo vodila vlada, katere premier zanika znanstvena dejstva? - N1 Slovenija",
           "(AKTUALNO) V novi številki revije Demokracija preberite: Izključujejo in zavirajo razvoj! Janša: Osamosvojitvena Slovenija ne bo nikoli več ",
-          "(AKTUALNO) Varuhinja človekovih pravic Simona Drenik Bavdek: Pravica do dostojnega pokopa temeljna človekova pravica - DEMOKRACIJA.SI"
+          "(AKTUALNO) Varuhinja človekovih pravic Simona Drenik Bavdek: Pravica do dostojnega pokopa temeljna človekova pravica - DEMOKRACIJA.SI",
+          "Najnižja gledanost oddaje Marcel v desetih letih, Tarča ostaja paradni konj - info360.si"
         ]
       }
     }
