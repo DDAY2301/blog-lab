@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-23T08:10:01+02:00",
-  "loop_count": 432,
+  "updated_at": "2026-09-23T08:25:58+02:00",
+  "loop_count": 433,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-23T08:09:38+02:00",
+      "last_learning_run": "2026-09-23T08:25:33+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -41,13 +41,13 @@
       ],
       "source_health": {
         "news.google.com": {
-          "score": 2.494,
-          "seen": 12870,
-          "last_seen": "2026-09-23T08:09:38+02:00",
+          "score": 2.498,
+          "seen": 12900,
+          "last_seen": "2026-09-23T08:25:33+02:00",
           "last_title": "Škoti se bodo v Stožicah predstavili s precej spremenjeno zasedbo - rtvslo.si",
           "last_provider": "",
-          "published": 7977,
-          "last_output_id": "poljaki-gladko-boljsi-slovenci-po-porazu-0-3-v-boj-za-bron-proti-japoncem-88391181"
+          "published": 8003,
+          "last_output_id": "poslanica-predsednice-republike-ob-dnevu-slovenskega-sporta-1a0240e7"
         },
         "solvecalc.net": {
           "score": 0.77,
@@ -74,7 +74,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-23T08:09:48+02:00",
+      "last_learning_run": "2026-09-23T08:25:46+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -96,12 +96,12 @@
       ],
       "source_health": {
         "news.google.com": {
-          "score": 2.498,
-          "seen": 12870,
-          "last_seen": "2026-09-23T08:09:48+02:00",
+          "score": 2.502,
+          "seen": 12900,
+          "last_seen": "2026-09-23T08:25:46+02:00",
           "last_title": "Kajzer in Janša diplomate nagovorila za zaprtimi vrati - 24ur.com",
           "last_provider": "",
-          "published": 8080,
+          "published": 8105,
           "last_output_id": "jansa-vlada-bo-vodila-pragmaticno-zunanjo-politiko-enako-pricakuje-od-drugih-62238c9b"
         }
       },
@@ -115,7 +115,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-23T08:10:01+02:00",
+      "last_learning_run": "2026-09-23T08:25:58+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -149,96 +149,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 12870,
-          "last_seen": "2026-09-23T08:10:01+02:00",
-          "last_title": "Slovenija med državami, ki bi prepovedale družbena omrežja mlajšim od 16 let - Info360",
+          "seen": 12900,
+          "last_seen": "2026-09-23T08:25:58+02:00",
+          "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 14327,
+          "published": 14368,
           "last_output_id": "aktualno-strateska-povezava-etrela-in-vietnamskega-vinfasta-se-zacenja-v-sloveniji-novice--40d62851"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 409,
+          "published": 410,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 409,
+          "published": 410,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 432,
+          "published": 433,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 334,
+          "published": 335,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 398,
+          "published": 399,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 334,
+          "published": 335,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 334,
+          "published": 335,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 398,
+          "published": 399,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 1728,
+          "published": 1732,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 432,
+          "published": 433,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 409,
+          "published": 410,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 732,
+          "published": 734,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 366,
+          "published": 367,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 796,
+          "published": 798,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 432,
+          "published": 433,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 334,
+          "published": 335,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 732,
+          "published": 734,
           "last_output_id": "duckduckgo-287dab86"
         }
       },
@@ -253,6 +253,12 @@
     }
   },
   "recent_articles": [
+    {
+      "id": "poslanica-predsednice-republike-ob-dnevu-slovenskega-sporta-1a0240e7",
+      "title": "Poslanica predsednice republike ob dnevu slovenskega športa",
+      "category": "Šport",
+      "createdAt": "2026-09-23T08:24:32+02:00"
+    },
     {
       "id": "aktualno-strateska-povezava-etrela-in-vietnamskega-vinfasta-se-zacenja-v-sloveniji-novice--40d62851",
       "title": "Aktualno: Strateška povezava Etrela in vietnamskega Vinfasta se začenja v Sloveniji Novice - AVTO FOKUS -",
@@ -318,12 +324,6 @@
       "title": "Okoljski ekonomist Sonnenschein: Politika ministra za energetiko ni v interesu javnosti",
       "category": "Politika",
       "createdAt": "2026-09-21T13:40:14+02:00"
-    },
-    {
-      "id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762",
-      "title": "Kako brati vremensko napoved brez panike",
-      "category": "Vodniki",
-      "createdAt": "2026-09-21T13:05:00+02:00"
     }
   ],
   "recent_failures": [
