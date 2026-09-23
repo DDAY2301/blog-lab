@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-23T13:27:19+02:00",
-  "loop_count": 476,
+  "updated_at": "2026-09-23T13:35:08+02:00",
+  "loop_count": 477,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-23T13:26:57+02:00",
+      "last_learning_run": "2026-09-23T13:34:45+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -42,12 +42,12 @@
       ],
       "source_health": {
         "news.google.com": {
-          "score": 2.502,
-          "seen": 14160,
-          "last_seen": "2026-09-23T13:26:57+02:00",
-          "last_title": "Poslanica ob dnevu slovenskega športa - Predsednica Republike Slovenije",
+          "score": 2.498,
+          "seen": 14190,
+          "last_seen": "2026-09-23T13:34:45+02:00",
+          "last_title": "23. september, dan slovenskega športa - Ljubljanske novice",
           "last_provider": "",
-          "published": 9121,
+          "published": 9147,
           "last_output_id": "poslanica-predsednice-republike-ob-dnevu-slovenskega-sporta-1a0240e7"
         },
         "blackfriday.com": {
@@ -82,7 +82,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-23T13:27:07+02:00",
+      "last_learning_run": "2026-09-23T13:34:57+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -105,12 +105,12 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 14160,
-          "last_seen": "2026-09-23T13:27:07+02:00",
+          "seen": 14190,
+          "last_seen": "2026-09-23T13:34:57+02:00",
           "last_title": "VIDEO: Objavljen sporni posnetek Luke Mesca: »Za nekaj sekund sem prižgal še lučke« - Ljubljanainfo.com",
           "last_provider": "",
-          "published": 9180,
-          "last_output_id": "jansa-vlada-bo-vodila-pragmaticno-zunanjo-politiko-enako-pricakuje-od-drugih-62238c9b"
+          "published": 9210,
+          "last_output_id": "interpelacija-zaradi-obrata-v-zunanji-politiki-ki-krsi-mednarodno-pravo-72c19f1e"
         }
       },
       "current_source_count": 30,
@@ -123,7 +123,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-23T13:27:19+02:00",
+      "last_learning_run": "2026-09-23T13:35:08+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -157,110 +157,116 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 14160,
-          "last_seen": "2026-09-23T13:27:19+02:00",
+          "seen": 14190,
+          "last_seen": "2026-09-23T13:35:08+02:00",
           "last_title": "Slovenija med državami, ki bi prepovedale družbena omrežja mlajšim od 16 let - Info360",
           "last_provider": "",
-          "published": 16131,
+          "published": 16172,
           "last_output_id": "aktualno-strateska-povezava-etrela-in-vietnamskega-vinfasta-se-zacenja-v-sloveniji-novice--40d62851"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 453,
+          "published": 454,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 453,
+          "published": 454,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 476,
+          "published": 477,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 378,
+          "published": 379,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 442,
+          "published": 443,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 378,
+          "published": 379,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 378,
+          "published": 379,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 442,
+          "published": 443,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 1904,
+          "published": 1908,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 476,
+          "published": 477,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 453,
+          "published": 454,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 820,
+          "published": 822,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 410,
+          "published": 411,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 884,
+          "published": 886,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 476,
+          "published": 477,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 378,
+          "published": 379,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 820,
+          "published": 822,
           "last_output_id": "duckduckgo-287dab86"
         }
       },
       "current_source_count": 30,
       "example_titles": {
         "news.google.com": [
-          "Kakšno podnebno politiko bo vodila vlada, katere premier zanika znanstvena dejstva? - N1 Slovenija",
-          "Najnovejše novice iz ameriškega tabora, tako hudo naj bi bilo z Lindsey Vonn - Žurnal24",
-          "(AKTUALNO) V novi številki revije Demokracija preberite: Izključujejo in zavirajo razvoj! Janša: Osamosvojitvena Slovenija ne bo nikoli več "
+          "(AKTUALNO) V novi številki revije Demokracija preberite: Izključujejo in zavirajo razvoj! Janša: Osamosvojitvena Slovenija ne bo nikoli več ",
+          "(AKTUALNO) Varuhinja človekovih pravic Simona Drenik Bavdek: Pravica do dostojnega pokopa temeljna človekova pravica - DEMOKRACIJA.SI",
+          "Najnižja gledanost oddaje Marcel v desetih letih, Tarča ostaja paradni konj - Info360"
         ]
       }
     }
   },
   "recent_articles": [
+    {
+      "id": "interpelacija-zaradi-obrata-v-zunanji-politiki-ki-krsi-mednarodno-pravo-72c19f1e",
+      "title": "Interpelacija zaradi obrata v zunanji politiki, ki krši mednarodno pravo",
+      "category": "Politika",
+      "createdAt": "2026-09-23T13:34:09+02:00"
+    },
     {
       "id": "running-ljubljana-tivoli-roznik-guide",
       "title": "Running in Ljubljana: A Tivoli and Rožnik Guide for Visitors",
@@ -326,12 +332,6 @@
       "title": "FOTO: Od ponedeljka velika novost na ljubljanski železniški postaji - prihaja vseh sedem novih peronov -…",
       "category": "Aktualno",
       "createdAt": "2026-09-21T17:27:53+02:00"
-    },
-    {
-      "id": "cene-ram-a-ssd-jev-in-graficnih-kartic-spet-rastejo-kaj-se-dogaja-875ba7e6",
-      "title": "Cene RAM-a, SSD-jev in grafičnih kartic spet rastejo, kaj se dogaja?",
-      "category": "Aktualno",
-      "createdAt": "2026-09-21T17:16:16+02:00"
     }
   ],
   "recent_failures": [
