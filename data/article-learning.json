@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-23T16:41:18+02:00",
-  "loop_count": 509,
+  "updated_at": "2026-09-23T16:54:01+02:00",
+  "loop_count": 510,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-23T16:40:01+02:00",
+      "last_learning_run": "2026-09-23T16:53:40+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -43,11 +43,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 15120,
-          "last_seen": "2026-09-23T16:38:45+02:00",
-          "last_title": "Pogačar presenetljivo prijavljen za EP v Sloveniji - zurnal24.si",
+          "seen": 15150,
+          "last_seen": "2026-09-23T16:53:40+02:00",
+          "last_title": "Pogačar presenetljivo prijavljen za EP v Sloveniji - Žurnal24",
           "last_provider": "",
-          "published": 9979,
+          "published": 10005,
           "last_output_id": "poslanica-predsednice-republike-ob-dnevu-slovenskega-sporta-1a0240e7"
         },
         "blackfriday.com": {
@@ -72,11 +72,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 0,
-      "example_titles": {}
+      "current_source_count": 30,
+      "example_titles": {
+        "news.google.com": [
+          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
+          "Četrtfinale: Slovenija - Belgija 0:0 (-, -, -) - rtvslo.si",
+          "Odlična igra Slovenije v prvem nizu 25:22 - 24ur.com"
+        ]
+      }
     },
     "politika": {
-      "last_learning_run": "2026-09-23T16:40:38+02:00",
+      "last_learning_run": "2026-09-23T16:53:50+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -100,11 +106,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 15120,
-          "last_seen": "2026-09-23T16:38:56+02:00",
-          "last_title": "Golob: Igrice so jasno razkrite. Janša: Levica se je naučila šteti - 24ur.com",
+          "seen": 15150,
+          "last_seen": "2026-09-23T16:53:50+02:00",
+          "last_title": "Okoljski ekonomist Sonnenschein: Politika ministra za energetiko ni v interesu javnosti - Dnevnik",
           "last_provider": "",
-          "published": 10170,
+          "published": 10200,
           "last_output_id": "interpelacija-zaradi-obrata-v-zunanji-politiki-ki-krsi-mednarodno-pravo-72c19f1e"
         },
         "britannica.com": {
@@ -115,15 +121,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 1,
+      "current_source_count": 30,
       "example_titles": {
-        "britannica.com": [
-          "Slovenia | History, Geography, & People | Britannica"
+        "news.google.com": [
+          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
+          "Na Radiu Ognjišče zadnje predvolilno soočenje: v ospredju prisluhi, zdravstvo, zunanja politika in sprava - Radio Ognjišče",
+          "Ste slišali, kako je Anton Rop udaril čez Roberta Goloba? »Na tedenski bazi daješ neke obljube, ki se nikoli ne uresničijo« - Slovenske novi"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-23T16:41:18+02:00",
+      "last_learning_run": "2026-09-23T16:54:01+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -157,96 +165,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 15120,
-          "last_seen": "2026-09-23T16:39:07+02:00",
+          "seen": 15150,
+          "last_seen": "2026-09-23T16:54:01+02:00",
           "last_title": "Slovenija med državami, ki bi prepovedale družbena omrežja mlajšim od 16 let - Info360",
           "last_provider": "",
-          "published": 17484,
+          "published": 17525,
           "last_output_id": "aktualno-strateska-povezava-etrela-in-vietnamskega-vinfasta-se-zacenja-v-sloveniji-novice--40d62851"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 486,
+          "published": 487,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 486,
+          "published": 487,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 509,
+          "published": 510,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 411,
+          "published": 412,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 475,
+          "published": 476,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 411,
+          "published": 412,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 411,
+          "published": 412,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 475,
+          "published": 476,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 2036,
+          "published": 2040,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 509,
+          "published": 510,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 486,
+          "published": 487,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 886,
+          "published": 888,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 443,
+          "published": 444,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 950,
+          "published": 952,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 509,
+          "published": 510,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 411,
+          "published": 412,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 886,
+          "published": 888,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
@@ -264,13 +272,12 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 2,
+      "current_source_count": 30,
       "example_titles": {
-        "britannica.com": [
-          "Slovenia | History, Geography, & People | Britannica"
-        ],
-        "slovenia.info": [
-          "The official travel guide to Slovenia | I feel Slovenia"
+        "news.google.com": [
+          "(AKTUALNO) V novi številki revije Demokracija preberite: Izključujejo in zavirajo razvoj! Janša: Osamosvojitvena Slovenija ne bo nikoli več ",
+          "(AKTUALNO) Varuhinja človekovih pravic Simona Drenik Bavdek: Pravica do dostojnega pokopa temeljna človekova pravica - DEMOKRACIJA.SI",
+          "Najnižja gledanost oddaje Marcel v desetih letih, Tarča ostaja paradni konj - Info360"
         ]
       }
     }
