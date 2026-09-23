@@ -1,8 +1,7 @@
 // Review draft only. Not imported by the production application.
-// Rolling review draft. Sources rechecked on 2026-09-21 at 07:00 Europe/Ljubljana.
+// Rolling review draft. Sources rechecked on 2026-09-23 at 07:00 Europe/Ljubljana.
 // Production remains unchanged until the calendar model and stable views are implemented.
 // Unknown values deliberately remain null.
-
 export const draftEvents = [
   {
     "eventId": "flirrt-cankarjev-dom-2026-09-19",
@@ -95,7 +94,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-21T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
   },
   {
     "eventId": "gallery-at-your-fingertips-2026",
@@ -126,7 +125,7 @@ export const draftEvents = [
     "accessibility": "Tactile exhibition; confirm individual access needs with the gallery",
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-21T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
   },
   {
     "eventId": "sms-1-katarza-2026-09-18",
@@ -252,7 +251,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-21T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
   },
   {
     "eventId": "opera-orchestra-academy-soloists-2026-09-17",
@@ -531,7 +530,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "unconfirmed",
-    "lastCheckedAt": "2026-09-17T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
   },
   {
     "eventId": "ehosistem-castle-2026-09-24",
@@ -562,7 +561,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-19T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
   },
   {
     "eventId": "open-kitchen-2026-09-25",
@@ -593,7 +592,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-17T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
   },
   {
     "eventId": "cherry-wine-tribute-2026-09-25",
@@ -624,7 +623,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-19T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
   },
   {
     "eventId": "castle-vineyard-picnic-2026-09-26",
@@ -655,7 +654,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-19T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
   },
   {
     "eventId": "national-gallery-tone-kralj-2026",
@@ -686,7 +685,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-21T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
   },
   {
     "eventId": "national-gallery-fragments-past-2026",
@@ -717,7 +716,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-21T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
   },
   {
     "eventId": "revelations-national-gallery-2026",
@@ -748,7 +747,7 @@ export const draftEvents = [
     "accessibility": "The gallery publishes a dedicated accessibility section; confirm individual requirements directly",
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-21T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
   },
   {
     "eventId": "artish-2026-09-26",
@@ -779,7 +778,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-20T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
   },
   {
     "eventId": "salome-mgl-2026-09-23-1930",
@@ -810,7 +809,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-20T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
   },
   {
     "eventId": "salome-mgl-2026-09-24-1930",
@@ -841,7 +840,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-20T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
   },
   {
     "eventId": "salome-mgl-2026-09-25-1930",
@@ -872,7 +871,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-20T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
   },
   {
     "eventId": "illustrations-in-motion-castle-2026",
@@ -903,7 +902,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-21T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
   },
   {
     "eventId": "salome-mgl-2026-09-23-1530",
@@ -934,7 +933,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-21T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
   },
   {
     "eventId": "man-overboard-mgl-2026-09-23",
@@ -965,7 +964,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "sold_out",
-    "lastCheckedAt": "2026-09-21T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
   },
   {
     "eventId": "sunday-flea-market-2026-09-27",
@@ -996,7 +995,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-21T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
   },
   {
     "eventId": "wind-orchestra-promenade-2026-09-27",
@@ -1027,7 +1026,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-21T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
   },
   {
     "eventId": "salome-mgl-2026-09-29-1930",
@@ -1058,7 +1057,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-21T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
   },
   {
     "eventId": "beauty-queen-leenane-mgl-2026-09-30",
@@ -1089,7 +1088,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-21T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
   },
   {
     "eventId": "ex-mgl-2026-09-30",
@@ -1120,6 +1119,68 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "sold_out",
-    "lastCheckedAt": "2026-09-21T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
+  },
+  {
+    "eventId": "unicum-2026-ljubljana",
+    "title": "UNICUM 2026 – 6th International Ceramics Triennial",
+    "summary": "The international ceramics triennial continues at the National Museum of Slovenia, NMS Metelkova and Center Rog through 15 October. The official tourism listing confirms daily visiting hours of 10:00–18:00 and links to National Museum ticketing; confirm the applicable venue, price and accessibility before visiting.",
+    "category": "exhibition",
+    "startAt": "2026-07-08T10:00:00+02:00",
+    "endAt": "2026-10-15T18:00:00+02:00",
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "National Museum of Slovenia, NMS Metelkova and Center Rog",
+      "address": "Muzejska ulica 1; Maistrova ulica 1; Trubarjeva cesta 72, Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": false
+    },
+    "ticketUrl": "https://www.nms.si/",
+    "officialUrl": "https://www.visitljubljana.com/en/visitors/events",
+    "sourceName": "Ljubljana Tourism",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
+  },
+  {
+    "eventId": "corn-labyrinth-ljubljana-2026",
+    "title": "Corn Labyrinth Ljubljana",
+    "summary": "The seasonal corn labyrinth in Stanežiče is listed daily from 09:00 to 20:00 through 31 October. It can suit families and visitors looking for an outdoor activity, but admission, age guidance, accessibility and weather-related status should be confirmed directly before travel.",
+    "category": "family",
+    "startAt": "2026-07-11T09:00:00+02:00",
+    "endAt": "2026-10-31T20:00:00+01:00",
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Koruzni labirint Ljubljana",
+      "address": "1751 Stanežiče, Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": false
+    },
+    "ticketUrl": null,
+    "officialUrl": "https://www.visitljubljana.com/en/visitors/events",
+    "sourceName": "Ljubljana Tourism",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": true,
+    "accessibility": null,
+    "indoorOutdoor": "outdoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
   }
 ];
