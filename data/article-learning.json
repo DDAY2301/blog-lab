@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-23T19:22:23+02:00",
-  "loop_count": 537,
+  "updated_at": "2026-09-23T19:24:01+02:00",
+  "loop_count": 538,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-23T19:22:00+02:00",
+      "last_learning_run": "2026-09-23T19:23:40+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -43,11 +43,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 15960,
-          "last_seen": "2026-09-23T19:22:00+02:00",
+          "seen": 15990,
+          "last_seen": "2026-09-23T19:23:40+02:00",
           "last_title": "'Dober rezultat je tisti, ki ti prinese pravo energijo'' - 24ur.com",
           "last_provider": "",
-          "published": 10707,
+          "published": 10733,
           "last_output_id": "poslanica-predsednice-republike-ob-dnevu-slovenskega-sporta-1a0240e7"
         },
         "blackfriday.com": {
@@ -76,13 +76,13 @@
       "example_titles": {
         "news.google.com": [
           "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
-          "Slovenija v neverjetni seriji s Poljsko – je to dolgčas ali 'el clasico' - Ekipa",
+          "Slovenija v neverjetni seriji s Poljsko – je to dolgčas ali 'el clasico' - ekipa.svet24.si",
           "Slovenija je v polfinalu evropskega prvenstva - 24ur.com"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-23T19:22:12+02:00",
+      "last_learning_run": "2026-09-23T19:23:50+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -106,11 +106,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 15960,
-          "last_seen": "2026-09-23T19:22:12+02:00",
+          "seen": 15990,
+          "last_seen": "2026-09-23T19:23:50+02:00",
           "last_title": "Nataša Pirc Musar: Slovenija si zasluži povezanost v politiki - Dnevnik",
           "last_provider": "",
-          "published": 11010,
+          "published": 11040,
           "last_output_id": "interpelacija-zaradi-obrata-v-zunanji-politiki-ki-krsi-mednarodno-pravo-72c19f1e"
         },
         "britannica.com": {
@@ -125,13 +125,13 @@
       "example_titles": {
         "news.google.com": [
           "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - slovenskenovice.delo.si",
-          "Na Radiu Ognjišče zadnje predvolilno soočenje: v ospredju prisluhi, zdravstvo, zunanja politika in sprava - Radio Ognjišče",
+          "Na Radiu Ognjišče zadnje predvolilno soočenje: v ospredju prisluhi, zdravstvo, zunanja politika in sprava - radio.ognjisce.si",
           "Stisk pesti in tapkanje v DZ: v kakšni fizični formi so politiki? - 24ur.com"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-23T19:22:23+02:00",
+      "last_learning_run": "2026-09-23T19:24:01+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -165,96 +165,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 15960,
-          "last_seen": "2026-09-23T19:22:23+02:00",
+          "seen": 15990,
+          "last_seen": "2026-09-23T19:24:01+02:00",
           "last_title": "Slovenija med državami, ki bi prepovedale družbena omrežja mlajšim od 16 let - Info360",
           "last_provider": "",
-          "published": 18632,
+          "published": 18673,
           "last_output_id": "aktualno-strateska-povezava-etrela-in-vietnamskega-vinfasta-se-zacenja-v-sloveniji-novice--40d62851"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 514,
+          "published": 515,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 514,
+          "published": 515,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 537,
+          "published": 538,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 439,
+          "published": 440,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 503,
+          "published": 504,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 439,
+          "published": 440,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 439,
+          "published": 440,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 503,
+          "published": 504,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 2148,
+          "published": 2152,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 537,
+          "published": 538,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 514,
+          "published": 515,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 942,
+          "published": 944,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 471,
+          "published": 472,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 1006,
+          "published": 1008,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 537,
+          "published": 538,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 439,
+          "published": 440,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 942,
+          "published": 944,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
@@ -276,7 +276,7 @@
       "example_titles": {
         "news.google.com": [
           "Kakšno podnebno politiko bo vodila vlada, katere premier zanika znanstvena dejstva? - N1 Slovenija",
-          "Najnovejše novice iz ameriškega tabora, tako hudo naj bi bilo z Lindsey Vonn - Žurnal24",
+          "Kučan napadel Janšo! »Kaj se je zgodilo s 'črno kocko', kdo je imel za to interese, to so vprašanja, ki bodo zahtevala odgovor« - slovensken",
           "(AKTUALNO) V novi številki revije Demokracija preberite: Izključujejo in zavirajo razvoj! Janša: Osamosvojitvena Slovenija ne bo nikoli več "
         ]
       }
