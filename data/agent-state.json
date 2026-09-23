@@ -1,19 +1,20 @@
 {
-  "last_success": "2026-09-23T13:34:09+02:00",
+  "last_success": "2026-09-23T19:54:38+02:00",
   "last_failure": "2026-09-21T20:56:52+02:00",
   "consecutive_failures": 0,
   "posts_date": "2026-09-23",
-  "posts_today": 2,
-  "last_output": "interpelacija-zaradi-obrata-v-zunanji-politiki-ki-krsi-mednarodno-pravo-72c19f1e",
+  "posts_today": 3,
+  "last_output": "s-kaksnimi-argumenti-je-ustavno-sodisce-pozegnalo-cistko-na-rtv-slovenija-dc8b0170",
   "last_error": null,
   "agent_version": "2.7.0",
-  "current_category": "politika",
-  "scheduled_posts_today": 2,
+  "current_category": "aktualno",
+  "scheduled_posts_today": 3,
   "manual_posts_today": 0,
   "writer_mode": "local_evidence_ai",
   "scheduled_slots_done": [
     "2026-09-23|08:17|sport",
-    "2026-09-23|13:27|politika"
+    "2026-09-23|13:27|politika",
+    "2026-09-23|19:43|aktualno"
   ],
   "scheduled_slots_deferred": [],
   "last_editorial_hold": null
