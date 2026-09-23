@@ -20,6 +20,44 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "interpelacija-zaradi-obrata-v-zunanji-politiki-ki-krsi-mednarodno-pravo-72c19f1e",
+    "title": "Interpelacija zaradi obrata v zunanji politiki, ki krši mednarodno pravo",
+    "excerpt": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Interpelacija zaradi obrata v zunanji politiki, ki krši mednarodno pravo«.",
+    "seoDescription": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Interpelacija zaradi obrata v zunanji politiki, ki krši mednarodno pravo«.",
+    "content": "**Politika, 23. 9. 2026.** Interpelacija zaradi obrata v zunanji politiki, ki krši mednarodno pravo Delo.si\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nPri političnih temah Blog Lab ne podpira kandidatov, strank ali političnih odločitev; izjave in ocene so predstavljene kot stališča njihovih avtorjev ali virov, ne kot uredniška presoja.\n\nVir: Delo.si. Objavljeno: Mon, 21 Sep 2026 11:22:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiiwFBVV95cUxOckFaTFp4YXpwZDJ3LWg1b1paVzU1UHBxNkVMY0VjRFQtdEhPZU9xdkctU01ySXhmUlpGS19DMzhlaUphOXhnZ2gyVS1jb2cyYUZtZ0pyM0pKU2ZEaWxTOXdBWTdnX1YyaGZKOFB1ZXNGbUE1ak5nSExkX1JFLVM5NklOXzJSbk83YXZn?oc=5)\n\n## Dopolnitev vira 2: Radio Ognjišče\n\nNa Radiu Ognjišče zadnje predvolilno soočenje: v ospredju prisluhi, zdravstvo, zunanja politika in sprava Radio Ognjišče\n\n Vir: Radio Ognjišče. Objavljeno: Wed, 18 Mar 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMi5wFBVV95cUxQUTJybWU5WFpxaUNHRHgtOW1kTmhCYXd5dEctaU02OENUaW9yREUzOGNZMUs5S2pxMXppN0NQWUk3ZUJfdDZfNkpMZFA5MHBWNW1FUnBHYVZhQkROR0plV05jQ2R1UmJtM1pNbXZKaUJwN1VlVEloUlNLcUJCUlVrTWFtVkItZTc4SnRVRHFBWVdhTXdpZzRIekIwQXhxX0NhcDFrSEpib2FXRWxDWmQxZEZFNU5RVGZPWThrVkhwOTkxMUJpc19qSGYxZmp6dkplZTNXMGlxaWhBdERXenRHWkI0V1piV2s?oc=5)\n\n## Dopolnitev vira 3: Dnevnik\n\nOpozicija nad Kajzerja, SDS udarila nazaj: Interpelacija služi Moskvi in Teheranu! Dnevnik\n\n Vir: Dnevnik. Objavljeno: Mon, 21 Sep 2026 12:46:48 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMi4AFBVV95cUxNNHlaZ3daVjItN29teXJSRURLSUgtanhJNm5EWnVsVk1qQWEwLVgybGZ2aDFVbUdyVUtEMGJiUzYza1ZldzlMc1dFN0lGNkVia253SmV3Mk1kcnNPVlBVbmY5NXBsZjlyUG5qZEJ3YjJJalI0WTMtcHhFUlB1RVcxOENBVE5fWlZIZ0hUSHF0RlRtSjNXVFRxLW5FWTFMd0IxVXhPcGJFMlE2R2JYeDhIVlFlUHM0U0IzVlpLbzBiem1LcDE4UVhFdzJnUmpZZ2tyTHctdGhzTWhPZXByVXkxWg?oc=5)\n\n## Dopolnitev vira 4: rtvslo.si\n\nDanilo Türk: \"Ves svet nas vidi kot instrument izraelske zunanje politike\" rtvslo.si\n\n Vir: rtvslo.si. Objavljeno: Fri, 28 Aug 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMisAFBVV95cUxNOUNYM19fbmQ2VzRGNDNtZjR6SnZBX0Q3T2hmazh1NGFSb0tOX0xsRkVSZEtKRlhjTUF1dFJwSTljOGpQNDhyRUVCMTFyWEZ3MWFSNkY5SFY0UFl0YkhKZk1XVzFaeU8yMFJHUEl0X1RaRjZVdHJfMnhGclBQS2VOUnIwSWE2azZqNER3TzVPOGdNUTlqdVM3RGNmYUdrTEpiMS1KUUI3VlpFVzZYSElUWg?oc=5)\n\n## Dopolnitev vira 5: svet24.si\n\nNovi v politiki: Volt Slovenija gre na lokalne volitve tudi na Ptuju svet24.si\n\n Vir: svet24.si. Objavljeno: Mon, 21 Sep 2026 13:37:23 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMihAFBVV95cUxQNUF6Vy1HSmpMRUVJMEtGRV9HT2tVNjItYXVqcVlNek9EUzRacnZTNldEOE9Ia1RudzlCcXB2Q1dRUk1RSzFnc1NlemFNNGp3cGdfTEdtTEh4eGN4Wndza1N2VUtYcHpSZ0xMMkFkdkQ5Y3FsM3owaVNiRkZoTlMzVHQxOWc?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Politika",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Delo.si — Interpelacija zaradi obrata v zunanji politiki, ki krši mednarodno pravo - Delo.si",
+        "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOckFaTFp4YXpwZDJ3LWg1b1paVzU1UHBxNkVMY0VjRFQtdEhPZU9xdkctU01ySXhmUlpGS19DMzhlaUphOXhnZ2gyVS1jb2cyYUZtZ0pyM0pKU2ZEaWxTOXdBWTdnX1YyaGZKOFB1ZXNGbUE1ak5nSExkX1JFLVM5NklOXzJSbk83YXZn?oc=5"
+      },
+      {
+        "label": "Radio Ognjišče — Na Radiu Ognjišče zadnje predvolilno soočenje: v ospredju prisluhi, zdravstvo, zunanja politika in sprava - Radio…",
+        "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQUTJybWU5WFpxaUNHRHgtOW1kTmhCYXd5dEctaU02OENUaW9yREUzOGNZMUs5S2pxMXppN0NQWUk3ZUJfdDZfNkpMZFA5MHBWNW1FUnBHYVZhQkROR0plV05jQ2R1UmJtM1pNbXZKaUJwN1VlVEloUlNLcUJCUlVrTWFtVkItZTc4SnRVRHFBWVdhTXdpZzRIekIwQXhxX0NhcDFrSEpib2FXRWxDWmQxZEZFNU5RVGZPWThrVkhwOTkxMUJpc19qSGYxZmp6dkplZTNXMGlxaWhBdERXenRHWkI0V1piV2s?oc=5"
+      },
+      {
+        "label": "Dnevnik — Opozicija nad Kajzerja, SDS udarila nazaj: Interpelacija služi Moskvi in Teheranu! - Dnevnik",
+        "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNNHlaZ3daVjItN29teXJSRURLSUgtanhJNm5EWnVsVk1qQWEwLVgybGZ2aDFVbUdyVUtEMGJiUzYza1ZldzlMc1dFN0lGNkVia253SmV3Mk1kcnNPVlBVbmY5NXBsZjlyUG5qZEJ3YjJJalI0WTMtcHhFUlB1RVcxOENBVE5fWlZIZ0hUSHF0RlRtSjNXVFRxLW5FWTFMd0IxVXhPcGJFMlE2R2JYeDhIVlFlUHM0U0IzVlpLbzBiem1LcDE4UVhFdzJnUmpZZ2tyTHctdGhzTWhPZXByVXkxWg?oc=5"
+      },
+      {
+        "label": "rtvslo.si — Danilo Türk: \"Ves svet nas vidi kot instrument izraelske zunanje politike\" - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNOUNYM19fbmQ2VzRGNDNtZjR6SnZBX0Q3T2hmazh1NGFSb0tOX0xsRkVSZEtKRlhjTUF1dFJwSTljOGpQNDhyRUVCMTFyWEZ3MWFSNkY5SFY0UFl0YkhKZk1XVzFaeU8yMFJHUEl0X1RaRjZVdHJfMnhGclBQS2VOUnIwSWE2azZqNER3TzVPOGdNUTlqdVM3RGNmYUdrTEpiMS1KUUI3VlpFVzZYSElUWg?oc=5"
+      },
+      {
+        "label": "svet24.si — Novi v politiki: Volt Slovenija gre na lokalne volitve tudi na Ptuju - svet24.si",
+        "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQNUF6Vy1HSmpMRUVJMEtGRV9HT2tVNjItYXVqcVlNek9EUzRacnZTNldEOE9Ia1RudzlCcXB2Q1dRUk1RSzFnc1NlemFNNGp3cGdfTEdtTEh4eGN4Wndza1N2VUtYcHpSZ0xMMkFkdkQ5Y3FsM3owaVNiRkZoTlMzVHQxOWc?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-23T13:34:09+02:00",
+    "updatedAt": "2026-09-23T13:34:09+02:00"
+  },
+
+  {
     "id": "running-ljubljana-tivoli-roznik-guide",
     "title": "Running in Ljubljana: A Tivoli and Rožnik Guide for Visitors",
     "excerpt": "Choose a safe city run through Tivoli Park and Rožnik with flexible distances, trail etiquette, weather checks and practical access from central Ljubljana.",
