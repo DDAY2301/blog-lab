@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-23T18:39:08+02:00",
-  "loop_count": 526,
+  "updated_at": "2026-09-23T18:40:03+02:00",
+  "loop_count": 527,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-23T18:38:42+02:00",
+      "last_learning_run": "2026-09-23T18:39:42+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -42,12 +42,12 @@
       ],
       "source_health": {
         "news.google.com": {
-          "score": 2.496,
-          "seen": 15630,
-          "last_seen": "2026-09-23T18:38:42+02:00",
-          "last_title": "Stisk pesti in tapkanje v DZ: kako zmogljivi so politiki? - 24ur.com",
+          "score": 2.498,
+          "seen": 15660,
+          "last_seen": "2026-09-23T18:39:42+02:00",
+          "last_title": "Pri Realu služil milijone, a ni imel sreče. Zdaj se bo pridružil Slovencu. - Siol.net",
           "last_provider": "",
-          "published": 10421,
+          "published": 10447,
           "last_output_id": "poslanica-predsednice-republike-ob-dnevu-slovenskega-sporta-1a0240e7"
         },
         "blackfriday.com": {
@@ -82,7 +82,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-23T18:38:57+02:00",
+      "last_learning_run": "2026-09-23T18:39:52+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -106,11 +106,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 15630,
-          "last_seen": "2026-09-23T18:38:57+02:00",
+          "seen": 15660,
+          "last_seen": "2026-09-23T18:39:52+02:00",
           "last_title": "Golob: Igrice so jasno razkrite. Janša: Levica se je naučila šteti - 24ur.com",
           "last_provider": "",
-          "published": 10680,
+          "published": 10710,
           "last_output_id": "interpelacija-zaradi-obrata-v-zunanji-politiki-ki-krsi-mednarodno-pravo-72c19f1e"
         },
         "britannica.com": {
@@ -124,14 +124,14 @@
       "current_source_count": 30,
       "example_titles": {
         "news.google.com": [
-          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - slovenskenovice.delo.si",
+          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
           "Na Radiu Ognjišče zadnje predvolilno soočenje: v ospredju prisluhi, zdravstvo, zunanja politika in sprava - Radio Ognjišče",
           "Stisk pesti in tapkanje v DZ: kako zmogljivi so politiki? - 24ur.com"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-23T18:39:08+02:00",
+      "last_learning_run": "2026-09-23T18:40:03+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -165,96 +165,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 15630,
-          "last_seen": "2026-09-23T18:39:08+02:00",
-          "last_title": "Slovenija med državami, ki bi prepovedale družbena omrežja mlajšim od 16 let - info360.si",
+          "seen": 15660,
+          "last_seen": "2026-09-23T18:40:03+02:00",
+          "last_title": "Slovenija med državami, ki bi prepovedale družbena omrežja mlajšim od 16 let - Info360",
           "last_provider": "",
-          "published": 18181,
+          "published": 18222,
           "last_output_id": "aktualno-strateska-povezava-etrela-in-vietnamskega-vinfasta-se-zacenja-v-sloveniji-novice--40d62851"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 503,
+          "published": 504,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 503,
+          "published": 504,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 526,
+          "published": 527,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 428,
+          "published": 429,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 492,
+          "published": 493,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 428,
+          "published": 429,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 428,
+          "published": 429,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 492,
+          "published": 493,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 2104,
+          "published": 2108,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 526,
+          "published": 527,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 503,
+          "published": 504,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 920,
+          "published": 922,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 460,
+          "published": 461,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 984,
+          "published": 986,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 526,
+          "published": 527,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 428,
+          "published": 429,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 920,
+          "published": 922,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
@@ -275,9 +275,9 @@
       "current_source_count": 30,
       "example_titles": {
         "news.google.com": [
-          "Kakšno podnebno politiko bo vodila vlada, katere premier zanika znanstvena dejstva? - N1 Slovenija",
-          "Najnovejše novice iz ameriškega tabora, tako hudo naj bi bilo z Lindsey Vonn - Žurnal24",
-          "(AKTUALNO) V novi številki revije Demokracija preberite: Izključujejo in zavirajo razvoj! Janša: Osamosvojitvena Slovenija ne bo nikoli več "
+          "(AKTUALNO) V novi številki revije Demokracija preberite: Izključujejo in zavirajo razvoj! Janša: Osamosvojitvena Slovenija ne bo nikoli več ",
+          "(AKTUALNO) Varuhinja človekovih pravic Simona Drenik Bavdek: Pravica do dostojnega pokopa temeljna človekova pravica - DEMOKRACIJA.SI",
+          "Najnižja gledanost oddaje Marcel v desetih letih, Tarča ostaja paradni konj - Info360"
         ]
       }
     }
