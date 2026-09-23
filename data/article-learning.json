@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-24T00:38:19+02:00",
-  "loop_count": 587,
+  "updated_at": "2026-09-24T00:39:14+02:00",
+  "loop_count": 588,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-24T00:37:56+02:00",
+      "last_learning_run": "2026-09-24T00:38:49+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -43,11 +43,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.496,
-          "seen": 17460,
-          "last_seen": "2026-09-24T00:37:56+02:00",
+          "seen": 17490,
+          "last_seen": "2026-09-24T00:38:49+02:00",
           "last_title": "Tek, na katerem ni pomembno, kako hitro greste - Delo.si",
           "last_provider": "",
-          "published": 12007,
+          "published": 12033,
           "last_output_id": "poslanica-predsednice-republike-ob-dnevu-slovenskega-sporta-1a0240e7"
         },
         "blackfriday.com": {
@@ -76,13 +76,13 @@
       "example_titles": {
         "news.google.com": [
           "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
-          "Poljaki gladko boljši, Slovenci po porazu 0:3 v boj za bron proti Japoncem - rtvslo.si",
+          "Kot v sanjah: Slovenija že drugič v dveh tednih evropski prvak! (VIDEO) - Šport TV",
           "Četrtfinale: Belgija - Slovenija 0:2 (-22, -22, -) - rtvslo.si"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-24T00:38:08+02:00",
+      "last_learning_run": "2026-09-24T00:39:01+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -106,11 +106,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 17460,
-          "last_seen": "2026-09-24T00:38:08+02:00",
-          "last_title": "Sprejeta Krajinska politika Slovenije - Portal GOV.SI",
+          "seen": 17490,
+          "last_seen": "2026-09-24T00:39:01+02:00",
+          "last_title": "Okoljski ekonomist Sonnenschein: Politika ministra za energetiko ni v interesu javnosti - Dnevnik",
           "last_provider": "",
-          "published": 12510,
+          "published": 12540,
           "last_output_id": "interpelacija-zaradi-obrata-v-zunanji-politiki-ki-krsi-mednarodno-pravo-72c19f1e"
         },
         "britannica.com": {
@@ -131,7 +131,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-24T00:38:19+02:00",
+      "last_learning_run": "2026-09-24T00:39:14+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -165,96 +165,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 17460,
-          "last_seen": "2026-09-24T00:38:19+02:00",
-          "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
+          "seen": 17490,
+          "last_seen": "2026-09-24T00:39:14+02:00",
+          "last_title": "Društvo Izgubljeni otroci Slovenije odprlo nove prostore - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 20912,
+          "published": 20958,
           "last_output_id": "s-kaksnimi-argumenti-je-ustavno-sodisce-pozegnalo-cistko-na-rtv-slovenija-dc8b0170"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 564,
+          "published": 565,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 564,
+          "published": 565,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 587,
+          "published": 588,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 489,
+          "published": 490,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 553,
+          "published": 554,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 489,
+          "published": 490,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 489,
+          "published": 490,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 553,
+          "published": 554,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 2348,
+          "published": 2352,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 587,
+          "published": 588,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 564,
+          "published": 565,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 1042,
+          "published": 1044,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 521,
+          "published": 522,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 1106,
+          "published": 1108,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 587,
+          "published": 588,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 489,
+          "published": 490,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 1042,
+          "published": 1044,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
@@ -277,7 +277,7 @@
         "news.google.com": [
           "Kakšno podnebno politiko bo vodila vlada, katere premier zanika znanstvena dejstva? - N1 Slovenija",
           "(AKTUALNO) V novi številki revije Demokracija preberite: Izključujejo in zavirajo razvoj! Janša: Osamosvojitvena Slovenija ne bo nikoli več ",
-          "(AKTUALNO) Varuhinja človekovih pravic Simona Drenik Bavdek: Pravica do dostojnega pokopa temeljna človekova pravica - demokracija.si"
+          "(AKTUALNO) Varuhinja človekovih pravic Simona Drenik Bavdek: Pravica do dostojnega pokopa temeljna človekova pravica - DEMOKRACIJA.SI"
         ]
       }
     }
