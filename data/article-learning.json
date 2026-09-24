@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-24T16:38:42+02:00",
-  "loop_count": 732,
+  "updated_at": "2026-09-24T16:39:42+02:00",
+  "loop_count": 733,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-24T16:38:16+02:00",
+      "last_learning_run": "2026-09-24T16:39:20+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -45,11 +45,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 21720,
-          "last_seen": "2026-09-24T16:38:16+02:00",
+          "seen": 21750,
+          "last_seen": "2026-09-24T16:39:20+02:00",
           "last_title": "'Na uspehe naših športnic in športnikov smo upravičeno izjemno ponosni' - 24ur.com",
           "last_provider": "",
-          "published": 16167,
+          "published": 16198,
           "last_output_id": "slovenska-odbojkarska-reprezentanca-je-v-polfinalu-evropskega-prvenstva-zdaj-jih-caka-veli-54905004"
         },
         "aarp.org": {
@@ -98,7 +98,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-24T16:38:27+02:00",
+      "last_learning_run": "2026-09-24T16:39:31+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -122,11 +122,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 21720,
-          "last_seen": "2026-09-24T16:38:27+02:00",
-          "last_title": "Janša na Newsmaxu: “Slovenija in ZDA imata poseben odnos« – razkril tudi, kaj mu je obljubil Trump!” - e-Maribor",
+          "seen": 21750,
+          "last_seen": "2026-09-24T16:39:31+02:00",
+          "last_title": "Ste slišali, kako je Anton Rop udaril čez Roberta Goloba? »Na tedenski bazi daješ neke obljube, ki se nikoli ne uresničijo« - Slovenske novice",
           "last_provider": "",
-          "published": 17020,
+          "published": 17055,
           "last_output_id": "rop-o-golobovi-vladi-politika-ne-bi-smela-biti-tako-plehka-ciljata-z-ursko-klakocar-zupanc-2b13995b"
         },
         "britannica.com": {
@@ -140,14 +140,14 @@
       "current_source_count": 30,
       "example_titles": {
         "news.google.com": [
-          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - slovenskenovice.delo.si",
+          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
           "Netanjahu napovedal srečanje z Janšo, številne voditelje je zavrnil - Dnevnik",
           "Rop o Golobovi vladi: \"Politika ne bi smela biti tako plehka.\" Ciljata z Urško Klakočar Zupančič na državno raven? - Večer"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-24T16:38:42+02:00",
+      "last_learning_run": "2026-09-24T16:39:42+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -181,96 +181,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 21720,
-          "last_seen": "2026-09-24T16:38:42+02:00",
+          "seen": 21750,
+          "last_seen": "2026-09-24T16:39:42+02:00",
           "last_title": "Slovenija med državami, ki bi prepovedale družbena omrežja mlajšim od 16 let - Info360",
           "last_provider": "",
-          "published": 27582,
+          "published": 27628,
           "last_output_id": "s-kaksnimi-argumenti-je-ustavno-sodisce-pozegnalo-cistko-na-rtv-slovenija-dc8b0170"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 709,
+          "published": 710,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 709,
+          "published": 710,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 732,
+          "published": 733,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 634,
+          "published": 635,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 698,
+          "published": 699,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 634,
+          "published": 635,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 634,
+          "published": 635,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 698,
+          "published": 699,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 2928,
+          "published": 2932,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 732,
+          "published": 733,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 709,
+          "published": 710,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 1332,
+          "published": 1334,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 666,
+          "published": 667,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 1396,
+          "published": 1398,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 732,
+          "published": 733,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 634,
+          "published": 635,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 1332,
+          "published": 1334,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
@@ -293,7 +293,7 @@
         "news.google.com": [
           "(AKTUALNO) V novi številki revije Demokracija preberite: Izključujejo in zavirajo razvoj! Janša: Osamosvojitvena Slovenija ne bo nikoli več ",
           "Janša v New Yorku jasno o Ukrajini: Slovenija bo nadaljevala politično, vojaško, humanitarno in finančno pomoč - Najdi.si novice",
-          "(AKTUALNO) Varuhinja človekovih pravic Simona Drenik Bavdek: Pravica do dostojnega pokopa temeljna človekova pravica - Demokracija"
+          "Janša na Newsmaxu: “Slovenija in ZDA imata poseben odnos« – razkril tudi, kaj mu je obljubil Trump!” - e-Maribor"
         ]
       }
     }
