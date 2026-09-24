@@ -20,6 +20,44 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "slovenska-odbojkarska-reprezentanca-je-v-polfinalu-evropskega-prvenstva-zdaj-jih-caka-veli-54905004",
+    "title": "Slovenska odbojkarska reprezentanca je v polfinalu evropskega prvenstva! Zdaj jih čaka veliki obračun s Poljsko -…",
+    "excerpt": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Slovenska odbojkarska reprezentanca je v polfinalu evropskega prvenstva! Zdaj jih čaka veliki obračun s Poljsko -…«.",
+    "seoDescription": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Slovenska odbojkarska reprezentanca je v polfinalu evropskega prvenstva! Zdaj ji",
+    "content": "**Šport, 24. 9. 2026.** Slovenska odbojkarska reprezentanca je v polfinalu evropskega prvenstva! Zdaj jih čaka veliki obračun s Poljsko NaDlani.si\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: NaDlani.si. Objavljeno: Wed, 23 Sep 2026 16:15:03 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMi1wFBVV95cUxOa0puV1RfS2dlaDRXMjY2dlRVRHpETFhjbkFpMkRFQU55VkFpUE5fVUFkU05Gc1hnSllST0lRX1BsdTZ2c19kc2lvR1M1czMwbktnUEl5VXU4XzU0YlJWVkVZMGFucHdGUk5OUU9FQUhfS0VSODk1NEt6TnVsbFdxeGlhVmQ5NG5OY25fZ01tMzBNcjVKMzZEbWszZEFpMjU1Rm42UTZqMXd6MFhjUV9KeEdOWXA0OXdQMTkyZlRNWDdwNFFFb3VXWnFJN1VZTFdjd0hkRk5iUQ?oc=5)\n\n## Dopolnitev vira 2: rtvslo.si\n\nSlovenski odbojkarji prek Belgijcev v polfinale! Tam presenetljivo tudi Finci. rtvslo.si\n\n Vir: rtvslo.si. Objavljeno: Thu, 24 Sep 2026 05:05:34 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMi0wFBVV95cUxPa2tPS1pDUU9MNEU4UjR1dDhuNWkwMXRFNjktaWEtZlhDQXVnTnc5RHY0UWs2aUdUeFpyMVN5aWV2MjN4N2d6ZE51MERkdndFN045SEt6dVpjbVU2Sm44Zm1qNm5hN1JMTlJhcnhYMldQc19OSi1IWlBYUWt2bzFYeG9FOVRSX0ZkNVFjQUtwZm5wVV9jUldQSzZ3cm1iUDdmbUVFZGpOOEpPc0ZINWExY3NXaUplNEtiWlFHc1paZnotaElrYURIV2JBVG5DX3Rkd2Zr?oc=5)\n\n## Dopolnitev vira 3: NaDlani.si\n\nSlovenski šport žaluje: umrl dolgoletni novinar in športni poznavalec Gojko NaDlani.si\n\n Vir: NaDlani.si. Objavljeno: Thu, 24 Sep 2026 04:20:08 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMipwFBVV95cUxNdUpEQTNOMkQ2U0NabkpEQlFfNHk1M01ZdUo4VXRnX3J1OG1iOTRVZ08tczZseUpXM05hbWQybER4TEs0M2xNZThDdExNcGxiV2IwUzNVQ2lmaFdEbjV3ZTJRY2NmRFRoZG1PY2RpVkloRkV4eUlxTk1yWlkwQjdrMVZ5QWNVeUpPTVVJZzNOSUZ4cVhzNnhaTS1xZ0cyQjgyckRiekVHTQ?oc=5)\n\n## Dopolnitev vira 4: Delo.si\n\nSlovenija odpihnila Srbijo, sledi Belgija, pogled proti polfinalu ... Delo.si\n\n Vir: Delo.si. Objavljeno: Tue, 22 Sep 2026 07:30:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMilAFBVV95cUxObXg5RDhzb0NTeFdxbUR6RmZjTWNlYXlVbERrblZxSDEwQkgwV3hRSFRkaVVqVTJDaGpGRGdZcms3Y2tWVTEteWs0MTFOQnFwb1BaZGU4QXJoSXphY2ltTEloWFozYW13VUJHRFBjUjc3Q2pyMVcySFZVbGp0NEZOWUlyWndoSGI4SXRpTjVVVmstSXFp?oc=5)\n\n## Dopolnitev vira 5: Ekipa\n\nSlovenija v neverjetni seriji s Poljsko – res dolgčas ali 'el clasico' Ekipa\n\n Vir: Ekipa. Objavljeno: Wed, 23 Sep 2026 17:11:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiogFBVV95cUxQeE85RDdUSXA0THF2dnR3azVKVkkzb2tJNElqMjh4S1Y3NU9QeFJXd3FuS19ZOEJ4QlVEVDFvZUQ3NEhyUEFNNG9JVEV3ZjVlVi1KbkxPM21mUW5JUUw0WGUwZjZtUHNFQjhKVGVFckFjUHZtaE1ackpVN0FHZ2t1VThZWjBnSDBzNXpmbEhVdG1fMnVESUlsZkp1Q3FsakRNMHc?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Šport",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "NaDlani.si — Slovenska odbojkarska reprezentanca je v polfinalu evropskega prvenstva! Zdaj jih čaka veliki obračun s Poljsko -…",
+        "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOa0puV1RfS2dlaDRXMjY2dlRVRHpETFhjbkFpMkRFQU55VkFpUE5fVUFkU05Gc1hnSllST0lRX1BsdTZ2c19kc2lvR1M1czMwbktnUEl5VXU4XzU0YlJWVkVZMGFucHdGUk5OUU9FQUhfS0VSODk1NEt6TnVsbFdxeGlhVmQ5NG5OY25fZ01tMzBNcjVKMzZEbWszZEFpMjU1Rm42UTZqMXd6MFhjUV9KeEdOWXA0OXdQMTkyZlRNWDdwNFFFb3VXWnFJN1VZTFdjd0hkRk5iUQ?oc=5"
+      },
+      {
+        "label": "rtvslo.si — Slovenski odbojkarji prek Belgijcev v polfinale! Tam presenetljivo tudi Finci. - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPa2tPS1pDUU9MNEU4UjR1dDhuNWkwMXRFNjktaWEtZlhDQXVnTnc5RHY0UWs2aUdUeFpyMVN5aWV2MjN4N2d6ZE51MERkdndFN045SEt6dVpjbVU2Sm44Zm1qNm5hN1JMTlJhcnhYMldQc19OSi1IWlBYUWt2bzFYeG9FOVRSX0ZkNVFjQUtwZm5wVV9jUldQSzZ3cm1iUDdmbUVFZGpOOEpPc0ZINWExY3NXaUplNEtiWlFHc1paZnotaElrYURIV2JBVG5DX3Rkd2Zr?oc=5"
+      },
+      {
+        "label": "NaDlani.si — Slovenski šport žaluje: umrl dolgoletni novinar in športni poznavalec Gojko - NaDlani.si",
+        "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNdUpEQTNOMkQ2U0NabkpEQlFfNHk1M01ZdUo4VXRnX3J1OG1iOTRVZ08tczZseUpXM05hbWQybER4TEs0M2xNZThDdExNcGxiV2IwUzNVQ2lmaFdEbjV3ZTJRY2NmRFRoZG1PY2RpVkloRkV4eUlxTk1yWlkwQjdrMVZ5QWNVeUpPTVVJZzNOSUZ4cVhzNnhaTS1xZ0cyQjgyckRiekVHTQ?oc=5"
+      },
+      {
+        "label": "Delo.si — Slovenija odpihnila Srbijo, sledi Belgija, pogled proti polfinalu ... - Delo.si",
+        "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxObXg5RDhzb0NTeFdxbUR6RmZjTWNlYXlVbERrblZxSDEwQkgwV3hRSFRkaVVqVTJDaGpGRGdZcms3Y2tWVTEteWs0MTFOQnFwb1BaZGU4QXJoSXphY2ltTEloWFozYW13VUJHRFBjUjc3Q2pyMVcySFZVbGp0NEZOWUlyWndoSGI4SXRpTjVVVmstSXFp?oc=5"
+      },
+      {
+        "label": "Ekipa — Slovenija v neverjetni seriji s Poljsko – res dolgčas ali 'el clasico' - Ekipa",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQeE85RDdUSXA0THF2dnR3azVKVkkzb2tJNElqMjh4S1Y3NU9QeFJXd3FuS19ZOEJ4QlVEVDFvZUQ3NEhyUEFNNG9JVEV3ZjVlVi1KbkxPM21mUW5JUUw0WGUwZjZtUHNFQjhKVGVFckFjUHZtaE1ackpVN0FHZ2t1VThZWjBnSDBzNXpmbEhVdG1fMnVESUlsZkp1Q3FsakRNMHc?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-24T08:24:19+02:00",
+    "updatedAt": "2026-09-24T08:24:19+02:00"
+  },
+
+  {
     "id": "s-kaksnimi-argumenti-je-ustavno-sodisce-pozegnalo-cistko-na-rtv-slovenija-dc8b0170",
     "title": "S kakšnimi argumenti je ustavno sodišče \"požegnalo\" čistko na RTV Slovenija",
     "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »S kakšnimi argumenti je ustavno sodišče \"požegnalo\" čistko na RTV Slovenija«.",
