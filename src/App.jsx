@@ -20,6 +20,44 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "rop-o-golobovi-vladi-politika-ne-bi-smela-biti-tako-plehka-ciljata-z-ursko-klakocar-zupanc-2b13995b",
+    "title": "Rop o Golobovi vladi: \"Politika ne bi smela biti tako plehka.\" Ciljata z Urško Klakočar Zupančič na državno…",
+    "excerpt": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Rop o Golobovi vladi: \"Politika ne bi smela biti tako plehka.\" Ciljata z Urško Klakočar Zupančič na državno…«.",
+    "seoDescription": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Rop o Golobovi vladi: \"Politika ne bi smela biti tako plehka.\" Ciljata z Uršk",
+    "content": "**Politika, 24. 9. 2026.** Rop o Golobovi vladi: \"Politika ne bi smela biti tako plehka.\" Ciljata z Urško Klakočar Zupančič na državno raven? vecer.com\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nPri političnih temah Blog Lab ne podpira kandidatov, strank ali političnih odločitev; izjave in ocene so predstavljene kot stališča njihovih avtorjev ali virov, ne kot uredniška presoja.\n\nVir: vecer.com. Objavljeno: Thu, 24 Sep 2026 11:25:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMilAFBVV95cUxON08yMzRJdC1xVXd1cVlpRG1UZmwtbnc0RkVybm11b1UxMWdIc2dQcm12RVJ1c2c4ZmZwSzJaZWt2WDJ6R0R3RlJhZHB0Ty16WndWeHlaS0RKX2dFbWxNWTNTV0VSV09HVTEtVmFrZUJ3ZUJNLXRjUWlNc3FKSll3MHYtVkQ1LWJibFNtNUpkaEVKMXZV?oc=5)\n\n## Dopolnitev vira 2: N1 Slovenija\n\nKoalicija verjame v uspeh Skoka. Opozicija kritična tudi do ministra Zupančiča: \"Nismo na tekmovanju za mis sveta\" N1 Slovenija\n\n Vir: N1 Slovenija. Objavljeno: Thu, 24 Sep 2026 09:03:33 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMizwFBVV95cUxQcmZFaThmNWZQSmRGNXBEYkozWFNpNUtjTXdNYXdZYXA1Ymo3aFdfMGNqRi0yU2xWcmlQTnlFd2RXanhVMFFaUG5OdE9yV3lzdE8wdmxTekFscmJLeUcyWDRYNkc1dGRBdkZPbHVYRy1iRGFfaE15VjFMUkhSeXdOYjUzQlZaLTFRRkNhd0x6MDktT0VSbUlOUkJLQllCZHpWNXpJWWhIOUhOZ1JELUpCQ0owUnlPbWZnZl93VEs2QXpudTM2Rk5SMVIwY1VjbDQ?oc=5)\n\n## Dopolnitev vira 3: zurnal24.si\n\nKandidaturo za župana naj bi umaknil zaradi nasprotovanja dveh znanih politikov zurnal24.si\n\n Vir: zurnal24.si. Objavljeno: Wed, 23 Sep 2026 19:01:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMikAFBVV95cUxQSU5kMmxGV1phNkdGaUw1SnV4dC00R3NPcHFYTmxFbldpNjZQRFp3c3NybE5aaXJzT2R0UnBuTmJOY09odWltUWh2VXBodzZRM2dBOGVBX3JTbGdXOHNLM21aOTZiRG9aaXdURi1fSTluSnJmT1dtamUybWdLQlN5eDZfWDdac1JDVDduR2tsWlDSAZYBQVVfeXFMUGhHTEhXLWpYLVZ4RE1BRWlDVlBmTHJfM09rUGpuSC00bWVUbDczVlJBOVJNRlFWeFVvemJmTkdlRzloNE1qOXNTM2ZVbHE1b0doelctN25yU2RHMW5rNV85N01iV0UyMGQxX09NWk5SaFVmQ1BzNmo3elMzVjMxRVd2Qm9IRGFIVTFVYVZBZnpJSmZUSkxB?oc=5)\n\n## Dopolnitev vira 4: Lider.si\n\nCene hrane: Slovenci evropski kmetijski politiki zaupajo manj kot vsi sosedje Lider.si\n\n Vir: Lider.si. Objavljeno: Wed, 23 Sep 2026 09:58:39 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMimgFBVV95cUxPNHUwUFhhLTRNbU5mZEhRYjdYMHFxTVVaT19MZ3VodkwtNkhEdnlZLXQ4blFiZjdoX2lzS2h2cTdIS2lEWG1oQlA0RWxvOUo1UXlhajNoQjVraEJHQS1vVHJYQk9JcUdhRi0tWVVvUHhjSzFpOU5PNXlTN09kMTI3YlQ2bWVaQzR5Z0FMejM1d3JZc1ByS3d6ZVJn?oc=5)\n\n## Dopolnitev vira 5: 24ur.com\n\nStisk pesti in tapkanje v DZ: v kakšni fizični formi so politiki? 24ur.com\n\n Vir: 24ur.com. Objavljeno: Wed, 23 Sep 2026 16:31:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiogFBVV95cUxPeElydjFNY0ZOQ2hDVGFoUUVJZUQ5Rm1qYWh1bU5pV3BfbGpUOEFmU09RVDZQSm9YUlN3dUQ3WmRGTDZPU1Q3T2hUdTFoTkJNSlV1RHphQ0kzdUFsbHFvNG1mTDQ2WUlkUjl3OTlJZm5nSzBjcERINWlmSjc0UG9vRGNCdjdzVzc0eTN5TUpzLURKSkJPM2hRLU0wQW5iYk9ZQWc?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Politika",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "vecer.com — Rop o Golobovi vladi: \"Politika ne bi smela biti tako plehka.\" Ciljata z Urško Klakočar Zupančič na državno raven? -…",
+        "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxON08yMzRJdC1xVXd1cVlpRG1UZmwtbnc0RkVybm11b1UxMWdIc2dQcm12RVJ1c2c4ZmZwSzJaZWt2WDJ6R0R3RlJhZHB0Ty16WndWeHlaS0RKX2dFbWxNWTNTV0VSV09HVTEtVmFrZUJ3ZUJNLXRjUWlNc3FKSll3MHYtVkQ1LWJibFNtNUpkaEVKMXZV?oc=5"
+      },
+      {
+        "label": "N1 Slovenija — Koalicija verjame v uspeh Skoka. Opozicija kritična tudi do ministra Zupančiča: \"Nismo na tekmovanju za mis sveta\" -…",
+        "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQcmZFaThmNWZQSmRGNXBEYkozWFNpNUtjTXdNYXdZYXA1Ymo3aFdfMGNqRi0yU2xWcmlQTnlFd2RXanhVMFFaUG5OdE9yV3lzdE8wdmxTekFscmJLeUcyWDRYNkc1dGRBdkZPbHVYRy1iRGFfaE15VjFMUkhSeXdOYjUzQlZaLTFRRkNhd0x6MDktT0VSbUlOUkJLQllCZHpWNXpJWWhIOUhOZ1JELUpCQ0owUnlPbWZnZl93VEs2QXpudTM2Rk5SMVIwY1VjbDQ?oc=5"
+      },
+      {
+        "label": "zurnal24.si — Kandidaturo za župana naj bi umaknil zaradi nasprotovanja dveh znanih politikov - zurnal24.si",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQSU5kMmxGV1phNkdGaUw1SnV4dC00R3NPcHFYTmxFbldpNjZQRFp3c3NybE5aaXJzT2R0UnBuTmJOY09odWltUWh2VXBodzZRM2dBOGVBX3JTbGdXOHNLM21aOTZiRG9aaXdURi1fSTluSnJmT1dtamUybWdLQlN5eDZfWDdac1JDVDduR2tsWlDSAZYBQVVfeXFMUGhHTEhXLWpYLVZ4RE1BRWlDVlBmTHJfM09rUGpuSC00bWVUbDczVlJBOVJNRlFWeFVvemJmTkdlRzloNE1qOXNTM2ZVbHE1b0doelctN25yU2RHMW5rNV85N01iV0UyMGQxX09NWk5SaFVmQ1BzNmo3elMzVjMxRVd2Qm9IRGFIVTFVYVZBZnpJSmZUSkxB?oc=5"
+      },
+      {
+        "label": "Lider.si — Cene hrane: Slovenci evropski kmetijski politiki zaupajo manj kot vsi sosedje - Lider.si",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPNHUwUFhhLTRNbU5mZEhRYjdYMHFxTVVaT19MZ3VodkwtNkhEdnlZLXQ4blFiZjdoX2lzS2h2cTdIS2lEWG1oQlA0RWxvOUo1UXlhajNoQjVraEJHQS1vVHJYQk9JcUdhRi0tWVVvUHhjSzFpOU5PNXlTN09kMTI3YlQ2bWVaQzR5Z0FMejM1d3JZc1ByS3d6ZVJn?oc=5"
+      },
+      {
+        "label": "24ur.com — Stisk pesti in tapkanje v DZ: v kakšni fizični formi so politiki? - 24ur.com",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPeElydjFNY0ZOQ2hDVGFoUUVJZUQ5Rm1qYWh1bU5pV3BfbGpUOEFmU09RVDZQSm9YUlN3dUQ3WmRGTDZPU1Q3T2hUdTFoTkJNSlV1RHphQ0kzdUFsbHFvNG1mTDQ2WUlkUjl3OTlJZm5nSzBjcERINWlmSjc0UG9vRGNCdjdzVzc0eTN5TUpzLURKSkJPM2hRLU0wQW5iYk9ZQWc?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-24T13:39:21+02:00",
+    "updatedAt": "2026-09-24T13:39:21+02:00"
+  },
+
+  {
     "id": "why-ljubljana-symbol-is-a-dragon",
     "title": "Why Is Ljubljana’s Symbol a Dragon? Legend, History and a Self-Guided Walk",
     "excerpt": "Separate the legend of Jason and the Argonauts from the documented history of Ljubljana’s dragon, then find the city’s most memorable dragon symbols on foot.",
