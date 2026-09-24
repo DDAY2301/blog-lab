@@ -843,37 +843,6 @@ export const draftEvents = [
     "lastCheckedAt": "2026-09-24T07:00:00+02:00"
   },
   {
-    "eventId": "ehosistem-ljubljana-castle-2026",
-    "title": "Aleksandra Atanasovski and Maja Licul: Ehosistem",
-    "summary": "This jewellery exhibition opens in the Pentagonal Tower on 24 September and runs through 15 November, daily from 09:00 to 20:00. The official Castle listing confirms the dates and hours; admission and detailed accessibility were not stated in the overview.",
-    "category": "exhibition",
-    "startAt": "2026-09-24T09:00:00+02:00",
-    "endAt": "2026-11-15T20:00:00+01:00",
-    "timezone": "Europe/Ljubljana",
-    "venue": {
-      "name": "Pentagonal Tower, Ljubljana Castle",
-      "address": "Grajska planota 1, 1000 Ljubljana",
-      "city": "Ljubljana",
-      "region": "Central Slovenia"
-    },
-    "price": {
-      "amount": null,
-      "currency": "EUR",
-      "label": null,
-      "free": null
-    },
-    "ticketUrl": null,
-    "officialUrl": "https://www.ljubljanskigrad.si/en/castle-events/",
-    "sourceName": "Ljubljana Castle",
-    "languages": [],
-    "touristFriendly": true,
-    "familyFriendly": null,
-    "accessibility": null,
-    "indoorOutdoor": "indoor",
-    "status": "confirmed",
-    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
-  },
-  {
     "eventId": "air-raid-cankarjev-dom-2026-09-24",
     "title": "Dino Pešut: Air Raid",
     "summary": "Cankarjev dom lists this theatre and dance performance for Thursday 24 September at 18:00. The overview does not confirm language, surtitles, price or accessibility, so international visitors should verify these details before booking.",
@@ -1142,37 +1111,6 @@ export const draftEvents = [
       "free": null
     },
     "ticketUrl": null,
-    "officialUrl": "https://www.ljubljanskigrad.si/en/castle-events/",
-    "sourceName": "Ljubljana Castle",
-    "languages": [],
-    "touristFriendly": true,
-    "familyFriendly": null,
-    "accessibility": null,
-    "indoorOutdoor": "outdoor",
-    "status": "confirmed",
-    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
-  },
-  {
-    "eventId": "picnic-castle-grapevines-2026-09-26",
-    "title": "Picnic among the Castle Grapevines",
-    "summary": "Ljubljana Castle offers a guided tour with a special picnic experience on Saturday 26 September from 15:00 to 17:00. The official listing confirms the time and location; price, tour language, age suitability and access requirements should be checked before booking.",
-    "category": "tour",
-    "startAt": "2026-09-26T15:00:00+02:00",
-    "endAt": "2026-09-26T17:00:00+02:00",
-    "timezone": "Europe/Ljubljana",
-    "venue": {
-      "name": "Bridge at the main entrance, Ljubljana Castle",
-      "address": "Grajska planota 1, 1000 Ljubljana",
-      "city": "Ljubljana",
-      "region": "Central Slovenia"
-    },
-    "price": {
-      "amount": null,
-      "currency": "EUR",
-      "label": null,
-      "free": false
-    },
-    "ticketUrl": "https://www.ljubljanskigrad.si/en/castle-events/",
     "officialUrl": "https://www.ljubljanskigrad.si/en/castle-events/",
     "sourceName": "Ljubljana Castle",
     "languages": [],
