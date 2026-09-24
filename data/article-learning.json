@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-24T13:53:37+02:00",
-  "loop_count": 705,
+  "updated_at": "2026-09-24T13:54:32+02:00",
+  "loop_count": 706,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-24T13:53:13+02:00",
+      "last_learning_run": "2026-09-24T13:54:10+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -45,11 +45,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 20910,
-          "last_seen": "2026-09-24T13:53:13+02:00",
+          "seen": 20940,
+          "last_seen": "2026-09-24T13:54:10+02:00",
           "last_title": "Slovenija z izjemno predstavo blokerjev in vrnitvijo Čebulja gladko odpravila Srbijo - rtvslo.si",
           "last_provider": "",
-          "published": 15330,
+          "published": 15361,
           "last_output_id": "slovenska-odbojkarska-reprezentanca-je-v-polfinalu-evropskega-prvenstva-zdaj-jih-caka-veli-54905004"
         },
         "aarp.org": {
@@ -93,12 +93,12 @@
         "news.google.com": [
           "Slovenski odbojkarji prek Belgijcev v polfinale! Tam presenetljivo tudi Finci. - rtvslo.si",
           "Slovenija proti Belgiji za vstopnico v polfinale evropskega prvenstva - 24ur.com",
-          "Déjà vu: Slovenija in Poljska že šestič zapored! - zurnal24.si"
+          "Déjà vu: Slovenija in Poljska že šestič zapored! - Žurnal24"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-24T13:53:26+02:00",
+      "last_learning_run": "2026-09-24T13:54:22+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -122,11 +122,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 20910,
-          "last_seen": "2026-09-24T13:53:26+02:00",
-          "last_title": "Ko se politiki izogibajo javne televizije: lastni kanali in manj neprijetnih vprašanj - Dnevnik",
+          "seen": 20940,
+          "last_seen": "2026-09-24T13:54:22+02:00",
+          "last_title": "Ste slišali, kako je Anton Rop udaril čez Roberta Goloba? »Na tedenski bazi daješ neke obljube, ki se nikoli ne uresničijo« - Slovenske novice",
           "last_provider": "",
-          "published": 16075,
+          "published": 16110,
           "last_output_id": "rop-o-golobovi-vladi-politika-ne-bi-smela-biti-tako-plehka-ciljata-z-ursko-klakocar-zupanc-2b13995b"
         },
         "britannica.com": {
@@ -140,14 +140,14 @@
       "current_source_count": 30,
       "example_titles": {
         "news.google.com": [
+          "Netanjahu napovedal srečanje z Janšo, številne voditelje je zavrnil - Dnevnik",
           "Kdo vodi bolnišnice: stroka, politika ali osebni interesi? - 24ur.com",
-          "Rop o Golobovi vladi: \"Politika ne bi smela biti tako plehka.\" Ciljata z Urško Klakočar Zupančič na državno raven? - vecer.com",
-          "Obeta se še en referendum: zbranih dovolj podpisov za referendum o zakonu za razvoj Slovenije - Dnevnik"
+          "Rop o Golobovi vladi: \"Politika ne bi smela biti tako plehka.\" Ciljata z Urško Klakočar Zupančič na državno raven? - Večer"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-24T13:53:37+02:00",
+      "last_learning_run": "2026-09-24T13:54:32+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -181,96 +181,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 20910,
-          "last_seen": "2026-09-24T13:53:37+02:00",
+          "seen": 20940,
+          "last_seen": "2026-09-24T13:54:32+02:00",
           "last_title": "Slovenija med državami, ki bi prepovedale družbena omrežja mlajšim od 16 let - Info360",
           "last_provider": "",
-          "published": 26340,
+          "published": 26386,
           "last_output_id": "s-kaksnimi-argumenti-je-ustavno-sodisce-pozegnalo-cistko-na-rtv-slovenija-dc8b0170"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 682,
+          "published": 683,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 682,
+          "published": 683,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 705,
+          "published": 706,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 607,
+          "published": 608,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 671,
+          "published": 672,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 607,
+          "published": 608,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 607,
+          "published": 608,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 671,
+          "published": 672,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 2820,
+          "published": 2824,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 705,
+          "published": 706,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 682,
+          "published": 683,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 1278,
+          "published": 1280,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 639,
+          "published": 640,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 1342,
+          "published": 1344,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 705,
+          "published": 706,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 607,
+          "published": 608,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 1278,
+          "published": 1280,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
