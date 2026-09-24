@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-24T19:39:39+02:00",
-  "loop_count": 763,
+  "updated_at": "2026-09-24T19:55:30+02:00",
+  "loop_count": 764,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-24T19:39:16+02:00",
+      "last_learning_run": "2026-09-24T19:55:08+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -45,11 +45,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 22650,
-          "last_seen": "2026-09-24T19:39:16+02:00",
-          "last_title": "Soli ponosen na ekipo: z mislimi že pri polfinalnem obračunu s Poljsko - 24ur.com",
+          "seen": 22680,
+          "last_seen": "2026-09-24T19:55:08+02:00",
+          "last_title": "Slovenija odpihnila Srbijo, sledi Belgija, pogled proti polfinalu ... - Delo.si",
           "last_provider": "",
-          "published": 17128,
+          "published": 17159,
           "last_output_id": "slovenska-odbojkarska-reprezentanca-je-v-polfinalu-evropskega-prvenstva-zdaj-jih-caka-veli-54905004"
         },
         "aarp.org": {
@@ -98,7 +98,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-24T19:39:28+02:00",
+      "last_learning_run": "2026-09-24T19:55:19+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -122,11 +122,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 22650,
-          "last_seen": "2026-09-24T19:39:28+02:00",
-          "last_title": "Danilo Türk: \"Ves svet nas vidi kot instrument izraelske zunanje politike\" - rtvslo.si",
+          "seen": 22680,
+          "last_seen": "2026-09-24T19:55:19+02:00",
+          "last_title": "Kajzer: Zunanja politika se osredotoča na okvire, v katerih ima Slovenija možnosti vplivanja - rtvslo.si",
           "last_provider": "",
-          "published": 18105,
+          "published": 18140,
           "last_output_id": "rop-o-golobovi-vladi-politika-ne-bi-smela-biti-tako-plehka-ciljata-z-ursko-klakocar-zupanc-2b13995b"
         },
         "britannica.com": {
@@ -140,14 +140,14 @@
       "current_source_count": 30,
       "example_titles": {
         "news.google.com": [
+          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - slovenskenovice.delo.si",
           "Netanjahu napovedal srečanje z Janšo, številne voditelje je zavrnil - Dnevnik",
-          "Rop o Golobovi vladi: \"Politika ne bi smela biti tako plehka.\" Ciljata z Urško Klakočar Zupančič na državno raven? - Večer",
           "Kdo vodi bolnišnice: stroka, politika ali osebni interesi? - 24ur.com"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-24T19:39:39+02:00",
+      "last_learning_run": "2026-09-24T19:55:30+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -181,96 +181,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 22650,
-          "last_seen": "2026-09-24T19:39:39+02:00",
+          "seen": 22680,
+          "last_seen": "2026-09-24T19:55:30+02:00",
           "last_title": "Slovenija med državami, ki bi prepovedale družbena omrežja mlajšim od 16 let - Info360",
           "last_provider": "",
-          "published": 29008,
-          "last_output_id": "s-kaksnimi-argumenti-je-ustavno-sodisce-pozegnalo-cistko-na-rtv-slovenija-dc8b0170"
+          "published": 29058,
+          "last_output_id": "sramota-v-oddaji-marcel-na-tv-slovenija-ne-spostujejo-eticnega-in-poklicnega-kodeksa-e-mar-62369ae7"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 740,
+          "published": 741,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 740,
+          "published": 741,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 763,
+          "published": 764,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 665,
+          "published": 666,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 729,
+          "published": 730,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 665,
+          "published": 666,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 665,
+          "published": 666,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 729,
+          "published": 730,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 3052,
+          "published": 3056,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 763,
+          "published": 764,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 740,
+          "published": 741,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 1394,
+          "published": 1396,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 697,
+          "published": 698,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 1458,
+          "published": 1460,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 763,
+          "published": 764,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 665,
+          "published": 666,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 1394,
+          "published": 1396,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
@@ -292,13 +292,19 @@
       "example_titles": {
         "news.google.com": [
           "(AKTUALNO) V novi številki revije Demokracija preberite: Izključujejo in zavirajo razvoj! Janša: Osamosvojitvena Slovenija ne bo nikoli več ",
-          "Janša v New Yorku jasno o Ukrajini: Slovenija bo nadaljevala politično, vojaško, humanitarno in finančno pomoč - Najdi.si novice",
+          "Janša v New Yorku jasno o Ukrajini: Slovenija bo nadaljevala politično, vojaško, humanitarno in finančno pomoč - novice.najdi.si",
           "Sramota! V oddaji Marcel na TV Slovenija, ne spoštujejo etičnega in poklicnega kodeksa - e-Maribor"
         ]
       }
     }
   },
   "recent_articles": [
+    {
+      "id": "sramota-v-oddaji-marcel-na-tv-slovenija-ne-spostujejo-eticnega-in-poklicnega-kodeksa-e-mar-62369ae7",
+      "title": "Sramota! V oddaji Marcel na TV Slovenija, ne spoštujejo etičnega in poklicnega kodeksa - e-Maribor",
+      "category": "Aktualno",
+      "createdAt": "2026-09-24T19:54:23+02:00"
+    },
     {
       "id": "rop-o-golobovi-vladi-politika-ne-bi-smela-biti-tako-plehka-ciljata-z-ursko-klakocar-zupanc-2b13995b",
       "title": "Rop o Golobovi vladi: \\",
@@ -364,12 +370,6 @@
       "title": "Sečovlje Salt Pans: A Nature-First Day Trip from Ljubljana",
       "category": "Vodniki",
       "createdAt": "2026-09-22T08:59:58+02:00"
-    },
-    {
-      "id": "poljaki-gladko-boljsi-slovenci-po-porazu-0-3-v-boj-za-bron-proti-japoncem-88391181",
-      "title": "Poljaki gladko boljši, Slovenci po porazu 0:3 v boj za bron proti Japoncem",
-      "category": "Šport",
-      "createdAt": "2026-09-22T08:24:15+02:00"
     }
   ],
   "recent_failures": [
