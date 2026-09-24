@@ -20,6 +20,40 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "sramota-v-oddaji-marcel-na-tv-slovenija-ne-spostujejo-eticnega-in-poklicnega-kodeksa-e-mar-62369ae7",
+    "title": "Sramota! V oddaji Marcel na TV Slovenija, ne spoštujejo etičnega in poklicnega kodeksa - e-Maribor",
+    "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Sramota! V oddaji Marcel na TV Slovenija, ne spoštujejo etičnega in poklicnega kodeksa - e-Maribor«.",
+    "seoDescription": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Sramota! V oddaji Marcel na TV Slovenija, ne spoštujejo etičnega in poklicneg",
+    "content": "**Aktualno, 24. 9. 2026.** Sramota! V oddaji Marcel na TV Slovenija, ne spoštujejo etičnega in poklicnega kodeksa e-Maribor\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: e-Maribor. Objavljeno: Wed, 23 Sep 2026 14:56:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiqgFBVV95cUxPMGlJb2ZIV0xFSEh5bDBoUkxBU0JFd0hpMmVFMU5veW5YbkxYbWlMRzY1RE5DWXk2ZnpPQlFGd2hJSjJUckZ2UHpIRV9weVZkVVd3MWU1OU5BZmZYRWhEbGItYnlybWF3NXJLbDhJQkNGNlFNTVI4eGVkN1I3aHg0Qk90aUl0b3IyWHFxN0cxT09XOTlFRG1TV1MwTFJzTDYzb1VHcVVXVzVvUQ?oc=5)\n\n## Dopolnitev vira 2: e-Maribor\n\nSte za ukinitev RTV Slovenija in Slovenske tiskovne agencije? Glasujte v članku! e-Maribor\n\n Vir: e-Maribor. Objavljeno: Sat, 18 Jul 2026 18:37:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiogFBVV95cUxNMlp2Y214dk5vYlBBTk4yWXFydG9ncDR0czBHMjJmYXNjcFhXQ3FQQzlkZXdDYTBvNGZwREp2S2w0dXdrV2ZQZ285NmhjMVFIRFE3akhqWjlfNXZQNTlQUm0yU2l4UmVKZXZaS2h4RG5iUHdsNFdIbk9OSEtCNUwtbGI3eTFfN3FxSjRDU0d6STA2S05SdE1xamMtQlZzSjZaTHc?oc=5)\n\n## Dopolnitev vira 3: e-Maribor\n\nZačelo se je! Novinarji TV Koper zahtevajo odstop uprave RTV Slovenija e-Maribor\n\n Vir: e-Maribor. Objavljeno: Thu, 03 Sep 2026 15:53:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMilgFBVV95cUxPYWUwVkVVSUtrSlBWRXJXaVEzMXhlY0tDSVJ5WGtMRkhXaEU3UTZxSkZFMEUyWTFtODlIQWF2OFc1QlJkcGpHVUdrbTFMdmZBT0l1UjY0eEdxUV9rVmpYY0hPbFo1azdTZWVRWFNzcFVBT2dMZ1MwN1BrckxWT3c3WkdmMVJLU2M1TzdOZGpJd2VoemR0LUE?oc=5)\n\n## Dopolnitev vira 4: e-Maribor\n\nPred RTV Slovenija, se obeta shod za ukinitev RTV naročnine!\n\n Vir: e-Maribor. Objavljeno: Thu, 10 Sep 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMihwFBVV95cUxQc0owWnpwUWhHSkd1aVZKbUpST2JjdWNQemRCUUxpSjNHZUh5QXhKeHN3c2lZUUpLUnJUb3FnNk5ockN2MkV3eFhBZDAyMEJwU2o2VGxhLUxSd21TWnFuaU5NYVNzMERfWmVfZW5mVXRNVUczU0tJSy1nZVY2SExibHJtRzJLMkk?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Aktualno",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "e-Maribor — Sramota! V oddaji Marcel na TV Slovenija, ne spoštujejo etičnega in poklicnega kodeksa - e-Maribor",
+        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPMGlJb2ZIV0xFSEh5bDBoUkxBU0JFd0hpMmVFMU5veW5YbkxYbWlMRzY1RE5DWXk2ZnpPQlFGd2hJSjJUckZ2UHpIRV9weVZkVVd3MWU1OU5BZmZYRWhEbGItYnlybWF3NXJLbDhJQkNGNlFNTVI4eGVkN1I3aHg0Qk90aUl0b3IyWHFxN0cxT09XOTlFRG1TV1MwTFJzTDYzb1VHcVVXVzVvUQ?oc=5"
+      },
+      {
+        "label": "e-Maribor — Ste za ukinitev RTV Slovenija in Slovenske tiskovne agencije? Glasujte v članku! - e-Maribor",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNMlp2Y214dk5vYlBBTk4yWXFydG9ncDR0czBHMjJmYXNjcFhXQ3FQQzlkZXdDYTBvNGZwREp2S2w0dXdrV2ZQZ285NmhjMVFIRFE3akhqWjlfNXZQNTlQUm0yU2l4UmVKZXZaS2h4RG5iUHdsNFdIbk9OSEtCNUwtbGI3eTFfN3FxSjRDU0d6STA2S05SdE1xamMtQlZzSjZaTHc?oc=5"
+      },
+      {
+        "label": "e-Maribor — Začelo se je! Novinarji TV Koper zahtevajo odstop uprave RTV Slovenija - e-Maribor",
+        "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPYWUwVkVVSUtrSlBWRXJXaVEzMXhlY0tDSVJ5WGtMRkhXaEU3UTZxSkZFMEUyWTFtODlIQWF2OFc1QlJkcGpHVUdrbTFMdmZBT0l1UjY0eEdxUV9rVmpYY0hPbFo1azdTZWVRWFNzcFVBT2dMZ1MwN1BrckxWT3c3WkdmMVJLU2M1TzdOZGpJd2VoemR0LUE?oc=5"
+      },
+      {
+        "label": "e-Maribor — Pred RTV Slovenija, se obeta shod za ukinitev RTV naročnine! - e-Maribor",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQc0owWnpwUWhHSkd1aVZKbUpST2JjdWNQemRCUUxpSjNHZUh5QXhKeHN3c2lZUUpLUnJUb3FnNk5ockN2MkV3eFhBZDAyMEJwU2o2VGxhLUxSd21TWnFuaU5NYVNzMERfWmVfZW5mVXRNVUczU0tJSy1nZVY2SExibHJtRzJLMkk?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-24T19:54:23+02:00",
+    "updatedAt": "2026-09-24T19:54:23+02:00"
+  },
+
+  {
     "id": "rop-o-golobovi-vladi-politika-ne-bi-smela-biti-tako-plehka-ciljata-z-ursko-klakocar-zupanc-2b13995b",
     "title": "Rop o Golobovi vladi: \"Politika ne bi smela biti tako plehka.\" Ciljata z Urško Klakočar Zupančič na državno…",
     "excerpt": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Rop o Golobovi vladi: \"Politika ne bi smela biti tako plehka.\" Ciljata z Urško Klakočar Zupančič na državno…«.",
