@@ -1,19 +1,19 @@
 // Review draft only. Not imported by the production application.
-// Rolling review draft. Sources rechecked on 2026-09-23 at 07:00 Europe/Ljubljana.
+// Rolling review draft. Sources rechecked on 2026-09-24 at 07:00 Europe/Ljubljana.
 // Production remains unchanged until the calendar model and stable views are implemented.
 // Unknown values deliberately remain null.
 export const draftEvents = [
   {
-    "eventId": "flirrt-cankarjev-dom-2026-09-19",
-    "title": "Flirrt",
-    "summary": "Flirrt performs at Cankarjev dom on Saturday evening at 20:00. The official programme confirms the date and time; current price, remaining tickets and accessibility details should be checked in the linked sales flow.",
-    "category": "music",
-    "startAt": "2026-09-19T20:00:00+02:00",
-    "endAt": null,
+    "eventId": "illustrations-in-motion-castle-2026",
+    "title": "Illustrations in Motion",
+    "summary": "Ljubljana Castle presents this video-mapping exhibition in the Casemate daily from 09:00 to 18:00. The official programme confirms the dates and hours; admission and individual accessibility details should be checked before visiting.",
+    "category": "exhibition",
+    "startAt": "2025-11-20T09:00:00+01:00",
+    "endAt": "2027-01-10T18:00:00+01:00",
     "timezone": "Europe/Ljubljana",
     "venue": {
-      "name": "Cankarjev dom",
-      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "name": "Casemate, Ljubljana Castle",
+      "address": "Grajska planota 1, 1000 Ljubljana",
       "city": "Ljubljana",
       "region": "Central Slovenia"
     },
@@ -21,30 +21,30 @@ export const draftEvents = [
       "amount": null,
       "currency": "EUR",
       "label": null,
-      "free": false
+      "free": null
     },
-    "ticketUrl": "https://www.cd-cc.si/",
-    "officialUrl": "https://www.cd-cc.si/",
-    "sourceName": "Cankarjev dom",
+    "ticketUrl": "https://www.ljubljanskigrad.si/en/castle-events/",
+    "officialUrl": "https://www.ljubljanskigrad.si/en/castle-events/",
+    "sourceName": "Ljubljana Castle",
     "languages": [],
     "touristFriendly": true,
-    "familyFriendly": null,
+    "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "expired",
-    "lastCheckedAt": "2026-09-21T07:00:00+02:00"
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
   },
   {
-    "eventId": "nina-ramsak-markovic-stvari-2026-09-19",
-    "title": "Nina Ramšak Marković: Stvari, ki jih ne morem povedati o stvareh",
-    "summary": "Cankarjev dom lists a second performance on Saturday 19 September at 20:00. The production is likely language-dependent, but exact language and surtitles were not confirmed in the programme overview and therefore remain unclassified.",
-    "category": "theatre",
-    "startAt": "2026-09-19T20:00:00+02:00",
-    "endAt": null,
+    "eventId": "national-gallery-tone-kralj-2026",
+    "title": "Tone Kralj (1900–1975): Visionary Mystic",
+    "summary": "The National Gallery's temporary exhibition presents Tone Kralj and remains open through 4 October. Visitors should consult the gallery's live visit page for current opening hours, admission and accessibility details.",
+    "category": "exhibition",
+    "startAt": "2026-04-16T00:00:00+02:00",
+    "endAt": "2026-10-04T23:59:00+02:00",
     "timezone": "Europe/Ljubljana",
     "venue": {
-      "name": "Cankarjev dom",
-      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "name": "National Gallery of Slovenia",
+      "address": "Prešernova cesta 24, 1000 Ljubljana",
       "city": "Ljubljana",
       "region": "Central Slovenia"
     },
@@ -52,18 +52,49 @@ export const draftEvents = [
       "amount": null,
       "currency": "EUR",
       "label": null,
-      "free": false
+      "free": null
     },
-    "ticketUrl": "https://www.cd-cc.si/",
-    "officialUrl": "https://www.cd-cc.si/",
-    "sourceName": "Cankarjev dom",
+    "ticketUrl": null,
+    "officialUrl": "https://www.ng-slo.si/en/",
+    "sourceName": "National Gallery of Slovenia",
     "languages": [],
-    "touristFriendly": null,
-    "familyFriendly": null,
+    "touristFriendly": true,
+    "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "expired",
-    "lastCheckedAt": "2026-09-21T07:00:00+02:00"
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+  },
+  {
+    "eventId": "national-gallery-fragments-past-2026",
+    "title": "Fragments of the Past",
+    "summary": "The National Gallery displays detached medieval wall paintings from Crngrob and Vrzdenec until 27 September. Current hours, admission and guided-tour language should be checked directly with the gallery.",
+    "category": "exhibition",
+    "startAt": "2026-05-21T00:00:00+02:00",
+    "endAt": "2026-09-27T23:59:00+02:00",
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "National Gallery of Slovenia",
+      "address": "Prešernova cesta 24, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": null
+    },
+    "ticketUrl": null,
+    "officialUrl": "https://www.ng-slo.si/en/",
+    "sourceName": "National Gallery of Slovenia",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": true,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
   },
   {
     "eventId": "hana-karim-fragments-memories-2026",
@@ -94,133 +125,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
-  },
-  {
-    "eventId": "gallery-at-your-fingertips-2026",
-    "title": "Gallery at Your Fingertips",
-    "summary": "The National Gallery's tactile exhibition remains on view through 4 October. It is potentially useful for visitors seeking a multisensory museum experience, but current admission, language support and individual accessibility requirements should be confirmed directly.",
-    "category": "exhibition",
-    "startAt": "2026-06-18T00:00:00+02:00",
-    "endAt": "2026-10-04T23:59:00+02:00",
-    "timezone": "Europe/Ljubljana",
-    "venue": {
-      "name": "National Gallery of Slovenia",
-      "address": "Prešernova cesta 24, 1000 Ljubljana",
-      "city": "Ljubljana",
-      "region": "Central Slovenia"
-    },
-    "price": {
-      "amount": null,
-      "currency": "EUR",
-      "label": null,
-      "free": null
-    },
-    "ticketUrl": null,
-    "officialUrl": "https://www.ng-slo.si/en/exhibitions-and-projects",
-    "sourceName": "National Gallery of Slovenia",
-    "languages": [],
-    "touristFriendly": true,
-    "familyFriendly": true,
-    "accessibility": "Tactile exhibition; confirm individual access needs with the gallery",
-    "indoorOutdoor": "indoor",
-    "status": "confirmed",
-    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
-  },
-  {
-    "eventId": "sms-1-katarza-2026-09-18",
-    "title": "SMS 1: Katarza",
-    "summary": "Cankarjev dom lists this music event for Friday evening at 19:30. Ticket price, language and detailed accessibility information were not visible in the checked programme overview, so visitors should verify them on the official booking page.",
-    "category": "music",
-    "startAt": "2026-09-18T19:30:00+02:00",
-    "endAt": null,
-    "timezone": "Europe/Ljubljana",
-    "venue": {
-      "name": "Cankarjev dom",
-      "address": "Prešernova cesta 10, 1000 Ljubljana",
-      "city": "Ljubljana",
-      "region": "Central Slovenia"
-    },
-    "price": {
-      "amount": null,
-      "currency": "EUR",
-      "label": null,
-      "free": null
-    },
-    "ticketUrl": "https://www.cd-cc.si/",
-    "officialUrl": "https://www.cd-cc.si/",
-    "sourceName": "Cankarjev dom",
-    "languages": [],
-    "touristFriendly": null,
-    "familyFriendly": null,
-    "accessibility": null,
-    "indoorOutdoor": "indoor",
-    "status": "expired",
-    "lastCheckedAt": "2026-09-21T07:00:00+02:00"
-  },
-  {
-    "eventId": "nina-ramsak-markovic-stvari-2026-09-18",
-    "title": "Nina Ramšak Marković: Stvari, ki jih ne morem povedati o stvareh",
-    "summary": "The theatre and dance programme at Cankarjev dom starts at 20:00 on Friday 18 September. The official overview confirms the performance and time; language suitability, ticket availability and price require a final check on the event page.",
-    "category": "theatre",
-    "startAt": "2026-09-18T20:00:00+02:00",
-    "endAt": null,
-    "timezone": "Europe/Ljubljana",
-    "venue": {
-      "name": "Cankarjev dom",
-      "address": "Prešernova cesta 10, 1000 Ljubljana",
-      "city": "Ljubljana",
-      "region": "Central Slovenia"
-    },
-    "price": {
-      "amount": null,
-      "currency": "EUR",
-      "label": null,
-      "free": false
-    },
-    "ticketUrl": "https://www.cd-cc.si/",
-    "officialUrl": "https://www.cd-cc.si/",
-    "sourceName": "Cankarjev dom",
-    "languages": [
-      "Slovenian (not independently confirmed)"
-    ],
-    "touristFriendly": null,
-    "familyFriendly": null,
-    "accessibility": null,
-    "indoorOutdoor": "indoor",
-    "status": "expired",
-    "lastCheckedAt": "2026-09-21T07:00:00+02:00"
-  },
-  {
-    "eventId": "kozmos-kosovel-cankarjev-dom-2026",
-    "title": "KOZMOS KOSOVEL",
-    "summary": "Cankarjev dom's exhibition marking the centenary of Srečko Kosovel's death runs from 16 September 2026 to 9 May 2027. The official programme currently lists admission at €8; language and accessibility details should be checked before a dedicated visit.",
-    "category": "exhibition",
-    "startAt": "2026-09-16T00:00:00+02:00",
-    "endAt": "2027-05-09T23:59:00+02:00",
-    "timezone": "Europe/Ljubljana",
-    "venue": {
-      "name": "Cankarjev dom",
-      "address": "Prešernova cesta 10, 1000 Ljubljana",
-      "city": "Ljubljana",
-      "region": "Central Slovenia"
-    },
-    "price": {
-      "amount": 8,
-      "currency": "EUR",
-      "label": "€8",
-      "free": false
-    },
-    "ticketUrl": "https://www.cd-cc.si/",
-    "officialUrl": "https://www.cd-cc.si/",
-    "sourceName": "Cankarjev dom",
-    "languages": [],
-    "touristFriendly": true,
-    "familyFriendly": null,
-    "accessibility": null,
-    "indoorOutdoor": "indoor",
-    "status": "confirmed",
-    "lastCheckedAt": "2026-09-21T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
   },
   {
     "eventId": "castle-reading-corner-2026",
@@ -251,7 +156,162 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+  },
+  {
+    "eventId": "gallery-at-your-fingertips-2026",
+    "title": "Gallery at Your Fingertips",
+    "summary": "The National Gallery's tactile exhibition remains on view through 4 October. It is potentially useful for visitors seeking a multisensory museum experience, but current admission, language support and individual accessibility requirements should be confirmed directly.",
+    "category": "exhibition",
+    "startAt": "2026-06-18T00:00:00+02:00",
+    "endAt": "2026-10-04T23:59:00+02:00",
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "National Gallery of Slovenia",
+      "address": "Prešernova cesta 24, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": null
+    },
+    "ticketUrl": null,
+    "officialUrl": "https://www.ng-slo.si/en/exhibitions-and-projects",
+    "sourceName": "National Gallery of Slovenia",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": true,
+    "accessibility": "Tactile exhibition; confirm individual access needs with the gallery",
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+  },
+  {
+    "eventId": "unicum-2026-ljubljana",
+    "title": "UNICUM 2026 – 6th International Ceramics Triennial",
+    "summary": "The international ceramics triennial continues at the National Museum of Slovenia, NMS Metelkova and Center Rog through 15 October. The official tourism listing confirms daily visiting hours of 10:00–18:00 and links to National Museum ticketing; confirm the applicable venue, price and accessibility before visiting.",
+    "category": "exhibition",
+    "startAt": "2026-07-08T10:00:00+02:00",
+    "endAt": "2026-10-15T18:00:00+02:00",
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "National Museum of Slovenia, NMS Metelkova and Center Rog",
+      "address": "Muzejska ulica 1; Maistrova ulica 1; Trubarjeva cesta 72, Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": false
+    },
+    "ticketUrl": "https://www.nms.si/",
+    "officialUrl": "https://www.visitljubljana.com/en/visitors/events",
+    "sourceName": "Ljubljana Tourism",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+  },
+  {
+    "eventId": "corn-labyrinth-ljubljana-2026",
+    "title": "Corn Labyrinth Ljubljana",
+    "summary": "The seasonal corn labyrinth in Stanežiče is listed daily from 09:00 to 20:00 through 31 October. It can suit families and visitors looking for an outdoor activity, but admission, age guidance, accessibility and weather-related status should be confirmed directly before travel.",
+    "category": "family",
+    "startAt": "2026-07-11T09:00:00+02:00",
+    "endAt": "2026-10-31T20:00:00+01:00",
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Koruzni labirint Ljubljana",
+      "address": "1751 Stanežiče, Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": false
+    },
+    "ticketUrl": null,
+    "officialUrl": "https://www.visitljubljana.com/en/visitors/events",
+    "sourceName": "Ljubljana Tourism",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": true,
+    "accessibility": null,
+    "indoorOutdoor": "outdoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+  },
+  {
+    "eventId": "revelations-national-gallery-2026",
+    "title": "Revelations: Matej Sternen, The Poppies",
+    "summary": "The National Gallery's current Revelations display is open from 10 September to 2 December 2026. Current admission, daily opening hours and accessibility should be checked on the gallery visit page before arrival.",
+    "category": "exhibition",
+    "startAt": "2026-09-10T00:00:00+02:00",
+    "endAt": "2026-12-02T23:59:00+01:00",
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "National Gallery of Slovenia",
+      "address": "Prešernova cesta 24, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": null
+    },
+    "ticketUrl": null,
+    "officialUrl": "https://www.ng-slo.si/en/exhibitions-and-projects",
+    "sourceName": "National Gallery of Slovenia",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": null,
+    "accessibility": "The gallery publishes a dedicated accessibility section; confirm individual requirements directly",
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+  },
+  {
+    "eventId": "kozmos-kosovel-cankarjev-dom-2026",
+    "title": "KOZMOS KOSOVEL",
+    "summary": "Cankarjev dom's exhibition marking the centenary of Srečko Kosovel's death runs from 16 September 2026 to 9 May 2027. The official programme currently lists admission at €8; language and accessibility details should be checked before a dedicated visit.",
+    "category": "exhibition",
+    "startAt": "2026-09-16T00:00:00+02:00",
+    "endAt": "2027-05-09T23:59:00+02:00",
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": 8,
+      "currency": "EUR",
+      "label": "€8",
+      "free": false
+    },
+    "ticketUrl": "https://www.cd-cc.si/",
+    "officialUrl": "https://www.cd-cc.si/",
+    "sourceName": "Cankarjev dom",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
   },
   {
     "eventId": "opera-orchestra-academy-soloists-2026-09-17",
@@ -316,6 +376,37 @@ export const draftEvents = [
     "lastCheckedAt": "2026-09-21T07:00:00+02:00"
   },
   {
+    "eventId": "sms-1-katarza-2026-09-18",
+    "title": "SMS 1: Katarza",
+    "summary": "Cankarjev dom lists this music event for Friday evening at 19:30. Ticket price, language and detailed accessibility information were not visible in the checked programme overview, so visitors should verify them on the official booking page.",
+    "category": "music",
+    "startAt": "2026-09-18T19:30:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": null
+    },
+    "ticketUrl": "https://www.cd-cc.si/",
+    "officialUrl": "https://www.cd-cc.si/",
+    "sourceName": "Cankarjev dom",
+    "languages": [],
+    "touristFriendly": null,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "expired",
+    "lastCheckedAt": "2026-09-21T07:00:00+02:00"
+  },
+  {
     "eventId": "mia-znidaric-colored-2026-09-18",
     "title": "Mia Žnidarič – Colored",
     "summary": "Mia Žnidarič opens this Friday's Ljubljana Castle Jazz Club programme in the Rock Hall. The club opens at 19:00, live music starts at 20:00, and the concert ticket includes a return funicular ride.",
@@ -341,6 +432,70 @@ export const draftEvents = [
     "languages": [],
     "touristFriendly": true,
     "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "expired",
+    "lastCheckedAt": "2026-09-21T07:00:00+02:00"
+  },
+  {
+    "eventId": "nina-ramsak-markovic-stvari-2026-09-18",
+    "title": "Nina Ramšak Marković: Stvari, ki jih ne morem povedati o stvareh",
+    "summary": "The theatre and dance programme at Cankarjev dom starts at 20:00 on Friday 18 September. The official overview confirms the performance and time; language suitability, ticket availability and price require a final check on the event page.",
+    "category": "theatre",
+    "startAt": "2026-09-18T20:00:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": false
+    },
+    "ticketUrl": "https://www.cd-cc.si/",
+    "officialUrl": "https://www.cd-cc.si/",
+    "sourceName": "Cankarjev dom",
+    "languages": [
+      "Slovenian (not independently confirmed)"
+    ],
+    "touristFriendly": null,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "expired",
+    "lastCheckedAt": "2026-09-21T07:00:00+02:00"
+  },
+  {
+    "eventId": "mineralfest-ljubljana-2026-09-19",
+    "title": "MineralFest Ljubljana",
+    "summary": "The anniversary sales exhibition brings minerals, fossils, jewellery and related displays to Cankarjev dom. The official programme lists sessions on both 19 and 20 September; detailed ticket and hall information should be read on the event page before visiting.",
+    "category": "exhibition",
+    "startAt": "2026-09-19T09:00:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": null
+    },
+    "ticketUrl": "https://www.cd-cc.si/",
+    "officialUrl": "https://www.cd-cc.si/",
+    "sourceName": "Cankarjev dom",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "expired",
@@ -378,11 +533,11 @@ export const draftEvents = [
     "lastCheckedAt": "2026-09-21T07:00:00+02:00"
   },
   {
-    "eventId": "mineralfest-ljubljana-2026-09-19",
-    "title": "MineralFest Ljubljana",
-    "summary": "The anniversary sales exhibition brings minerals, fossils, jewellery and related displays to Cankarjev dom. The official programme lists sessions on both 19 and 20 September; detailed ticket and hall information should be read on the event page before visiting.",
-    "category": "exhibition",
-    "startAt": "2026-09-19T09:00:00+02:00",
+    "eventId": "flirrt-cankarjev-dom-2026-09-19",
+    "title": "Flirrt",
+    "summary": "Flirrt performs at Cankarjev dom on Saturday evening at 20:00. The official programme confirms the date and time; current price, remaining tickets and accessibility details should be checked in the linked sales flow.",
+    "category": "music",
+    "startAt": "2026-09-19T20:00:00+02:00",
     "endAt": null,
     "timezone": "Europe/Ljubljana",
     "venue": {
@@ -395,14 +550,45 @@ export const draftEvents = [
       "amount": null,
       "currency": "EUR",
       "label": null,
-      "free": null
+      "free": false
     },
     "ticketUrl": "https://www.cd-cc.si/",
     "officialUrl": "https://www.cd-cc.si/",
     "sourceName": "Cankarjev dom",
     "languages": [],
     "touristFriendly": true,
-    "familyFriendly": true,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "expired",
+    "lastCheckedAt": "2026-09-21T07:00:00+02:00"
+  },
+  {
+    "eventId": "nina-ramsak-markovic-stvari-2026-09-19",
+    "title": "Nina Ramšak Marković: Stvari, ki jih ne morem povedati o stvareh",
+    "summary": "Cankarjev dom lists a second performance on Saturday 19 September at 20:00. The production is likely language-dependent, but exact language and surtitles were not confirmed in the programme overview and therefore remain unclassified.",
+    "category": "theatre",
+    "startAt": "2026-09-19T20:00:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": false
+    },
+    "ticketUrl": "https://www.cd-cc.si/",
+    "officialUrl": "https://www.cd-cc.si/",
+    "sourceName": "Cankarjev dom",
+    "languages": [],
+    "touristFriendly": null,
+    "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "expired",
@@ -419,37 +605,6 @@ export const draftEvents = [
     "venue": {
       "name": "Breg",
       "address": "Breg, 1000 Ljubljana",
-      "city": "Ljubljana",
-      "region": "Central Slovenia"
-    },
-    "price": {
-      "amount": 0,
-      "currency": "EUR",
-      "label": "Free admission",
-      "free": true
-    },
-    "ticketUrl": null,
-    "officialUrl": "https://www.visitljubljana.com/en/visitors/events",
-    "sourceName": "Ljubljana Tourism",
-    "languages": [],
-    "touristFriendly": true,
-    "familyFriendly": true,
-    "accessibility": null,
-    "indoorOutdoor": "outdoor",
-    "status": "expired",
-    "lastCheckedAt": "2026-09-21T07:00:00+02:00"
-  },
-  {
-    "eventId": "wind-orchestra-promenade-2026-09-20",
-    "title": "Sunday Promenade Concert by Ljubljana Wind Orchestras",
-    "summary": "A free one-hour promenade concert takes place at Novi trg/Breg. It is suitable for a relaxed city-centre stop, but outdoor visitors should still check the weather before departure.",
-    "category": "music",
-    "startAt": "2026-09-20T11:00:00+02:00",
-    "endAt": "2026-09-20T12:00:00+02:00",
-    "timezone": "Europe/Ljubljana",
-    "venue": {
-      "name": "Novi trg / Breg",
-      "address": "Novi trg / Breg, 1000 Ljubljana",
       "city": "Ljubljana",
       "region": "Central Slovenia"
     },
@@ -502,6 +657,37 @@ export const draftEvents = [
     "lastCheckedAt": "2026-09-21T07:00:00+02:00"
   },
   {
+    "eventId": "wind-orchestra-promenade-2026-09-20",
+    "title": "Sunday Promenade Concert by Ljubljana Wind Orchestras",
+    "summary": "A free one-hour promenade concert takes place at Novi trg/Breg. It is suitable for a relaxed city-centre stop, but outdoor visitors should still check the weather before departure.",
+    "category": "music",
+    "startAt": "2026-09-20T11:00:00+02:00",
+    "endAt": "2026-09-20T12:00:00+02:00",
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Novi trg / Breg",
+      "address": "Novi trg / Breg, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": 0,
+      "currency": "EUR",
+      "label": "Free admission",
+      "free": true
+    },
+    "ticketUrl": null,
+    "officialUrl": "https://www.visitljubljana.com/en/visitors/events",
+    "sourceName": "Ljubljana Tourism",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": true,
+    "accessibility": null,
+    "indoorOutdoor": "outdoor",
+    "status": "expired",
+    "lastCheckedAt": "2026-09-21T07:00:00+02:00"
+  },
+  {
     "eventId": "la-traviata-run-2026-09-22",
     "title": "Giuseppe Verdi: La traviata",
     "summary": "SNG Opera and Ballet Ljubljana has announced the return of Verdi's La traviata between 22 and 26 September. Exact performance dates, start times, ticket availability and surtitles must be read from the live booking calendar before individual instances are published.",
@@ -530,6 +716,99 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "unconfirmed",
+    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+  },
+  {
+    "eventId": "salome-mgl-2026-09-23-1530",
+    "title": "Salome",
+    "summary": "Ljubljana City Theatre lists an afternoon Main Stage performance on Wednesday 23 September at 15:30. Visitors should confirm the language, surtitles, ticket price and access requirements in the live sales flow.",
+    "category": "theatre",
+    "startAt": "2026-09-23T15:30:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Mestno gledališče ljubljansko",
+      "address": "Čopova ulica 14, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": false
+    },
+    "ticketUrl": "https://www.mgl.si/en/schedule/",
+    "officialUrl": "https://www.mgl.si/en/schedule/",
+    "sourceName": "Mestno gledališče ljubljansko",
+    "languages": [],
+    "touristFriendly": null,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "expired",
+    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
+  },
+  {
+    "eventId": "salome-mgl-2026-09-23-1930",
+    "title": "Salome",
+    "summary": "Ljubljana City Theatre lists Salome on the Main Stage on Wednesday 23 September at 19:30. The performance is language-dependent; international visitors should confirm the performance language, surtitles, price and access requirements before booking.",
+    "category": "theatre",
+    "startAt": "2026-09-23T19:30:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Mestno gledališče ljubljansko",
+      "address": "Čopova ulica 14, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": false
+    },
+    "ticketUrl": "https://www.mgl.si/en/schedule/",
+    "officialUrl": "https://www.mgl.si/en/schedule/",
+    "sourceName": "Mestno gledališče ljubljansko",
+    "languages": [],
+    "touristFriendly": null,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "expired",
+    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
+  },
+  {
+    "eventId": "man-overboard-mgl-2026-09-23",
+    "title": "Man Overboard",
+    "summary": "The documentary solo performance begins at 20:00 on MGL's Small Stage on 23 September. The official schedule marks it sold out; language and accessibility details remain unconfirmed.",
+    "category": "theatre",
+    "startAt": "2026-09-23T20:00:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Mestno gledališče ljubljansko, Small Stage",
+      "address": "Čopova ulica 14, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": "Sold out",
+      "free": false
+    },
+    "ticketUrl": "https://www.mgl.si/en/schedule/",
+    "officialUrl": "https://www.mgl.si/en/schedule/",
+    "sourceName": "Mestno gledališče ljubljansko",
+    "languages": [],
+    "touristFriendly": null,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "expired",
     "lastCheckedAt": "2026-09-23T07:00:00+02:00"
   },
   {
@@ -561,80 +840,18 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
   },
   {
-    "eventId": "open-kitchen-2026-09-25",
-    "title": "Open Kitchen",
-    "summary": "The Friday food market returns to Pogačarjev trg with dishes from Ljubljana and across Slovenia. Because it is an outdoor, weather-dependent event, recheck the organiser's status on the morning of 25 September.",
-    "category": "food",
-    "startAt": "2026-09-25T10:00:00+02:00",
-    "endAt": "2026-09-25T21:00:00+02:00",
+    "eventId": "ehosistem-ljubljana-castle-2026",
+    "title": "Aleksandra Atanasovski and Maja Licul: Ehosistem",
+    "summary": "This jewellery exhibition opens in the Pentagonal Tower on 24 September and runs through 15 November, daily from 09:00 to 20:00. The official Castle listing confirms the dates and hours; admission and detailed accessibility were not stated in the overview.",
+    "category": "exhibition",
+    "startAt": "2026-09-24T09:00:00+02:00",
+    "endAt": "2026-11-15T20:00:00+01:00",
     "timezone": "Europe/Ljubljana",
     "venue": {
-      "name": "Pogačarjev trg",
-      "address": "Pogačarjev trg, 1000 Ljubljana",
-      "city": "Ljubljana",
-      "region": "Central Slovenia"
-    },
-    "price": {
-      "amount": null,
-      "currency": "EUR",
-      "label": null,
-      "free": null
-    },
-    "ticketUrl": null,
-    "officialUrl": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/open-kitchen",
-    "sourceName": "Ljubljana Tourism",
-    "languages": [],
-    "touristFriendly": true,
-    "familyFriendly": true,
-    "accessibility": null,
-    "indoorOutdoor": "outdoor",
-    "status": "confirmed",
-    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
-  },
-  {
-    "eventId": "cherry-wine-tribute-2026-09-25",
-    "title": "Cherry Wine – Amy Winehouse Tribute Band & AnzaRa Mai",
-    "summary": "Ljubljana Castle Jazz Club hosts an Amy Winehouse tribute evening in the Rock Hall. Live music begins at 20:00, the club opens at 19:00, and the concert ticket includes a return funicular ride.",
-    "category": "music",
-    "startAt": "2026-09-25T20:00:00+02:00",
-    "endAt": null,
-    "timezone": "Europe/Ljubljana",
-    "venue": {
-      "name": "Rock Hall, Ljubljana Castle",
-      "address": "Grajska planota 1, 1000 Ljubljana",
-      "city": "Ljubljana",
-      "region": "Central Slovenia"
-    },
-    "price": {
-      "amount": null,
-      "currency": "EUR",
-      "label": "Ticket includes return funicular journey",
-      "free": false
-    },
-    "ticketUrl": "https://www.ljubljanskigrad.si/en/castle-events/the-ljubljana-castle-jazz-club-2/",
-    "officialUrl": "https://www.ljubljanskigrad.si/en/castle-events/the-ljubljana-castle-jazz-club-2/",
-    "sourceName": "Ljubljana Castle",
-    "languages": [],
-    "touristFriendly": true,
-    "familyFriendly": null,
-    "accessibility": null,
-    "indoorOutdoor": "indoor",
-    "status": "confirmed",
-    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
-  },
-  {
-    "eventId": "castle-vineyard-picnic-2026-09-26",
-    "title": "Picnic among the Castle Grapevines",
-    "summary": "This guided special experience takes place by Ljubljana Castle's vineyard. The official listing confirms the two-hour slot; price, language and accessibility details should be confirmed on the booking page before publication.",
-    "category": "food",
-    "startAt": "2026-09-26T15:00:00+02:00",
-    "endAt": "2026-09-26T17:00:00+02:00",
-    "timezone": "Europe/Ljubljana",
-    "venue": {
-      "name": "Ljubljana Castle",
+      "name": "Pentagonal Tower, Ljubljana Castle",
       "address": "Grajska planota 1, 1000 Ljubljana",
       "city": "Ljubljana",
       "region": "Central Slovenia"
@@ -652,145 +869,21 @@ export const draftEvents = [
     "touristFriendly": true,
     "familyFriendly": null,
     "accessibility": null,
-    "indoorOutdoor": "outdoor",
-    "status": "confirmed",
-    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
-  },
-  {
-    "eventId": "national-gallery-tone-kralj-2026",
-    "title": "Tone Kralj (1900–1975): Visionary Mystic",
-    "summary": "The National Gallery's temporary exhibition presents Tone Kralj and remains open through 4 October. Visitors should consult the gallery's live visit page for current opening hours, admission and accessibility details.",
-    "category": "exhibition",
-    "startAt": "2026-04-16T00:00:00+02:00",
-    "endAt": "2026-10-04T23:59:00+02:00",
-    "timezone": "Europe/Ljubljana",
-    "venue": {
-      "name": "National Gallery of Slovenia",
-      "address": "Prešernova cesta 24, 1000 Ljubljana",
-      "city": "Ljubljana",
-      "region": "Central Slovenia"
-    },
-    "price": {
-      "amount": null,
-      "currency": "EUR",
-      "label": null,
-      "free": null
-    },
-    "ticketUrl": null,
-    "officialUrl": "https://www.ng-slo.si/en/",
-    "sourceName": "National Gallery of Slovenia",
-    "languages": [],
-    "touristFriendly": true,
-    "familyFriendly": true,
-    "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
   },
   {
-    "eventId": "national-gallery-fragments-past-2026",
-    "title": "Fragments of the Past",
-    "summary": "The National Gallery displays detached medieval wall paintings from Crngrob and Vrzdenec until 27 September. Current hours, admission and guided-tour language should be checked directly with the gallery.",
-    "category": "exhibition",
-    "startAt": "2026-05-21T00:00:00+02:00",
-    "endAt": "2026-09-27T23:59:00+02:00",
-    "timezone": "Europe/Ljubljana",
-    "venue": {
-      "name": "National Gallery of Slovenia",
-      "address": "Prešernova cesta 24, 1000 Ljubljana",
-      "city": "Ljubljana",
-      "region": "Central Slovenia"
-    },
-    "price": {
-      "amount": null,
-      "currency": "EUR",
-      "label": null,
-      "free": null
-    },
-    "ticketUrl": null,
-    "officialUrl": "https://www.ng-slo.si/en/",
-    "sourceName": "National Gallery of Slovenia",
-    "languages": [],
-    "touristFriendly": true,
-    "familyFriendly": true,
-    "accessibility": null,
-    "indoorOutdoor": "indoor",
-    "status": "confirmed",
-    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
-  },
-  {
-    "eventId": "revelations-national-gallery-2026",
-    "title": "Revelations: Matej Sternen, The Poppies",
-    "summary": "The National Gallery's current Revelations display is open from 10 September to 2 December 2026. Current admission, daily opening hours and accessibility should be checked on the gallery visit page before arrival.",
-    "category": "exhibition",
-    "startAt": "2026-09-10T00:00:00+02:00",
-    "endAt": "2026-12-02T23:59:00+01:00",
-    "timezone": "Europe/Ljubljana",
-    "venue": {
-      "name": "National Gallery of Slovenia",
-      "address": "Prešernova cesta 24, 1000 Ljubljana",
-      "city": "Ljubljana",
-      "region": "Central Slovenia"
-    },
-    "price": {
-      "amount": null,
-      "currency": "EUR",
-      "label": null,
-      "free": null
-    },
-    "ticketUrl": null,
-    "officialUrl": "https://www.ng-slo.si/en/exhibitions-and-projects",
-    "sourceName": "National Gallery of Slovenia",
-    "languages": [],
-    "touristFriendly": true,
-    "familyFriendly": null,
-    "accessibility": "The gallery publishes a dedicated accessibility section; confirm individual requirements directly",
-    "indoorOutdoor": "indoor",
-    "status": "confirmed",
-    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
-  },
-  {
-    "eventId": "artish-2026-09-26",
-    "title": "ARTish",
-    "summary": "The free exhibition-sales festival returns to Gallusovo nabrežje on Saturday 26 September from 10:00 to 17:00. It is an easy tourist-friendly stop for locally made art and design; the riverside setting is outdoors.",
-    "category": "market",
-    "startAt": "2026-09-26T10:00:00+02:00",
-    "endAt": "2026-09-26T17:00:00+02:00",
-    "timezone": "Europe/Ljubljana",
-    "venue": {
-      "name": "Gallusovo nabrežje",
-      "address": "Gallusovo nabrežje, 1000 Ljubljana",
-      "city": "Ljubljana",
-      "region": "Central Slovenia"
-    },
-    "price": {
-      "amount": 0,
-      "currency": "EUR",
-      "label": "Free admission",
-      "free": true
-    },
-    "ticketUrl": null,
-    "officialUrl": "https://www.visitljubljana.com/en/visitors/events",
-    "sourceName": "Ljubljana Tourism",
-    "languages": [],
-    "touristFriendly": true,
-    "familyFriendly": true,
-    "accessibility": null,
-    "indoorOutdoor": "outdoor",
-    "status": "confirmed",
-    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
-  },
-  {
-    "eventId": "salome-mgl-2026-09-23-1930",
-    "title": "Salome",
-    "summary": "Ljubljana City Theatre lists Salome on the Main Stage on Wednesday 23 September at 19:30. The performance is language-dependent; international visitors should confirm the performance language, surtitles, price and access requirements before booking.",
+    "eventId": "air-raid-cankarjev-dom-2026-09-24",
+    "title": "Dino Pešut: Air Raid",
+    "summary": "Cankarjev dom lists this theatre and dance performance for Thursday 24 September at 18:00. The overview does not confirm language, surtitles, price or accessibility, so international visitors should verify these details before booking.",
     "category": "theatre",
-    "startAt": "2026-09-23T19:30:00+02:00",
+    "startAt": "2026-09-24T18:00:00+02:00",
     "endAt": null,
     "timezone": "Europe/Ljubljana",
     "venue": {
-      "name": "Mestno gledališče ljubljansko",
-      "address": "Čopova ulica 14, 1000 Ljubljana",
+      "name": "Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
       "city": "Ljubljana",
       "region": "Central Slovenia"
     },
@@ -800,16 +893,16 @@ export const draftEvents = [
       "label": null,
       "free": false
     },
-    "ticketUrl": "https://www.mgl.si/en/schedule/",
-    "officialUrl": "https://www.mgl.si/en/schedule/",
-    "sourceName": "Mestno gledališče ljubljansko",
+    "ticketUrl": "https://www.cd-cc.si/en",
+    "officialUrl": "https://www.cd-cc.si/en",
+    "sourceName": "Cankarjev dom",
     "languages": [],
     "touristFriendly": null,
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
   },
   {
     "eventId": "salome-mgl-2026-09-24-1930",
@@ -840,7 +933,69 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+  },
+  {
+    "eventId": "izstekani-zmelkoow-2026-09-24",
+    "title": "Izštekani Zmelkoow",
+    "summary": "Zmelkoow perform at Cankarjev dom on Thursday 24 September at 20:00. The official programme lists tickets at €25 or €30; the concert is music-led and therefore practical for international visitors.",
+    "category": "music",
+    "startAt": "2026-09-24T20:00:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": "€25 / €30",
+      "free": false
+    },
+    "ticketUrl": "https://vstopnice.cd-cc.si/",
+    "officialUrl": "https://www.cd-cc.si/en",
+    "sourceName": "Cankarjev dom",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": null,
+    "accessibility": "Cankarjev dom publishes an accessibility statement; confirm individual requirements directly",
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+  },
+  {
+    "eventId": "open-kitchen-2026-09-25",
+    "title": "Open Kitchen",
+    "summary": "The Friday food market returns to Pogačarjev trg with dishes from Ljubljana and across Slovenia. Because it is an outdoor, weather-dependent event, recheck the organiser's status on the morning of 25 September.",
+    "category": "food",
+    "startAt": "2026-09-25T10:00:00+02:00",
+    "endAt": "2026-09-25T21:00:00+02:00",
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Pogačarjev trg",
+      "address": "Pogačarjev trg, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": null
+    },
+    "ticketUrl": null,
+    "officialUrl": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/open-kitchen",
+    "sourceName": "Ljubljana Tourism",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": true,
+    "accessibility": null,
+    "indoorOutdoor": "outdoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
   },
   {
     "eventId": "salome-mgl-2026-09-25-1930",
@@ -871,18 +1026,111 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
   },
   {
-    "eventId": "illustrations-in-motion-castle-2026",
-    "title": "Illustrations in Motion",
-    "summary": "Ljubljana Castle presents this video-mapping exhibition in the Casemate daily from 09:00 to 18:00. The official programme confirms the dates and hours; admission and individual accessibility details should be checked before visiting.",
-    "category": "exhibition",
-    "startAt": "2025-11-20T09:00:00+01:00",
-    "endAt": "2027-01-10T18:00:00+01:00",
+    "eventId": "cherry-wine-tribute-2026-09-25",
+    "title": "Cherry Wine – Amy Winehouse Tribute Band & AnzaRa Mai",
+    "summary": "Ljubljana Castle Jazz Club hosts an Amy Winehouse tribute evening in the Rock Hall. Live music begins at 20:00, the club opens at 19:00, and the concert ticket includes a return funicular ride.",
+    "category": "music",
+    "startAt": "2026-09-25T20:00:00+02:00",
+    "endAt": null,
     "timezone": "Europe/Ljubljana",
     "venue": {
-      "name": "Casemate, Ljubljana Castle",
+      "name": "Rock Hall, Ljubljana Castle",
+      "address": "Grajska planota 1, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": "Ticket includes return funicular journey",
+      "free": false
+    },
+    "ticketUrl": "https://www.ljubljanskigrad.si/en/castle-events/the-ljubljana-castle-jazz-club-2/",
+    "officialUrl": "https://www.ljubljanskigrad.si/en/castle-events/the-ljubljana-castle-jazz-club-2/",
+    "sourceName": "Ljubljana Castle",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+  },
+  {
+    "eventId": "when-i-get-out-cankarjev-dom-2026-09-25",
+    "title": "When I Get Out (Ko pridem ven)",
+    "summary": "Cankarjev dom schedules this cinema event for Friday 25 September at 20:00. Language, subtitles, ticket price and accessibility should be confirmed on the official event or sales page before visiting.",
+    "category": "cinema",
+    "startAt": "2026-09-25T20:00:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": null
+    },
+    "ticketUrl": "https://www.cd-cc.si/en",
+    "officialUrl": "https://www.cd-cc.si/en",
+    "sourceName": "Cankarjev dom",
+    "languages": [],
+    "touristFriendly": null,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+  },
+  {
+    "eventId": "artish-2026-09-26",
+    "title": "ARTish",
+    "summary": "The free exhibition-sales festival returns to Gallusovo nabrežje on Saturday 26 September from 10:00 to 17:00. It is an easy tourist-friendly stop for locally made art and design; the riverside setting is outdoors.",
+    "category": "market",
+    "startAt": "2026-09-26T10:00:00+02:00",
+    "endAt": "2026-09-26T17:00:00+02:00",
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Gallusovo nabrežje",
+      "address": "Gallusovo nabrežje, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": 0,
+      "currency": "EUR",
+      "label": "Free admission",
+      "free": true
+    },
+    "ticketUrl": null,
+    "officialUrl": "https://www.visitljubljana.com/en/visitors/events",
+    "sourceName": "Ljubljana Tourism",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": true,
+    "accessibility": null,
+    "indoorOutdoor": "outdoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+  },
+  {
+    "eventId": "castle-vineyard-picnic-2026-09-26",
+    "title": "Picnic among the Castle Grapevines",
+    "summary": "This guided special experience takes place by Ljubljana Castle's vineyard. The official listing confirms the two-hour slot; price, language and accessibility details should be confirmed on the booking page before publication.",
+    "category": "food",
+    "startAt": "2026-09-26T15:00:00+02:00",
+    "endAt": "2026-09-26T17:00:00+02:00",
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Ljubljana Castle",
       "address": "Grajska planota 1, 1000 Ljubljana",
       "city": "Ljubljana",
       "region": "Central Slovenia"
@@ -893,28 +1141,28 @@ export const draftEvents = [
       "label": null,
       "free": null
     },
-    "ticketUrl": "https://www.ljubljanskigrad.si/en/castle-events/",
+    "ticketUrl": null,
     "officialUrl": "https://www.ljubljanskigrad.si/en/castle-events/",
     "sourceName": "Ljubljana Castle",
     "languages": [],
     "touristFriendly": true,
-    "familyFriendly": true,
+    "familyFriendly": null,
     "accessibility": null,
-    "indoorOutdoor": "indoor",
+    "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
   },
   {
-    "eventId": "salome-mgl-2026-09-23-1530",
-    "title": "Salome",
-    "summary": "Ljubljana City Theatre lists an afternoon Main Stage performance on Wednesday 23 September at 15:30. Visitors should confirm the language, surtitles, ticket price and access requirements in the live sales flow.",
-    "category": "theatre",
-    "startAt": "2026-09-23T15:30:00+02:00",
-    "endAt": null,
+    "eventId": "picnic-castle-grapevines-2026-09-26",
+    "title": "Picnic among the Castle Grapevines",
+    "summary": "Ljubljana Castle offers a guided tour with a special picnic experience on Saturday 26 September from 15:00 to 17:00. The official listing confirms the time and location; price, tour language, age suitability and access requirements should be checked before booking.",
+    "category": "tour",
+    "startAt": "2026-09-26T15:00:00+02:00",
+    "endAt": "2026-09-26T17:00:00+02:00",
     "timezone": "Europe/Ljubljana",
     "venue": {
-      "name": "Mestno gledališče ljubljansko",
-      "address": "Čopova ulica 14, 1000 Ljubljana",
+      "name": "Bridge at the main entrance, Ljubljana Castle",
+      "address": "Grajska planota 1, 1000 Ljubljana",
       "city": "Ljubljana",
       "region": "Central Slovenia"
     },
@@ -924,47 +1172,78 @@ export const draftEvents = [
       "label": null,
       "free": false
     },
-    "ticketUrl": "https://www.mgl.si/en/schedule/",
-    "officialUrl": "https://www.mgl.si/en/schedule/",
-    "sourceName": "Mestno gledališče ljubljansko",
+    "ticketUrl": "https://www.ljubljanskigrad.si/en/castle-events/",
+    "officialUrl": "https://www.ljubljanskigrad.si/en/castle-events/",
+    "sourceName": "Ljubljana Castle",
     "languages": [],
-    "touristFriendly": null,
+    "touristFriendly": true,
     "familyFriendly": null,
     "accessibility": null,
-    "indoorOutdoor": "indoor",
+    "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
   },
   {
-    "eventId": "man-overboard-mgl-2026-09-23",
-    "title": "Man Overboard",
-    "summary": "The documentary solo performance begins at 20:00 on MGL's Small Stage on 23 September. The official schedule marks it sold out; language and accessibility details remain unconfirmed.",
+    "eventId": "u-bu-cankarjev-dom-2026-09-26-1600",
+    "title": "Festival Lutke: M. Solce and A. Jarry: U!-BU?",
+    "summary": "The Lutke Festival performance begins at Cankarjev dom on Saturday 26 September at 16:00. The programme category is theatre and dance; confirm the intended age group, language, price and accessibility directly.",
     "category": "theatre",
-    "startAt": "2026-09-23T20:00:00+02:00",
+    "startAt": "2026-09-26T16:00:00+02:00",
     "endAt": null,
     "timezone": "Europe/Ljubljana",
     "venue": {
-      "name": "Mestno gledališče ljubljansko, Small Stage",
-      "address": "Čopova ulica 14, 1000 Ljubljana",
+      "name": "Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
       "city": "Ljubljana",
       "region": "Central Slovenia"
     },
     "price": {
       "amount": null,
       "currency": "EUR",
-      "label": "Sold out",
-      "free": false
+      "label": null,
+      "free": null
     },
-    "ticketUrl": "https://www.mgl.si/en/schedule/",
-    "officialUrl": "https://www.mgl.si/en/schedule/",
-    "sourceName": "Mestno gledališče ljubljansko",
+    "ticketUrl": "https://www.cd-cc.si/en",
+    "officialUrl": "https://www.cd-cc.si/en",
+    "sourceName": "Cankarjev dom",
     "languages": [],
     "touristFriendly": null,
-    "familyFriendly": null,
+    "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "sold_out",
-    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+  },
+  {
+    "eventId": "u-bu-cankarjev-dom-2026-09-26-2000",
+    "title": "Festival Lutke: M. Solce and A. Jarry: U!-BU?",
+    "summary": "A second performance is listed at Cankarjev dom on Saturday 26 September at 20:00. Confirm the intended age group, language, price and accessibility on the official programme before booking.",
+    "category": "theatre",
+    "startAt": "2026-09-26T20:00:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": null
+    },
+    "ticketUrl": "https://www.cd-cc.si/en",
+    "officialUrl": "https://www.cd-cc.si/en",
+    "sourceName": "Cankarjev dom",
+    "languages": [],
+    "touristFriendly": null,
+    "familyFriendly": true,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
   },
   {
     "eventId": "sunday-flea-market-2026-09-27",
@@ -995,7 +1274,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
   },
   {
     "eventId": "wind-orchestra-promenade-2026-09-27",
@@ -1026,12 +1305,43 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+  },
+  {
+    "eventId": "barcelona-guitar-trio-dance-2026-09-27",
+    "title": "Barcelona Guitar Trio & Dance",
+    "summary": "This guitar and dance event is scheduled at Cankarjev dom for Sunday 27 September at 20:00. It is visually and musically accessible to international visitors; current price, tickets and accessibility should be confirmed in the live sales flow.",
+    "category": "music",
+    "startAt": "2026-09-27T20:00:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": false
+    },
+    "ticketUrl": "https://www.cd-cc.si/en",
+    "officialUrl": "https://www.cd-cc.si/en",
+    "sourceName": "Cankarjev dom",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
   },
   {
     "eventId": "salome-mgl-2026-09-29-1930",
     "title": "Salome",
-    "summary": "MGL schedules Salome on the Main Stage on Tuesday 29 September at 19:30. Language support, ticket price, remaining availability and accessibility should be confirmed directly.",
+    "summary": "MGL schedules Salome on the Main Stage on Tuesday 29 September at 19:30. The official schedule now marks this performance sold out; language support and accessibility remain unconfirmed.",
     "category": "theatre",
     "startAt": "2026-09-29T19:30:00+02:00",
     "endAt": null,
@@ -1045,7 +1355,7 @@ export const draftEvents = [
     "price": {
       "amount": null,
       "currency": "EUR",
-      "label": null,
+      "label": "Sold out",
       "free": false
     },
     "ticketUrl": "https://www.mgl.si/en/schedule/",
@@ -1056,8 +1366,8 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "confirmed",
-    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
+    "status": "sold_out",
+    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
   },
   {
     "eventId": "beauty-queen-leenane-mgl-2026-09-30",
@@ -1088,7 +1398,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
   },
   {
     "eventId": "ex-mgl-2026-09-30",
@@ -1119,19 +1429,19 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "sold_out",
-    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
   },
   {
-    "eventId": "unicum-2026-ljubljana",
-    "title": "UNICUM 2026 – 6th International Ceramics Triennial",
-    "summary": "The international ceramics triennial continues at the National Museum of Slovenia, NMS Metelkova and Center Rog through 15 October. The official tourism listing confirms daily visiting hours of 10:00–18:00 and links to National Museum ticketing; confirm the applicable venue, price and accessibility before visiting.",
-    "category": "exhibition",
-    "startAt": "2026-07-08T10:00:00+02:00",
-    "endAt": "2026-10-15T18:00:00+02:00",
+    "eventId": "ex-mgl-2026-10-02",
+    "title": "Ex",
+    "summary": "MGL lists Ex on the Small Stage on Friday 2 October at 20:00, with tickets currently offered. The drama is language-dependent, so international visitors should confirm language support, price and accessibility before booking.",
+    "category": "theatre",
+    "startAt": "2026-10-02T20:00:00+02:00",
+    "endAt": null,
     "timezone": "Europe/Ljubljana",
     "venue": {
-      "name": "National Museum of Slovenia, NMS Metelkova and Center Rog",
-      "address": "Muzejska ulica 1; Maistrova ulica 1; Trubarjeva cesta 72, Ljubljana",
+      "name": "Mestno gledališče ljubljansko, Small Stage",
+      "address": "Čopova ulica 14, 1000 Ljubljana",
       "city": "Ljubljana",
       "region": "Central Slovenia"
     },
@@ -1141,28 +1451,28 @@ export const draftEvents = [
       "label": null,
       "free": false
     },
-    "ticketUrl": "https://www.nms.si/",
-    "officialUrl": "https://www.visitljubljana.com/en/visitors/events",
-    "sourceName": "Ljubljana Tourism",
+    "ticketUrl": "https://www.mgl.si/en/schedule/",
+    "officialUrl": "https://www.mgl.si/en/schedule/",
+    "sourceName": "Mestno gledališče ljubljansko",
     "languages": [],
-    "touristFriendly": true,
+    "touristFriendly": null,
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
   },
   {
-    "eventId": "corn-labyrinth-ljubljana-2026",
-    "title": "Corn Labyrinth Ljubljana",
-    "summary": "The seasonal corn labyrinth in Stanežiče is listed daily from 09:00 to 20:00 through 31 October. It can suit families and visitors looking for an outdoor activity, but admission, age guidance, accessibility and weather-related status should be confirmed directly before travel.",
-    "category": "family",
-    "startAt": "2026-07-11T09:00:00+02:00",
-    "endAt": "2026-10-31T20:00:00+01:00",
+    "eventId": "salome-mgl-2026-10-03",
+    "title": "Salome",
+    "summary": "Salome returns to MGL's Main Stage on Saturday 3 October at 19:30, with tickets currently listed. Confirm the performance language, surtitles, price and accessibility before booking.",
+    "category": "theatre",
+    "startAt": "2026-10-03T19:30:00+02:00",
+    "endAt": null,
     "timezone": "Europe/Ljubljana",
     "venue": {
-      "name": "Koruzni labirint Ljubljana",
-      "address": "1751 Stanežiče, Ljubljana",
+      "name": "Mestno gledališče ljubljansko",
+      "address": "Čopova ulica 14, 1000 Ljubljana",
       "city": "Ljubljana",
       "region": "Central Slovenia"
     },
@@ -1172,15 +1482,139 @@ export const draftEvents = [
       "label": null,
       "free": false
     },
-    "ticketUrl": null,
-    "officialUrl": "https://www.visitljubljana.com/en/visitors/events",
-    "sourceName": "Ljubljana Tourism",
+    "ticketUrl": "https://www.mgl.si/en/schedule/",
+    "officialUrl": "https://www.mgl.si/en/schedule/",
+    "sourceName": "Mestno gledališče ljubljansko",
     "languages": [],
-    "touristFriendly": true,
-    "familyFriendly": true,
+    "touristFriendly": null,
+    "familyFriendly": null,
     "accessibility": null,
-    "indoorOutdoor": "outdoor",
+    "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-23T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+  },
+  {
+    "eventId": "man-overboard-mgl-2026-10-03",
+    "title": "Man Overboard",
+    "summary": "MGL schedules this documentary solo performance on the Small Stage for Saturday 3 October at 20:00. The official schedule marks it sold out; language and accessibility remain unconfirmed.",
+    "category": "theatre",
+    "startAt": "2026-10-03T20:00:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Mestno gledališče ljubljansko, Small Stage",
+      "address": "Čopova ulica 14, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": "Sold out",
+      "free": false
+    },
+    "ticketUrl": "https://www.mgl.si/en/schedule/",
+    "officialUrl": "https://www.mgl.si/en/schedule/",
+    "sourceName": "Mestno gledališče ljubljansko",
+    "languages": [],
+    "touristFriendly": null,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "sold_out",
+    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+  },
+  {
+    "eventId": "salome-mgl-2026-10-06",
+    "title": "Salome",
+    "summary": "MGL lists Salome on the Main Stage on Tuesday 6 October at 19:30. Tickets are currently offered; confirm language support, price and accessibility in the live sales flow.",
+    "category": "theatre",
+    "startAt": "2026-10-06T19:30:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Mestno gledališče ljubljansko",
+      "address": "Čopova ulica 14, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": false
+    },
+    "ticketUrl": "https://www.mgl.si/en/schedule/",
+    "officialUrl": "https://www.mgl.si/en/schedule/",
+    "sourceName": "Mestno gledališče ljubljansko",
+    "languages": [],
+    "touristFriendly": null,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+  },
+  {
+    "eventId": "salome-mgl-2026-10-07",
+    "title": "Salome",
+    "summary": "MGL lists another Main Stage performance of Salome for Wednesday 7 October at 19:30. Confirm language support, ticket price and accessibility before booking.",
+    "category": "theatre",
+    "startAt": "2026-10-07T19:30:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Mestno gledališče ljubljansko",
+      "address": "Čopova ulica 14, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": false
+    },
+    "ticketUrl": "https://www.mgl.si/en/schedule/",
+    "officialUrl": "https://www.mgl.si/en/schedule/",
+    "sourceName": "Mestno gledališče ljubljansko",
+    "languages": [],
+    "touristFriendly": null,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+  },
+  {
+    "eventId": "man-overboard-mgl-2026-10-07",
+    "title": "Man Overboard",
+    "summary": "The documentary solo performance is scheduled on MGL's Small Stage for Wednesday 7 October at 20:00. The official schedule marks it sold out; language and accessibility details remain unconfirmed.",
+    "category": "theatre",
+    "startAt": "2026-10-07T20:00:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Mestno gledališče ljubljansko, Small Stage",
+      "address": "Čopova ulica 14, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": "Sold out",
+      "free": false
+    },
+    "ticketUrl": "https://www.mgl.si/en/schedule/",
+    "officialUrl": "https://www.mgl.si/en/schedule/",
+    "sourceName": "Mestno gledališče ljubljansko",
+    "languages": [],
+    "touristFriendly": null,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "sold_out",
+    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
   }
 ];
