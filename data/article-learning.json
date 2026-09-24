@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-24T22:39:18+02:00",
-  "loop_count": 789,
+  "updated_at": "2026-09-24T22:46:38+02:00",
+  "loop_count": 790,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-24T22:38:57+02:00",
+      "last_learning_run": "2026-09-24T22:46:16+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -45,11 +45,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 23430,
-          "last_seen": "2026-09-24T22:38:57+02:00",
-          "last_title": "Spor s sodniki bo verjetno zamaknil začetek jadranske lige - rtvslo.si",
+          "seen": 23460,
+          "last_seen": "2026-09-24T22:46:16+02:00",
+          "last_title": "Nad Slovence tudi legenda? Eden najboljših vseh časov se ni mogel upreti - ekipa.svet24.si",
           "last_provider": "",
-          "published": 17934,
+          "published": 17965,
           "last_output_id": "slovenska-odbojkarska-reprezentanca-je-v-polfinalu-evropskega-prvenstva-zdaj-jih-caka-veli-54905004"
         },
         "aarp.org": {
@@ -91,14 +91,14 @@
       "current_source_count": 30,
       "example_titles": {
         "news.google.com": [
-          "Slovenski odbojkarji prek Belgijcev v polfinale! Tam presenetljivo tudi Finci. - rtvslo.si",
-          "Stisk pesti in tapkanje v DZ: v kakšni fizični formi so politiki? - 24ur.com",
-          "Obračun za finale EP: lahko Slovenija šokira svetovno številko ena? - Delo.si"
+          "Slovenija proti Belgiji za vstopnico v polfinale evropskega prvenstva - 24ur.com",
+          "Slovenija zavzela Zagreb: S športom, naravo in doživetji se predstavljajo ponudniki na osrednjem trgu - Večer",
+          "Slovenija v Samarkandu: dve zmagi, dva skoka po lestvici - Delo.si"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-24T22:39:07+02:00",
+      "last_learning_run": "2026-09-24T22:46:27+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -122,11 +122,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 23430,
-          "last_seen": "2026-09-24T22:39:07+02:00",
-          "last_title": "Pirc Musar: \"Ne bom tiho, ko zunanja politika ne bo skladna z ustavnimi vrednotami naše države\" - rtvslo.si",
+          "seen": 23460,
+          "last_seen": "2026-09-24T22:46:27+02:00",
+          "last_title": "Kajzer: Zunanja politika se osredotoča na okvire, v katerih ima Slovenija možnosti vplivanja - rtvslo.si",
           "last_provider": "",
-          "published": 19015,
+          "published": 19050,
           "last_output_id": "rop-o-golobovi-vladi-politika-ne-bi-smela-biti-tako-plehka-ciljata-z-ursko-klakocar-zupanc-2b13995b"
         },
         "britannica.com": {
@@ -142,12 +142,12 @@
         "news.google.com": [
           "Netanjahu napovedal srečanje z Janšo, številne voditelje je zavrnil - Dnevnik",
           "Rop o Golobovi vladi: \"Politika ne bi smela biti tako plehka.\" Ciljata z Urško Klakočar Zupančič na državno raven? - Večer",
-          "Opozicija nasprotuje zakonu o Skoku. Koalicija: Potrebujemo metlo, da pomete s korupcijo - N1 Slovenija"
+          "Opozicija nasprotuje zakonu o Skoku. Koalicija: Potrebujemo metlo, da pomete s korupcijo - n1info.si"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-24T22:39:18+02:00",
+      "last_learning_run": "2026-09-24T22:46:38+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -181,96 +181,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 23430,
-          "last_seen": "2026-09-24T22:39:18+02:00",
-          "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
+          "seen": 23460,
+          "last_seen": "2026-09-24T22:46:38+02:00",
+          "last_title": "Slovenija med državami, ki bi prepovedale družbena omrežja mlajšim od 16 let - Info360",
           "last_provider": "",
-          "published": 30308,
+          "published": 30358,
           "last_output_id": "sramota-v-oddaji-marcel-na-tv-slovenija-ne-spostujejo-eticnega-in-poklicnega-kodeksa-e-mar-62369ae7"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 766,
+          "published": 767,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 766,
+          "published": 767,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 789,
+          "published": 790,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 691,
+          "published": 692,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 755,
+          "published": 756,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 691,
+          "published": 692,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 691,
+          "published": 692,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 755,
+          "published": 756,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 3156,
+          "published": 3160,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 789,
+          "published": 790,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 766,
+          "published": 767,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 1446,
+          "published": 1448,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 723,
+          "published": 724,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 1510,
+          "published": 1512,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 789,
+          "published": 790,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 691,
+          "published": 692,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 1446,
+          "published": 1448,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
