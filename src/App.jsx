@@ -20,6 +20,44 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "kajzer-zavrnil-ocitke-da-ne-vodi-suverene-zunanje-politike-cbe54319",
+    "title": "Kajzer zavrnil očitke, da ne vodi suverene zunanje politike",
+    "excerpt": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Kajzer zavrnil očitke, da ne vodi suverene zunanje politike«.",
+    "seoDescription": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Kajzer zavrnil očitke, da ne vodi suverene zunanje politike«.",
+    "content": "**Politika, 25. 9. 2026.** Kajzer zavrnil očitke, da ne vodi suverene zunanje politike Dnevnik\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nPri političnih temah Blog Lab ne podpira kandidatov, strank ali političnih odločitev; izjave in ocene so predstavljene kot stališča njihovih avtorjev ali virov, ne kot uredniška presoja.\n\nVir: Dnevnik. Objavljeno: Thu, 10 Sep 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiqwFBVV95cUxPUnlFRmxtaE1ZM0NqVEVYbEJMQ3cyWXVYeUtVOGkwaVlCc1d1MFExZnhNeFhtVnY5ejVVSFptc21aZ1J3UWIzWTdkTDJvZVNqYURDR29CWFNUYW8tQ2o3bGJxdUt5cThTYkVWNWRWeWRHbHJPcW1GbkZQM2RhTHBTSTRUWElDTzFGUnNSdHZXcWhjeFQ4Q0NlSjZORUFfVHF5NDJTRW1lZzlPeG8?oc=5)\n\n## Dopolnitev vira 2: Dnevnik\n\nOdnosi z Izraelom: diplomacija ne sme biti izgovor za normalizacijo zločinov Dnevnik\n\n Vir: Dnevnik. Objavljeno: Wed, 09 Sep 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMixAFBVV95cUxQZ0VoRERMZkVmbXVvTGdOVzQ3MTZwM1loeXpGZFpad0VlbWNKM296T2xZYTZCMVdTdjc4ZTltNHR2MUltUGxHNzJvUUI1LVlVT1R2QnVHTjRDdF9GOUgxT0hMWXF3NG1HUzZFaDJNMExwVURTN0k1U3FKU1d1eng3OWE1eEdzc3gzMkdvWDRtZEZzT0hmOG5CY2dJYlRDczRpWjlMWThVbXpKZEd3aXdLekNmZmpRdkVObG9WSTdYSC1RZUxy?oc=5)\n\n## Dopolnitev vira 3: Dnevnik\n\nNetanjahu napovedal srečanje z Janšo, številne voditelje je zavrnil Dnevnik\n\n Vir: Dnevnik. Objavljeno: Thu, 24 Sep 2026 10:55:39 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMikwFBVV95cUxPU3kxaWJJYzg2NUhoV1NRNTFpNU94Skh6ZVFuVHlHUXNGbkQ2RHZvNElwbXdialEtaWxQQXg4eHA1MXhzbDlBZFFRdU5TbGpoRmFfbzRqNTgyNlhPZkQycGVQalk3clBDdWdPNjJwU3JUN2h2dmhjem9uMENjVUVub0d0aTdKS0hSTnV5OFRvVnppU0k?oc=5)\n\n## Dopolnitev vira 4: 24ur.com\n\nAnatomija vodenja: kje se križajo interesi politike in stroke? 24ur.com\n\n Vir: 24ur.com. Objavljeno: Fri, 25 Sep 2026 04:21:12 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiowFBVV95cUxPZmtxdk8tZjB0R0s0Qkd5TnJBZ3N5U3BGUjlnTE9LTzJfLTBOMVJZZWc3NDFuaFI4RjcxOFJFOXcyeVFEbEpNdVV4ZjJvQkxZdV8xUU9NMDBEd2pXc0ljb1kxT1E4Ukh4cHZHdWNGY2Q2MHhiazExbTNySVhWVXgzRWd2dzhRakdwel9XZXpYaTU4blh6TUp3dC1mcVhqak1OUzgw?oc=5)\n\n## Dopolnitev vira 5: www.primorski.eu\n\n»Veliko bolj je razdeljena politika kot pa naš narod« www.primorski.eu\n\n Vir: www.primorski.eu. Objavljeno: Fri, 11 Sep 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMikwFBVV95cUxPc1RpdklfaWh3cFBrWG1UeFpQUlZvZ3ZzdUtmdnI3SlFCUXkzS1ZmcnhTMzlqcmtpbXFKdzlvQ01UeElwNG1JbFFyUmdHQ3UtS1VPUjZxZlNnYURNZm8tbE5RT19GXzZjb3NENWhfVE1fNTJXMzM4OFJ1Ml9XVXY5TldKVGFzZ2RTcDJxSm9XdE5nb0k?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Politika",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Dnevnik — Kajzer zavrnil očitke, da ne vodi suverene zunanje politike - Dnevnik",
+        "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPUnlFRmxtaE1ZM0NqVEVYbEJMQ3cyWXVYeUtVOGkwaVlCc1d1MFExZnhNeFhtVnY5ejVVSFptc21aZ1J3UWIzWTdkTDJvZVNqYURDR29CWFNUYW8tQ2o3bGJxdUt5cThTYkVWNWRWeWRHbHJPcW1GbkZQM2RhTHBTSTRUWElDTzFGUnNSdHZXcWhjeFQ4Q0NlSjZORUFfVHF5NDJTRW1lZzlPeG8?oc=5"
+      },
+      {
+        "label": "Dnevnik — Odnosi z Izraelom: diplomacija ne sme biti izgovor za normalizacijo zločinov - Dnevnik",
+        "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQZ0VoRERMZkVmbXVvTGdOVzQ3MTZwM1loeXpGZFpad0VlbWNKM296T2xZYTZCMVdTdjc4ZTltNHR2MUltUGxHNzJvUUI1LVlVT1R2QnVHTjRDdF9GOUgxT0hMWXF3NG1HUzZFaDJNMExwVURTN0k1U3FKU1d1eng3OWE1eEdzc3gzMkdvWDRtZEZzT0hmOG5CY2dJYlRDczRpWjlMWThVbXpKZEd3aXdLekNmZmpRdkVObG9WSTdYSC1RZUxy?oc=5"
+      },
+      {
+        "label": "Dnevnik — Netanjahu napovedal srečanje z Janšo, številne voditelje je zavrnil - Dnevnik",
+        "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPU3kxaWJJYzg2NUhoV1NRNTFpNU94Skh6ZVFuVHlHUXNGbkQ2RHZvNElwbXdialEtaWxQQXg4eHA1MXhzbDlBZFFRdU5TbGpoRmFfbzRqNTgyNlhPZkQycGVQalk3clBDdWdPNjJwU3JUN2h2dmhjem9uMENjVUVub0d0aTdKS0hSTnV5OFRvVnppU0k?oc=5"
+      },
+      {
+        "label": "24ur.com — Anatomija vodenja: kje se križajo interesi politike in stroke? - 24ur.com",
+        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPZmtxdk8tZjB0R0s0Qkd5TnJBZ3N5U3BGUjlnTE9LTzJfLTBOMVJZZWc3NDFuaFI4RjcxOFJFOXcyeVFEbEpNdVV4ZjJvQkxZdV8xUU9NMDBEd2pXc0ljb1kxT1E4Ukh4cHZHdWNGY2Q2MHhiazExbTNySVhWVXgzRWd2dzhRakdwel9XZXpYaTU4blh6TUp3dC1mcVhqak1OUzgw?oc=5"
+      },
+      {
+        "label": "www.primorski.eu — »Veliko bolj je razdeljena politika kot pa naš narod« - www.primorski.eu",
+        "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPc1RpdklfaWh3cFBrWG1UeFpQUlZvZ3ZzdUtmdnI3SlFCUXkzS1ZmcnhTMzlqcmtpbXFKdzlvQ01UeElwNG1JbFFyUmdHQ3UtS1VPUjZxZlNnYURNZm8tbE5RT19GXzZjb3NENWhfVE1fNTJXMzM4OFJ1Ml9XVXY5TldKVGFzZ2RTcDJxSm9XdE5nb0k?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-25T13:39:14+02:00",
+    "updatedAt": "2026-09-25T13:39:14+02:00"
+  },
+
+  {
     "id": "skocjan-caves-day-trip-from-ljubljana",
     "title": "Škocjan Caves: A Car-Light Day Trip from Ljubljana",
     "excerpt": "Plan a responsible visit to Slovenia’s UNESCO-listed underground canyon, with 2026 prices, route choices, safety notes and practical transport planning from Ljubljana.",
