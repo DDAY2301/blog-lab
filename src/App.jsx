@@ -20,6 +20,28 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "jansa-v-new-yorku-jasno-o-ukrajini-slovenija-bo-nadaljevala-politicno-vojasko-humanitarno--03200e1d",
+    "title": "Janša v New Yorku jasno o Ukrajini: Slovenija bo nadaljevala politično, vojaško, humanitarno in finančno pomoč -…",
+    "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Janša v New Yorku jasno o Ukrajini: Slovenija bo nadaljevala politično, vojaško, humanitarno in finančno pomoč -…«.",
+    "seoDescription": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Janša v New Yorku jasno o Ukrajini: Slovenija bo nadaljevala politično, vojaš",
+    "content": "**Aktualno, 25. 9. 2026.** Janša v New Yorku jasno o Ukrajini: Slovenija bo nadaljevala politično, vojaško, humanitarno in finančno pomoč Najdi.si novice\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Najdi.si novice. Objavljeno: Thu, 24 Sep 2026 07:38:33 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMijgJBVV95cUxOcjZZRjI2Y1l0OTVqTE1Bd0pOaHJlUGI1ekpsdkJYakRMeHRILWpMcmJqTm5XWXJ1eXJUZzAxbG81cHJNaDVvdEQ5V3FyY19KeEk2Q216YWVhNnVhQkxVV3hxRS1zUnpyLWJGSHp4cDdNdk9yeXdZNUJmMGdzNUUtMFRhYzM2cm84RXoxYzFGcmZiOXc2REEtMHEtSm9IMVk2cTVRdy11WVppT1FRM2g0OU5qWTVsQk1OYlF0Mm9uZE1iNnNBSWh3ZmhrYnhZRTBGZzdXN1ZyU3F2ekFLZ0psbTUwdGQ0d2gxSU9pWmdlX0gzTmF2Xzd0Tkdnb0FhcWpEMzhNYjJZbTRMM2diQ0E?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Aktualno",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Najdi.si novice — Janša v New Yorku jasno o Ukrajini: Slovenija bo nadaljevala politično, vojaško, humanitarno in finančno pomoč -…",
+        "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxOcjZZRjI2Y1l0OTVqTE1Bd0pOaHJlUGI1ekpsdkJYakRMeHRILWpMcmJqTm5XWXJ1eXJUZzAxbG81cHJNaDVvdEQ5V3FyY19KeEk2Q216YWVhNnVhQkxVV3hxRS1zUnpyLWJGSHp4cDdNdk9yeXdZNUJmMGdzNUUtMFRhYzM2cm84RXoxYzFGcmZiOXc2REEtMHEtSm9IMVk2cTVRdy11WVppT1FRM2g0OU5qWTVsQk1OYlF0Mm9uZE1iNnNBSWh3ZmhrYnhZRTBGZzdXN1ZyU3F2ekFLZ0psbTUwdGQ0d2gxSU9pWmdlX0gzTmF2Xzd0Tkdnb0FhcWpEMzhNYjJZbTRMM2diQ0E?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-25T19:54:00+02:00",
+    "updatedAt": "2026-09-25T19:54:00+02:00"
+  },
+
+  {
     "id": "kajzer-zavrnil-ocitke-da-ne-vodi-suverene-zunanje-politike-cbe54319",
     "title": "Kajzer zavrnil očitke, da ne vodi suverene zunanje politike",
     "excerpt": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Kajzer zavrnil očitke, da ne vodi suverene zunanje politike«.",
