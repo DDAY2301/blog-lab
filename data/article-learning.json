@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-25T08:54:06+02:00",
-  "loop_count": 883,
+  "updated_at": "2026-09-25T09:09:58+02:00",
+  "loop_count": 884,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-25T08:53:39+02:00",
+      "last_learning_run": "2026-09-25T09:08:34+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -49,7 +49,7 @@
           "last_seen": "2026-09-25T08:53:39+02:00",
           "last_title": "(PREGLED) Kdo bo nadomestil Benjamina Šeška: Dvojec z velikim bremenom ali dvojec brez prvenca? - Večer",
           "last_provider": "",
-          "published": 20878,
+          "published": 20914,
           "last_output_id": "slovenci-imajo-z-ep-jev-lepe-spomine-na-poljake-razen-z-zadnjega-49e1ad92"
         },
         "aarp.org": {
@@ -88,17 +88,11 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 30,
-      "example_titles": {
-        "news.google.com": [
-          "Slovenci imajo z EP-jev lepe spomine na Poljake, razen z zadnjega - rtvslo.si",
-          "Slovenija prek Belgije v polfinale, kjer jih čakajo Poljaki - 24ur.com",
-          "Obračun za finale EP: lahko Slovenija šokira svetovno številko ena? - Delo.si"
-        ]
-      }
+      "current_source_count": 0,
+      "example_titles": {}
     },
     "politika": {
-      "last_learning_run": "2026-09-25T08:53:50+02:00",
+      "last_learning_run": "2026-09-25T09:09:18+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -126,7 +120,7 @@
           "last_seen": "2026-09-25T08:53:50+02:00",
           "last_title": "Skok ključen za pregon korupcije ali gre za podreditev politiki? - Reporter",
           "last_provider": "",
-          "published": 22305,
+          "published": 22340,
           "last_output_id": "rop-o-golobovi-vladi-politika-ne-bi-smela-biti-tako-plehka-ciljata-z-ursko-klakocar-zupanc-2b13995b"
         },
         "britannica.com": {
@@ -137,17 +131,11 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 30,
-      "example_titles": {
-        "news.google.com": [
-          "Anatomija vodenja: kje se križajo interesi politike in stroke? - 24ur.com",
-          "Netanjahu napovedal srečanje z Janšo, številne voditelje je zavrnil - Dnevnik",
-          "Poslanci potrdili zakon o Skoku. Logar in Zupančič prepričana o tektonskem premiku, opozicija svari pred politizacijo tožilstva - N1 Sloveni"
-        ]
-      }
+      "current_source_count": 0,
+      "example_titles": {}
     },
     "aktualno": {
-      "last_learning_run": "2026-09-25T08:54:06+02:00",
+      "last_learning_run": "2026-09-25T09:09:58+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -185,92 +173,92 @@
           "last_seen": "2026-09-25T08:54:06+02:00",
           "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 35008,
+          "published": 35058,
           "last_output_id": "sramota-v-oddaji-marcel-na-tv-slovenija-ne-spostujejo-eticnega-in-poklicnega-kodeksa-e-mar-62369ae7"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 860,
+          "published": 861,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 860,
+          "published": 861,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 883,
+          "published": 884,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 785,
+          "published": 786,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 849,
+          "published": 850,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 785,
+          "published": 786,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 785,
+          "published": 786,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 849,
+          "published": 850,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 3532,
+          "published": 3536,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 883,
+          "published": 884,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 860,
+          "published": 861,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 1634,
+          "published": 1636,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 817,
+          "published": 818,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 1698,
+          "published": 1700,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 883,
+          "published": 884,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 785,
+          "published": 786,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 1634,
+          "published": 1636,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
@@ -288,17 +276,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 30,
-      "example_titles": {
-        "news.google.com": [
-          "(AKTUALNO) V novi številki revije Demokracija preberite: Izključujejo in zavirajo razvoj! Janša: Osamosvojitvena Slovenija ne bo nikoli več ",
-          "Sramota! V oddaji Marcel na TV Slovenija, ne spoštujejo etičnega in poklicnega kodeksa - e-Maribor",
-          "Janša v New Yorku jasno o Ukrajini: Slovenija bo nadaljevala politično, vojaško, humanitarno in finančno pomoč - Najdi.si novice"
-        ]
-      }
+      "current_source_count": 0,
+      "example_titles": {}
     }
   },
   "recent_articles": [
+    {
+      "id": "skocjan-caves-day-trip-from-ljubljana",
+      "title": "Škocjan Caves: A Car-Light Day Trip from Ljubljana",
+      "category": "Vodniki",
+      "createdAt": "2026-09-25T09:00:00+02:00"
+    },
     {
       "id": "slovenci-imajo-z-ep-jev-lepe-spomine-na-poljake-razen-z-zadnjega-49e1ad92",
       "title": "Slovenci imajo z EP-jev lepe spomine na Poljake, razen z zadnjega",
@@ -364,12 +352,6 @@
       "title": "Janša: Vlada bo vodila pragmatično zunanjo politiko, enako pričakuje od drugih",
       "category": "Politika",
       "createdAt": "2026-09-22T13:36:56+02:00"
-    },
-    {
-      "id": "zgodba-sonje-debelak-zaposlene-v-modi-mi-lan-dva-dni-pred-stecajem-odplacala-dolg-ki-ni-bi-0447136d",
-      "title": "(Zgodba Sonje Debelak, zaposlene v Modi Mi&lan) Dva dni pred stečajem odplačala dolg, ki ni bil njen, sedaj pa je…",
-      "category": "Politika",
-      "createdAt": "2026-09-22T10:58:43+02:00"
     }
   ],
   "recent_failures": [
