@@ -1,5 +1,5 @@
 // Review draft only. Not imported by the production application.
-// Rolling review draft. Sources rechecked on 2026-09-24 at 07:00 Europe/Ljubljana.
+// Rolling review draft. Sources rechecked on 2026-09-25 at 07:00 Europe/Ljubljana.
 // Production remains unchanged until the calendar model and stable views are implemented.
 // Unknown values deliberately remain null.
 export const draftEvents = [
@@ -32,7 +32,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
     "eventId": "national-gallery-tone-kralj-2026",
@@ -63,7 +63,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
     "eventId": "national-gallery-fragments-past-2026",
@@ -94,7 +94,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
     "eventId": "hana-karim-fragments-memories-2026",
@@ -125,7 +125,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
     "eventId": "castle-reading-corner-2026",
@@ -156,7 +156,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
     "eventId": "gallery-at-your-fingertips-2026",
@@ -187,7 +187,7 @@ export const draftEvents = [
     "accessibility": "Tactile exhibition; confirm individual access needs with the gallery",
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
     "eventId": "unicum-2026-ljubljana",
@@ -218,7 +218,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
     "eventId": "corn-labyrinth-ljubljana-2026",
@@ -249,7 +249,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
     "eventId": "revelations-national-gallery-2026",
@@ -280,7 +280,7 @@ export const draftEvents = [
     "accessibility": "The gallery publishes a dedicated accessibility section; confirm individual requirements directly",
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
     "eventId": "kozmos-kosovel-cankarjev-dom-2026",
@@ -311,7 +311,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
     "eventId": "opera-orchestra-academy-soloists-2026-09-17",
@@ -716,7 +716,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "unconfirmed",
-    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
     "eventId": "salome-mgl-2026-09-23-1530",
@@ -840,7 +840,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
     "eventId": "air-raid-cankarjev-dom-2026-09-24",
@@ -870,7 +870,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "confirmed",
+    "status": "expired",
     "lastCheckedAt": "2026-09-24T07:00:00+02:00"
   },
   {
@@ -901,7 +901,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "confirmed",
+    "status": "expired",
     "lastCheckedAt": "2026-09-24T07:00:00+02:00"
   },
   {
@@ -932,7 +932,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": "Cankarjev dom publishes an accessibility statement; confirm individual requirements directly",
     "indoorOutdoor": "indoor",
-    "status": "confirmed",
+    "status": "expired",
     "lastCheckedAt": "2026-09-24T07:00:00+02:00"
   },
   {
@@ -964,7 +964,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
     "eventId": "salome-mgl-2026-09-25-1930",
@@ -995,12 +995,12 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
     "eventId": "cherry-wine-tribute-2026-09-25",
     "title": "Cherry Wine – Amy Winehouse Tribute Band & AnzaRa Mai",
-    "summary": "Ljubljana Castle Jazz Club hosts an Amy Winehouse tribute evening in the Rock Hall. Live music begins at 20:00, the club opens at 19:00, and the concert ticket includes a return funicular ride.",
+    "summary": "The Ljubljana Castle Jazz Club confirms the concert for Friday 25 September at 20:00 in the Rock Hall and now marks it sold out. The programme combines an Amy Winehouse tribute with AnzaRa Mai; language and accessibility details remain unconfirmed.",
     "category": "music",
     "startAt": "2026-09-25T20:00:00+02:00",
     "endAt": null,
@@ -1014,19 +1014,19 @@ export const draftEvents = [
     "price": {
       "amount": null,
       "currency": "EUR",
-      "label": "Ticket includes return funicular journey",
+      "label": "Sold out",
       "free": false
     },
-    "ticketUrl": "https://www.ljubljanskigrad.si/en/castle-events/the-ljubljana-castle-jazz-club-2/",
-    "officialUrl": "https://www.ljubljanskigrad.si/en/castle-events/the-ljubljana-castle-jazz-club-2/",
+    "ticketUrl": "https://www.ljubljanskigrad.si/en/castle-events/cherry-wine-amy-winehouse-tribute-band-and-anzara-mai/",
+    "officialUrl": "https://www.ljubljanskigrad.si/en/castle-events/cherry-wine-amy-winehouse-tribute-band-and-anzara-mai/",
     "sourceName": "Ljubljana Castle",
     "languages": [],
     "touristFriendly": true,
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "confirmed",
-    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+    "status": "sold_out",
+    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
     "eventId": "when-i-get-out-cankarjev-dom-2026-09-25",
@@ -1057,7 +1057,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
     "eventId": "artish-2026-09-26",
@@ -1088,7 +1088,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
     "eventId": "castle-vineyard-picnic-2026-09-26",
@@ -1119,7 +1119,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
     "eventId": "u-bu-cankarjev-dom-2026-09-26-1600",
@@ -1150,7 +1150,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
     "eventId": "u-bu-cankarjev-dom-2026-09-26-2000",
@@ -1181,7 +1181,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
     "eventId": "sunday-flea-market-2026-09-27",
@@ -1212,7 +1212,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
     "eventId": "wind-orchestra-promenade-2026-09-27",
@@ -1243,7 +1243,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
     "eventId": "barcelona-guitar-trio-dance-2026-09-27",
@@ -1274,7 +1274,38 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
+  },
+  {
+    "eventId": "festival-third-age-cd-2026-09-29",
+    "title": "25th Festival of the Third Age",
+    "summary": "Cankarjev dom lists the 25th Festival of the Third Age from 09:00 on Tuesday 29 September. The official overview confirms the date and venue; programme details, admission and accessibility should be checked directly.",
+    "category": "festival",
+    "startAt": "2026-09-29T09:00:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": null
+    },
+    "ticketUrl": "https://cd-cc.si/en",
+    "officialUrl": "https://cd-cc.si/en",
+    "sourceName": "Cankarjev dom",
+    "languages": [],
+    "touristFriendly": null,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
     "eventId": "salome-mgl-2026-09-29-1930",
@@ -1305,7 +1336,38 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "sold_out",
-    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
+  },
+  {
+    "eventId": "festival-third-age-cd-2026-09-30",
+    "title": "25th Festival of the Third Age",
+    "summary": "The second listed day of the 25th Festival of the Third Age begins at Cankarjev dom at 09:00 on Wednesday 30 September. Admission, individual sessions, language and access details remain unconfirmed.",
+    "category": "festival",
+    "startAt": "2026-09-30T09:00:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": null
+    },
+    "ticketUrl": "https://cd-cc.si/en",
+    "officialUrl": "https://cd-cc.si/en",
+    "sourceName": "Cankarjev dom",
+    "languages": [],
+    "touristFriendly": null,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
     "eventId": "beauty-queen-leenane-mgl-2026-09-30",
@@ -1336,7 +1398,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
     "eventId": "ex-mgl-2026-09-30",
@@ -1367,7 +1429,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "sold_out",
-    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
     "eventId": "ex-mgl-2026-10-02",
@@ -1398,7 +1460,38 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
+  },
+  {
+    "eventId": "sheby-umami-castle-2026-10-02",
+    "title": "Sheby – Umami",
+    "summary": "The Ljubljana Castle Jazz Club lists Sheby – Umami for Friday 2 October at 20:00 in the Rock Hall. Ticket price, language and accessibility details should be checked on the official event page before booking.",
+    "category": "music",
+    "startAt": "2026-10-02T20:00:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Rock Hall, Ljubljana Castle",
+      "address": "Grajska planota 1, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": false
+    },
+    "ticketUrl": "https://www.ljubljanskigrad.si/en/castle-events/the-ljubljana-castle-jazz-club-2/",
+    "officialUrl": "https://www.ljubljanskigrad.si/en/castle-events/the-ljubljana-castle-jazz-club-2/",
+    "sourceName": "Ljubljana Castle",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
     "eventId": "salome-mgl-2026-10-03",
@@ -1429,7 +1522,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
     "eventId": "man-overboard-mgl-2026-10-03",
@@ -1460,7 +1553,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "sold_out",
-    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
     "eventId": "salome-mgl-2026-10-06",
@@ -1491,7 +1584,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
     "eventId": "salome-mgl-2026-10-07",
@@ -1522,7 +1615,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
     "eventId": "man-overboard-mgl-2026-10-07",
@@ -1553,6 +1646,37 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "sold_out",
-    "lastCheckedAt": "2026-09-24T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
+  },
+  {
+    "eventId": "sunnysiders-stone-head-castle-2026-10-09",
+    "title": "Sunnysiders and Stone Head",
+    "summary": "The Ljubljana Castle Jazz Club lists Sunnysiders and Stone Head for Friday 9 October at 20:00 in the Rock Hall. The date is the final day of this rolling 14-day window; price, language and accessibility remain unconfirmed.",
+    "category": "music",
+    "startAt": "2026-10-09T20:00:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Rock Hall, Ljubljana Castle",
+      "address": "Grajska planota 1, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": false
+    },
+    "ticketUrl": "https://www.ljubljanskigrad.si/en/castle-events/the-ljubljana-castle-jazz-club-2/",
+    "officialUrl": "https://www.ljubljanskigrad.si/en/castle-events/the-ljubljana-castle-jazz-club-2/",
+    "sourceName": "Ljubljana Castle",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   }
 ];
