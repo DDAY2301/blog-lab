@@ -20,6 +20,44 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "slovenci-imajo-z-ep-jev-lepe-spomine-na-poljake-razen-z-zadnjega-49e1ad92",
+    "title": "Slovenci imajo z EP-jev lepe spomine na Poljake, razen z zadnjega",
+    "excerpt": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Slovenci imajo z EP-jev lepe spomine na Poljake, razen z zadnjega«.",
+    "seoDescription": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Slovenci imajo z EP-jev lepe spomine na Poljake, razen z zadnjega«.",
+    "content": "**Šport, 25. 9. 2026.** Slovenci imajo z EP-jev lepe spomine na Poljake, razen z zadnjega rtvslo.si\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: rtvslo.si. Objavljeno: Thu, 24 Sep 2026 06:27:15 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiwwFBVV95cUxNT0tDbEV6Q2dmcF9Vci1GUjhzWm12Y0ZUY1VNS1hqUzRYU2s0d2gzYVIwaTZHV2lYYVdSbHUtVkhJczhFdzZHQ2JEY0dzNExJTk01VTNVWUEtWk4tWEdfbTUtSktWQkpVVVBkM1Nja3V5MVlIYnhzSGRmNFM0aEg4blpxNndsd0dwZUpLRXh1bTVqRkRjbXdMMURvMEYydjNpdVFEQm1HbVdUaDRpWW9PZ2g1M3g5SzZRQmdhYmowU2dEemM?oc=5)\n\n## Dopolnitev vira 2: 24ur.com\n\nPoljaki na papirju favoriti, a pozor: Slovenci vedo, kako jih vreči s prestola! 24ur.com\n\n Vir: 24ur.com. Objavljeno: Thu, 24 Sep 2026 16:32:25 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiX0FVX3lxTE1TWlA0U3lzUzNSSVR2anh3X3V3RG9UMTR2cmJKOXpkR1k2RThGNkV6amROdDdibzl0RnpaRnZ6SE14R0JSNk96SF9ZMkhCTmIwSWh6NnBZWVVLcmhrSGhv?oc=5)\n\n## Dopolnitev vira 3: rtvslo.si\n\nGal Stare vse do zadnjega v igri za bron, ekipni uspeh mladincev rtvslo.si\n\n Vir: rtvslo.si. Objavljeno: Fri, 25 Sep 2026 05:03:45 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMi2wFBVV95cUxPdTFrWkpmY3VTT0pYemNzbVFjOHZkV0ZndHdicUFwc2R2ZzJUdlZYNTk5Nkh0eVFVLW9YYmFQbFVOQjhNZ1RaVDhBY19IbWZEcVB5Q3ZVSlVydDVwZGZZV3NUSllSSGlYb0Q5NkNzNGtBZlBBRmRnU2hJVnVtYlhyZk5KRWUzVUZlNzZ1dWpJZXVpTHBYdVVtYVVPdEVfdnlWVWxHNldiOFNMTUp3elVzckRHQldGZS1sdW5Ed2RkVjMwRWM5ZUVQdUZrYnZ1bER6aXVES2tsUlIwSE0?oc=5)\n\n## Dopolnitev vira 4: rtvslo.si\n\nOd leta 2015 v polfinalu EP-jev največkrat odbojkarji Slovenije rtvslo.si\n\n Vir: rtvslo.si. Objavljeno: Thu, 24 Sep 2026 07:35:13 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMirwFBVV95cUxOS21EVWdpd2NyRXpkYTdyNVdESk8xQVNvUFhPSmJvODRxc3JUbU9za1hqZnJGYVU1Z3RQc09vQjJRclpFRXdOblRJSXF5Z1hlQ3JCRDhKS2R4RU41a01yU2lmRDRkMnRpLUdyNFhuZnBRcEFZTmlKRUs0N1U3WjBnZGF2ZDlnRWR1OVl2VndndXpaNkczWjhhdnBWX1U5OTRId2JGNUFkeWJKSEMyMnlV?oc=5)\n\n## Dopolnitev vira 5: 24ur.com\n\nSlovenci ekspresno opravili s Srbi za četrtfinale EP 24ur.com\n\n Vir: 24ur.com. Objavljeno: Mon, 21 Sep 2026 21:37:18 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMilwFBVV95cUxNR3p6d0puR3BQd3B1RDZha3RuTHc5U2l5am1jTGJUUjBSd2NDQXdNSFIwZWk2RnRlMk5ZMHVYUWR4R0NVRnNzNVhlQmlFRDFJNDd4SGthcUpnTUVKMnNHTHVvVWFXdi1kbWRiY2FBczQ5RzZzcVZWYTVqbGlpcDBMN1BLS1B4OXE4d0dGWWFJRlpjMW1rMzdR?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Šport",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "rtvslo.si — Slovenci imajo z EP-jev lepe spomine na Poljake, razen z zadnjega - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNT0tDbEV6Q2dmcF9Vci1GUjhzWm12Y0ZUY1VNS1hqUzRYU2s0d2gzYVIwaTZHV2lYYVdSbHUtVkhJczhFdzZHQ2JEY0dzNExJTk01VTNVWUEtWk4tWEdfbTUtSktWQkpVVVBkM1Nja3V5MVlIYnhzSGRmNFM0aEg4blpxNndsd0dwZUpLRXh1bTVqRkRjbXdMMURvMEYydjNpdVFEQm1HbVdUaDRpWW9PZ2g1M3g5SzZRQmdhYmowU2dEemM?oc=5"
+      },
+      {
+        "label": "24ur.com — Poljaki na papirju favoriti, a pozor: Slovenci vedo, kako jih vreči s prestola! - 24ur.com",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1TWlA0U3lzUzNSSVR2anh3X3V3RG9UMTR2cmJKOXpkR1k2RThGNkV6amROdDdibzl0RnpaRnZ6SE14R0JSNk96SF9ZMkhCTmIwSWh6NnBZWVVLcmhrSGhv?oc=5"
+      },
+      {
+        "label": "rtvslo.si — Gal Stare vse do zadnjega v igri za bron, ekipni uspeh mladincev - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPdTFrWkpmY3VTT0pYemNzbVFjOHZkV0ZndHdicUFwc2R2ZzJUdlZYNTk5Nkh0eVFVLW9YYmFQbFVOQjhNZ1RaVDhBY19IbWZEcVB5Q3ZVSlVydDVwZGZZV3NUSllSSGlYb0Q5NkNzNGtBZlBBRmRnU2hJVnVtYlhyZk5KRWUzVUZlNzZ1dWpJZXVpTHBYdVVtYVVPdEVfdnlWVWxHNldiOFNMTUp3elVzckRHQldGZS1sdW5Ed2RkVjMwRWM5ZUVQdUZrYnZ1bER6aXVES2tsUlIwSE0?oc=5"
+      },
+      {
+        "label": "rtvslo.si — Od leta 2015 v polfinalu EP-jev največkrat odbojkarji Slovenije - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOS21EVWdpd2NyRXpkYTdyNVdESk8xQVNvUFhPSmJvODRxc3JUbU9za1hqZnJGYVU1Z3RQc09vQjJRclpFRXdOblRJSXF5Z1hlQ3JCRDhKS2R4RU41a01yU2lmRDRkMnRpLUdyNFhuZnBRcEFZTmlKRUs0N1U3WjBnZGF2ZDlnRWR1OVl2VndndXpaNkczWjhhdnBWX1U5OTRId2JGNUFkeWJKSEMyMnlV?oc=5"
+      },
+      {
+        "label": "24ur.com — Slovenci ekspresno opravili s Srbi za četrtfinale EP - 24ur.com",
+        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNR3p6d0puR3BQd3B1RDZha3RuTHc5U2l5am1jTGJUUjBSd2NDQXdNSFIwZWk2RnRlMk5ZMHVYUWR4R0NVRnNzNVhlQmlFRDFJNDd4SGthcUpnTUVKMnNHTHVvVWFXdi1kbWRiY2FBczQ5RzZzcVZWYTVqbGlpcDBMN1BLS1B4OXE4d0dGWWFJRlpjMW1rMzdR?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-25T08:24:10+02:00",
+    "updatedAt": "2026-09-25T08:24:10+02:00"
+  },
+
+  {
     "id": "sramota-v-oddaji-marcel-na-tv-slovenija-ne-spostujejo-eticnega-in-poklicnega-kodeksa-e-mar-62369ae7",
     "title": "Sramota! V oddaji Marcel na TV Slovenija, ne spoštujejo etičnega in poklicnega kodeksa - e-Maribor",
     "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Sramota! V oddaji Marcel na TV Slovenija, ne spoštujejo etičnega in poklicnega kodeksa - e-Maribor«.",
