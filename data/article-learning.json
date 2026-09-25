@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-25T15:08:22+02:00",
-  "loop_count": 942,
+  "updated_at": "2026-09-25T15:10:49+02:00",
+  "loop_count": 943,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-25T15:07:53+02:00",
+      "last_learning_run": "2026-09-25T15:09:27+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -38,6 +38,7 @@
         "news.google.com",
         "aarp.org",
         "blackfriday.com",
+        "pointclickcare.com",
         "biologyinsights.com",
         "scied.ucar.edu",
         "sciencenewstoday.org",
@@ -52,7 +53,7 @@
           "last_seen": "2026-09-25T15:07:53+02:00",
           "last_title": "Poljaki na papirju favoriti, a pozor: Slovenci vedo, kako jih vreči s prestola! - 24ur.com",
           "last_provider": "",
-          "published": 23002,
+          "published": 23038,
           "last_output_id": "slovenci-imajo-z-ep-jev-lepe-spomine-na-poljake-razen-z-zadnjega-49e1ad92"
         },
         "aarp.org": {
@@ -67,6 +68,13 @@
           "seen": 1,
           "last_seen": "2026-09-23T10:39:40+02:00",
           "last_title": "The Home Depot Spring Black Friday 2026 - Ad & Deals",
+          "last_provider": "bing-web"
+        },
+        "pointclickcare.com": {
+          "score": 1.271,
+          "seen": 2,
+          "last_seen": "2026-09-25T15:09:27+02:00",
+          "last_title": "Healthcare Software for Smarter Care Delivery | PointClickCare",
           "last_provider": "bing-web"
         },
         "biologyinsights.com": {
@@ -112,17 +120,16 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 30,
+      "current_source_count": 2,
       "example_titles": {
-        "news.google.com": [
-          "Slovenci za preboj v finale ob 17.00 proti Poljakom - rtvslo.si",
-          "Stisk pesti in tapkanje v DZ: v kakšni fizični formi so politiki? - 24ur.com",
-          "Obračun za finale EP: lahko Slovenija šokira svetovno številko ena? - Delo.si"
+        "pointclickcare.com": [
+          "PCC Login - PointClickCare | PointClickCare",
+          "Healthcare Software for Smarter Care Delivery | PointClickCare"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-25T15:08:05+02:00",
+      "last_learning_run": "2026-09-25T15:10:10+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -152,7 +159,7 @@
           "last_seen": "2026-09-25T15:08:05+02:00",
           "last_title": "Sramota! V oddaji Marcel na TV Slovenija, ne spoštujejo etičnega in poklicnega kodeksa - e-Maribor",
           "last_provider": "",
-          "published": 24465,
+          "published": 24505,
           "last_output_id": "kajzer-zavrnil-ocitke-da-ne-vodi-suverene-zunanje-politike-cbe54319"
         },
         "hellovein.com": {
@@ -177,17 +184,11 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 30,
-      "example_titles": {
-        "news.google.com": [
-          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
-          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer",
-          "Stisk pesti in tapkanje v DZ: v kakšni fizični formi so politiki? - 24ur.com"
-        ]
-      }
+      "current_source_count": 0,
+      "example_titles": {}
     },
     "aktualno": {
-      "last_learning_run": "2026-09-25T15:08:22+02:00",
+      "last_learning_run": "2026-09-25T15:10:49+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -225,92 +226,92 @@
           "last_seen": "2026-09-25T15:08:22+02:00",
           "last_title": "Slovenija med državami, ki bi prepovedale družbena omrežja mlajšim od 16 let - Info360",
           "last_provider": "",
-          "published": 37958,
+          "published": 38008,
           "last_output_id": "sramota-v-oddaji-marcel-na-tv-slovenija-ne-spostujejo-eticnega-in-poklicnega-kodeksa-e-mar-62369ae7"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 919,
+          "published": 920,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 919,
+          "published": 920,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 942,
+          "published": 943,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 844,
+          "published": 845,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 908,
+          "published": 909,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 844,
+          "published": 845,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 844,
+          "published": 845,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 908,
+          "published": 909,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 3768,
+          "published": 3772,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 942,
+          "published": 943,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 919,
+          "published": 920,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 1752,
+          "published": 1754,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 876,
+          "published": 877,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 1816,
+          "published": 1818,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 942,
+          "published": 943,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 844,
+          "published": 845,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 1752,
+          "published": 1754,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
@@ -328,14 +329,8 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 30,
-      "example_titles": {
-        "news.google.com": [
-          "Kakšno podnebno politiko bo vodila vlada, katere premier zanika znanstvena dejstva? - N1 Slovenija",
-          "(AKTUALNO) V novi številki revije Demokracija preberite: Izključujejo in zavirajo razvoj! Janša: Osamosvojitvena Slovenija ne bo nikoli več ",
-          "Evropska komisija: Slovenija krši pravice avtorjem - Info360"
-        ]
-      }
+      "current_source_count": 0,
+      "example_titles": {}
     }
   },
   "recent_articles": [
