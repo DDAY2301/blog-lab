@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-25T19:55:01+02:00",
-  "loop_count": 985,
+  "updated_at": "2026-09-25T19:55:49+02:00",
+  "loop_count": 986,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-25T19:54:38+02:00",
+      "last_learning_run": "2026-09-25T19:55:27+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -49,11 +49,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 29130,
-          "last_seen": "2026-09-25T19:54:38+02:00",
+          "seen": 29160,
+          "last_seen": "2026-09-25T19:55:27+02:00",
           "last_title": "Tako so se razpletli zadnji obračuni Slovenije in Poljske - Žurnal24",
           "last_provider": "",
-          "published": 24550,
+          "published": 24586,
           "last_output_id": "slovenci-imajo-z-ep-jev-lepe-spomine-na-poljake-razen-z-zadnjega-49e1ad92"
         },
         "aarp.org": {
@@ -123,14 +123,14 @@
       "current_source_count": 30,
       "example_titles": {
         "news.google.com": [
-          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - sport-tv.si",
-          "Poljaki končali slovenske sanje o zlati medalji - 24ur.com",
-          "Odbojka (M): Slovenija - Poljska, Evropsko prvenstvo 2026, Polfinale - Siol.net"
+          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
+          "Izjemno močna Poljska znova previsoka ovira za slovenske odbojkarje - rtvslo.si",
+          "Poljaki končali slovenske sanje o zlati medalji - 24ur.com"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-25T19:54:49+02:00",
+      "last_learning_run": "2026-09-25T19:55:37+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -156,11 +156,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 29130,
-          "last_seen": "2026-09-25T19:54:49+02:00",
+          "seen": 29160,
+          "last_seen": "2026-09-25T19:55:37+02:00",
           "last_title": "Napovedali konec kvazi zelenega prehoda, zdaj presenečajo z odgovori - Žurnal24",
           "last_provider": "",
-          "published": 26185,
+          "published": 26225,
           "last_output_id": "kajzer-zavrnil-ocitke-da-ne-vodi-suverene-zunanje-politike-cbe54319"
         },
         "hellovein.com": {
@@ -195,7 +195,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-25T19:55:01+02:00",
+      "last_learning_run": "2026-09-25T19:55:49+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -229,96 +229,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 29130,
-          "last_seen": "2026-09-25T19:55:01+02:00",
+          "seen": 29160,
+          "last_seen": "2026-09-25T19:55:49+02:00",
           "last_title": "Slovenija med državami, ki bi prepovedale družbena omrežja mlajšim od 16 let - Info360",
           "last_provider": "",
-          "published": 40109,
+          "published": 40160,
           "last_output_id": "jansa-v-new-yorku-jasno-o-ukrajini-slovenija-bo-nadaljevala-politicno-vojasko-humanitarno--03200e1d"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 962,
+          "published": 963,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 962,
+          "published": 963,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 985,
+          "published": 986,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 887,
+          "published": 888,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 951,
+          "published": 952,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 887,
+          "published": 888,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 887,
+          "published": 888,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 951,
+          "published": 952,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 3940,
+          "published": 3944,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 985,
+          "published": 986,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 962,
+          "published": 963,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 1838,
+          "published": 1840,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 919,
+          "published": 920,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 1902,
+          "published": 1904,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 985,
+          "published": 986,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 887,
+          "published": 888,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 1838,
+          "published": 1840,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
