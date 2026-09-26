@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-26T23:24:39+02:00",
-  "loop_count": 1247,
+  "updated_at": "2026-09-26T23:32:13+02:00",
+  "loop_count": 1248,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-26T23:24:18+02:00",
+      "last_learning_run": "2026-09-26T23:31:52+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -50,11 +50,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 36900,
-          "last_seen": "2026-09-26T23:24:18+02:00",
-          "last_title": "Boštjan Cesar: Za nas je to velika točka - Delo.si",
+          "seen": 36930,
+          "last_seen": "2026-09-26T23:31:52+02:00",
+          "last_title": "Remi Slovenije: dobro začeli, razpadli, a preživeli - sportklub.si",
           "last_provider": "",
-          "published": 34707,
+          "published": 34748,
           "last_output_id": "odbojka-m-slovenija-poljska-evropsko-prvenstvo-2026-polfinale-a0b3dbff"
         },
         "aarp.org": {
@@ -132,13 +132,13 @@
       "example_titles": {
         "news.google.com": [
           "*〜?[[Živý=šport!!]++] Škotska Slovenija prenos 26. september 2026 - czechinvest.gov.cz",
-          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - sport-tv.si",
-          "Kot v sanjah: Slovenija že drugič v dveh tednih evropski prvak! (VIDEO) - sport-tv.si"
+          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
+          "Kot v sanjah: Slovenija že drugič v dveh tednih evropski prvak! (VIDEO) - Šport TV"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-26T23:24:28+02:00",
+      "last_learning_run": "2026-09-26T23:32:02+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -164,11 +164,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 36900,
-          "last_seen": "2026-09-26T23:24:28+02:00",
-          "last_title": "Skok ključen za pregon korupcije ali gre za podreditev politiki? - Reporter",
+          "seen": 36930,
+          "last_seen": "2026-09-26T23:32:02+02:00",
+          "last_title": "Da ne bo pozabljeno in nikoli več ponovljeno - Nova24TV",
           "last_provider": "",
-          "published": 37155,
+          "published": 37200,
           "last_output_id": "jansev-govor-v-zn-razburil-opozicijo-svoboda-sd-in-levica-kriticne-do-politike-do-izraela-5f1368df"
         },
         "hellovein.com": {
@@ -203,7 +203,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-26T23:24:39+02:00",
+      "last_learning_run": "2026-09-26T23:32:13+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -237,96 +237,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 36900,
-          "last_seen": "2026-09-26T23:24:39+02:00",
+          "seen": 36930,
+          "last_seen": "2026-09-26T23:32:13+02:00",
           "last_title": "Objavljen je nov razpis za projekt PONI JV Slovenija - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 53543,
+          "published": 53596,
           "last_output_id": "aktualno-prodaja-avtomobilov-v-sloveniji-julija-je-bil-vsak-cetrti-novi-avtomobilov-v-slov-828a08f7"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 1224,
+          "published": 1225,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 1224,
+          "published": 1225,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 1247,
+          "published": 1248,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 1149,
+          "published": 1150,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 1213,
+          "published": 1214,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 1149,
+          "published": 1150,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 1149,
+          "published": 1150,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 1213,
+          "published": 1214,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 4988,
+          "published": 4992,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 1247,
+          "published": 1248,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 1224,
+          "published": 1225,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 2362,
+          "published": 2364,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 1181,
+          "published": 1182,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 2426,
+          "published": 2428,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 1247,
+          "published": 1248,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 1149,
+          "published": 1150,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 2362,
+          "published": 2364,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
