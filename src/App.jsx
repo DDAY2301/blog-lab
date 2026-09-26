@@ -20,6 +20,32 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "aktualno-prodaja-avtomobilov-v-sloveniji-julija-je-bil-vsak-cetrti-novi-avtomobilov-v-slov-828a08f7",
+    "title": "Aktualno: prodaja avtomobilov v Sloveniji: Julija je bil vsak četrti novi avtomobilov v Sloveniji električen…",
+    "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Aktualno: prodaja avtomobilov v Sloveniji: Julija je bil vsak četrti novi avtomobilov v Sloveniji električen…«.",
+    "seoDescription": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Aktualno: prodaja avtomobilov v Sloveniji: Julija je bil vsak četrti novi avt",
+    "content": "**Aktualno, 26. 9. 2026.** Aktualno: prodaja avtomobilov v Sloveniji: Julija je bil vsak četrti novi avtomobilov v Sloveniji električen Novice AVTO FOKUS -\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: AVTO FOKUS -. Objavljeno: Mon, 10 Aug 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiqAFBVV95cUxNRDRqdE9Tc3VFS2hidkRUVUxyTk52X0pSRzlfQmh3MDFKbnYyZUJjMjVQQ1Q3NVJ5S1ZSTnJndERMci1ocXVIb3pOQlNQMFRKR0NYN3Jabks4OEh5ejhrSU93NnVIS2ZBZ0ZfSlUtbWNuN1JWT2FaeWUxSTB4T3ZIX1NBWHR0R2FLVnphalNhZnRrc0l6VWhLa0pEMTNxaGJqSDlwdnk2NWQ?oc=5)\n\n## Dopolnitev vira 2: AVTO FOKUS -\n\nAktualno: RTV Slovenija: Revozu grozi stavka zaposlenih Novice AVTO FOKUS -\n\n Vir: AVTO FOKUS -. Objavljeno: Wed, 01 Apr 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiX0FVX3lxTE1QQ21QMUxUa00wc1RhVThrODlzN3JWVll6QmxFTU5HRnZkTC05djhCVmlHYUpUY010dVNjX2w1Y2UzRjl3eHVvUm84WWtsaFpqNGxfUEw5WkY5cXdXNE5R?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Aktualno",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "AVTO FOKUS - — Aktualno: prodaja avtomobilov v Sloveniji: Julija je bil vsak četrti novi avtomobilov v Sloveniji električen Novice -…",
+        "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNRDRqdE9Tc3VFS2hidkRUVUxyTk52X0pSRzlfQmh3MDFKbnYyZUJjMjVQQ1Q3NVJ5S1ZSTnJndERMci1ocXVIb3pOQlNQMFRKR0NYN3Jabks4OEh5ejhrSU93NnVIS2ZBZ0ZfSlUtbWNuN1JWT2FaeWUxSTB4T3ZIX1NBWHR0R2FLVnphalNhZnRrc0l6VWhLa0pEMTNxaGJqSDlwdnk2NWQ?oc=5"
+      },
+      {
+        "label": "AVTO FOKUS - — Aktualno: RTV Slovenija: Revozu grozi stavka zaposlenih Novice - AVTO FOKUS -",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1QQ21QMUxUa00wc1RhVThrODlzN3JWVll6QmxFTU5HRnZkTC05djhCVmlHYUpUY010dVNjX2w1Y2UzRjl3eHVvUm84WWtsaFpqNGxfUEw5WkY5cXdXNE5R?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-26T19:53:53+02:00",
+    "updatedAt": "2026-09-26T19:53:53+02:00"
+  },
+
+  {
     "id": "solkan-bridge-history-visitor-guide",
     "title": "Solkan Bridge: Engineering History and a Car-Light Visitor Guide",
     "excerpt": "Discover the history of the Solkan railway bridge, its record-setting stone arch and a responsible way to see it beside the Soča River.",
