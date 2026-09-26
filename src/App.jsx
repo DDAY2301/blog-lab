@@ -20,6 +20,40 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "solkan-bridge-history-visitor-guide",
+    "title": "Solkan Bridge: Engineering History and a Car-Light Visitor Guide",
+    "excerpt": "Discover the history of the Solkan railway bridge, its record-setting stone arch and a responsible way to see it beside the Soča River.",
+    "seoDescription": "Explore Solkan Bridge history, its 85-metre stone railway arch, wartime destruction and practical car-light visitor guidance near Nova Gorica.",
+    "content": "The Solkan Bridge crosses the emerald Soča near Nova Gorica with an **85-metre stone arch**. Official Slovenian tourism sources describe it as the world's longest stone-arch railway bridge. It is both a working piece of transport infrastructure and a striking introduction to the engineering history of western Slovenia.\n\n## Why the bridge matters\n\nThe bridge formed part of the Bohinj Railway, developed to connect Central Europe with the Adriatic. The official Vipava Valley tourism portal dates completion of the structure to 1905, while the railway connection was ceremonially opened in 1906. Its great arch was assembled from precisely shaped stone blocks rather than reinforced concrete or steel.\n\nThe record is specific: it concerns the span of a **stone railway arch**. Calling it simply the world's longest bridge would be incorrect. The complete viaduct is longer than its central arch, but the 85-metre opening is the feature that made the structure exceptional.\n\n## Destruction and reconstruction\n\nDuring the First World War, the bridge stood close to the Isonzo Front. Retreating forces destroyed its main arch in 1916. The official regional heritage account explains that the crossing was later rebuilt in stone, returning the bridge to the visual form visitors recognise today.\n\nThis is verified history, not folklore. There is no need to add a heroic legend to make the site compelling: its survival story already reflects the upheaval that repeatedly reshaped the borderland around Gorizia, Nova Gorica and the Soča.\n\n## How to Experience It Today\n\nThe bridge remains an active railway structure. **Do not enter the tracks, tunnels or railway land** to take photographs. Observe it only from lawful public paths and viewpoints, keep away from edges, and supervise children near the river. Wet stone, loose gravel and riverbanks can be slippery.\n\nA responsible visit can be simple:\n\n1. Use the [Slovenian Railways timetable](https://potniski.sz.si/en/timetable-finder/) to plan travel toward Nova Gorica or Solkan.\n2. Check [live travel updates](https://potniski.sz.si/en/help-and-travel-updates/) shortly before departure because engineering works can introduce replacement buses.\n3. Continue only on marked public streets and paths toward a legal viewpoint.\n4. Allow extra daylight rather than approaching unfamiliar river terrain after dark.\n5. Take all rubbish away and avoid drones unless you have confirmed every applicable aviation, privacy and local restriction.\n\nTrain frequency, connections and fares vary, so this guide deliberately does not freeze them into the article. Search the live planner using the exact station names and confirm the final return connection on the day. If step-free travel is required, contact the carrier in advance to confirm assistance and the accessibility of the chosen service.\n\n## Pairing the bridge with Nova Gorica\n\nThe bridge works well as one part of a wider car-light day rather than a rushed photo stop. Nova Gorica and neighbouring Gorizia form a cross-border urban area shaped by twentieth-century border changes. Visitors can combine the river landscape with the railway station area and Europe Square, while keeping the itinerary compact and using public transport.\n\nThe bridge itself is an outdoor landmark, not a ticketed attraction with fixed opening hours. There is **no admission fee to view it from public space**, but any guided activity, museum visit or transport journey nearby may have its own price and schedule.\n\n## Responsible viewing\n\n- Never climb fences or infrastructure for a better angle.\n- Keep clear when a train approaches and never place equipment near the line.\n- Respect residents and private land around Solkan.\n- Avoid swimming or entering the river based only on its calm appearance; water level, temperature and current can change.\n- Use the location tag `Solkanski most` when checking local maps, but follow on-site signs over an app shortcut.\n\n## Direct sources\n\n- [Vipava Valley official tourism portal: Solkan Bridge](https://www.vipavskadolina.si/en/odkrivaj/dediscina/kultura/arhitekturne-posebnosti/solkanski-most)\n- [Slovenian Tourist Board: The most beautiful train journeys in Slovenia](https://www.slovenia.info/en/stories/the-most-beautiful-train-journeys-in-slovenia)\n- [Slovenian Railways: Timetable finder](https://potniski.sz.si/en/timetable-finder/)\n- [Slovenian Railways: Help and travel updates](https://potniski.sz.si/en/help-and-travel-updates/)\n\nHistorical facts and visitor information were checked on **26 September 2026**. Recheck transport notices and local conditions before travelling.",
+    "category": "Vodniki",
+    "author": "Uredništvo Blog Lab",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Vipava Valley — Solkan Bridge",
+        "url": "https://www.vipavskadolina.si/en/odkrivaj/dediscina/kultura/arhitekturne-posebnosti/solkanski-most"
+      },
+      {
+        "label": "Slovenian Tourist Board — Beautiful train journeys",
+        "url": "https://www.slovenia.info/en/stories/the-most-beautiful-train-journeys-in-slovenia"
+      },
+      {
+        "label": "Slovenian Railways — Timetable finder",
+        "url": "https://potniski.sz.si/en/timetable-finder/"
+      },
+      {
+        "label": "Slovenian Railways — Help and travel updates",
+        "url": "https://potniski.sz.si/en/help-and-travel-updates/"
+      }
+    ],
+    "createdAt": "2026-09-26T15:00:00+02:00",
+    "updatedAt": "2026-09-26T15:00:00+02:00"
+  },
+
+  {
     "id": "jansev-govor-v-zn-razburil-opozicijo-svoboda-sd-in-levica-kriticne-do-politike-do-izraela-5f1368df",
     "title": "JANŠEV GOVOR V ZN RAZBURIL OPOZICIJO: Svoboda, SD in Levica kritične do politike do Izraela",
     "excerpt": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »JANŠEV GOVOR V ZN RAZBURIL OPOZICIJO: Svoboda, SD in Levica kritične do politike do Izraela«.",
