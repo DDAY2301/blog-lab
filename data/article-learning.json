@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-26T14:24:03+02:00",
-  "loop_count": 1159,
+  "updated_at": "2026-09-26T14:38:10+02:00",
+  "loop_count": 1160,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-26T14:23:40+02:00",
+      "last_learning_run": "2026-09-26T14:37:48+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -50,11 +50,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 34320,
-          "last_seen": "2026-09-26T14:23:40+02:00",
-          "last_title": "Po zatišju pod Storžičem danes vihar v Stožicah - Slovenske novice",
+          "seen": 34350,
+          "last_seen": "2026-09-26T14:37:48+02:00",
+          "last_title": "Veliki debi Kloppa, Slovenija začne v soboto proti Škotski - Šport TV",
           "last_provider": "",
-          "published": 31099,
+          "published": 31140,
           "last_output_id": "odbojka-m-slovenija-poljska-evropsko-prvenstvo-2026-polfinale-a0b3dbff"
         },
         "aarp.org": {
@@ -132,13 +132,13 @@
       "example_titles": {
         "news.google.com": [
           "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
-          "Kot v sanjah: Slovenija že drugič v dveh tednih evropski prvak! (VIDEO) - Šport TV",
-          "Slovenci ob 17.00 že po peto medaljo na zadnjih šestih EP-jih - rtvslo.si"
+          "Slovenci ob 17.00 že po peto medaljo na zadnjih šestih EP-jih - rtvslo.si",
+          "Slovenija po preobrat v tretjem nizu (14:17*) - 24ur.com"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-26T14:23:52+02:00",
+      "last_learning_run": "2026-09-26T14:37:59+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -164,11 +164,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 34320,
-          "last_seen": "2026-09-26T14:23:52+02:00",
+          "seen": 34350,
+          "last_seen": "2026-09-26T14:37:59+02:00",
           "last_title": "Okoljski ekonomist Sonnenschein: Politika ministra za energetiko ni v interesu javnosti - Dnevnik",
           "last_provider": "",
-          "published": 33195,
+          "published": 33240,
           "last_output_id": "jansev-govor-v-zn-razburil-opozicijo-svoboda-sd-in-levica-kriticne-do-politike-do-izraela-5f1368df"
         },
         "hellovein.com": {
@@ -203,7 +203,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-26T14:24:03+02:00",
+      "last_learning_run": "2026-09-26T14:38:10+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -237,96 +237,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 34320,
-          "last_seen": "2026-09-26T14:24:03+02:00",
-          "last_title": "Društvo Izgubljeni otroci Slovenije odprlo nove prostore - Novice - Aktualno - novomesto.si",
+          "seen": 34350,
+          "last_seen": "2026-09-26T14:38:10+02:00",
+          "last_title": "Društvo Izgubljeni otroci Slovenije odprlo nove prostore - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 48983,
+          "published": 49034,
           "last_output_id": "jansa-v-new-yorku-jasno-o-ukrajini-slovenija-bo-nadaljevala-politicno-vojasko-humanitarno--03200e1d"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 1136,
+          "published": 1137,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 1136,
+          "published": 1137,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 1159,
+          "published": 1160,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 1061,
+          "published": 1062,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 1125,
+          "published": 1126,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 1061,
+          "published": 1062,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 1061,
+          "published": 1062,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 1125,
+          "published": 1126,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 4636,
+          "published": 4640,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 1159,
+          "published": 1160,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 1136,
+          "published": 1137,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 2186,
+          "published": 2188,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 1093,
+          "published": 1094,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 2250,
+          "published": 2252,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 1159,
+          "published": 1160,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 1061,
+          "published": 1062,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 2186,
+          "published": 2188,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
@@ -348,7 +348,7 @@
       "example_titles": {
         "news.google.com": [
           "(AKTUALNO) V novi številki revije Demokracija preberite: Izključujejo in zavirajo razvoj! Janša: Osamosvojitvena Slovenija ne bo nikoli več ",
-          "Evropska komisija: Slovenija krši pravice avtorjem - info360.si",
+          "Evropska komisija: Slovenija krši pravice avtorjem - Info360",
           "Sramota! V oddaji Marcel na TV Slovenija, ne spoštujejo etičnega in poklicnega kodeksa - e-Maribor"
         ]
       }
