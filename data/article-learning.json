@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-26T14:54:12+02:00",
-  "loop_count": 1163,
+  "updated_at": "2026-09-26T15:01:27+02:00",
+  "loop_count": 1164,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-26T14:53:47+02:00",
+      "last_learning_run": "2026-09-26T15:01:01+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -50,11 +50,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 34440,
-          "last_seen": "2026-09-26T14:53:47+02:00",
-          "last_title": "Slovenija za bron proti ekipi, ki nas ni premagala že več kot desetletje - Večer",
+          "seen": 34470,
+          "last_seen": "2026-09-26T15:01:01+02:00",
+          "last_title": "Liga narodov Sloveniji odpira vrata Eura 2028 - sportklub.si",
           "last_provider": "",
-          "published": 31263,
+          "published": 31304,
           "last_output_id": "odbojka-m-slovenija-poljska-evropsko-prvenstvo-2026-polfinale-a0b3dbff"
         },
         "aarp.org": {
@@ -131,14 +131,14 @@
       "current_source_count": 30,
       "example_titles": {
         "news.google.com": [
-          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
-          "Kot v sanjah: Slovenija že drugič v dveh tednih evropski prvak! (VIDEO) - Šport TV",
+          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - sport-tv.si",
+          "Kot v sanjah: Slovenija že drugič v dveh tednih evropski prvak! (VIDEO) - sport-tv.si",
           "Poljaki gladko boljši, Slovenci po porazu 0:3 v boj za bron proti Japoncem - rtvslo.si"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-26T14:53:59+02:00",
+      "last_learning_run": "2026-09-26T15:01:11+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -163,12 +163,12 @@
       ],
       "source_health": {
         "news.google.com": {
-          "score": 2.502,
-          "seen": 34440,
-          "last_seen": "2026-09-26T14:53:59+02:00",
-          "last_title": "Okoljski ekonomist Sonnenschein: Politika ministra za energetiko ni v interesu javnosti - Dnevnik",
+          "score": 2.498,
+          "seen": 34470,
+          "last_seen": "2026-09-26T15:01:11+02:00",
+          "last_title": "Kajzer in Janša diplomate nagovorila za zaprtimi vrati - 24ur.com",
           "last_provider": "",
-          "published": 33375,
+          "published": 33420,
           "last_output_id": "jansev-govor-v-zn-razburil-opozicijo-svoboda-sd-in-levica-kriticne-do-politike-do-izraela-5f1368df"
         },
         "hellovein.com": {
@@ -197,13 +197,13 @@
       "example_titles": {
         "news.google.com": [
           "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
-          "Obrat slovenske zunanje politike: se od Evrope obračamo k Ameriki? - 24ur.com",
-          "Vabila so, odgovorov pa ne: spor zaradi nastopov politikov na RTV Slovenija - Dnevnik"
+          "Na Radiu Ognjišče zadnje predvolilno soočenje: v ospredju prisluhi, zdravstvo, zunanja politika in sprava - Radio Ognjišče",
+          "Obrat slovenske zunanje politike: se od Evrope obračamo k Ameriki? - 24ur.com"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-26T14:54:12+02:00",
+      "last_learning_run": "2026-09-26T15:01:27+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -237,96 +237,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 34440,
-          "last_seen": "2026-09-26T14:54:12+02:00",
+          "seen": 34470,
+          "last_seen": "2026-09-26T15:01:27+02:00",
           "last_title": "Društvo Izgubljeni otroci Slovenije odprlo nove prostore - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 49187,
+          "published": 49238,
           "last_output_id": "jansa-v-new-yorku-jasno-o-ukrajini-slovenija-bo-nadaljevala-politicno-vojasko-humanitarno--03200e1d"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 1140,
+          "published": 1141,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 1140,
+          "published": 1141,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 1163,
+          "published": 1164,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 1065,
+          "published": 1066,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 1129,
+          "published": 1130,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 1065,
+          "published": 1066,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 1065,
+          "published": 1066,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 1129,
+          "published": 1130,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 4652,
+          "published": 4656,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 1163,
+          "published": 1164,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 1140,
+          "published": 1141,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 2194,
+          "published": 2196,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 1097,
+          "published": 1098,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 2258,
+          "published": 2260,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 1163,
+          "published": 1164,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 1065,
+          "published": 1066,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 2194,
+          "published": 2196,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
