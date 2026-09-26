@@ -20,6 +20,44 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "jansev-govor-v-zn-razburil-opozicijo-svoboda-sd-in-levica-kriticne-do-politike-do-izraela-5f1368df",
+    "title": "JANŠEV GOVOR V ZN RAZBURIL OPOZICIJO: Svoboda, SD in Levica kritične do politike do Izraela",
+    "excerpt": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »JANŠEV GOVOR V ZN RAZBURIL OPOZICIJO: Svoboda, SD in Levica kritične do politike do Izraela«.",
+    "seoDescription": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »JANŠEV GOVOR V ZN RAZBURIL OPOZICIJO: Svoboda, SD in Levica kritične do polit",
+    "content": "**Politika, 26. 9. 2026.** JANŠEV GOVOR V ZN RAZBURIL OPOZICIJO: Svoboda, SD in Levica kritične do politike do Izraela regionalobala.si\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nPri političnih temah Blog Lab ne podpira kandidatov, strank ali političnih odločitev; izjave in ocene so predstavljene kot stališča njihovih avtorjev ali virov, ne kot uredniška presoja.\n\nVir: regionalobala.si. Objavljeno: Fri, 25 Sep 2026 14:22:02 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMivgFBVV95cUxNamdBaVhrdVdwWXlCdGw5NE9EbUJ1VDE0SkVjUUpXSE4xZV9CdGFZTzR6U3hNUFZCcmlWMzdncmtoVGJrdTZyRXFHMFRxd2k1YUdndG1zbzlXWmxMNG9IdEhCV2FDSlZjdmRKSk9uSk8tc19qcWdOWTc5cFBjcXJ5WVRpVnc0RFdiRmxESkZJbzVNRXNtYmNlRHVueE5MSXZ3WmNmMjJOTEtWQ25pZDhPZGFibWhXNFhPYnpBdjF3?oc=5)\n\n## Dopolnitev vira 2: Dnevnik\n\nVabila so, odgovorov pa ne: spor zaradi nastopov politikov na RTV Slovenija Dnevnik\n\n Vir: Dnevnik. Objavljeno: Sat, 26 Sep 2026 09:36:26 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMibkFVX3lxTE1vdlhwZVdCaUVCX2hhbGEwcHVpSjNQMWJTcF9Ra3R3ME1ud2pGUTJocHNLaWVIU3NScFZCb2FFRU1ydTR0OTBFdFNTLWhfX3hLSFZzVGpEY0JtOHdXcXM1RE5zOURVWm9wa01iT1V3?oc=5)\n\n## Dopolnitev vira 3: had blog\n\nV čigavem imenu Slovenija postaja prijateljica Izraela? V mojem ne! had blog\n\n Vir: had blog. Objavljeno: Sat, 26 Sep 2026 03:21:35 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiowFBVV95cUxQZFNlRnRVOUxrTjl2UWlrT2s2SjZGaEVINFpzLTY0UktxWjZ2TmpuYXJCTGY1Qkt1OGJQeGxOR0RHQzFpR2hoX1ZWY3h1dWZfREtMX0phMzhOUGp2S3d2ZkZBY1VBYUhBZWJjdmh0OVptNGtsZ2JJNVc1dTlKX2tVN0RPZTRJNm85UW80TG14UkN1ZC1hRHExbV9ZQ1pVbnJDZWNN?oc=5)\n\n## Dopolnitev vira 4: 24ur.com\n\nObrat slovenske zunanje politike: se od Evrope obračamo k Ameriki? 24ur.com\n\n Vir: 24ur.com. Objavljeno: Sat, 26 Sep 2026 05:03:40 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiqwFBVV95cUxOV1lSZjdOcXFxUDAyMXA4Q1A0VHhlQi0xXzFOZlE1MHFQUXRhb0ZKbFFabTMyQWFEWVMxU1pPUEN3NjNWb3NPTGlrbjNQNFVRZTdTQzIwbFlnQ1dfdlQxdDBQQUlMUkRpVHlZeGJYUkY0OHd4RjByTk05ODRsSjNIT3pMUk5KWkk5M2RTczNWQlpKdjdtdHFjTlBQZkoxVnFoQ3c4QzRvV3J3Qm8?oc=5)\n\n## Dopolnitev vira 5: Žurnal24\n\nVelike spremembe: Naši politiki sprejeli vrsto novih zakonov Žurnal24\n\n Vir: Žurnal24. Objavljeno: Thu, 24 Sep 2026 19:25:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMihgFBVV95cUxPUzNlUjB5TlBkcjExR0pvNlNDSnN2MDlRNG16VHdrTEdtQU9kZHlFdzNHall5WEE0T3ZPSUFrUll5N2pIWkhqZWFKTVNveU9HSEg1OG1Bak1ycVN2YlRxNGtwUXlELU51MlBJYVdtWUJFR2pjM3U1VzdOaV9naDJyWkd2WDlSZ9IBiwFBVV95cUxQVk04UmQ3cGpwdVBqbnJDa2xQaFdtaHZvNjA0NUQwTjIyVWc0VGl6UjgxNVpiNTM4cERpdGh0VXRpOFltWHFqRGhQenJyS3VhQXVkeXhZNmJjcG5GWVFiVWNrdm42T2NBTy1YZjdjd3JkLW5lMkhYay1Od2VVYTVsU01PSTB4UlNlV2sw?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Politika",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "regionalobala.si — JANŠEV GOVOR V ZN RAZBURIL OPOZICIJO: Svoboda, SD in Levica kritične do politike do Izraela - regionalobala.si",
+        "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNamdBaVhrdVdwWXlCdGw5NE9EbUJ1VDE0SkVjUUpXSE4xZV9CdGFZTzR6U3hNUFZCcmlWMzdncmtoVGJrdTZyRXFHMFRxd2k1YUdndG1zbzlXWmxMNG9IdEhCV2FDSlZjdmRKSk9uSk8tc19qcWdOWTc5cFBjcXJ5WVRpVnc0RFdiRmxESkZJbzVNRXNtYmNlRHVueE5MSXZ3WmNmMjJOTEtWQ25pZDhPZGFibWhXNFhPYnpBdjF3?oc=5"
+      },
+      {
+        "label": "Dnevnik — Vabila so, odgovorov pa ne: spor zaradi nastopov politikov na RTV Slovenija - Dnevnik",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1vdlhwZVdCaUVCX2hhbGEwcHVpSjNQMWJTcF9Ra3R3ME1ud2pGUTJocHNLaWVIU3NScFZCb2FFRU1ydTR0OTBFdFNTLWhfX3hLSFZzVGpEY0JtOHdXcXM1RE5zOURVWm9wa01iT1V3?oc=5"
+      },
+      {
+        "label": "had blog — V čigavem imenu Slovenija postaja prijateljica Izraela? V mojem ne! - had blog",
+        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQZFNlRnRVOUxrTjl2UWlrT2s2SjZGaEVINFpzLTY0UktxWjZ2TmpuYXJCTGY1Qkt1OGJQeGxOR0RHQzFpR2hoX1ZWY3h1dWZfREtMX0phMzhOUGp2S3d2ZkZBY1VBYUhBZWJjdmh0OVptNGtsZ2JJNVc1dTlKX2tVN0RPZTRJNm85UW80TG14UkN1ZC1hRHExbV9ZQ1pVbnJDZWNN?oc=5"
+      },
+      {
+        "label": "24ur.com — Obrat slovenske zunanje politike: se od Evrope obračamo k Ameriki? - 24ur.com",
+        "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOV1lSZjdOcXFxUDAyMXA4Q1A0VHhlQi0xXzFOZlE1MHFQUXRhb0ZKbFFabTMyQWFEWVMxU1pPUEN3NjNWb3NPTGlrbjNQNFVRZTdTQzIwbFlnQ1dfdlQxdDBQQUlMUkRpVHlZeGJYUkY0OHd4RjByTk05ODRsSjNIT3pMUk5KWkk5M2RTczNWQlpKdjdtdHFjTlBQZkoxVnFoQ3c4QzRvV3J3Qm8?oc=5"
+      },
+      {
+        "label": "Žurnal24 — Velike spremembe: Naši politiki sprejeli vrsto novih zakonov - Žurnal24",
+        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPUzNlUjB5TlBkcjExR0pvNlNDSnN2MDlRNG16VHdrTEdtQU9kZHlFdzNHall5WEE0T3ZPSUFrUll5N2pIWkhqZWFKTVNveU9HSEg1OG1Bak1ycVN2YlRxNGtwUXlELU51MlBJYVdtWUJFR2pjM3U1VzdOaV9naDJyWkd2WDlSZ9IBiwFBVV95cUxQVk04UmQ3cGpwdVBqbnJDa2xQaFdtaHZvNjA0NUQwTjIyVWc0VGl6UjgxNVpiNTM4cERpdGh0VXRpOFltWHFqRGhQenJyS3VhQXVkeXhZNmJjcG5GWVFiVWNrdm42T2NBTy1YZjdjd3JkLW5lMkhYay1Od2VVYTVsU01PSTB4UlNlV2sw?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-26T13:39:36+02:00",
+    "updatedAt": "2026-09-26T13:39:36+02:00"
+  },
+
+  {
     "id": "odbojka-m-slovenija-poljska-evropsko-prvenstvo-2026-polfinale-a0b3dbff",
     "title": "Odbojka (M): Slovenija - Poljska, Evropsko prvenstvo 2026, Polfinale",
     "excerpt": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Odbojka (M): Slovenija - Poljska, Evropsko prvenstvo 2026, Polfinale«.",
