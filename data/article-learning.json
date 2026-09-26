@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-26T08:09:24+02:00",
-  "loop_count": 1102,
+  "updated_at": "2026-09-26T08:25:39+02:00",
+  "loop_count": 1103,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-26T08:09:04+02:00",
+      "last_learning_run": "2026-09-26T08:25:18+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -49,12 +49,12 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 32640,
-          "last_seen": "2026-09-26T08:09:04+02:00",
-          "last_title": "Slovenija v polfinalu klonila proti Poljski, jutri tekma za tretje mesto - Koroške Novice",
+          "seen": 32670,
+          "last_seen": "2026-09-26T08:25:18+02:00",
+          "last_title": "Italijan od nedeljskega kosila pri stricu do selektorske klopi Slovenije - Dnevnik",
           "last_provider": "",
-          "published": 28762,
-          "last_output_id": "slovenci-imajo-z-ep-jev-lepe-spomine-na-poljake-razen-z-zadnjega-49e1ad92"
+          "published": 28803,
+          "last_output_id": "odbojka-m-slovenija-poljska-evropsko-prvenstvo-2026-polfinale-a0b3dbff"
         },
         "aarp.org": {
           "score": 1.635,
@@ -123,14 +123,14 @@
       "current_source_count": 30,
       "example_titles": {
         "news.google.com": [
-          "Izjemno kakovostni Poljaki Slovence poslali v boj za bron s Finci - rtvslo.si",
+          "Za bron proti Finski, ki v marsičem spominja na Slovenijo - rtvslo.si",
           "Slovenija po preobrat v tretjem nizu (14:17*) - 24ur.com",
           "Slovenija bo bron lovila proti Finski, Francija po štirih nizih v finale - Delo.si"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-26T08:09:14+02:00",
+      "last_learning_run": "2026-09-26T08:25:29+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -156,11 +156,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 32640,
-          "last_seen": "2026-09-26T08:09:14+02:00",
-          "last_title": "Netanjahu po srečanju z Janšo: Slovenija in Izrael odpirata novo poglavje sodelovanja ~ - Portal24",
+          "seen": 32670,
+          "last_seen": "2026-09-26T08:25:29+02:00",
+          "last_title": "Da ne bo pozabljeno in nikoli več ponovljeno - Nova24TV",
           "last_provider": "",
-          "published": 30865,
+          "published": 30905,
           "last_output_id": "kajzer-zavrnil-ocitke-da-ne-vodi-suverene-zunanje-politike-cbe54319"
         },
         "hellovein.com": {
@@ -190,12 +190,12 @@
         "news.google.com": [
           "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
           "Obrat slovenske zunanje politike: se od Evrope obračamo k Ameriki? - 24ur.com",
-          "V čigavem imenu Slovenija postaja prijateljica Izraela? V mojem ne! - had blog"
+          "V čigavem imenu Slovenija postaja prijateljica Izraela? V mojem ne! - had.si"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-26T08:09:24+02:00",
+      "last_learning_run": "2026-09-26T08:25:39+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -229,96 +229,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 32640,
-          "last_seen": "2026-09-26T08:09:24+02:00",
-          "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
+          "seen": 32670,
+          "last_seen": "2026-09-26T08:25:39+02:00",
+          "last_title": "Slovenija med državami, ki bi prepovedale družbena omrežja mlajšim od 16 let - Info360",
           "last_provider": "",
-          "published": 46076,
+          "published": 46127,
           "last_output_id": "jansa-v-new-yorku-jasno-o-ukrajini-slovenija-bo-nadaljevala-politicno-vojasko-humanitarno--03200e1d"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 1079,
+          "published": 1080,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 1079,
+          "published": 1080,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 1102,
+          "published": 1103,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 1004,
+          "published": 1005,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 1068,
+          "published": 1069,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 1004,
+          "published": 1005,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 1004,
+          "published": 1005,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 1068,
+          "published": 1069,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 4408,
+          "published": 4412,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 1102,
+          "published": 1103,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 1079,
+          "published": 1080,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 2072,
+          "published": 2074,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 1036,
+          "published": 1037,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 2136,
+          "published": 2138,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 1102,
+          "published": 1103,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 1004,
+          "published": 1005,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 2072,
+          "published": 2074,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
@@ -347,6 +347,12 @@
     }
   },
   "recent_articles": [
+    {
+      "id": "odbojka-m-slovenija-poljska-evropsko-prvenstvo-2026-polfinale-a0b3dbff",
+      "title": "Odbojka (M): Slovenija - Poljska, Evropsko prvenstvo 2026, Polfinale",
+      "category": "Šport",
+      "createdAt": "2026-09-26T08:24:38+02:00"
+    },
     {
       "id": "jansa-v-new-yorku-jasno-o-ukrajini-slovenija-bo-nadaljevala-politicno-vojasko-humanitarno--03200e1d",
       "title": "Janša v New Yorku jasno o Ukrajini: Slovenija bo nadaljevala politično, vojaško, humanitarno in finančno pomoč -…",
@@ -412,12 +418,6 @@
       "title": "Running in Ljubljana: A Tivoli and Rožnik Guide for Visitors",
       "category": "Šport",
       "createdAt": "2026-09-23T09:02:29+02:00"
-    },
-    {
-      "id": "poslanica-predsednice-republike-ob-dnevu-slovenskega-sporta-1a0240e7",
-      "title": "Poslanica predsednice republike ob dnevu slovenskega športa",
-      "category": "Šport",
-      "createdAt": "2026-09-23T08:24:32+02:00"
     }
   ],
   "recent_failures": [
