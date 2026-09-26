@@ -1,5 +1,5 @@
 // Review draft only. Not imported by the production application.
-// Rolling review draft. Sources rechecked on 2026-09-25 at 07:00 Europe/Ljubljana.
+// Rolling review draft. Sources rechecked on 2026-09-26 at 07:00 Europe/Ljubljana.
 // Production remains unchanged until the calendar model and stable views are implemented.
 // Unknown values deliberately remain null.
 export const draftEvents = [
@@ -32,7 +32,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
     "eventId": "national-gallery-tone-kralj-2026",
@@ -63,7 +63,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
     "eventId": "national-gallery-fragments-past-2026",
@@ -94,7 +94,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
     "eventId": "hana-karim-fragments-memories-2026",
@@ -125,7 +125,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
     "eventId": "castle-reading-corner-2026",
@@ -156,7 +156,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
     "eventId": "gallery-at-your-fingertips-2026",
@@ -187,7 +187,7 @@ export const draftEvents = [
     "accessibility": "Tactile exhibition; confirm individual access needs with the gallery",
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
     "eventId": "unicum-2026-ljubljana",
@@ -218,7 +218,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
     "eventId": "corn-labyrinth-ljubljana-2026",
@@ -249,7 +249,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
     "eventId": "revelations-national-gallery-2026",
@@ -280,7 +280,7 @@ export const draftEvents = [
     "accessibility": "The gallery publishes a dedicated accessibility section; confirm individual requirements directly",
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
     "eventId": "kozmos-kosovel-cankarjev-dom-2026",
@@ -311,7 +311,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
     "eventId": "opera-orchestra-academy-soloists-2026-09-17",
@@ -716,7 +716,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "unconfirmed",
-    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
     "eventId": "salome-mgl-2026-09-23-1530",
@@ -840,7 +840,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
     "eventId": "air-raid-cankarjev-dom-2026-09-24",
@@ -963,7 +963,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "confirmed",
+    "status": "expired",
     "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
@@ -994,7 +994,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "confirmed",
+    "status": "expired",
     "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
@@ -1056,7 +1056,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "confirmed",
+    "status": "expired",
     "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
@@ -1088,12 +1088,12 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
     "eventId": "castle-vineyard-picnic-2026-09-26",
     "title": "Picnic among the Castle Grapevines",
-    "summary": "This guided special experience takes place by Ljubljana Castle's vineyard. The official listing confirms the two-hour slot; price, language and accessibility details should be confirmed on the booking page before publication.",
+    "summary": "A two-hour guided walk from the Castle entrance to the vineyard ends with a picnic basket for two. The official page confirms Slovenian and English, a maximum of 16 participants and a €115 ticket for two; advance purchase closes 48 hours before the selected date.",
     "category": "food",
     "startAt": "2026-09-26T15:00:00+02:00",
     "endAt": "2026-09-26T17:00:00+02:00",
@@ -1105,26 +1105,29 @@ export const draftEvents = [
       "region": "Central Slovenia"
     },
     "price": {
-      "amount": null,
+      "amount": 115,
       "currency": "EUR",
-      "label": null,
-      "free": null
+      "label": "€115 for two people",
+      "free": false
     },
-    "ticketUrl": null,
-    "officialUrl": "https://www.ljubljanskigrad.si/en/castle-events/",
+    "ticketUrl": "https://ljubljanskigrad.si/en/castle-events/picnic-among-the-castle-grapevines-5/",
+    "officialUrl": "https://ljubljanskigrad.si/en/castle-events/picnic-among-the-castle-grapevines-5/",
     "sourceName": "Ljubljana Castle",
-    "languages": [],
+    "languages": [
+      "Slovenian",
+      "English"
+    ],
     "touristFriendly": true,
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
     "eventId": "u-bu-cankarjev-dom-2026-09-26-1600",
     "title": "Festival Lutke: M. Solce and A. Jarry: U!-BU?",
-    "summary": "The Lutke Festival performance begins at Cankarjev dom on Saturday 26 September at 16:00. The programme category is theatre and dance; confirm the intended age group, language, price and accessibility directly.",
+    "summary": "This 50-minute puppet-and-live-action Dada cabaret is for audiences aged 15 and over. It is performed in Slovenian without translation; regular tickets are €10 and the official sales page currently offers booking.",
     "category": "theatre",
     "startAt": "2026-09-26T16:00:00+02:00",
     "endAt": null,
@@ -1136,26 +1139,28 @@ export const draftEvents = [
       "region": "Central Slovenia"
     },
     "price": {
-      "amount": null,
+      "amount": 10,
       "currency": "EUR",
-      "label": null,
-      "free": null
+      "label": "€10 regular sale",
+      "free": false
     },
-    "ticketUrl": "https://www.cd-cc.si/en",
-    "officialUrl": "https://www.cd-cc.si/en",
+    "ticketUrl": "https://vstopnice.cd-cc.si/en/tickets.html",
+    "officialUrl": "https://cd-cc.si/en/culture/theatre-and-dance/festival-lutke-m-solce-in-jarry-u-bu",
     "sourceName": "Cankarjev dom",
-    "languages": [],
-    "touristFriendly": null,
-    "familyFriendly": true,
+    "languages": [
+      "Slovenian (no translation)"
+    ],
+    "touristFriendly": false,
+    "familyFriendly": false,
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
     "eventId": "u-bu-cankarjev-dom-2026-09-26-2000",
     "title": "Festival Lutke: M. Solce and A. Jarry: U!-BU?",
-    "summary": "A second performance is listed at Cankarjev dom on Saturday 26 September at 20:00. Confirm the intended age group, language, price and accessibility on the official programme before booking.",
+    "summary": "This 50-minute puppet-and-live-action Dada cabaret is for audiences aged 15 and over. It is performed in Slovenian without translation; regular tickets are €10 and the official sales page currently offers booking.",
     "category": "theatre",
     "startAt": "2026-09-26T20:00:00+02:00",
     "endAt": null,
@@ -1167,21 +1172,23 @@ export const draftEvents = [
       "region": "Central Slovenia"
     },
     "price": {
-      "amount": null,
+      "amount": 10,
       "currency": "EUR",
-      "label": null,
-      "free": null
+      "label": "€10 regular sale",
+      "free": false
     },
-    "ticketUrl": "https://www.cd-cc.si/en",
-    "officialUrl": "https://www.cd-cc.si/en",
+    "ticketUrl": "https://vstopnice.cd-cc.si/en/tickets.html",
+    "officialUrl": "https://cd-cc.si/en/culture/theatre-and-dance/festival-lutke-m-solce-in-jarry-u-bu",
     "sourceName": "Cankarjev dom",
-    "languages": [],
-    "touristFriendly": null,
-    "familyFriendly": true,
+    "languages": [
+      "Slovenian (no translation)"
+    ],
+    "touristFriendly": false,
+    "familyFriendly": false,
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
     "eventId": "sunday-flea-market-2026-09-27",
@@ -1212,7 +1219,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
     "eventId": "wind-orchestra-promenade-2026-09-27",
@@ -1243,7 +1250,69 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
+  },
+  {
+    "eventId": "festival-lutke-the-nest-2026-09-27-1600",
+    "title": "Festival Lutke: Gnezdo / The Nest",
+    "summary": "Cankarjev dom lists The Nest in Duša Počkaj Hall at 16:00 on Sunday 27 September, with tickets currently offered. Price, performance language, age guidance and accessibility should be confirmed in the live sales flow.",
+    "category": "theatre",
+    "startAt": "2026-09-27T16:00:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Duša Počkaj Hall, Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": false
+    },
+    "ticketUrl": "https://vstopnice.cd-cc.si/en/tickets.html",
+    "officialUrl": "https://vstopnice.cd-cc.si/en/tickets.html",
+    "sourceName": "Cankarjev dom",
+    "languages": [],
+    "touristFriendly": null,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
+  },
+  {
+    "eventId": "festival-lutke-the-nest-2026-09-27-1800",
+    "title": "Festival Lutke: Gnezdo / The Nest",
+    "summary": "The second Sunday performance of The Nest begins in Duša Počkaj Hall at 18:00. Tickets are currently offered; language, age guidance, price and accessibility remain unconfirmed.",
+    "category": "theatre",
+    "startAt": "2026-09-27T18:00:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Duša Počkaj Hall, Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": false
+    },
+    "ticketUrl": "https://vstopnice.cd-cc.si/en/tickets.html",
+    "officialUrl": "https://vstopnice.cd-cc.si/en/tickets.html",
+    "sourceName": "Cankarjev dom",
+    "languages": [],
+    "touristFriendly": null,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
     "eventId": "barcelona-guitar-trio-dance-2026-09-27",
@@ -1274,7 +1343,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
     "eventId": "festival-third-age-cd-2026-09-29",
@@ -1305,7 +1374,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
     "eventId": "salome-mgl-2026-09-29-1930",
@@ -1336,7 +1405,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "sold_out",
-    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
     "eventId": "festival-third-age-cd-2026-09-30",
@@ -1367,7 +1436,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
     "eventId": "beauty-queen-leenane-mgl-2026-09-30",
@@ -1398,7 +1467,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
     "eventId": "ex-mgl-2026-09-30",
@@ -1429,7 +1498,69 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "sold_out",
-    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
+  },
+  {
+    "eventId": "open-kitchen-2026-10-02",
+    "title": "Open Kitchen",
+    "summary": "Ljubljana's outdoor Friday food market is scheduled at Pogačarjev trg from 10:00 to 21:00. Entry to the market is free, food is purchased from individual vendors, and the event is weather-dependent.",
+    "category": "food",
+    "startAt": "2026-10-02T10:00:00+02:00",
+    "endAt": "2026-10-02T21:00:00+02:00",
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Pogačarjev trg",
+      "address": "Pogačarjev trg, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": 0,
+      "currency": "EUR",
+      "label": "Free entry; food purchased separately",
+      "free": true
+    },
+    "ticketUrl": null,
+    "officialUrl": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/open-kitchen",
+    "sourceName": "Ljubljana Tourism",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": true,
+    "accessibility": null,
+    "indoorOutdoor": "outdoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
+  },
+  {
+    "eventId": "uec-road-european-championships-2026",
+    "title": "UEC Road European Championships 2026",
+    "summary": "More than 800 riders from over 50 countries are due to compete in 14 races across Ljubljana and Central Slovenia from 2 to 7 October. Spectating is free; Ljubljana road races start at Congress Square at 13:30 on 2 and 3 October and 12:30 on 4 October.",
+    "category": "sport",
+    "startAt": "2026-10-02T13:30:00+02:00",
+    "endAt": "2026-10-07T23:59:00+02:00",
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Ljubljana and Central Slovenia",
+      "address": "Congress Square start for Ljubljana road races",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": 0,
+      "currency": "EUR",
+      "label": "Free spectating along the routes",
+      "free": true
+    },
+    "ticketUrl": null,
+    "officialUrl": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/uec-road-european-championships",
+    "sourceName": "Ljubljana Tourism",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": true,
+    "accessibility": "Outdoor roadside viewing; individual accessible viewing arrangements not stated",
+    "indoorOutdoor": "outdoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
     "eventId": "ex-mgl-2026-10-02",
@@ -1460,7 +1591,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
     "eventId": "sheby-umami-castle-2026-10-02",
@@ -1491,7 +1622,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
     "eventId": "salome-mgl-2026-10-03",
@@ -1522,7 +1653,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
     "eventId": "man-overboard-mgl-2026-10-03",
@@ -1553,7 +1684,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "sold_out",
-    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
     "eventId": "salome-mgl-2026-10-06",
@@ -1584,7 +1715,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
     "eventId": "salome-mgl-2026-10-07",
@@ -1615,7 +1746,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
     "eventId": "man-overboard-mgl-2026-10-07",
@@ -1646,7 +1777,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "sold_out",
-    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
     "eventId": "sunnysiders-stone-head-castle-2026-10-09",
@@ -1677,6 +1808,6 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-25T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   }
 ];
