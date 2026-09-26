@@ -20,6 +20,44 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "odbojka-m-slovenija-poljska-evropsko-prvenstvo-2026-polfinale-a0b3dbff",
+    "title": "Odbojka (M): Slovenija - Poljska, Evropsko prvenstvo 2026, Polfinale",
+    "excerpt": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Odbojka (M): Slovenija - Poljska, Evropsko prvenstvo 2026, Polfinale«.",
+    "seoDescription": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Odbojka (M): Slovenija - Poljska, Evropsko prvenstvo 2026, Polfinale«.",
+    "content": "**Šport, 26. 9. 2026.** Odbojka (M): Slovenija - Poljska, Evropsko prvenstvo 2026, Polfinale Siol.net\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Siol.net. Objavljeno: Fri, 25 Sep 2026 08:45:57 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMi0AFBVV95cUxNaW1GTWhKUTUxcktqdEhwTnMxbEZ3MGR4LThUUW54Yy1KbnBMMHkwZ2NXQ1Nma2lBcGhqZ05TVUVlcTNjb3FZdFdJTDJVMnBKUlBFZ3ZEUEVSbkNjRWF3V0ppcEstU2dEcnJrR05oamhYXy1wUmJ4RG5NTllfMFB3MW5jdmdxWVQwWm5IekNFRmhOSzRRQkk2amRkODJUUXVFMU1wZS0tb2xaWWpzVXZobGk3cTJ5dmVoTDNLSnE4U1ZJUVFLVE0wQXROT3QwTlpf?oc=5)\n\n## Dopolnitev vira 2: OBALAplus\n\nSlovenski odbojkarji ostali brez finala, zdaj jih čaka boj za bron OBALAplus\n\n Vir: OBALAplus. Objavljeno: Sat, 26 Sep 2026 05:36:09 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMibkFVX3lxTE1tckRwQ21iY2dMbHhWam5UdVN0XzF3OGR1aldaUHo2YkNoY3J6T2daOEZBVGgwZ3RKUGtwWTF6aE5LREZRZ0VzTXZlWERTblpKb1hqTEl0UUFsMFJZSVh2djFIZXM4SGZaUlA1Y3ZB?oc=5)\n\n## Dopolnitev vira 3: 24ur.com\n\nSlovenija prek Belgije v polfinale, kjer jih čakajo Poljaki 24ur.com\n\n Vir: 24ur.com. Objavljeno: Wed, 23 Sep 2026 13:09:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMirAFBVV95cUxNaXpfZ2FyenVFWEpXRU9OaTF6TjhDc0lGUmNERnRvcEJSRC16dFQ4T2l5endNVjd1V1FIaV95S01kSHp2bS1MMENZZy1JY052T1JEWU82NE8yWGxPTGRIeUVPYU50ek8wYzV5Q3NRV0ZnZnctRG1iZnFHMWxhbEFxWkp3NUVFblpYNkFZVTNOSE42d0lzdTFnNWJXbTFzeV9ZaXdIVFloclhKbHVr?oc=5)\n\n## Dopolnitev vira 4: rtvslo.si\n\nPolfinale: Slovenija - Poljska 0:2 (13:13 v tretjem nizu) rtvslo.si\n\n Vir: rtvslo.si. Objavljeno: Fri, 25 Sep 2026 16:31:56 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiswFBVV95cUxONkc0NTBVV3ZSX1JaUkVYRFFvVWREWW5KbE5kRHJwRDNXV2VnRTFPZDE5aU1IYWpTeWZVX1h6alM3RGZ3NEN6VWxac3JueGxLR1N2VVhEXzZQQ05mTGY5dVNuMm1pcGJrNGZZUjRoenVPX3o1T25FcUVIeVRtNkNIVksxbjNpai1MVndsVElySGpDZVp2SmhRd0NLdjJ1UGtEaDAyQ1Z1cm1EYkxOSWVnVllFOA?oc=5)\n\n## Dopolnitev vira 5: rtvslo.si\n\nPolfinale: Slovenija - Poljska 0:2 (23:25 v drugem nizu) rtvslo.si\n\n Vir: rtvslo.si. Objavljeno: Fri, 25 Sep 2026 16:01:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMisgFBVV95cUxOckFfd1ZzaWsyTU5ybFBTbmNGOGFWNG5aZDBxc3FxXzA5bE5VQlJqYnhRdndGRFNNOEgydGd1T3RDZXpjQ1NlaVE3aVJGczMwNUxzclNFelFHWE02ZTdrNW5fMnJaWFV4RVJsRlJDRzJnQ0ZGWE1mNDJVMHM1MER2djV1ODZSME1WTjd5aEI3dUdySlhnRHhkYW1IYUQxVl9MMXZlaEJEbW9idkRiOFR4SDZB?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Šport",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Siol.net — Odbojka (M): Slovenija - Poljska, Evropsko prvenstvo 2026, Polfinale - Siol.net",
+        "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNaW1GTWhKUTUxcktqdEhwTnMxbEZ3MGR4LThUUW54Yy1KbnBMMHkwZ2NXQ1Nma2lBcGhqZ05TVUVlcTNjb3FZdFdJTDJVMnBKUlBFZ3ZEUEVSbkNjRWF3V0ppcEstU2dEcnJrR05oamhYXy1wUmJ4RG5NTllfMFB3MW5jdmdxWVQwWm5IekNFRmhOSzRRQkk2amRkODJUUXVFMU1wZS0tb2xaWWpzVXZobGk3cTJ5dmVoTDNLSnE4U1ZJUVFLVE0wQXROT3QwTlpf?oc=5"
+      },
+      {
+        "label": "OBALAplus — Slovenski odbojkarji ostali brez finala, zdaj jih čaka boj za bron - OBALAplus",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1tckRwQ21iY2dMbHhWam5UdVN0XzF3OGR1aldaUHo2YkNoY3J6T2daOEZBVGgwZ3RKUGtwWTF6aE5LREZRZ0VzTXZlWERTblpKb1hqTEl0UUFsMFJZSVh2djFIZXM4SGZaUlA1Y3ZB?oc=5"
+      },
+      {
+        "label": "24ur.com — Slovenija prek Belgije v polfinale, kjer jih čakajo Poljaki - 24ur.com",
+        "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNaXpfZ2FyenVFWEpXRU9OaTF6TjhDc0lGUmNERnRvcEJSRC16dFQ4T2l5endNVjd1V1FIaV95S01kSHp2bS1MMENZZy1JY052T1JEWU82NE8yWGxPTGRIeUVPYU50ek8wYzV5Q3NRV0ZnZnctRG1iZnFHMWxhbEFxWkp3NUVFblpYNkFZVTNOSE42d0lzdTFnNWJXbTFzeV9ZaXdIVFloclhKbHVr?oc=5"
+      },
+      {
+        "label": "rtvslo.si — Polfinale: Slovenija - Poljska 0:2 (13:13 v tretjem nizu) - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxONkc0NTBVV3ZSX1JaUkVYRFFvVWREWW5KbE5kRHJwRDNXV2VnRTFPZDE5aU1IYWpTeWZVX1h6alM3RGZ3NEN6VWxac3JueGxLR1N2VVhEXzZQQ05mTGY5dVNuMm1pcGJrNGZZUjRoenVPX3o1T25FcUVIeVRtNkNIVksxbjNpai1MVndsVElySGpDZVp2SmhRd0NLdjJ1UGtEaDAyQ1Z1cm1EYkxOSWVnVllFOA?oc=5"
+      },
+      {
+        "label": "rtvslo.si — Polfinale: Slovenija - Poljska 0:2 (23:25 v drugem nizu) - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOckFfd1ZzaWsyTU5ybFBTbmNGOGFWNG5aZDBxc3FxXzA5bE5VQlJqYnhRdndGRFNNOEgydGd1T3RDZXpjQ1NlaVE3aVJGczMwNUxzclNFelFHWE02ZTdrNW5fMnJaWFV4RVJsRlJDRzJnQ0ZGWE1mNDJVMHM1MER2djV1ODZSME1WTjd5aEI3dUdySlhnRHhkYW1IYUQxVl9MMXZlaEJEbW9idkRiOFR4SDZB?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-26T08:24:38+02:00",
+    "updatedAt": "2026-09-26T08:24:38+02:00"
+  },
+
+  {
     "id": "jansa-v-new-yorku-jasno-o-ukrajini-slovenija-bo-nadaljevala-politicno-vojasko-humanitarno--03200e1d",
     "title": "Janša v New Yorku jasno o Ukrajini: Slovenija bo nadaljevala politično, vojaško, humanitarno in finančno pomoč -…",
     "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Janša v New Yorku jasno o Ukrajini: Slovenija bo nadaljevala politično, vojaško, humanitarno in finančno pomoč -…«.",
