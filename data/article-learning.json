@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-26T19:38:50+02:00",
-  "loop_count": 1211,
+  "updated_at": "2026-09-26T19:56:25+02:00",
+  "loop_count": 1212,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-26T19:38:28+02:00",
+      "last_learning_run": "2026-09-26T19:55:12+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -39,12 +39,12 @@
         "aarp.org",
         "blackfriday.com",
         "pointclickcare.com",
+        "support.microsoft.com",
         "biologyinsights.com",
         "scied.ucar.edu",
         "sciencenewstoday.org",
         "solvecalc.net",
         "calculator.net",
-        "support.microsoft.com",
         "translate.google.com"
       ],
       "source_health": {
@@ -54,7 +54,7 @@
           "last_seen": "2026-09-26T19:38:28+02:00",
           "last_title": "Nika Prevc na tekmi medcelinskega pokala diskvalificirana - rtvslo.si",
           "last_provider": "",
-          "published": 33231,
+          "published": 33272,
           "last_output_id": "odbojka-m-slovenija-poljska-evropsko-prvenstvo-2026-polfinale-a0b3dbff"
         },
         "aarp.org": {
@@ -76,6 +76,13 @@
           "seen": 2,
           "last_seen": "2026-09-25T15:09:27+02:00",
           "last_title": "Healthcare Software for Smarter Care Delivery | PointClickCare",
+          "last_provider": "bing-web"
+        },
+        "support.microsoft.com": {
+          "score": 1.26,
+          "seen": 2,
+          "last_seen": "2026-09-26T19:55:12+02:00",
+          "last_title": "Contact Us - Microsoft Support",
           "last_provider": "bing-web"
         },
         "biologyinsights.com": {
@@ -113,13 +120,6 @@
           "last_title": "Math Calculators",
           "last_provider": "bing-web"
         },
-        "support.microsoft.com": {
-          "score": 0.63,
-          "seen": 1,
-          "last_seen": "2026-09-24T03:08:48+02:00",
-          "last_title": "Contact Us - Microsoft Support",
-          "last_provider": "bing-web"
-        },
         "translate.google.com": {
           "score": 0.63,
           "seen": 1,
@@ -128,17 +128,15 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 30,
+      "current_source_count": 1,
       "example_titles": {
-        "news.google.com": [
-          "*〜?[[Živý=šport!!]++] Škotska Slovenija prenos 26. september 2026 - czechinvest.gov.cz",
-          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
-          "Slovenija brez osvojenega niza izgubila v borbi za bron - rtvslo.si"
+        "support.microsoft.com": [
+          "Contact Us - Microsoft Support"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-26T19:38:40+02:00",
+      "last_learning_run": "2026-09-26T19:55:48+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -168,7 +166,7 @@
           "last_seen": "2026-09-26T19:38:40+02:00",
           "last_title": "Kajzer in Janša diplomate nagovorila za zaprtimi vrati - 24ur.com",
           "last_provider": "",
-          "published": 35535,
+          "published": 35580,
           "last_output_id": "jansev-govor-v-zn-razburil-opozicijo-svoboda-sd-in-levica-kriticne-do-politike-do-izraela-5f1368df"
         },
         "hellovein.com": {
@@ -193,17 +191,11 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 30,
-      "example_titles": {
-        "news.google.com": [
-          "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si",
-          "Na Radiu Ognjišče zadnje predvolilno soočenje: v ospredju prisluhi, zdravstvo, zunanja politika in sprava - Radio Ognjišče",
-          "Obrat slovenske zunanje politike: se od Evrope obračamo k Ameriki? - 24ur.com"
-        ]
-      }
+      "current_source_count": 0,
+      "example_titles": {}
     },
     "aktualno": {
-      "last_learning_run": "2026-09-26T19:38:50+02:00",
+      "last_learning_run": "2026-09-26T19:56:25+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -241,92 +233,92 @@
           "last_seen": "2026-09-26T19:38:50+02:00",
           "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 51635,
-          "last_output_id": "jansa-v-new-yorku-jasno-o-ukrajini-slovenija-bo-nadaljevala-politicno-vojasko-humanitarno--03200e1d"
+          "published": 51688,
+          "last_output_id": "aktualno-prodaja-avtomobilov-v-sloveniji-julija-je-bil-vsak-cetrti-novi-avtomobilov-v-slov-828a08f7"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 1188,
+          "published": 1189,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 1188,
+          "published": 1189,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 1211,
+          "published": 1212,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 1113,
+          "published": 1114,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 1177,
+          "published": 1178,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 1113,
+          "published": 1114,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 1113,
+          "published": 1114,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 1177,
+          "published": 1178,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 4844,
+          "published": 4848,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 1211,
+          "published": 1212,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 1188,
+          "published": 1189,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 2290,
+          "published": 2292,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 1145,
+          "published": 1146,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 2354,
+          "published": 2356,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 1211,
+          "published": 1212,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 1113,
+          "published": 1114,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 2290,
+          "published": 2292,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
@@ -344,17 +336,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 30,
-      "example_titles": {
-        "news.google.com": [
-          "(AKTUALNO) V novi številki revije Demokracija preberite: Izključujejo in zavirajo razvoj! Janša: Osamosvojitvena Slovenija ne bo nikoli več ",
-          "Evropska komisija: Slovenija krši pravice avtorjem - Info360",
-          "Sramota! V oddaji Marcel na TV Slovenija, ne spoštujejo etičnega in poklicnega kodeksa - e-Maribor"
-        ]
-      }
+      "current_source_count": 0,
+      "example_titles": {}
     }
   },
   "recent_articles": [
+    {
+      "id": "aktualno-prodaja-avtomobilov-v-sloveniji-julija-je-bil-vsak-cetrti-novi-avtomobilov-v-slov-828a08f7",
+      "title": "Aktualno: prodaja avtomobilov v Sloveniji: Julija je bil vsak četrti novi avtomobilov v Sloveniji električen…",
+      "category": "Aktualno",
+      "createdAt": "2026-09-26T19:53:53+02:00"
+    },
     {
       "id": "solkan-bridge-history-visitor-guide",
       "title": "Solkan Bridge: Engineering History and a Car-Light Visitor Guide",
@@ -420,12 +412,6 @@
       "title": "Slovenska odbojkarska reprezentanca je v polfinalu evropskega prvenstva! Zdaj jih čaka veliki obračun s Poljsko -…",
       "category": "Šport",
       "createdAt": "2026-09-24T08:24:19+02:00"
-    },
-    {
-      "id": "s-kaksnimi-argumenti-je-ustavno-sodisce-pozegnalo-cistko-na-rtv-slovenija-dc8b0170",
-      "title": "S kakšnimi argumenti je ustavno sodišče \\",
-      "category": "Aktualno",
-      "createdAt": "2026-09-23T19:54:38+02:00"
     }
   ],
   "recent_failures": [
