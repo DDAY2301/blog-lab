@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-26T08:53:47+02:00",
-  "loop_count": 1107,
+  "updated_at": "2026-09-26T08:54:36+02:00",
+  "loop_count": 1108,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-26T08:53:20+02:00",
+      "last_learning_run": "2026-09-26T08:54:14+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -49,11 +49,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 32790,
-          "last_seen": "2026-09-26T08:53:20+02:00",
-          "last_title": "Italijan od nedeljskega kosila pri stricu do selektorske klopi Slovenije - Dnevnik",
+          "seen": 32820,
+          "last_seen": "2026-09-26T08:54:14+02:00",
+          "last_title": "Konec slovenskih sanj o finalu, Poljska slavila s 3:0 - delo.si",
           "last_provider": "",
-          "published": 28967,
+          "published": 29008,
           "last_output_id": "odbojka-m-slovenija-poljska-evropsko-prvenstvo-2026-polfinale-a0b3dbff"
         },
         "aarp.org": {
@@ -125,12 +125,12 @@
         "news.google.com": [
           "Za bron proti Finski, ki v marsičem spominja na Slovenijo - rtvslo.si",
           "Slovenija po preobrat v tretjem nizu (14:17*) - 24ur.com",
-          "Slovenija bo bron lovila proti Finski, Francija po štirih nizih v finale - Delo.si"
+          "Slovenija bo bron lovila proti Finski, Francija po štirih nizih v finale - delo.si"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-26T08:53:30+02:00",
+      "last_learning_run": "2026-09-26T08:54:25+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -156,11 +156,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 32790,
-          "last_seen": "2026-09-26T08:53:30+02:00",
+          "seen": 32820,
+          "last_seen": "2026-09-26T08:54:25+02:00",
           "last_title": "Da ne bo pozabljeno in nikoli več ponovljeno - Nova24TV",
           "last_provider": "",
-          "published": 31065,
+          "published": 31105,
           "last_output_id": "kajzer-zavrnil-ocitke-da-ne-vodi-suverene-zunanje-politike-cbe54319"
         },
         "hellovein.com": {
@@ -188,14 +188,14 @@
       "current_source_count": 30,
       "example_titles": {
         "news.google.com": [
-          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - slovenskenovice.delo.si",
-          "Obrat slovenske zunanje politike: se od Evrope obračamo k Ameriki? - 24ur.com",
-          "V čigavem imenu Slovenija postaja prijateljica Izraela? V mojem ne! - had blog"
+          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
+          "Na Radiu Ognjišče zadnje predvolilno soočenje: v ospredju prisluhi, zdravstvo, zunanja politika in sprava - Radio Ognjišče",
+          "Obrat slovenske zunanje politike: se od Evrope obračamo k Ameriki? - 24ur.com"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-26T08:53:47+02:00",
+      "last_learning_run": "2026-09-26T08:54:36+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -229,96 +229,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 32790,
-          "last_seen": "2026-09-26T08:53:47+02:00",
-          "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
+          "seen": 32820,
+          "last_seen": "2026-09-26T08:54:36+02:00",
+          "last_title": "Društvo Izgubljeni otroci Slovenije odprlo nove prostore - Novice - Aktualno - novomesto.si",
           "last_provider": "",
-          "published": 46331,
+          "published": 46382,
           "last_output_id": "jansa-v-new-yorku-jasno-o-ukrajini-slovenija-bo-nadaljevala-politicno-vojasko-humanitarno--03200e1d"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 1084,
+          "published": 1085,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 1084,
+          "published": 1085,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 1107,
+          "published": 1108,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 1009,
+          "published": 1010,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 1073,
+          "published": 1074,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 1009,
+          "published": 1010,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 1009,
+          "published": 1010,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 1073,
+          "published": 1074,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 4428,
+          "published": 4432,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 1107,
+          "published": 1108,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 1084,
+          "published": 1085,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 2082,
+          "published": 2084,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 1041,
+          "published": 1042,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 2146,
+          "published": 2148,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 1107,
+          "published": 1108,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 1009,
+          "published": 1010,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 2082,
+          "published": 2084,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
