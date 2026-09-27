@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-27T08:39:55+02:00",
-  "loop_count": 1332,
+  "updated_at": "2026-09-27T08:54:06+02:00",
+  "loop_count": 1333,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-27T08:39:28+02:00",
+      "last_learning_run": "2026-09-27T08:53:36+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -51,11 +51,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 39420,
-          "last_seen": "2026-09-27T08:39:28+02:00",
-          "last_title": "Jan Oblak po remiju s Škotsko brez olepševanja: \"Od 50. minute smo dihali na škrge\" ~ - Portal24",
+          "seen": 39450,
+          "last_seen": "2026-09-27T08:53:36+02:00",
+          "last_title": "Poljaki končali slovenske sanje o zlati medalji - 24ur.com",
           "last_provider": "",
-          "published": 38212,
+          "published": 38258,
           "last_output_id": "slovenci-so-se-krcevito-branili-in-se-ubranili-s-skotsko-so-remizirali-70821aca"
         },
         "aarp.org": {
@@ -148,12 +148,12 @@
         "news.google.com": [
           "*〜?[[Živý=šport!!]++] Škotska Slovenija prenos 26. september 2026 - czechinvest.gov.cz",
           "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - sport-tv.si",
-          "Kot v sanjah: Slovenija že drugič v dveh tednih evropski prvak! (VIDEO) - sport-tv.si"
+          "Slovenci izgubili boj za bron; Poljaki drugič zapored evropski prvaki - rtvslo.si"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-27T08:39:44+02:00",
+      "last_learning_run": "2026-09-27T08:53:47+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -179,11 +179,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 39420,
-          "last_seen": "2026-09-27T08:39:44+02:00",
-          "last_title": "Slovenska politika na dnu? Štiri sodbe, neporavnani dolgovi in podkupnine - Slovenske novice",
+          "seen": 39450,
+          "last_seen": "2026-09-27T08:53:47+02:00",
+          "last_title": "Nataša Pirc Musar: Slovenija si zasluži povezanost v politiki - Dnevnik",
           "last_provider": "",
-          "published": 40980,
+          "published": 41025,
           "last_output_id": "jansev-govor-v-zn-razburil-opozicijo-svoboda-sd-in-levica-kriticne-do-politike-do-izraela-5f1368df"
         },
         "hellovein.com": {
@@ -211,14 +211,14 @@
       "current_source_count": 30,
       "example_titles": {
         "news.google.com": [
-          "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si",
           "Obrat slovenske zunanje politike: se od Evrope obračamo k Ameriki? - 24ur.com",
-          "Colja se je razgovoril o razlogih za odhod iz SDS, Janša mu odgovarja - Dnevnik"
+          "Colja se je razgovoril o razlogih za odhod iz SDS, Janša mu odgovarja - Dnevnik",
+          "Janša v Generalni skupščini ZN pozval k večji doslednosti - STA.SI"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-27T08:39:55+02:00",
+      "last_learning_run": "2026-09-27T08:54:06+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -252,96 +252,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 39420,
-          "last_seen": "2026-09-27T08:39:55+02:00",
+          "seen": 39450,
+          "last_seen": "2026-09-27T08:54:06+02:00",
           "last_title": "Objavljen je nov razpis za projekt PONI JV Slovenija - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 58048,
+          "published": 58101,
           "last_output_id": "aktualno-prodaja-avtomobilov-v-sloveniji-julija-je-bil-vsak-cetrti-novi-avtomobilov-v-slov-828a08f7"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 1309,
+          "published": 1310,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 1309,
+          "published": 1310,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 1332,
+          "published": 1333,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 1234,
+          "published": 1235,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 1298,
+          "published": 1299,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 1234,
+          "published": 1235,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 1234,
+          "published": 1235,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 1298,
+          "published": 1299,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 5328,
+          "published": 5332,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 1332,
+          "published": 1333,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 1309,
+          "published": 1310,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 2532,
+          "published": 2534,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 1266,
+          "published": 1267,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 2596,
+          "published": 2598,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 1332,
+          "published": 1333,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 1234,
+          "published": 1235,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 2532,
+          "published": 2534,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
