@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-27T17:28:24+02:00",
-  "loop_count": 1412,
+  "updated_at": "2026-09-27T17:38:34+02:00",
+  "loop_count": 1413,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-27T17:27:59+02:00",
+      "last_learning_run": "2026-09-27T17:38:09+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -51,11 +51,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 41760,
-          "last_seen": "2026-09-27T17:27:59+02:00",
+          "seen": 41790,
+          "last_seen": "2026-09-27T17:38:09+02:00",
           "last_title": "Hribar na tekmi svetovnega izziva v Parizu le za izkušenim Dolgopyatom - rtvslo.si",
           "last_provider": "",
-          "published": 41892,
+          "published": 41938,
           "last_output_id": "slovenci-so-se-krcevito-branili-in-se-ubranili-s-skotsko-so-remizirali-70821aca"
         },
         "aarp.org": {
@@ -160,7 +160,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-27T17:28:12+02:00",
+      "last_learning_run": "2026-09-27T17:38:20+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -186,11 +186,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 41760,
-          "last_seen": "2026-09-27T17:28:12+02:00",
+          "seen": 41790,
+          "last_seen": "2026-09-27T17:38:20+02:00",
           "last_title": "Kajzer in Janša diplomate nagovorila za zaprtimi vrati - 24ur.com",
           "last_provider": "",
-          "published": 44770,
+          "published": 44820,
           "last_output_id": "breznik-zasebni-obiski-v-moskvi-ne-predstavljajo-zunanje-politike-slovenije-45a4bf9f"
         },
         "hellovein.com": {
@@ -219,13 +219,13 @@
       "example_titles": {
         "news.google.com": [
           "Izraelski minister v Ljubljani odpira veleposlaništvo, napovedani protest - Dnevnik",
-          "(INTERVJU) V novi reviji Demokracija: Minister Tone Kajzer: Slovenije ne prodajamo nikomur. Slovenija je suverena država in slovenska zunanj",
+          "Kaj premier Janša sporoča z govornice OZN in kaj bi Trumpa prepričalo v obisk Slovenije? - Zanima.me",
           "Obrat slovenske zunanje politike: se od Evrope obračamo k Ameriki? - 24ur.com"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-27T17:28:24+02:00",
+      "last_learning_run": "2026-09-27T17:38:34+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -259,96 +259,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 41760,
-          "last_seen": "2026-09-27T17:28:24+02:00",
-          "last_title": "Anja Rakuša Brus: Pomemben argument za mojo kandidaturo je izkušnja z aktualno vlado, ki stroke ne posluša dovolj - Nova24TV",
+          "seen": 41790,
+          "last_seen": "2026-09-27T17:38:34+02:00",
+          "last_title": "Objavljen je nov razpis za projekt PONI JV Slovenija - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 62288,
+          "published": 62341,
           "last_output_id": "aktualno-prodaja-avtomobilov-v-sloveniji-julija-je-bil-vsak-cetrti-novi-avtomobilov-v-slov-828a08f7"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 1389,
+          "published": 1390,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 1389,
+          "published": 1390,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 1412,
+          "published": 1413,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 1314,
+          "published": 1315,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 1378,
+          "published": 1379,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 1314,
+          "published": 1315,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 1314,
+          "published": 1315,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 1378,
+          "published": 1379,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 5648,
+          "published": 5652,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 1412,
+          "published": 1413,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 1389,
+          "published": 1390,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 2692,
+          "published": 2694,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 1346,
+          "published": 1347,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 2756,
+          "published": 2758,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 1412,
+          "published": 1413,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 1314,
+          "published": 1315,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 2692,
+          "published": 2694,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
@@ -371,7 +371,7 @@
         "news.google.com": [
           "(AKTUALNO) V novi številki revije Demokracija preberite: Izključujejo in zavirajo razvoj! Janša: Osamosvojitvena Slovenija ne bo nikoli več ",
           "Evropska komisija: Slovenija krši pravice avtorjem - Info360",
-          "Sramota! V oddaji Marcel na TV Slovenija, ne spoštujejo etičnega in poklicnega kodeksa - e-Maribor"
+          "Sramota! V oddaji Marcel na TV Slovenija, ne spoštujejo etičnega in poklicnega kodeksa - e-Maribor.si"
         ]
       }
     }
