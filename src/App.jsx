@@ -20,6 +20,44 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "slovenci-so-se-krcevito-branili-in-se-ubranili-s-skotsko-so-remizirali-70821aca",
+    "title": "Slovenci so se krčevito branili in se ubranili: s Škotsko so remizirali",
+    "excerpt": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Slovenci so se krčevito branili in se ubranili: s Škotsko so remizirali«.",
+    "seoDescription": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Slovenci so se krčevito branili in se ubranili: s Škotsko so remizirali«.",
+    "content": "**Šport, 27. 9. 2026.** Slovenci so se krčevito branili in se ubranili: s Škotsko so remizirali Dnevnik\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Dnevnik. Objavljeno: Sat, 26 Sep 2026 16:19:16 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMirAFBVV95cUxNc0U4a0U0SUJUaW53WUFfTF9xclVDUC1CazkwZTFLRE5DV29hTUZhRVZ4ZDM5ajRCcENEb1JzQlB0cFZrQV82TFdndUF6ZFlSWTFqVWpraWVWZ29tLXozeHMwRzY4ZEdQdFZqOV9TQTY2aFl1Y3ZCTjZNYWpyc0NIaFFlaVJFVW1QRkstcHlfLWJVYi1wV0Vfb1NMOVFZV2h0OXV2N1NfTldHZExG?oc=5)\n\n## Dopolnitev vira 2: Maribor24.si\n\nSlovenija remizirala v uvodni tekmi, nogometaše že v torek čaka nova preizkušnja Maribor24.si\n\n Vir: Maribor24.si. Objavljeno: Sat, 26 Sep 2026 15:04:41 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiqwFBVV95cUxNcm5wZUs5WmkwRENuU1daRlFrY25id1h2Vl9jOHhuYl9oTEdVazM4VzI5Y2dRMXhQem1acWhDYzk1U3psY3duSm5vQ2ZNT0k0TTgwU2Nuc2dwSHJPRmN1SUZsZHRvcEdWb3JrQnluX1F0bFdXNkh3Zk5hWExVZElqbjB4OEhjdW5LRDJFQldCZHRmRU52Q1RSSG54S0ZHOVFWLTBmSDJ4dWZtLVk?oc=5)\n\n## Dopolnitev vira 3: Dnevnik\n\nDogodki po Sloveniji: od 70 vrst štrudlja do robota Jožeta, ki teče na maratonu Dnevnik\n\n Vir: Dnevnik. Objavljeno: Sun, 27 Sep 2026 04:46:01 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMivgFBVV95cUxORGRpZHRJNE1NS3h3V18wRE1kTk5WM2RQMVlBRUVTbGVUZXNfcmZyajE4VU93U0lHckx3UEhabWNxWi0zZVdPR3V1T0NZVWV5Wk02Nm9USDFzeHFmb0hBdlcwX2NJVk0wOU9hSHdRVkRzSGdEOFNza0xJWGN1ZDIwZHc3aTUtOUkzVkN6SGQxem53Z1VNZnpIelN4VVlnN25iYUlVV1RiVUFKYkZNVHduQm9WUWRKTm9pQ3RjY1p3?oc=5)\n\n## Dopolnitev vira 4: rtvslo.si\n\nSlovenci pogoreli v preveliki želji: \"Finci so bili enostavno premočni\" rtvslo.si\n\n Vir: rtvslo.si. Objavljeno: Sun, 27 Sep 2026 01:09:37 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiyAFBVV95cUxPX2xmRTAxME5fSVpwTmJvdXEtNVJwZVN1NmpBOFYxWUFKWEc5bGFiZEdEd3ZkQnh5bUFab2RNdXNPYjBuVkZVVVU3dmllQWFkbVluT1pPTm9aT3BEVUUyX2I4UF9WMGlqODRLNGQ3UklQM05iaVpEcHZENzhyTEZ3ZjFsZjdiXzNSaDFveEFFX21EazhvdE1Qa3l5UW11THVpUHl5TmljVV9EOU9tQ25URHBYUFM0QU9sdjhrdlBUbWItOXpDVUJmaQ?oc=5)\n\n## Dopolnitev vira 5: rtvslo.si\n\nSlovenci izgubili boj za bron; Poljaki drugič zapored evropski prvaki rtvslo.si\n\n Vir: rtvslo.si. Objavljeno: Sat, 26 Sep 2026 21:54:42 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiyAFBVV95cUxPVWh1cHNZMFUwcUljY1RXd3M0eUZZUGFmNWhmZjlxb0hEOUI4d3U1Qmk0cFVHQkU2ME9hVkJlU3Znc0J6TW5CQUcwc2U3LV96c3NhVW1WSnJ2dGNGeFFDVE5RdlJGZVFaTTlmRjBWUjAxMEQ4akJvU1hwdFByY0E3TGcwd0c5VXVfaS1KTkFQM0tLaFZfaDRJVEdFVkpBR0ZQLUJRaEd5THcydDg5dFJLVGNwOHhJakVROEtKbV9jWWw4Rkx1SFQ0VA?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Šport",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Dnevnik — Slovenci so se krčevito branili in se ubranili: s Škotsko so remizirali - Dnevnik",
+        "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNc0U4a0U0SUJUaW53WUFfTF9xclVDUC1CazkwZTFLRE5DV29hTUZhRVZ4ZDM5ajRCcENEb1JzQlB0cFZrQV82TFdndUF6ZFlSWTFqVWpraWVWZ29tLXozeHMwRzY4ZEdQdFZqOV9TQTY2aFl1Y3ZCTjZNYWpyc0NIaFFlaVJFVW1QRkstcHlfLWJVYi1wV0Vfb1NMOVFZV2h0OXV2N1NfTldHZExG?oc=5"
+      },
+      {
+        "label": "Maribor24.si — Slovenija remizirala v uvodni tekmi, nogometaše že v torek čaka nova preizkušnja - Maribor24.si",
+        "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNcm5wZUs5WmkwRENuU1daRlFrY25id1h2Vl9jOHhuYl9oTEdVazM4VzI5Y2dRMXhQem1acWhDYzk1U3psY3duSm5vQ2ZNT0k0TTgwU2Nuc2dwSHJPRmN1SUZsZHRvcEdWb3JrQnluX1F0bFdXNkh3Zk5hWExVZElqbjB4OEhjdW5LRDJFQldCZHRmRU52Q1RSSG54S0ZHOVFWLTBmSDJ4dWZtLVk?oc=5"
+      },
+      {
+        "label": "Dnevnik — Dogodki po Sloveniji: od 70 vrst štrudlja do robota Jožeta, ki teče na maratonu - Dnevnik",
+        "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxORGRpZHRJNE1NS3h3V18wRE1kTk5WM2RQMVlBRUVTbGVUZXNfcmZyajE4VU93U0lHckx3UEhabWNxWi0zZVdPR3V1T0NZVWV5Wk02Nm9USDFzeHFmb0hBdlcwX2NJVk0wOU9hSHdRVkRzSGdEOFNza0xJWGN1ZDIwZHc3aTUtOUkzVkN6SGQxem53Z1VNZnpIelN4VVlnN25iYUlVV1RiVUFKYkZNVHduQm9WUWRKTm9pQ3RjY1p3?oc=5"
+      },
+      {
+        "label": "rtvslo.si — Slovenci pogoreli v preveliki želji: \"Finci so bili enostavno premočni\" - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPX2xmRTAxME5fSVpwTmJvdXEtNVJwZVN1NmpBOFYxWUFKWEc5bGFiZEdEd3ZkQnh5bUFab2RNdXNPYjBuVkZVVVU3dmllQWFkbVluT1pPTm9aT3BEVUUyX2I4UF9WMGlqODRLNGQ3UklQM05iaVpEcHZENzhyTEZ3ZjFsZjdiXzNSaDFveEFFX21EazhvdE1Qa3l5UW11THVpUHl5TmljVV9EOU9tQ25URHBYUFM0QU9sdjhrdlBUbWItOXpDVUJmaQ?oc=5"
+      },
+      {
+        "label": "rtvslo.si — Slovenci izgubili boj za bron; Poljaki drugič zapored evropski prvaki - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPVWh1cHNZMFUwcUljY1RXd3M0eUZZUGFmNWhmZjlxb0hEOUI4d3U1Qmk0cFVHQkU2ME9hVkJlU3Znc0J6TW5CQUcwc2U3LV96c3NhVW1WSnJ2dGNGeFFDVE5RdlJGZVFaTTlmRjBWUjAxMEQ4akJvU1hwdFByY0E3TGcwd0c5VXVfaS1KTkFQM0tLaFZfaDRJVEdFVkpBR0ZQLUJRaEd5THcydDg5dFJLVGNwOHhJakVROEtKbV9jWWw4Rkx1SFQ0VA?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-27T08:24:45+02:00",
+    "updatedAt": "2026-09-27T08:24:45+02:00"
+  },
+
+  {
     "id": "aktualno-prodaja-avtomobilov-v-sloveniji-julija-je-bil-vsak-cetrti-novi-avtomobilov-v-slov-828a08f7",
     "title": "Aktualno: prodaja avtomobilov v Sloveniji: Julija je bil vsak četrti novi avtomobilov v Sloveniji električen…",
     "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Aktualno: prodaja avtomobilov v Sloveniji: Julija je bil vsak četrti novi avtomobilov v Sloveniji električen…«.",
