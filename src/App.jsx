@@ -20,6 +20,28 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "ljubljana-ni-slovenija-zakaj-je-selitev-solskega-ministrstva-v-novo-mesto-odlicna-ideja-150359b0",
+    "title": "Ljubljana ni Slovenija: zakaj je selitev šolskega ministrstva v Novo mesto odlična ideja",
+    "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Ljubljana ni Slovenija: zakaj je selitev šolskega ministrstva v Novo mesto odlična ideja«.",
+    "seoDescription": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Ljubljana ni Slovenija: zakaj je selitev šolskega ministrstva v Novo mesto od",
+    "content": "**Aktualno, 27. 9. 2026.** Ljubljana ni Slovenija: zakaj je selitev šolskega ministrstva v Novo mesto odlična ideja Najdi.si novice\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Najdi.si novice. Objavljeno: Mon, 06 Jul 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMi8wFBVV95cUxQTkVvS1FTSXY0ZEhoQVZUaWhBT3FpbW5uMWFqSlhzMkVYVXJnM2pQekFXYmpjOGRWOTBQVTFYdUQ4SkVUOWdrUUZlRVNCQzZiQWxzM0UtNml3UGh5M0E5Tl8wcUxockVEUmNadGVYZGJuclhtNWdyRktHNVBTa2ZHbGFpVndBNVE4TGpwTEd1N2p3WE5wX3lNUEJpbXllSFU0RWRfU3ZtdURMQldZancxblJUZEUzOEg5VHA0VlVuRXl2dGlqcGdkR25abzdQR0p1UnRGcnVOelVVdWNQaG5pbTBVeTJyUi1Ma0dkbHM5aEVXT1k?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Aktualno",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Najdi.si novice — Ljubljana ni Slovenija: zakaj je selitev šolskega ministrstva v Novo mesto odlična ideja - Najdi.si novice",
+        "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQTkVvS1FTSXY0ZEhoQVZUaWhBT3FpbW5uMWFqSlhzMkVYVXJnM2pQekFXYmpjOGRWOTBQVTFYdUQ4SkVUOWdrUUZlRVNCQzZiQWxzM0UtNml3UGh5M0E5Tl8wcUxockVEUmNadGVYZGJuclhtNWdyRktHNVBTa2ZHbGFpVndBNVE4TGpwTEd1N2p3WE5wX3lNUEJpbXllSFU0RWRfU3ZtdURMQldZancxblJUZEUzOEg5VHA0VlVuRXl2dGlqcGdkR25abzdQR0p1UnRGcnVOelVVdWNQaG5pbTBVeTJyUi1Ma0dkbHM5aEVXT1k?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-27T19:51:40+02:00",
+    "updatedAt": "2026-09-27T19:51:40+02:00"
+  },
+
+  {
     "id": "breznik-zasebni-obiski-v-moskvi-ne-predstavljajo-zunanje-politike-slovenije-45a4bf9f",
     "title": "Breznik: Zasebni obiski v Moskvi ne predstavljajo zunanje politike Slovenije",
     "excerpt": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Breznik: Zasebni obiski v Moskvi ne predstavljajo zunanje politike Slovenije«.",
