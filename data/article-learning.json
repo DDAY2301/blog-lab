@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-27T02:25:07+02:00",
-  "loop_count": 1276,
+  "updated_at": "2026-09-27T02:25:56+02:00",
+  "loop_count": 1277,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-27T02:23:49+02:00",
+      "last_learning_run": "2026-09-27T02:25:34+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -51,11 +51,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 37740,
-          "last_seen": "2026-09-27T02:09:19+02:00",
-          "last_title": "Začela se je vrnitev, Tadej Pogačar spet trenira (FOTO) - Delo.si",
+          "seen": 37770,
+          "last_seen": "2026-09-27T02:25:34+02:00",
+          "last_title": "Polfinale: Slovenija - Poljska 0:2 (11:7 v tretjem nizu) - rtvslo.si",
           "last_provider": "",
-          "published": 35896,
+          "published": 35937,
           "last_output_id": "odbojka-m-slovenija-poljska-evropsko-prvenstvo-2026-polfinale-a0b3dbff"
         },
         "aarp.org": {
@@ -143,18 +143,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 2,
+      "current_source_count": 30,
       "example_titles": {
-        "set-timer.com": [
-          "Free Online Timers – Countdown, Stopwatch, Pomodoro & More | Set-Timer"
-        ],
-        "online-stopwatch.com": [
-          "Countdown Timer"
+        "news.google.com": [
+          "*〜?[[Živý=šport!!]++] Škotska Slovenija prenos 26. september 2026 - czechinvest.gov.cz",
+          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
+          "Slovenija izgubila boj za bron; Finale: Poljska - Francija (31:29, drugi niz) - rtvslo.si"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-27T02:24:30+02:00",
+      "last_learning_run": "2026-09-27T02:25:45+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -180,11 +179,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 37740,
-          "last_seen": "2026-09-27T02:09:29+02:00",
-          "last_title": "Slovenska politika na dnu? Štiri sodbe, neporavnani dolgovi in podkupnine - slovenskenovice.delo.si",
+          "seen": 37770,
+          "last_seen": "2026-09-27T02:25:45+02:00",
+          "last_title": "Kajzer zavrnil očitke, da ne vodi suverene zunanje politike - dnevnik.si",
           "last_provider": "",
-          "published": 38460,
+          "published": 38505,
           "last_output_id": "jansev-govor-v-zn-razburil-opozicijo-svoboda-sd-in-levica-kriticne-do-politike-do-izraela-5f1368df"
         },
         "hellovein.com": {
@@ -209,11 +208,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 0,
-      "example_titles": {}
+      "current_source_count": 30,
+      "example_titles": {
+        "news.google.com": [
+          "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si",
+          "Na Radiu Ognjišče zadnje predvolilno soočenje: v ospredju prisluhi, zdravstvo, zunanja politika in sprava - radio.ognjisce.si",
+          "Obrat slovenske zunanje politike: se od Evrope obračamo k Ameriki? - 24ur.com"
+        ]
+      }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-27T02:25:07+02:00",
+      "last_learning_run": "2026-09-27T02:25:56+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -247,96 +252,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 37740,
-          "last_seen": "2026-09-27T02:09:40+02:00",
-          "last_title": "Objavljen je nov razpis za projekt PONI JV Slovenija - Novice - Aktualno - novomesto.si",
+          "seen": 37770,
+          "last_seen": "2026-09-27T02:25:56+02:00",
+          "last_title": "Objavljen je nov razpis za projekt PONI JV Slovenija - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 55080,
+          "published": 55133,
           "last_output_id": "aktualno-prodaja-avtomobilov-v-sloveniji-julija-je-bil-vsak-cetrti-novi-avtomobilov-v-slov-828a08f7"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 1253,
+          "published": 1254,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 1253,
+          "published": 1254,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 1276,
+          "published": 1277,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 1178,
+          "published": 1179,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 1242,
+          "published": 1243,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 1178,
+          "published": 1179,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 1178,
+          "published": 1179,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 1242,
+          "published": 1243,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 5104,
+          "published": 5108,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 1276,
+          "published": 1277,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 1253,
+          "published": 1254,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 2420,
+          "published": 2422,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 1210,
+          "published": 1211,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 2484,
+          "published": 2486,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 1276,
+          "published": 1277,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 1178,
+          "published": 1179,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 2420,
+          "published": 2422,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
@@ -354,8 +359,14 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 0,
-      "example_titles": {}
+      "current_source_count": 30,
+      "example_titles": {
+        "news.google.com": [
+          "(AKTUALNO) V novi številki revije Demokracija preberite: Izključujejo in zavirajo razvoj! Janša: Osamosvojitvena Slovenija ne bo nikoli več ",
+          "Evropska komisija: Slovenija krši pravice avtorjem - Info360",
+          "Sramota! V oddaji Marcel na TV Slovenija, ne spoštujejo etičnega in poklicnega kodeksa - e-Maribor"
+        ]
+      }
     }
   },
   "recent_articles": [
