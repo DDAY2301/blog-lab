@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-28T01:37:58+02:00",
-  "loop_count": 1492,
+  "updated_at": "2026-09-28T01:38:46+02:00",
+  "loop_count": 1493,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-28T01:37:38+02:00",
+      "last_learning_run": "2026-09-28T01:38:25+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -51,11 +51,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 44100,
-          "last_seen": "2026-09-28T01:37:38+02:00",
+          "seen": 44130,
+          "last_seen": "2026-09-28T01:38:25+02:00",
           "last_title": "Izjemno kakovostni Poljaki Slovence poslali v boj za bron s Finci - rtvslo.si",
           "last_provider": "",
-          "published": 45572,
+          "published": 45618,
           "last_output_id": "slovenci-so-se-krcevito-branili-in-se-ubranili-s-skotsko-so-remizirali-70821aca"
         },
         "aarp.org": {
@@ -160,7 +160,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-28T01:37:48+02:00",
+      "last_learning_run": "2026-09-28T01:38:36+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -186,11 +186,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 44100,
-          "last_seen": "2026-09-28T01:37:48+02:00",
+          "seen": 44130,
+          "last_seen": "2026-09-28T01:38:36+02:00",
           "last_title": "[Video] Simonič svobodnjakom nastavil ogledalo: “Napuh vas je stal vlade” - Nova24TV",
           "last_provider": "",
-          "published": 48770,
+          "published": 48820,
           "last_output_id": "breznik-zasebni-obiski-v-moskvi-ne-predstavljajo-zunanje-politike-slovenije-45a4bf9f"
         },
         "hellovein.com": {
@@ -218,14 +218,14 @@
       "current_source_count": 30,
       "example_titles": {
         "news.google.com": [
-          "Izraelski minister v Ljubljani odpira veleposlaništvo, napovedani protest - dnevnik.si",
+          "Izraelski minister v Ljubljani odpira veleposlaništvo, napovedani protest - Dnevnik",
           "»Ujeti med politiko in ceh: Komu sploh odgovarja RTV Slovenija?« - Ljubljanske novice",
           "Vladi in SDS zrasla podpora, Han najbolj priljubljen - 24ur.com"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-28T01:37:58+02:00",
+      "last_learning_run": "2026-09-28T01:38:46+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -259,96 +259,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 44100,
-          "last_seen": "2026-09-28T01:37:58+02:00",
+          "seen": 44130,
+          "last_seen": "2026-09-28T01:38:46+02:00",
           "last_title": "Objavljen je nov razpis za projekt PONI JV Slovenija - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 66586,
+          "published": 66640,
           "last_output_id": "ljubljana-ni-slovenija-zakaj-je-selitev-solskega-ministrstva-v-novo-mesto-odlicna-ideja-150359b0"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 1469,
+          "published": 1470,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 1469,
+          "published": 1470,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 1492,
+          "published": 1493,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 1394,
+          "published": 1395,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 1458,
+          "published": 1459,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 1394,
+          "published": 1395,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 1394,
+          "published": 1395,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 1458,
+          "published": 1459,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 5968,
+          "published": 5972,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 1492,
+          "published": 1493,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 1469,
+          "published": 1470,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 2852,
+          "published": 2854,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 1426,
+          "published": 1427,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 2916,
+          "published": 2918,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 1492,
+          "published": 1493,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 1394,
+          "published": 1395,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 2852,
+          "published": 2854,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
