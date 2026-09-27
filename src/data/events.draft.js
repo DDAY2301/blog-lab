@@ -1154,7 +1154,7 @@ export const draftEvents = [
     "familyFriendly": false,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "confirmed",
+    "status": "expired",
     "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
@@ -1187,7 +1187,7 @@ export const draftEvents = [
     "familyFriendly": false,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "confirmed",
+    "status": "expired",
     "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
@@ -1281,7 +1281,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
     "eventId": "festival-lutke-the-nest-2026-09-27-1800",
@@ -1312,7 +1312,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
     "eventId": "barcelona-guitar-trio-dance-2026-09-27",
@@ -1343,7 +1343,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
     "eventId": "festival-third-age-cd-2026-09-29",
