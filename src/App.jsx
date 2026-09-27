@@ -20,6 +20,44 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "breznik-zasebni-obiski-v-moskvi-ne-predstavljajo-zunanje-politike-slovenije-45a4bf9f",
+    "title": "Breznik: Zasebni obiski v Moskvi ne predstavljajo zunanje politike Slovenije",
+    "excerpt": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Breznik: Zasebni obiski v Moskvi ne predstavljajo zunanje politike Slovenije«.",
+    "seoDescription": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Breznik: Zasebni obiski v Moskvi ne predstavljajo zunanje politike Slovenije«",
+    "content": "**Politika, 27. 9. 2026.** Breznik: Zasebni obiski v Moskvi ne predstavljajo zunanje politike Slovenije 24ur.com\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nPri političnih temah Blog Lab ne podpira kandidatov, strank ali političnih odločitev; izjave in ocene so predstavljene kot stališča njihovih avtorjev ali virov, ne kot uredniška presoja.\n\nVir: 24ur.com. Objavljeno: Tue, 11 Aug 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiugFBVV95cUxPRjZtZEExUGZqZUotMVRBa3BXX0FNaVBwR2pNdnlzYmlkck5HeWhRaVJaVUEzVV9PTUd6UElkaWVvcEF3dkc3YU5UaGJuS3VwMkhmejNPNk1IS0lLamxER0NGajJjN2Y3d2lmU1IyM3RBQWt6Ri0zbm1GdE5KY0NtbFYxM3RRTUR3V0FDN2pqN2tZOGZlVFd2dnpVTnBSXy14R0VwdC1lMWRIVVVyZUFuNXEwQ3NzSWlBU2c?oc=5)\n\n## Dopolnitev vira 2: Slovenske novice\n\nJanša in Netanjahu v New Yorku odprla »novo poglavje«: tako so se odzvali v Sloveniji Slovenske novice\n\n Vir: Slovenske novice. Objavljeno: Fri, 25 Sep 2026 16:34:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiywFBVV95cUxPckZ5ZGxaRFJ2eTM4SjAxVzdkY3owaHVyNGo5OGlFU25aOWNjQ2dfb1l3aU5JNV9nZU5XT0JucW5Gank2VEdFNEdWaFZEbVp3LWxEU1VDRXdhNUViUkpCVFpldHpzS19TTG9wZzJjRmplV1VtMW9BMVg5UkpHTVdtVlBRcXVCeHV5UTAwRE5iNDN1anFTdmFfMmxhZlMwRFJ2Rmk4bHREbFowWE5pcGdSUFg2UkVUVzJnVXF3Rlh6aFJhMnIxcVlIVmJfUQ?oc=5)\n\n## Dopolnitev vira 3: Dnevnik\n\nNataša Pirc Musar: Slovenija si zasluži povezanost v politiki Dnevnik\n\n Vir: Dnevnik. Objavljeno: Sat, 11 Jul 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMirwFBVV95cUxOVGhEQWFRaTc4VWxtSWdFYTRNZVotV20zYlZKcDJ2RVdNMGFVc0xkMXJxQ00wY05kalZRMDlCTThFeS1OUmh6UjVuRllDT2cyYmROcVVaQzBhWVBydDBVVEwteDhGeDI5UHJncG12NHExNmg1SWlpcVRDLXVzdG9qcU4zTGNrN2F6TXQydVVjc0lIdGJHWi1TeXo1aHBGNGxJd3hVM25oYThKSWVVU3U0?oc=5)\n\n## Dopolnitev vira 4: 24ur.com\n\nKdo vodi bolnišnice: stroka, politika ali osebni interesi? 24ur.com\n\n Vir: 24ur.com. Objavljeno: Thu, 24 Sep 2026 04:48:38 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiekFVX3lxTE81X3lWVlNPcDBUeldITUwzSzV3V1BMa1BGTTM0cDNWbzU2NVdLZTZaaV9WM0RSNWtFa0ZNNlkydHR6MTNlRndaVThVU1MzbnB0VDJQeHVzNUF6YjU4M3poSHRQdFVBWjZNd1FKU0xCRjROZTdUUTBoSWd3?oc=5)\n\n## Dopolnitev vira 5: Dnevnik\n\nNovinarji udarili po mizi: RTV ne damo politiki! Dnevnik\n\n Vir: Dnevnik. Objavljeno: Tue, 15 Sep 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMinwFBVV95cUxNQ05xTlRtMGlpUEJtVEU4X3ZnbWRHRWRySGl2MDdRaUp3YUtneHBwWm1BNUE3emo3Z2lXZUhxM0Q4UVgxSHRYUmxhc2trMkxzLUdZaEtBbTY0QlM1bmhwUzdqZ1F5Z3ZaaEFCOVNXY2M5eTN1YVpWQnp2UmhkS05jUUw5Ym84RE5pTVM1VkIyaXBORktQaFp4WlpFaGRwYjA?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Politika",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "24ur.com — Breznik: Zasebni obiski v Moskvi ne predstavljajo zunanje politike Slovenije - 24ur.com",
+        "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPRjZtZEExUGZqZUotMVRBa3BXX0FNaVBwR2pNdnlzYmlkck5HeWhRaVJaVUEzVV9PTUd6UElkaWVvcEF3dkc3YU5UaGJuS3VwMkhmejNPNk1IS0lLamxER0NGajJjN2Y3d2lmU1IyM3RBQWt6Ri0zbm1GdE5KY0NtbFYxM3RRTUR3V0FDN2pqN2tZOGZlVFd2dnpVTnBSXy14R0VwdC1lMWRIVVVyZUFuNXEwQ3NzSWlBU2c?oc=5"
+      },
+      {
+        "label": "Slovenske novice — Janša in Netanjahu v New Yorku odprla »novo poglavje«: tako so se odzvali v Sloveniji - Slovenske novice",
+        "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPckZ5ZGxaRFJ2eTM4SjAxVzdkY3owaHVyNGo5OGlFU25aOWNjQ2dfb1l3aU5JNV9nZU5XT0JucW5Gank2VEdFNEdWaFZEbVp3LWxEU1VDRXdhNUViUkpCVFpldHpzS19TTG9wZzJjRmplV1VtMW9BMVg5UkpHTVdtVlBRcXVCeHV5UTAwRE5iNDN1anFTdmFfMmxhZlMwRFJ2Rmk4bHREbFowWE5pcGdSUFg2UkVUVzJnVXF3Rlh6aFJhMnIxcVlIVmJfUQ?oc=5"
+      },
+      {
+        "label": "Dnevnik — Nataša Pirc Musar: Slovenija si zasluži povezanost v politiki - Dnevnik",
+        "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOVGhEQWFRaTc4VWxtSWdFYTRNZVotV20zYlZKcDJ2RVdNMGFVc0xkMXJxQ00wY05kalZRMDlCTThFeS1OUmh6UjVuRllDT2cyYmROcVVaQzBhWVBydDBVVEwteDhGeDI5UHJncG12NHExNmg1SWlpcVRDLXVzdG9qcU4zTGNrN2F6TXQydVVjc0lIdGJHWi1TeXo1aHBGNGxJd3hVM25oYThKSWVVU3U0?oc=5"
+      },
+      {
+        "label": "24ur.com — Kdo vodi bolnišnice: stroka, politika ali osebni interesi? - 24ur.com",
+        "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE81X3lWVlNPcDBUeldITUwzSzV3V1BMa1BGTTM0cDNWbzU2NVdLZTZaaV9WM0RSNWtFa0ZNNlkydHR6MTNlRndaVThVU1MzbnB0VDJQeHVzNUF6YjU4M3poSHRQdFVBWjZNd1FKU0xCRjROZTdUUTBoSWd3?oc=5"
+      },
+      {
+        "label": "Dnevnik — Novinarji udarili po mizi: RTV ne damo politiki! - Dnevnik",
+        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNQ05xTlRtMGlpUEJtVEU4X3ZnbWRHRWRySGl2MDdRaUp3YUtneHBwWm1BNUE3emo3Z2lXZUhxM0Q4UVgxSHRYUmxhc2trMkxzLUdZaEtBbTY0QlM1bmhwUzdqZ1F5Z3ZaaEFCOVNXY2M5eTN1YVpWQnp2UmhkS05jUUw5Ym84RE5pTVM1VkIyaXBORktQaFp4WlpFaGRwYjA?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-27T13:39:50+02:00",
+    "updatedAt": "2026-09-27T13:39:50+02:00"
+  },
+
+  {
     "id": "zelenci-nature-reserve-day-trip-from-ljubljana",
     "title": "Zelenci Nature Reserve: An Easy Alpine Day Trip from Ljubljana",
     "excerpt": "Visit the emerald source of the Sava Dolinka with a low-impact route from Rateče, public-transport planning, family advice and clear wetland safety rules.",

@@ -1,18 +1,19 @@
 {
-  "last_success": "2026-09-27T08:24:45+02:00",
+  "last_success": "2026-09-27T13:39:50+02:00",
   "last_failure": "2026-09-21T20:56:52+02:00",
   "consecutive_failures": 0,
   "posts_date": "2026-09-27",
-  "posts_today": 1,
-  "last_output": "slovenci-so-se-krcevito-branili-in-se-ubranili-s-skotsko-so-remizirali-70821aca",
+  "posts_today": 2,
+  "last_output": "breznik-zasebni-obiski-v-moskvi-ne-predstavljajo-zunanje-politike-slovenije-45a4bf9f",
   "last_error": null,
   "agent_version": "2.7.0",
-  "current_category": "sport",
-  "scheduled_posts_today": 1,
+  "current_category": "politika",
+  "scheduled_posts_today": 2,
   "manual_posts_today": 0,
   "writer_mode": "local_evidence_ai",
   "scheduled_slots_done": [
-    "2026-09-27|08:17|sport"
+    "2026-09-27|08:17|sport",
+    "2026-09-27|13:27|politika"
   ],
   "scheduled_slots_deferred": [],
   "last_editorial_hold": null
