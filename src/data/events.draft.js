@@ -1,5 +1,5 @@
 // Review draft only. Not imported by the production application.
-// Rolling review draft. Sources rechecked on 2026-09-26 at 07:00 Europe/Ljubljana.
+// Rolling review draft. Sources rechecked on 2026-09-27 at 07:00 Europe/Ljubljana.
 // Production remains unchanged until the calendar model and stable views are implemented.
 // Unknown values deliberately remain null.
 export const draftEvents = [
@@ -32,7 +32,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
     "eventId": "national-gallery-tone-kralj-2026",
@@ -63,7 +63,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
     "eventId": "national-gallery-fragments-past-2026",
@@ -94,7 +94,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
     "eventId": "hana-karim-fragments-memories-2026",
@@ -125,7 +125,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
     "eventId": "castle-reading-corner-2026",
@@ -156,7 +156,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
     "eventId": "gallery-at-your-fingertips-2026",
@@ -187,7 +187,7 @@ export const draftEvents = [
     "accessibility": "Tactile exhibition; confirm individual access needs with the gallery",
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
     "eventId": "unicum-2026-ljubljana",
@@ -218,7 +218,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
     "eventId": "corn-labyrinth-ljubljana-2026",
@@ -249,7 +249,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
     "eventId": "revelations-national-gallery-2026",
@@ -280,7 +280,7 @@ export const draftEvents = [
     "accessibility": "The gallery publishes a dedicated accessibility section; confirm individual requirements directly",
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
     "eventId": "kozmos-kosovel-cankarjev-dom-2026",
@@ -311,7 +311,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
     "eventId": "opera-orchestra-academy-soloists-2026-09-17",
@@ -840,7 +840,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
     "eventId": "air-raid-cankarjev-dom-2026-09-24",
@@ -1087,7 +1087,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "confirmed",
+    "status": "expired",
     "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
@@ -1121,7 +1121,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "confirmed",
+    "status": "expired",
     "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
@@ -1219,7 +1219,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
     "eventId": "wind-orchestra-promenade-2026-09-27",
@@ -1250,7 +1250,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
     "eventId": "festival-lutke-the-nest-2026-09-27-1600",
@@ -1377,6 +1377,37 @@ export const draftEvents = [
     "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
+    "eventId": "prisleki-30-years-cd-2026-09-29",
+    "title": "Celebratory Literary Evening: 30 Years of Prišleki",
+    "summary": "Cankarjev dom marks 30 years of the Prišleki book series with a literary evening in Alma Karlin Hall at 19:30. Admission is free, but a free ticket is required; the event language is not stated on the official English listing.",
+    "category": "literature",
+    "startAt": "2026-09-29T19:30:00+02:00",
+    "endAt": "2026-09-29T21:00:00+02:00",
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Alma Karlin Hall, Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": "Free ticket required",
+      "free": true
+    },
+    "ticketUrl": "https://www.cd-cc.si/en/culture/literature-and-humanities/celebratory-literary-evening-30-years-prisleki-book-series",
+    "officialUrl": "https://www.cd-cc.si/en/culture/literature-and-humanities/celebratory-literary-evening-30-years-prisleki-book-series",
+    "sourceName": "Cankarjev dom",
+    "languages": [],
+    "touristFriendly": null,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-27T07:00:00+02:00"
+  },
+  {
     "eventId": "salome-mgl-2026-09-29-1930",
     "title": "Salome",
     "summary": "MGL schedules Salome on the Main Stage on Tuesday 29 September at 19:30. The official schedule now marks this performance sold out; language support and accessibility remain unconfirmed.",
@@ -1437,6 +1468,68 @@ export const draftEvents = [
     "indoorOutdoor": "indoor",
     "status": "confirmed",
     "lastCheckedAt": "2026-09-26T07:00:00+02:00"
+  },
+  {
+    "eventId": "lastovka-award-cd-2026-09-30",
+    "title": "Lastovka Award Ceremony",
+    "summary": "The Lastovka Award ceremony takes place in Alma Karlin Hall at 18:00. Admission is free with a free ticket; the official listing does not confirm the event language or accessibility arrangements.",
+    "category": "literature",
+    "startAt": "2026-09-30T18:00:00+02:00",
+    "endAt": "2026-09-30T19:30:00+02:00",
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Alma Karlin Hall, Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": "Free ticket required",
+      "free": true
+    },
+    "ticketUrl": "https://www.cd-cc.si/en/culture/literature-and-humanities/lastovka-award-ceremony",
+    "officialUrl": "https://www.cd-cc.si/en/culture/literature-and-humanities/lastovka-award-ceremony",
+    "sourceName": "Cankarjev dom",
+    "languages": [],
+    "touristFriendly": null,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-27T07:00:00+02:00"
+  },
+  {
+    "eventId": "opera-ballet-rehearsal-cinderella-2026-09-30",
+    "title": "Behind the Scenes: Cinderella Ballet Rehearsal",
+    "summary": "SNG Opera and Ballet Ljubljana opens a rehearsal for the forthcoming Cinderella premiere at 18:30 as part of Ljubljana Tourism Week. The official notice confirms the time and programme but does not state price, booking, language or accessibility details.",
+    "category": "performing-arts",
+    "startAt": "2026-09-30T18:30:00+02:00",
+    "endAt": "2026-09-30T20:00:00+02:00",
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "SNG Opera and Ballet Ljubljana",
+      "address": "Župančičeva ulica 1, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": null
+    },
+    "ticketUrl": null,
+    "officialUrl": "https://www.opera.si/en/programme/what-s-on/",
+    "sourceName": "SNG Opera and Ballet Ljubljana",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
     "eventId": "beauty-queen-leenane-mgl-2026-09-30",
@@ -1501,6 +1594,37 @@ export const draftEvents = [
     "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
+    "eventId": "festival-third-age-cd-2026-10-01",
+    "title": "Festival for the Third Age",
+    "summary": "The Festival for the Third Age continues at Cankarjev dom from 09:00 on 1 October. The official programme confirms the date and start time; visitors should check the live event page for detailed sessions, language, admission and accessibility.",
+    "category": "festival",
+    "startAt": "2026-10-01T09:00:00+02:00",
+    "endAt": "2026-10-01T18:00:00+02:00",
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": null
+    },
+    "ticketUrl": null,
+    "officialUrl": "https://www.cd-cc.si/en",
+    "sourceName": "Cankarjev dom",
+    "languages": [],
+    "touristFriendly": null,
+    "familyFriendly": true,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-27T07:00:00+02:00"
+  },
+  {
     "eventId": "open-kitchen-2026-10-02",
     "title": "Open Kitchen",
     "summary": "Ljubljana's outdoor Friday food market is scheduled at Pogačarjev trg from 10:00 to 21:00. Entry to the market is free, food is purchased from individual vendors, and the event is weather-dependent.",
@@ -1529,7 +1653,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
     "eventId": "uec-road-european-championships-2026",
@@ -1560,7 +1684,7 @@ export const draftEvents = [
     "accessibility": "Outdoor roadside viewing; individual accessible viewing arrangements not stated",
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
     "eventId": "ex-mgl-2026-10-02",
@@ -1623,6 +1747,37 @@ export const draftEvents = [
     "indoorOutdoor": "indoor",
     "status": "confirmed",
     "lastCheckedAt": "2026-09-26T07:00:00+02:00"
+  },
+  {
+    "eventId": "artish-2026-10-03",
+    "title": "ARTish",
+    "summary": "ARTish brings Slovenian artists and independent makers to Gallusovo nabrežje from 10:00 to 17:00. Entry is free; the riverside market is easy for visitors to browse, while accessibility depends on the outdoor public-space conditions.",
+    "category": "market",
+    "startAt": "2026-10-03T10:00:00+02:00",
+    "endAt": "2026-10-03T17:00:00+02:00",
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Gallusovo nabrežje",
+      "address": "Gallusovo nabrežje, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": "Free admission",
+      "free": true
+    },
+    "ticketUrl": null,
+    "officialUrl": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/artish-fest",
+    "sourceName": "Ljubljana Tourism",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": true,
+    "accessibility": null,
+    "indoorOutdoor": "outdoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
     "eventId": "salome-mgl-2026-10-03",
@@ -1809,5 +1964,36 @@ export const draftEvents = [
     "indoorOutdoor": "indoor",
     "status": "confirmed",
     "lastCheckedAt": "2026-09-26T07:00:00+02:00"
+  },
+  {
+    "eventId": "artish-2026-10-10",
+    "title": "ARTish",
+    "summary": "ARTish returns to Gallusovo nabrežje from 10:00 to 17:00 with locally made art and design. Entry is free; the riverside market is visitor-friendly, while accessibility depends on the outdoor public-space conditions.",
+    "category": "market",
+    "startAt": "2026-10-10T10:00:00+02:00",
+    "endAt": "2026-10-10T17:00:00+02:00",
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Gallusovo nabrežje",
+      "address": "Gallusovo nabrežje, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": "Free admission",
+      "free": true
+    },
+    "ticketUrl": null,
+    "officialUrl": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/artish-fest",
+    "sourceName": "Ljubljana Tourism",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": true,
+    "accessibility": null,
+    "indoorOutdoor": "outdoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   }
 ];
