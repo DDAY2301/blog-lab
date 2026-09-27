@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-27T11:24:41+02:00",
-  "loop_count": 1357,
+  "updated_at": "2026-09-27T11:40:13+02:00",
+  "loop_count": 1358,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-27T11:24:20+02:00",
+      "last_learning_run": "2026-09-27T11:38:59+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -37,6 +37,7 @@
       "preferred_hosts": [
         "news.google.com",
         "aarp.org",
+        "amazon.de",
         "blackfriday.com",
         "set-timer.com",
         "pointclickcare.com",
@@ -45,8 +46,7 @@
         "scied.ucar.edu",
         "sciencenewstoday.org",
         "solvecalc.net",
-        "calculator.net",
-        "online-stopwatch.com"
+        "calculator.net"
       ],
       "source_health": {
         "news.google.com": {
@@ -55,7 +55,7 @@
           "last_seen": "2026-09-27T11:24:20+02:00",
           "last_title": "Slovenija v Samarkandu: dve zmagi, dva skoka po lestvici - Delo.si",
           "last_provider": "",
-          "published": 39362,
+          "published": 39408,
           "last_output_id": "slovenci-so-se-krcevito-branili-in-se-ubranili-s-skotsko-so-remizirali-70821aca"
         },
         "aarp.org": {
@@ -63,6 +63,13 @@
           "seen": 2,
           "last_seen": "2026-09-24T01:08:24+02:00",
           "last_title": "Discover Social Security News, Advice & Tools from AARP",
+          "last_provider": "bing-web"
+        },
+        "amazon.de": {
+          "score": 1.47,
+          "seen": 1,
+          "last_seen": "2026-09-27T11:38:59+02:00",
+          "last_title": "Ivo Leonel: Bücher, Biographie, neuestes Aktualisierung",
           "last_provider": "bing-web"
         },
         "blackfriday.com": {
@@ -143,17 +150,15 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 30,
+      "current_source_count": 1,
       "example_titles": {
-        "news.google.com": [
-          "*〜?[[Živý=šport!!]++] Škotska Slovenija prenos 26. september 2026 - czechinvest.gov.cz",
-          "Slovenija brez osvojenega niza izgubila boj za bron; Finale: Poljska - Francija 10:8 (prvi niz) - rtvslo.si",
-          "Finska dobila tudi drugi niz, Skandinavci ne popuščajo tudi v tretjem nizu - 24ur.com"
+        "amazon.de": [
+          "Ivo Leonel: Bücher, Biographie, neuestes Aktualisierung"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-27T11:24:31+02:00",
+      "last_learning_run": "2026-09-27T11:39:38+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -183,7 +188,7 @@
           "last_seen": "2026-09-27T11:24:31+02:00",
           "last_title": "99 % verjetnost do leta 2056, podobno kot SFRJ: Tako je razpad EU napovedala umetna inteligenca! - Insajder.com",
           "last_provider": "",
-          "published": 42105,
+          "published": 42150,
           "last_output_id": "jansev-govor-v-zn-razburil-opozicijo-svoboda-sd-in-levica-kriticne-do-politike-do-izraela-5f1368df"
         },
         "hellovein.com": {
@@ -208,17 +213,11 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 30,
-      "example_titles": {
-        "news.google.com": [
-          "Izraelski minister v Ljubljani odpira veleposlaništvo, napovedani protest - Dnevnik",
-          "Golob ostro nad Janšo: »To je največja možna sramota« - Dnevnik",
-          "Obrat slovenske zunanje politike: se od Evrope obračamo k Ameriki? - 24ur.com"
-        ]
-      }
+      "current_source_count": 0,
+      "example_titles": {}
     },
     "aktualno": {
-      "last_learning_run": "2026-09-27T11:24:41+02:00",
+      "last_learning_run": "2026-09-27T11:40:13+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -256,92 +255,92 @@
           "last_seen": "2026-09-27T11:24:41+02:00",
           "last_title": "Objavljen je nov razpis za projekt PONI JV Slovenija - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 59373,
+          "published": 59426,
           "last_output_id": "aktualno-prodaja-avtomobilov-v-sloveniji-julija-je-bil-vsak-cetrti-novi-avtomobilov-v-slov-828a08f7"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 1334,
+          "published": 1335,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 1334,
+          "published": 1335,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 1357,
+          "published": 1358,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 1259,
+          "published": 1260,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 1323,
+          "published": 1324,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 1259,
+          "published": 1260,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 1259,
+          "published": 1260,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 1323,
+          "published": 1324,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 5428,
+          "published": 5432,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 1357,
+          "published": 1358,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 1334,
+          "published": 1335,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 2582,
+          "published": 2584,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 1291,
+          "published": 1292,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 2646,
+          "published": 2648,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 1357,
+          "published": 1358,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 1259,
+          "published": 1260,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 2582,
+          "published": 2584,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
@@ -359,14 +358,8 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 30,
-      "example_titles": {
-        "news.google.com": [
-          "(AKTUALNO) V novi številki revije Demokracija preberite: Izključujejo in zavirajo razvoj! Janša: Osamosvojitvena Slovenija ne bo nikoli več ",
-          "Evropska komisija: Slovenija krši pravice avtorjem - Info360",
-          "Sramota! V oddaji Marcel na TV Slovenija, ne spoštujejo etičnega in poklicnega kodeksa - e-Maribor"
-        ]
-      }
+      "current_source_count": 0,
+      "example_titles": {}
     }
   },
   "recent_articles": [
