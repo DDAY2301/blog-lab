@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-28T08:09:24+02:00",
-  "loop_count": 1550,
+  "updated_at": "2026-09-28T08:25:34+02:00",
+  "loop_count": 1551,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-28T08:09:03+02:00",
+      "last_learning_run": "2026-09-28T08:25:13+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -51,12 +51,12 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 45840,
-          "last_seen": "2026-09-28T08:09:03+02:00",
+          "seen": 45870,
+          "last_seen": "2026-09-28T08:25:13+02:00",
           "last_title": "Slovenija v Samarkandu: dve zmagi, dva skoka po lestvici - Delo.si",
           "last_provider": "",
-          "published": 48240,
-          "last_output_id": "slovenci-so-se-krcevito-branili-in-se-ubranili-s-skotsko-so-remizirali-70821aca"
+          "published": 48291,
+          "last_output_id": "slovenija-brez-osvojenega-niza-izgubila-boj-za-bron-finale-poljska-francija-24-24-prvi-niz-feefb9dc"
         },
         "aarp.org": {
           "score": 1.635,
@@ -160,7 +160,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-28T08:09:14+02:00",
+      "last_learning_run": "2026-09-28T08:25:23+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -186,11 +186,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 45840,
-          "last_seen": "2026-09-28T08:09:14+02:00",
+          "seen": 45870,
+          "last_seen": "2026-09-28T08:25:23+02:00",
           "last_title": "Novi v politiki: Volt Slovenija gre na lokalne volitve tudi na Ptuju - Svet24.si",
           "last_provider": "",
-          "published": 51670,
+          "published": 51720,
           "last_output_id": "breznik-zasebni-obiski-v-moskvi-ne-predstavljajo-zunanje-politike-slovenije-45a4bf9f"
         },
         "hellovein.com": {
@@ -218,14 +218,14 @@
       "current_source_count": 30,
       "example_titles": {
         "news.google.com": [
-          "Pirc Musar: \"Ne bom tiho, ko slovenska zunanja politika ne bo skladna z ustavnimi vrednotami naše države\" - Večer",
+          "Pirc Musar: \"Ne bom tiho, ko slovenska zunanja politika ne bo skladna z ustavnimi vrednotami naše države\" - vecer.com",
           "»Ujeti med politiko in ceh: Komu sploh odgovarja RTV Slovenija?« - Ljubljanske novice",
           "Vladi in SDS zrasla podpora, Han najbolj priljubljen - 24ur.com"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-28T08:09:24+02:00",
+      "last_learning_run": "2026-09-28T08:25:34+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -259,96 +259,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 45840,
-          "last_seen": "2026-09-28T08:09:24+02:00",
+          "seen": 45870,
+          "last_seen": "2026-09-28T08:25:34+02:00",
           "last_title": "Kočevski rog: kraj, kjer je Slovenija prvič prekinila desetletja molka - Najdi.si novice",
           "last_provider": "",
-          "published": 69718,
+          "published": 69772,
           "last_output_id": "ljubljana-ni-slovenija-zakaj-je-selitev-solskega-ministrstva-v-novo-mesto-odlicna-ideja-150359b0"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 1527,
+          "published": 1528,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 1527,
+          "published": 1528,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 1550,
+          "published": 1551,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 1452,
+          "published": 1453,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 1516,
+          "published": 1517,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 1452,
+          "published": 1453,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 1452,
+          "published": 1453,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 1516,
+          "published": 1517,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 6200,
+          "published": 6204,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 1550,
+          "published": 1551,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 1527,
+          "published": 1528,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 2968,
+          "published": 2970,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 1484,
+          "published": 1485,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 3032,
+          "published": 3034,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 1550,
+          "published": 1551,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 1452,
+          "published": 1453,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 2968,
+          "published": 2970,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
@@ -377,6 +377,12 @@
     }
   },
   "recent_articles": [
+    {
+      "id": "slovenija-brez-osvojenega-niza-izgubila-boj-za-bron-finale-poljska-francija-24-24-prvi-niz-feefb9dc",
+      "title": "Slovenija brez osvojenega niza izgubila boj za bron; Finale: Poljska - Francija 24:24 (prvi niz)",
+      "category": "Šport",
+      "createdAt": "2026-09-28T08:24:33+02:00"
+    },
     {
       "id": "ljubljana-ni-slovenija-zakaj-je-selitev-solskega-ministrstva-v-novo-mesto-odlicna-ideja-150359b0",
       "title": "Ljubljana ni Slovenija: zakaj je selitev šolskega ministrstva v Novo mesto odlična ideja",
@@ -442,12 +448,6 @@
       "title": "Škocjan Caves: A Car-Light Day Trip from Ljubljana",
       "category": "Vodniki",
       "createdAt": "2026-09-25T09:00:00+02:00"
-    },
-    {
-      "id": "slovenci-imajo-z-ep-jev-lepe-spomine-na-poljake-razen-z-zadnjega-49e1ad92",
-      "title": "Slovenci imajo z EP-jev lepe spomine na Poljake, razen z zadnjega",
-      "category": "Šport",
-      "createdAt": "2026-09-25T08:24:10+02:00"
     }
   ],
   "recent_failures": [
