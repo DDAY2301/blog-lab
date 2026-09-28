@@ -20,6 +20,44 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "prvic-obelezujemo-mednarodni-dan-jam-in-krasa-ki-je-bil-lani-razglasen-na-pobudo-slovenije-8f0aafa8",
+    "title": "Prvič obeležujemo Mednarodni dan jam in krasa, ki je bil lani razglašen na pobudo Slovenije",
+    "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Prvič obeležujemo Mednarodni dan jam in krasa, ki je bil lani razglašen na pobudo Slovenije«.",
+    "seoDescription": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Prvič obeležujemo Mednarodni dan jam in krasa, ki je bil lani razglašen na po",
+    "content": "**Aktualno, 28. 9. 2026.** Prvič obeležujemo Mednarodni dan jam in krasa, ki je bil lani razglašen na pobudo Slovenije MojaObčina.si\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: MojaObčina.si. Objavljeno: Wed, 16 Sep 2026 05:56:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMi0wFBVV95cUxNMFB2aU42anVxcFh4QWsyVEVqQWFWTHVwRWRRbzNKV2N3MmxNRFY1X1pmTDBaTzFyV295ZVI1N2dXMFBKbmR5Y3ZCWDR4NnViODhacmRja3d1d2laLUg0RjFGMDFxbm5HVXozZnNhY2FzcFVvUHRQNDlWVl92ZE0ybW4tellmSEFnTjIzSGpZMzgwUHlLYWtaZDM5TElMSUc3VHo5SkZMcC0zQ3h1Zk0xeTJlaGhiQUd2d1EwaTFsRnJFeV8wOWM4V2w1REdPOGdxOF80?oc=5)\n\n## Dopolnitev vira 2: MojaObčina.si\n\nPark vojaške zgodovine je po 20 letih delovanja največji muzejski kompleks v Sloveniji MojaObčina.si\n\n Vir: MojaObčina.si. Objavljeno: Mon, 21 Sep 2026 11:05:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMizgFBVV95cUxPNHo0ME54RjZWU19sYkFudFBlYnVQVGRPOHhQeFBTUjZZOWY2ZFlrVWF6a2wxa3p2YW1GZXhpbDBjOU1RT0E5cXlHaTR5b1hhVDFna05MaXZJWW1DUzZlOHlqSGFKRzNoU0d5RTZsZDFFYnlScjJ3ZVhaRXd3UjNHd3A5UVNjRjl2WTJPRTZ3VWdqTVY4YXRIZVV4OV9GQmF5NFlld2plQzVTWTZjcXJwNFNZNUhzdW8tVnpqR185OV81WVhOeHdPeVI5QnNOUQ?oc=5)\n\n## Dopolnitev vira 3: MojaObčina.si\n\nSlovenija lovi Guinnessov rekord v skupinskem igranju harmonike - prijave so odprte MojaObčina.si\n\n Vir: MojaObčina.si. Objavljeno: Fri, 27 Mar 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMixwFBVV95cUxQVGdJSjhwOUV5emwySjNOeS04Mno3TzhvUDRTMW1WYUVGYmxYWHcyWkdKaGdDM1pOM0JJaDE0amhMemVqSnFfVWVNRUpWWExEYXM2dEpHNmJNNUl4blQxSTBfajh3WWIyV1hSRC1HRTlOVGVmT0ZhU2dPbmtEc3RwVnpFOTNTS0hoMEtsUGVEMzdpdmFwZlM2aTl2cWFjekI3TXd1ZkU2SXpzRGNKaGpTNV9uT05pN1JDSk1RQmt6Z0VzYkRtLUZV?oc=5)\n\n## Dopolnitev vira 4: Mestna občina Novo mesto\n\nV Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno Mestna občina Novo mesto\n\n Vir: Mestna občina Novo mesto. Objavljeno: Thu, 02 Jul 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMisAFBVV95cUxPNHBQZW1tbVE5Z1FyZ3dOeEd3X0Q1SnMyQ3NydHNaX1BVclk3S0dZem1Zc2JfZ3Z0Rjhna0VIYnV6U0pvanRkenRrUjN2NTV4UllMeGtyLTFCUTROY3hjMWxlUGNMeVRLTlZLZmMxRmpmUVFGeWxVRElmQ1haUU9ZX1lFMlI3VWtvSEFNd09mbnVibGZrRy16VDZKSEhvNkNXX0QzXzQtLTJXX2JiZC0wUA?oc=5)\n\n## Dopolnitev vira 5: MojaObčina.si\n\nV Laškem podelili nagrade in priznanja Skupnosti občin Slovenije MojaObčina.si\n\n Vir: MojaObčina.si. Objavljeno: Wed, 16 Sep 2026 06:30:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMisAFBVV95cUxPZlRIdXA0azB6cXJsZGozdHVxZlVndE5odDdodVFlbUdpU3JuNkVzTzZ1UjJ2U2xhc0JOclRhZE1VUV92VHBJZXFsZGV1RDBnVlE2TnJfYzljUVFOalR2bFRHVEp5LTBKcEsybHZiUkFaU2dtYVBtb0UxdWhnbUMxRW41dmlFN2ZVdUlqTmVvSjd6a2lNOUsyQ3NwcWtCWHRUZTR2dVBhRUZ3VjI1dXpMeQ?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Aktualno",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "MojaObčina.si — Prvič obeležujemo Mednarodni dan jam in krasa, ki je bil lani razglašen na pobudo Slovenije - MojaObčina.si",
+        "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNMFB2aU42anVxcFh4QWsyVEVqQWFWTHVwRWRRbzNKV2N3MmxNRFY1X1pmTDBaTzFyV295ZVI1N2dXMFBKbmR5Y3ZCWDR4NnViODhacmRja3d1d2laLUg0RjFGMDFxbm5HVXozZnNhY2FzcFVvUHRQNDlWVl92ZE0ybW4tellmSEFnTjIzSGpZMzgwUHlLYWtaZDM5TElMSUc3VHo5SkZMcC0zQ3h1Zk0xeTJlaGhiQUd2d1EwaTFsRnJFeV8wOWM4V2w1REdPOGdxOF80?oc=5"
+      },
+      {
+        "label": "MojaObčina.si — Park vojaške zgodovine je po 20 letih delovanja največji muzejski kompleks v Sloveniji - MojaObčina.si",
+        "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPNHo0ME54RjZWU19sYkFudFBlYnVQVGRPOHhQeFBTUjZZOWY2ZFlrVWF6a2wxa3p2YW1GZXhpbDBjOU1RT0E5cXlHaTR5b1hhVDFna05MaXZJWW1DUzZlOHlqSGFKRzNoU0d5RTZsZDFFYnlScjJ3ZVhaRXd3UjNHd3A5UVNjRjl2WTJPRTZ3VWdqTVY4YXRIZVV4OV9GQmF5NFlld2plQzVTWTZjcXJwNFNZNUhzdW8tVnpqR185OV81WVhOeHdPeVI5QnNOUQ?oc=5"
+      },
+      {
+        "label": "MojaObčina.si — Slovenija lovi Guinnessov rekord v skupinskem igranju harmonike - prijave so odprte - MojaObčina.si",
+        "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQVGdJSjhwOUV5emwySjNOeS04Mno3TzhvUDRTMW1WYUVGYmxYWHcyWkdKaGdDM1pOM0JJaDE0amhMemVqSnFfVWVNRUpWWExEYXM2dEpHNmJNNUl4blQxSTBfajh3WWIyV1hSRC1HRTlOVGVmT0ZhU2dPbmtEc3RwVnpFOTNTS0hoMEtsUGVEMzdpdmFwZlM2aTl2cWFjekI3TXd1ZkU2SXpzRGNKaGpTNV9uT05pN1JDSk1RQmt6Z0VzYkRtLUZV?oc=5"
+      },
+      {
+        "label": "Mestna občina Novo mesto — V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
+        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPNHBQZW1tbVE5Z1FyZ3dOeEd3X0Q1SnMyQ3NydHNaX1BVclk3S0dZem1Zc2JfZ3Z0Rjhna0VIYnV6U0pvanRkenRrUjN2NTV4UllMeGtyLTFCUTROY3hjMWxlUGNMeVRLTlZLZmMxRmpmUVFGeWxVRElmQ1haUU9ZX1lFMlI3VWtvSEFNd09mbnVibGZrRy16VDZKSEhvNkNXX0QzXzQtLTJXX2JiZC0wUA?oc=5"
+      },
+      {
+        "label": "MojaObčina.si — V Laškem podelili nagrade in priznanja Skupnosti občin Slovenije - MojaObčina.si",
+        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPZlRIdXA0azB6cXJsZGozdHVxZlVndE5odDdodVFlbUdpU3JuNkVzTzZ1UjJ2U2xhc0JOclRhZE1VUV92VHBJZXFsZGV1RDBnVlE2TnJfYzljUVFOalR2bFRHVEp5LTBKcEsybHZiUkFaU2dtYVBtb0UxdWhnbUMxRW41dmlFN2ZVdUlqTmVvSjd6a2lNOUsyQ3NwcWtCWHRUZTR2dVBhRUZ3VjI1dXpMeQ?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-28T19:53:52+02:00",
+    "updatedAt": "2026-09-28T19:53:52+02:00"
+  },
+
+  {
     "id": "doncicu-politiki-za-trditev-da-on-vodi-slovenijo-storili-tole-vse-jasno-e275e810",
     "title": "Dončiću politiki za trditev, da on vodi Slovenijo, storili tole - vse jasno",
     "excerpt": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Dončiću politiki za trditev, da on vodi Slovenijo, storili tole - vse jasno«.",
