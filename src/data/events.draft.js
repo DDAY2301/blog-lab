@@ -1,5 +1,5 @@
 // Review draft only. Not imported by the production application.
-// Rolling review draft. Sources rechecked on 2026-09-27 at 07:00 Europe/Ljubljana.
+// Rolling review draft. Sources rechecked on 2026-09-28 at 07:00 Europe/Ljubljana.
 // Production remains unchanged until the calendar model and stable views are implemented.
 // Unknown values deliberately remain null.
 export const draftEvents = [
@@ -32,7 +32,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-27T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
   },
   {
     "eventId": "national-gallery-tone-kralj-2026",
@@ -63,7 +63,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-27T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
   },
   {
     "eventId": "national-gallery-fragments-past-2026",
@@ -93,7 +93,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "confirmed",
+    "status": "expired",
     "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
@@ -125,7 +125,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-27T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
   },
   {
     "eventId": "castle-reading-corner-2026",
@@ -155,7 +155,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "confirmed",
+    "status": "expired",
     "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
@@ -187,7 +187,7 @@ export const draftEvents = [
     "accessibility": "Tactile exhibition; confirm individual access needs with the gallery",
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-27T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
   },
   {
     "eventId": "unicum-2026-ljubljana",
@@ -218,7 +218,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-27T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
   },
   {
     "eventId": "corn-labyrinth-ljubljana-2026",
@@ -249,7 +249,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-27T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
   },
   {
     "eventId": "revelations-national-gallery-2026",
@@ -280,7 +280,7 @@ export const draftEvents = [
     "accessibility": "The gallery publishes a dedicated accessibility section; confirm individual requirements directly",
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-27T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
   },
   {
     "eventId": "kozmos-kosovel-cankarjev-dom-2026",
@@ -311,7 +311,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-27T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
   },
   {
     "eventId": "opera-orchestra-academy-soloists-2026-09-17",
@@ -840,7 +840,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-27T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
   },
   {
     "eventId": "air-raid-cankarjev-dom-2026-09-24",
@@ -1218,7 +1218,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "confirmed",
+    "status": "expired",
     "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
@@ -1249,7 +1249,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "confirmed",
+    "status": "expired",
     "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
@@ -1280,7 +1280,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "confirmed",
+    "status": "expired",
     "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
@@ -1311,7 +1311,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "confirmed",
+    "status": "expired",
     "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
@@ -1342,7 +1342,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "confirmed",
+    "status": "expired",
     "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
@@ -1374,7 +1374,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
   },
   {
     "eventId": "prisleki-30-years-cd-2026-09-29",
@@ -1405,7 +1405,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-27T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
   },
   {
     "eventId": "salome-mgl-2026-09-29-1930",
@@ -1436,7 +1436,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "sold_out",
-    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
   },
   {
     "eventId": "festival-third-age-cd-2026-09-30",
@@ -1467,7 +1467,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
   },
   {
     "eventId": "lastovka-award-cd-2026-09-30",
@@ -1498,7 +1498,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-27T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
   },
   {
     "eventId": "opera-ballet-rehearsal-cinderella-2026-09-30",
@@ -1529,7 +1529,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-27T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
   },
   {
     "eventId": "beauty-queen-leenane-mgl-2026-09-30",
@@ -1560,7 +1560,38 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
+  },
+  {
+    "eventId": "now-1-neohero-cd-2026-09-30",
+    "title": "NOW 1: Neohero",
+    "summary": "Cankarjev dom lists Neohero in its NOW 1 music programme at 19:30 on 30 September. Price, performance language, detailed accessibility and ticket status should be checked on the live event page before visiting.",
+    "category": "music",
+    "startAt": "2026-09-30T19:30:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": null
+    },
+    "ticketUrl": null,
+    "officialUrl": "https://www.cd-cc.si/en",
+    "sourceName": "Cankarjev dom",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
   },
   {
     "eventId": "ex-mgl-2026-09-30",
@@ -1591,7 +1622,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "sold_out",
-    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
   },
   {
     "eventId": "festival-third-age-cd-2026-10-01",
@@ -1622,7 +1653,38 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-27T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
+  },
+  {
+    "eventId": "katalena-cd-2026-10-01",
+    "title": "Katalena",
+    "summary": "Katalena performs at Cankarjev dom at 19:30 on 1 October. The official programme confirms the date and time; visitors should verify current prices, ticket availability and accessibility directly with the venue.",
+    "category": "music",
+    "startAt": "2026-10-01T19:30:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": null
+    },
+    "ticketUrl": null,
+    "officialUrl": "https://www.cd-cc.si/en",
+    "sourceName": "Cankarjev dom",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
   },
   {
     "eventId": "open-kitchen-2026-10-02",
@@ -1653,7 +1715,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-27T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
   },
   {
     "eventId": "uec-road-european-championships-2026",
@@ -1684,7 +1746,7 @@ export const draftEvents = [
     "accessibility": "Outdoor roadside viewing; individual accessible viewing arrangements not stated",
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-27T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
   },
   {
     "eventId": "ex-mgl-2026-10-02",
@@ -1715,7 +1777,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
   },
   {
     "eventId": "sheby-umami-castle-2026-10-02",
@@ -1746,7 +1808,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
   },
   {
     "eventId": "artish-2026-10-03",
@@ -1777,7 +1839,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-27T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
   },
   {
     "eventId": "salome-mgl-2026-10-03",
@@ -1808,7 +1870,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
   },
   {
     "eventId": "man-overboard-mgl-2026-10-03",
@@ -1839,7 +1901,69 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "sold_out",
-    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
+  },
+  {
+    "eventId": "sunday-flea-market-2026-10-04",
+    "title": "Sunday Flea Market",
+    "summary": "Ljubljana's antique and vintage market returns to Breg from 08:00 to 15:00 on Sunday 4 October. Entry is free; outdoor sellers may finish early in poor weather.",
+    "category": "market",
+    "startAt": "2026-10-04T08:00:00+02:00",
+    "endAt": "2026-10-04T15:00:00+02:00",
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Breg",
+      "address": "Breg, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": "Free admission",
+      "free": true
+    },
+    "ticketUrl": null,
+    "officialUrl": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/ljubljana-flea-market",
+    "sourceName": "Ljubljana Tourism",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": true,
+    "accessibility": null,
+    "indoorOutdoor": "outdoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
+  },
+  {
+    "eventId": "wind-orchestra-promenade-2026-10-04",
+    "title": "Sunday Promenade Concert by Ljubljana Wind Orchestras",
+    "summary": "The final scheduled 2026 promenade concert takes place at Novi trg/Breg from 11:00 to 12:00 on 4 October. Admission is free; as an outdoor event, it remains weather-dependent.",
+    "category": "music",
+    "startAt": "2026-10-04T11:00:00+02:00",
+    "endAt": "2026-10-04T12:00:00+02:00",
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Novi trg / Breg",
+      "address": "Novi trg / Breg, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": "Free admission",
+      "free": true
+    },
+    "ticketUrl": null,
+    "officialUrl": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/promenade-concerts-of-local-brass-bands",
+    "sourceName": "Ljubljana Tourism",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": true,
+    "accessibility": null,
+    "indoorOutdoor": "outdoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
   },
   {
     "eventId": "salome-mgl-2026-10-06",
@@ -1870,7 +1994,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
   },
   {
     "eventId": "salome-mgl-2026-10-07",
@@ -1901,7 +2025,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
   },
   {
     "eventId": "man-overboard-mgl-2026-10-07",
@@ -1932,7 +2056,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "sold_out",
-    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
   },
   {
     "eventId": "sunnysiders-stone-head-castle-2026-10-09",
@@ -1963,7 +2087,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-26T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
   },
   {
     "eventId": "artish-2026-10-10",
@@ -1994,6 +2118,37 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-27T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
+  },
+  {
+    "eventId": "european-table-tennis-championships-2026",
+    "title": "European Individual Table Tennis Championships 2026",
+    "summary": "Europe's leading players compete at Stožice Arena from 11 to 18 October in singles, doubles and mixed doubles. Tickets are on sale; exact daily session times, prices, language services and accessibility should be checked for the selected session.",
+    "category": "sport",
+    "startAt": "2026-10-11T00:00:00+02:00",
+    "endAt": "2026-10-18T23:59:00+02:00",
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Stožice Arena",
+      "address": "Vojkova cesta 100, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": null
+    },
+    "ticketUrl": "https://www.eventim.si/en/artist/evropsko-prvenstvo-v-namiznem-tenisu/",
+    "officialUrl": "https://www.ettu.org/european-individual-championships/",
+    "sourceName": "European Table Tennis Union",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": true,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
   }
 ];
