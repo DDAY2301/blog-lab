@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-28T13:24:29+02:00",
-  "loop_count": 1594,
+  "updated_at": "2026-09-28T13:40:31+02:00",
+  "loop_count": 1595,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-28T13:24:07+02:00",
+      "last_learning_run": "2026-09-28T13:40:10+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -51,11 +51,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 47160,
-          "last_seen": "2026-09-28T13:24:07+02:00",
-          "last_title": "Roglič presenetil še samega sebe: \"Na koncu me je malo zmanjkalo, a si nimam česa očitati\" - rtvslo.si",
+          "seen": 47190,
+          "last_seen": "2026-09-28T13:40:10+02:00",
+          "last_title": "Nika Prevc z zmago prinesla Sloveniji dodatno kvoto za svetovni pokal - rtvslo.si",
           "last_provider": "",
-          "published": 50484,
+          "published": 50535,
           "last_output_id": "slovenija-brez-osvojenega-niza-izgubila-boj-za-bron-finale-poljska-francija-24-24-prvi-niz-feefb9dc"
         },
         "aarp.org": {
@@ -153,14 +153,14 @@
       "current_source_count": 30,
       "example_titles": {
         "news.google.com": [
-          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
-          "Kot v sanjah: Slovenija že drugič v dveh tednih evropski prvak! (VIDEO) - Šport TV",
-          "S tribune: Športni trenutki, zaradi katerih se mi še danes naježijo dlake - Svet24.si"
+          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - sport-tv.si",
+          "Kot v sanjah: Slovenija že drugič v dveh tednih evropski prvak! (VIDEO) - sport-tv.si",
+          "Konec ugibanj: finale Slovenije bo na televiziji! Tukaj ga lahko gledate - ekipa.svet24.si"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-28T13:24:18+02:00",
+      "last_learning_run": "2026-09-28T13:40:21+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -186,12 +186,12 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 47160,
-          "last_seen": "2026-09-28T13:24:18+02:00",
+          "seen": 47190,
+          "last_seen": "2026-09-28T13:40:21+02:00",
           "last_title": "Kajzer zavrnil očitke, da ne vodi suverene zunanje politike - Dnevnik",
           "last_provider": "",
-          "published": 53870,
-          "last_output_id": "breznik-zasebni-obiski-v-moskvi-ne-predstavljajo-zunanje-politike-slovenije-45a4bf9f"
+          "published": 53925,
+          "last_output_id": "doncicu-politiki-za-trditev-da-on-vodi-slovenijo-storili-tole-vse-jasno-e275e810"
         },
         "hellovein.com": {
           "score": 1.47,
@@ -220,12 +220,12 @@
         "news.google.com": [
           "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si",
           "Na Radiu Ognjišče zadnje predvolilno soočenje: v ospredju prisluhi, zdravstvo, zunanja politika in sprava - Radio Ognjišče",
-          "»Ujeti med politiko in ceh: Komu sploh odgovarja RTV Slovenija?« - Ljubljanske novice"
+          "Pirc Musar: \"Ne bom tiho, ko slovenska zunanja politika ne bo skladna z ustavnimi vrednotami naše države\" - Večer"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-28T13:24:29+02:00",
+      "last_learning_run": "2026-09-28T13:40:31+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -259,96 +259,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 47160,
-          "last_seen": "2026-09-28T13:24:29+02:00",
-          "last_title": "Anja Rakuša Brus: Pomemben argument za mojo kandidaturo je izkušnja z aktualno vlado, ki stroke ne posluša dovolj - Nova24TV",
+          "seen": 47190,
+          "last_seen": "2026-09-28T13:40:31+02:00",
+          "last_title": "Anja Rakuša Brus: Pomemben argument za mojo kandidaturo je izkušnja z aktualno vlado, ki stroke ne posluša dovolj - nova24tv.si",
           "last_provider": "",
-          "published": 72094,
+          "published": 72148,
           "last_output_id": "ljubljana-ni-slovenija-zakaj-je-selitev-solskega-ministrstva-v-novo-mesto-odlicna-ideja-150359b0"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 1571,
+          "published": 1572,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 1571,
+          "published": 1572,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 1594,
+          "published": 1595,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 1496,
+          "published": 1497,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 1560,
+          "published": 1561,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 1496,
+          "published": 1497,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 1496,
+          "published": 1497,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 1560,
+          "published": 1561,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 6376,
+          "published": 6380,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 1594,
+          "published": 1595,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 1571,
+          "published": 1572,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 3056,
+          "published": 3058,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 1528,
+          "published": 1529,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 3120,
+          "published": 3122,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 1594,
+          "published": 1595,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 1496,
+          "published": 1497,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 3056,
+          "published": 3058,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
@@ -377,6 +377,12 @@
     }
   },
   "recent_articles": [
+    {
+      "id": "doncicu-politiki-za-trditev-da-on-vodi-slovenijo-storili-tole-vse-jasno-e275e810",
+      "title": "Dončiću politiki za trditev, da on vodi Slovenijo, storili tole - vse jasno",
+      "category": "Politika",
+      "createdAt": "2026-09-28T13:39:32+02:00"
+    },
     {
       "id": "roman-emona-ljubljana-self-guided-walk",
       "title": "Roman Emona in Ljubljana: A Self-Guided Archaeology Walk",
@@ -442,12 +448,6 @@
       "title": "Janša v New Yorku jasno o Ukrajini: Slovenija bo nadaljevala politično, vojaško, humanitarno in finančno pomoč -…",
       "category": "Aktualno",
       "createdAt": "2026-09-25T19:54:00+02:00"
-    },
-    {
-      "id": "kajzer-zavrnil-ocitke-da-ne-vodi-suverene-zunanje-politike-cbe54319",
-      "title": "Kajzer zavrnil očitke, da ne vodi suverene zunanje politike",
-      "category": "Politika",
-      "createdAt": "2026-09-25T13:39:14+02:00"
     }
   ],
   "recent_failures": [
