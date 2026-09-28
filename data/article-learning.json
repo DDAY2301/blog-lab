@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-28T21:53:52+02:00",
-  "loop_count": 1673,
+  "updated_at": "2026-09-28T22:08:11+02:00",
+  "loop_count": 1674,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-28T21:53:30+02:00",
+      "last_learning_run": "2026-09-28T22:07:47+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -51,11 +51,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 49500,
-          "last_seen": "2026-09-28T21:53:30+02:00",
-          "last_title": "Slovenija tokrat brez kolajne, Finska je bila boljša s 3:0 - Dnevnik",
+          "seen": 49530,
+          "last_seen": "2026-09-28T22:07:47+02:00",
+          "last_title": "Reaves spregovoril o obisku Lakersov v Sloveniji - 24ur.com",
           "last_provider": "",
-          "published": 54513,
+          "published": 54564,
           "last_output_id": "slovenija-brez-osvojenega-niza-izgubila-boj-za-bron-finale-poljska-francija-24-24-prvi-niz-feefb9dc"
         },
         "aarp.org": {
@@ -175,13 +175,13 @@
       "example_titles": {
         "news.google.com": [
           "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
-          "Kot v sanjah: Slovenija že drugič v dveh tednih evropski prvak! (VIDEO) - Šport TV",
-          "Slovenija v Ligi narodov dosega (samo) gol na tekmo - rtvslo.si"
+          "Slovenija v Ligi narodov dosega (samo) gol na tekmo - rtvslo.si",
+          "Slovenija - Izrael na Ptuju, slovenski poziv za odpoved tekme: Odrecite ... - Ekipa"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-28T21:53:41+02:00",
+      "last_learning_run": "2026-09-28T22:07:59+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -207,11 +207,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 49500,
-          "last_seen": "2026-09-28T21:53:41+02:00",
-          "last_title": "Kandidaturo za župana naj bi umaknil zaradi nasprotovanja dveh znanih politikov - Žurnal24",
+          "seen": 49530,
+          "last_seen": "2026-09-28T22:07:59+02:00",
+          "last_title": "Slovenska meščanska politika v razcepu – naslonitev na sile osi pred okupacijo Slovenije - rtvslo.si",
           "last_provider": "",
-          "published": 58215,
+          "published": 58270,
           "last_output_id": "doncicu-politiki-za-trditev-da-on-vodi-slovenijo-storili-tole-vse-jasno-e275e810"
         },
         "hellovein.com": {
@@ -239,14 +239,14 @@
       "current_source_count": 30,
       "example_titles": {
         "news.google.com": [
-          "»Ujeti med politiko in ceh: Komu sploh odgovarja RTV Slovenija?« - ljnovice.si",
-          "Županska tekma se širi: Za župana bo kandidiral tudi tekmovalec MasterChefa Slovenija - Ljubljanainfo.com",
-          "Vladi in SDS zrasla podpora, Han najbolj priljubljen - 24ur.com"
+          "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si",
+          "»Ujeti med politiko in ceh: Komu sploh odgovarja RTV Slovenija?« - Ljubljanske novice",
+          "Županska tekma se širi: Za župana bo kandidiral tudi tekmovalec MasterChefa Slovenija - Ljubljanainfo.com"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-28T21:53:52+02:00",
+      "last_learning_run": "2026-09-28T22:08:11+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -280,96 +280,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 49500,
-          "last_seen": "2026-09-28T21:53:52+02:00",
+          "seen": 49530,
+          "last_seen": "2026-09-28T22:08:11+02:00",
           "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 76465,
+          "published": 76524,
           "last_output_id": "prvic-obelezujemo-mednarodni-dan-jam-in-krasa-ki-je-bil-lani-razglasen-na-pobudo-slovenije-8f0aafa8"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 1650,
+          "published": 1651,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 1650,
+          "published": 1651,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 1673,
+          "published": 1674,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 1575,
+          "published": 1576,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 1639,
+          "published": 1640,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 1575,
+          "published": 1576,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 1575,
+          "published": 1576,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 1639,
+          "published": 1640,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 6692,
+          "published": 6696,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 1673,
+          "published": 1674,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 1650,
+          "published": 1651,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 3214,
+          "published": 3216,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 1607,
+          "published": 1608,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 3278,
+          "published": 3280,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 1673,
+          "published": 1674,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 1575,
+          "published": 1576,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 3214,
+          "published": 3216,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
