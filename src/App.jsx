@@ -20,6 +20,44 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "slovenija-brez-osvojenega-niza-izgubila-boj-za-bron-finale-poljska-francija-24-24-prvi-niz-feefb9dc",
+    "title": "Slovenija brez osvojenega niza izgubila boj za bron; Finale: Poljska - Francija 24:24 (prvi niz)",
+    "excerpt": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Slovenija brez osvojenega niza izgubila boj za bron; Finale: Poljska - Francija 24:24 (prvi niz)«.",
+    "seoDescription": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Slovenija brez osvojenega niza izgubila boj za bron; Finale: Poljska - Francija ",
+    "content": "**Šport, 28. 9. 2026.** Slovenija brez osvojenega niza izgubila boj za bron; Finale: Poljska - Francija 24:24 (prvi niz) rtvslo.si\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: rtvslo.si. Objavljeno: Sat, 26 Sep 2026 16:39:46 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiqgFBVV95cUxOUXlEeDh4cEhkRmR6SUJ2dzJYRWJpZnZ3T1NKSnB5LXp5VmV0Sm8tUEdZRVAyeWpXUk9PNkFIVTB2TFVXUGFWNlN1dDRlUjd3OWc4TU1HdFlseVREX2ZCbXJqdXdJMFAyVmkxaU82RmEwWjlwdkx0RDZlUVdFdGRONjVYOUhpd3lmZDhGRFhRMkxiOERZSWZaN0lFNG15LUc2Yjh5WERRcFI0QQ?oc=5)\n\n## Dopolnitev vira 2: Delo.si\n\nSlovenija bo bron lovila proti Finski, Francija po štirih nizih v finale Delo.si\n\n Vir: Delo.si. Objavljeno: Fri, 25 Sep 2026 21:06:01 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMirwFBVV95cUxPZ181UTlGUWlKM1BwWjJnd2xRTXk4S0tkT2JEc1B6ZkpxcnBOaWV6SVR2M3l4UW1BNzQyaGVFcFlERFppdFZpb1JGbUdYX3lFbVpBODZGZmxDZndGaUtxZ0d4Y2FUd1JQYXFtODZLYmNBOHozS0FxVnFOOUZFQTNnWkRjR192NEFDMXlxdktHUWpsVExpR3p2RldvdEQxY1g0LUs0S09aT29vVTBMQkpr?oc=5)\n\n## Dopolnitev vira 3: rtvslo.si\n\nIzjemno kakovostni Poljaki Slovence poslali v boj za bron s Finci rtvslo.si\n\n Vir: rtvslo.si. Objavljeno: Fri, 25 Sep 2026 20:49:56 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMixAFBVV95cUxPUGpmTEE3Njc5QXZPMXRSRVNvaHJpd0dIb19yM3dpSUZ6TUdEcFlFbUx3emJ2MWs5M19aaFlaeE5PNnd2N3l2ckQxTFdlWV9IdEoxX09GT0dUM1JYbllFeTlMWWpmWTJOSUFTUUVPTWlWNGFoWHZVZDA2eFFuekpGLVlHbXZsNFJrU0V0M1FPczlzVXRERnlqTnZvaUUxQXViQ1BTendUMU8xRjJBSlpFOXRQckJuYmFmVWwyblI4ZFNGMkFQ?oc=5)\n\n## Dopolnitev vira 4: rtvslo.si\n\nPolfinale: Slovenija - Poljska 0:2 (11:7 v tretjem nizu) rtvslo.si\n\n Vir: rtvslo.si. Objavljeno: Fri, 25 Sep 2026 15:06:16 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMikgFBVV95cUxOSmt3ZE9Wa2J2NS05Y2dtM3FGVHUyd01WUWtZRFBwS05uU0NfTURtUnFZMV9kNmFpRV9ockpRb2VqcUhTNlBjNm5JdWI1eXVwaXYzM1FmaFFRNTJkTTAydXoxLUlaYnhhUTBkYnh5YWFUbUZBMlI2U2pvRTdwX0JiWHQ3dWtKa3BKaUdrUTFnbmlEZw?oc=5)\n\n## Dopolnitev vira 5: rtvslo.si\n\nSlovenija brez osvojenega niza izgubila v boju za bron rtvslo.si\n\n Vir: rtvslo.si. Objavljeno: Sat, 26 Sep 2026 15:43:09 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMimAFBVV95cUxNd05HaWNEQk1BQkFoQnVnZ05aV1FTdHloSzBSa2NfZnJlQ0VST1dqQW1QS2d1a2pYT3FQelpiRUhlOEJVVGNnWGxzU3RsM2R4S1RNQUVvbllOUGtBX0RERHEzWl9wMUtpR0traVBUX2pCSi1DNXh1RDRjSmNiQXZZcFU5ellFZzlseXpxcHdpbzdmUlg5a3RoQg?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Šport",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "rtvslo.si — Slovenija brez osvojenega niza izgubila boj za bron; Finale: Poljska - Francija 24:24 (prvi niz) - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOUXlEeDh4cEhkRmR6SUJ2dzJYRWJpZnZ3T1NKSnB5LXp5VmV0Sm8tUEdZRVAyeWpXUk9PNkFIVTB2TFVXUGFWNlN1dDRlUjd3OWc4TU1HdFlseVREX2ZCbXJqdXdJMFAyVmkxaU82RmEwWjlwdkx0RDZlUVdFdGRONjVYOUhpd3lmZDhGRFhRMkxiOERZSWZaN0lFNG15LUc2Yjh5WERRcFI0QQ?oc=5"
+      },
+      {
+        "label": "Delo.si — Slovenija bo bron lovila proti Finski, Francija po štirih nizih v finale - Delo.si",
+        "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPZ181UTlGUWlKM1BwWjJnd2xRTXk4S0tkT2JEc1B6ZkpxcnBOaWV6SVR2M3l4UW1BNzQyaGVFcFlERFppdFZpb1JGbUdYX3lFbVpBODZGZmxDZndGaUtxZ0d4Y2FUd1JQYXFtODZLYmNBOHozS0FxVnFOOUZFQTNnWkRjR192NEFDMXlxdktHUWpsVExpR3p2RldvdEQxY1g0LUs0S09aT29vVTBMQkpr?oc=5"
+      },
+      {
+        "label": "rtvslo.si — Izjemno kakovostni Poljaki Slovence poslali v boj za bron s Finci - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPUGpmTEE3Njc5QXZPMXRSRVNvaHJpd0dIb19yM3dpSUZ6TUdEcFlFbUx3emJ2MWs5M19aaFlaeE5PNnd2N3l2ckQxTFdlWV9IdEoxX09GT0dUM1JYbllFeTlMWWpmWTJOSUFTUUVPTWlWNGFoWHZVZDA2eFFuekpGLVlHbXZsNFJrU0V0M1FPczlzVXRERnlqTnZvaUUxQXViQ1BTendUMU8xRjJBSlpFOXRQckJuYmFmVWwyblI4ZFNGMkFQ?oc=5"
+      },
+      {
+        "label": "rtvslo.si — Polfinale: Slovenija - Poljska 0:2 (11:7 v tretjem nizu) - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOSmt3ZE9Wa2J2NS05Y2dtM3FGVHUyd01WUWtZRFBwS05uU0NfTURtUnFZMV9kNmFpRV9ockpRb2VqcUhTNlBjNm5JdWI1eXVwaXYzM1FmaFFRNTJkTTAydXoxLUlaYnhhUTBkYnh5YWFUbUZBMlI2U2pvRTdwX0JiWHQ3dWtKa3BKaUdrUTFnbmlEZw?oc=5"
+      },
+      {
+        "label": "rtvslo.si — Slovenija brez osvojenega niza izgubila v boju za bron - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNd05HaWNEQk1BQkFoQnVnZ05aV1FTdHloSzBSa2NfZnJlQ0VST1dqQW1QS2d1a2pYT3FQelpiRUhlOEJVVGNnWGxzU3RsM2R4S1RNQUVvbllOUGtBX0RERHEzWl9wMUtpR0traVBUX2pCSi1DNXh1RDRjSmNiQXZZcFU5ellFZzlseXpxcHdpbzdmUlg5a3RoQg?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-28T08:24:33+02:00",
+    "updatedAt": "2026-09-28T08:24:33+02:00"
+  },
+
+  {
     "id": "ljubljana-ni-slovenija-zakaj-je-selitev-solskega-ministrstva-v-novo-mesto-odlicna-ideja-150359b0",
     "title": "Ljubljana ni Slovenija: zakaj je selitev šolskega ministrstva v Novo mesto odlična ideja",
     "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Ljubljana ni Slovenija: zakaj je selitev šolskega ministrstva v Novo mesto odlična ideja«.",
