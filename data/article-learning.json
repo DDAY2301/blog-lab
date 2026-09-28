@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-28T07:53:50+02:00",
-  "loop_count": 1547,
+  "updated_at": "2026-09-28T08:07:26+02:00",
+  "loop_count": 1548,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-28T07:53:25+02:00",
+      "last_learning_run": "2026-09-28T08:07:04+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -51,11 +51,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 45750,
-          "last_seen": "2026-09-28T07:53:25+02:00",
-          "last_title": "Obračun za finale EP: lahko Slovenija šokira svetovno številko ena? - Delo.si",
+          "seen": 45780,
+          "last_seen": "2026-09-28T08:07:04+02:00",
+          "last_title": "Slovenija v Samarkandu: dve zmagi, dva skoka po lestvici - Delo.si",
           "last_provider": "",
-          "published": 48102,
+          "published": 48148,
           "last_output_id": "slovenci-so-se-krcevito-branili-in-se-ubranili-s-skotsko-so-remizirali-70821aca"
         },
         "aarp.org": {
@@ -155,12 +155,12 @@
         "news.google.com": [
           "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
           "Kot v sanjah: Slovenija že drugič v dveh tednih evropski prvak! (VIDEO) - Šport TV",
-          "Slovenija daleč od nepozabne podobe iz Nemčije 2024 - Delo.si"
+          "Brez medalje, a še vedno med evropsko elito - rtvslo.si"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-28T07:53:39+02:00",
+      "last_learning_run": "2026-09-28T08:07:15+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -186,11 +186,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 45750,
-          "last_seen": "2026-09-28T07:53:39+02:00",
+          "seen": 45780,
+          "last_seen": "2026-09-28T08:07:15+02:00",
           "last_title": "Novi v politiki: Volt Slovenija gre na lokalne volitve tudi na Ptuju - Svet24.si",
           "last_provider": "",
-          "published": 51520,
+          "published": 51570,
           "last_output_id": "breznik-zasebni-obiski-v-moskvi-ne-predstavljajo-zunanje-politike-slovenije-45a4bf9f"
         },
         "hellovein.com": {
@@ -225,7 +225,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-28T07:53:50+02:00",
+      "last_learning_run": "2026-09-28T08:07:26+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -259,96 +259,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 45750,
-          "last_seen": "2026-09-28T07:53:50+02:00",
+          "seen": 45780,
+          "last_seen": "2026-09-28T08:07:26+02:00",
           "last_title": "Kočevski rog: kraj, kjer je Slovenija prvič prekinila desetletja molka - Najdi.si novice",
           "last_provider": "",
-          "published": 69556,
+          "published": 69610,
           "last_output_id": "ljubljana-ni-slovenija-zakaj-je-selitev-solskega-ministrstva-v-novo-mesto-odlicna-ideja-150359b0"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 1524,
+          "published": 1525,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 1524,
+          "published": 1525,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 1547,
+          "published": 1548,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 1449,
+          "published": 1450,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 1513,
+          "published": 1514,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 1449,
+          "published": 1450,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 1449,
+          "published": 1450,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 1513,
+          "published": 1514,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 6188,
+          "published": 6192,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 1547,
+          "published": 1548,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 1524,
+          "published": 1525,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 2962,
+          "published": 2964,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 1481,
+          "published": 1482,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 3026,
+          "published": 3028,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 1547,
+          "published": 1548,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 1449,
+          "published": 1450,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 2962,
+          "published": 2964,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
