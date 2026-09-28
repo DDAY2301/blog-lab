@@ -20,6 +20,44 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "doncicu-politiki-za-trditev-da-on-vodi-slovenijo-storili-tole-vse-jasno-e275e810",
+    "title": "Dončiću politiki za trditev, da on vodi Slovenijo, storili tole - vse jasno",
+    "excerpt": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Dončiću politiki za trditev, da on vodi Slovenijo, storili tole - vse jasno«.",
+    "seoDescription": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Dončiću politiki za trditev, da on vodi Slovenijo, storili tole - vse jasno«.",
+    "content": "**Politika, 28. 9. 2026.** Dončiću politiki za trditev, da on vodi Slovenijo, storili tole - vse jasno Ekipa\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nPri političnih temah Blog Lab ne podpira kandidatov, strank ali političnih odločitev; izjave in ocene so predstavljene kot stališča njihovih avtorjev ali virov, ne kot uredniška presoja.\n\nVir: Ekipa. Objavljeno: Sun, 27 Sep 2026 12:14:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiygFBVV95cUxNT2hGOFNCMWxjWnBKOGpoS2p2a1NLR2p4d2VRSGx1YXdBemZrTzJhSVJ0c2ozZmtNbkwtRnJIV2NjdkZGM3VOTUtSekZLVXdWUFRqNXV3dW1JcmhjQm82QThEX3B6QmtEazRRbmNSdGxVQk1ZTnZzSElmTEVLR0ZDbWFZaFpXVU5NYzBVeUUybV9iZTZ0ZVhJblp6RzhkWm02cVFTQWxNc0poRmZlSXU1Tl9LVlZKd0hjNjEtUXdIQzVFVkdsdGk1UzRn?oc=5)\n\n## Dopolnitev vira 2: zanima.me\n\nKaj premier Janša sporoča z govornice OZN in kaj bi Trumpa prepričalo v obisk Slovenije? zanima.me\n\n Vir: zanima.me. Objavljeno: Sun, 27 Sep 2026 15:27:44 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMirwFBVV95cUxQWW15Nk5ZckhhT0N2RzJCTDg4c0ZQcFhJSzc1YmVEUXJNdURYYTNwWk1zOTJDZHVqVVYwaFF5RndjRFBqcjM1Xy0wMVZ5cVZXU3VXYW1zSmJDLWh6b2lKOEY2R0RMaV81cm1wYWxxR3gzYjhvZWxCX1Fjb0JheTN4bUhEUGpmT1g2b1JaNDJ5ZWdzSFNKclFONnl4OXNQVVFFbG8tUEpNRTNiLXM3dE1V?oc=5)\n\n## Dopolnitev vira 3: novice.najdi.si\n\nFiskalni svet opozarja: rebalans odmika Slovenijo od fiskalnih ciljev novice.najdi.si\n\n Vir: novice.najdi.si. Objavljeno: Mon, 28 Sep 2026 08:22:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMi4gFBVV95cUxPVWRmT202dnZQbHlKQ0FpU3diNWFQcFFQQmNOd0VLdFFxZ00zQW8ydUVOekZ4VGE3QnFxSzQzWFFpaGdXb1dfYlpuQnpOOXlLM1lveVAyRzJaOEZGRTRPY09Pa0J5QmtMbTYySEtqSlgtUXJKMmNhUnZhREtZTjFhRjdnbXFfZDlZb1U5Q2xDdy1ncDNUU2tVT3lmeW05MDgtWjNha0xQWXo4YzZ4YS1kMWVTM2FySkhlemNQMGZjS0w4aUVzY0JBVzAxMkZkbmtZRkFEU19KQ0gwck1kQ2VRVjJ3?oc=5)\n\n## Dopolnitev vira 4: Ljubljanske novice\n\n»Ujeti med politiko in ceh: Komu sploh odgovarja RTV Slovenija?« Ljubljanske novice\n\n Vir: Ljubljanske novice. Objavljeno: Sun, 27 Sep 2026 23:02:41 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMilwFBVV95cUxNRHdWMEpXOGd6RUNBMmpTVVVfVTI4eWx6RWg2bVBhd1JFMFctdWtxWWNHUS1GeXhTX3h0bW9kdWZYV3Z5enpERUE0NFJJbFdOdElXdzlGMjZwclZKQTM4ejFoOFRGTlNqa3RJRTIzRGhwUzdmb05GSnFhTUJObXdZRHNNT2RqT1VBZ0FNS2hVZXFFV2lOVDRR?oc=5)\n\n## Dopolnitev vira 5: Reporter\n\nOzadje novega kurza slovenske zunanje politike Reporter\n\n Vir: Reporter. Objavljeno: Sun, 27 Sep 2026 18:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMijAFBVV95cUxNX0pzU2NwX3BGWHRqaVBIWDZ5ZEFEeVA2cFRwNDlRcE83OHotT2JXRVpra3A1elo4T055MDBYcGpSZ29vWlM0OExkczgzTmdEeFRvQW9hVm9iSFlscWJYakhGTV9uQ29VSkV0OUJTOERsMnF6VnJ4b2pfZy1YM0tmR2lrVnNXVHNYT0ZHVw?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Politika",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Ekipa — Dončiću politiki za trditev, da on vodi Slovenijo, storili tole - vse jasno - Ekipa",
+        "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNT2hGOFNCMWxjWnBKOGpoS2p2a1NLR2p4d2VRSGx1YXdBemZrTzJhSVJ0c2ozZmtNbkwtRnJIV2NjdkZGM3VOTUtSekZLVXdWUFRqNXV3dW1JcmhjQm82QThEX3B6QmtEazRRbmNSdGxVQk1ZTnZzSElmTEVLR0ZDbWFZaFpXVU5NYzBVeUUybV9iZTZ0ZVhJblp6RzhkWm02cVFTQWxNc0poRmZlSXU1Tl9LVlZKd0hjNjEtUXdIQzVFVkdsdGk1UzRn?oc=5"
+      },
+      {
+        "label": "zanima.me — Kaj premier Janša sporoča z govornice OZN in kaj bi Trumpa prepričalo v obisk Slovenije? - zanima.me",
+        "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQWW15Nk5ZckhhT0N2RzJCTDg4c0ZQcFhJSzc1YmVEUXJNdURYYTNwWk1zOTJDZHVqVVYwaFF5RndjRFBqcjM1Xy0wMVZ5cVZXU3VXYW1zSmJDLWh6b2lKOEY2R0RMaV81cm1wYWxxR3gzYjhvZWxCX1Fjb0JheTN4bUhEUGpmT1g2b1JaNDJ5ZWdzSFNKclFONnl4OXNQVVFFbG8tUEpNRTNiLXM3dE1V?oc=5"
+      },
+      {
+        "label": "novice.najdi.si — Fiskalni svet opozarja: rebalans odmika Slovenijo od fiskalnih ciljev - novice.najdi.si",
+        "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPVWRmT202dnZQbHlKQ0FpU3diNWFQcFFQQmNOd0VLdFFxZ00zQW8ydUVOekZ4VGE3QnFxSzQzWFFpaGdXb1dfYlpuQnpOOXlLM1lveVAyRzJaOEZGRTRPY09Pa0J5QmtMbTYySEtqSlgtUXJKMmNhUnZhREtZTjFhRjdnbXFfZDlZb1U5Q2xDdy1ncDNUU2tVT3lmeW05MDgtWjNha0xQWXo4YzZ4YS1kMWVTM2FySkhlemNQMGZjS0w4aUVzY0JBVzAxMkZkbmtZRkFEU19KQ0gwck1kQ2VRVjJ3?oc=5"
+      },
+      {
+        "label": "Ljubljanske novice — »Ujeti med politiko in ceh: Komu sploh odgovarja RTV Slovenija?« - Ljubljanske novice",
+        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNRHdWMEpXOGd6RUNBMmpTVVVfVTI4eWx6RWg2bVBhd1JFMFctdWtxWWNHUS1GeXhTX3h0bW9kdWZYV3Z5enpERUE0NFJJbFdOdElXdzlGMjZwclZKQTM4ejFoOFRGTlNqa3RJRTIzRGhwUzdmb05GSnFhTUJObXdZRHNNT2RqT1VBZ0FNS2hVZXFFV2lOVDRR?oc=5"
+      },
+      {
+        "label": "Reporter — Ozadje novega kurza slovenske zunanje politike - Reporter",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNX0pzU2NwX3BGWHRqaVBIWDZ5ZEFEeVA2cFRwNDlRcE83OHotT2JXRVpra3A1elo4T055MDBYcGpSZ29vWlM0OExkczgzTmdEeFRvQW9hVm9iSFlscWJYakhGTV9uQ29VSkV0OUJTOERsMnF6VnJ4b2pfZy1YM0tmR2lrVnNXVHNYT0ZHVw?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-28T13:39:32+02:00",
+    "updatedAt": "2026-09-28T13:39:32+02:00"
+  },
+
+  {
     "id": "roman-emona-ljubljana-self-guided-walk",
     "title": "Roman Emona in Ljubljana: A Self-Guided Archaeology Walk",
     "excerpt": "Trace Roman Ljubljana on a practical city-centre walk linking the City Museum, Emona House, Mirje wall, the Early Christian Centre and Congress Square.",
