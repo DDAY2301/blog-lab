@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-29T18:57:22+02:00",
-  "loop_count": 1859,
+  "updated_at": "2026-09-29T19:08:54+02:00",
+  "loop_count": 1860,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-29T18:56:53+02:00",
+      "last_learning_run": "2026-09-29T19:08:33+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -51,11 +51,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 55080,
-          "last_seen": "2026-09-29T18:56:53+02:00",
-          "last_title": "Slovenci izgubili boj za bron; Poljaki drugič zapored evropski prvaki - rtvslo.si",
+          "seen": 55110,
+          "last_seen": "2026-09-29T19:08:33+02:00",
+          "last_title": "Slovenija - Finska 4:3 (23:25, drugi niz) - rtvslo.si",
           "last_provider": "",
-          "published": 64189,
+          "published": 64242,
           "last_output_id": "pogacar-zeli-nastopiti-na-evropskem-prvenstvu-zdravnik-je-dal-zeleno-luc-c47c285b"
         },
         "aarp.org": {
@@ -175,13 +175,13 @@
       "example_titles": {
         "news.google.com": [
           "Finci premagali Slovenijo in osvojili prvo medaljo na velikih tekmovanjih - 24ur.com",
-          "'Slovenija je moj drugi dom, a nocoj navijam za Makedonijo' - 24ur.com",
-          "Slovenija v Ligi narodov dosega (samo) gol na tekmo - rtvslo.si"
+          "Nogometaši drevi s Severno Makedonijo - rtvslo.si",
+          "'Slovenija je moj drugi dom, a nocoj navijam za Makedonijo' - 24ur.com"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-29T18:57:04+02:00",
+      "last_learning_run": "2026-09-29T19:08:43+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -206,12 +206,12 @@
       ],
       "source_health": {
         "news.google.com": {
-          "score": 2.502,
-          "seen": 55080,
-          "last_seen": "2026-09-29T18:57:04+02:00",
-          "last_title": "Okoljski ekonomist Sonnenschein: Politika ministra za energetiko ni v interesu javnosti - Dnevnik",
+          "score": 2.498,
+          "seen": 55110,
+          "last_seen": "2026-09-29T19:08:43+02:00",
+          "last_title": "Odnosi z Izraelom: diplomacija ne sme biti izgovor za normalizacijo zločinov - Dnevnik",
           "last_provider": "",
-          "published": 68595,
+          "published": 68653,
           "last_output_id": "volilna-pravila-o-zakonodajnem-referendumu-in-treh-posvetovalnih-referendumih-0c5c1f86"
         },
         "hellovein.com": {
@@ -241,12 +241,12 @@
         "news.google.com": [
           "Predsednik vlade odgovarjal na poslanska vprašanja - Portal GOV.SI",
           "Slovenska zunanja politika: sledi preobrat? - Siol.net",
-          "(POGLED) Kolumna Vesne V. Godina: Tako nizko je padla slovenska politika. In kaj zdaj? - Večer"
+          "»Ujeti med politiko in ceh: Komu sploh odgovarja RTV Slovenija?« - Ljubljanske novice"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-29T18:57:22+02:00",
+      "last_learning_run": "2026-09-29T19:08:54+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -280,96 +280,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 55080,
-          "last_seen": "2026-09-29T18:57:22+02:00",
-          "last_title": "Anja Rakuša Brus: Pomemben argument za mojo kandidaturo je izkušnja z aktualno vlado, ki stroke ne posluša dovolj - nova24tv.si",
+          "seen": 55110,
+          "last_seen": "2026-09-29T19:08:54+02:00",
+          "last_title": "Anja Rakuša Brus: Pomemben argument za mojo kandidaturo je izkušnja z aktualno vlado, ki stroke ne posluša dovolj - Nova24TV",
           "last_provider": "",
-          "published": 87439,
+          "published": 87498,
           "last_output_id": "prvic-obelezujemo-mednarodni-dan-jam-in-krasa-ki-je-bil-lani-razglasen-na-pobudo-slovenije-8f0aafa8"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 1836,
+          "published": 1837,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 1836,
+          "published": 1837,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 1859,
+          "published": 1860,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 1761,
+          "published": 1762,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 1825,
+          "published": 1826,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 1761,
+          "published": 1762,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 1761,
+          "published": 1762,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 1825,
+          "published": 1826,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 7436,
+          "published": 7440,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 1859,
+          "published": 1860,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 1836,
+          "published": 1837,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 3586,
+          "published": 3588,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 1793,
+          "published": 1794,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 3650,
+          "published": 3652,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 1859,
+          "published": 1860,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 1761,
+          "published": 1762,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 3586,
+          "published": 3588,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
