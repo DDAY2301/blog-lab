@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-29T08:09:13+02:00",
-  "loop_count": 1764,
+  "updated_at": "2026-09-29T08:20:32+02:00",
+  "loop_count": 1765,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-29T08:08:51+02:00",
+      "last_learning_run": "2026-09-29T08:20:11+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -51,12 +51,12 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 52230,
-          "last_seen": "2026-09-29T08:08:51+02:00",
-          "last_title": "Slovenija ogrozila Poljsko, a se podaja v boj za bron - Šport TV",
+          "seen": 52260,
+          "last_seen": "2026-09-29T08:20:11+02:00",
+          "last_title": "Finci premagali Slovenijo in osvojili prvo medaljo na velikih tekmovanjih - 24ur.com",
           "last_provider": "",
-          "published": 59154,
-          "last_output_id": "slovenija-brez-osvojenega-niza-izgubila-boj-za-bron-finale-poljska-francija-24-24-prvi-niz-feefb9dc"
+          "published": 59207,
+          "last_output_id": "pogacar-zeli-nastopiti-na-evropskem-prvenstvu-zdravnik-je-dal-zeleno-luc-c47c285b"
         },
         "aarp.org": {
           "score": 1.635,
@@ -181,7 +181,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-29T08:09:02+02:00",
+      "last_learning_run": "2026-09-29T08:20:21+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -207,11 +207,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 52230,
-          "last_seen": "2026-09-29T08:09:02+02:00",
+          "seen": 52260,
+          "last_seen": "2026-09-29T08:20:21+02:00",
           "last_title": "Banka Slovenije o podražitvah energentov: Možnosti ekonomskih politik so omejene - Forbes Slovenija",
           "last_provider": "",
-          "published": 63220,
+          "published": 63275,
           "last_output_id": "doncicu-politiki-za-trditev-da-on-vodi-slovenijo-storili-tole-vse-jasno-e275e810"
         },
         "hellovein.com": {
@@ -246,7 +246,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-29T08:09:13+02:00",
+      "last_learning_run": "2026-09-29T08:20:32+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -280,96 +280,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 52230,
-          "last_seen": "2026-09-29T08:09:13+02:00",
+          "seen": 52260,
+          "last_seen": "2026-09-29T08:20:32+02:00",
           "last_title": "[Video] Afera vseh afer: Švarc Pipanova v prisluhih o nedotakljivem Jankoviću in Golobu, ki še vedno vodi Gen-I - Nova24TV",
           "last_provider": "",
-          "published": 81834,
+          "published": 81893,
           "last_output_id": "prvic-obelezujemo-mednarodni-dan-jam-in-krasa-ki-je-bil-lani-razglasen-na-pobudo-slovenije-8f0aafa8"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 1741,
+          "published": 1742,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 1741,
+          "published": 1742,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 1764,
+          "published": 1765,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 1666,
+          "published": 1667,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 1730,
+          "published": 1731,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 1666,
+          "published": 1667,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 1666,
+          "published": 1667,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 1730,
+          "published": 1731,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 7056,
+          "published": 7060,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 1764,
+          "published": 1765,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 1741,
+          "published": 1742,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 3396,
+          "published": 3398,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 1698,
+          "published": 1699,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 3460,
+          "published": 3462,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 1764,
+          "published": 1765,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 1666,
+          "published": 1667,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 3396,
+          "published": 3398,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
@@ -398,6 +398,12 @@
     }
   },
   "recent_articles": [
+    {
+      "id": "pogacar-zeli-nastopiti-na-evropskem-prvenstvu-zdravnik-je-dal-zeleno-luc-c47c285b",
+      "title": "Pogačar želi nastopiti na evropskem prvenstvu, zdravnik je dal zeleno luč",
+      "category": "Šport",
+      "createdAt": "2026-09-29T08:19:40+02:00"
+    },
     {
       "id": "prvic-obelezujemo-mednarodni-dan-jam-in-krasa-ki-je-bil-lani-razglasen-na-pobudo-slovenije-8f0aafa8",
       "title": "Prvič obeležujemo Mednarodni dan jam in krasa, ki je bil lani razglašen na pobudo Slovenije",
@@ -463,12 +469,6 @@
       "title": "JANŠEV GOVOR V ZN RAZBURIL OPOZICIJO: Svoboda, SD in Levica kritične do politike do Izraela",
       "category": "Politika",
       "createdAt": "2026-09-26T13:39:36+02:00"
-    },
-    {
-      "id": "odbojka-m-slovenija-poljska-evropsko-prvenstvo-2026-polfinale-a0b3dbff",
-      "title": "Odbojka (M): Slovenija - Poljska, Evropsko prvenstvo 2026, Polfinale",
-      "category": "Šport",
-      "createdAt": "2026-09-26T08:24:38+02:00"
     }
   ],
   "recent_failures": [
