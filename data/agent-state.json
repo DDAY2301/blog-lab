@@ -1,21 +1,25 @@
 {
-  "last_success": "2026-09-28T19:53:52+02:00",
+  "last_success": "2026-09-29T08:19:40+02:00",
   "last_failure": "2026-09-21T20:56:52+02:00",
   "consecutive_failures": 0,
-  "posts_date": "2026-09-28",
-  "posts_today": 3,
-  "last_output": "prvic-obelezujemo-mednarodni-dan-jam-in-krasa-ki-je-bil-lani-razglasen-na-pobudo-slovenije-8f0aafa8",
+  "posts_date": "2026-09-29",
+  "posts_today": 1,
+  "last_output": "pogacar-zeli-nastopiti-na-evropskem-prvenstvu-zdravnik-je-dal-zeleno-luc-c47c285b",
   "last_error": null,
-  "agent_version": "2.7.0",
-  "current_category": "aktualno",
-  "scheduled_posts_today": 3,
+  "agent_version": "3.0.0-learning-guarded-fallback",
+  "current_category": "sport",
+  "scheduled_posts_today": 1,
   "manual_posts_today": 0,
-  "writer_mode": "local_evidence_ai",
+  "writer_mode": "deterministic_fallback",
   "scheduled_slots_done": [
-    "2026-09-28|08:17|sport",
-    "2026-09-28|13:27|politika",
-    "2026-09-28|19:43|aktualno"
+    "2026-09-29|08:17|sport"
   ],
   "scheduled_slots_deferred": [],
-  "last_editorial_hold": null
+  "last_editorial_hold": null,
+  "publisher_guardian_last_run": "2026-09-29T08:19:40+02:00",
+  "publisher_guardian_last_action": {
+    "category": "sport",
+    "slot": "2026-09-29|08:17|sport",
+    "remaining_repairs": 0
+  }
 }

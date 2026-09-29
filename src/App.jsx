@@ -20,6 +20,32 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "pogacar-zeli-nastopiti-na-evropskem-prvenstvu-zdravnik-je-dal-zeleno-luc-c47c285b",
+    "title": "Pogačar želi nastopiti na evropskem prvenstvu, zdravnik je dal zeleno luč",
+    "excerpt": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Pogačar želi nastopiti na evropskem prvenstvu, zdravnik je dal zeleno luč«.",
+    "seoDescription": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Pogačar želi nastopiti na evropskem prvenstvu, zdravnik je dal zeleno luč«.",
+    "content": "**Šport, 29. 9. 2026.** Pogačar želi nastopiti na evropskem prvenstvu, zdravnik je dal zeleno luč Delo.si\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Delo.si. Objavljeno: Tue, 29 Sep 2026 05:47:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMipgFBVV95cUxOTVJ3MTBUZ2VBcnBDQ0g1TGpWRmRLbmdfczFBd0dmcjdYQW1VQWxFSHVBQTdzWlNOY3JOSTJsQTJxNXdDQW1MY2NSUWI0alJHdjN2ZmQ0UXBBalZWdEJNd1g4N0htNUdlcGMyUE9vWnNOcWR1MEstcm0xNlFsMVVMamJ5TVJvY2tUOUIxd05BeUNid0ttdVRkbllsMnBZUWE3cFBLb2tn?oc=5)\n\n## Dopolnitev vira 2: rtvslo.si\n\nBrez medalje, a še vedno med evropsko elito rtvslo.si\n\n Vir: rtvslo.si. Objavljeno: Sun, 27 Sep 2026 09:44:27 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMipgFBVV95cUxPNkstdVZ4eEtQeVRlek1qbjljN01lUllVME5Vc0ZhYUdVWUpudi02ZGR2eDRWNHhZQmFSV2NDd2pkRGlnUWx3VFRGVXo0dC1FQ3VReE9jYUJHS0ZRZGVldnhvREdzanpmOW9JMU80aGV0bTRoZ2ZoaEY1OUNDTi1ud2ZDMHdya3ZEYkNCZjN2aVpFM3lNZEh3TGVLUExIRkI1X29tQVln?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Šport",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Delo.si — Pogačar želi nastopiti na evropskem prvenstvu, zdravnik je dal zeleno luč - Delo.si",
+        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOTVJ3MTBUZ2VBcnBDQ0g1TGpWRmRLbmdfczFBd0dmcjdYQW1VQWxFSHVBQTdzWlNOY3JOSTJsQTJxNXdDQW1MY2NSUWI0alJHdjN2ZmQ0UXBBalZWdEJNd1g4N0htNUdlcGMyUE9vWnNOcWR1MEstcm0xNlFsMVVMamJ5TVJvY2tUOUIxd05BeUNid0ttdVRkbllsMnBZUWE3cFBLb2tn?oc=5"
+      },
+      {
+        "label": "rtvslo.si — Brez medalje, a še vedno med evropsko elito - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPNkstdVZ4eEtQeVRlek1qbjljN01lUllVME5Vc0ZhYUdVWUpudi02ZGR2eDRWNHhZQmFSV2NDd2pkRGlnUWx3VFRGVXo0dC1FQ3VReE9jYUJHS0ZRZGVldnhvREdzanpmOW9JMU80aGV0bTRoZ2ZoaEY1OUNDTi1ud2ZDMHdya3ZEYkNCZjN2aVpFM3lNZEh3TGVLUExIRkI1X29tQVln?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-29T08:19:40+02:00",
+    "updatedAt": "2026-09-29T08:19:40+02:00"
+  },
+
+  {
     "id": "prvic-obelezujemo-mednarodni-dan-jam-in-krasa-ki-je-bil-lani-razglasen-na-pobudo-slovenije-8f0aafa8",
     "title": "Prvič obeležujemo Mednarodni dan jam in krasa, ki je bil lani razglašen na pobudo Slovenije",
     "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Prvič obeležujemo Mednarodni dan jam in krasa, ki je bil lani razglašen na pobudo Slovenije«.",
