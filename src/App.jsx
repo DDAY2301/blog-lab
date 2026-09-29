@@ -20,6 +20,36 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "volilna-pravila-o-zakonodajnem-referendumu-in-treh-posvetovalnih-referendumih-0c5c1f86",
+    "title": "Volilna pravila o zakonodajnem referendumu in treh posvetovalnih referendumih",
+    "excerpt": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Volilna pravila o zakonodajnem referendumu in treh posvetovalnih referendumih«.",
+    "seoDescription": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Volilna pravila o zakonodajnem referendumu in treh posvetovalnih referendumih",
+    "content": "**Politika, 29. 9. 2026.** Volilna pravila o zakonodajnem referendumu in treh posvetovalnih referendumih Dolenjskainfo.com\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nPri političnih temah Blog Lab ne podpira kandidatov, strank ali političnih odločitev; izjave in ocene so predstavljene kot stališča njihovih avtorjev ali virov, ne kot uredniška presoja.\n\nVir: Dolenjskainfo.com. Objavljeno: Tue, 29 Sep 2026 08:36:52 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiwAFBVV95cUxPRlM4aFN2Y0UwSUg1Z1RPdV9kdVhTclp4bV9vQWlpZmhlckJqRlJKaUctc0VHQVkwSGc3T1BYRExwN3IzV1RtaU9sNFVCTnFhcVQ5Nk1oWmNlNWxmdXB3ZENORmsweWEzd1lhRnFjSHgwM2RXOU12eDVyaTg4QVJ2NEhQd19ubEUwdHdGTWx4LVptbzIzcjBwZUNWc1BqTzJVOFV1WDVGZDh5REpLRVpuMGM0TzBibURsVjdnQ194Zlo?oc=5)\n\n## Dopolnitev vira 2: Ljubljanainfo.com\n\nVolilna tekma se širi: Za župana bo kandidiral tudi tekmovalec MasterChefa Slovenija Ljubljanainfo.com\n\n Vir: Ljubljanainfo.com. Objavljeno: Mon, 28 Sep 2026 14:04:58 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMizAFBVV95cUxOQmtodHhZNHJhUnhTQ3JSMEtGcUlOTExBODZBU2NQc04zMnBsUE5kblV5QkJOcnlxOGo2bXN2eFg4bnd3YWtSb2pWZzZrVnN6QnZtcGFIREpOcUNYa19YQng3ZUktS0FiTjlTUmZydDcwLUxNOTc1ZDNfYWZ3R05uclA2SXg1Z3pqNExoMnI1Y2RtNC1pTGF4Q3RBV1djaFNtYmxUS0FBTDJlcEZpWVFHbl9OMVVqcnpWTDVVM2RBemJrOHU2YUNIdFBvbnc?oc=5)\n\n## Dopolnitev vira 3: Delo.si\n\nKaj prinaša oktobrski referendum: koliko ljudi lahko izgubi volilno pravico? Delo.si\n\n Vir: Delo.si. Objavljeno: Tue, 29 Sep 2026 06:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiigFBVV95cUxQdWExY040bHRkN1BkeGJycnRGN3dxMUUydnZxMkhMb3NkdEphTlpIV3FadE1PSEFDQnJfdm9JcGwtbDJ6UW1pM0lMb3htaHU0cTRRWUN1XzhpdzFGcTdKU0V0U18wZTNQT196Q29zNFVseFNKM203UmNFbjFiaEtTNGpBLW1lQXRmd2c?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Politika",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Dolenjskainfo.com — Volilna pravila o zakonodajnem referendumu in treh posvetovalnih referendumih - Dolenjskainfo.com",
+        "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPRlM4aFN2Y0UwSUg1Z1RPdV9kdVhTclp4bV9vQWlpZmhlckJqRlJKaUctc0VHQVkwSGc3T1BYRExwN3IzV1RtaU9sNFVCTnFhcVQ5Nk1oWmNlNWxmdXB3ZENORmsweWEzd1lhRnFjSHgwM2RXOU12eDVyaTg4QVJ2NEhQd19ubEUwdHdGTWx4LVptbzIzcjBwZUNWc1BqTzJVOFV1WDVGZDh5REpLRVpuMGM0TzBibURsVjdnQ194Zlo?oc=5"
+      },
+      {
+        "label": "Ljubljanainfo.com — Volilna tekma se širi: Za župana bo kandidiral tudi tekmovalec MasterChefa Slovenija - Ljubljanainfo.com",
+        "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOQmtodHhZNHJhUnhTQ3JSMEtGcUlOTExBODZBU2NQc04zMnBsUE5kblV5QkJOcnlxOGo2bXN2eFg4bnd3YWtSb2pWZzZrVnN6QnZtcGFIREpOcUNYa19YQng3ZUktS0FiTjlTUmZydDcwLUxNOTc1ZDNfYWZ3R05uclA2SXg1Z3pqNExoMnI1Y2RtNC1pTGF4Q3RBV1djaFNtYmxUS0FBTDJlcEZpWVFHbl9OMVVqcnpWTDVVM2RBemJrOHU2YUNIdFBvbnc?oc=5"
+      },
+      {
+        "label": "Delo.si — Kaj prinaša oktobrski referendum: koliko ljudi lahko izgubi volilno pravico? - Delo.si",
+        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQdWExY040bHRkN1BkeGJycnRGN3dxMUUydnZxMkhMb3NkdEphTlpIV3FadE1PSEFDQnJfdm9JcGwtbDJ6UW1pM0lMb3htaHU0cTRRWUN1XzhpdzFGcTdKU0V0U18wZTNQT196Q29zNFVseFNKM203UmNFbjFiaEtTNGpBLW1lQXRmd2c?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-29T13:39:11+02:00",
+    "updatedAt": "2026-09-29T13:39:11+02:00"
+  },
+
+  {
     "id": "arboretum-volcji-potok-day-trip-from-ljubljana",
     "title": "Arboretum Volčji Potok: An Easy Nature Day Trip from Ljubljana",
     "excerpt": "Plan a relaxed, car-light visit to Slovenia’s largest arboretum, with current opening hours, ticket prices, public transport, accessible routes and weather-safety advice.",
