@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-29T03:24:14+02:00",
-  "loop_count": 1723,
+  "updated_at": "2026-09-29T03:38:50+02:00",
+  "loop_count": 1724,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-29T03:23:52+02:00",
+      "last_learning_run": "2026-09-29T03:38:26+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -51,11 +51,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 51000,
-          "last_seen": "2026-09-29T03:23:52+02:00",
-          "last_title": "Boštjan Cesar o glavni težavi Slovenije: Težko kaj spremenimo - Siol.net",
+          "seen": 51030,
+          "last_seen": "2026-09-29T03:38:26+02:00",
+          "last_title": "Luka Dončić komaj čaka začetek priprav, spomnil se je obiska z moštvom v Sloveniji - Večer",
           "last_provider": "",
-          "published": 57063,
+          "published": 57114,
           "last_output_id": "slovenija-brez-osvojenega-niza-izgubila-boj-za-bron-finale-poljska-francija-24-24-prvi-niz-feefb9dc"
         },
         "aarp.org": {
@@ -181,7 +181,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-29T03:24:03+02:00",
+      "last_learning_run": "2026-09-29T03:38:38+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -206,12 +206,12 @@
       ],
       "source_health": {
         "news.google.com": {
-          "score": 2.502,
-          "seen": 51000,
-          "last_seen": "2026-09-29T03:24:03+02:00",
-          "last_title": "Banka Slovenije o podražitvah energentov: Možnosti ekonomskih politik so omejene - Forbes Slovenija",
+          "score": 2.498,
+          "seen": 51030,
+          "last_seen": "2026-09-29T03:38:38+02:00",
+          "last_title": "Napovedali konec kvazi zelenega prehoda, zdaj presenečajo z odgovori - Žurnal24",
           "last_provider": "",
-          "published": 60965,
+          "published": 61020,
           "last_output_id": "doncicu-politiki-za-trditev-da-on-vodi-slovenijo-storili-tole-vse-jasno-e275e810"
         },
         "hellovein.com": {
@@ -246,7 +246,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-29T03:24:14+02:00",
+      "last_learning_run": "2026-09-29T03:38:50+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -280,96 +280,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 51000,
-          "last_seen": "2026-09-29T03:24:14+02:00",
+          "seen": 51030,
+          "last_seen": "2026-09-29T03:38:50+02:00",
           "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 79415,
+          "published": 79474,
           "last_output_id": "prvic-obelezujemo-mednarodni-dan-jam-in-krasa-ki-je-bil-lani-razglasen-na-pobudo-slovenije-8f0aafa8"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 1700,
+          "published": 1701,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 1700,
+          "published": 1701,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 1723,
+          "published": 1724,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 1625,
+          "published": 1626,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 1689,
+          "published": 1690,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 1625,
+          "published": 1626,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 1625,
+          "published": 1626,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 1689,
+          "published": 1690,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 6892,
+          "published": 6896,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 1723,
+          "published": 1724,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 1700,
+          "published": 1701,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 3314,
+          "published": 3316,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 1657,
+          "published": 1658,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 3378,
+          "published": 3380,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 1723,
+          "published": 1724,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 1625,
+          "published": 1626,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 3314,
+          "published": 3316,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
