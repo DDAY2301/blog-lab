@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-29T08:23:58+02:00",
-  "loop_count": 1767,
+  "updated_at": "2026-09-29T08:38:09+02:00",
+  "loop_count": 1768,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-29T08:23:35+02:00",
+      "last_learning_run": "2026-09-29T08:37:45+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -51,11 +51,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 52320,
-          "last_seen": "2026-09-29T08:23:35+02:00",
-          "last_title": "Finci premagali Slovenijo in osvojili prvo medaljo na velikih tekmovanjih - 24ur.com",
+          "seen": 52350,
+          "last_seen": "2026-09-29T08:37:45+02:00",
+          "last_title": "Slovenija ogrozila Poljsko, a se podaja v boj za bron - Šport TV",
           "last_provider": "",
-          "published": 59313,
+          "published": 59366,
           "last_output_id": "pogacar-zeli-nastopiti-na-evropskem-prvenstvu-zdravnik-je-dal-zeleno-luc-c47c285b"
         },
         "aarp.org": {
@@ -181,7 +181,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-29T08:23:46+02:00",
+      "last_learning_run": "2026-09-29T08:37:58+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -207,11 +207,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 52320,
-          "last_seen": "2026-09-29T08:23:46+02:00",
-          "last_title": "Banka Slovenije o podražitvah energentov: Možnosti ekonomskih politik so omejene - Forbes Slovenija",
+          "seen": 52350,
+          "last_seen": "2026-09-29T08:37:58+02:00",
+          "last_title": "V Mariboru prvič v zgodovini Slovenije odprli ministrstvo! - e-Maribor",
           "last_provider": "",
-          "published": 63385,
+          "published": 63440,
           "last_output_id": "doncicu-politiki-za-trditev-da-on-vodi-slovenijo-storili-tole-vse-jasno-e275e810"
         },
         "hellovein.com": {
@@ -239,14 +239,14 @@
       "current_source_count": 30,
       "example_titles": {
         "news.google.com": [
-          "Je Janša obrnil slovensko zunanjo politiko? Ali ...? - Siol.net",
-          "'Preplet politike in gospodarstva je preplet centrov moči' - 24ur.com",
-          "»Ujeti med politiko in ceh: Komu sploh odgovarja RTV Slovenija?« - Ljubljanske novice"
+          "Slovenska zunanja politika: sledi preobrat? - Siol.net",
+          "Prvo soočenje mnenj: Naj bo socialna pomoč pogojena z družbenokoristnim delom? - rtvslo.si",
+          "'Preplet politike in gospodarstva je preplet centrov moči' - 24ur.com"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-29T08:23:58+02:00",
+      "last_learning_run": "2026-09-29T08:38:09+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -280,96 +280,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 52320,
-          "last_seen": "2026-09-29T08:23:58+02:00",
+          "seen": 52350,
+          "last_seen": "2026-09-29T08:38:09+02:00",
           "last_title": "[Video] Afera vseh afer: Švarc Pipanova v prisluhih o nedotakljivem Jankoviću in Golobu, ki še vedno vodi Gen-I - Nova24TV",
           "last_provider": "",
-          "published": 82011,
+          "published": 82070,
           "last_output_id": "prvic-obelezujemo-mednarodni-dan-jam-in-krasa-ki-je-bil-lani-razglasen-na-pobudo-slovenije-8f0aafa8"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 1744,
+          "published": 1745,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 1744,
+          "published": 1745,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 1767,
+          "published": 1768,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 1669,
+          "published": 1670,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 1733,
+          "published": 1734,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 1669,
+          "published": 1670,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 1669,
+          "published": 1670,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 1733,
+          "published": 1734,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 7068,
+          "published": 7072,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 1767,
+          "published": 1768,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 1744,
+          "published": 1745,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 3402,
+          "published": 3404,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 1701,
+          "published": 1702,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 3466,
+          "published": 3468,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 1767,
+          "published": 1768,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 1669,
+          "published": 1670,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 3402,
+          "published": 3404,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
