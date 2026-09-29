@@ -20,6 +20,28 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "jansa-na-newsmaxu-slovenija-in-zda-imata-poseben-odnos-razkril-tudi-kaj-mu-je-obljubil-tru-a1bdde5d",
+    "title": "Janša na Newsmaxu: \"Slovenija in ZDA imata poseben odnos« – razkril tudi, kaj mu je obljubil Trump!\" - e-Maribor",
+    "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Janša na Newsmaxu: \"Slovenija in ZDA imata poseben odnos« – razkril tudi, kaj mu je obljubil Trump!\" - e-Maribor«.",
+    "seoDescription": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Janša na Newsmaxu: \"Slovenija in ZDA imata poseben odnos« – razkril tudi, kaj",
+    "content": "**Aktualno, 29. 9. 2026.** Janša na Newsmaxu: \"Slovenija in ZDA imata poseben odnos« – razkril tudi, kaj mu je obljubil Trump!\" e-Maribor\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: e-Maribor. Objavljeno: Thu, 24 Sep 2026 06:30:47 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMitAFBVV95cUxQQm9DbWV3RVIzVjlxOEllVjlQZmwzLTJhbF9PS1ZtNmo5WERXdGtnTTZWYnpkMHMyUGpsMUVkQkQyeVVwWm54Q0kzVThxazd5SFNINXA3dUViYzk0d3d4Z3dhbEdia2tiWFVCRTM5bGQwaXJxVm12VkpFUHo1bmFSTUJIaEVMbUJxbUdpVWJEZ256RXVGYlNtcWp4cHhTVGp3UWxyYzh3TWpjaUxEM0xNR0x6Z3I?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Aktualno",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "e-Maribor — Janša na Newsmaxu: \"Slovenija in ZDA imata poseben odnos« – razkril tudi, kaj mu je obljubil Trump!\" - e-Maribor",
+        "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQQm9DbWV3RVIzVjlxOEllVjlQZmwzLTJhbF9PS1ZtNmo5WERXdGtnTTZWYnpkMHMyUGpsMUVkQkQyeVVwWm54Q0kzVThxazd5SFNINXA3dUViYzk0d3d4Z3dhbEdia2tiWFVCRTM5bGQwaXJxVm12VkpFUHo1bmFSTUJIaEVMbUJxbUdpVWJEZ256RXVGYlNtcWp4cHhTVGp3UWxyYzh3TWpjaUxEM0xNR0x6Z3I?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-29T19:54:41+02:00",
+    "updatedAt": "2026-09-29T19:54:41+02:00"
+  },
+
+  {
     "id": "volilna-pravila-o-zakonodajnem-referendumu-in-treh-posvetovalnih-referendumih-0c5c1f86",
     "title": "Volilna pravila o zakonodajnem referendumu in treh posvetovalnih referendumih",
     "excerpt": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Volilna pravila o zakonodajnem referendumu in treh posvetovalnih referendumih«.",
