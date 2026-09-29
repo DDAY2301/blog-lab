@@ -20,6 +20,47 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "arboretum-volcji-potok-day-trip-from-ljubljana",
+    "title": "Arboretum Volčji Potok: An Easy Nature Day Trip from Ljubljana",
+    "excerpt": "Plan a relaxed, car-light visit to Slovenia’s largest arboretum, with current opening hours, ticket prices, public transport, accessible routes and weather-safety advice.",
+    "seoDescription": "Plan an Arboretum Volčji Potok day trip from Ljubljana with current hours, ticket prices, public transport, accessible routes and weather safety.",
+    "content": "Last updated: 29 September 2026\n\nOnly about 20 kilometres from Ljubljana, Arboretum Volčji Potok is an easy nature escape when you want landscaped parkland rather than a strenuous hike. Its roughly 85 hectares combine broad lawns, woodland paths, ponds and extensive plant collections, so it works equally well for a quiet half-day, a family outing or a slower accessible visit.\n\n## Essential information for 2026\n\n### Opening hours\n\nThe park is open daily, including public holidays. In September it opens from 08:00 to 19:00; in October, from 08:00 to 18:00. Last admission is one hour before closing.\n\nHours can change for evening concerts, when the park may close at 16:00, and management may close the grounds in dangerous weather or during a red ARSO warning. Check the official opening-hours page on the morning of your visit.\n\n### Tickets\n\nCurrent standard admission is €11 for adults, €9.50 for students and pensioners, and €6 for children aged 3–18. A family ticket costs €30. Dogs require a €5 ticket, and the tourist train costs €4.\n\nBuy tickets at the entrance or follow the official ticket link. Prices and concessions can change, so verify them before travelling.\n\n### Weather check for 29 September 2026\n\nThe fresh forecast for the Kamnik area is sunny, with a daytime high around 23°C and a cool early-morning low near 5°C. Layers, water and sun protection are sensible. This snapshot is not a substitute for checking [ARSO](https://meteo.arso.gov.si/met/en/) immediately before departure.\n\n## How to get there from Ljubljana without a car\n\n### By regional bus\n\nBuses on the Ljubljana–Kamnik route stop several times a day at Volčji Potok Šraj, about 300 metres from the entrance. Services to Radomlje are more frequent, but the walk from there is about 1.5 kilometres. Use [Arriva’s live timetable](https://arriva.si/en/timetables/) for the exact date rather than relying on a static schedule.\n\n### By train and on foot\n\nHomec is the nearest railway stop, roughly 2 kilometres away. The signed walking approach crosses the pedestrian bridge over the Kamniška Bistrica. Check [Slovenian Railways](https://potniski.sz.si/en/) before leaving: works at Ljubljana station can mean temporary platforms or delays.\n\n### By bicycle or car\n\nThe arboretum publishes cycling approaches from Domžale and Kamnik. Free parking is available at the entrance, but overnight parking is not permitted.\n\n## A practical 2–4 hour walking plan\n\nBegin with the central historic park, where the main paths are generally firm and gently sloped. Continue past the ponds and major tree collections, then add the approximately one-kilometre Memory Path if you want a quiet, mostly level extension with benches and shade.\n\nThe electric tourist train is a useful alternative when walking the full grounds is too much. It normally operates from March to October in fine weather, takes about 30–40 minutes and can carry two wheelchair users. Confirm operation when you arrive.\n\n## Accessibility\n\nMuch of the central park can be visited with a wheelchair or pushchair, but some steeper areas and buildings are not fully accessible. The arboretum offers two wheelchairs free of charge if reserved in advance, accessible toilets, and a one-kilometre route designed for blind and partially sighted visitors.\n\nFor the gentlest option, use the firm-surfaced Memory Path and allow about an hour with stops. Visitors who need assistance should contact the park before travelling, because surfaces and access can change with weather.\n\n## Families, dogs and a slower visit\n\nChildren can use the playground and labyrinth, but the park asks adults not to leave them unattended. The broad lawns make this an easier family outing than a mountain trail, although ponds, changing surfaces and the size of the grounds still require supervision.\n\nDogs are welcome with a paid ticket and must remain on a lead except in the designated off-lead area. Bring water and waste bags.\n\n## Safety and seasonal limits\n\nThe park is a living landscape, not an all-weather indoor attraction. In strong wind or a storm, leave wooded areas and do not shelter under trees. After rain, expect wet leaves and softer side paths; choose the main routes if footing or mobility is a concern.\n\nAutumn daylight and opening hours shorten quickly. Plan to enter at least two hours before closing if you want more than the central circuit, and remember that the tourist train is weather-dependent and seasonal.\n\n## Pair it with another Slovenia nature day\n\nFor a wilder wetland landscape close to the capital, read [Ljubljana Marshes: Pile Dwellers and UNESCO History](?article=ljubljana-marshes-pile-dwellings-history). If you prefer a protected alpine spring, see the [Zelenci Nature Reserve guide](?article=zelenci-nature-reserve-guide). For a city-based alternative, follow the [Plečnik self-guided walk](?article=plecnik-ljubljana-self-guided-walking-tour).\n\n## Official sources\n\n- [Arboretum Volčji Potok](https://www.arboretum.si/en/)\n- [Opening hours and weather closures](https://www.arboretum.si/en/visit-us/opening-hours/)\n- [Admission prices](https://www.arboretum.si/en/visit-us/prices/)\n- [Public transport, cycling and parking](https://www.arboretum.si/en/visit-us/how-to-get-here/)\n- [Accessible park information](https://www.arboretum.si/en/visit-us/accessible-park/)\n- [Family visit information](https://www.arboretum.si/en/visit-us/kids/)\n- [Visit Ljubljana overview](https://www.visitljubljana.com/en/poi/volcji-potok-arboretum)\n- [ARSO weather](https://meteo.arso.gov.si/met/en/)",
+    "category": "Vodniki",
+    "author": "Slovenia Pulse Editorial",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Arboretum Volčji Potok — Opening hours",
+        "url": "https://www.arboretum.si/en/visit-us/opening-hours/"
+      },
+      {
+        "label": "Arboretum Volčji Potok — Prices",
+        "url": "https://www.arboretum.si/en/visit-us/prices/"
+      },
+      {
+        "label": "Arboretum Volčji Potok — How to get here",
+        "url": "https://www.arboretum.si/en/visit-us/how-to-get-here/"
+      },
+      {
+        "label": "Arboretum Volčji Potok — Accessible park",
+        "url": "https://www.arboretum.si/en/visit-us/accessible-park/"
+      },
+      {
+        "label": "ARSO — Weather",
+        "url": "https://meteo.arso.gov.si/met/en/"
+      },
+      {
+        "label": "Visit Ljubljana — Volčji Potok Arboretum",
+        "url": "https://www.visitljubljana.com/en/poi/volcji-potok-arboretum"
+      }
+    ],
+    "createdAt": "2026-09-29T08:58:45+02:00",
+    "updatedAt": "2026-09-29T08:58:45+02:00"
+  },
+  {
     "id": "pogacar-zeli-nastopiti-na-evropskem-prvenstvu-zdravnik-je-dal-zeleno-luc-c47c285b",
     "title": "Pogačar želi nastopiti na evropskem prvenstvu, zdravnik je dal zeleno luč",
     "excerpt": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Pogačar želi nastopiti na evropskem prvenstvu, zdravnik je dal zeleno luč«.",
