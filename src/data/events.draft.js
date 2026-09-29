@@ -1,5 +1,5 @@
 // Review draft only. Not imported by the production application.
-// Rolling review draft. Sources rechecked on 2026-09-28 at 07:00 Europe/Ljubljana.
+// Rolling review draft. Sources rechecked on 2026-09-29 at 07:00 Europe/Ljubljana.
 // Production remains unchanged until the calendar model and stable views are implemented.
 // Unknown values deliberately remain null.
 export const draftEvents = [
@@ -715,7 +715,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "unconfirmed",
+    "status": "expired",
     "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
@@ -1025,7 +1025,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "sold_out",
+    "status": "expired",
     "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
@@ -1348,7 +1348,7 @@ export const draftEvents = [
   {
     "eventId": "festival-third-age-cd-2026-09-29",
     "title": "25th Festival of the Third Age",
-    "summary": "Cankarjev dom lists the 25th Festival of the Third Age from 09:00 on Tuesday 29 September. The official overview confirms the date and venue; programme details, admission and accessibility should be checked directly.",
+    "summary": "Cankarjev dom confirms the 25th Festival of the Third Age from 09:00 on Tuesday 29 September. Detailed session languages, admission conditions and accessibility should be checked in the live programme; unknown values remain unpublished.",
     "category": "festival",
     "startAt": "2026-09-29T09:00:00+02:00",
     "endAt": null,
@@ -1374,12 +1374,12 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-29T07:00:00+02:00"
   },
   {
     "eventId": "prisleki-30-years-cd-2026-09-29",
     "title": "Celebratory Literary Evening: 30 Years of Prišleki",
-    "summary": "Cankarjev dom marks 30 years of the Prišleki book series with a literary evening in Alma Karlin Hall at 19:30. Admission is free, but a free ticket is required; the event language is not stated on the official English listing.",
+    "summary": "Cankarjev dom lists the celebratory literary evening marking 30 years of the Prišleki collection at 19:30 on Tuesday 29 September. The programme overview does not confirm tourist language support, price or accessibility details.",
     "category": "literature",
     "startAt": "2026-09-29T19:30:00+02:00",
     "endAt": "2026-09-29T21:00:00+02:00",
@@ -1405,12 +1405,12 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-29T07:00:00+02:00"
   },
   {
     "eventId": "salome-mgl-2026-09-29-1930",
     "title": "Salome",
-    "summary": "MGL schedules Salome on the Main Stage on Tuesday 29 September at 19:30. The official schedule now marks this performance sold out; language support and accessibility remain unconfirmed.",
+    "summary": "MGL confirms Salome on the Main Stage on Tuesday 29 September at 19:30 and now marks this performance sold out. Language support, age suitability and accessibility are not stated in the schedule overview.",
     "category": "theatre",
     "startAt": "2026-09-29T19:30:00+02:00",
     "endAt": null,
@@ -1436,7 +1436,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "sold_out",
-    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-29T07:00:00+02:00"
   },
   {
     "eventId": "festival-third-age-cd-2026-09-30",
@@ -1467,7 +1467,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-29T07:00:00+02:00"
   },
   {
     "eventId": "lastovka-award-cd-2026-09-30",
@@ -1498,7 +1498,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-29T07:00:00+02:00"
   },
   {
     "eventId": "opera-ballet-rehearsal-cinderella-2026-09-30",
@@ -1529,7 +1529,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-29T07:00:00+02:00"
   },
   {
     "eventId": "beauty-queen-leenane-mgl-2026-09-30",
@@ -1560,7 +1560,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-29T07:00:00+02:00"
   },
   {
     "eventId": "now-1-neohero-cd-2026-09-30",
@@ -1591,7 +1591,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-29T07:00:00+02:00"
   },
   {
     "eventId": "ex-mgl-2026-09-30",
@@ -1622,7 +1622,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "sold_out",
-    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-29T07:00:00+02:00"
   },
   {
     "eventId": "festival-third-age-cd-2026-10-01",
@@ -2150,5 +2150,36 @@ export const draftEvents = [
     "indoorOutdoor": "indoor",
     "status": "confirmed",
     "lastCheckedAt": "2026-09-28T07:00:00+02:00"
+  },
+  {
+    "eventId": "ex-mgl-2026-09-30-2000",
+    "title": "Ex",
+    "summary": "MGL schedules Ex on the Small Stage on Wednesday 30 September at 20:00 and marks the performance sold out. Language support, age suitability and accessibility are not confirmed in the programme overview.",
+    "category": "theatre",
+    "startAt": "2026-09-30T20:00:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Mestno gledališče ljubljansko – Small Stage",
+      "address": "Čopova ulica 14, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": "Sold out",
+      "free": false
+    },
+    "ticketUrl": "https://www.mgl.si/en/schedule/",
+    "officialUrl": "https://www.mgl.si/en/schedule/",
+    "sourceName": "Mestno gledališče ljubljansko",
+    "languages": [],
+    "touristFriendly": null,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "sold_out",
+    "lastCheckedAt": "2026-09-29T07:00:00+02:00"
   }
 ];
