@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-29T06:54:24+02:00",
-  "loop_count": 1754,
+  "updated_at": "2026-09-29T07:08:20+02:00",
+  "loop_count": 1755,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-29T06:54:02+02:00",
+      "last_learning_run": "2026-09-29T07:07:58+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -51,11 +51,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 51930,
-          "last_seen": "2026-09-29T06:54:02+02:00",
-          "last_title": "Finci premagali Slovenijo in osvojili prvo medaljo na velikih tekmovanjih - 24ur.com",
+          "seen": 51960,
+          "last_seen": "2026-09-29T07:07:58+02:00",
+          "last_title": "Slovenija ogrozila Poljsko, a se podaja v boj za bron - sport-tv.si",
           "last_provider": "",
-          "published": 58644,
+          "published": 58695,
           "last_output_id": "slovenija-brez-osvojenega-niza-izgubila-boj-za-bron-finale-poljska-francija-24-24-prvi-niz-feefb9dc"
         },
         "aarp.org": {
@@ -174,14 +174,14 @@
       "current_source_count": 30,
       "example_titles": {
         "news.google.com": [
-          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
-          "Kot v sanjah: Slovenija že drugič v dveh tednih evropski prvak! (VIDEO) - Šport TV",
+          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - sport-tv.si",
+          "Kot v sanjah: Slovenija že drugič v dveh tednih evropski prvak! (VIDEO) - sport-tv.si",
           "Slovenija v Ligi narodov dosega (samo) gol na tekmo - rtvslo.si"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-29T06:54:13+02:00",
+      "last_learning_run": "2026-09-29T07:08:09+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -206,12 +206,12 @@
       ],
       "source_health": {
         "news.google.com": {
-          "score": 2.498,
-          "seen": 51930,
-          "last_seen": "2026-09-29T06:54:13+02:00",
-          "last_title": "Napovedali konec kvazi zelenega prehoda, zdaj presenečajo z odgovori - Žurnal24",
+          "score": 2.502,
+          "seen": 51960,
+          "last_seen": "2026-09-29T07:08:09+02:00",
+          "last_title": "[Video] Simonič svobodnjakom nastavil ogledalo: “Napuh vas je stal vlade” - Nova24TV",
           "last_provider": "",
-          "published": 62670,
+          "published": 62725,
           "last_output_id": "doncicu-politiki-za-trditev-da-on-vodi-slovenijo-storili-tole-vse-jasno-e275e810"
         },
         "hellovein.com": {
@@ -239,14 +239,14 @@
       "current_source_count": 30,
       "example_titles": {
         "news.google.com": [
+          "Je Janša obrnil slovensko zunanjo politiko? Ali ...? - Siol.net",
           "'Preplet politike in gospodarstva je preplet centrov moči' - 24ur.com",
-          "»Ujeti med politiko in ceh: Komu sploh odgovarja RTV Slovenija?« - Ljubljanske novice",
-          "Volilna tekma se širi: Za župana bo kandidiral tudi tekmovalec MasterChefa Slovenija - Ljubljanainfo.com"
+          "»Ujeti med politiko in ceh: Komu sploh odgovarja RTV Slovenija?« - Ljubljanske novice"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-29T06:54:24+02:00",
+      "last_learning_run": "2026-09-29T07:08:20+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -280,96 +280,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 51930,
-          "last_seen": "2026-09-29T06:54:24+02:00",
-          "last_title": "Društvo Izgubljeni otroci Slovenije odprlo nove prostore - Novice - Aktualno - Mestna občina Novo mesto",
+          "seen": 51960,
+          "last_seen": "2026-09-29T07:08:20+02:00",
+          "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 81244,
+          "published": 81303,
           "last_output_id": "prvic-obelezujemo-mednarodni-dan-jam-in-krasa-ki-je-bil-lani-razglasen-na-pobudo-slovenije-8f0aafa8"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 1731,
+          "published": 1732,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 1731,
+          "published": 1732,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 1754,
+          "published": 1755,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 1656,
+          "published": 1657,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 1720,
+          "published": 1721,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 1656,
+          "published": 1657,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 1656,
+          "published": 1657,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 1720,
+          "published": 1721,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 7016,
+          "published": 7020,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 1754,
+          "published": 1755,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 1731,
+          "published": 1732,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 3376,
+          "published": 3378,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 1688,
+          "published": 1689,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 3440,
+          "published": 3442,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 1754,
+          "published": 1755,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 1656,
+          "published": 1657,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 3376,
+          "published": 3378,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
@@ -391,7 +391,7 @@
       "example_titles": {
         "news.google.com": [
           "(AKTUALNO) V novi številki revije Demokracija preberite: Izključujejo in zavirajo razvoj! Janša: Osamosvojitvena Slovenija ne bo nikoli več ",
-          "Evropska komisija: Slovenija krši pravice avtorjem - Info360",
+          "Evropska komisija: Slovenija krši pravice avtorjem - info360.si",
           "Janša v New Yorku jasno o Ukrajini: Slovenija bo nadaljevala politično, vojaško, humanitarno in finančno pomoč - Najdi.si novice"
         ]
       }
