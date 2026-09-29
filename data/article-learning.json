@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-30T00:09:09+02:00",
-  "loop_count": 1908,
+  "updated_at": "2026-09-30T00:23:11+02:00",
+  "loop_count": 1909,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-30T00:08:43+02:00",
+      "last_learning_run": "2026-09-30T00:22:44+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -51,11 +51,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 56520,
-          "last_seen": "2026-09-30T00:08:43+02:00",
-          "last_title": "Himni Izraela so navijači na Ptuju naredili to, slovenski nogometaši pa ... - ekipa.svet24.si",
+          "seen": 56550,
+          "last_seen": "2026-09-30T00:22:44+02:00",
+          "last_title": "Poljaki končali slovenske sanje o zlati medalji - 24ur.com",
           "last_provider": "",
-          "published": 66786,
+          "published": 66839,
           "last_output_id": "pogacar-zeli-nastopiti-na-evropskem-prvenstvu-zdravnik-je-dal-zeleno-luc-c47c285b"
         },
         "aarp.org": {
@@ -189,13 +189,13 @@
       "example_titles": {
         "news.google.com": [
           "Finci premagali Slovenijo in osvojili prvo medaljo na velikih tekmovanjih - 24ur.com",
-          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - sport-tv.si",
-          "Prvi polčas na uničeni travnati površini minil brez zadetkov (0:0)* - 24ur.com"
+          "Prvi polčas na uničeni travnati površini minil brez zadetkov (0:0)* - 24ur.com",
+          "Slovenija izpolnila nalogo, pogled na lestvico lepši kot na zelenico - Delo.si"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-30T00:08:54+02:00",
+      "last_learning_run": "2026-09-30T00:22:56+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -221,12 +221,12 @@
       ],
       "source_health": {
         "news.google.com": {
-          "score": 2.498,
-          "seen": 56520,
-          "last_seen": "2026-09-30T00:08:54+02:00",
-          "last_title": "Odnosi z Izraelom: diplomacija ne sme biti izgovor za normalizacijo zločinov - Dnevnik",
+          "score": 2.502,
+          "seen": 56550,
+          "last_seen": "2026-09-30T00:22:56+02:00",
+          "last_title": "Danilo Türk: \"Ves svet nas vidi kot instrument izraelske zunanje politike\" - rtvslo.si",
           "last_provider": "",
-          "published": 71437,
+          "published": 71495,
           "last_output_id": "volilna-pravila-o-zakonodajnem-referendumu-in-treh-posvetovalnih-referendumih-0c5c1f86"
         },
         "hellovein.com": {
@@ -263,12 +263,12 @@
         "news.google.com": [
           "Predsednik vlade odgovarjal na poslanska vprašanja - Portal GOV.SI",
           "Slovenska zunanja politika: sledi preobrat? - Siol.net",
-          "»Ujeti med politiko in ceh: Komu sploh odgovarja RTV Slovenija?« - ljnovice.si"
+          "»Ujeti med politiko in ceh: Komu sploh odgovarja RTV Slovenija?« - Ljubljanske novice"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-30T00:09:09+02:00",
+      "last_learning_run": "2026-09-30T00:23:11+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -302,96 +302,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 56520,
-          "last_seen": "2026-09-30T00:09:09+02:00",
-          "last_title": "Društvo Izgubljeni otroci Slovenije odprlo nove prostore - Novice - Aktualno - novomesto.si",
+          "seen": 56550,
+          "last_seen": "2026-09-30T00:23:11+02:00",
+          "last_title": "V čigave roke je odtekal denar iz Japajade šova na TV Slovenija? - Info360",
           "last_provider": "",
-          "published": 90373,
+          "published": 90433,
           "last_output_id": "jansa-na-newsmaxu-slovenija-in-zda-imata-poseben-odnos-razkril-tudi-kaj-mu-je-obljubil-tru-a1bdde5d"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 1885,
+          "published": 1886,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 1885,
+          "published": 1886,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 1908,
+          "published": 1909,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 1810,
+          "published": 1811,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 1874,
+          "published": 1875,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 1810,
+          "published": 1811,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 1810,
+          "published": 1811,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 1874,
+          "published": 1875,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 7632,
+          "published": 7636,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 1908,
+          "published": 1909,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 1885,
+          "published": 1886,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 3684,
+          "published": 3686,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 1842,
+          "published": 1843,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 3748,
+          "published": 3750,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 1908,
+          "published": 1909,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 1810,
+          "published": 1811,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 3684,
+          "published": 3686,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
@@ -412,9 +412,9 @@
       "current_source_count": 30,
       "example_titles": {
         "news.google.com": [
-          "(AKTUALNO) V novi številki revije Demokracija preberite: Izključujejo in zavirajo razvoj! Janša: Osamosvojitvena Slovenija ne bo nikoli več ",
           "Evropska komisija: Slovenija krši pravice avtorjem - Info360",
-          "Janša v New Yorku jasno o Ukrajini: Slovenija bo nadaljevala politično, vojaško, humanitarno in finančno pomoč - Najdi.si novice"
+          "Nov zakon - souporaba električne energije - PwC",
+          "Aktualno: prodaja avtomobilov v Sloveniji: Julija je bil vsak četrti novi avtomobilov v Sloveniji električen Novice - AVTO FOKUS -"
         ]
       }
     }
