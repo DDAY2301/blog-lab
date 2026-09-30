@@ -7,13 +7,21 @@ from fastapi import FastAPI, HTTPException
 
 from .discovery import RepositoryScanner
 from .evaluator import AgentEvaluator, deterministic_health
-from .models import DiscoverResult, ReviewRequest, ReviewResult, ScanRequest
+from .models import (
+    DiscoverResult,
+    RepairPlanRequest,
+    RepairPlanResult,
+    ReviewRequest,
+    ReviewResult,
+    ScanRequest,
+)
 from .ollama_client import OllamaClient
 from .registry import AgentRegistry
+from .repair import RepairPlanner
 
 app = FastAPI(
     title="Agent Manager",
-    version="0.2.0",
+    version="0.3.0",
     description="Local-first supervisor for discovering, evaluating and improving AI agents.",
 )
 
@@ -21,6 +29,7 @@ scanner = RepositoryScanner()
 ollama = OllamaClient()
 evaluator = AgentEvaluator(ollama)
 registry = AgentRegistry()
+repair_planner = RepairPlanner(ollama)
 
 
 def configured_roots() -> list[str]:
@@ -41,7 +50,7 @@ async def health() -> dict:
 
     return {
         "ok": True,
-        "version": "0.2.0",
+        "version": "0.3.0",
         "mode": "local-free",
         "registered_agents": len(registry.list()),
         "ollama": model_status,
@@ -121,3 +130,11 @@ async def review(request: ReviewRequest) -> ReviewResult:
         health=health_report,
         ai_review=ai_review,
     )
+
+
+@app.post("/repair/plan", response_model=RepairPlanResult)
+async def plan_repair(request: RepairPlanRequest) -> RepairPlanResult:
+    try:
+        return await repair_planner.plan(request)
+    except Exception as exc:
+        raise HTTPException(status_code=400, detail=str(exc)) from exc
