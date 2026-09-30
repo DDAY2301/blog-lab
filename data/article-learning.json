@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-30T14:33:28+02:00",
-  "loop_count": 2036,
+  "updated_at": "2026-09-30T14:38:18+02:00",
+  "loop_count": 2037,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-30T14:33:05+02:00",
+      "last_learning_run": "2026-09-30T14:37:54+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -51,11 +51,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 60360,
-          "last_seen": "2026-09-30T14:33:05+02:00",
-          "last_title": "Zelenica, ki je bila vse prej kot v izjemnem stanju - Večer",
+          "seen": 60390,
+          "last_seen": "2026-09-30T14:37:54+02:00",
+          "last_title": "To se Sloveniji ni zgodilo še nikoli, ta zmaga gre v anale - Siol.net",
           "last_provider": "",
-          "published": 73845,
+          "published": 73903,
           "last_output_id": "slovenija-premagala-severno-makedonijo-v-ligi-narodov-foto-d79efe69"
         },
         "aarp.org": {
@@ -195,7 +195,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-30T14:33:16+02:00",
+      "last_learning_run": "2026-09-30T14:38:07+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -222,11 +222,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 60360,
-          "last_seen": "2026-09-30T14:33:16+02:00",
-          "last_title": "Kajzer zavrnil očitke, da ne vodi suverene zunanje politike - Dnevnik",
+          "seen": 60390,
+          "last_seen": "2026-09-30T14:38:07+02:00",
+          "last_title": "Kajzer: Zunanja politika se osredotoča na okvire, v katerih ima Slovenija možnosti vplivanja - rtvslo.si",
           "last_provider": "",
-          "published": 78911,
+          "published": 78974,
           "last_output_id": "jansa-o-gazi-zdravljenju-redkih-bolezni-in-drogah-34d06ca6"
         },
         "hellovein.com": {
@@ -261,14 +261,14 @@
       "current_source_count": 30,
       "example_titles": {
         "news.google.com": [
-          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
           "Opozicija vladi očita poskuse podrejanja neodvisnih medijev - 24ur.com",
-          "»Ujeti med politiko in ceh: Komu sploh odgovarja RTV Slovenija?« - Ljubljanske novice"
+          "»Ujeti med politiko in ceh: Komu sploh odgovarja RTV Slovenija?« - Ljubljanske novice",
+          "Danes zadnji dan za prijavo na glasovanje po pošti - stadion.si"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-30T14:33:28+02:00",
+      "last_learning_run": "2026-09-30T14:38:18+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -302,96 +302,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 60360,
-          "last_seen": "2026-09-30T14:33:28+02:00",
-          "last_title": "Olimpijski komite Slovenije - Olimpijski Komite Slovenije",
+          "seen": 60390,
+          "last_seen": "2026-09-30T14:38:18+02:00",
+          "last_title": "Društvo Izgubljeni otroci Slovenije odprlo nove prostore - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 98053,
+          "published": 98113,
           "last_output_id": "jansa-na-newsmaxu-slovenija-in-zda-imata-poseben-odnos-razkril-tudi-kaj-mu-je-obljubil-tru-a1bdde5d"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 2013,
+          "published": 2014,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 2013,
+          "published": 2014,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 2036,
+          "published": 2037,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 1938,
+          "published": 1939,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 2002,
+          "published": 2003,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 1938,
+          "published": 1939,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 1938,
+          "published": 1939,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 2002,
+          "published": 2003,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 8144,
+          "published": 8148,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 2036,
+          "published": 2037,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 2013,
+          "published": 2014,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 3940,
+          "published": 3942,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 1970,
+          "published": 1971,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 4004,
+          "published": 4006,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 2036,
+          "published": 2037,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 1938,
+          "published": 1939,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 3940,
+          "published": 3942,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
