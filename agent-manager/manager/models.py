@@ -74,3 +74,20 @@ class AgentRecord(BaseModel):
 class DiscoverResult(BaseModel):
     agents: list[AgentRecord] = Field(default_factory=list)
     errors: list[dict[str, str]] = Field(default_factory=list)
+
+
+class RepairPlanRequest(BaseModel):
+    root: str
+    objective: str = Field(min_length=3, max_length=4000)
+
+
+class RepairPlanResult(BaseModel):
+    model: str
+    objective: str
+    summary: str
+    plan: list[str] = Field(default_factory=list)
+    patch: str = ""
+    tests: list[str] = Field(default_factory=list)
+    risk: str = "high"
+    valid: bool = False
+    validation_errors: list[str] = Field(default_factory=list)
