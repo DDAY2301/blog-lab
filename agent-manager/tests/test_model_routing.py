@@ -1,10 +1,9 @@
-import pytest
+import asyncio
 
 from manager.ollama_client import OllamaClient
 
 
-@pytest.mark.asyncio
-async def test_auto_max_chooses_strongest_installed(monkeypatch: pytest.MonkeyPatch) -> None:
+def test_auto_max_chooses_strongest_installed(monkeypatch) -> None:
     client = OllamaClient(
         preferred_model="auto-max",
         capability_priority=(
@@ -18,11 +17,10 @@ async def test_auto_max_chooses_strongest_installed(monkeypatch: pytest.MonkeyPa
         return ["devstral-small-2:latest", "qwen3.8:27b"]
 
     monkeypatch.setattr(client, "available_models", fake_models)
-    assert await client.choose_model() == "qwen3.8:27b"
+    assert asyncio.run(client.choose_model()) == "qwen3.8:27b"
 
 
-@pytest.mark.asyncio
-async def test_explicit_quality_tag_is_not_downgraded_by_alias(monkeypatch: pytest.MonkeyPatch) -> None:
+def test_explicit_quality_tag_is_not_downgraded_by_alias(monkeypatch) -> None:
     client = OllamaClient(
         preferred_model="auto-max",
         capability_priority=("qwen3.8:27b-q8_0", "qwen3.8:27b"),
@@ -32,4 +30,4 @@ async def test_explicit_quality_tag_is_not_downgraded_by_alias(monkeypatch: pyte
         return ["qwen3.8:27b"]
 
     monkeypatch.setattr(client, "available_models", fake_models)
-    assert await client.choose_model() == "qwen3.8:27b"
+    assert asyncio.run(client.choose_model()) == "qwen3.8:27b"
