@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-30T18:24:46+02:00",
-  "loop_count": 2071,
+  "updated_at": "2026-09-30T18:39:40+02:00",
+  "loop_count": 2072,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-30T18:24:24+02:00",
+      "last_learning_run": "2026-09-30T18:38:23+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -36,6 +36,7 @@
       ],
       "preferred_hosts": [
         "news.google.com",
+        "city-data.com",
         "aarp.org",
         "amazon.de",
         "blackfriday.com",
@@ -45,8 +46,7 @@
         "support.microsoft.com",
         "greaterdcdiaperbank.org",
         "biologyinsights.com",
-        "digitalcitizen.life",
-        "learn.microsoft.com"
+        "digitalcitizen.life"
       ],
       "source_health": {
         "news.google.com": {
@@ -55,8 +55,15 @@
           "last_seen": "2026-09-30T18:24:24+02:00",
           "last_title": "Slovenija v znamenju največjega kolesarskega spektakla: poglejte, kaj se bo dogajalo - Siol.net",
           "last_provider": "",
-          "published": 75875,
+          "published": 75933,
           "last_output_id": "slovenija-premagala-severno-makedonijo-v-ligi-narodov-foto-d79efe69"
+        },
+        "city-data.com": {
+          "score": 1.726,
+          "seen": 2,
+          "last_seen": "2026-09-30T18:38:23+02:00",
+          "last_title": "What is DEATH? - Christianity - - Page 106 - City-Data Forum",
+          "last_provider": "bing-web"
         },
         "aarp.org": {
           "score": 1.635,
@@ -192,17 +199,16 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 30,
+      "current_source_count": 2,
       "example_titles": {
-        "news.google.com": [
-          "Finci premagali Slovenijo in osvojili prvo medaljo na velikih tekmovanjih - 24ur.com",
-          "Prvi polčas na uničeni travnati površini minil brez zadetkov (0:0)* - 24ur.com",
-          "Slovenija na sramotni zelenici Stožic v drugem polčasu strla Makedonce - Šport TV"
+        "city-data.com": [
+          "Columbus, GA Forum - Relocation, Moving, General and Local City Discussions - City-Data Forum",
+          "What is DEATH? - Christianity - - Page 106 - City-Data Forum"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-30T18:24:35+02:00",
+      "last_learning_run": "2026-09-30T18:38:56+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -234,7 +240,7 @@
           "last_seen": "2026-09-30T18:24:35+02:00",
           "last_title": "Kajzer: Zunanja politika se osredotoča na okvire, v katerih ima Slovenija možnosti vplivanja - rtvslo.si",
           "last_provider": "",
-          "published": 81116,
+          "published": 81179,
           "last_output_id": "jansa-o-gazi-zdravljenju-redkih-bolezni-in-drogah-34d06ca6"
         },
         "hellovein.com": {
@@ -273,17 +279,11 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 30,
-      "example_titles": {
-        "news.google.com": [
-          "Predsednica republike za viceguvernerko predlaga Arjano Brezigar - Dnevnik",
-          "Fotografija iz Gaze in referendumi kot preizkus resnice - Delo.si",
-          "Član Svobode pred referendumom: Bi želeli, da vam Žavbi ali Grgurevičeva brskata po mailih ali računih? - Večer"
-        ]
-      }
+      "current_source_count": 0,
+      "example_titles": {}
     },
     "aktualno": {
-      "last_learning_run": "2026-09-30T18:24:46+02:00",
+      "last_learning_run": "2026-09-30T18:39:40+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -321,92 +321,92 @@
           "last_seen": "2026-09-30T18:24:46+02:00",
           "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 100153,
+          "published": 100213,
           "last_output_id": "jansa-na-newsmaxu-slovenija-in-zda-imata-poseben-odnos-razkril-tudi-kaj-mu-je-obljubil-tru-a1bdde5d"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 2048,
+          "published": 2049,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 2048,
+          "published": 2049,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 2071,
+          "published": 2072,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 1973,
+          "published": 1974,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 2037,
+          "published": 2038,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 1973,
+          "published": 1974,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 1973,
+          "published": 1974,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 2037,
+          "published": 2038,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 8284,
+          "published": 8288,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 2071,
+          "published": 2072,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 2048,
+          "published": 2049,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 4010,
+          "published": 4012,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 2005,
+          "published": 2006,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 4074,
+          "published": 4076,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 2071,
+          "published": 2072,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 1973,
+          "published": 1974,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 4010,
+          "published": 4012,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
@@ -424,14 +424,8 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 30,
-      "example_titles": {
-        "news.google.com": [
-          "(AKTUALNO) V novi številki revije Demokracija preberite: Izključujejo in zavirajo razvoj! Janša: Osamosvojitvena Slovenija ne bo nikoli več ",
-          "Evropska komisija: Slovenija krši pravice avtorjem - Info360",
-          "Janša v New Yorku jasno o Ukrajini: Slovenija bo nadaljevala politično, vojaško, humanitarno in finančno pomoč - Najdi.si novice"
-        ]
-      }
+      "current_source_count": 0,
+      "example_titles": {}
     }
   },
   "recent_articles": [
