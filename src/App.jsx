@@ -20,6 +20,47 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "path-remembrance-ljubljana-running-cycling-guide",
+    "title": "Ljubljana’s Green Ring: A Running and Cycling Guide to the PST",
+    "excerpt": "Run, walk or cycle Ljubljana’s 32.5-kilometre Path of Remembrance and Comradeship with practical sections, surface notes, transport links and safety advice.",
+    "seoDescription": "Explore Ljubljana’s 32.5 km Green Ring by foot or bike with route sections, surfaces, access points, public transport and current safety advice.",
+    "content": "Last updated: 30 September 2026\n\nLjubljana’s Path of Remembrance and Comradeship — usually shortened to PST — is a 32.5-kilometre green ring around the city. It follows the line of the wartime barbed-wire perimeter and today works as a free, open-air route for walking, running and recreational cycling.\n\nThe complete circuit is a serious day out rather than a short city stroll. Most visitors will enjoy it more by choosing one section and using a city bus to return.\n\n## Route facts at a glance\n\n- **Distance:** 32.5 km for the full loop\n- **Official difficulty:** easy\n- **Estimated walking time:** about 8 hours without long stops\n- **Total ascent:** approximately 152 metres\n- **Surface:** mostly broad compacted sand or gravel, with asphalt through some residential areas\n- **Cost and opening:** free, outdoors and normally accessible at all times\n- **Best uses:** walking, running, trekking bikes, gravel bikes and careful recreational cycling\n\nThe route is marked, but urban crossings and connecting streets can be less obvious than the green sections. Save the official map before leaving and do not depend on mobile signal or a single navigation app.\n\n## Which section should you choose?\n\n### Koseze Pond and the north-western green ring\n\nThis is the simplest introduction for most visitors. Start around Koseze Pond and follow the broad path east or south for an easy out-and-back run or walk. The terrain is generally gentler than Golovec, and buses make it easier to shorten the outing.\n\nAllow 60–120 minutes for a relaxed section. This is the best choice for families, casual runners and visitors who want greenery without committing to the complete loop.\n\n### Fužine Castle and the Ljubljanica\n\nThe eastern section combines neighbourhood life, riverside scenery and historical markers. Fužine Castle is a useful landmark, while nearby bus connections make a one-way walk practical.\n\nSurfaces vary between compacted path and pavement. Expect road crossings and shared space rather than a continuous traffic-free trail.\n\n### Golovec for hills and trail running\n\nGolovec is the most athletic part of the ring. Forest tracks add climbing, uneven ground and faster-changing conditions after rain. It suits runners and confident cyclists, but it is not the section to choose for a first wheelchair, pushchair or relaxed family attempt.\n\nWear shoes with grip and slow down on descents. Leaves, mud, roots and low light under trees can make the surface more demanding than the route’s overall “easy” rating suggests.\n\n### The marsh-edge southern section\n\nThe southern arc feels more open and rural. It is attractive for longer runs or gravel-style cycling, but shade and services are less consistent. Carry water, especially outside the central neighbourhoods.\n\n## Walking, running or cycling?\n\n### Walking\n\nThe full loop takes most of a day. For ordinary sightseeing, plan a 5–12 km section and combine it with a bus ride. Keep to the right where possible and remain aware of faster users.\n\n### Running\n\nThe compacted surface is comfortable for steady training, but road crossings interrupt rhythm. Golovec adds useful elevation; Koseze and the flatter northern sections suit easier runs. Reflective clothing is sensible in poor visibility.\n\n### Cycling\n\nA trekking, hybrid, mountain or gravel bike is more suitable than a narrow-tyred road bike. Give walkers priority, control speed near schools, playgrounds and blind corners, and dismount where crossings or congestion make riding unsafe.\n\nThe route is popular with cyclists, but it is primarily a shared recreational path, not a race circuit.\n\n## Accessibility and family use\n\nThe PST cannot be described as uniformly step-free. Broad, firm sections near Koseze and through flatter residential districts may work for wheelchairs or pushchairs in dry weather, while Golovec, loose gravel, kerbs and busy road crossings create barriers.\n\nFamilies should choose a short out-and-back section, avoid the steep forest portion and supervise children at every street crossing. There are no continuous guardrails or services around the full ring.\n\n## Getting to the trail without a car\n\nBecause the route encircles Ljubljana, several LPP bus lines intersect or approach it. Use the [LPP journey planner](https://www.lpp.si/en/) for the exact starting section and current diversions.\n\nBicikeLJ is useful for reaching a trailhead, but rental bicycles must be returned to a station. Check the live station map before planning a one-way ride, and remember that the standard city bikes are less comfortable on rough or muddy sections than a trekking bike.\n\n## Weather, surface and closure checks\n\nCheck [ARSO](https://meteo.arso.gov.si/met/en/) immediately before departure. After rain, forest and gravel portions may be muddy or slippery; during strong wind or thunderstorms, avoid wooded sections and do not shelter beneath trees.\n\nThe city periodically maintains trees and path surfaces, while road works can affect crossings or short connections. No single official source guarantees that every metre is unobstructed, so review [Ljubljana municipal news](https://www.ljubljana.si/en/) and [Promet.si](https://promet.si/en) on the day of your activity.\n\nIf you encounter machinery, temporary fencing or a signed diversion, follow the posted route and never pass through a work zone.\n\n## Safety checklist\n\n- Carry water, a charged phone and an offline map.\n- Use lights and reflective clothing in low visibility.\n- Cross major roads only at marked crossings.\n- Keep dogs under full control and collect waste.\n- Do not block the path when stopping in a group.\n- Turn back if the surface exceeds your equipment or mobility level.\n- For emergencies in Slovenia, call 112.\n\n## A realistic half-day plan\n\nFor a balanced visitor experience, choose a 7–10 km section around Koseze and Šiška or Fužine and the Ljubljanica. Walk or run for two to three hours, then return by LPP. This gives you the landscape and history of the PST without turning a city break into an eight-hour endurance event.\n\nExperienced runners and cyclists can complete the full circle, but should start early, carry navigation and expect frequent urban crossings.\n\n## Continue exploring Ljubljana outdoors\n\nFor a shorter forest run, use the [Tivoli and Rožnik running guide](?article=running-ljubljana-tivoli-roznik-guide). Cyclists who prefer a city-centre loop can read [Cycling Ljubljana safely](?article=cycling-ljubljana-city-guide). For a steeper hike with views, see the [Šmarna Gora guide](?article=smarna-gora-hike-ljubljana-guide).\n\n## Official sources\n\n- [Visit Ljubljana: Path of Remembrance and Comradeship](https://www.visitljubljana.com/en/visitors/sights-and-activities/active-holidays/hiking-trails/path-of-remembrance-and-comradeship)\n- [Visit Ljubljana hiking route data](https://www.visitljubljana.com/en/visitors/sights-and-activities/active-holidays/hiking-trails)\n- [City of Ljubljana](https://www.ljubljana.si/en/)\n- [ARSO weather and warnings](https://meteo.arso.gov.si/met/en/)\n- [Promet.si traffic and road works](https://promet.si/en)\n- [LPP public transport](https://www.lpp.si/en/)",
+    "category": "Vodniki",
+    "author": "Slovenia Pulse Editorial",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Visit Ljubljana — Path of Remembrance and Comradeship",
+        "url": "https://www.visitljubljana.com/en/visitors/sights-and-activities/active-holidays/hiking-trails/path-of-remembrance-and-comradeship"
+      },
+      {
+        "label": "Visit Ljubljana — Hiking trails",
+        "url": "https://www.visitljubljana.com/en/visitors/sights-and-activities/active-holidays/hiking-trails"
+      },
+      {
+        "label": "City of Ljubljana",
+        "url": "https://www.ljubljana.si/en/"
+      },
+      {
+        "label": "ARSO — Weather and warnings",
+        "url": "https://meteo.arso.gov.si/met/en/"
+      },
+      {
+        "label": "Promet.si — Traffic information",
+        "url": "https://promet.si/en"
+      },
+      {
+        "label": "LPP — Ljubljana public transport",
+        "url": "https://www.lpp.si/en/"
+      }
+    ],
+    "createdAt": "2026-09-30T09:01:28+02:00",
+    "updatedAt": "2026-09-30T09:01:28+02:00"
+  },
+  {
     "id": "slovenija-premagala-severno-makedonijo-v-ligi-narodov-foto-d79efe69",
     "title": "Slovenija premagala Severno Makedonijo v ligi narodov (FOTO)",
     "excerpt": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Slovenija premagala Severno Makedonijo v ligi narodov (FOTO)«.",
