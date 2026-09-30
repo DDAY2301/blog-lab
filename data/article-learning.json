@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-30T10:39:11+02:00",
-  "loop_count": 2002,
+  "updated_at": "2026-09-30T10:53:22+02:00",
+  "loop_count": 2003,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-30T10:38:51+02:00",
+      "last_learning_run": "2026-09-30T10:53:00+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -51,11 +51,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 59340,
-          "last_seen": "2026-09-30T10:38:51+02:00",
-          "last_title": "Po porazu s Slovenijo počilo - navijači zahtevajo odstop in bojkot - Ekipa",
+          "seen": 59370,
+          "last_seen": "2026-09-30T10:53:00+02:00",
+          "last_title": "Lovrić in Matko zadela za zmago nad skromnimi Makedonci - rtvslo.si",
           "last_provider": "",
-          "published": 71873,
+          "published": 71931,
           "last_output_id": "slovenija-premagala-severno-makedonijo-v-ligi-narodov-foto-d79efe69"
         },
         "aarp.org": {
@@ -189,13 +189,13 @@
       "example_titles": {
         "news.google.com": [
           "Finci premagali Slovenijo in osvojili prvo medaljo na velikih tekmovanjih - 24ur.com",
-          "Prvi polčas na uničeni travnati površini minil brez zadetkov (0:0)* - 24ur.com",
-          "Slovenija na sramotni zelenici Stožic v drugem polčasu strla Makedonce - Šport TV"
+          "Izraelci na Ptuju končali slovenske upe o nastopu na EP-ju - rtvslo.si",
+          "Prvi polčas na uničeni travnati površini minil brez zadetkov (0:0)* - 24ur.com"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-30T10:39:01+02:00",
+      "last_learning_run": "2026-09-30T10:53:11+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -222,11 +222,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 59340,
-          "last_seen": "2026-09-30T10:39:01+02:00",
-          "last_title": "Kajzer in Janša diplomate nagovorila za zaprtimi vrati - 24ur.com",
+          "seen": 59370,
+          "last_seen": "2026-09-30T10:53:11+02:00",
+          "last_title": "Novi v politiki: Volt Slovenija gre na lokalne volitve tudi na Ptuju - Svet24.si",
           "last_provider": "",
-          "published": 76889,
+          "published": 76947,
           "last_output_id": "volilna-pravila-o-zakonodajnem-referendumu-in-treh-posvetovalnih-referendumih-0c5c1f86"
         },
         "hellovein.com": {
@@ -268,7 +268,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-30T10:39:11+02:00",
+      "last_learning_run": "2026-09-30T10:53:22+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -302,96 +302,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 59340,
-          "last_seen": "2026-09-30T10:39:11+02:00",
-          "last_title": "Slovenija med državami, ki bi prepovedale družbena omrežja mlajšim od 16 let - Info360",
+          "seen": 59370,
+          "last_seen": "2026-09-30T10:53:22+02:00",
+          "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 96013,
+          "published": 96073,
           "last_output_id": "jansa-na-newsmaxu-slovenija-in-zda-imata-poseben-odnos-razkril-tudi-kaj-mu-je-obljubil-tru-a1bdde5d"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 1979,
+          "published": 1980,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 1979,
+          "published": 1980,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 2002,
+          "published": 2003,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 1904,
+          "published": 1905,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 1968,
+          "published": 1969,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 1904,
+          "published": 1905,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 1904,
+          "published": 1905,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 1968,
+          "published": 1969,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 8008,
+          "published": 8012,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 2002,
+          "published": 2003,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 1979,
+          "published": 1980,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 3872,
+          "published": 3874,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 1936,
+          "published": 1937,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 3936,
+          "published": 3938,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 2002,
+          "published": 2003,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 1904,
+          "published": 1905,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 3872,
+          "published": 3874,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
