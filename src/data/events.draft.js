@@ -1,5 +1,5 @@
 // Review draft only. Not imported by the production application.
-// Rolling review draft. Sources rechecked on 2026-09-29 at 07:00 Europe/Ljubljana.
+// Rolling review draft. Sources rechecked on 2026-09-30 at 07:01 Europe/Ljubljana.
 // Production remains unchanged until the calendar model and stable views are implemented.
 // Unknown values deliberately remain null.
 export const draftEvents = [
@@ -32,7 +32,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-30T07:01:22+02:00"
   },
   {
     "eventId": "national-gallery-tone-kralj-2026",
@@ -63,7 +63,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-30T07:01:22+02:00"
   },
   {
     "eventId": "national-gallery-fragments-past-2026",
@@ -93,7 +93,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "expired",
+    "status": "completed",
     "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
@@ -125,7 +125,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-30T07:01:22+02:00"
   },
   {
     "eventId": "castle-reading-corner-2026",
@@ -155,7 +155,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "expired",
+    "status": "completed",
     "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
@@ -372,7 +372,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "expired",
+    "status": "completed",
     "lastCheckedAt": "2026-09-21T07:00:00+02:00"
   },
   {
@@ -529,7 +529,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "expired",
+    "status": "completed",
     "lastCheckedAt": "2026-09-21T07:00:00+02:00"
   },
   {
@@ -622,7 +622,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "expired",
+    "status": "completed",
     "lastCheckedAt": "2026-09-21T07:00:00+02:00"
   },
   {
@@ -653,7 +653,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "expired",
+    "status": "completed",
     "lastCheckedAt": "2026-09-21T07:00:00+02:00"
   },
   {
@@ -684,7 +684,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "expired",
+    "status": "completed",
     "lastCheckedAt": "2026-09-21T07:00:00+02:00"
   },
   {
@@ -715,7 +715,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "expired",
+    "status": "completed",
     "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
@@ -840,7 +840,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-30T07:01:22+02:00"
   },
   {
     "eventId": "air-raid-cankarjev-dom-2026-09-24",
@@ -963,7 +963,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "expired",
+    "status": "completed",
     "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
@@ -1087,7 +1087,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "expired",
+    "status": "completed",
     "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
@@ -1121,7 +1121,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "expired",
+    "status": "completed",
     "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
@@ -1218,7 +1218,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "expired",
+    "status": "completed",
     "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
@@ -1249,7 +1249,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "expired",
+    "status": "completed",
     "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
@@ -1404,7 +1404,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "confirmed",
+    "status": "completed",
     "lastCheckedAt": "2026-09-29T07:00:00+02:00"
   },
   {
@@ -1467,7 +1467,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-29T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-30T07:01:22+02:00"
   },
   {
     "eventId": "lastovka-award-cd-2026-09-30",
@@ -1498,7 +1498,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-29T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-30T07:01:22+02:00"
   },
   {
     "eventId": "opera-ballet-rehearsal-cinderella-2026-09-30",
@@ -1529,38 +1529,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-29T07:00:00+02:00"
-  },
-  {
-    "eventId": "beauty-queen-leenane-mgl-2026-09-30",
-    "title": "The Beauty Queen of Leenane",
-    "summary": "Prešeren Theatre Kranj visits MGL's Main Stage on Wednesday 30 September at 19:30. The programme confirms tickets are offered, while language, surtitles, price and access details require a direct check.",
-    "category": "theatre",
-    "startAt": "2026-09-30T19:30:00+02:00",
-    "endAt": null,
-    "timezone": "Europe/Ljubljana",
-    "venue": {
-      "name": "Mestno gledališče ljubljansko",
-      "address": "Čopova ulica 14, 1000 Ljubljana",
-      "city": "Ljubljana",
-      "region": "Central Slovenia"
-    },
-    "price": {
-      "amount": null,
-      "currency": "EUR",
-      "label": null,
-      "free": false
-    },
-    "ticketUrl": "https://www.mgl.si/en/schedule/",
-    "officialUrl": "https://www.mgl.si/en/schedule/",
-    "sourceName": "Mestno gledališče ljubljansko",
-    "languages": [],
-    "touristFriendly": null,
-    "familyFriendly": null,
-    "accessibility": null,
-    "indoorOutdoor": "indoor",
-    "status": "confirmed",
-    "lastCheckedAt": "2026-09-29T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-30T07:01:22+02:00"
   },
   {
     "eventId": "now-1-neohero-cd-2026-09-30",
@@ -1591,7 +1560,38 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-29T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-30T07:01:22+02:00"
+  },
+  {
+    "eventId": "beauty-queen-leenane-mgl-2026-09-30",
+    "title": "The Beauty Queen of Leenane",
+    "summary": "Prešeren Theatre Kranj visits MGL's Main Stage on Wednesday 30 September at 19:30. The programme confirms tickets are offered, while language, surtitles, price and access details require a direct check.",
+    "category": "theatre",
+    "startAt": "2026-09-30T19:30:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Mestno gledališče ljubljansko",
+      "address": "Čopova ulica 14, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": false
+    },
+    "ticketUrl": "https://www.mgl.si/en/schedule/",
+    "officialUrl": "https://www.mgl.si/en/schedule/",
+    "sourceName": "Mestno gledališče ljubljansko",
+    "languages": [],
+    "touristFriendly": null,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-30T07:01:22+02:00"
   },
   {
     "eventId": "ex-mgl-2026-09-30",
@@ -1622,7 +1622,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "sold_out",
-    "lastCheckedAt": "2026-09-29T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-30T07:01:22+02:00"
   },
   {
     "eventId": "festival-third-age-cd-2026-10-01",
@@ -1656,6 +1656,37 @@ export const draftEvents = [
     "lastCheckedAt": "2026-09-28T07:00:00+02:00"
   },
   {
+    "timezone": "Europe/Ljubljana",
+    "eventId": "prison-theatre-church-cd-2026-10-01",
+    "title": "Prison Theatre Church (Zapor teater cerkev)",
+    "summary": "Cankarjev dom lists this cinema event for 1 October at 19:00. Ticket price, language and accessibility details were not stated clearly enough in the live programme and should be checked before booking.",
+    "category": "cinema",
+    "startAt": "2026-10-01T19:00:00+02:00",
+    "endAt": "2026-10-01T21:00:00+02:00",
+    "venue": {
+      "name": "Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": null
+    },
+    "ticketUrl": "https://www.cd-cc.si/en/buy-tickets",
+    "officialUrl": "https://www.cd-cc.si/en",
+    "sourceName": "Cankarjev dom",
+    "languages": [],
+    "touristFriendly": null,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-30T07:01:22+02:00"
+  },
+  {
     "eventId": "katalena-cd-2026-10-01",
     "title": "Katalena",
     "summary": "Katalena performs at Cankarjev dom at 19:30 on 1 October. The official programme confirms the date and time; visitors should verify current prices, ticket availability and accessibility directly with the venue.",
@@ -1687,6 +1718,37 @@ export const draftEvents = [
     "lastCheckedAt": "2026-09-28T07:00:00+02:00"
   },
   {
+    "timezone": "Europe/Ljubljana",
+    "eventId": "artist-talk-matej-kejzar-cd-2026-10-01",
+    "title": "Artist Talk with Matej Kejžar",
+    "summary": "The official Cankarjev dom programme schedules this theatre-and-dance artist talk for 1 October at 21:00. Language, price and accessibility information remain unconfirmed in the calendar draft.",
+    "category": "talk",
+    "startAt": "2026-10-01T21:00:00+02:00",
+    "endAt": "2026-10-01T22:30:00+02:00",
+    "venue": {
+      "name": "Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": null
+    },
+    "ticketUrl": "https://www.cd-cc.si/en/buy-tickets",
+    "officialUrl": "https://www.cd-cc.si/en",
+    "sourceName": "Cankarjev dom",
+    "languages": [],
+    "touristFriendly": null,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-30T07:01:22+02:00"
+  },
+  {
     "eventId": "open-kitchen-2026-10-02",
     "title": "Open Kitchen",
     "summary": "Ljubljana's outdoor Friday food market is scheduled at Pogačarjev trg from 10:00 to 21:00. Entry to the market is free, food is purchased from individual vendors, and the event is weather-dependent.",
@@ -1715,7 +1777,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-30T07:01:22+02:00"
   },
   {
     "eventId": "uec-road-european-championships-2026",
@@ -1746,7 +1808,7 @@ export const draftEvents = [
     "accessibility": "Outdoor roadside viewing; individual accessible viewing arrangements not stated",
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-30T07:01:22+02:00"
   },
   {
     "eventId": "ex-mgl-2026-10-02",
@@ -1778,6 +1840,37 @@ export const draftEvents = [
     "indoorOutdoor": "indoor",
     "status": "confirmed",
     "lastCheckedAt": "2026-09-28T07:00:00+02:00"
+  },
+  {
+    "timezone": "Europe/Ljubljana",
+    "eventId": "movements-9-cd-2026-10-02",
+    "title": "Movements 9",
+    "summary": "Cankarjev dom lists this theatre-and-dance event for 2 October at 20:00. Visitors should confirm ticket availability, language and accessibility on the official event page.",
+    "category": "theatre-dance",
+    "startAt": "2026-10-02T20:00:00+02:00",
+    "endAt": "2026-10-02T22:00:00+02:00",
+    "venue": {
+      "name": "Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": null
+    },
+    "ticketUrl": "https://www.cd-cc.si/en/buy-tickets",
+    "officialUrl": "https://www.cd-cc.si/en",
+    "sourceName": "Cankarjev dom",
+    "languages": [],
+    "touristFriendly": null,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-30T07:01:22+02:00"
   },
   {
     "eventId": "sheby-umami-castle-2026-10-02",
@@ -1839,7 +1932,38 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-30T07:01:22+02:00"
+  },
+  {
+    "timezone": "Europe/Ljubljana",
+    "eventId": "kolizej-book-film-cd-2026-10-03",
+    "title": "The Kolizej – Book and Film",
+    "summary": "This Cankarjev dom literature-and-humanities programme is scheduled for 3 October at 19:00. Price, language and accessibility were left blank where the official listing did not provide enough detail.",
+    "category": "literature-film",
+    "startAt": "2026-10-03T19:00:00+02:00",
+    "endAt": "2026-10-03T21:00:00+02:00",
+    "venue": {
+      "name": "Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": null
+    },
+    "ticketUrl": "https://www.cd-cc.si/en/buy-tickets",
+    "officialUrl": "https://www.cd-cc.si/en",
+    "sourceName": "Cankarjev dom",
+    "languages": [],
+    "touristFriendly": null,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-30T07:01:22+02:00"
   },
   {
     "eventId": "salome-mgl-2026-10-03",
@@ -1904,6 +2028,37 @@ export const draftEvents = [
     "lastCheckedAt": "2026-09-28T07:00:00+02:00"
   },
   {
+    "timezone": "Europe/Ljubljana",
+    "eventId": "movements-of-aphrodite-cd-2026-10-03",
+    "title": "The Movements of Aphrodite",
+    "summary": "Cankarjev dom confirms this theatre-and-dance event on 3 October at 20:00. Current ticket availability, language and visitor accessibility should be checked directly before attending.",
+    "category": "theatre-dance",
+    "startAt": "2026-10-03T20:00:00+02:00",
+    "endAt": "2026-10-03T22:00:00+02:00",
+    "venue": {
+      "name": "Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": null
+    },
+    "ticketUrl": "https://www.cd-cc.si/en/buy-tickets",
+    "officialUrl": "https://www.cd-cc.si/en",
+    "sourceName": "Cankarjev dom",
+    "languages": [],
+    "touristFriendly": null,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-30T07:01:22+02:00"
+  },
+  {
     "eventId": "sunday-flea-market-2026-10-04",
     "title": "Sunday Flea Market",
     "summary": "Ljubljana's antique and vintage market returns to Breg from 08:00 to 15:00 on Sunday 4 October. Entry is free; outdoor sellers may finish early in poor weather.",
@@ -1932,7 +2087,38 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-30T07:01:22+02:00"
+  },
+  {
+    "timezone": "Europe/Ljubljana",
+    "eventId": "peekaboo-workshop-cd-2026-10-04",
+    "title": "“Peekaboo” Workshop – Bojana Robinson",
+    "summary": "Cankarjev dom schedules this workshop for 4 October at 10:00. It may suit families, but the exact age range, language, price and accessibility should be confirmed on the official listing.",
+    "category": "workshop",
+    "startAt": "2026-10-04T10:00:00+02:00",
+    "endAt": "2026-10-04T12:00:00+02:00",
+    "venue": {
+      "name": "Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": null
+    },
+    "ticketUrl": "https://www.cd-cc.si/en/buy-tickets",
+    "officialUrl": "https://www.cd-cc.si/en",
+    "sourceName": "Cankarjev dom",
+    "languages": [],
+    "touristFriendly": null,
+    "familyFriendly": true,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-09-30T07:01:22+02:00"
   },
   {
     "eventId": "wind-orchestra-promenade-2026-10-04",
@@ -1963,7 +2149,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-30T07:01:22+02:00"
   },
   {
     "eventId": "salome-mgl-2026-10-06",
@@ -2118,7 +2304,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-30T07:01:22+02:00"
   },
   {
     "eventId": "european-table-tennis-championships-2026",
@@ -2149,37 +2335,6 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
-  },
-  {
-    "eventId": "ex-mgl-2026-09-30-2000",
-    "title": "Ex",
-    "summary": "MGL schedules Ex on the Small Stage on Wednesday 30 September at 20:00 and marks the performance sold out. Language support, age suitability and accessibility are not confirmed in the programme overview.",
-    "category": "theatre",
-    "startAt": "2026-09-30T20:00:00+02:00",
-    "endAt": null,
-    "timezone": "Europe/Ljubljana",
-    "venue": {
-      "name": "Mestno gledališče ljubljansko – Small Stage",
-      "address": "Čopova ulica 14, 1000 Ljubljana",
-      "city": "Ljubljana",
-      "region": "Central Slovenia"
-    },
-    "price": {
-      "amount": null,
-      "currency": "EUR",
-      "label": "Sold out",
-      "free": false
-    },
-    "ticketUrl": "https://www.mgl.si/en/schedule/",
-    "officialUrl": "https://www.mgl.si/en/schedule/",
-    "sourceName": "Mestno gledališče ljubljansko",
-    "languages": [],
-    "touristFriendly": null,
-    "familyFriendly": null,
-    "accessibility": null,
-    "indoorOutdoor": "indoor",
-    "status": "sold_out",
-    "lastCheckedAt": "2026-09-29T07:00:00+02:00"
+    "lastCheckedAt": "2026-09-30T07:01:22+02:00"
   }
 ];
