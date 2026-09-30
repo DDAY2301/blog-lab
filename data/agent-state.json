@@ -23,10 +23,10 @@
     "reason": "prekratek",
     "at": "2026-09-30T19:54:32+02:00"
   },
-  "publisher_guardian_last_run": "2026-09-29T08:19:40+02:00",
+  "publisher_guardian_last_run": "2026-09-30T19:55:22+02:00",
   "publisher_guardian_last_action": {
-    "category": "sport",
-    "slot": "2026-09-29|08:17|sport",
+    "category": "aktualno",
+    "slot": "2026-09-30|19:43|aktualno",
     "remaining_repairs": 0
   }
 }
