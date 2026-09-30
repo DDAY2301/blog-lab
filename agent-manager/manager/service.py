@@ -5,9 +5,12 @@ from pathlib import Path
 
 from fastapi import FastAPI, HTTPException
 
+from .autopilot import AutopilotDisabled, AutonomousRepairExecutor
 from .discovery import RepositoryScanner
 from .evaluator import AgentEvaluator, deterministic_health
 from .models import (
+    AutopilotRequest,
+    AutopilotResult,
     DiscoverResult,
     RepairPlanRequest,
     RepairPlanResult,
@@ -21,8 +24,8 @@ from .repair import RepairPlanner
 
 app = FastAPI(
     title="Agent Manager",
-    version="0.3.0",
-    description="Local-first supervisor for discovering, evaluating and improving AI agents.",
+    version="0.4.0",
+    description="Local-first supervisor for discovering, evaluating and safely improving AI agents.",
 )
 
 scanner = RepositoryScanner()
@@ -30,6 +33,7 @@ ollama = OllamaClient()
 evaluator = AgentEvaluator(ollama)
 registry = AgentRegistry()
 repair_planner = RepairPlanner(ollama)
+autopilot = AutonomousRepairExecutor(repair_planner)
 
 
 def configured_roots() -> list[str]:
@@ -48,10 +52,19 @@ async def health() -> dict:
     except Exception as exc:
         model_status = {"reachable": False, "error": str(exc), "models": []}
 
+    write_enabled = os.getenv("AGENT_MANAGER_WRITE_ENABLED", "").strip().lower() in {
+        "1",
+        "true",
+        "yes",
+        "on",
+    }
+
     return {
         "ok": True,
-        "version": "0.3.0",
+        "version": "0.4.0",
         "mode": "local-free",
+        "write_enabled": write_enabled,
+        "write_policy": "isolated-worktree-tests-branch-pr-no-direct-main",
         "registered_agents": len(registry.list()),
         "ollama": model_status,
     }
@@ -136,5 +149,15 @@ async def review(request: ReviewRequest) -> ReviewResult:
 async def plan_repair(request: RepairPlanRequest) -> RepairPlanResult:
     try:
         return await repair_planner.plan(request)
+    except Exception as exc:
+        raise HTTPException(status_code=400, detail=str(exc)) from exc
+
+
+@app.post("/autopilot/execute", response_model=AutopilotResult)
+async def execute_autopilot(request: AutopilotRequest) -> AutopilotResult:
+    try:
+        return await autopilot.execute(request)
+    except AutopilotDisabled as exc:
+        raise HTTPException(status_code=403, detail=str(exc)) from exc
     except Exception as exc:
         raise HTTPException(status_code=400, detail=str(exc)) from exc
