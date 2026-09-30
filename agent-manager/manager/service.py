@@ -7,25 +7,26 @@ from fastapi import FastAPI, HTTPException
 
 from .discovery import RepositoryScanner
 from .evaluator import AgentEvaluator, deterministic_health
-from .models import ReviewRequest, ReviewResult, ScanRequest
+from .models import DiscoverResult, ReviewRequest, ReviewResult, ScanRequest
 from .ollama_client import OllamaClient
+from .registry import AgentRegistry
 
 app = FastAPI(
     title="Agent Manager",
-    version="0.1.0",
+    version="0.2.0",
     description="Local-first supervisor for discovering, evaluating and improving AI agents.",
 )
 
 scanner = RepositoryScanner()
 ollama = OllamaClient()
 evaluator = AgentEvaluator(ollama)
+registry = AgentRegistry()
 
 
 def configured_roots() -> list[str]:
     raw = os.getenv("AGENT_MANAGER_ROOTS", "").strip()
     if raw:
         return [p for p in raw.split(os.pathsep) if p]
-    # Running from agent-manager/, default to the parent repository.
     return [str(Path(__file__).resolve().parents[2])]
 
 
@@ -40,8 +41,9 @@ async def health() -> dict:
 
     return {
         "ok": True,
-        "version": "0.1.0",
+        "version": "0.2.0",
         "mode": "local-free",
+        "registered_agents": len(registry.list()),
         "ollama": model_status,
     }
 
@@ -54,6 +56,28 @@ async def models() -> dict:
         return {"available": available, "selected": chosen}
     except Exception as exc:
         raise HTTPException(status_code=503, detail=str(exc)) from exc
+
+
+@app.get("/registry")
+async def get_registry() -> dict:
+    return {"agents": [item.model_dump() for item in registry.list()]}
+
+
+@app.post("/registry/discover", response_model=DiscoverResult)
+async def discover(request: ScanRequest) -> DiscoverResult:
+    roots = request.roots or configured_roots()
+    agents = []
+    errors = []
+
+    for root in roots:
+        try:
+            snapshot = scanner.scan(root)
+            report = deterministic_health(snapshot)
+            agents.append(registry.upsert(snapshot, report))
+        except Exception as exc:
+            errors.append({"root": root, "error": str(exc)})
+
+    return DiscoverResult(agents=agents, errors=errors)
 
 
 @app.post("/scan")
@@ -83,13 +107,13 @@ async def review(request: ReviewRequest) -> ReviewResult:
         raise HTTPException(status_code=400, detail=str(exc)) from exc
 
     health_report = deterministic_health(snapshot)
+    registry.upsert(snapshot, health_report)
     ai_review = None
 
     if request.use_ai:
         try:
             ai_review = await evaluator.ai_review(snapshot, health_report)
         except Exception as exc:
-            # Deterministic review remains available even when Ollama/model is offline.
             health_report.findings.append(f"AI review unavailable: {exc}")
 
     return ReviewResult(
