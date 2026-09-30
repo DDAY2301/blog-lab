@@ -1,6 +1,6 @@
 $ErrorActionPreference = "Stop"
 
-Write-Host "Agent Manager AUTOPILOT - local/free write mode"
+Write-Host "Agent Manager AUTOPILOT - MAX CAPABILITY / local-free"
 Write-Host "Repairs are isolated in git worktrees and published as Pull Requests."
 Write-Host "Direct merge to main is not enabled."
 
@@ -20,5 +20,6 @@ if (Get-Command gh -ErrorAction SilentlyContinue) {
 }
 
 $env:AGENT_MANAGER_WRITE_ENABLED = "1"
+$env:AGENT_MANAGER_MODEL = "auto-max"
 
 & .\start.ps1
