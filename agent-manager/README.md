@@ -1,34 +1,34 @@
-# Agent Manager v0.1
+# Agent Manager v0.3
 
-Local-first supervisor for discovering, evaluating and gradually improving AI-agent repositories.
+Local-first supervisor for discovering, evaluating and safely improving AI-agent repositories.
 
-## Goal
+## Current capabilities
 
-Agent Manager is a management layer above existing agents. Version 0.1 focuses on four safe capabilities:
+1. repository and agent discovery;
+2. deterministic health score (0-100);
+3. local Ollama engineering review;
+4. persistent local Agent Registry with previous score tracking;
+5. safe repair planning that produces a candidate unified diff;
+6. protected-path validation before any repair can progress;
+7. FastAPI control surface;
+8. isolated GitHub CI validation.
 
-1. discover agent-related code and configuration;
-2. calculate a deterministic health score;
-3. use a local Ollama model for a second-pass engineering review;
-4. expose everything through a local FastAPI API.
+The current repair engine is **plan-only**: it can propose and validate a patch, but it does not write into production repositories yet. The next milestone is sandbox apply -> tests -> repair branch -> PR.
 
-It does **not** modify production code automatically in v0.1. Repair and PR generation are the next layer, after baseline/evaluation is reliable.
+## Free/local stack
 
-## Cost model
-
-The default runtime has no paid model API dependency.
-
-- LLM server: Ollama on localhost
-- API/server: FastAPI
-- storage in v0.1: local filesystem / repository
-- CI tests: ordinary GitHub Actions, no hosted LLM required
-- preferred coding model: `qwen3-coder:30b`
-- fallback models: `qwen2.5-coder:7b`, `devstral`
-
-A smaller installed Ollama model is selected automatically when the preferred model is unavailable.
+- LLM runtime: Ollama on localhost
+- preferred model: `qwen3-coder:30b`
+- fallbacks: `qwen2.5-coder:7b`, `devstral`
+- API: FastAPI
+- state: local JSON registry
+- tests: pytest
+- source control / review: GitHub branch + PR
+- no paid LLM API is required
 
 ## Windows quick start
 
-Open PowerShell in this directory:
+Open PowerShell in `agent-manager`:
 
 ```powershell
 .\start.ps1
@@ -40,13 +40,13 @@ Then open:
 http://127.0.0.1:8787/docs
 ```
 
-### Optional stronger local coding model
+Optional stronger model:
 
 ```powershell
 ollama pull qwen3-coder:30b
 ```
 
-If the machine is too small for that model, keep an existing smaller coding model installed. The manager automatically falls back.
+If that model is too large for the machine, keep a smaller installed coding model; Agent Manager automatically falls back.
 
 ## API
 
@@ -56,17 +56,13 @@ If the machine is too small for that model, keep an existing smaller coding mode
 GET /health
 ```
 
-Shows Agent Manager status and whether Ollama is reachable.
-
-### Local models
+### Installed / selected local models
 
 ```http
 GET /models
 ```
 
-Lists installed Ollama models and the selected model.
-
-### Scan repositories
+### Scan repositories without storing them
 
 ```http
 POST /scan
@@ -80,9 +76,27 @@ Content-Type: application/json
 }
 ```
 
-Returns deterministic repository inventory and health scores.
+### Discover and persist agents in Registry
 
-### Review one repository
+```http
+POST /registry/discover
+Content-Type: application/json
+
+{
+  "roots": [
+    "C:\\Projects\\blog-lab",
+    "C:\\Projects\\other-agent"
+  ]
+}
+```
+
+### List known agents
+
+```http
+GET /registry
+```
+
+### Full engineering review
 
 ```http
 POST /review
@@ -94,24 +108,31 @@ Content-Type: application/json
 }
 ```
 
-Returns:
+### Prepare a safe repair candidate
 
-- repository snapshot;
-- score 0-100;
-- test/workflow/security/recovery findings;
-- local AI review;
-- prioritized improvements.
+```http
+POST /repair/plan
+Content-Type: application/json
 
-## Environment variables
+{
+  "root": "C:\\Projects\\blog-lab",
+  "objective": "Improve the publisher agent recovery logic without changing current publishing behaviour."
+}
+```
 
-Copy `.env.example` values into the environment when needed.
+The response includes the chosen local model, repair plan, candidate unified diff, suggested test commands, risk level and patch validation result.
 
-Important variables:
+## Repair security
 
-- `OLLAMA_BASE_URL`
-- `AGENT_MANAGER_MODEL`
-- `AGENT_MANAGER_FALLBACK_MODELS`
-- `AGENT_MANAGER_ROOTS`
+Before a candidate can become executable, Agent Manager rejects paths including:
+
+- `.git/`
+- `.env*`
+- `secrets/`
+- `credentials/`
+- parent-directory traversal such as `../`
+
+The execution layer will add further gates before write access is enabled.
 
 ## Architecture
 
@@ -121,32 +142,36 @@ repositories
     v
 RepositoryScanner
     |
-    +--> deterministic HealthReport
+    +--> HealthReport
     |
-    v
-AgentEvaluator
+    +--> AgentRegistry ---------> history / score drift
     |
-    v
-local Ollama model
+    +--> AgentEvaluator --------> local Ollama
     |
-    v
-ReviewResult
-    |
-    v
-FastAPI
+    +--> RepairPlanner ---------> local Ollama
+                               |
+                               v
+                         unified diff
+                               |
+                               v
+                        path validation
+                               |
+                               v
+                         [next milestone]
+                    sandbox -> tests -> PR
 ```
 
-## Safety model
+## Environment
 
-The manager is intentionally read-only in this first milestone.
+See `.env.example`.
 
-Future repair flow:
+Main variables:
 
-```text
-detect -> reproduce -> propose patch -> isolated branch -> tests -> review -> PR
-```
-
-Direct edits to `main` are not part of the manager's repair path.
+- `OLLAMA_BASE_URL`
+- `AGENT_MANAGER_MODEL`
+- `AGENT_MANAGER_FALLBACK_MODELS`
+- `AGENT_MANAGER_ROOTS`
+- `AGENT_MANAGER_STATE`
 
 ## Tests
 
@@ -154,15 +179,17 @@ Direct edits to `main` are not part of the manager's repair path.
 .\.venv\Scripts\python.exe -m pytest -q
 ```
 
-## Next implementation milestones
+The development branch also has an isolated GitHub Actions workflow that runs compile, unit tests and a FastAPI import smoke test.
 
-- Agent Registry with persistent history
-- GitHub repository discovery
-- prompt quality evaluator
-- regression/eval suites
-- code repair worker
-- sandboxed patch validation
-- automatic repair branches and pull requests
-- manager dashboard
-- A2A Agent Card support
-- MCP tool gateway
+## Next milestones
+
+1. sandboxed patch application;
+2. automatic test-command detection;
+3. before/after health and regression comparison;
+4. repair branch creation and automatic Pull Request;
+5. prompt-specific eval suite;
+6. GitHub repository discovery across the account;
+7. A2A 1.0 transport using the official SDK;
+8. MCP tool gateway;
+9. web dashboard;
+10. scheduled autonomous review loop.
