@@ -1,13 +1,13 @@
 {
   "status": "learning_completed",
-  "updated_at": "2026-09-30T21:38:20+02:00",
-  "loop_count": 2101,
+  "updated_at": "2026-09-30T21:39:20+02:00",
+  "loop_count": 2102,
   "categories_checked": [
     "sport",
     "politika",
     "aktualno"
   ],
   "recent_article_count": 40,
-  "recent_failure_count": 21,
+  "recent_failure_count": 22,
   "mode": "continuous"
 }
