@@ -20,6 +20,44 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "slovenija-premagala-severno-makedonijo-v-ligi-narodov-foto-d79efe69",
+    "title": "Slovenija premagala Severno Makedonijo v ligi narodov (FOTO)",
+    "excerpt": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Slovenija premagala Severno Makedonijo v ligi narodov (FOTO)«.",
+    "seoDescription": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Slovenija premagala Severno Makedonijo v ligi narodov (FOTO)«.",
+    "content": "**Šport, 30. 9. 2026.** Slovenija premagala Severno Makedonijo v ligi narodov (FOTO) Primorske novice\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Primorske novice. Objavljeno: Wed, 30 Sep 2026 06:12:02 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiiAFBVV95cUxQYkFaMERfbHBuY2FVQzVmaGx0c09ObGx3MFdvQU13ZkpvMEI4M3g3VmtTcXJOVkh2Q2xoVy1rdUxYQ0oza09PdVRkT3lHeXhncmF2VWZlSENya1QzSnQtcncteFpoLUtiaXJDR3YxWjFmM2lrMnBXTzU5cmJXVkI4c055clhCZDdS?oc=5)\n\n## Dopolnitev vira 2: 24ur.com\n\nFinci premagali Slovenijo in osvojili prvo medaljo na velikih tekmovanjih 24ur.com\n\n Vir: 24ur.com. Objavljeno: Sat, 26 Sep 2026 14:45:07 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMihgFBVV95cUxNendvdk9RamJ0eUU2ZVdmTmhYd0VCdkJPVURyckNtOE4taEFlMmlLOWtnVHpOYmg1ZGNvVmp6b21oVU0xUHY2c3FQUW1NRFRhdUgtUzlHeGhITFJYTThjYm14UTZpSzZZVF9IeFBIc0NqenVfa3lHMXV0RHhPelM1Ui1KaEpJdw?oc=5)\n\n## Dopolnitev vira 3: Ekipa\n\nSlovenija v Stožicah po nujno zmago, ranjeni Makedonci v zgodovinski krizi Ekipa\n\n Vir: Ekipa. Objavljeno: Tue, 29 Sep 2026 05:29:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiqwFBVV95cUxPMkJyaGxzU2RvUDl5a0ZPTzR4T1VLYnNMY1ZuRkVSNkVXMFJmR19nVzdfVkZDUGRBVGJnUm5BTEx4aDdkSkZIVTc3MDRfMWVFNzRtdGdzbzJQVnQxVmd3YTdHN0xMTWFiWmtkZDhjZ3VuZEh3UEJqOS1JMEhzYWU3YXMxVTlIdnNoNFZNUHVtZlFLRGR1d3R6aGV5ekQ5THJBMDNtckJ0eXA3YWM?oc=5)\n\n## Dopolnitev vira 4: Šport TV\n\nSlovenija na sramotni zelenici Stožic v drugem polčasu strla Makedonce Šport TV\n\n Vir: Šport TV. Objavljeno: Wed, 30 Sep 2026 00:09:57 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMimwFBVV95cUxONmlVUEs0bEFtUlhfZWpSaVhXTVdTMXV0NVNCZ3pqWDZ6RkpFdHJXdGVJWE9aZ1lDWEY3Q0J3bElqOVhlTTVqVE9ENGdIWDlRR0tRaXpYVm1COW5qRklmZnVpMml2UGZRXzcwVk13bVRSUVQ0R1BoTHNrcGVjTTA0Vm1fX2RQUWRzTDd2d25mOWVKdXhVRDI3X2JCWQ?oc=5)\n\n## Dopolnitev vira 5: sportklub.si\n\nOdločna Slovenija v razritih Stožicah nadigrala Makedonijo sportklub.si\n\n Vir: sportklub.si. Objavljeno: Tue, 29 Sep 2026 20:37:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMikgFBVV95cUxPSzE5Q3lwZk1DUS1LZElBRktObFNkbF9OY2luV2hCcmRpbDRzZ0tDMlFYX3g4YzBiM3BHRTkybkh5Uk1NSFJ2OUJKN1BYQm9ybXJ2RjNfNWFFbkVFV3R3R25UUldDSzNoV0hmejJyZ3M1SmVOUXFEOW5PZmNOOEVzTUMyX002anVmaEh4UG9ocWdaZw?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Šport",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Primorske novice — Slovenija premagala Severno Makedonijo v ligi narodov (FOTO) - Primorske novice",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQYkFaMERfbHBuY2FVQzVmaGx0c09ObGx3MFdvQU13ZkpvMEI4M3g3VmtTcXJOVkh2Q2xoVy1rdUxYQ0oza09PdVRkT3lHeXhncmF2VWZlSENya1QzSnQtcncteFpoLUtiaXJDR3YxWjFmM2lrMnBXTzU5cmJXVkI4c055clhCZDdS?oc=5"
+      },
+      {
+        "label": "24ur.com — Finci premagali Slovenijo in osvojili prvo medaljo na velikih tekmovanjih - 24ur.com",
+        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNendvdk9RamJ0eUU2ZVdmTmhYd0VCdkJPVURyckNtOE4taEFlMmlLOWtnVHpOYmg1ZGNvVmp6b21oVU0xUHY2c3FQUW1NRFRhdUgtUzlHeGhITFJYTThjYm14UTZpSzZZVF9IeFBIc0NqenVfa3lHMXV0RHhPelM1Ui1KaEpJdw?oc=5"
+      },
+      {
+        "label": "Ekipa — Slovenija v Stožicah po nujno zmago, ranjeni Makedonci v zgodovinski krizi - Ekipa",
+        "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPMkJyaGxzU2RvUDl5a0ZPTzR4T1VLYnNMY1ZuRkVSNkVXMFJmR19nVzdfVkZDUGRBVGJnUm5BTEx4aDdkSkZIVTc3MDRfMWVFNzRtdGdzbzJQVnQxVmd3YTdHN0xMTWFiWmtkZDhjZ3VuZEh3UEJqOS1JMEhzYWU3YXMxVTlIdnNoNFZNUHVtZlFLRGR1d3R6aGV5ekQ5THJBMDNtckJ0eXA3YWM?oc=5"
+      },
+      {
+        "label": "Šport TV — Slovenija na sramotni zelenici Stožic v drugem polčasu strla Makedonce - Šport TV",
+        "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxONmlVUEs0bEFtUlhfZWpSaVhXTVdTMXV0NVNCZ3pqWDZ6RkpFdHJXdGVJWE9aZ1lDWEY3Q0J3bElqOVhlTTVqVE9ENGdIWDlRR0tRaXpYVm1COW5qRklmZnVpMml2UGZRXzcwVk13bVRSUVQ0R1BoTHNrcGVjTTA0Vm1fX2RQUWRzTDd2d25mOWVKdXhVRDI3X2JCWQ?oc=5"
+      },
+      {
+        "label": "sportklub.si — Odločna Slovenija v razritih Stožicah nadigrala Makedonijo - sportklub.si",
+        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPSzE5Q3lwZk1DUS1LZElBRktObFNkbF9OY2luV2hCcmRpbDRzZ0tDMlFYX3g4YzBiM3BHRTkybkh5Uk1NSFJ2OUJKN1BYQm9ybXJ2RjNfNWFFbkVFV3R3R25UUldDSzNoV0hmejJyZ3M1SmVOUXFEOW5PZmNOOEVzTUMyX002anVmaEh4UG9ocWdaZw?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-30T08:24:07+02:00",
+    "updatedAt": "2026-09-30T08:24:07+02:00"
+  },
+
+  {
     "id": "jansa-na-newsmaxu-slovenija-in-zda-imata-poseben-odnos-razkril-tudi-kaj-mu-je-obljubil-tru-a1bdde5d",
     "title": "Janša na Newsmaxu: \"Slovenija in ZDA imata poseben odnos« – razkril tudi, kaj mu je obljubil Trump!\" - e-Maribor",
     "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Janša na Newsmaxu: \"Slovenija in ZDA imata poseben odnos« – razkril tudi, kaj mu je obljubil Trump!\" - e-Maribor«.",
