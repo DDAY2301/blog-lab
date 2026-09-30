@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Literal
+from typing import Any, Literal
 
 from pydantic import BaseModel, Field
 
@@ -90,4 +90,25 @@ class RepairPlanResult(BaseModel):
     tests: list[str] = Field(default_factory=list)
     risk: str = "high"
     valid: bool = False
+    validation_errors: list[str] = Field(default_factory=list)
+
+
+class AutopilotRequest(BaseModel):
+    root: str
+    objective: str = Field(min_length=3, max_length=4000)
+    base_branch: str = Field(default="main", min_length=1, max_length=200)
+
+
+class AutopilotResult(BaseModel):
+    ok: bool
+    objective: str
+    stage: str
+    summary: str = ""
+    branch: str | None = None
+    commit_sha: str | None = None
+    pull_request_url: str | None = None
+    changed_files: list[str] = Field(default_factory=list)
+    baseline_score: int | None = Field(default=None, ge=0, le=100)
+    candidate_score: int | None = Field(default=None, ge=0, le=100)
+    tests: list[dict[str, Any]] = Field(default_factory=list)
     validation_errors: list[str] = Field(default_factory=list)
