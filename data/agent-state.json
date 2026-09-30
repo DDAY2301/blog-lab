@@ -5,7 +5,7 @@
   "posts_date": "2026-09-30",
   "posts_today": 2,
   "last_output": "jansa-o-gazi-zdravljenju-redkih-bolezni-in-drogah-34d06ca6",
-  "last_error": "ze_uporabljen_vir",
+  "last_error": "podvojen_naslov,ze_uporabljen_vir",
   "agent_version": "2.7.0",
   "current_category": "aktualno",
   "scheduled_posts_today": 2,
@@ -23,7 +23,7 @@
     "reason": "prekratek",
     "at": "2026-09-30T19:54:32+02:00"
   },
-  "publisher_guardian_last_run": "2026-09-30T23:32:35+02:00",
+  "publisher_guardian_last_run": "2026-09-30T23:38:11+02:00",
   "publisher_guardian_last_action": {
     "category": "aktualno",
     "slot": "2026-09-30|19:43|aktualno",
