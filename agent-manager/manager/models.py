@@ -5,6 +5,9 @@ from typing import Literal
 from pydantic import BaseModel, Field
 
 
+HealthStatus = Literal["healthy", "watch", "degraded", "critical"]
+
+
 class RepoSnapshot(BaseModel):
     name: str
     root: str
@@ -22,7 +25,7 @@ class RepoSnapshot(BaseModel):
 class HealthReport(BaseModel):
     repo: str
     score: int = Field(ge=0, le=100)
-    status: Literal["healthy", "watch", "degraded", "critical"]
+    status: HealthStatus
     checks: dict[str, int] = Field(default_factory=dict)
     findings: list[str] = Field(default_factory=list)
 
@@ -50,3 +53,24 @@ class ScanRequest(BaseModel):
 class ReviewRequest(BaseModel):
     root: str
     use_ai: bool = True
+
+
+class AgentRecord(BaseModel):
+    id: str
+    name: str
+    root: str
+    first_seen_at: str
+    last_seen_at: str
+    health_score: int = Field(ge=0, le=100)
+    previous_score: int | None = Field(default=None, ge=0, le=100)
+    status: HealthStatus
+    languages: dict[str, int] = Field(default_factory=dict)
+    agent_paths: list[str] = Field(default_factory=list)
+    workflow_files: list[str] = Field(default_factory=list)
+    prompt_files: list[str] = Field(default_factory=list)
+    security_findings: list[str] = Field(default_factory=list)
+
+
+class DiscoverResult(BaseModel):
+    agents: list[AgentRecord] = Field(default_factory=list)
+    errors: list[dict[str, str]] = Field(default_factory=list)
