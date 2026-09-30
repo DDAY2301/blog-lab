@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-30T20:38:08+02:00",
-  "loop_count": 2091,
+  "updated_at": "2026-09-30T20:39:42+02:00",
+  "loop_count": 2092,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-30T20:37:47+02:00",
+      "last_learning_run": "2026-09-30T20:39:17+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -51,11 +51,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 61950,
-          "last_seen": "2026-09-30T20:37:47+02:00",
-          "last_title": "Slovenija kljub novi sramoti Stožic do zaslužene zmage - siol.net",
+          "seen": 61980,
+          "last_seen": "2026-09-30T20:39:17+02:00",
+          "last_title": "Oblak rešil Slovenijo, ki je proti Škotski igrala le prve pol ure - rtvslo.si",
           "last_provider": "",
-          "published": 77035,
+          "published": 77093,
           "last_output_id": "slovenija-premagala-severno-makedonijo-v-ligi-narodov-foto-d79efe69"
         },
         "city-data.com": {
@@ -202,14 +202,14 @@
       "current_source_count": 30,
       "example_titles": {
         "news.google.com": [
+          "Finci premagali Slovenijo in osvojili prvo medaljo na velikih tekmovanjih - 24ur.com",
           "Prvi polčas na uničeni travnati površini minil brez zadetkov (0:0)* - 24ur.com",
-          "Slovenija na sramotni zelenici Stožic v drugem polčasu strla Makedonce - Šport TV",
-          "Slovenija izpolnila nalogo, pogled na lestvico lepši kot na zelenico - delo.si"
+          "Slovenija na sramotni zelenici Stožic v drugem polčasu strla Makedonce - Šport TV"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-30T20:37:57+02:00",
+      "last_learning_run": "2026-09-30T20:39:29+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -237,11 +237,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 61950,
-          "last_seen": "2026-09-30T20:37:57+02:00",
+          "seen": 61980,
+          "last_seen": "2026-09-30T20:39:29+02:00",
           "last_title": "Janša: Vlada bo vodila pragmatično zunanjo politiko, enako pričakuje od drugih - Dnevnik",
           "last_provider": "",
-          "published": 82376,
+          "published": 82439,
           "last_output_id": "jansa-o-gazi-zdravljenju-redkih-bolezni-in-drogah-34d06ca6"
         },
         "hellovein.com": {
@@ -290,7 +290,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-30T20:38:08+02:00",
+      "last_learning_run": "2026-09-30T20:39:42+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -324,96 +324,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 61950,
-          "last_seen": "2026-09-30T20:38:08+02:00",
+          "seen": 61980,
+          "last_seen": "2026-09-30T20:39:42+02:00",
           "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 101353,
+          "published": 101413,
           "last_output_id": "jansa-na-newsmaxu-slovenija-in-zda-imata-poseben-odnos-razkril-tudi-kaj-mu-je-obljubil-tru-a1bdde5d"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 2068,
+          "published": 2069,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 2068,
+          "published": 2069,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 2091,
+          "published": 2092,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 1993,
+          "published": 1994,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 2057,
+          "published": 2058,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 1993,
+          "published": 1994,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 1993,
+          "published": 1994,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 2057,
+          "published": 2058,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 8364,
+          "published": 8368,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 2091,
+          "published": 2092,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 2068,
+          "published": 2069,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 4050,
+          "published": 4052,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 2025,
+          "published": 2026,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 4114,
+          "published": 4116,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 2091,
+          "published": 2092,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 1993,
+          "published": 1994,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 4050,
+          "published": 4052,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
@@ -434,9 +434,9 @@
       "current_source_count": 30,
       "example_titles": {
         "news.google.com": [
+          "Kakšno podnebno politiko bo vodila vlada, katere premier zanika znanstvena dejstva? - N1 Slovenija",
           "(AKTUALNO) V novi številki revije Demokracija preberite: Izključujejo in zavirajo razvoj! Janša: Osamosvojitvena Slovenija ne bo nikoli več ",
-          "Evropska komisija: Slovenija krši pravice avtorjem - Info360",
-          "Janša v New Yorku jasno o Ukrajini: Slovenija bo nadaljevala politično, vojaško, humanitarno in finančno pomoč - Najdi.si novice"
+          "Evropska komisija: Slovenija krši pravice avtorjem - info360.si"
         ]
       }
     }
@@ -517,14 +517,6 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20260920-200836.json",
-      "category": "aktualno",
-      "errors": [
-        "ponavljanje"
-      ],
-      "title": "Anja Rakuša Brus: Pomemben argument za mojo kandidaturo je izkušnja z aktualno vlado, ki stroke ne posluša dovolj…"
-    },
-    {
       "file": "fallback-failed-20260920-202352.json",
       "category": "aktualno",
       "errors": [
@@ -597,6 +589,14 @@
       "title": "Pred Stevanovićevim obiskom v Srbiji znova aktualno vprašanje statusa srbske skupnosti v Sloveniji"
     },
     {
+      "file": "fallback-failed-20260930-203752.json",
+      "category": "aktualno",
+      "errors": [
+        "ze_uporabljen_vir"
+      ],
+      "title": "Pred Stevanovićevim obiskom v Srbiji znova aktualno vprašanje statusa srbske skupnosti v Sloveniji"
+    },
+    {
       "file": "agent-state",
       "category": "aktualno",
       "errors": [
@@ -614,7 +614,7 @@
   ],
   "failure_summary": {
     "ponavljanje": 8,
-    "ze_uporabljen_vir": 7,
+    "ze_uporabljen_vir": 8,
     "prekratek": 1
   }
 }
