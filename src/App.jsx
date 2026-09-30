@@ -20,6 +20,44 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "jansa-o-gazi-zdravljenju-redkih-bolezni-in-drogah-34d06ca6",
+    "title": "Janša o Gazi, zdravljenju redkih bolezni in drogah",
+    "excerpt": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Janša o Gazi, zdravljenju redkih bolezni in drogah«.",
+    "seoDescription": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Janša o Gazi, zdravljenju redkih bolezni in drogah«.",
+    "content": "**Politika, 30. 9. 2026.** Janša o Gazi, zdravljenju redkih bolezni in drogah Stadion SI\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nPri političnih temah Blog Lab ne podpira kandidatov, strank ali političnih odločitev; izjave in ocene so predstavljene kot stališča njihovih avtorjev ali virov, ne kot uredniška presoja.\n\nVir: Stadion SI. Objavljeno: Tue, 29 Sep 2026 10:05:27 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMihwFBVV95cUxQMml1cS1BRkpwbGduaUZNdjhheHVhSDBkOTF4ZFc3THAyNi1pUEM4dlFxaGNVazhESlVNLUF2cXJ3NEg2Rnc0MDE0TlZLQU4xeEx3b1FfdXJjWDVOSEx2b3JEWVNJVFpOTGlNZVM0RVpVLUhSbjB0dmtxTXFIR0VrYnI1X2dxTHc?oc=5)\n\n## Dopolnitev vira 2: Svet24.si\n\nJanša brani Izrael: V Gazi ni genocida, to je političen jezik Svet24.si\n\n Vir: Svet24.si. Objavljeno: Tue, 29 Sep 2026 09:03:26 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMihwFBVV95cUxPb2Z2RmZQN2FDU2NVSDFRV2J4clI5aXZabFBMem9ZNkNkUlhtUEVUSGh3dy11eVZXWC13MXlFSUtmSXhmZ0xSY2IyY3ZEa2E1YWVNUTVlaTQwdEc1MEw0WU9zZC13VDhzOG50YndHOUt1UkE2VnY5a0w2RzZTRkdGSm12OEZIREk?oc=5)\n\n## Dopolnitev vira 3: Stadion SI\n\nLevica predlaga draginjski dodatek za najranljivejše Stadion SI\n\n Vir: Stadion SI. Objavljeno: Tue, 29 Sep 2026 10:25:54 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiiwFBVV95cUxQTFBwMGplUmE0bkFqelRWUVZEbFMtdTJBblpzQ1k4eWMtdDM3MDRWZ0ZxUk1yZzZlaVpuQ2dRaVdoU3pVcmdnaEJtZUxZd1RpN3lJS0N2a0RzOWZ5QUpyZG54bnBZckJBQ0VKU3BnUnZXc0U4NWZGM3N3VmR4RXFLd3ItTFluMzdNTnkw?oc=5)\n\n## Dopolnitev vira 4: Stadion SI\n\nDanes zadnji dan za prijavo na glasovanje po pošti Stadion SI\n\n Vir: Stadion SI. Objavljeno: Wed, 30 Sep 2026 06:22:18 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiiAFBVV95cUxNNXcwNkVMTkM2bWs2RmF3cmZTcmpUQWN0VllidzVoSzJ6V1FWMl9qbkY0ZDNLOUJoMVkyQ19FNURzVjVsQW9ldmpwRWp6UWFKU1A1RGRMcTc3ZWYtNnhhOG5iSU1ERWN4UjhweVh1WW50ejE4bHlPd3NKRW5iNlhTbEtOajJZTkpk?oc=5)\n\n## Dopolnitev vira 5: Stadion SI\n\nJanša obljublja ukrepe proti energetski draginji Stadion SI\n\n Vir: Stadion SI. Objavljeno: Tue, 29 Sep 2026 08:32:52 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMihgFBVV95cUxNNTI0ZV85a2tTNDk0eEtsc1F0YUVFMWwyaDB5OW9tZzZONTV0cFU2NlBjRmdHbG4tSnhFQ0VOYmNzbXZEN3lkQjFyeE1rOGx6Z09JeXZBSlRGMzF2TTl6MDhqdWtwdGFoNzB6MEM0Y0QzaS1YdjNIT0k2UzVQYlVYeWJMV0ZpUQ?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Politika",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Stadion SI — Janša o Gazi, zdravljenju redkih bolezni in drogah - Stadion SI",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQMml1cS1BRkpwbGduaUZNdjhheHVhSDBkOTF4ZFc3THAyNi1pUEM4dlFxaGNVazhESlVNLUF2cXJ3NEg2Rnc0MDE0TlZLQU4xeEx3b1FfdXJjWDVOSEx2b3JEWVNJVFpOTGlNZVM0RVpVLUhSbjB0dmtxTXFIR0VrYnI1X2dxTHc?oc=5"
+      },
+      {
+        "label": "Svet24.si — Janša brani Izrael: V Gazi ni genocida, to je političen jezik - Svet24.si",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPb2Z2RmZQN2FDU2NVSDFRV2J4clI5aXZabFBMem9ZNkNkUlhtUEVUSGh3dy11eVZXWC13MXlFSUtmSXhmZ0xSY2IyY3ZEa2E1YWVNUTVlaTQwdEc1MEw0WU9zZC13VDhzOG50YndHOUt1UkE2VnY5a0w2RzZTRkdGSm12OEZIREk?oc=5"
+      },
+      {
+        "label": "Stadion SI — Levica predlaga draginjski dodatek za najranljivejše - Stadion SI",
+        "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQTFBwMGplUmE0bkFqelRWUVZEbFMtdTJBblpzQ1k4eWMtdDM3MDRWZ0ZxUk1yZzZlaVpuQ2dRaVdoU3pVcmdnaEJtZUxZd1RpN3lJS0N2a0RzOWZ5QUpyZG54bnBZckJBQ0VKU3BnUnZXc0U4NWZGM3N3VmR4RXFLd3ItTFluMzdNTnkw?oc=5"
+      },
+      {
+        "label": "Stadion SI — Danes zadnji dan za prijavo na glasovanje po pošti - Stadion SI",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNNXcwNkVMTkM2bWs2RmF3cmZTcmpUQWN0VllidzVoSzJ6V1FWMl9qbkY0ZDNLOUJoMVkyQ19FNURzVjVsQW9ldmpwRWp6UWFKU1A1RGRMcTc3ZWYtNnhhOG5iSU1ERWN4UjhweVh1WW50ejE4bHlPd3NKRW5iNlhTbEtOajJZTkpk?oc=5"
+      },
+      {
+        "label": "Stadion SI — Janša obljublja ukrepe proti energetski draginji - Stadion SI",
+        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNNTI0ZV85a2tTNDk0eEtsc1F0YUVFMWwyaDB5OW9tZzZONTV0cFU2NlBjRmdHbG4tSnhFQ0VOYmNzbXZEN3lkQjFyeE1rOGx6Z09JeXZBSlRGMzF2TTl6MDhqdWtwdGFoNzB6MEM0Y0QzaS1YdjNIT0k2UzVQYlVYeWJMV0ZpUQ?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-30T13:39:14+02:00",
+    "updatedAt": "2026-09-30T13:39:14+02:00"
+  },
+
+  {
     "id": "path-remembrance-ljubljana-running-cycling-guide",
     "title": "Ljubljana’s Green Ring: A Running and Cycling Guide to the PST",
     "excerpt": "Run, walk or cycle Ljubljana’s 32.5-kilometre Path of Remembrance and Comradeship with practical sections, surface notes, transport links and safety advice.",
