@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-09-30T23:39:05+02:00",
-  "loop_count": 2122,
+  "updated_at": "2026-09-30T23:53:22+02:00",
+  "loop_count": 2123,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-09-30T23:38:43+02:00",
+      "last_learning_run": "2026-09-30T23:53:00+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -51,11 +51,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 62880,
-          "last_seen": "2026-09-30T23:38:43+02:00",
-          "last_title": "Oblak rešil Slovenijo, ki je proti Škotski igrala le prve pol ure - rtvslo.si",
+          "seen": 62910,
+          "last_seen": "2026-09-30T23:53:00+02:00",
+          "last_title": "Reaves spregovoril o obisku Lakersov v Sloveniji - 24ur.com",
           "last_provider": "",
-          "published": 78833,
+          "published": 78891,
           "last_output_id": "slovenija-premagala-severno-makedonijo-v-ligi-narodov-foto-d79efe69"
         },
         "city-data.com": {
@@ -202,14 +202,14 @@
       "current_source_count": 30,
       "example_titles": {
         "news.google.com": [
+          "Finci premagali Slovenijo in osvojili prvo medaljo na velikih tekmovanjih - 24ur.com",
           "Dobra podoba Slovenije ob prvi zmagi pod vodstvom Cesarja - 24ur.com",
-          "Slovenija na sramotni zelenici Stožic v drugem polčasu strla Makedonce - Šport TV",
-          "Slovenija izpolnila nalogo, pogled na lestvico lepši kot na zelenico - Delo.si"
+          "Slovenija na sramotni zelenici Stožic v drugem polčasu strla Makedonce - Šport TV"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-09-30T23:38:54+02:00",
+      "last_learning_run": "2026-09-30T23:53:10+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -236,12 +236,12 @@
       ],
       "source_health": {
         "news.google.com": {
-          "score": 2.502,
-          "seen": 62880,
-          "last_seen": "2026-09-30T23:38:54+02:00",
+          "score": 2.498,
+          "seen": 62910,
+          "last_seen": "2026-09-30T23:53:10+02:00",
           "last_title": "Pirc Musarjeva kritična do vlade, Janša: Jugoslavije ni več - 24ur.com",
           "last_provider": "",
-          "published": 84329,
+          "published": 84392,
           "last_output_id": "jansa-o-gazi-zdravljenju-redkih-bolezni-in-drogah-34d06ca6"
         },
         "hellovein.com": {
@@ -283,14 +283,14 @@
       "current_source_count": 30,
       "example_titles": {
         "news.google.com": [
-          "Pirc Musarjeva z Janšo na delovnem sestanku - 24ur.com",
           "Delovni sestanek predsednice republike in predsednika vlade - rtvslo.si",
-          "Fotografija iz Gaze in referendumi kot preizkus resnice - Delo.si"
+          "Fotografija iz Gaze in referendumi kot preizkus resnice - Delo.si",
+          "Predsednik vlade odgovarjal na poslanska vprašanja - Portal GOV.SI"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-09-30T23:39:05+02:00",
+      "last_learning_run": "2026-09-30T23:53:22+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -324,96 +324,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 62880,
-          "last_seen": "2026-09-30T23:39:05+02:00",
+          "seen": 62910,
+          "last_seen": "2026-09-30T23:53:22+02:00",
           "last_title": "Olimpijski komite Slovenije - Olimpijski Komite Slovenije",
           "last_provider": "",
-          "published": 103213,
+          "published": 103273,
           "last_output_id": "jansa-na-newsmaxu-slovenija-in-zda-imata-poseben-odnos-razkril-tudi-kaj-mu-je-obljubil-tru-a1bdde5d"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 2099,
+          "published": 2100,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 2099,
+          "published": 2100,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 2122,
+          "published": 2123,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 2024,
+          "published": 2025,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 2088,
+          "published": 2089,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 2024,
+          "published": 2025,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 2024,
+          "published": 2025,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 2088,
+          "published": 2089,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 8488,
+          "published": 8492,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 2122,
+          "published": 2123,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 2099,
+          "published": 2100,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 4112,
+          "published": 4114,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 2056,
+          "published": 2057,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 4176,
+          "published": 4178,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 2122,
+          "published": 2123,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 2024,
+          "published": 2025,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 4112,
+          "published": 4114,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
