@@ -20,6 +20,44 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "bo-trenutno-najbolj-priljubljen-politik-kandidiral-za-predsednika-republike-fd63474f",
+    "title": "Bo trenutno najbolj priljubljen politik kandidiral za predsednika republike?",
+    "excerpt": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Bo trenutno najbolj priljubljen politik kandidiral za predsednika republike?«.",
+    "seoDescription": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Bo trenutno najbolj priljubljen politik kandidiral za predsednika republike?«",
+    "content": "**Politika, 1. 10. 2026.** Bo trenutno najbolj priljubljen politik kandidiral za predsednika republike? delo.si\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nPri političnih temah Blog Lab ne podpira kandidatov, strank ali političnih odločitev; izjave in ocene so predstavljene kot stališča njihovih avtorjev ali virov, ne kot uredniška presoja.\n\nVir: delo.si. Objavljeno: Thu, 01 Oct 2026 03:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMijgFBVV95cUxPald6LUV6YzRlRTBGSlNvdk56b1V5Q1A3U2wwWUFrT1BYNGFOekVhSG5vck1Ma2pkRXlScEg2eThGYVlGZTJMc19uTGVGd215SVk1aXpXNkpOSXVORlV2YTBDY0k0azI4SU9yTWxaOUJmYV8zTWVsdFZIZnVrUkdyMklwTEJCeFFHNDQ5OXVR?oc=5)\n\n## Dopolnitev vira 2: Večer\n\n(POGLED) Kolumna Vesne V. Godina: Tako nizko je padla slovenska politika Večer\n\n Vir: Večer. Objavljeno: Tue, 29 Sep 2026 15:30:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMipgFBVV95cUxPelhpZkVQRmtLbGQ0eHRVMzVyWGdLUUw1N3ZjeHV3MTVlc1FJR1AwQ3V4SVNtdHNjd25BS09aWG9JWENjTTJydi13dHdQaEZmQ0xYSW5CQWR5bnF4R1poRDRqVVJ4WG83VWhYeGc0bHNnUlVPbGIyLUlocHpGMFR5ZkdCV0RST3pfNEswWFBTQmdSdmRnZzhCMkV6RVBfRnJEelJDR3Z3?oc=5)\n\n## Dopolnitev vira 3: dnevnik.si\n\nPredsednica republike za viceguvernerko predlaga Arjano Brezigar dnevnik.si\n\n Vir: dnevnik.si. Objavljeno: Wed, 30 Sep 2026 12:48:05 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiswFBVV95cUxQakRDYUtCLWFsMjRfM0hVMk9rLWtzZU5OR1J4SDVPeFktSUJIU1lOcTFMMkZyYkthUFdvSnZBRHJ5ZlBVMWVXR1g5Q1hRRnB5XzFJVGllX3ZaT2MweEFZRm85WVVzVjBSWm90SHc0UVpvcWppWFJHTjdwdjVTOWVsQXRWM1JmRkpJZExOb2pSRGxCbWl6TXJnOUdJVmtaRHQ5NFcwODNYRHo0MUIzT1h1MnJRdw?oc=5)\n\n## Dopolnitev vira 4: rtvslo.si\n\nDelovni sestanek predsednice republike in predsednika vlade rtvslo.si\n\n Vir: rtvslo.si. Objavljeno: Wed, 30 Sep 2026 16:44:54 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMinwFBVV95cUxQMkw0Sk1Xb1YyUXJUSFFTR3R1MDZoeGh2dThaZHBTVHV5akpSa1phaEN5N3NiYUhGczhLc2Q1TVZmV0QzVVNCdU5nWFZtYkJmNTV5dUY5VkM1TG5ia1dpM19CYlFzZjVuVXlBSE9zaDBYNHVaNm43UDg1YU9XZHlxMzhKWFh3bWw1MXUzNXA3Y2xEeHFsMDZsLTRsSjZkeFU?oc=5)\n\n## Dopolnitev vira 5: 24ur.com\n\n'Preplet politike in gospodarstva je preplet centrov moči' 24ur.com\n\n Vir: 24ur.com. Objavljeno: Mon, 28 Sep 2026 19:49:24 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiigFBVV95cUxQSUF4YnZXRkJNTXJGaWtJTDBLRHpER2RFVDFKQ3FsLWlNY0IyZlN5bXZuVHBaSDdSWHpYRng0TlVic2llbDd4LTcwY0pfVng0OVIwS0J5VTZ3MVNSWm5ldl9XZUhVSWtoU3FGLTllSE54YmdIa0JEVXJZZzFYOHFubTBvU3gxZlBjSXc?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Politika",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "delo.si — Bo trenutno najbolj priljubljen politik kandidiral za predsednika republike? - delo.si",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPald6LUV6YzRlRTBGSlNvdk56b1V5Q1A3U2wwWUFrT1BYNGFOekVhSG5vck1Ma2pkRXlScEg2eThGYVlGZTJMc19uTGVGd215SVk1aXpXNkpOSXVORlV2YTBDY0k0azI4SU9yTWxaOUJmYV8zTWVsdFZIZnVrUkdyMklwTEJCeFFHNDQ5OXVR?oc=5"
+      },
+      {
+        "label": "Večer — (POGLED) Kolumna Vesne V. Godina: Tako nizko je padla slovenska politika - Večer",
+        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPelhpZkVQRmtLbGQ0eHRVMzVyWGdLUUw1N3ZjeHV3MTVlc1FJR1AwQ3V4SVNtdHNjd25BS09aWG9JWENjTTJydi13dHdQaEZmQ0xYSW5CQWR5bnF4R1poRDRqVVJ4WG83VWhYeGc0bHNnUlVPbGIyLUlocHpGMFR5ZkdCV0RST3pfNEswWFBTQmdSdmRnZzhCMkV6RVBfRnJEelJDR3Z3?oc=5"
+      },
+      {
+        "label": "dnevnik.si — Predsednica republike za viceguvernerko predlaga Arjano Brezigar - dnevnik.si",
+        "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQakRDYUtCLWFsMjRfM0hVMk9rLWtzZU5OR1J4SDVPeFktSUJIU1lOcTFMMkZyYkthUFdvSnZBRHJ5ZlBVMWVXR1g5Q1hRRnB5XzFJVGllX3ZaT2MweEFZRm85WVVzVjBSWm90SHc0UVpvcWppWFJHTjdwdjVTOWVsQXRWM1JmRkpJZExOb2pSRGxCbWl6TXJnOUdJVmtaRHQ5NFcwODNYRHo0MUIzT1h1MnJRdw?oc=5"
+      },
+      {
+        "label": "rtvslo.si — Delovni sestanek predsednice republike in predsednika vlade - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQMkw0Sk1Xb1YyUXJUSFFTR3R1MDZoeGh2dThaZHBTVHV5akpSa1phaEN5N3NiYUhGczhLc2Q1TVZmV0QzVVNCdU5nWFZtYkJmNTV5dUY5VkM1TG5ia1dpM19CYlFzZjVuVXlBSE9zaDBYNHVaNm43UDg1YU9XZHlxMzhKWFh3bWw1MXUzNXA3Y2xEeHFsMDZsLTRsSjZkeFU?oc=5"
+      },
+      {
+        "label": "24ur.com — 'Preplet politike in gospodarstva je preplet centrov moči' - 24ur.com",
+        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQSUF4YnZXRkJNTXJGaWtJTDBLRHpER2RFVDFKQ3FsLWlNY0IyZlN5bXZuVHBaSDdSWHpYRng0TlVic2llbDd4LTcwY0pfVng0OVIwS0J5VTZ3MVNSWm5ldl9XZUhVSWtoU3FGLTllSE54YmdIa0JEVXJZZzFYOHFubTBvU3gxZlBjSXc?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-01T13:39:21+02:00",
+    "updatedAt": "2026-10-01T13:39:21+02:00"
+  },
+
+  {
     "id": "ljubljana-earthquake-1895-history-walk",
     "title": "The 1895 Ljubljana Earthquake: History and a Self-Guided Walk",
     "excerpt": "Follow the traces of the 1895 earthquake through central Ljubljana and see how destruction, photography, planning and Secession architecture reshaped the city.",
