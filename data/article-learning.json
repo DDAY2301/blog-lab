@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-01T08:39:21+02:00",
-  "loop_count": 2202,
+  "updated_at": "2026-10-01T08:53:44+02:00",
+  "loop_count": 2203,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-01T08:39:00+02:00",
+      "last_learning_run": "2026-10-01T08:53:22+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -50,12 +50,12 @@
       ],
       "source_health": {
         "news.google.com": {
-          "score": 2.498,
-          "seen": 65280,
-          "last_seen": "2026-10-01T08:39:00+02:00",
-          "last_title": "Umrl je Peter Semolič (59): Pri ogledu reli proge ga je zadela kap - Slovenske novice",
+          "score": 2.502,
+          "seen": 65310,
+          "last_seen": "2026-10-01T08:53:22+02:00",
+          "last_title": "Slovenski nogometaši po dveh tekmah lige narodov v dobrem položaju - Slovenske novice",
           "last_provider": "",
-          "published": 83493,
+          "published": 83556,
           "last_output_id": "slovenski-nogometasi-po-dveh-tekmah-lige-narodov-v-dobrem-polozaju-ee8396a0"
         },
         "city-data.com": {
@@ -209,7 +209,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-01T08:39:11+02:00",
+      "last_learning_run": "2026-10-01T08:53:33+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -236,12 +236,12 @@
       ],
       "source_health": {
         "news.google.com": {
-          "score": 2.502,
-          "seen": 65280,
-          "last_seen": "2026-10-01T08:39:11+02:00",
-          "last_title": "Kajzer zavrnil očitke, da ne vodi suverene zunanje politike - Dnevnik",
+          "score": 2.498,
+          "seen": 65310,
+          "last_seen": "2026-10-01T08:53:33+02:00",
+          "last_title": "Nova denarna pomoč pred zimo? Nekateri bi lahko prejeli 200 evrov - Mariborinfo.com",
           "last_provider": "",
-          "published": 89369,
+          "published": 89432,
           "last_output_id": "jansa-o-gazi-zdravljenju-redkih-bolezni-in-drogah-34d06ca6"
         },
         "hellovein.com": {
@@ -283,14 +283,14 @@
       "current_source_count": 30,
       "example_titles": {
         "news.google.com": [
+          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
           "Pred referendumom: Je RTV Slovenija »vredna« plačevanja obveznega rtv prispevka? - Info360",
-          "Pirc Musarjeva z Janšo na delovnem sestanku - 24ur.com",
-          "Delovni sestanek predsednice republike in predsednika vlade - rtvslo.si"
+          "Pirc Musarjeva z Janšo na delovnem sestanku - 24ur.com"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-01T08:39:21+02:00",
+      "last_learning_run": "2026-10-01T08:53:44+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -324,96 +324,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 65280,
-          "last_seen": "2026-10-01T08:39:21+02:00",
-          "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - novomesto.si",
+          "seen": 65310,
+          "last_seen": "2026-10-01T08:53:44+02:00",
+          "last_title": "Olimpijski komite Slovenije - Olimpijski Komite Slovenije",
           "last_provider": "",
-          "published": 108013,
+          "published": 108073,
           "last_output_id": "jansa-na-newsmaxu-slovenija-in-zda-imata-poseben-odnos-razkril-tudi-kaj-mu-je-obljubil-tru-a1bdde5d"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 2179,
+          "published": 2180,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 2179,
+          "published": 2180,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 2202,
+          "published": 2203,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 2104,
+          "published": 2105,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 2168,
+          "published": 2169,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 2104,
+          "published": 2105,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 2104,
+          "published": 2105,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 2168,
+          "published": 2169,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 8808,
+          "published": 8812,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 2202,
+          "published": 2203,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 2179,
+          "published": 2180,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 4272,
+          "published": 4274,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 2136,
+          "published": 2137,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 4336,
+          "published": 4338,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 2202,
+          "published": 2203,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 2104,
+          "published": 2105,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 4272,
+          "published": 4274,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
@@ -434,9 +434,9 @@
       "current_source_count": 30,
       "example_titles": {
         "news.google.com": [
-          "Kakšno podnebno politiko bo vodila vlada, katere premier zanika znanstvena dejstva? - N1 Slovenija",
           "(AKTUALNO) V novi številki revije Demokracija preberite: Izključujejo in zavirajo razvoj! Janša: Osamosvojitvena Slovenija ne bo nikoli več ",
-          "Evropska komisija: Slovenija krši pravice avtorjem - Info360"
+          "Evropska komisija: Slovenija krši pravice avtorjem - Info360",
+          "Janša v New Yorku jasno o Ukrajini: Slovenija bo nadaljevala politično, vojaško, humanitarno in finančno pomoč - Najdi.si novice"
         ]
       }
     }
