@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-01T19:55:56+02:00",
-  "loop_count": 2302,
+  "updated_at": "2026-10-01T19:56:53+02:00",
+  "loop_count": 2303,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-01T19:55:34+02:00",
+      "last_learning_run": "2026-10-01T19:56:25+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -51,11 +51,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 68280,
-          "last_seen": "2026-10-01T19:55:34+02:00",
-          "last_title": "Slovenija v znamenju največjega kolesarskega spektakla: poglejte, kaj se bo dogajalo - Siol.net",
+          "seen": 68310,
+          "last_seen": "2026-10-01T19:56:25+02:00",
+          "last_title": "Dončićev prijatelj iz Slovenije na visok položaj pri Lakersih - vse za Luko - Ekipa",
           "last_provider": "",
-          "published": 89793,
+          "published": 89856,
           "last_output_id": "slovenski-nogometasi-po-dveh-tekmah-lige-narodov-v-dobrem-polozaju-ee8396a0"
         },
         "city-data.com": {
@@ -209,7 +209,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-01T19:55:45+02:00",
+      "last_learning_run": "2026-10-01T19:56:43+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -237,11 +237,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 68280,
-          "last_seen": "2026-10-01T19:55:45+02:00",
-          "last_title": "Okoljski ekonomist Sonnenschein: Politika ministra za energetiko ni v interesu javnosti - Dnevnik",
+          "seen": 68310,
+          "last_seen": "2026-10-01T19:56:43+02:00",
+          "last_title": "Interpelacija zaradi obrata v zunanji politiki, ki krši mednarodno pravo - Delo.si",
           "last_provider": "",
-          "published": 95974,
+          "published": 96042,
           "last_output_id": "bo-trenutno-najbolj-priljubljen-politik-kandidiral-za-predsednika-republike-fd63474f"
         },
         "hellovein.com": {
@@ -290,7 +290,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-01T19:55:56+02:00",
+      "last_learning_run": "2026-10-01T19:56:53+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -324,96 +324,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 68280,
-          "last_seen": "2026-10-01T19:55:56+02:00",
+          "seen": 68310,
+          "last_seen": "2026-10-01T19:56:53+02:00",
           "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 114013,
+          "published": 114073,
           "last_output_id": "jansa-na-newsmaxu-slovenija-in-zda-imata-poseben-odnos-razkril-tudi-kaj-mu-je-obljubil-tru-a1bdde5d"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 2279,
+          "published": 2280,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 2279,
+          "published": 2280,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 2302,
+          "published": 2303,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 2204,
+          "published": 2205,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 2268,
+          "published": 2269,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 2204,
+          "published": 2205,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 2204,
+          "published": 2205,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 2268,
+          "published": 2269,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 9208,
+          "published": 9212,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 2302,
+          "published": 2303,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 2279,
+          "published": 2280,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 4472,
+          "published": 4474,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 2236,
+          "published": 2237,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 4536,
+          "published": 4538,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 2302,
+          "published": 2303,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 2204,
+          "published": 2205,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 4472,
+          "published": 4474,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
@@ -517,14 +517,6 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20260930-222253.json",
-      "category": "aktualno",
-      "errors": [
-        "ze_uporabljen_vir"
-      ],
-      "title": "Direktorica RTV Slovenija vztraja, da je prek 400 tisočakov plačil Čeferinom zakonitih"
-    },
-    {
       "file": "fallback-failed-20260930-223800.json",
       "category": "aktualno",
       "errors": [
@@ -598,10 +590,19 @@
       "title": "(AKTUALNO) V novi številki revije Demokracija preberite: Izključujejo in zavirajo razvoj! Janša: Osamosvojitvena…"
     },
     {
+      "file": "fallback-failed-20261001-195534.json",
+      "category": "aktualno",
+      "errors": [
+        "podvojen_naslov",
+        "ze_uporabljen_vir"
+      ],
+      "title": "Janša v New Yorku jasno o Ukrajini: Slovenija bo nadaljevala politično, vojaško, humanitarno in finančno pomoč -…"
+    },
+    {
       "file": "agent-state",
       "category": "aktualno",
       "errors": [
-        "ze_uporabljen_vir"
+        "podvojen_naslov,ze_uporabljen_vir"
       ]
     },
     {
@@ -614,8 +615,9 @@
     }
   ],
   "failure_summary": {
-    "ze_uporabljen_vir": 19,
+    "ze_uporabljen_vir": 18,
     "prekratek": 3,
-    "podvojen_naslov": 1
+    "podvojen_naslov": 2,
+    "podvojen_naslov,ze_uporabljen_vir": 1
   }
 }
