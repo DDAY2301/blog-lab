@@ -20,6 +20,44 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "slovenski-nogometasi-po-dveh-tekmah-lige-narodov-v-dobrem-polozaju-ee8396a0",
+    "title": "Slovenski nogometaši po dveh tekmah lige narodov v dobrem položaju",
+    "excerpt": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Slovenski nogometaši po dveh tekmah lige narodov v dobrem položaju«.",
+    "seoDescription": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Slovenski nogometaši po dveh tekmah lige narodov v dobrem položaju«.",
+    "content": "**Šport, 1. 10. 2026.** Slovenski nogometaši po dveh tekmah lige narodov v dobrem položaju Slovenske novice\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Slovenske novice. Objavljeno: Thu, 01 Oct 2026 04:47:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMisAFBVV95cUxOamZzYTY2eVVwZWJmWlNYNFdfcnR4N3V2R3h6b3hldi0wU3BjdHJkajJycnJ3S2dvbUh5aFpRYlZoNVJEVU9hWVgzcGw3VF9CUmd0Y1FLZ29VUnY3YkJTbDhOeGxtQkVRYkNBdlpJeTBPMkJBdlFkWjRiMzEyVS1BRDRvNGl5TnR0SFhzTVVlNE9ZaWNSZXZwTVNGOWRGOGRJUEJPYkU5VVhiMHdhZU5EVA?oc=5)\n\n## Dopolnitev vira 2: Koroške Novice\n\nSlovenija do prve zmage v Ligi narodov, zadela Lovrić in Matko Koroške Novice\n\n Vir: Koroške Novice. Objavljeno: Wed, 30 Sep 2026 14:23:38 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMingFBVV95cUxPdHNxaFBWcWZDejZnRENKM0tEQUNWcVVKZlZ6cTVVZi1NX1YxRlhPOFdMWmNWTWVyeDFaSC0tc29iQkhMbXRNS1o0NUJYNTVJTGVzZm1CM3dPZWNyRXN2Z1UwQXVvRGdNTXF5TjU4c1hEdDdqZkFMV3E2TkRBc1V0QTZrcjJqZklTRnJKTTlIRTBCV3Q2MjFlUVVSUzh2UQ?oc=5)\n\n## Dopolnitev vira 3: rtvslo.si\n\nIzraelci na Ptuju končali slovenske upe o nastopu na EP-ju rtvslo.si\n\n Vir: rtvslo.si. Objavljeno: Wed, 30 Sep 2026 01:24:33 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiowFBVV95cUxNaEw2TTlNZWZqUGt5aUFaVDgwNGp5aGJsRlhieUdoaW9Kb0FJWmc1akxuOXk3WEVDc3NUMnFDYXJnNFFxY0U1X1VvOHMyWm1nX0lmeWFucjdQUEVKUjVaQS1CeUJfLTNqSDFqY2oxTWVXUUNtX3prNUhlTHQ1RGN6TWRfZi03amQyVC01bDZTZGN4Zm81ODFhZVBBSk1EeXRWLUVr?oc=5)\n\n## Dopolnitev vira 4: Slovenske novice\n\nTadeja Pogačarja ne bo, Primož Roglič po kolajno Slovenske novice\n\n Vir: Slovenske novice. Objavljeno: Thu, 01 Oct 2026 05:50:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMilwFBVV95cUxPT0FUano3N1hfc09yeG5zbXo5VkdXTUVCQ1NRcFBYUklvVWwtNVpyRWlqcHNVOFhfMzhldWFnSHplakxIV2xnV0RPcHJQYjlfblNFbHdOVEl2NGlQeF8wWUk4UmY5Y3NrS24xaWllN2xqZ2JNN0Z1SWVtblExZVkyejgxNHZOd2Z3ZTd1OEhkSU82RmYtWHpz?oc=5)\n\n## Dopolnitev vira 5: rtvslo.si\n\nSlovenija v Ligi narodov dosega (samo) gol na tekmo rtvslo.si\n\n Vir: rtvslo.si. Objavljeno: Mon, 28 Sep 2026 11:09:27 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMinAFBVV95cUxQS21hNkV0cnBVUzQ0cENNTV94RHVjdFJFSXR1bzFZY0sxUkpmbFpLSVhySjdodERhWTBic01HUFY1c3Y0dFR3MWZPTGJwcnNNWWlkZWhLQmd4N1lJQTlVaDVlc0dLb1VaRjd3S2ZGcDZFbk1xaUlfd0ZSelhrV0tJZnJ1QXh4NlE2bmpZejI2Rmo4YmMtcVJncTY0SDc?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Šport",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Slovenske novice — Slovenski nogometaši po dveh tekmah lige narodov v dobrem položaju - Slovenske novice",
+        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOamZzYTY2eVVwZWJmWlNYNFdfcnR4N3V2R3h6b3hldi0wU3BjdHJkajJycnJ3S2dvbUh5aFpRYlZoNVJEVU9hWVgzcGw3VF9CUmd0Y1FLZ29VUnY3YkJTbDhOeGxtQkVRYkNBdlpJeTBPMkJBdlFkWjRiMzEyVS1BRDRvNGl5TnR0SFhzTVVlNE9ZaWNSZXZwTVNGOWRGOGRJUEJPYkU5VVhiMHdhZU5EVA?oc=5"
+      },
+      {
+        "label": "Koroške Novice — Slovenija do prve zmage v Ligi narodov, zadela Lovrić in Matko - Koroške Novice",
+        "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPdHNxaFBWcWZDejZnRENKM0tEQUNWcVVKZlZ6cTVVZi1NX1YxRlhPOFdMWmNWTWVyeDFaSC0tc29iQkhMbXRNS1o0NUJYNTVJTGVzZm1CM3dPZWNyRXN2Z1UwQXVvRGdNTXF5TjU4c1hEdDdqZkFMV3E2TkRBc1V0QTZrcjJqZklTRnJKTTlIRTBCV3Q2MjFlUVVSUzh2UQ?oc=5"
+      },
+      {
+        "label": "rtvslo.si — Izraelci na Ptuju končali slovenske upe o nastopu na EP-ju - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNaEw2TTlNZWZqUGt5aUFaVDgwNGp5aGJsRlhieUdoaW9Kb0FJWmc1akxuOXk3WEVDc3NUMnFDYXJnNFFxY0U1X1VvOHMyWm1nX0lmeWFucjdQUEVKUjVaQS1CeUJfLTNqSDFqY2oxTWVXUUNtX3prNUhlTHQ1RGN6TWRfZi03amQyVC01bDZTZGN4Zm81ODFhZVBBSk1EeXRWLUVr?oc=5"
+      },
+      {
+        "label": "Slovenske novice — Tadeja Pogačarja ne bo, Primož Roglič po kolajno - Slovenske novice",
+        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPT0FUano3N1hfc09yeG5zbXo5VkdXTUVCQ1NRcFBYUklvVWwtNVpyRWlqcHNVOFhfMzhldWFnSHplakxIV2xnV0RPcHJQYjlfblNFbHdOVEl2NGlQeF8wWUk4UmY5Y3NrS24xaWllN2xqZ2JNN0Z1SWVtblExZVkyejgxNHZOd2Z3ZTd1OEhkSU82RmYtWHpz?oc=5"
+      },
+      {
+        "label": "rtvslo.si — Slovenija v Ligi narodov dosega (samo) gol na tekmo - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQS21hNkV0cnBVUzQ0cENNTV94RHVjdFJFSXR1bzFZY0sxUkpmbFpLSVhySjdodERhWTBic01HUFY1c3Y0dFR3MWZPTGJwcnNNWWlkZWhLQmd4N1lJQTlVaDVlc0dLb1VaRjd3S2ZGcDZFbk1xaUlfd0ZSelhrV0tJZnJ1QXh4NlE2bmpZejI2Rmo4YmMtcVJncTY0SDc?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-01T08:24:22+02:00",
+    "updatedAt": "2026-10-01T08:24:22+02:00"
+  },
+
+  {
     "id": "jansa-o-gazi-zdravljenju-redkih-bolezni-in-drogah-34d06ca6",
     "title": "Janša o Gazi, zdravljenju redkih bolezni in drogah",
     "excerpt": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Janša o Gazi, zdravljenju redkih bolezni in drogah«.",
