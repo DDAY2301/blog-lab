@@ -1,5 +1,5 @@
 // Review draft only. Not imported by the production application.
-// Rolling review draft. Sources rechecked on 2026-09-30 at 07:01 Europe/Ljubljana.
+// Rolling review draft. Sources rechecked on 2026-10-01 at 07:01 Europe/Ljubljana.
 // Production remains unchanged until the calendar model and stable views are implemented.
 // Unknown values deliberately remain null.
 export const draftEvents = [
@@ -1373,7 +1373,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "confirmed",
+    "status": "completed",
     "lastCheckedAt": "2026-09-29T07:00:00+02:00"
   },
   {
@@ -1435,7 +1435,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "sold_out",
+    "status": "completed",
     "lastCheckedAt": "2026-09-29T07:00:00+02:00"
   },
   {
@@ -1466,7 +1466,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "confirmed",
+    "status": "completed",
     "lastCheckedAt": "2026-09-30T07:01:22+02:00"
   },
   {
@@ -1497,7 +1497,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "confirmed",
+    "status": "completed",
     "lastCheckedAt": "2026-09-30T07:01:22+02:00"
   },
   {
@@ -1528,7 +1528,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "confirmed",
+    "status": "completed",
     "lastCheckedAt": "2026-09-30T07:01:22+02:00"
   },
   {
@@ -1559,7 +1559,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "confirmed",
+    "status": "completed",
     "lastCheckedAt": "2026-09-30T07:01:22+02:00"
   },
   {
@@ -1590,7 +1590,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "confirmed",
+    "status": "completed",
     "lastCheckedAt": "2026-09-30T07:01:22+02:00"
   },
   {
@@ -1621,7 +1621,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "sold_out",
+    "status": "completed",
     "lastCheckedAt": "2026-09-30T07:01:22+02:00"
   },
   {
@@ -1653,7 +1653,100 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
+    "lastCheckedAt": "2026-10-01T07:01:40+02:00"
+  },
+  {
+    "eventId": "izar-comics-studio-2026-10-01-1000",
+    "title": "Discover Comics in Izar's Studio",
+    "summary": "Meet illustrator and comics author Izar Lunaček at Striparna Stripolis on 1 October at 10:00. Advance registration is required; the official Ljubljana Tourism programme lists €54.41 per person and a maximum group of six.",
+    "category": "workshop",
+    "startAt": "2026-10-01T10:00:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Striparna Stripolis",
+      "address": "Poljanska cesta 11, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": 54.41,
+      "currency": "EUR",
+      "label": "€54.41 per person; advance registration required",
+      "free": false
+    },
+    "ticketUrl": "https://www.visitljubljana.com/sl/turizem-ljubljana/program-za-cetrtek",
+    "officialUrl": "https://www.visitljubljana.com/sl/turizem-ljubljana/program-za-cetrtek",
+    "sourceName": "Visit Ljubljana",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-10-01T07:01:40+02:00"
+  },
+  {
+    "eventId": "seminary-library-tour-2026-10-01-1100",
+    "title": "Baroque Seminary Library Tour",
+    "summary": "Visit the preserved Baroque Seminary Library on 1 October at 11:00. Registration is required; admission is €10 for adults and €4 for visitors under 18, with attendance limited to 50.",
+    "category": "guided_tour",
+    "startAt": "2026-10-01T11:00:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Seminary Library",
+      "address": "Dolničarjeva ulica 4, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": 10,
+      "currency": "EUR",
+      "label": "Adults €10; under 18 €4",
+      "free": false
+    },
+    "ticketUrl": "https://www.visitljubljana.com/sl/turizem-ljubljana/program-za-cetrtek",
+    "officialUrl": "https://www.visitljubljana.com/sl/turizem-ljubljana/program-za-cetrtek",
+    "sourceName": "Visit Ljubljana",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": true,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-10-01T07:01:40+02:00"
+  },
+  {
+    "eventId": "seminary-library-tour-2026-10-01-1600",
+    "title": "Baroque Seminary Library Tour",
+    "summary": "A second tour of the preserved Baroque Seminary Library begins on 1 October at 16:00. Registration is required; admission is €10 for adults and €4 for visitors under 18, with attendance limited to 50.",
+    "category": "guided_tour",
+    "startAt": "2026-10-01T16:00:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Seminary Library",
+      "address": "Dolničarjeva ulica 4, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": 10,
+      "currency": "EUR",
+      "label": "Adults €10; under 18 €4",
+      "free": false
+    },
+    "ticketUrl": "https://www.visitljubljana.com/sl/turizem-ljubljana/program-za-cetrtek",
+    "officialUrl": "https://www.visitljubljana.com/sl/turizem-ljubljana/program-za-cetrtek",
+    "sourceName": "Visit Ljubljana",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": true,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-10-01T07:01:40+02:00"
   },
   {
     "timezone": "Europe/Ljubljana",
@@ -1684,7 +1777,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-30T07:01:22+02:00"
+    "lastCheckedAt": "2026-10-01T07:01:40+02:00"
   },
   {
     "eventId": "katalena-cd-2026-10-01",
@@ -1715,7 +1808,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
+    "lastCheckedAt": "2026-10-01T07:01:40+02:00"
   },
   {
     "timezone": "Europe/Ljubljana",
@@ -1746,7 +1839,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-30T07:01:22+02:00"
+    "lastCheckedAt": "2026-10-01T07:01:40+02:00"
   },
   {
     "eventId": "open-kitchen-2026-10-02",
@@ -1777,7 +1870,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-30T07:01:22+02:00"
+    "lastCheckedAt": "2026-10-01T07:01:40+02:00"
   },
   {
     "eventId": "uec-road-european-championships-2026",
@@ -1808,7 +1901,7 @@ export const draftEvents = [
     "accessibility": "Outdoor roadside viewing; individual accessible viewing arrangements not stated",
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-30T07:01:22+02:00"
+    "lastCheckedAt": "2026-10-01T07:01:40+02:00"
   },
   {
     "eventId": "ex-mgl-2026-10-02",
@@ -1839,7 +1932,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
+    "lastCheckedAt": "2026-10-01T07:01:40+02:00"
   },
   {
     "timezone": "Europe/Ljubljana",
@@ -1870,7 +1963,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-30T07:01:22+02:00"
+    "lastCheckedAt": "2026-10-01T07:01:40+02:00"
   },
   {
     "eventId": "sheby-umami-castle-2026-10-02",
@@ -1901,7 +1994,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
+    "lastCheckedAt": "2026-10-01T07:01:40+02:00"
   },
   {
     "eventId": "artish-2026-10-03",
