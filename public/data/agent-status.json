@@ -3,11 +3,11 @@
   "status": "waiting",
   "enabled": true,
   "category": "aktualno",
-  "last_run": "2026-10-01T19:55:34+02:00",
+  "last_run": "2026-10-01T20:08:13+02:00",
   "last_success": "2026-10-01T13:39:21+02:00",
   "last_output": "bo-trenutno-najbolj-priljubljen-politik-kandidiral-za-predsednika-republike-fd63474f",
   "next_run": null,
-  "message": "Fallback QA ni uspel: podvojen_naslov,ze_uporabljen_vir",
+  "message": "Fallback QA ni uspel: prekratek",
   "posts_today": 2,
   "scheduled_posts_today": 2,
   "manual_posts_today": 0,
@@ -24,5 +24,5 @@
     "reason": "prekratek",
     "at": "2026-10-01T19:54:51+02:00"
   },
-  "last_error": "podvojen_naslov,ze_uporabljen_vir"
+  "last_error": "prekratek"
 }
