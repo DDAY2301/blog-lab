@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-02T00:54:32+02:00",
-  "loop_count": 2351,
+  "updated_at": "2026-10-02T01:08:45+02:00",
+  "loop_count": 2352,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-02T00:54:13+02:00",
+      "last_learning_run": "2026-10-02T01:08:23+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -51,11 +51,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 69750,
-          "last_seen": "2026-10-02T00:54:13+02:00",
-          "last_title": "Na domačem evropskem prvenstvu (pričakovano) brez Pogačarja - rtvslo.si",
+          "seen": 69780,
+          "last_seen": "2026-10-02T01:08:23+02:00",
+          "last_title": "\"Čakata nas najtežji tekmi, zato ostajamo trdno na tleh\" - Siol.net",
           "last_provider": "",
-          "published": 92880,
+          "published": 92943,
           "last_output_id": "slovenski-nogometasi-po-dveh-tekmah-lige-narodov-v-dobrem-polozaju-ee8396a0"
         },
         "city-data.com": {
@@ -209,7 +209,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-02T00:54:23+02:00",
+      "last_learning_run": "2026-10-02T01:08:34+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -237,11 +237,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 69750,
-          "last_seen": "2026-10-02T00:54:23+02:00",
-          "last_title": "Simon Štrancar napovedal kandidaturo za župana Občine Hoče-Slivnice, podporo mu daje pet strank - Mariborinfo.com",
+          "seen": 69780,
+          "last_seen": "2026-10-02T01:08:34+02:00",
+          "last_title": "Okoljski ekonomist Sonnenschein: Politika ministra za energetiko ni v interesu javnosti - Dnevnik",
           "last_provider": "",
-          "published": 99306,
+          "published": 99374,
           "last_output_id": "bo-trenutno-najbolj-priljubljen-politik-kandidiral-za-predsednika-republike-fd63474f"
         },
         "hellovein.com": {
@@ -290,7 +290,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-02T00:54:32+02:00",
+      "last_learning_run": "2026-10-02T01:08:45+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -324,96 +324,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 69750,
-          "last_seen": "2026-10-02T00:54:32+02:00",
+          "seen": 69780,
+          "last_seen": "2026-10-02T01:08:45+02:00",
           "last_title": "Olimpijski komite Slovenije - Olimpijski Komite Slovenije",
           "last_provider": "",
-          "published": 116953,
+          "published": 117013,
           "last_output_id": "jansa-na-newsmaxu-slovenija-in-zda-imata-poseben-odnos-razkril-tudi-kaj-mu-je-obljubil-tru-a1bdde5d"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 2328,
+          "published": 2329,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 2328,
+          "published": 2329,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 2351,
+          "published": 2352,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 2253,
+          "published": 2254,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 2317,
+          "published": 2318,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 2253,
+          "published": 2254,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 2253,
+          "published": 2254,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 2317,
+          "published": 2318,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 9404,
+          "published": 9408,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 2351,
+          "published": 2352,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 2328,
+          "published": 2329,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 4570,
+          "published": 4572,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 2285,
+          "published": 2286,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 4634,
+          "published": 4636,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 2351,
+          "published": 2352,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 2253,
+          "published": 2254,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 4570,
+          "published": 4572,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
