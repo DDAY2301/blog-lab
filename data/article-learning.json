@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-01T08:54:33+02:00",
-  "loop_count": 2204,
+  "updated_at": "2026-10-01T09:08:40+02:00",
+  "loop_count": 2205,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-01T08:54:09+02:00",
+      "last_learning_run": "2026-10-01T09:08:12+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -50,12 +50,12 @@
       ],
       "source_health": {
         "news.google.com": {
-          "score": 2.502,
-          "seen": 65340,
-          "last_seen": "2026-10-01T08:54:09+02:00",
-          "last_title": "Slovenski nogometaši po dveh tekmah lige narodov v dobrem položaju - Slovenske novice",
+          "score": 2.498,
+          "seen": 65370,
+          "last_seen": "2026-10-01T09:08:12+02:00",
+          "last_title": "Junak zmage upa, da bo novembra bolje - 24ur.com",
           "last_provider": "",
-          "published": 83619,
+          "published": 83682,
           "last_output_id": "slovenski-nogometasi-po-dveh-tekmah-lige-narodov-v-dobrem-polozaju-ee8396a0"
         },
         "city-data.com": {
@@ -203,13 +203,13 @@
       "example_titles": {
         "news.google.com": [
           "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
-          "Poljaki gladko boljši, Slovenci po porazu 0:3 v boj za bron proti Japoncem - rtvslo.si",
-          "Kot v sanjah: Slovenija že drugič v dveh tednih evropski prvak! (VIDEO) - Šport TV"
+          "Kot v sanjah: Slovenija že drugič v dveh tednih evropski prvak! (VIDEO) - Šport TV",
+          "Poljaki gladko boljši, Slovenci po porazu 0:3 v boj za bron proti Japoncem - rtvslo.si"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-01T08:54:21+02:00",
+      "last_learning_run": "2026-10-01T09:08:27+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -237,11 +237,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 65340,
-          "last_seen": "2026-10-01T08:54:21+02:00",
+          "seen": 65370,
+          "last_seen": "2026-10-01T09:08:27+02:00",
           "last_title": "Okoljski ekonomist Sonnenschein: Politika ministra za energetiko ni v interesu javnosti - Dnevnik",
           "last_provider": "",
-          "published": 89495,
+          "published": 89558,
           "last_output_id": "jansa-o-gazi-zdravljenju-redkih-bolezni-in-drogah-34d06ca6"
         },
         "hellovein.com": {
@@ -290,7 +290,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-01T08:54:33+02:00",
+      "last_learning_run": "2026-10-01T09:08:40+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -324,96 +324,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 65340,
-          "last_seen": "2026-10-01T08:54:33+02:00",
+          "seen": 65370,
+          "last_seen": "2026-10-01T09:08:40+02:00",
           "last_title": "Olimpijski komite Slovenije - Olimpijski Komite Slovenije",
           "last_provider": "",
-          "published": 108133,
+          "published": 108193,
           "last_output_id": "jansa-na-newsmaxu-slovenija-in-zda-imata-poseben-odnos-razkril-tudi-kaj-mu-je-obljubil-tru-a1bdde5d"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 2181,
+          "published": 2182,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 2181,
+          "published": 2182,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 2204,
+          "published": 2205,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 2106,
+          "published": 2107,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 2170,
+          "published": 2171,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 2106,
+          "published": 2107,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 2106,
+          "published": 2107,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 2170,
+          "published": 2171,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 8816,
+          "published": 8820,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 2204,
+          "published": 2205,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 2181,
+          "published": 2182,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 4276,
+          "published": 4278,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 2138,
+          "published": 2139,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 4340,
+          "published": 4342,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 2204,
+          "published": 2205,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 2106,
+          "published": 2107,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 4276,
+          "published": 4278,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
@@ -442,6 +442,12 @@
     }
   },
   "recent_articles": [
+    {
+      "id": "ljubljana-earthquake-1895-history-walk",
+      "title": "The 1895 Ljubljana Earthquake: History and a Self-Guided Walk",
+      "category": "Vodniki",
+      "createdAt": "2026-10-01T09:00:15+02:00"
+    },
     {
       "id": "slovenski-nogometasi-po-dveh-tekmah-lige-narodov-v-dobrem-polozaju-ee8396a0",
       "title": "Slovenski nogometaši po dveh tekmah lige narodov v dobrem položaju",
@@ -507,12 +513,6 @@
       "title": "Roman Emona in Ljubljana: A Self-Guided Archaeology Walk",
       "category": "Vodniki",
       "createdAt": "2026-09-28T09:13:35+02:00"
-    },
-    {
-      "id": "slovenija-brez-osvojenega-niza-izgubila-boj-za-bron-finale-poljska-francija-24-24-prvi-niz-feefb9dc",
-      "title": "Slovenija brez osvojenega niza izgubila boj za bron; Finale: Poljska - Francija 24:24 (prvi niz)",
-      "category": "Šport",
-      "createdAt": "2026-09-28T08:24:33+02:00"
     }
   ],
   "recent_failures": [
