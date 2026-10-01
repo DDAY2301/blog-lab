@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-01T20:29:28+02:00",
-  "loop_count": 2308,
+  "updated_at": "2026-10-01T20:30:19+02:00",
+  "loop_count": 2309,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-01T20:29:08+02:00",
+      "last_learning_run": "2026-10-01T20:29:55+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -51,11 +51,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 68460,
-          "last_seen": "2026-10-01T20:29:08+02:00",
-          "last_title": "Mavrični McNulty razveselil Pogačarja, Roglič adut Slovenije za kolajno na EP - Delo.si",
+          "seen": 68490,
+          "last_seen": "2026-10-01T20:29:55+02:00",
+          "last_title": "Matko po prvencu: Eden najlepših trenutkov v moji karieri - 24ur.com",
           "last_provider": "",
-          "published": 90171,
+          "published": 90234,
           "last_output_id": "slovenski-nogometasi-po-dveh-tekmah-lige-narodov-v-dobrem-polozaju-ee8396a0"
         },
         "city-data.com": {
@@ -209,7 +209,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-01T20:29:18+02:00",
+      "last_learning_run": "2026-10-01T20:30:07+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -237,11 +237,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 68460,
-          "last_seen": "2026-10-01T20:29:18+02:00",
+          "seen": 68490,
+          "last_seen": "2026-10-01T20:30:07+02:00",
           "last_title": "Stisk pesti in tapkanje v DZ: v kakšni fizični formi so politiki? - 24ur.com",
           "last_provider": "",
-          "published": 96382,
+          "published": 96450,
           "last_output_id": "bo-trenutno-najbolj-priljubljen-politik-kandidiral-za-predsednika-republike-fd63474f"
         },
         "hellovein.com": {
@@ -290,7 +290,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-01T20:29:28+02:00",
+      "last_learning_run": "2026-10-01T20:30:19+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -324,96 +324,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 68460,
-          "last_seen": "2026-10-01T20:29:28+02:00",
+          "seen": 68490,
+          "last_seen": "2026-10-01T20:30:19+02:00",
           "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 114373,
+          "published": 114433,
           "last_output_id": "jansa-na-newsmaxu-slovenija-in-zda-imata-poseben-odnos-razkril-tudi-kaj-mu-je-obljubil-tru-a1bdde5d"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 2285,
+          "published": 2286,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 2285,
+          "published": 2286,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 2308,
+          "published": 2309,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 2210,
+          "published": 2211,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 2274,
+          "published": 2275,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 2210,
+          "published": 2211,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 2210,
+          "published": 2211,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 2274,
+          "published": 2275,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 9232,
+          "published": 9236,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 2308,
+          "published": 2309,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 2285,
+          "published": 2286,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 4484,
+          "published": 4486,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 2242,
+          "published": 2243,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 4548,
+          "published": 4550,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 2308,
+          "published": 2309,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 2210,
+          "published": 2211,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 4484,
+          "published": 4486,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
@@ -517,14 +517,6 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20260930-225301.json",
-      "category": "aktualno",
-      "errors": [
-        "prekratek"
-      ],
-      "title": "Slovenija letos s trinajstimi Michelinovimi zvezdicami"
-    },
-    {
       "file": "fallback-failed-20260930-230810.json",
       "category": "aktualno",
       "errors": [
@@ -592,6 +584,14 @@
     },
     {
       "file": "fallback-failed-20261001-202313.json",
+      "category": "aktualno",
+      "errors": [
+        "prekratek"
+      ],
+      "title": "Slovenija letos s trinajstimi Michelinovimi zvezdicami"
+    },
+    {
+      "file": "fallback-failed-20261001-202912.json",
       "category": "aktualno",
       "errors": [
         "prekratek"
