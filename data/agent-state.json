@@ -5,9 +5,9 @@
   "posts_date": "2026-10-01",
   "posts_today": 2,
   "last_output": "bo-trenutno-najbolj-priljubljen-politik-kandidiral-za-predsednika-republike-fd63474f",
-  "last_error": null,
+  "last_error": "ze_uporabljen_vir",
   "agent_version": "2.7.0",
-  "current_category": "politika",
+  "current_category": "aktualno",
   "scheduled_posts_today": 2,
   "manual_posts_today": 0,
   "writer_mode": "local_evidence_ai",
@@ -15,8 +15,14 @@
     "2026-10-01|08:17|sport",
     "2026-10-01|13:27|politika"
   ],
-  "scheduled_slots_deferred": [],
-  "last_editorial_hold": null,
+  "scheduled_slots_deferred": [
+    "2026-10-01|19:43|aktualno"
+  ],
+  "last_editorial_hold": {
+    "slot": "2026-10-01|19:43|aktualno",
+    "reason": "prekratek",
+    "at": "2026-10-01T19:54:51+02:00"
+  },
   "publisher_guardian_last_run": "2026-09-30T23:53:05+02:00",
   "publisher_guardian_last_action": {
     "category": "aktualno",
