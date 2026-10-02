@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-02T12:39:09+02:00",
-  "loop_count": 2452,
+  "updated_at": "2026-10-02T12:54:28+02:00",
+  "loop_count": 2453,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-02T12:38:45+02:00",
+      "last_learning_run": "2026-10-02T12:53:10+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -55,7 +55,7 @@
           "last_seen": "2026-10-02T12:38:45+02:00",
           "last_title": "Slovenija daleč od nepozabne podobe iz Nemčije 2024 - Delo.si",
           "last_provider": "",
-          "published": 99438,
+          "published": 99506,
           "last_output_id": "giro-bi-se-lahko-zacel-v-trstu-kolesarji-pa-bi-vozili-tudi-po-sloveniji-fa41f4b4"
         },
         "city-data.com": {
@@ -199,17 +199,11 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 30,
-      "example_titles": {
-        "news.google.com": [
-          "Slovenija gosti evropsko kolesarsko prvenstvo - rtvslo.si",
-          "Dobra podoba Slovenije ob prvi zmagi pod vodstvom Cesarja - 24ur.com",
-          "Njiva v Stožicah: \"Igrišče je sramotno. Kolikor vem, je novo …\" - Žurnal24"
-        ]
-      }
+      "current_source_count": 0,
+      "example_titles": {}
     },
     "politika": {
-      "last_learning_run": "2026-10-02T12:38:56+02:00",
+      "last_learning_run": "2026-10-02T12:53:47+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -241,7 +235,7 @@
           "last_seen": "2026-10-02T12:38:56+02:00",
           "last_title": "Danilo Türk: \"Ves svet nas vidi kot instrument izraelske zunanje politike\" - rtvslo.si",
           "last_provider": "",
-          "published": 106174,
+          "published": 106242,
           "last_output_id": "bo-trenutno-najbolj-priljubljen-politik-kandidiral-za-predsednika-republike-fd63474f"
         },
         "hellovein.com": {
@@ -280,17 +274,11 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 30,
-      "example_titles": {
-        "news.google.com": [
-          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
-          "Umrl je znani slovenski poslovnež in politik - Slovenske novice",
-          "Kaj prinaša novela zakona o parlamentarni preiskavi? - rtvslo.si"
-        ]
-      }
+      "current_source_count": 0,
+      "example_titles": {}
     },
     "aktualno": {
-      "last_learning_run": "2026-10-02T12:39:09+02:00",
+      "last_learning_run": "2026-10-02T12:54:28+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -328,92 +316,92 @@
           "last_seen": "2026-10-02T12:39:09+02:00",
           "last_title": "Olimpijski komite Slovenije - Olimpijski Komite Slovenije",
           "last_provider": "",
-          "published": 123013,
+          "published": 123073,
           "last_output_id": "jansa-na-newsmaxu-slovenija-in-zda-imata-poseben-odnos-razkril-tudi-kaj-mu-je-obljubil-tru-a1bdde5d"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 2429,
+          "published": 2430,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 2429,
+          "published": 2430,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 2452,
+          "published": 2453,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 2354,
+          "published": 2355,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 2418,
+          "published": 2419,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 2354,
+          "published": 2355,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 2354,
+          "published": 2355,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 2418,
+          "published": 2419,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 9808,
+          "published": 9812,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 2452,
+          "published": 2453,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 2429,
+          "published": 2430,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 4772,
+          "published": 4774,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 2386,
+          "published": 2387,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 4836,
+          "published": 4838,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 2452,
+          "published": 2453,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 2354,
+          "published": 2355,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 4772,
+          "published": 4774,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
@@ -431,14 +419,8 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 30,
-      "example_titles": {
-        "news.google.com": [
-          "(AKTUALNO) V novi številki revije Demokracija preberite: Izključujejo in zavirajo razvoj! Janša: Osamosvojitvena Slovenija ne bo nikoli več ",
-          "Evropska komisija: Slovenija krši pravice avtorjem - Info360",
-          "Janša v New Yorku jasno o Ukrajini: Slovenija bo nadaljevala politično, vojaško, humanitarno in finančno pomoč - Najdi.si novice"
-        ]
-      }
+      "current_source_count": 0,
+      "example_titles": {}
     }
   },
   "recent_articles": [
