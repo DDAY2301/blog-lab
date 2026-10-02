@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-02T19:39:44+02:00",
-  "loop_count": 2517,
+  "updated_at": "2026-10-02T19:55:43+02:00",
+  "loop_count": 2518,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-02T19:39:20+02:00",
+      "last_learning_run": "2026-10-02T19:55:21+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -51,11 +51,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 74700,
-          "last_seen": "2026-10-02T19:39:20+02:00",
-          "last_title": "Slovenija v Švico z jasnim ciljem: “Vsak protinapad bomo morali izpeljati na najvišji ravni” - Šport TV",
+          "seen": 74730,
+          "last_seen": "2026-10-02T19:55:21+02:00",
+          "last_title": "Pogačar boljši kot Roglič, v Sloveniji pa zato pogreb - udarili z vso silo - Ekipa",
           "last_provider": "",
-          "published": 103858,
+          "published": 103926,
           "last_output_id": "giro-bi-se-lahko-zacel-v-trstu-kolesarji-pa-bi-vozili-tudi-po-sloveniji-fa41f4b4"
         },
         "city-data.com": {
@@ -209,7 +209,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-02T19:39:34+02:00",
+      "last_learning_run": "2026-10-02T19:55:33+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -237,11 +237,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 74700,
-          "last_seen": "2026-10-02T19:39:34+02:00",
+          "seen": 74730,
+          "last_seen": "2026-10-02T19:55:33+02:00",
           "last_title": "Odnosi z Izraelom: diplomacija ne sme biti izgovor za normalizacijo zločinov - Dnevnik",
           "last_provider": "",
-          "published": 110889,
+          "published": 110962,
           "last_output_id": "sprejeta-krajinska-politika-slovenije-39b660cc"
         },
         "hellovein.com": {
@@ -290,7 +290,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-02T19:39:44+02:00",
+      "last_learning_run": "2026-10-02T19:55:43+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -324,96 +324,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 74700,
-          "last_seen": "2026-10-02T19:39:44+02:00",
+          "seen": 74730,
+          "last_seen": "2026-10-02T19:55:43+02:00",
           "last_title": "Anja Rakuša Brus: Pomemben argument za mojo kandidaturo je izkušnja z aktualno vlado, ki stroke ne posluša dovolj - Nova24TV",
           "last_provider": "",
-          "published": 126913,
-          "last_output_id": "jansa-na-newsmaxu-slovenija-in-zda-imata-poseben-odnos-razkril-tudi-kaj-mu-je-obljubil-tru-a1bdde5d"
+          "published": 126974,
+          "last_output_id": "subvencij-za-elektricna-vozila-zmanjkuje-bo-evropa-se-naprej-financirala-konkurenco-ki-ogr-13457c93"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 2494,
+          "published": 2495,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 2494,
+          "published": 2495,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 2517,
+          "published": 2518,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 2419,
+          "published": 2420,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 2483,
+          "published": 2484,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 2419,
+          "published": 2420,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 2419,
+          "published": 2420,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 2483,
+          "published": 2484,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 10068,
+          "published": 10072,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 2517,
+          "published": 2518,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 2494,
+          "published": 2495,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 4902,
+          "published": 4904,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 2451,
+          "published": 2452,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 4966,
+          "published": 4968,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 2517,
+          "published": 2518,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 2419,
+          "published": 2420,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 4902,
+          "published": 4904,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
@@ -435,13 +435,19 @@
       "example_titles": {
         "news.google.com": [
           "(AKTUALNO) V novi številki revije Demokracija preberite: Izključujejo in zavirajo razvoj! Janša: Osamosvojitvena Slovenija ne bo nikoli več ",
-          "Evropska komisija: Slovenija krši pravice avtorjem - Info360",
+          "Evropska komisija: Slovenija krši pravice avtorjem - info360.si",
           "Janša v New Yorku jasno o Ukrajini: Slovenija bo nadaljevala politično, vojaško, humanitarno in finančno pomoč - Najdi.si novice"
         ]
       }
     }
   },
   "recent_articles": [
+    {
+      "id": "subvencij-za-elektricna-vozila-zmanjkuje-bo-evropa-se-naprej-financirala-konkurenco-ki-ogr-13457c93",
+      "title": "Subvencij za električna vozila zmanjkuje: bo Evropa še naprej financirala konkurenco, ki ogroža njeno…",
+      "category": "Aktualno",
+      "createdAt": "2026-10-02T19:54:37+02:00"
+    },
     {
       "id": "sprejeta-krajinska-politika-slovenije-39b660cc",
       "title": "Sprejeta Krajinska politika Slovenije",
@@ -507,12 +513,6 @@
       "title": "Volilna pravila o zakonodajnem referendumu in treh posvetovalnih referendumih",
       "category": "Politika",
       "createdAt": "2026-09-29T13:39:11+02:00"
-    },
-    {
-      "id": "arboretum-volcji-potok-day-trip-from-ljubljana",
-      "title": "Arboretum Volčji Potok: An Easy Nature Day Trip from Ljubljana",
-      "category": "Vodniki",
-      "createdAt": "2026-09-29T08:58:45+02:00"
     }
   ],
   "recent_failures": [
