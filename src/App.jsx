@@ -20,6 +20,44 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "sprejeta-krajinska-politika-slovenije-39b660cc",
+    "title": "Sprejeta Krajinska politika Slovenije",
+    "excerpt": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Sprejeta Krajinska politika Slovenije«.",
+    "seoDescription": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Sprejeta Krajinska politika Slovenije«.",
+    "content": "**Politika, 2. 10. 2026.** Sprejeta Krajinska politika Slovenije Portal GOV.SI\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nPri političnih temah Blog Lab ne podpira kandidatov, strank ali političnih odločitev; izjave in ocene so predstavljene kot stališča njihovih avtorjev ali virov, ne kot uredniška presoja.\n\nVir: Portal GOV.SI. Objavljeno: Fri, 27 Mar 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMigAFBVV95cUxNS1JEejBEUUV6TjkwXzF5anRBVTlnZ1Z4emxPVmIwempiNVRwQkxScDhhVXY3NU1TdlBjSWVpTHpqTmd0RUVjdmZNUXc0Q2xsYzVBcGRiRVVTQ1lLZkdzWDNzZjB2V2xpM2REVDhMelU3cjUxZDZUa0J1dnh4NXFiTA?oc=5)\n\n## Dopolnitev vira 2: Demokracija\n\n(INTERVJU) V novi reviji Demokracija: Minister Tone Kajzer: Slovenije ne prodajamo nikomur. Slovenija je suverena država in slovenska zunanja politika mora služiti predvsem slovenskim nacionalnim interesom Demokracija\n\n Vir: Demokracija. Objavljeno: Tue, 29 Sep 2026 10:31:06 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiyAJBVV95cUxPalFtdWFwOXl4NlpOdktRYTY0YVEtTTRMVGQ0VDAwWjJXZHFRbWRvRHVaNVZZNy0xWGVrRGRVek5pMVBYTVNEaFpDTGJSNk8yd2ZCNE9EbFgtVU1LTUx6cDBHRGxOT0VhZVBwY21jZ3UzX3cxVTBVcS1maVcyRUl2d1czWjN5NFJMZlJFSWdiclVzQUpIdm4zd3pVWU50YnMtNUYxbmNZM0tkVkhMdW9TTEthX0dzQjZVTkVwMkdZaE1PNGZ0RVNfWWwzTlJQWlB1SW53b09GQVBfQkRPcTBmSWpCbVpEenUwZGRoSGRWb2tXTDdlT3FhYmhKVWdZZG9VTl9lcU9sTFZCSVlYNzVwaTBNbTdkVEZBeE1nbWdEZFFONGlKZks1LU9KWkoyaDRBbUJNMmNkTlh1TGhwbFlXQ3N5eWRfTnl0?oc=5)\n\n## Dopolnitev vira 3: Nova24TV\n\nVlada: Slovenija skokovito izboljšuje črpanje evropskih sredstev, sprejeti ukrepi za znižanje cen goriv Nova24TV\n\n Vir: Nova24TV. Objavljeno: Thu, 01 Oct 2026 12:45:33 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMivwFBVV95cUxNcUFxRzYya2kweDBNVE1zcTRxLVVodkNOT1lRTkc4ZlpPLWpVTzltRUo2ZzR6QTgyRFV0bDMwdkhrcHZ4WUhTY184eWpyOHdIOWp4UVQxZWg1RzA3WWtBeEpMbEMzY2lNek5iYWoxR3ZRZHRrbWthZk1fR1VOdnhZM216Yk4tU3p0N0hPblFVR1hSY2tKS2dnYXN3N2VDQ1RLZkpfcXpRXzhLcmFvcE1DNWRrME5NXy1XM21WMm16Zw?oc=5)\n\n## Dopolnitev vira 4: Dnevnik\n\nCivilna družba: \"Prodaja Slovenije genocidnemu Izraelu se je šele dobro začela\" Dnevnik\n\n Vir: Dnevnik. Objavljeno: Fri, 02 Oct 2026 10:57:46 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiyAFBVV95cUxPdm9jNkRwVkx3eXU2OWhfSFlzT3ZhUGhObjEwSXZUR2gwNEpYRXdwM3JhWnlzbTAyZWY4VTIwOW1yU0lPblhsM3Njc1lCSkdmazRVRW5KVTJWZ0pBRl8wRWFqbU1ock40WS1jbnZkWUROMzBuN1R6S0Q5RHlHSVBTR2VHQ3dnTDlPSGpEa1JNc0R6dnFQalRtUW1maG5PZ0huVDVkS1RxYmJ6bnduNFZSanVobHQyWTB1YUFESk03UWUtZmpmVUNReA?oc=5)\n\n## Dopolnitev vira 5: Slovenske novice\n\nUmrl je znani slovenski poslovnež in politik Slovenske novice\n\n Vir: Slovenske novice. Objavljeno: Fri, 02 Oct 2026 06:27:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMimAFBVV95cUxNNXJVVWJwVzEyTk1mT3hrdTZtR1ZqMWQ3b3dNNWJkYzZZWVVlaFAtM0praFI1NXVjZ1JmQW1INTA3a1ZQVjlreFJFSTVhdFhnMWpXRTlVQXloNGh6bUFXaWRleDNrRkZ2dUVGSHBiazJpMGlSTlVpTGNfSmpRVzJSSW5lbjVGZS1VMjlKcW5nemtyZHVRNl8wUQ?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Politika",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Portal GOV.SI — Sprejeta Krajinska politika Slovenije - Portal GOV.SI",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNS1JEejBEUUV6TjkwXzF5anRBVTlnZ1Z4emxPVmIwempiNVRwQkxScDhhVXY3NU1TdlBjSWVpTHpqTmd0RUVjdmZNUXc0Q2xsYzVBcGRiRVVTQ1lLZkdzWDNzZjB2V2xpM2REVDhMelU3cjUxZDZUa0J1dnh4NXFiTA?oc=5"
+      },
+      {
+        "label": "Demokracija — (INTERVJU) V novi reviji Demokracija: Minister Tone Kajzer: Slovenije ne prodajamo nikomur. Slovenija je suverena…",
+        "url": "https://news.google.com/rss/articles/CBMiyAJBVV95cUxPalFtdWFwOXl4NlpOdktRYTY0YVEtTTRMVGQ0VDAwWjJXZHFRbWRvRHVaNVZZNy0xWGVrRGRVek5pMVBYTVNEaFpDTGJSNk8yd2ZCNE9EbFgtVU1LTUx6cDBHRGxOT0VhZVBwY21jZ3UzX3cxVTBVcS1maVcyRUl2d1czWjN5NFJMZlJFSWdiclVzQUpIdm4zd3pVWU50YnMtNUYxbmNZM0tkVkhMdW9TTEthX0dzQjZVTkVwMkdZaE1PNGZ0RVNfWWwzTlJQWlB1SW53b09GQVBfQkRPcTBmSWpCbVpEenUwZGRoSGRWb2tXTDdlT3FhYmhKVWdZZG9VTl9lcU9sTFZCSVlYNzVwaTBNbTdkVEZBeE1nbWdEZFFONGlKZks1LU9KWkoyaDRBbUJNMmNkTlh1TGhwbFlXQ3N5eWRfTnl0?oc=5"
+      },
+      {
+        "label": "Nova24TV — Vlada: Slovenija skokovito izboljšuje črpanje evropskih sredstev, sprejeti ukrepi za znižanje cen goriv - Nova24TV",
+        "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNcUFxRzYya2kweDBNVE1zcTRxLVVodkNOT1lRTkc4ZlpPLWpVTzltRUo2ZzR6QTgyRFV0bDMwdkhrcHZ4WUhTY184eWpyOHdIOWp4UVQxZWg1RzA3WWtBeEpMbEMzY2lNek5iYWoxR3ZRZHRrbWthZk1fR1VOdnhZM216Yk4tU3p0N0hPblFVR1hSY2tKS2dnYXN3N2VDQ1RLZkpfcXpRXzhLcmFvcE1DNWRrME5NXy1XM21WMm16Zw?oc=5"
+      },
+      {
+        "label": "Dnevnik — Civilna družba: \"Prodaja Slovenije genocidnemu Izraelu se je šele dobro začela\" - Dnevnik",
+        "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPdm9jNkRwVkx3eXU2OWhfSFlzT3ZhUGhObjEwSXZUR2gwNEpYRXdwM3JhWnlzbTAyZWY4VTIwOW1yU0lPblhsM3Njc1lCSkdmazRVRW5KVTJWZ0pBRl8wRWFqbU1ock40WS1jbnZkWUROMzBuN1R6S0Q5RHlHSVBTR2VHQ3dnTDlPSGpEa1JNc0R6dnFQalRtUW1maG5PZ0huVDVkS1RxYmJ6bnduNFZSanVobHQyWTB1YUFESk03UWUtZmpmVUNReA?oc=5"
+      },
+      {
+        "label": "Slovenske novice — Umrl je znani slovenski poslovnež in politik - Slovenske novice",
+        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNNXJVVWJwVzEyTk1mT3hrdTZtR1ZqMWQ3b3dNNWJkYzZZWVVlaFAtM0praFI1NXVjZ1JmQW1INTA3a1ZQVjlreFJFSTVhdFhnMWpXRTlVQXloNGh6bUFXaWRleDNrRkZ2dUVGSHBiazJpMGlSTlVpTGNfSmpRVzJSSW5lbjVGZS1VMjlKcW5nemtyZHVRNl8wUQ?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-02T13:38:58+02:00",
+    "updatedAt": "2026-10-02T13:38:58+02:00"
+  },
+
+  {
     "id": "giro-bi-se-lahko-zacel-v-trstu-kolesarji-pa-bi-vozili-tudi-po-sloveniji-fa41f4b4",
     "title": "Giro bi se lahko začel v Trstu, kolesarji pa bi vozili tudi po Sloveniji",
     "excerpt": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Giro bi se lahko začel v Trstu, kolesarji pa bi vozili tudi po Sloveniji«.",
