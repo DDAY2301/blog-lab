@@ -20,6 +20,28 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "subvencij-za-elektricna-vozila-zmanjkuje-bo-evropa-se-naprej-financirala-konkurenco-ki-ogr-13457c93",
+    "title": "Subvencij za električna vozila zmanjkuje: bo Evropa še naprej financirala konkurenco, ki ogroža njeno…",
+    "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Subvencij za električna vozila zmanjkuje: bo Evropa še naprej financirala konkurenco, ki ogroža njeno…«.",
+    "seoDescription": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Subvencij za električna vozila zmanjkuje: bo Evropa še naprej financirala kon",
+    "content": "**Aktualno, 2. 10. 2026.** Subvencij za električna vozila zmanjkuje: bo Evropa še naprej financirala konkurenco, ki ogroža njeno avtomobilsko industrijo? | Portal OS na najdi.si novicah Najdi.si novice\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Najdi.si novice. Objavljeno: Mon, 10 Aug 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiowJBVV95cUxNbzJIUGxWNHAyX2JzQlE0VXNBNVNsbzBhSjJjV1lLUU01YkZXNlZVa0xxc2l6bWpCeV91V2UyYmdPckxvTjEtdFF4bzREU3RKWEVQRWtYZjJnM3R6dDJHaldkWlFOalZvMVhPVVFmSWNScHkydlpoSi1kUE94UjJnY1gzT2lCdUFCNk5mb2tXaV9Tekx5YnJKWThMZHNxUHNFRjRQYS1KeWtyOEZDSWpKUEtDZUdSNWVfT1VYdmRMOUNtdUI5U2Iya0Y5dXZ4QW12QnJTcGM3VHdqdEZpVFgxQllNaUV1Y2RCSWhyRUd3MlBQdjVIVjk2UElkekgxSnhJeTlFbHBvUEYwcHZFVWVWWkxYdlV5Z1BsV2dnbENEeE1PY2c?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Aktualno",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Najdi.si novice — Subvencij za električna vozila zmanjkuje: bo Evropa še naprej financirala konkurenco, ki ogroža njeno avtomobilsko…",
+        "url": "https://news.google.com/rss/articles/CBMiowJBVV95cUxNbzJIUGxWNHAyX2JzQlE0VXNBNVNsbzBhSjJjV1lLUU01YkZXNlZVa0xxc2l6bWpCeV91V2UyYmdPckxvTjEtdFF4bzREU3RKWEVQRWtYZjJnM3R6dDJHaldkWlFOalZvMVhPVVFmSWNScHkydlpoSi1kUE94UjJnY1gzT2lCdUFCNk5mb2tXaV9Tekx5YnJKWThMZHNxUHNFRjRQYS1KeWtyOEZDSWpKUEtDZUdSNWVfT1VYdmRMOUNtdUI5U2Iya0Y5dXZ4QW12QnJTcGM3VHdqdEZpVFgxQllNaUV1Y2RCSWhyRUd3MlBQdjVIVjk2UElkekgxSnhJeTlFbHBvUEYwcHZFVWVWWkxYdlV5Z1BsV2dnbENEeE1PY2c?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-02T19:54:37+02:00",
+    "updatedAt": "2026-10-02T19:54:37+02:00"
+  },
+
+  {
     "id": "sprejeta-krajinska-politika-slovenije-39b660cc",
     "title": "Sprejeta Krajinska politika Slovenije",
     "excerpt": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Sprejeta Krajinska politika Slovenije«.",
