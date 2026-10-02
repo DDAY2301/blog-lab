@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-02T14:32:41+02:00",
-  "loop_count": 2468,
+  "updated_at": "2026-10-02T14:38:22+02:00",
+  "loop_count": 2469,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-02T14:32:15+02:00",
+      "last_learning_run": "2026-10-02T14:37:55+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -51,11 +51,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 73230,
-          "last_seen": "2026-10-02T14:32:15+02:00",
-          "last_title": "Massi po razhodu s Slokarjevo: Vpletenih je bilo preveč ljudi - 24ur.com",
+          "seen": 73260,
+          "last_seen": "2026-10-02T14:37:55+02:00",
+          "last_title": "FOTO: Mladi invalidi na Parafestu preizkusili pet parašportov - Ljubljanainfo.com",
           "last_provider": "",
-          "published": 100526,
+          "published": 100594,
           "last_output_id": "giro-bi-se-lahko-zacel-v-trstu-kolesarji-pa-bi-vozili-tudi-po-sloveniji-fa41f4b4"
         },
         "city-data.com": {
@@ -202,14 +202,14 @@
       "current_source_count": 30,
       "example_titles": {
         "news.google.com": [
+          "EP v kolesarstvu: dirka mlajših članic - rtvslo.si",
           "Dobra podoba Slovenije ob prvi zmagi pod vodstvom Cesarja - 24ur.com",
-          "Njiva v Stožicah: \"Igrišče je sramotno. Kolikor vem, je novo …\" - Žurnal24",
-          "Slovenija na sramotni zelenici Stožic v drugem polčasu strla Makedonce - Šport TV"
+          "Njiva v Stožicah: \"Igrišče je sramotno. Kolikor vem, je novo …\" - Žurnal24"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-02T14:32:30+02:00",
+      "last_learning_run": "2026-10-02T14:38:07+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -237,11 +237,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 73230,
-          "last_seen": "2026-10-02T14:32:30+02:00",
-          "last_title": "Stisk pesti in tapkanje v DZ: v kakšni fizični formi so politiki? - 24ur.com",
+          "seen": 73260,
+          "last_seen": "2026-10-02T14:38:07+02:00",
+          "last_title": "Kajzer: Zunanja politika se osredotoča na okvire, v katerih ima Slovenija možnosti vplivanja - rtvslo.si",
           "last_provider": "",
-          "published": 107312,
+          "published": 107385,
           "last_output_id": "sprejeta-krajinska-politika-slovenije-39b660cc"
         },
         "hellovein.com": {
@@ -284,13 +284,13 @@
       "example_titles": {
         "news.google.com": [
           "Civilna družba: \"Prodaja Slovenije genocidnemu Izraelu se je šele dobro začela\" - Dnevnik",
-          "Kaj prinaša novela zakona o parlamentarni preiskavi? - rtvslo.si",
-          "Umrl je znani slovenski poslovnež in politik - Slovenske novice"
+          "Umrl je znani slovenski poslovnež in politik - Slovenske novice",
+          "Kaj prinaša novela zakona o parlamentarni preiskavi? - rtvslo.si"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-02T14:32:41+02:00",
+      "last_learning_run": "2026-10-02T14:38:22+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -324,96 +324,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 73230,
-          "last_seen": "2026-10-02T14:32:41+02:00",
+          "seen": 73260,
+          "last_seen": "2026-10-02T14:38:22+02:00",
           "last_title": "(AKTUALNO) Hudo bolni slovenski otroci ostajajo brez dostopa do zdravila, odobrenega s strani evropske agencije EMA - Demokracija",
           "last_provider": "",
-          "published": 123973,
+          "published": 124033,
           "last_output_id": "jansa-na-newsmaxu-slovenija-in-zda-imata-poseben-odnos-razkril-tudi-kaj-mu-je-obljubil-tru-a1bdde5d"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 2445,
+          "published": 2446,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 2445,
+          "published": 2446,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 2468,
+          "published": 2469,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 2370,
+          "published": 2371,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 2434,
+          "published": 2435,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 2370,
+          "published": 2371,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 2370,
+          "published": 2371,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 2434,
+          "published": 2435,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 9872,
+          "published": 9876,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 2468,
+          "published": 2469,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 2445,
+          "published": 2446,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 4804,
+          "published": 4806,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 2402,
+          "published": 2403,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 4868,
+          "published": 4870,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 2468,
+          "published": 2469,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 2370,
+          "published": 2371,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 4804,
+          "published": 4806,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
@@ -436,7 +436,7 @@
         "news.google.com": [
           "(AKTUALNO) V novi številki revije Demokracija preberite: Izključujejo in zavirajo razvoj! Janša: Osamosvojitvena Slovenija ne bo nikoli več ",
           "Evropska komisija: Slovenija krši pravice avtorjem - Info360",
-          "Nov zakon - souporaba električne energije - PwC"
+          "Nov zakon - souporaba električne energije - pwc.com"
         ]
       }
     }
