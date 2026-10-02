@@ -1,5 +1,5 @@
 // Review draft only. Not imported by the production application.
-// Rolling review draft. Sources rechecked on 2026-10-01 at 07:01 Europe/Ljubljana.
+// Rolling review draft. Sources rechecked on 2026-10-02 at 07:04 Europe/Ljubljana.
 // Production remains unchanged until the calendar model and stable views are implemented.
 // Unknown values deliberately remain null.
 export const draftEvents = [
@@ -1652,7 +1652,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "confirmed",
+    "status": "completed",
     "lastCheckedAt": "2026-10-01T07:01:40+02:00"
   },
   {
@@ -1683,7 +1683,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "confirmed",
+    "status": "completed",
     "lastCheckedAt": "2026-10-01T07:01:40+02:00"
   },
   {
@@ -1714,7 +1714,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "confirmed",
+    "status": "completed",
     "lastCheckedAt": "2026-10-01T07:01:40+02:00"
   },
   {
@@ -1745,7 +1745,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "confirmed",
+    "status": "completed",
     "lastCheckedAt": "2026-10-01T07:01:40+02:00"
   },
   {
@@ -1776,7 +1776,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "confirmed",
+    "status": "completed",
     "lastCheckedAt": "2026-10-01T07:01:40+02:00"
   },
   {
@@ -1807,7 +1807,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "confirmed",
+    "status": "completed",
     "lastCheckedAt": "2026-10-01T07:01:40+02:00"
   },
   {
@@ -1838,7 +1838,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "confirmed",
+    "status": "completed",
     "lastCheckedAt": "2026-10-01T07:01:40+02:00"
   },
   {
@@ -1870,7 +1870,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-10-01T07:01:40+02:00"
+    "lastCheckedAt": "2026-10-02T07:04:03+02:00"
   },
   {
     "eventId": "uec-road-european-championships-2026",
@@ -1901,7 +1901,7 @@ export const draftEvents = [
     "accessibility": "Outdoor roadside viewing; individual accessible viewing arrangements not stated",
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-10-01T07:01:40+02:00"
+    "lastCheckedAt": "2026-10-02T07:04:03+02:00"
   },
   {
     "eventId": "ex-mgl-2026-10-02",
@@ -1932,13 +1932,13 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-10-01T07:01:40+02:00"
+    "lastCheckedAt": "2026-10-02T07:04:03+02:00"
   },
   {
     "timezone": "Europe/Ljubljana",
     "eventId": "movements-9-cd-2026-10-02",
     "title": "Movements 9",
-    "summary": "Cankarjev dom lists this theatre-and-dance event for 2 October at 20:00. Visitors should confirm ticket availability, language and accessibility on the official event page.",
+    "summary": "A contemporary dance performance by MN Dance Company takes place in Linhart Hall at 20:00 and lasts about 116 minutes. Tickets are €18; advance booking is recommended.",
     "category": "theatre-dance",
     "startAt": "2026-10-02T20:00:00+02:00",
     "endAt": "2026-10-02T22:00:00+02:00",
@@ -1949,10 +1949,10 @@ export const draftEvents = [
       "region": "Central Slovenia"
     },
     "price": {
-      "amount": null,
+      "amount": 18,
       "currency": "EUR",
-      "label": null,
-      "free": null
+      "label": "€18",
+      "free": false
     },
     "ticketUrl": "https://www.cd-cc.si/en/buy-tickets",
     "officialUrl": "https://www.cd-cc.si/en",
@@ -1963,7 +1963,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-10-01T07:01:40+02:00"
+    "lastCheckedAt": "2026-10-02T07:04:03+02:00"
   },
   {
     "eventId": "sheby-umami-castle-2026-10-02",
@@ -1994,7 +1994,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-10-01T07:01:40+02:00"
+    "lastCheckedAt": "2026-10-02T07:04:03+02:00"
   },
   {
     "eventId": "artish-2026-10-03",
@@ -2025,7 +2025,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-30T07:01:22+02:00"
+    "lastCheckedAt": "2026-10-02T07:04:03+02:00"
   },
   {
     "timezone": "Europe/Ljubljana",
@@ -2056,7 +2056,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-30T07:01:22+02:00"
+    "lastCheckedAt": "2026-10-02T07:04:03+02:00"
   },
   {
     "eventId": "salome-mgl-2026-10-03",
@@ -2087,7 +2087,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
+    "lastCheckedAt": "2026-10-02T07:04:03+02:00"
   },
   {
     "eventId": "man-overboard-mgl-2026-10-03",
@@ -2118,13 +2118,13 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "sold_out",
-    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
+    "lastCheckedAt": "2026-10-02T07:04:03+02:00"
   },
   {
     "timezone": "Europe/Ljubljana",
     "eventId": "movements-of-aphrodite-cd-2026-10-03",
     "title": "The Movements of Aphrodite",
-    "summary": "Cankarjev dom confirms this theatre-and-dance event on 3 October at 20:00. Current ticket availability, language and visitor accessibility should be checked directly before attending.",
+    "summary": "Rosana Hribar's dance work is performed in Linhart Hall at 20:00. Tickets are €18; visitors should confirm any language or accessibility needs directly with the venue.",
     "category": "theatre-dance",
     "startAt": "2026-10-03T20:00:00+02:00",
     "endAt": "2026-10-03T22:00:00+02:00",
@@ -2135,10 +2135,10 @@ export const draftEvents = [
       "region": "Central Slovenia"
     },
     "price": {
-      "amount": null,
+      "amount": 18,
       "currency": "EUR",
-      "label": null,
-      "free": null
+      "label": "€18",
+      "free": false
     },
     "ticketUrl": "https://www.cd-cc.si/en/buy-tickets",
     "officialUrl": "https://www.cd-cc.si/en",
@@ -2149,7 +2149,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-30T07:01:22+02:00"
+    "lastCheckedAt": "2026-10-02T07:04:03+02:00"
   },
   {
     "eventId": "sunday-flea-market-2026-10-04",
@@ -2245,6 +2245,68 @@ export const draftEvents = [
     "lastCheckedAt": "2026-09-30T07:01:22+02:00"
   },
   {
+    "eventId": "house-bolero-cd-2026-10-04",
+    "title": "House Bolero",
+    "summary": "Matjaž Farič's dance performance begins in Linhart Hall at 20:00. Tickets are listed at €20, €22 or €25; visitors should confirm accessibility requirements with the venue.",
+    "category": "dance",
+    "startAt": "2026-10-04T20:00:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Cankarjev dom, Linhart Hall",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": "€20 / €22 / €25",
+      "free": false
+    },
+    "ticketUrl": "https://www.cd-cc.si/en",
+    "officialUrl": "https://www.cd-cc.si/en",
+    "sourceName": "Cankarjev dom",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-10-02T07:04:03+02:00"
+  },
+  {
+    "eventId": "zenske-brez-filtra-2-cd-2026-10-05",
+    "title": "Ženske brez filtra 2",
+    "summary": "This theatre event is scheduled for 19:00 at Cankarjev dom. Language, price and accessibility details were not confirmed in the official listing and should be checked before booking.",
+    "category": "theatre",
+    "startAt": "2026-10-05T19:00:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": null
+    },
+    "ticketUrl": "https://www.cd-cc.si/en",
+    "officialUrl": "https://www.cd-cc.si/en",
+    "sourceName": "Cankarjev dom",
+    "languages": [],
+    "touristFriendly": null,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-10-02T07:04:03+02:00"
+  },
+  {
     "eventId": "salome-mgl-2026-10-06",
     "title": "Salome",
     "summary": "MGL lists Salome on the Main Stage on Tuesday 6 October at 19:30. Tickets are currently offered; confirm language support, price and accessibility in the live sales flow.",
@@ -2274,6 +2336,37 @@ export const draftEvents = [
     "indoorOutdoor": "indoor",
     "status": "confirmed",
     "lastCheckedAt": "2026-09-28T07:00:00+02:00"
+  },
+  {
+    "eventId": "vladimir-kostadinovic-iris-cd-2026-10-06",
+    "title": "Vladimir Kostadinović – Iris",
+    "summary": "The concert begins at 19:30 at Cankarjev dom. Ticket price, accessibility and language-independent visitor information should be confirmed on the venue's live listing before arrival.",
+    "category": "music",
+    "startAt": "2026-10-06T19:30:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": null
+    },
+    "ticketUrl": "https://www.cd-cc.si/en",
+    "officialUrl": "https://www.cd-cc.si/en",
+    "sourceName": "Cankarjev dom",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-10-02T07:04:03+02:00"
   },
   {
     "eventId": "salome-mgl-2026-10-07",
