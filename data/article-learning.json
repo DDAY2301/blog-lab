@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-02T13:23:57+02:00",
-  "loop_count": 2458,
+  "updated_at": "2026-10-02T13:40:00+02:00",
+  "loop_count": 2459,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-02T13:23:37+02:00",
+      "last_learning_run": "2026-10-02T13:39:39+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -51,11 +51,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 72930,
-          "last_seen": "2026-10-02T13:23:37+02:00",
-          "last_title": "FOTO: Mladi invalidi na Parafestu preizkusili pet parašportov - Ljubljanainfo.com",
+          "seen": 72960,
+          "last_seen": "2026-10-02T13:39:39+02:00",
+          "last_title": "Mavrični McNulty razveselil Pogačarja, Roglič adut Slovenije za kolajno na EP - Delo.si",
           "last_provider": "",
-          "published": 99846,
+          "published": 99914,
           "last_output_id": "giro-bi-se-lahko-zacel-v-trstu-kolesarji-pa-bi-vozili-tudi-po-sloveniji-fa41f4b4"
         },
         "city-data.com": {
@@ -202,14 +202,14 @@
       "current_source_count": 30,
       "example_titles": {
         "news.google.com": [
-          "EP v kolesarstvu: dirka mlajših članic - rtvslo.si",
           "Dobra podoba Slovenije ob prvi zmagi pod vodstvom Cesarja - 24ur.com",
-          "Njiva v Stožicah: \"Igrišče je sramotno. Kolikor vem, je novo …\" - Žurnal24"
+          "Njiva v Stožicah: \"Igrišče je sramotno. Kolikor vem, je novo …\" - Žurnal24",
+          "Slovenija na sramotni zelenici Stožic v drugem polčasu strla Makedonce - Šport TV"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-02T13:23:47+02:00",
+      "last_learning_run": "2026-10-02T13:39:49+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -237,12 +237,12 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 72930,
-          "last_seen": "2026-10-02T13:23:47+02:00",
-          "last_title": "Kajzer in Janša diplomate nagovorila za zaprtimi vrati - 24ur.com",
+          "seen": 72960,
+          "last_seen": "2026-10-02T13:39:49+02:00",
+          "last_title": "Novi v politiki: Volt Slovenija gre na lokalne volitve tudi na Ptuju - Svet24.si",
           "last_provider": "",
-          "published": 106582,
-          "last_output_id": "bo-trenutno-najbolj-priljubljen-politik-kandidiral-za-predsednika-republike-fd63474f"
+          "published": 106655,
+          "last_output_id": "sprejeta-krajinska-politika-slovenije-39b660cc"
         },
         "hellovein.com": {
           "score": 1.47,
@@ -290,7 +290,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-02T13:23:57+02:00",
+      "last_learning_run": "2026-10-02T13:40:00+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -324,96 +324,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 72930,
-          "last_seen": "2026-10-02T13:23:57+02:00",
+          "seen": 72960,
+          "last_seen": "2026-10-02T13:40:00+02:00",
           "last_title": "Olimpijski komite Slovenije - Olimpijski Komite Slovenije",
           "last_provider": "",
-          "published": 123373,
+          "published": 123433,
           "last_output_id": "jansa-na-newsmaxu-slovenija-in-zda-imata-poseben-odnos-razkril-tudi-kaj-mu-je-obljubil-tru-a1bdde5d"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 2435,
+          "published": 2436,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 2435,
+          "published": 2436,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 2458,
+          "published": 2459,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 2360,
+          "published": 2361,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 2424,
+          "published": 2425,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 2360,
+          "published": 2361,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 2360,
+          "published": 2361,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 2424,
+          "published": 2425,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 9832,
+          "published": 9836,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 2458,
+          "published": 2459,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 2435,
+          "published": 2436,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 4784,
+          "published": 4786,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 2392,
+          "published": 2393,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 4848,
+          "published": 4850,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 2458,
+          "published": 2459,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 2360,
+          "published": 2361,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 4784,
+          "published": 4786,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
@@ -442,6 +442,12 @@
     }
   },
   "recent_articles": [
+    {
+      "id": "sprejeta-krajinska-politika-slovenije-39b660cc",
+      "title": "Sprejeta Krajinska politika Slovenije",
+      "category": "Politika",
+      "createdAt": "2026-10-02T13:38:58+02:00"
+    },
     {
       "id": "giro-bi-se-lahko-zacel-v-trstu-kolesarji-pa-bi-vozili-tudi-po-sloveniji-fa41f4b4",
       "title": "Giro bi se lahko začel v Trstu, kolesarji pa bi vozili tudi po Sloveniji",
@@ -507,12 +513,6 @@
       "title": "Arboretum Volčji Potok: An Easy Nature Day Trip from Ljubljana",
       "category": "Vodniki",
       "createdAt": "2026-09-29T08:58:45+02:00"
-    },
-    {
-      "id": "pogacar-zeli-nastopiti-na-evropskem-prvenstvu-zdravnik-je-dal-zeleno-luc-c47c285b",
-      "title": "Pogačar želi nastopiti na evropskem prvenstvu, zdravnik je dal zeleno luč",
-      "category": "Šport",
-      "createdAt": "2026-09-29T08:19:40+02:00"
     }
   ],
   "recent_failures": [
