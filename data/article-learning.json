@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-02T04:24:20+02:00",
-  "loop_count": 2383,
+  "updated_at": "2026-10-02T04:38:42+02:00",
+  "loop_count": 2384,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-02T04:24:01+02:00",
+      "last_learning_run": "2026-10-02T04:38:21+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -51,11 +51,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 70710,
-          "last_seen": "2026-10-02T04:24:01+02:00",
-          "last_title": "\"Čakata nas najtežji tekmi, zato ostajamo trdno na tleh\" - Siol.net",
+          "seen": 70740,
+          "last_seen": "2026-10-02T04:38:21+02:00",
+          "last_title": "»Če bi skočil pol metra manj, bi bil pol metra krajši«: Se še spomnite legendarnih izjav Andreja Stareta? Ob teh se je smejala vsa Slovenija (VIDEO) - NaDlani.si",
           "last_provider": "",
-          "published": 94896,
+          "published": 94959,
           "last_output_id": "slovenski-nogometasi-po-dveh-tekmah-lige-narodov-v-dobrem-polozaju-ee8396a0"
         },
         "city-data.com": {
@@ -209,7 +209,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-02T04:24:10+02:00",
+      "last_learning_run": "2026-10-02T04:38:31+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -237,11 +237,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 70710,
-          "last_seen": "2026-10-02T04:24:10+02:00",
-          "last_title": "Simon Štrancar napovedal kandidaturo za župana Občine Hoče-Slivnice, podporo mu daje pet strank - Mariborinfo.com",
+          "seen": 70740,
+          "last_seen": "2026-10-02T04:38:31+02:00",
+          "last_title": "Pirc Musarjeva kritična do vlade, Janša: Jugoslavije ni več - 24ur.com",
           "last_provider": "",
-          "published": 101482,
+          "published": 101550,
           "last_output_id": "bo-trenutno-najbolj-priljubljen-politik-kandidiral-za-predsednika-republike-fd63474f"
         },
         "hellovein.com": {
@@ -290,7 +290,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-02T04:24:20+02:00",
+      "last_learning_run": "2026-10-02T04:38:42+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -324,96 +324,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 70710,
-          "last_seen": "2026-10-02T04:24:20+02:00",
+          "seen": 70740,
+          "last_seen": "2026-10-02T04:38:42+02:00",
           "last_title": "Anja Rakuša Brus: Pomemben argument za mojo kandidaturo je izkušnja z aktualno vlado, ki stroke ne posluša dovolj - Nova24TV",
           "last_provider": "",
-          "published": 118873,
+          "published": 118933,
           "last_output_id": "jansa-na-newsmaxu-slovenija-in-zda-imata-poseben-odnos-razkril-tudi-kaj-mu-je-obljubil-tru-a1bdde5d"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 2360,
+          "published": 2361,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 2360,
+          "published": 2361,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 2383,
+          "published": 2384,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 2285,
+          "published": 2286,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 2349,
+          "published": 2350,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 2285,
+          "published": 2286,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 2285,
+          "published": 2286,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 2349,
+          "published": 2350,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 9532,
+          "published": 9536,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 2383,
+          "published": 2384,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 2360,
+          "published": 2361,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 4634,
+          "published": 4636,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 2317,
+          "published": 2318,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 4698,
+          "published": 4700,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 2383,
+          "published": 2384,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 2285,
+          "published": 2286,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 4634,
+          "published": 4636,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
