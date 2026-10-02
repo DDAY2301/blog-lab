@@ -20,6 +20,44 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "giro-bi-se-lahko-zacel-v-trstu-kolesarji-pa-bi-vozili-tudi-po-sloveniji-fa41f4b4",
+    "title": "Giro bi se lahko začel v Trstu, kolesarji pa bi vozili tudi po Sloveniji",
+    "excerpt": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Giro bi se lahko začel v Trstu, kolesarji pa bi vozili tudi po Sloveniji«.",
+    "seoDescription": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Giro bi se lahko začel v Trstu, kolesarji pa bi vozili tudi po Sloveniji«.",
+    "content": "**Šport, 2. 10. 2026.** Giro bi se lahko začel v Trstu, kolesarji pa bi vozili tudi po Sloveniji Delo.si\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Delo.si. Objavljeno: Fri, 02 Oct 2026 04:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiigFBVV95cUxOQWNJWVJkaHR6VTJ3T01FRHhWeGZ6OWhFY2R1RU5aUHhjVlE3YmRGaF9kTUpnRWRwNS1Kam5CMG1TaXB4UmpwdlRXWkJuTzVWLWRVdmxKR2R3X0Rva3BUZ3AxYnR4cUExOExnUXZqUTJqS0Y5V1pHVGZubHN2WlhYaUQwTXhydEpsRlE?oc=5)\n\n## Dopolnitev vira 2: Siol.net\n\nSlovenija v znamenju največjega kolesarskega spektakla: poglejte, kaj se bo dogajalo Siol.net\n\n Vir: Siol.net. Objavljeno: Wed, 30 Sep 2026 04:29:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMixAFBVV95cUxQYnBxd1JJUWVZS0hGUmpPbEZ0QkNSTFJXaHp6bDhsYUFyRHdILXRGcUM3aDFrb1R4b2JzRFFWV0VNR2FSeUtIbEFGdHExQ0R3UWhhUWtyVjRmU1Bsa0ZiTnkxdEpOVGgwRmgyYVV1Ymt3ODJ6WndMX3p5RlpaSnEzaEhKVk9mZW90WHBhdldRdE9JdGVSRDlRM0lDUTZJRU9VTlBWTXpPZjNsdm1BYUNkbWswLU53YUZVVGZnSndvd2c0eGJj?oc=5)\n\n## Dopolnitev vira 3: Delo.si\n\nVelika sprememba za slovensko kolesarstvo, k nam prihaja nova klasika Delo.si\n\n Vir: Delo.si. Objavljeno: Wed, 30 Sep 2026 05:24:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMisgFBVV95cUxQRWxXRl9yS0xzSVlwZ0YzWUNlay10blVOSl9IMVNuSk1GVGU5dW9BU1N1YkgxcmZJbWwtdElXdWdyb19UQmVFX1I2UWQ5MnpJcTNzNWNBSmJWVGhyZGN2UTFCTG5HU093N3BaLXp5LUJyazJNbV9pTE9ZR1Zod1M5X1VlX3lSNS0zaE1uVE5ha2xybW5tM2Y0eGRwOWxIMUxrZkg4aWY5WnFOSDNQX011ZlRR?oc=5)\n\n## Dopolnitev vira 4: rtvslo.si\n\nNovincu Lakersov Cameronu Carru žal, da ni obiskal Slovenije rtvslo.si\n\n Vir: rtvslo.si. Objavljeno: Fri, 02 Oct 2026 04:37:52 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMisAFBVV95cUxNYmhtY2ptZzllMXIzUmMtLTRpb1E5a0I5SHVjVmVBNk10RHZVSWs1cE51b0dQZkwybjl3cEc4SldTTWVuWkZ0MHdBb1U4ZW0tMXRjSzZPdjExSU5rajVUZkdNWkNRSkdMY3J4TUJyRUxid0ZkZFg5ZWdwVlljcjBsamNkcXo4cWZxZUhCWFo1ZXFuZFB5VEEtSDBkY29Fd05XZllqVFRiYUlFRGtqbEEtaA?oc=5)\n\n## Dopolnitev vira 5: rtvslo.si\n\nDanes se v Sloveniji začela evropsko prvenstvo v kolesarstvu rtvslo.si\n\n Vir: rtvslo.si. Objavljeno: Fri, 02 Oct 2026 05:26:15 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMi1wFBVV95cUxQNGQyOTlDWHNLMUxzZHdHSUZOYTdMaVVEaEllWi1OSjk5NFJGYjZUeDJzZU5TUHB0cXRLQktESmFqZ1RtWHJxLVlYOHJIZUM0bjAwUG1HZFBBcXVWa3RtM2hMa1VzSi1EQlRGSm5mOVI1YzNudTdDbFpQeGEtRlF6TFJ4aThfbHZBc2ZaZ3M3Q213OW4zZWp0RUtFMUVSNWVuSVpvWW9vVk92amdDTWFncEZKVXE5NnVSaDFoVGVnTlR1RnQtbkZ0eDV1LU5Gczg1YUFPTHU0NA?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Šport",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Delo.si — Giro bi se lahko začel v Trstu, kolesarji pa bi vozili tudi po Sloveniji - Delo.si",
+        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOQWNJWVJkaHR6VTJ3T01FRHhWeGZ6OWhFY2R1RU5aUHhjVlE3YmRGaF9kTUpnRWRwNS1Kam5CMG1TaXB4UmpwdlRXWkJuTzVWLWRVdmxKR2R3X0Rva3BUZ3AxYnR4cUExOExnUXZqUTJqS0Y5V1pHVGZubHN2WlhYaUQwTXhydEpsRlE?oc=5"
+      },
+      {
+        "label": "Siol.net — Slovenija v znamenju največjega kolesarskega spektakla: poglejte, kaj se bo dogajalo - Siol.net",
+        "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQYnBxd1JJUWVZS0hGUmpPbEZ0QkNSTFJXaHp6bDhsYUFyRHdILXRGcUM3aDFrb1R4b2JzRFFWV0VNR2FSeUtIbEFGdHExQ0R3UWhhUWtyVjRmU1Bsa0ZiTnkxdEpOVGgwRmgyYVV1Ymt3ODJ6WndMX3p5RlpaSnEzaEhKVk9mZW90WHBhdldRdE9JdGVSRDlRM0lDUTZJRU9VTlBWTXpPZjNsdm1BYUNkbWswLU53YUZVVGZnSndvd2c0eGJj?oc=5"
+      },
+      {
+        "label": "Delo.si — Velika sprememba za slovensko kolesarstvo, k nam prihaja nova klasika - Delo.si",
+        "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQRWxXRl9yS0xzSVlwZ0YzWUNlay10blVOSl9IMVNuSk1GVGU5dW9BU1N1YkgxcmZJbWwtdElXdWdyb19UQmVFX1I2UWQ5MnpJcTNzNWNBSmJWVGhyZGN2UTFCTG5HU093N3BaLXp5LUJyazJNbV9pTE9ZR1Zod1M5X1VlX3lSNS0zaE1uVE5ha2xybW5tM2Y0eGRwOWxIMUxrZkg4aWY5WnFOSDNQX011ZlRR?oc=5"
+      },
+      {
+        "label": "rtvslo.si — Novincu Lakersov Cameronu Carru žal, da ni obiskal Slovenije - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNYmhtY2ptZzllMXIzUmMtLTRpb1E5a0I5SHVjVmVBNk10RHZVSWs1cE51b0dQZkwybjl3cEc4SldTTWVuWkZ0MHdBb1U4ZW0tMXRjSzZPdjExSU5rajVUZkdNWkNRSkdMY3J4TUJyRUxid0ZkZFg5ZWdwVlljcjBsamNkcXo4cWZxZUhCWFo1ZXFuZFB5VEEtSDBkY29Fd05XZllqVFRiYUlFRGtqbEEtaA?oc=5"
+      },
+      {
+        "label": "rtvslo.si — Danes se v Sloveniji začela evropsko prvenstvo v kolesarstvu - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQNGQyOTlDWHNLMUxzZHdHSUZOYTdMaVVEaEllWi1OSjk5NFJGYjZUeDJzZU5TUHB0cXRLQktESmFqZ1RtWHJxLVlYOHJIZUM0bjAwUG1HZFBBcXVWa3RtM2hMa1VzSi1EQlRGSm5mOVI1YzNudTdDbFpQeGEtRlF6TFJ4aThfbHZBc2ZaZ3M3Q213OW4zZWp0RUtFMUVSNWVuSVpvWW9vVk92amdDTWFncEZKVXE5NnVSaDFoVGVnTlR1RnQtbkZ0eDV1LU5Gczg1YUFPTHU0NA?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-02T08:23:54+02:00",
+    "updatedAt": "2026-10-02T08:23:54+02:00"
+  },
+
+  {
     "id": "idrija-mercury-heritage-day-trip",
     "title": "Idrija Mercury Heritage: A UNESCO Day Trip from Ljubljana",
     "excerpt": "Walk through five centuries of mining history in Idrija, separate the tub-maker legend from documented history, and plan a practical UNESCO heritage day trip.",
