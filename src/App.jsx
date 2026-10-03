@@ -20,6 +20,36 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "po-kritikah-opozicije-glede-skoka-evropsko-javno-tozilstvo-sporoca-nismo-identificirali-no-4fdbf59e",
+    "title": "Po kritikah opozicije glede Skoka Evropsko javno tožilstvo sporoča: “Nismo identificirali nobenih posebnih…",
+    "excerpt": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Po kritikah opozicije glede Skoka Evropsko javno tožilstvo sporoča: “Nismo identificirali nobenih posebnih…«.",
+    "seoDescription": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Po kritikah opozicije glede Skoka Evropsko javno tožilstvo sporoča: “Nismo id",
+    "content": "**Politika, 3. 10. 2026.** Po kritikah opozicije glede Skoka Evropsko javno tožilstvo sporoča: “Nismo identificirali nobenih posebnih pomislekov” nova24tv.si\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nPri političnih temah Blog Lab ne podpira kandidatov, strank ali političnih odločitev; izjave in ocene so predstavljene kot stališča njihovih avtorjev ali virov, ne kot uredniška presoja.\n\nVir: nova24tv.si. Objavljeno: Fri, 02 Oct 2026 17:36:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMi0gFBVV95cUxQbTdvYXRWTjFrWWxNOHIzQVBOeHRDQUg4TnJSV28zYlZQejIzOGtfcVRrUjNaVGRmR0h5a0Z0S043Z2J2NEh2NmUzdXVaV2dRQTNESy1KUTM0TEdGSk5zQ21WQXdkTGozcUMta0w5WjdMSldmSDNVOUhtRk9BOUZUaENSYWliQi1OZzhIZXVYWjRBTmw2cmcwenRFWVFMbl9HdlhpbFduRVN0cmxmWG9JR2hpR0djOFVFMXFNZk5FRFpGVXpCQ2tyRWFFYUFyTFJpZkE?oc=5)\n\n## Dopolnitev vira 2: 24ur.com\n\nOpozicija vladi očita poskuse podrejanja neodvisnih medijev 24ur.com\n\n Vir: 24ur.com. Objavljeno: Wed, 30 Sep 2026 10:40:36 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMioAFBVV95cUxPenRwV1ZlbDc5MHZuRS1kZjM4NkVEb3NJUnZPSGJCMkFBVmlMWks1dVBPc2NjYjNIcWpCZm52UHlyUVNLU3RrTUg3MG9kalpiS1NLdGlRWFJYeXFSYkZJeXN4c3l4U2I4T2ZscXYyc0NQWWY5azRzTnFLVWtJNTVRek9ITUxESktkUlB0WG1BeUVJV3VUVDN1SGlwRk1QdWVZ?oc=5)\n\n## Dopolnitev vira 3: nova24tv.si\n\nJanša: “Pogasimo sovraštvo. 4 X ZA” nova24tv.si\n\n Vir: nova24tv.si. Objavljeno: Fri, 02 Oct 2026 18:00:08 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiYkFVX3lxTE9jMWVIdnV5MFl2cFV5b0RZeUJYN3l0Y2RLbm9kV0U3angwM1Z1aWtZMWpaVURGMWl3VS1COUNic2dzUHdGS1N6dV9WWjhBTTB4dkotajBYZWlPQm1UanNLcS13?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Politika",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "nova24tv.si — Po kritikah opozicije glede Skoka Evropsko javno tožilstvo sporoča: “Nismo identificirali nobenih posebnih pomislekov”…",
+        "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQbTdvYXRWTjFrWWxNOHIzQVBOeHRDQUg4TnJSV28zYlZQejIzOGtfcVRrUjNaVGRmR0h5a0Z0S043Z2J2NEh2NmUzdXVaV2dRQTNESy1KUTM0TEdGSk5zQ21WQXdkTGozcUMta0w5WjdMSldmSDNVOUhtRk9BOUZUaENSYWliQi1OZzhIZXVYWjRBTmw2cmcwenRFWVFMbl9HdlhpbFduRVN0cmxmWG9JR2hpR0djOFVFMXFNZk5FRFpGVXpCQ2tyRWFFYUFyTFJpZkE?oc=5"
+      },
+      {
+        "label": "24ur.com — Opozicija vladi očita poskuse podrejanja neodvisnih medijev - 24ur.com",
+        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPenRwV1ZlbDc5MHZuRS1kZjM4NkVEb3NJUnZPSGJCMkFBVmlMWks1dVBPc2NjYjNIcWpCZm52UHlyUVNLU3RrTUg3MG9kalpiS1NLdGlRWFJYeXFSYkZJeXN4c3l4U2I4T2ZscXYyc0NQWWY5azRzTnFLVWtJNTVRek9ITUxESktkUlB0WG1BeUVJV3VUVDN1SGlwRk1QdWVZ?oc=5"
+      },
+      {
+        "label": "nova24tv.si — Janša: “Pogasimo sovraštvo. 4 X ZA” - nova24tv.si",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9jMWVIdnV5MFl2cFV5b0RZeUJYN3l0Y2RLbm9kV0U3angwM1Z1aWtZMWpaVURGMWl3VS1COUNic2dzUHdGS1N6dV9WWjhBTTB4dkotajBYZWlPQm1UanNLcS13?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-03T13:40:41+02:00",
+    "updatedAt": "2026-10-03T13:40:41+02:00"
+  },
+
+  {
     "id": "golob-ne-predstavljam-si-da-bi-kdo-zelel-ziveti-v-drzavi-v-kateri-bi-politika-imela-poobla-13839ad8",
     "title": "Golob: Ne predstavljam si, da bi kdo želel živeti v državi, v kateri bi politika imela pooblastila policije",
     "excerpt": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Golob: Ne predstavljam si, da bi kdo želel živeti v državi, v kateri bi politika imela pooblastila policije«.",

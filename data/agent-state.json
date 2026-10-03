@@ -1,14 +1,14 @@
 {
-  "last_success": "2026-10-03T13:38:45+02:00",
+  "last_success": "2026-10-03T13:40:41+02:00",
   "last_failure": "2026-09-21T20:56:52+02:00",
   "consecutive_failures": 0,
   "posts_date": "2026-10-03",
-  "posts_today": 2,
-  "last_output": "golob-ne-predstavljam-si-da-bi-kdo-zelel-ziveti-v-drzavi-v-kateri-bi-politika-imela-poobla-13839ad8",
+  "posts_today": 3,
+  "last_output": "po-kritikah-opozicije-glede-skoka-evropsko-javno-tozilstvo-sporoca-nismo-identificirali-no-4fdbf59e",
   "last_error": null,
   "agent_version": "2.7.0",
   "current_category": "politika",
-  "scheduled_posts_today": 2,
+  "scheduled_posts_today": 3,
   "manual_posts_today": 0,
   "writer_mode": "local_evidence_ai",
   "scheduled_slots_done": [
