@@ -1,5 +1,5 @@
 // Review draft only. Not imported by the production application.
-// Rolling review draft. Sources rechecked on 2026-10-02 at 07:04 Europe/Ljubljana.
+// Rolling review draft. Sources rechecked on 2026-10-03 at 07:04 Europe/Ljubljana.
 // Production remains unchanged until the calendar model and stable views are implemented.
 // Unknown values deliberately remain null.
 export const draftEvents = [
@@ -32,7 +32,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-30T07:01:22+02:00"
+    "lastCheckedAt": "2026-10-03T07:04:12+02:00"
   },
   {
     "eventId": "national-gallery-tone-kralj-2026",
@@ -63,7 +63,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-30T07:01:22+02:00"
+    "lastCheckedAt": "2026-10-03T07:04:12+02:00"
   },
   {
     "eventId": "national-gallery-fragments-past-2026",
@@ -125,7 +125,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-30T07:01:22+02:00"
+    "lastCheckedAt": "2026-10-03T07:04:12+02:00"
   },
   {
     "eventId": "castle-reading-corner-2026",
@@ -187,7 +187,7 @@ export const draftEvents = [
     "accessibility": "Tactile exhibition; confirm individual access needs with the gallery",
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
+    "lastCheckedAt": "2026-10-03T07:04:12+02:00"
   },
   {
     "eventId": "unicum-2026-ljubljana",
@@ -218,7 +218,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
+    "lastCheckedAt": "2026-10-03T07:04:12+02:00"
   },
   {
     "eventId": "corn-labyrinth-ljubljana-2026",
@@ -249,7 +249,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
+    "lastCheckedAt": "2026-10-03T07:04:12+02:00"
   },
   {
     "eventId": "revelations-national-gallery-2026",
@@ -280,7 +280,7 @@ export const draftEvents = [
     "accessibility": "The gallery publishes a dedicated accessibility section; confirm individual requirements directly",
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
+    "lastCheckedAt": "2026-10-03T07:04:12+02:00"
   },
   {
     "eventId": "kozmos-kosovel-cankarjev-dom-2026",
@@ -311,7 +311,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
+    "lastCheckedAt": "2026-10-03T07:04:12+02:00"
   },
   {
     "eventId": "opera-orchestra-academy-soloists-2026-09-17",
@@ -341,7 +341,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "expired",
+    "status": "completed",
     "lastCheckedAt": "2026-09-21T07:00:00+02:00"
   },
   {
@@ -403,7 +403,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "expired",
+    "status": "completed",
     "lastCheckedAt": "2026-09-21T07:00:00+02:00"
   },
   {
@@ -434,7 +434,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "expired",
+    "status": "completed",
     "lastCheckedAt": "2026-09-21T07:00:00+02:00"
   },
   {
@@ -467,7 +467,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "expired",
+    "status": "completed",
     "lastCheckedAt": "2026-09-21T07:00:00+02:00"
   },
   {
@@ -498,7 +498,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "expired",
+    "status": "completed",
     "lastCheckedAt": "2026-09-21T07:00:00+02:00"
   },
   {
@@ -560,7 +560,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "expired",
+    "status": "completed",
     "lastCheckedAt": "2026-09-21T07:00:00+02:00"
   },
   {
@@ -591,7 +591,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "expired",
+    "status": "completed",
     "lastCheckedAt": "2026-09-21T07:00:00+02:00"
   },
   {
@@ -746,7 +746,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "expired",
+    "status": "completed",
     "lastCheckedAt": "2026-09-23T07:00:00+02:00"
   },
   {
@@ -777,7 +777,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "expired",
+    "status": "completed",
     "lastCheckedAt": "2026-09-23T07:00:00+02:00"
   },
   {
@@ -808,7 +808,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "expired",
+    "status": "completed",
     "lastCheckedAt": "2026-09-23T07:00:00+02:00"
   },
   {
@@ -840,7 +840,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-30T07:01:22+02:00"
+    "lastCheckedAt": "2026-10-03T07:04:12+02:00"
   },
   {
     "eventId": "air-raid-cankarjev-dom-2026-09-24",
@@ -870,7 +870,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "expired",
+    "status": "completed",
     "lastCheckedAt": "2026-09-24T07:00:00+02:00"
   },
   {
@@ -901,7 +901,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "expired",
+    "status": "completed",
     "lastCheckedAt": "2026-09-24T07:00:00+02:00"
   },
   {
@@ -932,7 +932,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": "Cankarjev dom publishes an accessibility statement; confirm individual requirements directly",
     "indoorOutdoor": "indoor",
-    "status": "expired",
+    "status": "completed",
     "lastCheckedAt": "2026-09-24T07:00:00+02:00"
   },
   {
@@ -994,7 +994,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "expired",
+    "status": "completed",
     "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
@@ -1025,7 +1025,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "expired",
+    "status": "completed",
     "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
@@ -1056,7 +1056,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "expired",
+    "status": "completed",
     "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
@@ -1154,7 +1154,7 @@ export const draftEvents = [
     "familyFriendly": false,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "expired",
+    "status": "completed",
     "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
@@ -1187,7 +1187,7 @@ export const draftEvents = [
     "familyFriendly": false,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "expired",
+    "status": "completed",
     "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
@@ -1280,7 +1280,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "expired",
+    "status": "completed",
     "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
@@ -1311,7 +1311,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "expired",
+    "status": "completed",
     "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
@@ -1342,7 +1342,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "expired",
+    "status": "completed",
     "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
@@ -1869,13 +1869,13 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "confirmed",
+    "status": "completed",
     "lastCheckedAt": "2026-10-02T07:04:03+02:00"
   },
   {
     "eventId": "uec-road-european-championships-2026",
     "title": "UEC Road European Championships 2026",
-    "summary": "More than 800 riders from over 50 countries are due to compete in 14 races across Ljubljana and Central Slovenia from 2 to 7 October. Spectating is free; Ljubljana road races start at Congress Square at 13:30 on 2 and 3 October and 12:30 on 4 October.",
+    "summary": "The official championship programme confirms Ljubljana's ceremonial start for the Women's Elite road race at 13:00 on 3 October, followed by the race start at 13:30; the Men's Elite ceremonial start is at 12:00 on 4 October, with the race at 12:30. Spectating is free, but rolling road closures apply 13:00–15:30 on Saturday and 12:00–14:30 on Sunday.",
     "category": "sport",
     "startAt": "2026-10-02T13:30:00+02:00",
     "endAt": "2026-10-07T23:59:00+02:00",
@@ -1893,15 +1893,15 @@ export const draftEvents = [
       "free": true
     },
     "ticketUrl": null,
-    "officialUrl": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/uec-road-european-championships",
-    "sourceName": "Ljubljana Tourism",
+    "officialUrl": "https://roadslovenia2026.si/en/news/events-alongside-the-european-championships/",
+    "sourceName": "UEC Road European Championships 2026",
     "languages": [],
     "touristFriendly": true,
     "familyFriendly": true,
     "accessibility": "Outdoor roadside viewing; individual accessible viewing arrangements not stated",
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-10-02T07:04:03+02:00"
+    "lastCheckedAt": "2026-10-03T07:04:12+02:00"
   },
   {
     "eventId": "ex-mgl-2026-10-02",
@@ -1931,7 +1931,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "confirmed",
+    "status": "completed",
     "lastCheckedAt": "2026-10-02T07:04:03+02:00"
   },
   {
@@ -1962,7 +1962,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "confirmed",
+    "status": "completed",
     "lastCheckedAt": "2026-10-02T07:04:03+02:00"
   },
   {
@@ -1993,13 +1993,13 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "confirmed",
+    "status": "completed",
     "lastCheckedAt": "2026-10-02T07:04:03+02:00"
   },
   {
     "eventId": "artish-2026-10-03",
     "title": "ARTish",
-    "summary": "ARTish brings Slovenian artists and independent makers to Gallusovo nabrežje from 10:00 to 17:00. Entry is free; the riverside market is easy for visitors to browse, while accessibility depends on the outdoor public-space conditions.",
+    "summary": "ARTish brings Slovenian artists and independent makers to Gallusovo nabrežje from 10:00 to 17:00. Entry is free; this outdoor riverside market is scheduled for non-rainy Saturdays.",
     "category": "market",
     "startAt": "2026-10-03T10:00:00+02:00",
     "endAt": "2026-10-03T17:00:00+02:00",
@@ -2025,7 +2025,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-10-02T07:04:03+02:00"
+    "lastCheckedAt": "2026-10-03T07:04:12+02:00"
   },
   {
     "timezone": "Europe/Ljubljana",
@@ -2056,12 +2056,12 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-10-02T07:04:03+02:00"
+    "lastCheckedAt": "2026-10-03T07:04:12+02:00"
   },
   {
     "eventId": "salome-mgl-2026-10-03",
     "title": "Salome",
-    "summary": "Salome returns to MGL's Main Stage on Saturday 3 October at 19:30, with tickets currently listed. Confirm the performance language, surtitles, price and accessibility before booking.",
+    "summary": "Salome is on MGL's Main Stage on Saturday 3 October at 19:30; the performance lasts 1 hour 30 minutes without an interval. Confirm language support, ticket price and accessibility before booking.",
     "category": "theatre",
     "startAt": "2026-10-03T19:30:00+02:00",
     "endAt": null,
@@ -2087,12 +2087,12 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-10-02T07:04:03+02:00"
+    "lastCheckedAt": "2026-10-03T07:04:12+02:00"
   },
   {
     "eventId": "man-overboard-mgl-2026-10-03",
     "title": "Man Overboard",
-    "summary": "MGL schedules this documentary solo performance on the Small Stage for Saturday 3 October at 20:00. The official schedule marks it sold out; language and accessibility remain unconfirmed.",
+    "summary": "MGL schedules this two-hour documentary solo performance without an interval on the Small Stage at 20:00. The official schedule marks it sold out; language and accessibility remain unconfirmed.",
     "category": "theatre",
     "startAt": "2026-10-03T20:00:00+02:00",
     "endAt": null,
@@ -2118,7 +2118,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "sold_out",
-    "lastCheckedAt": "2026-10-02T07:04:03+02:00"
+    "lastCheckedAt": "2026-10-03T07:04:12+02:00"
   },
   {
     "timezone": "Europe/Ljubljana",
@@ -2149,12 +2149,12 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-10-02T07:04:03+02:00"
+    "lastCheckedAt": "2026-10-03T07:04:12+02:00"
   },
   {
     "eventId": "sunday-flea-market-2026-10-04",
     "title": "Sunday Flea Market",
-    "summary": "Ljubljana's antique and vintage market returns to Breg from 08:00 to 15:00 on Sunday 4 October. Entry is free; outdoor sellers may finish early in poor weather.",
+    "summary": "Ljubljana's antique and vintage market returns to Breg from 08:00 to 15:00 on Sunday 4 October. Entry is free; exhibitors may leave early in rain or bad weather.",
     "category": "market",
     "startAt": "2026-10-04T08:00:00+02:00",
     "endAt": "2026-10-04T15:00:00+02:00",
@@ -2180,7 +2180,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-30T07:01:22+02:00"
+    "lastCheckedAt": "2026-10-03T07:04:12+02:00"
   },
   {
     "timezone": "Europe/Ljubljana",
@@ -2211,7 +2211,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-30T07:01:22+02:00"
+    "lastCheckedAt": "2026-10-03T07:04:12+02:00"
   },
   {
     "eventId": "wind-orchestra-promenade-2026-10-04",
@@ -2242,7 +2242,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-30T07:01:22+02:00"
+    "lastCheckedAt": "2026-10-03T07:04:12+02:00"
   },
   {
     "eventId": "house-bolero-cd-2026-10-04",
@@ -2273,7 +2273,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-10-02T07:04:03+02:00"
+    "lastCheckedAt": "2026-10-03T07:04:12+02:00"
   },
   {
     "eventId": "zenske-brez-filtra-2-cd-2026-10-05",
@@ -2309,7 +2309,7 @@ export const draftEvents = [
   {
     "eventId": "salome-mgl-2026-10-06",
     "title": "Salome",
-    "summary": "MGL lists Salome on the Main Stage on Tuesday 6 October at 19:30. Tickets are currently offered; confirm language support, price and accessibility in the live sales flow.",
+    "summary": "MGL lists Salome on the Main Stage on Tuesday 6 October at 19:30, but the official page currently marks this performance sold out. It lasts 1 hour 30 minutes without an interval; language and accessibility should be confirmed with the venue.",
     "category": "theatre",
     "startAt": "2026-10-06T19:30:00+02:00",
     "endAt": null,
@@ -2323,7 +2323,7 @@ export const draftEvents = [
     "price": {
       "amount": null,
       "currency": "EUR",
-      "label": null,
+      "label": "Sold out",
       "free": false
     },
     "ticketUrl": "https://www.mgl.si/en/schedule/",
@@ -2334,8 +2334,8 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "confirmed",
-    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
+    "status": "sold_out",
+    "lastCheckedAt": "2026-10-03T07:04:12+02:00"
   },
   {
     "eventId": "vladimir-kostadinovic-iris-cd-2026-10-06",
