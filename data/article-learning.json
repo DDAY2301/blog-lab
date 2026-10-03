@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-03T08:54:18+02:00",
-  "loop_count": 2637,
+  "updated_at": "2026-10-03T09:09:09+02:00",
+  "loop_count": 2638,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-03T08:53:59+02:00",
+      "last_learning_run": "2026-10-03T09:08:47+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -51,11 +51,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 78300,
-          "last_seen": "2026-10-03T08:53:59+02:00",
-          "last_title": "V Ljudskem vrtu v obračunu Slovenije in Nizozemske šest golov - Ekipa",
+          "seen": 78330,
+          "last_seen": "2026-10-03T09:08:47+02:00",
+          "last_title": "Slovenija izpolnila nalogo, pogled na lestvico lepši kot na zelenico - Delo.si",
           "last_provider": "",
-          "published": 112036,
+          "published": 112107,
           "last_output_id": "foto-na-dnu-skupine-in-brez-eura-mladi-slovenci-pod-budnim-ocesom-milanica-in-zahovica-klo-619a3e6d"
         },
         "city-data.com": {
@@ -202,14 +202,14 @@
       "current_source_count": 30,
       "example_titles": {
         "news.google.com": [
-          "Selektor razkril, kako lahko Slovenija pokvari načrte Švici - Siol.net",
-          "Dobra podoba Slovenije ob prvi zmagi pod vodstvom Cesarja - 24ur.com",
-          "Velika sprememba za slovensko kolesarstvo, k nam prihaja nova klasika - Delo.si"
+          "Cesar pred tekmo s Švico: \"Če se želimo meriti z njimi, moramo biti na najvišji ravni!\" - rtvslo.si",
+          "Švica bo pokazala, kam sodi Cesarjeva Slovenija - Dnevnik",
+          "NET SPORT NAVDUŠEVAL MLADE NA OLIMPIJSKEM FESTIVALU - Tenis Slovenija"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-03T08:54:08+02:00",
+      "last_learning_run": "2026-10-03T09:08:58+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -237,11 +237,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 78300,
-          "last_seen": "2026-10-03T08:54:08+02:00",
-          "last_title": "Okoljski ekonomist Sonnenschein: Politika ministra za energetiko ni v interesu javnosti - Dnevnik",
+          "seen": 78330,
+          "last_seen": "2026-10-03T09:08:58+02:00",
+          "last_title": "(INTERVJU) V novi reviji Demokracija: Minister Tone Kajzer: Slovenije ne prodajamo nikomur. Slovenija je suverena država in slovenska zunanja politika mora služiti predvsem slovens",
           "last_provider": "",
-          "published": 119649,
+          "published": 119722,
           "last_output_id": "sprejeta-krajinska-politika-slovenije-39b660cc"
         },
         "hellovein.com": {
@@ -283,14 +283,14 @@
       "current_source_count": 30,
       "example_titles": {
         "news.google.com": [
+          "Odnosi z Izraelom: diplomacija ne sme biti izgovor za normalizacijo zločinov - Dnevnik",
           "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
-          "Na Radiu Ognjišče zadnje predvolilno soočenje: v ospredju prisluhi, zdravstvo, zunanja politika in sprava - Radio Ognjišče",
           "Podnebna in naravovarstvena politika morata biti bolj povezani - Zelena Slovenija"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-03T08:54:18+02:00",
+      "last_learning_run": "2026-10-03T09:09:09+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -324,96 +324,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 78300,
-          "last_seen": "2026-10-03T08:54:18+02:00",
+          "seen": 78330,
+          "last_seen": "2026-10-03T09:09:09+02:00",
           "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 134233,
+          "published": 134294,
           "last_output_id": "subvencij-za-elektricna-vozila-zmanjkuje-bo-evropa-se-naprej-financirala-konkurenco-ki-ogr-13457c93"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 2614,
+          "published": 2615,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 2614,
+          "published": 2615,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 2637,
+          "published": 2638,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 2539,
+          "published": 2540,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 2603,
+          "published": 2604,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 2539,
+          "published": 2540,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 2539,
+          "published": 2540,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 2603,
+          "published": 2604,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 10548,
+          "published": 10552,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 2637,
+          "published": 2638,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 2614,
+          "published": 2615,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 5142,
+          "published": 5144,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 2571,
+          "published": 2572,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 5206,
+          "published": 5208,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 2637,
+          "published": 2638,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 2539,
+          "published": 2540,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 5142,
+          "published": 5144,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
@@ -442,6 +442,12 @@
     }
   },
   "recent_articles": [
+    {
+      "id": "polhograjska-grmada-hike-from-ljubljana",
+      "title": "Polhograjska Grmada: A Car-Free Hiking Guide from Ljubljana",
+      "category": "Vodniki",
+      "createdAt": "2026-10-03T08:57:08+02:00"
+    },
     {
       "id": "foto-na-dnu-skupine-in-brez-eura-mladi-slovenci-pod-budnim-ocesom-milanica-in-zahovica-klo-619a3e6d",
       "title": "(FOTO) Na dnu skupine in brez Eura: Mladi Slovenci pod budnim očesom Milaniča in Zahovića klonili proti…",
@@ -507,12 +513,6 @@
       "title": "Slovenija premagala Severno Makedonijo v ligi narodov (FOTO)",
       "category": "Šport",
       "createdAt": "2026-09-30T08:24:07+02:00"
-    },
-    {
-      "id": "jansa-na-newsmaxu-slovenija-in-zda-imata-poseben-odnos-razkril-tudi-kaj-mu-je-obljubil-tru-a1bdde5d",
-      "title": "Janša na Newsmaxu: \\",
-      "category": "Aktualno",
-      "createdAt": "2026-09-29T19:54:41+02:00"
     }
   ],
   "recent_failures": [
