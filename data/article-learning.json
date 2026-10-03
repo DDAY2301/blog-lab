@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-04T00:24:23+02:00",
-  "loop_count": 2786,
+  "updated_at": "2026-10-04T00:29:46+02:00",
+  "loop_count": 2787,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-04T00:24:01+02:00",
+      "last_learning_run": "2026-10-04T00:29:26+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -51,11 +51,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 82710,
-          "last_seen": "2026-10-04T00:24:01+02:00",
-          "last_title": "NET SPORT NAVDUŠEVAL MLADE NA OLIMPIJSKEM FESTIVALU - tenis-slovenija.si",
+          "seen": 82740,
+          "last_seen": "2026-10-04T00:29:26+02:00",
+          "last_title": "Švica bo pokazala, kam sodi Cesarjeva Slovenija - Dnevnik",
           "last_provider": "",
-          "published": 122615,
+          "published": 122686,
           "last_output_id": "foto-na-dnu-skupine-in-brez-eura-mladi-slovenci-pod-budnim-ocesom-milanica-in-zahovica-klo-619a3e6d"
         },
         "city-data.com": {
@@ -210,13 +210,13 @@
       "example_titles": {
         "news.google.com": [
           "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
-          "Slovenija lovi zaostanek proti Švici (2:1)* - 24ur.com",
+          "Slovenija drago prodala svojo kožo proti favorizirani Švici - 24ur.com",
           "Slovenija ekspresno povedla, a vseeno v Švici ostala praznih rok - rtvslo.si"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-04T00:24:12+02:00",
+      "last_learning_run": "2026-10-04T00:29:36+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -244,11 +244,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 82710,
-          "last_seen": "2026-10-04T00:24:12+02:00",
-          "last_title": "Odnosi z Izraelom: diplomacija ne sme biti izgovor za normalizacijo zločinov - Dnevnik",
+          "seen": 82740,
+          "last_seen": "2026-10-04T00:29:36+02:00",
+          "last_title": "Ozadje novega kurza slovenske zunanje politike - Reporter",
           "last_provider": "",
-          "published": 131290,
+          "published": 131370,
           "last_output_id": "po-kritikah-opozicije-glede-skoka-evropsko-javno-tozilstvo-sporoca-nismo-identificirali-no-4fdbf59e"
         },
         "hellovein.com": {
@@ -290,14 +290,14 @@
       "current_source_count": 30,
       "example_titles": {
         "news.google.com": [
-          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - slovenskenovice.delo.si",
-          "Vrtovec: Burke in nikabi ne spadajo v šole, javne ustanove in javna mesta - Info360",
-          "Vrtovec: Prejšnja vlada je hotela poteptati vse, kar nas definira – kulturo, vrednote, način življenja … - Dnevnik"
+          "Odnosi z Izraelom: diplomacija ne sme biti izgovor za normalizacijo zločinov - Dnevnik",
+          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
+          "Vrtovec: Burke in nikabi ne spadajo v šole, javne ustanove in javna mesta - Info360"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-04T00:24:23+02:00",
+      "last_learning_run": "2026-10-04T00:29:46+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -331,96 +331,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 82710,
-          "last_seen": "2026-10-04T00:24:23+02:00",
-          "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
+          "seen": 82740,
+          "last_seen": "2026-10-04T00:29:46+02:00",
+          "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - novomesto.si",
           "last_provider": "",
-          "published": 143322,
+          "published": 143383,
           "last_output_id": "subvencij-za-elektricna-vozila-zmanjkuje-bo-evropa-se-naprej-financirala-konkurenco-ki-ogr-13457c93"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 2763,
+          "published": 2764,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 2763,
+          "published": 2764,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 2786,
+          "published": 2787,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 2688,
+          "published": 2689,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 2752,
+          "published": 2753,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 2688,
+          "published": 2689,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 2688,
+          "published": 2689,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 2752,
+          "published": 2753,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 11144,
+          "published": 11148,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 2786,
+          "published": 2787,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 2763,
+          "published": 2764,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 5440,
+          "published": 5442,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 2720,
+          "published": 2721,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 5504,
+          "published": 5506,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 2786,
+          "published": 2787,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 2688,
+          "published": 2689,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 5440,
+          "published": 5442,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
