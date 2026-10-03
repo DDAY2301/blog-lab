@@ -20,6 +20,36 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "foto-na-dnu-skupine-in-brez-eura-mladi-slovenci-pod-budnim-ocesom-milanica-in-zahovica-klo-619a3e6d",
+    "title": "(FOTO) Na dnu skupine in brez Eura: Mladi Slovenci pod budnim očesom Milaniča in Zahovića klonili proti…",
+    "excerpt": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »(FOTO) Na dnu skupine in brez Eura: Mladi Slovenci pod budnim očesom Milaniča in Zahovića klonili proti…«.",
+    "seoDescription": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »(FOTO) Na dnu skupine in brez Eura: Mladi Slovenci pod budnim očesom Milaniča in",
+    "content": "**Šport, 3. 10. 2026.** (FOTO) Na dnu skupine in brez Eura: Mladi Slovenci pod budnim očesom Milaniča in Zahovića klonili proti Nizozemcem Večer\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Večer. Objavljeno: Fri, 02 Oct 2026 19:01:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMihgFBVV95cUxQVUNlRGloa0xsY1BNTEY4MG1OMS1Qc3BWOHNadldxalJ0MUU1OTJwM2txNTh6a2FwM1MwMW1kQzlLUEFKV1llT1B4RHNMZENzalEzWkpXZlp3RjZkVFV4SmwzSkJqcVFvQVNvV1BlVS1JVFlicm96OHNUUVY4WXlCR1AtcGlKQQ?oc=5)\n\n## Dopolnitev vira 2: rtvslo.si\n\nMladi slovenski nogometaši kvalifikacije končali s porazom proti Nizozemski rtvslo.si\n\n Vir: rtvslo.si. Objavljeno: Fri, 02 Oct 2026 18:44:52 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiugFBVV95cUxQTkpQSlJfcHJqVHczaWNKRTUzRUFicGZpZzdQaEVSY2I1Q2hVbW91RWFnSzMwN3hoNXc5SUdXeWFFWUV0N0NCUkhnZVhmN21aYzhBS1RXUFVTN1dudlNaV1hzOXpNb0ppeGNHZ3A5WVh0VnpPbFpkdWhaS0hBVDFEZUJUdUdiWG10dGpfMEU3V3M3c3VhVXRsMnVzbFIwNUxpQ2xtd0VfWTF1WUlxaGRtT0g5S3ZlZ3hEWGc?oc=5)\n\n## Dopolnitev vira 3: sportklub.si\n\nŠvica – Slovenija v živo na SK: Slovenci napadajo vrh skupine sportklub.si\n\n Vir: sportklub.si. Objavljeno: Sat, 03 Oct 2026 06:03:35 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiigFBVV95cUxOOEctR2U5Wk82Rm9RSzlGWkxhWnRvY2luQVhJWElMQ0JDYlNrT282eVlfZ0xrekNMMUxjcXJIMTR0T3pfWXJEMmw0azhFQ0NqMzROTy1VMWd1Tm4tWlFrazFXQVItUFdpcUVrbllGUjhfSHR5ZkphLUwwOUpFaXd5Rk5jS2Y3ZnBuWUE?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Šport",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Večer — (FOTO) Na dnu skupine in brez Eura: Mladi Slovenci pod budnim očesom Milaniča in Zahovića klonili proti Nizozemcem -…",
+        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQVUNlRGloa0xsY1BNTEY4MG1OMS1Qc3BWOHNadldxalJ0MUU1OTJwM2txNTh6a2FwM1MwMW1kQzlLUEFKV1llT1B4RHNMZENzalEzWkpXZlp3RjZkVFV4SmwzSkJqcVFvQVNvV1BlVS1JVFlicm96OHNUUVY4WXlCR1AtcGlKQQ?oc=5"
+      },
+      {
+        "label": "rtvslo.si — Mladi slovenski nogometaši kvalifikacije končali s porazom proti Nizozemski - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQTkpQSlJfcHJqVHczaWNKRTUzRUFicGZpZzdQaEVSY2I1Q2hVbW91RWFnSzMwN3hoNXc5SUdXeWFFWUV0N0NCUkhnZVhmN21aYzhBS1RXUFVTN1dudlNaV1hzOXpNb0ppeGNHZ3A5WVh0VnpPbFpkdWhaS0hBVDFEZUJUdUdiWG10dGpfMEU3V3M3c3VhVXRsMnVzbFIwNUxpQ2xtd0VfWTF1WUlxaGRtT0g5S3ZlZ3hEWGc?oc=5"
+      },
+      {
+        "label": "sportklub.si — Švica – Slovenija v živo na SK: Slovenci napadajo vrh skupine - sportklub.si",
+        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOOEctR2U5Wk82Rm9RSzlGWkxhWnRvY2luQVhJWElMQ0JDYlNrT282eVlfZ0xrekNMMUxjcXJIMTR0T3pfWXJEMmw0azhFQ0NqMzROTy1VMWd1Tm4tWlFrazFXQVItUFdpcUVrbllGUjhfSHR5ZkphLUwwOUpFaXd5Rk5jS2Y3ZnBuWUE?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-03T08:24:11+02:00",
+    "updatedAt": "2026-10-03T08:24:11+02:00"
+  },
+
+  {
     "id": "subvencij-za-elektricna-vozila-zmanjkuje-bo-evropa-se-naprej-financirala-konkurenco-ki-ogr-13457c93",
     "title": "Subvencij za električna vozila zmanjkuje: bo Evropa še naprej financirala konkurenco, ki ogroža njeno…",
     "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Subvencij za električna vozila zmanjkuje: bo Evropa še naprej financirala konkurenco, ki ogroža njeno…«.",
