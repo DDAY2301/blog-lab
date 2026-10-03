@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-03T22:13:07+02:00",
-  "loop_count": 2764,
+  "updated_at": "2026-10-03T22:13:55+02:00",
+  "loop_count": 2765,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-03T22:12:46+02:00",
+      "last_learning_run": "2026-10-03T22:13:33+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -51,11 +51,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 82080,
-          "last_seen": "2026-10-03T22:12:46+02:00",
-          "last_title": "Slovenija na zahtevni gostovanji brez Verbiča in Šporarja - 24ur.com",
+          "seen": 82110,
+          "last_seen": "2026-10-03T22:13:33+02:00",
+          "last_title": "Vrhunski Pancar Slovenijo popeljal v finale - Siol.net",
           "last_provider": "",
-          "published": 121053,
+          "published": 121124,
           "last_output_id": "foto-na-dnu-skupine-in-brez-eura-mladi-slovenci-pod-budnim-ocesom-milanica-in-zahovica-klo-619a3e6d"
         },
         "city-data.com": {
@@ -209,7 +209,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-03T22:12:56+02:00",
+      "last_learning_run": "2026-10-03T22:13:44+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -237,11 +237,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 82080,
-          "last_seen": "2026-10-03T22:12:56+02:00",
+          "seen": 82110,
+          "last_seen": "2026-10-03T22:13:44+02:00",
           "last_title": "Ozadje novega kurza slovenske zunanje politike - Reporter",
           "last_provider": "",
-          "published": 129530,
+          "published": 129610,
           "last_output_id": "po-kritikah-opozicije-glede-skoka-evropsko-javno-tozilstvo-sporoca-nismo-identificirali-no-4fdbf59e"
         },
         "hellovein.com": {
@@ -290,7 +290,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-03T22:13:07+02:00",
+      "last_learning_run": "2026-10-03T22:13:55+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -324,96 +324,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 82080,
-          "last_seen": "2026-10-03T22:13:07+02:00",
-          "last_title": "Slovenija med državami, ki bi prepovedale družbena omrežja mlajšim od 16 let - Info360",
+          "seen": 82110,
+          "last_seen": "2026-10-03T22:13:55+02:00",
+          "last_title": "Joveva: Z aktualno vlado je naš ugled v Bruslju boljši - 24ur.com",
           "last_provider": "",
-          "published": 141980,
+          "published": 142041,
           "last_output_id": "subvencij-za-elektricna-vozila-zmanjkuje-bo-evropa-se-naprej-financirala-konkurenco-ki-ogr-13457c93"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 2741,
+          "published": 2742,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 2741,
+          "published": 2742,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 2764,
+          "published": 2765,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 2666,
+          "published": 2667,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 2730,
+          "published": 2731,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 2666,
+          "published": 2667,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 2666,
+          "published": 2667,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 2730,
+          "published": 2731,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 11056,
+          "published": 11060,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 2764,
+          "published": 2765,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 2741,
+          "published": 2742,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 5396,
+          "published": 5398,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 2698,
+          "published": 2699,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 5460,
+          "published": 5462,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 2764,
+          "published": 2765,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 2666,
+          "published": 2667,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 5396,
+          "published": 5398,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
@@ -436,7 +436,7 @@
         "news.google.com": [
           "(AKTUALNO) V novi številki revije Demokracija preberite: Izključujejo in zavirajo razvoj! Janša: Osamosvojitvena Slovenija ne bo nikoli več ",
           "Janša v New Yorku jasno o Ukrajini: Slovenija bo nadaljevala politično, vojaško, humanitarno in finančno pomoč - Najdi.si novice",
-          "Janša na Newsmaxu: \"Slovenija in ZDA imata poseben odnos« – razkril tudi, kaj mu je obljubil Trump!\" - e-Maribor"
+          "Pred RTV Slovenija, se obeta shod za ukinitev RTV naročnine! - e-Maribor"
         ]
       }
     }
