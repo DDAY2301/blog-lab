@@ -20,6 +20,40 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "golob-ne-predstavljam-si-da-bi-kdo-zelel-ziveti-v-drzavi-v-kateri-bi-politika-imela-poobla-13839ad8",
+    "title": "Golob: Ne predstavljam si, da bi kdo želel živeti v državi, v kateri bi politika imela pooblastila policije",
+    "excerpt": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Golob: Ne predstavljam si, da bi kdo želel živeti v državi, v kateri bi politika imela pooblastila policije«.",
+    "seoDescription": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Golob: Ne predstavljam si, da bi kdo želel živeti v državi, v kateri bi polit",
+    "content": "**Politika, 3. 10. 2026.** Golob: Ne predstavljam si, da bi kdo želel živeti v državi, v kateri bi politika imela pooblastila policije N1 Slovenija\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nPri političnih temah Blog Lab ne podpira kandidatov, strank ali političnih odločitev; izjave in ocene so predstavljene kot stališča njihovih avtorjev ali virov, ne kot uredniška presoja.\n\nVir: N1 Slovenija. Objavljeno: Fri, 19 Jun 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMi-wFBVV95cUxOanN0bmFxRVU2Y185Wnk3VFBmc0VkQnhFQUhSVnpDbW03LUlaU2RXZXEzQTEwZzhOdXE1dEtwcW1tU0JLaVlySzEtdUQyNnlNZjBadTZWNm5fOFByU2dCV2N5RElfTmdWNHpTcGMzSFRIYXVwR2hkUHU3WnpHeUNUNjIxY2tmYWlrd1pwWEdJMmtXRkY0VHp6RHhUbWxWZFJQeDVLWEZrVFc0dzlWM2dKMnVKRlQzSk5BMEVZdll2bWFVR3BLNmNOelEwTHNleWp3dDNaekx2UktJdkk5M01vbU52Wmo2SUJyN1A5dXZFV3ZFdGRXaFZlWFZaSQ?oc=5)\n\n## Dopolnitev vira 2: Večer\n\nMilan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" Večer\n\n Vir: Večer. Objavljeno: Sun, 21 Jun 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMi2AFBVV95cUxNYi1zVXRJUnFpbE5GejRlYzJVcGwyNFdQUktUYUluMzNmUWFSdFlfNUlha0RWem9UMTBId2pFWEJFOTVYXzZVVFUwS2cwTm1NTG00a3JQeUQ4OEJBbXp6ekQ5MGc2ajVQNUFMUThnWUd3RWlmMHpyQXJ1MEVBN1NWWFQ1YlFtQkVodXdGYWFiZlRDcTdqM2VteldZS3hGYXhjdkp5UVZ4TFplVmpTUEhWQW9zZHAxbXdlUElIajRGa05iOUJEa2VXbzluYjF3Y2taSTQxSndpTnI?oc=5)\n\n## Dopolnitev vira 3: Zelena Slovenija\n\nPodnebna in naravovarstvena politika morata biti bolj povezani Zelena Slovenija\n\n Vir: Zelena Slovenija. Objavljeno: Sat, 03 Oct 2026 05:27:13 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiowFBVV95cUxPSkM0d25GblBlcHRZVHBORXhBSk1fNFJIU2dzaDM3SWVxZ1ItV0ZkUUkydjZHR3dNdDlCZWRoa25KR3ROSzZYdnpSMWdMVkhrOU1NcWxmRTViNkNRLTVGc0hLcDFTdTdEYTVOX0ZOWGdpUmhhczR2Sy1EVUs3aXFmaWJTZkhVSFlRaHFkcm51Y2g5TnlwT3JHb3BkZVViNUp3cG1V?oc=5)\n\n## Dopolnitev vira 4: tv3m.si\n\nHan: Politika potrebuje več dialoga in manj obračunavanja tv3m.si\n\n Vir: tv3m.si. Objavljeno: Sat, 03 Oct 2026 11:29:46 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMihwFBVV95cUxQWjZRX0tvd00xb0hHSXZqS2c2czhOOXZOclZMVkhPNzlpU05JQXFRM2kyQmpHUkItN0VpSE1HY0htbXZPNEduUEVQSy00cWxTbFQ4ZGczYUkwMEtwZzFEZGcwVlh6RW9KZjE5UDk0bVRZZUxBT01kSlEwN2NsQTYxZUlvR05yWmc?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Politika",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "N1 Slovenija — Golob: Ne predstavljam si, da bi kdo želel živeti v državi, v kateri bi politika imela pooblastila policije - N1…",
+        "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxOanN0bmFxRVU2Y185Wnk3VFBmc0VkQnhFQUhSVnpDbW03LUlaU2RXZXEzQTEwZzhOdXE1dEtwcW1tU0JLaVlySzEtdUQyNnlNZjBadTZWNm5fOFByU2dCV2N5RElfTmdWNHpTcGMzSFRIYXVwR2hkUHU3WnpHeUNUNjIxY2tmYWlrd1pwWEdJMmtXRkY0VHp6RHhUbWxWZFJQeDVLWEZrVFc0dzlWM2dKMnVKRlQzSk5BMEVZdll2bWFVR3BLNmNOelEwTHNleWp3dDNaekx2UktJdkk5M01vbU52Wmo2SUJyN1A5dXZFV3ZFdGRXaFZlWFZaSQ?oc=5"
+      },
+      {
+        "label": "Večer — Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer",
+        "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNYi1zVXRJUnFpbE5GejRlYzJVcGwyNFdQUktUYUluMzNmUWFSdFlfNUlha0RWem9UMTBId2pFWEJFOTVYXzZVVFUwS2cwTm1NTG00a3JQeUQ4OEJBbXp6ekQ5MGc2ajVQNUFMUThnWUd3RWlmMHpyQXJ1MEVBN1NWWFQ1YlFtQkVodXdGYWFiZlRDcTdqM2VteldZS3hGYXhjdkp5UVZ4TFplVmpTUEhWQW9zZHAxbXdlUElIajRGa05iOUJEa2VXbzluYjF3Y2taSTQxSndpTnI?oc=5"
+      },
+      {
+        "label": "Zelena Slovenija — Podnebna in naravovarstvena politika morata biti bolj povezani - Zelena Slovenija",
+        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPSkM0d25GblBlcHRZVHBORXhBSk1fNFJIU2dzaDM3SWVxZ1ItV0ZkUUkydjZHR3dNdDlCZWRoa25KR3ROSzZYdnpSMWdMVkhrOU1NcWxmRTViNkNRLTVGc0hLcDFTdTdEYTVOX0ZOWGdpUmhhczR2Sy1EVUs3aXFmaWJTZkhVSFlRaHFkcm51Y2g5TnlwT3JHb3BkZVViNUp3cG1V?oc=5"
+      },
+      {
+        "label": "tv3m.si — Han: Politika potrebuje več dialoga in manj obračunavanja - tv3m.si",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQWjZRX0tvd00xb0hHSXZqS2c2czhOOXZOclZMVkhPNzlpU05JQXFRM2kyQmpHUkItN0VpSE1HY0htbXZPNEduUEVQSy00cWxTbFQ4ZGczYUkwMEtwZzFEZGcwVlh6RW9KZjE5UDk0bVRZZUxBT01kSlEwN2NsQTYxZUlvR05yWmc?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-03T13:38:45+02:00",
+    "updatedAt": "2026-10-03T13:38:45+02:00"
+  },
+
+  {
     "id": "polhograjska-grmada-hike-from-ljubljana",
     "title": "Polhograjska Grmada: A Car-Free Hiking Guide from Ljubljana",
     "excerpt": "Hike Polhograjska Grmada from Polhov Gradec by bus, with verified route statistics, realistic difficulty, ridge safety, family guidance and current conditions.",
