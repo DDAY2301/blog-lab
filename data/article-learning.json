@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-03T13:24:46+02:00",
-  "loop_count": 2676,
+  "updated_at": "2026-10-03T13:39:43+02:00",
+  "loop_count": 2677,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-03T13:24:25+02:00",
+      "last_learning_run": "2026-10-03T13:39:23+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -51,11 +51,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 79470,
-          "last_seen": "2026-10-03T13:24:25+02:00",
-          "last_title": "Cesarjeva četa na misiji v Švici: Če bomo stalno pod pritiskom, ne bo dobro - Večer",
+          "seen": 79500,
+          "last_seen": "2026-10-03T13:39:23+02:00",
+          "last_title": "Kolesarsko evropsko prvenstvo in Slovenija proti Švici - tv3m.si",
           "last_provider": "",
-          "published": 114805,
+          "published": 114876,
           "last_output_id": "foto-na-dnu-skupine-in-brez-eura-mladi-slovenci-pod-budnim-ocesom-milanica-in-zahovica-klo-619a3e6d"
         },
         "city-data.com": {
@@ -203,13 +203,13 @@
       "example_titles": {
         "news.google.com": [
           "Ob 9. uri dirka mladincev s prenosom na MMC TV - rtvslo.si",
-          "Slovenija gostuje v Švici: glavna tema je znova – trava - sportklub.si",
-          "Švica bo pokazala, kam sodi Cesarjeva Slovenija - Dnevnik"
+          "Švica bo pokazala, kam sodi Cesarjeva Slovenija - Dnevnik",
+          "Slovenija gostuje v Švici: glavna tema je znova – trava - sportklub.si"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-03T13:24:36+02:00",
+      "last_learning_run": "2026-10-03T13:39:34+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -237,12 +237,12 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 79470,
-          "last_seen": "2026-10-03T13:24:36+02:00",
-          "last_title": "Stisk pesti in tapkanje v DZ: v kakšni fizični formi so politiki? - 24ur.com",
+          "seen": 79500,
+          "last_seen": "2026-10-03T13:39:34+02:00",
+          "last_title": "Odnosi z Izraelom: diplomacija ne sme biti izgovor za normalizacijo zločinov - Dnevnik",
           "last_provider": "",
-          "published": 122496,
-          "last_output_id": "sprejeta-krajinska-politika-slovenije-39b660cc"
+          "published": 122573,
+          "last_output_id": "golob-ne-predstavljam-si-da-bi-kdo-zelel-ziveti-v-drzavi-v-kateri-bi-politika-imela-poobla-13839ad8"
         },
         "hellovein.com": {
           "score": 1.47,
@@ -285,12 +285,12 @@
         "news.google.com": [
           "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
           "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer",
-          "Golob: Ne predstavljam si, da bi kdo želel živeti v državi, v kateri bi politika imela pooblastila policije - N1 Slovenija"
+          "Podnebna in naravovarstvena politika morata biti bolj povezani - Zelena Slovenija"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-03T13:24:46+02:00",
+      "last_learning_run": "2026-10-03T13:39:43+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -324,96 +324,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 79470,
-          "last_seen": "2026-10-03T13:24:46+02:00",
-          "last_title": "Slovenija med državami, ki bi prepovedale družbena omrežja mlajšim od 16 let - Info360",
+          "seen": 79500,
+          "last_seen": "2026-10-03T13:39:43+02:00",
+          "last_title": "Slovenija med državami, ki bi prepovedale družbena omrežja mlajšim od 16 let - info360.si",
           "last_provider": "",
-          "published": 136612,
+          "published": 136673,
           "last_output_id": "subvencij-za-elektricna-vozila-zmanjkuje-bo-evropa-se-naprej-financirala-konkurenco-ki-ogr-13457c93"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 2653,
+          "published": 2654,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 2653,
+          "published": 2654,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 2676,
+          "published": 2677,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 2578,
+          "published": 2579,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 2642,
+          "published": 2643,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 2578,
+          "published": 2579,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 2578,
+          "published": 2579,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 2642,
+          "published": 2643,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 10704,
+          "published": 10708,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 2676,
+          "published": 2677,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 2653,
+          "published": 2654,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 5220,
+          "published": 5222,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 2610,
+          "published": 2611,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 5284,
+          "published": 5286,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 2676,
+          "published": 2677,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 2578,
+          "published": 2579,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 5220,
+          "published": 5222,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
@@ -435,13 +435,19 @@
       "example_titles": {
         "news.google.com": [
           "(AKTUALNO) V novi številki revije Demokracija preberite: Izključujejo in zavirajo razvoj! Janša: Osamosvojitvena Slovenija ne bo nikoli več ",
-          "Evropska komisija: Slovenija krši pravice avtorjem - Info360",
+          "Evropska komisija: Slovenija krši pravice avtorjem - info360.si",
           "Janša v New Yorku jasno o Ukrajini: Slovenija bo nadaljevala politično, vojaško, humanitarno in finančno pomoč - Najdi.si novice"
         ]
       }
     }
   },
   "recent_articles": [
+    {
+      "id": "golob-ne-predstavljam-si-da-bi-kdo-zelel-ziveti-v-drzavi-v-kateri-bi-politika-imela-poobla-13839ad8",
+      "title": "Golob: Ne predstavljam si, da bi kdo želel živeti v državi, v kateri bi politika imela pooblastila policije",
+      "category": "Politika",
+      "createdAt": "2026-10-03T13:38:45+02:00"
+    },
     {
       "id": "polhograjska-grmada-hike-from-ljubljana",
       "title": "Polhograjska Grmada: A Car-Free Hiking Guide from Ljubljana",
@@ -507,12 +513,6 @@
       "title": "Ljubljana’s Green Ring: A Running and Cycling Guide to the PST",
       "category": "Vodniki",
       "createdAt": "2026-09-30T09:01:28+02:00"
-    },
-    {
-      "id": "slovenija-premagala-severno-makedonijo-v-ligi-narodov-foto-d79efe69",
-      "title": "Slovenija premagala Severno Makedonijo v ligi narodov (FOTO)",
-      "category": "Šport",
-      "createdAt": "2026-09-30T08:24:07+02:00"
     }
   ],
   "recent_failures": [
