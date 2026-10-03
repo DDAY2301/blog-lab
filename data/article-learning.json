@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-03T21:10:02+02:00",
-  "loop_count": 2753,
+  "updated_at": "2026-10-03T21:24:10+02:00",
+  "loop_count": 2754,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-03T21:09:39+02:00",
+      "last_learning_run": "2026-10-03T21:23:47+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -51,11 +51,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 81780,
-          "last_seen": "2026-10-03T21:09:39+02:00",
-          "last_title": "Debevec vseh 60 strelov v deset: zmaga z evropskim rekordom - 24ur.com",
+          "seen": 81810,
+          "last_seen": "2026-10-03T21:23:47+02:00",
+          "last_title": "Slovenija na zahtevni gostovanji brez Verbiča in Šporarja - 24ur.com",
           "last_provider": "",
-          "published": 120272,
+          "published": 120343,
           "last_output_id": "foto-na-dnu-skupine-in-brez-eura-mladi-slovenci-pod-budnim-ocesom-milanica-in-zahovica-klo-619a3e6d"
         },
         "city-data.com": {
@@ -202,14 +202,14 @@
       "current_source_count": 30,
       "example_titles": {
         "news.google.com": [
-          "Cesar s tremi spremembami za tekmo proti Švici - 24ur.com",
-          "Ob 20.45: Švica - Slovenija (postavi) - rtvslo.si",
-          "Slovenija želi biti nova Švica, zdaj pa je Švica postala nova Slovenija. Trava, kriva je trava - Dnevnik"
+          "Vipotnik za vodstvo Slovenije v Švici (0:1*) - 24ur.com",
+          "Švica – Slovenija: Slovenci napadajo vrh skupine (VIDEO) - sportklub.si",
+          "Ob 20.45: Švica - Slovenija (postavi) - rtvslo.si"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-03T21:09:51+02:00",
+      "last_learning_run": "2026-10-03T21:23:57+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -237,11 +237,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 81780,
-          "last_seen": "2026-10-03T21:09:51+02:00",
+          "seen": 81810,
+          "last_seen": "2026-10-03T21:23:57+02:00",
           "last_title": "Vlada da pečat zunanji politiki, a težnja k mednarodnemu pravu in človekovim pravicam naj ostane. - rtvslo.si",
           "last_provider": "",
-          "published": 128650,
+          "published": 128730,
           "last_output_id": "po-kritikah-opozicije-glede-skoka-evropsko-javno-tozilstvo-sporoca-nismo-identificirali-no-4fdbf59e"
         },
         "hellovein.com": {
@@ -290,7 +290,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-03T21:10:02+02:00",
+      "last_learning_run": "2026-10-03T21:24:10+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -324,96 +324,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 81780,
-          "last_seen": "2026-10-03T21:10:02+02:00",
+          "seen": 81810,
+          "last_seen": "2026-10-03T21:24:10+02:00",
           "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 141309,
+          "published": 141370,
           "last_output_id": "subvencij-za-elektricna-vozila-zmanjkuje-bo-evropa-se-naprej-financirala-konkurenco-ki-ogr-13457c93"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 2730,
+          "published": 2731,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 2730,
+          "published": 2731,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 2753,
+          "published": 2754,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 2655,
+          "published": 2656,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 2719,
+          "published": 2720,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 2655,
+          "published": 2656,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 2655,
+          "published": 2656,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 2719,
+          "published": 2720,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 11012,
+          "published": 11016,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 2753,
+          "published": 2754,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 2730,
+          "published": 2731,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 5374,
+          "published": 5376,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 2687,
+          "published": 2688,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 5438,
+          "published": 5440,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 2753,
+          "published": 2754,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 2655,
+          "published": 2656,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 5374,
+          "published": 5376,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
@@ -436,7 +436,7 @@
         "news.google.com": [
           "(AKTUALNO) V novi številki revije Demokracija preberite: Izključujejo in zavirajo razvoj! Janša: Osamosvojitvena Slovenija ne bo nikoli več ",
           "Nov zakon - souporaba električne energije - PwC",
-          "Ustavno sodišče končno odločilo glede zakona o RTV Slovenija - info360.si"
+          "Ustavno sodišče končno odločilo glede zakona o RTV Slovenija - Info360"
         ]
       }
     }
