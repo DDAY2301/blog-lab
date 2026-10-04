@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-04T15:08:10+02:00",
-  "loop_count": 2916,
+  "updated_at": "2026-10-04T15:09:06+02:00",
+  "loop_count": 2917,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-04T15:07:47+02:00",
+      "last_learning_run": "2026-10-04T15:08:45+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -51,11 +51,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 86370,
-          "last_seen": "2026-10-04T15:07:47+02:00",
+          "seen": 86400,
+          "last_seen": "2026-10-04T15:08:45+02:00",
           "last_title": "Slovenija poražena v Luzernu, a poraz se od poraza razlikuje - Ekipa",
           "last_provider": "",
-          "published": 132025,
+          "published": 132099,
           "last_output_id": "slovenija-v-luzernu-v-lov-na-senzacijo-z-mocno-spremenjeno-enajsterico-66860ffc"
         },
         "city-data.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-04T15:07:59+02:00",
+      "last_learning_run": "2026-10-04T15:08:55+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -270,11 +270,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 86370,
-          "last_seen": "2026-10-04T15:07:59+02:00",
+          "seen": 86400,
+          "last_seen": "2026-10-04T15:08:55+02:00",
           "last_title": "Novi v politiki: Volt Slovenija gre na lokalne volitve tudi na Ptuju - Svet24.si",
           "last_provider": "",
-          "published": 141765,
+          "published": 141850,
           "last_output_id": "vrtovec-prejsnja-vlada-je-hotela-poteptati-vse-kar-nas-definira-kulturo-vrednote-nacin-ziv-d56fdb3d"
         },
         "pewresearch.org": {
@@ -353,12 +353,12 @@
         "news.google.com": [
           "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
           "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer",
-          "'Politiki imajo veliko moč. Ko ni bilo varovalk, so jo tudi že zlorabljali' - 24ur.com"
+          "Janša diplomatom: Zunanjo politiko vodi vlada, samo to je uradna politika Slovenije - Siol.net"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-04T15:08:10+02:00",
+      "last_learning_run": "2026-10-04T15:09:06+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -392,96 +392,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 86370,
-          "last_seen": "2026-10-04T15:08:10+02:00",
+          "seen": 86400,
+          "last_seen": "2026-10-04T15:09:06+02:00",
           "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 151252,
+          "published": 151313,
           "last_output_id": "subvencij-za-elektricna-vozila-zmanjkuje-bo-evropa-se-naprej-financirala-konkurenco-ki-ogr-13457c93"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 2893,
+          "published": 2894,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 2893,
+          "published": 2894,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 2916,
+          "published": 2917,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 2818,
+          "published": 2819,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 2882,
+          "published": 2883,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 2818,
+          "published": 2819,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 2818,
+          "published": 2819,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 2882,
+          "published": 2883,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 11664,
+          "published": 11668,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 2916,
+          "published": 2917,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 2893,
+          "published": 2894,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 5700,
+          "published": 5702,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 2850,
+          "published": 2851,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 5764,
+          "published": 5766,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 2916,
+          "published": 2917,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 2818,
+          "published": 2819,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 5700,
+          "published": 5702,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
