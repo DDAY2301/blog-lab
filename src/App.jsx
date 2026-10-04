@@ -20,6 +20,36 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "slovenija-v-luzernu-v-lov-na-senzacijo-z-mocno-spremenjeno-enajsterico-66860ffc",
+    "title": "Slovenija v Luzernu v lov na senzacijo z močno spremenjeno enajsterico",
+    "excerpt": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Slovenija v Luzernu v lov na senzacijo z močno spremenjeno enajsterico«.",
+    "seoDescription": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Slovenija v Luzernu v lov na senzacijo z močno spremenjeno enajsterico«.",
+    "content": "**Šport, 4. 10. 2026.** Slovenija v Luzernu v lov na senzacijo z močno spremenjeno enajsterico Delo.si\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Delo.si. Objavljeno: Sat, 03 Oct 2026 17:55:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiqAFBVV95cUxPVVFPZkd5YVdMVDhrRDh2TDZHcVAxWDVQT2hWVG1WaW9UVHRwcTRGc2IwZDVFRmQzX3ppUWM5LXByM3JfSm9aODJqOVhiYnpOMzRMYW9BTFptVjV6aEhFVVUxcktUNUNsNFhmUlNUbVNZazU2c1VtbUtvQl9SZl9lNndQaXlJMEZTZDhTS1JRUnYwR0NLYk1KcWJTOXNRYjdEOTRVb1JFSS0?oc=5)\n\n## Dopolnitev vira 2: Delo.si\n\nV Luzernu je šprintal Usain Bolt, zaradi Karničnika je zavrelo Delo.si\n\n Vir: Delo.si. Objavljeno: Sun, 04 Oct 2026 03:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMioAFBVV95cUxQNmJBNW94alNnMXdZcTFEU3JpY2MzVlFVY3dpRVZNT09EblhtaTBGb1VVaWZVWklTeXJ3TDBkdnhZdG5zNTUtTmQ0OWp2aU1MdGoxZ2o5RDBfQ01OOHFWTUZsZWdhUC1FMmZXNVlnYzIxV1pvOW9zX19qRkRqSUNpa0hKZG1aVU9PN25pYzhqU29rMHB1SW9WYmZhRXV0aEdp?oc=5)\n\n## Dopolnitev vira 3: Ekipa\n\nSlovenija poražena v Luzernu, a poraz se od poraza razlikuje Ekipa\n\n Vir: Ekipa. Objavljeno: Sat, 03 Oct 2026 20:41:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiowFBVV95cUxPclViVWN4VFgyLVBrS2hFdzlZWFN3X1NTamM4TkdFdk81emdIZk5DOVVrNk14cTRNUkJQYVVFMzVKTnpTejhneFZjaHg3eDdMQXdVY1RWZGdEQk51ZXRjRmczQ1lNRlV0amU3dnNvbENjUUlzcUUtUUhjbFRPU3BueVl0cXpXYWR6eTRaOTZNamN1cTIyTXFuYWZVYjNBSlpIb1VR?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Šport",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Delo.si — Slovenija v Luzernu v lov na senzacijo z močno spremenjeno enajsterico - Delo.si",
+        "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPVVFPZkd5YVdMVDhrRDh2TDZHcVAxWDVQT2hWVG1WaW9UVHRwcTRGc2IwZDVFRmQzX3ppUWM5LXByM3JfSm9aODJqOVhiYnpOMzRMYW9BTFptVjV6aEhFVVUxcktUNUNsNFhmUlNUbVNZazU2c1VtbUtvQl9SZl9lNndQaXlJMEZTZDhTS1JRUnYwR0NLYk1KcWJTOXNRYjdEOTRVb1JFSS0?oc=5"
+      },
+      {
+        "label": "Delo.si — V Luzernu je šprintal Usain Bolt, zaradi Karničnika je zavrelo - Delo.si",
+        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQNmJBNW94alNnMXdZcTFEU3JpY2MzVlFVY3dpRVZNT09EblhtaTBGb1VVaWZVWklTeXJ3TDBkdnhZdG5zNTUtTmQ0OWp2aU1MdGoxZ2o5RDBfQ01OOHFWTUZsZWdhUC1FMmZXNVlnYzIxV1pvOW9zX19qRkRqSUNpa0hKZG1aVU9PN25pYzhqU29rMHB1SW9WYmZhRXV0aEdp?oc=5"
+      },
+      {
+        "label": "Ekipa — Slovenija poražena v Luzernu, a poraz se od poraza razlikuje - Ekipa",
+        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPclViVWN4VFgyLVBrS2hFdzlZWFN3X1NTamM4TkdFdk81emdIZk5DOVVrNk14cTRNUkJQYVVFMzVKTnpTejhneFZjaHg3eDdMQXdVY1RWZGdEQk51ZXRjRmczQ1lNRlV0amU3dnNvbENjUUlzcUUtUUhjbFRPU3BueVl0cXpXYWR6eTRaOTZNamN1cTIyTXFuYWZVYjNBSlpIb1VR?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-04T08:23:45+02:00",
+    "updatedAt": "2026-10-04T08:23:45+02:00"
+  },
+
+  {
     "id": "po-kritikah-opozicije-glede-skoka-evropsko-javno-tozilstvo-sporoca-nismo-identificirali-no-4fdbf59e",
     "title": "Po kritikah opozicije glede Skoka Evropsko javno tožilstvo sporoča: “Nismo identificirali nobenih posebnih…",
     "excerpt": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Po kritikah opozicije glede Skoka Evropsko javno tožilstvo sporoča: “Nismo identificirali nobenih posebnih…«.",
