@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-04T21:52:52+02:00",
-  "loop_count": 2982,
+  "updated_at": "2026-10-04T21:53:38+02:00",
+  "loop_count": 2983,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-04T21:52:32+02:00",
+      "last_learning_run": "2026-10-04T21:53:18+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -51,11 +51,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 88260,
-          "last_seen": "2026-10-04T21:52:32+02:00",
-          "last_title": "Slovenija pustila dober vtis, a Švico zapušča brez novih točk - zurnal24.si",
+          "seen": 88290,
+          "last_seen": "2026-10-04T21:53:18+02:00",
+          "last_title": "Slovenija pustila dober vtis, a Švico zapušča brez novih točk - Žurnal24",
           "last_provider": "",
-          "published": 136909,
+          "published": 136983,
           "last_output_id": "slovenija-v-luzernu-v-lov-na-senzacijo-z-mocno-spremenjeno-enajsterico-66860ffc"
         },
         "answers.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-04T21:52:42+02:00",
+      "last_learning_run": "2026-10-04T21:53:27+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -271,11 +271,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 88260,
-          "last_seen": "2026-10-04T21:52:42+02:00",
-          "last_title": "Interpelacija zaradi obrata v zunanji politiki, ki krši mednarodno pravo - Delo.si",
+          "seen": 88290,
+          "last_seen": "2026-10-04T21:53:27+02:00",
+          "last_title": "Golob: Igrice so jasno razkrite. Janša: Levica se je naučila šteti - 24ur.com",
           "last_provider": "",
-          "published": 147375,
+          "published": 147460,
           "last_output_id": "vrtovec-prejsnja-vlada-je-hotela-poteptati-vse-kar-nas-definira-kulturo-vrednote-nacin-ziv-d56fdb3d"
         },
         "pewresearch.org": {
@@ -366,7 +366,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-04T21:52:52+02:00",
+      "last_learning_run": "2026-10-04T21:53:38+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -400,96 +400,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 88260,
-          "last_seen": "2026-10-04T21:52:52+02:00",
-          "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
+          "seen": 88290,
+          "last_seen": "2026-10-04T21:53:38+02:00",
+          "last_title": "Društvo Izgubljeni otroci Slovenije odprlo nove prostore - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 155278,
-          "last_output_id": "subvencij-za-elektricna-vozila-zmanjkuje-bo-evropa-se-naprej-financirala-konkurenco-ki-ogr-13457c93"
+          "published": 155341,
+          "last_output_id": "v-novo-mesto-prihaja-rekordni-kids-tour-of-slovenia-novice-aktualno-d0320c01"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 2959,
+          "published": 2960,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 2959,
+          "published": 2960,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 2982,
+          "published": 2983,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 2884,
+          "published": 2885,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 2948,
+          "published": 2949,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 2884,
+          "published": 2885,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 2884,
+          "published": 2885,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 2948,
+          "published": 2949,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 11928,
+          "published": 11932,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 2982,
+          "published": 2983,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 2959,
+          "published": 2960,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 5832,
+          "published": 5834,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 2916,
+          "published": 2917,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 5896,
+          "published": 5898,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 2982,
+          "published": 2983,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 2884,
+          "published": 2885,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 5832,
+          "published": 5834,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
@@ -525,6 +525,12 @@
     }
   },
   "recent_articles": [
+    {
+      "id": "v-novo-mesto-prihaja-rekordni-kids-tour-of-slovenia-novice-aktualno-d0320c01",
+      "title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno",
+      "category": "Aktualno",
+      "createdAt": "2026-10-04T21:52:41+02:00"
+    },
     {
       "id": "vrtovec-prejsnja-vlada-je-hotela-poteptati-vse-kar-nas-definira-kulturo-vrednote-nacin-ziv-d56fdb3d",
       "title": "Vrtovec: Prejšnja vlada je hotela poteptati vse, kar nas definira – kulturo, vrednote, način življenja …",
@@ -590,15 +596,25 @@
       "title": "Idrija Mercury Heritage: A UNESCO Day Trip from Ljubljana",
       "category": "Vodniki",
       "createdAt": "2026-10-01T15:00:00+02:00"
-    },
-    {
-      "id": "bo-trenutno-najbolj-priljubljen-politik-kandidiral-za-predsednika-republike-fd63474f",
-      "title": "Bo trenutno najbolj priljubljen politik kandidiral za predsednika republike?",
-      "category": "Politika",
-      "createdAt": "2026-10-01T13:39:21+02:00"
     }
   ],
   "recent_failures": [
+    {
+      "file": "fallback-failed-20261001-233826.json",
+      "category": "aktualno",
+      "errors": [
+        "ze_uporabljen_vir"
+      ],
+      "title": "Društvo Izgubljeni otroci Slovenije odprlo nove prostore - Novice - Aktualno"
+    },
+    {
+      "file": "fallback-failed-20261001-235329.json",
+      "category": "aktualno",
+      "errors": [
+        "ze_uporabljen_vir"
+      ],
+      "title": "Slovenija lovi Guinnessov rekord v skupinskem igranju harmonike - prijave so odprte"
+    },
     {
       "file": "fallback-failed-20261004-195401.json",
       "category": "aktualno",
@@ -685,26 +701,11 @@
         "prekratek"
       ],
       "title": "Blagoslov za konje in voznike: Zakaj je Štefanovo še vedno aktualno"
-    },
-    {
-      "file": "agent-state",
-      "category": "aktualno",
-      "errors": [
-        "prekratek"
-      ]
-    },
-    {
-      "file": "agent-state",
-      "category": "aktualno",
-      "errors": [
-        "prekratek"
-      ],
-      "slot": "2026-10-04|19:43|aktualno"
     }
   ],
   "failure_summary": {
     "ze_uporabljen_vir": 13,
-    "prekratek": 9,
+    "prekratek": 7,
     "podvojen_naslov": 7
   }
 }
