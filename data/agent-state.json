@@ -5,7 +5,7 @@
   "posts_date": "2026-10-04",
   "posts_today": 2,
   "last_output": "vrtovec-prejsnja-vlada-je-hotela-poteptati-vse-kar-nas-definira-kulturo-vrednote-nacin-ziv-d56fdb3d",
-  "last_error": "ze_uporabljen_vir",
+  "last_error": "podvojen_naslov,ze_uporabljen_vir",
   "agent_version": "2.7.0",
   "current_category": "aktualno",
   "scheduled_posts_today": 2,
@@ -23,7 +23,7 @@
     "reason": "prekratek",
     "at": "2026-10-04T19:53:51+02:00"
   },
-  "publisher_guardian_last_run": "2026-10-04T20:07:51+02:00",
+  "publisher_guardian_last_run": "2026-10-04T20:22:41+02:00",
   "publisher_guardian_last_action": {
     "category": "aktualno",
     "slot": "2026-10-04|19:43|aktualno",
