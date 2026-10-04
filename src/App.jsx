@@ -20,6 +20,56 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "vintgar-gorge-day-trip-from-ljubljana",
+    "title": "Vintgar Gorge: A Car-Free Day Trip from Ljubljana",
+    "excerpt": "Plan Vintgar Gorge from Ljubljana with current opening hours, ticket prices, public transport, the one-way route, family guidance and autumn safety advice.",
+    "seoDescription": "Visit Vintgar Gorge from Ljubljana without a car: 2026 hours, tickets, bus connections, route length, accessibility, family tips and safety.",
+    "content": "Last updated: 4 October 2026\n\nVintgar Gorge is a dramatic 1.6-kilometre river gorge on the edge of Triglav National Park, about 4 kilometres from Bled. It works as a day trip from Ljubljana, but it is not a quick boardwalk stop: the official visit combines a one-way walk through the gorge with a return trail, so you should allow at least three hours on site plus transport.\n\nThe official operator confirmed on 4 October 2026 that the gorge is open. From 21 September until the end of the season, entry is scheduled between 09:00 and 15:00. The season normally ends during October and operating hours can change with weather, so check the official opening page and available ticket slots again on the morning of travel.\n\n## Quick facts\n\n- **Gorge path:** 1.6 km, one way\n- **Time through the gorge:** about 45 minutes\n- **Full experience:** at least 2.5–3 hours with the return trail\n- **Autumn opening hours:** 09:00–15:00 from 21 September until season closure\n- **Adult, student and senior pass:** €15\n- **Child pass, up to age 15:** €5\n- **Pet pass:** €3\n- **Access:** not suitable for wheelchairs or pushchairs\n- **Safety:** helmets are supplied and mandatory in the gorge\n- **Swimming:** prohibited in the Radovna River and at Šum Waterfall\n\n## Why Vintgar is different from a normal short walk\n\nThe Radovna River runs between steep rock walls, pools and rapids before reaching Šum Waterfall. Wooden galleries and bridges carry visitors through terrain that cannot be visited as an ordinary riverside path.\n\nThe route is strictly one way. After the 45-minute gorge section, you continue on a marked thematic return route rather than turning around. The official Path of King Triglav is 4.1 km and takes about two hours. Budgeting only for the 1.6-kilometre gorge is the most common planning mistake.\n\nFor a quieter experience, the operator recommends arriving in the morning or later in the afternoon; the busiest period is usually 10:00–13:00. In October, the earlier closing time makes a morning slot the safest choice for a day trip from Ljubljana.\n\n## Getting there from Ljubljana without a car\n\n### The simplest option: bus to Bled\n\nLjubljana Bus Station lists frequent direct services to Bled. On Sunday, 4 October 2026, several morning departures take roughly 58–80 minutes. Timetables can change, so search the exact travel date rather than copying these times into a future plan.\n\nFrom Bled Central Bus Station, the official electric VINTGAR Shuttle runs to the visitor centre during visiting hours, normally every 15 minutes. Return shuttles continue until two hours after the gorge closes. This transfer is included in the all-in-one pass.\n\nA practical sequence is:\n\n1. Take an early bus from Ljubljana to Bled.\n2. Leave enough time to find the VINTGAR Shuttle stop.\n3. Reach the visitor centre several minutes before your booked entry.\n4. Complete the gorge and return trail.\n5. Take the shuttle back to Bled and keep a flexible bus connection to Ljubljana.\n\nDo not book the final practical return from Bled. Autumn daylight, wet paths and queues can all lengthen the visit.\n\n### Train alternative\n\nThe official operator recommends Podhom as the closest railway station for arrival and Vintgar (Blejska Dobrava) for the return side. These stations are served from the Jesenice–Nova Gorica line, so travel from Ljubljana normally requires careful connection planning.\n\nFor most first-time visitors, the direct Ljubljana–Bled bus is simpler. If you prefer rail, check the live Slovenian Railways planner in both directions and account for current construction-related changes around Ljubljana stations.\n\n### By car\n\nCars cannot park at the gorge entrance. Use the free official VINTGAR LIP central parking area, then take the electric shuttle. The operator advises arriving at the car park at least 40 minutes before the reserved entry slot. Parking is limited to four hours and is included in the pass.\n\n## Tickets and what the pass includes\n\nThe all-in-one pass costs €15 for adults, students and seniors, €5 for children up to 15, and €3 for pets. It covers gorge entry, the return experience and green-access services, including the official shuttle.\n\nBuy online in advance to secure a time. Physical tickets are sold only at the VINTGAR LIP hub, not at the visitor centre, and visitors without a reservation may need to wait for the next available slot.\n\nA standard individual visit can include an audio guide. Guided visits outside the June–20 September period are scheduled at 15:00 and cost €25 for adults or €15 for children; verify availability when booking.\n\n## Route plan\n\n### 1. Visitor centre to Šum Waterfall\n\nCollect the mandatory helmet and follow the fenced wooden route downstream. The gorge itself takes approximately 45 minutes, but allow more time if the path is busy.\n\nKeep moving calmly, do not overtake on narrow galleries and never lean over barriers. Rock erosion remains possible even with protective nets, which is why helmets are compulsory.\n\n### 2. Choose the marked return\n\nThe visit does not end at the waterfall. Follow the official return route and its signs back towards the visitor centre. The Path of King Triglav adds 4.1 km and around two hours.\n\nWear shoes with a good tread. Damp wood, limestone, roots and autumn leaves can all become slippery even on a sunny day. If weather deteriorates or staff change the route, follow on-site instructions.\n\n## Weather and autumn safety\n\nAt the morning update on 4 October, Bled was sunny and about 6°C, with an expected high near 20°C. That is pleasant walking weather, but the shaded gorge can feel much colder than the lakeside, and wet surfaces may persist long after rain.\n\nBring:\n\n- a light warm layer and rain shell;\n- closed walking shoes with grip;\n- water in a refillable bottle;\n- a charged phone and an offline copy of your ticket;\n- enough daylight margin for the return trail.\n\nCheck the official Vintgar status, ARSO weather warnings and transport information immediately before departure. Strong rain, wind, flooding risk or maintenance can change access even when a general forecast looks favourable.\n\n## Families, dogs and accessibility\n\nThe operator advises against the route for children under three because of trail difficulty. For older children, the official Vintgar for Kids experience adds 13 activity points, but adults should still judge whether each child can manage several hours of walking, stairs and narrow passages.\n\nDogs are allowed on a leash and require a €3 pass. A muzzle is required on the VINTGAR Shuttle.\n\nThe gorge is not suitable for wheelchairs or pushchairs. Visitors needing step-free nature experiences should choose a different outing, such as the accessible areas described in our [Arboretum Volčji Potok guide](?article=arboretum-volcji-potok-day-trip-from-ljubljana).\n\n## Responsible visiting\n\nStay on fenced and marked paths. Do not swim, throw objects into the river, pick plants or disturb wildlife. Bins are intentionally absent inside the gorge, so carry all waste out. Drones and professional recording equipment require prior consent.\n\nIf you want another protected-landscape trip, compare this visit with our [Škocjan Caves guide](?article=skocjan-caves-day-trip-from-ljubljana) or the quieter [Zelenci Nature Reserve guide](?article=zelenci-nature-reserve-day-trip-from-ljubljana).\n\n## A realistic day plan\n\n### Efficient car-free itinerary\n\n- **07:30–09:45:** bus from Ljubljana to Bled, depending on the chosen departure\n- **Morning:** VINTGAR Shuttle and reserved entry\n- **Late morning to early afternoon:** gorge plus return trail\n- **Afternoon:** lunch or a short lakeside walk in Bled\n- **Late afternoon:** bus back to Ljubljana\n\nThis schedule is a planning framework, not a fixed timetable. Reserve the gorge first, then build public transport around the confirmed entry slot.\n\n## Final checklist\n\n- Confirm that the gorge is open on your date.\n- Buy a timed pass before leaving Ljubljana.\n- Recheck the Ljubljana–Bled bus and return options.\n- Allow at least three hours at Vintgar.\n- Wear grippy closed shoes and layers.\n- Do not expect wheelchair or pushchair access.\n- Follow the one-way system and staff instructions.\n\nVintgar is easy to reach but rewards careful planning. Treat it as a half-day hike through a protected gorge, not as a roadside photo stop, and it becomes one of the strongest nature day trips available from Ljubljana.",
+    "category": "Vodniki",
+    "author": "Blog Lab Travel Desk",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Vintgar Gorge — Official opening hours",
+        "url": "https://www.vintgar.si/en/my-visit/opening-hours/"
+      },
+      {
+        "label": "Vintgar Gorge — Official price list",
+        "url": "https://www.vintgar.si/en/my-visit/pricelist/"
+      },
+      {
+        "label": "Vintgar Gorge — Official individual visit guidance",
+        "url": "https://www.vintgar.si/en/experience/individualni-visit/"
+      },
+      {
+        "label": "Vintgar Gorge — Official access and transport",
+        "url": "https://www.vintgar.si/en/my-visit/how-to-reach-us/"
+      },
+      {
+        "label": "Ljubljana Bus Station — Timetable",
+        "url": "https://www.ap-ljubljana.si/en/timetable"
+      },
+      {
+        "label": "Slovenian Railways — Timetable planner",
+        "url": "https://potniski.sz.si/en/plan-your-journey/timetable-finder/"
+      },
+      {
+        "label": "ARSO — Weather and warnings",
+        "url": "https://meteo.arso.gov.si/met/en/"
+      },
+      {
+        "label": "Triglav National Park — Visitor guidance",
+        "url": "https://www.tnp.si/en/visit/"
+      }
+    ],
+    "createdAt": "2026-10-04T09:00:00+02:00",
+    "updatedAt": "2026-10-04T09:00:00+02:00"
+  },
+
+  {
     "id": "slovenija-v-luzernu-v-lov-na-senzacijo-z-mocno-spremenjeno-enajsterico-66860ffc",
     "title": "Slovenija v Luzernu v lov na senzacijo z močno spremenjeno enajsterico",
     "excerpt": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Slovenija v Luzernu v lov na senzacijo z močno spremenjeno enajsterico«.",
