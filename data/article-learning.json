@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-04T07:23:46+02:00",
-  "loop_count": 2847,
+  "updated_at": "2026-10-04T07:24:41+02:00",
+  "loop_count": 2848,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-04T07:23:24+02:00",
+      "last_learning_run": "2026-10-04T07:24:16+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -51,11 +51,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 84480,
-          "last_seen": "2026-10-04T07:23:24+02:00",
+          "seen": 84510,
+          "last_seen": "2026-10-04T07:24:16+02:00",
           "last_title": "Slovenija gosti evropsko kolesarsko prvenstvo - rtvslo.si",
           "last_provider": "",
-          "published": 126946,
+          "published": 127017,
           "last_output_id": "foto-na-dnu-skupine-in-brez-eura-mladi-slovenci-pod-budnim-ocesom-milanica-in-zahovica-klo-619a3e6d"
         },
         "city-data.com": {
@@ -223,7 +223,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-04T07:23:35+02:00",
+      "last_learning_run": "2026-10-04T07:24:29+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -251,11 +251,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 84480,
-          "last_seen": "2026-10-04T07:23:35+02:00",
+          "seen": 84510,
+          "last_seen": "2026-10-04T07:24:29+02:00",
           "last_title": "Bitka za volilno pravico: 'Slovenija naj se zgleduje po Skandinaviji, ne po Balkanu' - 24ur.com",
           "last_provider": "",
-          "published": 136170,
+          "published": 136250,
           "last_output_id": "po-kritikah-opozicije-glede-skoka-evropsko-javno-tozilstvo-sporoca-nismo-identificirali-no-4fdbf59e"
         },
         "hellovein.com": {
@@ -304,7 +304,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-04T07:23:46+02:00",
+      "last_learning_run": "2026-10-04T07:24:41+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -338,96 +338,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 84480,
-          "last_seen": "2026-10-04T07:23:46+02:00",
+          "seen": 84510,
+          "last_seen": "2026-10-04T07:24:41+02:00",
           "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 147043,
+          "published": 147104,
           "last_output_id": "subvencij-za-elektricna-vozila-zmanjkuje-bo-evropa-se-naprej-financirala-konkurenco-ki-ogr-13457c93"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 2824,
+          "published": 2825,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 2824,
+          "published": 2825,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 2847,
+          "published": 2848,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 2749,
+          "published": 2750,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 2813,
+          "published": 2814,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 2749,
+          "published": 2750,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 2749,
+          "published": 2750,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 2813,
+          "published": 2814,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 11388,
+          "published": 11392,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 2847,
+          "published": 2848,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 2824,
+          "published": 2825,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 5562,
+          "published": 5564,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 2781,
+          "published": 2782,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 5626,
+          "published": 5628,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 2847,
+          "published": 2848,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 2749,
+          "published": 2750,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 5562,
+          "published": 5564,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
