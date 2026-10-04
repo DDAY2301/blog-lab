@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-04T11:52:58+02:00",
-  "loop_count": 2887,
+  "updated_at": "2026-10-04T11:55:06+02:00",
+  "loop_count": 2888,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-04T11:52:38+02:00",
+      "last_learning_run": "2026-10-04T11:53:49+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -55,7 +55,7 @@
           "last_seen": "2026-10-04T11:52:38+02:00",
           "last_title": "Sanjski razplet vrhunca EP: za naslov Roglič proti Evenepoelu? - 24ur.com",
           "last_provider": "",
-          "published": 129879,
+          "published": 129953,
           "last_output_id": "slovenija-v-luzernu-v-lov-na-senzacijo-z-mocno-spremenjeno-enajsterico-66860ffc"
         },
         "city-data.com": {
@@ -198,6 +198,13 @@
           "last_title": "Math Calculators",
           "last_provider": "bing-web"
         },
+        "careers.microsoft.com": {
+          "score": 0.63,
+          "seen": 1,
+          "last_seen": "2026-10-04T11:53:49+02:00",
+          "last_title": "Microsoft Careers Stage",
+          "last_provider": "bing-web"
+        },
         "greaterdcdiaperbank.app.neoncrm.com": {
           "score": 0.63,
           "seen": 1,
@@ -218,26 +225,17 @@
           "last_seen": "2026-09-26T13:41:29+02:00",
           "last_title": "Google Traduttore",
           "last_provider": "bing-web"
-        },
-        "worldscholarshipforum.com": {
-          "score": -0.175,
-          "seen": 1,
-          "last_seen": "2026-10-04T05:38:55+02:00",
-          "last_title": "What Is ROTC In High School? (Full Explanation With FAQs)",
-          "last_provider": "bing-web"
         }
       },
-      "current_source_count": 30,
+      "current_source_count": 1,
       "example_titles": {
-        "news.google.com": [
-          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - sport-tv.si",
-          "Slovenija drago prodala svojo kožo proti favorizirani Švici - 24ur.com",
-          "Slovenija želi biti nova Švica, zdaj pa je Švica postala nova Slovenija. Trava, kriva je trava - Dnevnik"
+        "careers.microsoft.com": [
+          "Microsoft Careers Stage"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-04T11:52:48+02:00",
+      "last_learning_run": "2026-10-04T11:54:28+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -257,6 +255,7 @@
       "preferred_hosts": [
         "news.google.com",
         "hellovein.com",
+        "art.com",
         "comgateway.com",
         "github.com",
         "cdc.gov",
@@ -269,7 +268,7 @@
           "last_seen": "2026-10-04T11:52:48+02:00",
           "last_title": "Danilo Türk: \"Ves svet nas vidi kot instrument izraelske zunanje politike\" - rtvslo.si",
           "last_provider": "",
-          "published": 139370,
+          "published": 139450,
           "last_output_id": "po-kritikah-opozicije-glede-skoka-evropsko-javno-tozilstvo-sporoca-nismo-identificirali-no-4fdbf59e"
         },
         "hellovein.com": {
@@ -277,6 +276,13 @@
           "seen": 1,
           "last_seen": "2026-09-25T11:39:54+02:00",
           "last_title": "Syringe Size Guide: Types and How to Select the Right One",
+          "last_provider": "bing-web"
+        },
+        "art.com": {
+          "score": 0.945,
+          "seen": 1,
+          "last_seen": "2026-10-04T11:54:28+02:00",
+          "last_title": "Art.com | Wall Art, Framed Prints, Canvas Paintings & Decor for Sale Online",
           "last_provider": "bing-web"
         },
         "comgateway.com": {
@@ -308,17 +314,15 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 30,
+      "current_source_count": 1,
       "example_titles": {
-        "news.google.com": [
-          "Odnosi z Izraelom: diplomacija ne sme biti izgovor za normalizacijo zločinov - Dnevnik",
-          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
-          "Na Radiu Ognjišče zadnje predvolilno soočenje: v ospredju prisluhi, zdravstvo, zunanja politika in sprava - Radio Ognjišče"
+        "art.com": [
+          "Art.com | Wall Art, Framed Prints, Canvas Paintings & Decor for Sale Online"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-04T11:52:58+02:00",
+      "last_learning_run": "2026-10-04T11:55:06+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -356,92 +360,92 @@
           "last_seen": "2026-10-04T11:52:58+02:00",
           "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - novomesto.si",
           "last_provider": "",
-          "published": 149483,
+          "published": 149544,
           "last_output_id": "subvencij-za-elektricna-vozila-zmanjkuje-bo-evropa-se-naprej-financirala-konkurenco-ki-ogr-13457c93"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 2864,
+          "published": 2865,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 2864,
+          "published": 2865,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 2887,
+          "published": 2888,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 2789,
+          "published": 2790,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 2853,
+          "published": 2854,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 2789,
+          "published": 2790,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 2789,
+          "published": 2790,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 2853,
+          "published": 2854,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 11548,
+          "published": 11552,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 2887,
+          "published": 2888,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 2864,
+          "published": 2865,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 5642,
+          "published": 5644,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 2821,
+          "published": 2822,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 5706,
+          "published": 5708,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 2887,
+          "published": 2888,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 2789,
+          "published": 2790,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 5642,
+          "published": 5644,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
@@ -459,14 +463,8 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 30,
-      "example_titles": {
-        "news.google.com": [
-          "(AKTUALNO) V novi številki revije Demokracija preberite: Izključujejo in zavirajo razvoj! Janša: Osamosvojitvena Slovenija ne bo nikoli več ",
-          "Evropska komisija: Slovenija krši pravice avtorjem - info360.si",
-          "Nov zakon - souporaba električne energije - PwC"
-        ]
-      }
+      "current_source_count": 0,
+      "example_titles": {}
     }
   },
   "recent_articles": [
