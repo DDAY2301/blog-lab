@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-04T12:09:18+02:00",
-  "loop_count": 2889,
+  "updated_at": "2026-10-04T12:10:15+02:00",
+  "loop_count": 2890,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-04T12:08:04+02:00",
+      "last_learning_run": "2026-10-04T12:09:45+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -51,11 +51,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 85620,
-          "last_seen": "2026-10-04T11:52:38+02:00",
-          "last_title": "Sanjski razplet vrhunca EP: za naslov Roglič proti Evenepoelu? - 24ur.com",
+          "seen": 85650,
+          "last_seen": "2026-10-04T12:09:45+02:00",
+          "last_title": "Slovenija po Švici že osredotočena na Škotsko - tv3m.si",
           "last_provider": "",
-          "published": 130027,
+          "published": 130101,
           "last_output_id": "slovenija-v-luzernu-v-lov-na-senzacijo-z-mocno-spremenjeno-enajsterico-66860ffc"
         },
         "city-data.com": {
@@ -227,11 +227,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 0,
-      "example_titles": {}
+      "current_source_count": 30,
+      "example_titles": {
+        "news.google.com": [
+          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - sport-tv.si",
+          "Slovenija drago prodala svojo kožo proti favorizirani Švici - 24ur.com",
+          "Slovenija želi biti nova Švica, zdaj pa je Švica postala nova Slovenija. Trava, kriva je trava - Dnevnik"
+        ]
+      }
     },
     "politika": {
-      "last_learning_run": "2026-10-04T12:08:39+02:00",
+      "last_learning_run": "2026-10-04T12:10:04+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -261,12 +267,12 @@
       ],
       "source_health": {
         "news.google.com": {
-          "score": 2.502,
-          "seen": 85620,
-          "last_seen": "2026-10-04T11:52:48+02:00",
-          "last_title": "Danilo Türk: \"Ves svet nas vidi kot instrument izraelske zunanje politike\" - rtvslo.si",
+          "score": 2.498,
+          "seen": 85650,
+          "last_seen": "2026-10-04T12:10:04+02:00",
+          "last_title": "Pirc Musarjeva kritična do vlade, Janša: Jugoslavije ni več - 24ur.com",
           "last_provider": "",
-          "published": 139530,
+          "published": 139610,
           "last_output_id": "po-kritikah-opozicije-glede-skoka-evropsko-javno-tozilstvo-sporoca-nismo-identificirali-no-4fdbf59e"
         },
         "experian.com": {
@@ -326,19 +332,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 3,
+      "current_source_count": 30,
       "example_titles": {
-        "experian.com": [
-          "Dispute Credit Report Information - Experian",
-          "How to Dispute Credit Report Information"
-        ],
-        "creditkaren.ai": [
-          "How to Dispute with Experian — 2026 Guide | CreditKaren"
+        "news.google.com": [
+          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
+          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer",
+          "(INTERVJU) V novi reviji Demokracija: Minister Tone Kajzer: Slovenije ne prodajamo nikomur. Slovenija je suverena država in slovenska zunanj"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-04T12:09:18+02:00",
+      "last_learning_run": "2026-10-04T12:10:15+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -372,96 +376,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 85620,
-          "last_seen": "2026-10-04T11:52:58+02:00",
+          "seen": 85650,
+          "last_seen": "2026-10-04T12:10:15+02:00",
           "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - novomesto.si",
           "last_provider": "",
-          "published": 149605,
+          "published": 149666,
           "last_output_id": "subvencij-za-elektricna-vozila-zmanjkuje-bo-evropa-se-naprej-financirala-konkurenco-ki-ogr-13457c93"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 2866,
+          "published": 2867,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 2866,
+          "published": 2867,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 2889,
+          "published": 2890,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 2791,
+          "published": 2792,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 2855,
+          "published": 2856,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 2791,
+          "published": 2792,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 2791,
+          "published": 2792,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 2855,
+          "published": 2856,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 11556,
+          "published": 11560,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 2889,
+          "published": 2890,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 2866,
+          "published": 2867,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 5646,
+          "published": 5648,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 2823,
+          "published": 2824,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 5710,
+          "published": 5712,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 2889,
+          "published": 2890,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 2791,
+          "published": 2792,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 5646,
+          "published": 5648,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
@@ -479,8 +483,14 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 0,
-      "example_titles": {}
+      "current_source_count": 30,
+      "example_titles": {
+        "news.google.com": [
+          "(AKTUALNO) V novi številki revije Demokracija preberite: Izključujejo in zavirajo razvoj! Janša: Osamosvojitvena Slovenija ne bo nikoli več ",
+          "Evropska komisija: Slovenija krši pravice avtorjem - Info360",
+          "Nov zakon - souporaba električne energije - PwC"
+        ]
+      }
     }
   },
   "recent_articles": [
