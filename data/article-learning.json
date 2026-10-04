@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-04T20:52:55+02:00",
-  "loop_count": 2971,
+  "updated_at": "2026-10-04T20:53:41+02:00",
+  "loop_count": 2972,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-04T20:52:37+02:00",
+      "last_learning_run": "2026-10-04T20:53:20+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -51,11 +51,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 87960,
-          "last_seen": "2026-10-04T20:52:37+02:00",
-          "last_title": "Prepoceni zadetka bolita, Vipotnik je bil rokoborec - delo.si",
+          "seen": 87990,
+          "last_seen": "2026-10-04T20:53:20+02:00",
+          "last_title": "Prepoceni zadetka bolita, Vipotnik je bil rokoborec - Delo.si",
           "last_provider": "",
-          "published": 136095,
+          "published": 136169,
           "last_output_id": "slovenija-v-luzernu-v-lov-na-senzacijo-z-mocno-spremenjeno-enajsterico-66860ffc"
         },
         "answers.com": {
@@ -231,13 +231,13 @@
       "example_titles": {
         "news.google.com": [
           "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
-          "Poljaki gladko boljši, Slovenci po porazu 0:3 v boj za bron proti Japoncem - rtvslo.si",
+          "Kot v sanjah: Slovenija že drugič v dveh tednih evropski prvak! (VIDEO) - Šport TV",
           "Kljub porazu v Švici selektor prepričan: “To je bila dobra Slovenija” - Šport TV"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-04T20:52:46+02:00",
+      "last_learning_run": "2026-10-04T20:53:31+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -271,11 +271,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 87960,
-          "last_seen": "2026-10-04T20:52:46+02:00",
-          "last_title": "Golob: Igrice so jasno razkrite. Janša: Levica se je naučila šteti - 24ur.com",
+          "seen": 87990,
+          "last_seen": "2026-10-04T20:53:31+02:00",
+          "last_title": "Interpelacija zaradi obrata v zunanji politiki, ki krši mednarodno pravo - Delo.si",
           "last_provider": "",
-          "published": 146440,
+          "published": 146525,
           "last_output_id": "vrtovec-prejsnja-vlada-je-hotela-poteptati-vse-kar-nas-definira-kulturo-vrednote-nacin-ziv-d56fdb3d"
         },
         "pewresearch.org": {
@@ -366,7 +366,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-04T20:52:55+02:00",
+      "last_learning_run": "2026-10-04T20:53:41+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -400,96 +400,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 87960,
-          "last_seen": "2026-10-04T20:52:55+02:00",
-          "last_title": "Društvo Izgubljeni otroci Slovenije odprlo nove prostore - Novice - Aktualno - Mestna občina Novo mesto",
+          "seen": 87990,
+          "last_seen": "2026-10-04T20:53:41+02:00",
+          "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 154607,
+          "published": 154668,
           "last_output_id": "subvencij-za-elektricna-vozila-zmanjkuje-bo-evropa-se-naprej-financirala-konkurenco-ki-ogr-13457c93"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 2948,
+          "published": 2949,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 2948,
+          "published": 2949,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 2971,
+          "published": 2972,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 2873,
+          "published": 2874,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 2937,
+          "published": 2938,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 2873,
+          "published": 2874,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 2873,
+          "published": 2874,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 2937,
+          "published": 2938,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 11884,
+          "published": 11888,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 2971,
+          "published": 2972,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 2948,
+          "published": 2949,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 5810,
+          "published": 5812,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 2905,
+          "published": 2906,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 5874,
+          "published": 5876,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 2971,
+          "published": 2972,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 2873,
+          "published": 2874,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 5810,
+          "published": 5812,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
@@ -593,14 +593,6 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20261001-230808.json",
-      "category": "aktualno",
-      "errors": [
-        "ze_uporabljen_vir"
-      ],
-      "title": "Društvo Izgubljeni otroci Slovenije odprlo nove prostore - Novice - Aktualno"
-    },
-    {
       "file": "fallback-failed-20261001-232308.json",
       "category": "aktualno",
       "errors": [
@@ -676,6 +668,15 @@
       "title": "Anja Rakuša Brus: Pomemben argument za mojo kandidaturo je izkušnja z aktualno vlado, ki stroke ne posluša dovolj…"
     },
     {
+      "file": "fallback-failed-20261004-205238.json",
+      "category": "aktualno",
+      "errors": [
+        "podvojen_naslov",
+        "ze_uporabljen_vir"
+      ],
+      "title": "Anja Rakuša Brus: Pomemben argument za mojo kandidaturo je izkušnja z aktualno vlado, ki stroke ne posluša dovolj…"
+    },
+    {
       "file": "agent-state",
       "category": "aktualno",
       "errors": [
@@ -692,9 +693,9 @@
     }
   ],
   "failure_summary": {
-    "prekratek": 11,
-    "ze_uporabljen_vir": 10,
-    "podvojen_naslov": 3,
+    "ze_uporabljen_vir": 11,
+    "prekratek": 10,
+    "podvojen_naslov": 4,
     "podvojen_naslov,ze_uporabljen_vir": 1
   }
 }
