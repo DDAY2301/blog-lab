@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-04T19:54:51+02:00",
-  "loop_count": 2963,
+  "updated_at": "2026-10-04T19:55:37+02:00",
+  "loop_count": 2964,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-04T19:54:29+02:00",
+      "last_learning_run": "2026-10-04T19:55:15+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -51,11 +51,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 87720,
-          "last_seen": "2026-10-04T19:54:29+02:00",
+          "seen": 87750,
+          "last_seen": "2026-10-04T19:55:15+02:00",
           "last_title": "Slovenija v znamenju evropskega prvenstva v cestnem kolesarstvu: jutri na vrsti moški Elite - Koroške Novice",
           "last_provider": "",
-          "published": 135503,
+          "published": 135577,
           "last_output_id": "slovenija-v-luzernu-v-lov-na-senzacijo-z-mocno-spremenjeno-enajsterico-66860ffc"
         },
         "answers.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-04T19:54:39+02:00",
+      "last_learning_run": "2026-10-04T19:55:26+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -271,11 +271,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 87720,
-          "last_seen": "2026-10-04T19:54:39+02:00",
+          "seen": 87750,
+          "last_seen": "2026-10-04T19:55:26+02:00",
           "last_title": "Vlada da pečat zunanji politiki, a težnja k mednarodnemu pravu in človekovim pravicam naj ostane. - rtvslo.si",
           "last_provider": "",
-          "published": 145760,
+          "published": 145845,
           "last_output_id": "vrtovec-prejsnja-vlada-je-hotela-poteptati-vse-kar-nas-definira-kulturo-vrednote-nacin-ziv-d56fdb3d"
         },
         "pewresearch.org": {
@@ -366,7 +366,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-04T19:54:51+02:00",
+      "last_learning_run": "2026-10-04T19:55:37+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -400,96 +400,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 87720,
-          "last_seen": "2026-10-04T19:54:51+02:00",
+          "seen": 87750,
+          "last_seen": "2026-10-04T19:55:37+02:00",
           "last_title": "Društvo Izgubljeni otroci Slovenije odprlo nove prostore - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 154119,
+          "published": 154180,
           "last_output_id": "subvencij-za-elektricna-vozila-zmanjkuje-bo-evropa-se-naprej-financirala-konkurenco-ki-ogr-13457c93"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 2940,
+          "published": 2941,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 2940,
+          "published": 2941,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 2963,
+          "published": 2964,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 2865,
+          "published": 2866,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 2929,
+          "published": 2930,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 2865,
+          "published": 2866,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 2865,
+          "published": 2866,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 2929,
+          "published": 2930,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 11852,
+          "published": 11856,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 2963,
+          "published": 2964,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 2940,
+          "published": 2941,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 5794,
+          "published": 5796,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 2897,
+          "published": 2898,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 5858,
+          "published": 5860,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 2963,
+          "published": 2964,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 2865,
+          "published": 2866,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 5794,
+          "published": 5796,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
@@ -593,14 +593,6 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20261001-220837.json",
-      "category": "aktualno",
-      "errors": [
-        "prekratek"
-      ],
-      "title": "Slovenija letos s trinajstimi Michelinovimi zvezdicami"
-    },
-    {
       "file": "fallback-failed-20261001-222314.json",
       "category": "aktualno",
       "errors": [
@@ -673,10 +665,19 @@
       "title": "Blagoslov za konje in voznike: Zakaj je Štefanovo še vedno aktualno"
     },
     {
+      "file": "fallback-failed-20261004-195436.json",
+      "category": "aktualno",
+      "errors": [
+        "podvojen_naslov",
+        "ze_uporabljen_vir"
+      ],
+      "title": "Aktualno: prodaja avtomobilov v Sloveniji: Julija je bil vsak četrti novi avtomobilov v Sloveniji električen…"
+    },
+    {
       "file": "agent-state",
       "category": "aktualno",
       "errors": [
-        "prekratek"
+        "podvojen_naslov,ze_uporabljen_vir"
       ]
     },
     {
@@ -689,7 +690,9 @@
     }
   ],
   "failure_summary": {
-    "prekratek": 16,
-    "ze_uporabljen_vir": 6
+    "prekratek": 14,
+    "ze_uporabljen_vir": 7,
+    "podvojen_naslov": 1,
+    "podvojen_naslov,ze_uporabljen_vir": 1
   }
 }
