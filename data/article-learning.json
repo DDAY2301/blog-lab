@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-04T08:08:58+02:00",
-  "loop_count": 2856,
+  "updated_at": "2026-10-04T08:24:47+02:00",
+  "loop_count": 2857,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-04T08:08:34+02:00",
+      "last_learning_run": "2026-10-04T08:24:23+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -51,12 +51,12 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 84720,
-          "last_seen": "2026-10-04T08:08:34+02:00",
-          "last_title": "Rajmond Debevec pri 63 letih postavil evropski rekord - rtvslo.si",
+          "seen": 84750,
+          "last_seen": "2026-10-04T08:24:23+02:00",
+          "last_title": "Slovenija gosti evropsko kolesarsko prvenstvo - rtvslo.si",
           "last_provider": "",
-          "published": 127585,
-          "last_output_id": "foto-na-dnu-skupine-in-brez-eura-mladi-slovenci-pod-budnim-ocesom-milanica-in-zahovica-klo-619a3e6d"
+          "published": 127659,
+          "last_output_id": "slovenija-v-luzernu-v-lov-na-senzacijo-z-mocno-spremenjeno-enajsterico-66860ffc"
         },
         "city-data.com": {
           "score": 1.726,
@@ -230,7 +230,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-04T08:08:46+02:00",
+      "last_learning_run": "2026-10-04T08:24:35+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -258,11 +258,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 84720,
-          "last_seen": "2026-10-04T08:08:46+02:00",
-          "last_title": "Danilo Türk: \"Ves svet nas vidi kot instrument izraelske zunanje politike\" - rtvslo.si",
+          "seen": 84750,
+          "last_seen": "2026-10-04T08:24:35+02:00",
+          "last_title": "Sprejeta Krajinska politika Slovenije - Portal GOV.SI",
           "last_provider": "",
-          "published": 136890,
+          "published": 136970,
           "last_output_id": "po-kritikah-opozicije-glede-skoka-evropsko-javno-tozilstvo-sporoca-nismo-identificirali-no-4fdbf59e"
         },
         "hellovein.com": {
@@ -306,12 +306,12 @@
         "news.google.com": [
           "Odnosi z Izraelom: diplomacija ne sme biti izgovor za normalizacijo zločinov - Dnevnik",
           "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
-          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - vecer.com"
+          "Na Radiu Ognjišče zadnje predvolilno soočenje: v ospredju prisluhi, zdravstvo, zunanja politika in sprava - radio.ognjisce.si"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-04T08:08:58+02:00",
+      "last_learning_run": "2026-10-04T08:24:47+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -345,96 +345,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 84720,
-          "last_seen": "2026-10-04T08:08:58+02:00",
+          "seen": 84750,
+          "last_seen": "2026-10-04T08:24:47+02:00",
           "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 147592,
+          "published": 147653,
           "last_output_id": "subvencij-za-elektricna-vozila-zmanjkuje-bo-evropa-se-naprej-financirala-konkurenco-ki-ogr-13457c93"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 2833,
+          "published": 2834,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 2833,
+          "published": 2834,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 2856,
+          "published": 2857,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 2758,
+          "published": 2759,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 2822,
+          "published": 2823,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 2758,
+          "published": 2759,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 2758,
+          "published": 2759,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 2822,
+          "published": 2823,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 11424,
+          "published": 11428,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 2856,
+          "published": 2857,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 2833,
+          "published": 2834,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 5580,
+          "published": 5582,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 2790,
+          "published": 2791,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 5644,
+          "published": 5646,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 2856,
+          "published": 2857,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 2758,
+          "published": 2759,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 5580,
+          "published": 5582,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
@@ -463,6 +463,12 @@
     }
   },
   "recent_articles": [
+    {
+      "id": "slovenija-v-luzernu-v-lov-na-senzacijo-z-mocno-spremenjeno-enajsterico-66860ffc",
+      "title": "Slovenija v Luzernu v lov na senzacijo z močno spremenjeno enajsterico",
+      "category": "Šport",
+      "createdAt": "2026-10-04T08:23:45+02:00"
+    },
     {
       "id": "po-kritikah-opozicije-glede-skoka-evropsko-javno-tozilstvo-sporoca-nismo-identificirali-no-4fdbf59e",
       "title": "Po kritikah opozicije glede Skoka Evropsko javno tožilstvo sporoča: “Nismo identificirali nobenih posebnih…",
@@ -528,12 +534,6 @@
       "title": "Slovenski nogometaši po dveh tekmah lige narodov v dobrem položaju",
       "category": "Šport",
       "createdAt": "2026-10-01T08:24:22+02:00"
-    },
-    {
-      "id": "jansa-o-gazi-zdravljenju-redkih-bolezni-in-drogah-34d06ca6",
-      "title": "Janša o Gazi, zdravljenju redkih bolezni in drogah",
-      "category": "Politika",
-      "createdAt": "2026-09-30T13:39:14+02:00"
     }
   ],
   "recent_failures": [
