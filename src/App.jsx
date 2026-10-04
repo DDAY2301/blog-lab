@@ -20,6 +20,32 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "v-novo-mesto-prihaja-rekordni-kids-tour-of-slovenia-novice-aktualno-d0320c01",
+    "title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno",
+    "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno«.",
+    "seoDescription": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno«.",
+    "content": "**Aktualno, 4. 10. 2026.** V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno Mestna občina Novo mesto\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Mestna občina Novo mesto. Objavljeno: Thu, 02 Jul 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiZEFVX3lxTE5SazFBcGdTemlPY2IzemRCSU9BWE10N0Y0SWludEJGeGw5ckplTGVXVDhCWEVZYUxpeV9fUXExLXBUREExek9DdFRRdERlaXhCV2xsazVUQW1NZExrUTdWeDljSEs?oc=5)\n\n## Dopolnitev vira 2: Svet24.si\n\nBlagoslov za konje in voznike: Zakaj je Štefanovo še vedno aktualno Svet24.si\n\n Vir: Svet24.si. Objavljeno: Fri, 26 Dec 2025 08:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMikAFBVV95cUxQV2NubDl5U1V1cXB5Vmk5Ry1VbmFhdGxMMUVfZmJWdkVOVmFoTnd0ZkdpOXR0OWdUSlhuNDhqNEhvRDByUURsRGF4UDdEVGU0dFFUWndYbGY3QkpZOGtjUThSc1d4ejA2aUpwblBYRHluUklyWnB5aXBPclMyTlVUQnJTdjNRcnlmaHBFV1FmYkI?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Aktualno",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Mestna občina Novo mesto — V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5SazFBcGdTemlPY2IzemRCSU9BWE10N0Y0SWludEJGeGw5ckplTGVXVDhCWEVZYUxpeV9fUXExLXBUREExek9DdFRRdERlaXhCV2xsazVUQW1NZExrUTdWeDljSEs?oc=5"
+      },
+      {
+        "label": "Svet24.si — Blagoslov za konje in voznike: Zakaj je Štefanovo še vedno aktualno - Svet24.si",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQV2NubDl5U1V1cXB5Vmk5Ry1VbmFhdGxMMUVfZmJWdkVOVmFoTnd0ZkdpOXR0OWdUSlhuNDhqNEhvRDByUURsRGF4UDdEVGU0dFFUWndYbGY3QkpZOGtjUThSc1d4ejA2aUpwblBYRHluUklyWnB5aXBPclMyTlVUQnJTdjNRcnlmaHBFV1FmYkI?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-04T21:52:41+02:00",
+    "updatedAt": "2026-10-04T21:52:41+02:00"
+  },
+
+  {
     "id": "vrtovec-prejsnja-vlada-je-hotela-poteptati-vse-kar-nas-definira-kulturo-vrednote-nacin-ziv-d56fdb3d",
     "title": "Vrtovec: Prejšnja vlada je hotela poteptati vse, kar nas definira – kulturo, vrednote, način življenja …",
     "excerpt": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Vrtovec: Prejšnja vlada je hotela poteptati vse, kar nas definira – kulturo, vrednote, način življenja …«.",
