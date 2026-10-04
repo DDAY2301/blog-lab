@@ -20,6 +20,44 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "vrtovec-prejsnja-vlada-je-hotela-poteptati-vse-kar-nas-definira-kulturo-vrednote-nacin-ziv-d56fdb3d",
+    "title": "Vrtovec: Prejšnja vlada je hotela poteptati vse, kar nas definira – kulturo, vrednote, način življenja …",
+    "excerpt": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Vrtovec: Prejšnja vlada je hotela poteptati vse, kar nas definira – kulturo, vrednote, način življenja …«.",
+    "seoDescription": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Vrtovec: Prejšnja vlada je hotela poteptati vse, kar nas definira – kulturo, ",
+    "content": "**Politika, 4. 10. 2026.** Vrtovec: Prejšnja vlada je hotela poteptati vse, kar nas definira – kulturo, vrednote, način življenja … Dnevnik\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nPri političnih temah Blog Lab ne podpira kandidatov, strank ali političnih odločitev; izjave in ocene so predstavljene kot stališča njihovih avtorjev ali virov, ne kot uredniška presoja.\n\nVir: Dnevnik. Objavljeno: Sat, 03 Oct 2026 11:59:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMi2gFBVV95cUxNQ1VPWlYwSmlzYjBtZW11cDdkMllhYWlDNnl6ZzA4U2NGS2lfRDJWRDFiQjZUTDZUQzZfMGRHN1FqQUptR0k5NUxTTHZwOUhjLWpjR01HZmo0YjRIX2drQXNVdzhOSGpMYk5nZEl6cWNRei13cndyaGJuQ2VtUlNQTmVHazY4WXZLNWJ3TGpnaTl4NFpabVhyOEpmY2lFTGZxZkJnR0QzeU90UGtGZGJDdllMajN5akNXZmd4MGc0QV9pempHdzQ3Ni12OW9XXzM0NTB5V1RyR3BJZw?oc=5)\n\n## Dopolnitev vira 2: Nova24TV\n\nJernej Vrtovec na programskem kongresu NSi: “Napreduje družba, ki se zaveda identitete in kulture” Nova24TV\n\n Vir: Nova24TV. Objavljeno: Sat, 03 Oct 2026 12:34:43 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMitgFBVV95cUxNMTZmUVExXy1TMjhXV3FObjFkZWFkUFdGcURmR3hJclUzbmwteW5kQ0Nhc1ZuOUNaZDFic2M2MmtRdmM5UWZTX1FRYjRCeFJpdGl4UTRxN09nYnhvaWZQMnJPN1NwNkwtUDJpeldVejc5cHdlZUNWRzFCQkJMV2liQk1pNVo5bC1tOXVNNmNBV2o2VS1GWVFRWll2c0F5Z3pfUWY4bUtCYzEwajNqVnRFUVYtU0FMZw?oc=5)\n\n## Dopolnitev vira 3: Info360\n\nVrtovec: Burke in nikabi ne spadajo v šole, javne ustanove in javna mesta Info360\n\n Vir: Info360. Objavljeno: Sat, 03 Oct 2026 11:56:58 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiogFBVV95cUxOS2FwOC1fTTEzcHl6UUw4VnZNSTVGMHRQdGE2ZDlMQlhzZEZuckxfSFp2bzBzc2V1bnZqMUJaeDRHYVU3SVR5QlZJN0p1X0lJMnZnZ3R6NVFXLUljYVpOLURneXUySWM1clducnNpSU0tWTZubmt6Wl9GZnRybFAyMzVERUpXSUdkOUFnOFBFeHJMNHJqcVFCd1FPZWdTU1RJMEE?oc=5)\n\n## Dopolnitev vira 4: Dnevnik\n\nHan: Gospodarski napredek je treba povezati z blaginjo ljudi Dnevnik\n\n Vir: Dnevnik. Objavljeno: Sat, 03 Oct 2026 13:07:34 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMirAFBVV95cUxOTVlOTlptUjZzZ294VUEwLWx6T214TkYxZEJlNXJNelhrUDlubDRqNnBTZUI5LUNmWE8xd0tiam94MWU3YmtDUjAtZmM5akc2eU1YaU9odnMxWDRjWjZiTTZkMWNWRG1mZzlSTlpFRlRnTkt0b0w5WlJrZWFYSFFfRE9iNHdDeS1mWm81eWRURG5NT2trcTdPSVl2bzVKM2VvNld4RlVVSTNkY29Z?oc=5)\n\n## Dopolnitev vira 5: Dnevnik\n\nZakaj se Izrael brati z evropsko skrajno desnico? Dnevnik\n\n Vir: Dnevnik. Objavljeno: Fri, 02 Oct 2026 14:04:03 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMilwFBVV95cUxPanU4RGpYVW1IUmU5M3dYeXIyRzZPcFBfbUhhWGZoa2JMU2Fqd2VJeEZfTkdqTHFkNWc4NmYtYk5neUxvX195NElIeHlqM29UY08xTjhuX0NXZDRsUFpqSTIwZjJXQ1RHeHdCNi12RGdQM2lYdzl4OEc0UFFobmU4TWlWV2J5bEZteU9GOGVoNmhOeXpRS293?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Politika",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Dnevnik — Vrtovec: Prejšnja vlada je hotela poteptati vse, kar nas definira – kulturo, vrednote, način življenja … - Dnevnik",
+        "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNQ1VPWlYwSmlzYjBtZW11cDdkMllhYWlDNnl6ZzA4U2NGS2lfRDJWRDFiQjZUTDZUQzZfMGRHN1FqQUptR0k5NUxTTHZwOUhjLWpjR01HZmo0YjRIX2drQXNVdzhOSGpMYk5nZEl6cWNRei13cndyaGJuQ2VtUlNQTmVHazY4WXZLNWJ3TGpnaTl4NFpabVhyOEpmY2lFTGZxZkJnR0QzeU90UGtGZGJDdllMajN5akNXZmd4MGc0QV9pempHdzQ3Ni12OW9XXzM0NTB5V1RyR3BJZw?oc=5"
+      },
+      {
+        "label": "Nova24TV — Jernej Vrtovec na programskem kongresu NSi: “Napreduje družba, ki se zaveda identitete in kulture” - Nova24TV",
+        "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNMTZmUVExXy1TMjhXV3FObjFkZWFkUFdGcURmR3hJclUzbmwteW5kQ0Nhc1ZuOUNaZDFic2M2MmtRdmM5UWZTX1FRYjRCeFJpdGl4UTRxN09nYnhvaWZQMnJPN1NwNkwtUDJpeldVejc5cHdlZUNWRzFCQkJMV2liQk1pNVo5bC1tOXVNNmNBV2o2VS1GWVFRWll2c0F5Z3pfUWY4bUtCYzEwajNqVnRFUVYtU0FMZw?oc=5"
+      },
+      {
+        "label": "Info360 — Vrtovec: Burke in nikabi ne spadajo v šole, javne ustanove in javna mesta - Info360",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOS2FwOC1fTTEzcHl6UUw4VnZNSTVGMHRQdGE2ZDlMQlhzZEZuckxfSFp2bzBzc2V1bnZqMUJaeDRHYVU3SVR5QlZJN0p1X0lJMnZnZ3R6NVFXLUljYVpOLURneXUySWM1clducnNpSU0tWTZubmt6Wl9GZnRybFAyMzVERUpXSUdkOUFnOFBFeHJMNHJqcVFCd1FPZWdTU1RJMEE?oc=5"
+      },
+      {
+        "label": "Dnevnik — Han: Gospodarski napredek je treba povezati z blaginjo ljudi - Dnevnik",
+        "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOTVlOTlptUjZzZ294VUEwLWx6T214TkYxZEJlNXJNelhrUDlubDRqNnBTZUI5LUNmWE8xd0tiam94MWU3YmtDUjAtZmM5akc2eU1YaU9odnMxWDRjWjZiTTZkMWNWRG1mZzlSTlpFRlRnTkt0b0w5WlJrZWFYSFFfRE9iNHdDeS1mWm81eWRURG5NT2trcTdPSVl2bzVKM2VvNld4RlVVSTNkY29Z?oc=5"
+      },
+      {
+        "label": "Dnevnik — Zakaj se Izrael brati z evropsko skrajno desnico? - Dnevnik",
+        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPanU4RGpYVW1IUmU5M3dYeXIyRzZPcFBfbUhhWGZoa2JMU2Fqd2VJeEZfTkdqTHFkNWc4NmYtYk5neUxvX195NElIeHlqM29UY08xTjhuX0NXZDRsUFpqSTIwZjJXQ1RHeHdCNi12RGdQM2lYdzl4OEc0UFFobmU4TWlWV2J5bEZteU9GOGVoNmhOeXpRS293?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-04T13:38:51+02:00",
+    "updatedAt": "2026-10-04T13:38:51+02:00"
+  },
+
+  {
     "id": "vintgar-gorge-day-trip-from-ljubljana",
     "title": "Vintgar Gorge: A Car-Free Day Trip from Ljubljana",
     "excerpt": "Plan Vintgar Gorge from Ljubljana with current opening hours, ticket prices, public transport, the one-way route, family guidance and autumn safety advice.",
