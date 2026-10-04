@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-04T21:35:30+02:00",
-  "loop_count": 2979,
+  "updated_at": "2026-10-04T21:39:28+02:00",
+  "loop_count": 2980,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-04T21:35:01+02:00",
+      "last_learning_run": "2026-10-04T21:38:03+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -55,7 +55,7 @@
           "last_seen": "2026-10-04T21:35:01+02:00",
           "last_title": "Po sanjskem začetku pričakovan poraz Slovenije - Dnevnik",
           "last_provider": "",
-          "published": 136687,
+          "published": 136761,
           "last_output_id": "slovenija-v-luzernu-v-lov-na-senzacijo-z-mocno-spremenjeno-enajsterico-66860ffc"
         },
         "answers.com": {
@@ -191,6 +191,13 @@
           "last_title": "Configure Cortana in Windows 10 and Windows 11 - Windows 10",
           "last_provider": "bing-web"
         },
+        "lonelyplanet.com": {
+          "score": 0.77,
+          "seen": 1,
+          "last_seen": "2026-10-04T21:38:03+02:00",
+          "last_title": "11 things to know before booking a trip to Slovenia - Lonely Planet",
+          "last_provider": "bing-web"
+        },
         "makeuseof.com": {
           "score": 0.77,
           "seen": 1,
@@ -218,26 +225,17 @@
           "last_seen": "2026-09-22T19:06:31+02:00",
           "last_title": "SolveCalc - Free CalcSolver & Scientific Calculator",
           "last_provider": "bing-web"
-        },
-        "worldtimenow.net": {
-          "score": 0.77,
-          "seen": 1,
-          "last_seen": "2026-10-03T23:09:19+02:00",
-          "last_title": "Current Time in Delhi — Live Clock, Time Zone & UTC Offset",
-          "last_provider": "bing-web"
         }
       },
-      "current_source_count": 30,
+      "current_source_count": 1,
       "example_titles": {
-        "news.google.com": [
-          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
-          "Kot v sanjah: Slovenija že drugič v dveh tednih evropski prvak! (VIDEO) - Šport TV",
-          "Kljub porazu v Švici selektor prepričan: “To je bila dobra Slovenija” - Šport TV"
+        "lonelyplanet.com": [
+          "11 things to know before booking a trip to Slovenia - Lonely Planet"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-04T21:35:12+02:00",
+      "last_learning_run": "2026-10-04T21:38:41+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -275,7 +273,7 @@
           "last_seen": "2026-10-04T21:35:12+02:00",
           "last_title": "Interpelacija zaradi obrata v zunanji politiki, ki krši mednarodno pravo - Delo.si",
           "last_provider": "",
-          "published": 147120,
+          "published": 147205,
           "last_output_id": "vrtovec-prejsnja-vlada-je-hotela-poteptati-vse-kar-nas-definira-kulturo-vrednote-nacin-ziv-d56fdb3d"
         },
         "pewresearch.org": {
@@ -349,24 +347,22 @@
           "last_provider": "bing-web"
         },
         "britannica.com": {
-          "score": -1.4,
-          "seen": 5,
-          "last_seen": "2026-09-27T22:44:40+02:00",
+          "score": -1.68,
+          "seen": 6,
+          "last_seen": "2026-10-04T21:38:41+02:00",
           "last_title": "Slovenia | History, Geography, & People | Britannica",
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 30,
+      "current_source_count": 1,
       "example_titles": {
-        "news.google.com": [
-          "Odnosi z Izraelom: diplomacija ne sme biti izgovor za normalizacijo zločinov - Dnevnik",
-          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
-          "'Politiki imajo veliko moč. Ko ni bilo varovalk, so jo tudi že zlorabljali' - 24ur.com"
+        "britannica.com": [
+          "Slovenia | History, Geography, & People | Britannica"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-04T21:35:30+02:00",
+      "last_learning_run": "2026-10-04T21:39:28+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -404,115 +400,126 @@
           "last_seen": "2026-10-04T21:35:30+02:00",
           "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 155095,
+          "published": 155156,
           "last_output_id": "subvencij-za-elektricna-vozila-zmanjkuje-bo-evropa-se-naprej-financirala-konkurenco-ki-ogr-13457c93"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 2956,
+          "published": 2957,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 2956,
+          "published": 2957,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 2979,
+          "published": 2980,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 2881,
+          "published": 2882,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 2945,
+          "published": 2946,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 2881,
+          "published": 2882,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 2881,
+          "published": 2882,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 2945,
+          "published": 2946,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 11916,
+          "published": 11920,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 2979,
+          "published": 2980,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 2956,
+          "published": 2957,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 5826,
+          "published": 5828,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 2913,
+          "published": 2914,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 5890,
+          "published": 5892,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 2979,
+          "published": 2980,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 2881,
+          "published": 2882,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 5826,
+          "published": 5828,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
-          "score": 1.225,
-          "seen": 5,
-          "last_seen": "2026-09-27T22:45:18+02:00",
+          "score": 1.47,
+          "seen": 6,
+          "last_seen": "2026-10-04T21:39:28+02:00",
           "last_title": "Slovenia | History, Geography, & People | Britannica",
           "last_provider": "bing-web"
         },
+        "lonelyplanet.com": {
+          "score": 1.47,
+          "seen": 1,
+          "last_seen": "2026-10-04T21:39:28+02:00",
+          "last_title": "11 things to know before booking a trip to Slovenia - Lonely Planet",
+          "last_provider": "bing-web"
+        },
         "slovenia.info": {
-          "score": 1.225,
-          "seen": 5,
-          "last_seen": "2026-09-27T22:45:18+02:00",
+          "score": 1.47,
+          "seen": 6,
+          "last_seen": "2026-10-04T21:39:28+02:00",
           "last_title": "The official travel guide to Slovenia | I feel Slovenia",
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 30,
+      "current_source_count": 3,
       "example_titles": {
-        "news.google.com": [
-          "(AKTUALNO) V novi številki revije Demokracija preberite: Izključujejo in zavirajo razvoj! Janša: Osamosvojitvena Slovenija ne bo nikoli več ",
-          "Evropska komisija: Slovenija krši pravice avtorjem - Info360",
-          "Nov zakon - souporaba električne energije - PwC"
+        "lonelyplanet.com": [
+          "11 things to know before booking a trip to Slovenia - Lonely Planet"
+        ],
+        "britannica.com": [
+          "Slovenia | History, Geography, & People | Britannica"
+        ],
+        "slovenia.info": [
+          "The official travel guide to Slovenia | I feel Slovenia"
         ]
       }
     }
