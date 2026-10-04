@@ -1,5 +1,5 @@
 // Review draft only. Not imported by the production application.
-// Rolling review draft. Sources rechecked on 2026-10-03 at 07:04 Europe/Ljubljana.
+// Rolling review draft. Sources rechecked on 2026-10-04 at 06:55 Europe/Ljubljana.
 // Production remains unchanged until the calendar model and stable views are implemented.
 // Unknown values deliberately remain null.
 export const draftEvents = [
@@ -63,7 +63,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-10-03T07:04:12+02:00"
+    "lastCheckedAt": "2026-10-04T06:55:58+02:00"
   },
   {
     "eventId": "national-gallery-fragments-past-2026",
@@ -93,7 +93,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
@@ -155,7 +155,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
@@ -187,7 +187,38 @@ export const draftEvents = [
     "accessibility": "Tactile exhibition; confirm individual access needs with the gallery",
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-10-03T07:04:12+02:00"
+    "lastCheckedAt": "2026-10-04T06:55:58+02:00"
+  },
+  {
+    "eventId": "ana-sluga-passive-torso-cd-2026",
+    "title": "Art Critics' Choice: Ana Sluga – Passive Torso",
+    "summary": "Cankarjev dom presents Ana Sluga in its Art Critics' Choice series through 18 October. Admission is free; check current gallery hours and accessibility before travel.",
+    "category": "exhibition",
+    "startAt": "2026-07-07T00:00:00+02:00",
+    "endAt": "2026-10-18T23:59:00+02:00",
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": 0,
+      "currency": "EUR",
+      "label": "Free admission",
+      "free": true
+    },
+    "ticketUrl": null,
+    "officialUrl": "https://www.cd-cc.si/en/culture/exhibitions/art-critics-choice-ana-sluga-passive-torso",
+    "sourceName": "Cankarjev dom",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": true,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-10-04T06:55:58+02:00"
   },
   {
     "eventId": "unicum-2026-ljubljana",
@@ -252,6 +283,37 @@ export const draftEvents = [
     "lastCheckedAt": "2026-10-03T07:04:12+02:00"
   },
   {
+    "eventId": "gaja-zadravec-nostalgia-cd-2026",
+    "title": "Gaja Zadravec: NostalGIA – Telescope Series",
+    "summary": "The current Cankarjev dom exhibition runs through 2 November. Admission information, languages and accessibility were not stated clearly enough in the checked programme and remain unspecified.",
+    "category": "exhibition",
+    "startAt": "2026-09-04T00:00:00+02:00",
+    "endAt": "2026-11-02T23:59:00+01:00",
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": null
+    },
+    "ticketUrl": null,
+    "officialUrl": "https://www.cd-cc.si/en",
+    "sourceName": "Cankarjev dom",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": true,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-10-04T06:55:58+02:00"
+  },
+  {
     "eventId": "revelations-national-gallery-2026",
     "title": "Revelations: Matej Sternen, The Poppies",
     "summary": "The National Gallery's current Revelations display is open from 10 September to 2 December 2026. Current admission, daily opening hours and accessibility should be checked on the gallery visit page before arrival.",
@@ -281,6 +343,37 @@ export const draftEvents = [
     "indoorOutdoor": "indoor",
     "status": "confirmed",
     "lastCheckedAt": "2026-10-03T07:04:12+02:00"
+  },
+  {
+    "eventId": "jaka-vukotic-kosovel-comics-cd-2026",
+    "title": "Jaka Vukotič: Kosovel in Comics",
+    "summary": "This free exhibition explores Srečko Kosovel through Jaka Vukotič's comic illustrations. It runs through 8 November; check current opening hours and accessibility before visiting.",
+    "category": "exhibition",
+    "startAt": "2026-09-16T00:00:00+02:00",
+    "endAt": "2026-11-08T23:59:00+01:00",
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": 0,
+      "currency": "EUR",
+      "label": "Free admission",
+      "free": true
+    },
+    "ticketUrl": null,
+    "officialUrl": "https://www.cd-cc.si/en/culture/exhibitions/jaka-vukotic-kosovel-in-comics",
+    "sourceName": "Cankarjev dom",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": true,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-10-04T06:55:58+02:00"
   },
   {
     "eventId": "kozmos-kosovel-cankarjev-dom-2026",
@@ -372,7 +465,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-09-21T07:00:00+02:00"
   },
   {
@@ -529,7 +622,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-09-21T07:00:00+02:00"
   },
   {
@@ -622,7 +715,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-09-21T07:00:00+02:00"
   },
   {
@@ -653,7 +746,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-09-21T07:00:00+02:00"
   },
   {
@@ -684,7 +777,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-09-21T07:00:00+02:00"
   },
   {
@@ -715,7 +808,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
@@ -963,7 +1056,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
@@ -1087,7 +1180,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
@@ -1121,7 +1214,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
@@ -1218,7 +1311,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
@@ -1249,7 +1342,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
@@ -1404,7 +1497,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-09-29T07:00:00+02:00"
   },
   {
@@ -1497,7 +1590,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-09-30T07:01:22+02:00"
   },
   {
@@ -1525,6 +1618,37 @@ export const draftEvents = [
     "sourceName": "SNG Opera and Ballet Ljubljana",
     "languages": [],
     "touristFriendly": true,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "past",
+    "lastCheckedAt": "2026-09-30T07:01:22+02:00"
+  },
+  {
+    "eventId": "beauty-queen-leenane-mgl-2026-09-30",
+    "title": "The Beauty Queen of Leenane",
+    "summary": "Prešeren Theatre Kranj visits MGL's Main Stage on Wednesday 30 September at 19:30. The programme confirms tickets are offered, while language, surtitles, price and access details require a direct check.",
+    "category": "theatre",
+    "startAt": "2026-09-30T19:30:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Mestno gledališče ljubljansko",
+      "address": "Čopova ulica 14, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": false
+    },
+    "ticketUrl": "https://www.mgl.si/en/schedule/",
+    "officialUrl": "https://www.mgl.si/en/schedule/",
+    "sourceName": "Mestno gledališče ljubljansko",
+    "languages": [],
+    "touristFriendly": null,
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
@@ -1556,37 +1680,6 @@ export const draftEvents = [
     "sourceName": "Cankarjev dom",
     "languages": [],
     "touristFriendly": true,
-    "familyFriendly": null,
-    "accessibility": null,
-    "indoorOutdoor": "indoor",
-    "status": "completed",
-    "lastCheckedAt": "2026-09-30T07:01:22+02:00"
-  },
-  {
-    "eventId": "beauty-queen-leenane-mgl-2026-09-30",
-    "title": "The Beauty Queen of Leenane",
-    "summary": "Prešeren Theatre Kranj visits MGL's Main Stage on Wednesday 30 September at 19:30. The programme confirms tickets are offered, while language, surtitles, price and access details require a direct check.",
-    "category": "theatre",
-    "startAt": "2026-09-30T19:30:00+02:00",
-    "endAt": null,
-    "timezone": "Europe/Ljubljana",
-    "venue": {
-      "name": "Mestno gledališče ljubljansko",
-      "address": "Čopova ulica 14, 1000 Ljubljana",
-      "city": "Ljubljana",
-      "region": "Central Slovenia"
-    },
-    "price": {
-      "amount": null,
-      "currency": "EUR",
-      "label": null,
-      "free": false
-    },
-    "ticketUrl": "https://www.mgl.si/en/schedule/",
-    "officialUrl": "https://www.mgl.si/en/schedule/",
-    "sourceName": "Mestno gledališče ljubljansko",
-    "languages": [],
-    "touristFriendly": null,
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
@@ -1652,7 +1745,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-10-01T07:01:40+02:00"
   },
   {
@@ -1776,7 +1869,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-10-01T07:01:40+02:00"
   },
   {
@@ -1838,7 +1931,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-10-01T07:01:40+02:00"
   },
   {
@@ -1869,7 +1962,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-10-02T07:04:03+02:00"
   },
   {
@@ -1962,7 +2055,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-10-02T07:04:03+02:00"
   },
   {
@@ -2024,7 +2117,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "confirmed",
+    "status": "past",
     "lastCheckedAt": "2026-10-03T07:04:12+02:00"
   },
   {
@@ -2055,7 +2148,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "confirmed",
+    "status": "past",
     "lastCheckedAt": "2026-10-03T07:04:12+02:00"
   },
   {
@@ -2148,7 +2241,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "confirmed",
+    "status": "past",
     "lastCheckedAt": "2026-10-03T07:04:12+02:00"
   },
   {
@@ -2180,13 +2273,13 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-10-03T07:04:12+02:00"
+    "lastCheckedAt": "2026-10-04T06:55:58+02:00"
   },
   {
     "timezone": "Europe/Ljubljana",
     "eventId": "peekaboo-workshop-cd-2026-10-04",
     "title": "“Peekaboo” Workshop – Bojana Robinson",
-    "summary": "Cankarjev dom schedules this workshop for 4 October at 10:00. It may suit families, but the exact age range, language, price and accessibility should be confirmed on the official listing.",
+    "summary": "A free two-hour dance and movement workshop runs from 10:00 to 12:00. It is intended for participants with good prior dance experience, and advance registration by email is required.",
     "category": "workshop",
     "startAt": "2026-10-04T10:00:00+02:00",
     "endAt": "2026-10-04T12:00:00+02:00",
@@ -2197,12 +2290,12 @@ export const draftEvents = [
       "region": "Central Slovenia"
     },
     "price": {
-      "amount": null,
+      "amount": 0,
       "currency": "EUR",
-      "label": null,
-      "free": null
+      "label": "Free; advance registration required",
+      "free": true
     },
-    "ticketUrl": "https://www.cd-cc.si/en/buy-tickets",
+    "ticketUrl": "mailto:info@institute01.org",
     "officialUrl": "https://www.cd-cc.si/en",
     "sourceName": "Cankarjev dom",
     "languages": [],
@@ -2211,7 +2304,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-10-03T07:04:12+02:00"
+    "lastCheckedAt": "2026-10-04T06:55:58+02:00"
   },
   {
     "eventId": "wind-orchestra-promenade-2026-10-04",
@@ -2242,12 +2335,12 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-10-03T07:04:12+02:00"
+    "lastCheckedAt": "2026-10-04T06:55:58+02:00"
   },
   {
     "eventId": "house-bolero-cd-2026-10-04",
     "title": "House Bolero",
-    "summary": "Matjaž Farič's dance performance begins in Linhart Hall at 20:00. Tickets are listed at €20, €22 or €25; visitors should confirm accessibility requirements with the venue.",
+    "summary": "Matej Kejžar's intergenerational dance performance begins at 20:00 in Linhart Hall. Tickets cost €20–25, with reduced prices of €18–22 for eligible visitors.",
     "category": "dance",
     "startAt": "2026-10-04T20:00:00+02:00",
     "endAt": null,
@@ -2259,13 +2352,13 @@ export const draftEvents = [
       "region": "Central Slovenia"
     },
     "price": {
-      "amount": null,
+      "amount": 20,
       "currency": "EUR",
-      "label": "€20 / €22 / €25",
+      "label": "€20–25; concessions €18–22",
       "free": false
     },
-    "ticketUrl": "https://www.cd-cc.si/en",
-    "officialUrl": "https://www.cd-cc.si/en",
+    "ticketUrl": "https://cd-cc.si/en/culture/theatre-and-dance/house-bolero",
+    "officialUrl": "https://cd-cc.si/en/culture/theatre-and-dance/house-bolero",
     "sourceName": "Cankarjev dom",
     "languages": [],
     "touristFriendly": true,
@@ -2273,7 +2366,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-10-03T07:04:12+02:00"
+    "lastCheckedAt": "2026-10-04T06:55:58+02:00"
   },
   {
     "eventId": "zenske-brez-filtra-2-cd-2026-10-05",
@@ -2429,6 +2522,68 @@ export const draftEvents = [
     "indoorOutdoor": "indoor",
     "status": "sold_out",
     "lastCheckedAt": "2026-09-28T07:00:00+02:00"
+  },
+  {
+    "eventId": "pc1-eternal-rest-cd-2026-10-08",
+    "title": "PC 1: Eternal Rest",
+    "summary": "Michael Sanderling conducts the Slovenian Philharmonic Orchestra and choirs in Brahms, Mozart and Schumann. The concert starts at 19:30; tickets cost €9–42, with listed concessions.",
+    "category": "music",
+    "startAt": "2026-10-08T19:30:00+02:00",
+    "endAt": "2026-10-08T21:00:00+02:00",
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Gallus Hall, Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": 9,
+      "currency": "EUR",
+      "label": "€9–42; concessions €5–34",
+      "free": false
+    },
+    "ticketUrl": "https://www.cd-cc.si/en/culture/music/pc-1-eternal-rest",
+    "officialUrl": "https://www.cd-cc.si/en/culture/music/pc-1-eternal-rest",
+    "sourceName": "Cankarjev dom",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": false,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-10-04T06:55:58+02:00"
+  },
+  {
+    "eventId": "pc1-eternal-rest-cd-2026-10-09",
+    "title": "PC 1: Eternal Rest",
+    "summary": "The second performance begins at 19:30 and lasts about 90 minutes including an interval. Tickets cost €9–42, with listed concessions.",
+    "category": "music",
+    "startAt": "2026-10-09T19:30:00+02:00",
+    "endAt": "2026-10-09T21:00:00+02:00",
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Gallus Hall, Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": 9,
+      "currency": "EUR",
+      "label": "€9–42; concessions €5–34",
+      "free": false
+    },
+    "ticketUrl": "https://filharmonija.si/en/koncert/pc-1-eternal-rest/",
+    "officialUrl": "https://filharmonija.si/en/koncert/pc-1-eternal-rest/",
+    "sourceName": "Slovenian Philharmonic Orchestra",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": false,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-10-04T06:55:58+02:00"
   },
   {
     "eventId": "sunnysiders-stone-head-castle-2026-10-09",
