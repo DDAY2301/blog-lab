@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-04T13:23:52+02:00",
-  "loop_count": 2901,
+  "updated_at": "2026-10-04T13:39:51+02:00",
+  "loop_count": 2902,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-04T13:23:33+02:00",
+      "last_learning_run": "2026-10-04T13:39:31+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -51,11 +51,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 85920,
-          "last_seen": "2026-10-04T13:23:33+02:00",
+          "seen": 85950,
+          "last_seen": "2026-10-04T13:39:31+02:00",
           "last_title": "Brez Gajserja, a z visokimi cilji: Slovenija na Pokal narodov - Šport TV",
           "last_provider": "",
-          "published": 130915,
+          "published": 130989,
           "last_output_id": "slovenija-v-luzernu-v-lov-na-senzacijo-z-mocno-spremenjeno-enajsterico-66860ffc"
         },
         "city-data.com": {
@@ -231,13 +231,13 @@
       "example_titles": {
         "news.google.com": [
           "Slovenija drago prodala svojo kožo proti favorizirani Švici - 24ur.com",
-          "Kljub porazu v Švici selektor prepričan: “To je bila dobra Slovenija” - Šport TV",
-          "Slovenija želi biti nova Švica, zdaj pa je Švica postala nova Slovenija. Trava, kriva je trava - Dnevnik"
+          "Slovenija želi biti nova Švica, zdaj pa je Švica postala nova Slovenija. Trava, kriva je trava - Dnevnik",
+          "Kljub porazu v Švici selektor prepričan: “To je bila dobra Slovenija” - Šport TV"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-04T13:23:42+02:00",
+      "last_learning_run": "2026-10-04T13:39:41+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -270,12 +270,12 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 85920,
-          "last_seen": "2026-10-04T13:23:42+02:00",
+          "seen": 85950,
+          "last_seen": "2026-10-04T13:39:41+02:00",
           "last_title": "Pirc Musarjeva kritična do vlade, Janša: Jugoslavije ni več - 24ur.com",
           "last_provider": "",
-          "published": 140490,
-          "last_output_id": "po-kritikah-opozicije-glede-skoka-evropsko-javno-tozilstvo-sporoca-nismo-identificirali-no-4fdbf59e"
+          "published": 140575,
+          "last_output_id": "vrtovec-prejsnja-vlada-je-hotela-poteptati-vse-kar-nas-definira-kulturo-vrednote-nacin-ziv-d56fdb3d"
         },
         "pewresearch.org": {
           "score": 2.381,
@@ -351,14 +351,14 @@
       "current_source_count": 30,
       "example_titles": {
         "news.google.com": [
-          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
+          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - slovenskenovice.delo.si",
           "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer",
           "(INTERVJU) V novi reviji Demokracija: Minister Tone Kajzer: Slovenije ne prodajamo nikomur. Slovenija je suverena država in slovenska zunanj"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-04T13:23:52+02:00",
+      "last_learning_run": "2026-10-04T13:39:51+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -392,96 +392,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 85920,
-          "last_seen": "2026-10-04T13:23:52+02:00",
+          "seen": 85950,
+          "last_seen": "2026-10-04T13:39:51+02:00",
           "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 150337,
+          "published": 150398,
           "last_output_id": "subvencij-za-elektricna-vozila-zmanjkuje-bo-evropa-se-naprej-financirala-konkurenco-ki-ogr-13457c93"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 2878,
+          "published": 2879,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 2878,
+          "published": 2879,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 2901,
+          "published": 2902,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 2803,
+          "published": 2804,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 2867,
+          "published": 2868,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 2803,
+          "published": 2804,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 2803,
+          "published": 2804,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 2867,
+          "published": 2868,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 11604,
+          "published": 11608,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 2901,
+          "published": 2902,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 2878,
+          "published": 2879,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 5670,
+          "published": 5672,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 2835,
+          "published": 2836,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 5734,
+          "published": 5736,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 2901,
+          "published": 2902,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 2803,
+          "published": 2804,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 5670,
+          "published": 5672,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
@@ -510,6 +510,12 @@
     }
   },
   "recent_articles": [
+    {
+      "id": "vrtovec-prejsnja-vlada-je-hotela-poteptati-vse-kar-nas-definira-kulturo-vrednote-nacin-ziv-d56fdb3d",
+      "title": "Vrtovec: Prejšnja vlada je hotela poteptati vse, kar nas definira – kulturo, vrednote, način življenja …",
+      "category": "Politika",
+      "createdAt": "2026-10-04T13:38:51+02:00"
+    },
     {
       "id": "vintgar-gorge-day-trip-from-ljubljana",
       "title": "Vintgar Gorge: A Car-Free Day Trip from Ljubljana",
@@ -575,12 +581,6 @@
       "title": "Bo trenutno najbolj priljubljen politik kandidiral za predsednika republike?",
       "category": "Politika",
       "createdAt": "2026-10-01T13:39:21+02:00"
-    },
-    {
-      "id": "ljubljana-earthquake-1895-history-walk",
-      "title": "The 1895 Ljubljana Earthquake: History and a Self-Guided Walk",
-      "category": "Vodniki",
-      "createdAt": "2026-10-01T09:00:15+02:00"
     }
   ],
   "recent_failures": [
