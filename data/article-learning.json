@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-05T06:54:33+02:00",
-  "loop_count": 3069,
+  "updated_at": "2026-10-05T07:08:57+02:00",
+  "loop_count": 3070,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-05T06:54:12+02:00",
+      "last_learning_run": "2026-10-05T07:08:29+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -51,11 +51,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 90810,
-          "last_seen": "2026-10-05T06:54:12+02:00",
-          "last_title": "Prepoceni zadetka bolita, Vipotnik je bil rokoborec - Delo.si",
+          "seen": 90840,
+          "last_seen": "2026-10-05T07:08:29+02:00",
+          "last_title": "Prepoceni zadetka bolita, Vipotnik je bil rokoborec - delo.si",
           "last_provider": "",
-          "published": 143347,
+          "published": 143421,
           "last_output_id": "slovenija-v-luzernu-v-lov-na-senzacijo-z-mocno-spremenjeno-enajsterico-66860ffc"
         },
         "answers.com": {
@@ -230,14 +230,14 @@
       "current_source_count": 30,
       "example_titles": {
         "news.google.com": [
-          "Kljub porazu v Švici selektor prepričan: “To je bila dobra Slovenija” - Šport TV",
+          "Kljub porazu v Švici selektor prepričan: “To je bila dobra Slovenija” - sport-tv.si",
           "Slovenija se je dokaj enakovredno kosala s četrtfinalisti SP-ja - rtvslo.si",
           "Slovenija drago prodala svojo kožo proti favorizirani Švici - 24ur.com"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-05T06:54:22+02:00",
+      "last_learning_run": "2026-10-05T07:08:40+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -271,11 +271,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 90810,
-          "last_seen": "2026-10-05T06:54:22+02:00",
-          "last_title": "Stisk pesti in tapkanje v DZ: v kakšni fizični formi so politiki? - 24ur.com",
+          "seen": 90840,
+          "last_seen": "2026-10-05T07:08:40+02:00",
+          "last_title": "Novi v politiki: Volt Slovenija gre na lokalne volitve tudi na Ptuju - Svet24.si",
           "last_provider": "",
-          "published": 154770,
+          "published": 154855,
           "last_output_id": "vrtovec-prejsnja-vlada-je-hotela-poteptati-vse-kar-nas-definira-kulturo-vrednote-nacin-ziv-d56fdb3d"
         },
         "pewresearch.org": {
@@ -366,7 +366,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-05T06:54:33+02:00",
+      "last_learning_run": "2026-10-05T07:08:57+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -400,96 +400,96 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 90810,
-          "last_seen": "2026-10-05T06:54:33+02:00",
-          "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
+          "seen": 90840,
+          "last_seen": "2026-10-05T07:08:57+02:00",
+          "last_title": "(AKTUALNO) Zakaj je državno premoženje v Sloveniji obravnavano kot politični plen - Večer",
           "last_provider": "",
-          "published": 160759,
+          "published": 160822,
           "last_output_id": "v-novo-mesto-prihaja-rekordni-kids-tour-of-slovenia-novice-aktualno-d0320c01"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 3046,
+          "published": 3047,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 3046,
+          "published": 3047,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 3069,
+          "published": 3070,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 2971,
+          "published": 2972,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 3035,
+          "published": 3036,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 2971,
+          "published": 2972,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 2971,
+          "published": 2972,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 3035,
+          "published": 3036,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 12276,
+          "published": 12280,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 3069,
+          "published": 3070,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 3046,
+          "published": 3047,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 6006,
+          "published": 6008,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 3003,
+          "published": 3004,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 6070,
+          "published": 6072,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 3069,
+          "published": 3070,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 2971,
+          "published": 2972,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 6006,
+          "published": 6008,
           "last_output_id": "duckduckgo-287dab86"
         },
         "britannica.com": {
@@ -519,7 +519,7 @@
         "news.google.com": [
           "(AKTUALNO) V novi številki revije Demokracija preberite: Izključujejo in zavirajo razvoj! Janša: Osamosvojitvena Slovenija ne bo nikoli več ",
           "Evropska komisija: Slovenija krši pravice avtorjem - Info360",
-          "Nov zakon - souporaba električne energije - PwC"
+          "Janša v New Yorku jasno o Ukrajini: Slovenija bo nadaljevala politično, vojaško, humanitarno in finančno pomoč - Najdi.si novice"
         ]
       }
     }
