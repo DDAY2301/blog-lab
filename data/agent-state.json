@@ -5,7 +5,7 @@
   "posts_date": "2026-10-05",
   "posts_today": 1,
   "last_output": "pokal-narodov-osvojila-belgija-jan-pancar-slovenijo-popeljal-do-13-mesta-3cdeb11e",
-  "last_error": "fallback_no_category_evidence",
+  "last_error": "ze_uporabljen_vir",
   "agent_version": "2.7.0",
   "current_category": "politika",
   "scheduled_posts_today": 1,
@@ -16,10 +16,10 @@
   ],
   "scheduled_slots_deferred": [],
   "last_editorial_hold": null,
-  "publisher_guardian_last_run": "2026-10-04T21:52:41+02:00",
+  "publisher_guardian_last_run": "2026-10-05T13:39:35+02:00",
   "publisher_guardian_last_action": {
-    "category": "aktualno",
-    "slot": "2026-10-04|19:43|aktualno",
+    "category": "politika",
+    "slot": "2026-10-05|13:27|politika",
     "remaining_repairs": 0
   }
 }
