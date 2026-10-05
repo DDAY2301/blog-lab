@@ -20,6 +20,28 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "debate-z-bergantom-tujci-v-sloveniji-trije-pogledi-na-aktualno-temo-8a8fda8f",
+    "title": "Debate z Bergantom: Tujci v Sloveniji: Trije pogledi na aktualno temo",
+    "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Debate z Bergantom: Tujci v Sloveniji: Trije pogledi na aktualno temo«.",
+    "seoDescription": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Debate z Bergantom: Tujci v Sloveniji: Trije pogledi na aktualno temo«.",
+    "content": "**Aktualno, 5. 10. 2026.** Debate z Bergantom: Tujci v Sloveniji: Trije pogledi na aktualno temo Siol.net\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Siol.net. Objavljeno: Mon, 05 Oct 2026 12:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMi2AFBVV95cUxOay1FZHhuZ0ZISEtxaVhnRGJ4c1BlTkdPZUdtY2xSZDZKbnJCNUEybDNPZnJ4aWt6LTBxMDQwbzhtaGE5bDducnBWWjRJM0QxY2piRUtmeGdjTFUxc1phbktxR05iN3dQbk5oLUVISno2UFZSdDFvaFlxYUEzS3FzRDdINHR3aEg4SHlKbl94eHlLZmFhejRKVWtPTXhHTVNSelJHdEdycHpqcnp6RFRKNm5fWWpIZGpCanlsY1NiVU1VT3pCWTB1UmhrcV93N21lNXUwLTRQWFQ?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Aktualno",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Siol.net — Debate z Bergantom: Tujci v Sloveniji: Trije pogledi na aktualno temo - Siol.net",
+        "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOay1FZHhuZ0ZISEtxaVhnRGJ4c1BlTkdPZUdtY2xSZDZKbnJCNUEybDNPZnJ4aWt6LTBxMDQwbzhtaGE5bDducnBWWjRJM0QxY2piRUtmeGdjTFUxc1phbktxR05iN3dQbk5oLUVISno2UFZSdDFvaFlxYUEzS3FzRDdINHR3aEg4SHlKbl94eHlLZmFhejRKVWtPTXhHTVNSelJHdEdycHpqcnp6RFRKNm5fWWpIZGpCanlsY1NiVU1VT3pCWTB1UmhrcV93N21lNXUwLTRQWFQ?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-05T19:54:39+02:00",
+    "updatedAt": "2026-10-05T19:54:39+02:00"
+  },
+
+  {
     "id": "vodi-ukinitev-prispevka-v-politicni-despotizem-ali-ne-ker-je-politika-tako-vedno-zraven-429d50e9",
     "title": "Vodi ukinitev prispevka v politični despotizem ali ne, ker je politika tako \"vedno zraven\"?",
     "excerpt": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Vodi ukinitev prispevka v politični despotizem ali ne, ker je politika tako \"vedno zraven\"?«.",

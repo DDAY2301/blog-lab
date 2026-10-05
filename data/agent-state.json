@@ -1,19 +1,20 @@
 {
-  "last_success": "2026-10-05T13:54:03+02:00",
+  "last_success": "2026-10-05T19:54:39+02:00",
   "last_failure": "2026-09-21T20:56:52+02:00",
   "consecutive_failures": 0,
   "posts_date": "2026-10-05",
-  "posts_today": 2,
-  "last_output": "vodi-ukinitev-prispevka-v-politicni-despotizem-ali-ne-ker-je-politika-tako-vedno-zraven-429d50e9",
+  "posts_today": 3,
+  "last_output": "debate-z-bergantom-tujci-v-sloveniji-trije-pogledi-na-aktualno-temo-8a8fda8f",
   "last_error": null,
   "agent_version": "2.7.0",
-  "current_category": "politika",
-  "scheduled_posts_today": 2,
+  "current_category": "aktualno",
+  "scheduled_posts_today": 3,
   "manual_posts_today": 0,
   "writer_mode": "local_evidence_ai",
   "scheduled_slots_done": [
     "2026-10-05|08:17|sport",
-    "2026-10-05|13:27|politika"
+    "2026-10-05|13:27|politika",
+    "2026-10-05|19:43|aktualno"
   ],
   "scheduled_slots_deferred": [],
   "last_editorial_hold": null,
