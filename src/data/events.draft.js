@@ -1,5 +1,5 @@
 // Review draft only. Not imported by the production application.
-// Rolling review draft. Sources rechecked on 2026-10-04 at 06:55 Europe/Ljubljana.
+// Rolling review draft. Sources rechecked on 2026-10-05 at 07:07 Europe/Ljubljana.
 // Production remains unchanged until the calendar model and stable views are implemented.
 // Unknown values deliberately remain null.
 export const draftEvents = [
@@ -62,7 +62,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "confirmed",
+    "status": "past",
     "lastCheckedAt": "2026-10-04T06:55:58+02:00"
   },
   {
@@ -186,7 +186,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": "Tactile exhibition; confirm individual access needs with the gallery",
     "indoorOutdoor": "indoor",
-    "status": "confirmed",
+    "status": "past",
     "lastCheckedAt": "2026-10-04T06:55:58+02:00"
   },
   {
@@ -434,7 +434,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-09-21T07:00:00+02:00"
   },
   {
@@ -496,7 +496,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-09-21T07:00:00+02:00"
   },
   {
@@ -527,7 +527,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-09-21T07:00:00+02:00"
   },
   {
@@ -560,7 +560,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-09-21T07:00:00+02:00"
   },
   {
@@ -591,7 +591,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-09-21T07:00:00+02:00"
   },
   {
@@ -653,7 +653,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-09-21T07:00:00+02:00"
   },
   {
@@ -684,7 +684,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-09-21T07:00:00+02:00"
   },
   {
@@ -839,7 +839,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-09-23T07:00:00+02:00"
   },
   {
@@ -870,7 +870,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-09-23T07:00:00+02:00"
   },
   {
@@ -901,7 +901,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-09-23T07:00:00+02:00"
   },
   {
@@ -963,7 +963,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-09-24T07:00:00+02:00"
   },
   {
@@ -994,7 +994,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-09-24T07:00:00+02:00"
   },
   {
@@ -1025,7 +1025,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": "Cankarjev dom publishes an accessibility statement; confirm individual requirements directly",
     "indoorOutdoor": "indoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-09-24T07:00:00+02:00"
   },
   {
@@ -1087,7 +1087,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
@@ -1118,7 +1118,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
@@ -1149,7 +1149,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
@@ -1247,7 +1247,7 @@ export const draftEvents = [
     "familyFriendly": false,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
@@ -1280,7 +1280,7 @@ export const draftEvents = [
     "familyFriendly": false,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
@@ -1373,7 +1373,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
@@ -1404,7 +1404,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
@@ -1435,7 +1435,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
@@ -1466,7 +1466,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-09-29T07:00:00+02:00"
   },
   {
@@ -1528,7 +1528,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-09-29T07:00:00+02:00"
   },
   {
@@ -1559,7 +1559,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-09-30T07:01:22+02:00"
   },
   {
@@ -1652,7 +1652,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-09-30T07:01:22+02:00"
   },
   {
@@ -1683,7 +1683,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-09-30T07:01:22+02:00"
   },
   {
@@ -1714,7 +1714,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-09-30T07:01:22+02:00"
   },
   {
@@ -1776,7 +1776,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-10-01T07:01:40+02:00"
   },
   {
@@ -1807,7 +1807,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-10-01T07:01:40+02:00"
   },
   {
@@ -1838,7 +1838,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-10-01T07:01:40+02:00"
   },
   {
@@ -1900,7 +1900,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-10-01T07:01:40+02:00"
   },
   {
@@ -1968,7 +1968,7 @@ export const draftEvents = [
   {
     "eventId": "uec-road-european-championships-2026",
     "title": "UEC Road European Championships 2026",
-    "summary": "The official championship programme confirms Ljubljana's ceremonial start for the Women's Elite road race at 13:00 on 3 October, followed by the race start at 13:30; the Men's Elite ceremonial start is at 12:00 on 4 October, with the race at 12:30. Spectating is free, but rolling road closures apply 13:00–15:30 on Saturday and 12:00–14:30 on Sunday.",
+    "summary": "The official UEC programme confirms the European Road Championships in Ljubljana from 3 to 7 October. Monday 5 October features the Men Under 23 and Women Under 23 road races; spectators should check the organiser's live programme and city traffic notices before travelling.",
     "category": "sport",
     "startAt": "2026-10-02T13:30:00+02:00",
     "endAt": "2026-10-07T23:59:00+02:00",
@@ -1986,7 +1986,7 @@ export const draftEvents = [
       "free": true
     },
     "ticketUrl": null,
-    "officialUrl": "https://roadslovenia2026.si/en/news/events-alongside-the-european-championships/",
+    "officialUrl": "https://www.uec.ch/en/actu/348/ljubljana-to-host-2026-uec-road-european-championships",
     "sourceName": "UEC Road European Championships 2026",
     "languages": [],
     "touristFriendly": true,
@@ -1994,7 +1994,7 @@ export const draftEvents = [
     "accessibility": "Outdoor roadside viewing; individual accessible viewing arrangements not stated",
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-10-03T07:04:12+02:00"
+    "lastCheckedAt": "2026-10-05T07:07:57+02:00"
   },
   {
     "eventId": "ex-mgl-2026-10-02",
@@ -2024,7 +2024,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-10-02T07:04:03+02:00"
   },
   {
@@ -2086,7 +2086,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "completed",
+    "status": "past",
     "lastCheckedAt": "2026-10-02T07:04:03+02:00"
   },
   {
@@ -2179,7 +2179,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "confirmed",
+    "status": "past",
     "lastCheckedAt": "2026-10-03T07:04:12+02:00"
   },
   {
@@ -2210,7 +2210,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "sold_out",
+    "status": "past",
     "lastCheckedAt": "2026-10-03T07:04:12+02:00"
   },
   {
@@ -2272,7 +2272,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "confirmed",
+    "status": "past",
     "lastCheckedAt": "2026-10-04T06:55:58+02:00"
   },
   {
@@ -2303,7 +2303,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "confirmed",
+    "status": "past",
     "lastCheckedAt": "2026-10-04T06:55:58+02:00"
   },
   {
@@ -2334,7 +2334,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "confirmed",
+    "status": "past",
     "lastCheckedAt": "2026-10-04T06:55:58+02:00"
   },
   {
@@ -2365,19 +2365,19 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "confirmed",
+    "status": "past",
     "lastCheckedAt": "2026-10-04T06:55:58+02:00"
   },
   {
     "eventId": "zenske-brez-filtra-2-cd-2026-10-05",
     "title": "Ženske brez filtra 2",
-    "summary": "This theatre event is scheduled for 19:00 at Cankarjev dom. Language, price and accessibility details were not confirmed in the official listing and should be checked before booking.",
+    "summary": "Cankarjev dom confirms this lease event for Monday 5 October at 19:00 in Gallus Hall, with online ticket sales available. The official English listing does not state the performance language, price or event-specific accessibility details, so visitors should verify these before booking.",
     "category": "theatre",
     "startAt": "2026-10-05T19:00:00+02:00",
     "endAt": null,
     "timezone": "Europe/Ljubljana",
     "venue": {
-      "name": "Cankarjev dom",
+      "name": "Gallus Hall, Cankarjev dom",
       "address": "Prešernova cesta 10, 1000 Ljubljana",
       "city": "Ljubljana",
       "region": "Central Slovenia"
@@ -2388,7 +2388,7 @@ export const draftEvents = [
       "label": null,
       "free": null
     },
-    "ticketUrl": "https://www.cd-cc.si/en",
+    "ticketUrl": "https://vstopnice.cd-cc.si/en/venue/38/gallusova-dvorana-cankarjev-dom.html",
     "officialUrl": "https://www.cd-cc.si/en",
     "sourceName": "Cankarjev dom",
     "languages": [],
@@ -2397,7 +2397,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-10-02T07:04:03+02:00"
+    "lastCheckedAt": "2026-10-05T07:07:57+02:00"
   },
   {
     "eventId": "salome-mgl-2026-10-06",
@@ -2428,7 +2428,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "sold_out",
-    "lastCheckedAt": "2026-10-03T07:04:12+02:00"
+    "lastCheckedAt": "2026-10-05T07:07:57+02:00"
   },
   {
     "eventId": "vladimir-kostadinovic-iris-cd-2026-10-06",
@@ -2459,7 +2459,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-10-02T07:04:03+02:00"
+    "lastCheckedAt": "2026-10-05T07:07:57+02:00"
   },
   {
     "eventId": "salome-mgl-2026-10-07",
@@ -2677,5 +2677,253 @@ export const draftEvents = [
     "indoorOutdoor": "indoor",
     "status": "confirmed",
     "lastCheckedAt": "2026-09-30T07:01:22+02:00"
+  },
+  {
+    "eventId": "dino-pesut-air-raid-cd-2026-10-12",
+    "title": "Dino Pešut: Air Raid",
+    "summary": "Cankarjev dom lists Dino Pešut's Air Raid for Monday 12 October at 20:00. The official English schedule confirms the date and time; price, language and event-specific accessibility were not published in the listing checked.",
+    "category": "theatre",
+    "startAt": "2026-10-12T20:00:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": null
+    },
+    "ticketUrl": "https://www.cd-cc.si/en",
+    "officialUrl": "https://www.cd-cc.si/en",
+    "sourceName": "Cankarjev dom",
+    "languages": [],
+    "touristFriendly": null,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-10-05T07:07:57+02:00"
+  },
+  {
+    "eventId": "borderless-body-cd-2026-10-13",
+    "title": "MN Dance Company & Silence: Borderless Body",
+    "summary": "Cankarjev dom confirms Borderless Body for Tuesday 13 October at 19:30. Tickets are listed from €23 to €35; the dance format may suit international visitors, while event-specific accessibility should be checked before booking.",
+    "category": "dance",
+    "startAt": "2026-10-13T19:30:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Gallus Hall, Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": 23,
+      "currency": "EUR",
+      "label": "€23–€35",
+      "free": false
+    },
+    "ticketUrl": "https://www.cd-cc.si/en",
+    "officialUrl": "https://www.cd-cc.si/en",
+    "sourceName": "Cankarjev dom",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-10-05T07:07:57+02:00"
+  },
+  {
+    "eventId": "dino-pesut-air-raid-cd-2026-10-13",
+    "title": "Dino Pešut: Air Raid",
+    "summary": "Cankarjev dom lists a second performance of Dino Pešut's Air Raid for Tuesday 13 October at 20:00. Language, price and event-specific accessibility remain unconfirmed in the official English listing.",
+    "category": "theatre",
+    "startAt": "2026-10-13T20:00:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": null
+    },
+    "ticketUrl": "https://www.cd-cc.si/en",
+    "officialUrl": "https://www.cd-cc.si/en",
+    "sourceName": "Cankarjev dom",
+    "languages": [],
+    "touristFriendly": null,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-10-05T07:07:57+02:00"
+  },
+  {
+    "eventId": "stretch-3789-castle-2026",
+    "title": "Stretch 3789",
+    "summary": "Ljubljana Castle opens this spatial installation in the S Gallery on 15 October, with daily viewing from 09:00 to 18:00 through 31 January 2027. Admission and event-specific accessibility were not stated on the programme page checked.",
+    "category": "exhibition",
+    "startAt": "2026-10-15T09:00:00+02:00",
+    "endAt": "2027-01-31T18:00:00+01:00",
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "S Gallery, Ljubljana Castle",
+      "address": "Grajska planota 1, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": null
+    },
+    "ticketUrl": "https://www.ljubljanskigrad.si/en/castle-events/",
+    "officialUrl": "https://www.ljubljanskigrad.si/en/castle-events/",
+    "sourceName": "Ljubljana Castle",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-10-05T07:07:57+02:00"
+  },
+  {
+    "eventId": "sentido-project-castle-2026-10-16",
+    "title": "Sentido Project",
+    "summary": "The Ljubljana Castle Jazz Club hosts Sentido Project on Friday 16 October at 20:00 in the Rock Hall; the club opens from 19:00 to 23:00. Admission is €15 and includes a return funicular journey, making this a practical evening option for visitors.",
+    "category": "music",
+    "startAt": "2026-10-16T20:00:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Rock Hall, Ljubljana Castle",
+      "address": "Grajska planota 1, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": 15,
+      "currency": "EUR",
+      "label": "€15",
+      "free": false
+    },
+    "ticketUrl": "https://ljubljanskigrad.si/en/castle-events/sentido-project/",
+    "officialUrl": "https://ljubljanskigrad.si/en/castle-events/sentido-project/",
+    "sourceName": "Ljubljana Castle",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-10-05T07:07:57+02:00"
+  },
+  {
+    "eventId": "prima-facie-mgl-2026-10-17",
+    "title": "Prima Facie",
+    "summary": "MGL confirms the premiere of Prima Facie on Saturday 17 October at 20:00 on the Small Stage. Performance language, price and event-specific accessibility were not stated in the schedule checked.",
+    "category": "theatre",
+    "startAt": "2026-10-17T20:00:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Small Stage, MGL",
+      "address": "Čopova ulica 14, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": false
+    },
+    "ticketUrl": "https://www.mgl.si/en",
+    "officialUrl": "https://www.mgl.si/en",
+    "sourceName": "MGL",
+    "languages": [],
+    "touristFriendly": null,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-10-05T07:07:57+02:00"
+  },
+  {
+    "eventId": "romantic-souls-mgl-2026-10-19",
+    "title": "Romantic Souls",
+    "summary": "MGL schedules the pre-premiere of Ivan Cankar's Romantic Souls for Monday 19 October at 19:30 on the Main Stage. The English page confirms the performance and ticket availability but not the spoken language or event-specific accessibility.",
+    "category": "theatre",
+    "startAt": "2026-10-19T19:30:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Main Stage, MGL",
+      "address": "Čopova ulica 14, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": false
+    },
+    "ticketUrl": "https://www.mgl.si/en/shows/romantic-souls/",
+    "officialUrl": "https://www.mgl.si/en/shows/romantic-souls/",
+    "sourceName": "MGL",
+    "languages": [],
+    "touristFriendly": null,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-10-05T07:07:57+02:00"
+  },
+  {
+    "eventId": "prima-facie-mgl-2026-10-19",
+    "title": "Prima Facie",
+    "summary": "MGL lists Prima Facie for Monday 19 October at 20:00 on the Small Stage and marks the performance sold out. It remains in the calendar for status awareness, with no ticket availability implied.",
+    "category": "theatre",
+    "startAt": "2026-10-19T20:00:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Small Stage, MGL",
+      "address": "Čopova ulica 14, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": false
+    },
+    "ticketUrl": "https://www.mgl.si/en",
+    "officialUrl": "https://www.mgl.si/en",
+    "sourceName": "MGL",
+    "languages": [],
+    "touristFriendly": null,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "sold_out",
+    "lastCheckedAt": "2026-10-05T07:07:57+02:00"
   }
 ];
