@@ -20,6 +20,44 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "pokal-narodov-osvojila-belgija-jan-pancar-slovenijo-popeljal-do-13-mesta-3cdeb11e",
+    "title": "Pokal narodov osvojila Belgija, Jan Pancar Slovenijo popeljal do 13. mesta",
+    "excerpt": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Pokal narodov osvojila Belgija, Jan Pancar Slovenijo popeljal do 13. mesta«.",
+    "seoDescription": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Pokal narodov osvojila Belgija, Jan Pancar Slovenijo popeljal do 13. mesta«.",
+    "content": "**Šport, 5. 10. 2026.** Pokal narodov osvojila Belgija, Jan Pancar Slovenijo popeljal do 13. mesta rtvslo.si\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: rtvslo.si. Objavljeno: Mon, 05 Oct 2026 00:15:01 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiwgFBVV95cUxPTXRuTFB2V1hvem40UzRYS0pWT2I3YlYyX1JfT0NMNkhQdHl3TmdtZjZCU0FxZnJ6ZGVpbG05RGdsWldUdWdCc0VpTnZFbm5YSWZJMTF6SXR6YVhKOTdhUFo1TnFBV29FOE5QbTZYX2ZXVkJMZ3gzcDFYNjNaR1d5a1E3Vy1JNHVGV2QzRHNvVXNhdFV5TzRrZDFRa3hxcmNST25tSF9rbEJnczJFaW5fOFVaQ0c2RjRVOE9MRDBRTm9RUQ?oc=5)\n\n## Dopolnitev vira 2: Večer\n\n(ODZIVI) Slovenija prvič poražena v letošnji ligi narodov: Ko izgubljaš, moraš biti nevaren Večer\n\n Vir: Večer. Objavljeno: Sun, 04 Oct 2026 15:20:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMivAFBVV95cUxQeXg4RE8zTHp5ZTdsaUE1M0lvSnR0cUJvaUItSngxa2RKZjBwMTFkY09YYkdQX1ZFcE5HSWJIYV9YazZvREZkbDZJNGxqQXdoX2w1MW4yOWtLWDdmbGJHWE1VNDdLZXBZMVl2d2t4RThHWkpHNUV5SlBxNVcxMWc4N1ptYkRqaThMQmkxWU9DZDV1Z0VUdFB4Um9ZYS0xSnhpaE1GOW94VXpqQXJsVmwxUmMzeXkwdWxSZVFtZg?oc=5)\n\n## Dopolnitev vira 3: Avto-magazin.si\n\nPancar blestel pred 100.000 gledalci, Slovenija brez Gajserja do 13. mesta Avto-magazin.si\n\n Vir: Avto-magazin.si. Objavljeno: Mon, 05 Oct 2026 05:00:17 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiswFBVV95cUxQX3BhTFNjM0MzX3RPLUFhSzN5anRNSlplV0ZxdDBXeTRMa2lxaHhRUDR0bnZZLTBVLUptd0JlRW1SWGJpWFlwbWdUd2d5SVlFV21PVC16OVR3WGg1LW1fdmRkZlltcGVOb1RiTXlPcWxHelJPZ1ptRzBEWjFvYVFxbTZDQW02ME9NUmdZZG9hdFlZNm5samhycHlqZFE4OXRMcklwalZGZWFwS1JuSEpVVk1UUQ?oc=5)\n\n## Dopolnitev vira 4: Siol.net\n\nEvenepoel v objemu žene proslavljal velik mejnik: Užival sem v Sloveniji Siol.net\n\n Vir: Siol.net. Objavljeno: Sun, 04 Oct 2026 18:11:53 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMitgFBVV95cUxQLXlIU2tFXzFCenFieHAwb1lkOHpEei1IZ2VpejZDRzhJZlp2MHpuQXN4N3l1SU9Eb0d5cUxyTXFJOG9Lb1ZOR193bnkzRDkwYjctNXFKajZseEZXVHZMckN4UjdFRzNpWk1RcE42c1FaU0huTUZxenpJZm5tX0dfLWZ5QmVhRnJjT1V0dWFpUG1jc085Y3VEYnd3d2s5bWVmblpvWWVxTEd3ZEJDSmRLaGFBN2VOQQ?oc=5)\n\n## Dopolnitev vira 5: Šport TV\n\nBrez Gajserja, a z visokimi cilji: Slovenija na Pokal narodov Šport TV\n\n Vir: Šport TV. Objavljeno: Thu, 01 Oct 2026 10:27:03 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMijAFBVV95cUxPQU5ONzRZYTVUejR2ajFFcDEzaktBOUNyRF9GcHF3LWw0d1VITElzek9tazJSaVFtbThsRFZIYmtqZGF3cldoLVlWbnFkc3NuTHpVc3Z5aFlRNkc2dlFfMk9NbjJ0cnNPTlhYeTl6eUVQeUdSd21WOF9GLXZBRnRSbFRHVGlVN2hrR0pyWg?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Šport",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "rtvslo.si — Pokal narodov osvojila Belgija, Jan Pancar Slovenijo popeljal do 13. mesta - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPTXRuTFB2V1hvem40UzRYS0pWT2I3YlYyX1JfT0NMNkhQdHl3TmdtZjZCU0FxZnJ6ZGVpbG05RGdsWldUdWdCc0VpTnZFbm5YSWZJMTF6SXR6YVhKOTdhUFo1TnFBV29FOE5QbTZYX2ZXVkJMZ3gzcDFYNjNaR1d5a1E3Vy1JNHVGV2QzRHNvVXNhdFV5TzRrZDFRa3hxcmNST25tSF9rbEJnczJFaW5fOFVaQ0c2RjRVOE9MRDBRTm9RUQ?oc=5"
+      },
+      {
+        "label": "Večer — (ODZIVI) Slovenija prvič poražena v letošnji ligi narodov: Ko izgubljaš, moraš biti nevaren - Večer",
+        "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQeXg4RE8zTHp5ZTdsaUE1M0lvSnR0cUJvaUItSngxa2RKZjBwMTFkY09YYkdQX1ZFcE5HSWJIYV9YazZvREZkbDZJNGxqQXdoX2w1MW4yOWtLWDdmbGJHWE1VNDdLZXBZMVl2d2t4RThHWkpHNUV5SlBxNVcxMWc4N1ptYkRqaThMQmkxWU9DZDV1Z0VUdFB4Um9ZYS0xSnhpaE1GOW94VXpqQXJsVmwxUmMzeXkwdWxSZVFtZg?oc=5"
+      },
+      {
+        "label": "Avto-magazin.si — Pancar blestel pred 100.000 gledalci, Slovenija brez Gajserja do 13. mesta - Avto-magazin.si",
+        "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQX3BhTFNjM0MzX3RPLUFhSzN5anRNSlplV0ZxdDBXeTRMa2lxaHhRUDR0bnZZLTBVLUptd0JlRW1SWGJpWFlwbWdUd2d5SVlFV21PVC16OVR3WGg1LW1fdmRkZlltcGVOb1RiTXlPcWxHelJPZ1ptRzBEWjFvYVFxbTZDQW02ME9NUmdZZG9hdFlZNm5samhycHlqZFE4OXRMcklwalZGZWFwS1JuSEpVVk1UUQ?oc=5"
+      },
+      {
+        "label": "Siol.net — Evenepoel v objemu žene proslavljal velik mejnik: Užival sem v Sloveniji - Siol.net",
+        "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQLXlIU2tFXzFCenFieHAwb1lkOHpEei1IZ2VpejZDRzhJZlp2MHpuQXN4N3l1SU9Eb0d5cUxyTXFJOG9Lb1ZOR193bnkzRDkwYjctNXFKajZseEZXVHZMckN4UjdFRzNpWk1RcE42c1FaU0huTUZxenpJZm5tX0dfLWZ5QmVhRnJjT1V0dWFpUG1jc085Y3VEYnd3d2s5bWVmblpvWWVxTEd3ZEJDSmRLaGFBN2VOQQ?oc=5"
+      },
+      {
+        "label": "Šport TV — Brez Gajserja, a z visokimi cilji: Slovenija na Pokal narodov - Šport TV",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPQU5ONzRZYTVUejR2ajFFcDEzaktBOUNyRF9GcHF3LWw0d1VITElzek9tazJSaVFtbThsRFZIYmtqZGF3cldoLVlWbnFkc3NuTHpVc3Z5aFlRNkc2dlFfMk9NbjJ0cnNPTlhYeTl6eUVQeUdSd21WOF9GLXZBRnRSbFRHVGlVN2hrR0pyWg?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-05T08:23:59+02:00",
+    "updatedAt": "2026-10-05T08:23:59+02:00"
+  },
+
+  {
     "id": "v-novo-mesto-prihaja-rekordni-kids-tour-of-slovenia-novice-aktualno-d0320c01",
     "title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno",
     "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno«.",
