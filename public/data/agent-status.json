@@ -1,13 +1,13 @@
 {
   "agent": "Blog Lab Publisher",
-  "status": "completed",
+  "status": "waiting",
   "enabled": true,
-  "category": "sport",
-  "last_run": "2026-10-05T08:23:59+02:00",
+  "category": "politika",
+  "last_run": "2026-10-05T13:38:50+02:00",
   "last_success": "2026-10-05T08:23:59+02:00",
   "last_output": "pokal-narodov-osvojila-belgija-jan-pancar-slovenijo-popeljal-do-13-mesta-3cdeb11e",
   "next_run": null,
-  "message": "Članek je uspešno pripravljen za objavo.",
+  "message": "Fallback ni našel dovolj preverljivih virov za zahtevano kategorijo.",
   "posts_today": 1,
   "scheduled_posts_today": 1,
   "manual_posts_today": 0,
@@ -17,5 +17,5 @@
   ],
   "scheduled_slots_deferred": [],
   "last_editorial_hold": null,
-  "last_error": null
+  "last_error": "fallback_no_category_evidence"
 }
