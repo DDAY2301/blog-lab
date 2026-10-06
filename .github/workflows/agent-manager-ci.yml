@@ -2,7 +2,7 @@ name: Agent Manager CI
 
 on:
   pull_request:
-    branches: [main]
+    branches: [main, agent-manager-v1]
     paths:
       - "agent-manager/**"
       - ".github/workflows/agent-manager-ci.yml"
@@ -40,6 +40,10 @@ jobs:
         run: |
           python -m pytest -q
 
-      - name: FastAPI import smoke
+      - name: V3 FastAPI import smoke
         run: |
-          python -c "from manager.service import app; assert app.title == 'Agent Manager'; print(app.version)"
+          python -c "from manager.service_v3 import app; assert app.title == 'Agent Manager V3'; print(app.version)"
+
+      - name: Legacy import compatibility
+        run: |
+          python -c "from manager.service import app; print(app.version)"
