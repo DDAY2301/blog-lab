@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-06T14:39:15+02:00",
-  "loop_count": 3341,
+  "updated_at": "2026-10-06T14:53:27+02:00",
+  "loop_count": 3342,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-06T14:38:51+02:00",
+      "last_learning_run": "2026-10-06T14:53:06+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -58,11 +58,11 @@
         },
         "news.google.com": {
           "score": 2.498,
-          "seen": 98790,
-          "last_seen": "2026-10-06T14:38:51+02:00",
-          "last_title": "Jorgić v Pekingu moral priznati premoč nemškemu kvalifikantu - rtvslo.si",
+          "seen": 98820,
+          "last_seen": "2026-10-06T14:53:06+02:00",
+          "last_title": "Za uvod odbojkarske sezone po novem superpokal - rtvslo.si",
           "last_provider": "",
-          "published": 164959,
+          "published": 165037,
           "last_output_id": "direktor-dirke-po-sloveniji-tezave-so-vedno-prisotne-a-vi-jih-ne-smete-opaziti-3698cf33"
         },
         "answers.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-06T14:39:03+02:00",
+      "last_learning_run": "2026-10-06T14:53:16+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -270,12 +270,12 @@
       ],
       "source_health": {
         "news.google.com": {
-          "score": 2.498,
-          "seen": 98790,
-          "last_seen": "2026-10-06T14:39:03+02:00",
-          "last_title": "Danes se začenja s predčasnim glasovanjem: Slovenci bodo odločali o štirih referendumskih vprašanjih - Goriške novice",
+          "score": 2.502,
+          "seen": 98820,
+          "last_seen": "2026-10-06T14:53:16+02:00",
+          "last_title": "Ko se politiki izogibajo javne televizije: lastni kanali in manj neprijetnih vprašanj - Dnevnik",
           "last_provider": "",
-          "published": 179010,
+          "published": 179105,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -359,14 +359,14 @@
       "current_source_count": 30,
       "example_titles": {
         "news.google.com": [
+          "Odnosi z Izraelom: diplomacija ne sme biti izgovor za normalizacijo zločinov - Dnevnik",
           "Igor Vobič: Politika ne sme imeti roke na finančni pipi RTV Slovenija - Delo.si",
-          "Vodi ukinitev prispevka v politični despotizem ali ne, ker je politika tako \"vedno zraven\"? - rtvslo.si",
-          "Janša: Znašli smo se v neki spirali stopicanja na mestu - 24ur.com"
+          "Vodi ukinitev prispevka v politični despotizem ali ne, ker je politika tako \"vedno zraven\"? - rtvslo.si"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-06T14:39:15+02:00",
+      "last_learning_run": "2026-10-06T14:53:27+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -421,96 +421,96 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 98790,
-          "last_seen": "2026-10-06T14:39:15+02:00",
+          "seen": 98820,
+          "last_seen": "2026-10-06T14:53:27+02:00",
           "last_title": "Društvo Izgubljeni otroci Slovenije odprlo nove prostore - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 176601,
+          "published": 176655,
           "last_output_id": "debate-z-bergantom-tujci-v-sloveniji-trije-pogledi-na-aktualno-temo-8a8fda8f"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 3318,
+          "published": 3319,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 3318,
+          "published": 3319,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 3341,
+          "published": 3342,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 3243,
+          "published": 3244,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 3307,
+          "published": 3308,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 3243,
+          "published": 3244,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 3243,
+          "published": 3244,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 3307,
+          "published": 3308,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 13364,
+          "published": 13368,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 3341,
+          "published": 3342,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 3318,
+          "published": 3319,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 6550,
+          "published": 6552,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 3275,
+          "published": 3276,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 6614,
+          "published": 6616,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 3341,
+          "published": 3342,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 3243,
+          "published": 3244,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 6550,
+          "published": 6552,
           "last_output_id": "duckduckgo-287dab86"
         },
         "slovenia.info": {
