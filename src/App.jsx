@@ -20,6 +20,40 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "direktor-dirke-po-sloveniji-tezave-so-vedno-prisotne-a-vi-jih-ne-smete-opaziti-3698cf33",
+    "title": "Direktor dirke po Sloveniji: »Težave so vedno prisotne, a vi jih ne smete opaziti«",
+    "excerpt": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Direktor dirke po Sloveniji: »Težave so vedno prisotne, a vi jih ne smete opaziti««.",
+    "seoDescription": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Direktor dirke po Sloveniji: »Težave so vedno prisotne, a vi jih ne smete opazit",
+    "content": "**Šport, 6. 10. 2026.** Direktor dirke po Sloveniji: »Težave so vedno prisotne, a vi jih ne smete opaziti« Slovenske novice\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Slovenske novice. Objavljeno: Tue, 06 Oct 2026 05:35:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiwAFBVV95cUxOUW92OGwyVGRSa21LOGsydWVtNExWVy1aaW84NldQQ2ZBVnZ2RElzdXFndmJZZkozT2JiZTgwRkpMenpoTlBFRTFfcnMyeGtkVGNZd1B5LVlKR1diYlJmcWlMMGNIWGExNlVrRjZoNkNuNWE3cXc3b20xZTQtY3BCc2dwbllGRHU4NjJsNm9JTWJ5dXY1OHU3ellmM0REcnlCZEV1TGFObF9vNlBPRmJpNlVFMkpQN0JVWHF0REE1eDY?oc=5)\n\n## Dopolnitev vira 2: sportklub.si\n\nPozor: čas je za veliki test nove slovenske generacije sportklub.si\n\n Vir: sportklub.si. Objavljeno: Tue, 06 Oct 2026 03:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiiwFBVV95cUxNX3BLejdMYlVHNjhXRC1qbTkxeGE1ZldybThLbXY0QV9XN01McXFCUGpJVXllaFNvZ2N0U2FtVGFXSkhYY1JpdW1ZZDI3WU51Y1hXOEM3Vzh4TndhT1FHOWdWMzVYZXVyOUpNZ09mTjBkSUNOanJpY0F4Z2REVXA2c0k1eV9rNVdZMXlv?oc=5)\n\n## Dopolnitev vira 3: 24ur.com\n\nDobra podoba Slovenije ob prvi zmagi pod vodstvom Cesarja 24ur.com\n\n Vir: 24ur.com. Objavljeno: Wed, 30 Sep 2026 04:51:24 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiiwFBVV95cUxOekFmREp1UEZSbW50Z3J6Si1SengwOWNteHlGajNobXZoVS1mdC04cUJwckc3SnA4cEhTMHJrVGczZGVfdGVRWmQ2SG5CQ3pDbG9YMC1pcGlaN0ExM2xBaGxIUFdDc213TzBIdV9qZHdRbmhxLWowRE9fZV83Y0Jxc0RzYmFsU2xFb0l3?oc=5)\n\n## Dopolnitev vira 4: Morel.si\n\nV Sloveniji bomo prvič spremljali odbojkarski Superpokal Morel.si\n\n Vir: Morel.si. Objavljeno: Tue, 06 Oct 2026 02:30:05 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMikgFBVV95cUxQRjFiOHFiVFlEQVRJTGRLN1k1b0NpN2dGZ29uU1p1YTBNZDBPYlhfdW42Q3JXLW9BUmhpOHUyc213N0pzSXRsU18tZGF5OGVOTDcwaGREc2NYVjFsM3A4MWpabUdmTXctOHVYdmFCZWM3ZzdfQ2JkTXBwX1IxTXZfWW9Kc0h1S1laSTlJMXJWRlBqZw?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Šport",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Slovenske novice — Direktor dirke po Sloveniji: »Težave so vedno prisotne, a vi jih ne smete opaziti« - Slovenske novice",
+        "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOUW92OGwyVGRSa21LOGsydWVtNExWVy1aaW84NldQQ2ZBVnZ2RElzdXFndmJZZkozT2JiZTgwRkpMenpoTlBFRTFfcnMyeGtkVGNZd1B5LVlKR1diYlJmcWlMMGNIWGExNlVrRjZoNkNuNWE3cXc3b20xZTQtY3BCc2dwbllGRHU4NjJsNm9JTWJ5dXY1OHU3ellmM0REcnlCZEV1TGFObF9vNlBPRmJpNlVFMkpQN0JVWHF0REE1eDY?oc=5"
+      },
+      {
+        "label": "sportklub.si — Pozor: čas je za veliki test nove slovenske generacije - sportklub.si",
+        "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNX3BLejdMYlVHNjhXRC1qbTkxeGE1ZldybThLbXY0QV9XN01McXFCUGpJVXllaFNvZ2N0U2FtVGFXSkhYY1JpdW1ZZDI3WU51Y1hXOEM3Vzh4TndhT1FHOWdWMzVYZXVyOUpNZ09mTjBkSUNOanJpY0F4Z2REVXA2c0k1eV9rNVdZMXlv?oc=5"
+      },
+      {
+        "label": "24ur.com — Dobra podoba Slovenije ob prvi zmagi pod vodstvom Cesarja - 24ur.com",
+        "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOekFmREp1UEZSbW50Z3J6Si1SengwOWNteHlGajNobXZoVS1mdC04cUJwckc3SnA4cEhTMHJrVGczZGVfdGVRWmQ2SG5CQ3pDbG9YMC1pcGlaN0ExM2xBaGxIUFdDc213TzBIdV9qZHdRbmhxLWowRE9fZV83Y0Jxc0RzYmFsU2xFb0l3?oc=5"
+      },
+      {
+        "label": "Morel.si — V Sloveniji bomo prvič spremljali odbojkarski Superpokal - Morel.si",
+        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQRjFiOHFiVFlEQVRJTGRLN1k1b0NpN2dGZ29uU1p1YTBNZDBPYlhfdW42Q3JXLW9BUmhpOHUyc213N0pzSXRsU18tZGF5OGVOTDcwaGREc2NYVjFsM3A4MWpabUdmTXctOHVYdmFCZWM3ZzdfQ2JkTXBwX1IxTXZfWW9Kc0h1S1laSTlJMXJWRlBqZw?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-06T08:24:07+02:00",
+    "updatedAt": "2026-10-06T08:24:07+02:00"
+  },
+
+  {
     "id": "debate-z-bergantom-tujci-v-sloveniji-trije-pogledi-na-aktualno-temo-8a8fda8f",
     "title": "Debate z Bergantom: Tujci v Sloveniji: Trije pogledi na aktualno temo",
     "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Debate z Bergantom: Tujci v Sloveniji: Trije pogledi na aktualno temo«.",
