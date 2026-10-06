@@ -20,6 +20,32 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3",
+    "title": "Je Igor E. Bergant na TV Slovenija namerno zlorabil programski čas za prikrito propagando?",
+    "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Je Igor E. Bergant na TV Slovenija namerno zlorabil programski čas za prikrito propagando?«.",
+    "seoDescription": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Je Igor E. Bergant na TV Slovenija namerno zlorabil programski čas za prikrit",
+    "content": "**Aktualno, 6. 10. 2026.** Je Igor E. Bergant na TV Slovenija namerno zlorabil programski čas za prikrito propagando? Info360\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Info360. Objavljeno: Tue, 06 Oct 2026 11:03:53 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiuAFBVV95cUxPNVA0LXNjNXZNOEdhOThlU2JiSjkweGx4UG5oU0FYbGNiSTFYQlNvUFdTQ19HSzhCYWJpaEVfU09BdVI2ZVRkQUVBTzZUbzh2SjFhS1ZRSnJScVlleVdXbmxvSjcxcDZUWUFUTHZlQWNjbHJILTdqZTQyMjJmSVh3S2p6X2dyU0dYeEVqLXFjVUNfeDFMVEdFbnVvZldVRFVTOFYzVEV1eFR5LXVOQjlzTi1jMi1tZnI5?oc=5)\n\n## Dopolnitev vira 2: Info360\n\nEvropska komisija: Slovenija krši pravice avtorjem Info360\n\n Vir: Info360. Objavljeno: Fri, 25 Sep 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiWEFVX3lxTE1teGRra3cxR0lpMlBzLWxyZUhhR241TXFpM0c1MFFodnVUQ3dXbzlHcWNlaTE2YmE4RVllVnpnNm5KeEZyRTF5bXVGa1k1YjJ6SlAtSUd0dW4?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Aktualno",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Info360 — Je Igor E. Bergant na TV Slovenija namerno zlorabil programski čas za prikrito propagando? - Info360",
+        "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPNVA0LXNjNXZNOEdhOThlU2JiSjkweGx4UG5oU0FYbGNiSTFYQlNvUFdTQ19HSzhCYWJpaEVfU09BdVI2ZVRkQUVBTzZUbzh2SjFhS1ZRSnJScVlleVdXbmxvSjcxcDZUWUFUTHZlQWNjbHJILTdqZTQyMjJmSVh3S2p6X2dyU0dYeEVqLXFjVUNfeDFMVEdFbnVvZldVRFVTOFYzVEV1eFR5LXVOQjlzTi1jMi1tZnI5?oc=5"
+      },
+      {
+        "label": "Info360 — Evropska komisija: Slovenija krši pravice avtorjem - Info360",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1teGRra3cxR0lpMlBzLWxyZUhhR241TXFpM0c1MFFodnVUQ3dXbzlHcWNlaTE2YmE4RVllVnpnNm5KeEZyRTF5bXVGa1k1YjJ6SlAtSUd0dW4?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-06T19:59:01+02:00",
+    "updatedAt": "2026-10-06T19:59:01+02:00"
+  },
+
+  {
     "id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909",
     "title": "Mijičeva odločitev sprožila plaz odzivov, predsednica Levice besna: Dno dna slovenske politike, sramota vseh…",
     "excerpt": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Mijičeva odločitev sprožila plaz odzivov, predsednica Levice besna: Dno dna slovenske politike, sramota vseh…«.",
