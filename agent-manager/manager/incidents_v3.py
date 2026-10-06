@@ -16,4 +16,12 @@ class IncidentEngineV3:
     def resolve(self,incident_id:str,payload:dict|None=None):
         now=utcnow(); self.store.execute("UPDATE incidents SET status='resolved',resolved_at=?,last_seen=? WHERE id=?",(now,now,incident_id))
         self.store.execute("INSERT INTO incident_events(incident_id,ts,state,payload) VALUES(?,?,?,?)",(incident_id,now,"resolved",json.dumps(payload or {})))
+    def resolve_matching(self, component: str, title: str, payload: dict | None = None) -> bool:
+        fp = self.fingerprint(component, title)
+        rows = self.store.query("SELECT id FROM incidents WHERE fingerprint=? AND status!='resolved'", (fp,))
+        if not rows:
+            return False
+        self.resolve(rows[0]["id"], payload or {"reason": "health restored"})
+        return True
+
     def open(self): return self.store.query("SELECT * FROM incidents WHERE status!='resolved' ORDER BY last_seen DESC")
