@@ -10,8 +10,14 @@ class MonitorLoopV3:
         loop_id=uuid.uuid4().hex[:10]; self.store.heartbeat("manager","running",loop_id)
         resources=system_resources(); pv=await http_health(self.s.pv_health_url); ollama=await http_health(self.s.ollama_base_url+"/api/tags")
         self.last={"loop_id":loop_id,"resources":resources,"project_visibility":pv,"ollama":ollama}; self.store.event("HEALTH_CYCLE","manager","info",self.last)
-        if not pv.get("ok"): self.inc.raise_or_update("project_visibility","Health endpoint unreachable","P1",[str(pv)])
-        if not ollama.get("ok"): self.inc.raise_or_update("ollama","Local AI runtime unreachable","P2",[str(ollama)])
+        if not pv.get("ok"):
+            self.inc.raise_or_update("project_visibility","Health endpoint unreachable","P1",[str(pv)])
+        else:
+            self.inc.resolve_matching("project_visibility","Health endpoint unreachable",{"health": pv})
+        if not ollama.get("ok"):
+            self.inc.raise_or_update("ollama","Local AI runtime unreachable","P2",[str(ollama)])
+        else:
+            self.inc.resolve_matching("ollama","Local AI runtime unreachable",{"health": ollama})
         if resources.get("ram_percent",0)>=92: self.inc.raise_or_update("system","RAM critical","P1",[str(resources)])
         elif resources.get("ram_percent",0)>=85: self.inc.raise_or_update("system","RAM elevated","P2",[str(resources)])
         if resources.get("disk_percent",0)>=95: self.inc.raise_or_update("system","Disk critical","P0",[str(resources)])
