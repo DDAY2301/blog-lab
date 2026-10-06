@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-06T21:39:58+02:00",
-  "loop_count": 3410,
+  "updated_at": "2026-10-06T21:53:51+02:00",
+  "loop_count": 3411,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-06T21:39:28+02:00",
+      "last_learning_run": "2026-10-06T21:53:29+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -58,11 +58,11 @@
         },
         "news.google.com": {
           "score": 2.498,
-          "seen": 100860,
-          "last_seen": "2026-10-06T21:39:28+02:00",
-          "last_title": "Brez Gajserja, a z visokimi cilji: Slovenija na Pokal narodov - Šport TV",
+          "seen": 100890,
+          "last_seen": "2026-10-06T21:53:29+02:00",
+          "last_title": "Coco Gauff tarča rasističnih žaljivk: 'Ni zgolj goljufinja, je tudi lažnivka' - 24ur.com",
           "last_provider": "",
-          "published": 170341,
+          "published": 170419,
           "last_output_id": "direktor-dirke-po-sloveniji-tezave-so-vedno-prisotne-a-vi-jih-ne-smete-opaziti-3698cf33"
         },
         "answers.com": {
@@ -232,12 +232,12 @@
         "news.google.com": [
           "Slovenija odlično začela, Škotska pa zadela (1:0*) - 24ur.com",
           "(SPREMLJAMO) Slovenija s Škotsko za drugo mesto v skupini - Dnevnik",
-          "Mešani ekipni kronometer: naslov spet Franciji, Slovenci peti - rtvslo.si"
+          "Slovenija ekspresno povedla, a vseeno v Švici ostala praznih rok - rtvslo.si"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-06T21:39:47+02:00",
+      "last_learning_run": "2026-10-06T21:53:40+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -271,11 +271,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 100860,
-          "last_seen": "2026-10-06T21:39:47+02:00",
-          "last_title": "So na RTV namerno zlorabili programski čas za prikrito propagando? - e-Maribor",
+          "seen": 100890,
+          "last_seen": "2026-10-06T21:53:40+02:00",
+          "last_title": "Umrl je znani slovenski poslovnež in politik - Slovenske novice",
           "last_provider": "",
-          "published": 185527,
+          "published": 185620,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -366,7 +366,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-06T21:39:58+02:00",
+      "last_learning_run": "2026-10-06T21:53:51+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -421,96 +421,96 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 100860,
-          "last_seen": "2026-10-06T21:39:58+02:00",
+          "seen": 100890,
+          "last_seen": "2026-10-06T21:53:51+02:00",
           "last_title": "V čigave roke je odtekal denar iz Japajade šova na TV Slovenija? - Info360",
           "last_provider": "",
-          "published": 180365,
+          "published": 180421,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 3387,
+          "published": 3388,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 3387,
+          "published": 3388,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 3410,
+          "published": 3411,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 3312,
+          "published": 3313,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 3376,
+          "published": 3377,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 3312,
+          "published": 3313,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 3312,
+          "published": 3313,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 3376,
+          "published": 3377,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 13640,
+          "published": 13644,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 3410,
+          "published": 3411,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 3387,
+          "published": 3388,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 6688,
+          "published": 6690,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 3344,
+          "published": 3345,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 6752,
+          "published": 6754,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 3410,
+          "published": 3411,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 3312,
+          "published": 3313,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 6688,
+          "published": 6690,
           "last_output_id": "duckduckgo-287dab86"
         },
         "slovenia.info": {
