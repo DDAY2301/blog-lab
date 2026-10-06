@@ -1,5 +1,5 @@
 // Review draft only. Not imported by the production application.
-// Rolling review draft. Sources rechecked on 2026-10-05 at 07:07 Europe/Ljubljana.
+// Rolling review draft. Sources rechecked on 2026-10-06 at 07:01 Europe/Ljubljana.
 // Production remains unchanged until the calendar model and stable views are implemented.
 // Unknown values deliberately remain null.
 export const draftEvents = [
@@ -1994,7 +1994,7 @@ export const draftEvents = [
     "accessibility": "Outdoor roadside viewing; individual accessible viewing arrangements not stated",
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-10-05T07:07:57+02:00"
+    "lastCheckedAt": "2026-10-06T07:01:47+02:00"
   },
   {
     "eventId": "ex-mgl-2026-10-02",
@@ -2396,7 +2396,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "confirmed",
+    "status": "past",
     "lastCheckedAt": "2026-10-05T07:07:57+02:00"
   },
   {
@@ -2428,7 +2428,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "sold_out",
-    "lastCheckedAt": "2026-10-05T07:07:57+02:00"
+    "lastCheckedAt": "2026-10-06T07:01:47+02:00"
   },
   {
     "eventId": "vladimir-kostadinovic-iris-cd-2026-10-06",
@@ -2459,7 +2459,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-10-05T07:07:57+02:00"
+    "lastCheckedAt": "2026-10-06T07:01:47+02:00"
   },
   {
     "eventId": "salome-mgl-2026-10-07",
@@ -2490,7 +2490,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
+    "lastCheckedAt": "2026-10-06T07:01:47+02:00"
   },
   {
     "eventId": "man-overboard-mgl-2026-10-07",
@@ -2521,7 +2521,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "sold_out",
-    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
+    "lastCheckedAt": "2026-10-06T07:01:47+02:00"
   },
   {
     "eventId": "pc1-eternal-rest-cd-2026-10-08",
@@ -2555,6 +2555,37 @@ export const draftEvents = [
     "lastCheckedAt": "2026-10-04T06:55:58+02:00"
   },
   {
+    "eventId": "open-kitchen-2026-10-09",
+    "title": "Open Kitchen",
+    "summary": "Ljubljana's open-air food market is scheduled at Pogačarjev trg from 10:00 to 21:00, subject to suitable weather. Entry is free; food and drink are purchased from individual stalls.",
+    "category": "food",
+    "startAt": "2026-10-09T10:00:00+02:00",
+    "endAt": "2026-10-09T21:00:00+02:00",
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Pogačarjev trg",
+      "address": "Pogačarjev trg, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": "Free admission",
+      "free": true
+    },
+    "ticketUrl": null,
+    "officialUrl": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/open-kitchen",
+    "sourceName": "Ljubljana Tourism",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": true,
+    "accessibility": null,
+    "indoorOutdoor": "outdoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-10-06T07:01:47+02:00"
+  },
+  {
     "eventId": "pc1-eternal-rest-cd-2026-10-09",
     "title": "PC 1: Eternal Rest",
     "summary": "The second performance begins at 19:30 and lasts about 90 minutes including an interval. Tickets cost €9–42, with listed concessions.",
@@ -2584,6 +2615,37 @@ export const draftEvents = [
     "indoorOutdoor": "indoor",
     "status": "confirmed",
     "lastCheckedAt": "2026-10-04T06:55:58+02:00"
+  },
+  {
+    "eventId": "bojana-robinson-peekaboo-cd-2026-10-09",
+    "title": "Bojana Robinson: Peekaboo",
+    "summary": "Cankarjev dom lists this theatre and dance performance for Friday 9 October at 20:00. Price, language, family suitability and event-specific accessibility were not stated in the official English overview checked.",
+    "category": "dance",
+    "startAt": "2026-10-09T20:00:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": null
+    },
+    "ticketUrl": "https://www.cd-cc.si/en",
+    "officialUrl": "https://www.cd-cc.si/en",
+    "sourceName": "Cankarjev dom",
+    "languages": [],
+    "touristFriendly": null,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-10-06T07:01:47+02:00"
   },
   {
     "eventId": "sunnysiders-stone-head-castle-2026-10-09",
@@ -2617,6 +2679,37 @@ export const draftEvents = [
     "lastCheckedAt": "2026-09-28T07:00:00+02:00"
   },
   {
+    "eventId": "when-i-get-out-cd-2026-10-09",
+    "title": "When I Get Out (Ko pridem ven)",
+    "summary": "Cankarjev dom lists this cinema event for Friday 9 October at 20:00. Ticket price, screening language and accessibility details were not provided in the official English overview checked.",
+    "category": "film",
+    "startAt": "2026-10-09T20:00:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": null
+    },
+    "ticketUrl": "https://www.cd-cc.si/en",
+    "officialUrl": "https://www.cd-cc.si/en",
+    "sourceName": "Cankarjev dom",
+    "languages": [],
+    "touristFriendly": null,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-10-06T07:01:47+02:00"
+  },
+  {
     "eventId": "artish-2026-10-10",
     "title": "ARTish",
     "summary": "ARTish returns to Gallusovo nabrežje from 10:00 to 17:00 with locally made art and design. Entry is free; the riverside market is visitor-friendly, while accessibility depends on the outdoor public-space conditions.",
@@ -2648,6 +2741,99 @@ export const draftEvents = [
     "lastCheckedAt": "2026-09-30T07:01:22+02:00"
   },
   {
+    "eventId": "flamenco-beyond-genre-cd-2026-10-10",
+    "title": "Flamenco Beyond Genre",
+    "summary": "Cankarjev dom schedules this theatre and dance event for Saturday 10 October at 10:30. Price, language, family suitability and accessibility remain unconfirmed in the overview checked.",
+    "category": "dance",
+    "startAt": "2026-10-10T10:30:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": null
+    },
+    "ticketUrl": "https://www.cd-cc.si/en",
+    "officialUrl": "https://www.cd-cc.si/en",
+    "sourceName": "Cankarjev dom",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-10-06T07:01:47+02:00"
+  },
+  {
+    "eventId": "marco-de-ana-power-protest-cd-2026-10-10",
+    "title": "Marco de Ana: The Power of Protest",
+    "summary": "The official Cankarjev dom programme lists this theatre and dance event for Saturday 10 October at 12:00. Price, language and event-specific accessibility were not published in the overview checked.",
+    "category": "dance",
+    "startAt": "2026-10-10T12:00:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": null
+    },
+    "ticketUrl": "https://www.cd-cc.si/en",
+    "officialUrl": "https://www.cd-cc.si/en",
+    "sourceName": "Cankarjev dom",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-10-06T07:01:47+02:00"
+  },
+  {
+    "eventId": "multituds-cd-2026-10-10",
+    "title": "Alba Haro & Marco de Ana: MultituDs",
+    "summary": "Cankarjev dom schedules MultituDs for Saturday 10 October at 20:00. The dance-led format may be accessible to international visitors, but price, age guidance and venue accessibility should be checked before booking.",
+    "category": "dance",
+    "startAt": "2026-10-10T20:00:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": null
+    },
+    "ticketUrl": "https://www.cd-cc.si/en",
+    "officialUrl": "https://www.cd-cc.si/en",
+    "sourceName": "Cankarjev dom",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-10-06T07:01:47+02:00"
+  },
+  {
     "eventId": "european-table-tennis-championships-2026",
     "title": "European Individual Table Tennis Championships 2026",
     "summary": "Europe's leading players compete at Stožice Arena from 11 to 18 October in singles, doubles and mixed doubles. Tickets are on sale; exact daily session times, prices, language services and accessibility should be checked for the selected session.",
@@ -2677,6 +2863,99 @@ export const draftEvents = [
     "indoorOutdoor": "indoor",
     "status": "confirmed",
     "lastCheckedAt": "2026-09-30T07:01:22+02:00"
+  },
+  {
+    "eventId": "sunday-flea-market-2026-10-11",
+    "title": "Sunday Flea Market",
+    "summary": "The antiques and vintage market is scheduled on Breg from 08:00 to 15:00. Admission is free; as an outdoor event, the number of sellers and closing time can depend on weather.",
+    "category": "market",
+    "startAt": "2026-10-11T08:00:00+02:00",
+    "endAt": "2026-10-11T15:00:00+02:00",
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Breg",
+      "address": "Breg, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": "Free admission",
+      "free": true
+    },
+    "ticketUrl": null,
+    "officialUrl": "https://www.visitljubljana.com/en/visitors/events",
+    "sourceName": "Ljubljana Tourism",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": true,
+    "accessibility": null,
+    "indoorOutdoor": "outdoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-10-06T07:01:47+02:00"
+  },
+  {
+    "eventId": "bojana-robinson-peekaboo-cd-2026-10-11",
+    "title": "Bojana Robinson: Peekaboo",
+    "summary": "A second performance is listed at Cankarjev dom for Sunday 11 October at 20:00. Price, language, family suitability and event-specific accessibility remain unconfirmed.",
+    "category": "dance",
+    "startAt": "2026-10-11T20:00:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": null
+    },
+    "ticketUrl": "https://www.cd-cc.si/en",
+    "officialUrl": "https://www.cd-cc.si/en",
+    "sourceName": "Cankarjev dom",
+    "languages": [],
+    "touristFriendly": null,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-10-06T07:01:47+02:00"
+  },
+  {
+    "eventId": "volosi-cd-2026-10-11",
+    "title": "Vołosi (Poland)",
+    "summary": "The Polish ensemble Vołosi performs at Cankarjev dom on Sunday 11 October at 20:00. Music is suitable for international visitors; ticket price and event-specific accessibility should be confirmed before booking.",
+    "category": "music",
+    "startAt": "2026-10-11T20:00:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": null
+    },
+    "ticketUrl": "https://www.cd-cc.si/en",
+    "officialUrl": "https://www.cd-cc.si/en",
+    "sourceName": "Cankarjev dom",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-10-06T07:01:47+02:00"
   },
   {
     "eventId": "dino-pesut-air-raid-cd-2026-10-12",
@@ -2772,6 +3051,37 @@ export const draftEvents = [
     "lastCheckedAt": "2026-10-05T07:07:57+02:00"
   },
   {
+    "eventId": "france-podrekar-national-gallery-2026",
+    "title": "France Podrekar (1887–1964)",
+    "summary": "The National Gallery opens this exhibition on 14 October 2026 and lists it through 14 February 2027. Opening hours, admission and accessibility should be checked on the gallery's visitor pages before arrival.",
+    "category": "exhibition",
+    "startAt": "2026-10-14T10:00:00+02:00",
+    "endAt": "2027-02-14T18:00:00+01:00",
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "National Gallery of Slovenia",
+      "address": "Prešernova cesta 24, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": null
+    },
+    "ticketUrl": "https://www.ng-slo.si/en/",
+    "officialUrl": "https://www.ng-slo.si/en/exhibitions-and-projects",
+    "sourceName": "National Gallery of Slovenia",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": null,
+    "accessibility": true,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-10-06T07:01:47+02:00"
+  },
+  {
     "eventId": "stretch-3789-castle-2026",
     "title": "Stretch 3789",
     "summary": "Ljubljana Castle opens this spatial installation in the S Gallery on 15 October, with daily viewing from 09:00 to 18:00 through 31 January 2027. Admission and event-specific accessibility were not stated on the programme page checked.",
@@ -2863,6 +3173,37 @@ export const draftEvents = [
     "indoorOutdoor": "indoor",
     "status": "confirmed",
     "lastCheckedAt": "2026-10-05T07:07:57+02:00"
+  },
+  {
+    "eventId": "cleveland-orchestra-cd-2026-10-18",
+    "title": "The Cleveland Orchestra",
+    "summary": "Franz Welser-Möst conducts The Cleveland Orchestra at Cankarjev dom on Sunday 18 October at 19:30. Tickets are listed at €48, €62, €70 and €85; the concert format is visitor-friendly and language-independent.",
+    "category": "music",
+    "startAt": "2026-10-18T19:30:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Gallus Hall, Cankarjev dom",
+      "address": "Prešernova cesta 10, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": 48,
+      "currency": "EUR",
+      "label": "€48–€85",
+      "free": false
+    },
+    "ticketUrl": "https://www.cd-cc.si/en",
+    "officialUrl": "https://www.cd-cc.si/en",
+    "sourceName": "Cankarjev dom",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-10-06T07:01:47+02:00"
   },
   {
     "eventId": "romantic-souls-mgl-2026-10-19",
