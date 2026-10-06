@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-06T06:09:39+02:00",
-  "loop_count": 3269,
+  "updated_at": "2026-10-06T06:23:55+02:00",
+  "loop_count": 3270,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-06T06:09:17+02:00",
+      "last_learning_run": "2026-10-06T06:23:33+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -58,11 +58,11 @@
         },
         "news.google.com": {
           "score": 2.498,
-          "seen": 96630,
-          "last_seen": "2026-10-06T06:09:17+02:00",
+          "seen": 96660,
+          "last_seen": "2026-10-06T06:23:33+02:00",
           "last_title": "(ODZIVI) Slovenija prvič poražena v letošnji ligi narodov: Ko izgubljaš, moraš biti nevaren - Večer",
           "last_provider": "",
-          "published": 159097,
+          "published": 159176,
           "last_output_id": "pokal-narodov-osvojila-belgija-jan-pancar-slovenijo-popeljal-do-13-mesta-3cdeb11e"
         },
         "answers.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-06T06:09:28+02:00",
+      "last_learning_run": "2026-10-06T06:23:43+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -271,11 +271,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 96630,
-          "last_seen": "2026-10-06T06:09:28+02:00",
+          "seen": 96660,
+          "last_seen": "2026-10-06T06:23:43+02:00",
           "last_title": "Interpelacija zaradi obrata v zunanji politiki, ki krši mednarodno pravo - Delo.si",
           "last_provider": "",
-          "published": 172480,
+          "published": 172570,
           "last_output_id": "vodi-ukinitev-prispevka-v-politicni-despotizem-ali-ne-ker-je-politika-tako-vedno-zraven-429d50e9"
         },
         "pewresearch.org": {
@@ -366,7 +366,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-06T06:09:39+02:00",
+      "last_learning_run": "2026-10-06T06:23:55+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -421,96 +421,96 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 96630,
-          "last_seen": "2026-10-06T06:09:39+02:00",
-          "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
+          "seen": 96660,
+          "last_seen": "2026-10-06T06:23:55+02:00",
+          "last_title": "Društvo Izgubljeni otroci Slovenije odprlo nove prostore - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 172649,
+          "published": 172707,
           "last_output_id": "debate-z-bergantom-tujci-v-sloveniji-trije-pogledi-na-aktualno-temo-8a8fda8f"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 3246,
+          "published": 3247,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 3246,
+          "published": 3247,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 3269,
+          "published": 3270,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 3171,
+          "published": 3172,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 3235,
+          "published": 3236,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 3171,
+          "published": 3172,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 3171,
+          "published": 3172,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 3235,
+          "published": 3236,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 13076,
+          "published": 13080,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 3269,
+          "published": 3270,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 3246,
+          "published": 3247,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 6406,
+          "published": 6408,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 3203,
+          "published": 3204,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 6470,
+          "published": 6472,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 3269,
+          "published": 3270,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 3171,
+          "published": 3172,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 6406,
+          "published": 6408,
           "last_output_id": "duckduckgo-287dab86"
         },
         "slovenia.info": {
@@ -533,7 +533,7 @@
         "news.google.com": [
           "(AKTUALNO) V novi številki revije Demokracija preberite: Izključujejo in zavirajo razvoj! Janša: Osamosvojitvena Slovenija ne bo nikoli več ",
           "Debate z Bergantom: Tujci v Sloveniji: Trije pogledi na aktualno temo - Siol.net",
-          "Evropska komisija: Slovenija krši pravice avtorjem - Info360"
+          "(AKTUALNO) Varuhinja človekovih pravic Simona Drenik Bavdek: Pravica do dostojnega pokopa temeljna človekova pravica - Demokracija"
         ]
       }
     }
