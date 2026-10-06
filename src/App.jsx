@@ -20,6 +20,44 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909",
+    "title": "Mijičeva odločitev sprožila plaz odzivov, predsednica Levice besna: Dno dna slovenske politike, sramota vseh…",
+    "excerpt": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Mijičeva odločitev sprožila plaz odzivov, predsednica Levice besna: Dno dna slovenske politike, sramota vseh…«.",
+    "seoDescription": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Mijičeva odločitev sprožila plaz odzivov, predsednica Levice besna: Dno dna s",
+    "content": "**Politika, 6. 10. 2026.** Mijičeva odločitev sprožila plaz odzivov, predsednica Levice besna: Dno dna slovenske politike, sramota vseh sramot ... Slovenske novice\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nPri političnih temah Blog Lab ne podpira kandidatov, strank ali političnih odločitev; izjave in ocene so predstavljene kot stališča njihovih avtorjev ali virov, ne kot uredniška presoja.\n\nVir: Slovenske novice. Objavljeno: Tue, 06 Oct 2026 08:15:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMi8wFBVV95cUxNUGRtdGpRN2Z4TGZOZlQ4VFVJS05CVEhUVmJoUzFQT2k3dnZGU3o4dzYxd0JtOVFlTC1EQzRZVkNLTVR4SVZqa3VZOHE2ek1MeXlzVV9VZzZfem5BZURhbnpheTNiLVZkWDlaTElRTkg3dFJfVUlyaUlJOGdIeXJPSnkzLVN6YlZfSk5Bd1ZPSFZvR2Jsd0k0cm1ZZzVOeEdrRDBaZm41amQtLUl2Wlo1bU42QU5vR0NJRXFsWXdfZHI1NDcxX1Q3Ri1KSG5zcDRkb05Kbko2cU9MaGFTeWpqSGZhWS16Mm5Zb1U1ZEJib1d0ZU0?oc=5)\n\n## Dopolnitev vira 2: vecer.com\n\nAsta Vrečko: \"Če od česa ni dodane vrednosti, je to politik, ki greje dobro plačane funkcije že 35 let\" vecer.com\n\n Vir: vecer.com. Objavljeno: Mon, 05 Oct 2026 12:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdU44MGZERlJha0k4TktVNkFZRXFySWROdTJjYnBzS04ycXZXSnJwdmFXY3BUZ0hCTjBZVnNpLXQxMWdSWEJlY3FxRFp4eDd1ZDR1Zm9zbEdTcUNEb0lCZlJjUHVBV0duWTFRQmdGS1B5ZUQzYWpBTjFNeFhjWExMY3NNMmRWcFBVOTdxR0t6WnVER0dQd1l6THB5NzNsZDRHSkJXU0lIMXgwUQ?oc=5)\n\n## Dopolnitev vira 3: Radio Ognjišče\n\nCerar in Peterle: Slovenska politika potrebuje več resnice, spoštovanja in skupnih ciljev Radio Ognjišče\n\n Vir: Radio Ognjišče. Objavljeno: Mon, 05 Oct 2026 16:10:51 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiR0FVX3lxTE9WS2VfaW91cE5RTWU2WGdGbXE3YnIycVpJZF94Vnkwb0JtaXpSZHczZ1I0UEN1bE1JR09sdmhZeTh6NDRSWE5J?oc=5)\n\n## Dopolnitev vira 4: rtvslo.si\n\nSlovenski Pen: Javna radio in televizija nista last trenutno vladajoče politike rtvslo.si\n\n Vir: rtvslo.si. Objavljeno: Tue, 06 Oct 2026 11:30:48 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMi_wFBVV95cUxNMnZSNks0ZEY1QnNnWWp0OHVaS1ZQSzk1c3YzaTQ1a1ZZRE04aGhiazBjR21WWHB6T2REM3AtQ0ZXWkZIMDJ4d3lYWUpob09xMEtvQ3N5Q0Q0dV9vcC11cTRxSy1iMmdmbXdYcEFrMVhrM1hOMTFtSGpncVFwQnJTdjhiUm54eXlKaHVJM0ZXaFNKR3N0R1M3UFIwb202b0lNcTFRSklpdE1JZ2k2TTlHTGEyelBtUVExRXp2clVQd3pmUi1GWE1zMWNKVkJPNlBKVVdiWV9VVzQ0VkFOVFV6N1p1VlhSWE1Ha21rME5xcTBGUmptY2R3MEVlamQ0UGs?oc=5)\n\n## Dopolnitev vira 5: Delo.si\n\nIgor Vobič: Politika ne sme imeti roke na finančni pipi RTV Slovenija Delo.si\n\n Vir: Delo.si. Objavljeno: Tue, 06 Oct 2026 07:30:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMilAFBVV95cUxPLTMtazdBWEs1QWs2cEJVNm9Gb0FFNWZ0Q3ZnZ2pZUkNkQlg2WGZNN1lOOHZXTFJzaUtRcTdkdUM4cWhJcDAxSVlQeHBELWNRbFczUkFhMGJsdXVydl90Tm1rMzU1eEw1bmRPT2dNbU5tSHI3V043VXV3eUtmMEMyQmVRRkZ4Y1JZR1VFVk5ZbzNQUW9o?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Politika",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Slovenske novice — Mijičeva odločitev sprožila plaz odzivov, predsednica Levice besna: Dno dna slovenske politike, sramota vseh sramot…",
+        "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNUGRtdGpRN2Z4TGZOZlQ4VFVJS05CVEhUVmJoUzFQT2k3dnZGU3o4dzYxd0JtOVFlTC1EQzRZVkNLTVR4SVZqa3VZOHE2ek1MeXlzVV9VZzZfem5BZURhbnpheTNiLVZkWDlaTElRTkg3dFJfVUlyaUlJOGdIeXJPSnkzLVN6YlZfSk5Bd1ZPSFZvR2Jsd0k0cm1ZZzVOeEdrRDBaZm41amQtLUl2Wlo1bU42QU5vR0NJRXFsWXdfZHI1NDcxX1Q3Ri1KSG5zcDRkb05Kbko2cU9MaGFTeWpqSGZhWS16Mm5Zb1U1ZEJib1d0ZU0?oc=5"
+      },
+      {
+        "label": "vecer.com — Asta Vrečko: \"Če od česa ni dodane vrednosti, je to politik, ki greje dobro plačane funkcije že 35 let\" - vecer.com",
+        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdU44MGZERlJha0k4TktVNkFZRXFySWROdTJjYnBzS04ycXZXSnJwdmFXY3BUZ0hCTjBZVnNpLXQxMWdSWEJlY3FxRFp4eDd1ZDR1Zm9zbEdTcUNEb0lCZlJjUHVBV0duWTFRQmdGS1B5ZUQzYWpBTjFNeFhjWExMY3NNMmRWcFBVOTdxR0t6WnVER0dQd1l6THB5NzNsZDRHSkJXU0lIMXgwUQ?oc=5"
+      },
+      {
+        "label": "Radio Ognjišče — Cerar in Peterle: Slovenska politika potrebuje več resnice, spoštovanja in skupnih ciljev - Radio Ognjišče",
+        "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE9WS2VfaW91cE5RTWU2WGdGbXE3YnIycVpJZF94Vnkwb0JtaXpSZHczZ1I0UEN1bE1JR09sdmhZeTh6NDRSWE5J?oc=5"
+      },
+      {
+        "label": "rtvslo.si — Slovenski Pen: Javna radio in televizija nista last trenutno vladajoče politike - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxNMnZSNks0ZEY1QnNnWWp0OHVaS1ZQSzk1c3YzaTQ1a1ZZRE04aGhiazBjR21WWHB6T2REM3AtQ0ZXWkZIMDJ4d3lYWUpob09xMEtvQ3N5Q0Q0dV9vcC11cTRxSy1iMmdmbXdYcEFrMVhrM1hOMTFtSGpncVFwQnJTdjhiUm54eXlKaHVJM0ZXaFNKR3N0R1M3UFIwb202b0lNcTFRSklpdE1JZ2k2TTlHTGEyelBtUVExRXp2clVQd3pmUi1GWE1zMWNKVkJPNlBKVVdiWV9VVzQ0VkFOVFV6N1p1VlhSWE1Ha21rME5xcTBGUmptY2R3MEVlamQ0UGs?oc=5"
+      },
+      {
+        "label": "Delo.si — Igor Vobič: Politika ne sme imeti roke na finančni pipi RTV Slovenija - Delo.si",
+        "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPLTMtazdBWEs1QWs2cEJVNm9Gb0FFNWZ0Q3ZnZ2pZUkNkQlg2WGZNN1lOOHZXTFJzaUtRcTdkdUM4cWhJcDAxSVlQeHBELWNRbFczUkFhMGJsdXVydl90Tm1rMzU1eEw1bmRPT2dNbU5tSHI3V043VXV3eUtmMEMyQmVRRkZ4Y1JZR1VFVk5ZbzNQUW9o?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-06T13:38:59+02:00",
+    "updatedAt": "2026-10-06T13:38:59+02:00"
+  },
+
+  {
     "id": "planica-tamar-valley-day-trip-ljubljana",
     "title": "Planica and Tamar Valley: An Easy Alpine Day Trip from Ljubljana",
     "excerpt": "Walk from the Planica ski jumps into the glacial Tamar Valley with this practical guide to transport, trail conditions, autumn weather, families and accessibility.",

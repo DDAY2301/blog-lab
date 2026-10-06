@@ -1,18 +1,19 @@
 {
-  "last_success": "2026-10-06T08:24:07+02:00",
+  "last_success": "2026-10-06T13:38:59+02:00",
   "last_failure": "2026-09-21T20:56:52+02:00",
   "consecutive_failures": 0,
   "posts_date": "2026-10-06",
-  "posts_today": 1,
-  "last_output": "direktor-dirke-po-sloveniji-tezave-so-vedno-prisotne-a-vi-jih-ne-smete-opaziti-3698cf33",
+  "posts_today": 2,
+  "last_output": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909",
   "last_error": null,
   "agent_version": "2.7.0",
-  "current_category": "sport",
-  "scheduled_posts_today": 1,
+  "current_category": "politika",
+  "scheduled_posts_today": 2,
   "manual_posts_today": 0,
   "writer_mode": "local_evidence_ai",
   "scheduled_slots_done": [
-    "2026-10-06|08:17|sport"
+    "2026-10-06|08:17|sport",
+    "2026-10-06|13:27|politika"
   ],
   "scheduled_slots_deferred": [],
   "last_editorial_hold": null,
