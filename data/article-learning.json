@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-06T09:30:22+02:00",
-  "loop_count": 3297,
+  "updated_at": "2026-10-06T09:38:13+02:00",
+  "loop_count": 3298,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-06T09:29:57+02:00",
+      "last_learning_run": "2026-10-06T09:37:53+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -58,11 +58,11 @@
         },
         "news.google.com": {
           "score": 2.498,
-          "seen": 97470,
-          "last_seen": "2026-10-06T09:29:57+02:00",
-          "last_title": "Pokal narodov osvojila Belgija, Jan Pancar Slovenijo popeljal do 13. mesta - rtvslo.si",
+          "seen": 97500,
+          "last_seen": "2026-10-06T09:37:53+02:00",
+          "last_title": "Slovenija po odličnem začetku v Švici ostala praznih rok - Koroške Novice",
           "last_provider": "",
-          "published": 161357,
+          "published": 161440,
           "last_output_id": "direktor-dirke-po-sloveniji-tezave-so-vedno-prisotne-a-vi-jih-ne-smete-opaziti-3698cf33"
         },
         "answers.com": {
@@ -231,13 +231,13 @@
       "example_titles": {
         "news.google.com": [
           "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
-          "*〜?[[Živý=šport!!]++] Škotska Slovenija prenos 26. september 2026 - czechinvest.gov.cz",
-          "Slovenija pred zahtevno nalogo v Glasgowu - 24ur.com"
+          "Slovenija pred zahtevno nalogo v Glasgowu - 24ur.com",
+          "Slovenija daje zmagi še dodatno težo - dnevnik.si"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-06T09:30:07+02:00",
+      "last_learning_run": "2026-10-06T09:38:03+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -270,12 +270,12 @@
       ],
       "source_health": {
         "news.google.com": {
-          "score": 2.502,
-          "seen": 97470,
-          "last_seen": "2026-10-06T09:30:07+02:00",
-          "last_title": "Ko se politiki izogibajo javne televizije: lastni kanali in manj neprijetnih vprašanj - Dnevnik",
+          "score": 2.498,
+          "seen": 97500,
+          "last_seen": "2026-10-06T09:38:03+02:00",
+          "last_title": "Danes se začenja s predčasnim glasovanjem: Slovenci bodo odločali o štirih referendumskih vprašanjih - Goriške novice",
           "last_provider": "",
-          "published": 175000,
+          "published": 175090,
           "last_output_id": "vodi-ukinitev-prispevka-v-politicni-despotizem-ali-ne-ker-je-politika-tako-vedno-zraven-429d50e9"
         },
         "pewresearch.org": {
@@ -360,13 +360,13 @@
       "example_titles": {
         "news.google.com": [
           "Vodi ukinitev prispevka v politični despotizem ali ne, ker je politika tako \"vedno zraven\"? - rtvslo.si",
-          "Goran Forbici: Janševa vlada izvaja fašistične pritiske na RTV Slovenija - Info360",
-          "Zakrivanje obraza je pri nas redek pojav - Delo.si"
+          "Igor Vobič: Politika ne sme imeti roke na finančni pipi RTV Slovenija - Delo.si",
+          "Goran Forbici: Janševa vlada izvaja fašistične pritiske na RTV Slovenija - Info360"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-06T09:30:22+02:00",
+      "last_learning_run": "2026-10-06T09:38:13+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -421,96 +421,96 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 97470,
-          "last_seen": "2026-10-06T09:30:22+02:00",
-          "last_title": "V čigave roke je odtekal denar iz Japajade šova na TV Slovenija? - Info360",
+          "seen": 97500,
+          "last_seen": "2026-10-06T09:38:13+02:00",
+          "last_title": "Olimpijski komite Slovenije - Olimpijski Komite Slovenije",
           "last_provider": "",
-          "published": 174225,
+          "published": 174279,
           "last_output_id": "debate-z-bergantom-tujci-v-sloveniji-trije-pogledi-na-aktualno-temo-8a8fda8f"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 3274,
+          "published": 3275,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 3274,
+          "published": 3275,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 3297,
+          "published": 3298,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 3199,
+          "published": 3200,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 3263,
+          "published": 3264,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 3199,
+          "published": 3200,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 3199,
+          "published": 3200,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 3263,
+          "published": 3264,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 13188,
+          "published": 13192,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 3297,
+          "published": 3298,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 3274,
+          "published": 3275,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 6462,
+          "published": 6464,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 3231,
+          "published": 3232,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 6526,
+          "published": 6528,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 3297,
+          "published": 3298,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 3199,
+          "published": 3200,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 6462,
+          "published": 6464,
           "last_output_id": "duckduckgo-287dab86"
         },
         "slovenia.info": {
