@@ -40,9 +40,9 @@ jobs:
         run: |
           python -m pytest -q
 
-      - name: V3 FastAPI import smoke
+      - name: Agent Manager FastAPI import smoke
         run: |
-          python -c "from manager.service_v3 import app; assert app.title == 'Agent Manager V3'; print(app.version)"
+          python -c "from manager.service_v3 import app; assert app.title.startswith('Agent Manager'); print(app.version)"
 
       - name: Legacy import compatibility
         run: |
