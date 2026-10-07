@@ -66,13 +66,26 @@ for attempt in range(1, attempts + 1):
 if health is None:
     raise SystemExit(f"Live health contract failed: {last_error}")
 
-status, public_headers, public_body = call("/api/public/product-status")
-require(status == 200, f"public product status returned HTTP {status}")
-public_status = json.loads(public_body)
-require(public_status.get("demo_ready") is True, "public demo is not ready")
-require(public_status.get("trial_signup_ready") is True, "trial signup is not ready")
-if EXPECTED_VERSION:
-    require(public_status.get("version") == EXPECTED_VERSION, "public product status version mismatch")
+public_status = None
+public_headers = {}
+public_last_error = None
+for attempt in range(1, attempts + 1):
+    try:
+        status, public_headers, public_body = call("/api/public/product-status")
+        require(status == 200, f"public product status returned HTTP {status}")
+        candidate = json.loads(public_body)
+        require(candidate.get("demo_ready") is True, "public demo is not ready")
+        require(candidate.get("trial_signup_ready") is True, "trial signup is not ready")
+        if EXPECTED_VERSION:
+            require(candidate.get("version") == EXPECTED_VERSION, f"public product status version {candidate.get('version')} != {EXPECTED_VERSION}")
+        public_status = candidate
+        break
+    except Exception as exc:
+        public_last_error = exc
+        if attempt < attempts:
+            time.sleep(3 if EXPECTED_VERSION else 1)
+if public_status is None:
+    raise SystemExit(f"Public product status contract failed: {public_last_error}")
 require(str(public_headers.get("Access-Control-Allow-Origin") or public_headers.get("access-control-allow-origin") or "") == "*", "public product status CORS missing")
 public_product_status_checked = True
 
