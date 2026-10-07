@@ -21,6 +21,49 @@ const TOURISM_CATEGORIES = new Set(["kolesarstvo", "dediščina", "sezonsko", "g
 
 const starterArticles = [
   {
+    "id": "gorenjska-gradi-eno-najobseznejsih-kolesarskih-mrez-v-sloveniji-kaj-je-ze-zgrajeno-in-kaj--9998ae72",
+    "title": "Gorenjska gradi eno najobsežnejših kolesarskih mrež v Sloveniji: Kaj je že zgrajeno in kaj še sledi? -…",
+    "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Gorenjska gradi eno najobsežnejših kolesarskih mrež v Sloveniji: Kaj je že zgrajeno in kaj še sledi? -…«.",
+    "seoDescription": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Gorenjska gradi eno najobsežnejših kolesarskih mrež v Sloveniji: Kaj je že zg",
+    "content": "**Aktualno, 7. 10. 2026.** Gorenjska gradi eno najobsežnejših kolesarskih mrež v Sloveniji: Kaj je že zgrajeno in kaj še sledi? Gorenjskainfo.com\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Gorenjskainfo.com. Objavljeno: Wed, 01 Jul 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMi2wFBVV95cUxQT1VEdXZIY3IzUzJPaXRKT1ViZkoxanZpcHRkN1ZHa25lTFgwOFc2Q3ZvLXYtdm80aWJ2MkVEY1BoczBWalFSbzAwVDEyZUVPX0lVbVZfMnhaMkVOLUJ0T3JDX1Vaek9zZ1RhLXF5bkpCQVFqcjYtWW94cEJYamRJQ0ROM2hpTUNVajlXVUxITjVDSW5uemhEeXhHSHJONkV2bGJydVFxTzZwZkZXd2x6OGdjT29CZjJBUDZfTTJZUkpkUzdZMUFoU0RRUWFGdUFiTUttcjlRRnRscEk?oc=5)\n\n## Dopolnitev vira 2: Koroške Novice\n\nRadlje ob Dravi na zemljevidu največjih športnih dogodkov: Kolesarska destinacija prvič v zgodovini gostila start 2. etape Dirke po Sloveniji Koroške Novice\n\n Vir: Koroške Novice. Objavljeno: Thu, 18 Jun 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMihwJBVV95cUxNX0R3UnVuQTRTV0xFT2M3d2VXLUZ4Q1cwdktqX0FoOXFGX0lYSWpyZmdEdXRpYWNHV0ozUHJicHhTYmZSYnNDNVhDREludFJUcHUyUF9jbHNfR3Fhc1VKXzk2WlpHZnlha1pwWmdqQkJZMkowY3FNN3VIYlVJdENFb1RVZk1Td1VhMnFNVlh6eXh0b0VxcWtpTEI4WmlqSDZycGphZ1NxN0FNUG02cE1JMEFpMVlPdmplTHN2NGM5R05qNkRRN1BjZUozdGZpVEtJMG1TVWhoODMxUUJlMWdzeUJOSHl6R2hrNjdTUDNJNjRoOU9XdnBNZ1lYM1VPejdNbE4yNnFvWQ?oc=5)\n\n## Dopolnitev vira 3: Kozjansko.info\n\nKolesarske poti in družinski ter rekreativni izleti po Kozjanskem in Obsotelju: Podčetrtek, Kozje, Bistrica ob Sotli Kozjansko.info\n\n Vir: Kozjansko.info. Objavljeno: Fri, 23 Apr 2021 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMidEFVX3lxTE9lRFBmek5waEdtV2dfQmtQRWVqWjVjalRUWThrYlNJal9LckNEYWx5YU0xYm1yQ0lvZU8wTkcwRV92R2ZRRWdwT3IxQ3VrMUZka0NTQUtkZ2hIU1VWUk5BMDBIZnNTcl9BX3JORlc5dVRGa0N6?oc=5)\n\n## Dopolnitev vira 4: Gorenjskainfo.com\n\nBohinjski župan razkriva veliko vizijo: Z Gorenjske bi se s kolesom lahko peljali vse do Primorske Gorenjskainfo.com\n\n Vir: Gorenjskainfo.com. Objavljeno: Thu, 16 Jul 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMi3gFBVV95cUxQM3NIaGdub0NoellHdzduSWZMelI2aU55X3djWXF6dFh0YVRmVmVwZG03X0I5LVJYcUZVSnhlaUVaVHNLVzJ2OFBYN0FpM01JaWFQTGRLLVREWlA0aXBFZHFWcDBNRUEyM01QMTBkd2NnYUhTeEFfVEp3NU5rdGtkNnNIN0RSSERJSzJoZ3Q5V2pLM0k3QmRhRGVkTzRfcXNlcVhZTWZoUDhhZTd4RV9RVnhVaHZVZXFxa0hQTG1GaGhXUVVWbDNTRC1sSm5XeGJBd2ZuSk5nZngwSVVJSVE?oc=5)\n\n## Dopolnitev vira 5: Metropolitan.si\n\nMagnet za turiste: Slovenija bo do poletja dobila eno najbolj težko pričakovanih kolesarskih prog Metropolitan.si\n\n Vir: Metropolitan.si. Objavljeno: Thu, 19 Mar 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiiwFBVV95cUxQVTBybTZoMlU1NDZCTnJUNDJCMmNkSC1UeEpoaUlTU0FMM3JGdWpzRjBtX1BCT3psZXhGVXhqd2xNeERkdU96U2xfTG5zdkl5RjVCQ1duSkxhOXRJUHpIdThwQW1BX0cwYWJIN2VHam5QelY0NVFJcXRQLWVtalBNdEI4ODhYVnE1MnJr?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Aktualno",
+    "author": "Blog Lab Slovenia Publisher",
+    "status": "published",
+    "heroImage": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Black_and_white_Paris_landscape.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "alt": "Cathédrale Notre-Dame de Paris . Suggested credit: Underwood/Library of Congress [VIA PINGNEWS]. Additional information from source: TITLE: Notre Dame Cathedral from Tower of St. G",
+      "caption": "David Shapinsky from Washington, D.C., United States · Wikimedia Commons · CC BY-SA 2.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Black_and_white_Paris_landscape.jpg"
+    },
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Gorenjskainfo.com — Gorenjska gradi eno najobsežnejših kolesarskih mrež v Sloveniji: Kaj je že zgrajeno in kaj še sledi? - Gorenjskainfo.com",
+        "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQT1VEdXZIY3IzUzJPaXRKT1ViZkoxanZpcHRkN1ZHa25lTFgwOFc2Q3ZvLXYtdm80aWJ2MkVEY1BoczBWalFSbzAwVDEyZUVPX0lVbVZfMnhaMkVOLUJ0T3JDX1Vaek9zZ1RhLXF5bkpCQVFqcjYtWW94cEJYamRJQ0ROM2hpTUNVajlXVUxITjVDSW5uemhEeXhHSHJONkV2bGJydVFxTzZwZkZXd2x6OGdjT29CZjJBUDZfTTJZUkpkUzdZMUFoU0RRUWFGdUFiTUttcjlRRnRscEk?oc=5"
+      },
+      {
+        "label": "Koroške Novice — Radlje ob Dravi na zemljevidu največjih športnih dogodkov: Kolesarska destinacija prvič v zgodovini gostila start 2.…",
+        "url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxNX0R3UnVuQTRTV0xFT2M3d2VXLUZ4Q1cwdktqX0FoOXFGX0lYSWpyZmdEdXRpYWNHV0ozUHJicHhTYmZSYnNDNVhDREludFJUcHUyUF9jbHNfR3Fhc1VKXzk2WlpHZnlha1pwWmdqQkJZMkowY3FNN3VIYlVJdENFb1RVZk1Td1VhMnFNVlh6eXh0b0VxcWtpTEI4WmlqSDZycGphZ1NxN0FNUG02cE1JMEFpMVlPdmplTHN2NGM5R05qNkRRN1BjZUozdGZpVEtJMG1TVWhoODMxUUJlMWdzeUJOSHl6R2hrNjdTUDNJNjRoOU9XdnBNZ1lYM1VPejdNbE4yNnFvWQ?oc=5"
+      },
+      {
+        "label": "Kozjansko.info — Kolesarske poti in družinski ter rekreativni izleti po Kozjanskem in Obsotelju: Podčetrtek, Kozje, Bistrica ob Sotli -…",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9lRFBmek5waEdtV2dfQmtQRWVqWjVjalRUWThrYlNJal9LckNEYWx5YU0xYm1yQ0lvZU8wTkcwRV92R2ZRRWdwT3IxQ3VrMUZka0NTQUtkZ2hIU1VWUk5BMDBIZnNTcl9BX3JORlc5dVRGa0N6?oc=5"
+      },
+      {
+        "label": "Gorenjskainfo.com — Bohinjski župan razkriva veliko vizijo: Z Gorenjske bi se s kolesom lahko peljali vse do Primorske - Gorenjskainfo.com",
+        "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQM3NIaGdub0NoellHdzduSWZMelI2aU55X3djWXF6dFh0YVRmVmVwZG03X0I5LVJYcUZVSnhlaUVaVHNLVzJ2OFBYN0FpM01JaWFQTGRLLVREWlA0aXBFZHFWcDBNRUEyM01QMTBkd2NnYUhTeEFfVEp3NU5rdGtkNnNIN0RSSERJSzJoZ3Q5V2pLM0k3QmRhRGVkTzRfcXNlcVhZTWZoUDhhZTd4RV9RVnhVaHZVZXFxa0hQTG1GaGhXUVVWbDNTRC1sSm5XeGJBd2ZuSk5nZngwSVVJSVE?oc=5"
+      },
+      {
+        "label": "Metropolitan.si — Magnet za turiste: Slovenija bo do poletja dobila eno najbolj težko pričakovanih kolesarskih prog - Metropolitan.si",
+        "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQVTBybTZoMlU1NDZCTnJUNDJCMmNkSC1UeEpoaUlTU0FMM3JGdWpzRjBtX1BCT3psZXhGVXhqd2xNeERkdU96U2xfTG5zdkl5RjVCQ1duSkxhOXRJUHpIdThwQW1BX0cwYWJIN2VHam5QelY0NVFJcXRQLWVtalBNdEI4ODhYVnE1MnJr?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-07T13:32:49+02:00",
+    "updatedAt": "2026-10-07T13:32:49+02:00"
+  },
+
+  {
     "id": "paddleboarding-kayaking-ljubljanica-safety-guide",
     "title": "Paddleboarding and Kayaking the Ljubljanica: A Safety-First Visitor Guide",
     "excerpt": "See Ljubljana from the water with a practical guide to guided SUP and kayak trips, river rules, October conditions, swimming ability and safer alternatives.",
