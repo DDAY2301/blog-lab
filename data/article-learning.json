@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-07T04:40:15+02:00",
-  "loop_count": 3476,
+  "updated_at": "2026-10-07T04:53:39+02:00",
+  "loop_count": 3477,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-07T04:39:52+02:00",
+      "last_learning_run": "2026-10-07T04:53:17+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -58,11 +58,11 @@
         },
         "news.google.com": {
           "score": 2.498,
-          "seen": 102840,
-          "last_seen": "2026-10-07T04:39:52+02:00",
-          "last_title": "Zlati paralimpijec Tiršek sklenil športno pot - Ekipa",
+          "seen": 102870,
+          "last_seen": "2026-10-07T04:53:17+02:00",
+          "last_title": "Pred Slovenijo priznal, da se je zlomil, potem pa razkril še to ... - Ekipa",
           "last_provider": "",
-          "published": 175489,
+          "published": 175567,
           "last_output_id": "direktor-dirke-po-sloveniji-tezave-so-vedno-prisotne-a-vi-jih-ne-smete-opaziti-3698cf33"
         },
         "answers.com": {
@@ -232,12 +232,12 @@
         "news.google.com": [
           "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
           "Kot v sanjah: Slovenija že drugič v dveh tednih evropski prvak! (VIDEO) - Šport TV",
-          "Slovenija po odličnem drugem polčasu do zmage v Glasgowu - - Sportklub Slovenija"
+          "Slovenija s fenomenalno predstavo do izjemno pomembne zmage - 24ur.com"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-07T04:40:05+02:00",
+      "last_learning_run": "2026-10-07T04:53:28+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -271,11 +271,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.498,
-          "seen": 102840,
-          "last_seen": "2026-10-07T04:40:05+02:00",
-          "last_title": "VIDEO: Več denarja za vzhod države? Aleksander Gungl razkril projekte, za katere bo lobiral - Sobotainfo.com",
+          "seen": 102870,
+          "last_seen": "2026-10-07T04:53:28+02:00",
+          "last_title": "V Bruslju se pripravlja napeta bitka za proračun - Delo.si",
           "last_provider": "",
-          "published": 191665,
+          "published": 191758,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -366,7 +366,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-07T04:40:15+02:00",
+      "last_learning_run": "2026-10-07T04:53:39+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -421,96 +421,96 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 102840,
-          "last_seen": "2026-10-07T04:40:15+02:00",
-          "last_title": "Anja Rakuša Brus: Pomemben argument za mojo kandidaturo je izkušnja z aktualno vlado, ki stroke ne posluša dovolj - Nova24TV",
+          "seen": 102870,
+          "last_seen": "2026-10-07T04:53:39+02:00",
+          "last_title": "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "",
-          "published": 184061,
+          "published": 184117,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 3453,
+          "published": 3454,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 3453,
+          "published": 3454,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 3476,
+          "published": 3477,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 3378,
+          "published": 3379,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 3442,
+          "published": 3443,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 3378,
+          "published": 3379,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 3378,
+          "published": 3379,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 3442,
+          "published": 3443,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 13904,
+          "published": 13908,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
           "score": 2.498,
-          "published": 3476,
+          "published": 3477,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 3453,
+          "published": 3454,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 6820,
+          "published": 6822,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 3410,
+          "published": 3411,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 6884,
+          "published": 6886,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
           "score": 2.498,
-          "published": 3476,
+          "published": 3477,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 3378,
+          "published": 3379,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 6820,
+          "published": 6822,
           "last_output_id": "duckduckgo-287dab86"
         },
         "slovenia.info": {
