@@ -1084,33 +1084,69 @@ async function diagnoseWorkersAi(env) {
 function deterministicArticleFromSources(sourceItems, category = "aktualno") {
   const items = (Array.isArray(sourceItems) ? sourceItems : []).slice(0, 10).map((item) => {
     const title = String(item?.title || item?.name || "").replace(/\s+/g, " ").trim().slice(0, 240);
-    const summary = String(item?.summary || item?.description || item?.snippet || item?.content || "").replace(/\s+/g, " ").trim().slice(0, 2200);
+    const summary = String(item?.summary || item?.description || item?.snippet || item?.content || "").replace(/\s+/g, " ").trim().slice(0, 2600);
     const url = String(item?.url || item?.link || "").trim().slice(0, 1000);
     const sourceName = String(item?.source_name || item?.source || "").replace(/\s+/g, " ").trim().slice(0, 160);
     return { title, summary, url, source_name: sourceName };
   }).filter((item) => item.title || item.summary);
 
   if (!items.length) return null;
+
   const primary = items[0];
-  const title = primary.title || `${String(category || "Aktualno").trim()}: preverjeni podatki`;
-  const paragraphs = items
-    .map((item) => item.summary || item.title)
-    .filter(Boolean)
-    .slice(0, 5);
-  const content = paragraphs.join("\n\n").trim() || title;
+  const normalizedCategory = String(category || "aktualno").trim().slice(0, 40);
+  const title = primary.title || `${normalizedCategory}: preverjeni podatki`;
   const sources = items
-    .filter((item) => item.url)
+    .filter((item) => /^https:\/\//i.test(item.url))
     .map((item) => ({
       title: item.title || item.source_name || item.url,
       url: item.url,
       source_name: item.source_name || undefined
     }));
 
+  const sections = items.slice(0, 7).map((item, index) => {
+    const heading = item.title || `Preverjeni vir ${index + 1}`;
+    const evidence = item.summary || `Vir je objavil informacijo z naslovom »${heading}«.`;
+    const sourceLine = item.url
+      ? `Vir: ${item.source_name || heading} — ${item.url}`
+      : `Vir: ${item.source_name || heading}`;
+    return `## ${heading}\n${evidence}\n\n${sourceLine}`;
+  });
+
+  const editorialNotes = [
+    "## Kako brati ta pregled\nTa članek je v varnem nadomestnem načinu sestavljen izključno iz podanih virov. Ne dodaja dejstev, ki jih v podlagi ni, zato so navedene povezave sestavni del članka in omogočajo neposredno preverjanje informacij.",
+    "## Kaj preveriti pred obiskom\nDatumi, odpiralni časi, dostopnost, prometne razmere, vreme in programi dogodkov se lahko spremenijo. Pred odhodom preveri najnovejše podatke neposredno pri organizatorju, upravljavcu ali drugem uradnem viru, ki je naveden v članku.",
+    "## Uredniška sledljivost\nKjer več virov opisuje isto temo, so informacije predstavljene ločeno, brez združevanja v nove trditve. Če se podatki med viri razlikujejo, za končno odločitev uporabi neposredni in časovno najnovejši vir.",
+    "## Posodobitve\nTa pregled je namenjen hitri orientaciji. Ob naslednji samodejni uredniški osvežitvi lahko Blog Lab vsebino dopolni z novejšimi preverljivimi informacijami, pri tem pa ohrani povezave do uporabljene podlage."
+  ];
+
+  let content = [
+    `Pregled za rubriko ${normalizedCategory} povzema trenutno razpoložljive informacije iz spodaj navedenih virov. Besedilo je pripravljeno brez dodajanja nepodprtih dejstev.`,
+    ...sections
+  ].join("\n\n").trim();
+
+  for (const note of editorialNotes) {
+    if (content.length >= 1050) break;
+    content += "\n\n" + note;
+  }
+
+  const excerptBase = primary.summary || title;
+  const excerpt = excerptBase.slice(0, 220);
+  const seoDescription = (primary.summary || `${title}. Preverjen pregled z neposrednimi povezavami do uporabljenih virov.`).slice(0, 155);
+  const titleTokens = title
+    .toLowerCase()
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .split(/[^a-z0-9]+/)
+    .filter((token) => token.length >= 5)
+    .slice(0, 3);
+
   return {
     title,
+    excerpt,
+    seoDescription,
     content,
-    excerpt: content.slice(0, 320),
-    category: String(category || "aktualno").trim().slice(0, 40),
+    category: normalizedCategory,
+    tags: [...new Set([normalizedCategory, "Slovenija", ...titleTokens])].slice(0, 6),
     sources,
     fallback: "source-evidence"
   };
@@ -2180,7 +2216,7 @@ export default {
       return json({
         ok: true,
         worker: "blog-lab",
-        version: "auth-v6.27-production",
+        version: "auth-v6.28-production",
         ready: state.ready,
         auth_ready: authReady,
         auth_self_test_ok: authTest.ok,
@@ -2210,7 +2246,7 @@ export default {
       return json({
         ok: true,
         product: "blog-lab",
-        version: "auth-v6.27-production",
+        version: "auth-v6.28-production",
         demo_ready: true,
         trial_signup_ready: true,
         terminal_ready: state.ready,
@@ -2365,7 +2401,7 @@ export default {
       return json({
         ok: true,
         worker: "blog-lab",
-        version: "auth-v6.27-production",
+        version: "auth-v6.28-production",
         ...diagnostic,
         server_time: new Date().toISOString(),
         hint: diagnostic.email_known
