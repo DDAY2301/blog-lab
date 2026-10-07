@@ -1,25 +1,18 @@
 name: Blog Lab Publisher Agent
 
 on:
-  # Exact CET/CEST candidates are kept for near-on-time runs. The heartbeat is
-  # the reliability layer: if GitHub delays or drops an exact cron, a later
-  # heartbeat catches the first overdue Ljubljana slot that is still unfinished.
+  # Četrturni heartbeat razreši pet lokalnih slotov v Europe/Ljubljana.
+  # Tako ostane urnik pravilen tudi pri prehodu CET/CEST in zamudah GitHub schedulerja.
   schedule:
-    - cron: "17 6 * * *"
-    - cron: "17 7 * * *"
-    - cron: "27 11 * * *"
-    - cron: "27 12 * * *"
-    - cron: "43 17 * * *"
-    - cron: "43 18 * * *"
     - cron: "7,22,37,52 * * * *"
   workflow_dispatch:
     inputs:
       category:
         description: "Kategorija članka"
         required: true
-        default: "aktualno"
+        default: "sezonsko"
         type: choice
-        options: [sport, politika, aktualno]
+        options: [kolesarstvo, dediscina, sezonsko, gore, gourmet]
       dry_run:
         description: "Samo test, brez objave"
         required: false
@@ -69,7 +62,7 @@ jobs:
           set -euo pipefail
           if [[ "$EVENT_NAME" == "workflow_dispatch" && "$INPUT_CATCH_UP" != "true" ]]; then
             echo "run=true" >> "$GITHUB_OUTPUT"
-            echo "category=${INPUT_CATEGORY:-aktualno}" >> "$GITHUB_OUTPUT"
+            echo "category=${INPUT_CATEGORY:-sezonsko}" >> "$GITHUB_OUTPUT"
             echo "slot=" >> "$GITHUB_OUTPUT"
             echo "slot_time=" >> "$GITHUB_OUTPUT"
             echo "reason=manual_dispatch" >> "$GITHUB_OUTPUT"

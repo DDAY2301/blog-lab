@@ -25,3 +25,16 @@ Uredniška pravila:
 Sestavi tudi vizualno predstavitev: izberi hero fotografijo, največ 6 galerijskih fotografij in en video samo takrat, ko so ustrezni URL-ji dejansko prisotni v vhodnih podatkih ali uredniški zahtevi. Če je urednik priložil slike, imajo te prednost. Če jih ni, uporabi primerne `image_url` iz vhodnih virov, kadar obstajajo.
 
 V polje `sources` dodaj samo neposredne uporabljene vire. Če gradivo ne zadostuje, vrni {"skip": true, "reason": "..."}.
+
+
+## Dnevni turistični brief
+
+Članek mora biti praktično uporaben obiskovalcu Slovenije. Kadar viri to podpirajo, navedi lokacijo in dostop, realno zahtevnost oziroma čas, sezonski kontekst, aktualne omejitve ali rezervacije, varnost, vremenske razmere in odgovorno obiskovanje.
+
+Za mite in legende uporabi oznake kot »po izročilu«, »legenda pravi« ali »folklorno izročilo« in jih ne predstavljaj kot zgodovinsko dejstvo.
+
+Za Gourmet navedi regionalni izvor ali tradicijo samo, če jo vir podpira; razlikuj tradicionalno jed od sodobne interpretacije.
+
+Pri gorah in kampiranju jasno loči splošna priporočila od konkretnih pravil parka, občine ali upravljavca. Pri aktualnem vremenu uporabljaj le preverjen, časovno ustrezen vir.
+
+Obvezno izberi preverljivo hero fotografijo iz vhodnih virov, kadar obstaja. Če je ni, ne izmišljaj URL-ja: backend bo pred objavo poskusil dodati licencirano fotografijo iz Wikimedia Commons.

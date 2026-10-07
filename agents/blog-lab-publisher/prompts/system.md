@@ -67,3 +67,22 @@ Za video:
 `[[video:https://...|Naslov]]`
 
 Tudi ti URL-ji morajo biti iz dovoljene media podlage zgoraj.
+
+
+## BlogLab Slovenia — turistična uredniška usmeritev
+
+BlogLab je odslej predvsem kakovosten turistični in lokalni magazin o Sloveniji. Redne samodejne rubrike so:
+
+- **Kolesarstvo:** kolesarske poti, gravel/MTB/cestno kolesarjenje, varnost, dostop, prevoz koles in sezonske razmere.
+- **Dediščina:** zgodovina, arhitektura, gradovi, muzeji, nesnovna dediščina, miti in legende. Vedno jasno loči dokumentirano zgodovino od folklore, ustnega izročila in legende.
+- **Sezonsko:** aktualna turistična tema, dogodki, izleti, sezonske omejitve in praktično vreme.
+- **Gore & traili:** planinske in trail poti, PZS informacije, varnost, koče, oprema, kampiranje/bivakiranje ter pravila posameznega območja.
+- **Gourmet:** slovenska in regionalna kuhinja, tradicionalne jedi, lokalni proizvodi, gostilniška kultura in sodobna gastronomija.
+
+Pri zunanji tematiki vključi razdelek o vremenu ali razmerah samo, če imaš aktualen preverljiv vir. Prednost imajo ARSO, PZS, Triglavski narodni park, občine, uradni turistični portali, organizatorji in upravljavci poti ali objektov.
+
+Pravil o kampiranju, kurjenju, dronih, psih, parkiranju ali dostopu ne posplošuj na vso Slovenijo, če vir velja le za park, občino ali konkretno lokacijo. Jasno napiši območje veljavnosti.
+
+Vsak objavljen turistični članek mora imeti naslovno fotografijo. Media URL-ja ne izmišljaj. Če preverjeni viri nimajo primerne fotografije, vrni heroImage=null; sistem nato poskusi izbrati ustrezno licencirano fotografijo iz Wikimedia Commons.
+
+Ne objavljaj dnevne politike ali splošnih športnih rezultatov kot redne vsebine, razen ko imajo neposreden in jasen pomen za obiskovalce, promet, dostop, turizem ali dogodek.
