@@ -29,6 +29,7 @@ class ColibriClient:
         self.health_url = os.getenv("COLIBRI_HEALTH_URL", self.base_url.removesuffix("/v1") + "/health")
         self.model = os.getenv("COLIBRI_MODEL", "").strip()
         self.api_key = os.getenv("COLIBRI_API_KEY", "").strip()
+        self.profile = os.getenv("AGENT_MANAGER_COLIBRI_PROFILE", "").strip().lower()
         self.timeout = float(os.getenv("COLIBRI_TIMEOUT", "300"))
 
     def _headers(self) -> dict[str, str]:
@@ -70,6 +71,10 @@ class ColibriClient:
                 ok=True,
                 model=model,
                 latency_ms=round((time.perf_counter() - start) * 1000, 1),
+                detail={
+                    "profile": self.profile or "generative",
+                    "decision_only": self.decision_only,
+                },
             )
         except Exception as exc:
             return ProviderStatus(
@@ -78,6 +83,13 @@ class ColibriClient:
                 latency_ms=round((time.perf_counter() - start) * 1000, 1),
                 error=str(exc),
             )
+
+    @property
+    def decision_only(self) -> bool:
+        return (
+            self.profile.startswith("decision")
+            or self.model.lower() in {"laya", "gliner2.5-decide", "gliner-decide"}
+        )
 
     async def system_one(self, state: str, questions: dict[str, Any]) -> dict[str, Any]:
         model = await self.choose_model()
@@ -202,6 +214,11 @@ class AIRouterV4:
                 continue
             try:
                 if provider == "colibri":
+                    if self.colibri.decision_only:
+                        # Laya/GLiNER are System One decision engines and intentionally
+                        # reject chat/completions. Do not mark that as a provider failure:
+                        # keep Colibri healthy for triage and use Ollama for generation.
+                        continue
                     return await self.colibri.chat_json(system, user)
                 if provider == "ollama":
                     model, result = await self.ollama.chat_json(system, user)
