@@ -1,0 +1,283 @@
+/* BlogLab Slovenia — unified editorial palette
+   Loaded last on purpose so legacy surfaces converge without rewriting the app. */
+
+:root {
+  --navy: #24344A;
+  --forest: #173A2A;
+  --sage: #A9B89A;
+  --sage-soft: #CCD5B6;
+  --cream: #F4F0E7;
+  --stone: #DCE3E7;
+  --sand: #C7B184;
+  --paper: #F4F0E7;
+  --white: #FAF9F6;
+  --ink: #243247;
+  --muted: #667267;
+  --line: #D7D9D0;
+  --green: #173A2A;
+  --green-dark: #102A1E;
+  --mint: #CCD5B6;
+  --orange: #C7B184;
+  --shadow: 0 18px 52px rgba(36, 50, 71, .10);
+}
+
+body {
+  color: var(--ink);
+  background: var(--cream);
+}
+
+.site-header {
+  border-bottom-color: rgba(36, 50, 71, .11);
+  background: rgba(244, 240, 231, .91);
+  box-shadow: 0 8px 34px rgba(36, 50, 71, .04);
+}
+
+.brand-mark {
+  background: var(--forest);
+}
+
+nav button {
+  color: #5d685f;
+}
+
+nav button:hover,
+nav button.active {
+  color: var(--navy);
+  background: rgba(169, 184, 154, .20);
+}
+
+.primary {
+  background: var(--forest);
+  color: var(--white);
+  box-shadow: 0 8px 20px rgba(23, 58, 42, .18);
+}
+
+.primary:hover {
+  background: var(--navy);
+}
+
+.secondary {
+  background: rgba(250, 249, 246, .88);
+  border-color: var(--line);
+}
+
+.hero {
+  border-bottom-color: rgba(36, 50, 71, .10);
+  background:
+    radial-gradient(circle at 84% 18%, rgba(204, 213, 182, .62) 0 13%, transparent 34%),
+    linear-gradient(135deg, #FAF9F6 0%, #EEF0E6 100%);
+}
+
+.hero::after {
+  border-color: rgba(23, 58, 42, .10);
+}
+
+.eyebrow,
+.kicker {
+  color: var(--forest);
+}
+
+.eyebrow span {
+  background: var(--sand);
+}
+
+.hero h1 em {
+  color: var(--forest);
+}
+
+.post-card,
+.stats,
+.article-list,
+.editor-main,
+.side-card {
+  background: rgba(250, 249, 246, .96);
+  border-color: var(--line);
+}
+
+.post-card:hover {
+  box-shadow: 0 22px 58px rgba(36, 50, 71, .12);
+}
+
+.card-art {
+  background: linear-gradient(145deg, #CCD5B6, #E7DFC9);
+}
+
+.card-art::after {
+  border-color: rgba(23, 58, 42, .12);
+}
+
+.card-art span,
+.stats strong,
+.text-button,
+.row-actions button,
+.back,
+.article-body a,
+.article-sources a {
+  color: var(--forest);
+}
+
+.meta span:first-child,
+.list-meta span:first-child,
+.media-section-heading > span {
+  color: var(--forest);
+}
+
+.article-category {
+  color: var(--forest);
+  background: rgba(204, 213, 182, .72);
+}
+
+.status-pill.published {
+  background: rgba(204, 213, 182, .55);
+  color: var(--forest);
+}
+
+.editor-shell {
+  background: #ECECE5;
+}
+
+.agent-note,
+.media-editor-hint,
+.format-hint {
+  background: rgba(204, 213, 182, .42);
+}
+
+/* Event rail: one family with the main editorial surface. */
+.live-pulse,
+.events-pulse {
+  border-color: rgba(36, 50, 71, .12);
+  background: rgba(250, 249, 246, .90);
+  box-shadow: 0 18px 52px rgba(36, 50, 71, .09);
+}
+
+.live-pulse-head strong,
+.event-type {
+  color: var(--forest);
+}
+
+.event-pulse-item:hover {
+  border-color: rgba(23, 58, 42, .24);
+  background: rgba(204, 213, 182, .18);
+}
+
+/* Language controls now use the same cream / forest / navy family. */
+.language-tools {
+  border-color: rgba(36, 50, 71, .14);
+  background: rgba(244, 240, 231, .92);
+  color: var(--navy);
+  box-shadow: 0 18px 52px rgba(36, 50, 71, .14);
+}
+
+.language-tools__topline strong,
+.language-tools__buttons button:hover,
+.language-tools__buttons button.active,
+.language-tools__collapse:hover {
+  background: var(--forest);
+}
+
+.language-tools__buttons {
+  background: rgba(250, 249, 246, .72);
+}
+
+.language-tools__actions button,
+.language-tools__actions span {
+  color: var(--forest);
+  border-color: rgba(23, 58, 42, .22);
+  background: rgba(204, 213, 182, .30);
+}
+
+/* Product / platform area: remove the unrelated blue visual system. */
+.product-page {
+  background: var(--cream);
+  color: var(--navy);
+}
+
+.product-kicker,
+.product-section-head > span,
+.product-cta span {
+  color: var(--forest);
+}
+
+.product-hero h1 em,
+.product-proof strong {
+  color: var(--forest);
+}
+
+.product-hero p,
+.product-section-head p,
+.product-onboarding > div > p,
+.product-proof span,
+.product-feature-grid p {
+  color: #667267;
+}
+
+.product-status,
+.product-proof,
+.product-feature-grid article,
+.product-onboarding-card {
+  border-color: var(--line);
+  background: var(--white);
+}
+
+.product-console {
+  border-color: rgba(169, 184, 154, .28);
+  background: #101D18;
+  color: #EEF1E7;
+  box-shadow: 0 34px 80px rgba(23, 58, 42, .18);
+}
+
+.product-console-top {
+  background: #173A2A;
+}
+
+.product-console-body small,
+.console-line.success {
+  color: #BFD0AE;
+}
+
+.product-flow {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.product-section-head.light > span {
+  color: var(--sage-soft);
+}
+
+.product-step > span {
+  background: var(--sage-soft);
+  color: var(--forest);
+}
+
+.product-onboarding-card > span {
+  background: rgba(204, 213, 182, .55);
+  color: var(--forest);
+}
+
+.product-cta {
+  background: #E5E6D8;
+  border-top-color: var(--line);
+}
+
+.terminal-login-button {
+  border-color: rgba(23, 58, 42, .24);
+  color: var(--forest);
+  background: rgba(250, 249, 246, .88);
+}
+
+.terminal-login-button:hover,
+.terminal-login-button:focus-visible {
+  background: var(--forest);
+  border-color: var(--forest);
+}
+
+::selection {
+  background: var(--sage-soft);
+  color: var(--navy);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+  }
+}
