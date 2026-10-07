@@ -5,6 +5,18 @@ if(-not (Test-Path (Join-Path $home "c\coli"))){
   Write-Host "Colibri STANDBY: official control script not installed."
   exit 0
 }
+
+$profile=[Environment]::GetEnvironmentVariable("AGENT_MANAGER_COLIBRI_PROFILE","User")
+if($profile -eq "decision-laya"){
+  $os=Get-CimInstance Win32_OperatingSystem -ErrorAction SilentlyContinue
+  if($os){
+    $freeGB=[math]::Round(($os.FreePhysicalMemory * 1KB) / 1GB,2)
+    if($freeGB -lt 2.2){
+      Write-Host "Colibri Laya STANDBY: only $freeGB GB RAM is free; 2.2 GB safety threshold required." -ForegroundColor Yellow
+      exit 0
+    }
+  }
+}
 Push-Location $home
 $statusRaw=& py -3 c\coli status --json 2>$null
 $status=$null
