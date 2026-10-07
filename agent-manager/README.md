@@ -37,13 +37,16 @@ Run:
 
     .\scripts\install-colibri-v2.ps1
 
-The installer resolves the latest stable release from JustVugg/colibri, selects the Windows CUDA archive when an NVIDIA GPU is detected, verifies SHA256 when the release publishes checksums, and registers Colibri as the first AI provider.
+The installer resolves the latest stable release from JustVugg/colibri and uses Colibri's official hardware detector plus coli setup, so Colibri itself selects the supported local engine/backend and model plan.
 
 Large Colibri model files are intentionally not downloaded automatically. The manager checks the machine first. Systems below the documented large-model memory class keep Colibri in STANDBY and continue with Ollama.
 
-To use an already prepared compatible model:
+To prepare Colibri, run:
 
-    .\scripts\install-colibri-v2.ps1 -ModelPath "D:\Models\your-colibri-model"
+    .\scripts\install-colibri-v2.ps1
+
+It first shows hardware and compatible-model information. A potentially large model download begins only after an explicit YES. Start an already configured Colibri installation with:
+
     .\scripts\start-colibri.ps1
 
 ## 24/7 startup
@@ -149,7 +152,7 @@ Install the practical profile for the current machine with:
 
 The script detects system RAM and NVIDIA VRAM. On machines with 16+ GB RAM but limited VRAM it uses compact GGUF builds and hybrid GPU/CPU inference. On large-memory systems it can use Q4 models. Existing qwen2.5-coder:7b remains the emergency fallback.
 
-For lower memory pressure the default Agent Manager context is 32768 tokens.
+For stable 24/7 operation on the current 8 GB-class machine, the default Agent Manager context is 8192 tokens and Ollama uses a one-model/one-request memory profile.
 
 
 ## Production-grade recovery
