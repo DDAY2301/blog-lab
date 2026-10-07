@@ -30,6 +30,33 @@ const CATEGORY_EMPTY_COPY = {
 
 const starterArticles = [
   {
+    "id": "foto-in-video-halosko-zlato-dobo-oziveli-v-krcmi-janzevina-domace-vino-stajerska-hrana-in--9819d25c",
+    "title": "FOTO in VIDEO: Haloško zlato dobo oživeli v Krčmi Janževina: Domače vino, štajerska hrana in notranjost, ki…",
+    "excerpt": "Gourmet: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »FOTO in VIDEO: Haloško zlato dobo oživeli v Krčmi Janževina: Domače vino, štajerska hrana in notranjost, ki…«.",
+    "seoDescription": "Gourmet: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »FOTO in VIDEO: Haloško zlato dobo oživeli v Krčmi Janževina: Domače vino, štaj",
+    "content": "**Gourmet, 7. 10. 2026.** FOTO in VIDEO: Haloško zlato dobo oživeli v Krčmi Janževina: Domače vino, štajerska hrana in notranjost, ki popelje v hiške babic Ptujinfo.com\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Ptujinfo.com. Objavljeno: Wed, 23 Feb 2022 08:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiuwFBVV95cUxOR1FDVWd1NkhUVnV4S3luRWZyUmlqZU5JUHBjaVNZeU9CYjVFRkkxUm5xVHI3YktwSHMxN19iODFTMWFCc0NGNVNYa3ljTHd0TEItMm9URXdEMmRPeG95V1hSV3dVc21GSm9jMGt3ZjJfQ193MHB2aXJOZXBLVVZ0X3FfekZIeDJpSXMzYm1CZ3lIVWplU0Rmbjg2RmdtbmhWd3N4TzBZQ2cxVlRWTVNtSmpNajl5NlpsQW9B?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Gourmet",
+    "author": "Blog Lab Slovenia Publisher",
+    "status": "published",
+    "heroImage": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/33/SiroviStruklji.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "alt": "Sirovi štruklji (skutini); \" cheese-\"dumplings\" \", slovenian food",
+      "caption": "Sl-Ziga · Wikimedia Commons · Public domain",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:SiroviStruklji.jpg"
+    },
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Ptujinfo.com — FOTO in VIDEO: Haloško zlato dobo oživeli v Krčmi Janževina: Domače vino, štajerska hrana in notranjost, ki popelje v…",
+        "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOR1FDVWd1NkhUVnV4S3luRWZyUmlqZU5JUHBjaVNZeU9CYjVFRkkxUm5xVHI3YktwSHMxN19iODFTMWFCc0NGNVNYa3ljTHd0TEItMm9URXdEMmRPeG95V1hSV3dVc21GSm9jMGt3ZjJfQ193MHB2aXJOZXBLVVZ0X3FfekZIeDJpSXMzYm1CZ3lIVWplU0Rmbjg2RmdtbmhWd3N4TzBZQ2cxVlRWTVNtSmpNajl5NlpsQW9B?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-07T19:23:48+02:00",
+    "updatedAt": "2026-10-07T19:23:48+02:00"
+  },
+
+  {
     "id": "vreme-danes-v-sloveniji-arso-opozarja-na-moznost-neviht-temperature-do-25-c-f6aedd82",
     "title": "Vreme danes v Sloveniji: ARSO opozarja na možnost neviht, temperature do 25 °C",
     "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Vreme danes v Sloveniji: ARSO opozarja na možnost neviht, temperature do 25 °C«.",

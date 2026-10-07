@@ -1,14 +1,14 @@
 {
-  "last_success": "2026-10-07T16:23:28+02:00",
+  "last_success": "2026-10-07T19:23:48+02:00",
   "last_failure": "2026-09-21T20:56:52+02:00",
   "consecutive_failures": 0,
   "posts_date": "2026-10-07",
-  "posts_today": 5,
-  "last_output": "vreme-danes-v-sloveniji-arso-opozarja-na-moznost-neviht-temperature-do-25-c-f6aedd82",
+  "posts_today": 6,
+  "last_output": "foto-in-video-halosko-zlato-dobo-oziveli-v-krcmi-janzevina-domace-vino-stajerska-hrana-in--9819d25c",
   "last_error": null,
   "agent_version": "3.0.0-learning-guarded-fallback",
-  "current_category": "gore",
-  "scheduled_posts_today": 4,
+  "current_category": "gourmet",
+  "scheduled_posts_today": 5,
   "manual_posts_today": 0,
   "writer_mode": "deterministic_fallback",
   "scheduled_slots_done": [
@@ -16,14 +16,15 @@
     "2026-10-07|07:35|kolesarstvo",
     "2026-10-07|10:45|dediscina",
     "2026-10-07|13:30|sezonsko",
-    "2026-10-07|16:20|gore"
+    "2026-10-07|16:20|gore",
+    "2026-10-07|19:10|gourmet"
   ],
   "scheduled_slots_deferred": [],
   "last_editorial_hold": null,
-  "publisher_guardian_last_run": "2026-10-07T16:23:28+02:00",
+  "publisher_guardian_last_run": "2026-10-07T19:23:48+02:00",
   "publisher_guardian_last_action": {
-    "category": "gore",
-    "slot": "2026-10-07|16:20|gore",
+    "category": "gourmet",
+    "slot": "2026-10-07|19:10|gourmet",
     "remaining_repairs": 0
   },
   "schedule_counter_normalized_at": "2026-10-07T16:45:00+02:00"
