@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-07T13:36:00+02:00",
-  "loop_count": 3549,
+  "updated_at": "2026-10-07T13:36:46+02:00",
+  "loop_count": 3550,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-07T13:35:38+02:00",
+      "last_learning_run": "2026-10-07T13:36:25+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -58,11 +58,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 104819,
-          "last_seen": "2026-10-07T13:35:38+02:00",
+          "seen": 104829,
+          "last_seen": "2026-10-07T13:36:25+02:00",
           "last_title": "Sin znanih slovenskih športnikov navdušuje na SP, danes pa nastopa proti Sloveniji! - Siol.net",
           "last_provider": "google-news-si",
-          "published": 181392,
+          "published": 181467,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,7 +227,7 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 9,
+      "current_source_count": 10,
       "example_titles": {
         "news.google.com": [
           "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-07T13:35:48+02:00",
+      "last_learning_run": "2026-10-07T13:36:36+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -271,11 +271,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 104895,
-          "last_seen": "2026-10-07T13:35:48+02:00",
+          "seen": 104912,
+          "last_seen": "2026-10-07T13:36:36+02:00",
           "last_title": "Golob pravi: Slovenija potrebuje široko koalicijo. NSi ne bo na sestanek - Svet24.si",
           "last_provider": "google-news-si",
-          "published": 198322,
+          "published": 198412,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -366,7 +366,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-07T13:36:00+02:00",
+      "last_learning_run": "2026-10-07T13:36:46+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -421,21 +421,21 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 104939,
-          "last_seen": "2026-10-07T13:36:00+02:00",
+          "seen": 104961,
+          "last_seen": "2026-10-07T13:36:46+02:00",
           "last_title": "Vreme se bo danes hitro obrnilo: nevihte bodo zajele večji del Slovenije, na Primorskem tudi burja - Dnevne Novice",
           "last_provider": "google-news-si",
-          "published": 188149,
+          "published": 188205,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 3526,
+          "published": 3527,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 3526,
+          "published": 3527,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
@@ -445,27 +445,27 @@
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 3451,
+          "published": 3452,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 3515,
+          "published": 3516,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 3451,
+          "published": 3452,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 3451,
+          "published": 3452,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 3515,
+          "published": 3516,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
@@ -480,22 +480,22 @@
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 3526,
+          "published": 3527,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 6966,
+          "published": 6968,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 3483,
+          "published": 3484,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 7030,
+          "published": 7032,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
@@ -505,12 +505,12 @@
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 3451,
+          "published": 3452,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 6966,
+          "published": 6968,
           "last_output_id": "duckduckgo-287dab86"
         },
         "slovenia.info": {
