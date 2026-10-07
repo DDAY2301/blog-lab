@@ -193,7 +193,7 @@ The BlogLab publisher workflow is not modified by Project Visibility monitoring.
 
 Agent Manager can send:
 
-- one daily status report;
+- one periodic status report (3 hours by default);
 - immediate P0/P1 incident alerts.
 
 Gmail uses a local OAuth Desktop App token. No Gmail password is stored.
@@ -204,7 +204,7 @@ Place the downloaded Google OAuth Desktop App JSON at:
 
 Then configure the existing Manager:
 
-    .\scripts\setup-gmail-reporting.ps1 -Recipient "you@example.com" -DailyHour 9
+    .\scripts\setup-gmail-reporting.ps1 -Recipient "you@example.com" -IntervalHours 3
 
 The browser opens once for Google authorization. Runtime tokens remain under `data/` and are excluded from Git.
 
@@ -215,3 +215,10 @@ Status endpoint:
 Test endpoint:
 
     POST http://127.0.0.1:8787/email/send-test
+
+
+Periodic status mail cadence is controlled by:
+
+    AGENT_MANAGER_EMAIL_INTERVAL_HOURS=3
+
+P0/P1 incident alerts are independent of this interval and are queued immediately.
