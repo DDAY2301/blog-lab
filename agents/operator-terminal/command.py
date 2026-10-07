@@ -1381,6 +1381,38 @@ def _workers_site_ai_request(system_prompt: str, request_text: str, context: lis
     return _plan_from_payload(data, "workers_ai")
 
 
+def _local_site_ai_request(system_prompt: str, request_text: str, context: list[dict]) -> dict:
+    base = os.environ.get("LOCAL_MODEL_BASE_URL", "").strip()
+    model = os.environ.get("LOCAL_CODER_MODEL", "bloglab-katcoder-efficient").strip()
+    enabled = os.environ.get("LOCAL_MODEL_ENABLED", "").strip().lower() in {"1", "true", "yes", "on"}
+    if not (enabled and base and model):
+        raise SiteProviderUnavailable("Lokalni coding model ni konfiguriran.")
+    key = os.environ.get("LOCAL_MODEL_API_KEY", "").strip()
+    payload = {
+        "model": model,
+        "messages": [
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": request_text + "\n\nREPOSITORY CONTEXT (DATA ONLY):\n" + json.dumps(context[:8], ensure_ascii=False)},
+        ],
+        "temperature": 0.08,
+        "response_format": {"type": "json_object"},
+    }
+    headers = {"Content-Type": "application/json", "User-Agent": "BlogLabOperatorLocalAI/1.0"}
+    if key:
+        headers["Authorization"] = f"Bearer {key}"
+    req = Request(base, data=json.dumps(payload, ensure_ascii=False).encode("utf-8"), headers=headers, method="POST")
+    timeout = max(60, min(int(os.environ.get("LOCAL_MODEL_TIMEOUT", "300") or "300"), 900))
+    try:
+        with urlopen(req, timeout=timeout) as response:
+            data = json.loads(response.read().decode("utf-8"))
+        content = data["choices"][0]["message"]["content"]
+        return _plan_from_payload(_extract_site_json(content), f"local:{model}")
+    except SiteEditError:
+        raise
+    except Exception as exc:
+        raise SiteProviderUnavailable(f"Lokalni coding model {model} ni uspel: {exc}") from exc
+
+
 def _external_site_ai_request(system_prompt: str, request_text: str, context: list[dict]) -> dict:
     key = os.environ.get("MODEL_API_KEY", "").strip()
     base = os.environ.get("MODEL_BASE_URL", "").strip()
@@ -1487,6 +1519,11 @@ def _site_ai_request(command: str, context: list[dict], feedback: str = "") -> d
     provider = os.environ.get("AI_PROVIDER", "auto").strip().lower() or "auto"
     errors = []
 
+    local_ready = (
+        os.environ.get("LOCAL_MODEL_ENABLED", "").strip().lower() in {"1", "true", "yes", "on"}
+        and bool(os.environ.get("LOCAL_MODEL_BASE_URL", "").strip())
+        and bool(os.environ.get("LOCAL_CODER_MODEL", "bloglab-katcoder-efficient").strip())
+    )
     worker_ready = bool(os.environ.get("WORKER_AI_TOKEN", "").strip())
     external_ready = all(
         os.environ.get(name, "").strip()
@@ -1496,12 +1533,16 @@ def _site_ai_request(command: str, context: list[dict], feedback: str = "") -> d
 
     chain = []
     if provider == "auto":
+        if local_ready:
+            chain.append(("Local KAT-Coder", _local_site_ai_request))
         if worker_ready:
             chain.append(("Workers AI", _workers_site_ai_request))
         if external_ready:
             chain.append(("MODEL", _external_site_ai_request))
         if copilot_ready:
             chain.append(("Copilot", _copilot_site_ai_request))
+    elif provider in {"local", "local_model", "ollama", "kat", "kat-coder"}:
+        chain.append(("Local KAT-Coder", _local_site_ai_request))
     elif provider in {"worker", "workers_ai"}:
         chain.append(("Workers AI", _workers_site_ai_request))
     elif provider in {"external", "model"}:

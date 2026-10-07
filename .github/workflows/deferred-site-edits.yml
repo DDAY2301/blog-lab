@@ -33,6 +33,12 @@ jobs:
       GITHUB_TOKEN: ${{ github.token }}
       COPILOT_GITHUB_TOKEN: ${{ secrets.COPILOT_GITHUB_TOKEN }}
       AI_PROVIDER: "auto"
+      LOCAL_MODEL_ENABLED: ${{ vars.LOCAL_MODEL_ENABLED || 'false' }}
+      LOCAL_MODEL_BASE_URL: ${{ vars.LOCAL_MODEL_BASE_URL }}
+      LOCAL_MODEL_API_KEY: ${{ secrets.LOCAL_MODEL_API_KEY }}
+      LOCAL_GENERAL_MODEL: ${{ vars.LOCAL_GENERAL_MODEL || 'bloglab-qwen36-efficient' }}
+      LOCAL_CODER_MODEL: ${{ vars.LOCAL_CODER_MODEL || 'bloglab-katcoder-efficient' }}
+      LOCAL_MODEL_TIMEOUT: ${{ vars.LOCAL_MODEL_TIMEOUT || '300' }}
       WORKER_SITE_AI_URL: "https://blog-lab.dan-grmusa.workers.dev/api/ai/edit"
       WORKER_AI_TOKEN: ${{ secrets.TERMINAL_COMMAND_KEY }}
       MODEL_API_KEY: ${{ secrets.MODEL_API_KEY }}

@@ -268,6 +268,34 @@ def _worker_provider(system: str, request_text: str, context: list[dict]) -> dic
     return plan
 
 
+def _local_provider(system: str, request_text: str, context: list[dict]) -> dict:
+    enabled = os.environ.get("LOCAL_MODEL_ENABLED", "").strip().lower() in {"1", "true", "yes", "on"}
+    base = os.environ.get("LOCAL_MODEL_BASE_URL", "").strip()
+    model = os.environ.get("LOCAL_CODER_MODEL", "bloglab-katcoder-efficient").strip()
+    if not (enabled and base and model):
+        raise ProviderUnavailable("Local coding model is not configured")
+    key = os.environ.get("LOCAL_MODEL_API_KEY", "").strip()
+    payload = {
+        "model": model,
+        "messages": [{"role": "system", "content": system}, {"role": "user", "content": request_text}],
+        "temperature": 0.05,
+        "response_format": {"type": "json_object"},
+    }
+    headers = {"Content-Type": "application/json", "User-Agent": "BlogLabSelfHealLocalAI/1.0"}
+    if key:
+        headers["Authorization"] = f"Bearer {key}"
+    req = Request(base, data=json.dumps(payload, ensure_ascii=False).encode("utf-8"), headers=headers, method="POST")
+    timeout = max(60, min(int(os.environ.get("LOCAL_MODEL_TIMEOUT", "300") or "300"), 900))
+    try:
+        with urlopen(req, timeout=timeout) as response:
+            data = json.loads(response.read().decode("utf-8"))
+        plan = _extract_json(data["choices"][0]["message"]["content"])
+        plan["_provider"] = f"local:{model}"
+        return plan
+    except (HTTPError, URLError, TimeoutError, OSError, KeyError, IndexError, json.JSONDecodeError, RepairError) as exc:
+        raise ProviderUnavailable(f"Local coding model unavailable: {exc}") from exc
+
+
 def _external_provider(system: str, request_text: str, context: list[dict]) -> dict:
     key = os.environ.get("MODEL_API_KEY", "").strip()
     base = os.environ.get("MODEL_BASE_URL", "").strip()
@@ -337,10 +365,13 @@ def request_plan(diagnostic: str, context: list[dict], feedback: str = "") -> di
     chain = []
     if provider == "auto":
         chain = [
+            ("Local KAT-Coder", _local_provider),
             ("Workers AI", _worker_provider),
             ("External model", _external_provider),
             ("GitHub Copilot", _copilot_provider),
         ]
+    elif provider in {"local", "local_model", "ollama", "kat", "kat-coder"}:
+        chain = [("Local KAT-Coder", _local_provider)]
     elif provider in {"worker", "workers_ai"}:
         chain = [("Workers AI", _worker_provider)]
     elif provider in {"external", "model"}:
