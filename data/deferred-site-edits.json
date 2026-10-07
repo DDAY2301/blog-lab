@@ -7,10 +7,10 @@
     "category": "aktualno",
     "actor": "dan.grmusa@gmail.com",
     "created_at": "2026-09-20T13:47:50Z",
-    "updated_at": "2026-10-07T20:13:41Z",
-    "attempts": 160,
+    "updated_at": "2026-10-07T22:02:35Z",
+    "attempts": 161,
     "reason": "Workers AI capacity still unavailable; will retry later.",
-    "last_attempt_at": "2026-10-07T20:13:41Z",
+    "last_attempt_at": "2026-10-07T22:02:34Z",
     "last_log": "INTENT_ROUTE requested=site resolved=site autocorrected=true SITE_AI_PROVIDER_UNAVAILABLE Workers AI: Workers AI kvota/kapaciteta je trenutno izčrpana. WORKERS_AI_SITE_DIAGNOSTIC_BEGIN AI capacity unavailable: Workers AI kvota/kapaciteta je trenutno izčrpana. WORKERS_AI_SITE_DIAGNOSTIC_END SITE_AI_CAPACITY_UNAVAILABLE AI model trenutno ni na voljo; ukaz ni bil delno uporabljen in se v istem runu ne bo nesmiselno ponavljal."
   },
   {
@@ -21,10 +21,10 @@
     "category": "aktualno",
     "actor": "dan.grmusa@gmail.com",
     "created_at": "2026-09-21T13:49:22Z",
-    "updated_at": "2026-10-07T16:35:19Z",
-    "attempts": 76,
+    "updated_at": "2026-10-07T22:02:35Z",
+    "attempts": 77,
     "reason": "Workers AI capacity still unavailable; will retry later.",
-    "last_attempt_at": "2026-10-07T16:35:19Z",
+    "last_attempt_at": "2026-10-07T22:02:35Z",
     "last_log": "INTENT_ROUTE requested=site resolved=site autocorrected=true SITE_AI_PROVIDER_UNAVAILABLE Workers AI: Workers AI kvota/kapaciteta je trenutno izčrpana. WORKERS_AI_SITE_DIAGNOSTIC_BEGIN AI capacity unavailable: Workers AI kvota/kapaciteta je trenutno izčrpana. WORKERS_AI_SITE_DIAGNOSTIC_END SITE_AI_CAPACITY_UNAVAILABLE AI model trenutno ni na voljo; ukaz ni bil delno uporabljen in se v istem runu ne bo nesmiselno ponavljal."
   }
 ]
