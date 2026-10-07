@@ -4,6 +4,12 @@ Set-Location (Split-Path $PSScriptRoot -Parent)
 function Port-Up([int]$Port) {
   return [bool](Get-NetTCPConnection -State Listen -LocalPort $Port -ErrorAction SilentlyContinue | Select-Object -First 1)
 }
+function Test-ManagerHealth {
+  try{
+    $r=Invoke-RestMethod "http://127.0.0.1:8787/health" -TimeoutSec 3
+    return [bool]$r.ok
+  }catch{ return $false }
+}
 
 function Start-Ollama {
   if (Port-Up 11434) { return }
@@ -54,10 +60,21 @@ function Import-GitHubAuth {
 function Start-Manager {
   $py=Join-Path (Get-Location) ".venv\Scripts\python.exe"
   if (-not (Test-Path $py)) { throw "Agent Manager venv missing. Run install-agent-manager.ps1 first." }
+
+  if ((Port-Up 8787) -and -not (Test-ManagerHealth)) {
+    Write-Warning "Manager owns/listens on 8787 but health is unresponsive. Running safe reconciler..."
+    & $py -m manager.reconcile_v4 --manager
+    if($LASTEXITCODE -ne 0){ throw "Port 8787 is not owned by the configured Agent Manager; refusing to terminate it." }
+    Start-Sleep -Seconds 1
+  }
+
   if (-not (Port-Up 8787)) {
     Start-Process $py -ArgumentList "run.py" -WorkingDirectory (Get-Location) -WindowStyle Hidden
-    Start-Sleep -Seconds 3
+    $deadline=(Get-Date).AddSeconds(20)
+    while((Get-Date) -lt $deadline -and -not (Test-ManagerHealth)){ Start-Sleep -Milliseconds 750 }
+    if(-not (Test-ManagerHealth)){ throw "Agent Manager process started but health did not recover." }
   }
+
   $guardian = Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -match 'manager.guardian_v3' } | Select-Object -First 1
   if (-not $guardian) {
     Start-Process $py -ArgumentList @("-m","manager.guardian_v3") -WorkingDirectory (Get-Location) -WindowStyle Hidden
