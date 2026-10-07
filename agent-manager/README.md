@@ -1,195 +1,64 @@
-# Agent Manager v0.3
+# Agent Manager V3
 
-Local-first supervisor for discovering, evaluating and safely improving AI-agent repositories.
+Local-first autonomous operations center for Project Visibility and other local agents. This is an in-place upgrade of the existing Agent Manager branch, not a second manager.
 
-## Current capabilities
+## V3 control plane
 
-1. repository and agent discovery;
-2. deterministic health score (0-100);
-3. local Ollama engineering review;
-4. persistent local Agent Registry with previous score tracking;
-5. safe repair planning that produces a candidate unified diff;
-6. protected-path validation before any repair can progress;
-7. FastAPI control surface;
-8. isolated GitHub CI validation.
+- SQLite/WAL persistent operational state
+- incident fingerprinting and deduplication
+- Manager heartbeat + separate Guardian process
+- Project Visibility and Ollama endpoint monitoring
+- CPU/RAM/disk telemetry
+- discovery of configured local projects and important runtime processes
+- event and action journals
+- policy engine for ALLOW / REQUIRE_REVIEW / REQUIRE_USER
+- Auto-Fix proposal layer without arbitrary shell execution
+- persistent email queue and Gmail AUTH_REQUIRED state
+- local dashboard at http://127.0.0.1:8787/control
+- Windows install/start/stop/restart/status/doctor scripts
+- existing V1 repair/worktree/PR engine remains available for source-code repair workflows
 
-The current repair engine is **plan-only**: it can propose and validate a patch, but it does not write into production repositories yet. The next milestone is sandbox apply -> tests -> repair branch -> PR.
+## Windows install
 
-## Free/local stack
+Open PowerShell in agent-manager:
 
-- LLM runtime: Ollama on localhost
-- preferred model: `qwen3-coder:30b`
-- fallbacks: `qwen2.5-coder:7b`, `devstral`
-- API: FastAPI
-- state: local JSON registry
-- tests: pytest
-- source control / review: GitHub branch + PR
-- no paid LLM API is required
-
-## Windows quick start
-
-Open PowerShell in `agent-manager`:
-
-```powershell
-.\start.ps1
-```
+    .\scripts\install-agent-manager.ps1
+    .\scripts\start-agent-manager.ps1
 
 Then open:
 
-```text
-http://127.0.0.1:8787/docs
-```
+    http://127.0.0.1:8787/control
 
-Optional stronger model:
+Run diagnostics:
 
-```powershell
-ollama pull qwen3-coder:30b
-```
+    .\scripts\doctor-agent-manager.ps1
 
-If that model is too large for the machine, keep a smaller installed coding model; Agent Manager automatically falls back.
+## Configuration
 
-## API
+Set local paths with environment variables before startup:
 
-### Health
+- AGENT_MANAGER_ROOTS
+- PROJECT_VISIBILITY_ROOT
+- PROJECT_VISIBILITY_HEALTH_URL
+- OLLAMA_BASE_URL
 
-```http
-GET /health
-```
+The API binds to 127.0.0.1 by default.
 
-### Installed / selected local models
+Gmail is intentionally not bypassed. Set GMAIL_REPORTING_ENABLED=1 only after valid local OAuth configuration exists. Until then the connection state remains AUTH_REQUIRED/DISABLED.
 
-```http
-GET /models
-```
+## Safety
 
-### Scan repositories without storing them
+- deterministic monitoring continues if Ollama is unavailable
+- no commands are executed from websites, logs, emails, README files or uploaded projects
+- no direct blind edits to main
+- low-risk reversible runtime actions may be allowed only through explicit adapters
+- source/deployment changes require review
+- auth, payment, permission and destructive database changes require explicit user approval
+- secrets must not be committed or logged
 
-```http
-POST /scan
-Content-Type: application/json
+## Verification
 
-{
-  "roots": [
-    "C:\\Projects\\blog-lab",
-    "C:\\Projects\\other-agent"
-  ]
-}
-```
+    .\.venv\Scripts\python.exe -m pytest -q
+    .\scripts\doctor-agent-manager.ps1
 
-### Discover and persist agents in Registry
-
-```http
-POST /registry/discover
-Content-Type: application/json
-
-{
-  "roots": [
-    "C:\\Projects\\blog-lab",
-    "C:\\Projects\\other-agent"
-  ]
-}
-```
-
-### List known agents
-
-```http
-GET /registry
-```
-
-### Full engineering review
-
-```http
-POST /review
-Content-Type: application/json
-
-{
-  "root": "C:\\Projects\\blog-lab",
-  "use_ai": true
-}
-```
-
-### Prepare a safe repair candidate
-
-```http
-POST /repair/plan
-Content-Type: application/json
-
-{
-  "root": "C:\\Projects\\blog-lab",
-  "objective": "Improve the publisher agent recovery logic without changing current publishing behaviour."
-}
-```
-
-The response includes the chosen local model, repair plan, candidate unified diff, suggested test commands, risk level and patch validation result.
-
-## Repair security
-
-Before a candidate can become executable, Agent Manager rejects paths including:
-
-- `.git/`
-- `.env*`
-- `secrets/`
-- `credentials/`
-- parent-directory traversal such as `../`
-
-The execution layer will add further gates before write access is enabled.
-
-## Architecture
-
-```text
-repositories
-    |
-    v
-RepositoryScanner
-    |
-    +--> HealthReport
-    |
-    +--> AgentRegistry ---------> history / score drift
-    |
-    +--> AgentEvaluator --------> local Ollama
-    |
-    +--> RepairPlanner ---------> local Ollama
-                               |
-                               v
-                         unified diff
-                               |
-                               v
-                        path validation
-                               |
-                               v
-                         [next milestone]
-                    sandbox -> tests -> PR
-```
-
-## Environment
-
-See `.env.example`.
-
-Main variables:
-
-- `OLLAMA_BASE_URL`
-- `AGENT_MANAGER_MODEL`
-- `AGENT_MANAGER_FALLBACK_MODELS`
-- `AGENT_MANAGER_ROOTS`
-- `AGENT_MANAGER_STATE`
-
-## Tests
-
-```powershell
-.\.venv\Scripts\python.exe -m pytest -q
-```
-
-The development branch also has an isolated GitHub Actions workflow that runs compile, unit tests and a FastAPI import smoke test.
-
-## Next milestones
-
-1. sandboxed patch application;
-2. automatic test-command detection;
-3. before/after health and regression comparison;
-4. repair branch creation and automatic Pull Request;
-5. prompt-specific eval suite;
-6. GitHub repository discovery across the account;
-7. A2A 1.0 transport using the official SDK;
-8. MCP tool gateway;
-9. web dashboard;
-10. scheduled autonomous review loop.
+A system is VERIFIED DONE only after these checks also pass on the target Windows machine: Project Visibility health, Ollama health, Guardian heartbeat, startup tasks, restart recovery, dashboard, Gmail OAuth/report delivery, and soak testing.
