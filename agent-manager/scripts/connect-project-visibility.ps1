@@ -111,6 +111,13 @@ if(Get-Command gh -ErrorAction SilentlyContinue){
 [Environment]::SetEnvironmentVariable("PROJECT_VISIBILITY_MODEL",$Model,"User")
 [Environment]::SetEnvironmentVariable("OLLAMA_BASE_URL","http://127.0.0.1:11434","User")
 
+# Apply the same values to this process so the very first Manager start can
+# immediately use Project Visibility recovery without waiting for a new login shell.
+$env:PROJECT_VISIBILITY_ROOT=$ProjectRoot
+$env:PROJECT_VISIBILITY_HEALTH_URL="http://127.0.0.1:8000/health"
+$env:PROJECT_VISIBILITY_MODEL=$Model
+$env:OLLAMA_BASE_URL="http://127.0.0.1:11434"
+
 if(-not (Test-Http "http://127.0.0.1:8000/health" 2)){
   $listener=Get-NetTCPConnection -LocalPort 8000 -State Listen -ErrorAction SilentlyContinue | Select-Object -First 1
   if($listener){
