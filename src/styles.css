@@ -1052,9 +1052,9 @@ body{background:#0b1710}
 .tourism-site .hero p{color:rgba(255,255,255,.82);max-width:690px}
 .tourism-site .hero .primary{align-self:flex-start;background:#f0a84d;color:#142419;box-shadow:0 16px 38px rgba(0,0,0,.18)}
 .tourism-site .hero .primary:hover{background:#f6bb70}
-.tourism-site .home-content{margin-top:38px;margin-bottom:54px;padding:0 24px 22px;border:1px solid rgba(255,255,255,.18);border-radius:30px;background:rgba(247,245,239,.90);backdrop-filter:blur(18px);box-shadow:0 34px 100px rgba(0,0,0,.22)}
+.tourism-site .home-content{margin-top:38px;margin-bottom:54px;padding:0 24px 22px;border:1px solid rgba(207,217,192,.14);border-radius:30px;background:radial-gradient(circle at 72% 8%,rgba(169,184,154,.10),transparent 34%),linear-gradient(145deg,rgba(32,68,52,.96),rgba(21,53,40,.98));backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 28px 82px rgba(3,18,12,.22),inset 0 1px 0 rgba(255,255,255,.045)}
 .tourism-site .feed{padding-top:54px}
-.tourism-site .post-card{background:rgba(255,254,253,.94)}
+.tourism-site .post-card{background:#F7F2E8;border-color:rgba(224,216,197,.66);box-shadow:0 14px 34px rgba(4,20,13,.11),inset 0 1px 0 rgba(255,255,255,.70)}
 .tourism-site .post-card .card-art-image img{transition:transform .55s cubic-bezier(.2,.7,.2,1),filter .25s ease;filter:saturate(.94) contrast(1.025)}
 .tourism-site .post-card:hover .card-art-image img{transform:scale(1.035);filter:saturate(1.03) contrast(1.03)}
 .events-jump span{color:#f4c473;font-size:.74rem}
@@ -1069,7 +1069,7 @@ body{background:#0b1710}
 .event-pulse-top{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-bottom:8px;color:var(--muted);font-size:10px}
 .event-type{display:inline-flex;align-items:center;min-height:22px;padding:0 7px;border-radius:999px;color:#fff;background:var(--green);font-size:9px;font-weight:800;letter-spacing:.045em;text-transform:uppercase}
 .event-place{margin:-3px 0 8px;color:#59665e;font-size:11px;line-height:1.35}
-.live-pulse-ad{min-height:180px;margin:14px 0;border-color:rgba(23,107,69,.22);color:var(--green-dark);background:radial-gradient(circle at 80% 12%,rgba(233,111,59,.12),transparent 32%),linear-gradient(145deg,#edf3e9,#fff)}
+.live-pulse-ad{min-height:180px;margin:14px 0;border-color:rgba(224,231,212,.12);color:rgba(232,237,223,.72);background:radial-gradient(circle at 78% 16%,rgba(199,177,132,.10),transparent 38%),rgba(9,39,27,.34)}
 .live-pulse-ad small{color:var(--muted)}
 .tourism-site>footer{display:grid;grid-template-columns:auto minmax(260px,1fr) auto;gap:14px 28px;color:rgba(255,255,255,.78);border-top:1px solid rgba(255,255,255,.14);background:rgba(7,20,13,.88);backdrop-filter:blur(16px)}
 .travel-photo-credit{grid-column:1/-1;color:rgba(255,255,255,.48);font-size:10px;line-height:1.5}
@@ -1078,3 +1078,17 @@ body{background:#0b1710}
 @media(max-width:980px){.tourism-site .site-header{height:auto;min-height:76px;flex-wrap:wrap;gap:10px 14px;padding-top:10px;padding-bottom:10px}.tourism-site .site-header nav{order:3;width:100%;overflow-x:auto;padding-bottom:2px}.tourism-site .site-header nav button{white-space:nowrap}.tourism-site .hero{min-height:560px}}
 @media(max-width:720px){.travel-bg-scene{inset:-2%}.tourism-site .hero{min-height:560px;padding:90px 24px 70px;background:linear-gradient(180deg,rgba(7,24,14,.80),rgba(7,24,14,.62))}.tourism-site .home-content{width:min(100% - 24px,1160px);margin-top:18px;padding:0 12px 16px;border-radius:22px}.ad-leaderboard-wrap{width:min(100% - 24px,1160px);padding-top:18px}.ad-slot{min-height:84px}.tourism-site>footer{grid-template-columns:1fr}.travel-photo-credit{grid-column:1}}
 @media(prefers-reduced-motion:reduce){.travel-bg-scene{animation:none!important;opacity:0!important;transform:none!important}.travel-bg-soca{opacity:1!important}}
+
+/* Production homepage shell hardening — no light fallback */
+main.tourism-site > .home-content.container{background:radial-gradient(circle at 72% 8%,rgba(169,184,154,.10),transparent 34%),linear-gradient(145deg,#244B39 0%,#153528 100%)!important;border-color:rgba(207,217,192,.14)!important;color:#EFF0E7!important}
+main.tourism-site > .home-content.container .section-heading{border-bottom-color:rgba(239,239,225,.15)!important}
+main.tourism-site > .home-content.container .section-heading h2{color:#F2EFE5!important}
+main.tourism-site > .home-content.container .section-heading .kicker{color:#B9C8A9!important}
+main.tourism-site > .home-content.container .section-heading .count{color:rgba(237,239,226,.64)!important}
+main.tourism-site > .home-content.container .live-pulse,main.tourism-site > .home-content.container .events-pulse{background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.018))!important;border-color:rgba(225,232,213,.14)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.035),0 12px 34px rgba(3,18,12,.08)!important;color:#EFF0E7!important}
+main.tourism-site > .home-content.container .live-pulse-head{border-bottom-color:rgba(231,235,221,.12)!important}
+main.tourism-site > .home-content.container .live-pulse-head strong,main.tourism-site > .home-content.container .live-pulse-item h3{color:#F0F1E8!important}
+main.tourism-site > .home-content.container .live-pulse-head>span,main.tourism-site > .home-content.container .live-pulse-intro,main.tourism-site > .home-content.container .live-pulse-foot,main.tourism-site > .home-content.container .live-pulse-meta,main.tourism-site > .home-content.container .event-pulse-top,main.tourism-site > .home-content.container .event-place{color:rgba(229,235,220,.64)!important}
+main.tourism-site > .home-content.container .live-pulse-item{border-bottom-color:rgba(232,236,223,.11)!important}
+main.tourism-site > .home-content.container .event-type{color:#EAF0E5!important;background:rgba(8,57,39,.88)!important;border-color:rgba(190,211,182,.08)!important}
+main.tourism-site > .home-content.container .live-pulse-ad{background:radial-gradient(circle at 78% 16%,rgba(199,177,132,.10),transparent 38%),rgba(9,39,27,.34)!important;border-color:rgba(224,231,212,.12)!important;color:rgba(232,237,223,.72)!important}
