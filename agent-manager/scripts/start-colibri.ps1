@@ -1,8 +1,12 @@
 $ErrorActionPreference="Stop"
-$home=[Environment]::GetEnvironmentVariable("COLIBRI_HOME","User")
-if(-not $home){ $home="$env:LOCALAPPDATA\AgentManager\colibri-src" }
-if(-not (Test-Path (Join-Path $home "c\coli"))){
-  Write-Host "Colibri STANDBY: official control script not installed."
+
+# Do not use $home here: PowerShell treats variable names case-insensitively,
+# so $home collides with the built-in read-only $HOME variable.
+$colibriHome=[Environment]::GetEnvironmentVariable("COLIBRI_HOME","User")
+if(-not $colibriHome){ $colibriHome="$env:LOCALAPPDATA\AgentManager\colibri-src" }
+
+if(-not (Test-Path (Join-Path $colibriHome "c\coli"))){
+  Write-Host "Colibri STANDBY: official control script not installed." -ForegroundColor Yellow
   exit 0
 }
 
@@ -17,39 +21,54 @@ if($profile -eq "decision-laya"){
     }
   }
 }
-Push-Location $home
-$statusRaw=& py -3 c\coli status --json 2>$null
-$status=$null
-try{ $status=$statusRaw | ConvertFrom-Json }catch{}
-if($status -and $status.server -and $status.server.state -eq "ready"){
-  $url=$status.server.urls.openai_base_url
-  if($url){ [Environment]::SetEnvironmentVariable("COLIBRI_BASE_URL",$url,"User"); $env:COLIBRI_BASE_URL=$url }
-  Write-Host "Colibri already READY: $url"
+
+Push-Location $colibriHome
+try {
+  $statusRaw=& py -3 c\coli status --json 2>$null
+  $status=$null
+  try{ $status=$statusRaw | ConvertFrom-Json }catch{}
+
+  if($status -and $status.server -and $status.server.state -eq "ready"){
+    $url=$status.server.urls.openai_base_url
+    if($url){
+      [Environment]::SetEnvironmentVariable("COLIBRI_BASE_URL",$url,"User")
+      $env:COLIBRI_BASE_URL=$url
+    }
+    Write-Host "Colibri already READY: $url" -ForegroundColor Green
+    exit 0
+  }
+
+  $setupReady=$false
+  if($status -and $status.install){
+    $setupReady=($status.install.phase -in @("ready","started"))
+  }
+
+  if(-not $setupReady){
+    Write-Host "Colibri STANDBY: no configured model. Run INSTALL-COLIBRI-V2.bat later if desired." -ForegroundColor Yellow
+    exit 0
+  }
+
+  & py -3 c\coli start --background --no-browser
+  if($LASTEXITCODE -ne 0){ throw "Colibri start failed." }
+
+  $deadline=(Get-Date).AddMinutes(3)
+  do{
+    Start-Sleep -Seconds 3
+    $raw=& py -3 c\coli status --json 2>$null
+    try{ $status=$raw | ConvertFrom-Json }catch{ $status=$null }
+  }while((Get-Date) -lt $deadline -and (-not $status -or $status.server.state -ne "ready"))
+
+  if($status -and $status.server.state -eq "ready"){
+    $url=$status.server.urls.openai_base_url
+    if($url){
+      [Environment]::SetEnvironmentVariable("COLIBRI_BASE_URL",$url,"User")
+      $env:COLIBRI_BASE_URL=$url
+    }
+    Write-Host "Colibri READY: $url" -ForegroundColor Green
+  }else{
+    Write-Warning "Colibri did not reach READY. Ollama fallback will remain active."
+  }
+}
+finally {
   Pop-Location
-  exit 0
 }
-$setupReady=$false
-if($status -and $status.install){
-  $setupReady=($status.install.phase -in @("ready","started"))
-}
-if(-not $setupReady){
-  Write-Host "Colibri STANDBY: no configured model. Run INSTALL-COLIBRI-V2.bat first."
-  Pop-Location
-  exit 0
-}
-& py -3 c\coli start --background --no-browser
-if($LASTEXITCODE -ne 0){ Pop-Location; throw "Colibri start failed." }
-$deadline=(Get-Date).AddMinutes(3)
-do{
-  Start-Sleep -Seconds 3
-  $raw=& py -3 c\coli status --json 2>$null
-  try{ $status=$raw | ConvertFrom-Json }catch{ $status=$null }
-}while((Get-Date) -lt $deadline -and (-not $status -or $status.server.state -ne "ready"))
-if($status -and $status.server.state -eq "ready"){
-  $url=$status.server.urls.openai_base_url
-  if($url){ [Environment]::SetEnvironmentVariable("COLIBRI_BASE_URL",$url,"User"); $env:COLIBRI_BASE_URL=$url }
-  Write-Host "Colibri READY: $url" -ForegroundColor Green
-}else{
-  Write-Warning "Colibri did not reach READY. Ollama fallback will remain active."
-}
-Pop-Location
