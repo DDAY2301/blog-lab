@@ -165,6 +165,7 @@ class ManagedTargetInput(BaseModel):
     workflows: list[str] | None = None
     repair_adapter: str = ""
     local_root_env: str = ""
+    process_match: str = ""
 
 
 @app.put("/managed-agents/{target_id}")
