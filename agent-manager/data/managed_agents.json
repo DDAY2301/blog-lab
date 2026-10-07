@@ -8,7 +8,8 @@
       "enabled": true,
       "health_url": "http://127.0.0.1:8000/health",
       "repair_adapter": "project_visibility_restart",
-      "local_root_env": "PROJECT_VISIBILITY_ROOT"
+      "local_root_env": "PROJECT_VISIBILITY_ROOT",
+      "interval_seconds": 60
     },
     {
       "id": "bloglab_live",
@@ -16,7 +17,8 @@
       "kind": "http",
       "enabled": true,
       "health_url": "https://bloglab.eu/",
-      "repair_adapter": ""
+      "repair_adapter": "",
+      "interval_seconds": 60
     },
     {
       "id": "bloglab_worker",
@@ -24,7 +26,8 @@
       "kind": "http",
       "enabled": true,
       "health_url": "https://blog-lab.dan-grmusa.workers.dev/health",
-      "repair_adapter": ""
+      "repair_adapter": "",
+      "interval_seconds": 60
     },
     {
       "id": "bloglab_github",
@@ -40,7 +43,8 @@
         "Blog Lab Production Guardian",
         "Blog Lab Self Heal"
       ],
-      "repair_adapter": "bloglab_self_heal"
+      "repair_adapter": "bloglab_self_heal",
+      "interval_seconds": 300
     }
   ]
 }
