@@ -132,3 +132,21 @@ Expected steady-state core:
     Colibri             ACTIVE or STANDBY
 
 STANDBY for Colibri is a valid healthy state when the machine does not have a compatible large Colibri model loaded.
+
+
+## Qwen3.6 + KAT-Coder
+
+Agent Manager now prefers the local aliases:
+
+    bloglab-katcoder-efficient
+    bloglab-qwen36-efficient
+
+KAT-Coder-V2.5-Dev is used first for engineering/autofix work. Qwen3.6-35B-A3B is the general reasoning fallback.
+
+Install the practical profile for the current machine with:
+
+    .\setup-max-model.ps1 -Profile auto
+
+The script detects system RAM and NVIDIA VRAM. On machines with 16+ GB RAM but limited VRAM it uses compact GGUF builds and hybrid GPU/CPU inference. On large-memory systems it can use Q4 models. Existing qwen2.5-coder:7b remains the emergency fallback.
+
+For lower memory pressure the default Agent Manager context is 32768 tokens.
