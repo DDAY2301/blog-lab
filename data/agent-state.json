@@ -8,7 +8,7 @@
   "last_error": null,
   "agent_version": "3.0.0-learning-guarded-fallback",
   "current_category": "gore",
-  "scheduled_posts_today": 5,
+  "scheduled_posts_today": 4,
   "manual_posts_today": 0,
   "writer_mode": "deterministic_fallback",
   "scheduled_slots_done": [
@@ -25,5 +25,6 @@
     "category": "gore",
     "slot": "2026-10-07|16:20|gore",
     "remaining_repairs": 0
-  }
+  },
+  "schedule_counter_normalized_at": "2026-10-07T16:45:00+02:00"
 }
