@@ -34,7 +34,7 @@ jobs:
       CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
       BLOG_LAB_DISPATCH_TOKEN: ${{ secrets.BLOG_LAB_DISPATCH_TOKEN }}
-      EXPECTED_WORKER_VERSION: auth-v6.26-production
+      EXPECTED_WORKER_VERSION: auth-v6.27-production
     steps:
       - uses: actions/checkout@v7
 
