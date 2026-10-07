@@ -50,11 +50,19 @@ if (-not $taskOk) {
     @"
 @echo off
 cd /d "$root"
-start "" /min powershell.exe -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File "$root\scripts\start-agent-manager.ps1"
+start "" /min powershell.exe -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File "$root\scripts\start-stack-v4.ps1"
 "@ | Set-Content -Path $cmd -Encoding ASCII
     Write-Warning "Scheduled Task creation was denied. Installed current-user Startup fallback instead: $cmd"
 } else {
     Write-Host "Windows startup tasks installed." -ForegroundColor Green
 }
 Write-Host "Agent Manager V3 dependencies are installed." -ForegroundColor Green
-Write-Host "Next: .\scripts\start-agent-manager.ps1"
+$startup = [Environment]::GetFolderPath("Startup")
+$stackCmd = Join-Path $startup "AgentManagerV4-Stack.cmd"
+@"
+@echo off
+cd /d "$root"
+start "" /min powershell.exe -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File "$root\scripts\start-stack-v4.ps1"
+"@ | Set-Content -Path $stackCmd -Encoding ASCII
+Write-Host "Current-user 24/7 startup registered: $stackCmd" -ForegroundColor Green
+Write-Host "Next: .\scripts\start-stack-v4.ps1"
