@@ -9,6 +9,20 @@ $env:OLLAMA_FAST_KEEP_ALIVE="60s"
 $env:AGENT_MANAGER_CONTEXT="8192"
 $env:AGENT_MANAGER_OLLAMA_KEEP_ALIVE="60s"
 
+# Refresh persisted user-level integration settings into every reconciled stack.
+foreach($name in @(
+  "PROJECT_VISIBILITY_ROOT",
+  "PROJECT_VISIBILITY_HEALTH_URL",
+  "PROJECT_VISIBILITY_MODEL",
+  "OLLAMA_BASE_URL",
+  "COLIBRI_BASE_URL",
+  "COLIBRI_MODEL",
+  "AGENT_MANAGER_COLIBRI_PROFILE"
+)){
+  $value=[Environment]::GetEnvironmentVariable($name,"User")
+  if($value){ Set-Item -Path "Env:$name" -Value $value }
+}
+
 function Port-Up([int]$Port) {
   return [bool](Get-NetTCPConnection -State Listen -LocalPort $Port -ErrorAction SilentlyContinue | Select-Object -First 1)
 }
