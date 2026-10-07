@@ -72,7 +72,7 @@ def _local_model_config(role: str = "general") -> tuple[str, str, str]:
         return "", "", ""
     model = os.getenv(
         "LOCAL_CODER_MODEL" if role == "coder" else "LOCAL_GENERAL_MODEL",
-        "bloglab-katcoder-efficient" if role == "coder" else "bloglab-qwen36-efficient",
+        "bloglab-katcoder-efficient" if role == "coder" else "qwen2.5-coder:7b",
     ).strip()
     return base, model, os.getenv("LOCAL_MODEL_API_KEY", "").strip()
 
