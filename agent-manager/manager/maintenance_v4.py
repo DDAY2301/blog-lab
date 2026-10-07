@@ -31,16 +31,30 @@ class MaintenanceLoopV4:
         loop_id = uuid.uuid4().hex[:10]
         targets = await self.supervisor.check_all()
         providers = await self.ai.status()
+        triage = await self._colibri_triage_targets(targets)
         diagnoses = await self._auto_diagnose_open_incidents()
         self.last = {
             "loop_id": loop_id,
             "targets": targets,
             "ai_providers": providers,
+            "colibri_triage": triage,
             "automatic_diagnoses": diagnoses,
         }
         self.store.heartbeat("maintenance-v4", "running", loop_id)
         self.store.event("MAINTENANCE_CYCLE", "maintenance-v4", "info", self.last)
         return self.last
+
+    async def _colibri_triage_targets(self, targets: list[dict[str, Any]]) -> list[dict[str, Any]]:
+        out: list[dict[str, Any]] = []
+        for target in targets:
+            if target.get("ok"):
+                continue
+            state = str(target)[:8000]
+            decision = await self.ai.triage(state)
+            if decision:
+                out.append({"target_id": target.get("id"), "decision": decision})
+                self.store.action("maintenance-v4", "colibri_triage", str(target.get("id","")), "completed", {"result": decision})
+        return out
 
     async def _auto_diagnose_open_incidents(self) -> list[dict[str, Any]]:
         rows = self.store.query(
