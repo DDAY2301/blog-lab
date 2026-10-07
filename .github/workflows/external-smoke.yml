@@ -186,12 +186,12 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          URL="https://dday2301.github.io/blog-lab/"
+          URL="https://bloglab.eu/"
           for attempt in {1..24}; do
             echo "Pages probe $attempt/24"
-            body="$(curl -fsS --max-time 20 "$URL" || true)"
+            body="$(curl -LfsS --max-time 20 "$URL" || true)"
             if grep -Fq 'Blog Lab' <<<"$body"; then
-              echo "Public Blog Lab is reachable."
+              echo "Public Blog Lab is reachable on the production domain."
               exit 0
             fi
             sleep 10
