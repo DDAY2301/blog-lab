@@ -45,7 +45,15 @@ foreach($legacy in @("AgentManagerV3.cmd","ProjectVisibility.cmd")){
     if(Test-Path $p){ Remove-Item $p -Force -ErrorAction SilentlyContinue }
 }
 foreach($task in @("AgentManagerV3","AgentManagerV3-Guardian")){
-    schtasks /Delete /TN $task /F 2>$null | Out-Null
+    try {
+        $existing = Get-ScheduledTask -TaskName $task -ErrorAction SilentlyContinue
+        if($existing){
+            Unregister-ScheduledTask -TaskName $task -Confirm:$false -ErrorAction Stop
+            Write-Host "Removed legacy scheduled task: $task"
+        }
+    } catch {
+        Write-Warning "Could not remove legacy task $task. Continuing because V4 Startup + Watchdog do not depend on it."
+    }
 }
 
 $stackScript=Join-Path $root "scripts\start-stack-v4.ps1"
@@ -57,13 +65,33 @@ start "" /min powershell.exe -NoProfile -WindowStyle Hidden -ExecutionPolicy Byp
 "@ | Set-Content -Path $stackCmd -Encoding ASCII
 Write-Host "Current-user startup registered: $stackCmd" -ForegroundColor Green
 
-# Best-effort recurring reconciler. Startup + watchdog remains the fallback if Task Scheduler denies it.
-$taskCommand="powershell.exe -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File `"$stackScript`""
-schtasks /Create /TN "AgentManagerV4-Reconcile" /TR $taskCommand /SC MINUTE /MO 5 /F 2>$null | Out-Null
-if($LASTEXITCODE -eq 0){
+# Best-effort recurring reconciler. Startup + Watchdog is already sufficient for normal recovery.
+# Use PowerShell ScheduledTasks so missing/denied tasks never emit a fatal native stderr record.
+try {
+    $actionArgs = @{
+        Execute = "powershell.exe"
+        Argument = "-NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File `"$stackScript`""
+    }
+    $action = New-ScheduledTaskAction @actionArgs
+    $triggerArgs = @{
+        Once = $true
+        At = (Get-Date).AddMinutes(1)
+        RepetitionInterval = (New-TimeSpan -Minutes 5)
+    }
+    $trigger = New-ScheduledTaskTrigger @triggerArgs
+    $registerArgs = @{
+        TaskName = "AgentManagerV4-Reconcile"
+        Action = $action
+        Trigger = $trigger
+        Description = "Agent Manager V4 five-minute reconciliation safety net"
+        Force = $true
+        ErrorAction = "Stop"
+    }
+    Register-ScheduledTask @registerArgs | Out-Null
     Write-Host "5-minute recovery task registered." -ForegroundColor Green
-}else{
-    Write-Warning "Task Scheduler did not allow the recurring recovery task. Startup + Watchdog will still provide recovery."
+} catch {
+    Write-Warning "Task Scheduler recovery task was not registered: $($_.Exception.Message)"
+    Write-Warning "This is non-fatal: Current-user Startup + independent Watchdog remain enabled."
 }
 
 Write-Host "Agent Manager V4 dependencies are installed." -ForegroundColor Green
