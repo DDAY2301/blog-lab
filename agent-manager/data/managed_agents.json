@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "targets": [
+    {
+      "id": "project_visibility",
+      "name": "Project Visibility",
+      "kind": "http",
+      "enabled": true,
+      "health_url": "http://127.0.0.1:8000/health",
+      "repair_adapter": "project_visibility_restart",
+      "local_root_env": "PROJECT_VISIBILITY_ROOT"
+    },
+    {
+      "id": "bloglab_live",
+      "name": "BlogLab Live Site",
+      "kind": "http",
+      "enabled": true,
+      "health_url": "https://bloglab.eu/",
+      "repair_adapter": ""
+    },
+    {
+      "id": "bloglab_worker",
+      "name": "BlogLab Cloudflare Worker",
+      "kind": "http",
+      "enabled": true,
+      "health_url": "https://blog-lab.dan-grmusa.workers.dev/health",
+      "repair_adapter": ""
+    },
+    {
+      "id": "bloglab_github",
+      "name": "BlogLab GitHub Agents",
+      "kind": "github_repo",
+      "enabled": true,
+      "repo": "DDAY2301/blog-lab",
+      "branch": "main",
+      "workflows": [
+        "Blog Lab Publisher Agent",
+        "Blog Lab Health Check",
+        "Blog Lab External Smoke Test",
+        "Blog Lab Production Guardian",
+        "Blog Lab Self Heal"
+      ],
+      "repair_adapter": "bloglab_self_heal"
+    }
+  ]
+}
