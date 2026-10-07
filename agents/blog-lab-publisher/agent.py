@@ -22,13 +22,21 @@ from services.publisher import publish_to_app, slugify
 from services.state import load_json, atomic_json
 from services.learning import learning_source_ok, rank_sources_with_learning
 from services.article_templates import apply_article_template, template_prompt
+from services.media_library import commons_image_for
 
 STATE = BASE / "data/agent-state.json"
 CONTROL = BASE / "data/agent-control.json"
 PROCESSED = BASE / "data/processed-items.json"
 STATUS = BASE / "public/data/agent-status.json"
 APP = BASE / "src/App.jsx"
-VALID_CATEGORIES = {"sport", "politika", "aktualno"}
+VALID_CATEGORIES = {"kolesarstvo", "dediscina", "sezonsko", "gore", "gourmet"}
+OUTPUT_CATEGORY_LABELS = {
+    "kolesarstvo": "Kolesarstvo",
+    "dediscina": "Dediščina",
+    "sezonsko": "Sezonsko",
+    "gore": "Gore & traili",
+    "gourmet": "Gourmet",
+}
 
 def operator_media(topic: str) -> tuple[list[dict], dict | None]:
     text = topic or ""
@@ -243,26 +251,38 @@ def defer_scheduled_slot(state: dict, slot_id: str, reason: str) -> None:
 
 
 AUTO_SEARCH_QUERIES = {
-    "sport": "Slovenija šport danes",
-    "politika": "Slovenija politika danes",
-    "aktualno": "Slovenija aktualne novice danes",
+    "kolesarstvo": "Slovenija kolesarstvo kolesarske poti gravel bike turizem varnost",
+    "dediscina": "Slovenija dediščina zgodovina gradovi muzeji miti legende turizem",
+    "sezonsko": "Slovenija turizem sezona dogodki vreme ARSO izleti danes",
+    "gore": "Slovenija gore pohodništvo PZS trail kampiranje pravila vreme ARSO",
+    "gourmet": "Slovenija tradicionalna kuhinja gastronomija lokalna hrana vino gostilne",
 }
 
 
 AUTO_CATEGORY_TERMS = {
-    "sport": (
-        "šport", "sport", "nogomet", "football", "soccer", "košark", "basket",
-        "tenis", "tennis", "koles", "cycling", "atlet", "hokej", "hockey",
-        "smuč", "ski", "rokomet", "handball", "odboj", "volley", "liga", "league",
-        "prvenst", "championship", "tekm", "match", "igral", "player", "trener",
-        "coach", "gol", "goal", "racing", "race", "formula", "moto", "nba",
-        "uefa", "fifa", "olimp", "olymp", "medal", "turnir", "tournament",
+    "kolesarstvo": (
+        "koles", "cycling", "bike", "bicycle", "gravel", "mtb", "kolesarsk",
+        "kolesarjenje", "pot", "route", "trail", "pedal", "e-bike",
     ),
-    "politika": (
-        "politika", "politic", "vlada", "government", "parlament", "parliament",
-        "volit", "election", "minister", "predsed", "president", "zakon", "law",
-        "strank", "party", "koalic", "coalition", "opozic", "opposition",
-        "državni zbor", "national assembly", "evropska unija", "european union",
+    "dediscina": (
+        "dedišč", "dedisc", "heritage", "zgodovin", "history", "grad", "castle",
+        "muzej", "museum", "mit", "myth", "legend", "legenda", "arheolog",
+        "tradic", "folklor", "plečnik", "plecnik",
+    ),
+    "sezonsko": (
+        "turiz", "tourism", "visit", "obisk", "izlet", "sezon", "jesen", "zima",
+        "pomlad", "poletje", "weather", "vreme", "arso", "festival", "dogodek",
+        "prired", "ljubljan", "bled", "bohinj", "piran", "sloven",
+    ),
+    "gore": (
+        "gora", "mountain", "planin", "hiking", "pohod", "trail", "pzs",
+        "triglav", "alp", "koča", "koca", "bivak", "kamp", "camping", "pot",
+        "vreme", "weather", "sneg", "plaz", "varnost",
+    ),
+    "gourmet": (
+        "kulinar", "cuisine", "gourmet", "food", "hrana", "jed", "recept",
+        "restavr", "gostil", "vino", "wine", "sir", "cheese", "tradicional",
+        "lokaln", "gastronom", "chef", "okus",
     ),
 }
 
@@ -306,21 +326,6 @@ def _automatic_category_match(item: dict, category: str) -> bool:
     if category in AUTO_CATEGORY_TERMS:
         return any(term in text for term in AUTO_CATEGORY_TERMS[category])
 
-    # "Aktualno" is intentionally broad, but the autonomous Slovenian slot
-    # should still be anchored to Slovenia/local sources when using global web search.
-    if category == "aktualno":
-        provider = str(item.get("provider") or "").lower()
-        try:
-            host = (urlparse(str(item.get("url") or "")).hostname or "").lower()
-        except Exception:
-            host = ""
-        return (
-            provider == "google-news-si"
-            or host.endswith(".si")
-            or "slovenij" in text
-            or "slovenia" in text
-            or "ljubljan" in text
-        )
     return True
 
 
@@ -526,11 +531,12 @@ def prepare_article_candidate(
     if output_category.strip():
         article["category"] = output_category.strip()[:40]
     article = apply_media_policy(article, source_items, topic)
-    article = apply_article_template(
-        article,
-        output_category.strip() or str(article.get("category") or ""),
-        topic,
-    )
+    resolved_category = output_category.strip() or str(article.get("category") or "")
+    if not _media_url(article.get("heroImage")):
+        fallback_image = commons_image_for(str(article.get("title") or topic or ""), resolved_category)
+        if fallback_image:
+            article["heroImage"] = fallback_image
+    article = apply_article_template(article, resolved_category, topic)
     return article
 
 
@@ -561,6 +567,7 @@ def main():
     ap.add_argument("--topic", default="")
     ap.add_argument("--output-category", default="")
     args = ap.parse_args()
+    resolved_output_category = args.output_category.strip() or OUTPUT_CATEGORY_LABELS.get(args.category, "")
     cfg = yaml.safe_load((HERE / "config.yaml").read_text(encoding="utf-8"))
     state = load_json(str(STATE), {
         "consecutive_failures": 0,
@@ -688,7 +695,7 @@ def main():
         article,
         used_for_article,
         args.topic,
-        args.output_category,
+        resolved_output_category,
     )
     if article.get("skip") and args.topic.strip() and args.force and len(fresh) >= 3:
         # A manual editorial request gets one bounded second pass. The second
@@ -710,7 +717,7 @@ def main():
                 article,
                 used_for_article,
                 args.topic,
-                args.output_category,
+                resolved_output_category,
             )
         except AIUnavailable as exc:
             print(f"INFO manual retry unavailable: {exc}")
@@ -733,7 +740,7 @@ def main():
             article = generate(system_prompt, retry_task, evidence_pool[:8], args.category)
             article["fallback"] = False
             state["writer_mode"] = str(article.pop("_writer_provider", state.get("writer_mode", "ai")))
-            article = prepare_article_candidate(article, used_for_article, args.topic, args.output_category)
+            article = prepare_article_candidate(article, used_for_article, args.topic, resolved_output_category)
         except AIUnavailable as exc:
             print(f"INFO automatic retry unavailable: {exc}")
 
@@ -767,7 +774,7 @@ def main():
             repaired = generate(system_prompt, repair_prompt, evidence_pool[:8], args.category)
             repaired["fallback"] = False
             state["writer_mode"] = str(repaired.pop("_writer_provider", state.get("writer_mode", "ai")))
-            repaired = prepare_article_candidate(repaired, used_for_article, args.topic, args.output_category)
+            repaired = prepare_article_candidate(repaired, used_for_article, args.topic, resolved_output_category)
             if not repaired.get("skip"):
                 repaired["id"] = slugify(repaired.get("title", "")) + "-" + hashlib.sha1(used_for_article[0]["url"].encode()).hexdigest()[:8]
                 repaired_errors = validate(repaired, min_chars, max_chars, titles, used_urls, allowed_urls)
@@ -804,7 +811,7 @@ def main():
                     repaired,
                     used_for_article,
                     args.topic,
-                    args.output_category,
+                    resolved_output_category,
                 )
                 if not repaired.get("skip"):
                     repaired["id"] = (

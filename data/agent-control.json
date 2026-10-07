@@ -1,27 +1,35 @@
 {
   "enabled": true,
   "publish_mode": "automatic",
-  "schedule_profile": "default-3x-daily",
+  "schedule_profile": "slovenia-tourism-5x-daily",
   "schedule": {
     "timezone": "Europe/Ljubljana",
     "slots": [
       {
-        "time": "08:17",
-        "category": "sport"
+        "time": "07:35",
+        "category": "kolesarstvo"
       },
       {
-        "time": "13:27",
-        "category": "politika"
+        "time": "10:45",
+        "category": "dediscina"
       },
       {
-        "time": "19:43",
-        "category": "aktualno"
+        "time": "13:30",
+        "category": "sezonsko"
+      },
+      {
+        "time": "16:20",
+        "category": "gore"
+      },
+      {
+        "time": "19:10",
+        "category": "gourmet"
       }
     ]
   },
   "last_terminal_schedule_update": {
-    "at": "2026-09-20T13:55:09Z",
-    "actor": "dan.grmusa@gmail.com",
-    "command": "nadaljuj z rutinskimi objavami in vrni vse članke ki smo jih zamudili"
+    "at": "2026-10-07T10:15:00Z",
+    "actor": "editorial-direction",
+    "command": "BlogLab preusmeri v dnevni turistični magazin za Slovenijo"
   }
 }

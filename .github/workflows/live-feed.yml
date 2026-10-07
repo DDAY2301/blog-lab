@@ -1,29 +1,26 @@
-name: Blog Lab Live Pulse
-
+name: Blog Lab Event Pulse
 on:
   push:
     branches: [main]
     paths:
       - "agents/live-feed/**"
       - "src/LivePulse.jsx"
+      - "public/events-feed.json"
       - ".github/workflows/live-feed.yml"
   schedule:
-    - cron: "*/30 * * * *"
+    - cron: "17 */4 * * *"
   workflow_dispatch:
-
 concurrency:
-  group: blog-lab-live-pulse
+  group: blog-lab-event-pulse
   cancel-in-progress: true
-
 permissions:
   contents: write
   pages: write
   id-token: write
-
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 12
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -43,20 +40,20 @@ jobs:
         with:
           node-version: 22
           cache: npm
-      - name: Refresh live mini articles
+      - name: Refresh official event calendar
         run: python agents/live-feed/update.py
       - name: Install frontend dependencies
         run: npm ci
-      - name: Commit live feed state
+      - name: Commit event feed state
         shell: bash
         run: |
-          if git diff --quiet -- public/live-feed.json; then
-            echo "No live-feed changes."
+          if git diff --quiet -- public/events-feed.json; then
+            echo "No event-feed changes."
           else
-            git config user.name "blog-lab-live[bot]"
-            git config user.email "blog-lab-live[bot]@users.noreply.github.com"
-            git add public/live-feed.json
-            git commit -m "Live feed: refresh mini articles"
+            git config user.name "blog-lab-events[bot]"
+            git config user.email "blog-lab-events[bot]@users.noreply.github.com"
+            git add public/events-feed.json
+            git commit -m "Events: refresh Ljubljana and Slovenia calendar"
             git pull --rebase origin main
             git push origin HEAD:main
           fi
