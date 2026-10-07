@@ -12,6 +12,7 @@ data/*.tmp
 data/latest-summary.json
 data/registry.json
 data/gmail-token.json
+data/gmail-client-secret.json
 data/*token*.json
 data/*secret*
 *.pid

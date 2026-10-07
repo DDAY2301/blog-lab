@@ -12,6 +12,26 @@
       "interval_seconds": 60
     },
     {
+      "id": "project_visibility_process",
+      "name": "Project Visibility Local Process",
+      "kind": "process",
+      "enabled": true,
+      "process_match": "api.server:app",
+      "repair_adapter": "",
+      "interval_seconds": 60
+    },
+    {
+      "id": "project_visibility_github",
+      "name": "Project Visibility GitHub",
+      "kind": "github_repo",
+      "enabled": true,
+      "repo": "DDAY2301/PROJEKT",
+      "branch": "main",
+      "workflows": null,
+      "repair_adapter": "",
+      "interval_seconds": 300
+    },
+    {
       "id": "bloglab_live",
       "name": "BlogLab Live Site",
       "kind": "http",
