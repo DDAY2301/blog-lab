@@ -1,0 +1,177 @@
+{
+  "version": 1,
+  "createdAt": "2026-10-07",
+  "language": "sl",
+  "purpose": "BlogLab Slovenia starter editorial pack",
+  "publishingRule": "Pred objavo preveri aktualnost, vire in podvajanje teme. Vsaka objava potrebuje lokalno optimizirano WebP fotografijo in alt opis.",
+  "articles": [
+    {
+      "id": "seed-parenzana-slovenska-istra",
+      "category": "Kolesarstvo",
+      "title": "Parenzana: kolesarska pot med slovensko obalo in Istro",
+      "intro": "Nekdanja ozkotirna železnica je danes ena najbolj slikovitih kolesarskih povezav na slovenski obali. Vodnik naj obiskovalcu jasno pove, kateri odsek izbrati, kakšno kolo potrebuje, kje računati na tunele in vzpone ter kako se pripraviti na vročino in pomanjkanje sence.",
+      "imageDirection": "Editorial travel fotografija kolesarja na Parenzani v slovenski Istri; makadam ali tunel, mediteransko zelenje, brez poziranja v kamero, naravna svetloba, horizontalni crop 16:9.",
+      "imageAlt": "Kolesar na poti Parenzana v slovenski Istri",
+      "dedupeKeywords": [
+        "Parenzana",
+        "slovenska Istra",
+        "kolesarstvo"
+      ]
+    },
+    {
+      "id": "seed-ljubljana-bike-half-day",
+      "category": "Kolesarstvo",
+      "title": "S kolesom okoli Ljubljane: 5 idej za poldnevni izlet",
+      "intro": "Ljubljana je dovolj kompaktna, da lahko obiskovalec v nekaj urah zamenja mestne ulice za barje, reko ali gozdni rob. Članek naj primerja pet realnih tras po dolžini, prometu, podlagi in zahtevnosti ter posebej označi možnosti za obiskovalce brez lastnega kolesa.",
+      "imageDirection": "Kolo na mirni poti ob Ljubljanici ali na Ljubljanskem barju; lokalni občutek, zelenje, brez generičnega mestnega stock videza, 3:2 ali 16:9.",
+      "imageAlt": "Kolesarska pot v okolici Ljubljane",
+      "dedupeKeywords": [
+        "Ljubljana",
+        "kolesarski izlet",
+        "Ljubljansko barje",
+        "PST"
+      ]
+    },
+    {
+      "id": "seed-zlatorog-legend",
+      "category": "Dediščina",
+      "title": "Zlatorog: legenda, ki je postala simbol slovenskih Alp",
+      "intro": "Zgodba o belem gamsu z zlatimi rogovi je tesno povezana z Bohinjem in podobo Julijskih Alp. Prispevek naj loči ljudsko izročilo od poznejših literarnih različic ter pokaže, zakaj se motiv Zlatoroga še vedno pojavlja v slovenski kulturi in turizmu.",
+      "imageDirection": "Atmosferski pogled na Bohinj ali Julijske Alpe v jutranji meglici; brez umetnega zlatega gamsa, poudarek na pokrajini in legendarnem občutku, cinematic editorial.",
+      "imageAlt": "Julijske Alpe nad Bohinjem, pokrajina povezana z legendo o Zlatorogu",
+      "dedupeKeywords": [
+        "Zlatorog",
+        "Bohinj",
+        "Julijske Alpe",
+        "legenda"
+      ]
+    },
+    {
+      "id": "seed-ljubljana-dragon",
+      "category": "Dediščina",
+      "title": "Ljubljanski zmaj: od legende do simbola mesta",
+      "intro": "Zmaj ni samo turistični znak na Zmajskem mostu, ampak eden najbolj prepoznavnih simbolov Ljubljane. Članek naj razloži pripoved o Jazonu in Argonavtih, zgodovino mestnega simbola ter jasno označi, kateri del zgodbe je mit in kateri dokumentirana zgodovina.",
+      "imageDirection": "Detajl zmaja na Zmajskem mostu z Ljubljano v ozadju, zgodnje jutro ali modra ura, brez turistične gneče, vertikalni in horizontalni crop.",
+      "imageAlt": "Kip zmaja na Zmajskem mostu v Ljubljani",
+      "dedupeKeywords": [
+        "Ljubljanski zmaj",
+        "Zmajski most",
+        "Jason",
+        "Argonavti"
+      ]
+    },
+    {
+      "id": "seed-slovenia-october",
+      "category": "Sezonsko",
+      "title": "Slovenija oktobra: 10 idej za jesenski izlet",
+      "intro": "Oktober v Sloveniji pomeni krajše dni, barvite gozdove in precej različne razmere med obalo, mestom in gorami. Vodnik naj združi deset konkretnih idej ter pri vsaki doda realen plan B za dež, hladnejše vreme ali slabšo vidljivost.",
+      "imageDirection": "Jesenski slovenski gozd ali vinogradi v zlati uri; tople naravne barve, brez prenasičenosti, premium travel magazine občutek.",
+      "imageAlt": "Jesenska pokrajina v Sloveniji v oktobru",
+      "dedupeKeywords": [
+        "Slovenija oktobra",
+        "jesenski izlet",
+        "jesen"
+      ]
+    },
+    {
+      "id": "seed-weekend-slovenia",
+      "category": "Dogodki",
+      "title": "Kam ta vikend v Sloveniji",
+      "intro": "Tedenski izbor naj združi en kulturni dogodek, šport, koncert, naravo, gastronomijo in dobro alternativo za slabo vreme. Noben dogodek ne sme biti vključen brez preverjenega datuma, lokacije in neposrednega vira; vsebina naj se vsak četrtek ali petek osveži.",
+      "imageDirection": "Aktualna fotografija Slovenije ali Ljubljane, ki ustreza glavnemu dogodku tedna; če ni ustrezne licenčne fotografije, uporabi nevtralni mestni ali sezonski editorial vizual.",
+      "imageAlt": "Aktualni vikend dogodki in izleti po Sloveniji",
+      "dedupeKeywords": [
+        "kam ta vikend",
+        "dogodki Slovenija",
+        "vikend"
+      ]
+    },
+    {
+      "id": "seed-mountain-rules",
+      "category": "Gore & traili",
+      "title": "Pravila v slovenskih gorah, ki jih mora poznati vsak obiskovalec",
+      "intro": "Slovenske gore so hitro dostopne, vendar obiskovalcu ne odpuščajo slabe priprave. Prispevek naj na enem mestu razloži markirane poti, osnovno opremo, vreme, koče, smeti, klic 112 in odgovorno vedenje brez dramatiziranja ali lažnega občutka varnosti.",
+      "imageDirection": "Planinec na markirani poti v Julijskih Alpah, vidna realna gorska pokrajina in oprema, brez ekstremnega poziranja, jasna dnevna svetloba.",
+      "imageAlt": "Planinec na markirani poti v slovenskih gorah",
+      "dedupeKeywords": [
+        "pravila v gorah",
+        "PZS",
+        "112",
+        "markirane poti"
+      ]
+    },
+    {
+      "id": "seed-tnp-rules",
+      "category": "Gore & traili",
+      "title": "Triglavski narodni park: kaj je dovoljeno in česa ne počni",
+      "intro": "Obisk Triglavskega narodnega parka zahteva več kot le izbiro lepe poti. Vodnik naj razloži varovanje narave, kampiranje, ogenj, parkiranje, pse in ravnanje ob jezerih, pri vseh pravilih pa naj se opre na aktualne uradne informacije parka.",
+      "imageDirection": "Širok pogled na Triglavski narodni park, Bohinj ali dolino Soče; brez dronov v kadru, naraven dokumentaren slog, 16:9.",
+      "imageAlt": "Gorska pokrajina v Triglavskem narodnem parku",
+      "dedupeKeywords": [
+        "Triglavski narodni park",
+        "TNP",
+        "kampiranje",
+        "pravila"
+      ]
+    },
+    {
+      "id": "seed-mountain-weather",
+      "category": "Vreme & praktično",
+      "title": "Kako brati vremensko napoved pred izletom v slovenske gore",
+      "intro": "Ikona sonca ali dežja ni dovolj za odločitev o gorskem izletu. Članek naj obiskovalca nauči preveriti ARSO, padavine, veter, nevihte in temperaturo po višini ter pokazati, kdaj je boljša odločitev zgodnejši odhod ali popolna sprememba načrta.",
+      "imageDirection": "Gorski greben s hitro menjavo vremena, oblaki nad vrhovi in jasna vidljivost v dolini; realistična dokumentarna fotografija, brez dramatičnih CGI neviht.",
+      "imageAlt": "Spreminjajoče se vreme nad slovenskimi gorami",
+      "dedupeKeywords": [
+        "ARSO",
+        "vreme gore",
+        "nevihte",
+        "veter"
+      ]
+    },
+    {
+      "id": "seed-slovenian-food",
+      "category": "Gourmet",
+      "title": "10 slovenskih jedi, ki jih mora poskusiti obiskovalec",
+      "intro": "Slovenska kuhinja ni ena sama enotna tradicija, ampak mozaik regionalnih jedi. Članek naj obiskovalcu predstavi potico, štruklje, joto, kranjsko klobaso, prekmursko gibanico, idrijske žlikrofe, bograč, ajdove žgance in druge okuse z jasnim regionalnim kontekstom.",
+      "imageDirection": "Miza z več slovenskimi jedmi v sodobni editorial postavitvi; naravna svetloba, avtentični krožniki, brez umetnih generičnih food-styling elementov.",
+      "imageAlt": "Izbor tradicionalnih slovenskih jedi",
+      "dedupeKeywords": [
+        "slovenske jedi",
+        "potica",
+        "štruklji",
+        "žlikrofi",
+        "gibanica"
+      ]
+    },
+    {
+      "id": "seed-slovenian-wine",
+      "category": "Gourmet",
+      "title": "Slovensko vino za začetnike: 3 vinorodne dežele",
+      "intro": "Najlažji način za razumevanje slovenskega vina je pogled na tri vinorodne dežele: Podravje, Posavje in Primorsko. Vodnik naj začetniku približa ključne razlike, značilne sorte in osnovni besednjak, brez pretiranega strokovnega žargona.",
+      "imageDirection": "Slovenski vinogradi, po možnosti Goriška brda, Štajerska ali Vipavska dolina; jutranja ali večerna svetloba, brez dominantne blagovne znamke steklenice.",
+      "imageAlt": "Vinogradi v eni od slovenskih vinorodnih pokrajin",
+      "dedupeKeywords": [
+        "slovensko vino",
+        "Podravje",
+        "Posavje",
+        "Primorska",
+        "Rebula",
+        "Teran"
+      ]
+    },
+    {
+      "id": "seed-ljubljana-one-day",
+      "category": "Ljubljana",
+      "title": "Ljubljana v enem dnevu: peš pot za prvi obisk",
+      "intro": "Za prvi obisk Ljubljane je boljši smiseln tempo kot lovljenje desetih znamenitosti v eni uri. Pot naj poveže Tromostovje, tržnico, grad, stari center, Ljubljanico in Tivoli ter obiskovalcu ponudi realne čase, postanke in možnost skrajšane različice.",
+      "imageDirection": "Peš pogled skozi staro Ljubljano z Ljubljanico, Tromostovjem ali tržnico; ljudje naj delujejo naravno, brez turistične katalog estetike, horizontalni hero crop.",
+      "imageAlt": "Peš raziskovanje starega mestnega jedra Ljubljane",
+      "dedupeKeywords": [
+        "Ljubljana v enem dnevu",
+        "peš pot",
+        "Tromostovje",
+        "Tivoli"
+      ]
+    }
+  ]
+}
