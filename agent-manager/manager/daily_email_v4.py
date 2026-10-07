@@ -69,7 +69,7 @@ class DailyEmailReporterV4:
         return "\n".join(lines)
 
     def queue_if_due(self, report: dict[str, Any]) -> bool:
-        if self.gmail.auth_state() not in {"CONFIGURED", "AUTH_REQUIRED", "CLIENT_SECRET_REQUIRED"}:
+        if self.gmail.auth_state() != "CONFIGURED":
             return False
         now = datetime.now()
         if now.hour < self.hour:
