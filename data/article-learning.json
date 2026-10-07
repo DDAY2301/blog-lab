@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-07T12:24:47+02:00",
-  "loop_count": 3541,
+  "updated_at": "2026-10-07T12:30:49+02:00",
+  "loop_count": 3542,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-07T12:24:25+02:00",
+      "last_learning_run": "2026-10-07T12:30:28+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -57,12 +57,12 @@
           "last_provider": "bing-web"
         },
         "news.google.com": {
-          "score": 2.498,
-          "seen": 104760,
-          "last_seen": "2026-10-07T12:24:25+02:00",
-          "last_title": "Kljub porazu v Švici selektor prepričan: “To je bila dobra Slovenija” - Šport TV",
-          "last_provider": "",
-          "published": 180739,
+          "score": 2.502,
+          "seen": 104764,
+          "last_seen": "2026-10-07T12:30:28+02:00",
+          "last_title": "S tribune: Športni trenutki, zaradi katerih se mi še danes naježijo dlake - Svet24.si",
+          "last_provider": "google-news-si",
+          "published": 180822,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,17 +227,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 30,
+      "current_source_count": 4,
       "example_titles": {
         "news.google.com": [
           "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
-          "Slovenija s fenomenalno predstavo do izjemno pomembne zmage - 24ur.com",
-          "Neustrašna Slovenija je Škotom skrila žogo - Dnevnik"
+          "Kje gledati finale košarkarskega EP med Slovenci in Italijani? Televizijski prenos bo! - Dnevnik",
+          "Slovenija proti Danski danes odpira svoje nastope na letošnjem evropskem prvenstvu - Šport TV"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-07T12:24:36+02:00",
+      "last_learning_run": "2026-10-07T12:30:38+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -270,12 +270,12 @@
       ],
       "source_health": {
         "news.google.com": {
-          "score": 2.498,
-          "seen": 104760,
-          "last_seen": "2026-10-07T12:24:36+02:00",
-          "last_title": "Pred referendumom: Je RTV Slovenija »vredna« plačevanja obveznega rtv prispevka? - Info360",
-          "last_provider": "",
-          "published": 197602,
+          "score": 2.502,
+          "seen": 104777,
+          "last_seen": "2026-10-07T12:30:38+02:00",
+          "last_title": "Golob pravi: Slovenija potrebuje široko koalicijo. NSi ne bo na sestanek - Svet24.si",
+          "last_provider": "google-news-si",
+          "published": 197692,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -356,17 +356,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 30,
+      "current_source_count": 17,
       "example_titles": {
         "news.google.com": [
           "Odnosi z Izraelom: diplomacija ne sme biti izgovor za normalizacijo zločinov - Dnevnik",
-          "Matej Avbelj: Nimamo državnikov, ampak politike, ki nagovarjajo svoje vernike - rtvslo.si",
-          "Brez RTV-prispevka: manjša položnica, večja odvisnost od politike? - Dnevnik"
+          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
+          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-07T12:24:47+02:00",
+      "last_learning_run": "2026-10-07T12:30:49+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -421,56 +421,56 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 104760,
-          "last_seen": "2026-10-07T12:24:47+02:00",
-          "last_title": "Anja Rakuša Brus: Pomemben argument za mojo kandidaturo je izkušnja z aktualno vlado, ki stroke ne posluša dovolj - Nova24TV",
-          "last_provider": "",
-          "published": 187701,
+          "seen": 104782,
+          "last_seen": "2026-10-07T12:30:49+02:00",
+          "last_title": "Vreme se bo danes hitro obrnilo: nevihte bodo zajele večji del Slovenije, na Primorskem tudi burja - Dnevne Novice",
+          "last_provider": "google-news-si",
+          "published": 187757,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 3518,
+          "published": 3519,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 3518,
+          "published": 3519,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 3541,
+          "published": 3542,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 3443,
+          "published": 3444,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 3507,
+          "published": 3508,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 3443,
+          "published": 3444,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 3443,
+          "published": 3444,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 3507,
+          "published": 3508,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 14164,
+          "published": 14168,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
@@ -480,22 +480,22 @@
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 3518,
+          "published": 3519,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 6950,
+          "published": 6952,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 3475,
+          "published": 3476,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 7014,
+          "published": 7016,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
@@ -505,12 +505,12 @@
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 3443,
+          "published": 3444,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 6950,
+          "published": 6952,
           "last_output_id": "duckduckgo-287dab86"
         },
         "slovenia.info": {
@@ -528,12 +528,12 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 30,
+      "current_source_count": 22,
       "example_titles": {
         "news.google.com": [
-          "(AKTUALNO) V novi številki revije Demokracija preberite: Izključujejo in zavirajo razvoj! Janša: Osamosvojitvena Slovenija ne bo nikoli več ",
-          "Kajzer: zunanjepolitična strategija mora odražati aktualno geopolitično okolje - 24ur.com",
-          "Je Igor E. Bergant na TV Slovenija namerno zlorabil programski čas za prikrito propagando? - Info360"
+          "(AKTUALNO) Varuhinja človekovih pravic Simona Drenik Bavdek: Pravica do dostojnega pokopa temeljna človekova pravica - Demokracija",
+          "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
+          "Ko so bile ZDA stare toliko kot danes Slovenija, so bile na robu razpada - Zanima.me"
         ]
       }
     }
