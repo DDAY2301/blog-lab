@@ -1,10 +1,9 @@
-import pytest
+import asyncio
 
 from manager.ai_router_v4 import AIRouterV4
 
 
-@pytest.mark.asyncio
-async def test_router_falls_back_to_ollama(monkeypatch):
+def test_router_falls_back_to_ollama(monkeypatch):
     router = AIRouterV4()
     router.priority = ["colibri", "ollama"]
 
@@ -17,6 +16,6 @@ async def test_router_falls_back_to_ollama(monkeypatch):
     monkeypatch.setattr(router.colibri, "chat_json", colibri_fail)
     monkeypatch.setattr(router.ollama, "chat_json", ollama_ok)
 
-    provider, result = await router.chat_json("s", "u")
+    provider, result = asyncio.run(router.chat_json("s", "u"))
     assert provider == "ollama/qwen-test"
     assert result["summary"] == "ok"
