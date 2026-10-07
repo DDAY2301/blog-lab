@@ -18,6 +18,26 @@ CATEGORY_FALLBACKS = {
     "vodniki": "Slovenia travel landscape",
 }
 ALLOWED_LICENSE_TOKENS = ("cc by", "cc-by", "cc0", "public domain", "cc by-sa", "cc-by-sa")
+SLOVENIA_CONTEXT_TERMS = (
+    "slovenia", "slovenian", "slovenije", "sloveni", "triglav", "bohinj", "bled",
+    "ljubljana", "kranjska gora", "julian alps", "julijske alpe", "soča", "soca",
+    "piran", "postojna", "gorenjska", "primorska", "prekmurje", "idrija", "vipava",
+    "brda", "ptuj", "maribor", "velenje", "kranj",
+)
+CATEGORY_IMAGE_TERMS = {
+    "kolesarstvo": ("cycling", "cyclist", "bicycle", "bike", "koles", "gravel", "mtb", "cycle route"),
+    "dediščina": ("heritage", "castle", "grad", "museum", "muzej", "historic", "church", "cerkev", "tradition", "dedišč"),
+    "dediscina": ("heritage", "castle", "grad", "museum", "muzej", "historic", "church", "cerkev", "tradition", "dedisc"),
+    "sezonsko": ("landscape", "tourism", "travel", "autumn", "winter", "spring", "summer", "narava", "nature"),
+    "gore & traili": ("mountain", "mountains", "alps", "hiking", "trail", "peak", "summit", "gora", "pohod"),
+    "gore": ("mountain", "mountains", "alps", "hiking", "trail", "peak", "summit", "gora", "pohod"),
+    "gourmet": ("food", "cuisine", "dish", "wine", "vineyard", "potica", "gibanica", "žlikrofi", "zlikrofi", "kulinar", "vino"),
+    "vodniki": ("landscape", "travel", "tourism", "city", "old town", "nature", "park"),
+}
+FOREIGN_LOCATION_TERMS = (
+    "paris", "france", "london", "england", "new york", "usa", "united states",
+    "berlin", "germany", "rome", "italy", "madrid", "spain", "vienna", "austria",
+)
 
 def _clean(value: str) -> str:
     value = re.sub(r"<[^>]+>", " ", unescape(str(value or "")))
@@ -31,9 +51,20 @@ def _api(params: dict) -> dict:
     with urllib.request.urlopen(req, timeout=15) as response:
         return json.loads(response.read(2_000_000).decode("utf-8", errors="replace"))
 
-def _search_once(query: str) -> dict | None:
+def _image_relevant(title: str, description: str, category_key: str) -> bool:
+    text = f"{title} {description}".lower()
+    has_slovenia_context = any(term in text for term in SLOVENIA_CONTEXT_TERMS)
+    has_foreign_context = any(term in text for term in FOREIGN_LOCATION_TERMS)
+    if has_foreign_context and not has_slovenia_context:
+        return False
+    category_terms = CATEGORY_IMAGE_TERMS.get(category_key, ())
+    if category_terms:
+        return has_slovenia_context and any(term in text for term in category_terms)
+    return has_slovenia_context
+
+def _search_once(query: str, category_key: str) -> dict | None:
     payload = _api({
-        "action":"query","generator":"search","gsrnamespace":"6","gsrsearch":query,"gsrlimit":"12",
+        "action":"query","generator":"search","gsrnamespace":"6","gsrsearch":query,"gsrlimit":"24",
         "prop":"imageinfo","iiprop":"url|extmetadata|mime","iiurlwidth":"1600",
         "format":"json","formatversion":"2","origin":"*"
     })
@@ -48,6 +79,9 @@ def _search_once(query: str) -> dict | None:
             continue
         author = _clean((meta.get("Artist") or {}).get("value","")) or "Wikimedia Commons"
         description = _clean((meta.get("ImageDescription") or {}).get("value",""))
+        if not _image_relevant(title, description, category_key):
+            print(f"COMMONS_MEDIA_REJECTED category={category_key} title={title!r}")
+            continue
         image_url = str(info.get("thumburl") or info.get("url") or "").strip()
         if not image_url.startswith("https://"):
             continue
@@ -76,7 +110,7 @@ def commons_image_for(topic: str, category: str) -> dict | None:
             continue
         seen.add(key)
         try:
-            found=_search_once(query)
+            found=_search_once(query, category_key)
         except Exception as exc:
             print(f"WARN commons media query={query!r} error={type(exc).__name__}: {exc}")
             continue
