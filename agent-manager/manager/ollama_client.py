@@ -8,13 +8,14 @@ import httpx
 
 
 DEFAULT_MAX_CAPABILITY_MODELS = (
-    # Use the strongest installed local model first.
-    # The first entry is extremely large and will only be selected if the user
-    # explicitly installed it on suitable hardware.
-    "qwen3.8-flash-next:125b-a6b-q4_K_M",
-    "qwen3.8:27b-q8_0",
-    "qwen3.8:27b",
-    "qwen3.8",
+    # Local-first coding stack. Stable aliases are created by setup-max-model.ps1.
+    # KAT-Coder-V2.5-Dev is post-trained on Qwen3.6-35B-A3B and is the preferred
+    # engineering/autofix model. Qwen3.6 is the general reasoning fallback.
+    "bloglab-katcoder-efficient",
+    "bloglab-qwen36-efficient",
+    "frob/kat-coder-v2.5-dev:35b-a3b-q4_K_M",
+    "qwen3.6:35b-a3b-coding",
+    "qwen3.6:35b-a3b",
     "qwen3-coder-next",
     "devstral-small-2",
     "qwen3-coder:30b",
@@ -39,7 +40,7 @@ class OllamaClient:
     )
     fallback_models: tuple[str, ...] = _csv_env(
         "AGENT_MANAGER_FALLBACK_MODELS",
-        ("qwen3.8", "qwen3-coder-next", "devstral-small-2", "qwen2.5-coder:7b"),
+        ("bloglab-qwen36-efficient", "qwen3-coder-next", "devstral-small-2", "qwen2.5-coder:7b"),
     )
     timeout: float = 300.0
 
@@ -105,6 +106,7 @@ class OllamaClient:
             "model": model,
             "stream": False,
             "format": "json",
+            "keep_alive": os.getenv("AGENT_MANAGER_OLLAMA_KEEP_ALIVE", "60s"),
             "messages": [
                 {"role": "system", "content": system},
                 {"role": "user", "content": user},
@@ -112,7 +114,7 @@ class OllamaClient:
             # Low temperature is deliberate for autonomous code changes.
             "options": {
                 "temperature": 0.05,
-                "num_ctx": int(os.getenv("AGENT_MANAGER_CONTEXT", "65536")),
+                "num_ctx": int(os.getenv("AGENT_MANAGER_CONTEXT", "8192")),
             },
         }
 
