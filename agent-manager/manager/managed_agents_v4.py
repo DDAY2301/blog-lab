@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import asyncio
 import json
 import os
 import shutil
@@ -45,6 +46,7 @@ class ManagedAgentSupervisorV4:
         self._last_repair: dict[str, float] = {}
         self._last_check: dict[str, float] = {}
         self._cached: dict[str, dict[str, Any]] = {}
+        self._repair_tasks: dict[str, asyncio.Task] = {}
         self.repair_cooldown = max(300, int(os.getenv("AGENT_MANAGER_REPAIR_COOLDOWN", "1800")))
 
     def targets(self) -> list[ManagedTarget]:
@@ -249,14 +251,52 @@ class ManagedAgentSupervisorV4:
 
         if count >= 2 and target.repair_adapter:
             last = self._last_repair.get(target.id, 0)
-            if time.time() - last >= self.repair_cooldown:
-                repair = self.repair(target)
+            task = self._repair_tasks.get(target.id)
+            if time.time() - last >= self.repair_cooldown and (not task or task.done()):
                 self._last_repair[target.id] = time.time()
+                self._schedule_repair(target, count)
+
+    def _schedule_repair(self, target: ManagedTarget, failure_count: int) -> None:
+        async def runner() -> None:
+            try:
+                repair = await asyncio.to_thread(self.repair, target)
                 self.store.action("maintenance-v4", "repair", target.id, "attempted", repair)
                 if repair.get("ok"):
-                    self.notify.send("P2", f"{target.name} recovery started", repair.get("summary","Repair action started."), target.id)
-                elif count >= 3:
-                    self.notify.send("P1", f"{target.name} recovery needs attention", repair.get("summary","Automatic recovery was not available."), target.id)
+                    self.notify.send(
+                        "P2",
+                        f"{target.name} recovery started",
+                        repair.get("summary", "Repair action started."),
+                        target.id,
+                    )
+                elif failure_count >= 3:
+                    self.notify.send(
+                        "P1",
+                        f"{target.name} recovery needs attention",
+                        repair.get("summary", "Automatic recovery was not available."),
+                        target.id,
+                    )
+            except Exception as exc:
+                self.store.action(
+                    "maintenance-v4",
+                    "repair",
+                    target.id,
+                    "failed",
+                    {"error": str(exc)},
+                )
+                if failure_count >= 3:
+                    self.notify.send(
+                        "P1",
+                        f"{target.name} recovery failed",
+                        str(exc),
+                        target.id,
+                    )
+            finally:
+                self._repair_tasks.pop(target.id, None)
+
+        self._repair_tasks[target.id] = asyncio.create_task(
+            runner(),
+            name=f"repair:{target.id}",
+        )
 
     def repair(self, target: ManagedTarget) -> dict[str, Any]:
         adapter = target.repair_adapter
