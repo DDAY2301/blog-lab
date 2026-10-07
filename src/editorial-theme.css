@@ -281,3 +281,48 @@ nav button.active {
     scroll-behavior: auto !important;
   }
 }
+
+
+@media (max-width: 760px) {
+  .site-header {
+    height: auto !important;
+    min-height: 68px;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    padding: 10px 14px 9px;
+  }
+
+  .site-header nav {
+    order: 3;
+    display: flex !important;
+    width: 100%;
+    margin: 0;
+    overflow-x: auto;
+    gap: 4px;
+    padding: 2px 0 1px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .site-header nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .site-header nav button {
+    flex: 0 0 auto;
+    min-height: 36px;
+    padding: 8px 11px;
+    white-space: nowrap;
+    font-size: 12px;
+  }
+
+  .events-jump {
+    min-height: 38px;
+    padding-inline: 12px;
+    font-size: 12px;
+  }
+
+  .product-page {
+    min-height: calc(100vh - 112px);
+  }
+}
