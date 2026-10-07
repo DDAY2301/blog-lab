@@ -5,7 +5,7 @@ import os
 import time
 import uuid
 from pathlib import Path
-from typing import Any, Awaitable
+from typing import Any, Awaitable, Callable
 
 from .ai_router_v4 import AIRouterV4
 from .db_v3 import StoreV3
@@ -55,17 +55,14 @@ class MaintenanceLoopV4:
         self.store.event("MAINTENANCE_CYCLE", "maintenance-v4", "info", self.last)
         return self.last
 
-    def _spawn(self, key: str, awaitable: Awaitable[Any]) -> None:
+    def _spawn(self, key: str, factory: Callable[[], Awaitable[Any]]) -> None:
         if key in self._inflight:
-            close = getattr(awaitable, "close", None)
-            if close:
-                close()
             return
         self._inflight.add(key)
 
         async def runner() -> None:
             try:
-                await awaitable
+                await factory()
             except asyncio.CancelledError:
                 raise
             except Exception as exc:
@@ -92,7 +89,7 @@ class MaintenanceLoopV4:
             key = f"triage:{target_id}"
             if now - self._last_ai_at.get(key, 0) >= self.ai_cooldown:
                 self._last_ai_at[key] = now
-                self._spawn(key, self._triage_one(target))
+                self._spawn(key, lambda target=target: self._triage_one(target))
 
         rows = self.store.query(
             "SELECT * FROM incidents WHERE status!='resolved' AND severity IN ('P0','P1') ORDER BY last_seen DESC LIMIT 5"
@@ -105,7 +102,7 @@ class MaintenanceLoopV4:
             )
             if done:
                 continue
-            self._spawn(f"diagnose:{incident_id}", self._diagnose_one(incident))
+            self._spawn(f"diagnose:{incident_id}", lambda incident=incident: self._diagnose_one(incident))
 
     async def _triage_one(self, target: dict[str, Any]) -> None:
         state = str(target)[:8000]
