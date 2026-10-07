@@ -8,6 +8,11 @@ LABELS = {
     "sport": ("Šport", "Šport"),
     "politika": ("Politika", "Politika"),
     "aktualno": ("Aktualno", "Aktualno"),
+    "kolesarstvo": ("Kolesarstvo", "Kolesarstvo"),
+    "dediscina": ("Dediščina", "Dediščina"),
+    "sezonsko": ("Sezonsko", "Sezonsko"),
+    "gore": ("Gore & traili", "Gore & traili"),
+    "gourmet": ("Gourmet", "Gourmet"),
 }
 
 def _clean(text: str, limit: int = 720) -> str:
