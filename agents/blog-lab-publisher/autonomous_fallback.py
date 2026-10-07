@@ -31,6 +31,8 @@ from agent import (  # noqa: E402
     mark_scheduled_slot_done,
     now,
     prepare_article_candidate,
+    normalize_current_schedule_counter,
+    OUTPUT_CATEGORY_LABELS,
 )
 from services.fallback_writer import build_digest  # noqa: E402
 from services.publisher import publish_to_app, slugify  # noqa: E402
@@ -131,7 +133,7 @@ def _reset_daily_state(state: dict, today: str) -> dict:
     state.setdefault("manual_posts_today", 0)
     state.setdefault("scheduled_slots_done", [])
     state.setdefault("scheduled_slots_deferred", [])
-    return state
+    return normalize_current_schedule_counter(state)
 
 
 def _write_status(cfg: dict, state: dict, status: str, message: str, output: str | None = None) -> None:
@@ -208,7 +210,9 @@ def run(category: str, scheduled_slot: str = "", dry_run: bool = False) -> int:
         print("FALLBACK_USED_SOURCES_FAILED_CATEGORY_GUARD")
         return 0
 
-    article = prepare_article_candidate(article, used_for_article, "", "")
+    output_category = OUTPUT_CATEGORY_LABELS.get(category, category)
+    article = prepare_article_candidate(article, used_for_article, "", output_category)
+    article["category"] = output_category
     article["fallback"] = True
     article["id"] = slugify(article.get("title", "")) + "-" + hashlib.sha1(
         str(used_for_article[0].get("url", "fallback")).encode("utf-8")
