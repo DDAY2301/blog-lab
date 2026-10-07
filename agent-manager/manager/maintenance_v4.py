@@ -57,6 +57,9 @@ class MaintenanceLoopV4:
 
     def _spawn(self, key: str, awaitable: Awaitable[Any]) -> None:
         if key in self._inflight:
+            close = getattr(awaitable, "close", None)
+            if close:
+                close()
             return
         self._inflight.add(key)
 
