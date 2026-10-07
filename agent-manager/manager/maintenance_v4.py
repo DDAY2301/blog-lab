@@ -54,7 +54,7 @@ class MaintenanceLoopV4:
         live_report = self.summary.build(targets, providers)
         live_report["targets"] = targets
         self.daily_email.queue_if_due(live_report)
-        gmail_flush = self.gmail.flush_queue()
+        gmail_flush = await asyncio.to_thread(self.gmail.flush_queue)
         self.daily_email.mark_sent_if_complete()
 
         self.last = {
