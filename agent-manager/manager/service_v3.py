@@ -268,6 +268,10 @@ label{font-size:12px;color:#9db0bf}.formgrid{display:grid;grid-template-columns:
 <div><label>GitHub repo</label><input id="a_repo" placeholder="owner/repo"></div>
 <div><label>Branch</label><input id="a_branch" value="main"></div>
 <div class="wide"><label>Process contains</label><input id="a_process" placeholder="agent.py or executable name"></div>
+<div class="wide"><label>Executable (absolute path, optional)</label><input id="a_exe" placeholder="C:\Python312\python.exe"></div>
+<div class="wide"><label>Arguments (one argument per line)</label><textarea id="a_args" rows="3" style="width:100%;box-sizing:border-box;background:#0d151e;color:#eef5fb;border:1px solid #2d4356;border-radius:9px;padding:9px" placeholder="-m&#10;my_agent"></textarea></div>
+<div class="wide"><label>Working directory (absolute path)</label><input id="a_workdir" placeholder="C:\Agents\MyAgent"></div>
+<div class="wide"><label><input id="a_autorestart" type="checkbox" style="width:auto"> Auto-restart this local process after repeated failures</label></div>
 <div class="wide"><button onclick="saveAgent()">Save monitored agent</button><div id="agentmsg" class="msg"></div></div>
 </div></details></div>
 <div class="card"><h3>Incidents</h3><pre id="incidents">loading</pre></div>
@@ -287,8 +291,13 @@ async function saveAgent(){
   health_url:document.getElementById('a_url').value.trim(),
   repo:document.getElementById('a_repo').value.trim(),
   branch:document.getElementById('a_branch').value.trim()||'main',
-  workflows:null,repair_adapter:'',local_root_env:'',
+  workflows:null,
+  repair_adapter:document.getElementById('a_autorestart').checked?'local_process_restart':'',
+  local_root_env:'',
   process_match:document.getElementById('a_process').value.trim(),
+  executable:document.getElementById('a_exe').value.trim(),
+  arguments:document.getElementById('a_args').value.split(/\r?\n/).map(x=>x.trim()).filter(Boolean),
+  working_dir:document.getElementById('a_workdir').value.trim(),
   interval_seconds:Number(document.getElementById('a_interval').value||60)
  };
  const r=await fetch('/managed-agents/'+encodeURIComponent(id),{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
