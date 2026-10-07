@@ -274,9 +274,9 @@ label{font-size:12px;color:#9db0bf}.formgrid{display:grid;grid-template-columns:
 <div><label>GitHub repo</label><input id="a_repo" placeholder="owner/repo"></div>
 <div><label>Branch</label><input id="a_branch" value="main"></div>
 <div class="wide"><label>Process contains</label><input id="a_process" placeholder="agent.py or executable name"></div>
-<div class="wide"><label>Executable (absolute path, optional)</label><input id="a_exe" placeholder="C:\Python312\python.exe"></div>
+<div class="wide"><label>Executable (absolute path, optional)</label><input id="a_exe" placeholder="C:\\Python312\\python.exe"></div>
 <div class="wide"><label>Arguments (one argument per line)</label><textarea id="a_args" rows="3" style="width:100%;box-sizing:border-box;background:#0d151e;color:#eef5fb;border:1px solid #2d4356;border-radius:9px;padding:9px" placeholder="-m&#10;my_agent"></textarea></div>
-<div class="wide"><label>Working directory (absolute path)</label><input id="a_workdir" placeholder="C:\Agents\MyAgent"></div>
+<div class="wide"><label>Working directory (absolute path)</label><input id="a_workdir" placeholder="C:\\Agents\\MyAgent"></div>
 <div class="wide"><label><input id="a_autorestart" type="checkbox" style="width:auto"> Auto-restart this local process after repeated failures</label></div>
 <div class="wide"><button onclick="saveAgent()">Save monitored agent</button><div id="agentmsg" class="msg"></div></div>
 </div></details></div>
