@@ -21,6 +21,49 @@ const TOURISM_CATEGORIES = new Set(["kolesarstvo", "dediščina", "sezonsko", "g
 
 const starterArticles = [
   {
+    "id": "fedja-pobegajlo-direktor-turisticno-gostinske-zbornice-slovenije-letosnja-turisticna-sezon-6603a284",
+    "title": "Fedja Pobegajlo, direktor Turistično gostinske zbornice Slovenije: Letošnja turistična sezona utegne biti še celo…",
+    "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Fedja Pobegajlo, direktor Turistično gostinske zbornice Slovenije: Letošnja turistična sezona utegne biti še celo…«.",
+    "seoDescription": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Fedja Pobegajlo, direktor Turistično gostinske zbornice Slovenije: Letošnja t",
+    "content": "**Aktualno, 7. 10. 2026.** Fedja Pobegajlo, direktor Turistično gostinske zbornice Slovenije: Letošnja turistična sezona utegne biti še celo slabša od lanske Dnevnik\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Dnevnik. Objavljeno: Fri, 21 May 2021 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMigwJBVV95cUxOR3FVZnhhTGY1enRSdVpOamZzZ2FrYXlhR0NYbllrdnlweVVUVFFOdnVIaTFfMWtnS3RTUjVkVEg3TmhsUmktYUxVSWdFcnRkcXFuc2JGTkZSYk9OcFFoWnFCUzdwZW9CdnYwVTNncFJlbnAyd3Q3S0RrT2ZQcUVhY2lGUjBqMjJiV213ZThBd1c0MWlHV0pVTUR4M3NpbWpUUThpdHRBVTJ0dWYxM0RnV2dhX1p1ZnQwdmZVTWlFOTVoakR2ZlBFVUxvTldUeXI5bTAzSFBJQnozQVJ5eXhxWi1iX2JYaUxNSkFLVUN1XzBJSTlzZWNaNGhxSksxNjdpb3ZB?oc=5)\n\n## Dopolnitev vira 2: regionalobala.si\n\nV KOPER PRIHAJA VSE VEČ KRIŽARK: Sezona se zdaj razteza skoraj čez celo leto regionalobala.si\n\n Vir: regionalobala.si. Objavljeno: Wed, 13 May 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMisAFBVV95cUxQYTFDRnF3N1hKaGprUnMyMVNYTi1EdG1EcnBMMTk4N0tITlB1OUFRX19LVV85eTAzU0w2dFc3RzVYNGVhYWhTVkZUcVU3VC1Pc2tfT0hQNUROMXpndVVydWUxOE5LTG42TG5EcGZ4NzZ3ZTRkRDJxTGpEMEFKMFpGaTc5NGlrTTJrWE92ckkxaXp1QkJ0TnRIUF80eGRmRkhUMWdkWHhHY0V4RzVKMG52Rw?oc=5)\n\n## Dopolnitev vira 3: Nova24TV\n\nNemci o Hrvaški: Letošnja turistična sezona je precej drugačna od prejšnjih Nova24TV\n\n Vir: Nova24TV. Objavljeno: Sun, 26 Jul 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiowFBVV95cUxPRmRlN1Bnd2xkdzRiUGx4NTNIQ1dUZXFXWklXclNFTVlSRmdxTUJ6MlFCN3p4VHlrZ3I2bjE3a0JHdGNGVktVQ0UwQWtETjZScmlGZ3c0WTRLS1E4YlBieGxZb0ZUNVZ3aFdkTlBOS3RjRjdPanV2eFFSdGZVTjhFTjNpYkpFY2NobmVwRk1UUEhGTGtFQjhTX1JlS2VCVENvSHpz?oc=5)\n\n## Dopolnitev vira 4: Delo.si\n\nDobra sezona: največ domačih smučarjev, prihajajo celo Avstrijci in Italijani Delo.si\n\n Vir: Delo.si. Objavljeno: Thu, 26 Feb 2026 08:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMingFBVV95cUxNUG13d01tS0RlMjlQbWVOcDVjOVZ6Z2RyVWZpUl8xYVNKbkpVdEZ3TTRaSEI3cVZWQzdCZ1ozaTRfRktnV0duc1lUVkk0RDVQOWM0Vm9sU2JtQWVuMGNGcVh4ajN0Zlp3VjdaTnRQWGJxaEw4T3plaV9XNG51QzVQUzRWdGROa1ZOMWIxTHBneWdWQjdvbEdENVZKOXhKZw?oc=5)\n\n## Dopolnitev vira 5: 24ur.com\n\nRekordna turistična sezona na Hrvaškem 24ur.com\n\n Vir: 24ur.com. Objavljeno: Fri, 07 Sep 2012 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiiAFBVV95cUxOUFVrMXV1aHpVU2FGenROSkFyZFRfYUZWWWZCN25oNzhCVVFOZlpPOFFKRmhCTEdnUHlLY0dSLW5xWnVWVzlWdlg0Q3M4ZWplUXJNeDA4N0Z0QUNhZlVvN3ZSNjJ4Wm1sTUx0azBUNUZkUnktUE1BcWFWbUxNZ082blcwLWpUbFBO?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Aktualno",
+    "author": "Blog Lab Slovenia Publisher",
+    "status": "published",
+    "heroImage": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Black_and_white_Paris_landscape.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "alt": "Cathédrale Notre-Dame de Paris . Suggested credit: Underwood/Library of Congress [VIA PINGNEWS]. Additional information from source: TITLE: Notre Dame Cathedral from Tower of St. G",
+      "caption": "David Shapinsky from Washington, D.C., United States · Wikimedia Commons · CC BY-SA 2.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Black_and_white_Paris_landscape.jpg"
+    },
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Dnevnik — Fedja Pobegajlo, direktor Turistično gostinske zbornice Slovenije: Letošnja turistična sezona utegne biti še celo…",
+        "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxOR3FVZnhhTGY1enRSdVpOamZzZ2FrYXlhR0NYbllrdnlweVVUVFFOdnVIaTFfMWtnS3RTUjVkVEg3TmhsUmktYUxVSWdFcnRkcXFuc2JGTkZSYk9OcFFoWnFCUzdwZW9CdnYwVTNncFJlbnAyd3Q3S0RrT2ZQcUVhY2lGUjBqMjJiV213ZThBd1c0MWlHV0pVTUR4M3NpbWpUUThpdHRBVTJ0dWYxM0RnV2dhX1p1ZnQwdmZVTWlFOTVoakR2ZlBFVUxvTldUeXI5bTAzSFBJQnozQVJ5eXhxWi1iX2JYaUxNSkFLVUN1XzBJSTlzZWNaNGhxSksxNjdpb3ZB?oc=5"
+      },
+      {
+        "label": "regionalobala.si — V KOPER PRIHAJA VSE VEČ KRIŽARK: Sezona se zdaj razteza skoraj čez celo leto - regionalobala.si",
+        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQYTFDRnF3N1hKaGprUnMyMVNYTi1EdG1EcnBMMTk4N0tITlB1OUFRX19LVV85eTAzU0w2dFc3RzVYNGVhYWhTVkZUcVU3VC1Pc2tfT0hQNUROMXpndVVydWUxOE5LTG42TG5EcGZ4NzZ3ZTRkRDJxTGpEMEFKMFpGaTc5NGlrTTJrWE92ckkxaXp1QkJ0TnRIUF80eGRmRkhUMWdkWHhHY0V4RzVKMG52Rw?oc=5"
+      },
+      {
+        "label": "Nova24TV — Nemci o Hrvaški: Letošnja turistična sezona je precej drugačna od prejšnjih - Nova24TV",
+        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPRmRlN1Bnd2xkdzRiUGx4NTNIQ1dUZXFXWklXclNFTVlSRmdxTUJ6MlFCN3p4VHlrZ3I2bjE3a0JHdGNGVktVQ0UwQWtETjZScmlGZ3c0WTRLS1E4YlBieGxZb0ZUNVZ3aFdkTlBOS3RjRjdPanV2eFFSdGZVTjhFTjNpYkpFY2NobmVwRk1UUEhGTGtFQjhTX1JlS2VCVENvSHpz?oc=5"
+      },
+      {
+        "label": "Delo.si — Dobra sezona: največ domačih smučarjev, prihajajo celo Avstrijci in Italijani - Delo.si",
+        "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNUG13d01tS0RlMjlQbWVOcDVjOVZ6Z2RyVWZpUl8xYVNKbkpVdEZ3TTRaSEI3cVZWQzdCZ1ozaTRfRktnV0duc1lUVkk0RDVQOWM0Vm9sU2JtQWVuMGNGcVh4ajN0Zlp3VjdaTnRQWGJxaEw4T3plaV9XNG51QzVQUzRWdGROa1ZOMWIxTHBneWdWQjdvbEdENVZKOXhKZw?oc=5"
+      },
+      {
+        "label": "24ur.com — Rekordna turistična sezona na Hrvaškem - 24ur.com",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOUFVrMXV1aHpVU2FGenROSkFyZFRfYUZWWWZCN25oNzhCVVFOZlpPOFFKRmhCTEdnUHlLY0dSLW5xWnVWVzlWdlg0Q3M4ZWplUXJNeDA4N0Z0QUNhZlVvN3ZSNjJ4Wm1sTUx0azBUNUZkUnktUE1BcWFWbUxNZ082blcwLWpUbFBO?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-07T13:34:59+02:00",
+    "updatedAt": "2026-10-07T13:34:59+02:00"
+  },
+
+  {
     "id": "foto-grad-borl-zgodovino-spreminja-v-pustolovscino-kaj-skriva-borlijeva-knjiga-skrivnosti-7c5a2351",
     "title": "(FOTO) Grad Borl zgodovino spreminja v pustolovščino: Kaj skriva Borlijeva knjiga skrivnosti?",
     "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »(FOTO) Grad Borl zgodovino spreminja v pustolovščino: Kaj skriva Borlijeva knjiga skrivnosti?«.",
