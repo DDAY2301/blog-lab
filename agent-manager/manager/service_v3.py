@@ -64,7 +64,7 @@ async def health():
         "version": VERSION,
         "mode": "24x7-maintenance",
         "write_enabled": s.write_enabled,
-        "gmail": reporter.auth_state(),
+        "gmail": maintenance.gmail.auth_state(),
         "open_incidents": len(incidents.open()),
         "resources": system_resources(),
         "last_system_cycle": monitor.last,
@@ -148,6 +148,26 @@ async def summary():
     return maintenance.summary.build(targets, providers)
 
 
+@app.get("/email-status")
+async def email_status():
+    return {
+        "state": maintenance.gmail.auth_state(),
+        "recipient": maintenance.gmail.recipient or None,
+        "queue": store.query("SELECT id,created_at,kind,priority,recipient,subject,status,attempts,last_error FROM email_queue ORDER BY id DESC LIMIT 50"),
+    }
+
+
+@app.post("/email/send-test")
+async def email_send_test():
+    if maintenance.gmail.auth_state() != "CONFIGURED":
+        raise HTTPException(409, f"Gmail state: {maintenance.gmail.auth_state()}")
+    message_id = maintenance.gmail.send(
+        "Agent Manager V4 - test email",
+        "Agent Manager V4 Gmail reporting is configured and working.",
+    )
+    return {"ok": True, "message_id": message_id}
+
+
 @app.get("/connections")
 async def connections():
     providers = await maintenance.ai.status()
@@ -156,7 +176,7 @@ async def connections():
         "ollama": monitor.last.get("ollama"),
         "colibri": providers.get("colibri"),
         "ai_priority": providers.get("priority"),
-        "gmail": reporter.auth_state(),
+        "gmail": maintenance.gmail.auth_state(),
         "managed_agents": maintenance.supervisor.status_rows(),
     }
 
