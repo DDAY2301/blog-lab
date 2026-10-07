@@ -166,6 +166,7 @@ class ManagedTargetInput(BaseModel):
     repair_adapter: str = ""
     local_root_env: str = ""
     process_match: str = ""
+    interval_seconds: int = 60
 
 
 @app.put("/managed-agents/{target_id}")
