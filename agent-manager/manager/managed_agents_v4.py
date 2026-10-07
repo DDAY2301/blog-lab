@@ -142,6 +142,20 @@ class ManagedAgentSupervisorV4:
 
     def _github_headers(self) -> dict[str, str]:
         token = os.getenv("GITHUB_TOKEN", "").strip() or os.getenv("GH_TOKEN", "").strip()
+        if not token:
+            gh = shutil.which("gh")
+            if gh:
+                try:
+                    probe = subprocess.run(
+                        [gh, "auth", "token"],
+                        capture_output=True,
+                        text=True,
+                        timeout=10,
+                    )
+                    if probe.returncode == 0:
+                        token = probe.stdout.strip()
+                except Exception:
+                    token = ""
         headers = {"Accept": "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28"}
         if token:
             headers["Authorization"] = f"Bearer {token}"
@@ -149,30 +163,46 @@ class ManagedAgentSupervisorV4:
 
     async def _check_github(self, target: ManagedTarget) -> dict[str, Any]:
         url = f"https://api.github.com/repos/{target.repo}/actions/runs"
-        params = {"branch": target.branch, "per_page": 50}
-        async with httpx.AsyncClient(timeout=15.0) as client:
-            r = await client.get(url, headers=self._github_headers(), params=params)
-        if r.status_code >= 400:
-            return {"id": target.id, "name": target.name, "ok": False, "repo": target.repo, "status_code": r.status_code, "error": r.text[:300]}
-        runs = r.json().get("workflow_runs", [])
         wanted = target.workflows or []
         latest: dict[str, dict[str, Any]] = {}
-        for run in runs:
-            name = str(run.get("name") or run.get("workflow_name") or "")
-            if wanted and name not in wanted:
-                continue
-            if name not in latest:
-                latest[name] = {
-                    "status": run.get("status"),
-                    "conclusion": run.get("conclusion"),
-                    "created_at": run.get("created_at"),
-                    "updated_at": run.get("updated_at"),
-                    "html_url": run.get("html_url"),
-                    "run_attempt": run.get("run_attempt"),
-                }
+        pages_checked = 0
+        async with httpx.AsyncClient(timeout=15.0) as client:
+            for page in range(1, 6):
+                params = {"branch": target.branch, "per_page": 100, "page": page}
+                r = await client.get(url, headers=self._github_headers(), params=params)
+                pages_checked = page
+                if r.status_code >= 400:
+                    return {
+                        "id": target.id,
+                        "name": target.name,
+                        "ok": False,
+                        "repo": target.repo,
+                        "status_code": r.status_code,
+                        "error": r.text[:300],
+                    }
+                runs = r.json().get("workflow_runs", [])
+                for run in runs:
+                    name = str(run.get("name") or run.get("workflow_name") or "")
+                    if wanted and name not in wanted:
+                        continue
+                    if name not in latest:
+                        latest[name] = {
+                            "status": run.get("status"),
+                            "conclusion": run.get("conclusion"),
+                            "created_at": run.get("created_at"),
+                            "updated_at": run.get("updated_at"),
+                            "html_url": run.get("html_url"),
+                            "run_attempt": run.get("run_attempt"),
+                        }
+                if wanted and all(name in latest for name in wanted):
+                    break
+                if len(runs) < 100:
+                    break
+
         failures = [
             name for name, row in latest.items()
-            if row.get("status") == "completed" and row.get("conclusion") in {"failure", "cancelled", "timed_out", "action_required"}
+            if row.get("status") == "completed"
+            and row.get("conclusion") in {"failure", "cancelled", "timed_out", "action_required"}
         ]
         missing = [name for name in wanted if name not in latest]
         return {
@@ -183,6 +213,7 @@ class ManagedAgentSupervisorV4:
             "workflows": latest,
             "failed_workflows": failures,
             "missing_workflows": missing,
+            "pages_checked": pages_checked,
         }
 
     def _persist(self, target: ManagedTarget, result: dict[str, Any]) -> None:
@@ -236,11 +267,39 @@ class ManagedAgentSupervisorV4:
         root_value = os.getenv(target.local_root_env or "PROJECT_VISIBILITY_ROOT", "").strip()
         if not root_value:
             return {"ok": False, "stage": "config", "summary": "PROJECT_VISIBILITY_ROOT is not configured."}
-        root = Path(root_value).expanduser()
+        root = Path(root_value).expanduser().resolve()
         py = root / ".venv" / "Scripts" / "python.exe"
         secret_file = root / "api" / "data" / ".app-secret"
         if not py.exists():
             return {"ok": False, "stage": "runtime", "summary": f"Project Visibility Python runtime not found: {py}"}
+
+        try:
+            import psutil
+            for conn in psutil.net_connections(kind="inet"):
+                if not conn.laddr or conn.laddr.port != 8000 or conn.status != psutil.CONN_LISTEN or not conn.pid:
+                    continue
+                try:
+                    proc = psutil.Process(conn.pid)
+                    cmdline = " ".join(proc.cmdline())
+                    cwd = Path(proc.cwd()).resolve()
+                    belongs = str(cwd).lower().startswith(str(root).lower()) or "api.server:app" in cmdline
+                    if belongs:
+                        proc.terminate()
+                        try:
+                            proc.wait(timeout=8)
+                        except psutil.TimeoutExpired:
+                            proc.kill()
+                            proc.wait(timeout=5)
+                    else:
+                        return {
+                            "ok": False,
+                            "stage": "port_conflict",
+                            "summary": f"Port 8000 belongs to unrelated PID {conn.pid}; refusing to terminate it.",
+                        }
+                except (psutil.NoSuchProcess, psutil.AccessDenied):
+                    continue
+        except Exception as exc:
+            return {"ok": False, "stage": "stop_old", "summary": f"Could not safely inspect/stop old listener: {exc}"}
 
         env = os.environ.copy()
         env["OLLAMA_BASE_URL"] = env.get("OLLAMA_BASE_URL", "http://127.0.0.1:11434")
@@ -250,7 +309,7 @@ class ManagedAgentSupervisorV4:
 
         flags = getattr(subprocess, "CREATE_NO_WINDOW", 0) | getattr(subprocess, "DETACHED_PROCESS", 0)
         try:
-            subprocess.Popen(
+            child = subprocess.Popen(
                 [str(py), "-m", "uvicorn", "api.server:app", "--host", "127.0.0.1", "--port", "8000"],
                 cwd=str(root),
                 env=env,
@@ -258,9 +317,38 @@ class ManagedAgentSupervisorV4:
                 stderr=subprocess.DEVNULL,
                 creationflags=flags,
             )
-            return {"ok": True, "stage": "restart", "summary": "Project Visibility background restart launched."}
         except Exception as exc:
             return {"ok": False, "stage": "restart", "summary": str(exc)}
+
+        deadline = time.time() + 25
+        health_url = target.health_url or "http://127.0.0.1:8000/health"
+        while time.time() < deadline:
+            if child.poll() is not None:
+                return {
+                    "ok": False,
+                    "stage": "verify",
+                    "summary": f"Replacement Project Visibility process exited with code {child.returncode}.",
+                }
+            try:
+                with httpx.Client(timeout=3.0) as client:
+                    response = client.get(health_url)
+                if 200 <= response.status_code < 400:
+                    return {
+                        "ok": True,
+                        "stage": "verified_restart",
+                        "summary": "Project Visibility restarted and health endpoint recovered.",
+                        "pid": child.pid,
+                    }
+            except Exception:
+                pass
+            time.sleep(1)
+
+        return {
+            "ok": False,
+            "stage": "verify",
+            "summary": "Replacement process started but health did not recover within 25 seconds.",
+            "pid": child.pid,
+        }
 
     def _dispatch_bloglab_self_heal(self, target: ManagedTarget) -> dict[str, Any]:
         gh = shutil.which("gh")
