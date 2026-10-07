@@ -177,3 +177,41 @@ Then use:
     DOCTOR.bat
 
 The dashboard can also register additional HTTP, GitHub, hybrid or local-process agents without changing Python code.
+
+## Project Visibility monitoring
+
+Project Visibility is monitored independently from BlogLab:
+
+- local health endpoint at `http://127.0.0.1:8000/health`;
+- local `api.server:app` process presence;
+- `DDAY2301/PROJEKT` GitHub Actions on `main`;
+- verified local restart recovery when the health endpoint repeatedly fails.
+
+The BlogLab publisher workflow is not modified by Project Visibility monitoring.
+
+## Gmail reporting
+
+Agent Manager can send:
+
+- one daily status report;
+- immediate P0/P1 incident alerts.
+
+Gmail uses a local OAuth Desktop App token. No Gmail password is stored.
+
+Place the downloaded Google OAuth Desktop App JSON at:
+
+    data/gmail-client-secret.json
+
+Then configure the existing Manager:
+
+    .\scripts\setup-gmail-reporting.ps1 -Recipient "you@example.com" -DailyHour 9
+
+The browser opens once for Google authorization. Runtime tokens remain under `data/` and are excluded from Git.
+
+Status endpoint:
+
+    http://127.0.0.1:8787/email-status
+
+Test endpoint:
+
+    POST http://127.0.0.1:8787/email/send-test
