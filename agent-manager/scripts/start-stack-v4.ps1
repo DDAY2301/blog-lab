@@ -84,7 +84,13 @@ function Start-Ollama {
 }
 
 function Start-Colibri {
-  & "$PSScriptRoot\start-colibri.ps1"
+  try {
+    & "$PSScriptRoot\start-colibri.ps1"
+  } catch {
+    Write-Warning "Colibri startup failed: $($_.Exception.Message)"
+    Write-Warning "Continuing with Ollama fallback so the 24/7 Manager can still start."
+  }
+
   $url=[Environment]::GetEnvironmentVariable("COLIBRI_BASE_URL","User")
   $profile=[Environment]::GetEnvironmentVariable("AGENT_MANAGER_COLIBRI_PROFILE","User")
   $model=[Environment]::GetEnvironmentVariable("COLIBRI_MODEL","User")
