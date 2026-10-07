@@ -1,6 +1,7 @@
 param(
   [string]$InstallDir = "$env:LOCALAPPDATA\AgentManager\colibri-src",
-  [switch]$InstallRecommended
+  [ValidateSet("ask","engine-only","decision","recommended")]
+  [string]$Mode = "ask"
 )
 $ErrorActionPreference = "Stop"
 
@@ -10,8 +11,7 @@ function Require([string]$Name,[string]$Hint) {
 Require "git" "Install Git for Windows."
 Require "py" "Install Python 3.12 and reopen PowerShell."
 
-$api="https://api.github.com/repos/JustVugg/colibri/releases/latest"
-$release=Invoke-RestMethod $api -Headers @{"User-Agent"="AgentManagerV4"}
+$release=Invoke-RestMethod "https://api.github.com/repos/JustVugg/colibri/releases/latest" -Headers @{"User-Agent"="AgentManagerV4"}
 $tag=$release.tag_name
 Write-Host "Colibri latest stable: $tag" -ForegroundColor Cyan
 
@@ -28,37 +28,99 @@ if (-not (Test-Path (Join-Path $InstallDir ".git"))) {
 
 Push-Location $InstallDir
 Write-Host ""
-Write-Host "=== HARDWARE ===" -ForegroundColor Cyan
+Write-Host "=== COLIBRI HARDWARE PREFLIGHT ===" -ForegroundColor Cyan
 & py -3 c\setup_hw.py --json
-if($LASTEXITCODE -ne 0){ throw "Colibri hardware detection failed." }
-
+if($LASTEXITCODE -ne 0){ Pop-Location; throw "Colibri hardware detection failed." }
 Write-Host ""
-Write-Host "=== MODELS THAT FIT THIS PC ===" -ForegroundColor Cyan
+Write-Host "=== COLIBRI GENERATIVE MODELS THAT FIT ===" -ForegroundColor Cyan
 & py -3 c\coli setup --list
-if($LASTEXITCODE -ne 0){ throw "Colibri model compatibility scan failed." }
+if($LASTEXITCODE -ne 0){ Pop-Location; throw "Colibri model compatibility scan failed." }
+Pop-Location
 
 [Environment]::SetEnvironmentVariable("COLIBRI_HOME",$InstallDir,"User")
 [Environment]::SetEnvironmentVariable("AGENT_MANAGER_AI_PRIORITY","colibri,ollama","User")
 
-$doInstall=$InstallRecommended
-if(-not $InstallRecommended){
-  $answer=Read-Host "Install Colibri's recommended model now? This may download tens or hundreds of GB. Type YES to continue"
-  $doInstall=($answer -eq "YES")
+if($Mode -eq "ask"){
+  Write-Host ""
+  Write-Host "Recommended Agent Manager architecture for this PC:" -ForegroundColor Green
+  Write-Host "  LAYA        = Colibri decision/triage engine (~842 MB download, ~1.7 GB RAM when active)"
+  Write-Host "                + Ollama qwen2.5-coder:3b for explanations/code repair."
+  Write-Host "  RECOMMENDED = Colibri's recommended generative model (can be tens/hundreds of GB)."
+  Write-Host "  NONE        = install Colibri control layer only; keep Colibri STANDBY."
+  $choice=(Read-Host "Type LAYA, RECOMMENDED, or NONE").Trim().ToUpperInvariant()
+  if($choice -eq "LAYA"){ $Mode="decision" }
+  elseif($choice -eq "RECOMMENDED"){ $Mode="recommended" }
+  else{ $Mode="engine-only" }
 }
 
-if($doInstall){
-  $occupied=Get-NetTCPConnection -State Listen -LocalPort 8790 -ErrorAction SilentlyContinue
-  if($occupied){ throw "Port 8790 is already in use. Stop that process before configuring Colibri." }
-  Write-Host "Installing the model Colibri recommends for this hardware..." -ForegroundColor Yellow
+if($Mode -eq "engine-only"){
+  Write-Host "Colibri control layer installed in STANDBY. Ollama remains active." -ForegroundColor Yellow
+  exit 0
+}
+
+$occupied=Get-NetTCPConnection -State Listen -LocalPort 8790 -ErrorAction SilentlyContinue
+if($occupied){ throw "Port 8790 is already in use. Stop the conflicting process before configuring Colibri." }
+
+if($Mode -eq "decision"){
+  $managerRoot=Split-Path $PSScriptRoot -Parent
+  $managerPy=Join-Path $managerRoot ".venv\Scripts\python.exe"
+  if(-not (Test-Path $managerPy)){ throw "Agent Manager Python environment is required before installing Laya." }
+
+  $modelDir="$env:LOCALAPPDATA\AgentManager\models\laya"
+  New-Item -ItemType Directory -Force $modelDir | Out-Null
+  Write-Host "Installing Hugging Face downloader into the Agent Manager venv..."
+  & $managerPy -m pip install --disable-pip-version-check "huggingface_hub>=0.35,<2"
+  if($LASTEXITCODE -ne 0){ throw "Could not install huggingface_hub." }
+
+  $env:AGENT_MANAGER_LAYA_DIR=$modelDir
+  $pyCode=@'
+from huggingface_hub import snapshot_download
+import os
+snapshot_download(
+    repo_id="convaiinnovations/laya",
+    local_dir=os.environ["AGENT_MANAGER_LAYA_DIR"],
+    allow_patterns=[
+        "model.safetensors",
+        "rl_agent_config.json",
+        "encoder/*",
+        "tokenizer/*",
+    ],
+)
+'@
+  Write-Host "Downloading Colibri Laya decision checkpoint (~842 MB)..."
+  & $managerPy -c $pyCode
+  if($LASTEXITCODE -ne 0){ throw "Laya checkpoint download failed." }
+
+  Push-Location $InstallDir
+  Write-Host "Configuring Colibri System One decision service..."
+  & py -3 c\coli setup --yes --model-dir $modelDir --no-start --host 127.0.0.1 --port 8790
+  if($LASTEXITCODE -ne 0){ Pop-Location; throw "Colibri Laya setup failed for $modelDir." }
+  Pop-Location
+
+  [Environment]::SetEnvironmentVariable("AGENT_MANAGER_COLIBRI_PROFILE","decision-laya","User")
+  [Environment]::SetEnvironmentVariable("COLIBRI_MODEL","laya","User")
+
+  $os=Get-CimInstance Win32_OperatingSystem
+  $freeGB=[math]::Round(($os.FreePhysicalMemory * 1KB) / 1GB,2)
+  Write-Host "Laya configured. Current free RAM: $freeGB GB." -ForegroundColor Green
+  if($freeGB -lt 2.2){
+    Write-Warning "Keep Colibri in STANDBY until at least ~2.2 GB RAM is free. Manager will continue with Ollama meanwhile."
+  }else{
+    Write-Host "Enough free RAM detected for the lightweight decision engine."
+  }
+  exit 0
+}
+
+if($Mode -eq "recommended"){
+  $answer=Read-Host "Colibri's recommended generative model may download tens or hundreds of GB. Type YES to continue"
+  if($answer -ne "YES"){
+    Write-Host "Large model download cancelled. Colibri remains STANDBY." -ForegroundColor Yellow
+    exit 0
+  }
+  Push-Location $InstallDir
   & py -3 c\coli setup --yes --no-start --host 127.0.0.1 --port 8790
-  if($LASTEXITCODE -ne 0){ throw "Colibri setup failed. Run: py -3 c\coli logs --install" }
-  $status=& py -3 c\coli status --json
-  $status | Set-Content (Join-Path $InstallDir "agent-manager-status.json") -Encoding UTF8
-  Write-Host "Colibri model setup complete." -ForegroundColor Green
-} else {
-  Write-Host "Colibri engine/control layer installed in STANDBY. Ollama remains the active fallback." -ForegroundColor Yellow
-  Write-Host "Run this script again when you want to install the recommended Colibri model."
+  if($LASTEXITCODE -ne 0){ Pop-Location; throw "Colibri setup failed. Run coli logs --install." }
+  Pop-Location
+  [Environment]::SetEnvironmentVariable("AGENT_MANAGER_COLIBRI_PROFILE","generative","User")
+  Write-Host "Colibri recommended generative model configured." -ForegroundColor Green
 }
-Pop-Location
-
-Write-Host "Colibri integration ready at: $InstallDir" -ForegroundColor Green

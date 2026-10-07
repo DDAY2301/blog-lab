@@ -36,7 +36,11 @@ function Start-Ollama {
 function Start-Colibri {
   & "$PSScriptRoot\start-colibri.ps1"
   $url=[Environment]::GetEnvironmentVariable("COLIBRI_BASE_URL","User")
+  $profile=[Environment]::GetEnvironmentVariable("AGENT_MANAGER_COLIBRI_PROFILE","User")
+  $model=[Environment]::GetEnvironmentVariable("COLIBRI_MODEL","User")
   if($url){ $env:COLIBRI_BASE_URL=$url }
+  if($profile){ $env:AGENT_MANAGER_COLIBRI_PROFILE=$profile }
+  if($model){ $env:COLIBRI_MODEL=$model }
 }
 
 function Start-ProjectVisibility {
