@@ -1,13 +1,13 @@
 # Blog Lab local model stack
 
-Blog Lab uses local-first routing to reduce paid AI usage while preserving the existing cloud fallbacks.
+Blog Lab uses a tiered local-first model profile so routine work stays cheap and fast while difficult repository repairs can use a much stronger expert model.
 
-- Qwen3.6-35B-A3B: editorial writing and grounding review.
-- KAT-Coder-V2.5-Dev: code/site changes and self-heal repair planning.
-- qwen2.5-coder:7b: fast fallback.
+- `qwen2.5-coder:7b`: fast/general local fallback for normal work.
+- `KAT-Coder-V2.5-Dev`: expert coding/self-heal model, based on Qwen3.6-35B-A3B.
+- `qwen3.6:35b-a3b-coding`: optional larger fallback; not installed by default to avoid duplicating ~20+ GB of weights.
 - Vision remains separate because the open KAT-Coder release is text-only.
 
-KAT-Coder-V2.5-Dev is a post-trained MoE coding model based on Qwen3.6-35B-A3B. The model has about 35B total parameters and about 3B active parameters per token; the full quantized weights still need RAM/VRAM.
+KAT-Coder-V2.5-Dev is a 35B-total Mixture-of-Experts model with roughly 3B active parameters per token. The quantized weights still require substantial RAM/disk, so the efficient profile installs one KAT expert quantization and keeps normal tasks on the 7B fast path.
 
 ## Windows
 
@@ -17,29 +17,33 @@ Set-ExecutionPolicy -Scope Process Bypass -Force
 .\scripts\test-local-ai-models.ps1
 ```
 
-The efficient profile creates stable aliases:
-- `bloglab-qwen36-efficient`
-- `bloglab-katcoder-efficient`
+The efficient profile:
+- keeps `qwen2.5-coder:7b` as the routine/general model;
+- imports verified `Abiray/KAT-Coder-V2.5-Dev-Imatrix-GGUF` through Ollama;
+- creates stable alias `bloglab-katcoder-efficient`;
+- chooses `IQ3_M` on machines with enough RAM, otherwise `Q3_K_M`.
 
-On a 6 GB RTX laptop GPU, the 35B-A3B weights do not fit fully in VRAM. The efficient profile uses compact GGUF quantizations and hybrid GPU/CPU/system-RAM inference. Use `-Profile quality` only when enough system memory is available for ~21-24 GB model weights plus KV cache.
+To additionally install the larger Qwen3.6 coding fallback:
+
+```powershell
+.\scripts\install-local-ai-models.ps1 -Profile efficient -InstallQwen36
+```
+
+Do not install both large models unless you actually need them; KAT is already post-trained from Qwen3.6 and is the preferred expert coder.
 
 ## Routing
 
-With `AI_PROVIDER=auto`:
-1. local model if configured and reachable;
-2. Workers AI;
-3. external model;
-4. Copilot where supported;
-5. deterministic fallback where supported.
-
-Editorial work uses `LOCAL_GENERAL_MODEL`. Coding/repair work uses `LOCAL_CODER_MODEL`.
+With local models configured:
+1. routine/general work uses `LOCAL_GENERAL_MODEL` (normally 7B);
+2. self-heal/code repair uses `LOCAL_CODER_MODEL` (KAT expert);
+3. Workers AI/external providers remain fallbacks according to the existing provider chain.
 
 ## GitHub Actions
 
 A GitHub-hosted runner cannot reach `127.0.0.1` on the Windows host. To use local models from scheduled workflows, expose a protected OpenAI-compatible endpoint and configure repository variables:
 - `LOCAL_MODEL_ENABLED=true`
 - `LOCAL_MODEL_BASE_URL=https://<protected-endpoint>/v1/chat/completions`
-- `LOCAL_GENERAL_MODEL=bloglab-qwen36-efficient`
+- `LOCAL_GENERAL_MODEL=qwen2.5-coder:7b`
 - `LOCAL_CODER_MODEL=bloglab-katcoder-efficient`
 - `LOCAL_MODEL_TIMEOUT=300`
 
