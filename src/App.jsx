@@ -21,6 +21,41 @@ const TOURISM_CATEGORIES = new Set(["kolesarstvo", "dediščina", "sezonsko", "g
 
 const starterArticles = [
   {
+    "id": "foto-grad-borl-zgodovino-spreminja-v-pustolovscino-kaj-skriva-borlijeva-knjiga-skrivnosti-7c5a2351",
+    "title": "(FOTO) Grad Borl zgodovino spreminja v pustolovščino: Kaj skriva Borlijeva knjiga skrivnosti?",
+    "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »(FOTO) Grad Borl zgodovino spreminja v pustolovščino: Kaj skriva Borlijeva knjiga skrivnosti?«.",
+    "seoDescription": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »(FOTO) Grad Borl zgodovino spreminja v pustolovščino: Kaj skriva Borlijeva kn",
+    "content": "**Aktualno, 7. 10. 2026.** (FOTO) Grad Borl zgodovino spreminja v pustolovščino: Kaj skriva Borlijeva knjiga skrivnosti? Večer\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Večer. Objavljeno: Wed, 07 Oct 2026 10:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMioAFBVV95cUxQY1NIMWNrTWNlMEUwbHI2OUJ1bVpEd2xvWFExRTJlY3pybm5BMXpxQ29rZVZOdFNMenUzU0JyUTlCRjFCSHRoSVltT0Z2NnBrdk9ldnIzdTkzRmV1bkFrZWItY0xTSkFEZmg0SjYxUFVzMGJXQWMtSUtscW1aNXJBSXhXSmhJOFJsbXlFdHhqb2RWUEFnQ3JrTDhIMEVROXBV?oc=5)\n\n## Dopolnitev vira 2: Slovenske novice\n\nSte videli prenovljeni Grad Turjak? Med prvimi si ga je ogledal Janez Janša (FOTO) Slovenske novice\n\n Vir: Slovenske novice. Objavljeno: Sun, 30 Aug 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMixwFBVV95cUxQZlVsX1R4R1RHd1hTZ1hoS3lLYnRya3NfNk5PSTd2YnJiQXREZGYybGdybFBremdDXzRYTk9XVXh6b2d4M2VTdTF4cGctT0I0bHM3Um9hTzlfT2xTcjZ4ZEF3VHc0RzlGWXlCQmZKMW1nazVEU3N3cU8tV2RRZDFiMnZ0SGxBWVdNdGtrRER5Z1hBbDdIN0tXbFFzSHo0aDRxYUJ5UXhrQjNLcXp2QlJMdjR0cjdpVlFOeUNoNnBsdDJNeWp0Zmhj?oc=5)\n\n## Dopolnitev vira 3: Sobotainfo.com\n\nGrad Grad na Goričkem: Največji baročni grad v Sloveniji s skrivnostno zgodovino Sobotainfo.com\n\n Vir: Sobotainfo.com. Objavljeno: Sat, 15 Feb 2025 08:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiuAFBVV95cUxONW1ISXlhdTRGdlZNbVQ0bWR1bW9fVzBGU2RReWFWMVNsT0RPUkVPSDZ4ZXpnUm4zVTZJb3RSYnRmbl9FX1BMU2o5NHVKcFZuSk9tdW1zcHRQOHJYTnoxbDBqeTFaYUc0MEpzVXhtVTJ2WEtxRG92WnpndUxvcXoxSjZ0c3B0OVY1aVNSZG1kc0FVbHFWZ0hvbllCX1ExSEdNYlZTek1Wdzh4WVpzWThPZ1ZRbHh3cnZa?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Aktualno",
+    "author": "Blog Lab Slovenia Publisher",
+    "status": "published",
+    "heroImage": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Black_and_white_Paris_landscape.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "alt": "Cathédrale Notre-Dame de Paris . Suggested credit: Underwood/Library of Congress [VIA PINGNEWS]. Additional information from source: TITLE: Notre Dame Cathedral from Tower of St. G",
+      "caption": "David Shapinsky from Washington, D.C., United States · Wikimedia Commons · CC BY-SA 2.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Black_and_white_Paris_landscape.jpg"
+    },
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Večer — (FOTO) Grad Borl zgodovino spreminja v pustolovščino: Kaj skriva Borlijeva knjiga skrivnosti? - Večer",
+        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQY1NIMWNrTWNlMEUwbHI2OUJ1bVpEd2xvWFExRTJlY3pybm5BMXpxQ29rZVZOdFNMenUzU0JyUTlCRjFCSHRoSVltT0Z2NnBrdk9ldnIzdTkzRmV1bkFrZWItY0xTSkFEZmg0SjYxUFVzMGJXQWMtSUtscW1aNXJBSXhXSmhJOFJsbXlFdHhqb2RWUEFnQ3JrTDhIMEVROXBV?oc=5"
+      },
+      {
+        "label": "Slovenske novice — Ste videli prenovljeni Grad Turjak? Med prvimi si ga je ogledal Janez Janša (FOTO) - Slovenske novice",
+        "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQZlVsX1R4R1RHd1hTZ1hoS3lLYnRya3NfNk5PSTd2YnJiQXREZGYybGdybFBremdDXzRYTk9XVXh6b2d4M2VTdTF4cGctT0I0bHM3Um9hTzlfT2xTcjZ4ZEF3VHc0RzlGWXlCQmZKMW1nazVEU3N3cU8tV2RRZDFiMnZ0SGxBWVdNdGtrRER5Z1hBbDdIN0tXbFFzSHo0aDRxYUJ5UXhrQjNLcXp2QlJMdjR0cjdpVlFOeUNoNnBsdDJNeWp0Zmhj?oc=5"
+      },
+      {
+        "label": "Sobotainfo.com — Grad Grad na Goričkem: Največji baročni grad v Sloveniji s skrivnostno zgodovino - Sobotainfo.com",
+        "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxONW1ISXlhdTRGdlZNbVQ0bWR1bW9fVzBGU2RReWFWMVNsT0RPUkVPSDZ4ZXpnUm4zVTZJb3RSYnRmbl9FX1BMU2o5NHVKcFZuSk9tdW1zcHRQOHJYTnoxbDBqeTFaYUc0MEpzVXhtVTJ2WEtxRG92WnpndUxvcXoxSjZ0c3B0OVY1aVNSZG1kc0FVbHFWZ0hvbllCX1ExSEdNYlZTek1Wdzh4WVpzWThPZ1ZRbHh3cnZa?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-07T13:33:50+02:00",
+    "updatedAt": "2026-10-07T13:33:50+02:00"
+  },
+
+  {
     "id": "gorenjska-gradi-eno-najobseznejsih-kolesarskih-mrez-v-sloveniji-kaj-je-ze-zgrajeno-in-kaj--9998ae72",
     "title": "Gorenjska gradi eno najobsežnejših kolesarskih mrež v Sloveniji: Kaj je že zgrajeno in kaj še sledi? -…",
     "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Gorenjska gradi eno najobsežnejših kolesarskih mrež v Sloveniji: Kaj je že zgrajeno in kaj še sledi? -…«.",
