@@ -103,6 +103,13 @@ CATEGORY_DEFAULTS = {
     "projekti": "studio",
     "vodniki": "fieldnote",
     "mnenja": "magazine",
+    "kolesarstvo": "fieldnote",
+    "dediscina": "fieldnote",
+    "dediščina": "fieldnote",
+    "sezonsko": "fieldnote",
+    "gore": "fieldnote",
+    "gore & traili": "fieldnote",
+    "gourmet": "fieldnote",
 }
 
 

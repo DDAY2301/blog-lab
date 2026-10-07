@@ -18,6 +18,7 @@ def _image(value):
         "url": str(value.get("url", "")).strip(),
         "alt": str(value.get("alt", "")).strip(),
         "caption": str(value.get("caption", "")).strip(),
+        "sourceUrl": str(value.get("sourceUrl", "")).strip(),
     }
 
 def _video(value):

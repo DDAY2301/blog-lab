@@ -3,6 +3,7 @@ import re
 from urllib.parse import parse_qsl, urlencode, urlparse, urlunparse
 
 REQUIRED = ("title", "excerpt", "seoDescription", "content", "category", "tags")
+PHOTO_REQUIRED_CATEGORIES = {"kolesarstvo", "dediščina", "dediscina", "sezonsko", "gore & traili", "gore", "gourmet", "vodniki"}
 
 def _safe_external_url(value: str) -> bool:
     try:
@@ -130,6 +131,17 @@ def validate(article: dict, min_chars: int, max_chars: int, used_titles: set[str
             continue
         if not _safe_external_url(url):
             errors.append("neveljaven_medij")
+
+    category_key = str(article.get("category") or "").strip().lower()
+    hero = article.get("heroImage")
+    if isinstance(hero, str):
+        hero_url = hero.strip()
+    elif isinstance(hero, dict):
+        hero_url = str(hero.get("url") or "").strip()
+    else:
+        hero_url = ""
+    if category_key in PHOTO_REQUIRED_CATEGORIES and not hero_url:
+        errors.append("manjka_fotografija")
 
     lower = content.lower()
     if "<script" in lower or "javascript:" in lower or "data:text/html" in lower:

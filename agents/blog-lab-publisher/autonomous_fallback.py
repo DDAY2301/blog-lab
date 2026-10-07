@@ -39,21 +39,24 @@ from services.learning import learning_source_ok, rank_sources_with_learning  # 
 
 
 CATEGORY_TERMS = {
-    "sport": (
-        "šport", "sport", "športn", "nogomet", "košark", "kosark", "tenis",
-        "odboj", "rokomet", "hokej", "smuč", "smuc", "koles", "tekma",
-        "prvenst", "liga", "turnir", "atlet", "trener", "igral", "gol",
-        "uefa", "fifa", "olimp", "medal", "velesovo", "stadion", "klub",
+    "kolesarstvo": (
+        "koles", "cycling", "bike", "bicycle", "gravel", "mtb", "pot", "route", "trail",
     ),
-    "politika": (
-        "polit", "vlada", "parlament", "državni zbor", "drzavni zbor",
-        "minister", "ministr", "predsed", "zakon", "strank", "koalic",
-        "opozic", "volit", "evropska unija", "eu", "bruselj",
+    "dediscina": (
+        "dedišč", "dedisc", "heritage", "zgodovin", "history", "grad", "castle",
+        "muzej", "museum", "mit", "myth", "legend", "legenda", "tradic", "folklor",
     ),
-    "aktualno": (
-        "sloven", "ljubljan", "maribor", "celje", "kopr", "novice", "danes",
-        "aktual", "dogaj", "dogodek", "vreme", "promet", "gospodar", "družb",
-        "druzb", "zdrav", "šol", "sol", "kultur",
+    "sezonsko": (
+        "turiz", "tourism", "izlet", "visit", "sezon", "vreme", "weather", "arso",
+        "dogodek", "festival", "ljubljan", "bled", "bohinj", "piran", "sloven",
+    ),
+    "gore": (
+        "gora", "mountain", "planin", "hiking", "pohod", "trail", "pzs", "triglav",
+        "koča", "koca", "bivak", "kamp", "camping", "vreme", "sneg", "varnost",
+    ),
+    "gourmet": (
+        "kulinar", "cuisine", "gourmet", "food", "hrana", "jed", "recept", "restavr",
+        "gostil", "vino", "wine", "sir", "tradicional", "gastronom", "lokaln",
     ),
 }
 
@@ -105,8 +108,6 @@ def _category_relevant(item: dict, category: str) -> bool:
     # Sports and politics slots must be clearly category-bound. A generic page
     # that only mentions the category in our wrapper text is not enough, because
     # fallback articles prepend the category name themselves later.
-    if category == "sport":
-        return any(term in text for term in terms if term not in {"šport", "sport"})
     return True
 
 
