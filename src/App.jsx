@@ -30,6 +30,49 @@ const CATEGORY_EMPTY_COPY = {
 
 const starterArticles = [
   {
+    "id": "vreme-danes-v-sloveniji-arso-opozarja-na-moznost-neviht-temperature-do-25-c-f6aedd82",
+    "title": "Vreme danes v Sloveniji: ARSO opozarja na možnost neviht, temperature do 25 °C",
+    "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Vreme danes v Sloveniji: ARSO opozarja na možnost neviht, temperature do 25 °C«.",
+    "seoDescription": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Vreme danes v Sloveniji: ARSO opozarja na možnost neviht, temperature do 25 °",
+    "content": "**Aktualno, 7. 10. 2026.** Vreme danes v Sloveniji: ARSO opozarja na možnost neviht, temperature do 25 °C Dnevne Novice\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Dnevne Novice. Objavljeno: Sat, 09 May 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMipAFBVV95cUxOcXpHOW5DaU1nSlFoMjlicVh4M3NqNUh5RzRCYXMySGxCMW5YUjdQbjlyYUYtWTZYa2FjWmRINVpuUUFIS2tRQ2NYcC1QaHF6M0o1a3ZLcmhGaXlhcWhZeTdmNjZBVHlTYVVLRnVLUDVzMmRnMklmazVJZ3dtcElWQTlxbFNMR0V6ekVBaWZ4d21qZzRsWHY3OGJNQzQ4SlRtaVZQZQ?oc=5)\n\n## Dopolnitev vira 2: Dnevnik\n\nSvetovni hit v severovzhodni Sloveniji: uradno odprta 187 kilometrov dolga pohodniška pravljica Dnevnik\n\n Vir: Dnevnik. Objavljeno: Mon, 15 Jun 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMi6wFBVV95cUxQbXlYTzJueUJ0dXVMTldWZzIyRWVGR3VqcVo4cGo0VzVIVDk0ZG8wY1FHdFhDYTlDX3BMOW5nd1FIdG1OUFM0OGUybFdOdDUxZU9lTWpBWENBNjJ3X0RSdG83Uy1ZQktLbElIUHBYSE9saFhxYk9YRElJeXZVeEpCdFpkQ3d6dnhiWDVVMHNnUGU1MGtuc29oYTNjRTBiU3h5blpDZTUxNnZuTUtXcGR6d2VHUEpsYWtycWFuRmNjOGx5Z0dNV3RPYXZMTEFpQVlfblVOcXNTUF8xSzBLNkNfakxKLVdfYVlNbE9J?oc=5)\n\n## Dopolnitev vira 3: Žurnal24\n\nVreme: Slovenija še naprej pod toplotno kupolo, Arso izdal rumeno opozorilo Žurnal24\n\n Vir: Žurnal24. Objavljeno: Mon, 25 May 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMirAFBVV95cUxOeUtQRGdFZVAzYTJGVEZyNXNEZ0M4czA2UWNqbWxSaXI3cUVNdDcyQUltVzZsMXVkRExjTmN6Qi1qaG10NjZEMlVOZm5MVnktdkJDN3ZGR0ZJdFJXYkZkMEFIazZXZDJJWTZHRXVWNUtRRTI2eW93c1R1dnRqUFZ0eHJuXzRYeG8wcmloOFlwQzBXSHpTUmxyV3E4RkVaNFZsWmRULVZlQ0JRaUFJ0gGyAUFVX3lxTE5mZkliWG5qdE1xdHo3d2VPVFltVFUwUl9jVTZNeVRETmFmSmx2bGk5bEo0YTFPUGxsbWdmNjZHaU42OWpZT0Z2MjVhZkRtcW9oUXpQRlFYN1VsbWkyNzhaYkM5d1BYMWE1a2YtNjZ1aEpKc19oSmNubnZtUEZ1M1oxamV6M0tIXzBjVWtVZDY2Y2prcWZ5dU5jVVMxenFfREFHUUlSTVpOaDNHNzk5azdmT2c?oc=5)\n\n## Dopolnitev vira 4: Dnevne Novice\n\nVremenska napoved ARSO: za Primorsko velja opozorilo, drugod do 28 °C Dnevne Novice\n\n Vir: Dnevne Novice. Objavljeno: Fri, 24 Jul 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMilgFBVV95cUxPV2o3dlVCRC1MNl9Fc1ItWXBMODV3dFlvS0JtdTJSZWdqV1lNZFpvZG1qd0NFaUw4WGFwOEpjZFZkQmdHNWMyV2JiZERWYnFjb1ZXVlZxWGFrSUtveEZhbGZkWVl4NjBBdnNTdkY5SmFJU0M3YS04TmtFU3dMSXV6VDFod2xqa2hvQzV3Z3ZzakJVeE5VS2c?oc=5)\n\n## Dopolnitev vira 5: Svet24.si\n\nSlovenijo čakata dve fronti: Arso napoveduje burno vremensko dogajanje Svet24.si\n\n Vir: Svet24.si. Objavljeno: Tue, 09 Jun 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMimgFBVV95cUxPYjZCVHFFQTZrVkZYYjkxc0ExSTB3dWN6eWh3NTFRWFlFUjBILW1ncjA4V2JseGh3V0VlZXVEdzgzMmJYaWh2R3Z0RUVwbmFYNDVHaGVqbjBqby1QSUxTRlhnQUlmMXREQ000ekNsaFRJZXZjVDNISG1FcjczZlBITEJPVW42Ynh6Q2R1YUNwS0ZHQjBFNWp6NDFn?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Aktualno",
+    "author": "Blog Lab Slovenia Publisher",
+    "status": "published",
+    "heroImage": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Black_and_white_Paris_landscape.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "alt": "Cathédrale Notre-Dame de Paris . Suggested credit: Underwood/Library of Congress [VIA PINGNEWS]. Additional information from source: TITLE: Notre Dame Cathedral from Tower of St. G",
+      "caption": "David Shapinsky from Washington, D.C., United States · Wikimedia Commons · CC BY-SA 2.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Black_and_white_Paris_landscape.jpg"
+    },
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Dnevne Novice — Vreme danes v Sloveniji: ARSO opozarja na možnost neviht, temperature do 25 °C - Dnevne Novice",
+        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOcXpHOW5DaU1nSlFoMjlicVh4M3NqNUh5RzRCYXMySGxCMW5YUjdQbjlyYUYtWTZYa2FjWmRINVpuUUFIS2tRQ2NYcC1QaHF6M0o1a3ZLcmhGaXlhcWhZeTdmNjZBVHlTYVVLRnVLUDVzMmRnMklmazVJZ3dtcElWQTlxbFNMR0V6ekVBaWZ4d21qZzRsWHY3OGJNQzQ4SlRtaVZQZQ?oc=5"
+      },
+      {
+        "label": "Dnevnik — Svetovni hit v severovzhodni Sloveniji: uradno odprta 187 kilometrov dolga pohodniška pravljica - Dnevnik",
+        "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQbXlYTzJueUJ0dXVMTldWZzIyRWVGR3VqcVo4cGo0VzVIVDk0ZG8wY1FHdFhDYTlDX3BMOW5nd1FIdG1OUFM0OGUybFdOdDUxZU9lTWpBWENBNjJ3X0RSdG83Uy1ZQktLbElIUHBYSE9saFhxYk9YRElJeXZVeEpCdFpkQ3d6dnhiWDVVMHNnUGU1MGtuc29oYTNjRTBiU3h5blpDZTUxNnZuTUtXcGR6d2VHUEpsYWtycWFuRmNjOGx5Z0dNV3RPYXZMTEFpQVlfblVOcXNTUF8xSzBLNkNfakxKLVdfYVlNbE9J?oc=5"
+      },
+      {
+        "label": "Žurnal24 — Vreme: Slovenija še naprej pod toplotno kupolo, Arso izdal rumeno opozorilo - Žurnal24",
+        "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOeUtQRGdFZVAzYTJGVEZyNXNEZ0M4czA2UWNqbWxSaXI3cUVNdDcyQUltVzZsMXVkRExjTmN6Qi1qaG10NjZEMlVOZm5MVnktdkJDN3ZGR0ZJdFJXYkZkMEFIazZXZDJJWTZHRXVWNUtRRTI2eW93c1R1dnRqUFZ0eHJuXzRYeG8wcmloOFlwQzBXSHpTUmxyV3E4RkVaNFZsWmRULVZlQ0JRaUFJ0gGyAUFVX3lxTE5mZkliWG5qdE1xdHo3d2VPVFltVFUwUl9jVTZNeVRETmFmSmx2bGk5bEo0YTFPUGxsbWdmNjZHaU42OWpZT0Z2MjVhZkRtcW9oUXpQRlFYN1VsbWkyNzhaYkM5d1BYMWE1a2YtNjZ1aEpKc19oSmNubnZtUEZ1M1oxamV6M0tIXzBjVWtVZDY2Y2prcWZ5dU5jVVMxenFfREFHUUlSTVpOaDNHNzk5azdmT2c?oc=5"
+      },
+      {
+        "label": "Dnevne Novice — Vremenska napoved ARSO: za Primorsko velja opozorilo, drugod do 28 °C - Dnevne Novice",
+        "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPV2o3dlVCRC1MNl9Fc1ItWXBMODV3dFlvS0JtdTJSZWdqV1lNZFpvZG1qd0NFaUw4WGFwOEpjZFZkQmdHNWMyV2JiZERWYnFjb1ZXVlZxWGFrSUtveEZhbGZkWVl4NjBBdnNTdkY5SmFJU0M3YS04TmtFU3dMSXV6VDFod2xqa2hvQzV3Z3ZzakJVeE5VS2c?oc=5"
+      },
+      {
+        "label": "Svet24.si — Slovenijo čakata dve fronti: Arso napoveduje burno vremensko dogajanje - Svet24.si",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPYjZCVHFFQTZrVkZYYjkxc0ExSTB3dWN6eWh3NTFRWFlFUjBILW1ncjA4V2JseGh3V0VlZXVEdzgzMmJYaWh2R3Z0RUVwbmFYNDVHaGVqbjBqby1QSUxTRlhnQUlmMXREQ000ekNsaFRJZXZjVDNISG1FcjczZlBITEJPVW42Ynh6Q2R1YUNwS0ZHQjBFNWp6NDFn?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-07T16:23:28+02:00",
+    "updatedAt": "2026-10-07T16:23:28+02:00"
+  },
+
+  {
     "id": "fedja-pobegajlo-direktor-turisticno-gostinske-zbornice-slovenije-letosnja-turisticna-sezon-6603a284",
     "title": "Fedja Pobegajlo, direktor Turistično gostinske zbornice Slovenije: Letošnja turistična sezona utegne biti še celo…",
     "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Fedja Pobegajlo, direktor Turistično gostinske zbornice Slovenije: Letošnja turistična sezona utegne biti še celo…«.",
