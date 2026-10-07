@@ -80,13 +80,28 @@ if($Mode -eq "decision"){
 
   $env:AGENT_MANAGER_LAYA_DIR=$modelDir
 
-  # Windows PowerShell 5.1 can mangle multiline native-command arguments passed to python -c.
-  # Keep the Python payload on one line so quoting is deterministic.
-  $pyCode='from huggingface_hub import snapshot_download; import os; snapshot_download(repo_id="convaiinnovations/laya", local_dir=os.environ["AGENT_MANAGER_LAYA_DIR"], allow_patterns=["model.safetensors","rl_agent_config.json","encoder/*","tokenizer/*"])'
+  # Windows PowerShell 5.1 can rewrite quotes in native `python -c` arguments.
+  # Send source over STDIN instead; `python -` reads the script verbatim.
+  $pyCode=@'
+from huggingface_hub import snapshot_download
+import os
+
+snapshot_download(
+    repo_id="convaiinnovations/laya",
+    local_dir=os.environ["AGENT_MANAGER_LAYA_DIR"],
+    allow_patterns=[
+        "model.safetensors",
+        "rl_agent_config.json",
+        "encoder/*",
+        "tokenizer/*",
+    ],
+)
+'@
 
   Write-Host "Downloading Colibri Laya decision checkpoint (~842 MB) into existing Manager data..."
-  & $managerPy -c $pyCode
-  if($LASTEXITCODE -ne 0){ throw "Laya checkpoint download failed." }
+  $pyCode | & $managerPy -
+  $layaExit=$LASTEXITCODE
+  if($layaExit -ne 0){ throw "Laya checkpoint download failed (python exit $layaExit)." }
 
   Push-Location $InstallDir
   Write-Host "Configuring Colibri System One decision service..."
