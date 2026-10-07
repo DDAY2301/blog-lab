@@ -22,33 +22,26 @@ $rows+=Probe "Agent Manager" "http://127.0.0.1:8787/health"
 $rows+=Probe "Project Visibility" "http://127.0.0.1:8000/health"
 $rows+=Probe "Ollama" "http://127.0.0.1:11434/api/tags"
 
-$base=[Environment]::GetEnvironmentVariable("COLIBRI_BASE_URL","User")
-if(-not $base){ $base=$env:COLIBRI_BASE_URL }
-if($base){
-  $health=($base -replace '/v1/?$','') + "/health"
-  $rows+=Probe "Colibri" $health
+$colibriBase=[Environment]::GetEnvironmentVariable("COLIBRI_BASE_URL","User")
+if($colibriBase){
+  $colibriHealth=($colibriBase -replace '/v1/?$','') + "/health"
+  $rows+=Probe "Colibri" $colibriHealth
 }else{
-  $rows+=[pscustomobject]@{
-    Component="Colibri"
-    State="STANDBY"
-    Detail="No configured Colibri model/API. Ollama fallback remains active."
-  }
+  $rows+=[pscustomobject]@{Component="Colibri";State="STANDBY";Detail="Not configured"}
 }
 
-$watchdog=Get-CimInstance Win32_Process |
+$watchdog=Get-CimInstance Win32_Process -ErrorAction SilentlyContinue |
   Where-Object { $_.CommandLine -match 'manager\.watchdog_v4' } |
   Select-Object -First 1
-
 $rows+=[pscustomobject]@{
   Component="Watchdog"
   State=$(if($watchdog){"UP"}else{"DOWN"})
   Detail=$(if($watchdog){"PID $($watchdog.ProcessId)"}else{"not running"})
 }
 
-$guardian=Get-CimInstance Win32_Process |
+$guardian=Get-CimInstance Win32_Process -ErrorAction SilentlyContinue |
   Where-Object { $_.CommandLine -match 'manager\.guardian_v3' } |
   Select-Object -First 1
-
 $rows+=[pscustomobject]@{
   Component="Guardian"
   State=$(if($guardian){"UP"}else{"DOWN"})
