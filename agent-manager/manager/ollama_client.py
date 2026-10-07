@@ -106,6 +106,7 @@ class OllamaClient:
             "model": model,
             "stream": False,
             "format": "json",
+            "keep_alive": os.getenv("AGENT_MANAGER_OLLAMA_KEEP_ALIVE", "60s"),
             "messages": [
                 {"role": "system", "content": system},
                 {"role": "user", "content": user},
@@ -113,7 +114,7 @@ class OllamaClient:
             # Low temperature is deliberate for autonomous code changes.
             "options": {
                 "temperature": 0.05,
-                "num_ctx": int(os.getenv("AGENT_MANAGER_CONTEXT", "65536")),
+                "num_ctx": int(os.getenv("AGENT_MANAGER_CONTEXT", "8192")),
             },
         }
 
