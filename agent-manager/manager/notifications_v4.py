@@ -23,6 +23,21 @@ class NotificationCenterV4:
             (utcnow(), severity, source, title, body[:4000]),
         )
         self.store.event("NOTIFICATION", source, severity.lower(), {"title": title, "body": body[:1000]})
+        if severity.upper() in {"P0", "P1"} and source != "summary-v4":
+            recipient = os.getenv("REPORT_TO_EMAIL", "").strip()
+            gmail_enabled = os.getenv("GMAIL_REPORTING_ENABLED", "0").strip().lower() in {"1","true","yes","on"}
+            if gmail_enabled and recipient:
+                self.store.execute(
+                    "INSERT INTO email_queue(created_at,kind,priority,recipient,subject,body,status) VALUES(?,?,?,?,?,?,'pending')",
+                    (
+                        utcnow(),
+                        "critical_alert",
+                        5 if severity.upper() == "P0" else 10,
+                        recipient,
+                        f"[{severity.upper()}] Agent Manager V4 - {title}",
+                        f"{body}\n\nSource: {source}",
+                    ),
+                )
         if self.desktop and severity.upper() in {"P0", "P1"} and os.name == "nt":
             self._desktop_balloon(title, body)
 
