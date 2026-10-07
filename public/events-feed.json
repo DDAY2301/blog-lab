@@ -1,0 +1,107 @@
+{
+  "updatedAt": "2026-10-07T12:00:00+02:00",
+  "status": "fresh",
+  "sourcesChecked": [
+    "Visit Ljubljana",
+    "Kino Šiška",
+    "Gala Hala / Metelkova",
+    "Klub K4",
+    "Cirkus Klub"
+  ],
+  "items": [
+    {
+      "id": "tinta-2026-2026-10-07",
+      "title": "TINTA 2026 | Festival stripa Ljubljana",
+      "url": "https://www.kinosiska.si/dogodek/tinta-2026-festival-stripa-ljubljana/",
+      "source": "Kino Šiška",
+      "type": "Festival · kultura",
+      "place": "Ljubljana · več prizorišč",
+      "startAt": "2026-10-07T19:00:00+02:00",
+      "endAt": "2026-10-11T23:00:00+02:00"
+    },
+    {
+      "id": "rundek-ekipa-2026-10-08",
+      "title": "Rundek & Ekipa",
+      "url": "https://www.kinosiska.si/?post_type=events",
+      "source": "Kino Šiška",
+      "type": "Koncert",
+      "place": "Kino Šiška · Ljubljana",
+      "startAt": "2026-10-08T20:00:00+02:00"
+    },
+    {
+      "id": "cosmic-kitten-2026-10-08",
+      "title": "COSMIC KITTEN",
+      "url": "https://www.galahala.com/",
+      "source": "Gala Hala",
+      "type": "Koncert · Metelkova",
+      "place": "Gala Hala · AKC Metelkova",
+      "startAt": "2026-10-08T20:00:00+02:00"
+    },
+    {
+      "id": "grandmaster-flash-2026-10-09",
+      "title": "Rapetek ekstra: GRANDMASTER FLASH",
+      "url": "https://www.galahala.com/",
+      "source": "Gala Hala",
+      "type": "Koncert · party",
+      "place": "Gala Hala · AKC Metelkova",
+      "startAt": "2026-10-09T20:00:00+02:00"
+    },
+    {
+      "id": "k4-tarkno-2026-10-09",
+      "title": "MIR|ЯOR x Shockwerk x Disco Sour presents Tarkno",
+      "url": "https://www.klub-k4.si/",
+      "source": "Klub K4",
+      "type": "Club · techno",
+      "place": "Klub K4 · Ljubljana",
+      "startAt": "2026-10-09T23:00:00+02:00"
+    },
+    {
+      "id": "artish-2026-10-10",
+      "title": "ARTish",
+      "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/artish-fest",
+      "source": "Visit Ljubljana",
+      "type": "Kultura · sejem",
+      "place": "Gallusovo nabrežje · Ljubljana",
+      "startAt": "2026-10-10T10:00:00+02:00",
+      "endAt": "2026-10-10T17:00:00+02:00"
+    },
+    {
+      "id": "majmunska-posla-2026-10-10",
+      "title": "MAJMUNSKA POSLA — predstavitev albuma",
+      "url": "https://www.galahala.com/",
+      "source": "Gala Hala",
+      "type": "Koncert",
+      "place": "Gala Hala · AKC Metelkova",
+      "startAt": "2026-10-10T20:00:00+02:00"
+    },
+    {
+      "id": "k4-lomilka-2026-10-10",
+      "title": "Lomilka x Gonobeats w/ Posij & Trinist",
+      "url": "https://www.klub-k4.si/",
+      "source": "Klub K4",
+      "type": "Club · bass",
+      "place": "Klub K4 · Ljubljana",
+      "startAt": "2026-10-10T23:00:00+02:00"
+    },
+    {
+      "id": "ettc-2026-10-11",
+      "title": "Evropsko prvenstvo v namiznem tenisu",
+      "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/evropsko-prvenstvo-v-namiznem-tenisu",
+      "source": "Visit Ljubljana",
+      "type": "Šport",
+      "place": "Dvorana Stožice · Ljubljana",
+      "startAt": "2026-10-11T09:00:00+02:00",
+      "endAt": "2026-10-18T22:00:00+02:00"
+    },
+    {
+      "id": "ljubljana-marathon-2026-10-17",
+      "title": "NLB 30. Ljubljanski maraton",
+      "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/nlb-30-ljubljanski-maraton",
+      "source": "Visit Ljubljana",
+      "type": "Šport",
+      "place": "Ljubljana · mestno središče",
+      "startAt": "2026-10-17T08:00:00+02:00",
+      "endAt": "2026-10-18T18:00:00+02:00"
+    }
+  ]
+}

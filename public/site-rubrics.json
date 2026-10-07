@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "name": "Kolesarstvo",
+    "slug": "kolesarstvo"
+  },
+  {
+    "name": "Dediščina",
+    "slug": "dediscina"
+  },
+  {
+    "name": "Sezonsko",
+    "slug": "sezonsko"
+  },
+  {
+    "name": "Gore & traili",
+    "slug": "gore-traili"
+  },
+  {
+    "name": "Gourmet",
+    "slug": "gourmet"
+  }
+]

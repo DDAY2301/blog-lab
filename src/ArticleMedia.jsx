@@ -19,7 +19,8 @@ function normalizeImage(value) {
   return {
     url,
     alt: String(value.alt || "").trim(),
-    caption: String(value.caption || "").trim()
+    caption: String(value.caption || "").trim(),
+    sourceUrl: safeMediaUrl(value.sourceUrl)
   };
 }
 
@@ -131,7 +132,7 @@ export function ArticleImage({ image, className = "" }) {
   return (
     <figure className={`article-image ${className}`.trim()}>
       <img src={item.url} alt={item.alt || ""} loading="lazy" decoding="async" />
-      {item.caption && <figcaption>{item.caption}</figcaption>}
+      {item.caption && <figcaption>{item.sourceUrl ? <a href={item.sourceUrl} target="_blank" rel="noopener noreferrer">{item.caption}</a> : item.caption}</figcaption>}
     </figure>
   );
 }
@@ -152,7 +153,7 @@ export function ArticleHero({ article, compact = false }) {
   return (
     <figure className="article-hero">
       <img src={image.url} alt={image.alt || article?.title || ""} fetchPriority="high" />
-      {image.caption && <figcaption>{image.caption}</figcaption>}
+      {image.caption && <figcaption>{image.sourceUrl ? <a href={image.sourceUrl} target="_blank" rel="noopener noreferrer">{image.caption}</a> : image.caption}</figcaption>}
     </figure>
   );
 }

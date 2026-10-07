@@ -16,7 +16,8 @@ import {
 
 const TERMINAL_URL = "https://blog-lab.dan-grmusa.workers.dev/";
 const PUBLIC_WRITE_LOCK_NOTICE = "Javno pisanje in lokalno objavljanje sta zaklenjena. Objave se dodajajo samo prek zasebnega terminala, publisher agenta in odobrenega workflowa.";
-const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mnenja", "Vodniki", "Drugo"];
+const CATEGORIES = ["Kolesarstvo", "Dediščina", "Sezonsko", "Gore & traili", "Gourmet", "Vodniki", "Drugo"];
+const TOURISM_CATEGORIES = new Set(["kolesarstvo", "dediščina", "sezonsko", "gore & traili", "gourmet", "vodniki"]);
 
 const starterArticles = [
   {
@@ -5131,6 +5132,15 @@ function Icon({ name }) {
   return <svg aria-hidden="true" viewBox="0 0 24 24" className="icon">{paths[name]}</svg>;
 }
 
+function AdSlot({ slot, compact = false }) {
+  return (
+    <aside className={`ad-slot ${compact ? "ad-slot--compact" : ""}`} aria-label="Oglasni prostor" data-ad-slot={slot}>
+      <span>OGLASNI PROSTOR</span>
+      <small>{compact ? "300 × 250 / native" : "970 × 90 / responsive"}</small>
+    </aside>
+  );
+}
+
 export default function Home() {
   const [articles, setArticles] = useState(starterArticles);
   const [rubrics, setRubrics] = useState([]);
@@ -5227,11 +5237,16 @@ export default function Home() {
     [articles]
   );
 
+  const tourismPublished = useMemo(
+    () => published.filter((article) => TOURISM_CATEGORIES.has(String(article.category || "").trim().toLowerCase())),
+    [published]
+  );
+
   const visiblePublished = useMemo(() => {
-    if (!publicCategory) return published;
+    if (!publicCategory) return tourismPublished;
     const target = publicCategory.trim().toLowerCase();
     return published.filter((article) => String(article.category || "").trim().toLowerCase() === target);
-  }, [published, publicCategory]);
+  }, [published, tourismPublished, publicCategory]);
 
   const shownArticles = useMemo(() => {
     const normalized = query.trim().toLowerCase();
@@ -5366,7 +5381,12 @@ export default function Home() {
   }
 
   return (
-    <main>
+    <main className="tourism-site">
+      <div className="travel-motion-bg" aria-hidden="true">
+        <span className="travel-bg-scene travel-bg-soca" />
+        <span className="travel-bg-scene travel-bg-bled" />
+        <span className="travel-bg-scene travel-bg-ljubljana" />
+      </div>
       <header className="site-header">
         <button className="brand" onClick={() => showPublicCategory("")} aria-label={`${siteSettings.brand} – domov`}>
           <span className="brand-mark">B</span>
@@ -5385,15 +5405,12 @@ export default function Home() {
               {rubric.name}
             </button>
           ))}
-          <button className={view === "platform" ? "active" : ""} onClick={() => navigate("platform")}>
-            Platforma
-          </button>
-          <button className={view === "dashboard" ? "active" : ""} onClick={() => navigate("dashboard")}>
-            <Icon name="file" /> Arhiv
-          </button>
         </nav>
-        <button className="primary small" onClick={newArticle} id="new-article-button" data-testid="new-article">
-          <span>↗</span> Uredniški terminal
+        <button
+          className="primary small events-jump"
+          onClick={() => document.getElementById("events-today")?.scrollIntoView({ behavior: "smooth", block: "start" })}
+        >
+          <span>●</span> Dogodki danes
         </button>
       </header>
 
@@ -5403,16 +5420,20 @@ export default function Home() {
             <div className="eyebrow"><span /> {siteSettings.heroEyebrow}</div>
             <h1>{siteSettings.heroTitle}<br /><em>{siteSettings.heroEmphasis}</em></h1>
             <p>{siteSettings.heroSubtitle}</p>
-            <button className="primary" onClick={newArticle}>{siteSettings.heroCta} <Icon name="arrow" /></button>
+            <button className="primary" onClick={() => document.querySelector(".feed")?.scrollIntoView({ behavior: "smooth", block: "start" })}>{siteSettings.heroCta} <Icon name="arrow" /></button>
           </section>
+
+          <div className="container ad-leaderboard-wrap">
+            <AdSlot slot="home-leaderboard" />
+          </div>
 
           <div className={`home-content container ${siteSettings.showLivePulse ? "" : "no-live-pulse"}`}>
             {siteSettings.showLivePulse && <LivePulse />}
             <section className="feed">
             <div className="section-heading">
               <div>
-                <span className="kicker">{publicCategory ? "RUBRIKA" : "ZADNJE OBJAVE"}</span>
-                <h2>{publicCategory || "Sveže iz uredništva"}</h2>
+                <span className="kicker">{publicCategory ? "RUBRIKA" : "SLOVENIJA DANES"}</span>
+                <h2>{publicCategory || "Najnovejše poti, okusi in zgodbe"}</h2>
               </div>
               <span className="count">{visiblePublished.length} {visiblePublished.length === 1 ? "objava" : "objav"}</span>
             </div>
@@ -5558,7 +5579,15 @@ export default function Home() {
       {toast && <div className="toast" role="status">{toast}</div>}
 
       <footer>
-        <span>{siteSettings.brand}</span><p>{siteSettings.footerText}</p><span>Uredniška platforma</span>
+        <span>{siteSettings.brand}</span>
+        <p>{siteSettings.footerText}</p>
+        <span>Potovanja · dogodki · lokalne zgodbe</span>
+        <small className="travel-photo-credit">
+          Ozadje:
+          {" "}<a href="https://commons.wikimedia.org/wiki/File:Soca_River_Slovenia.JPG" target="_blank" rel="noopener noreferrer">Lucash / Soča, CC BY-SA 3.0</a>
+          {" · "}<a href="https://commons.wikimedia.org/wiki/File:Bled_Lake,_Slovenia,_20240504_0851_8264.jpg" target="_blank" rel="noopener noreferrer">Jakub Hałun / Bled, CC BY 4.0</a>
+          {" · "}<a href="https://commons.wikimedia.org/wiki/File:Ljubljana_old_town_and_river_Ljubljanica.jpg" target="_blank" rel="noopener noreferrer">Petar Milošević / Ljubljana, CC BY-SA 4.0</a>
+        </small>
       </footer>
     </main>
   );

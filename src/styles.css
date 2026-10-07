@@ -1029,3 +1029,52 @@ footer { background: rgba(242,248,253,.84); }
   .article-template-kicker{margin-top:20px}
   .article-template--afterdark .article-heading--premium{padding:24px}
 }
+
+
+/* === BLOGLAB SLOVENIA TOURISM DIRECTION · 2026-10-07 === */
+body{background:#0b1710}
+.tourism-site{position:relative;min-height:100vh;overflow-x:clip}
+.travel-motion-bg{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;background:#102119}
+.travel-motion-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,16,10,.42),rgba(6,19,12,.68)),radial-gradient(circle at 18% 12%,rgba(221,239,216,.12),transparent 32%)}
+.travel-bg-scene{position:absolute;inset:-4%;opacity:0;background-position:center;background-size:cover;transform:scale(1.04);animation:travelScene 30s infinite ease-in-out;will-change:opacity,transform}
+.travel-bg-soca{background-image:url("https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Soca_River_Slovenia.JPG/1280px-Soca_River_Slovenia.JPG");animation-delay:0s}
+.travel-bg-bled{background-image:url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bled_Lake%2C_Slovenia%2C_20240504_0851_8264.jpg/1280px-Bled_Lake%2C_Slovenia%2C_20240504_0851_8264.jpg");animation-delay:10s}
+.travel-bg-ljubljana{background-image:url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Ljubljana_old_town_and_river_Ljubljanica.jpg/1280px-Ljubljana_old_town_and_river_Ljubljanica.jpg");animation-delay:20s}
+@keyframes travelScene{0%,28%{opacity:0;transform:scale(1.04) translate3d(0,0,0)}5%,23%{opacity:1}33%,100%{opacity:0;transform:scale(1.12) translate3d(-1.2%,.8%,0)}}
+.tourism-site>.site-header,.tourism-site>.hero,.tourism-site>.home-content,.tourism-site>.ad-leaderboard-wrap,.tourism-site>footer,.tourism-site>.dashboard,.tourism-site>.article-page,.tourism-site>.editor-shell,.tourism-site>.platform-shell{position:relative;z-index:2}
+.tourism-site .site-header{color:#f6f8f3;border-bottom-color:rgba(255,255,255,.12);background:rgba(10,28,18,.72);backdrop-filter:blur(18px) saturate(1.08)}
+.tourism-site .site-header nav button{color:rgba(255,255,255,.72)}
+.tourism-site .site-header nav button:hover,.tourism-site .site-header nav button.active{color:#fff;background:rgba(255,255,255,.11)}
+.tourism-site .brand-mark{background:#f0b15f;color:#153323}
+.tourism-site .hero{min-height:610px;display:flex;flex-direction:column;justify-content:center;color:#fff;border-bottom:1px solid rgba(255,255,255,.12);background:linear-gradient(90deg,rgba(7,24,14,.88) 0%,rgba(7,24,14,.63) 52%,rgba(7,24,14,.25) 100%)}
+.tourism-site .hero::after{border-color:rgba(238,178,92,.18)}
+.tourism-site .hero .eyebrow,.tourism-site .hero h1 em{color:#f2c37d}
+.tourism-site .hero p{color:rgba(255,255,255,.82);max-width:690px}
+.tourism-site .hero .primary{align-self:flex-start;background:#f0a84d;color:#142419;box-shadow:0 16px 38px rgba(0,0,0,.18)}
+.tourism-site .hero .primary:hover{background:#f6bb70}
+.tourism-site .home-content{margin-top:38px;margin-bottom:54px;padding:0 24px 22px;border:1px solid rgba(255,255,255,.18);border-radius:30px;background:rgba(247,245,239,.90);backdrop-filter:blur(18px);box-shadow:0 34px 100px rgba(0,0,0,.22)}
+.tourism-site .feed{padding-top:54px}
+.tourism-site .post-card{background:rgba(255,254,253,.94)}
+.tourism-site .post-card .card-art-image img{transition:transform .55s cubic-bezier(.2,.7,.2,1),filter .25s ease;filter:saturate(.94) contrast(1.025)}
+.tourism-site .post-card:hover .card-art-image img{transform:scale(1.035);filter:saturate(1.03) contrast(1.03)}
+.events-jump span{color:#f4c473;font-size:.74rem}
+.ad-leaderboard-wrap{padding-top:26px}
+.ad-slot,.live-pulse-ad{display:grid;place-items:center;align-content:center;min-height:96px;border:1px dashed rgba(255,255,255,.34);border-radius:18px;color:rgba(255,255,255,.80);background:rgba(8,24,15,.55);backdrop-filter:blur(12px);text-align:center}
+.ad-slot span,.live-pulse-ad span{font-size:10px;font-weight:850;letter-spacing:.16em}
+.ad-slot small,.live-pulse-ad small{margin-top:5px;color:rgba(255,255,255,.52);font-size:10px}
+.ad-slot--compact{min-height:250px}
+.events-pulse{scroll-margin-top:96px}
+.events-pulse .live-pulse-head strong{letter-spacing:.12em}
+.event-pulse-item{display:block}
+.event-pulse-top{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-bottom:8px;color:var(--muted);font-size:10px}
+.event-type{display:inline-flex;align-items:center;min-height:22px;padding:0 7px;border-radius:999px;color:#fff;background:var(--green);font-size:9px;font-weight:800;letter-spacing:.045em;text-transform:uppercase}
+.event-place{margin:-3px 0 8px;color:#59665e;font-size:11px;line-height:1.35}
+.live-pulse-ad{min-height:180px;margin:14px 0;border-color:rgba(23,107,69,.22);color:var(--green-dark);background:radial-gradient(circle at 80% 12%,rgba(233,111,59,.12),transparent 32%),linear-gradient(145deg,#edf3e9,#fff)}
+.live-pulse-ad small{color:var(--muted)}
+.tourism-site>footer{display:grid;grid-template-columns:auto minmax(260px,1fr) auto;gap:14px 28px;color:rgba(255,255,255,.78);border-top:1px solid rgba(255,255,255,.14);background:rgba(7,20,13,.88);backdrop-filter:blur(16px)}
+.travel-photo-credit{grid-column:1/-1;color:rgba(255,255,255,.48);font-size:10px;line-height:1.5}
+.travel-photo-credit a{color:rgba(255,255,255,.62);text-underline-offset:3px}
+.article-image figcaption a,.article-hero figcaption a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:980px){.tourism-site .site-header{height:auto;min-height:76px;flex-wrap:wrap;gap:10px 14px;padding-top:10px;padding-bottom:10px}.tourism-site .site-header nav{order:3;width:100%;overflow-x:auto;padding-bottom:2px}.tourism-site .site-header nav button{white-space:nowrap}.tourism-site .hero{min-height:560px}}
+@media(max-width:720px){.travel-bg-scene{inset:-2%}.tourism-site .hero{min-height:560px;padding:90px 24px 70px;background:linear-gradient(180deg,rgba(7,24,14,.80),rgba(7,24,14,.62))}.tourism-site .home-content{width:min(100% - 24px,1160px);margin-top:18px;padding:0 12px 16px;border-radius:22px}.ad-leaderboard-wrap{width:min(100% - 24px,1160px);padding-top:18px}.ad-slot{min-height:84px}.tourism-site>footer{grid-template-columns:1fr}.travel-photo-credit{grid-column:1}}
+@media(prefers-reduced-motion:reduce){.travel-bg-scene{animation:none!important;opacity:0!important;transform:none!important}.travel-bg-soca{opacity:1!important}}

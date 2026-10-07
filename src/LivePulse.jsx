@@ -11,17 +11,26 @@ function relativeTime(value) {
   if (hours < 24) return `${hours} h`;
   return new Intl.DateTimeFormat("sl-SI", { day: "numeric", month: "short" }).format(new Date(value));
 }
-
+function eventDay(value) {
+  const date = new Date(value);
+  if (!value || !Number.isFinite(date.getTime())) return "";
+  return new Intl.DateTimeFormat("sl-SI", { weekday: "short", day: "numeric", month: "short" }).format(date);
+}
+function eventTime(value) {
+  if (!value || !String(value).includes("T")) return "";
+  const date = new Date(value);
+  if (!Number.isFinite(date.getTime())) return "";
+  return new Intl.DateTimeFormat("sl-SI", { hour: "2-digit", minute: "2-digit" }).format(date);
+}
 export default function LivePulse() {
   const [feed, setFeed] = useState({ items: [], status: "loading", updatedAt: "" });
-
   useEffect(() => {
     let active = true;
     const load = async () => {
       try {
         const base = import.meta.env.BASE_URL || "/";
-        const response = await fetch(`${base}live-feed.json?t=${Date.now()}`, { cache: "no-store" });
-        if (!response.ok) throw new Error("feed unavailable");
+        const response = await fetch(`${base}events-feed.json?t=${Date.now()}`, { cache: "no-store" });
+        if (!response.ok) throw new Error("events feed unavailable");
         const data = await response.json();
         if (active) setFeed(data);
       } catch {
@@ -29,39 +38,29 @@ export default function LivePulse() {
       }
     };
     load();
-    const timer = setInterval(load, 60_000);
+    const timer = setInterval(load, 5 * 60_000);
     return () => { active = false; clearInterval(timer); };
   }, []);
-
-  const items = useMemo(() => Array.isArray(feed.items) ? feed.items.slice(0, 8) : [], [feed.items]);
-
+  const items = useMemo(() => (Array.isArray(feed.items) ? [...feed.items] : [])
+    .filter((item) => item?.title && item?.url)
+    .sort((a,b) => new Date(a.startAt || 0) - new Date(b.startAt || 0))
+    .slice(0,12), [feed.items]);
   return (
-    <aside className="live-pulse" aria-label="Tekoče aktualne novice">
-      <div className="live-pulse-head">
-        <div>
-          <span className="live-dot" />
-          <strong>TEKOČE</strong>
-        </div>
-        <span>30 min</span>
-      </div>
-      <p className="live-pulse-intro">Kratek pregled aktualnih naslovov, osvežen avtomatsko.</p>
+    <aside id="events-today" className="live-pulse events-pulse" aria-label="Aktualni dogodki v Ljubljani in Sloveniji">
+      <div className="live-pulse-head"><div><span className="live-dot" /><strong>DOGODKI</strong></div><span>{items.length ? `${items.length} izbranih` : "dnevno"}</span></div>
+      <p className="live-pulse-intro">Kultura, šport, koncerti, festivali in nočno življenje — preverjeno pri organizatorjih in uradnih koledarjih.</p>
       <div className="live-pulse-list">
-        {items.length ? items.map((item, index) => (
-          <a href={item.url} target="_blank" rel="noopener noreferrer" className="live-pulse-item" key={`${item.url}-${index}`}>
-            <div className="live-pulse-meta">
-              <span>{item.source || "Vir"}</span>
-              <span>{relativeTime(item.publishedAt)}</span>
-            </div>
+        {items.length ? items.map((item,index) => (
+          <a href={item.url} target="_blank" rel="noopener noreferrer" className="live-pulse-item event-pulse-item" key={item.id || `${item.url}-${index}`}>
+            <div className="event-pulse-top"><span className="event-type">{item.type || "Dogodek"}</span><span>{eventDay(item.startAt)}{eventTime(item.startAt) ? ` · ${eventTime(item.startAt)}` : ""}</span></div>
             <h3>{item.title}</h3>
+            <div className="event-place">{item.place || item.source || "Slovenija"}</div>
+            <div className="live-pulse-meta"><span>{item.source || "Uradni vir"}</span><span>↗</span></div>
           </a>
-        )) : (
-          <div className="live-pulse-empty">Trenutno ni svežih mini objav.</div>
-        )}
+        )) : <div className="live-pulse-empty">Koledar se trenutno osvežuje. Dogodki se ob naslednji sinhronizaciji znova preverijo pri uradnih virih.</div>}
       </div>
-      <div className="live-pulse-foot">
-        {feed.updatedAt ? <>Osveženo {relativeTime(feed.updatedAt)}</> : "Samodejno osveževanje"}
-        {feed.status === "stale" && <span> · zadnji znani podatki</span>}
-      </div>
+      <div className="live-pulse-ad" data-ad-slot="events-rail" aria-label="Oglasni prostor"><span>OGLAS</span><small>300 × 250 / native</small></div>
+      <div className="live-pulse-foot">{feed.updatedAt ? <>Preverjeno {relativeTime(feed.updatedAt)}</> : "Dnevno preverjanje"}{feed.status === "stale" && <span> · zadnji znani podatki</span>}{feed.status === "partial" && <span> · delna osvežitev</span>}</div>
     </aside>
   );
 }

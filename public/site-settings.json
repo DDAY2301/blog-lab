@@ -1,10 +1,10 @@
 {
-  "brand": "Blog Lab",
-  "heroEyebrow": "NEODVISNO UREDNIŠTVO",
-  "heroTitle": "Zgodbe, ki štejejo.",
-  "heroEmphasis": "Jasno in brez odvečnega hrupa.",
-  "heroSubtitle": "Vsak dan preverjene zgodbe, napisane z uredniškim standardom, jasnim kontekstom in neposrednimi viri.",
-  "heroCta": "Odpri uredniški terminal",
-  "footerText": "Preverjene zgodbe. Jasen kontekst. Neposredni viri.",
+  "brand": "BlogLab Slovenia",
+  "heroEyebrow": "SLOVENIJA · POTOVANJA · DOGODKI",
+  "heroTitle": "Doživi Slovenijo.",
+  "heroEmphasis": "Lokalno. Aktualno. Brez ugibanja.",
+  "heroSubtitle": "Dnevni dogodki, kolesarske poti, gore, dediščina, vreme in okusi Slovenije — s praktičnimi informacijami in neposrednimi viri.",
+  "heroCta": "Razišči današnje zgodbe",
+  "footerText": "Slovenija za pot. Preverjeni viri. Lokalni kontekst.",
   "showLivePulse": true
 }
