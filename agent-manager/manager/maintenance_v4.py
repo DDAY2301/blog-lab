@@ -13,6 +13,8 @@ from .managed_agents_v4 import ManagedAgentSupervisorV4
 from .notifications_v4 import NotificationCenterV4
 from .settings_v3 import SettingsV3
 from .summary_v4 import SummaryReporterV4
+from .gmail_v4 import GmailV4
+from .daily_email_v4 import DailyEmailReporterV4
 
 
 class MaintenanceLoopV4:
@@ -28,6 +30,8 @@ class MaintenanceLoopV4:
         self.ai = AIRouterV4()
         self.notify = NotificationCenterV4(store)
         self.summary = SummaryReporterV4(store, self.notify)
+        self.gmail = GmailV4(store)
+        self.daily_email = DailyEmailReporterV4(store, self.gmail)
         self.interval = max(30, int(os.getenv("AGENT_MANAGER_MAINTENANCE_INTERVAL", "60")))
         self.running = False
         self.last: dict[str, Any] = {}
@@ -47,6 +51,11 @@ class MaintenanceLoopV4:
 
         self._schedule_ai_work(targets)
         summary = self.summary.emit(targets, providers)
+        live_report = self.summary.build(targets, providers)
+        live_report["targets"] = targets
+        self.daily_email.queue_if_due(live_report)
+        gmail_flush = self.gmail.flush_queue()
+        self.daily_email.mark_sent_if_complete()
 
         self.last = {
             "loop_id": loop_id,
@@ -54,6 +63,11 @@ class MaintenanceLoopV4:
             "ai_providers": providers,
             "ai_jobs_pending": len(self._background),
             "summary": summary,
+            "gmail": {
+                "state": self.gmail.auth_state(),
+                "recipient": self.gmail.recipient or None,
+                "flush": gmail_flush,
+            },
         }
         self.store.heartbeat("maintenance-v4", "running", loop_id)
         self.store.event("MAINTENANCE_CYCLE", "maintenance-v4", "info", self.last)
