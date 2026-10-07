@@ -1,12 +1,16 @@
 from __future__ import annotations
 
+import asyncio
 import json
 import os
+import subprocess
 import time
 from dataclasses import dataclass
+from pathlib import Path
 from typing import Any
 
 import httpx
+import psutil
 
 from .ollama_client import OllamaClient
 
@@ -151,6 +155,14 @@ class AIRouterV4:
         ]
         self._fail_until: dict[str, float] = {}
         self.cooldown = max(15, int(os.getenv("AGENT_MANAGER_PROVIDER_COOLDOWN", "60")))
+        self.root = Path(__file__).resolve().parents[1]
+        self._resource_lock = asyncio.Lock()
+        total_gb = psutil.virtual_memory().total / (1024 ** 3)
+        low_mem = os.getenv("AGENT_MANAGER_LOW_MEMORY_AI_SWAP", "auto").strip().lower()
+        self.low_memory_swap = low_mem in {"1", "true", "yes", "on"} or (
+            low_mem == "auto" and total_gb < 12.0
+        )
+        self.colibri_min_free_gb = float(os.getenv("AGENT_MANAGER_COLIBRI_MIN_FREE_GB", "2.2"))
 
     async def status(self) -> dict[str, dict[str, Any]]:
         c = await self.colibri.status()
@@ -170,11 +182,120 @@ class AIRouterV4:
                 latency_ms=round((time.perf_counter() - start) * 1000, 1),
                 error=str(exc),
             )
+        memory = psutil.virtual_memory()
         return {
             "colibri": c.__dict__,
             "ollama": o.__dict__,
             "priority": self.priority,
+            "resource_mode": {
+                "low_memory_swap": self.low_memory_swap,
+                "total_ram_gb": round(memory.total / (1024 ** 3), 2),
+                "available_ram_gb": round(memory.available / (1024 ** 3), 2),
+                "colibri_min_free_gb": self.colibri_min_free_gb,
+            },
         }
+
+    async def _unload_ollama_running_models(self) -> None:
+        """Free RAM without stopping the Ollama service itself."""
+        try:
+            async with httpx.AsyncClient(timeout=15.0) as client:
+                r = await client.get(f"{self.ollama.base_url.rstrip('/')}/api/ps")
+                r.raise_for_status()
+                models = r.json().get("models", [])
+                for row in models:
+                    name = str(row.get("name") or row.get("model") or "").strip()
+                    if not name:
+                        continue
+                    try:
+                        await client.post(
+                            f"{self.ollama.base_url.rstrip('/')}/api/generate",
+                            json={"model": name, "prompt": "", "stream": False, "keep_alive": 0},
+                        )
+                    except Exception:
+                        pass
+        except Exception:
+            return
+        await asyncio.sleep(2.0)
+
+    async def _start_colibri_for_triage(self) -> bool:
+        try:
+            current = await self.colibri.status()
+            if current.ok:
+                return True
+        except Exception:
+            pass
+
+        if os.name != "nt":
+            return False
+
+        script = self.root / "scripts" / "start-colibri.ps1"
+        if not script.exists():
+            return False
+
+        def run_start() -> int:
+            completed = subprocess.run(
+                [
+                    "powershell.exe",
+                    "-NoProfile",
+                    "-ExecutionPolicy",
+                    "Bypass",
+                    "-File",
+                    str(script),
+                ],
+                cwd=str(self.root),
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL,
+                timeout=210,
+                check=False,
+            )
+            return int(completed.returncode)
+
+        await asyncio.to_thread(run_start)
+        deadline = time.time() + 45.0
+        while time.time() < deadline:
+            try:
+                status = await self.colibri.status()
+                if status.ok:
+                    return True
+            except Exception:
+                pass
+            await asyncio.sleep(2.0)
+        return False
+
+    async def _stop_colibri_after_triage(self) -> None:
+        if os.name != "nt":
+            return
+        colibri_home = Path(os.getenv("COLIBRI_HOME", "")).expanduser() if os.getenv("COLIBRI_HOME") else None
+        if not colibri_home or not colibri_home.exists():
+            colibri_home = self.root / "data" / "colibri-src"
+        cli = colibri_home / "c" / "coli"
+        if not cli.exists():
+            return
+
+        def run_stop() -> None:
+            try:
+                subprocess.run(
+                    ["py", "-3", str(cli), "stop"],
+                    cwd=str(colibri_home),
+                    stdout=subprocess.DEVNULL,
+                    stderr=subprocess.DEVNULL,
+                    timeout=45,
+                    check=False,
+                )
+            except Exception:
+                pass
+
+        await asyncio.to_thread(run_stop)
+
+    async def _prepare_low_memory_colibri(self) -> bool:
+        await self._unload_ollama_running_models()
+        deadline = time.time() + 15.0
+        while time.time() < deadline:
+            free_gb = psutil.virtual_memory().available / (1024 ** 3)
+            if free_gb >= self.colibri_min_free_gb:
+                break
+            await asyncio.sleep(1.0)
+        return await self._start_colibri_for_triage()
 
     async def triage(self, state: str) -> dict[str, Any] | None:
         if self._fail_until.get("colibri", 0) > time.time():
@@ -201,29 +322,43 @@ class AIRouterV4:
                 }
             }
         }
-        try:
-            return await self.colibri.system_one(state, questions)
-        except Exception:
-            return None
+
+        async with self._resource_lock:
+            started_for_call = False
+            try:
+                if self.low_memory_swap:
+                    status = await self.colibri.status()
+                    if not status.ok:
+                        started_for_call = await self._prepare_low_memory_colibri()
+                        if not started_for_call:
+                            return None
+                return await self.colibri.system_one(state, questions)
+            except Exception:
+                return None
+            finally:
+                if self.low_memory_swap and started_for_call:
+                    await self._stop_colibri_after_triage()
 
     async def chat_json(self, system: str, user: str) -> tuple[str, dict]:
-        now = time.time()
-        errors: list[str] = []
-        for provider in self.priority:
-            if self._fail_until.get(provider, 0) > now:
-                continue
-            try:
-                if provider == "colibri":
-                    if self.colibri.decision_only:
-                        # Laya/GLiNER are System One decision engines and intentionally
-                        # reject chat/completions. Do not mark that as a provider failure:
-                        # keep Colibri healthy for triage and use Ollama for generation.
-                        continue
-                    return await self.colibri.chat_json(system, user)
-                if provider == "ollama":
-                    model, result = await self.ollama.chat_json(system, user)
-                    return f"ollama/{model}", result
-            except Exception as exc:
-                self._fail_until[provider] = now + self.cooldown
-                errors.append(f"{provider}: {exc}")
-        raise RuntimeError("No local AI provider is available. " + " | ".join(errors))
+        async with self._resource_lock:
+            if self.low_memory_swap and self.colibri.decision_only:
+                await self._stop_colibri_after_triage()
+
+            now = time.time()
+            errors: list[str] = []
+            for provider in self.priority:
+                if self._fail_until.get(provider, 0) > now:
+                    continue
+                try:
+                    if provider == "colibri":
+                        if self.colibri.decision_only:
+                            # Laya is reserved for System One triage; generation goes to Ollama.
+                            continue
+                        return await self.colibri.chat_json(system, user)
+                    if provider == "ollama":
+                        model, result = await self.ollama.chat_json(system, user)
+                        return f"ollama/{model}", result
+                except Exception as exc:
+                    self._fail_until[provider] = now + self.cooldown
+                    errors.append(f"{provider}: {exc}")
+            raise RuntimeError("No local AI provider is available. " + " | ".join(errors))
