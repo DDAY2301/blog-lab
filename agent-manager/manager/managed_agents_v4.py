@@ -177,6 +177,8 @@ class ManagedAgentSupervisorV4:
         incident = self.incidents.raise_or_update(target.id, title, severity, [json.dumps(result, ensure_ascii=False)[:2000]])
         if count == 1:
             self.notify.send(severity, title, f"Manager detected a problem with {target.name}.", target.id)
+        elif count == 3:
+            self.notify.send("P1", title, f"{target.name} failed three consecutive checks. Automatic recovery is being attempted where a safe adapter exists.", target.id)
 
         if count >= 2 and target.repair_adapter:
             last = self._last_repair.get(target.id, 0)
@@ -186,6 +188,8 @@ class ManagedAgentSupervisorV4:
                 self.store.action("maintenance-v4", "repair", target.id, "attempted", repair)
                 if repair.get("ok"):
                     self.notify.send("P2", f"{target.name} recovery started", repair.get("summary","Repair action started."), target.id)
+                elif count >= 3:
+                    self.notify.send("P1", f"{target.name} recovery needs attention", repair.get("summary","Automatic recovery was not available."), target.id)
 
     def repair(self, target: ManagedTarget) -> dict[str, Any]:
         adapter = target.repair_adapter
