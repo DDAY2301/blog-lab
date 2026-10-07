@@ -108,7 +108,13 @@ async def repair_managed_agent(target_id: str):
     target = next((x for x in maintenance.supervisor.targets() if x.id == target_id), None)
     if not target:
         raise HTTPException(404, "managed target not found")
-    result = maintenance.supervisor.repair(target)
+    try:
+        result = await asyncio.wait_for(
+            asyncio.to_thread(maintenance.supervisor.repair, target),
+            timeout=70.0,
+        )
+    except asyncio.TimeoutError:
+        raise HTTPException(504, "repair timed out without blocking the manager event loop")
     store.action("operator", "manual_repair", target_id, "completed", result)
     return result
 
@@ -296,7 +302,7 @@ async function saveAgent(){
   local_root_env:'',
   process_match:document.getElementById('a_process').value.trim(),
   executable:document.getElementById('a_exe').value.trim(),
-  arguments:document.getElementById('a_args').value.split(/\r?\n/).map(x=>x.trim()).filter(Boolean),
+  arguments:document.getElementById('a_args').value.split(/\\r?\\n/).map(x=>x.trim()).filter(Boolean),
   working_dir:document.getElementById('a_workdir').value.trim(),
   interval_seconds:Number(document.getElementById('a_interval').value||60)
  };
