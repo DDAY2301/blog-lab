@@ -18,6 +18,15 @@ const TERMINAL_URL = "https://blog-lab.dan-grmusa.workers.dev/";
 const PUBLIC_WRITE_LOCK_NOTICE = "Javno pisanje in lokalno objavljanje sta zaklenjena. Objave se dodajajo samo prek zasebnega terminala, publisher agenta in odobrenega workflowa.";
 const CATEGORIES = ["Kolesarstvo", "Dediščina", "Sezonsko", "Gore & traili", "Gourmet", "Vodniki", "Drugo"];
 const TOURISM_CATEGORIES = new Set(["kolesarstvo", "dediščina", "sezonsko", "gore & traili", "gourmet", "vodniki"]);
+const CATEGORY_EMPTY_COPY = {
+  "Kolesarstvo": "Ko bo objavljen prvi vodič, kolesarska pot ali priporočilo, se bo prikazalo tukaj.",
+  "Dediščina": "Ko bo objavljena nova zgodba o krajih, legendah ali slovenski dediščini, se bo prikazala tukaj.",
+  "Sezonsko": "Ko bo objavljen nov sezonski vodič, izlet ali aktualno priporočilo, se bo prikazalo tukaj.",
+  "Gore & traili": "Ko bo objavljen članek o poteh, trailih ali gorskih priporočilih, se bo prikazal tukaj.",
+  "Gourmet": "Ko bo objavljena nova zgodba o okusih, jedeh, vinih ali gastronomskih doživetjih, se bo prikazala tukaj.",
+  "Vodniki": "Ko bo objavljen nov praktični vodič za raziskovanje Slovenije, se bo prikazal tukaj.",
+  "Drugo": "Ko bo objavljena nova zgodba v tej rubriki, se bo prikazala tukaj."
+};
 
 const starterArticles = [
   {
@@ -5601,10 +5610,10 @@ export default function Home() {
                   </div>
                 </a>
               )) : (
-                <div className="empty-state">
+                <div className="empty-state category-empty-state">
                   <h3>{publicCategory ? `V rubriki ${publicCategory} še ni objav.` : "Še ni objavljenih člankov."}</h3>
-                  <p>{publicCategory ? "Ko bo objavljen članek v tej kategoriji, se bo prikazal tukaj." : "Objave se dodajajo samo prek zasebnega uredniškega terminala, publisher agenta in odobrenega workflowa."}</p>
-                  <button className="secondary" onClick={openEditorialTerminal}>Odpri uredniški terminal ↗</button>
+                  <p>{publicCategory ? (CATEGORY_EMPTY_COPY[publicCategory] || "Ko bo objavljen članek v tej kategoriji, se bo prikazal tukaj.") : "Objave se dodajajo samo prek zasebnega uredniškega terminala, publisher agenta in odobrenega workflowa."}</p>
+                  <button className="category-empty-state__button" onClick={openEditorialTerminal}>Odpri uredniški terminal ↗</button>
                 </div>
               )}
             </div>
