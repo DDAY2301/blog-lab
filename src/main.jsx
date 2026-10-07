@@ -7,6 +7,7 @@ import "./styles.css";
 import "./production.css";
 import "./language-tools.css";
 import "./product-platform.css";
+import "./editorial-theme.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
