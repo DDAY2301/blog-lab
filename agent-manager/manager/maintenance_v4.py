@@ -2,9 +2,10 @@ from __future__ import annotations
 
 import asyncio
 import os
+import time
 import uuid
 from pathlib import Path
-from typing import Any
+from typing import Any, Awaitable
 
 from .ai_router_v4 import AIRouterV4
 from .db_v3 import StoreV3
@@ -14,6 +15,8 @@ from .settings_v3 import SettingsV3
 
 
 class MaintenanceLoopV4:
+    """Deterministic monitoring stays on schedule; AI work runs out-of-band."""
+
     def __init__(self, settings: SettingsV3, store: StoreV3) -> None:
         self.settings = settings
         self.store = store
@@ -26,53 +29,112 @@ class MaintenanceLoopV4:
         self.interval = max(30, int(os.getenv("AGENT_MANAGER_MAINTENANCE_INTERVAL", "60")))
         self.running = False
         self.last: dict[str, Any] = {}
+        self._background: set[asyncio.Task] = set()
+        self._inflight: set[str] = set()
+        self._last_ai_at: dict[str, float] = {}
+        self.ai_cooldown = max(120, int(os.getenv("AGENT_MANAGER_AI_DIAGNOSIS_COOLDOWN", "300")))
 
     async def cycle(self) -> dict[str, Any]:
         loop_id = uuid.uuid4().hex[:10]
         targets = await self.supervisor.check_all()
-        providers = await self.ai.status()
-        triage = await self._colibri_triage_targets(targets)
-        diagnoses = await self._auto_diagnose_open_incidents()
+
+        try:
+            providers = await asyncio.wait_for(self.ai.status(), timeout=5.0)
+        except Exception as exc:
+            providers = {"ok": False, "error": str(exc)}
+
+        self._schedule_ai_work(targets)
+
         self.last = {
             "loop_id": loop_id,
             "targets": targets,
             "ai_providers": providers,
-            "colibri_triage": triage,
-            "automatic_diagnoses": diagnoses,
+            "ai_jobs_pending": len(self._background),
         }
         self.store.heartbeat("maintenance-v4", "running", loop_id)
         self.store.event("MAINTENANCE_CYCLE", "maintenance-v4", "info", self.last)
         return self.last
 
-    async def _colibri_triage_targets(self, targets: list[dict[str, Any]]) -> list[dict[str, Any]]:
-        out: list[dict[str, Any]] = []
-        for target in targets:
-            if target.get("ok"):
-                continue
-            state = str(target)[:8000]
-            decision = await self.ai.triage(state)
-            if decision:
-                out.append({"target_id": target.get("id"), "decision": decision})
-                self.store.action("maintenance-v4", "colibri_triage", str(target.get("id","")), "completed", {"result": decision})
-        return out
+    def _spawn(self, key: str, awaitable: Awaitable[Any]) -> None:
+        if key in self._inflight:
+            return
+        self._inflight.add(key)
 
-    async def _auto_diagnose_open_incidents(self) -> list[dict[str, Any]]:
+        async def runner() -> None:
+            try:
+                await awaitable
+            except asyncio.CancelledError:
+                raise
+            except Exception as exc:
+                self.store.event(
+                    "AI_BACKGROUND_FAILURE",
+                    "maintenance-v4",
+                    "warning",
+                    {"key": key, "error": str(exc)},
+                )
+            finally:
+                self._inflight.discard(key)
+
+        task = asyncio.create_task(runner(), name=f"maintenance-ai:{key}")
+        self._background.add(task)
+        task.add_done_callback(self._background.discard)
+
+    def _schedule_ai_work(self, targets: list[dict[str, Any]]) -> None:
+        now = time.time()
+
+        for target in targets:
+            if target.get("ok") or target.get("cached"):
+                continue
+            target_id = str(target.get("id") or target.get("name") or "unknown")
+            key = f"triage:{target_id}"
+            if now - self._last_ai_at.get(key, 0) >= self.ai_cooldown:
+                self._last_ai_at[key] = now
+                self._spawn(key, self._triage_one(target))
+
         rows = self.store.query(
             "SELECT * FROM incidents WHERE status!='resolved' AND severity IN ('P0','P1') ORDER BY last_seen DESC LIMIT 5"
         )
-        out: list[dict[str, Any]] = []
         for incident in rows:
+            incident_id = str(incident["id"])
             done = self.store.query(
                 "SELECT id FROM actions WHERE actor='maintenance-v4' AND action='ai_diagnosis' AND target=? LIMIT 1",
-                (incident["id"],),
+                (incident_id,),
             )
             if done:
                 continue
-            try:
-                out.append({"incident_id": incident["id"], **(await self.diagnose_incident(incident))})
-            except Exception as exc:
-                self.store.event("AI_DIAGNOSIS_FAILED", "maintenance-v4", "warning", {"incident_id": incident["id"], "error": str(exc)})
-        return out
+            self._spawn(f"diagnose:{incident_id}", self._diagnose_one(incident))
+
+    async def _triage_one(self, target: dict[str, Any]) -> None:
+        state = str(target)[:8000]
+        try:
+            decision = await asyncio.wait_for(self.ai.triage(state), timeout=12.0)
+        except asyncio.TimeoutError:
+            self.store.event(
+                "COLIBRI_TRIAGE_TIMEOUT",
+                "maintenance-v4",
+                "warning",
+                {"target_id": target.get("id")},
+            )
+            return
+        if decision:
+            self.store.action(
+                "maintenance-v4",
+                "colibri_triage",
+                str(target.get("id", "")),
+                "completed",
+                {"result": decision},
+            )
+
+    async def _diagnose_one(self, incident: dict[str, Any]) -> None:
+        try:
+            await asyncio.wait_for(self.diagnose_incident(incident), timeout=120.0)
+        except asyncio.TimeoutError:
+            self.store.event(
+                "AI_DIAGNOSIS_TIMEOUT",
+                "maintenance-v4",
+                "warning",
+                {"incident_id": incident.get("id")},
+            )
 
     async def diagnose_incident(self, incident: dict[str, Any]) -> dict[str, Any]:
         system = (
@@ -85,7 +147,13 @@ class MaintenanceLoopV4:
             + str(incident)[:12000]
         )
         model, result = await self.ai.chat_json(system, user)
-        self.store.action("maintenance-v4", "ai_diagnosis", str(incident.get("id","")), "completed", {"provider": model, "result": result})
+        self.store.action(
+            "maintenance-v4",
+            "ai_diagnosis",
+            str(incident.get("id", "")),
+            "completed",
+            {"provider": model, "result": result},
+        )
         return {"provider": model, "diagnosis": result}
 
     async def run(self) -> None:
@@ -94,8 +162,15 @@ class MaintenanceLoopV4:
             try:
                 await self.cycle()
             except Exception as exc:
-                self.store.event("MAINTENANCE_FAILURE", "maintenance-v4", "error", {"error": str(exc)})
+                self.store.event(
+                    "MAINTENANCE_FAILURE",
+                    "maintenance-v4",
+                    "error",
+                    {"error": str(exc)},
+                )
             await asyncio.sleep(self.interval)
 
     def stop(self) -> None:
         self.running = False
+        for task in list(self._background):
+            task.cancel()
