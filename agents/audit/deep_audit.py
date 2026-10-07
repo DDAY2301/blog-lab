@@ -167,7 +167,7 @@ def audit_agent_control(audit: Audit) -> None:
     audit.require(control.get("publish_mode") == "automatic", "agent-control automatic mode")
     schedule = control.get("schedule") or {}
     audit.require(schedule.get("timezone") == "Europe/Ljubljana", "agent-control timezone Europe/Ljubljana")
-    expected = [("08:17", "sport"), ("13:27", "politika"), ("19:43", "aktualno")]
+    expected = [("07:35", "kolesarstvo"), ("10:45", "dediscina"), ("13:30", "sezonsko"), ("16:20", "gore"), ("19:10", "gourmet")]
     actual = [(item.get("time"), item.get("category")) for item in schedule.get("slots") or []]
     audit.require(actual == expected, f"agent-control default slots {expected}")
 

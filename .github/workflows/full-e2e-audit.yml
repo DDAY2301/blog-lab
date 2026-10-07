@@ -104,7 +104,7 @@ jobs:
           mkdir -p content/drafts
           AI_DEGRADED=false
           SOURCE_DEGRADED=false
-          for category in sport politika aktualno; do
+          for category in kolesarstvo dediscina sezonsko gore gourmet; do
             echo "=== E2E dry run: $category ==="
             set +e
             output="$(python agents/blog-lab-publisher/agent.py --category "$category" --dry-run --force 2>&1)"
@@ -157,23 +157,23 @@ jobs:
           print(f"Validated {len(drafts)} generated drafts.")
           PY
 
-      - name: Exercise live 30-minute feed against live source
+      - name: Exercise official tourism event feed
         shell: bash
         run: python agents/live-feed/update.py
 
-      - name: Validate live feed output
+      - name: Validate tourism event feed output
         shell: bash
         run: |
           python - <<'PY'
           import json
           from pathlib import Path
-          data=json.loads(Path("public/live-feed.json").read_text(encoding="utf-8"))
-          assert data.get("status") in {"fresh","stale"}, data
+          data=json.loads(Path("public/events-feed.json").read_text(encoding="utf-8"))
+          assert data.get("status") in {"fresh","partial","stale"}, data
           assert len(data.get("items", [])) >= 3, data
           for item in data["items"][:3]:
               assert item.get("title")
               assert str(item.get("url","")).startswith("https://")
-          print(f"Live feed contains {len(data['items'])} items.")
+          print(f"Event feed contains {len(data['items'])} items.")
           PY
 
       - name: Validate queue replay scripts without mutation
