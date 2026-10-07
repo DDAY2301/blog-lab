@@ -18,9 +18,11 @@ PUBLISHER_WORKFLOW = "agent-blog-lab-publisher.yml"
 DEFAULT_SCHEDULE = {
     "timezone": "Europe/Ljubljana",
     "slots": [
-        {"time": "08:17", "category": "sport"},
-        {"time": "13:27", "category": "politika"},
-        {"time": "19:43", "category": "aktualno"},
+        {"time": "07:35", "category": "kolesarstvo"},
+        {"time": "10:45", "category": "dediscina"},
+        {"time": "13:30", "category": "sezonsko"},
+        {"time": "16:20", "category": "gore"},
+        {"time": "19:10", "category": "gourmet"},
     ],
 }
 
@@ -87,7 +89,7 @@ def ensure_schedule(command: str, actor: str) -> dict:
     ctl.update({
         "enabled": True,
         "publish_mode": "automatic",
-        "schedule_profile": "default-3x-daily",
+        "schedule_profile": "slovenia-tourism-5x-daily",
         "schedule": DEFAULT_SCHEDULE,
         "last_terminal_schedule_update": {
             "at": utc_now(),
@@ -179,7 +181,7 @@ def main() -> int:
     text = fold(command)
     dispatched: list[str] = []
     if has_catchup_intent(text):
-        for category in ("sport", "politika", "aktualno"):
+        for category in ("kolesarstvo", "dediscina", "sezonsko", "gore", "gourmet"):
             dispatch_publisher(category)
             dispatched.append(category)
 

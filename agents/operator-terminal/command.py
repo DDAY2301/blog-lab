@@ -19,7 +19,7 @@ RUBRICS = BASE / "public/site-rubrics.json"
 SITE_SETTINGS = BASE / "public/site-settings.json"
 ARTICLE_AGENT = BASE / "agents/blog-lab-publisher/agent.py"
 VALID_MODES = {"auto", "article", "site", "control"}
-VALID_CATEGORIES = {"sport", "politika", "aktualno"}
+VALID_CATEGORIES = {"kolesarstvo", "dediscina", "sezonsko", "gore", "gourmet", "sport", "politika", "aktualno"}
 
 # Intent vocabulary is used only to understand what the operator means.
 # Literal names, article topics and values remain untouched.
@@ -343,7 +343,7 @@ def infer_mode(command: str) -> str:
         return "article"
     return "site"
 
-DEFAULT_SCHEDULE_TIMES = ("08:17", "13:27", "19:43")
+DEFAULT_SCHEDULE_TIMES = ("07:35", "10:45", "13:30", "16:20", "19:10")
 
 def _explicit_schedule_times(text: str) -> list[str]:
     found = []
@@ -363,16 +363,16 @@ def control_command(command: str) -> None:
     schedule_requested = _schedule_intent(low)
     requested_daily_count = _requested_daily_count(low)
     explicit_times = _explicit_schedule_times(low)
-    if requested_daily_count is not None and requested_daily_count != 3:
+    if requested_daily_count is not None and requested_daily_count != 5:
         print(
             f"CONTROL_UNSUPPORTED requested {requested_daily_count} objav na dan. "
-            "Trenutni preverjeni scheduler podpira 3 objave na dan ob 08:17 / 13:27 / 19:43.",
+            "Trenutni turistični scheduler podpira 5 objav na dan ob 07:35 / 10:45 / 13:30 / 16:20 / 19:10.",
             file=sys.stderr,
         )
         raise SystemExit(64)
     if "vsako uro" in low or "na vsako uro" in low:
         print(
-            "CONTROL_UNSUPPORTED urni scheduler ni omogočen; podprt je 3x-dnevni urnik.",
+            "CONTROL_UNSUPPORTED urni scheduler ni omogočen; podprt je 5x-dnevni turistični urnik.",
             file=sys.stderr,
         )
         raise SystemExit(64)
@@ -380,9 +380,11 @@ def control_command(command: str) -> None:
         schedule = ctl.get("schedule") or {
             "timezone": "Europe/Ljubljana",
             "slots": [
-                {"time": "08:17", "category": "sport"},
-                {"time": "13:27", "category": "politika"},
-                {"time": "19:43", "category": "aktualno"},
+                {"time": "07:35", "category": "kolesarstvo"},
+                {"time": "10:45", "category": "dediscina"},
+                {"time": "13:30", "category": "sezonsko"},
+                {"time": "16:20", "category": "gore"},
+                {"time": "19:10", "category": "gourmet"},
             ],
         }
         print(
@@ -396,7 +398,7 @@ def control_command(command: str) -> None:
         print(
             "CONTROL_UNSUPPORTED custom schedule requested: "
             + ", ".join(explicit_times)
-            + ". Podprt je preverjeni urnik 08:17 / 13:27 / 19:43 Europe/Ljubljana.",
+            + ". Podprt je preverjeni turistični urnik 07:35 / 10:45 / 13:30 / 16:20 / 19:10 Europe/Ljubljana.",
             file=sys.stderr,
         )
         raise SystemExit(64)
@@ -417,13 +419,15 @@ def control_command(command: str) -> None:
         ctl["publish_mode"] = "automatic"
 
     if schedule_requested:
-        ctl["schedule_profile"] = "default-3x-daily"
+        ctl["schedule_profile"] = "slovenia-tourism-5x-daily"
         ctl["schedule"] = {
             "timezone": "Europe/Ljubljana",
             "slots": [
-                {"time": "08:17", "category": "sport"},
-                {"time": "13:27", "category": "politika"},
-                {"time": "19:43", "category": "aktualno"},
+                {"time": "07:35", "category": "kolesarstvo"},
+                {"time": "10:45", "category": "dediscina"},
+                {"time": "13:30", "category": "sezonsko"},
+                {"time": "16:20", "category": "gore"},
+                {"time": "19:10", "category": "gourmet"},
             ],
         }
 
