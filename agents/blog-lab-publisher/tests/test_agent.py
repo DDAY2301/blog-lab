@@ -1179,3 +1179,31 @@ def test_manual_alignment_accepts_requested_topic():
         article,
         evidence,
     ) == []
+
+
+def test_fallback_writer_preserves_tourism_category_labels():
+    from services.fallback_writer import build_digest
+    base = {
+        "title": "Triglav in varno pohodništvo",
+        "summary": "Planinska pot v Sloveniji zahteva primerno pripravo in preverjanje razmer.",
+        "source_name": "Testni vir",
+        "url": "https://example.com/gore",
+        "published": "2026-10-07",
+    }
+    article = build_digest([base], "gore")
+    assert article["category"] == "Gore & traili"
+    assert article["tags"][0] == "gore & traili"
+
+
+def test_commons_relevance_rejects_foreign_landscape_and_accepts_slovenian_mountains():
+    from services.media_library import _image_relevant
+    assert not _image_relevant(
+        "Black and white Paris landscape.jpg",
+        "Cathédrale Notre-Dame de Paris, France",
+        "gore",
+    )
+    assert _image_relevant(
+        "Triglav National Park - mountain.jpg",
+        "View from a trail to a mountain in Kranjska Gora, Slovenia",
+        "gore",
+    )
