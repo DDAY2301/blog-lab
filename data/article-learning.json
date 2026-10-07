@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-07T16:23:43+02:00",
-  "loop_count": 3580,
+  "updated_at": "2026-10-07T16:24:34+02:00",
+  "loop_count": 3581,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-07T16:23:19+02:00",
+      "last_learning_run": "2026-10-07T16:24:13+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -58,11 +58,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 105105,
-          "last_seen": "2026-10-07T16:23:19+02:00",
+          "seen": 105113,
+          "last_seen": "2026-10-07T16:24:13+02:00",
           "last_title": "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
           "last_provider": "google-news-si",
-          "published": 183717,
+          "published": 183791,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-07T16:23:30+02:00",
+      "last_learning_run": "2026-10-07T16:24:23+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -271,11 +271,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 105406,
-          "last_seen": "2026-10-07T16:23:30+02:00",
-          "last_title": "Golob pravi: Slovenija potrebuje široko koalicijo. NSi ne bo na sestanek - Svet24.si",
+          "seen": 105422,
+          "last_seen": "2026-10-07T16:24:23+02:00",
+          "last_title": "Kučan napadel Janšo! »Kaj se je zgodilo s 'črno kocko', kdo je imel za to interese, to so vprašanja, ki bodo zahtevala odgovor« - Slovenske novice",
           "last_provider": "google-news-si",
-          "published": 201112,
+          "published": 201198,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -366,7 +366,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-07T16:23:43+02:00",
+      "last_learning_run": "2026-10-07T16:24:34+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -421,21 +421,21 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 105614,
-          "last_seen": "2026-10-07T16:23:43+02:00",
+          "seen": 105636,
+          "last_seen": "2026-10-07T16:24:34+02:00",
           "last_title": "Vreme se bo danes hitro obrnilo: nevihte bodo zajele večji del Slovenije, na Primorskem tudi burja - Dnevne Novice",
           "last_provider": "google-news-si",
-          "published": 189885,
+          "published": 189941,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 3557,
+          "published": 3558,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 3557,
+          "published": 3558,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
@@ -445,27 +445,27 @@
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 3482,
+          "published": 3483,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 3546,
+          "published": 3547,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 3482,
+          "published": 3483,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 3482,
+          "published": 3483,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 3546,
+          "published": 3547,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
@@ -480,22 +480,22 @@
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 3557,
+          "published": 3558,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 7028,
+          "published": 7030,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 3514,
+          "published": 3515,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 7092,
+          "published": 7094,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
@@ -505,12 +505,12 @@
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 3482,
+          "published": 3483,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 7028,
+          "published": 7030,
           "last_output_id": "duckduckgo-287dab86"
         },
         "slovenia.info": {
@@ -539,6 +539,12 @@
     }
   },
   "recent_articles": [
+    {
+      "id": "vreme-danes-v-sloveniji-arso-opozarja-na-moznost-neviht-temperature-do-25-c-f6aedd82",
+      "title": "Vreme danes v Sloveniji: ARSO opozarja na možnost neviht, temperature do 25 °C",
+      "category": "Aktualno",
+      "createdAt": "2026-10-07T16:23:28+02:00"
+    },
     {
       "id": "fedja-pobegajlo-direktor-turisticno-gostinske-zbornice-slovenije-letosnja-turisticna-sezon-6603a284",
       "title": "Fedja Pobegajlo, direktor Turistično gostinske zbornice Slovenije: Letošnja turistična sezona utegne biti še celo…",
@@ -604,12 +610,6 @@
       "title": "Vodi ukinitev prispevka v politični despotizem ali ne, ker je politika tako \\",
       "category": "Politika",
       "createdAt": "2026-10-05T13:54:03+02:00"
-    },
-    {
-      "id": "robba-fountain-ljubljana-original-replica-guide",
-      "title": "Robba Fountain in Ljubljana: Original, Replica and Baroque History",
-      "category": "Vodniki",
-      "createdAt": "2026-10-05T09:06:15+02:00"
     }
   ],
   "recent_failures": [
