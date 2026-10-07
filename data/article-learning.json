@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-07T08:54:29+02:00",
-  "loop_count": 3512,
+  "updated_at": "2026-10-07T09:09:01+02:00",
+  "loop_count": 3513,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-07T08:54:07+02:00",
+      "last_learning_run": "2026-10-07T09:08:27+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -58,11 +58,11 @@
         },
         "news.google.com": {
           "score": 2.498,
-          "seen": 103890,
-          "last_seen": "2026-10-07T08:54:07+02:00",
+          "seen": 103920,
+          "last_seen": "2026-10-07T09:08:27+02:00",
           "last_title": "Junak Slovenije na županske volitve? Šturmov odgovor navduši in nasmeji - Ekipa",
           "last_provider": "",
-          "published": 178332,
+          "published": 178415,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-07T08:54:18+02:00",
+      "last_learning_run": "2026-10-07T09:08:42+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -270,12 +270,12 @@
       ],
       "source_health": {
         "news.google.com": {
-          "score": 2.498,
-          "seen": 103890,
-          "last_seen": "2026-10-07T08:54:18+02:00",
-          "last_title": "VIDEO: Več denarja za vzhod države? Aleksander Gungl razkril projekte, za katere bo lobiral - Sobotainfo.com",
+          "score": 2.502,
+          "seen": 103920,
+          "last_seen": "2026-10-07T09:08:42+02:00",
+          "last_title": "Umrl je znani slovenski poslovnež in politik - Slovenske novice",
           "last_provider": "",
-          "published": 194992,
+          "published": 195082,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -360,13 +360,13 @@
       "example_titles": {
         "news.google.com": [
           "Odnosi z Izraelom: diplomacija ne sme biti izgovor za normalizacijo zločinov - Dnevnik",
-          "Igor Vobič: Politika ne sme imeti roke na finančni pipi RTV Slovenija - Delo.si",
-          "Slovenija se bo pri demografskih ukrepih zgledovala tudi po Hrvaški - Dnevnik"
+          "Brez RTV-prispevka: manjša položnica, večja odvisnost od politike? - Dnevnik",
+          "Igor Vobič: Politika ne sme imeti roke na finančni pipi RTV Slovenija - Delo.si"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-07T08:54:29+02:00",
+      "last_learning_run": "2026-10-07T09:09:01+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -421,56 +421,56 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 103890,
-          "last_seen": "2026-10-07T08:54:29+02:00",
+          "seen": 103920,
+          "last_seen": "2026-10-07T09:09:01+02:00",
           "last_title": "Anja Rakuša Brus: Pomemben argument za mojo kandidaturo je izkušnja z aktualno vlado, ki stroke ne posluša dovolj - Nova24TV",
           "last_provider": "",
-          "published": 186077,
+          "published": 186133,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 3489,
+          "published": 3490,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 3489,
+          "published": 3490,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
           "score": 2.498,
-          "published": 3512,
+          "published": 3513,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 3414,
+          "published": 3415,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 3478,
+          "published": 3479,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 3414,
+          "published": 3415,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 3414,
+          "published": 3415,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 3478,
+          "published": 3479,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
           "score": 2.498,
-          "published": 14048,
+          "published": 14052,
           "last_output_id": "nocno-zivljenje-v-ljubljani-1ae9f6e3"
         },
         "movies.youtube.com": {
@@ -480,22 +480,22 @@
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 3489,
+          "published": 3490,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 6892,
+          "published": 6894,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 3446,
+          "published": 3447,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 6956,
+          "published": 6958,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
@@ -505,12 +505,12 @@
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 3414,
+          "published": 3415,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 6892,
+          "published": 6894,
           "last_output_id": "duckduckgo-287dab86"
         },
         "slovenia.info": {
@@ -539,6 +539,12 @@
     }
   },
   "recent_articles": [
+    {
+      "id": "paddleboarding-kayaking-ljubljanica-safety-guide",
+      "title": "Paddleboarding and Kayaking the Ljubljanica: A Safety-First Visitor Guide",
+      "category": "Vodniki",
+      "createdAt": "2026-10-07T08:56:06+02:00"
+    },
     {
       "id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d",
       "title": "Kakšna tekma, kakšna zmaga Slovenije! Selektor: Zelo sem ponosen",
@@ -604,12 +610,6 @@
       "title": "Vrtovec: Prejšnja vlada je hotela poteptati vse, kar nas definira – kulturo, vrednote, način življenja …",
       "category": "Politika",
       "createdAt": "2026-10-04T13:38:51+02:00"
-    },
-    {
-      "id": "vintgar-gorge-day-trip-from-ljubljana",
-      "title": "Vintgar Gorge: A Car-Free Day Trip from Ljubljana",
-      "category": "Vodniki",
-      "createdAt": "2026-10-04T09:00:00+02:00"
     }
   ],
   "recent_failures": [
