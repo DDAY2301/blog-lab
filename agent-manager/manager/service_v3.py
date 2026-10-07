@@ -153,6 +153,7 @@ async def email_status():
     return {
         "state": maintenance.gmail.auth_state(),
         "recipient": maintenance.gmail.recipient or None,
+        "interval_hours": maintenance.daily_email.interval_hours,
         "queue": store.query("SELECT id,created_at,kind,priority,recipient,subject,status,attempts,last_error FROM email_queue ORDER BY id DESC LIMIT 50"),
     }
 

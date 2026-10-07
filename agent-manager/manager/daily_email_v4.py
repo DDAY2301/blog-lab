@@ -1,38 +1,47 @@
 from __future__ import annotations
 
-import json
 import os
-from datetime import datetime
+from datetime import datetime, timedelta
 from typing import Any
 
 from .db_v3 import StoreV3
 from .gmail_v4 import GmailV4
 
 
-class DailyEmailReporterV4:
+class PeriodicEmailReporterV4:
     def __init__(self, store: StoreV3, gmail: GmailV4) -> None:
         self.store = store
         self.gmail = gmail
-        self.hour = max(0, min(23, int(os.getenv("AGENT_MANAGER_DAILY_EMAIL_HOUR", "9"))))
-
-    def _already_sent_today(self, day: str) -> bool:
-        rows = self.store.query(
-            "SELECT id FROM actions WHERE actor='reporting-v4' AND action='daily_email' AND target=? AND result='sent' LIMIT 1",
-            (day,),
+        self.interval_hours = max(
+            1,
+            min(168, int(os.getenv("AGENT_MANAGER_EMAIL_INTERVAL_HOURS", "3"))),
         )
-        return bool(rows)
 
-    def _already_queued_today(self, day: str) -> bool:
+    def _latest_status_email(self) -> dict | None:
         rows = self.store.query(
-            "SELECT id FROM email_queue WHERE kind='daily_status' AND created_at LIKE ? AND status IN ('pending','sent') LIMIT 1",
-            (day + "%",),
+            "SELECT id,created_at,status FROM email_queue "
+            "WHERE kind='periodic_status' AND status IN ('pending','sent') "
+            "ORDER BY id DESC LIMIT 1"
         )
-        return bool(rows)
+        return rows[0] if rows else None
+
+    def _is_due(self, now: datetime) -> bool:
+        latest = self._latest_status_email()
+        if not latest:
+            return True
+        if latest["status"] == "pending":
+            return False
+        try:
+            previous = datetime.fromisoformat(str(latest["created_at"]))
+        except Exception:
+            return True
+        return now >= previous + timedelta(hours=self.interval_hours)
 
     def _render(self, report: dict[str, Any]) -> str:
         lines = [
-            "AGENT MANAGER V4 - DAILY STATUS",
+            "AGENT MANAGER V4 - PERIODIC STATUS",
             "",
+            f"Interval: every {self.interval_hours} hours",
             f"State: {report.get('state','UNKNOWN')}",
             f"Managed targets: {report.get('managed_ok',0)}/{report.get('managed_total',0)} OK",
             f"Open incidents: {len(report.get('open_incidents') or [])}",
@@ -46,7 +55,7 @@ class DailyEmailReporterV4:
 
         lines += ["", "AI PROVIDERS"]
         providers = report.get("providers") or {}
-        for key in ("colibri","ollama"):
+        for key in ("colibri", "ollama"):
             row = providers.get(key) or {}
             lines.append(
                 f"- {key}: {'OK' if row.get('ok') else 'STANDBY/OFF'}"
@@ -63,36 +72,46 @@ class DailyEmailReporterV4:
 
         lines += [
             "",
-            "Project Visibility is monitored locally by health endpoint/process checks and recovery logic.",
-            "BlogLab is monitored independently and its normal publisher flow is not modified by this report.",
+            "Project Visibility: health endpoint + local process + GitHub monitoring.",
+            "BlogLab: monitored independently; normal publisher logic is not modified.",
+            "P0/P1 alerts are sent independently of this periodic cycle.",
         ]
         return "\n".join(lines)
 
     def queue_if_due(self, report: dict[str, Any]) -> bool:
         if self.gmail.auth_state() != "CONFIGURED":
             return False
+
         now = datetime.now()
-        if now.hour < self.hour:
-            return False
-        day = now.date().isoformat()
-        if self._already_sent_today(day) or self._already_queued_today(day):
+        if not self._is_due(now):
             return False
 
         body = self._render(report)
-        subject = f"Agent Manager V4 daily status - {report.get('state','UNKNOWN')} - {day}"
-        self.store.execute(
-            "INSERT INTO email_queue(created_at,kind,priority,recipient,subject,body,status) VALUES(?,?,?,?,?,?,'pending')",
-            (now.isoformat(), "daily_status", 50, self.gmail.recipient or None, subject, body),
+        stamp = now.strftime("%Y-%m-%d %H:%M")
+        subject = (
+            f"Agent Manager V4 status - {report.get('state','UNKNOWN')} - {stamp}"
         )
-        # Mark queued; after a successful flush we promote to sent below.
-        self.store.action("reporting-v4", "daily_email", day, "queued", {"subject": subject})
+        self.store.execute(
+            "INSERT INTO email_queue(created_at,kind,priority,recipient,subject,body,status) "
+            "VALUES(?,?,?,?,?,?,'pending')",
+            (
+                now.isoformat(),
+                "periodic_status",
+                50,
+                self.gmail.recipient or None,
+                subject,
+                body,
+            ),
+        )
+        self.store.action(
+            "reporting-v4",
+            "periodic_email",
+            stamp,
+            "queued",
+            {"subject": subject, "interval_hours": self.interval_hours},
+        )
         return True
 
-    def mark_sent_if_complete(self) -> None:
-        today = datetime.now().date().isoformat()
-        sent = self.store.query(
-            "SELECT id FROM email_queue WHERE kind='daily_status' AND status='sent' AND created_at LIKE ? LIMIT 1",
-            (today + "%",),
-        )
-        if sent and not self._already_sent_today(today):
-            self.store.action("reporting-v4", "daily_email", today, "sent", {})
+
+# Backward-compatible alias so older imports/config do not break.
+DailyEmailReporterV4 = PeriodicEmailReporterV4
