@@ -52,15 +52,16 @@ function Import-GitHubAuth {
 }
 
 function Start-Manager {
-  if (Port-Up 8787) { return }
   $py=Join-Path (Get-Location) ".venv\Scripts\python.exe"
   if (-not (Test-Path $py)) { throw "Agent Manager venv missing. Run install-agent-manager.ps1 first." }
-  Start-Process $py -ArgumentList "run.py" -WorkingDirectory (Get-Location) -WindowStyle Hidden
+  if (-not (Port-Up 8787)) {
+    Start-Process $py -ArgumentList "run.py" -WorkingDirectory (Get-Location) -WindowStyle Hidden
+    Start-Sleep -Seconds 3
+  }
   $guardian = Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -match 'manager.guardian_v3' } | Select-Object -First 1
   if (-not $guardian) {
     Start-Process $py -ArgumentList @("-m","manager.guardian_v3") -WorkingDirectory (Get-Location) -WindowStyle Hidden
   }
-  Start-Sleep -Seconds 3
 }
 
 Import-GitHubAuth
