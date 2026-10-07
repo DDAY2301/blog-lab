@@ -71,7 +71,7 @@ export default function ProductPlatform({ terminalUrl }) {
       </div>
 
       <div className="product-proof container">
-        <div><strong>74+</strong><span>regresijskih ukazov</span></div>
+        <div><strong>300+</strong><span>avtomatskih regresijskih preverjanj</span></div>
         <div><strong>2.400</strong><span>stress-routing preverjanj</span></div>
         <div><strong>4</strong><span>jeziki ukazov</span></div>
         <div><strong>24/7</strong><span>watchdog + self-heal logika</span></div>
@@ -107,6 +107,38 @@ export default function ProductPlatform({ terminalUrl }) {
             <Step number="5" title="Self-heal prevzame napake">Če preverjanje pade, repair loop preveri trenutno main vejo in obnovi znane invariante.</Step>
           </div>
         </div>
+      </section>
+
+      <section className="product-section product-commercial container">
+        <div className="product-section-head">
+          <span>ZA KOMERCIALNO UPORABO</span>
+          <h2>Izberi obseg, ne novega kupa orodij.</h2>
+          <p>Demo pokaže delovanje. Produkcijska aktivacija se nato prilagodi številu strani, uporabnikov in zahtevani stopnji avtomatizacije.</p>
+        </div>
+        <div className="product-package-grid">
+          <article className="product-package">
+            <span>PILOT</span>
+            <h3>1 znamka / 1 portal</h3>
+            <p>Za podjetje ali organizacijo, ki želi uredniški terminal, publisher, osnovni QA in varen deployment.</p>
+            <ul><li>onboarding</li><li>publisher agent</li><li>production gate</li><li>osnovni self-heal</li></ul>
+            <button className="secondary" onClick={() => open("/join")}>Preizkusi demo ↗</button>
+          </article>
+          <article className="product-package featured-package">
+            <span>GROWTH</span>
+            <h3>Več vsebin in ekip</h3>
+            <p>Za redno produkcijo, kjer so pomembni urniki, ponovljivi procesi, diagnostika in hitrejša obnova po napaki.</p>
+            <ul><li>več urnikov</li><li>napredni QA</li><li>watchdog</li><li>operativni chatbot</li></ul>
+            <button className="primary" onClick={() => open("/join")}>Začni onboarding ↗</button>
+          </article>
+          <article className="product-package">
+            <span>AGENCY</span>
+            <h3>Več strank / več portalov</h3>
+            <p>Za agencijski model z ločenimi delovnimi prostori, nadzorom izvajanja in prilagojenimi produkcijskimi pravili.</p>
+            <ul><li>multi-workspace</li><li>ločeni procesi</li><li>monitoring</li><li>prilagojena aktivacija</li></ul>
+            <button className="secondary" onClick={() => open("/join")}>Odpri demo račun ↗</button>
+          </article>
+        </div>
+        <p className="product-commercial-note">Komercialna cena se določi po dejanskem obsegu integracij, številu portalov in zahtevani infrastrukturi. Javni demo ne zahteva produkcijskih GitHub ali Cloudflare dovoljenj.</p>
       </section>
 
       <section className="product-onboarding container">
