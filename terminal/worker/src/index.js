@@ -1375,7 +1375,7 @@ const COMMAND_TOKEN_ALIASES = Object.freeze({
   live:"live", pulse:"live", tekoce:"live", tekoče:"live",
   pomoc:"pomoc", pomoč:"pomoc", help:"pomoc", commands:"komande", command:"komande", komande:"komande", ukazi:"komande",
   zmoreš:"zmore", zmores:"zmore", capabilities:"zmore",
-  draft:"draft", osnutek:"draft", osnutek:"draft", review:"review", pregled:"review",
+  draft:"draft", osnutek:"draft", review:"review", pregled:"review",
   automatic:"automatic", avtomatsko:"automatic", samodejno:"automatic", samostojno:"automatic",
   preklopi:"preklopi", switch:"preklopi", mode:"mode", nacin:"mode", način:"mode"
 });
