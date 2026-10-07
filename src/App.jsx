@@ -5197,7 +5197,14 @@ export default function Home() {
     if (!ready) return undefined;
 
     function syncViewFromUrl() {
-      const requestedId = new URLSearchParams(window.location.search).get("article");
+      const params = new URLSearchParams(window.location.search);
+      const requestedView = params.get("view");
+      if (requestedView === "platform") {
+        setSelectedId("");
+        setView("platform");
+        return;
+      }
+      const requestedId = params.get("article");
       const matchedArticle = resolveSelectedArticle(articles, requestedId);
       if (matchedArticle) {
         setSelectedId(matchedArticle.id);
@@ -5217,14 +5224,19 @@ export default function Home() {
     const selectedArticle = resolveSelectedArticle(articles, selectedId);
     const description = document.querySelector('meta[name="description"]');
 
-    document.title = selectedArticle ? `${selectedArticle.title} | Blog Lab` : "Blog Lab";
+    document.title = selectedArticle
+      ? `${selectedArticle.title} | Blog Lab`
+      : (view === "platform" ? "Blog Lab Platform | Avtonomno objavljanje" : "Blog Lab Slovenia");
     if (description) {
       description.setAttribute(
         "content",
-        selectedArticle?.seoDescription || "Blog Lab – javni bralni blog. Objavljanje je zaklenjeno na zasebni uredniški terminal."
+        selectedArticle?.seoDescription
+          || (view === "platform"
+            ? "Blog Lab Platform poveže uredniški terminal, AI publisher, preverjanje virov, build, deploy in self-heal v nadzorovan sistem."
+            : "BlogLab Slovenia – poti, dogodki, gore, dediščina in okusi Slovenije z lokalnim kontekstom.")
       );
     }
-  }, [articles, selectedId]);
+  }, [articles, selectedId, view]);
 
   useEffect(() => {
     if (!toast) return;
@@ -5262,6 +5274,11 @@ export default function Home() {
     if (nextView !== "article") {
       const url = new URL(window.location.href);
       url.searchParams.delete("article");
+      if (nextView === "platform") {
+        url.searchParams.set("view", "platform");
+      } else {
+        url.searchParams.delete("view");
+      }
       window.history.pushState({}, "", `${url.pathname}${url.search}${url.hash}`);
       setSelectedId("");
     }
@@ -5405,6 +5422,12 @@ export default function Home() {
               {rubric.name}
             </button>
           ))}
+          <button
+            className={view === "platform" ? "active" : ""}
+            onClick={() => navigate("platform")}
+          >
+            Platforma
+          </button>
         </nav>
         <button
           className="primary small events-jump"
