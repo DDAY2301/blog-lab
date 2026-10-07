@@ -248,7 +248,7 @@ def audit_workflows(audit: Audit) -> None:
 def audit_worker(audit: Audit) -> None:
     source = read_text("terminal/worker/src/index.js")
     for marker in [
-        "auth-v6.24-product-onboarding",
+        "auth-v6.25-sell-ready",
         "DAN_LOGIN_PASSWORD",
         "MAJ_LOGIN_PASSWORD",
         "GITHUB_DISPATCH_TOKEN",
