@@ -154,6 +154,38 @@ async def connections():
     }
 
 
+class ManagedTargetInput(BaseModel):
+    id: str
+    name: str
+    kind: str
+    enabled: bool = True
+    health_url: str = ""
+    repo: str = ""
+    branch: str = "main"
+    workflows: list[str] | None = None
+    repair_adapter: str = ""
+    local_root_env: str = ""
+
+
+@app.put("/managed-agents/{target_id}")
+async def upsert_managed_agent(target_id: str, item: ManagedTargetInput):
+    payload = item.model_dump()
+    payload["id"] = target_id
+    try:
+        target = maintenance.supervisor.save_target(payload)
+    except (TypeError, ValueError) as exc:
+        raise HTTPException(400, str(exc)) from exc
+    return {"ok": True, "target": target.__dict__}
+
+
+@app.delete("/managed-agents/{target_id}")
+async def delete_managed_agent(target_id: str):
+    removed = maintenance.supervisor.remove_target(target_id)
+    if not removed:
+        raise HTTPException(404, "managed target not found")
+    return {"ok": True, "removed": target_id}
+
+
 class ActionRequest(BaseModel):
     action: str
     incident_id: str | None = None
