@@ -551,30 +551,57 @@ function unwrapAiObject(value, depth = 0) {
   return value;
 }
 
+function parseAiJsonText(value) {
+  if (typeof value !== "string" || !value.trim()) return null;
+  const cleaned = value
+    .trim()
+    .replace(/^\`\`\`(?:json)?\s*/i, "")
+    .replace(/\`\`\`$/i, "")
+    .trim();
+  const attempts = [cleaned];
+  const firstBrace = cleaned.indexOf("{");
+  const lastBrace = cleaned.lastIndexOf("}");
+  if (firstBrace >= 0 && lastBrace > firstBrace) {
+    attempts.push(cleaned.slice(firstBrace, lastBrace + 1));
+  }
+  for (const text of [...new Set(attempts)]) {
+    try {
+      const decoded = JSON.parse(text);
+      if (decoded && typeof decoded === "object" && !Array.isArray(decoded)) return decoded;
+    } catch {}
+  }
+  return null;
+}
+
 function articleJsonFromAiResult(result) {
+  // Parse textual model output first. Otherwise a provider envelope with a
+  // string `response` can be mistaken for the final application payload.
+  const textCandidates = [
+    result?.response,
+    result?.response?.content,
+    result?.response?.text,
+    result?.choices?.[0]?.message?.content,
+    result?.choices?.[0]?.text,
+    result?.content,
+    result?.text,
+  ];
+  for (const value of textCandidates) {
+    const decoded = parseAiJsonText(value);
+    if (!decoded) continue;
+    const parsed = unwrapAiObject(decoded);
+    if (parsed) return parsed;
+  }
+
   const objectCandidates = [
     result?.response,
     result?.choices?.[0]?.message,
+    result?.article,
+    result?.plan,
     result,
   ];
   for (const value of objectCandidates) {
     const parsed = unwrapAiObject(value);
     if (parsed) return parsed;
-  }
-
-  const candidates = [
-    result?.response,
-    result?.choices?.[0]?.message?.content,
-    result?.choices?.[0]?.text,
-  ];
-  for (const value of candidates) {
-    if (typeof value !== "string") continue;
-    const text = value.trim().replace(/^\`\`\`json\s*/i, "").replace(/\`\`\`$/i, "").trim();
-    try {
-      const decoded = JSON.parse(text);
-      const parsed = unwrapAiObject(decoded);
-      if (parsed) return parsed;
-    } catch {}
   }
   return null;
 }
