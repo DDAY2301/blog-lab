@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 
 const DEFAULT_STATUS = {
-  version: "auth-v6.25-sell-ready",
+  version: "auth-v6.26-production",
   demo_ready: true,
   trial_signup_ready: true,
   terminal_ready: true,
