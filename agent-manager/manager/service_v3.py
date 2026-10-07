@@ -141,6 +141,13 @@ async def notifications():
     return {"notifications": maintenance.notify.recent(200)}
 
 
+@app.get("/summary")
+async def summary():
+    targets = await maintenance.supervisor.check_all()
+    providers = await maintenance.ai.status()
+    return maintenance.summary.build(targets, providers)
+
+
 @app.get("/connections")
 async def connections():
     providers = await maintenance.ai.status()
