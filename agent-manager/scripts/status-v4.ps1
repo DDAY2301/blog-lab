@@ -12,7 +12,17 @@ $rows+=Probe "Agent Manager" "http://127.0.0.1:8787/health"
 $rows+=Probe "Project Visibility" "http://127.0.0.1:8000/health"
 $rows+=Probe "Ollama" "http://127.0.0.1:11434/api/tags"
 try{
-  $rows+=Probe "Colibri" ([Environment]::GetEnvironmentVariable("COLIBRI_BASE_URL","User").TrimEnd("/v1")+"/health")
+  $base=[Environment]::GetEnvironmentVariable("COLIBRI_BASE_URL","User")
+  if($base){
+    $health=($base -replace '/v1/?
+$watchdog=Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -match 'manager.watchdog_v4' } | Select-Object -First 1
+$rows+=[pscustomobject]@{Component="Watchdog";State=$(if($watchdog){"UP"}else{"DOWN"});Detail=$(if($watchdog){"PID $($watchdog.ProcessId)"}else{"not running"})}
+$rows | Format-Table -AutoSize
+,'') + "/health"
+    $rows+=Probe "Colibri" $health
+  }else{
+    $rows+=[pscustomobject]@{Component="Colibri";State="STANDBY";Detail="Not configured"}
+  }
 }catch{
   $rows+=[pscustomobject]@{Component="Colibri";State="STANDBY";Detail="Not configured"}
 }
