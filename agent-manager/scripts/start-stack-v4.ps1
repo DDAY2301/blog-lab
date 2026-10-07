@@ -42,6 +42,15 @@ function Start-ProjectVisibility {
   Start-Sleep -Seconds 3
 }
 
+function Import-GitHubAuth {
+  if(Get-Command gh -ErrorAction SilentlyContinue){
+    try{
+      $token=(& gh auth token 2>$null).Trim()
+      if($token){ $env:GITHUB_TOKEN=$token; $env:GH_TOKEN=$token }
+    }catch{}
+  }
+}
+
 function Start-Manager {
   if (Port-Up 8787) { return }
   $py=Join-Path (Get-Location) ".venv\Scripts\python.exe"
@@ -54,10 +63,12 @@ function Start-Manager {
   Start-Sleep -Seconds 3
 }
 
+Import-GitHubAuth
 Start-Ollama
 Start-Colibri
 Start-ProjectVisibility
 Start-Manager
+& "$PSScriptRoot\start-watchdog-v4.ps1"
 
 Write-Host ""
 Write-Host "Agent Manager V4 24/7 stack" -ForegroundColor Cyan
