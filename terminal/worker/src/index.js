@@ -1081,6 +1081,41 @@ async function diagnoseWorkersAi(env) {
   return { ok: false, available, gateway, models, results, code: "ALL_MODELS_FAILED" };
 }
 
+function deterministicArticleFromSources(sourceItems, category = "aktualno") {
+  const items = (Array.isArray(sourceItems) ? sourceItems : []).slice(0, 10).map((item) => {
+    const title = String(item?.title || item?.name || "").replace(/\s+/g, " ").trim().slice(0, 240);
+    const summary = String(item?.summary || item?.description || item?.snippet || item?.content || "").replace(/\s+/g, " ").trim().slice(0, 2200);
+    const url = String(item?.url || item?.link || "").trim().slice(0, 1000);
+    const sourceName = String(item?.source_name || item?.source || "").replace(/\s+/g, " ").trim().slice(0, 160);
+    return { title, summary, url, source_name: sourceName };
+  }).filter((item) => item.title || item.summary);
+
+  if (!items.length) return null;
+  const primary = items[0];
+  const title = primary.title || `${String(category || "Aktualno").trim()}: preverjeni podatki`;
+  const paragraphs = items
+    .map((item) => item.summary || item.title)
+    .filter(Boolean)
+    .slice(0, 5);
+  const content = paragraphs.join("\n\n").trim() || title;
+  const sources = items
+    .filter((item) => item.url)
+    .map((item) => ({
+      title: item.title || item.source_name || item.url,
+      url: item.url,
+      source_name: item.source_name || undefined
+    }));
+
+  return {
+    title,
+    content,
+    excerpt: content.slice(0, 320),
+    category: String(category || "aktualno").trim().slice(0, 40),
+    sources,
+    fallback: "source-evidence"
+  };
+}
+
 async function generateArticleWithWorkersAi(env, body) {
   if (!env.AI || typeof env.AI.run !== "function") {
     return { ok: false, status: 503, error: "Workers AI binding ni na voljo.", code: "AI_BINDING_MISSING" };
@@ -1114,6 +1149,19 @@ async function generateArticleWithWorkersAi(env, body) {
       repetition_penalty: 1.08,
     }, 2, { purpose: "article-write", cacheKey: `article:${category}:${sourceJson.slice(0, 400)}` });
   } catch (error) {
+    const fallbackArticle = deterministicArticleFromSources(sourceItems, category);
+    if (fallbackArticle) {
+      return {
+        ok: true,
+        article: fallbackArticle,
+        model: "deterministic-source-fallback",
+        degraded: true,
+        fallback_reason: "AI_INFERENCE_FAILED",
+        detail: String(error?.message || error || "").slice(0, 500),
+        attempts: Array.isArray(error?.aiErrors) ? error.aiErrors.slice(-8) : [],
+        last_model: error?.aiLastModel || null,
+      };
+    }
     return {
       ok: false,
       status: 502,
@@ -1125,13 +1173,26 @@ async function generateArticleWithWorkersAi(env, body) {
     };
   }
 
-  const article = articleJsonFromAiResult(result);
-  if (!looksLikeArticle(article)) {
+  let article = articleJsonFromAiResult(result);
+  if (!looksLikeArticle(article) || !String(article?.title || "").trim() || !String(article?.content || "").trim()) {
+    article = deterministicArticleFromSources(sourceItems, category);
+    if (!article) {
+      return {
+        ok: false,
+        status: 502,
+        error: "Workers AI je vrnil JSON, vendar brez pričakovane strukture članka.",
+        code: "AI_ARTICLE_SHAPE_INVALID"
+      };
+    }
     return {
-      ok: false,
-      status: 502,
-      error: "Workers AI je vrnil JSON, vendar brez pričakovane strukture članka.",
-      code: "AI_ARTICLE_SHAPE_INVALID"
+      ok: true,
+      article,
+      model: "deterministic-source-fallback",
+      degraded: true,
+      fallback_reason: "AI_ARTICLE_SHAPE_INVALID",
+      ai_gateway_log_id: result?._bloglab_gateway_log_id || null,
+      ai_attempts: result?._bloglab_attempts || null,
+      usage: result?.usage || null,
     };
   }
   return {
@@ -2119,7 +2180,7 @@ export default {
       return json({
         ok: true,
         worker: "blog-lab",
-        version: "auth-v6.25-sell-ready",
+        version: "auth-v6.26-production",
         ready: state.ready,
         auth_ready: authReady,
         auth_self_test_ok: authTest.ok,
@@ -2149,7 +2210,7 @@ export default {
       return json({
         ok: true,
         product: "blog-lab",
-        version: "auth-v6.25-sell-ready",
+        version: "auth-v6.26-production",
         demo_ready: true,
         trial_signup_ready: true,
         terminal_ready: state.ready,
@@ -2304,7 +2365,7 @@ export default {
       return json({
         ok: true,
         worker: "blog-lab",
-        version: "auth-v6.25-sell-ready",
+        version: "auth-v6.26-production",
         ...diagnostic,
         server_time: new Date().toISOString(),
         hint: diagnostic.email_known
