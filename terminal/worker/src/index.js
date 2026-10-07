@@ -2119,7 +2119,7 @@ export default {
       return json({
         ok: true,
         worker: "blog-lab",
-        version: "auth-v6.24-product-onboarding",
+        version: "auth-v6.25-sell-ready",
         ready: state.ready,
         auth_ready: authReady,
         auth_self_test_ok: authTest.ok,
@@ -2149,7 +2149,7 @@ export default {
       return json({
         ok: true,
         product: "blog-lab",
-        version: "auth-v6.24-product-onboarding",
+        version: "auth-v6.25-sell-ready",
         demo_ready: true,
         trial_signup_ready: true,
         terminal_ready: state.ready,
@@ -2304,7 +2304,7 @@ export default {
       return json({
         ok: true,
         worker: "blog-lab",
-        version: "auth-v6.24-product-onboarding",
+        version: "auth-v6.25-sell-ready",
         ...diagnostic,
         server_time: new Date().toISOString(),
         hint: diagnostic.email_known
