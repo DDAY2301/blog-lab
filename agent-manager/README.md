@@ -150,3 +150,27 @@ Install the practical profile for the current machine with:
 The script detects system RAM and NVIDIA VRAM. On machines with 16+ GB RAM but limited VRAM it uses compact GGUF builds and hybrid GPU/CPU inference. On large-memory systems it can use Q4 models. Existing qwen2.5-coder:7b remains the emergency fallback.
 
 For lower memory pressure the default Agent Manager context is 32768 tokens.
+
+
+## Production-grade recovery
+
+V4 runs three independent recovery layers:
+
+1. the Manager's deterministic health and incident loops;
+2. Guardian + independent Watchdog, which can safely replace a frozen Manager only after verifying process ownership;
+3. Windows Startup plus a best-effort five-minute reconciler.
+
+AI diagnosis never blocks the health loop. Colibri triage is bounded and runs out-of-band; Ollama remains the local fallback.
+
+Project Visibility uses a low-memory local bootstrap with qwen2.5-coder:3b, Chromium visual QA and the separate vision LLM disabled by default on constrained PCs.
+
+For a complete first install/update run:
+
+    INSTALL-AND-START-V4.bat
+
+Then use:
+
+    STATUS.bat
+    DOCTOR.bat
+
+The dashboard can also register additional HTTP, GitHub, hybrid or local-process agents without changing Python code.
