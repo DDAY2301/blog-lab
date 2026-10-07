@@ -282,7 +282,11 @@ class ManagedAgentSupervisorV4:
                     proc = psutil.Process(conn.pid)
                     cmdline = " ".join(proc.cmdline())
                     cwd = Path(proc.cwd()).resolve()
-                    belongs = str(cwd).lower().startswith(str(root).lower()) or "api.server:app" in cmdline
+                    try:
+                        in_root = cwd == root or cwd.is_relative_to(root)
+                    except AttributeError:
+                        in_root = cwd == root or root in cwd.parents
+                    belongs = in_root and "api.server:app" in cmdline
                     if belongs:
                         proc.terminate()
                         try:
