@@ -256,6 +256,9 @@ AUTO_SEARCH_QUERIES = {
     "sezonsko": "Slovenija turizem sezona dogodki vreme ARSO izleti danes",
     "gore": "Slovenija gore pohodništvo PZS trail kampiranje pravila vreme ARSO",
     "gourmet": "Slovenija tradicionalna kuhinja gastronomija lokalna hrana vino gostilne",
+    "sport": "Slovenija šport danes",
+    "politika": "Slovenija politika danes",
+    "aktualno": "Slovenija aktualno danes",
 }
 
 
@@ -283,6 +286,20 @@ AUTO_CATEGORY_TERMS = {
         "kulinar", "cuisine", "gourmet", "food", "hrana", "jed", "recept",
         "restavr", "gostil", "vino", "wine", "sir", "cheese", "tradicional",
         "lokaln", "gastronom", "chef", "okus",
+    ),
+    "sport": (
+        "šport", "sport", "nogomet", "football", "soccer", "košark", "basket",
+        "tenis", "tennis", "tekma", "match", "game", "liga", "league", "prvenstvo",
+        "championship", "turnir", "tournament", "gol", "goal", "zmaga", "win",
+        "kolesar", "cycling", "smuč", "ski", "atlet", "athlet", "odboj", "volley",
+    ),
+    "politika": (
+        "politik", "government", "vlada", "parlament", "election", "volit",
+        "minister", "ministr", "president", "predsed", "zakon", "law",
+    ),
+    "aktualno": (
+        "sloven", "dogodek", "event", "družb", "society", "gospodar", "econom",
+        "kultur", "culture", "promet", "transport", "okolj", "environment",
     ),
 }
 
