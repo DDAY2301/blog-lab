@@ -1,5 +1,5 @@
 // Review draft only. Not imported by the production application.
-// Rolling review draft. Sources rechecked on 2026-10-06 at 07:01 Europe/Ljubljana.
+// Rolling review draft. Sources rechecked on 2026-10-07 at 06:58 Europe/Ljubljana.
 // Production remains unchanged until the calendar model and stable views are implemented.
 // Unknown values deliberately remain null.
 export const draftEvents = [
@@ -62,7 +62,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-10-04T06:55:58+02:00"
   },
   {
@@ -93,7 +93,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
@@ -155,7 +155,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
@@ -186,7 +186,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": "Tactile exhibition; confirm individual access needs with the gallery",
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-10-04T06:55:58+02:00"
   },
   {
@@ -434,7 +434,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-09-21T07:00:00+02:00"
   },
   {
@@ -465,7 +465,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-09-21T07:00:00+02:00"
   },
   {
@@ -496,7 +496,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-09-21T07:00:00+02:00"
   },
   {
@@ -527,7 +527,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-09-21T07:00:00+02:00"
   },
   {
@@ -560,7 +560,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-09-21T07:00:00+02:00"
   },
   {
@@ -591,7 +591,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-09-21T07:00:00+02:00"
   },
   {
@@ -622,7 +622,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-09-21T07:00:00+02:00"
   },
   {
@@ -653,7 +653,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-09-21T07:00:00+02:00"
   },
   {
@@ -684,7 +684,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-09-21T07:00:00+02:00"
   },
   {
@@ -715,7 +715,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-09-21T07:00:00+02:00"
   },
   {
@@ -746,7 +746,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-09-21T07:00:00+02:00"
   },
   {
@@ -777,7 +777,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-09-21T07:00:00+02:00"
   },
   {
@@ -808,7 +808,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
@@ -839,7 +839,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-09-23T07:00:00+02:00"
   },
   {
@@ -870,7 +870,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-09-23T07:00:00+02:00"
   },
   {
@@ -901,7 +901,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-09-23T07:00:00+02:00"
   },
   {
@@ -963,7 +963,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-09-24T07:00:00+02:00"
   },
   {
@@ -994,7 +994,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-09-24T07:00:00+02:00"
   },
   {
@@ -1025,7 +1025,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": "Cankarjev dom publishes an accessibility statement; confirm individual requirements directly",
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-09-24T07:00:00+02:00"
   },
   {
@@ -1056,7 +1056,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
@@ -1087,7 +1087,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
@@ -1118,7 +1118,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
@@ -1149,7 +1149,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-09-25T07:00:00+02:00"
   },
   {
@@ -1180,7 +1180,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
@@ -1214,7 +1214,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
@@ -1247,7 +1247,7 @@ export const draftEvents = [
     "familyFriendly": false,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
@@ -1280,7 +1280,7 @@ export const draftEvents = [
     "familyFriendly": false,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-09-26T07:00:00+02:00"
   },
   {
@@ -1311,7 +1311,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
@@ -1342,7 +1342,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
@@ -1373,7 +1373,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
@@ -1404,7 +1404,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
@@ -1435,7 +1435,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-09-27T07:00:00+02:00"
   },
   {
@@ -1466,7 +1466,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-09-29T07:00:00+02:00"
   },
   {
@@ -1497,7 +1497,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-09-29T07:00:00+02:00"
   },
   {
@@ -1528,7 +1528,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-09-29T07:00:00+02:00"
   },
   {
@@ -1559,7 +1559,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-09-30T07:01:22+02:00"
   },
   {
@@ -1590,7 +1590,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-09-30T07:01:22+02:00"
   },
   {
@@ -1621,7 +1621,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-09-30T07:01:22+02:00"
   },
   {
@@ -1652,7 +1652,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-09-30T07:01:22+02:00"
   },
   {
@@ -1683,7 +1683,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-09-30T07:01:22+02:00"
   },
   {
@@ -1714,7 +1714,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-09-30T07:01:22+02:00"
   },
   {
@@ -1745,7 +1745,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-10-01T07:01:40+02:00"
   },
   {
@@ -1776,7 +1776,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-10-01T07:01:40+02:00"
   },
   {
@@ -1807,7 +1807,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-10-01T07:01:40+02:00"
   },
   {
@@ -1838,7 +1838,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-10-01T07:01:40+02:00"
   },
   {
@@ -1869,7 +1869,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-10-01T07:01:40+02:00"
   },
   {
@@ -1900,7 +1900,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-10-01T07:01:40+02:00"
   },
   {
@@ -1931,7 +1931,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-10-01T07:01:40+02:00"
   },
   {
@@ -1962,7 +1962,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-10-02T07:04:03+02:00"
   },
   {
@@ -2024,7 +2024,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-10-02T07:04:03+02:00"
   },
   {
@@ -2055,7 +2055,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-10-02T07:04:03+02:00"
   },
   {
@@ -2086,7 +2086,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-10-02T07:04:03+02:00"
   },
   {
@@ -2117,7 +2117,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-10-03T07:04:12+02:00"
   },
   {
@@ -2148,7 +2148,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-10-03T07:04:12+02:00"
   },
   {
@@ -2179,7 +2179,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-10-03T07:04:12+02:00"
   },
   {
@@ -2210,7 +2210,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-10-03T07:04:12+02:00"
   },
   {
@@ -2241,7 +2241,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-10-03T07:04:12+02:00"
   },
   {
@@ -2272,7 +2272,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-10-04T06:55:58+02:00"
   },
   {
@@ -2303,7 +2303,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-10-04T06:55:58+02:00"
   },
   {
@@ -2334,7 +2334,7 @@ export const draftEvents = [
     "familyFriendly": true,
     "accessibility": null,
     "indoorOutdoor": "outdoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-10-04T06:55:58+02:00"
   },
   {
@@ -2365,7 +2365,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-10-04T06:55:58+02:00"
   },
   {
@@ -2396,7 +2396,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "past",
+    "status": "expired",
     "lastCheckedAt": "2026-10-05T07:07:57+02:00"
   },
   {
@@ -2427,7 +2427,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "sold_out",
+    "status": "expired",
     "lastCheckedAt": "2026-10-06T07:01:47+02:00"
   },
   {
@@ -2458,8 +2458,132 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "confirmed",
+    "status": "expired",
     "lastCheckedAt": "2026-10-06T07:01:47+02:00"
+  },
+  {
+    "eventId": "hana-cernivec-i-cheat-time-tinta-2026",
+    "title": "Hana Černivec: I Cheat Time, a Voyeur of the Sleeping City",
+    "summary": "The Zine Vitrine exhibition opens at DobraVaga Gallery on 7 October at 19:00 and runs through 30 October. Admission is free; event-specific accessibility was not stated in the official listing checked.",
+    "category": "exhibition",
+    "startAt": "2026-10-07T19:00:00+02:00",
+    "endAt": "2026-10-30T19:00:00+01:00",
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "DobraVaga Gallery",
+      "address": "Adamič-Lundrovo nabrežje 5, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": 0,
+      "currency": "EUR",
+      "label": "Free admission",
+      "free": true
+    },
+    "ticketUrl": null,
+    "officialUrl": "https://www.kinosiska.si/en/",
+    "sourceName": "Kino Šiška",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-10-07T06:58:57+02:00"
+  },
+  {
+    "eventId": "kutiburger-untamed-nature-tinta-2026",
+    "title": "KUTIBURGER: (Un)tamed Nature",
+    "summary": "This TINTA group exhibition opens at DobraVaga Gallery on 7 October at 19:00 and continues through 5 December. Admission is free; the visual format is suitable for international visitors.",
+    "category": "exhibition",
+    "startAt": "2026-10-07T19:00:00+02:00",
+    "endAt": "2026-12-05T19:00:00+01:00",
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "DobraVaga Gallery",
+      "address": "Adamič-Lundrovo nabrežje 5, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": 0,
+      "currency": "EUR",
+      "label": "Free admission",
+      "free": true
+    },
+    "ticketUrl": null,
+    "officialUrl": "https://www.kinosiska.si/en/",
+    "sourceName": "Kino Šiška",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-10-07T06:58:57+02:00"
+  },
+  {
+    "eventId": "tinta-comics-festival-2026",
+    "title": "TINTA 2026 – Ljubljana Comics Festival",
+    "summary": "The 13th international comics festival runs at several Ljubljana venues from 7 to 11 October. Admission to the festival programme is free; individual workshops may have age or registration requirements.",
+    "category": "festival",
+    "startAt": "2026-10-07T19:00:00+02:00",
+    "endAt": "2026-10-11T23:00:00+02:00",
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Multiple venues",
+      "address": null,
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": 0,
+      "currency": "EUR",
+      "label": "Free admission",
+      "free": true
+    },
+    "ticketUrl": null,
+    "officialUrl": "https://www.kinosiska.si/en/dogodek/tinta-2026-festival-stripa-ljubljana/",
+    "sourceName": "Kino Šiška",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": true,
+    "accessibility": null,
+    "indoorOutdoor": "mixed",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-10-07T06:58:57+02:00"
+  },
+  {
+    "eventId": "ziga-sever-72-days-tinta-2026",
+    "title": "Žiga Sever: 72 Days",
+    "summary": "The Artist per Month exhibition opens at DobraVaga Gallery on 7 October at 19:00 and remains on view through 30 October. Admission is free and no language knowledge is needed for the exhibition.",
+    "category": "exhibition",
+    "startAt": "2026-10-07T19:00:00+02:00",
+    "endAt": "2026-10-30T19:00:00+01:00",
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "DobraVaga Gallery",
+      "address": "Adamič-Lundrovo nabrežje 5, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": 0,
+      "currency": "EUR",
+      "label": "Free admission",
+      "free": true
+    },
+    "ticketUrl": null,
+    "officialUrl": "https://www.kinosiska.si/en/",
+    "sourceName": "Kino Šiška",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-10-07T06:58:57+02:00"
   },
   {
     "eventId": "salome-mgl-2026-10-07",
@@ -2490,7 +2614,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-10-06T07:01:47+02:00"
+    "lastCheckedAt": "2026-10-07T06:58:57+02:00"
   },
   {
     "eventId": "man-overboard-mgl-2026-10-07",
@@ -2521,7 +2645,38 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "sold_out",
-    "lastCheckedAt": "2026-10-06T07:01:47+02:00"
+    "lastCheckedAt": "2026-10-07T06:58:57+02:00"
+  },
+  {
+    "eventId": "tinta-kutikuti-nonsense-comics-workshop-2026-10-08",
+    "title": "Kutikuti: Nonsense Comics Workshop",
+    "summary": "TINTA schedules this comics workshop for Thursday 8 October at 16:00. It is intended for participants aged 15 and over; registration, language and accessibility should be confirmed with the organiser.",
+    "category": "workshop",
+    "startAt": "2026-10-08T16:00:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Kino Šiška",
+      "address": "Trg prekomorskih brigad 3, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": null
+    },
+    "ticketUrl": "https://www.kinosiska.si/en/",
+    "officialUrl": "https://www.kinosiska.si/en/",
+    "sourceName": "Kino Šiška",
+    "languages": [],
+    "touristFriendly": null,
+    "familyFriendly": false,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-10-07T06:58:57+02:00"
   },
   {
     "eventId": "pc1-eternal-rest-cd-2026-10-08",
@@ -2739,6 +2894,37 @@ export const draftEvents = [
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
     "lastCheckedAt": "2026-09-30T07:01:22+02:00"
+  },
+  {
+    "eventId": "tinta-comics-fair-2026-10-10",
+    "title": "TINTA 2026 Comics Fair",
+    "summary": "The all-day comics fair begins at Kino Šiška on Saturday 10 October at 10:00. The festival lists free admission; the visual programme is visitor-friendly and forms the main Saturday gathering.",
+    "category": "fair",
+    "startAt": "2026-10-10T10:00:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Kino Šiška",
+      "address": "Trg prekomorskih brigad 3, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": 0,
+      "currency": "EUR",
+      "label": "Free admission",
+      "free": true
+    },
+    "ticketUrl": null,
+    "officialUrl": "https://www.kinosiska.si/en/dogodek/tinta-2026-festival-stripa-ljubljana/",
+    "sourceName": "Kino Šiška",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": true,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-10-07T06:58:57+02:00"
   },
   {
     "eventId": "flamenco-beyond-genre-cd-2026-10-10",
@@ -3082,6 +3268,37 @@ export const draftEvents = [
     "lastCheckedAt": "2026-10-06T07:01:47+02:00"
   },
   {
+    "eventId": "pussy-riot-riot-days-kino-siska-2026-10-14",
+    "title": "Pussy Riot: Riot Days + New Age Doom",
+    "summary": "Kino Šiška lists this concert for Wednesday 14 October at 20:00. Tickets are on sale; the price, age guidance and event-specific accessibility should be confirmed before booking.",
+    "category": "music",
+    "startAt": "2026-10-14T20:00:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Kino Šiška",
+      "address": "Trg prekomorskih brigad 3, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": false
+    },
+    "ticketUrl": "https://www.kinosiska.si/en/",
+    "officialUrl": "https://www.kinosiska.si/en/",
+    "sourceName": "Kino Šiška",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-10-07T06:58:57+02:00"
+  },
+  {
     "eventId": "stretch-3789-castle-2026",
     "title": "Stretch 3789",
     "summary": "Ljubljana Castle opens this spatial installation in the S Gallery on 15 October, with daily viewing from 09:00 to 18:00 through 31 January 2027. Admission and event-specific accessibility were not stated on the programme page checked.",
@@ -3111,6 +3328,37 @@ export const draftEvents = [
     "indoorOutdoor": "indoor",
     "status": "confirmed",
     "lastCheckedAt": "2026-10-05T07:07:57+02:00"
+  },
+  {
+    "eventId": "jimmy-barka-experience-kino-siska-2026-10-16",
+    "title": "Jimmy Barka Experience: Not Feeling So Good",
+    "summary": "The album-release concert is scheduled at Kino Šiška for Friday 16 October at 20:00. Tickets are on sale; exact price and event-specific accessibility were not stated in the listing checked.",
+    "category": "music",
+    "startAt": "2026-10-16T20:00:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Kino Šiška",
+      "address": "Trg prekomorskih brigad 3, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": false
+    },
+    "ticketUrl": "https://www.kinosiska.si/en/",
+    "officialUrl": "https://www.kinosiska.si/en/",
+    "sourceName": "Kino Šiška",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-10-07T06:58:57+02:00"
   },
   {
     "eventId": "sentido-project-castle-2026-10-16",
@@ -3206,6 +3454,37 @@ export const draftEvents = [
     "lastCheckedAt": "2026-10-06T07:01:47+02:00"
   },
   {
+    "eventId": "cellofest-peter-gregson-kino-siska-2026-10-18",
+    "title": "CelloFest Ljubljana 2026: Peter Gregson",
+    "summary": "Peter Gregson performs at Kino Šiška on Sunday 18 October at 20:00 as part of CelloFest Ljubljana. Tickets are on sale; music makes this suitable for international visitors.",
+    "category": "music",
+    "startAt": "2026-10-18T20:00:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Kino Šiška",
+      "address": "Trg prekomorskih brigad 3, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": false
+    },
+    "ticketUrl": "https://www.kinosiska.si/en/",
+    "officialUrl": "https://www.kinosiska.si/en/",
+    "sourceName": "Kino Šiška",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-10-07T06:58:57+02:00"
+  },
+  {
     "eventId": "romantic-souls-mgl-2026-10-19",
     "title": "Romantic Souls",
     "summary": "MGL schedules the pre-premiere of Ivan Cankar's Romantic Souls for Monday 19 October at 19:30 on the Main Stage. The English page confirms the performance and ticket availability but not the spoken language or event-specific accessibility.",
@@ -3237,6 +3516,37 @@ export const draftEvents = [
     "lastCheckedAt": "2026-10-05T07:07:57+02:00"
   },
   {
+    "eventId": "dub-pistols-kino-siska-2026-10-19",
+    "title": "Dub Pistols + Tare",
+    "summary": "Kino Šiška schedules Dub Pistols with Tare for Monday 19 October at 20:00. Tickets are on sale; the price, age guidance and accessibility should be checked before booking.",
+    "category": "nightlife",
+    "startAt": "2026-10-19T20:00:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Kino Šiška",
+      "address": "Trg prekomorskih brigad 3, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": false
+    },
+    "ticketUrl": "https://www.kinosiska.si/en/",
+    "officialUrl": "https://www.kinosiska.si/en/",
+    "sourceName": "Kino Šiška",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": false,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-10-07T06:58:57+02:00"
+  },
+  {
     "eventId": "prima-facie-mgl-2026-10-19",
     "title": "Prima Facie",
     "summary": "MGL lists Prima Facie for Monday 19 October at 20:00 on the Small Stage and marks the performance sold out. It remains in the calendar for status awareness, with no ticket availability implied.",
@@ -3266,5 +3576,129 @@ export const draftEvents = [
     "indoorOutdoor": "indoor",
     "status": "sold_out",
     "lastCheckedAt": "2026-10-05T07:07:57+02:00"
+  },
+  {
+    "eventId": "romantic-souls-mgl-2026-10-20",
+    "title": "Romantic Souls",
+    "summary": "MGL schedules the premiere of Romantic Souls for Tuesday 20 October at 20:00 on the Main Stage. Tickets are listed as available; spoken language and event-specific accessibility were not stated on the English schedule.",
+    "category": "theatre",
+    "startAt": "2026-10-20T20:00:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Main Stage, MGL",
+      "address": "Čopova ulica 14, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": false
+    },
+    "ticketUrl": "https://www.mgl.si/en/schedule/",
+    "officialUrl": "https://www.mgl.si/en/schedule/",
+    "sourceName": "MGL",
+    "languages": [],
+    "touristFriendly": null,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-10-07T06:58:57+02:00"
+  },
+  {
+    "eventId": "salome-mgl-2026-10-21",
+    "title": "Salome",
+    "summary": "MGL lists Salome on Wednesday 21 October at 19:30 on the Main Stage and marks it sold out. It remains in the calendar so visitors do not mistake it for an available performance.",
+    "category": "theatre",
+    "startAt": "2026-10-21T19:30:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Main Stage, MGL",
+      "address": "Čopova ulica 14, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": false
+    },
+    "ticketUrl": "https://www.mgl.si/en/schedule/",
+    "officialUrl": "https://www.mgl.si/en/schedule/",
+    "sourceName": "MGL",
+    "languages": [],
+    "touristFriendly": null,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "sold_out",
+    "lastCheckedAt": "2026-10-07T06:58:57+02:00"
+  },
+  {
+    "eventId": "jet-black-diamonds-kino-siska-2026-10-21",
+    "title": "Jet Black Diamonds: New Album Release",
+    "summary": "Kino Šiška lists the album-release concert for Wednesday 21 October at 20:00. Tickets are on sale; price and event-specific accessibility should be checked before booking.",
+    "category": "music",
+    "startAt": "2026-10-21T20:00:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Kino Šiška",
+      "address": "Trg prekomorskih brigad 3, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": false
+    },
+    "ticketUrl": "https://www.kinosiska.si/en/",
+    "officialUrl": "https://www.kinosiska.si/en/",
+    "sourceName": "Kino Šiška",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-10-07T06:58:57+02:00"
+  },
+  {
+    "eventId": "prima-facie-mgl-2026-10-21",
+    "title": "Prima Facie",
+    "summary": "MGL lists Prima Facie on Wednesday 21 October at 20:00 on the Small Stage and marks it sold out. No ticket availability is implied.",
+    "category": "theatre",
+    "startAt": "2026-10-21T20:00:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Small Stage, MGL",
+      "address": "Čopova ulica 14, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": false
+    },
+    "ticketUrl": "https://www.mgl.si/en/schedule/",
+    "officialUrl": "https://www.mgl.si/en/schedule/",
+    "sourceName": "MGL",
+    "languages": [],
+    "touristFriendly": null,
+    "familyFriendly": null,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "sold_out",
+    "lastCheckedAt": "2026-10-07T06:58:57+02:00"
   }
 ];
