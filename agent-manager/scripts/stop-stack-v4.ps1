@@ -1,5 +1,11 @@
 $ErrorActionPreference="SilentlyContinue"
-$ports=@(8787,8000,8790)
+$home=[Environment]::GetEnvironmentVariable("COLIBRI_HOME","User")
+if($home -and (Test-Path (Join-Path $home "c\coli"))){
+  Push-Location $home
+  & py -3 c\coli stop 2>$null | Out-Null
+  Pop-Location
+}
+$ports=@(8787,8000)
 foreach($port in $ports){
   Get-NetTCPConnection -State Listen -LocalPort $port -ErrorAction SilentlyContinue |
     Select-Object -ExpandProperty OwningProcess -Unique |
