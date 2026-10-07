@@ -76,12 +76,18 @@ class GmailV4:
 
         from googleapiclient.discovery import build
 
+        service = build("gmail", "v1", credentials=self._credentials(), cache_discovery=False)
+        profile = service.users().getProfile(userId="me").execute()
+        sender = str(profile.get("emailAddress") or "").strip()
+        if not sender:
+            raise RuntimeError("Could not determine authenticated Gmail sender address.")
+
         msg = EmailMessage()
+        msg["From"] = sender
         msg["To"] = to
         msg["Subject"] = subject
         msg.set_content(body)
         raw = base64.urlsafe_b64encode(msg.as_bytes()).decode("ascii")
-        service = build("gmail", "v1", credentials=self._credentials(), cache_discovery=False)
         sent = service.users().messages().send(userId="me", body={"raw": raw}).execute()
         return str(sent.get("id", ""))
 
