@@ -245,6 +245,50 @@ class ManagedAgentSupervisorV4:
         except Exception as exc:
             return {"ok": False, "stage": "dispatch", "summary": str(exc)}
 
+    def save_target(self, payload: dict[str, Any]) -> ManagedTarget:
+        allowed_adapters = {"", "project_visibility_restart", "bloglab_self_heal"}
+        target = ManagedTarget(**payload)
+        if target.kind not in {"http", "github_repo", "hybrid"}:
+            raise ValueError("kind must be http, github_repo, or hybrid")
+        if target.repair_adapter not in allowed_adapters:
+            raise ValueError("repair_adapter is not allowed")
+        if target.kind in {"http", "hybrid"} and not target.health_url:
+            raise ValueError("health_url is required for http/hybrid targets")
+        if target.kind in {"github_repo", "hybrid"} and not target.repo:
+            raise ValueError("repo is required for github_repo/hybrid targets")
+        data = {"version": 1, "targets": []}
+        if self.config_path.exists():
+            data = json.loads(self.config_path.read_text(encoding="utf-8"))
+        rows = data.setdefault("targets", [])
+        replaced = False
+        for i, row in enumerate(rows):
+            if row.get("id") == target.id:
+                rows[i] = target.__dict__
+                replaced = True
+                break
+        if not replaced:
+            rows.append(target.__dict__)
+        self.config_path.parent.mkdir(parents=True, exist_ok=True)
+        tmp = self.config_path.with_suffix(self.config_path.suffix + ".tmp")
+        tmp.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        tmp.replace(self.config_path)
+        return target
+
+    def remove_target(self, target_id: str) -> bool:
+        if not self.config_path.exists():
+            return False
+        data = json.loads(self.config_path.read_text(encoding="utf-8"))
+        rows = data.get("targets", [])
+        kept = [row for row in rows if row.get("id") != target_id]
+        if len(kept) == len(rows):
+            return False
+        data["targets"] = kept
+        tmp = self.config_path.with_suffix(self.config_path.suffix + ".tmp")
+        tmp.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        tmp.replace(self.config_path)
+        self.store.execute("DELETE FROM managed_target_status WHERE target_id=?", (target_id,))
+        return True
+
     def status_rows(self) -> list[dict[str, Any]]:
         rows = self.store.query("SELECT * FROM managed_target_status ORDER BY name")
         for row in rows:
