@@ -31,14 +31,34 @@ class MaintenanceLoopV4:
         loop_id = uuid.uuid4().hex[:10]
         targets = await self.supervisor.check_all()
         providers = await self.ai.status()
+        diagnoses = await self._auto_diagnose_open_incidents()
         self.last = {
             "loop_id": loop_id,
             "targets": targets,
             "ai_providers": providers,
+            "automatic_diagnoses": diagnoses,
         }
         self.store.heartbeat("maintenance-v4", "running", loop_id)
         self.store.event("MAINTENANCE_CYCLE", "maintenance-v4", "info", self.last)
         return self.last
+
+    async def _auto_diagnose_open_incidents(self) -> list[dict[str, Any]]:
+        rows = self.store.query(
+            "SELECT * FROM incidents WHERE status!='resolved' AND severity IN ('P0','P1') ORDER BY last_seen DESC LIMIT 5"
+        )
+        out: list[dict[str, Any]] = []
+        for incident in rows:
+            done = self.store.query(
+                "SELECT id FROM actions WHERE actor='maintenance-v4' AND action='ai_diagnosis' AND target=? LIMIT 1",
+                (incident["id"],),
+            )
+            if done:
+                continue
+            try:
+                out.append({"incident_id": incident["id"], **(await self.diagnose_incident(incident))})
+            except Exception as exc:
+                self.store.event("AI_DIAGNOSIS_FAILED", "maintenance-v4", "warning", {"incident_id": incident["id"], "error": str(exc)})
+        return out
 
     async def diagnose_incident(self, incident: dict[str, Any]) -> dict[str, Any]:
         system = (
