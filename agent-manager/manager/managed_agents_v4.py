@@ -28,6 +28,7 @@ class ManagedTarget:
     workflows: list[str] | None = None
     repair_adapter: str = ""
     local_root_env: str = ""
+    process_match: str = ""
 
 
 class ManagedAgentSupervisorV4:
@@ -68,6 +69,8 @@ class ManagedAgentSupervisorV4:
     async def check(self, target: ManagedTarget) -> dict[str, Any]:
         if target.kind == "http":
             return await self._check_http(target)
+        if target.kind == "process":
+            return self._check_process(target)
         if target.kind == "github_repo":
             return await self._check_github(target)
         if target.kind == "hybrid":
@@ -81,6 +84,24 @@ class ManagedAgentSupervisorV4:
                 "github": gh_result,
             }
         return {"id": target.id, "name": target.name, "ok": False, "error": f"Unknown target kind: {target.kind}"}
+
+    def _check_process(self, target: ManagedTarget) -> dict[str, Any]:
+        if not target.process_match:
+            return {"id": target.id, "name": target.name, "ok": False, "error": "process_match is required"}
+        try:
+            import psutil
+            needle = target.process_match.lower()
+            matches = []
+            for proc in psutil.process_iter(["pid","name","cmdline"]):
+                try:
+                    hay = " ".join([str(proc.info.get("name") or "")] + list(proc.info.get("cmdline") or [])).lower()
+                    if needle in hay:
+                        matches.append({"pid": proc.info["pid"], "name": proc.info.get("name"), "cmdline": (proc.info.get("cmdline") or [])[:8]})
+                except Exception:
+                    pass
+            return {"id": target.id, "name": target.name, "ok": bool(matches), "process_match": target.process_match, "matches": matches[:20]}
+        except Exception as exc:
+            return {"id": target.id, "name": target.name, "ok": False, "error": str(exc)}
 
     async def _check_http(self, target: ManagedTarget) -> dict[str, Any]:
         start = time.perf_counter()
@@ -252,14 +273,16 @@ class ManagedAgentSupervisorV4:
     def save_target(self, payload: dict[str, Any]) -> ManagedTarget:
         allowed_adapters = {"", "project_visibility_restart", "bloglab_self_heal"}
         target = ManagedTarget(**payload)
-        if target.kind not in {"http", "github_repo", "hybrid"}:
-            raise ValueError("kind must be http, github_repo, or hybrid")
+        if target.kind not in {"http", "github_repo", "hybrid", "process"}:
+            raise ValueError("kind must be http, github_repo, hybrid, or process")
         if target.repair_adapter not in allowed_adapters:
             raise ValueError("repair_adapter is not allowed")
         if target.kind in {"http", "hybrid"} and not target.health_url:
             raise ValueError("health_url is required for http/hybrid targets")
         if target.kind in {"github_repo", "hybrid"} and not target.repo:
             raise ValueError("repo is required for github_repo/hybrid targets")
+        if target.kind == "process" and not target.process_match:
+            raise ValueError("process_match is required for process targets")
         data = {"version": 1, "targets": []}
         if self.config_path.exists():
             data = json.loads(self.config_path.read_text(encoding="utf-8"))
