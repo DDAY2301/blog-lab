@@ -2,8 +2,11 @@ $ErrorActionPreference="Stop"
 
 # Do not use $home here: PowerShell treats variable names case-insensitively,
 # so $home collides with the built-in read-only $HOME variable.
+$managerRoot=Split-Path $PSScriptRoot -Parent
 $colibriHome=[Environment]::GetEnvironmentVariable("COLIBRI_HOME","User")
-if(-not $colibriHome){ $colibriHome="$env:LOCALAPPDATA\AgentManager\colibri-src" }
+if(-not $colibriHome -or -not (Test-Path $colibriHome)){
+  $colibriHome=Join-Path $managerRoot "data\colibri-src"
+}
 
 if(-not (Test-Path (Join-Path $colibriHome "c\coli"))){
   Write-Host "Colibri STANDBY: official control script not installed." -ForegroundColor Yellow

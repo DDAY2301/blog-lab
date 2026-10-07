@@ -1,9 +1,15 @@
 param(
-  [string]$InstallDir = "$env:LOCALAPPDATA\AgentManager\colibri-src",
+  [string]$InstallDir = "",
   [ValidateSet("ask","engine-only","decision","recommended")]
   [string]$Mode = "ask"
 )
 $ErrorActionPreference = "Stop"
+
+$managerRoot=Split-Path $PSScriptRoot -Parent
+if(-not $InstallDir){
+  # Keep Colibri inside the existing Agent Manager installation.
+  $InstallDir=Join-Path $managerRoot "data\colibri-src"
+}
 
 function Require([string]$Name,[string]$Hint) {
   if (-not (Get-Command $Name -ErrorAction SilentlyContinue)) { throw "$Name is required. $Hint" }
@@ -14,6 +20,7 @@ Require "py" "Install Python 3.12 and reopen PowerShell."
 $release=Invoke-RestMethod "https://api.github.com/repos/JustVugg/colibri/releases/latest" -Headers @{"User-Agent"="AgentManagerV4"}
 $tag=$release.tag_name
 Write-Host "Colibri latest stable: $tag" -ForegroundColor Cyan
+Write-Host "Installing inside existing Agent Manager: $InstallDir" -ForegroundColor Cyan
 
 if (-not (Test-Path (Join-Path $InstallDir ".git"))) {
   New-Item -ItemType Directory -Force (Split-Path $InstallDir -Parent) | Out-Null
@@ -62,13 +69,12 @@ $occupied=Get-NetTCPConnection -State Listen -LocalPort 8790 -ErrorAction Silent
 if($occupied){ throw "Port 8790 is already in use. Stop the conflicting process before configuring Colibri." }
 
 if($Mode -eq "decision"){
-  $managerRoot=Split-Path $PSScriptRoot -Parent
   $managerPy=Join-Path $managerRoot ".venv\Scripts\python.exe"
   if(-not (Test-Path $managerPy)){ throw "Agent Manager Python environment is required before installing Laya." }
 
-  $modelDir="$env:LOCALAPPDATA\AgentManager\models\laya"
+  $modelDir=Join-Path $managerRoot "data\models\laya"
   New-Item -ItemType Directory -Force $modelDir | Out-Null
-  Write-Host "Installing Hugging Face downloader into the Agent Manager venv..."
+  Write-Host "Installing Hugging Face downloader into the existing Agent Manager venv..."
   & $managerPy -m pip install --disable-pip-version-check "huggingface_hub>=0.35,<2"
   if($LASTEXITCODE -ne 0){ throw "Could not install huggingface_hub." }
 
@@ -87,7 +93,7 @@ snapshot_download(
     ],
 )
 '@
-  Write-Host "Downloading Colibri Laya decision checkpoint (~842 MB)..."
+  Write-Host "Downloading Colibri Laya decision checkpoint (~842 MB) into existing Manager data..."
   & $managerPy -c $pyCode
   if($LASTEXITCODE -ne 0){ throw "Laya checkpoint download failed." }
 
@@ -99,12 +105,13 @@ snapshot_download(
 
   [Environment]::SetEnvironmentVariable("AGENT_MANAGER_COLIBRI_PROFILE","decision-laya","User")
   [Environment]::SetEnvironmentVariable("COLIBRI_MODEL","laya","User")
+  [Environment]::SetEnvironmentVariable("COLIBRI_MODEL_PATH",$modelDir,"User")
 
   $os=Get-CimInstance Win32_OperatingSystem
   $freeGB=[math]::Round(($os.FreePhysicalMemory * 1KB) / 1GB,2)
-  Write-Host "Laya configured. Current free RAM: $freeGB GB." -ForegroundColor Green
+  Write-Host "Laya configured inside existing Agent Manager. Current free RAM: $freeGB GB." -ForegroundColor Green
   if($freeGB -lt 2.2){
-    Write-Warning "Keep Colibri in STANDBY until at least ~2.2 GB RAM is free. Manager will continue with Ollama meanwhile."
+    Write-Warning "Colibri will stay STANDBY until at least ~2.2 GB RAM is free. Ollama remains active meanwhile."
   }else{
     Write-Host "Enough free RAM detected for the lightweight decision engine."
   }
@@ -122,5 +129,5 @@ if($Mode -eq "recommended"){
   if($LASTEXITCODE -ne 0){ Pop-Location; throw "Colibri setup failed. Run coli logs --install." }
   Pop-Location
   [Environment]::SetEnvironmentVariable("AGENT_MANAGER_COLIBRI_PROFILE","generative","User")
-  Write-Host "Colibri recommended generative model configured." -ForegroundColor Green
+  Write-Host "Colibri recommended generative model configured inside existing Agent Manager." -ForegroundColor Green
 }
