@@ -58,7 +58,7 @@ jobs:
       - name: Scan manager files for obvious committed credentials
         shell: bash
         run: |
-          if git grep -I -n -E "(ghp_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|sk-[A-Za-z0-9_-]{20,})" -- agent-manager; then
+          if git grep -I -n -E "(ghp_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|sk-[A-Za-z0-9_-]{20,})" -- .; then
             echo "Credential-like material detected in Agent Manager."
             exit 1
           fi
