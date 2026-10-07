@@ -173,6 +173,9 @@ class ManagedTargetInput(BaseModel):
     repair_adapter: str = ""
     local_root_env: str = ""
     process_match: str = ""
+    executable: str = ""
+    arguments: list[str] | None = None
+    working_dir: str = ""
     interval_seconds: int = 60
 
 
