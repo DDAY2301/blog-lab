@@ -29,6 +29,9 @@ class ManagedTarget:
     repair_adapter: str = ""
     local_root_env: str = ""
     process_match: str = ""
+    executable: str = ""
+    arguments: list[str] | None = None
+    working_dir: str = ""
     interval_seconds: int = 60
 
 
@@ -261,6 +264,8 @@ class ManagedAgentSupervisorV4:
             return self._restart_project_visibility(target)
         if adapter == "bloglab_self_heal":
             return self._dispatch_bloglab_self_heal(target)
+        if adapter == "local_process_restart":
+            return self._restart_local_process(target)
         return {"ok": False, "stage": "unsupported", "summary": f"No safe repair adapter registered for {adapter}"}
 
     def _restart_project_visibility(self, target: ManagedTarget) -> dict[str, Any]:
@@ -354,6 +359,62 @@ class ManagedAgentSupervisorV4:
             "pid": child.pid,
         }
 
+    def _restart_local_process(self, target: ManagedTarget) -> dict[str, Any]:
+        if target.kind != "process":
+            return {"ok": False, "stage": "policy", "summary": "local_process_restart is only valid for process targets."}
+        if self._check_process(target).get("ok"):
+            return {"ok": True, "stage": "already_running", "summary": f"{target.name} is already running."}
+
+        exe = Path(target.executable).expanduser()
+        if not exe.is_absolute() or not exe.exists() or not exe.is_file():
+            return {"ok": False, "stage": "config", "summary": "A valid absolute executable path is required."}
+
+        workdir = Path(target.working_dir).expanduser() if target.working_dir else exe.parent
+        if not workdir.is_absolute() or not workdir.exists() or not workdir.is_dir():
+            return {"ok": False, "stage": "config", "summary": "A valid absolute working directory is required."}
+
+        args = target.arguments or []
+        if not isinstance(args, list) or not all(isinstance(x, str) for x in args):
+            return {"ok": False, "stage": "config", "summary": "arguments must be a list of strings."}
+
+        flags = getattr(subprocess, "CREATE_NO_WINDOW", 0) | getattr(subprocess, "DETACHED_PROCESS", 0)
+        try:
+            child = subprocess.Popen(
+                [str(exe), *args],
+                cwd=str(workdir),
+                env=os.environ.copy(),
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL,
+                creationflags=flags,
+                shell=False,
+            )
+        except Exception as exc:
+            return {"ok": False, "stage": "start", "summary": str(exc)}
+
+        deadline = time.time() + 15
+        while time.time() < deadline:
+            if child.poll() is not None:
+                return {
+                    "ok": False,
+                    "stage": "verify",
+                    "summary": f"Process exited with code {child.returncode}.",
+                }
+            check = self._check_process(target)
+            if check.get("ok"):
+                return {
+                    "ok": True,
+                    "stage": "verified_restart",
+                    "summary": f"{target.name} restarted and process match recovered.",
+                    "pid": child.pid,
+                }
+            time.sleep(0.5)
+        return {
+            "ok": False,
+            "stage": "verify",
+            "summary": "Process started but the configured process match did not recover within 15 seconds.",
+            "pid": child.pid,
+        }
+
     def _dispatch_bloglab_self_heal(self, target: ManagedTarget) -> dict[str, Any]:
         gh = shutil.which("gh")
         if not gh:
@@ -375,7 +436,7 @@ class ManagedAgentSupervisorV4:
             return {"ok": False, "stage": "dispatch", "summary": str(exc)}
 
     def save_target(self, payload: dict[str, Any]) -> ManagedTarget:
-        allowed_adapters = {"", "project_visibility_restart", "bloglab_self_heal"}
+        allowed_adapters = {"", "project_visibility_restart", "bloglab_self_heal", "local_process_restart"}
         target = ManagedTarget(**payload)
         if target.kind not in {"http", "github_repo", "hybrid", "process"}:
             raise ValueError("kind must be http, github_repo, hybrid, or process")
@@ -388,6 +449,16 @@ class ManagedAgentSupervisorV4:
             raise ValueError("repo is required for github_repo/hybrid targets")
         if target.kind == "process" and not target.process_match:
             raise ValueError("process_match is required for process targets")
+        if target.repair_adapter == "local_process_restart":
+            if target.kind != "process":
+                raise ValueError("local_process_restart is only valid for process targets")
+            exe = Path(target.executable).expanduser()
+            if not exe.is_absolute():
+                raise ValueError("local_process_restart requires an absolute executable path")
+            if target.working_dir and not Path(target.working_dir).expanduser().is_absolute():
+                raise ValueError("working_dir must be absolute")
+            if target.arguments is not None and not all(isinstance(x, str) for x in target.arguments):
+                raise ValueError("arguments must be a list of strings")
         data = {"version": 1, "targets": []}
         if self.config_path.exists():
             data = json.loads(self.config_path.read_text(encoding="utf-8"))
