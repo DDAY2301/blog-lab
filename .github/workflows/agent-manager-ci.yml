@@ -2,7 +2,7 @@ name: Agent Manager CI
 
 on:
   pull_request:
-    branches: [main, agent-manager-v1]
+    branches: [main, agent-manager-v1, feature/agent-manager-v3]
     paths:
       - "agent-manager/**"
       - ".github/workflows/agent-manager-ci.yml"
