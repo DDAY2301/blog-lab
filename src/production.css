@@ -1,6 +1,5 @@
 /* Public production shell: editorial tools live behind the private Cloudflare terminal. */
 #new-article-button,
-.site-header nav button:nth-child(2),
 .article-end .secondary {
   display: none !important;
 }

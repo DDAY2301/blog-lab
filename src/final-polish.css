@@ -1,0 +1,49 @@
+/* Final BlogLab Slovenia visual polish */
+.tourism-site .site-header{min-height:72px;box-shadow:0 10px 32px rgba(3,18,12,.12);border-bottom-color:rgba(236,241,229,.10)}
+.tourism-site .brand{color:#F6F5ED;transition:opacity .18s ease,transform .18s ease}
+.tourism-site .brand:hover{opacity:.92;transform:translateY(-1px)}
+.tourism-site .brand-mark{box-shadow:0 7px 18px rgba(0,0,0,.17),inset 0 1px 0 rgba(255,255,255,.34)}
+.tourism-site .site-header nav{gap:4px}
+.tourism-site .site-header nav button{min-height:38px;padding:8px 11px;border:1px solid transparent;border-radius:999px;font-size:12.5px;font-weight:720;transition:.16s ease}
+.tourism-site .site-header nav button:hover{transform:translateY(-1px);border-color:rgba(255,255,255,.08)}
+.tourism-site .site-header nav button.active{border-color:rgba(221,231,211,.18);background:rgba(255,255,255,.13);box-shadow:inset 0 1px 0 rgba(255,255,255,.06)}
+.tourism-site .events-jump{min-height:40px;border-radius:999px;padding-inline:15px;border:1px solid rgba(240,196,115,.22);background:rgba(12,45,31,.76);color:#F6F4EB}
+.tourism-site .hero{min-height:600px;padding:clamp(94px,10vw,132px) max(5vw,calc((100vw - 1160px)/2)) clamp(82px,8vw,108px)}
+.tourism-site .hero h1{max-width:900px;margin:20px 0 24px;text-wrap:balance}
+.tourism-site .hero p{max-width:690px;font-size:clamp(17px,1.6vw,20px)}
+.tourism-site .hero .primary{min-height:50px;padding-inline:22px;border-radius:14px;border:1px solid rgba(255,255,255,.13)}
+.tourism-site .hero .primary .icon{transition:transform .18s ease}
+.tourism-site .hero .primary:hover .icon{transform:translateX(3px)}
+.tourism-site .ad-leaderboard-wrap{padding-top:22px}
+.tourism-site .ad-leaderboard-wrap .ad-slot{min-height:82px;border-color:rgba(225,232,213,.18);background:rgba(8,30,20,.42);color:rgba(239,241,232,.58)}
+.tourism-site .home-content{margin-top:30px;border-radius:32px}
+.tourism-site .section-heading{align-items:end;gap:20px}
+.tourism-site .section-heading h2{max-width:760px;text-wrap:balance}
+.tourism-site .section-heading .count{display:inline-flex;align-items:center;min-height:30px;padding:0 11px;border:1px solid rgba(231,236,221,.13);border-radius:999px;background:rgba(255,255,255,.045);font-size:11px;font-weight:760}
+.tourism-site .live-pulse,.tourism-site .events-pulse{border-radius:22px}
+.tourism-site .live-pulse-head{padding:17px 17px 14px}
+.tourism-site .live-pulse-list{padding:7px 9px 9px}
+.tourism-site .event-pulse-item{margin:2px 0;padding:12px 10px 13px;border-radius:12px;transition:.16s ease}
+.tourism-site .event-pulse-item:hover{transform:translateX(2px)}
+.tourism-site .post-grid{gap:24px}
+.tourism-site .post-card{border-radius:22px;transition:transform .2s cubic-bezier(.2,.7,.2,1),box-shadow .2s ease,border-color .2s ease}
+.tourism-site .post-card.featured{min-height:360px}
+.tourism-site .post-card .card-art{min-height:220px}
+.tourism-site .post-card.featured .card-art{min-height:360px}
+.tourism-site .post-card .meta{align-items:center}
+.tourism-site .post-card .meta span:first-child{display:inline-flex;align-items:center;min-height:25px;padding:0 9px;border-radius:999px;background:rgba(199,177,132,.14);color:#80663D}
+.tourism-site .post-card h3{text-wrap:balance;letter-spacing:-.018em}
+.tourism-site .post-card p{color:#657067}
+.tourism-site .post-card:focus-visible{outline:3px solid rgba(185,200,169,.72);outline-offset:4px}
+.tourism-site .category-empty-state{border-style:solid;box-shadow:0 18px 48px rgba(3,18,12,.11),inset 0 1px 0 rgba(255,255,255,.74)}
+.tourism-site .article-page--premium{margin-top:34px;margin-bottom:58px;border:1px solid rgba(215,217,208,.82);border-radius:34px;overflow:clip;box-shadow:0 30px 90px rgba(3,18,12,.18)}
+.tourism-site .article-back{display:inline-flex;align-items:center;min-height:38px;padding:0 13px;border:1px solid rgba(23,58,42,.13);border-radius:999px;background:rgba(255,255,255,.70)}
+.tourism-site .article-page>.article-hero{border-radius:26px;box-shadow:0 20px 54px rgba(19,38,28,.10)}
+.tourism-site .article-page>.article-hero img{width:100%;aspect-ratio:16/9;max-height:600px;object-fit:cover}
+.tourism-site .article-body p{color:#324038}
+.tourism-site .article-body h2{color:#1C3528}
+.tourism-site>footer{padding-top:34px;padding-bottom:34px}
+.tourism-site>footer>span:first-child{color:#F4F2E9;font-size:20px}
+@media(max-width:900px){.tourism-site .hero{min-height:540px;padding-left:24px;padding-right:24px}.tourism-site .post-card .card-art,.tourism-site .post-card.featured .card-art{min-height:230px}}
+@media(max-width:650px){.tourism-site .events-jump{min-height:36px;padding-inline:11px;font-size:11px}.tourism-site .hero{min-height:500px;padding:76px 20px 66px}.tourism-site .hero h1{font-size:clamp(44px,13vw,58px)}.tourism-site .home-content{border-radius:22px}.tourism-site .post-grid{gap:16px}.tourism-site .post-card,.tourism-site .post-card.featured{border-radius:18px}.tourism-site .post-card .card-art,.tourism-site .post-card.featured .card-art{min-height:0;height:auto;aspect-ratio:16/9}.tourism-site .card-copy,.tourism-site .featured .card-copy{padding:23px 21px}.tourism-site .post-card h3,.tourism-site .featured h3{font-size:27px}.tourism-site .article-page--premium{width:calc(100% - 16px);margin-top:14px;margin-bottom:28px;border-radius:22px}}
+@media(hover:none){.tourism-site .post-card:hover,.tourism-site .event-pulse-item:hover,.tourism-site .brand:hover,.tourism-site .site-header nav button:hover{transform:none}}
