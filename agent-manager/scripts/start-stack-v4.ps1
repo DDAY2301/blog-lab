@@ -1,6 +1,14 @@
 $ErrorActionPreference="Stop"
 Set-Location (Split-Path $PSScriptRoot -Parent)
 
+# Conservative local inference defaults keep the 24/7 stack stable on 8 GB-class Windows PCs.
+$env:OLLAMA_MAX_LOADED_MODELS="1"
+$env:OLLAMA_NUM_PARALLEL="1"
+$env:OLLAMA_KEEP_ALIVE="60s"
+$env:OLLAMA_FAST_KEEP_ALIVE="60s"
+$env:AGENT_MANAGER_CONTEXT="8192"
+$env:AGENT_MANAGER_OLLAMA_KEEP_ALIVE="60s"
+
 function Port-Up([int]$Port) {
   return [bool](Get-NetTCPConnection -State Listen -LocalPort $Port -ErrorAction SilentlyContinue | Select-Object -First 1)
 }
