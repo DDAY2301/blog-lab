@@ -100,9 +100,17 @@ class MaintenanceLoopV4:
         )
         for incident in rows:
             incident_id = str(incident["id"])
+            occurrence_cutoff = incident.get("resolved_at") or incident.get("first_seen") or ""
             done = self.store.query(
-                "SELECT id FROM actions WHERE actor='maintenance-v4' AND action='ai_diagnosis' AND target=? LIMIT 1",
-                (incident_id,),
+                """
+                SELECT id FROM actions
+                WHERE actor='maintenance-v4'
+                  AND action='ai_diagnosis'
+                  AND target=?
+                  AND ts>=?
+                LIMIT 1
+                """,
+                (incident_id, occurrence_cutoff),
             )
             if done:
                 continue
