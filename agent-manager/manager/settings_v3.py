@@ -21,6 +21,10 @@ class SettingsV3:
     gmail_enabled: bool = _bool("GMAIL_REPORTING_ENABLED", False)
     gmail_token_file: Path = Path(os.getenv("GMAIL_OAUTH_TOKEN_FILE", "./data/gmail-token.json")).expanduser()
     report_to: str = os.getenv("REPORT_TO_EMAIL", "").strip()
+    maintenance_interval: int = max(30, int(os.getenv("AGENT_MANAGER_MAINTENANCE_INTERVAL", "60")))
+    ai_priority: str = os.getenv("AGENT_MANAGER_AI_PRIORITY", "colibri,ollama")
+    colibri_base_url: str = os.getenv("COLIBRI_BASE_URL", "http://127.0.0.1:8790/v1")
+    colibri_model: str = os.getenv("COLIBRI_MODEL", "").strip()
     def roots(self) -> list[Path]:
         vals=[x.strip() for x in self.roots_raw.split(os.pathsep) if x.strip()]
         if self.pv_root.strip() and self.pv_root.strip() not in vals: vals.insert(0,self.pv_root.strip())
