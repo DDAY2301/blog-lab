@@ -111,7 +111,8 @@ class MaintenanceLoopV4:
     async def _triage_one(self, target: dict[str, Any]) -> None:
         state = str(target)[:8000]
         try:
-            decision = await asyncio.wait_for(self.ai.triage(state), timeout=12.0)
+            triage_timeout = max(30.0, float(os.getenv("AGENT_MANAGER_COLIBRI_TRIAGE_TIMEOUT", "120")))
+            decision = await asyncio.wait_for(self.ai.triage(state), timeout=triage_timeout)
         except asyncio.TimeoutError:
             self.store.event(
                 "COLIBRI_TRIAGE_TIMEOUT",
