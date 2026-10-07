@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-07T19:09:10+02:00",
-  "loop_count": 3610,
+  "updated_at": "2026-10-07T19:24:01+02:00",
+  "loop_count": 3611,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-07T19:08:39+02:00",
+      "last_learning_run": "2026-10-07T19:23:41+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -58,11 +58,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 105355,
-          "last_seen": "2026-10-07T19:08:39+02:00",
-          "last_title": "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
+          "seen": 105364,
+          "last_seen": "2026-10-07T19:23:41+02:00",
+          "last_title": "Slovenija proti Danski danes odpira svoje nastope na letošnjem evropskem prvenstvu - Šport TV",
           "last_provider": "google-news-si",
-          "published": 185937,
+          "published": 186011,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,7 +227,7 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 8,
+      "current_source_count": 9,
       "example_titles": {
         "news.google.com": [
           "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-07T19:08:55+02:00",
+      "last_learning_run": "2026-10-07T19:23:51+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -271,11 +271,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 105910,
-          "last_seen": "2026-10-07T19:08:55+02:00",
+          "seen": 105927,
+          "last_seen": "2026-10-07T19:23:51+02:00",
           "last_title": "Pirc Musar: Mala zmaga za neko politično opcijo, pa hkrati velik poraz za državo - Delo.si",
           "last_provider": "google-news-si",
-          "published": 203692,
+          "published": 203778,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -356,17 +356,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 18,
+      "current_source_count": 17,
       "example_titles": {
         "news.google.com": [
           "Odnosi z Izraelom: diplomacija ne sme biti izgovor za normalizacijo zločinov - Dnevnik",
           "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
-          "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si"
+          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-07T19:09:10+02:00",
+      "last_learning_run": "2026-10-07T19:24:01+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -421,21 +421,21 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 106295,
-          "last_seen": "2026-10-07T19:09:10+02:00",
+          "seen": 106318,
+          "last_seen": "2026-10-07T19:24:01+02:00",
           "last_title": "Naša dežela bo danes razdeljena na srečneže na soncu in nas ostale v loncu - Dnevnik",
           "last_provider": "google-news-si",
-          "published": 191565,
+          "published": 191621,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 3587,
+          "published": 3588,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 3587,
+          "published": 3588,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
@@ -445,27 +445,27 @@
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 3512,
+          "published": 3513,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 3576,
+          "published": 3577,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 3512,
+          "published": 3513,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 3512,
+          "published": 3513,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 3576,
+          "published": 3577,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
@@ -480,22 +480,22 @@
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 3587,
+          "published": 3588,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 7088,
+          "published": 7090,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 3544,
+          "published": 3545,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 7152,
+          "published": 7154,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
@@ -505,12 +505,12 @@
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 3512,
+          "published": 3513,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 7088,
+          "published": 7090,
           "last_output_id": "duckduckgo-287dab86"
         },
         "slovenia.info": {
