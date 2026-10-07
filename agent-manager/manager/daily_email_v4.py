@@ -22,6 +22,13 @@ class DailyEmailReporterV4:
         )
         return bool(rows)
 
+    def _already_queued_today(self, day: str) -> bool:
+        rows = self.store.query(
+            "SELECT id FROM email_queue WHERE kind='daily_status' AND created_at LIKE ? AND status IN ('pending','sent') LIMIT 1",
+            (day + "%",),
+        )
+        return bool(rows)
+
     def _render(self, report: dict[str, Any]) -> str:
         lines = [
             "AGENT MANAGER V4 - DAILY STATUS",
@@ -68,7 +75,7 @@ class DailyEmailReporterV4:
         if now.hour < self.hour:
             return False
         day = now.date().isoformat()
-        if self._already_sent_today(day):
+        if self._already_sent_today(day) or self._already_queued_today(day):
             return False
 
         body = self._render(report)
