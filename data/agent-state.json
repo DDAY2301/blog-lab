@@ -1,20 +1,18 @@
 {
-  "last_success": "2026-10-06T19:59:01+02:00",
+  "last_success": "2026-10-07T08:24:37+02:00",
   "last_failure": "2026-09-21T20:56:52+02:00",
   "consecutive_failures": 0,
-  "posts_date": "2026-10-06",
-  "posts_today": 3,
-  "last_output": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3",
+  "posts_date": "2026-10-07",
+  "posts_today": 1,
+  "last_output": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d",
   "last_error": null,
   "agent_version": "2.7.0",
-  "current_category": "aktualno",
-  "scheduled_posts_today": 3,
+  "current_category": "sport",
+  "scheduled_posts_today": 1,
   "manual_posts_today": 0,
   "writer_mode": "local_evidence_ai",
   "scheduled_slots_done": [
-    "2026-10-06|08:17|sport",
-    "2026-10-06|13:27|politika",
-    "2026-10-06|19:43|aktualno"
+    "2026-10-07|08:17|sport"
   ],
   "scheduled_slots_deferred": [],
   "last_editorial_hold": null,

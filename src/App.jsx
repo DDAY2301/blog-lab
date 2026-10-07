@@ -20,6 +20,44 @@ const CATEGORIES = ["Šport", "Politika", "Aktualno", "Novice", "Projekti", "Mne
 
 const starterArticles = [
   {
+    "id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d",
+    "title": "Kakšna tekma, kakšna zmaga Slovenije! Selektor: Zelo sem ponosen",
+    "excerpt": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Kakšna tekma, kakšna zmaga Slovenije! Selektor: Zelo sem ponosen«.",
+    "seoDescription": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Kakšna tekma, kakšna zmaga Slovenije! Selektor: Zelo sem ponosen«.",
+    "content": "**Šport, 7. 10. 2026.** Kakšna tekma, kakšna zmaga Slovenije! Selektor: Zelo sem ponosen Žurnal24\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Žurnal24. Objavljeno: Tue, 06 Oct 2026 20:17:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMihwFBVV95cUxNQm91eU1EYmxQRGlEWEJROV95YkhHMnJ6NktMemp2c3p2dElheWlvUkpmSmtYVFJNT3lhRzdQMmVpakxNV3FDWFllTlNFZVhzOFRobzREYVZBd0RINENaMWRzSnhWRnF1ZlFNaE13S09IM2dzLUw5UVUyQzA0Nzh1Z1lGdC1XcFXSAYIBQVVfeXFMTTBGeFZwU282M1lqVXdPcC1USGlvU2NFQ1ZwWEdzQ3o0M094ZjFvZS1qMkVPM19hNG0yUmsycmRPdWtWOUhmSE1jamd2aEQ1elYyengxU2ItbmdjODE4ZXdUYm00LU5PRm9oZnZyNlFnNU8tR1hQUUxVb3BXTmVKTXJsQQ?oc=5)\n\n## Dopolnitev vira 2: 24ur.com\n\nGanec? Slovenec? Irec? 'Med poletji sem bil v Sloveniji tudi po dva meseca' 24ur.com\n\n Vir: 24ur.com. Objavljeno: Wed, 07 Oct 2026 04:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMibkFVX3lxTE9UbUp0dWZOdmg4enpBd2wxSGpqN3VjMUVGWGZGSlZvdkxBTEM1b2MwdWJkb2ZFbENkUlRHMjhGay16T01uUEM5WFNyRVMxaEpybzJxdjBhOHpaSXJ3V3NMSktRWTRKdTFscm5wRDdB?oc=5)\n\n## Dopolnitev vira 3: Šport TV\n\nKljub porazu v Švici selektor prepričan: “To je bila dobra Slovenija” Šport TV\n\n Vir: Šport TV. Objavljeno: Sun, 04 Oct 2026 18:32:44 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMilgFBVV95cUxOZTJqOFQwSUFMaUU4Nm9tcERLV3pVVW44Z1pnOGx6M2M4T1FNeFplTS0tQXhaX0xOcXZMMzA1Z0IxMzVpbmtuSlJITDEzR1hmSlNkaThsSTBCMTlHSFpMZmU5YWc1NlBrTnBFTVBqdHhhT0Q3LVVtZm1YZEt6VjNnemJzbGswUm5TWnVqYTQzMEE2ME1tTUE?oc=5)\n\n## Dopolnitev vira 4: Delo.si\n\nNasmejani selektor poslal opozorilo: Tudi Šeško ima resno konkurenco! Delo.si\n\n Vir: Delo.si. Objavljeno: Tue, 06 Oct 2026 22:08:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiowFBVV95cUxPUkYwX2U3UGNoajdyVWNsdU5HaEJ4al92aHhFanE3bERIek9tMGctTzBfbVFuRGV1ZGh4TzBWTFlMMVJMUTRCeDdOZW51Znd0ZUZGZnFFVm8zZ3Bpd2lGeG12UE5FQURtWTNfZmU0N0h3N3pmQVRvZjczN3pMMnFrdmRFTVlDdHp3ZWFRb3g0eFFCZ01vejNCNUwxNFVBOWhsUkJn?oc=5)\n\n## Dopolnitev vira 5: Večer\n\nZaključek EP z vrhuncem za Slovenijo: So se pri Rogliču zmotili? Večer\n\n Vir: Večer. Objavljeno: Wed, 07 Oct 2026 03:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiiAFBVV95cUxNYlFNNGxFS1pjWWZ2LVFjRlVfSDluY056YjdoU3dJOGY4Z3ZkbG44OTQ5VG9hTVU2bE53b3h2YjFnc1ZHUXJaY0ZicFgyOUJrZkdOaE5Gcjc0MjludVVkcGJweG5scGx2WnhHa1Q2TFBwSkFaZmg5YWRHYUV4MDhpR1F6RUJfdEdx?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Šport",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Žurnal24 — Kakšna tekma, kakšna zmaga Slovenije! Selektor: Zelo sem ponosen - Žurnal24",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNQm91eU1EYmxQRGlEWEJROV95YkhHMnJ6NktMemp2c3p2dElheWlvUkpmSmtYVFJNT3lhRzdQMmVpakxNV3FDWFllTlNFZVhzOFRobzREYVZBd0RINENaMWRzSnhWRnF1ZlFNaE13S09IM2dzLUw5UVUyQzA0Nzh1Z1lGdC1XcFXSAYIBQVVfeXFMTTBGeFZwU282M1lqVXdPcC1USGlvU2NFQ1ZwWEdzQ3o0M094ZjFvZS1qMkVPM19hNG0yUmsycmRPdWtWOUhmSE1jamd2aEQ1elYyengxU2ItbmdjODE4ZXdUYm00LU5PRm9oZnZyNlFnNU8tR1hQUUxVb3BXTmVKTXJsQQ?oc=5"
+      },
+      {
+        "label": "24ur.com — Ganec? Slovenec? Irec? 'Med poletji sem bil v Sloveniji tudi po dva meseca' - 24ur.com",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9UbUp0dWZOdmg4enpBd2wxSGpqN3VjMUVGWGZGSlZvdkxBTEM1b2MwdWJkb2ZFbENkUlRHMjhGay16T01uUEM5WFNyRVMxaEpybzJxdjBhOHpaSXJ3V3NMSktRWTRKdTFscm5wRDdB?oc=5"
+      },
+      {
+        "label": "Šport TV — Kljub porazu v Švici selektor prepričan: “To je bila dobra Slovenija” - Šport TV",
+        "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOZTJqOFQwSUFMaUU4Nm9tcERLV3pVVW44Z1pnOGx6M2M4T1FNeFplTS0tQXhaX0xOcXZMMzA1Z0IxMzVpbmtuSlJITDEzR1hmSlNkaThsSTBCMTlHSFpMZmU5YWc1NlBrTnBFTVBqdHhhT0Q3LVVtZm1YZEt6VjNnemJzbGswUm5TWnVqYTQzMEE2ME1tTUE?oc=5"
+      },
+      {
+        "label": "Delo.si — Nasmejani selektor poslal opozorilo: Tudi Šeško ima resno konkurenco! - Delo.si",
+        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPUkYwX2U3UGNoajdyVWNsdU5HaEJ4al92aHhFanE3bERIek9tMGctTzBfbVFuRGV1ZGh4TzBWTFlMMVJMUTRCeDdOZW51Znd0ZUZGZnFFVm8zZ3Bpd2lGeG12UE5FQURtWTNfZmU0N0h3N3pmQVRvZjczN3pMMnFrdmRFTVlDdHp3ZWFRb3g0eFFCZ01vejNCNUwxNFVBOWhsUkJn?oc=5"
+      },
+      {
+        "label": "Večer — Zaključek EP z vrhuncem za Slovenijo: So se pri Rogliču zmotili? - Večer",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNYlFNNGxFS1pjWWZ2LVFjRlVfSDluY056YjdoU3dJOGY4Z3ZkbG44OTQ5VG9hTVU2bE53b3h2YjFnc1ZHUXJaY0ZicFgyOUJrZkdOaE5Gcjc0MjludVVkcGJweG5scGx2WnhHa1Q2TFBwSkFaZmg5YWRHYUV4MDhpR1F6RUJfdEdx?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-07T08:24:37+02:00",
+    "updatedAt": "2026-10-07T08:24:37+02:00"
+  },
+
+  {
     "id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3",
     "title": "Je Igor E. Bergant na TV Slovenija namerno zlorabil programski čas za prikrito propagando?",
     "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Je Igor E. Bergant na TV Slovenija namerno zlorabil programski čas za prikrito propagando?«.",
