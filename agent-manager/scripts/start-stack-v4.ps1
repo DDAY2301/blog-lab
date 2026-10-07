@@ -20,10 +20,9 @@ function Start-Ollama {
 }
 
 function Start-Colibri {
-  if (Port-Up 8790) { return }
-  $model=[Environment]::GetEnvironmentVariable("COLIBRI_MODEL_PATH","User")
-  if (-not $model) { return }
   & "$PSScriptRoot\start-colibri.ps1"
+  $url=[Environment]::GetEnvironmentVariable("COLIBRI_BASE_URL","User")
+  if($url){ $env:COLIBRI_BASE_URL=$url }
 }
 
 function Start-ProjectVisibility {
