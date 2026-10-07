@@ -29,6 +29,7 @@ class ManagedTarget:
     repair_adapter: str = ""
     local_root_env: str = ""
     process_match: str = ""
+    interval_seconds: int = 60
 
 
 class ManagedAgentSupervisorV4:
@@ -39,6 +40,8 @@ class ManagedAgentSupervisorV4:
         self.notify = NotificationCenterV4(store)
         self._failure_counts: dict[str, int] = {}
         self._last_repair: dict[str, float] = {}
+        self._last_check: dict[str, float] = {}
+        self._cached: dict[str, dict[str, Any]] = {}
         self.repair_cooldown = max(300, int(os.getenv("AGENT_MANAGER_REPAIR_COOLDOWN", "1800")))
 
     def targets(self) -> list[ManagedTarget]:
@@ -57,10 +60,19 @@ class ManagedAgentSupervisorV4:
     async def check_all(self) -> list[dict[str, Any]]:
         results: list[dict[str, Any]] = []
         for target in self.targets():
+            now = time.time()
+            interval = max(30, int(target.interval_seconds or 60))
+            if target.id in self._cached and now - self._last_check.get(target.id, 0) < interval:
+                result = dict(self._cached[target.id])
+                result["cached"] = True
+                results.append(result)
+                continue
             try:
                 result = await self.check(target)
             except Exception as exc:
                 result = {"id": target.id, "name": target.name, "ok": False, "error": str(exc)}
+            self._last_check[target.id] = now
+            self._cached[target.id] = dict(result)
             results.append(result)
             self._persist(target, result)
             await self._incident_and_repair(target, result)
@@ -277,6 +289,7 @@ class ManagedAgentSupervisorV4:
             raise ValueError("kind must be http, github_repo, hybrid, or process")
         if target.repair_adapter not in allowed_adapters:
             raise ValueError("repair_adapter is not allowed")
+        target.interval_seconds = max(30, min(int(target.interval_seconds or 60), 3600))
         if target.kind in {"http", "hybrid"} and not target.health_url:
             raise ValueError("health_url is required for http/hybrid targets")
         if target.kind in {"github_repo", "hybrid"} and not target.repo:
