@@ -343,7 +343,9 @@ def infer_mode(command: str) -> str:
         return "article"
     return "site"
 
-DEFAULT_SCHEDULE_TIMES = ("07:35", "10:45", "13:30", "16:20", "19:10")
+TOURISM_SCHEDULE_TIMES = ("07:35", "10:45", "13:30", "16:20", "19:10")
+LEGACY_SCHEDULE_TIMES = ("08:17", "13:27", "19:43")
+DEFAULT_SCHEDULE_TIMES = TOURISM_SCHEDULE_TIMES
 
 def _explicit_schedule_times(text: str) -> list[str]:
     found = []
@@ -363,16 +365,21 @@ def control_command(command: str) -> None:
     schedule_requested = _schedule_intent(low)
     requested_daily_count = _requested_daily_count(low)
     explicit_times = _explicit_schedule_times(low)
-    if requested_daily_count is not None and requested_daily_count != 5:
+    legacy_schedule_requested = (
+        requested_daily_count == 3
+        or tuple(explicit_times) == LEGACY_SCHEDULE_TIMES
+        or ("kot na začetku" in low and schedule_requested)
+    )
+    if requested_daily_count is not None and requested_daily_count not in {3, 5}:
         print(
             f"CONTROL_UNSUPPORTED requested {requested_daily_count} objav na dan. "
-            "Trenutni turistični scheduler podpira 5 objav na dan ob 07:35 / 10:45 / 13:30 / 16:20 / 19:10.",
+            "Podprta sta turistični urnik 5x dnevno in združljivi klasični urnik 3x dnevno.",
             file=sys.stderr,
         )
         raise SystemExit(64)
     if "vsako uro" in low or "na vsako uro" in low:
         print(
-            "CONTROL_UNSUPPORTED urni scheduler ni omogočen; podprt je 5x-dnevni turistični urnik.",
+            "CONTROL_UNSUPPORTED urni scheduler ni omogočen; podprta sta 5x-dnevni turistični in 3x-dnevni klasični urnik.",
             file=sys.stderr,
         )
         raise SystemExit(64)
@@ -394,14 +401,18 @@ def control_command(command: str) -> None:
             f"schedule={json.dumps(schedule, ensure_ascii=False, separators=(',', ':'))}"
         )
         return
-    if schedule_requested and explicit_times and tuple(explicit_times) != DEFAULT_SCHEDULE_TIMES:
-        print(
-            "CONTROL_UNSUPPORTED custom schedule requested: "
-            + ", ".join(explicit_times)
-            + ". Podprt je preverjeni turistični urnik 07:35 / 10:45 / 13:30 / 16:20 / 19:10 Europe/Ljubljana.",
-            file=sys.stderr,
-        )
-        raise SystemExit(64)
+    if schedule_requested and explicit_times:
+        requested_times = tuple(explicit_times)
+        if requested_times not in {TOURISM_SCHEDULE_TIMES, LEGACY_SCHEDULE_TIMES}:
+            print(
+                "CONTROL_UNSUPPORTED custom schedule requested: "
+                + ", ".join(explicit_times)
+                + ". Podprta sta preverjena urnika 07:35 / 10:45 / 13:30 / 16:20 / 19:10 "
+                  "in 08:17 / 13:27 / 19:43 Europe/Ljubljana.",
+                file=sys.stderr,
+            )
+            raise SystemExit(64)
+        legacy_schedule_requested = requested_times == LEGACY_SCHEDULE_TIMES
 
     if any(x in low for x in ["ustavi", "zaustavi", "izklopi", "pause", "pavza", "deaktiviraj"]):
         ctl["enabled"] = False
@@ -419,17 +430,28 @@ def control_command(command: str) -> None:
         ctl["publish_mode"] = "automatic"
 
     if schedule_requested:
-        ctl["schedule_profile"] = "slovenia-tourism-5x-daily"
-        ctl["schedule"] = {
-            "timezone": "Europe/Ljubljana",
-            "slots": [
-                {"time": "07:35", "category": "kolesarstvo"},
-                {"time": "10:45", "category": "dediscina"},
-                {"time": "13:30", "category": "sezonsko"},
-                {"time": "16:20", "category": "gore"},
-                {"time": "19:10", "category": "gourmet"},
-            ],
-        }
+        if legacy_schedule_requested:
+            ctl["schedule_profile"] = "default-3x-daily"
+            ctl["schedule"] = {
+                "timezone": "Europe/Ljubljana",
+                "slots": [
+                    {"time": "08:17", "category": "sport"},
+                    {"time": "13:27", "category": "politika"},
+                    {"time": "19:43", "category": "aktualno"},
+                ],
+            }
+        else:
+            ctl["schedule_profile"] = "slovenia-tourism-5x-daily"
+            ctl["schedule"] = {
+                "timezone": "Europe/Ljubljana",
+                "slots": [
+                    {"time": "07:35", "category": "kolesarstvo"},
+                    {"time": "10:45", "category": "dediscina"},
+                    {"time": "13:30", "category": "sezonsko"},
+                    {"time": "16:20", "category": "gore"},
+                    {"time": "19:10", "category": "gourmet"},
+                ],
+            }
 
     write_json(CONTROL, ctl)
     print(
