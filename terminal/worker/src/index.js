@@ -551,8 +551,8 @@ function unwrapAiObject(value, depth = 0) {
   return value;
 }
 
-function parseAiJsonText(value) {
-  if (typeof value !== "string" || !value.trim()) return null;
+function parseAiJsonText(value, depth = 0) {
+  if (typeof value !== "string" || !value.trim() || depth > 3) return null;
   const cleaned = value
     .trim()
     .replace(/^\`\`\`(?:json)?\s*/i, "")
@@ -567,43 +567,73 @@ function parseAiJsonText(value) {
   for (const text of [...new Set(attempts)]) {
     try {
       const decoded = JSON.parse(text);
-      if (decoded && typeof decoded === "object" && !Array.isArray(decoded)) return decoded;
+      if (typeof decoded === "string") {
+        const nested = parseAiJsonText(decoded, depth + 1);
+        if (nested) return nested;
+      }
+      if (decoded && typeof decoded === "object") return decoded;
     } catch {}
   }
   return null;
 }
 
-function articleJsonFromAiResult(result) {
-  // Parse textual model output first. Otherwise a provider envelope with a
-  // string `response` can be mistaken for the final application payload.
-  const textCandidates = [
-    result?.response,
-    result?.response?.content,
-    result?.response?.text,
-    result?.choices?.[0]?.message?.content,
-    result?.choices?.[0]?.text,
-    result?.content,
-    result?.text,
-  ];
-  for (const value of textCandidates) {
+function isAiApplicationPayload(value) {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return false;
+  if (value.skip === true) return true;
+  if (Array.isArray(value.edits)) return true;
+  if (Object.prototype.hasOwnProperty.call(value, "pass")) return true;
+  const hasTitle = typeof value.title === "string" && value.title.trim().length > 0;
+  const hasContent = typeof value.content === "string" && value.content.trim().length > 0;
+  if (hasTitle && hasContent) return true;
+  if (!Object.prototype.hasOwnProperty.call(value, "role") && (hasTitle || hasContent) && Array.isArray(value.sources)) return true;
+  return false;
+}
+
+function findAiApplicationPayload(value, depth = 0, seen = new Set()) {
+  if (value == null || depth > 8) return null;
+
+  if (typeof value === "string") {
     const decoded = parseAiJsonText(value);
-    if (!decoded) continue;
-    const parsed = unwrapAiObject(decoded);
-    if (parsed) return parsed;
+    return decoded ? findAiApplicationPayload(decoded, depth + 1, seen) : null;
   }
 
-  const objectCandidates = [
-    result?.response,
-    result?.choices?.[0]?.message,
-    result?.article,
-    result?.plan,
-    result,
+  if (Array.isArray(value)) {
+    for (const item of value) {
+      const found = findAiApplicationPayload(item, depth + 1, seen);
+      if (found) return found;
+    }
+    return null;
+  }
+
+  if (typeof value !== "object") return null;
+  if (seen.has(value)) return null;
+  seen.add(value);
+
+  if (isAiApplicationPayload(value)) return value;
+
+  const priorityKeys = [
+    "article", "plan", "result", "data", "output", "response",
+    "message", "choices", "content", "text", "answer", "output_text"
   ];
-  for (const value of objectCandidates) {
-    const parsed = unwrapAiObject(value);
-    if (parsed) return parsed;
+  for (const key of priorityKeys) {
+    if (!(key in value)) continue;
+    const found = findAiApplicationPayload(value[key], depth + 1, seen);
+    if (found) return found;
+  }
+
+  // Last-resort traversal covers provider-specific wrappers without coupling
+  // the production parser to a single model SDK response shape. Deliberately
+  // ignore reasoning fields: they are never application payloads.
+  for (const [key, nested] of Object.entries(value)) {
+    if (priorityKeys.includes(key) || key === "reasoning" || key === "reasoning_content") continue;
+    const found = findAiApplicationPayload(nested, depth + 1, seen);
+    if (found) return found;
   }
   return null;
+}
+
+function articleJsonFromAiResult(result) {
+  return findAiApplicationPayload(result);
 }
 
 function looksLikeArticle(article) {
