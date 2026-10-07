@@ -236,6 +236,8 @@ main{max-width:1450px;margin:auto;padding:28px}.top{display:flex;justify-content
 pre{white-space:pre-wrap;word-break:break-word;color:#bed0df;max-height:420px;overflow:auto}
 h1{margin:0}h3{margin-top:0;color:#fff}.muted{color:#8ea3b5}
 button{background:#1e6f50;color:#fff;border:0;border-radius:10px;padding:9px 12px;cursor:pointer}
+input,select{width:100%;box-sizing:border-box;background:#0d151e;color:#eef5fb;border:1px solid #2d4356;border-radius:9px;padding:9px;margin:5px 0 9px}
+label{font-size:12px;color:#9db0bf}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.wide{grid-column:1/-1}.msg{font-size:13px;color:#9fdcb8;margin-top:8px}
 </style>
 </head>
 <body><main>
@@ -244,7 +246,19 @@ button{background:#1e6f50;color:#fff;border:0;border-radius:10px;padding:9px 12p
 <div class="grid">
 <div class="card"><h3>Health</h3><pre id="health">loading</pre></div>
 <div class="card"><h3>AI Providers</h3><pre id="providers">loading</pre></div>
-<div class="card"><h3>Managed Agents</h3><pre id="agents">loading</pre></div>
+<div class="card"><h3>Managed Agents</h3><pre id="agents">loading</pre>
+<details><summary>Add / update monitored agent</summary>
+<div class="formgrid" style="margin-top:10px">
+<div><label>ID</label><input id="a_id" placeholder="my-agent"></div>
+<div><label>Name</label><input id="a_name" placeholder="My Agent"></div>
+<div><label>Type</label><select id="a_kind"><option value="http">HTTP health</option><option value="github_repo">GitHub workflows</option><option value="hybrid">Hybrid</option><option value="process">Local process</option></select></div>
+<div><label>Check interval (sec)</label><input id="a_interval" type="number" min="30" max="3600" value="60"></div>
+<div class="wide"><label>Health URL</label><input id="a_url" placeholder="http://127.0.0.1:9000/health"></div>
+<div><label>GitHub repo</label><input id="a_repo" placeholder="owner/repo"></div>
+<div><label>Branch</label><input id="a_branch" value="main"></div>
+<div class="wide"><label>Process contains</label><input id="a_process" placeholder="agent.py or executable name"></div>
+<div class="wide"><button onclick="saveAgent()">Save monitored agent</button><div id="agentmsg" class="msg"></div></div>
+</div></details></div>
 <div class="card"><h3>Incidents</h3><pre id="incidents">loading</pre></div>
 <div class="card"><h3>Notifications</h3><pre id="notifications">loading</pre></div>
 <div class="card"><h3>System Map</h3><pre id="map">loading</pre></div>
@@ -253,6 +267,24 @@ button{background:#1e6f50;color:#fff;border:0;border-radius:10px;padding:9px 12p
 <script>
 async function j(u){return(await fetch(u)).json()}
 async function post(u){await fetch(u,{method:'POST'});setTimeout(refresh,700)}
+async function saveAgent(){
+ const id=document.getElementById('a_id').value.trim();
+ const name=document.getElementById('a_name').value.trim();
+ if(!id||!name){document.getElementById('agentmsg').textContent='ID and name are required.';return}
+ const body={
+  id,name,kind:document.getElementById('a_kind').value,enabled:true,
+  health_url:document.getElementById('a_url').value.trim(),
+  repo:document.getElementById('a_repo').value.trim(),
+  branch:document.getElementById('a_branch').value.trim()||'main',
+  workflows:null,repair_adapter:'',local_root_env:'',
+  process_match:document.getElementById('a_process').value.trim(),
+  interval_seconds:Number(document.getElementById('a_interval').value||60)
+ };
+ const r=await fetch('/managed-agents/'+encodeURIComponent(id),{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
+ let d={};try{d=await r.json()}catch{}
+ document.getElementById('agentmsg').textContent=r.ok?'Saved. Monitoring begins automatically.':(d.detail||'Could not save target.');
+ if(r.ok) setTimeout(refresh,500);
+}
 async function refresh(){
  for(const [id,u] of [['health','/health'],['providers','/providers'],['agents','/managed-agents'],['incidents','/incidents'],['notifications','/notifications'],['map','/system-map']]){
   try{document.getElementById(id).textContent=JSON.stringify(await j(u),null,2)}
