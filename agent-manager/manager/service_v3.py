@@ -251,6 +251,7 @@ label{font-size:12px;color:#9db0bf}.formgrid{display:grid;grid-template-columns:
 <div class="top"><div><h1>Agent Manager V4</h1><div class="muted">24/7 maintenance · Colibri/Ollama · Project Visibility · BlogLab</div></div><div class="badge">LOCAL CONTROL CENTER</div></div>
 <div style="margin-top:14px"><button onclick="refresh()">Refresh</button> <button onclick="post('/maintenance/run-once')">Run maintenance now</button></div>
 <div class="grid">
+<div class="card"><h3>Operations Summary</h3><pre id="summary">loading</pre></div>
 <div class="card"><h3>Health</h3><pre id="health">loading</pre></div>
 <div class="card"><h3>AI Providers</h3><pre id="providers">loading</pre></div>
 <div class="card"><h3>Managed Agents</h3><pre id="agents">loading</pre>
@@ -293,7 +294,7 @@ async function saveAgent(){
  if(r.ok) setTimeout(refresh,500);
 }
 async function refresh(){
- for(const [id,u] of [['health','/health'],['providers','/providers'],['agents','/managed-agents'],['incidents','/incidents'],['notifications','/notifications'],['map','/system-map']]){
+ for(const [id,u] of [['summary','/summary'],['health','/health'],['providers','/providers'],['agents','/managed-agents'],['incidents','/incidents'],['notifications','/notifications'],['map','/system-map']]){
   try{document.getElementById(id).textContent=JSON.stringify(await j(u),null,2)}
   catch(e){document.getElementById(id).textContent=String(e)}
  }
