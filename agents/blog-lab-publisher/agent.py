@@ -202,6 +202,23 @@ def manual_topic_alignment_errors(topic: str, article: dict, source_items: list[
 
 def now(): return datetime.now(ZoneInfo("Europe/Ljubljana"))
 def control(): return load_json(str(CONTROL), {"enabled": True, "publish_mode": "automatic"})
+
+def normalize_current_schedule_counter(state: dict) -> dict:
+    """Count only successful slots that belong to the currently active schedule."""
+    ctl = control()
+    schedule = ctl.get("schedule") or {}
+    slots = schedule.get("slots") or []
+    today = now().date().isoformat()
+    valid_ids = {
+        f"{today}|{str(slot.get('time') or '').strip()}|{str(slot.get('category') or '').strip()}"
+        for slot in slots
+        if str(slot.get("time") or "").strip() and str(slot.get("category") or "").strip()
+    }
+    done = set(state.get("scheduled_slots_done") or [])
+    current_done = [slot_id for slot_id in done if slot_id in valid_ids]
+    state["scheduled_posts_today"] = len(current_done)
+    return state
+
 def enabled(cfg): return cfg.get("enabled", True) and control().get("enabled", True) and os.getenv("AGENT_ENABLED", "true").lower() == "true"
 def set_status(cfg, state, value, message="", output=None):
     atomic_json(str(STATUS), {
@@ -554,6 +571,8 @@ def prepare_article_candidate(
         if fallback_image:
             article["heroImage"] = fallback_image
     article = apply_article_template(article, resolved_category, topic)
+    if output_category.strip():
+        article["category"] = output_category.strip()[:40]
     return article
 
 
@@ -608,6 +627,7 @@ def main():
     state.setdefault("scheduled_slots_done", [])
     state.setdefault("scheduled_slots_deferred", [])
     state.setdefault("last_editorial_hold", None)
+    state = normalize_current_schedule_counter(state)
     state["current_category"] = args.category
     manual_request = bool(args.manual or args.topic.strip())
     if not enabled(cfg): set_status(cfg, state, "paused", "Agent je izklopljen."); print("AGENT_DISABLED"); return 0
