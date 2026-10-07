@@ -79,6 +79,18 @@ class ColibriClient:
                 error=str(exc),
             )
 
+    async def system_one(self, state: str, questions: dict[str, Any]) -> dict[str, Any]:
+        model = await self.choose_model()
+        body = {"model": model, "state": state, "questions": questions}
+        async with httpx.AsyncClient(timeout=self.timeout) as client:
+            r = await client.post(
+                f"{self.base_url}/systemone",
+                headers=self._headers(),
+                json=body,
+            )
+            r.raise_for_status()
+            return r.json()
+
     async def chat_json(self, system: str, user: str) -> tuple[str, dict]:
         model = await self.choose_model()
         body = {
@@ -151,6 +163,36 @@ class AIRouterV4:
             "ollama": o.__dict__,
             "priority": self.priority,
         }
+
+    async def triage(self, state: str) -> dict[str, Any] | None:
+        if self._fail_until.get("colibri", 0) > time.time():
+            return None
+        questions = {
+            "severity": {
+                "type": "choice",
+                "instructions": "How severe is this operational incident?",
+                "criteria": {
+                    "P0": "system-wide outage, data corruption, or security emergency",
+                    "P1": "critical service unavailable or repeated unrecovered failure",
+                    "P2": "degraded service with a workaround or noncritical component failure",
+                    "P3": "minor issue or maintenance concern"
+                }
+            },
+            "action": {
+                "type": "choice",
+                "instructions": "Which safe response family fits best?",
+                "criteria": {
+                    "observe": "collect more evidence without changing the system",
+                    "restart": "restart a reversible local service or worker",
+                    "self_heal": "invoke an existing tested self-heal workflow",
+                    "human": "human approval or credentials are required"
+                }
+            }
+        }
+        try:
+            return await self.colibri.system_one(state, questions)
+        except Exception:
+            return None
 
     async def chat_json(self, system: str, user: str) -> tuple[str, dict]:
         now = time.time()
