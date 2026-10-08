@@ -112,6 +112,9 @@ function Start-ProjectVisibility {
   $env:OLLAMA_MODEL=$env:PROJECT_VISIBILITY_MODEL
   if (Test-Path $secret) { $env:APP_SECRET=(Get-Content $secret -Raw).Trim() }
   $env:VISUAL_QA_VISION="false"
+  $fleetToken=[Environment]::GetEnvironmentVariable("FLEET_LOCAL_TOKEN","User")
+  if(-not $fleetToken){ $fleetToken=[Environment]::GetEnvironmentVariable("PV_FLEET_TOKEN","User") }
+  if($fleetToken){ $env:PV_FLEET_TOKEN=$fleetToken }
   Start-Process $py -ArgumentList @("-m","uvicorn","api.server:app","--host","127.0.0.1","--port","8000") -WorkingDirectory $root -WindowStyle Hidden
   Start-Sleep -Seconds 3
 }
@@ -169,11 +172,44 @@ function Start-Manager {
   }
 }
 
+function Start-RemoteControl {
+  try {
+    & "$PSScriptRoot\start-remote-v4.ps1"
+  } catch {
+    Write-Warning "Fleet Remote startup failed: $($_.Exception.Message)"
+  }
+}
+
+function Start-FleetTunnel {
+  $config=[Environment]::GetEnvironmentVariable("FLEET_TUNNEL_CONFIG","User")
+  if(-not $config -or -not (Test-Path $config)){ return }
+
+  $existing=Get-CimInstance Win32_Process -ErrorAction SilentlyContinue |
+    Where-Object { $_.Name -like "cloudflared*" -and $_.CommandLine -match [regex]::Escape($config) } |
+    Select-Object -First 1
+  if($existing){ return }
+
+  $cloudflared=Get-Command cloudflared -ErrorAction SilentlyContinue
+  if(-not $cloudflared){
+    $candidate="C:\Program Files (x86)\cloudflared\cloudflared.exe"
+    if(Test-Path $candidate){ $cloudflared=Get-Item $candidate }
+  }
+  if(-not $cloudflared){
+    Write-Warning "Fleet tunnel config exists but cloudflared is not installed."
+    return
+  }
+  $cf=if($cloudflared.Source){$cloudflared.Source}else{$cloudflared.FullName}
+  Start-Process $cf -ArgumentList @("tunnel","--config",$config,"run") -WindowStyle Hidden
+  Start-Sleep -Seconds 2
+}
+
 Import-GitHubAuth
 Start-Ollama
 Start-Colibri
 Start-ProjectVisibility
 Start-Manager
+Start-RemoteControl
+Start-FleetTunnel
 & "$PSScriptRoot\start-watchdog-v4.ps1"
 
 Write-Host ""
@@ -182,7 +218,8 @@ foreach($item in @(
   @{n="Ollama";p=11434},
   @{n="Colibri";p=8790},
   @{n="Project Visibility";p=8000},
-  @{n="Agent Manager";p=8787}
+  @{n="Agent Manager";p=8787},
+  @{n="Fleet Remote";p=8788}
 )){
   $state=if(Port-Up $item.p){"UP"}else{"STANDBY/OFF"}
   Write-Host ("{0,-20} {1,-12} port {2}" -f $item.n,$state,$item.p)
@@ -191,4 +228,9 @@ if (Port-Up 8787) {
   $health=Get-ManagerHealth
   Write-Host ("Manager version: {0}" -f $health.version) -ForegroundColor Green
   Write-Host "Dashboard: http://127.0.0.1:8787/control" -ForegroundColor Green
+  if(Port-Up 8788){
+    Write-Host "Fleet Remote: http://127.0.0.1:8788" -ForegroundColor Green
+    $hostName=[Environment]::GetEnvironmentVariable("FLEET_REMOTE_HOSTNAME","User")
+    if($hostName){ Write-Host ("Remote URL: https://"+$hostName) -ForegroundColor Green }
+  }
 }

@@ -68,11 +68,15 @@ def main() -> None:
     last_reconcile = 0.0
     log("watchdog_started", pid=os.getpid(), interval=CHECK_INTERVAL)
     while True:
-        if healthy("http://127.0.0.1:8787/health"):
+        manager_ok = healthy("http://127.0.0.1:8787/health")
+        remote_expected = bool(os.getenv("FLEET_REMOTE_PASSWORD") or os.getenv("FLEET_TUNNEL_CONFIG"))
+        remote_ok = (not remote_expected) or healthy("http://127.0.0.1:8788/health")
+
+        if manager_ok and remote_ok:
             failures = 0
         else:
             failures += 1
-            log("manager_probe_failed", consecutive=failures)
+            log("stack_probe_failed", consecutive=failures, manager_ok=manager_ok, remote_ok=remote_ok)
             if failures >= FAIL_THRESHOLD and time.time() - last_reconcile >= COOLDOWN:
                 if reconcile():
                     last_reconcile = time.time()
