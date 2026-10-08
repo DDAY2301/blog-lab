@@ -25,6 +25,7 @@ CREATE TABLE IF NOT EXISTS command_steps(job_id TEXT NOT NULL,step_id TEXT NOT N
 CREATE TABLE IF NOT EXISTS artifacts(id TEXT PRIMARY KEY,source TEXT NOT NULL,source_id TEXT,filename TEXT NOT NULL,mime_type TEXT NOT NULL,size_bytes INTEGER NOT NULL,sha256 TEXT NOT NULL,local_path TEXT NOT NULL,created_at TEXT NOT NULL,metadata TEXT NOT NULL DEFAULT '{}');
 CREATE INDEX IF NOT EXISTS idx_artifacts_source ON artifacts(source,source_id);
 CREATE INDEX IF NOT EXISTS idx_command_jobs_source ON command_jobs(source,source_id);
+CREATE TABLE IF NOT EXISTS agent_capabilities(id TEXT PRIMARY KEY,name TEXT NOT NULL,description TEXT NOT NULL,capabilities TEXT NOT NULL DEFAULT '[]',artifact_support TEXT NOT NULL DEFAULT '[]',command_examples TEXT NOT NULL DEFAULT '[]',max_parallel INTEGER NOT NULL DEFAULT 1,dispatch_kind TEXT NOT NULL DEFAULT 'http',command_url TEXT NOT NULL DEFAULT '',token_env TEXT NOT NULL DEFAULT '',token_header TEXT NOT NULL DEFAULT 'authorization',token_prefix TEXT NOT NULL DEFAULT 'Bearer ',enabled INTEGER NOT NULL DEFAULT 1,updated_at TEXT NOT NULL);
 """
 def utcnow()->str: return datetime.now(timezone.utc).isoformat()
 
