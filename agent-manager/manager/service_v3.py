@@ -183,6 +183,38 @@ async def email_command_run_once():
     return await mail_commands.cycle()
 
 
+@app.get("/command-bus/capabilities")
+async def command_bus_capabilities():
+    return {
+        "version": "universal-command-bus-v2",
+        "targets": mail_commands.bus.registry.manifest(),
+        "max_plan_steps": __import__("manager.command_bus_v2", fromlist=["MAX_STEPS"]).MAX_STEPS,
+        "command_concurrency": __import__("manager.command_bus_v2", fromlist=["COMMAND_CONCURRENCY"]).COMMAND_CONCURRENCY,
+    }
+
+
+@app.get("/command-bus/jobs")
+async def command_bus_jobs():
+    return {
+        "jobs": store.query(
+            "SELECT id,source,source_id,status,planner,created_at,updated_at,error "
+            "FROM command_jobs ORDER BY created_at DESC LIMIT 100"
+        )
+    }
+
+
+@app.get("/command-bus/jobs/{job_id}")
+async def command_bus_job(job_id: str):
+    jobs = store.query("SELECT * FROM command_jobs WHERE id=?", (job_id,))
+    if not jobs:
+        raise HTTPException(404, "command job not found")
+    steps = store.query(
+        "SELECT * FROM command_steps WHERE job_id=? ORDER BY rowid",
+        (job_id,),
+    )
+    return {"job": jobs[0], "steps": steps}
+
+
 @app.post("/email/send-test")
 async def email_send_test():
     if maintenance.gmail.auth_state() != "CONFIGURED":
