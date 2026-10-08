@@ -1,13 +1,13 @@
 {
   "agent": "Blog Lab Slovenia Publisher",
-  "status": "completed",
+  "status": "waiting",
   "enabled": true,
-  "category": "gore",
-  "last_run": "2026-10-08T17:18:13+02:00",
+  "category": "gourmet",
+  "last_run": "2026-10-08T19:24:39+02:00",
   "last_success": "2026-10-08T17:18:13+02:00",
   "last_output": "olympic-national-park-u-s-national-park-service-7cbd8725",
   "next_run": null,
-  "message": "Fallback članek je objavljen brez zunanjega AI providerja.",
+  "message": "Fallback QA ni uspel: prekratek",
   "posts_today": 5,
   "scheduled_posts_today": 4,
   "manual_posts_today": 0,
@@ -20,5 +20,5 @@
   ],
   "scheduled_slots_deferred": [],
   "last_editorial_hold": null,
-  "last_error": null
+  "last_error": "prekratek"
 }
