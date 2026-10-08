@@ -59,18 +59,6 @@ jobs:
             exit 1
           fi
 
-      - name: Sync GitHub dispatch token to Worker
-        working-directory: terminal/worker
-        shell: bash
-        run: |
-          printf '%s' "$BLOG_LAB_DISPATCH_TOKEN" | npx --yes wrangler@4.40.0 secret put GITHUB_DISPATCH_TOKEN
-
-      - name: Sync Fleet Agent token to Worker
-        if: ${{ env.FLEET_AGENT_TOKEN != '' }}
-        working-directory: terminal/worker
-        shell: bash
-        run: printf '%s' "$FLEET_AGENT_TOKEN" | npx --yes wrangler@4.40.0 secret put FLEET_AGENT_TOKEN
-
       - name: Apply Worker dispatch diagnostics patch
         shell: bash
         run: python scripts/patch_worker_dispatch_diagnostics.py
@@ -122,9 +110,24 @@ jobs:
           grep -q 'workers_ai_model_timeout' terminal/worker/src/index.js
           grep -q 'MAX_MEDIA_BYTES = 5 \* 1024 \* 1024' terminal/worker/src/index.js
 
-      - name: Deploy Worker to Cloudflare
+      - name: Deploy Worker code to Cloudflare
         working-directory: terminal/worker
         run: npx wrangler deploy
+
+      # Cloudflare currently rejects secret edits while the newest Worker
+      # version is not deployed. Deploy code first, then bind secrets to that
+      # deployed version.
+      - name: Sync GitHub dispatch token to deployed Worker
+        working-directory: terminal/worker
+        shell: bash
+        run: |
+          printf '%s' "$BLOG_LAB_DISPATCH_TOKEN" | npx --yes wrangler@4.40.0 secret put GITHUB_DISPATCH_TOKEN
+
+      - name: Sync Fleet Agent token to deployed Worker
+        if: ${{ env.FLEET_AGENT_TOKEN != '' }}
+        working-directory: terminal/worker
+        shell: bash
+        run: printf '%s' "$FLEET_AGENT_TOKEN" | npx --yes wrangler@4.40.0 secret put FLEET_AGENT_TOKEN
 
       - name: Verify live Worker contract
         run: python scripts/test_terminal_live.py
