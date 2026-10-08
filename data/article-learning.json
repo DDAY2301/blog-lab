@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-08T07:24:35+02:00",
-  "loop_count": 3719,
+  "updated_at": "2026-10-08T07:39:51+02:00",
+  "loop_count": 3720,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-08T07:24:11+02:00",
+      "last_learning_run": "2026-10-08T07:39:31+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -58,11 +58,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 106349,
-          "last_seen": "2026-10-08T07:24:11+02:00",
+          "seen": 106358,
+          "last_seen": "2026-10-08T07:39:31+02:00",
           "last_title": "Sin znanih slovenskih športnikov navdušuje na SP, danes pa nastopa proti Sloveniji! - Siol.net",
           "last_provider": "google-news-si",
-          "published": 194003,
+          "published": 194077,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-08T07:24:23+02:00",
+      "last_learning_run": "2026-10-08T07:39:41+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -271,11 +271,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 107709,
-          "last_seen": "2026-10-08T07:24:23+02:00",
+          "seen": 107726,
+          "last_seen": "2026-10-08T07:39:41+02:00",
           "last_title": "Golob pravi: Slovenija potrebuje široko koalicijo. NSi ne bo na sestanek - Svet24.si",
           "last_provider": "google-news-si",
-          "published": 212958,
+          "published": 213043,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -366,7 +366,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-08T07:24:35+02:00",
+      "last_learning_run": "2026-10-08T07:39:51+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -421,21 +421,21 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 108739,
-          "last_seen": "2026-10-08T07:24:35+02:00",
+          "seen": 108762,
+          "last_seen": "2026-10-08T07:39:51+02:00",
           "last_title": "Vreme se bo danes hitro obrnilo: nevihte bodo zajele večji del Slovenije, na Primorskem tudi burja - Dnevne Novice",
           "last_provider": "google-news-si",
-          "published": 197669,
+          "published": 197720,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
           "score": 2.498,
-          "published": 3696,
+          "published": 3697,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "account.revealcellcam.com": {
           "score": 2.498,
-          "published": 3696,
+          "published": 3697,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "accounts.google.com": {
@@ -445,27 +445,27 @@
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 3621,
+          "published": 3622,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 3685,
+          "published": 3686,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 3621,
+          "published": 3622,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 3621,
+          "published": 3622,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
           "score": 2.498,
-          "published": 3685,
+          "published": 3686,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "marshalls.com": {
@@ -480,22 +480,22 @@
         },
         "myaccount.microsoft.com": {
           "score": 2.498,
-          "published": 3696,
+          "published": 3697,
           "last_output_id": "sign-in-to-your-account-4b374c63"
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 7306,
+          "published": 7308,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 3653,
+          "published": 3654,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 7370,
+          "published": 7372,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
@@ -505,12 +505,12 @@
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 3621,
+          "published": 3622,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 7306,
+          "published": 7308,
           "last_output_id": "duckduckgo-287dab86"
         },
         "locations.dollartree.com": {
@@ -546,6 +546,12 @@
     }
   },
   "recent_articles": [
+    {
+      "id": "dravska-kolesarska-pot-najdaljsa-najbolj-slikovita-in-raznolika-etapa-za-konec-6b71d0e6",
+      "title": "Dravska kolesarska pot: najdaljša, najbolj slikovita in raznolika etapa za konec",
+      "category": "Kolesarstvo",
+      "createdAt": "2026-10-08T07:39:03+02:00"
+    },
     {
       "id": "foto-in-video-halosko-zlato-dobo-oziveli-v-krcmi-janzevina-domace-vino-stajerska-hrana-in--9819d25c",
       "title": "FOTO in VIDEO: Haloško zlato dobo oživeli v Krčmi Janževina: Domače vino, štajerska hrana in notranjost, ki…",
@@ -611,12 +617,6 @@
       "title": "Direktor dirke po Sloveniji: »Težave so vedno prisotne, a vi jih ne smete opaziti«",
       "category": "Šport",
       "createdAt": "2026-10-06T08:24:07+02:00"
-    },
-    {
-      "id": "debate-z-bergantom-tujci-v-sloveniji-trije-pogledi-na-aktualno-temo-8a8fda8f",
-      "title": "Debate z Bergantom: Tujci v Sloveniji: Trije pogledi na aktualno temo",
-      "category": "Aktualno",
-      "createdAt": "2026-10-05T19:54:39+02:00"
     }
   ],
   "recent_failures": [
