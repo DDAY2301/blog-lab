@@ -12,7 +12,7 @@ def test_gmail_scope_switches_to_modify_for_commands(monkeypatch, tmp_path):
     monkeypatch.setenv("GMAIL_OAUTH_CLIENT_FILE", str(tmp_path / "client.json"))
     monkeypatch.setenv("GMAIL_OAUTH_TOKEN_FILE", str(tmp_path / "token.json"))
     gmail = GmailV4()
-    assert gmail.scopes == [COMMAND_SCOPE]
+    assert gmail.scopes == [COMMAND_SCOPE, SEND_SCOPE]
     assert gmail.implementation == "gmail-command-bus-v3"
 
 
