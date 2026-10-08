@@ -64,15 +64,53 @@ if($gh){
 }
 
 if(-not $SkipTunnel){
-  $cloudflared=Get-Command cloudflared -ErrorAction SilentlyContinue
+  function Find-Cloudflared {
+    $cmd=Get-Command cloudflared -ErrorAction SilentlyContinue
+    if($cmd){ return $cmd }
+
+    $candidates=@(
+      "C:\Program Files (x86)\cloudflared\cloudflared.exe",
+      "C:\Program Files\cloudflared\cloudflared.exe",
+      "$env:LOCALAPPDATA\Microsoft\WinGet\Links\cloudflared.exe"
+    )
+    foreach($candidate in $candidates){
+      if(Test-Path $candidate){ return Get-Item $candidate }
+    }
+
+    $wingetRoot="$env:LOCALAPPDATA\Microsoft\WinGet\Packages"
+    if(Test-Path $wingetRoot){
+      $found=Get-ChildItem $wingetRoot -Filter "cloudflared.exe" -File -Recurse -ErrorAction SilentlyContinue |
+        Select-Object -First 1
+      if($found){ return $found }
+    }
+    return $null
+  }
+
+  $cloudflared=Find-Cloudflared
   if(-not $cloudflared){
-    $candidate="C:\Program Files (x86)\cloudflared\cloudflared.exe"
-    if(Test-Path $candidate){ $cloudflared=Get-Item $candidate }
+    $winget=Get-Command winget -ErrorAction SilentlyContinue
+    if($winget){
+      Write-Host "cloudflared is missing. Installing Cloudflare Tunnel with winget..." -ForegroundColor Cyan
+      & winget install --id Cloudflare.cloudflared -e --source winget --accept-package-agreements --accept-source-agreements
+      if($LASTEXITCODE -ne 0){
+        Write-Warning "winget could not install Cloudflare.cloudflared."
+      }
+      $machinePath=[Environment]::GetEnvironmentVariable("Path","Machine")
+      $userPath=[Environment]::GetEnvironmentVariable("Path","User")
+      $env:Path="$machinePath;$userPath"
+      $cloudflared=Find-Cloudflared
+    }
   }
   if(-not $cloudflared){
-    throw "cloudflared is not installed. Install Cloudflare Tunnel or rerun with -SkipTunnel."
+    throw "cloudflared is still not available after automatic discovery/install. Run 'winget install --id Cloudflare.cloudflared -e' and rerun this setup."
   }
+
   $cf=if($cloudflared.Source){$cloudflared.Source}else{$cloudflared.FullName}
+  $cfDir=Split-Path $cf -Parent
+  if($cfDir -and -not (($env:Path -split ';') -contains $cfDir)){
+    $env:Path="$env:Path;$cfDir"
+  }
+  Write-Host ("Using cloudflared: "+$cf) -ForegroundColor Green
 
   $cert=Join-Path $env:USERPROFILE ".cloudflared\cert.pem"
   if(-not (Test-Path $cert)){
