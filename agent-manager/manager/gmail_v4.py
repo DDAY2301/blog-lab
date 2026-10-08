@@ -12,9 +12,12 @@ from typing import Any
 from .db_v3 import StoreV3
 
 SCOPES = ["https://www.googleapis.com/auth/gmail.send"]
+IMPLEMENTATION = "gmail-send-only-v2"
 
 
 class GmailV4:
+    implementation = IMPLEMENTATION
+
     def __init__(self, store: StoreV3 | None = None) -> None:
         self.store = store
         root = Path(__file__).resolve().parents[1]
