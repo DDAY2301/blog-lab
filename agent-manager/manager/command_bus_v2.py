@@ -25,7 +25,7 @@ class UniversalCommandBusV2:
 
     def __init__(self, store: StoreV3) -> None:
         self.store = store
-        self.registry = CapabilityRegistryV2()
+        self.registry = CapabilityRegistryV2(store)
         self.artifacts = ArtifactStoreV2(store)
         self.ai = AIRouterV4()
         self._execution_gate = asyncio.Semaphore(COMMAND_CONCURRENCY)
@@ -137,8 +137,9 @@ class UniversalCommandBusV2:
             "Use only registered targets. Independent steps may have no dependencies; "
             "dependent steps must name earlier step ids. Never invent credentials or shell commands. "
             "Return JSON only with shape: "
-            "{\"summary\":\"...\",\"steps\":[{\"id\":\"s1\",\"target\":\"manager|project_visibility|bloglab|all\","
-            "\"command\":\"...\",\"depends_on\":[],\"use_artifacts\":true}]}."
+            "{\"summary\":\"...\",\"steps\":[{\"id\":\"s1\",\"target\":\"REGISTERED_TARGET_ID_OR_all\","
+            "\"command\":\"...\",\"depends_on\":[],\"use_artifacts\":true}]}. "
+            "The target value must exactly match one registered agent id or all."
         )
         user = (
             f"REGISTERED AGENTS:\n{self.registry.planner_text()}\n\n"
@@ -271,6 +272,40 @@ class UniversalCommandBusV2:
         remaining = max(200, 4000 - len(suffix))
         return command[:remaining] + suffix[: 4000 - remaining]
 
+    async def _dispatch_dynamic(
+        self,
+        target: str,
+        command: str,
+        artifacts: list[dict[str, Any]],
+    ) -> Any:
+        capability = self.registry.get(target)
+        if not capability or capability.dispatch_kind != "http" or not capability.command_url:
+            raise RuntimeError(f"No dispatch adapter is registered for target {target}.")
+        headers: dict[str, str] = {"content-type": "application/json"}
+        if capability.token_env:
+            token = os.getenv(capability.token_env, "").strip()
+            if not token:
+                raise RuntimeError(
+                    f"Required token environment variable {capability.token_env} is not configured."
+                )
+            headers[capability.token_header or "authorization"] = f"{capability.token_prefix}{token}"
+        payload = {
+            "command": command,
+            "artifacts": [self.artifacts.public_view(x) for x in artifacts],
+            "actor": "agent-manager-v4",
+        }
+        async with httpx.AsyncClient(timeout=180.0, follow_redirects=True) as client:
+            response = await client.post(capability.command_url, headers=headers, json=payload)
+        try:
+            data = response.json()
+        except Exception:
+            data = {"text": response.text[:3000]}
+        if response.status_code >= 400:
+            raise RuntimeError(
+                f"Dynamic agent {target} returned HTTP {response.status_code}: {data}"
+            )
+        return data
+
     async def _execute_target(
         self,
         target: str,
@@ -282,7 +317,11 @@ class UniversalCommandBusV2:
             async def one(name: str):
                 enriched = await self._enrich_command(name, command, artifacts, upload_cache)
                 try:
-                    return name, {"ok": True, "result": await _dispatch(name, enriched)}
+                    if name in {"manager", "project_visibility", "bloglab"}:
+                        result = await _dispatch(name, enriched)
+                    else:
+                        result = await self._dispatch_dynamic(name, enriched, artifacts)
+                    return name, {"ok": True, "result": result}
                 except Exception as exc:
                     return name, {"ok": False, "error": str(exc)[:1800]}
 
@@ -290,7 +329,9 @@ class UniversalCommandBusV2:
             return {"targets": dict(rows)}
 
         enriched = await self._enrich_command(target, command, artifacts, upload_cache)
-        return await _dispatch(target, enriched)
+        if target in {"manager", "project_visibility", "bloglab"}:
+            return await _dispatch(target, enriched)
+        return await self._dispatch_dynamic(target, enriched, artifacts)
 
     async def _run_step(
         self,
