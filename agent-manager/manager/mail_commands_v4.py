@@ -180,10 +180,14 @@ class GmailCommandLoopV4:
             await asyncio.to_thread(self.gmail.mark_read, message_id)
             return {"id": message_id, "status": "empty"}
 
+        explicit_target = subject_target or ""
+        target_label = explicit_target or "auto"
+        self._insert_processing(details, target_label, command)
+
         artifacts: list[dict[str, Any]] = []
         total_bytes = 0
-        for attachment in details.get("attachments") or []:
-            try:
+        try:
+            for attachment in details.get("attachments") or []:
                 raw = await asyncio.to_thread(self.gmail.attachment_bytes, message_id, attachment)
                 total_bytes += len(raw)
                 if total_bytes > MAX_EMAIL_ARTIFACT_BYTES:
@@ -205,22 +209,29 @@ class GmailCommandLoopV4:
                         metadata=metadata,
                     )
                 )
-            except Exception as exc:
-                self.store.action(
-                    "gmail-command-v4",
-                    "attachment_ingest_failed",
-                    message_id,
-                    "failed",
-                    {
-                        "filename": str(attachment.get("filename") or ""),
-                        "error": str(exc)[:1200],
-                    },
+        except Exception as exc:
+            error = f"{type(exc).__name__}: {exc}"
+            self.store.action(
+                "gmail-command-v4",
+                "attachment_ingest_failed",
+                message_id,
+                "failed",
+                {"error": error[:1200]},
+            )
+            reply_id = ""
+            try:
+                reply_id = await asyncio.to_thread(
+                    self.gmail.send,
+                    f"[AGENT RESULT] {target_label.upper()} — FAILED",
+                    self._reply_body(target_label, command, "failed", error=error),
+                    sender,
                 )
-                raise
+            except Exception:
+                pass
+            self._finish(message_id, "failed", error=error, reply_message_id=reply_id or None)
+            await asyncio.to_thread(self.gmail.mark_read, message_id)
+            return {"id": message_id, "status": "failed", "target": target_label, "error": error}
 
-        explicit_target = subject_target or ""
-        target_label = explicit_target or "auto"
-        self._insert_processing(details, target_label, command)
         self.store.action(
             "gmail-command-v4",
             "command_received",
@@ -305,7 +316,7 @@ class GmailCommandLoopV4:
             return self.last
 
         # Gmail narrows the candidate set; exact [AGENT ...] validation happens locally.
-        rows = await asyncio.to_thread(self.gmail.list_messages, "is:unread newer_than:7d subject:AGENT", 30)
+        rows = await asyncio.to_thread(self.gmail.list_messages, 'is:unread newer_than:7d subject:AGENT -subject:"[AGENT RESULT]"', 30)
         results: list[dict[str, Any]] = []
         for row in reversed(rows):
             results.append(await self.process_one(row["id"]))
