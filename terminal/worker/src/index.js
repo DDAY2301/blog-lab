@@ -521,6 +521,91 @@ async function internalWriterAuthorized(request, env) {
   return Boolean(token && expected && timingSafeEqual(token, expected));
 }
 
+async function fleetAgentAuthorized(request, env) {
+  const header = String(request.headers.get("authorization") || "");
+  const token = header.startsWith("Bearer ") ? header.slice(7).trim() : "";
+  const expected = String(env.FLEET_AGENT_TOKEN || "").trim();
+  return Boolean(token && expected && timingSafeEqual(token, expected));
+}
+
+async function dispatchFleetOperatorCommand(env, command, actor = "agent-manager-v4", mode = "auto", category = "aktualno") {
+  const state = setupState(env);
+  if (!state.ready) return { ok:false, status:503, body:{ error:"Terminal še ni v celoti konfiguriran.", missing:state.missing } };
+  const clean = String(command || "").trim();
+  if (!clean || clean.length > 4000) return { ok:false, status:400, body:{ error:"Ukaz mora imeti 1–4000 znakov." } };
+
+  const selectedMode = ["auto","article","site","control"].includes(mode) ? mode : "auto";
+  const selectedCategory = ["sport","politika","aktualno"].includes(category) ? category : "aktualno";
+  const interpretation = selectedMode === "auto"
+    ? await resolveCommandIntent(clean, env, true)
+    : { ...localCommandIntent(clean), mode:selectedMode, confidence:1, ai_used:false };
+  const resolvedMode = selectedMode === "auto" ? interpretation.mode : selectedMode;
+  const dispatchMode = selectedMode === "auto"
+    ? ((interpretation.ai_used || interpretation.confidence >= 0.80) ? interpretation.mode : "auto")
+    : selectedMode;
+
+  if (isHelpCommand(clean)) {
+    const help = terminalCommandHelp();
+    return { ok:true, status:200, body:{ ok:true, local:true, target:"bloglab", result:{ summary:help.text, catalog:help.catalog } } };
+  }
+  if (resolvedMode === "control" && isAgentStatusCommand(clean)) {
+    return { ok:true, status:200, body:{ ok:true, local:true, target:"bloglab", result:await readAgentSnapshot(env) } };
+  }
+
+  const requestId = crypto.randomUUID();
+  const createdAt = new Date().toISOString();
+  let privatePayload;
+  try {
+    privatePayload = await encryptPayload(env, {
+      request_id: requestId,
+      command: clean,
+      mode: dispatchMode,
+      category: selectedCategory,
+      actor: String(actor || "agent-manager-v4").slice(0,180),
+      created_at: createdAt
+    });
+  } catch {
+    return { ok:false, status:503, body:{ error:"Šifriranje ukaza ni pravilno konfigurirano." } };
+  }
+
+  const dispatch = await github(`/repos/${OWNER}/${REPO}/actions/workflows/${WORKFLOW}/dispatches`, env, {
+    method:"POST",
+    headers:{ "content-type":"application/json" },
+    body:JSON.stringify({ ref:"main", inputs:{ request_id:requestId, payload:privatePayload } })
+  });
+  if (!dispatch.ok) {
+    const detail = (await dispatch.text().catch(() => "")).slice(0,900);
+    return {
+      ok:false,
+      status:502,
+      body:{
+        error:"GitHub workflow se ni zagnal.",
+        code:"GITHUB_WORKFLOW_DISPATCH_FAILED",
+        github_status:dispatch.status,
+        detail,
+        workflow:WORKFLOW,
+        request_id:requestId
+      }
+    };
+  }
+  return {
+    ok:true,
+    status:202,
+    body:{
+      ok:true,
+      target:"bloglab",
+      id:requestId,
+      interpretation:{
+        mode:resolvedMode,
+        dispatch_mode:dispatchMode,
+        action:interpretation.action,
+        confidence:interpretation.confidence,
+        ai_used:interpretation.ai_used
+      }
+    }
+  };
+}
+
 function unwrapAiObject(value, depth = 0) {
   if (!value || typeof value !== "object" || Array.isArray(value) || depth > 5) return null;
 
@@ -2229,6 +2314,7 @@ export default {
         site_editor_ready: Boolean(env.AI && typeof env.AI.run === "function"),
         self_heal_ai_ready: Boolean(env.AI && typeof env.AI.run === "function"),
         publisher_scheduler_ready: Boolean(String(env.GITHUB_DISPATCH_TOKEN || "").trim()),
+        fleet_agent_ready: Boolean(String(env.FLEET_AGENT_TOKEN || "").trim()),
         auth_mode: "built-in-session",
         login_secret_mode: "accept-either-configured-secret",
         free_tier_compatible: true,
@@ -2444,6 +2530,22 @@ export default {
     if (request.method === "GET" && url.pathname === "/logout") {
       const next = url.searchParams.get("next") || "/login";
       return new Response(null, { status: 302, headers: securityHeaders({ "location": next.startsWith("/") ? next : "/login", "set-cookie": clearSessionCookie() }) });
+    }
+
+    if (request.method === "POST" && url.pathname === "/api/fleet/command") {
+      if (!(await fleetAgentAuthorized(request, env))) {
+        return json({ ok:false, error:"FLEET_UNAUTHORIZED" }, 401);
+      }
+      let body;
+      try { body = await request.json(); } catch { return json({ ok:false, error:"INVALID_JSON" }, 400); }
+      const result = await dispatchFleetOperatorCommand(
+        env,
+        body?.command,
+        body?.actor || "agent-manager-v4",
+        body?.mode || "auto",
+        body?.category || "aktualno"
+      );
+      return json(result.body, result.status);
     }
 
     const user = await identity(request, env);
