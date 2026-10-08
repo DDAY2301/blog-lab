@@ -30,6 +30,33 @@ const CATEGORY_EMPTY_COPY = {
 
 const starterArticles = [
   {
+    "id": "discover-manchester-vermont-plan-a-visit-fe15a3d3",
+    "title": "Discover Manchester, Vermont | Plan A Visit",
+    "excerpt": "Plan your trip to Manchester, Vermont, tucked in the beautiful Green Mountains. Discover places to stay, things to do, and explore our calendar of events. MANCHESTER, VERMONT So Close. So Vermont. EXPLORE THE AREA → DISC",
+    "seoDescription": "Plan your trip to Manchester, Vermont, tucked in the beautiful Green Mountains. Discover places to stay, things to do, and explore our calendar of events. ",
+    "content": "Pregled za rubriko sezonsko povzema trenutno razpoložljive informacije iz spodaj navedenih virov. Besedilo je pripravljeno brez dodajanja nepodprtih dejstev.\n\n## Discover Manchester, Vermont | Plan A Visit\nPlan your trip to Manchester, Vermont, tucked in the beautiful Green Mountains. Discover places to stay, things to do, and explore our calendar of events. MANCHESTER, VERMONT So Close. So Vermont. EXPLORE THE AREA → DISCOVER MANCHESTER VERMONT Escape to the Green Mountains, where big, undiscovered experiences await. EXPERIENCE FALL EXPERIENCE WINTER EXPERIENCE SPRING EXPERIENCE SUMMER World-class accommodations, recreational activities and premiere cultural events. Stay at our boutique hotels, charming inns, and cottages. Spend the night in a 5-star hotel, a branded national chain, a New England-style Inn, a Mom and Pop owned accommodation, or choose from a wide variety of AirBNB selections. World-class shopping, exceptional dining, and endless outdoor activities. Local cuisine styles range from high-end quality dining to a unique food truck experience. A destination for a wide range of arts and culture, you’ll find performances by acclaimed actors and playwrights, renowned live orchestras, local music, and countless art galleries. EXPLORE LODGING OPTIONS SHOP MANCHESTER’S FINEST BROWSE REAL ESTATE SAMPLE LOCAL CUISINE DISCOVER ART & CULTURE FIND LOCAL SERVICES Outdoor adventure, cocktails, savory meals, and shopping at your fingertips. We don’t blame you if you never want to go home. Browse our designer outlets and locally owned shops. Walk our marble sidewalks, and indulge in a cocktail and a wide variety of cuisine. Dip into New England history. Get to know the people and personalities that make Manchester unique. We’re driving distance from New York City and Boston, and we’re real nice people. Harvest Day: A Family-Friendly Fall Event in Manchester, Vermont Sep 27, 2026 Looking for things to do in Manchester, Vermont this October? Celebrate the season at Manchester Harvest Day on Saturday, October 24, 2026, at Factory Point Green from 1-3pm, a free, family-friendly... read more\n\nVir: manchestervermont.com — https://www.manchestervermont.com/",
+    "category": "Sezonsko",
+    "author": "Blog Lab Slovenia Publisher",
+    "status": "published",
+    "heroImage": {
+      "url": "https://www.manchestervermont.com/wp-content/uploads/2022/03/Screen-Shot-2022-09-09-at-6.52.32-PM.png",
+      "alt": "Discover Manchester, Vermont | Plan A Visit",
+      "caption": "manchestervermont.com",
+      "sourceUrl": ""
+    },
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Discover Manchester, Vermont | Plan A Visit",
+        "url": "https://www.manchestervermont.com/"
+      }
+    ],
+    "createdAt": "2026-10-08T13:43:17+02:00",
+    "updatedAt": "2026-10-08T13:43:17+02:00"
+  },
+
+  {
     "id": "slovenski-turizem-kljub-negotovosti-racuna-na-uspesno-sezono-895ff827",
     "title": "Slovenski turizem kljub negotovosti računa na uspešno sezono",
     "excerpt": "Sezonsko: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Slovenski turizem kljub negotovosti računa na uspešno sezono«.",
