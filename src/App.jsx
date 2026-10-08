@@ -30,6 +30,48 @@ const CATEGORY_EMPTY_COPY = {
 
 const starterArticles = [
   {
+    "id": "olympic-national-park-u-s-national-park-service-7cbd8725",
+    "title": "Olympic National Park (U.S. National Park Service)",
+    "excerpt": "Gore & traili: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Olympic National Park (U.S. National Park Service)«.",
+    "seoDescription": "Gore & traili: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Olympic National Park (U.S. National Park Service)«.",
+    "content": "**Gore & traili, 8. 10. 2026.** Olympic National Park Olympic National Park (U.S. National Park Service) An official website of the United States government Here's how you know Here's how you know Official websites use .gov A .gov website belongs to an official government organization in the United States. Secure .gov websites use HTTPS A lock ( ) or https:// means you've safely connected to the .gov website. Share sensitive information only on official, secure websites. Skip to global NPS navigation Skip to this park navigation Skip to the main content Skip to this park information section Skip to the footer section National Park Service Olympic National Park Search Search This Site All NPS Open Menu Close Menu Explore This Park Explore…\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: nps.gov. Objavljeno: Thu, 08 Oct 2026 13:00:00 GMT. [Odpri izvirni vir](https://www.nps.gov/olym/index.htm)\n\n## Dopolnitev vira 2: home.nps.gov\n\nDeer Park information page. Deer Park - Olympic National Park (U.S. Skip to global NPS navigation Skip to this park navigation Skip to the main content Skip to this park information section Skip to the footer section National Park Service Olympic National Park Search Search This Site All NPS Open Menu Close Menu Explore This Park Explore the National Park Service Exiting nps.gov Cancel Olympic National Park Contact Us Deer Park Deer Park Ranger Station amid mountains and forest. NPS Photo Much of the area's weather originates in the Pacific Ocean. Fronts storm inland from the southwest, heading straight for the Olympics. As the clouds rise over the mountains, pressure and temperature drop, so the air can no…\n\n Vir: home.nps.gov. Objavljeno: Thu, 01 Oct 2026 13:23:00 GMT. [Odpri izvirni vir](https://home.nps.gov/olym/planyourvisit/deer-park.htm)\n\n## Dopolnitev vira 3: nps.gov\n\nMaps of Olympic National Park Maps - Olympic National Park (U.S. Skip to global NPS navigation Skip to this park navigation Skip to the main content Skip to this park information section Skip to the footer section National Park Service Olympic National Park Search Search This Site All NPS Open Menu Close Menu Explore This Park Explore the National Park Service Exiting nps.gov Cancel Olympic National Park Contact Us Maps Interactive Map Paper Maps Whether you need a detailed map for hiking or just want the challenge of folding a printed map after use, our park store has you covered. Purchase maps ! Brochure Maps Download a NPS brochure for Olympic National Park Download NPS brochures for all parks Audio…\n\n Vir: nps.gov. Objavljeno: Mon, 05 Oct 2026 20:20:00 GMT. [Odpri izvirni vir](https://www.nps.gov/olym/planyourvisit/maps.htm)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Gore & traili",
+    "author": "Blog Lab Slovenia Publisher",
+    "status": "published",
+    "heroImage": {
+      "url": "https://www.nps.gov/common/uploads/banner_image/pwr/homepage/24B35902-92B6-77CA-0C35FCF526C94819.jpg",
+      "alt": "Olympic National Park (U.S. National Park Service)",
+      "caption": "nps.gov",
+      "sourceUrl": ""
+    },
+    "video": null,
+    "gallery": [
+      {
+        "url": "https://www.nps.gov/olym/planyourvisit/images/Deer_Park_Ranger_Station_40.jpg",
+        "alt": "Deer Park - Olympic National Park (U.S. National Park Service)",
+        "caption": "home.nps.gov",
+        "sourceUrl": ""
+      }
+    ],
+    "sources": [
+      {
+        "label": "nps.gov — Olympic National Park (U.S. National Park Service)",
+        "url": "https://www.nps.gov/olym/index.htm"
+      },
+      {
+        "label": "home.nps.gov — Deer Park - Olympic National Park (U.S. National Park Service)",
+        "url": "https://home.nps.gov/olym/planyourvisit/deer-park.htm"
+      },
+      {
+        "label": "nps.gov — Maps - Olympic National Park (U.S. National Park Service)",
+        "url": "https://www.nps.gov/olym/planyourvisit/maps.htm"
+      }
+    ],
+    "createdAt": "2026-10-08T17:18:13+02:00",
+    "updatedAt": "2026-10-08T17:18:13+02:00"
+  },
+
+  {
     "id": "skofja-loka-passion-play-unesco-visitor-guide",
     "title": "Škofja Loka Passion Play: UNESCO Heritage Beyond the Performance",
     "excerpt": "Discover the documented history of the Škofja Loka Passion Play, what its UNESCO status means and how to explore its living heritage when no performance is taking place.",
