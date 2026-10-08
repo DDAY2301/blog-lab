@@ -5,10 +5,10 @@
   "posts_date": "2026-10-08",
   "posts_today": 4,
   "last_output": "discover-manchester-vermont-plan-a-visit-fe15a3d3",
-  "last_error": null,
+  "last_error": "prekratek",
   "agent_version": "2.7.0",
-  "current_category": "sezonsko",
-  "scheduled_posts_today": 4,
+  "current_category": "gore",
+  "scheduled_posts_today": 3,
   "manual_posts_today": 0,
   "writer_mode": "workers_ai",
   "scheduled_slots_done": [
@@ -18,10 +18,10 @@
   ],
   "scheduled_slots_deferred": [],
   "last_editorial_hold": null,
-  "publisher_guardian_last_run": "2026-10-08T13:39:47+02:00",
+  "publisher_guardian_last_run": "2026-10-08T16:24:43+02:00",
   "publisher_guardian_last_action": {
-    "category": "sezonsko",
-    "slot": "2026-10-08|13:30|sezonsko",
+    "category": "gore",
+    "slot": "2026-10-08|16:20|gore",
     "remaining_repairs": 0
   },
   "schedule_counter_normalized_at": "2026-10-07T16:45:00+02:00"
