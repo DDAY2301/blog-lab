@@ -153,6 +153,8 @@ async def email_status():
     return {
         "state": maintenance.gmail.auth_state(),
         "recipient": maintenance.gmail.recipient or None,
+        "sender": maintenance.gmail.sender or None,
+        "implementation": maintenance.gmail.implementation,
         "interval_hours": maintenance.daily_email.interval_hours,
         "queue": store.query("SELECT id,created_at,kind,priority,recipient,subject,status,attempts,last_error FROM email_queue ORDER BY id DESC LIMIT 50"),
     }
@@ -162,11 +164,34 @@ async def email_status():
 async def email_send_test():
     if maintenance.gmail.auth_state() != "CONFIGURED":
         raise HTTPException(409, f"Gmail state: {maintenance.gmail.auth_state()}")
-    message_id = maintenance.gmail.send(
-        "Agent Manager V4 - test email",
-        "Agent Manager V4 Gmail reporting is configured and working.",
-    )
-    return {"ok": True, "message_id": message_id}
+    try:
+        message_id = await asyncio.to_thread(
+            maintenance.gmail.send,
+            "Agent Manager V4 - test email",
+            "Agent Manager V4 Gmail reporting is configured and working.",
+        )
+        store.action(
+            "gmail-v4",
+            "send_test_email",
+            maintenance.gmail.recipient or "",
+            "sent",
+            {"message_id": message_id, "implementation": maintenance.gmail.implementation},
+        )
+        return {
+            "ok": True,
+            "message_id": message_id,
+            "implementation": maintenance.gmail.implementation,
+        }
+    except Exception as exc:
+        detail = f"{type(exc).__name__}: {exc}"
+        store.action(
+            "gmail-v4",
+            "send_test_email",
+            maintenance.gmail.recipient or "",
+            "failed",
+            {"error": detail[:1500], "implementation": maintenance.gmail.implementation},
+        )
+        raise HTTPException(502, f"Gmail send failed: {detail}") from exc
 
 
 @app.get("/connections")
