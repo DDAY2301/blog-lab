@@ -2613,7 +2613,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "confirmed",
+    "status": "expired",
     "lastCheckedAt": "2026-10-07T06:58:57+02:00"
   },
   {
@@ -2644,7 +2644,7 @@ export const draftEvents = [
     "familyFriendly": null,
     "accessibility": null,
     "indoorOutdoor": "indoor",
-    "status": "sold_out",
+    "status": "expired",
     "lastCheckedAt": "2026-10-07T06:58:57+02:00"
   },
   {
@@ -2676,7 +2676,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-10-07T06:58:57+02:00"
+    "lastCheckedAt": "2026-10-08T07:01:39+02:00"
   },
   {
     "eventId": "pc1-eternal-rest-cd-2026-10-08",
@@ -2707,7 +2707,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-10-04T06:55:58+02:00"
+    "lastCheckedAt": "2026-10-08T07:01:39+02:00"
   },
   {
     "eventId": "open-kitchen-2026-10-09",
@@ -2738,7 +2738,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "outdoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-10-06T07:01:47+02:00"
+    "lastCheckedAt": "2026-10-08T07:01:39+02:00"
   },
   {
     "eventId": "pc1-eternal-rest-cd-2026-10-09",
@@ -2769,7 +2769,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-10-04T06:55:58+02:00"
+    "lastCheckedAt": "2026-10-08T07:01:39+02:00"
   },
   {
     "eventId": "bojana-robinson-peekaboo-cd-2026-10-09",
@@ -2800,7 +2800,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-10-06T07:01:47+02:00"
+    "lastCheckedAt": "2026-10-08T07:01:39+02:00"
   },
   {
     "eventId": "sunnysiders-stone-head-castle-2026-10-09",
@@ -2831,7 +2831,7 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-09-28T07:00:00+02:00"
+    "lastCheckedAt": "2026-10-08T07:01:39+02:00"
   },
   {
     "eventId": "when-i-get-out-cd-2026-10-09",
@@ -2862,7 +2862,38 @@ export const draftEvents = [
     "accessibility": null,
     "indoorOutdoor": "indoor",
     "status": "confirmed",
-    "lastCheckedAt": "2026-10-06T07:01:47+02:00"
+    "lastCheckedAt": "2026-10-08T07:01:39+02:00"
+  },
+  {
+    "eventId": "prince-lucija-indigo-cukrarna-2026-10-09",
+    "title": "Prince Lucija",
+    "summary": "Prince Lucija performs experimental electronic music at Cukrarna Gallery on Friday 9 October, 21:00–22:00, as part of Indigo Festival. The artist and festival are confirmed by Cukrarna; price and event-specific accessibility were not stated in the checked pages.",
+    "category": "nightlife",
+    "startAt": "2026-10-09T21:00:00+02:00",
+    "endAt": "2026-10-09T22:00:00+02:00",
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Cukrarna Gallery",
+      "address": "Poljanski nasip 40, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": null
+    },
+    "ticketUrl": "https://cukrarna.art/en/program/news/105/for-media-announcing-the-programme-of-indigo-festival-2026/",
+    "officialUrl": "https://cukrarna.art/en/program/news/105/for-media-announcing-the-programme-of-indigo-festival-2026/",
+    "sourceName": "Cukrarna / Ljubljana Tourism",
+    "languages": [],
+    "touristFriendly": true,
+    "familyFriendly": false,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "confirmed",
+    "lastCheckedAt": "2026-10-08T07:01:39+02:00"
   },
   {
     "eventId": "artish-2026-10-10",
@@ -3082,6 +3113,39 @@ export const draftEvents = [
     "lastCheckedAt": "2026-10-06T07:01:47+02:00"
   },
   {
+    "eventId": "dragonology-doom-prophecy-castle-2026-10-11",
+    "title": "Dragonology School: Prophecy of the Doom of Dragons",
+    "summary": "Ljubljana Castle schedules this family dragon adventure for Sunday 11 October at 10:30 by the bridge at the main entrance. The official event page marks the session sold out; it remains listed so families do not mistake it for an available activity.",
+    "category": "family",
+    "startAt": "2026-10-11T10:30:00+02:00",
+    "endAt": null,
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Bridge by the main entrance, Ljubljana Castle",
+      "address": "Grajska planota 1, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": null,
+      "currency": "EUR",
+      "label": null,
+      "free": false
+    },
+    "ticketUrl": "https://www.ljubljanskigrad.si/sl/dogodki/sola-zmajeslovja-prerokba-o-pogubi-zmajev",
+    "officialUrl": "https://www.ljubljanskigrad.si/sl/dogodki/sola-zmajeslovja-prerokba-o-pogubi-zmajev",
+    "sourceName": "Ljubljana Castle",
+    "languages": [
+      "Slovenian"
+    ],
+    "touristFriendly": false,
+    "familyFriendly": true,
+    "accessibility": null,
+    "indoorOutdoor": "mixed",
+    "status": "sold_out",
+    "lastCheckedAt": "2026-10-08T07:01:39+02:00"
+  },
+  {
     "eventId": "bojana-robinson-peekaboo-cd-2026-10-11",
     "title": "Bojana Robinson: Peekaboo",
     "summary": "A second performance is listed at Cankarjev dom for Sunday 11 October at 20:00. Price, language, family suitability and event-specific accessibility remain unconfirmed.",
@@ -3266,6 +3330,39 @@ export const draftEvents = [
     "indoorOutdoor": "indoor",
     "status": "confirmed",
     "lastCheckedAt": "2026-10-06T07:01:47+02:00"
+  },
+  {
+    "eventId": "lisicka-sestricka-castle-2026-10-14",
+    "title": "Lisička sestrička",
+    "summary": "Anja Štefan and Janez Dovč present a 40-minute storytelling and music performance at Ljubljana Castle on Wednesday 14 October, 17:30–18:10. The programme recommends it for ages 5+, but the official event listing now marks it sold out.",
+    "category": "family",
+    "startAt": "2026-10-14T17:30:00+02:00",
+    "endAt": "2026-10-14T18:10:00+02:00",
+    "timezone": "Europe/Ljubljana",
+    "venue": {
+      "name": "Hribar Hall, Ljubljana Castle",
+      "address": "Grajska planota 1, 1000 Ljubljana",
+      "city": "Ljubljana",
+      "region": "Central Slovenia"
+    },
+    "price": {
+      "amount": 5,
+      "currency": "EUR",
+      "label": "€5",
+      "free": false
+    },
+    "ticketUrl": "https://ljubljanskigrad.si/sl/dogodki/lisicka-sestricka",
+    "officialUrl": "https://ljubljanskigrad.si/sl/dogodki/lisicka-sestricka",
+    "sourceName": "Ljubljana Castle",
+    "languages": [
+      "Slovenian"
+    ],
+    "touristFriendly": false,
+    "familyFriendly": true,
+    "accessibility": null,
+    "indoorOutdoor": "indoor",
+    "status": "sold_out",
+    "lastCheckedAt": "2026-10-08T07:01:39+02:00"
   },
   {
     "eventId": "pussy-riot-riot-days-kino-siska-2026-10-14",
