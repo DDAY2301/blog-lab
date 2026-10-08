@@ -1,8 +1,7 @@
 from __future__ import annotations
 
+import asyncio
 import base64
-
-import pytest
 
 from manager.artifacts_v2 import ArtifactStoreV2
 from manager.command_bus_v2 import UniversalCommandBusV2
@@ -70,70 +69,73 @@ def test_gmail_message_details_discovers_inline_image(monkeypatch, tmp_path):
     assert gmail.attachment_bytes("m1", details["attachments"][0]) == b"fake-image-bytes"
 
 
-@pytest.mark.asyncio
-async def test_explicit_bloglab_command_uploads_image_and_passes_url(tmp_path, monkeypatch):
-    store = _store(tmp_path, monkeypatch)
-    bus = UniversalCommandBusV2(store)
-    artifact = bus.artifacts.save_bytes(
-        source="gmail",
-        source_id="msg-2",
-        filename="hero.jpg",
-        mime_type="image/jpeg",
-        data=b"jpeg-data",
-    )
-    captured = {}
+def test_explicit_bloglab_command_uploads_image_and_passes_url(tmp_path, monkeypatch):
+    async def run():
+        store = _store(tmp_path, monkeypatch)
+        bus = UniversalCommandBusV2(store)
+        artifact = bus.artifacts.save_bytes(
+            source="gmail",
+            source_id="msg-2",
+            filename="hero.jpg",
+            mime_type="image/jpeg",
+            data=b"jpeg-data",
+        )
+        captured = {}
 
-    async def fake_upload(row, cache):
-        return {"ok": True, "url": "https://example.invalid/hero.jpg"}
+        async def fake_upload(row, cache):
+            return {"ok": True, "url": "https://example.invalid/hero.jpg"}
 
-    async def fake_dispatch(target, command):
-        captured["target"] = target
-        captured["command"] = command
-        return {"accepted": True}
+        async def fake_dispatch(target, command):
+            captured["target"] = target
+            captured["command"] = command
+            return {"accepted": True}
 
-    monkeypatch.setattr(bus, "_upload_bloglab_image", fake_upload)
-    monkeypatch.setattr("manager.command_bus_v2._dispatch", fake_dispatch)
+        monkeypatch.setattr(bus, "_upload_bloglab_image", fake_upload)
+        monkeypatch.setattr("manager.command_bus_v2._dispatch", fake_dispatch)
 
-    result = await bus.execute(
-        "Dodaj članek s priloženo sliko.",
-        source="gmail",
-        source_id="msg-2",
-        explicit_target="bloglab",
-        artifacts=[artifact],
-    )
-    assert result["status"] == "completed"
-    assert captured["target"] == "bloglab"
-    assert "https://example.invalid/hero.jpg" in captured["command"]
-    assert "hero.jpg" in captured["command"]
+        result = await bus.execute(
+            "Dodaj članek s priloženo sliko.",
+            source="gmail",
+            source_id="msg-2",
+            explicit_target="bloglab",
+            artifacts=[artifact],
+        )
+        assert result["status"] == "completed"
+        assert captured["target"] == "bloglab"
+        assert "https://example.invalid/hero.jpg" in captured["command"]
+        assert "hero.jpg" in captured["command"]
 
+    asyncio.run(run())
 
-@pytest.mark.asyncio
-async def test_ai_plan_can_execute_independent_multi_agent_steps(tmp_path, monkeypatch):
-    store = _store(tmp_path, monkeypatch)
-    bus = UniversalCommandBusV2(store)
-    calls = []
+def test_ai_plan_can_execute_independent_multi_agent_steps(tmp_path, monkeypatch):
+    async def run():
+        store = _store(tmp_path, monkeypatch)
+        bus = UniversalCommandBusV2(store)
+        calls = []
 
-    async def fake_chat(system, user):
-        return "ollama/test", {
-            "summary": "two independent tasks",
-            "steps": [
-                {"id": "s1", "target": "manager", "command": "status", "depends_on": []},
-                {"id": "s2", "target": "bloglab", "command": "status", "depends_on": []},
-            ],
-        }
+        async def fake_chat(system, user):
+            return "ollama/test", {
+                "summary": "two independent tasks",
+                "steps": [
+                    {"id": "s1", "target": "manager", "command": "status", "depends_on": []},
+                    {"id": "s2", "target": "bloglab", "command": "status", "depends_on": []},
+                ],
+            }
 
-    async def fake_dispatch(target, command):
-        calls.append((target, command))
-        return {"ok": True}
+        async def fake_dispatch(target, command):
+            calls.append((target, command))
+            return {"ok": True}
 
-    monkeypatch.setattr(bus.ai, "chat_json", fake_chat)
-    monkeypatch.setattr("manager.command_bus_v2._dispatch", fake_dispatch)
+        monkeypatch.setattr(bus.ai, "chat_json", fake_chat)
+        monkeypatch.setattr("manager.command_bus_v2._dispatch", fake_dispatch)
 
-    result = await bus.execute(
-        "Preveri manager in BlogLab.",
-        source="test",
-        source_id="req-1",
-    )
-    assert result["status"] == "completed"
-    assert {target for target, _ in calls} == {"manager", "bloglab"}
-    assert len(result["steps"]) == 2
+        result = await bus.execute(
+            "Preveri manager in BlogLab.",
+            source="test",
+            source_id="req-1",
+        )
+        assert result["status"] == "completed"
+        assert {target for target, _ in calls} == {"manager", "bloglab"}
+        assert len(result["steps"]) == 2
+
+    asyncio.run(run())
