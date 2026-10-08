@@ -37,6 +37,7 @@ $env:FLEET_REMOTE_HOSTNAME=$Hostname
 
 Write-Host "Local Fleet secrets are configured in the Windows user environment." -ForegroundColor Green
 
+$blogLabSecretSynced=$false
 $gh=Get-Command gh -ErrorAction SilentlyContinue
 if($gh){
   try{
@@ -44,6 +45,7 @@ if($gh){
     if($LASTEXITCODE -eq 0){
       $fleetAgentToken | & gh secret set FLEET_AGENT_TOKEN --repo DDAY2301/blog-lab
       if($LASTEXITCODE -ne 0){ throw "gh secret set failed" }
+      $blogLabSecretSynced=$true
       Write-Host "GitHub secret FLEET_AGENT_TOKEN synchronized." -ForegroundColor Green
       & gh workflow run deploy-worker.yml --repo DDAY2301/blog-lab --ref main
       if($LASTEXITCODE -eq 0){
@@ -121,8 +123,49 @@ ingress:
 }
 
 Write-Host ""
-Write-Host "Restarting the existing Agent Manager stack..." -ForegroundColor Cyan
+Write-Host "Restarting the existing V4 stack so Project Visibility and all Fleet services inherit the new tokens..." -ForegroundColor Cyan
+& "$PSScriptRoot\stop-stack-v4.ps1"
+Start-Sleep -Seconds 2
 & "$PSScriptRoot\start-stack-v4.ps1"
+
+Write-Host ""
+Write-Host "Verifying local Fleet Remote..." -ForegroundColor Cyan
+$remoteDeadline=(Get-Date).AddSeconds(20)
+$remoteHealth=$null
+do{
+  try{ $remoteHealth=Invoke-RestMethod "http://127.0.0.1:8788/health" -TimeoutSec 3 }catch{}
+  if($remoteHealth -and $remoteHealth.ok){ break }
+  Start-Sleep -Seconds 1
+}while((Get-Date) -lt $remoteDeadline)
+if(-not $remoteHealth -or -not $remoteHealth.ok){
+  throw "Fleet Remote did not become healthy on 127.0.0.1:8788."
+}
+
+Write-Host "Verifying Project Visibility Fleet bridge..." -ForegroundColor Cyan
+try{
+  $pvBody=@{command="status"} | ConvertTo-Json -Compress
+  $pvFleet=Invoke-RestMethod -Method Post "http://127.0.0.1:8000/internal/fleet/command" -Headers @{"x-fleet-token"=$localToken} -ContentType "application/json" -Body $pvBody -TimeoutSec 20
+  if(-not $pvFleet.ok){ throw "Project Visibility Fleet bridge returned ok=false." }
+  Write-Host "Project Visibility Fleet bridge OK." -ForegroundColor Green
+}catch{
+  throw "Project Visibility Fleet bridge is not ready. Pull DDAY2301/PROJEKT main into PROJECT_VISIBILITY_ROOT, then rerun this setup. Detail: $($_.Exception.Message)"
+}
+
+if($blogLabSecretSynced){
+  Write-Host "Waiting for the BlogLab Worker to receive the Fleet service token..." -ForegroundColor Cyan
+  $workerDeadline=(Get-Date).AddSeconds(120)
+  $workerHealth=$null
+  do{
+    try{ $workerHealth=Invoke-RestMethod "$env:BLOG_LAB_WORKER_URL/health" -TimeoutSec 8 }catch{}
+    if($workerHealth -and $workerHealth.fleet_agent_ready){ break }
+    Start-Sleep -Seconds 8
+  }while((Get-Date) -lt $workerDeadline)
+  if($workerHealth -and $workerHealth.fleet_agent_ready){
+    Write-Host "BlogLab Fleet bridge OK." -ForegroundColor Green
+  }else{
+    Write-Warning "BlogLab Worker is online but fleet_agent_ready is not true yet. The GitHub deploy may still be running; rerun setup or check deploy-worker.yml."
+  }
+}
 
 Write-Host ""
 Write-Host "Fleet Remote configured." -ForegroundColor Green
