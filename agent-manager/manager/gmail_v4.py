@@ -35,9 +35,11 @@ class GmailV4:
 
     @property
     def scopes(self) -> list[str]:
-        # gmail.modify already includes read, compose and send, so command mode
-        # needs only this single scope. Reporting-only mode stays least-privilege.
-        return [COMMAND_SCOPE] if self.commands_enabled else [SEND_SCOPE]
+        # The account already has gmail.send consent from reporting mode. During
+        # incremental authorization Google returns the union of previously granted
+        # and newly requested scopes. Request that union explicitly so oauthlib
+        # does not reject the token response as a scope change.
+        return [COMMAND_SCOPE, SEND_SCOPE] if self.commands_enabled else [SEND_SCOPE]
 
     @property
     def implementation(self) -> str:
