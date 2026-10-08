@@ -14,6 +14,7 @@ from .health_v3 import system_resources
 from .incidents_v3 import IncidentEngineV3
 from .maintenance_v4 import MaintenanceLoopV4
 from .mail_commands_v4 import GmailCommandLoopV4
+from .command_bus_v2 import COMMAND_CONCURRENCY, MAX_STEPS
 from .monitor_v3 import MonitorLoopV3
 from .policy_v3 import evaluate
 from .reporting_v3 import ReporterV3
@@ -181,6 +182,70 @@ async def email_command_status():
 @app.post("/email-command/run-once")
 async def email_command_run_once():
     return await mail_commands.cycle()
+
+
+@app.get("/command-bus/capabilities")
+async def command_bus_capabilities():
+    return {
+        "version": "universal-command-bus-v2",
+        "targets": mail_commands.bus.registry.manifest(),
+        "max_plan_steps": MAX_STEPS,
+        "command_concurrency": COMMAND_CONCURRENCY,
+    }
+
+
+class CapabilityRegistrationIn(BaseModel):
+    name: str
+    description: str = ""
+    capabilities: list[str] = []
+    artifact_support: list[str] = []
+    command_examples: list[str] = []
+    max_parallel: int = 1
+    dispatch_kind: str = "http"
+    command_url: str
+    token_env: str = ""
+    token_header: str = "authorization"
+    token_prefix: str = "Bearer "
+
+
+@app.put("/command-bus/capabilities/{target_id}")
+async def register_command_bus_capability(target_id: str, item: CapabilityRegistrationIn):
+    payload = item.model_dump()
+    payload["id"] = target_id
+    try:
+        saved = mail_commands.bus.registry.save_dynamic(payload)
+    except (TypeError, ValueError, RuntimeError) as exc:
+        raise HTTPException(400, str(exc)) from exc
+    return {"ok": True, "target": saved.as_dict()}
+
+
+@app.delete("/command-bus/capabilities/{target_id}")
+async def disable_command_bus_capability(target_id: str):
+    if not mail_commands.bus.registry.disable_dynamic(target_id):
+        raise HTTPException(404, "dynamic capability not found")
+    return {"ok": True, "disabled": target_id}
+
+
+@app.get("/command-bus/jobs")
+async def command_bus_jobs():
+    return {
+        "jobs": store.query(
+            "SELECT id,source,source_id,status,planner,created_at,updated_at,error "
+            "FROM command_jobs ORDER BY created_at DESC LIMIT 100"
+        )
+    }
+
+
+@app.get("/command-bus/jobs/{job_id}")
+async def command_bus_job(job_id: str):
+    jobs = store.query("SELECT * FROM command_jobs WHERE id=?", (job_id,))
+    if not jobs:
+        raise HTTPException(404, "command job not found")
+    steps = store.query(
+        "SELECT * FROM command_steps WHERE job_id=? ORDER BY rowid",
+        (job_id,),
+    )
+    return {"job": jobs[0], "steps": steps}
 
 
 @app.post("/email/send-test")

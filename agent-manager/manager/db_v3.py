@@ -20,6 +20,12 @@ CREATE TABLE IF NOT EXISTS lessons(id INTEGER PRIMARY KEY AUTOINCREMENT,created_
 CREATE TABLE IF NOT EXISTS managed_target_status(target_id TEXT PRIMARY KEY,name TEXT NOT NULL,kind TEXT NOT NULL,ok INTEGER NOT NULL DEFAULT 0,last_check TEXT NOT NULL,details TEXT NOT NULL DEFAULT '{}');
 CREATE TABLE IF NOT EXISTS notifications(id INTEGER PRIMARY KEY AUTOINCREMENT,created_at TEXT NOT NULL,severity TEXT NOT NULL,source TEXT NOT NULL,title TEXT NOT NULL,body TEXT NOT NULL,status TEXT NOT NULL DEFAULT 'new');
 CREATE TABLE IF NOT EXISTS mail_commands(message_id TEXT PRIMARY KEY,thread_id TEXT,sender TEXT NOT NULL,subject TEXT NOT NULL,target TEXT NOT NULL,command_text TEXT NOT NULL,status TEXT NOT NULL,received_at TEXT NOT NULL,processed_at TEXT,result TEXT,error TEXT,reply_message_id TEXT);
+CREATE TABLE IF NOT EXISTS command_jobs(id TEXT PRIMARY KEY,source TEXT NOT NULL,source_id TEXT,request_text TEXT NOT NULL,status TEXT NOT NULL,planner TEXT,plan_json TEXT NOT NULL DEFAULT '{}',created_at TEXT NOT NULL,updated_at TEXT NOT NULL,result_json TEXT,error TEXT);
+CREATE TABLE IF NOT EXISTS command_steps(job_id TEXT NOT NULL,step_id TEXT NOT NULL,target TEXT NOT NULL,command_text TEXT NOT NULL,status TEXT NOT NULL,depends_on TEXT NOT NULL DEFAULT '[]',artifacts TEXT NOT NULL DEFAULT '[]',started_at TEXT,finished_at TEXT,result_json TEXT,error TEXT,PRIMARY KEY(job_id,step_id));
+CREATE TABLE IF NOT EXISTS artifacts(id TEXT PRIMARY KEY,source TEXT NOT NULL,source_id TEXT,filename TEXT NOT NULL,mime_type TEXT NOT NULL,size_bytes INTEGER NOT NULL,sha256 TEXT NOT NULL,local_path TEXT NOT NULL,created_at TEXT NOT NULL,metadata TEXT NOT NULL DEFAULT '{}');
+CREATE INDEX IF NOT EXISTS idx_artifacts_source ON artifacts(source,source_id);
+CREATE INDEX IF NOT EXISTS idx_command_jobs_source ON command_jobs(source,source_id);
+CREATE TABLE IF NOT EXISTS agent_capabilities(id TEXT PRIMARY KEY,name TEXT NOT NULL,description TEXT NOT NULL,capabilities TEXT NOT NULL DEFAULT '[]',artifact_support TEXT NOT NULL DEFAULT '[]',command_examples TEXT NOT NULL DEFAULT '[]',max_parallel INTEGER NOT NULL DEFAULT 1,dispatch_kind TEXT NOT NULL DEFAULT 'http',command_url TEXT NOT NULL DEFAULT '',token_env TEXT NOT NULL DEFAULT '',token_header TEXT NOT NULL DEFAULT 'authorization',token_prefix TEXT NOT NULL DEFAULT 'Bearer ',enabled INTEGER NOT NULL DEFAULT 1,updated_at TEXT NOT NULL);
 """
 def utcnow()->str: return datetime.now(timezone.utc).isoformat()
 

@@ -6,10 +6,10 @@ import os
 import re
 from typing import Any
 
-from .ai_router_v4 import AIRouterV4
+from .artifacts_v2 import MAX_EMAIL_ARTIFACT_BYTES
+from .command_bus_v2 import UniversalCommandBusV2
 from .db_v3 import StoreV3, utcnow
 from .gmail_v4 import GmailV4
-from .remote_v4 import _dispatch
 
 
 class GmailCommandLoopV4:
@@ -24,7 +24,7 @@ class GmailCommandLoopV4:
         self.allowed_senders = {x.strip().lower() for x in allowed.split(",") if x.strip()}
         self._stop = asyncio.Event()
         self.last: dict[str, Any] = {}
-        self.ai = AIRouterV4()
+        self.bus = UniversalCommandBusV2(store)
 
     def stop(self) -> None:
         self._stop.set()
@@ -60,34 +60,6 @@ class GmailCommandLoopV4:
             "am": "manager",
         }
         return mapping.get(raw) if raw else "", tail
-
-    @staticmethod
-    def _keyword_target(command: str) -> str:
-        low = command.lower()
-        if any(x in low for x in ("bloglab", "blog lab", "članek", "clanek", "objav", "blog ")):
-            return "bloglab"
-        if any(x in low for x in ("project visibility", "projekt visibility", "preflight", "builder", "website agent")):
-            return "project_visibility"
-        if any(x in low for x in ("agent manager", "manager", "incident", "maintenance", "gmail", "provider")):
-            return "manager"
-        return "all"
-
-    async def _resolve_target(self, command: str) -> tuple[str, str]:
-        fallback = self._keyword_target(command)
-        system = (
-            "Route an operator command to exactly one of: manager, project_visibility, bloglab, all. "
-            "manager = health/maintenance/incidents/providers; project_visibility = website builder/QA/preflight; "
-            "bloglab = blog content/site publishing; all = fleet-wide status or instructions intended for every agent. "
-            "Return JSON only: {\"target\":\"...\",\"reason\":\"...\"}."
-        )
-        try:
-            provider, data = await self.ai.chat_json(system, command)
-            target = str(data.get("target") or "").strip().lower()
-            if target in {"manager", "project_visibility", "bloglab", "all"}:
-                return target, provider
-        except Exception:
-            pass
-        return fallback, "deterministic"
 
     def _seen(self, message_id: str) -> dict[str, Any] | None:
         rows = self.store.query("SELECT * FROM mail_commands WHERE message_id=?", (message_id,))
@@ -138,31 +110,32 @@ class GmailCommandLoopV4:
         )
 
     @staticmethod
-    def _reply_body(target: str, command: str, ok: bool, result: Any = None, error: str = "") -> str:
+    def _reply_body(target: str, command: str, status: str, result: Any = None, error: str = "") -> str:
         lines = [
-            "Agent Manager V4 — email command result",
+            "Agent Manager V4 — Universal Command Bus V2",
             "",
-            f"Target: {target}",
-            f"Status: {'COMPLETED' if ok else 'FAILED'}",
+            f"Requested target: {target or 'AUTO'}",
+            f"Status: {status.upper()}",
             "",
             "Command:",
             command,
             "",
         ]
-        if ok:
+        if result is not None:
             rendered = json.dumps(result, ensure_ascii=False, indent=2, default=str)
-            lines.extend(["Result:", rendered[:18000]])
-        else:
-            lines.extend(["Error:", error[:6000]])
+            lines.extend(["Execution:", rendered[:18000]])
+        if error:
+            lines.extend(["", "Error:", error[:6000]])
         lines.extend(
             [
                 "",
-                "Command syntax:",
-                "[AGENT] = automatic routing",
-                "[AGENT ALL] = all three agents",
+                "Routing:",
+                "[AGENT] = natural-language automatic planning",
+                "[AGENT ALL] = all registered agents",
                 "[AGENT MANAGER] = Agent Manager",
                 "[AGENT PV] = Project Visibility",
                 "[AGENT BLOGLAB] = BlogLab",
+                "Attachments are ingested automatically; supported BlogLab images are uploaded and passed to the publishing command.",
             ]
         )
         return "\n".join(lines)
@@ -170,7 +143,6 @@ class GmailCommandLoopV4:
     async def process_one(self, message_id: str) -> dict[str, Any]:
         existing = self._seen(message_id)
         if existing:
-            # Idempotency: a Gmail retry must never execute the same command twice.
             try:
                 await asyncio.to_thread(self.gmail.mark_read, message_id)
             except Exception:
@@ -195,7 +167,7 @@ class GmailCommandLoopV4:
             await asyncio.to_thread(self.gmail.mark_read, message_id)
             return {"id": message_id, "status": "denied", "sender": sender}
 
-        command = details["body"].strip()
+        command = str(details.get("body") or "").strip()
         if subject_tail:
             command = f"{subject_tail}\n\n{command}".strip()
         if not command:
@@ -208,48 +180,118 @@ class GmailCommandLoopV4:
             await asyncio.to_thread(self.gmail.mark_read, message_id)
             return {"id": message_id, "status": "empty"}
 
-        if subject_target:
-            target = subject_target
-            router = "subject"
-        else:
-            target, router = await self._resolve_target(command)
+        explicit_target = subject_target or ""
+        target_label = explicit_target or "auto"
+        self._insert_processing(details, target_label, command)
 
-        self._insert_processing(details, target, command)
+        artifacts: list[dict[str, Any]] = []
+        total_bytes = 0
+        try:
+            for attachment in details.get("attachments") or []:
+                raw = await asyncio.to_thread(self.gmail.attachment_bytes, message_id, attachment)
+                total_bytes += len(raw)
+                if total_bytes > MAX_EMAIL_ARTIFACT_BYTES:
+                    raise RuntimeError(
+                        f"Combined attachments exceed {MAX_EMAIL_ARTIFACT_BYTES} bytes."
+                    )
+                metadata = {
+                    "gmail_attachment_id": str(attachment.get("attachment_id") or ""),
+                    "content_id": str(attachment.get("content_id") or ""),
+                    "content_disposition": str(attachment.get("content_disposition") or ""),
+                }
+                artifacts.append(
+                    self.bus.artifacts.save_bytes(
+                        source="gmail",
+                        source_id=message_id,
+                        filename=str(attachment.get("filename") or "attachment.bin"),
+                        mime_type=str(attachment.get("mime_type") or "application/octet-stream"),
+                        data=raw,
+                        metadata=metadata,
+                    )
+                )
+        except Exception as exc:
+            error = f"{type(exc).__name__}: {exc}"
+            self.store.action(
+                "gmail-command-v4",
+                "attachment_ingest_failed",
+                message_id,
+                "failed",
+                {"error": error[:1200]},
+            )
+            reply_id = ""
+            try:
+                reply_id = await asyncio.to_thread(
+                    self.gmail.send,
+                    f"[AGENT RESULT] {target_label.upper()} — FAILED",
+                    self._reply_body(target_label, command, "failed", error=error),
+                    sender,
+                )
+            except Exception:
+                pass
+            self._finish(message_id, "failed", error=error, reply_message_id=reply_id or None)
+            await asyncio.to_thread(self.gmail.mark_read, message_id)
+            return {"id": message_id, "status": "failed", "target": target_label, "error": error}
+
         self.store.action(
             "gmail-command-v4",
             "command_received",
-            target,
+            target_label,
             "processing",
-            {"message_id": message_id, "sender": sender, "router": router, "subject": details["subject"]},
+            {
+                "message_id": message_id,
+                "sender": sender,
+                "router": "subject" if explicit_target else "universal-planner-v2",
+                "subject": details["subject"],
+                "attachments": len(artifacts),
+            },
         )
 
         try:
-            result = await _dispatch(target, command)
-            reply_body = self._reply_body(target, command, True, result=result)
+            result = await self.bus.execute(
+                command,
+                source="gmail",
+                source_id=message_id,
+                explicit_target=explicit_target,
+                artifacts=artifacts,
+            )
+            final_status = str(result.get("status") or "completed")
+            ok = final_status == "completed"
             reply_id = await asyncio.to_thread(
                 self.gmail.send,
-                f"[AGENT RESULT] {target.upper()} — COMPLETED",
-                reply_body,
+                f"[AGENT RESULT] {target_label.upper()} — {final_status.upper()}",
+                self._reply_body(target_label, command, final_status, result=result),
                 sender,
             )
-            self._finish(message_id, "completed", result=result, reply_message_id=reply_id)
+            self._finish(message_id, final_status, result=result, reply_message_id=reply_id)
             await asyncio.to_thread(self.gmail.mark_read, message_id)
             self.store.action(
                 "gmail-command-v4",
-                "command_completed",
-                target,
-                "completed",
-                {"message_id": message_id, "reply_message_id": reply_id, "router": router},
+                "command_completed" if ok else "command_partial",
+                target_label,
+                final_status,
+                {
+                    "message_id": message_id,
+                    "reply_message_id": reply_id,
+                    "job_id": result.get("job_id"),
+                    "attachments": len(artifacts),
+                },
             )
-            return {"id": message_id, "status": "completed", "target": target, "reply_message_id": reply_id}
+            return {
+                "id": message_id,
+                "status": final_status,
+                "target": target_label,
+                "job_id": result.get("job_id"),
+                "reply_message_id": reply_id,
+                "artifacts": len(artifacts),
+            }
         except Exception as exc:
             error = f"{type(exc).__name__}: {exc}"
             reply_id = ""
             try:
                 reply_id = await asyncio.to_thread(
                     self.gmail.send,
-                    f"[AGENT RESULT] {target.upper()} — FAILED",
-                    self._reply_body(target, command, False, error=error),
+                    f"[AGENT RESULT] {target_label.upper()} — FAILED",
+                    self._reply_body(target_label, command, "failed", error=error),
                     sender,
                 )
             except Exception:
@@ -259,11 +301,11 @@ class GmailCommandLoopV4:
             self.store.action(
                 "gmail-command-v4",
                 "command_failed",
-                target,
+                target_label,
                 "failed",
-                {"message_id": message_id, "error": error[:1500], "router": router},
+                {"message_id": message_id, "error": error[:1500], "attachments": len(artifacts)},
             )
-            return {"id": message_id, "status": "failed", "target": target, "error": error}
+            return {"id": message_id, "status": "failed", "target": target_label, "error": error}
 
     async def cycle(self) -> dict[str, Any]:
         if not self.enabled:
@@ -274,7 +316,7 @@ class GmailCommandLoopV4:
             return self.last
 
         # Gmail narrows the candidate set; exact [AGENT ...] validation happens locally.
-        rows = await asyncio.to_thread(self.gmail.list_messages, "is:unread newer_than:7d subject:AGENT", 30)
+        rows = await asyncio.to_thread(self.gmail.list_messages, 'is:unread newer_than:7d subject:AGENT -subject:"[AGENT RESULT]"', 30)
         results: list[dict[str, Any]] = []
         for row in reversed(rows):
             results.append(await self.process_one(row["id"]))

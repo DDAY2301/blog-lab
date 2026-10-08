@@ -156,24 +156,57 @@ class GmailV4:
         raw = base64.urlsafe_b64decode(data + "=" * ((4 - len(data) % 4) % 4))
         return raw.decode("utf-8", errors="replace")
 
-    def message_details(self, message: dict[str, Any]) -> dict[str, str]:
+    def message_details(self, message: dict[str, Any]) -> dict[str, Any]:
         payload = message.get("payload") or {}
         headers = {
             str(row.get("name", "")).lower(): str(row.get("value", ""))
             for row in payload.get("headers", [])
         }
+        text_parts: list[str] = []
+        attachments: list[dict[str, Any]] = []
+        generated_index = 0
 
-        def walk(part: dict[str, Any]) -> list[str]:
-            mime = str(part.get("mimeType") or "")
+        def walk(part: dict[str, Any]) -> None:
+            nonlocal generated_index
+            mime = str(part.get("mimeType") or "application/octet-stream").lower()
             body = part.get("body") or {}
-            out: list[str] = []
-            if mime == "text/plain" and body.get("data"):
-                out.append(self._decode_body(str(body.get("data"))))
-            for child in part.get("parts", []) or []:
-                out.extend(walk(child))
-            return out
+            filename = str(part.get("filename") or "").strip()
+            part_headers = {
+                str(row.get("name", "")).lower(): str(row.get("value", ""))
+                for row in part.get("headers", []) or []
+            }
 
-        text_parts = walk(payload)
+            if mime == "text/plain" and body.get("data") and not filename:
+                text_parts.append(self._decode_body(str(body.get("data"))))
+
+            attachment_id = str(body.get("attachmentId") or "").strip()
+            inline_data = str(body.get("data") or "").strip() if filename or mime.startswith("image/") else ""
+            if attachment_id or (inline_data and (filename or mime.startswith("image/"))):
+                generated_index += 1
+                if not filename:
+                    ext = {
+                        "image/jpeg": ".jpg",
+                        "image/png": ".png",
+                        "image/webp": ".webp",
+                        "image/gif": ".gif",
+                    }.get(mime, ".bin")
+                    filename = f"inline-{generated_index}{ext}"
+                attachments.append(
+                    {
+                        "filename": filename,
+                        "mime_type": mime,
+                        "size": int(body.get("size") or 0),
+                        "attachment_id": attachment_id,
+                        "inline_data": inline_data if not attachment_id else "",
+                        "content_id": part_headers.get("content-id", "").strip("<>"),
+                        "content_disposition": part_headers.get("content-disposition", ""),
+                    }
+                )
+
+            for child in part.get("parts", []) or []:
+                walk(child)
+
+        walk(payload)
         body = "\n\n".join(x.strip() for x in text_parts if x.strip()).strip()
         if not body:
             body = str(message.get("snippet") or "").strip()
@@ -186,7 +219,27 @@ class GmailV4:
             "subject": headers.get("subject", "").strip(),
             "body": body,
             "message_id_header": headers.get("message-id", "").strip(),
+            "attachments": attachments,
         }
+
+    def attachment_bytes(self, message_id: str, attachment: dict[str, Any]) -> bytes:
+        attachment_id = str(attachment.get("attachment_id") or "").strip()
+        if attachment_id:
+            service = self._service()
+            data = service.users().messages().attachments().get(
+                userId="me",
+                messageId=message_id,
+                id=attachment_id,
+            ).execute()
+            encoded = str(data.get("data") or "")
+            if not encoded:
+                raise RuntimeError("Gmail attachment payload is empty.")
+            return base64.urlsafe_b64decode(encoded + "=" * ((4 - len(encoded) % 4) % 4))
+
+        encoded = str(attachment.get("inline_data") or "")
+        if not encoded:
+            raise RuntimeError("Gmail attachment has no downloadable payload.")
+        return base64.urlsafe_b64decode(encoded + "=" * ((4 - len(encoded) % 4) % 4))
 
     def mark_read(self, message_id: str) -> None:
         service = self._service()
