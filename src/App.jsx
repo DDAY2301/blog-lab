@@ -30,6 +30,49 @@ const CATEGORY_EMPTY_COPY = {
 
 const starterArticles = [
   {
+    "id": "dravska-kolesarska-pot-najdaljsa-najbolj-slikovita-in-raznolika-etapa-za-konec-6b71d0e6",
+    "title": "Dravska kolesarska pot: najdaljša, najbolj slikovita in raznolika etapa za konec",
+    "excerpt": "Kolesarstvo: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Dravska kolesarska pot: najdaljša, najbolj slikovita in raznolika etapa za konec«.",
+    "seoDescription": "Kolesarstvo: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Dravska kolesarska pot: najdaljša, najbolj slikovita in raznolika etapa za",
+    "content": "**Kolesarstvo, 8. 10. 2026.** Dravska kolesarska pot: najdaljša, najbolj slikovita in raznolika etapa za konec rtvslo.si\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: rtvslo.si. Objavljeno: Fri, 26 Jun 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMi0gFBVV95cUxOWHVLdzFnWUFxdkI4bXFVUzcxaG1OUm9WbFJwbzB0eFJIMzdmM0tydVlUWndHZVBDWlk1VWd6RU1haURNUGRhYnBGdHhCNTA2WTZNRGctU0JiSy02d0lPZ3dVd2ZrTWk3WVpUd1M3UWJhbTJQZUdNZ0o4MXYxVDVmZ0IzSnFPZENvZ1BuN0dCVHBQV0pubHVfMW9yek9KTWg0ZTRBcV9Jal9MUk44dzVNYVlELXRRclBRMGc2U1JTMmhUSEUza1F5TEZzb3Y5d1Y4NGc?oc=5)\n\n## Dopolnitev vira 2: Dnevnik\n\nZakaj smo Slovenci obsedeni s kolesarjenjem (in zakaj nas tujci tako občudujejo)? Dnevnik\n\n Vir: Dnevnik. Objavljeno: Sat, 26 Sep 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMipAFBVV95cUxNb01EVm53LU9DcExPVVZiRGJxMmRYR0tXc0FjbHdGai01MWF5dGdmbjVfMk1Zd0I2a3QyYWFVM0d6dUVCZkVhSGFPal9fUEQ2N0NWSU9pTkVKR2pCM3NHWFFZdHUyNkpPTWlKMWNFV2w4dnlpR2pvSkRsTG9QdXMtMVNMMUprSGtHTWlxNVUzYklvMXRPSVpJYVNEazdVSnpZdXAydQ?oc=5)\n\n## Dopolnitev vira 3: Delo.si\n\nPot ob železni zavesi pripravljena, kolesarjev zaradi pandemije še ni Delo.si\n\n Vir: Delo.si. Objavljeno: Wed, 07 Apr 2021 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMirAFBVV95cUxPdXJEbGhRVEw4LUcxSEF6TFVGVzNLZXVhVll5X24xMDVESVQ4QlZjZXpEZVpoRWhHSEdSYnR4RXI2MlA1dnRBU28za2hoUnh6Rkp2TWRvbWNvcmNYSnFZMzVIR1FSVGhnZHdlSGV3bGczdWxGT0hsOHlUdmlKaDFnTjQ4SDlxZEtrNFJXbEJCQjhwaG5renUwRFBjdDN5OFFnTjNzM2VhRHpTLXE1?oc=5)\n\n## Dopolnitev vira 4: L’Étape Series by Tour de France\n\nMerkur zavarovalnica L’Étape Slovenia by Tour de France kolesarsko doživetje L’Étape Series by Tour de France\n\n Vir: L’Étape Series by Tour de France. Objavljeno: Wed, 19 Jul 2023 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiekFVX3lxTE03OVBiY2YzeG5rMkdObjZxaUJPak91eUQxNzRsUGtSSkhkTHAxYWI1RnQ0RElqMEZOUGhBU1NUT1I3RUljUHhkcVNYZzNiUVpZQkVOYXNPWkMxSVlxeE1rb3l6NkVQY1Q2Vmt6TWl3Um1PUVVDdHl6amFn?oc=5)\n\n## Dopolnitev vira 5: dnevne-novice.com\n\n5 najboljših destinacij za kolesarski turizem v Sloveniji: kam na popoln kolesarski oddih? dnevne-novice.com\n\n Vir: dnevne-novice.com. Objavljeno: Mon, 27 Jul 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiZkFVX3lxTFB6dTdHSHV4Y3FHWFV5bjhqREFVSE8xamxoLU16a3lBM2tHcUs5U3dkOHBNYlVYNk5NQjRSMElMNmN1cTdGXzIyZFN0bHVkOGRzTFEtUjFQYUg5MUJsRVRncExmZER0dw?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Kolesarstvo",
+    "author": "Blog Lab Slovenia Publisher",
+    "status": "published",
+    "heroImage": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/08_Slovenia_rural_landscape_-_bicycle_expedition_with_panniers.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "alt": "Three male cyclists wearing helmets during a summer bicycle tour in rural Slovenia near Luže.",
+      "caption": "Marek Ślusarczyk ( Tupungato ) Photo gallery · Wikimedia Commons · CC BY 3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:08_Slovenia_rural_landscape_-_bicycle_expedition_with_panniers.jpg"
+    },
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "rtvslo.si — Dravska kolesarska pot: najdaljša, najbolj slikovita in raznolika etapa za konec - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOWHVLdzFnWUFxdkI4bXFVUzcxaG1OUm9WbFJwbzB0eFJIMzdmM0tydVlUWndHZVBDWlk1VWd6RU1haURNUGRhYnBGdHhCNTA2WTZNRGctU0JiSy02d0lPZ3dVd2ZrTWk3WVpUd1M3UWJhbTJQZUdNZ0o4MXYxVDVmZ0IzSnFPZENvZ1BuN0dCVHBQV0pubHVfMW9yek9KTWg0ZTRBcV9Jal9MUk44dzVNYVlELXRRclBRMGc2U1JTMmhUSEUza1F5TEZzb3Y5d1Y4NGc?oc=5"
+      },
+      {
+        "label": "Dnevnik — Zakaj smo Slovenci obsedeni s kolesarjenjem (in zakaj nas tujci tako občudujejo)? - Dnevnik",
+        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNb01EVm53LU9DcExPVVZiRGJxMmRYR0tXc0FjbHdGai01MWF5dGdmbjVfMk1Zd0I2a3QyYWFVM0d6dUVCZkVhSGFPal9fUEQ2N0NWSU9pTkVKR2pCM3NHWFFZdHUyNkpPTWlKMWNFV2w4dnlpR2pvSkRsTG9QdXMtMVNMMUprSGtHTWlxNVUzYklvMXRPSVpJYVNEazdVSnpZdXAydQ?oc=5"
+      },
+      {
+        "label": "Delo.si — Pot ob železni zavesi pripravljena, kolesarjev zaradi pandemije še ni - Delo.si",
+        "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPdXJEbGhRVEw4LUcxSEF6TFVGVzNLZXVhVll5X24xMDVESVQ4QlZjZXpEZVpoRWhHSEdSYnR4RXI2MlA1dnRBU28za2hoUnh6Rkp2TWRvbWNvcmNYSnFZMzVIR1FSVGhnZHdlSGV3bGczdWxGT0hsOHlUdmlKaDFnTjQ4SDlxZEtrNFJXbEJCQjhwaG5renUwRFBjdDN5OFFnTjNzM2VhRHpTLXE1?oc=5"
+      },
+      {
+        "label": "L’Étape Series by Tour de France — Merkur zavarovalnica L’Étape Slovenia by Tour de France kolesarsko doživetje - L’Étape Series by Tour de France",
+        "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE03OVBiY2YzeG5rMkdObjZxaUJPak91eUQxNzRsUGtSSkhkTHAxYWI1RnQ0RElqMEZOUGhBU1NUT1I3RUljUHhkcVNYZzNiUVpZQkVOYXNPWkMxSVlxeE1rb3l6NkVQY1Q2Vmt6TWl3Um1PUVVDdHl6amFn?oc=5"
+      },
+      {
+        "label": "dnevne-novice.com — 5 najboljših destinacij za kolesarski turizem v Sloveniji: kam na popoln kolesarski oddih? - dnevne-novice.com",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFB6dTdHSHV4Y3FHWFV5bjhqREFVSE8xamxoLU16a3lBM2tHcUs5U3dkOHBNYlVYNk5NQjRSMElMNmN1cTdGXzIyZFN0bHVkOGRzTFEtUjFQYUg5MUJsRVRncExmZER0dw?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-08T07:39:03+02:00",
+    "updatedAt": "2026-10-08T07:39:03+02:00"
+  },
+
+  {
     "id": "foto-in-video-halosko-zlato-dobo-oziveli-v-krcmi-janzevina-domace-vino-stajerska-hrana-in--9819d25c",
     "title": "FOTO in VIDEO: Haloško zlato dobo oživeli v Krčmi Janževina: Domače vino, štajerska hrana in notranjost, ki…",
     "excerpt": "Gourmet: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »FOTO in VIDEO: Haloško zlato dobo oživeli v Krčmi Janževina: Domače vino, štajerska hrana in notranjost, ki…«.",
