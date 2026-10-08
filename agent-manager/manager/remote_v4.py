@@ -286,12 +286,13 @@ async def login(data: LoginIn, request: Request):
         await asyncio.sleep(0.5)
         raise HTTPException(401, "Invalid password")
     response = _json({"ok": True})
+    forwarded_https = request.headers.get("x-forwarded-proto", "").lower() == "https"
     response.set_cookie(
         SESSION_COOKIE,
         _make_session(),
         max_age=SESSION_TTL_SECONDS,
         httponly=True,
-        secure=True,
+        secure=forwarded_https or request.url.scheme == "https",
         samesite="strict",
         path="/",
     )
