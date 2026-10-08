@@ -1,12 +1,15 @@
 {
-  "updatedAt": "2026-10-08T02:15:28+02:00",
+  "updatedAt": "2026-10-08T07:01:39+02:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
+    "Cankarjev dom",
+    "MGL",
+    "Ljubljana Castle",
     "Kino Šiška",
+    "Cukrarna",
     "Gala Hala",
-    "Klub K4",
-    "Cirkus Klub"
+    "Klub K4"
   ],
   "sourcesFailed": [],
   "items": [
@@ -18,7 +21,51 @@
       "type": "Festival · kultura",
       "place": "Ljubljana · več prizorišč",
       "startAt": "2026-10-07T19:00:00+02:00",
-      "endAt": "2026-10-11T23:00:00+02:00"
+      "endAt": "2026-10-11T23:00:00+02:00",
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.kinosiska.si/dogodek/tinta-2026-festival-stripa-ljubljana/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-08T07:01:39+02:00"
+    },
+    {
+      "id": "kutikuti-nonsense-comics-workshop-2026-10-08",
+      "title": "Kutikuti: Nonsense Comics Workshop",
+      "url": "https://www.kinosiska.si/dogodek/tinta-2026-festival-stripa-ljubljana/",
+      "source": "Kino Šiška / TINTA",
+      "type": "Delavnica · strip",
+      "place": "Ljubljana",
+      "startAt": "2026-10-08T16:00:00+02:00",
+      "endAt": null,
+      "price": null,
+      "languages": [],
+      "touristFriendly": true,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.kinosiska.si/dogodek/tinta-2026-festival-stripa-ljubljana/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-08T07:01:39+02:00"
+    },
+    {
+      "id": "pc1-eternal-rest-2026-10-08",
+      "title": "PC 1: Eternal Rest",
+      "url": "https://www.cd-cc.si/en",
+      "source": "Cankarjev dom",
+      "type": "Koncert · klasična glasba",
+      "place": "Cankarjev dom · Ljubljana",
+      "startAt": "2026-10-08T19:30:00+02:00",
+      "endAt": null,
+      "price": "€9–€42",
+      "languages": [],
+      "touristFriendly": true,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.cd-cc.si/en",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-08T07:01:39+02:00"
     },
     {
       "id": "rundek-ekipa-2026-10-08",
@@ -27,7 +74,15 @@
       "source": "Kino Šiška",
       "type": "Koncert",
       "place": "Kino Šiška · Ljubljana",
-      "startAt": "2026-10-08T20:00:00+02:00"
+      "startAt": "2026-10-08T20:00:00+02:00",
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.kinosiska.si/?post_type=events",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-08T07:01:39+02:00"
     },
     {
       "id": "cosmic-kitten-2026-10-08",
@@ -36,17 +91,15 @@
       "source": "Gala Hala",
       "type": "Koncert · Metelkova",
       "place": "Gala Hala · AKC Metelkova",
-      "startAt": "2026-10-08T20:00:00+02:00"
-    },
-    {
-      "title": "COSMIC KITTEN (San Pedro / Los Angeles, USA) @ Gala hala",
-      "url": "https://www.galahala.com/",
-      "source": "Gala Hala",
-      "type": "Koncert · Metelkova",
-      "place": "Gala Hala · AKC Metelkova",
       "startAt": "2026-10-08T20:00:00+02:00",
-      "endAt": "",
-      "id": "event-04-cosmic-kitten-san-pedro-los-angeles-usa-gala-hala"
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.galahala.com/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-08T07:01:39+02:00"
     },
     {
       "id": "grandmaster-flash-2026-10-09",
@@ -55,17 +108,51 @@
       "source": "Gala Hala",
       "type": "Koncert · party",
       "place": "Gala Hala · AKC Metelkova",
-      "startAt": "2026-10-09T20:00:00+02:00"
+      "startAt": "2026-10-09T20:00:00+02:00",
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.galahala.com/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-08T07:01:39+02:00"
     },
     {
-      "title": "Rapetek ekstra: GRANDMASTER FLASH (ZDA) @ Gala hala",
-      "url": "https://www.galahala.com/",
-      "source": "Gala Hala",
-      "type": "Koncert · Metelkova",
-      "place": "Gala Hala · AKC Metelkova",
+      "id": "sunnysiders-stone-head-2026-10-09",
+      "title": "Sunnysiders and Stone Head",
+      "url": "https://ljubljanskigrad.si/en/castle-events/sunnysiders-and-stone-head/",
+      "source": "Ljubljana Castle",
+      "type": "Koncert · blues",
+      "place": "Rock Hall · Ljubljana Castle",
       "startAt": "2026-10-09T20:00:00+02:00",
-      "endAt": "",
-      "id": "event-06-rapetek-ekstra-grandmaster-flash-zda-gala-hala"
+      "endAt": null,
+      "price": "€11, return funicular included",
+      "languages": [],
+      "touristFriendly": true,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://ljubljanskigrad.si/en/castle-events/sunnysiders-and-stone-head/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-08T07:01:39+02:00"
+    },
+    {
+      "id": "prince-lucija-indigo-2026-10-09",
+      "title": "Prince Lucija",
+      "url": "https://cukrarna.art/en/program/news/105/for-media-announcing-the-programme-of-indigo-festival-2026/",
+      "source": "Cukrarna / Visit Ljubljana",
+      "type": "Koncert · elektronika",
+      "place": "Cukrarna Gallery · Ljubljana",
+      "startAt": "2026-10-09T21:00:00+02:00",
+      "endAt": "2026-10-09T22:00:00+02:00",
+      "price": null,
+      "languages": [],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": null,
+      "ticketUrl": "https://cukrarna.art/en/program/news/105/for-media-announcing-the-programme-of-indigo-festival-2026/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-08T07:01:39+02:00"
     },
     {
       "title": "MIR|ЯOR x Shockwerk x Disco Sour presents Tarkno",
@@ -75,7 +162,15 @@
       "place": "Klub K4 · Ljubljana",
       "startAt": "2026-10-09T23:00:00+02:00",
       "endAt": "",
-      "id": "event-07-mir-or-x-shockwerk-x-disco-sour-presents-tarkno"
+      "id": "event-07-mir-or-x-shockwerk-x-disco-sour-presents-tarkno",
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.klub-k4.si/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-08T07:01:39+02:00"
     },
     {
       "id": "artish-2026-10-10",
@@ -85,7 +180,15 @@
       "type": "Kultura · sejem",
       "place": "Gallusovo nabrežje · Ljubljana",
       "startAt": "2026-10-10T10:00:00+02:00",
-      "endAt": "2026-10-10T17:00:00+02:00"
+      "endAt": "2026-10-10T17:00:00+02:00",
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/artish-fest",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-08T07:01:39+02:00"
     },
     {
       "id": "majmunska-posla-2026-10-10",
@@ -94,17 +197,15 @@
       "source": "Gala Hala",
       "type": "Koncert",
       "place": "Gala Hala · AKC Metelkova",
-      "startAt": "2026-10-10T20:00:00+02:00"
-    },
-    {
-      "title": "MAJMUNSKA POSLA - predstavitev albuma @ Gala hala",
-      "url": "https://www.galahala.com/",
-      "source": "Gala Hala",
-      "type": "Koncert · Metelkova",
-      "place": "Gala Hala · AKC Metelkova",
       "startAt": "2026-10-10T20:00:00+02:00",
-      "endAt": "",
-      "id": "event-10-majmunska-posla-predstavitev-albuma-gala-hala"
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.galahala.com/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-08T07:01:39+02:00"
     },
     {
       "title": "Lomilka x Gonobeats w/ Posij & Trinist",
@@ -114,7 +215,15 @@
       "place": "Klub K4 · Ljubljana",
       "startAt": "2026-10-10T23:00:00+02:00",
       "endAt": "",
-      "id": "event-11-lomilka-x-gonobeats-w-posij-trinist"
+      "id": "event-11-lomilka-x-gonobeats-w-posij-trinist",
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.klub-k4.si/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-08T07:01:39+02:00"
     },
     {
       "id": "ettc-2026-10-11",
@@ -124,7 +233,35 @@
       "type": "Šport",
       "place": "Dvorana Stožice · Ljubljana",
       "startAt": "2026-10-11T09:00:00+02:00",
-      "endAt": "2026-10-18T22:00:00+02:00"
+      "endAt": "2026-10-18T22:00:00+02:00",
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/evropsko-prvenstvo-v-namiznem-tenisu",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-08T07:01:39+02:00"
+    },
+    {
+      "id": "dragonology-doom-prophecy-2026-10-11",
+      "title": "Dragonology School: Prophecy of the Doom of Dragons",
+      "url": "https://www.ljubljanskigrad.si/sl/dogodki/sola-zmajeslovja-prerokba-o-pogubi-zmajev",
+      "source": "Ljubljana Castle",
+      "type": "Družine · doživetje",
+      "place": "Ljubljana Castle",
+      "startAt": "2026-10-11T10:30:00+02:00",
+      "endAt": null,
+      "price": null,
+      "languages": [
+        "Slovenian"
+      ],
+      "touristFriendly": false,
+      "familyFriendly": true,
+      "accessibility": null,
+      "ticketUrl": "https://www.ljubljanskigrad.si/sl/dogodki/sola-zmajeslovja-prerokba-o-pogubi-zmajev",
+      "status": "sold_out",
+      "lastCheckedAt": "2026-10-08T07:01:39+02:00"
     },
     {
       "title": "KONCERTNA AKADEMIJA @ Kino Šiška",
@@ -134,7 +271,35 @@
       "place": "Gala Hala · AKC Metelkova",
       "startAt": "2026-10-12T17:00:00+02:00",
       "endAt": "",
-      "id": "event-13-koncertna-akademija-kino-i-ka"
+      "id": "event-13-koncertna-akademija-kino-i-ka",
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.galahala.com/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-08T07:01:39+02:00"
+    },
+    {
+      "id": "lisicka-sestricka-2026-10-14",
+      "title": "Lisička sestrička",
+      "url": "https://ljubljanskigrad.si/sl/dogodki/lisicka-sestricka",
+      "source": "Ljubljana Castle",
+      "type": "Družine · predstava",
+      "place": "Hribar Hall · Ljubljana Castle",
+      "startAt": "2026-10-14T17:30:00+02:00",
+      "endAt": "2026-10-14T18:10:00+02:00",
+      "price": "€5",
+      "languages": [
+        "Slovenian"
+      ],
+      "touristFriendly": false,
+      "familyFriendly": true,
+      "accessibility": null,
+      "ticketUrl": "https://ljubljanskigrad.si/sl/dogodki/lisicka-sestricka",
+      "status": "sold_out",
+      "lastCheckedAt": "2026-10-08T07:01:39+02:00"
     },
     {
       "title": "KARABRUKE @ Gala hala",
@@ -144,7 +309,15 @@
       "place": "Gala Hala · AKC Metelkova",
       "startAt": "2026-10-16T22:00:00+02:00",
       "endAt": "",
-      "id": "event-14-karabruke-gala-hala"
+      "id": "event-14-karabruke-gala-hala",
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.galahala.com/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-08T07:01:39+02:00"
     },
     {
       "title": "ODYSSEY:CLUB",
@@ -154,7 +327,15 @@
       "place": "Klub K4 · Ljubljana",
       "startAt": "2026-10-16T23:00:00+02:00",
       "endAt": "",
-      "id": "event-15-odyssey-club"
+      "id": "event-15-odyssey-club",
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.klub-k4.si/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-08T07:01:39+02:00"
     },
     {
       "id": "ljubljana-marathon-2026-10-17",
@@ -164,7 +345,15 @@
       "type": "Šport",
       "place": "Ljubljana · mestno središče",
       "startAt": "2026-10-17T08:00:00+02:00",
-      "endAt": "2026-10-18T18:00:00+02:00"
+      "endAt": "2026-10-18T18:00:00+02:00",
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/nlb-30-ljubljanski-maraton",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-08T07:01:39+02:00"
     },
     {
       "title": "RAPETEK EXTRA: IMMORTAL TECHNIQUE (ZDA) @ Gala hala",
@@ -174,7 +363,15 @@
       "place": "Gala Hala · AKC Metelkova",
       "startAt": "2026-10-17T20:00:00+02:00",
       "endAt": "",
-      "id": "event-17-rapetek-extra-immortal-technique-zda-gala-hala"
+      "id": "event-17-rapetek-extra-immortal-technique-zda-gala-hala",
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.galahala.com/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-08T07:01:39+02:00"
     },
     {
       "title": "BALANS (SI): ALBUM RELEASE KONCERT @ Gala hala",
@@ -184,7 +381,15 @@
       "place": "Gala Hala · AKC Metelkova",
       "startAt": "2026-10-23T21:00:00+02:00",
       "endAt": "",
-      "id": "event-18-balans-si-album-release-koncert-gala-hala"
+      "id": "event-18-balans-si-album-release-koncert-gala-hala",
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.galahala.com/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-08T07:01:39+02:00"
     },
     {
       "title": "FORESTDELIC / LABEL NIGHT / KLUB K4",
@@ -194,7 +399,15 @@
       "place": "Klub K4 · Ljubljana",
       "startAt": "2026-10-23T23:00:00+02:00",
       "endAt": "",
-      "id": "event-19-forestdelic-label-night-klub-k4"
+      "id": "event-19-forestdelic-label-night-klub-k4",
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.klub-k4.si/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-08T07:01:39+02:00"
     },
     {
       "title": "DNBKONFERENCA: 17. OBLETNICA @ Gala hala",
@@ -204,7 +417,15 @@
       "place": "Gala Hala · AKC Metelkova",
       "startAt": "2026-10-24T22:00:00+02:00",
       "endAt": "",
-      "id": "event-20-dnbkonferenca-17-obletnica-gala-hala"
+      "id": "event-20-dnbkonferenca-17-obletnica-gala-hala",
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.galahala.com/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-08T07:01:39+02:00"
     },
     {
       "title": "Grand Prix invites Upper90",
@@ -214,7 +435,15 @@
       "place": "Klub K4 · Ljubljana",
       "startAt": "2026-10-24T23:00:00+02:00",
       "endAt": "",
-      "id": "event-21-grand-prix-invites-upper90"
+      "id": "event-21-grand-prix-invites-upper90",
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.klub-k4.si/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-08T07:01:39+02:00"
     },
     {
       "title": "BBBBBBB (JP), MALA ROZA MUCA & PIXEL.BAMBI, SSMKOSK @ Channel Zero",
@@ -224,7 +453,15 @@
       "place": "Gala Hala · AKC Metelkova",
       "startAt": "2026-10-29T20:00:00+01:00",
       "endAt": "",
-      "id": "event-22-bbbbbbb-jp-mala-roza-muca-pixel-bambi-ssmkosk-channel-zero"
+      "id": "event-22-bbbbbbb-jp-mala-roza-muca-pixel-bambi-ssmkosk-channel-zero",
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.galahala.com/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-08T07:01:39+02:00"
     },
     {
       "title": "NOČ ČAROVNIC SPECIAL: KIKI @ Gala hala",
@@ -234,7 +471,15 @@
       "place": "Gala Hala · AKC Metelkova",
       "startAt": "2026-10-30T20:00:00+01:00",
       "endAt": "",
-      "id": "event-23-no-arovnic-special-kiki-gala-hala"
+      "id": "event-23-no-arovnic-special-kiki-gala-hala",
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.galahala.com/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-08T07:01:39+02:00"
     },
     {
       "title": "HALLOWEEN: BRIGHT SIDE OF THE 80’S @ Gala hala",
@@ -244,7 +489,15 @@
       "place": "Gala Hala · AKC Metelkova",
       "startAt": "2026-10-31T22:00:00+01:00",
       "endAt": "",
-      "id": "event-24-halloween-bright-side-of-the-80-s-gala-hala"
+      "id": "event-24-halloween-bright-side-of-the-80-s-gala-hala",
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.galahala.com/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-08T07:01:39+02:00"
     },
     {
       "title": "CODEFENDANTS (ZDA) + JAKOB'S CASTLE @ Gala hala",
@@ -254,7 +507,15 @@
       "place": "Gala Hala · AKC Metelkova",
       "startAt": "2026-11-03T20:00:00+01:00",
       "endAt": "",
-      "id": "event-25-codefendants-zda-jakob-s-castle-gala-hala"
+      "id": "event-25-codefendants-zda-jakob-s-castle-gala-hala",
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.galahala.com/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-08T07:01:39+02:00"
     },
     {
       "title": "WAVE RIDERS!",
@@ -264,7 +525,15 @@
       "place": "Gala Hala · AKC Metelkova",
       "startAt": "2026-11-06T22:00:00+01:00",
       "endAt": "",
-      "id": "event-26-wave-riders"
+      "id": "event-26-wave-riders",
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.galahala.com/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-08T07:01:39+02:00"
     },
     {
       "title": ".travnik - 5 LET ALBUMA PUBECI NE JOČEJO @ Gala hala",
@@ -274,7 +543,15 @@
       "place": "Gala Hala · AKC Metelkova",
       "startAt": "2026-11-07T21:00:00+01:00",
       "endAt": "",
-      "id": "event-27-travnik-5-let-albuma-pubeci-ne-jo-ejo-gala-hala"
+      "id": "event-27-travnik-5-let-albuma-pubeci-ne-jo-ejo-gala-hala",
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.galahala.com/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-08T07:01:39+02:00"
     },
     {
       "title": "KONCERTNA AKADEMIJA @ KINO ŠIŠKA: POSTPRODUKCIJA, RAČUNOVODSTVO",
@@ -284,7 +561,15 @@
       "place": "Gala Hala · AKC Metelkova",
       "startAt": "2026-11-09T17:00:00+01:00",
       "endAt": "",
-      "id": "event-28-koncertna-akademija-kino-i-ka-postprodukcija-ra-unovodstvo"
+      "id": "event-28-koncertna-akademija-kino-i-ka-postprodukcija-ra-unovodstvo",
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.galahala.com/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-08T07:01:39+02:00"
     },
     {
       "title": "DOUBLE DATE @ Gala hala",
@@ -294,7 +579,15 @@
       "place": "Gala Hala · AKC Metelkova",
       "startAt": "2026-11-13T23:00:00+01:00",
       "endAt": "",
-      "id": "event-29-double-date-gala-hala"
+      "id": "event-29-double-date-gala-hala",
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.galahala.com/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-08T07:01:39+02:00"
     },
     {
       "title": "In Between re|lined x AMOTIK",
@@ -304,7 +597,15 @@
       "place": "Klub K4 · Ljubljana",
       "startAt": "2026-11-13T23:00:00+01:00",
       "endAt": "",
-      "id": "event-30-in-between-re-lined-x-amotik"
+      "id": "event-30-in-between-re-lined-x-amotik",
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.klub-k4.si/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-08T07:01:39+02:00"
     }
   ]
 }
