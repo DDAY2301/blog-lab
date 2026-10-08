@@ -143,16 +143,42 @@ class GmailCommandLoopV4:
     async def process_one(self, message_id: str) -> dict[str, Any]:
         existing = self._seen(message_id)
         if existing:
-            try:
-                await asyncio.to_thread(self.gmail.mark_read, message_id)
-            except Exception:
-                pass
+            # Completed/failed command mail can be marked read. Messages that were
+            # merely false-positive Gmail search candidates must keep their inbox
+            # state untouched.
+            if existing.get("status") != "ignored":
+                try:
+                    await asyncio.to_thread(self.gmail.mark_read, message_id)
+                except Exception:
+                    pass
             return {"id": message_id, "status": "duplicate", "stored_status": existing.get("status")}
 
         message = await asyncio.to_thread(self.gmail.get_message, message_id)
         details = self.gmail.message_details(message)
         subject_target, subject_tail = self._subject_target(details["subject"])
         if subject_target is None:
+            # Gmail subject search is token-based and can match e.g. "Agent
+            # Manager V4" alerts. Remember the immutable message id so we do not
+            # repeatedly fetch/parse the same false positive, but do not change
+            # its unread/read state.
+            self.store.execute(
+                """
+                INSERT OR IGNORE INTO mail_commands(
+                  message_id,thread_id,sender,subject,target,command_text,status,received_at,processed_at
+                ) VALUES(?,?,?,?,?,?,?,?,?)
+                """,
+                (
+                    details["id"],
+                    details.get("thread_id", ""),
+                    details.get("sender", ""),
+                    details.get("subject", ""),
+                    "ignored",
+                    "",
+                    "ignored",
+                    utcnow(),
+                    utcnow(),
+                ),
+            )
             return {"id": message_id, "status": "ignored"}
 
         sender = details["sender"]
@@ -315,8 +341,14 @@ class GmailCommandLoopV4:
             self.last = {"ok": False, "enabled": True, "gmail_state": self.gmail.auth_state()}
             return self.last
 
-        # Gmail narrows the candidate set; exact [AGENT ...] validation happens locally.
-        rows = await asyncio.to_thread(self.gmail.list_messages, 'is:unread newer_than:7d subject:AGENT -subject:"[AGENT RESULT]"', 30)
+        # Do not depend on Gmail UNREAD state: an operator may open a command on
+        # their phone before the 30s poll. Gmail only narrows candidates; exact
+        # [AGENT ...] validation and message-id idempotency happen locally.
+        rows = await asyncio.to_thread(
+            self.gmail.list_messages,
+            'newer_than:7d subject:AGENT -subject:"[AGENT RESULT]" -subject:"Agent Manager V4"',
+            100,
+        )
         results: list[dict[str, Any]] = []
         for row in reversed(rows):
             results.append(await self.process_one(row["id"]))
