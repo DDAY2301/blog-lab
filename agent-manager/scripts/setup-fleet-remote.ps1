@@ -1,0 +1,134 @@
+param(
+  [string]$Hostname = "control.bloglab.eu",
+  [string]$TunnelName = "AgentManagerV4-Fleet",
+  [switch]$SkipTunnel
+)
+
+$ErrorActionPreference="Stop"
+$root=Split-Path $PSScriptRoot -Parent
+Set-Location $root
+
+function New-UrlToken([int]$Bytes=32){
+  $data=New-Object byte[] $Bytes
+  [Security.Cryptography.RandomNumberGenerator]::Create().GetBytes($data)
+  return [Convert]::ToBase64String($data).TrimEnd('=').Replace('+','-').Replace('/','_')
+}
+
+function Ensure-UserSecret([string]$Name,[int]$Bytes=32){
+  $value=[Environment]::GetEnvironmentVariable($Name,"User")
+  if(-not $value){
+    $value=New-UrlToken $Bytes
+    [Environment]::SetEnvironmentVariable($Name,$value,"User")
+  }
+  Set-Item -Path ("Env:"+$Name) -Value $value
+  return $value
+}
+
+$remotePassword=Ensure-UserSecret "FLEET_REMOTE_PASSWORD" 24
+$localToken=Ensure-UserSecret "FLEET_LOCAL_TOKEN" 32
+$fleetAgentToken=Ensure-UserSecret "FLEET_AGENT_TOKEN" 32
+
+[Environment]::SetEnvironmentVariable("PV_FLEET_TOKEN",$localToken,"User")
+[Environment]::SetEnvironmentVariable("BLOG_LAB_WORKER_URL","https://blog-lab.dan-grmusa.workers.dev","User")
+[Environment]::SetEnvironmentVariable("FLEET_REMOTE_HOSTNAME",$Hostname,"User")
+$env:PV_FLEET_TOKEN=$localToken
+$env:BLOG_LAB_WORKER_URL="https://blog-lab.dan-grmusa.workers.dev"
+$env:FLEET_REMOTE_HOSTNAME=$Hostname
+
+Write-Host "Local Fleet secrets are configured in the Windows user environment." -ForegroundColor Green
+
+$gh=Get-Command gh -ErrorAction SilentlyContinue
+if($gh){
+  try{
+    & gh auth status *> $null
+    if($LASTEXITCODE -eq 0){
+      $fleetAgentToken | & gh secret set FLEET_AGENT_TOKEN --repo DDAY2301/blog-lab
+      if($LASTEXITCODE -ne 0){ throw "gh secret set failed" }
+      Write-Host "GitHub secret FLEET_AGENT_TOKEN synchronized." -ForegroundColor Green
+      & gh workflow run deploy-worker.yml --repo DDAY2301/blog-lab --ref main
+      if($LASTEXITCODE -eq 0){
+        Write-Host "BlogLab Worker redeploy requested." -ForegroundColor Green
+      }else{
+        Write-Warning "Could not trigger deploy-worker.yml. Trigger it manually after merge."
+      }
+    }else{
+      Write-Warning "GitHub CLI is installed but not authenticated. Run: gh auth login"
+    }
+  }catch{
+    Write-Warning "Could not sync FLEET_AGENT_TOKEN through GitHub CLI: $($_.Exception.Message)"
+  }
+}else{
+  Write-Warning "GitHub CLI (gh) is not installed. FLEET_AGENT_TOKEN must be added as a repository secret before BlogLab fleet commands work."
+}
+
+if(-not $SkipTunnel){
+  $cloudflared=Get-Command cloudflared -ErrorAction SilentlyContinue
+  if(-not $cloudflared){
+    $candidate="C:\Program Files (x86)\cloudflared\cloudflared.exe"
+    if(Test-Path $candidate){ $cloudflared=Get-Item $candidate }
+  }
+  if(-not $cloudflared){
+    throw "cloudflared is not installed. Install Cloudflare Tunnel or rerun with -SkipTunnel."
+  }
+  $cf=if($cloudflared.Source){$cloudflared.Source}else{$cloudflared.FullName}
+
+  $cert=Join-Path $env:USERPROFILE ".cloudflared\cert.pem"
+  if(-not (Test-Path $cert)){
+    Write-Host "Cloudflare browser authorization is required once." -ForegroundColor Cyan
+    & $cf tunnel login
+    if($LASTEXITCODE -ne 0 -or -not (Test-Path $cert)){
+      throw "Cloudflare tunnel login did not complete."
+    }
+  }
+
+  $listRaw=& $cf tunnel list --output json 2>$null
+  $tunnels=@()
+  if($listRaw){ $tunnels=$listRaw | ConvertFrom-Json }
+  $tunnel=$tunnels | Where-Object { $_.name -eq $TunnelName } | Select-Object -First 1
+  if(-not $tunnel){
+    & $cf tunnel create $TunnelName
+    if($LASTEXITCODE -ne 0){ throw "Could not create Cloudflare tunnel $TunnelName" }
+    $listRaw=& $cf tunnel list --output json 2>$null
+    $tunnels=$listRaw | ConvertFrom-Json
+    $tunnel=$tunnels | Where-Object { $_.name -eq $TunnelName } | Select-Object -First 1
+  }
+  if(-not $tunnel){ throw "Tunnel was created but its ID could not be resolved." }
+
+  $tunnelId=[string]$tunnel.id
+  $credentials=Join-Path $env:USERPROFILE (".cloudflared\"+$tunnelId+".json")
+  if(-not (Test-Path $credentials)){ throw "Tunnel credentials file missing: $credentials" }
+
+  $config=Join-Path $root "data\fleet-tunnel.yml"
+  @"
+tunnel: $tunnelId
+credentials-file: $($credentials.Replace('\','/'))
+ingress:
+  - hostname: $Hostname
+    service: http://127.0.0.1:8788
+  - service: http_status:404
+"@ | Set-Content -Path $config -Encoding UTF8
+
+  [Environment]::SetEnvironmentVariable("FLEET_TUNNEL_CONFIG",$config,"User")
+  [Environment]::SetEnvironmentVariable("FLEET_TUNNEL_NAME",$TunnelName,"User")
+  $env:FLEET_TUNNEL_CONFIG=$config
+  $env:FLEET_TUNNEL_NAME=$TunnelName
+
+  Write-Host "Routing $Hostname to the Fleet tunnel..." -ForegroundColor Cyan
+  & $cf tunnel route dns $TunnelName $Hostname
+  if($LASTEXITCODE -ne 0){
+    Write-Warning "DNS route may already exist. Verify $Hostname in Cloudflare DNS."
+  }
+}
+
+Write-Host ""
+Write-Host "Restarting the existing Agent Manager stack..." -ForegroundColor Cyan
+& "$PSScriptRoot\start-stack-v4.ps1"
+
+Write-Host ""
+Write-Host "Fleet Remote configured." -ForegroundColor Green
+Write-Host "Local:  http://127.0.0.1:8788"
+if(-not $SkipTunnel){ Write-Host ("Remote: https://"+$Hostname) -ForegroundColor Green }
+Write-Host ""
+Write-Host "Remote login password has been copied to the clipboard." -ForegroundColor Yellow
+Set-Clipboard -Value $remotePassword
+Write-Host "Paste it into the Fleet login page. Do not paste it into chat."
