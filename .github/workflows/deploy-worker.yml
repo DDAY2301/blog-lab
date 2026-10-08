@@ -34,6 +34,7 @@ jobs:
       CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
       BLOG_LAB_DISPATCH_TOKEN: ${{ secrets.BLOG_LAB_DISPATCH_TOKEN }}
+      FLEET_AGENT_TOKEN: ${{ secrets.FLEET_AGENT_TOKEN }}
       EXPECTED_WORKER_VERSION: auth-v6.28-production
     steps:
       - uses: actions/checkout@v7
@@ -63,6 +64,12 @@ jobs:
         shell: bash
         run: |
           printf '%s' "$BLOG_LAB_DISPATCH_TOKEN" | npx --yes wrangler@4.40.0 secret put GITHUB_DISPATCH_TOKEN
+
+      - name: Sync Fleet Agent token to Worker
+        if: ${{ env.FLEET_AGENT_TOKEN != '' }}
+        working-directory: terminal/worker
+        shell: bash
+        run: printf '%s' "$FLEET_AGENT_TOKEN" | npx --yes wrangler@4.40.0 secret put FLEET_AGENT_TOKEN
 
       - name: Apply Worker dispatch diagnostics patch
         shell: bash
@@ -105,6 +112,8 @@ jobs:
           grep -q 'GITHUB_WORKFLOW_DISPATCH_FAILED' terminal/worker/src/index.js
           grep -q 'GitHub odgovor:' terminal/worker/src/index.js
           grep -q 'url.pathname === "/api/commands"' terminal/worker/src/index.js
+          grep -q 'url.pathname === "/api/fleet/command"' terminal/worker/src/index.js
+          grep -q 'fleet_agent_ready' terminal/worker/src/index.js
           grep -q 'id="helpCommands"' terminal/worker/src/index.js
           grep -q "PENDING_KEY='bloglab-terminal-pending-v1'" terminal/worker/src/index.js
           grep -q 'client_request_id' terminal/worker/src/index.js
