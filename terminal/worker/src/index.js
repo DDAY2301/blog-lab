@@ -2301,7 +2301,7 @@ export default {
       return json({
         ok: true,
         worker: "blog-lab",
-        version: "auth-v6.28-production",
+        version: "auth-v6.29-production",
         ready: state.ready,
         auth_ready: authReady,
         auth_self_test_ok: authTest.ok,
@@ -2315,6 +2315,7 @@ export default {
         self_heal_ai_ready: Boolean(env.AI && typeof env.AI.run === "function"),
         publisher_scheduler_ready: Boolean(String(env.GITHUB_DISPATCH_TOKEN || "").trim()),
         fleet_agent_ready: Boolean(String(env.FLEET_AGENT_TOKEN || "").trim()),
+        fleet_media_ready: Boolean(String(env.FLEET_AGENT_TOKEN || "").trim() && String(env.GITHUB_DISPATCH_TOKEN || "").trim()),
         auth_mode: "built-in-session",
         login_secret_mode: "accept-either-configured-secret",
         free_tier_compatible: true,
@@ -2332,7 +2333,7 @@ export default {
       return json({
         ok: true,
         product: "blog-lab",
-        version: "auth-v6.28-production",
+        version: "auth-v6.29-production",
         demo_ready: true,
         trial_signup_ready: true,
         terminal_ready: state.ready,
@@ -2487,7 +2488,7 @@ export default {
       return json({
         ok: true,
         worker: "blog-lab",
-        version: "auth-v6.28-production",
+        version: "auth-v6.29-production",
         ...diagnostic,
         server_time: new Date().toISOString(),
         hint: diagnostic.email_known
@@ -2546,6 +2547,23 @@ export default {
         body?.category || "aktualno"
       );
       return json(result.body, result.status);
+    }
+
+    if (request.method === "POST" && url.pathname === "/api/fleet/media") {
+      if (!(await fleetAgentAuthorized(request, env))) {
+        return json({ ok:false, error:"FLEET_UNAUTHORIZED" }, 401);
+      }
+      let form;
+      try { form = await request.formData(); } catch {
+        return json({ ok:false, error:"INVALID_MEDIA_FORM" }, 400);
+      }
+      const file = form.get("file");
+      if (!file || typeof file.arrayBuffer !== "function") {
+        return json({ ok:false, error:"MEDIA_FILE_MISSING" }, 400);
+      }
+      const result = await storeUploadedMedia(env, file);
+      if (!result.ok) return json(result, result.status || 500);
+      return json({ ...result, fleet:true }, 201);
     }
 
     const user = await identity(request, env);
