@@ -19,6 +19,7 @@ CREATE TABLE IF NOT EXISTS email_queue(id INTEGER PRIMARY KEY AUTOINCREMENT,crea
 CREATE TABLE IF NOT EXISTS lessons(id INTEGER PRIMARY KEY AUTOINCREMENT,created_at TEXT NOT NULL,pattern TEXT NOT NULL,successful_recovery TEXT,avoid TEXT,confidence REAL NOT NULL DEFAULT 0.5,last_verified TEXT);
 CREATE TABLE IF NOT EXISTS managed_target_status(target_id TEXT PRIMARY KEY,name TEXT NOT NULL,kind TEXT NOT NULL,ok INTEGER NOT NULL DEFAULT 0,last_check TEXT NOT NULL,details TEXT NOT NULL DEFAULT '{}');
 CREATE TABLE IF NOT EXISTS notifications(id INTEGER PRIMARY KEY AUTOINCREMENT,created_at TEXT NOT NULL,severity TEXT NOT NULL,source TEXT NOT NULL,title TEXT NOT NULL,body TEXT NOT NULL,status TEXT NOT NULL DEFAULT 'new');
+CREATE TABLE IF NOT EXISTS mail_commands(message_id TEXT PRIMARY KEY,thread_id TEXT,sender TEXT NOT NULL,subject TEXT NOT NULL,target TEXT NOT NULL,command_text TEXT NOT NULL,status TEXT NOT NULL,received_at TEXT NOT NULL,processed_at TEXT,result TEXT,error TEXT,reply_message_id TEXT);
 """
 def utcnow()->str: return datetime.now(timezone.utc).isoformat()
 

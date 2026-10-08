@@ -6,26 +6,25 @@ import json
 import os
 from datetime import datetime
 from email.message import EmailMessage
+from email.utils import parseaddr
 from pathlib import Path
 from typing import Any
 
 from .db_v3 import StoreV3
 
-SCOPES = ["https://www.googleapis.com/auth/gmail.send"]
-IMPLEMENTATION = "gmail-send-only-v2"
+SEND_SCOPE = "https://www.googleapis.com/auth/gmail.send"
+COMMAND_SCOPE = "https://www.googleapis.com/auth/gmail.modify"
+SEND_IMPLEMENTATION = "gmail-send-only-v2"
+COMMAND_IMPLEMENTATION = "gmail-command-bus-v3"
 
 
 class GmailV4:
-    implementation = IMPLEMENTATION
-
     def __init__(self, store: StoreV3 | None = None) -> None:
         self.store = store
         root = Path(__file__).resolve().parents[1]
         self.enabled = os.getenv("GMAIL_REPORTING_ENABLED", "0").strip().lower() in {"1","true","yes","on"}
+        self.commands_enabled = os.getenv("GMAIL_COMMANDS_ENABLED", "0").strip().lower() in {"1","true","yes","on"}
         self.recipient = os.getenv("REPORT_TO_EMAIL", "").strip()
-        # Keep Gmail authorization least-privilege: gmail.send does not authorize
-        # users.getProfile(). For this local reporting setup the sender is explicitly
-        # configured (and defaults to the report recipient for self-reporting).
         self.sender = os.getenv("GMAIL_FROM_EMAIL", self.recipient).strip()
         self.client_file = Path(
             os.getenv("GMAIL_OAUTH_CLIENT_FILE", str(root / "data" / "gmail-client-secret.json"))
@@ -33,6 +32,16 @@ class GmailV4:
         self.token_file = Path(
             os.getenv("GMAIL_OAUTH_TOKEN_FILE", str(root / "data" / "gmail-token.json"))
         ).expanduser()
+
+    @property
+    def scopes(self) -> list[str]:
+        # gmail.modify already includes read, compose and send, so command mode
+        # needs only this single scope. Reporting-only mode stays least-privilege.
+        return [COMMAND_SCOPE] if self.commands_enabled else [SEND_SCOPE]
+
+    @property
+    def implementation(self) -> str:
+        return COMMAND_IMPLEMENTATION if self.commands_enabled else SEND_IMPLEMENTATION
 
     def auth_state(self) -> str:
         if not self.enabled:
@@ -55,13 +64,19 @@ class GmailV4:
         from google.auth.transport.requests import Request
         from google.oauth2.credentials import Credentials
 
-        creds = Credentials.from_authorized_user_file(str(self.token_file), SCOPES)
+        creds = Credentials.from_authorized_user_file(str(self.token_file), self.scopes)
         if creds.expired and creds.refresh_token:
             creds.refresh(Request())
             self.token_file.write_text(creds.to_json(), encoding="utf-8")
         if not creds.valid:
             raise RuntimeError("Gmail OAuth credentials are not valid.")
+        if not creds.has_scopes(self.scopes):
+            raise RuntimeError("Gmail OAuth token does not include the scopes required by the current mode.")
         return creds
+
+    def _service(self):
+        from googleapiclient.discovery import build
+        return build("gmail", "v1", credentials=self._credentials(), cache_discovery=False)
 
     def authorize(self) -> dict[str, Any]:
         if not self.client_file.exists():
@@ -70,11 +85,22 @@ class GmailV4:
             )
         from google_auth_oauthlib.flow import InstalledAppFlow
 
-        flow = InstalledAppFlow.from_client_secrets_file(str(self.client_file), SCOPES)
-        creds = flow.run_local_server(host="127.0.0.1", port=0, open_browser=True)
+        flow = InstalledAppFlow.from_client_secrets_file(str(self.client_file), self.scopes)
+        creds = flow.run_local_server(
+            host="127.0.0.1",
+            port=0,
+            open_browser=True,
+            prompt="consent",
+            include_granted_scopes="true",
+        )
         self.token_file.parent.mkdir(parents=True, exist_ok=True)
         self.token_file.write_text(creds.to_json(), encoding="utf-8")
-        return {"ok": True, "token_file": str(self.token_file)}
+        return {
+            "ok": True,
+            "token_file": str(self.token_file),
+            "scopes": self.scopes,
+            "implementation": self.implementation,
+        }
 
     def send(self, subject: str, body: str, recipient: str | None = None) -> str:
         if not self.enabled:
@@ -86,13 +112,7 @@ class GmailV4:
         if not sender:
             raise RuntimeError("GMAIL_FROM_EMAIL is not configured.")
 
-        from googleapiclient.discovery import build
-
-        # Do not call users.getProfile(): that endpoint is not covered by the
-        # least-privilege gmail.send scope. The OAuth-authenticated Gmail account
-        # must match the configured From address (or an allowed Gmail send-as alias).
-        service = build("gmail", "v1", credentials=self._credentials(), cache_discovery=False)
-
+        service = self._service()
         msg = EmailMessage()
         msg["From"] = sender
         msg["To"] = to
@@ -101,6 +121,78 @@ class GmailV4:
         raw = base64.urlsafe_b64encode(msg.as_bytes()).decode("ascii")
         sent = service.users().messages().send(userId="me", body={"raw": raw}).execute()
         return str(sent.get("id", ""))
+
+    def list_messages(self, query: str, max_results: int = 20) -> list[dict[str, str]]:
+        if not self.commands_enabled:
+            raise RuntimeError("Gmail command mode is disabled.")
+        service = self._service()
+        data = service.users().messages().list(
+            userId="me",
+            q=query,
+            maxResults=max(1, min(max_results, 100)),
+        ).execute()
+        return [
+            {"id": str(row.get("id", "")), "threadId": str(row.get("threadId", ""))}
+            for row in data.get("messages", [])
+            if row.get("id")
+        ]
+
+    def get_message(self, message_id: str) -> dict[str, Any]:
+        if not self.commands_enabled:
+            raise RuntimeError("Gmail command mode is disabled.")
+        service = self._service()
+        return service.users().messages().get(
+            userId="me",
+            id=message_id,
+            format="full",
+        ).execute()
+
+    @staticmethod
+    def _decode_body(data: str) -> str:
+        if not data:
+            return ""
+        raw = base64.urlsafe_b64decode(data + "=" * ((4 - len(data) % 4) % 4))
+        return raw.decode("utf-8", errors="replace")
+
+    def message_details(self, message: dict[str, Any]) -> dict[str, str]:
+        payload = message.get("payload") or {}
+        headers = {
+            str(row.get("name", "")).lower(): str(row.get("value", ""))
+            for row in payload.get("headers", [])
+        }
+
+        def walk(part: dict[str, Any]) -> list[str]:
+            mime = str(part.get("mimeType") or "")
+            body = part.get("body") or {}
+            out: list[str] = []
+            if mime == "text/plain" and body.get("data"):
+                out.append(self._decode_body(str(body.get("data"))))
+            for child in part.get("parts", []) or []:
+                out.extend(walk(child))
+            return out
+
+        text_parts = walk(payload)
+        body = "\n\n".join(x.strip() for x in text_parts if x.strip()).strip()
+        if not body:
+            body = str(message.get("snippet") or "").strip()
+
+        sender = parseaddr(headers.get("from", ""))[1].strip().lower()
+        return {
+            "id": str(message.get("id") or ""),
+            "thread_id": str(message.get("threadId") or ""),
+            "sender": sender,
+            "subject": headers.get("subject", "").strip(),
+            "body": body,
+            "message_id_header": headers.get("message-id", "").strip(),
+        }
+
+    def mark_read(self, message_id: str) -> None:
+        service = self._service()
+        service.users().messages().modify(
+            userId="me",
+            id=message_id,
+            body={"removeLabelIds": ["UNREAD"]},
+        ).execute()
 
     def flush_queue(self, limit: int = 20) -> dict[str, int]:
         if not self.store or self.auth_state() != "CONFIGURED":
@@ -150,7 +242,7 @@ def main() -> None:
             "Agent Manager V4 - Gmail test",
             f"Gmail reporting is working. Test sent at {datetime.now().isoformat(timespec='seconds')}.",
         )
-        print(json.dumps({"ok": True, "message_id": mid}, indent=2))
+        print(json.dumps({"ok": True, "message_id": mid, "implementation": gmail.implementation}, indent=2))
 
 
 if __name__ == "__main__":

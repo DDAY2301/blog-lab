@@ -13,6 +13,7 @@ from .discovery_v3 import DiscoveryEngineV3
 from .health_v3 import system_resources
 from .incidents_v3 import IncidentEngineV3
 from .maintenance_v4 import MaintenanceLoopV4
+from .mail_commands_v4 import GmailCommandLoopV4
 from .monitor_v3 import MonitorLoopV3
 from .policy_v3 import evaluate
 from .reporting_v3 import ReporterV3
@@ -26,6 +27,7 @@ incidents = IncidentEngineV3(store)
 reporter = ReporterV3(s, store)
 monitor = MonitorLoopV3(s, store)
 maintenance = MaintenanceLoopV4(s, store)
+mail_commands = GmailCommandLoopV4(store, maintenance.gmail)
 autofix = AutoFixV3(store)
 
 _tasks: list[asyncio.Task] = []
@@ -36,9 +38,11 @@ async def lifespan(app: FastAPI):
     discovery.discover_roots(s.roots())
     _tasks.append(asyncio.create_task(monitor.run(), name="system-monitor"))
     _tasks.append(asyncio.create_task(maintenance.run(), name="maintenance-v4"))
+    _tasks.append(asyncio.create_task(mail_commands.run(), name="gmail-command-v4"))
     yield
     monitor.stop()
     maintenance.stop()
+    mail_commands.stop()
     for task in _tasks:
         task.cancel()
     for task in _tasks:
@@ -65,6 +69,7 @@ async def health():
         "mode": "24x7-maintenance",
         "write_enabled": s.write_enabled,
         "gmail": maintenance.gmail.auth_state(),
+        "gmail_commands": mail_commands.status(),
         "open_incidents": len(incidents.open()),
         "resources": system_resources(),
         "last_system_cycle": monitor.last,
@@ -158,6 +163,24 @@ async def email_status():
         "interval_hours": maintenance.daily_email.interval_hours,
         "queue": store.query("SELECT id,created_at,kind,priority,recipient,subject,status,attempts,last_error FROM email_queue ORDER BY id DESC LIMIT 50"),
     }
+
+
+@app.get("/email-command-status")
+async def email_command_status():
+    return {
+        "gmail_state": maintenance.gmail.auth_state(),
+        "implementation": maintenance.gmail.implementation,
+        "command_bus": mail_commands.status(),
+        "recent": store.query(
+            "SELECT message_id,thread_id,sender,subject,target,status,received_at,processed_at,error,reply_message_id "
+            "FROM mail_commands ORDER BY received_at DESC LIMIT 50"
+        ),
+    }
+
+
+@app.post("/email-command/run-once")
+async def email_command_run_once():
+    return await mail_commands.cycle()
 
 
 @app.post("/email/send-test")

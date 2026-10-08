@@ -1,7 +1,10 @@
 param(
   [Parameter(Mandatory=$true)]
   [string]$Recipient,
-  [int]$IntervalHours = 3
+  [int]$IntervalHours = 3,
+  [switch]$EnableCommands,
+  [string]$AllowedSenders = "",
+  [int]$CommandPollSeconds = 30
 )
 
 $ErrorActionPreference="Stop"
@@ -16,6 +19,8 @@ if(-not (Test-Path $py)){
 $clientFile=Join-Path $managerRoot "data\gmail-client-secret.json"
 $tokenFile=Join-Path $managerRoot "data\gmail-token.json"
 $IntervalHours=[math]::Max(1,[math]::Min(168,$IntervalHours))
+$CommandPollSeconds=[math]::Max(15,[math]::Min(3600,$CommandPollSeconds))
+if(-not $AllowedSenders){ $AllowedSenders=$Recipient }
 
 function Test-GmailDesktopOAuthClient([string]$Path){
   if(-not $Path -or -not (Test-Path -LiteralPath $Path)){ return $false }
@@ -70,6 +75,9 @@ $vars=@{
   "GMAIL_OAUTH_CLIENT_FILE"=$clientFile
   "GMAIL_OAUTH_TOKEN_FILE"=$tokenFile
   "AGENT_MANAGER_EMAIL_INTERVAL_HOURS"=[string]$IntervalHours
+  "GMAIL_COMMANDS_ENABLED"=$(if($EnableCommands){"1"}else{"0"})
+  "GMAIL_COMMAND_ALLOWED_SENDERS"=$AllowedSenders
+  "GMAIL_COMMAND_POLL_SECONDS"=[string]$CommandPollSeconds
 }
 foreach($entry in $vars.GetEnumerator()){
   [Environment]::SetEnvironmentVariable($entry.Key,$entry.Value,"User")
@@ -123,6 +131,11 @@ Write-Host "Installing/confirming Gmail OAuth dependencies..." -ForegroundColor 
 if($LASTEXITCODE -ne 0){ throw "Dependency install failed." }
 
 Write-Host ""
+if($EnableCommands){
+  Write-Host "Email command mode requested. Google will ask for Gmail modify access so Agent Manager can read command emails, mark them processed, and reply." -ForegroundColor Cyan
+}else{
+  Write-Host "Reporting-only Gmail mode requested." -ForegroundColor Cyan
+}
 Write-Host "Opening Google OAuth authorization in your browser..." -ForegroundColor Cyan
 & $py -m manager.gmail_v4 --authorize
 if($LASTEXITCODE -ne 0){ throw "Gmail OAuth authorization failed." }
@@ -151,4 +164,16 @@ Write-Host ""
 Write-Host "Gmail reporting configured and test message submitted successfully." -ForegroundColor Green
 Write-Host "Recipient: $Recipient"
 Write-Host "Periodic status: every $IntervalHours hour(s)"
+if($EnableCommands){
+  Write-Host "Email command bus: ENABLED" -ForegroundColor Green
+  Write-Host "Allowed senders: $AllowedSenders"
+  Write-Host "Command polling: every $CommandPollSeconds second(s)"
+  Write-Host "Command subjects: [AGENT], [AGENT ALL], [AGENT MANAGER], [AGENT PV], [AGENT BLOGLAB]"
+  try{
+    $commandStatus=Invoke-RestMethod http://127.0.0.1:8787/email-command-status -TimeoutSec 10
+    $commandStatus | ConvertTo-Json -Depth 8
+  }catch{
+    Write-Warning "Command status endpoint was not reachable yet: $($_.Exception.Message)"
+  }
+}
 Write-Host "P0/P1 alerts: queued immediately and delivered by the next maintenance cycle."
