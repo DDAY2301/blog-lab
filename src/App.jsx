@@ -30,6 +30,41 @@ const CATEGORY_EMPTY_COPY = {
 
 const starterArticles = [
   {
+    "id": "slovenski-turizem-kljub-negotovosti-racuna-na-uspesno-sezono-895ff827",
+    "title": "Slovenski turizem kljub negotovosti računa na uspešno sezono",
+    "excerpt": "Sezonsko: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Slovenski turizem kljub negotovosti računa na uspešno sezono«.",
+    "seoDescription": "Sezonsko: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Slovenski turizem kljub negotovosti računa na uspešno sezono«.",
+    "content": "**Sezonsko, 8. 10. 2026.** Slovenski turizem kljub negotovosti računa na uspešno sezono Delo.si\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Delo.si. Objavljeno: Mon, 08 Jun 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMingFBVV95cUxQRFhiYzRUajdNUWQ3eGM5UDFqUEZiZmZmTmtqNGEtTEhncUg0dlBxZ2Zib08wYjBwMElUc2FqanpkT0ZkWHN5WDMyUU9UQUtMR1dpYW5BZzZScEZqMFNtZTEtWXAyOUo4bWlLWl9JdjlDeHQxS0JHaEx3MnZnWVpPV1l5OUhxbE9wRnhyY25kY3dFTXVUWlJnRTF3WjR4dw?oc=5)\n\n## Dopolnitev vira 2: Delo.si\n\nSlovenski turizem izgublja dve milijardi Delo.si\n\n Vir: Delo.si. Objavljeno: Fri, 16 Apr 2021 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMigwFBVV95cUxOczIxbTJ3d1EtQVlKeEMxS3MzcmxOTEswZlRlTEl5cFBlbGl0X1FEeFNMMjI2WGRCSU5uYVZweThZdTZUQlBOdE0xX2Jwa09QY0d3c25COFhEX3FOLUNNMm1BRVQ2RDlCTVdZNEc4TEVLamRhemxQUkQzTmp0SmdsTTJPYw?oc=5)\n\n## Dopolnitev vira 3: Delo.si\n\nJulijska hladna prha za hrvaški turizem Delo.si\n\n Vir: Delo.si. Objavljeno: Mon, 11 Aug 2025 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiggFBVV95cUxQUWNfU1lIbEZlWjF2RVk3aWxucDNRZmtTdlM2OTFXblB0dGpTRjhWSTJSSk5qVnV4VHV1SC1Dcy1GdWdFQWhMcW56OEd1YkhhNjhLMEdqTjMxX3NHQ3Y0a3V1MXdKemtOOW1ZaGxmLTRHS2YwX3BKSElzZDhUWExEY2hB?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Sezonsko",
+    "author": "Blog Lab Slovenia Publisher",
+    "status": "published",
+    "heroImage": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Frozen_Lake_Bled_%28156843859%29.jpeg/1920px-Frozen_Lake_Bled_%28156843859%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "alt": "500px provided description: This picture has been taken on a nice, sunny, but cold winter day. It is amazing to see lake Bled frozen! [#landscape ,#lake ,#frozen ,#mountains ,#wint",
+      "caption": "Anita · Wikimedia Commons · CC0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Frozen_Lake_Bled_(156843859).jpeg"
+    },
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Delo.si — Slovenski turizem kljub negotovosti računa na uspešno sezono - Delo.si",
+        "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQRFhiYzRUajdNUWQ3eGM5UDFqUEZiZmZmTmtqNGEtTEhncUg0dlBxZ2Zib08wYjBwMElUc2FqanpkT0ZkWHN5WDMyUU9UQUtMR1dpYW5BZzZScEZqMFNtZTEtWXAyOUo4bWlLWl9JdjlDeHQxS0JHaEx3MnZnWVpPV1l5OUhxbE9wRnhyY25kY3dFTXVUWlJnRTF3WjR4dw?oc=5"
+      },
+      {
+        "label": "Delo.si — Slovenski turizem izgublja dve milijardi - Delo.si",
+        "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOczIxbTJ3d1EtQVlKeEMxS3MzcmxOTEswZlRlTEl5cFBlbGl0X1FEeFNMMjI2WGRCSU5uYVZweThZdTZUQlBOdE0xX2Jwa09QY0d3c25COFhEX3FOLUNNMm1BRVQ2RDlCTVdZNEc4TEVLamRhemxQUkQzTmp0SmdsTTJPYw?oc=5"
+      },
+      {
+        "label": "Delo.si — Julijska hladna prha za hrvaški turizem - Delo.si",
+        "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQUWNfU1lIbEZlWjF2RVk3aWxucDNRZmtTdlM2OTFXblB0dGpTRjhWSTJSSk5qVnV4VHV1SC1Dcy1GdWdFQWhMcW56OEd1YkhhNjhLMEdqTjMxX3NHQ3Y0a3V1MXdKemtOOW1ZaGxmLTRHS2YwX3BKSElzZDhUWExEY2hB?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-08T13:39:47+02:00",
+    "updatedAt": "2026-10-08T13:39:47+02:00"
+  },
+
+  {
     "id": "slovenia-history-geography-people-britannica-ff6791f3",
     "title": "Slovenia | History, Geography, & People | Britannica",
     "excerpt": "Geographical and historical treatment of Slovenia, including maps and statistics as well as a survey of its people, economy, and government.",
