@@ -20,6 +20,10 @@ class GmailV4:
         root = Path(__file__).resolve().parents[1]
         self.enabled = os.getenv("GMAIL_REPORTING_ENABLED", "0").strip().lower() in {"1","true","yes","on"}
         self.recipient = os.getenv("REPORT_TO_EMAIL", "").strip()
+        # Keep Gmail authorization least-privilege: gmail.send does not authorize
+        # users.getProfile(). For this local reporting setup the sender is explicitly
+        # configured (and defaults to the report recipient for self-reporting).
+        self.sender = os.getenv("GMAIL_FROM_EMAIL", self.recipient).strip()
         self.client_file = Path(
             os.getenv("GMAIL_OAUTH_CLIENT_FILE", str(root / "data" / "gmail-client-secret.json"))
         ).expanduser()
@@ -32,6 +36,8 @@ class GmailV4:
             return "DISABLED"
         if not self.recipient:
             return "RECIPIENT_REQUIRED"
+        if not self.sender:
+            return "SENDER_REQUIRED"
         if not self.client_file.exists():
             return "CLIENT_SECRET_REQUIRED"
         if not self.token_file.exists():
@@ -73,14 +79,16 @@ class GmailV4:
         to = (recipient or self.recipient).strip()
         if not to:
             raise RuntimeError("REPORT_TO_EMAIL is not configured.")
+        sender = self.sender.strip()
+        if not sender:
+            raise RuntimeError("GMAIL_FROM_EMAIL is not configured.")
 
         from googleapiclient.discovery import build
 
+        # Do not call users.getProfile(): that endpoint is not covered by the
+        # least-privilege gmail.send scope. The OAuth-authenticated Gmail account
+        # must match the configured From address (or an allowed Gmail send-as alias).
         service = build("gmail", "v1", credentials=self._credentials(), cache_discovery=False)
-        profile = service.users().getProfile(userId="me").execute()
-        sender = str(profile.get("emailAddress") or "").strip()
-        if not sender:
-            raise RuntimeError("Could not determine authenticated Gmail sender address.")
 
         msg = EmailMessage()
         msg["From"] = sender
