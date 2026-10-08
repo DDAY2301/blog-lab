@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-08T07:04:25+02:00",
+  "updatedAt": "2026-10-08T07:10:00+02:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -99,16 +99,6 @@
       "lastCheckedAt": "2026-10-08T07:01:39+02:00"
     },
     {
-      "title": "COSMIC KITTEN (San Pedro / Los Angeles, USA) @ Gala hala",
-      "url": "https://www.galahala.com/",
-      "source": "Gala Hala",
-      "type": "Koncert · Metelkova",
-      "place": "Gala Hala · AKC Metelkova",
-      "startAt": "2026-10-08T20:00:00+02:00",
-      "endAt": "",
-      "id": "event-06-cosmic-kitten-san-pedro-los-angeles-usa-gala-hala"
-    },
-    {
       "id": "grandmaster-flash-2026-10-09",
       "title": "Rapetek ekstra: GRANDMASTER FLASH",
       "url": "https://www.galahala.com/",
@@ -142,16 +132,6 @@
       "ticketUrl": "https://ljubljanskigrad.si/en/castle-events/sunnysiders-and-stone-head/",
       "status": "confirmed",
       "lastCheckedAt": "2026-10-08T07:01:39+02:00"
-    },
-    {
-      "title": "Rapetek ekstra: GRANDMASTER FLASH (ZDA) @ Gala hala",
-      "url": "https://www.galahala.com/",
-      "source": "Gala Hala",
-      "type": "Koncert · Metelkova",
-      "place": "Gala Hala · AKC Metelkova",
-      "startAt": "2026-10-09T20:00:00+02:00",
-      "endAt": "",
-      "id": "event-09-rapetek-ekstra-grandmaster-flash-zda-gala-hala"
     },
     {
       "id": "prince-lucija-indigo-2026-10-09",
@@ -215,16 +195,6 @@
       "ticketUrl": "https://www.galahala.com/",
       "status": "confirmed",
       "lastCheckedAt": "2026-10-08T07:01:39+02:00"
-    },
-    {
-      "title": "MAJMUNSKA POSLA - predstavitev albuma @ Gala hala",
-      "url": "https://www.galahala.com/",
-      "source": "Gala Hala",
-      "type": "Koncert · Metelkova",
-      "place": "Gala Hala · AKC Metelkova",
-      "startAt": "2026-10-10T20:00:00+02:00",
-      "endAt": "",
-      "id": "event-14-majmunska-posla-predstavitev-albuma-gala-hala"
     },
     {
       "title": "Lomilka x Gonobeats w/ Posij & Trinist",
