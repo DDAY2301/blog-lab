@@ -30,6 +30,62 @@ const CATEGORY_EMPTY_COPY = {
 
 const starterArticles = [
   {
+    "id": "slovenia-history-geography-people-britannica-ff6791f3",
+    "title": "Slovenia | History, Geography, & People | Britannica",
+    "excerpt": "Geographical and historical treatment of Slovenia, including maps and statistics as well as a survey of its people, economy, and government.",
+    "seoDescription": "Geographical and historical treatment of Slovenia, including maps and statistics as well as a survey of its people, economy, and government.",
+    "content": "Pregled za rubriko dediscina povzema trenutno razpoložljive informacije iz spodaj navedenih virov. Besedilo je pripravljeno brez dodajanja nepodprtih dejstev.\n\n## Slovenia | History, Geography, & People | Britannica\nGeographical and historical treatment of Slovenia, including maps and statistics as well as a survey of its people, economy, and government.\n\nVir: Bing Web – dediscina – Slovenija dediščina zgodovina gradovi muzeji miti legende tu — https://www.britannica.com/place/Slovenia\n\n## Mitesco, Inc. (MITI) Stock Price, News, Quote & History - Yahoo Finance\nFind the latest Mitesco, Inc. (MITI) stock quote, history, news and other vital information to help you with your stock trading and investing. MITI Mitesco, Inc. 0.0500 0.00% Chart Community Statistics Historical Data Profile Financials Analysis Options Holders OTC Markets OTCQB - Delayed Quote • USD Mitesco, Inc. (MITI) 0.0500 0.0000 (0.00%) At close: October 7 at 4:00:00 PM EDT Chart Range Bar 1D 5D -28.57% 1M 66.67% 6M -37.50% YTD -70.59% 1Y -80.00% 5Y -99.60% All -100.00% Baseline Advanced Chart AlphaSpace Chart Loading chart for MITI Previous Close 0.0500 Open 0.0648 Bid 0.0525 x 5000000 Ask 0.0619 x 1440000 Day's Range 0.0525 - 0.0648 52 Week Range 0.0200 - 0.3200 Volume 70,182 Avg. Volume 155,736 Market Cap (intraday) 2.42M Beta (5Y Monthly) 4.82 PE Ratio (TTM) -- EPS (TTM) -0.3400 Earnings Date (est.) -- Forward Dividend & Yield -- (0.00%) Ex-Dividend Date -- 1y Target Est -- Mitesco, Inc. Overview Information Technology Services / Technology Mitesco, Inc. engages in providing cloud computing, application hosting, and other data center related applications. It offers remote backup, general business applications, engineering analysis software, and digital marketing related to residential real estate software development. The company is based in Vero Beach, Florida. www.mitescoinc.com -- Full Time Employees December 31 Fiscal Year Ends Technology Sector Information Technology Services Industry More about Mitesco, Inc. Recent News View More All News Earnings Calls Press Releases SEC Filings Mitesco Names National Sales Manager, Regional Roll Out for Software Apps Slated for Q4 GlobeNewswire • 1mo ago Mitesco Provides Business Update on Ai Software, Edge Computing and Strategic Growth Initiatives GlobeNewswire • 2mo ago Mitesco’s Centcore Unit Expands into the $26 Billion Edge Computing Market with a Compact, Low-Power Solution GlobeNewswire • 2mo ago Mitesco Secures Up to $30 Million Financing Facility to Support Strategic Acquisitions and Accelerate Growth Initiatives GlobeNewswire • 3mo ago Mitesco Forges Exclusive Coaching Partnership with Brian Moses to Accelerate RoboAgent Growth and Adoption GlobeNewswire • 3mo ago Mitesco’s RoboAgent Team Talks A.I. For Real Estate Professionals GlobeNewswire • 3mo ago Mitesco Announces Financing Partnership to Accelerate Centcore Data Center Expansion and Software Acquisition Strategy NewMediaWire • 7mo ago Mitesco Advances Edge Computing Strategy and AI-Powered Sales Force Automation Deployment GlobeNewswire • 21d ago Mitesco, Inc. Announces Availability of Discussion with Sales Training Expert Brian Moses,\n\nVir: finance.yahoo.com — https://finance.yahoo.com/quote/MITI/\n\n## 11 things to know before booking a trip to Slovenia - Lonely Planet\nPlan the perfect trip to Slovenia with these tips on booking, packing and activities. 11 things to know before traveling to Slovenia - Lonely Planet Skip to Main Content Destinations Trending Europe Asia The Americas Australia & Oceania Africa & The Middle East The Caribbean Our Favorite Places li>a]:flex [&>li>a]:h-full [&>li>a]:flex-col [&>li>a]:justify-center\" style=\"grid-row:2 / span 7\" id=\"global-nav-wide-panel-0-section-0-group-0-0\" data-nav-group aria-labelledby=\"global-nav-wide-panel-0-section-0-group-0-0-title\"> Iceland Italy Japan London Portugal Peru Spain li>a]:flex [&>li>a]:h-full [&>li>a]:flex-col [&>li>a]:justify-center\" style=\"grid-row:2 / span 7\" id=\"global-nav-wide-panel-0-section-0-group-0-1\" data-nav-group> Algarve Mexico City Costa Rica Corfu Dubrovnik Cinque Terre Tokyo li>a]:flex [&>li>a]:h-full [&>li>a]:flex-col [&>li>a]:justify-center\" style=\"grid-row:2 / span 7\" id=\"global-nav-wide-panel-0-section-0-group-0-2\" data-nav-group> Budapest Lisbon Andalucía Morocco New York City Rio de Janeiro Vietnam View all destinations Not sure where to start? Get inspired by destinations chosen in this year's Best in Travel list. Start Discovering Popular li>a]:flex [&>li>a]:h-full [&>li>a]:flex-col [&>li>a]:justify-center\" style=\"grid-row:2 / span 7\" id=\"global-nav-wide-panel-0-section-1-group-0-0\" data-nav-group aria-labelledby=\"global-nav-wide-panel-0-section-1-group-0-0-title\"> Amalfi Coast The Azores Cinque Terre Puglia Sardinia Sicily Tuscany Countries li>a]:flex [&>li>a]:h-full [&>li>a]:flex-col [&>li>a]:justify-center\" style=\"grid-row:2 / span 7\" id=\"global-nav-wide-panel-0-section-1-group-0-1\" data-nav-group aria-labelledby=\"global-nav-wide-panel-0-section-1-group-0-1-title\"> Croatia Greece Iceland Ireland Italy Portugal Spain Cities li>a]:flex [&>li>a]:h-full [&>li>a]:flex-col [&>li>a]:justify-center\" style=\"grid-row:2 / span 7\" id=\"global-nav-wide-panel-0-section-1-group-0-2\" data-nav-group aria-labelledby=\"global-nav-wide-panel-0-section-1-group-0-2-title\"> Barcelona London Madrid Paris Porto Rome Santorini View all destinations in Europe Europe Experience Europe's ancient history, amazing beauty, divine food and incredible culture. EXPLORE Popular li>a]:flex [&>li>a]:h-full [&>li>a]:flex-col [&>li>a]:justify-center\" style=\"grid-row:2 / span 7\" id=\"global-nav-wide-panel-0-section-2-group-0-0\" data-nav-group aria-labelledby=\"global-nav-wide-panel-0-section-2-group-0-0-title\"> Bali Hong Kong Japan Maldives Phuket Southeast Asia Thailand Countries li>a]:flex [&>li>a]:h-full [&>li>a]:flex-col [&>li>a]:justify-center\" style=\"grid-row:2 / s\n\nVir: lonelyplanet.com — https://www.lonelyplanet.com/articles/things-to-know-before-traveling-to-slovenia\n\n## Slovenia Maps & Facts\nPhysical map of Slovenia showing major cities, terrain, national parks, rivers, and surrounding countries with international borders and outline maps. Key facts about Slovenia. UNESCO World Heritage Sites In Slovenia\n\nVir: worldatlas.com — https://www.worldatlas.com/maps/slovenia\n\n## Obiščite sedem najlepših gradov v Sloveniji - Vandraj\nObiščite sedem najlepših gradov v Sloveniji Vandraj\n\nVir: Vandraj — https://news.google.com/rss/articles/CBMidkFVX3lxTFA3b0V1Z1RBcjBWbGpOeWN4N3JMYUxMZU5lU0piRS1LM2ZxR21ieWI3QndQX2NwbGRjemdhaXNzdXZ4dnhPODlXN0dIYU5KMGJ2TEw5WmFHSkhpMXdZVG9tUjlDRDRvVllwaHl5QnBCRzlQcERfQmc?oc=5",
+    "category": "Dediščina",
+    "author": "Blog Lab Slovenia Publisher",
+    "status": "published",
+    "heroImage": {
+      "url": "https://pinhole.finance.yahoo.com/chart/MITI/__screenshot",
+      "alt": "Mitesco, Inc. (MITI) Stock Price, News, Quote & History - Yahoo Finance",
+      "caption": "finance.yahoo.com",
+      "sourceUrl": ""
+    },
+    "video": null,
+    "gallery": [
+      {
+        "url": "https://d2vbr83hnyiux1.cloudfront.net/image/975050285728/image_9h0nlf52h561p6slmku9ku0k5s/-FWEBP-Ro:5,w:1200,h:630,n:default",
+        "alt": "11 things to know before booking a trip to Slovenia - Lonely Planet",
+        "caption": "lonelyplanet.com",
+        "sourceUrl": ""
+      },
+      {
+        "url": "https://www.worldatlas.com/r/w1200-q80/upload/5f/1e/ec/si-01.jpg",
+        "alt": "Slovenia Maps & Facts",
+        "caption": "worldatlas.com",
+        "sourceUrl": ""
+      }
+    ],
+    "sources": [
+      {
+        "label": "Slovenia | History, Geography, & People | Britannica",
+        "url": "https://www.britannica.com/place/Slovenia"
+      },
+      {
+        "label": "Mitesco, Inc. (MITI) Stock Price, News, Quote & History - Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/MITI/"
+      },
+      {
+        "label": "11 things to know before booking a trip to Slovenia - Lonely Planet",
+        "url": "https://www.lonelyplanet.com/articles/things-to-know-before-traveling-to-slovenia"
+      },
+      {
+        "label": "Slovenia Maps & Facts",
+        "url": "https://www.worldatlas.com/maps/slovenia"
+      },
+      {
+        "label": "Obiščite sedem najlepših gradov v Sloveniji - Vandraj",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFA3b0V1Z1RBcjBWbGpOeWN4N3JMYUxMZU5lU0piRS1LM2ZxR21ieWI3QndQX2NwbGRjemdhaXNzdXZ4dnhPODlXN0dIYU5KMGJ2TEw5WmFHSkhpMXdZVG9tUjlDRDRvVllwaHl5QnBCRzlQcERfQmc?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-08T10:53:51+02:00",
+    "updatedAt": "2026-10-08T10:53:51+02:00"
+  },
+
+  {
     "id": "napoleons-ljubljana-illyrian-provinces-history-walk",
     "title": "Napoleon’s Ljubljana: The Illyrian Provinces History Walk",
     "excerpt": "Walk through the short French chapter that made Ljubljana a provincial capital—and learn what Napoleon changed, what he did not, and why the city still remembers it.",

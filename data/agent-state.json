@@ -1,18 +1,19 @@
 {
-  "last_success": "2026-10-08T07:39:03+02:00",
+  "last_success": "2026-10-08T10:53:51+02:00",
   "last_failure": "2026-09-21T20:56:52+02:00",
   "consecutive_failures": 0,
   "posts_date": "2026-10-08",
-  "posts_today": 1,
-  "last_output": "dravska-kolesarska-pot-najdaljsa-najbolj-slikovita-in-raznolika-etapa-za-konec-6b71d0e6",
+  "posts_today": 2,
+  "last_output": "slovenia-history-geography-people-britannica-ff6791f3",
   "last_error": null,
-  "agent_version": "3.0.0-learning-guarded-fallback",
-  "current_category": "kolesarstvo",
-  "scheduled_posts_today": 1,
+  "agent_version": "2.7.0",
+  "current_category": "dediscina",
+  "scheduled_posts_today": 2,
   "manual_posts_today": 0,
-  "writer_mode": "deterministic_fallback",
+  "writer_mode": "workers_ai",
   "scheduled_slots_done": [
-    "2026-10-08|07:35|kolesarstvo"
+    "2026-10-08|07:35|kolesarstvo",
+    "2026-10-08|10:45|dediscina"
   ],
   "scheduled_slots_deferred": [],
   "last_editorial_hold": null,
