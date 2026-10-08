@@ -66,6 +66,7 @@ function Find-GmailDesktopOAuthClient {
 $vars=@{
   "GMAIL_REPORTING_ENABLED"="1"
   "REPORT_TO_EMAIL"=$Recipient
+  "GMAIL_FROM_EMAIL"=$Recipient
   "GMAIL_OAUTH_CLIENT_FILE"=$clientFile
   "GMAIL_OAUTH_TOKEN_FILE"=$tokenFile
   "AGENT_MANAGER_EMAIL_INTERVAL_HOURS"=[string]$IntervalHours
