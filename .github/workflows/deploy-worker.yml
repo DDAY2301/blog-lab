@@ -35,7 +35,7 @@ jobs:
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
       BLOG_LAB_DISPATCH_TOKEN: ${{ secrets.BLOG_LAB_DISPATCH_TOKEN }}
       FLEET_AGENT_TOKEN: ${{ secrets.FLEET_AGENT_TOKEN }}
-      EXPECTED_WORKER_VERSION: auth-v6.28-production
+      EXPECTED_WORKER_VERSION: auth-v6.29-production
     steps:
       - uses: actions/checkout@v7
 
@@ -102,6 +102,8 @@ jobs:
           grep -q 'url.pathname === "/api/commands"' terminal/worker/src/index.js
           grep -q 'url.pathname === "/api/fleet/command"' terminal/worker/src/index.js
           grep -q 'fleet_agent_ready' terminal/worker/src/index.js
+          grep -q 'url.pathname === "/api/fleet/media"' terminal/worker/src/index.js
+          grep -q 'fleet_media_ready' terminal/worker/src/index.js
           grep -q 'id="helpCommands"' terminal/worker/src/index.js
           grep -q "PENDING_KEY='bloglab-terminal-pending-v1'" terminal/worker/src/index.js
           grep -q 'client_request_id' terminal/worker/src/index.js
