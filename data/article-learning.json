@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-08T16:59:40+02:00",
-  "loop_count": 3839,
+  "updated_at": "2026-10-08T17:00:43+02:00",
+  "loop_count": 3840,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-08T16:59:17+02:00",
+      "last_learning_run": "2026-10-08T17:00:18+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -58,11 +58,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 107332,
-          "last_seen": "2026-10-08T16:59:17+02:00",
+          "seen": 107341,
+          "last_seen": "2026-10-08T17:00:18+02:00",
           "last_title": "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
           "last_provider": "google-news-si",
-          "published": 202709,
+          "published": 202781,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-08T16:59:30+02:00",
+      "last_learning_run": "2026-10-08T17:00:29+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -271,11 +271,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 109736,
-          "last_seen": "2026-10-08T16:59:30+02:00",
+          "seen": 109753,
+          "last_seen": "2026-10-08T17:00:29+02:00",
           "last_title": "Golob pravi: Slovenija potrebuje široko koalicijo. NSi ne bo na sestanek - Svet24.si",
           "last_provider": "google-news-si",
-          "published": 223158,
+          "published": 223243,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -366,7 +366,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-08T16:59:40+02:00",
+      "last_learning_run": "2026-10-08T17:00:43+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -421,11 +421,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 111411,
-          "last_seen": "2026-10-08T16:59:40+02:00",
+          "seen": 111433,
+          "last_seen": "2026-10-08T17:00:43+02:00",
           "last_title": "Vreme se bo danes hitro obrnilo: nevihte bodo zajele večji del Slovenije, na Primorskem tudi burja - Dnevne Novice",
           "last_provider": "google-news-si",
-          "published": 203671,
+          "published": 203720,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -445,22 +445,22 @@
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 3741,
+          "published": 3742,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
           "score": 2.498,
-          "published": 3805,
+          "published": 3806,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 3741,
+          "published": 3742,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 3741,
+          "published": 3742,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
@@ -485,17 +485,17 @@
         },
         "reddit.com": {
           "score": 2.498,
-          "published": 7546,
+          "published": 7548,
           "last_output_id": "duckduckgo-287dab86"
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 3773,
+          "published": 3774,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
           "score": 2.498,
-          "published": 7554,
+          "published": 7555,
           "last_output_id": "kachelmannwetter-wetter-hd-radar-vorhersage-uvm-bf4d6762"
         },
         "tripadvisor.com": {
@@ -505,12 +505,12 @@
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 3741,
+          "published": 3742,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
           "score": 2.498,
-          "published": 7546,
+          "published": 7548,
           "last_output_id": "duckduckgo-287dab86"
         },
         "locations.dollartree.com": {
@@ -621,14 +621,6 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20261008-163043.json",
-      "category": "gore",
-      "errors": [
-        "prekratek"
-      ],
-      "title": "Plohe, nevihte in vremenska obremenitev: danes lahko trpi tudi počutje"
-    },
-    {
       "file": "fallback-failed-20261008-163222.json",
       "category": "gore",
       "errors": [
@@ -709,6 +701,14 @@
       "title": "Plohe, nevihte in vremenska obremenitev: danes lahko trpi tudi počutje"
     },
     {
+      "file": "fallback-failed-20261008-165952.json",
+      "category": "gore",
+      "errors": [
+        "prekratek"
+      ],
+      "title": "Plohe, nevihte in vremenska obremenitev: danes lahko trpi tudi počutje"
+    },
+    {
       "file": "agent-state",
       "category": "gore",
       "errors": [
@@ -717,8 +717,8 @@
     }
   ],
   "failure_summary": {
-    "prekratek": 16,
-    "ze_uporabljen_vir": 5,
-    "podvojen_naslov": 4
+    "prekratek": 17,
+    "ze_uporabljen_vir": 4,
+    "podvojen_naslov": 3
   }
 }
