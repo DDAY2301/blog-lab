@@ -30,6 +30,40 @@ const CATEGORY_EMPTY_COPY = {
 
 const starterArticles = [
   {
+    "id": "iski-vintgar-day-trip-from-ljubljana",
+    "title": "Iški Vintgar: A Car-Free Gorge Escape from Ljubljana",
+    "excerpt": "Plan a responsible half-day trip to Iški Vintgar, with bus access, route choices, river-safety advice and an honest guide to families and accessibility.",
+    "seoDescription": "Visit Iški Vintgar from Ljubljana: bus access, walking options, river safety, family advice and a practical autumn half-day itinerary.",
+    "content": "# Iški Vintgar: A Car-Free Gorge Escape from Ljubljana\n\nOnly about 15 kilometres south of Ljubljana, the Iška River leaves the Ljubljana Marshes and squeezes between steep, wooded rock walls. Iški Vintgar feels much wilder than its distance from the capital suggests: clear pools, gravel banks, exposed roots and the sound of fast water replace the city within a short outing.\n\n**Last updated: 9 October 2026.** Conditions beside a mountain-fed river can change quickly. Check the weather, official warnings and the return bus before leaving.\n\n## Is Iški Vintgar worth the trip?\n\nYes—especially if you want a nature-focused half day without committing to a mountain summit. Tectonic faulting helped shape the narrow gorge, while its shaded walls support both forest vegetation and alpine plants. The attraction is the landscape itself; there is no single viewpoint that requires you to finish a fixed route.\n\n### A realistic quick plan\n\nAllow half a day from Ljubljana. Travel to Iška Vas, continue to the gorge entrance, walk upstream only as far as conditions and your group allow, then return the same way. Pack water and food because services can be limited or seasonal.\n\n## Choose the walk that fits your day\n\n### Short gorge walk: best for most visitors\n\nFrom the arrival area, follow the river into the gorge and use a safe turnaround point rather than chasing a mileage target. The surface is natural and can include loose stone, roots, mud and slippery river-edge sections. This flexible out-and-back is the sensible first visit.\n\n### Partisan hospital: a longer historical detour\n\nVisit Ljubljana places a restored Second World War partisan hospital about one hour on foot from Iški Vintgar. Treat that estimate as walking time rather than a guarantee: wayfinding, wet ground and stops can lengthen the outing. Continue only with enough daylight and return time.\n\n### Okljuk trail: a proper point-to-point day\n\nThe themed Okljuk trail links Iški Vintgar with Lipe across the Ljubljana Marshes. The official description gives 13 kilometres for the route, while its detail panel lists 26 kilometres, 4 hours 30 minutes and medium difficulty—best interpreted as roughly 13 kilometres one way and 26 kilometres if you return on foot. Plan transport at both ends before choosing this option.\n\n## Getting there from Ljubljana\n\n### By bus\n\nLPP line **19I** runs through central Ljubljana to **Iška Vas**. The official stop list includes Bavarski dvor, Ajdovščina, Drama and Iška Vas. The bus does not remove the final walk to the gorge, so check the exact pedestrian approach and the last return departure on the day you travel.\n\nTimetables change by season and day type. Save the return options before entering the gorge; mobile reception and battery life should not be your only plan.\n\n### By car\n\nThe official Okljuk trail description identifies the area in front of the inn at Iški Vintgar as a starting point with parking. Do not assume that a space will be available at popular times, and keep access lanes clear.\n\n## Weather and river safety\n\nOn the morning of this update, the local forecast showed rain and drizzle before a drier afternoon, making wet stone, roots and leaf-covered ground the main immediate hazards. That forecast is a short-lived snapshot, not advice for a later visit.\n\n- Do not enter the gorge during thunderstorms, intense rain or official flood warnings.\n- Turn back if the river is rising, the path disappears under water or footing becomes insecure.\n- Do not jump into pools: depth, submerged rocks, current and water temperature are difficult to judge.\n- Wear shoes with dependable grip; ordinary smooth-soled city footwear is a poor match for wet rock.\n- In autumn, carry a warm layer and a light, even if Ljubljana feels mild.\n- Keep children within arm’s reach beside fast water and steep banks.\n- Call **112** for an emergency in Slovenia.\n\nCheck the [ARSO weather and warnings](https://meteo.arso.gov.si/met/en/) immediately before departure.\n\n## Families and accessibility\n\nA short out-and-back can work for confident school-age walkers in dry, low-water conditions, with close adult supervision. The longer routes are less suitable for young children because retreat time grows quickly.\n\nThis is not a step-free attraction. Based on the officially described rocky banks, woodland paths and natural trail surface, the gorge walk should be considered unsuitable for wheelchairs and most pushchairs beyond the arrival area. Visitors who need predictable, firm surfaces may prefer [Arboretum Volčji Potok](?article=arboretum-volcji-potok-day-trip-from-ljubljana).\n\n## A low-impact visit\n\nStay on established paths, carry all litter out, keep dogs controlled and do not remove plants or stones. Avoid loud music: the quiet river corridor is part of the experience. After heavy rain, choosing another day protects both you and fragile path edges.\n\n## Pair it with another Ljubljana-area landscape\n\nIški Vintgar shows the river in a narrow gorge; downstream, the same river reaches the open Ljubljana Marshes. For the archaeological story of that landscape, read [Ljubljana Marshes Pile Dwellers](?article=ljubljana-marshes-pile-dwellings-history). For a drier hill alternative with a clearer summit objective, use the [Polhograjska Grmada hiking guide](?article=polhograjska-grmada-hike-from-ljubljana).\n\n## Before you leave\n\n1. Check ARSO weather and warnings.\n2. Confirm LPP 19I outbound and return times.\n3. Choose the short gorge walk unless your group is equipped for a longer route.\n4. Pack water, food, grip-soled shoes and a warm layer.\n5. Turn around early if rain, river level or daylight makes the route doubtful.\n\n## Official sources\n\n- [Visit Ljubljana: Iški Vintgar Gorge](https://www.visitljubljana.com/en/poi/iski-vintgar-gorge)\n- [Visit Ljubljana: Trail along the Iška River – Okljuk](https://www.visitljubljana.com/en/visitors/sights-and-activities/active-holidays/hiking-trails/trail-along-the-iska-river-okljuk-ljubljana-marshes)\n- [LPP: line 19I stop timetable](https://www.lpp.si/sites/default/files/lpp_vozniredi/iskalnik/index.php?l=19I&stop=0)\n- [ARSO: weather and warnings](https://meteo.arso.gov.si/met/en/)",
+    "category": "Vodniki",
+    "author": "Blog Lab Travel Desk",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Visit Ljubljana — Iški Vintgar Gorge",
+        "url": "https://www.visitljubljana.com/en/poi/iski-vintgar-gorge"
+      },
+      {
+        "label": "Visit Ljubljana — Trail along the Iška River – Okljuk",
+        "url": "https://www.visitljubljana.com/en/visitors/sights-and-activities/active-holidays/hiking-trails/trail-along-the-iska-river-okljuk-ljubljana-marshes"
+      },
+      {
+        "label": "LPP — line 19I stop timetable",
+        "url": "https://www.lpp.si/sites/default/files/lpp_vozniredi/iskalnik/index.php?l=19I&stop=0"
+      },
+      {
+        "label": "ARSO — weather and warnings",
+        "url": "https://meteo.arso.gov.si/met/en/"
+      }
+    ],
+    "createdAt": "2026-10-09T08:58:04+02:00",
+    "updatedAt": "2026-10-09T08:58:04+02:00"
+  },
+
+  {
     "id": "aidan-cerar-zakaj-bi-morali-gradnjo-kolesarskih-stez-podpirati-predvsem-vozniki-2b0e1e2c",
     "title": "Aidan Cerar: zakaj bi morali gradnjo kolesarskih stez podpirati predvsem vozniki",
     "excerpt": "Kolesarstvo: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Aidan Cerar: zakaj bi morali gradnjo kolesarskih stez podpirati predvsem vozniki«.",
