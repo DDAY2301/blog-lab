@@ -30,6 +30,44 @@ const CATEGORY_EMPTY_COPY = {
 
 const starterArticles = [
   {
+    "id": "premier-league-football-latest-news-results-stats-transfers-bbc-sport-59f1acb2",
+    "title": "Premier League Football - Latest news, results, stats & transfers - BBC Sport",
+    "excerpt": "The home of Premier League on BBC Sport online. Includes the latest news stories, results, fixtures, video and audio. Premier League Everton owners consider selling club two years after takeover Everton owners the Friedk",
+    "seoDescription": "The home of Premier League on BBC Sport online. Includes the latest news stories, results, fixtures, video and audio. Premier League Everton owners conside",
+    "content": "Pregled za rubriko dediscina povzema trenutno razpoložljive informacije iz spodaj navedenih virov. Besedilo je pripravljeno brez dodajanja nepodprtih dejstev.\n\n## Premier League Football - Latest news, results, stats & transfers - BBC Sport\nThe home of Premier League on BBC Sport online. Includes the latest news stories, results, fixtures, video and audio. Premier League Everton owners consider selling club two years after takeover Everton owners the Friedkin Group are exploring the sale of the club less than two years after taking control. Attribution Everton Posted 29 minutes ago 29min Is £70m Baleba ready for his Man Utd exam? Attribution Man Utd Posted 55 minutes ago 55min How Arteta's response to Brighton loss may shape Arsenal's next chapter Attribution Arsenal Posted 2 hours ago 2h Sutton's predictions v Starsailor frontman James Walsh Attribution Premier League Posted 12 hours ago 12h Maresca says 'feeling is fantastic' among Man City squad Attribution Man City Posted 12 hours ago 12h Spurs' Simons enrols at iconic university Harvard Attribution Tottenham Posted 10 hours ago 10h Maresca will be demanding a siege mentality from Man City - Pulis Attribution Man City Posted 3 hours ago 3h What to do with Joao Pedro? FPL gameweek six dilemmas Attribution Football Posted 2 hours ago 2h Clubs fear political interference in Man City appeal Attribution Man City Posted 23 hours ago 23h Working with Iraola, car clauses and hope - the Liverpool academy approach Attribution Liverpool Posted 1 day ago 1d How Brighton attract and develop the best young players ahead of their rivals Attribution Brighton Posted 22 hours ago 22h Suspended fine for Xhaka over Covid-19 certificate Attribution Football Posted 15 hours ago 15h Highlights Man City beat Sunderland in eight-goal thriller to go three points clear Video Man City beat Sunderland in eight-goal thriller to go three points clear Manchester City beat Sunderland 5-3 in a thrilling Etihad encounter, to go three points clear at the top of the Premier League table. Attribution Premier League Posted 20 September 20 Sep Cunha's late strike denies Fulham first league win of season. Video Cunha's late strike denies Fulham first league win of season Attribution Premier League Posted 20 September 20 Sep Liverpool boss Iraola makes winning return to Bournemouth. Video Liverpool boss Iraola makes winning return to Bournemouth Attribution Premier League Posted 20 September 20 Sep Leeds continue unbeaten start in league with draw against Palace. Video Leeds continue unbeaten start in league with draw against Palace Attribution Premier League Posted 20 September 20 Sep Brighton cruise past Arsenal to end champions' perfect start Video Brighton cruise past Arsenal to end champions' perfect start Attribution Premier League Posted 19 September 19 Sep Coventry earn\n\nVir: bbc.com — https://www.bbc.com/sport/football/premier-league\n\n## Premier League - Scores & Fixtures - Football - BBC Sport\nPremier League scores, results and fixtures on BBC Sport, including live football scores Premier League Scores & Fixtures Search Skip to content Skip to today Oct 2025 Nov 2025 Dec 2025 Jan 2026 Feb 2026 Mar 2026 Apr 2026 May 2026 Jun 2026 Jul 2026 Aug 2026 Sep 2026 Oct 2026 Nov 2026 Dec 2026 Jan 2027 Feb 2027 Mar 2027 Apr 2027 May 2027 Jun 2027 Jul 2027 Aug 2027 Sep 2027 Oct 2027 Scroll left Scroll right Saturday 10th October Arsenal versus Leeds United kick off 12:30 Arsenal Arsenal Arsenal 12:30 12:30 plays Leeds Leeds United Leeds United Aston Villa versus Brentford kick off 15:00 A Villa Aston Villa Aston Villa 15:00 15:00 plays Brentford Brentford Brentford Chelsea versus Bournemouth kick off 15:00 Chelsea Chelsea Chelsea 15:00 15:00 plays Bournemouth Bournemouth Bournemouth Ipswich Town versus Fulham kick off 15:00 Ipswich Ipswich Town Ipswich Town 15:00 15:00 plays Fulham Fulham Fulham Sunderland versus Brighton & Hove Albion kick off 15:00 Sunderland Sunderland Sunderland 15:00 15:00 plays Brighton Brighton & Hove Albion Brighton & Hove Albion Manchester United versus Tottenham Hotspur kick off 17:30 Man Utd Manchester United Manchester United 17:30 17:30 plays Spurs Tottenham Hotspur Tottenham Hotspur Sunday 11th October Crystal Palace versus Nottingham Forest kick off 14:00 C Palace Crystal Palace Crystal Palace 14:00 14:00 plays N Forest Nottingham Forest Nottingham Forest Hull City versus Everton kick off 14:00 Hull City Hull City Hull City 14:00 14:00 plays Everton Everton Everton Liverpool versus Manchester City kick off 16:30 Liverpool Liverpool Liverpool 16:30 16:30 plays Man City Manchester City Manchester City Monday 12th October Coventry City versus Newcastle United kick off 20:00 Coventry Coventry City Coventry City 20:00 20:00 plays Newcastle Newcastle United Newcastle United Saturday 17th October Everton versus Chelsea kick off 12:30 Everton Everton Everton 12:30 12:30 plays Chelsea Chelsea Chelsea Brentford versus Liverpool kick off 15:00 Brentford Brentford Brentford 15:00 15:00 plays Liverpool Liverpool Liverpool Fulham versus Hull City kick off 15:00 Fulham Fulham Fulham 15:00 15:00 plays Hull City Hull City Hull City Manchester City versus Ipswich Town kick off 15:00 Man City Manchester City Manchester City 15:00 15:00 plays Ipswich Ipswich Town Ipswich Town Newcastle United versus Aston Villa kick off 17:30 Newcastle Newcastle United Newcastle United 17:30 17:30 plays A Villa Aston Villa Aston Villa Sunday 18th October Bournemouth versus Sunderland kick off 14:00 Bournemouth Bournemouth Bournemouth 14:00 14:00 plays Sunderlan\n\nVir: bbc.com — https://www.bbc.com/sport/football/premier-league/scores-fixtures",
+    "category": "Dediščina",
+    "author": "Blog Lab Slovenia Publisher",
+    "status": "published",
+    "heroImage": {
+      "url": "https://static.files.bbci.co.uk/core/website/assets/static/sport/images/metadata/poster-1024x576.146fae5646.png",
+      "alt": "Premier League Football - Latest news, results, stats & transfers - BBC Sport",
+      "caption": "bbc.com",
+      "sourceUrl": ""
+    },
+    "video": null,
+    "gallery": [
+      {
+        "url": "https://static.files.bbci.co.uk/core/website/assets/static/sport/bbc-sport-logo.ebbfcde41a.webp",
+        "alt": "Premier League - Scores & Fixtures - Football - BBC Sport",
+        "caption": "bbc.com",
+        "sourceUrl": ""
+      }
+    ],
+    "sources": [
+      {
+        "label": "Premier League Football - Latest news, results, stats & transfers - BBC Sport",
+        "url": "https://www.bbc.com/sport/football/premier-league"
+      },
+      {
+        "label": "Premier League - Scores & Fixtures - Football - BBC Sport",
+        "url": "https://www.bbc.com/sport/football/premier-league/scores-fixtures"
+      }
+    ],
+    "createdAt": "2026-10-09T10:54:00+02:00",
+    "updatedAt": "2026-10-09T10:54:00+02:00"
+  },
+
+  {
     "id": "iski-vintgar-day-trip-from-ljubljana",
     "title": "Iški Vintgar: A Car-Free Gorge Escape from Ljubljana",
     "excerpt": "Plan a responsible half-day trip to Iški Vintgar, with bus access, route choices, river-safety advice and an honest guide to families and accessibility.",

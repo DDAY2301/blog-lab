@@ -1,18 +1,19 @@
 {
-  "last_success": "2026-10-09T07:39:47+02:00",
+  "last_success": "2026-10-09T10:54:00+02:00",
   "last_failure": "2026-09-21T20:56:52+02:00",
   "consecutive_failures": 0,
   "posts_date": "2026-10-09",
-  "posts_today": 1,
-  "last_output": "aidan-cerar-zakaj-bi-morali-gradnjo-kolesarskih-stez-podpirati-predvsem-vozniki-2b0e1e2c",
+  "posts_today": 2,
+  "last_output": "premier-league-football-latest-news-results-stats-transfers-bbc-sport-59f1acb2",
   "last_error": null,
-  "agent_version": "3.0.0-learning-guarded-fallback",
-  "current_category": "kolesarstvo",
-  "scheduled_posts_today": 1,
+  "agent_version": "2.7.0",
+  "current_category": "dediscina",
+  "scheduled_posts_today": 2,
   "manual_posts_today": 0,
-  "writer_mode": "deterministic_fallback",
+  "writer_mode": "workers_ai",
   "scheduled_slots_done": [
-    "2026-10-09|07:35|kolesarstvo"
+    "2026-10-09|07:35|kolesarstvo",
+    "2026-10-09|10:45|dediscina"
   ],
   "scheduled_slots_deferred": [],
   "last_editorial_hold": null,
