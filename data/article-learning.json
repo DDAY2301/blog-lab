@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-09T13:39:34+02:00",
-  "loop_count": 4076,
+  "updated_at": "2026-10-09T13:40:23+02:00",
+  "loop_count": 4077,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-09T13:39:14+02:00",
+      "last_learning_run": "2026-10-09T13:40:02+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -58,11 +58,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 109490,
-          "last_seen": "2026-10-09T13:39:14+02:00",
+          "seen": 109501,
+          "last_seen": "2026-10-09T13:40:02+02:00",
           "last_title": "Sin znanih slovenskih športnikov navdušuje na SP, danes pa nastopa proti Sloveniji! - Siol.net",
           "last_provider": "google-news-si",
-          "published": 219773,
+          "published": 219845,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-09T13:39:24+02:00",
+      "last_learning_run": "2026-10-09T13:40:13+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -271,11 +271,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 113586,
-          "last_seen": "2026-10-09T13:39:24+02:00",
+          "seen": 113602,
+          "last_seen": "2026-10-09T13:40:13+02:00",
           "last_title": "Golob pravi: Slovenija potrebuje široko koalicijo. NSi ne bo na sestanek - Svet24.si",
           "last_provider": "google-news-si",
-          "published": 242629,
+          "published": 242709,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -366,7 +366,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-09T13:39:34+02:00",
+      "last_learning_run": "2026-10-09T13:40:23+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -421,11 +421,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 116751,
-          "last_seen": "2026-10-09T13:39:34+02:00",
+          "seen": 116774,
+          "last_seen": "2026-10-09T13:40:23+02:00",
           "last_title": "Vreme se bo danes hitro obrnilo: nevihte bodo zajele večji del Slovenije, na Primorskem tudi burja - Dnevne Novice",
           "last_provider": "google-news-si",
-          "published": 215261,
+          "published": 215308,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "reddit.com": {
@@ -454,7 +454,7 @@
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 3978,
+          "published": 3979,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
@@ -464,12 +464,12 @@
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 3978,
+          "published": 3979,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 3978,
+          "published": 3979,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
@@ -509,7 +509,7 @@
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 3978,
+          "published": 3979,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
@@ -550,6 +550,12 @@
     }
   },
   "recent_articles": [
+    {
+      "id": "rdeci-alarm-za-hrvaski-turizem-po-junijskem-padcu-se-zacenja-bitka-za-julijske-in-avgustov-792c4d39",
+      "title": "Rdeči alarm za hrvaški turizem: Po junijskem padcu se začenja bitka za julijske in avgustovske goste",
+      "category": "Sezonsko",
+      "createdAt": "2026-10-09T13:39:23+02:00"
+    },
     {
       "id": "premier-league-football-latest-news-results-stats-transfers-bbc-sport-59f1acb2",
       "title": "Premier League Football - Latest news, results, stats & transfers - BBC Sport",
@@ -615,12 +621,6 @@
       "title": "Dravska kolesarska pot: najdaljša, najbolj slikovita in raznolika etapa za konec",
       "category": "Kolesarstvo",
       "createdAt": "2026-10-08T07:39:03+02:00"
-    },
-    {
-      "id": "foto-in-video-halosko-zlato-dobo-oziveli-v-krcmi-janzevina-domace-vino-stajerska-hrana-in--9819d25c",
-      "title": "FOTO in VIDEO: Haloško zlato dobo oživeli v Krčmi Janževina: Domače vino, štajerska hrana in notranjost, ki…",
-      "category": "Gourmet",
-      "createdAt": "2026-10-07T19:23:48+02:00"
     }
   ],
   "recent_failures": [
