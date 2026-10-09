@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-09T11:37:58+02:00",
-  "loop_count": 4060,
+  "updated_at": "2026-10-09T11:38:45+02:00",
+  "loop_count": 4061,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-09T11:37:38+02:00",
+      "last_learning_run": "2026-10-09T11:38:25+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -58,11 +58,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 109317,
-          "last_seen": "2026-10-09T11:37:38+02:00",
+          "seen": 109328,
+          "last_seen": "2026-10-09T11:38:25+02:00",
           "last_title": "Sin znanih slovenskih športnikov navdušuje na SP, danes pa nastopa proti Sloveniji! - Siol.net",
           "last_provider": "google-news-si",
-          "published": 218621,
+          "published": 218693,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-09T11:37:48+02:00",
+      "last_learning_run": "2026-10-09T11:38:37+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -271,11 +271,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 113336,
-          "last_seen": "2026-10-09T11:37:48+02:00",
+          "seen": 113352,
+          "last_seen": "2026-10-09T11:38:37+02:00",
           "last_title": "Golob pravi: Slovenija potrebuje široko koalicijo. NSi ne bo na sestanek - Svet24.si",
           "last_provider": "google-news-si",
-          "published": 241349,
+          "published": 241429,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -366,7 +366,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-09T11:37:58+02:00",
+      "last_learning_run": "2026-10-09T11:38:45+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -421,11 +421,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 116383,
-          "last_seen": "2026-10-09T11:37:58+02:00",
+          "seen": 116406,
+          "last_seen": "2026-10-09T11:38:45+02:00",
           "last_title": "Vreme se bo danes hitro obrnilo: nevihte bodo zajele večji del Slovenije, na Primorskem tudi burja - Dnevne Novice",
           "last_provider": "google-news-si",
-          "published": 214493,
+          "published": 214541,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "reddit.com": {
@@ -454,7 +454,7 @@
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 3962,
+          "published": 3963,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
@@ -464,12 +464,12 @@
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 3962,
+          "published": 3963,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 3962,
+          "published": 3963,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
@@ -494,7 +494,7 @@
         },
         "sabervivirtv.com": {
           "score": 2.498,
-          "published": 3994,
+          "published": 3995,
           "last_output_id": "tabla-de-az-cares-de-las-frutas-la-cantidad-de-az-car-que-contiene-72b6c67d"
         },
         "seaofthieves.com": {
@@ -509,7 +509,7 @@
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 3962,
+          "published": 3963,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
