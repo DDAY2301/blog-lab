@@ -5,9 +5,9 @@
   "posts_date": "2026-10-09",
   "posts_today": 3,
   "last_output": "rdeci-alarm-za-hrvaski-turizem-po-junijskem-padcu-se-zacenja-bitka-za-julijske-in-avgustov-792c4d39",
-  "last_error": null,
+  "last_error": "prekratek",
   "agent_version": "3.0.0-learning-guarded-fallback",
-  "current_category": "sezonsko",
+  "current_category": "gore",
   "scheduled_posts_today": 3,
   "manual_posts_today": 0,
   "writer_mode": "deterministic_fallback",
@@ -18,10 +18,10 @@
   ],
   "scheduled_slots_deferred": [],
   "last_editorial_hold": null,
-  "publisher_guardian_last_run": "2026-10-09T13:39:23+02:00",
+  "publisher_guardian_last_run": "2026-10-09T16:29:20+02:00",
   "publisher_guardian_last_action": {
-    "category": "sezonsko",
-    "slot": "2026-10-09|13:30|sezonsko",
+    "category": "gore",
+    "slot": "2026-10-09|16:20|gore",
     "remaining_repairs": 0
   },
   "schedule_counter_normalized_at": "2026-10-07T16:45:00+02:00"
