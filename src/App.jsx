@@ -30,6 +30,37 @@ const CATEGORY_EMPTY_COPY = {
 
 const starterArticles = [
   {
+    "id": "rdeci-alarm-za-hrvaski-turizem-po-junijskem-padcu-se-zacenja-bitka-za-julijske-in-avgustov-792c4d39",
+    "title": "Rdeči alarm za hrvaški turizem: Po junijskem padcu se začenja bitka za julijske in avgustovske goste",
+    "excerpt": "Sezonsko: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Rdeči alarm za hrvaški turizem: Po junijskem padcu se začenja bitka za julijske in avgustovske goste«.",
+    "seoDescription": "Sezonsko: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Rdeči alarm za hrvaški turizem: Po junijskem padcu se začenja bitka za julijs",
+    "content": "**Sezonsko, 9. 10. 2026.** Rdeči alarm za hrvaški turizem: Po junijskem padcu se začenja bitka za julijske in avgustovske goste Nova24TV\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Nova24TV. Objavljeno: Wed, 07 Oct 2026 10:36:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMimgFBVV95cUxQNzhLRjB2VXcyeFpDU1FmeG1EQkozcFZVQ005alNkUnVqYndQZzQzRV9nLUhSbTRJNTB6SmF4ZDlkNDg1VWYwR3ZpVHMzWVBnT2xoVWdPNDhORndwMkdrLUV3VkpSbGhSMEpJMjlpbDJCTXRfNmU2ZFlTdGNGb21CeHB5MUcwcjlndkxIQmRwTDBUMXQ3RkNjVThn?oc=5)\n\n## Dopolnitev vira 2: Bloomberg Adria\n\nMarjetka Rangus: Zakaj so kolesarji pravi gosti za slovenski turizem Bloomberg Adria\n\n Vir: Bloomberg Adria. Objavljeno: Wed, 31 Jul 2024 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMirgFBVV95cUxOZHFEM0xKNkp6bXMtLUQ0Tnc1aU5KUGxzZ0ZDQ2g4Yzc5di1ra0FicUVYamFtaUZVcEQwQXdCdndZdEk5bnZYdVpmblNwOXg2VVdpMTdsTXhfZWplUE1DTmVPcE9QblAtcGdiR3FMNF9NU1Q0bTU5QUEzMkg3d2hWX203bE5NZ3A0SkZzdkNhYXZ2Y1NYaURIWTlvdU1BejJhRU9MazBEczJfZm5BMnc?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Sezonsko",
+    "author": "Blog Lab Slovenia Publisher",
+    "status": "published",
+    "heroImage": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Frozen_Lake_Bled_%28156843859%29.jpeg/1920px-Frozen_Lake_Bled_%28156843859%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "alt": "500px provided description: This picture has been taken on a nice, sunny, but cold winter day. It is amazing to see lake Bled frozen! [#landscape ,#lake ,#frozen ,#mountains ,#wint",
+      "caption": "Anita · Wikimedia Commons · CC0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Frozen_Lake_Bled_(156843859).jpeg"
+    },
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Nova24TV — Rdeči alarm za hrvaški turizem: Po junijskem padcu se začenja bitka za julijske in avgustovske goste - Nova24TV",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQNzhLRjB2VXcyeFpDU1FmeG1EQkozcFZVQ005alNkUnVqYndQZzQzRV9nLUhSbTRJNTB6SmF4ZDlkNDg1VWYwR3ZpVHMzWVBnT2xoVWdPNDhORndwMkdrLUV3VkpSbGhSMEpJMjlpbDJCTXRfNmU2ZFlTdGNGb21CeHB5MUcwcjlndkxIQmRwTDBUMXQ3RkNjVThn?oc=5"
+      },
+      {
+        "label": "Bloomberg Adria — Marjetka Rangus: Zakaj so kolesarji pravi gosti za slovenski turizem - Bloomberg Adria",
+        "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOZHFEM0xKNkp6bXMtLUQ0Tnc1aU5KUGxzZ0ZDQ2g4Yzc5di1ra0FicUVYamFtaUZVcEQwQXdCdndZdEk5bnZYdVpmblNwOXg2VVdpMTdsTXhfZWplUE1DTmVPcE9QblAtcGdiR3FMNF9NU1Q0bTU5QUEzMkg3d2hWX203bE5NZ3A0SkZzdkNhYXZ2Y1NYaURIWTlvdU1BejJhRU9MazBEczJfZm5BMnc?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-09T13:39:23+02:00",
+    "updatedAt": "2026-10-09T13:39:23+02:00"
+  },
+
+  {
     "id": "premier-league-football-latest-news-results-stats-transfers-bbc-sport-59f1acb2",
     "title": "Premier League Football - Latest news, results, stats & transfers - BBC Sport",
     "excerpt": "The home of Premier League on BBC Sport online. Includes the latest news stories, results, fixtures, video and audio. Premier League Everton owners consider selling club two years after takeover Everton owners the Friedk",

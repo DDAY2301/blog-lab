@@ -4431,5 +4431,33 @@
     "verified_direct": true,
     "processed_at": "2026-10-09T10:54:00+02:00",
     "output_id": "premier-league-football-latest-news-results-stats-transfers-bbc-sport-59f1acb2"
+  },
+  {
+    "source_name": "Nova24TV",
+    "category": "sezonsko",
+    "title": "Rdeči alarm za hrvaški turizem: Po junijskem padcu se začenja bitka za julijske in avgustovske goste - Nova24TV",
+    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQNzhLRjB2VXcyeFpDU1FmeG1EQkozcFZVQ005alNkUnVqYndQZzQzRV9nLUhSbTRJNTB6SmF4ZDlkNDg1VWYwR3ZpVHMzWVBnT2xoVWdPNDhORndwMkdrLUV3VkpSbGhSMEpJMjlpbDJCTXRfNmU2ZFlTdGNGb21CeHB5MUcwcjlndkxIQmRwTDBUMXQ3RkNjVThn?oc=5",
+    "summary": "Rdeči alarm za hrvaški turizem: Po junijskem padcu se začenja bitka za julijske in avgustovske goste Nova24TV",
+    "published": "Wed, 07 Oct 2026 10:36:00 GMT",
+    "image_url": "",
+    "video_url": "",
+    "hash": "c1e73c3611fc3becbdf9d23d2e286ea4e32e2e6d7044900773b11bdb22331be7",
+    "provider": "google-news-si",
+    "processed_at": "2026-10-09T13:39:23+02:00",
+    "output_id": "rdeci-alarm-za-hrvaski-turizem-po-junijskem-padcu-se-zacenja-bitka-za-julijske-in-avgustov-792c4d39"
+  },
+  {
+    "source_name": "Bloomberg Adria",
+    "category": "sezonsko",
+    "title": "Marjetka Rangus: Zakaj so kolesarji pravi gosti za slovenski turizem - Bloomberg Adria",
+    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOZHFEM0xKNkp6bXMtLUQ0Tnc1aU5KUGxzZ0ZDQ2g4Yzc5di1ra0FicUVYamFtaUZVcEQwQXdCdndZdEk5bnZYdVpmblNwOXg2VVdpMTdsTXhfZWplUE1DTmVPcE9QblAtcGdiR3FMNF9NU1Q0bTU5QUEzMkg3d2hWX203bE5NZ3A0SkZzdkNhYXZ2Y1NYaURIWTlvdU1BejJhRU9MazBEczJfZm5BMnc?oc=5",
+    "summary": "Marjetka Rangus: Zakaj so kolesarji pravi gosti za slovenski turizem Bloomberg Adria",
+    "published": "Wed, 31 Jul 2024 07:00:00 GMT",
+    "image_url": "",
+    "video_url": "",
+    "hash": "afc7c2754eea945b7dec012b7e66197d7bdae29e14b08a139210cdb3e75c6fcf",
+    "provider": "google-news-si",
+    "processed_at": "2026-10-09T13:39:23+02:00",
+    "output_id": "rdeci-alarm-za-hrvaski-turizem-po-junijskem-padcu-se-zacenja-bitka-za-julijske-in-avgustov-792c4d39"
   }
 ]
