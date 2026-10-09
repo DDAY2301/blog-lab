@@ -1,14 +1,12 @@
 {
-  "updatedAt": "2026-10-09T07:04:00+02:00",
+  "updatedAt": "2026-10-09T07:00:26+02:00",
   "status": "fresh",
   "sourcesChecked": [
-    "Cankarjev dom",
-    "MGL",
-    "Ljubljana Castle",
     "Visit Ljubljana",
     "Kino Šiška",
     "Gala Hala",
-    "Klub K4"
+    "Klub K4",
+    "Cirkus Klub"
   ],
   "sourcesFailed": [],
   "items": [
@@ -379,6 +377,16 @@
       "endAt": null
     },
     {
+      "title": "KONCERTNA AKADEMIJA @ Kino Šiška",
+      "url": "https://www.galahala.com/",
+      "source": "Gala Hala",
+      "type": "Koncert · Metelkova",
+      "place": "Gala Hala · AKC Metelkova",
+      "startAt": "2026-10-12T17:00:00+02:00",
+      "endAt": "",
+      "id": "event-22-koncertna-akademija-kino-i-ka"
+    },
+    {
       "price": "€23–€35",
       "languages": [],
       "touristFriendly": true,
@@ -664,82 +672,6 @@
       "place": "MGL Small Stage · Ljubljana",
       "startAt": "2026-10-22T20:00:00+02:00",
       "endAt": null
-    },
-    {
-      "price": "€15",
-      "languages": [],
-      "touristFriendly": true,
-      "familyFriendly": null,
-      "accessibility": null,
-      "ticketUrl": "https://www.cd-cc.si/en/calendar",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-09T06:56:35+02:00",
-      "id": "vocal-concert-kosovel-centennial-2026-10-23",
-      "title": "A Vocal Music Concert Marking the Centennial of the Death of Srečko Kosovel",
-      "url": "https://www.cd-cc.si/en/calendar",
-      "source": "Cankarjev dom",
-      "type": "Concert · vocal music",
-      "place": "Cankarjev dom · Ljubljana",
-      "startAt": "2026-10-23T19:30:00+02:00",
-      "endAt": null
-    },
-    {
-      "price": null,
-      "languages": [],
-      "touristFriendly": null,
-      "familyFriendly": null,
-      "accessibility": null,
-      "ticketUrl": "https://www.mgl.si/en/schedule/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-09T06:56:35+02:00",
-      "id": "romantic-souls-2026-10-23",
-      "title": "Romantic Souls",
-      "url": "https://www.mgl.si/en/schedule/",
-      "source": "MGL",
-      "type": "Theatre · drama",
-      "place": "MGL Main Stage · Ljubljana",
-      "startAt": "2026-10-23T19:30:00+02:00",
-      "endAt": null
-    },
-    {
-      "price": null,
-      "languages": [],
-      "touristFriendly": null,
-      "familyFriendly": null,
-      "accessibility": null,
-      "ticketUrl": "https://www.mgl.si/en/schedule/",
-      "status": "sold_out",
-      "lastCheckedAt": "2026-10-09T06:56:35+02:00",
-      "id": "prima-facie-2026-10-23",
-      "title": "Prima Facie",
-      "url": "https://www.mgl.si/en/schedule/",
-      "source": "MGL",
-      "type": "Theatre · legal drama",
-      "place": "MGL Small Stage · Ljubljana",
-      "startAt": "2026-10-23T20:00:00+02:00",
-      "endAt": null
-    },
-    {
-      "title": "BALANS (SI): ALBUM RELEASE KONCERT @ Gala hala",
-      "url": "https://www.galahala.com/",
-      "source": "Gala Hala",
-      "type": "Koncert · Metelkova",
-      "place": "Gala Hala · AKC Metelkova",
-      "startAt": "2026-10-23T21:00:00+02:00",
-      "endAt": "",
-      "id": "balans-album-release-2026-10-23",
-      "status": "confirmed"
-    },
-    {
-      "title": "FORESTDELIC / LABEL NIGHT / KLUB K4",
-      "url": "https://www.klub-k4.si/",
-      "source": "Klub K4",
-      "type": "Club · elektronika",
-      "place": "Klub K4 · Ljubljana",
-      "startAt": "2026-10-23T23:00:00+02:00",
-      "endAt": "",
-      "id": "forestdelic-label-night-2026-10-23",
-      "status": "confirmed"
     }
   ]
 }
