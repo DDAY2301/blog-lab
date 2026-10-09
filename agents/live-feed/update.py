@@ -94,7 +94,12 @@ def parse_gala(text,source):
     return out
 
 def event_key(item):
-    title=re.sub(r"\W+","",clean(item.get("title","")).lower())
+    title=clean(item.get("title","")).lower()
+    # Official feeds often repeat the same event with country/venue suffixes.
+    # Compare the stable title before those qualifiers so manual verification
+    # is not undone by the next scheduled refresh.
+    title=re.split(r"\s*(?:\(|@\s)",title,maxsplit=1)[0]
+    title=re.sub(r"\W+","",title)
     try:day=datetime.fromisoformat(item.get("startAt","")).astimezone(TZ).date().isoformat()
     except Exception:day=item.get("startAt","")[:10]
     return f"{title[:90]}|{day}"
@@ -105,7 +110,7 @@ def valid_future(item):
         if start.tzinfo is None:start=start.replace(tzinfo=TZ)
         if end.tzinfo is None:end=end.replace(tzinfo=TZ)
         now=datetime.now(TZ)
-        return end.astimezone(TZ)>=now-timedelta(hours=12) and start.astimezone(TZ)<=now+timedelta(days=45)
+        return end.astimezone(TZ)>=now-timedelta(hours=12) and start.astimezone(TZ)<=now+timedelta(days=14)
     except Exception:return False
 
 def main():
@@ -124,8 +129,8 @@ def main():
     for item in existing:
         if isinstance(item,dict) and valid_future(item):merged[event_key(item)]=item
     for item in discovered:
-        if valid_future(item):merged[event_key(item)]=item
-    items=sorted(merged.values(),key=lambda x:x.get("startAt",""))[:30]
+        if valid_future(item):merged.setdefault(event_key(item),item)
+    items=sorted(merged.values(),key=lambda x:x.get("startAt",""))[:80]
     for i,item in enumerate(items):
         if not item.get("id"):item["id"]=f"event-{i+1:02d}-"+re.sub(r"[^a-z0-9]+","-",item.get("title","").lower()).strip("-")[:60]
     status="fresh" if checked and not failed else ("partial" if checked else "stale")
