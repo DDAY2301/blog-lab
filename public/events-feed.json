@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-09T17:21:42+02:00",
+  "updatedAt": "2026-10-09T22:59:29+02:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -672,6 +672,16 @@
       "place": "MGL Small Stage · Ljubljana",
       "startAt": "2026-10-22T20:00:00+02:00",
       "endAt": null
+    },
+    {
+      "title": "BALANS (SI): ALBUM RELEASE KONCERT @ Gala hala",
+      "url": "https://www.galahala.com/",
+      "source": "Gala Hala",
+      "type": "Koncert · Metelkova",
+      "place": "Gala Hala · AKC Metelkova",
+      "startAt": "2026-10-23T21:00:00+02:00",
+      "endAt": "",
+      "id": "event-40-balans-si-album-release-koncert-gala-hala"
     }
   ]
 }
