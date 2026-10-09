@@ -30,6 +30,41 @@ const CATEGORY_EMPTY_COPY = {
 
 const starterArticles = [
   {
+    "id": "catering-lulu-s-mexican-food-751228e3",
+    "title": "Catering — LuLu's Mexican Food",
+    "excerpt": "Gourmet: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Catering — LuLu's Mexican Food«.",
+    "seoDescription": "Gourmet: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Catering — LuLu's Mexican Food«.",
+    "content": "**Gourmet, 9. 10. 2026.** Order LuLu’s catering to bring fresh authentic Mexican food to your next event. Feel Like a Guest at Your Own Fiesta Order from our generous selection of authentic Mexican specialties! We offer eight all-natural meat selections, grilled fresh fish, delicious shrimp, colorful vegetables, vegetarian beans, three varieties of rice, and a selection of flour, spinach, tomato, whole wheat, and corn tortillas. We also cater breakfast! Gluten-free, vegetarian, and vegan options available. We deliver directly to your home, office, or party venue. Whether your event is elegant, casual, or both, LuLu's ensures entertaining with traditional, homestyle Mexican dishes. Your appetizers and entrées will arrive on a selection…\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: lulusmexicanfood.com. Objavljeno: Sat, 03 Oct 2026 22:46:00 GMT. [Odpri izvirni vir](https://www.lulusmexicanfood.com/catering)\n\n## Dopolnitev vira 2: lasalsa.com\n\nFresh Mexican party platters & catering from La Salsa. Taco trays, burritos, taquitos, chips & salsa, perfect for parties, offices, or family gatherings. Party Platters | Catering | La Salsa Mexican Grill Skip to main content Get Social La Salsa Fresh Mexican Grill on Instagram (opens in a new tab) La Salsa Fresh Mexican Grill on X (opens in a new tab) La Salsa Fresh Mexican Grill on Facebook (opens in a new tab) La Salsa Fresh Mexican Grill on Pinterest (opens in a new tab) FIND A LOCATION Party Platters Welcome to La Salsa Catering — your one-stop choice for fresh, flavorful Mexican party platters that bring the fiesta to any event. Whether you're hosting a small gathering, family get-together, office…\n\n Vir: lasalsa.com. Objavljeno: Thu, 08 Oct 2026 06:19:00 GMT. [Odpri izvirni vir](https://www.lasalsa.com/menu/catering/partyplatters)\n\n## Dopolnitev vira 3: Bing Web – gourmet – Slovenija tradicionalna kuhinja gastronomija…\n\nWe had Talaveras Tacos cater an event for ~70 people at a park last summer. They were wonderful to work with, from start to finish: very responsive to our initial inquiries, pricing was as expected, and the team showed up on time and was ready to serve food on time.\n\n Vir: Bing Web – gourmet – Slovenija tradicionalna kuhinja gastronomija lokalna hrana v. Objavljeno: Thu, 01 Oct 2026 07:25:00 GMT. [Odpri izvirni vir](https://www.yelp.com/search?find_desc=Mexican+Catering&find_loc=Santa+Clara%2C+CA)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Gourmet",
+    "author": "Blog Lab Slovenia Publisher",
+    "status": "published",
+    "heroImage": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/33/SiroviStruklji.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "alt": "Sirovi štruklji (skutini); \" cheese-\"dumplings\" \", slovenian food",
+      "caption": "Sl-Ziga · Wikimedia Commons · Public domain",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:SiroviStruklji.jpg"
+    },
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "lulusmexicanfood.com — Catering — LuLu's Mexican Food",
+        "url": "https://www.lulusmexicanfood.com/catering"
+      },
+      {
+        "label": "lasalsa.com — Party Platters | Catering | La Salsa Mexican Grill",
+        "url": "https://www.lasalsa.com/menu/catering/partyplatters"
+      },
+      {
+        "label": "Bing Web – gourmet – Slovenija tradicionalna kuhinja gastronomija lokalna hrana v — TOP 10 BEST Mexican Catering in Santa Clara, CA - Updated 2026 ... - Yelp",
+        "url": "https://www.yelp.com/search?find_desc=Mexican+Catering&find_loc=Santa+Clara%2C+CA"
+      }
+    ],
+    "createdAt": "2026-10-09T19:28:58+02:00",
+    "updatedAt": "2026-10-09T19:28:58+02:00"
+  },
+
+  {
     "id": "recreation-gov-21adf42a",
     "title": "Recreation.gov",
     "excerpt": "Gore & traili: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Recreation.gov«.",
