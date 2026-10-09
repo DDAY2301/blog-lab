@@ -5,9 +5,9 @@
   "posts_date": "2026-10-09",
   "posts_today": 4,
   "last_output": "recreation-gov-21adf42a",
-  "last_error": null,
+  "last_error": "prekratek",
   "agent_version": "3.0.0-learning-guarded-fallback",
-  "current_category": "gore",
+  "current_category": "gourmet",
   "scheduled_posts_today": 4,
   "manual_posts_today": 0,
   "writer_mode": "deterministic_fallback",
@@ -19,10 +19,10 @@
   ],
   "scheduled_slots_deferred": [],
   "last_editorial_hold": null,
-  "publisher_guardian_last_run": "2026-10-09T16:57:32+02:00",
+  "publisher_guardian_last_run": "2026-10-09T19:25:35+02:00",
   "publisher_guardian_last_action": {
-    "category": "gore",
-    "slot": "2026-10-09|16:20|gore",
+    "category": "gourmet",
+    "slot": "2026-10-09|19:10|gourmet",
     "remaining_repairs": 0
   },
   "schedule_counter_normalized_at": "2026-10-07T16:45:00+02:00"
