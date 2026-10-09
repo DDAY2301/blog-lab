@@ -1,24 +1,25 @@
 {
-  "last_success": "2026-10-09T13:39:23+02:00",
+  "last_success": "2026-10-09T16:57:32+02:00",
   "last_failure": "2026-09-21T20:56:52+02:00",
   "consecutive_failures": 0,
   "posts_date": "2026-10-09",
-  "posts_today": 3,
-  "last_output": "rdeci-alarm-za-hrvaski-turizem-po-junijskem-padcu-se-zacenja-bitka-za-julijske-in-avgustov-792c4d39",
-  "last_error": "prekratek",
+  "posts_today": 4,
+  "last_output": "recreation-gov-21adf42a",
+  "last_error": null,
   "agent_version": "3.0.0-learning-guarded-fallback",
   "current_category": "gore",
-  "scheduled_posts_today": 3,
+  "scheduled_posts_today": 4,
   "manual_posts_today": 0,
   "writer_mode": "deterministic_fallback",
   "scheduled_slots_done": [
     "2026-10-09|07:35|kolesarstvo",
     "2026-10-09|10:45|dediscina",
-    "2026-10-09|13:30|sezonsko"
+    "2026-10-09|13:30|sezonsko",
+    "2026-10-09|16:20|gore"
   ],
   "scheduled_slots_deferred": [],
   "last_editorial_hold": null,
-  "publisher_guardian_last_run": "2026-10-09T16:55:50+02:00",
+  "publisher_guardian_last_run": "2026-10-09T16:57:32+02:00",
   "publisher_guardian_last_action": {
     "category": "gore",
     "slot": "2026-10-09|16:20|gore",

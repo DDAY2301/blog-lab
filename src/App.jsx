@@ -30,6 +30,44 @@ const CATEGORY_EMPTY_COPY = {
 
 const starterArticles = [
   {
+    "id": "recreation-gov-21adf42a",
+    "title": "Recreation.gov",
+    "excerpt": "Gore & traili: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Recreation.gov«.",
+    "seoDescription": "Gore & traili: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Recreation.gov«.",
+    "content": "**Gore & traili, 9. 10. 2026.** We're here to help you dream up your next trip, figure out the details, and reserve experiences at over 3,600 facilities and 103,000 individual sites across the country. Recreation.gov - Camping, Cabins, RVs, Permits, Passes & More Recreation.gov Find Your Next Adventure We're here to help you dream up your next trip, figure out the details, and reserve experiences at over 3,600 facilities and 103,000 individual sites across the country. There's something for everyone on Recreation.gov, so get out there, experience the USA, and bring home a story! Explore Destinations & Activities Discover new experiences, historic landmarks, and outdoor escapes right down the road or across the country. From camping, hiking,…\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: recreation.gov. Objavljeno: Fri, 09 Oct 2026 02:36:00 GMT. [Odpri izvirni vir](https://www.recreation.gov/)\n\n## Dopolnitev vira 2: hipcamp.com\n\nThe #1 camping app to find & book campsites, RV parks, cabins, treehouses & glamping. Browse national parks, RV resorts & private sites you won't find anywhere else. Tent Camping, RV Parks, Cabins & Glamping | Hipcamp 🌎 Why Hipcamp? Everywhere you want to camp. Explore all your favorite campsites in one place, from national parks to blueberry farms. Where to? Destination Roadtrip Where to? Add dates 2 campers 2026 Hipcamp Awards The best places to camp in America. View list LEAF PEEPIN' Cozy campsites prime for fall foliage. Book now Grow your campground or glamping business. Host our community of good-natured RVers and campers at your property, campground, or RV resort. Become a Host New ways to find…\n\n Vir: hipcamp.com. Objavljeno: Fri, 09 Oct 2026 10:57:00 GMT. [Odpri izvirni vir](https://www.hipcamp.com/en-US)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Gore & traili",
+    "author": "Blog Lab Slovenia Publisher",
+    "status": "published",
+    "heroImage": {
+      "url": "https://www.recreation.gov/FacebookOG.jpg",
+      "alt": "Recreation.gov - Camping, Cabins, RVs, Permits, Passes & More",
+      "caption": "recreation.gov",
+      "sourceUrl": ""
+    },
+    "video": null,
+    "gallery": [
+      {
+        "url": "https://dxynby2r8cy0b.cloudfront.net/image/upload/c_fill,f_auto,g_auto,h_400,q_60,w_780/v1626916641/homepage/W15-2024/W15-USA-BEST-OF-HEADER.png",
+        "alt": "Hipcamp, the #1 camping app | Everywhere you want to camp",
+        "caption": "hipcamp.com",
+        "sourceUrl": ""
+      }
+    ],
+    "sources": [
+      {
+        "label": "recreation.gov — Recreation.gov - Camping, Cabins, RVs, Permits, Passes & More",
+        "url": "https://www.recreation.gov/"
+      },
+      {
+        "label": "hipcamp.com — Hipcamp, the #1 camping app | Everywhere you want to camp",
+        "url": "https://www.hipcamp.com/en-US"
+      }
+    ],
+    "createdAt": "2026-10-09T16:57:32+02:00",
+    "updatedAt": "2026-10-09T16:57:32+02:00"
+  },
+
+  {
     "id": "rdeci-alarm-za-hrvaski-turizem-po-junijskem-padcu-se-zacenja-bitka-za-julijske-in-avgustov-792c4d39",
     "title": "Rdeči alarm za hrvaški turizem: Po junijskem padcu se začenja bitka za julijske in avgustovske goste",
     "excerpt": "Sezonsko: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Rdeči alarm za hrvaški turizem: Po junijskem padcu se začenja bitka za julijske in avgustovske goste«.",
