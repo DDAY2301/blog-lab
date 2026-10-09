@@ -30,6 +30,49 @@ const CATEGORY_EMPTY_COPY = {
 
 const starterArticles = [
   {
+    "id": "aidan-cerar-zakaj-bi-morali-gradnjo-kolesarskih-stez-podpirati-predvsem-vozniki-2b0e1e2c",
+    "title": "Aidan Cerar: zakaj bi morali gradnjo kolesarskih stez podpirati predvsem vozniki",
+    "excerpt": "Kolesarstvo: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Aidan Cerar: zakaj bi morali gradnjo kolesarskih stez podpirati predvsem vozniki«.",
+    "seoDescription": "Kolesarstvo: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Aidan Cerar: zakaj bi morali gradnjo kolesarskih stez podpirati predvsem v",
+    "content": "**Kolesarstvo, 9. 10. 2026.** Aidan Cerar: zakaj bi morali gradnjo kolesarskih stez podpirati predvsem vozniki Dnevnik\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Dnevnik. Objavljeno: Sun, 27 Sep 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMilwFBVV95cUxOQ1VtcmdGeVRUbEllTjAwb0RfWXR3eld3bkNEZmpqUnRwS3UtVGo4a1FYbzNibHJYVHZZSTREVkltXzJaakFscHNpbU5kTDB1RkhBbjhFR0ZFTG9VampNaHJLWDAtOXNjOVhKdGhEbEhXWk5qaHM4b2Jkbnd5MjNIMFlXTDlqemhWUU9vdXlNSTBVVENaY1Rr?oc=5)\n\n## Dopolnitev vira 2: Metropolitan.si\n\nSlovenija, kolesarska velesila. A tujci se čudijo, zakaj pri nas še vedno nimamo ... Metropolitan.si\n\n Vir: Metropolitan.si. Objavljeno: Sun, 06 Oct 2024 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiogFBVV95cUxOeFRJUFU0M2p5QU91UnVTLTZiSkVqYTBJaDltTml4ZmdIc2NRUzR2ZzVHOGNEaUJsbmo4eTc1MXNQdnBNUE53SXdzZjF1aVZGdVhPV0pkblZsWGRxbWp1ZmdJeGI5dkRGdm03aUFHTTkxZXJuZDhuZjBQNWtfRjFNYTA1Z0xvS3B4NnFMX2RtZGpYOUNIWEZ3QzdlWFpOcWhCM0E?oc=5)\n\n## Dopolnitev vira 3: Delo.si\n\nAvstrijska regija, kjer se vije eden najlepših delov Murske kolesarske poti Delo.si\n\n Vir: Delo.si. Objavljeno: Wed, 19 Aug 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMisgFBVV95cUxOaVdWajEtZl9qNmpoQk1YMExnZndRRG9yeXdVTkw4UEdkMVlqeHVGVFVVOFJpSE5GWC1hZDYxZXUzbUFHeTdyYzU1ek5LSkI5M2NNbnV3ZzB1ZVBVM0hXczlYREJyT2tnVGp2NWhVc1lnRldidGJHV3VGUWdhRmtESDd4alNMeU1wOVJwVVNNSzBwSk5DSFB2UGdaNThJWTVlRW5GMEFYazBKZW81d0ROSFZR?oc=5)\n\n## Dopolnitev vira 4: Svet24.si\n\nSlovenci množično odkrivajo te kolesarske poti: idealna ideja za izlet Svet24.si\n\n Vir: Svet24.si. Objavljeno: Fri, 22 May 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiiAFBVV95cUxNWlZ5Y1kzQ3RzWjRySURQNVFxaUo3NUh4Z1ZlcUZnRzhYT0w4SWNKY1RtQ2paVVdvYzVRanpKenhpRmd0b3RvbkhwR2JzT2wzVGRBbTVZZXR6QVN3d2M0NVkzNVNXcGZJSk1fTUxwc19GOWV4WERwbHh3d1I3YVNFY2ZaMWNna1dW?oc=5)\n\n## Dopolnitev vira 5: Slovenske novice\n\nNova kolesarska pot med Bledom in Bohinjem je odprta Slovenske novice\n\n Vir: Slovenske novice. Objavljeno: Fri, 17 Jul 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiogFBVV95cUxNcl9MMnBUM0pjalA4WHdSay1HdDZfME5PYmpsc004RVNiVzgzcGZyTUdndW42enpSVXY2OXZaakl5Sm9ueEQ4MHlsYWhxSTYtUjJXSjlLTk5XNFBMbFBjVkJiMmt0dC1aS1ZIdkZLRllVbWZSWUpoOUtsN2pHWnQzdUJ6a0UzZ0JFcDVuNEg2YUpyTkx0WW1vS0NmaEJNV21pcGc?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Kolesarstvo",
+    "author": "Blog Lab Slovenia Publisher",
+    "status": "published",
+    "heroImage": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/08_Slovenia_rural_landscape_-_bicycle_expedition_with_panniers.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "alt": "Three male cyclists wearing helmets during a summer bicycle tour in rural Slovenia near Luže.",
+      "caption": "Marek Ślusarczyk ( Tupungato ) Photo gallery · Wikimedia Commons · CC BY 3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:08_Slovenia_rural_landscape_-_bicycle_expedition_with_panniers.jpg"
+    },
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Dnevnik — Aidan Cerar: zakaj bi morali gradnjo kolesarskih stez podpirati predvsem vozniki - Dnevnik",
+        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOQ1VtcmdGeVRUbEllTjAwb0RfWXR3eld3bkNEZmpqUnRwS3UtVGo4a1FYbzNibHJYVHZZSTREVkltXzJaakFscHNpbU5kTDB1RkhBbjhFR0ZFTG9VampNaHJLWDAtOXNjOVhKdGhEbEhXWk5qaHM4b2Jkbnd5MjNIMFlXTDlqemhWUU9vdXlNSTBVVENaY1Rr?oc=5"
+      },
+      {
+        "label": "Metropolitan.si — Slovenija, kolesarska velesila. A tujci se čudijo, zakaj pri nas še vedno nimamo ... - Metropolitan.si",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOeFRJUFU0M2p5QU91UnVTLTZiSkVqYTBJaDltTml4ZmdIc2NRUzR2ZzVHOGNEaUJsbmo4eTc1MXNQdnBNUE53SXdzZjF1aVZGdVhPV0pkblZsWGRxbWp1ZmdJeGI5dkRGdm03aUFHTTkxZXJuZDhuZjBQNWtfRjFNYTA1Z0xvS3B4NnFMX2RtZGpYOUNIWEZ3QzdlWFpOcWhCM0E?oc=5"
+      },
+      {
+        "label": "Delo.si — Avstrijska regija, kjer se vije eden najlepših delov Murske kolesarske poti - Delo.si",
+        "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOaVdWajEtZl9qNmpoQk1YMExnZndRRG9yeXdVTkw4UEdkMVlqeHVGVFVVOFJpSE5GWC1hZDYxZXUzbUFHeTdyYzU1ek5LSkI5M2NNbnV3ZzB1ZVBVM0hXczlYREJyT2tnVGp2NWhVc1lnRldidGJHV3VGUWdhRmtESDd4alNMeU1wOVJwVVNNSzBwSk5DSFB2UGdaNThJWTVlRW5GMEFYazBKZW81d0ROSFZR?oc=5"
+      },
+      {
+        "label": "Svet24.si — Slovenci množično odkrivajo te kolesarske poti: idealna ideja za izlet - Svet24.si",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNWlZ5Y1kzQ3RzWjRySURQNVFxaUo3NUh4Z1ZlcUZnRzhYT0w4SWNKY1RtQ2paVVdvYzVRanpKenhpRmd0b3RvbkhwR2JzT2wzVGRBbTVZZXR6QVN3d2M0NVkzNVNXcGZJSk1fTUxwc19GOWV4WERwbHh3d1I3YVNFY2ZaMWNna1dW?oc=5"
+      },
+      {
+        "label": "Slovenske novice — Nova kolesarska pot med Bledom in Bohinjem je odprta - Slovenske novice",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNcl9MMnBUM0pjalA4WHdSay1HdDZfME5PYmpsc004RVNiVzgzcGZyTUdndW42enpSVXY2OXZaakl5Sm9ueEQ4MHlsYWhxSTYtUjJXSjlLTk5XNFBMbFBjVkJiMmt0dC1aS1ZIdkZLRllVbWZSWUpoOUtsN2pHWnQzdUJ6a0UzZ0JFcDVuNEg2YUpyTkx0WW1vS0NmaEJNV21pcGc?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-09T07:39:47+02:00",
+    "updatedAt": "2026-10-09T07:39:47+02:00"
+  },
+
+  {
     "id": "visiting-isla-de-culebra-from-st-thomas-0722ee54",
     "title": "Visiting Isla de Culebra from St. Thomas",
     "excerpt": "Gourmet: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Visiting Isla de Culebra from St. Thomas«.",
