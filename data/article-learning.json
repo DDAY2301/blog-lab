@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-10T22:38:05+02:00",
-  "loop_count": 4417,
+  "updated_at": "2026-10-10T22:38:59+02:00",
+  "loop_count": 4418,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-10T22:37:49+02:00",
+      "last_learning_run": "2026-10-10T22:38:34+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -65,11 +65,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 112395,
-          "last_seen": "2026-10-10T22:37:49+02:00",
+          "seen": 112404,
+          "last_seen": "2026-10-10T22:38:34+02:00",
           "last_title": "Premier Janša ob ogledu finala mladih košarkarjev udaril po RTV Slovenija: »Plačujemo vas več kot Inštitut Jožef Stefan!« - Slovenske novice",
           "last_provider": "google-news-si",
-          "published": 244325,
+          "published": 244397,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-10T22:37:58+02:00",
+      "last_learning_run": "2026-10-10T22:38:48+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -271,11 +271,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 119030,
-          "last_seen": "2026-10-10T22:37:58+02:00",
-          "last_title": "Pirc Musar: Mala zmaga za neko politično opcijo, pa hkrati velik poraz za državo - Delo.si",
+          "seen": 119047,
+          "last_seen": "2026-10-10T22:38:48+02:00",
+          "last_title": "Odhajajoči Golob še kar nabija Janšo! »Vedno, ko se bo Slovenija postavljala na sramotno stran zgodovine, se bom oglasil« (VIDEO) - Slovenske novice",
           "last_provider": "google-news-si",
-          "published": 269909,
+          "published": 269989,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -356,17 +356,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 15,
+      "current_source_count": 17,
       "example_titles": {
         "news.google.com": [
           "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
           "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer",
-          "Golob: Ne predstavljam si, da bi kdo želel živeti v državi, v kateri bi politika imela pooblastila policije - N1 Slovenija"
+          "Janša diplomatom: Zunanjo politiko vodi vlada, samo to je uradna politika Slovenije - Siol.net"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-10T22:38:05+02:00",
+      "last_learning_run": "2026-10-10T22:38:59+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -430,11 +430,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 124308,
-          "last_seen": "2026-10-10T22:38:05+02:00",
+          "seen": 124332,
+          "last_seen": "2026-10-10T22:38:59+02:00",
           "last_title": "Aktualno - trg motociklov v Sloveniji: Vsak četrti je že kitajec Novice - AVTO FOKUS -",
           "last_provider": "google-news-si",
-          "published": 228809,
+          "published": 228844,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "reddit.com": {
