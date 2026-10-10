@@ -24,6 +24,7 @@ from services.learning import learning_source_ok, rank_sources_with_learning
 from services.article_templates import apply_article_template, template_prompt
 from services.media_library import commons_image_for
 from services.editorial_guard import validate_automatic_story, CATEGORY_SIGNALS, SLOVENIA_SIGNALS, fold, _has_any
+from services.image_optimizer import optimize_commons_hero
 
 STATE = BASE / "data/agent-state.json"
 CONTROL = BASE / "data/agent-control.json"
@@ -573,6 +574,20 @@ def prepare_article_candidate(
     if output_category.strip():
         article["category"] = output_category.strip()[:40]
     article = apply_media_policy(article, source_items, topic)
+    # Source feeds can carry copyrighted, unrelated thumbnails. Automatic
+    # articles may only use an image with known Commons provenance/license.
+    # A licensed substitute is researched below; never invent an image URL.
+    if not str(topic or "").strip():
+        hero = article.get("heroImage")
+        known_commons = (
+            isinstance(hero, dict)
+            and str(hero.get("sourceUrl") or "").startswith("https://commons.wikimedia.org/wiki/")
+            and "Wikimedia Commons" in str(hero.get("caption") or "")
+            and "cc" in str(hero.get("caption") or "").lower()
+        )
+        if not known_commons:
+            article["heroImage"] = None
+            article["gallery"] = []
     resolved_category = output_category.strip() or str(article.get("category") or "")
     if not _media_url(article.get("heroImage")):
         fallback_image = commons_image_for(str(article.get("title") or topic or ""), resolved_category)
@@ -940,6 +955,8 @@ def main():
     ctl = control(); publish_mode = ctl.get("publish_mode") or os.getenv("PUBLISH_MODE", "automatic").lower()
     if args.dry_run or publish_mode != "automatic":
         draft = BASE / "content/drafts" / f"{article['id']}.json"; draft.parent.mkdir(parents=True, exist_ok=True); draft.write_text(json.dumps(article, ensure_ascii=False, indent=2), encoding="utf-8"); set_status(cfg, state, "needs_review", "Rezultat je shranjen kot osnutek.", str(draft)); print("DRY_RUN_OK"); return 0
+    # Only optimize a licensed Commons image after all editorial reviews passed.
+    article = optimize_commons_hero(article, BASE / "public")
     set_status(cfg, state, "publishing", "Objavljanje preverjenega članka."); publish_to_app(str(APP), article, cfg["agent_name"])
     cited_items = article_used_items(article, evidence_pool)
     for item in cited_items:
