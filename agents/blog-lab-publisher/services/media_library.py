@@ -1,6 +1,7 @@
 from __future__ import annotations
 import json
 import re
+import unicodedata
 import urllib.request
 from html import unescape
 from urllib.parse import quote, urlencode
@@ -34,6 +35,26 @@ CATEGORY_IMAGE_TERMS = {
     "gourmet": ("food", "cuisine", "dish", "wine", "vineyard", "potica", "gibanica", "žlikrofi", "zlikrofi", "kulinar", "vino"),
     "vodniki": ("landscape", "travel", "tourism", "city", "old town", "nature", "park"),
 }
+# Prefer no image over a photograph implying a different real-world location.
+PLACE_GROUPS = (
+    ("planica", "tamar"), ("triglav",), ("bohinj",), ("bled",),
+    ("ljubljan",), ("piran",), ("postojn",), ("idrij",),
+    ("ptuj",), ("maribor",), ("vintgar",), ("skofj", "skofja loka"),
+    ("logarsk",), ("pohor",), ("tolmin",), ("bovec",),
+    ("vipav",), ("radovljic",), ("koper",), ("izol",),
+)
+
+
+def _fold(value: str) -> str:
+    normalized = unicodedata.normalize("NFKD", str(value or "").lower())
+    return "".join(ch for ch in normalized if not unicodedata.combining(ch))
+
+
+def _location_filter(topic: str) -> tuple[str, ...]:
+    text = _fold(topic)
+    return tuple(term for group in PLACE_GROUPS if any(t in text for t in group) for term in group)
+
+
 FOREIGN_LOCATION_TERMS = (
     "paris", "france", "london", "england", "new york", "usa", "united states",
     "berlin", "germany", "rome", "italy", "madrid", "spain", "vienna", "austria",
@@ -62,7 +83,7 @@ def _image_relevant(title: str, description: str, category_key: str) -> bool:
         return has_slovenia_context and any(term in text for term in category_terms)
     return has_slovenia_context
 
-def _search_once(query: str, category_key: str) -> dict | None:
+def _search_once(query: str, category_key: str, location_terms: tuple[str, ...] = ()) -> dict | None:
     payload = _api({
         "action":"query","generator":"search","gsrnamespace":"6","gsrsearch":query,"gsrlimit":"24",
         "prop":"imageinfo","iiprop":"url|extmetadata|mime","iiurlwidth":"1600",
@@ -79,6 +100,11 @@ def _search_once(query: str, category_key: str) -> dict | None:
             continue
         author = _clean((meta.get("Artist") or {}).get("value","")) or "Wikimedia Commons"
         description = _clean((meta.get("ImageDescription") or {}).get("value",""))
+        # The category-only Commons fallback is not proof of the article's
+        # precise destination. Require a matching place name in metadata.
+        if location_terms and not any(term in _fold(title + " " + description) for term in location_terms):
+            print(f"COMMONS_LOCATION_REJECTED location={location_terms} title={title!r}")
+            continue
         if not _image_relevant(title, description, category_key):
             print(f"COMMONS_MEDIA_REJECTED category={category_key} title={title!r}")
             continue
@@ -97,6 +123,7 @@ def _search_once(query: str, category_key: str) -> dict | None:
 def commons_image_for(topic: str, category: str) -> dict | None:
     category_key = str(category or "").strip().lower()
     topic_query = _safe_query(topic)
+    location_terms = _location_filter(topic)
     attempts = []
     if topic_query:
         attempts.append(f"{topic_query} Slovenia")
@@ -110,7 +137,7 @@ def commons_image_for(topic: str, category: str) -> dict | None:
             continue
         seen.add(key)
         try:
-            found=_search_once(query, category_key)
+            found=_search_once(query, category_key, location_terms)
         except Exception as exc:
             print(f"WARN commons media query={query!r} error={type(exc).__name__}: {exc}")
             continue
