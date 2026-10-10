@@ -100,23 +100,70 @@ function Start-Colibri {
 }
 
 function Start-ProjectVisibility {
-  if (Port-Up 8000) { return }
-  $root=[Environment]::GetEnvironmentVariable("PROJECT_VISIBILITY_ROOT","User")
-  if (-not $root) { $root=$env:PROJECT_VISIBILITY_ROOT }
-  if (-not $root -or -not (Test-Path $root)) { return }
+  if (Port-Up 8000) {
+    try {
+      $health=Invoke-RestMethod "http://127.0.0.1:8000/health" -TimeoutSec 4
+      if ($health -and $health.ok) {
+        Write-Host "Project Visibility already healthy on port 8000." -ForegroundColor Green
+        return
+      }
+    } catch {}
+    Write-Warning "Port 8000 is occupied but Project Visibility health is not confirmed. Refusing to start a duplicate service."
+    return
+  }
+
+  $hint=[Environment]::GetEnvironmentVariable("PROJECT_VISIBILITY_ROOT","User")
+  if (-not $hint) { $hint=$env:PROJECT_VISIBILITY_ROOT }
+  try {
+    $resolver=Join-Path $PSScriptRoot "resolve-project-visibility-root.ps1"
+    if ($hint) { $root=& $resolver -ProjectRoot $hint -Persist }
+    else { $root=& $resolver -Persist }
+  } catch {
+    Write-Warning ("Project Visibility not connected: " + $_.Exception.Message)
+    return
+  }
+
+  $root=[string]$root
   $py=Join-Path $root ".venv\Scripts\python.exe"
-  if (-not (Test-Path $py)) { return }
-  $secret=Join-Path $root "api\data\.app-secret"
+  if (-not (Test-Path -LiteralPath $py -PathType Leaf)) {
+    Write-Warning "Project Visibility checkout located at '$root' but its .venv is missing. Use the existing connect-project-visibility.ps1 -ProjectRoot path to install dependencies."
+    return
+  }
+
   $env:OLLAMA_BASE_URL="http://127.0.0.1:11434"
   if (-not $env:PROJECT_VISIBILITY_MODEL) { $env:PROJECT_VISIBILITY_MODEL="qwen2.5-coder:3b" }
   $env:OLLAMA_MODEL=$env:PROJECT_VISIBILITY_MODEL
-  if (Test-Path $secret) { $env:APP_SECRET=(Get-Content $secret -Raw).Trim() }
+  foreach ($secretSuffix in @("api\data\app-secret.txt","api\data\.app-secret")) {
+    $secret=Join-Path $root $secretSuffix
+    if (Test-Path -LiteralPath $secret -PathType Leaf) {
+      $env:APP_SECRET=(Get-Content -LiteralPath $secret -Raw).Trim()
+      break
+    }
+  }
   $env:VISUAL_QA_VISION="false"
   $fleetToken=[Environment]::GetEnvironmentVariable("FLEET_LOCAL_TOKEN","User")
-  if(-not $fleetToken){ $fleetToken=[Environment]::GetEnvironmentVariable("PV_FLEET_TOKEN","User") }
-  if($fleetToken){ $env:PV_FLEET_TOKEN=$fleetToken }
-  Start-Process $py -ArgumentList @("-m","uvicorn","api.server:app","--host","127.0.0.1","--port","8000") -WorkingDirectory $root -WindowStyle Hidden
-  Start-Sleep -Seconds 3
+  if (-not $fleetToken) { $fleetToken=[Environment]::GetEnvironmentVariable("PV_FLEET_TOKEN","User") }
+  if ($fleetToken) { $env:PV_FLEET_TOKEN=$fleetToken }
+
+  try {
+    $pvProcess=Start-Process $py -ArgumentList @("-m","uvicorn","api.server:app","--host","127.0.0.1","--port","8000") -WorkingDirectory $root -WindowStyle Hidden -PassThru
+    $deadline=(Get-Date).AddSeconds(15)
+    while ((Get-Date) -lt $deadline) {
+      try {
+        $health=Invoke-RestMethod "http://127.0.0.1:8000/health" -TimeoutSec 2
+        if ($health -and $health.ok) {
+          Write-Host "Project Visibility connected at $root" -ForegroundColor Green
+          return
+        }
+      } catch {}
+      $pvProcess.Refresh()
+      if ($pvProcess.HasExited) { break }
+      Start-Sleep -Seconds 1
+    }
+    Write-Warning "Project Visibility was launched from '$root' but health is not confirmed. Run the existing API in a visible terminal to inspect startup errors."
+  } catch {
+    Write-Warning ("Project Visibility startup failed: " + $_.Exception.Message)
+  }
 }
 
 function Import-GitHubAuth {
