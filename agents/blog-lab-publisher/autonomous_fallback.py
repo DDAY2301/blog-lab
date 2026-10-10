@@ -38,6 +38,7 @@ from services.fallback_writer import build_digest  # noqa: E402
 from services.publisher import publish_to_app, slugify  # noqa: E402
 from services.validator import validate  # noqa: E402
 from services.editorial_guard import validate_automatic_story  # noqa: E402
+from services.image_optimizer import optimize_commons_hero  # noqa: E402
 from services.learning import learning_source_ok, rank_sources_with_learning  # noqa: E402
 
 
@@ -248,6 +249,7 @@ def run(category: str, scheduled_slot: str = "", dry_run: bool = False) -> int:
         print("FALLBACK_DRY_RUN_OK")
         return 0
 
+    article = optimize_commons_hero(article, BASE / "public")
     publish_to_app(str(APP), article, cfg["agent_name"])
     cited_items = article_used_items(article, evidence_pool)
     for item in cited_items:
