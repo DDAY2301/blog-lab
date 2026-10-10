@@ -182,6 +182,9 @@ export default function LanguageTools() {
   );
 
   useEffect(() => {
+    // Clear outdated Google cookies BEFORE loading its script. A previously
+    // selected language must not translate an explicitly Slovene page.
+    if (language === "sl") expireGoogleTranslateCookies();
     loadTranslateScript(setTranslatorReady, setTranslatorFailed);
     return () => {
       if (retryRef.current) window.clearInterval(retryRef.current);
@@ -273,7 +276,14 @@ export default function LanguageTools() {
       resetOriginal();
       return;
     }
-    setLanguage(code);
+    // Google Translate mutates the rendered React DOM. Reload from original
+    // Slovenian source for each new target instead of translating a previously
+    // translated DOM again (which corrupts navigation and language buttons).
+    setGoogleTranslateCookie(code);
+    window.localStorage.setItem(STORAGE_KEY, code);
+    const url = new URL(window.location.href);
+    url.searchParams.set("lang", code);
+    window.location.assign(`${url.pathname}${url.search}${url.hash}`);
   }
 
   function resetOriginal() {
