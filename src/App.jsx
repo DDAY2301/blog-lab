@@ -30,6 +30,37 @@ const CATEGORY_EMPTY_COPY = {
 
 const starterArticles = [
   {
+    "id": "what-is-juneteenth-history-fcb6fddd",
+    "title": "What Is Juneteenth? | HISTORY",
+    "excerpt": "A federal holiday, Juneteenth commemorates the effective end of slavery in the United States when news of the Emancip... What Is Juneteenth? | HISTORY Open navigation Close navigation Home Shows This Day in History Video",
+    "seoDescription": "A federal holiday, Juneteenth commemorates the effective end of slavery in the United States when news of the Emancip... What Is Juneteenth? | HISTORY Open",
+    "content": "Pregled za rubriko gourmet povzema trenutno razpoložljive informacije iz spodaj navedenih virov. Besedilo je pripravljeno brez dodajanja nepodprtih dejstev.\n\n## What Is Juneteenth? | HISTORY\nA federal holiday, Juneteenth commemorates the effective end of slavery in the United States when news of the Emancip... What Is Juneteenth? | HISTORY Open navigation Close navigation Home Shows This Day in History Videos U.S. U.S. History U.S. History All the major chapters in the American story, from Indigenous beginnings to the present day. Colonial America Colonial America American Revolution American Revolution Early U.S. Early U.S. Slavery Slavery Civil War Civil War Immigration Immigration Great Depression Great Depression Black History Black History Hispanic History Hispanic History Women’s History Women’s History LGBTQ+ History LGBTQ+ History Native American History Native American History Asian American, Native Hawaiian & Pacific Islander History Asian American, Native Hawaiian & Pacific Islander History U.S. Presidents U.S. Presidents First Ladies First Ladies U.S. Constitution U.S. Constitution U.S. Government and Politics U.S. Government and Politics U.S. States U.S. States Crime Crime World World History World History History from countries and communities across the globe, including the world’s major wars. African History African History Asian History Asian History Cold War Cold War European History European History Exploration Exploration Holocaust Holocaust Industrial Revolution Industrial Revolution Latin American & Caribbean History Latin American & Caribbean History Middle Eastern History Middle Eastern History World War I World War I World War II World War II Vietnam War Vietnam War Eras & Ages Eras & Ages Eras & Ages From prehistory, though antiquity and into the 21st century, all of history’s biggest chapters. Prehistory Prehistory Ancient Greece Ancient Greece Ancient Egypt Ancient Egypt Ancient China Ancient China Ancient Middle East Ancient Middle East Ancient Americas Ancient Americas Ancient Rome Ancient Rome Middle Ages Middle Ages Renaissance Renaissance 19th Century 19th Century 20th Century 20th Century 21st Century 21st Century Culture Culture & Tradition Culture & Tradition The stories behind the faiths, food, entertainment and holidays that shape our world. Arts & Entertainment Arts & Entertainment Food Food Holidays Holidays Landmarks Landmarks Mysteries & Folklore Mysteries & Folklore Religion Religion Sports Sports Books Books Science & Innovation Science & Innovation Science & Innovation The pivotal discoveries, visionary inventors and natural phenomena that impacted history. Inventions & Science Inventions & Science Natural Disasters & Environment Natural Disasters & Environment Space Exploration Space Exploration \n\nVir: history.com — https://www.history.com/articles/what-is-juneteenth\n\n## Juneteenth | Federal Holiday, Meaning, Flag, History, Food, United ...\nJuneteenth, holiday observed annually on June 19, commemorating the end of slavery in the United States. A combination of the words June and nineteenth, the holiday, also called Freedom Day, has been celebrated since 1866 and is considered to be one of the oldest continuing African American holidays.\n\nVir: Bing Web – gourmet – Slovenija tradicionalna kuhinja gastronomija — https://www.britannica.com/topic/Juneteenth",
+    "category": "Gourmet",
+    "author": "Blog Lab Slovenia Publisher",
+    "status": "published",
+    "heroImage": {
+      "url": "https://res.cloudinary.com/aenetworks/image/upload/c_fill,w_1200,h_630,g_auto/dpr_auto/f_auto/q_auto:eco/v1/juneteenth-gettyimages-515185532?_a=BAVMn6E80",
+      "alt": "What Is Juneteenth? | HISTORY",
+      "caption": "history.com",
+      "sourceUrl": ""
+    },
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "What Is Juneteenth? | HISTORY",
+        "url": "https://www.history.com/articles/what-is-juneteenth"
+      },
+      {
+        "label": "Juneteenth | Federal Holiday, Meaning, Flag, History, Food, United ...",
+        "url": "https://www.britannica.com/topic/Juneteenth"
+      }
+    ],
+    "createdAt": "2026-10-10T19:25:04+02:00",
+    "updatedAt": "2026-10-10T19:25:04+02:00"
+  },
+
+  {
     "id": "guardian-pohodnisko-pot-v-slovenskih-alpah-razglasil-za-eno-najboljsih-v-evropi-03bbfda9",
     "title": "Guardian pohodniško pot v slovenskih Alpah razglasil za eno najboljših v Evropi",
     "excerpt": "Gore & traili: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Guardian pohodniško pot v slovenskih Alpah razglasil za eno najboljših v Evropi«.",
