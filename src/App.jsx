@@ -30,6 +30,52 @@ const CATEGORY_EMPTY_COPY = {
 
 const starterArticles = [
   {
+    "id": "sveta-ana-hike-from-ljubljana-guide",
+    "title": "Sveta Ana Hike: A Short Viewpoint Walk from Ljubljana",
+    "excerpt": "Climb from Podpeč Lake to Sveta Ana on an easy marked trail, with public-transport advice, family notes and weather-aware autumn safety.",
+    "seoDescription": "Hike Sveta Ana from Podpeč Lake near Ljubljana: route facts, bus access, family advice, accessibility limits and autumn safety tips.",
+    "content": "# Sveta Ana Hike: A Short Viewpoint Walk from Ljubljana\n\nSveta Ana is the kind of hill that makes a useful active half-day rather than an expedition. The marked path starts beside Podpeč Lake on the southern edge of the Ljubljana Marshes and climbs to a small church at 484 metres, where the reward is a broad view across the wetland, the Ljubljana Basin and—on a clear day—towards the Alps.\n\n**Last updated: 10 October 2026.** Weather and trail conditions can change quickly. Check the official forecast, PZS trail notices and the return journey before leaving Ljubljana.\n\n## Route at a glance\n\nThe official Visit Ljubljana route starts in the village of **Jezero**, beside Podpeč Lake. It lists:\n\n- **Distance:** 1.19 km to the summit\n- **Ascent time:** about 35 minutes\n- **Total walking time:** about 1 hour for the out-and-back route\n- **Elevation gain:** 184 metres\n- **Highest point:** 484 metres\n- **Difficulty:** easy marked trail\n- **Descent:** by the same route\n\nThese figures describe a short hike, not a flat stroll. The climb is compact and the natural surface can be muddy, slippery or covered with wet leaves.\n\n## Getting to the trailhead from Ljubljana\n\n### By public transport\n\nVisit Ljubljana identifies **LPP line 19B** and the **Jezero** stop for access to the starting area. Services can vary by day and season, so confirm both outbound and return departures in the official LPP journey planner on the morning of your hike. Do not rely on an old screenshot or a third-party timetable.\n\nFrom the stop, orient yourself towards Podpeč Lake and the marked route to Sveta Ana. Download the route or map before leaving the built-up area.\n\n### By car\n\nThe official route information identifies parking by Podpeč Lake. Parking availability is not guaranteed, especially on fine weekends. Keep access roads clear and never park on wet grass or protected marshland.\n\n## A simple half-day plan\n\n### 1. Start beside Podpeč Lake\n\nThe lake gives the walk an unusually scenic beginning. It is a karst lake and a sensitive natural site, not simply a recreation facility. In autumn, treat the shore as a viewpoint rather than assuming swimming conditions are suitable.\n\n### 2. Follow the marked trail uphill\n\nUse the red-and-white trail markings and stay on the established path. The climb is short enough for an unhurried pace, but roots, stones and fallen leaves demand attention after rain.\n\n### 3. Pause below the church\n\nThe summit area has a small playground, making the walk attractive to families. Keep children close near steeper edges and avoid disturbing services or private activity around the church.\n\n### 4. Return the same way\n\nThe official route descends along the ascent path. Downhill travel is often more slippery than the climb, so allow enough daylight and do not rush for a bus.\n\n## Weather and trail conditions today\n\nOn the morning of **10 October 2026**, the local forecast showed fog around 9°C, with cloud increasing and a risk of showers, rain and an afternoon thunderstorm. This is a short-lived snapshot, not a forecast for later visits.\n\nFor today's conditions, the sensible choice is to start early only if the sky and official warnings remain favourable. Turn back before a thunderstorm approaches. Wet leaves and clay-rich ground can make even an easy path slick.\n\nBefore every visit:\n\n1. Check [ARSO weather and warnings](https://meteo.arso.gov.si/met/en/).\n2. Check the [PZS trail-status map](https://stanje-poti.pzs.si/en.php).\n3. Confirm the LPP return journey.\n4. Carry a charged phone and rain layer.\n5. Call **112** in an emergency.\n\nPZS advises hikers to choose a route suited to their fitness, use appropriate footwear, carry protection from rain and cold, and keep a first-aid kit and phone available.\n\n## Families, dogs and accessibility\n\n### Families\n\nThe short distance, easy official grade and summit playground make Sveta Ana a reasonable family objective in dry conditions. Children still need close supervision on the descent, near the road and beside the lake. A child who is comfortable walking uphill will get more from the route than one expected to complete it in a pushchair.\n\n### Dogs\n\nKeep dogs controlled, especially near other walkers, wildlife, farms and the church. Carry water and remove all waste. The Ljubljana Marshes are an ecologically important wetland, so preventing disturbance matters more than giving a dog unrestricted space.\n\n### Accessibility\n\nThis is a natural uphill path, not a step-free attraction. Based on the official description of a marked hiking trail and its elevation gain, it should be treated as unsuitable for wheelchairs and most pushchairs. Visitors needing a firm, predictable surface should choose a lakeside or urban alternative and verify conditions locally.\n\n## What to bring\n\nFor a short autumn hike, pack:\n\n- shoes with a grippy sole;\n- a light waterproof layer;\n- water and a small snack;\n- a downloaded map;\n- a charged phone;\n- a warm layer for the summit;\n- a small first-aid kit.\n\nYou do not need technical mountaineering equipment in normal dry conditions, but “easy” does not mean risk-free.\n\n## Make it part of a wider Ljubljana trip\n\nSveta Ana works well as the active viewpoint above the landscape explored in [Ljubljana Marshes Pile Dwellers](?article=ljubljana-marshes-pile-dwellings-history). For a wilder river walk, compare it with [Iški Vintgar](?article=iski-vintgar-day-trip-from-ljubljana). If you prefer a city-based workout with several distance options, use the [Tivoli and Rožnik running guide](?article=running-ljubljana-tivoli-roznik-guide).\n\n## Official sources\n\n- [Visit Ljubljana: Sveta Ana (484 m)](https://www.visitljubljana.com/en/visitors/sights-and-activities/active-holidays/hiking-trails/sveta-ana-484-m)\n- [Visit Ljubljana: Podpeč Lake](https://www.visitljubljana.com/en/poi/the-lake-of-podpesko-jezero)\n- [LPP: official timetables and journey planning](https://www.lpp.si/en/)\n- [PZS: current trail conditions](https://stanje-poti.pzs.si/en.php)\n- [PZS: recommendations for safer hiking](https://www.pzs.si/vsebina.php?pid=162)\n- [ARSO: weather and warnings](https://meteo.arso.gov.si/met/en/)\n- [Slovenian Tourist Board: hiking safety](https://www.slovenia.info/en/stories/stay-safe-in-the-mountains)",
+    "category": "Vodniki",
+    "author": "Blog Lab Travel Desk",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Visit Ljubljana — Sveta Ana (484 m)",
+        "url": "https://www.visitljubljana.com/en/visitors/sights-and-activities/active-holidays/hiking-trails/sveta-ana-484-m"
+      },
+      {
+        "label": "Visit Ljubljana — Podpeč Lake",
+        "url": "https://www.visitljubljana.com/en/poi/the-lake-of-podpesko-jezero"
+      },
+      {
+        "label": "LPP — official timetables and journey planning",
+        "url": "https://www.lpp.si/en/"
+      },
+      {
+        "label": "PZS — current trail conditions",
+        "url": "https://stanje-poti.pzs.si/en.php"
+      },
+      {
+        "label": "PZS — recommendations for safer hiking",
+        "url": "https://www.pzs.si/vsebina.php?pid=162"
+      },
+      {
+        "label": "ARSO — weather and warnings",
+        "url": "https://meteo.arso.gov.si/met/en/"
+      },
+      {
+        "label": "Slovenian Tourist Board — hiking safety",
+        "url": "https://www.slovenia.info/en/stories/stay-safe-in-the-mountains"
+      }
+    ],
+    "createdAt": "2026-10-10T09:05:01+02:00",
+    "updatedAt": "2026-10-10T09:05:01+02:00"
+  },
+
+  {
     "id": "evropsko-kolesarsko-prvenstvo-stevilne-ceste-bodo-zaprte-preverite-katere-34455346",
     "title": "Evropsko kolesarsko prvenstvo: številne ceste bodo zaprte, preverite katere",
     "excerpt": "Kolesarstvo: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Evropsko kolesarsko prvenstvo: številne ceste bodo zaprte, preverite katere«.",
