@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-10T22:09:27+02:00",
+  "updatedAt": "2026-10-11T01:38:43+02:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -104,63 +104,6 @@
       "status": "confirmed",
       "lastCheckedAt": "2026-10-10T07:03:43+02:00",
       "description": "ARTish is confirmed at Kongresni trg · Ljubljana. Free entry; check the official source for any late programme changes."
-    },
-    {
-      "price": null,
-      "languages": [],
-      "touristFriendly": null,
-      "familyFriendly": null,
-      "accessibility": null,
-      "ticketUrl": "https://www.cd-cc.si/en",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-10T07:03:43+02:00",
-      "id": "flamenco-beyond-genre-2026-10-10",
-      "title": "Flamenco Beyond Genre",
-      "url": "https://www.cd-cc.si/en",
-      "source": "Cankarjev dom",
-      "type": "Theatre · dance",
-      "place": "Cankarjev dom · Ljubljana",
-      "startAt": "2026-10-10T10:30:00+02:00",
-      "endAt": null,
-      "description": "Flamenco Beyond Genre is confirmed at Cankarjev dom · Ljubljana. Check the official source for any late programme or ticket changes."
-    },
-    {
-      "id": "tinta-matrijarsija-prints-2026-10-10",
-      "title": "TINTA 2026 | Who Would Have Known! Prints from Matrijaršija",
-      "url": "https://www.kinosiska.si/en",
-      "source": "Kino Šiška",
-      "type": "Visual arts · exhibition",
-      "place": "Kamera Gallery · Kino Šiška",
-      "startAt": "2026-10-10T10:30:00+02:00",
-      "endAt": null,
-      "price": "Free entry",
-      "languages": [],
-      "touristFriendly": true,
-      "familyFriendly": null,
-      "accessibility": null,
-      "ticketUrl": "https://www.kinosiska.si/en",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-10T07:03:43+02:00",
-      "description": "TINTA 2026 | Who Would Have Known! Prints from Matrijaršija is confirmed at Kamera Gallery · Kino Šiška. Check the official source for any late programme or ticket changes."
-    },
-    {
-      "price": null,
-      "languages": [],
-      "touristFriendly": null,
-      "familyFriendly": null,
-      "accessibility": null,
-      "ticketUrl": "https://www.cd-cc.si/en",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-10T07:03:43+02:00",
-      "id": "marco-de-ana-power-of-protest-2026-10-10",
-      "title": "Marco de Ana: The Power of Protest",
-      "url": "https://www.cd-cc.si/en",
-      "source": "Cankarjev dom",
-      "type": "Theatre · dance",
-      "place": "Cankarjev dom · Ljubljana",
-      "startAt": "2026-10-10T12:00:00+02:00",
-      "endAt": null,
-      "description": "Marco de Ana: The Power of Protest is confirmed at Cankarjev dom · Ljubljana. Check the official source for any late programme or ticket changes."
     },
     {
       "price": null,
@@ -983,6 +926,16 @@
       "startAt": "2026-10-24T22:00:00+02:00",
       "endAt": "",
       "id": "event-52-dnbkonferenca-17-obletnica-gala-hala"
+    },
+    {
+      "title": "Grand Prix invites Upper90",
+      "url": "https://www.klub-k4.si/",
+      "source": "Klub K4",
+      "type": "Club · elektronika",
+      "place": "Klub K4 · Ljubljana",
+      "startAt": "2026-10-24T23:00:00+02:00",
+      "endAt": "",
+      "id": "event-50-grand-prix-invites-upper90"
     }
   ]
 }
