@@ -251,7 +251,7 @@ def audit_worker(audit: Audit) -> None:
     # Requiring one literal version creates false CI failures after upgrades.
     versions = [
         (int(major), int(minor))
-        for major, minor in re.findall(r"auth-v(\\d+)\\.(\\d+)-production", source)
+        for major, minor in re.findall(r"auth-v(\d+)\.(\d+)-production", source)
     ]
     audit.require(
         any(version >= (6, 28) for version in versions),
