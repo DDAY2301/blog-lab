@@ -7,6 +7,7 @@ from manager.artifacts_v2 import ArtifactStoreV2
 from manager.command_bus_v2 import UniversalCommandBusV2
 from manager.db_v3 import StoreV3
 from manager.gmail_v4 import GmailV4
+from manager.manager_prompt_v5 import MANAGER_PROMPT_VERSION, planner_prompt, prompt_digest
 
 
 def _store(tmp_path, monkeypatch):
@@ -137,5 +138,45 @@ def test_ai_plan_can_execute_independent_multi_agent_steps(tmp_path, monkeypatch
         assert result["status"] == "completed"
         assert {target for target, _ in calls} == {"manager", "bloglab"}
         assert len(result["steps"]) == 2
+
+    asyncio.run(run())
+
+
+
+def test_manager_brain_prompt_has_core_orchestration_rules():
+    prompt = planner_prompt(max_steps=8, concurrency=2)
+    assert MANAGER_PROMPT_VERSION == "manager-brain-v5.0"
+    assert len(prompt_digest()) == 16
+    assert "Prefer the simplest plan" in prompt
+    assert "Parallelize independent work" in prompt
+    assert "Verify meaningful changes" in prompt
+    assert "Never use an unregistered target id" in prompt
+    assert "attachments" in prompt.lower()
+    assert "Return JSON only" in prompt
+
+
+def test_ai_planner_receives_manager_brain_v5(tmp_path, monkeypatch):
+    async def run():
+        store = _store(tmp_path, monkeypatch)
+        bus = UniversalCommandBusV2(store)
+        seen = {}
+
+        async def fake_chat(system, user):
+            seen["system"] = system
+            seen["user"] = user
+            return "ollama/test", {
+                "summary": "status check",
+                "steps": [
+                    {"id": "s1", "target": "manager", "command": "status", "depends_on": []}
+                ],
+            }
+
+        monkeypatch.setattr(bus.ai, "chat_json", fake_chat)
+        provider, plan = await bus.plan("Preveri manager.")
+        assert provider == "ollama/test"
+        assert plan["steps"][0]["target"] == "manager"
+        assert MANAGER_PROMPT_VERSION in seen["user"]
+        assert "PRIORITIES — IN THIS ORDER" in seen["system"]
+        assert "REGISTERED AGENTS" in seen["user"]
 
     asyncio.run(run())
