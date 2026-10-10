@@ -1,13 +1,44 @@
 $ErrorActionPreference="Stop"
 Set-Location (Split-Path $PSScriptRoot -Parent)
 
-# Conservative local inference defaults keep the 24/7 stack stable on 8 GB-class Windows PCs.
-$env:OLLAMA_MAX_LOADED_MODELS="1"
-$env:OLLAMA_NUM_PARALLEL="1"
-$env:OLLAMA_KEEP_ALIVE="60s"
-$env:OLLAMA_FAST_KEEP_ALIVE="60s"
-$env:AGENT_MANAGER_CONTEXT="8192"
-$env:AGENT_MANAGER_OLLAMA_KEEP_ALIVE="60s"
+# User-scoped Agent Focus settings take precedence for low-RAM operation.
+# Windows terminal sessions can retain stale Process env: refresh known settings
+# before launching Ollama and either local AI service.
+$lowMemory = [Environment]::GetEnvironmentVariable("AGENT_MANAGER_LOW_MEMORY_MODE", "User")
+if (-not $lowMemory) { $lowMemory = $env:AGENT_MANAGER_LOW_MEMORY_MODE }
+$lowMemoryEnabled = ($lowMemory -eq "1")
+
+if ($lowMemoryEnabled) {
+  $focusDefaults = @{
+    "OLLAMA_MAX_LOADED_MODELS" = "1"
+    "OLLAMA_NUM_PARALLEL" = "1"
+    "OLLAMA_KEEP_ALIVE" = "60s"
+    "OLLAMA_FAST_KEEP_ALIVE" = "60s"
+    "OLLAMA_CONTEXT_LENGTH" = "4096"
+    "AGENT_MANAGER_CONTEXT" = "4096"
+    "AGENT_MANAGER_OLLAMA_KEEP_ALIVE" = "60s"
+    "MODEL_CONCURRENCY" = "1"
+    "VISUAL_QA_CONCURRENCY" = "1"
+    "PRODUCTION_WORKERS" = "1"
+  }
+  foreach ($key in $focusDefaults.Keys) {
+    $userValue = [Environment]::GetEnvironmentVariable($key, "User")
+    if (-not [string]::IsNullOrWhiteSpace($userValue)) {
+      [Environment]::SetEnvironmentVariable($key, $userValue, "Process")
+    } else {
+      [Environment]::SetEnvironmentVariable($key, $focusDefaults[$key], "Process")
+    }
+  }
+  Write-Host "Agent Focus: 8 GB profile active. One AI model, one inference lane; optional Colibri launch disabled." -ForegroundColor Cyan
+} else {
+  # Preserve normal behavior when the operator has not enabled Agent Focus.
+  $env:OLLAMA_MAX_LOADED_MODELS="1"
+  $env:OLLAMA_NUM_PARALLEL="1"
+  $env:OLLAMA_KEEP_ALIVE="60s"
+  $env:OLLAMA_FAST_KEEP_ALIVE="60s"
+  $env:AGENT_MANAGER_CONTEXT="8192"
+  $env:AGENT_MANAGER_OLLAMA_KEEP_ALIVE="60s"
+}
 
 function Port-Up([int]$Port) {
   return [bool](Get-NetTCPConnection -State Listen -LocalPort $Port -ErrorAction SilentlyContinue | Select-Object -First 1)
@@ -205,7 +236,11 @@ function Start-FleetTunnel {
 
 Import-GitHubAuth
 Start-Ollama
-Start-Colibri
+if ($lowMemoryEnabled) {
+  Write-Host "Agent Focus: keeping Colibri in standby (no new Colibri process)." -ForegroundColor Yellow
+} else {
+  Start-Colibri
+}
 Start-ProjectVisibility
 Start-Manager
 Start-RemoteControl
