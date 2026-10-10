@@ -2,11 +2,13 @@
   "updatedAt": "2026-10-10T07:06:04+02:00",
   "status": "fresh",
   "sourcesChecked": [
-    "Visit Ljubljana",
     "Kino Šiška",
-    "Gala Hala",
+    "Ljubljana Castle",
     "Klub K4",
-    "Cirkus Klub"
+    "Visit Ljubljana",
+    "Cankarjev dom",
+    "Gala Hala",
+    "MGL"
   ],
   "sourcesFailed": [],
   "items": [
@@ -102,7 +104,7 @@
       "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/artish-fest",
       "source": "Visit Ljubljana",
       "type": "Kultura · sejem",
-      "place": "Gallusovo nabrežje · Ljubljana",
+      "place": "Kongresni trg · Ljubljana",
       "startAt": "2026-10-10T10:00:00+02:00",
       "endAt": "2026-10-10T17:00:00+02:00",
       "price": "Free entry",
@@ -113,7 +115,7 @@
       "ticketUrl": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/artish-fest",
       "status": "confirmed",
       "lastCheckedAt": "2026-10-10T07:03:43+02:00",
-      "description": "ARTish is confirmed at Gallusovo nabrežje · Ljubljana. Check the official source for any late programme or ticket changes."
+      "description": "ARTish is confirmed at Kongresni trg · Ljubljana. Free entry; check the official source for any late programme changes."
     },
     {
       "id": "tinta-comics-fair-2026-10-10",
