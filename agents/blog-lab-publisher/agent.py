@@ -654,7 +654,13 @@ def main():
     state["current_category"] = args.category
     manual_request = bool(args.manual or args.topic.strip())
     if not enabled(cfg): set_status(cfg, state, "paused", "Agent je izklopljen."); print("AGENT_DISABLED"); return 0
-    if not manual_request and state["scheduled_posts_today"] >= int(cfg.get("maximum_outputs_per_day", 3)):
+    # An explicitly forced dry run is a read-only QA operation, not a new
+    # scheduled publication. Never bypass this quota for a real write.
+    if (
+        not manual_request
+        and not (args.dry_run and args.force)
+        and state["scheduled_posts_today"] >= int(cfg.get("maximum_outputs_per_day", 3))
+    ):
         set_status(cfg, state, "completed", "Dosežena je dnevna omejitev samodejnih objav.")
         print("DAILY_LIMIT")
         return 0
