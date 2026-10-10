@@ -79,9 +79,9 @@ if ($commands.reachable) {
 $report = [ordered]@{
     timestamp_utc = (Get-Date).ToUniversalTime().ToString('o')
     git = [ordered]@{
-        branch = Git-Value @('branch', '--show-current')
-        commit = Git-Value @('rev-parse', 'HEAD')
-        local_changes = Git-Value @('status', '--porcelain')
+        branch = Git-Value -Arguments @('branch', '--show-current')
+        commit = Git-Value -Arguments @('rev-parse', 'HEAD')
+        local_changes = Git-Value -Arguments @('status', '--porcelain')
     }
     write_mode = [ordered]@{
         user = [Environment]::GetEnvironmentVariable('AGENT_MANAGER_WRITE_ENABLED', 'User')
