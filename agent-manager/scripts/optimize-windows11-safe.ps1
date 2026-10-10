@@ -121,7 +121,7 @@ function Restore-AgentCpuPriority {
       $process = Get-Process -Id ([int]$item.pid) -ErrorAction Stop
       if ($process.ProcessName -eq [string]$item.name -and
           $process.StartTime.ToUniversalTime().ToString("o") -eq [string]$item.start_time) {
-        $process.PriorityClass = [System.Diagnostics.ProcessPriorityClass]::Parse(
+        $process.PriorityClass = [System.Enum]::Parse(
           [System.Diagnostics.ProcessPriorityClass], [string]$item.current_priority
         )
         Write-Host "Restored CPU priority: $($item.service) / PID $($item.pid)"
