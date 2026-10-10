@@ -6,6 +6,14 @@ from pathlib import Path
 
 from .discovery import IGNORED_DIRS, RepositoryScanner
 from .evaluator import deterministic_health
+from .coder_prompt_v1 import (
+    CODER_FIX_PROMPT,
+    CODER_FIX_VERSION,
+    PROGRAMMER_WORKFLOW_PROMPT,
+    PROGRAMMER_WORKFLOW_VERSION,
+    coder_fix_prompt_digest,
+    programmer_prompt_digest,
+)
 from .models import RepairPlanRequest, RepairPlanResult
 from .ollama_client import OllamaClient
 
@@ -89,10 +97,39 @@ class RepairPlanner:
         ranked.sort(key=lambda item: (-item[0], item[1].as_posix()))
         return [p for _, p in ranked[:limit]]
 
-    def _context(self, root: Path, objective: str) -> str:
+    def _context(
+        self,
+        root: Path,
+        objective: str,
+        preferred: list[str] | None = None,
+    ) -> str:
         blocks: list[str] = []
         total = 0
+        ordered: list[Path] = []
+        seen: set[str] = set()
+
+        for rel_text in preferred or []:
+            rel = Path(str(rel_text).replace("\\", "/"))
+            candidate = (root / rel).resolve()
+            try:
+                candidate.relative_to(root)
+            except ValueError:
+                continue
+            if not candidate.is_file() or candidate.suffix.lower() not in SAFE_SUFFIXES:
+                continue
+            key = candidate.as_posix().lower()
+            if key not in seen:
+                ordered.append(candidate)
+                seen.add(key)
+
         for path in self._candidate_files(root, objective):
+            key = path.resolve().as_posix().lower()
+            if key in seen:
+                continue
+            ordered.append(path)
+            seen.add(key)
+
+        for path in ordered:
             rel = path.relative_to(root).as_posix()
             try:
                 text = path.read_text(encoding="utf-8", errors="replace")
@@ -115,31 +152,12 @@ class RepairPlanner:
         health = deterministic_health(snapshot)
         context = self._context(root, request.objective)
 
-        system = """You are a senior autonomous code-repair engineer.
-Prepare the smallest safe patch for the requested objective.
-
-Rules:
-- Use ONLY the provided repository evidence.
-- Do not touch secrets, .env files, credentials or .git.
-- Prefer minimal changes over rewrites.
-- Preserve existing behavior unless the objective requires a change.
-- Add/update tests when appropriate.
-- Return JSON only.
-- The patch field must be a standard unified git diff suitable for git apply.
-- If evidence is insufficient, return an empty patch and explain why.
-
-Schema:
-{
-  "summary": "what should change",
-  "plan": ["step 1", "step 2"],
-  "patch": "diff --git ...",
-  "tests": ["command"],
-  "risk": "low|medium|high"
-}
-"""
+        system = PROGRAMMER_WORKFLOW_PROMPT
 
         user = json.dumps(
             {
+                "prompt_version": PROGRAMMER_WORKFLOW_VERSION,
+                "prompt_digest": programmer_prompt_digest(),
                 "objective": request.objective,
                 "repository": snapshot.model_dump(),
                 "health": health.model_dump(),
@@ -156,6 +174,64 @@ Schema:
         return RepairPlanResult(
             model=model,
             objective=request.objective,
+            summary=str(payload.get("summary", "")),
+            plan=[str(x) for x in payload.get("plan", [])][:20],
+            patch=patch,
+            tests=[str(x) for x in payload.get("tests", [])][:20],
+            risk=str(payload.get("risk", "high")),
+            valid=valid,
+            validation_errors=errors,
+        )
+
+
+    async def fix_failed_candidate(
+        self,
+        *,
+        root: Path,
+        objective: str,
+        failures: list[dict],
+        changed_files: list[str],
+        attempt: int,
+    ) -> RepairPlanResult:
+        root = Path(root).expanduser().resolve()
+        if not root.is_dir():
+            raise ValueError(f"Repository not found: {root}")
+
+        snapshot = self.scanner.scan(root)
+        health = deterministic_health(snapshot)
+        failure_text = json.dumps(failures, ensure_ascii=False)[:36_000]
+        context_objective = (
+            objective
+            + "\n"
+            + " ".join(changed_files[:40])
+            + "\n"
+            + failure_text[:12_000]
+        )
+        context = self._context(root, context_objective, preferred=changed_files)
+
+        user = json.dumps(
+            {
+                "prompt_version": CODER_FIX_VERSION,
+                "prompt_digest": coder_fix_prompt_digest(),
+                "attempt": attempt,
+                "objective": objective,
+                "repository": snapshot.model_dump(),
+                "health": health.model_dump(),
+                "changed_files": changed_files[:80],
+                "validation_failures": failures[:12],
+                "selected_current_candidate_context": context,
+            },
+            ensure_ascii=False,
+        )
+
+        model, payload = await self.ollama.chat_json(CODER_FIX_PROMPT, user)
+        patch = str(payload.get("patch", "") or "")
+        errors = validate_patch_paths(patch)
+        valid = bool(patch.strip()) and not errors
+
+        return RepairPlanResult(
+            model=model,
+            objective=objective,
             summary=str(payload.get("summary", "")),
             plan=[str(x) for x in payload.get("plan", [])][:20],
             patch=patch,

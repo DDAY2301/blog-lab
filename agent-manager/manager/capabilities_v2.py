@@ -37,7 +37,7 @@ class CapabilityRegistryV2:
             "manager": AgentCapability(
                 id="manager",
                 name="Agent Manager V4",
-                description="Fleet health, maintenance, incidents, providers, self-heal and orchestration.",
+                description="Fleet orchestration plus evidence-based code review, repair planning, test-driven coder-fix and safe PR creation.",
                 capabilities=(
                     "fleet.status",
                     "fleet.health",
@@ -47,6 +47,12 @@ class CapabilityRegistryV2:
                     "fleet.providers",
                     "fleet.agent_check",
                     "service.restart",
+                    "code.review",
+                    "code.repair.plan",
+                    "code.repair.autopilot",
+                    "code.test_fix",
+                    "git.worktree",
+                    "git.pull_request",
                 ),
                 artifact_support=("text/*", "application/json"),
                 command_examples=(
@@ -54,6 +60,9 @@ class CapabilityRegistryV2:
                     "preglej in popravi",
                     "pokaži incidente",
                     "status",
+                    "programer plan za BlogLab: popravi ...",
+                    "coder fix Project Visibility: popravi ...",
+                    "preglej kodo in pripravi varen patch",
                 ),
                 max_parallel=1,
             ),

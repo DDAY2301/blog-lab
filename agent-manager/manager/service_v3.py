@@ -1,13 +1,24 @@
 from __future__ import annotations
 
 import asyncio
+import os
 from contextlib import asynccontextmanager
+from pathlib import Path
 
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import HTMLResponse
 from pydantic import BaseModel
 
 from .autofix_v3 import AutoFixV3
+from .autopilot import AutopilotDisabled, AutonomousRepairExecutor, MAX_CODER_FIX_ATTEMPTS
+from .coder_prompt_v1 import (
+    CODER_FIX_PROMPT,
+    CODER_FIX_VERSION,
+    PROGRAMMER_WORKFLOW_PROMPT,
+    PROGRAMMER_WORKFLOW_VERSION,
+    coder_fix_prompt_digest,
+    programmer_prompt_digest,
+)
 from .db_v3 import StoreV3
 from .discovery_v3 import DiscoveryEngineV3
 from .health_v3 import system_resources
@@ -16,7 +27,9 @@ from .maintenance_v4 import MaintenanceLoopV4
 from .mail_commands_v4 import GmailCommandLoopV4
 from .manager_prompt_v5 import CORE_MANAGER_PROMPT, DIAGNOSIS_PROMPT, MANAGER_PROMPT_VERSION, prompt_digest
 from .command_bus_v2 import COMMAND_CONCURRENCY, MAX_STEPS
+from .models import AutopilotRequest, RepairPlanRequest
 from .monitor_v3 import MonitorLoopV3
+from .repair import RepairPlanner
 from .policy_v3 import evaluate
 from .reporting_v3 import ReporterV3
 from .settings_v3 import SettingsV3
@@ -31,6 +44,8 @@ monitor = MonitorLoopV3(s, store)
 maintenance = MaintenanceLoopV4(s, store)
 mail_commands = GmailCommandLoopV4(store, maintenance.gmail)
 autofix = AutoFixV3(store)
+coder_planner = RepairPlanner(maintenance.ai)
+coder_autopilot = AutonomousRepairExecutor(coder_planner)
 
 _tasks: list[asyncio.Task] = []
 
@@ -193,6 +208,103 @@ async def manager_brain():
         "core_prompt": CORE_MANAGER_PROMPT,
         "diagnosis_prompt": DIAGNOSIS_PROMPT,
         "active_in": ["universal-command-planner", "maintenance-diagnosis"],
+    }
+
+
+class CoderRequest(BaseModel):
+    target_id: str = "manager"
+    objective: str
+    base_branch: str = "main"
+
+
+def _coder_root(target_id: str) -> Path:
+    target = str(target_id or "manager").strip().lower()
+    if target in {"manager", "agent_manager", "bloglab", "blog_lab"}:
+        return Path(__file__).resolve().parents[2]
+
+    if target in {"project_visibility", "project-visibility", "pv"}:
+        root_value = str(s.pv_root or "").strip()
+        if not root_value:
+            raise HTTPException(409, "PROJECT_VISIBILITY_ROOT is not configured.")
+        root = Path(root_value).expanduser().resolve()
+        if not root.is_dir():
+            raise HTTPException(409, f"Project Visibility root is unavailable: {root}")
+        return root
+
+    managed = next((x for x in maintenance.supervisor.targets() if x.id.lower() == target), None)
+    if managed and managed.local_root_env:
+        root_value = os.getenv(managed.local_root_env, "").strip()
+        if root_value:
+            root = Path(root_value).expanduser().resolve()
+            if root.is_dir():
+                return root
+
+    raise HTTPException(
+        404,
+        "Coder target has no trusted local repository root. Use manager, bloglab, project_visibility, "
+        "or configure a managed target local_root_env.",
+    )
+
+
+@app.get("/coder-brain")
+async def coder_brain():
+    return {
+        "programmer_workflow": {
+            "version": PROGRAMMER_WORKFLOW_VERSION,
+            "digest": programmer_prompt_digest(),
+            "prompt": PROGRAMMER_WORKFLOW_PROMPT,
+        },
+        "coder_fix": {
+            "version": CODER_FIX_VERSION,
+            "digest": coder_fix_prompt_digest(),
+            "prompt": CODER_FIX_PROMPT,
+        },
+        "workflow": "inspect -> root cause -> minimal patch -> tests -> bounded coder-fix -> health gate -> branch -> PR",
+        "max_fix_attempts": MAX_CODER_FIX_ATTEMPTS,
+        "write_enabled": s.write_enabled,
+        "write_policy": "isolated-worktree-tests-health-gate-branch-pr-no-direct-main",
+    }
+
+
+@app.post("/coder/plan")
+async def coder_plan(req: CoderRequest):
+    root = _coder_root(req.target_id)
+    try:
+        plan = await coder_planner.plan(
+            RepairPlanRequest(root=str(root), objective=req.objective)
+        )
+    except Exception as exc:
+        raise HTTPException(400, str(exc)) from exc
+    return {
+        "ok": plan.valid,
+        "target_id": req.target_id,
+        "root": str(root),
+        "programmer_workflow_version": PROGRAMMER_WORKFLOW_VERSION,
+        "programmer_workflow_digest": programmer_prompt_digest(),
+        "plan": plan.model_dump(),
+    }
+
+
+@app.post("/coder/fix")
+async def coder_fix(req: CoderRequest):
+    root = _coder_root(req.target_id)
+    try:
+        result = await coder_autopilot.execute(
+            AutopilotRequest(
+                root=str(root),
+                objective=req.objective,
+                base_branch=req.base_branch,
+            )
+        )
+    except AutopilotDisabled as exc:
+        raise HTTPException(403, str(exc)) from exc
+    except Exception as exc:
+        raise HTTPException(400, str(exc)) from exc
+    return {
+        "target_id": req.target_id,
+        "programmer_workflow_version": PROGRAMMER_WORKFLOW_VERSION,
+        "coder_fix_version": CODER_FIX_VERSION,
+        "result": result.model_dump(),
     }
 
 
