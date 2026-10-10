@@ -14,6 +14,7 @@ from .health_v3 import system_resources
 from .incidents_v3 import IncidentEngineV3
 from .maintenance_v4 import MaintenanceLoopV4
 from .mail_commands_v4 import GmailCommandLoopV4
+from .manager_prompt_v5 import CORE_MANAGER_PROMPT, DIAGNOSIS_PROMPT, MANAGER_PROMPT_VERSION, prompt_digest
 from .command_bus_v2 import COMMAND_CONCURRENCY, MAX_STEPS
 from .monitor_v3 import MonitorLoopV3
 from .policy_v3 import evaluate
@@ -184,10 +185,25 @@ async def email_command_run_once():
     return await mail_commands.cycle()
 
 
+@app.get("/manager-brain")
+async def manager_brain():
+    return {
+        "version": MANAGER_PROMPT_VERSION,
+        "digest": prompt_digest(),
+        "core_prompt": CORE_MANAGER_PROMPT,
+        "diagnosis_prompt": DIAGNOSIS_PROMPT,
+        "active_in": ["universal-command-planner", "maintenance-diagnosis"],
+    }
+
+
 @app.get("/command-bus/capabilities")
 async def command_bus_capabilities():
     return {
         "version": "universal-command-bus-v2",
+        "manager_brain": {
+            "version": MANAGER_PROMPT_VERSION,
+            "digest": prompt_digest(),
+        },
         "targets": mail_commands.bus.registry.manifest(),
         "max_plan_steps": MAX_STEPS,
         "command_concurrency": COMMAND_CONCURRENCY,
