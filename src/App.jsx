@@ -30,6 +30,49 @@ const CATEGORY_EMPTY_COPY = {
 
 const starterArticles = [
   {
+    "id": "evropsko-kolesarsko-prvenstvo-stevilne-ceste-bodo-zaprte-preverite-katere-34455346",
+    "title": "Evropsko kolesarsko prvenstvo: številne ceste bodo zaprte, preverite katere",
+    "excerpt": "Kolesarstvo: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Evropsko kolesarsko prvenstvo: številne ceste bodo zaprte, preverite katere«.",
+    "seoDescription": "Kolesarstvo: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Evropsko kolesarsko prvenstvo: številne ceste bodo zaprte, preverite kater",
+    "content": "**Kolesarstvo, 10. 10. 2026.** Evropsko kolesarsko prvenstvo: številne ceste bodo zaprte, preverite katere Svet24.si\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Svet24.si. Objavljeno: Tue, 29 Sep 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMipwFBVV95cUxPQWhZRWl0TndjMUd1a25PWkJjdDNxRzJaSUFFYmI2ZWdoQVhDOU9HbGhxV1IwS0RjY00xenU3NjRBWVUxSm5TMXlHTnd3emgxbkJCRjl4N3ZUaEc2d0FRbHFsMDdERF83R1M4TVFJdlJ0c21EcnpFbkNRYTZZejFHekNELVJST0JYUW1jWklQM25UUlZHR1dpcXR2SHVNbE4xTjJHX0JXaw?oc=5)\n\n## Dopolnitev vira 2: www.primorski.eu\n\nIzboljšati nameravajo ponudbo za kolesarske turiste www.primorski.eu\n\n Vir: www.primorski.eu. Objavljeno: Tue, 09 Jun 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMimgFBVV95cUxObzR5OGFodldUWHNtS3c4UkpCMGlHUjdlYnRyWkNybWZZcjk4eE9ESTdZd01rc19USkg4aFQ1NGhvSHl6WTJ5RnFtRmNLcDVhMkZhVWxUWjdHNU1US2w3OXhIcFU4TjZQenFQWXVZa3EzTzVaUVBDZ1hZeXFRYnhucmZpczVfbGltb29VN29xdDdfTFVSZ0xNNHJn?oc=5)\n\n## Dopolnitev vira 3: rtvslo.si\n\nNova kolesarska pot povezuje Brda, Vipavsko dolino in Kras rtvslo.si\n\n Vir: rtvslo.si. Objavljeno: Wed, 02 Apr 2025 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMitgFBVV95cUxQaTlSTGdXMHdMeEtkY3R4aGRaSTYta1RFY1B3ZDZBdHQwX09jMF9YdWF5YnNuQUxHa0pVakcxQ0lUb1FqWGJyNkpKNEFqOFJ0ekJ2VFFpU3d5ZC1GMk1Sc0hmczZpSEo0S3RWQTJyTmlmOWpmenJ1amkxbExJa1Z3VGg4eHFnMUZCMHpoX1I3MGw2cEdfRlR1REtBTTV1ejNzZ2g3MGZvYlRucmxYdlItdWhSWVF6Zw?oc=5)\n\n## Dopolnitev vira 4: Žurnal24\n\nFOTO: To je nova gorska kolesarska pot, kjer ni snega Žurnal24\n\n Vir: Žurnal24. Objavljeno: Sun, 18 Dec 2022 08:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMilgFBVV95cUxNMTA2Q3BuNGNKbDVqckNCOGRPZ2RYNEotdzZoQmV2d29xcHY5eXVYWm83SkdXcXh2N1BSUXhfaVY5Q1lTaVBzc0Zmck5qREN6Ny1sVTVPY2dOUjBqbDE0SDBiVUtKbFRGOUk2bUVqZWlhUEVPc3JXb2QtM3ZKT3gyOEo4d0xqRU9kZEhyYWYtZG8tQUFaMVHSAZsBQVVfeXFMUE04R0VuaXg3UjIxb3p5ZkNCX19KVWtQeVVVSVVRZ3I2TFFxUTBuSHlVbnZtQXpCSTl4aVA5SWg0VTl3dUppaDZuZ29uUW11MkNKMmhiTkRLSW5YSWJLcWRpYlRZb2pONHNwVzNQTW9tRDI5cUR5aldMY0RIMWFya2piOEFnZXB0NzRxQnN3NTNxQkRwZWlyeHNRRzQ?oc=5)\n\n## Dopolnitev vira 5: MojaObčina.si\n\nKolesarjenje po Spodnji Savinjski dolini 2026 MojaObčina.si\n\n Vir: MojaObčina.si. Objavljeno: Sun, 21 Jun 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMilAFBVV95cUxPSjNQUXZpUW1NTC16TC00X0dZMWlUNFNDVFJac2d3bUMwV0ZYek5yWnR6Qy1ybGQydWhqaTVGZ1dId2FJUFVMQWg0azhtbmdkdFFWaG5DUnozTFpFUTlpSWJnYjMwLTV4TTRaazZIb1hodFdld1EtNDdpMFFYaEVVUEpNVzJ1Wl94NVJBc0NBOV9lZFZ4?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Kolesarstvo",
+    "author": "Blog Lab Slovenia Publisher",
+    "status": "published",
+    "heroImage": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/08_Slovenia_rural_landscape_-_bicycle_expedition_with_panniers.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "alt": "Three male cyclists wearing helmets during a summer bicycle tour in rural Slovenia near Luže.",
+      "caption": "Marek Ślusarczyk ( Tupungato ) Photo gallery · Wikimedia Commons · CC BY 3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:08_Slovenia_rural_landscape_-_bicycle_expedition_with_panniers.jpg"
+    },
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Svet24.si — Evropsko kolesarsko prvenstvo: številne ceste bodo zaprte, preverite katere - Svet24.si",
+        "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPQWhZRWl0TndjMUd1a25PWkJjdDNxRzJaSUFFYmI2ZWdoQVhDOU9HbGhxV1IwS0RjY00xenU3NjRBWVUxSm5TMXlHTnd3emgxbkJCRjl4N3ZUaEc2d0FRbHFsMDdERF83R1M4TVFJdlJ0c21EcnpFbkNRYTZZejFHekNELVJST0JYUW1jWklQM25UUlZHR1dpcXR2SHVNbE4xTjJHX0JXaw?oc=5"
+      },
+      {
+        "label": "www.primorski.eu — Izboljšati nameravajo ponudbo za kolesarske turiste - www.primorski.eu",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxObzR5OGFodldUWHNtS3c4UkpCMGlHUjdlYnRyWkNybWZZcjk4eE9ESTdZd01rc19USkg4aFQ1NGhvSHl6WTJ5RnFtRmNLcDVhMkZhVWxUWjdHNU1US2w3OXhIcFU4TjZQenFQWXVZa3EzTzVaUVBDZ1hZeXFRYnhucmZpczVfbGltb29VN29xdDdfTFVSZ0xNNHJn?oc=5"
+      },
+      {
+        "label": "rtvslo.si — Nova kolesarska pot povezuje Brda, Vipavsko dolino in Kras - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQaTlSTGdXMHdMeEtkY3R4aGRaSTYta1RFY1B3ZDZBdHQwX09jMF9YdWF5YnNuQUxHa0pVakcxQ0lUb1FqWGJyNkpKNEFqOFJ0ekJ2VFFpU3d5ZC1GMk1Sc0hmczZpSEo0S3RWQTJyTmlmOWpmenJ1amkxbExJa1Z3VGg4eHFnMUZCMHpoX1I3MGw2cEdfRlR1REtBTTV1ejNzZ2g3MGZvYlRucmxYdlItdWhSWVF6Zw?oc=5"
+      },
+      {
+        "label": "Žurnal24 — FOTO: To je nova gorska kolesarska pot, kjer ni snega - Žurnal24",
+        "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNMTA2Q3BuNGNKbDVqckNCOGRPZ2RYNEotdzZoQmV2d29xcHY5eXVYWm83SkdXcXh2N1BSUXhfaVY5Q1lTaVBzc0Zmck5qREN6Ny1sVTVPY2dOUjBqbDE0SDBiVUtKbFRGOUk2bUVqZWlhUEVPc3JXb2QtM3ZKT3gyOEo4d0xqRU9kZEhyYWYtZG8tQUFaMVHSAZsBQVVfeXFMUE04R0VuaXg3UjIxb3p5ZkNCX19KVWtQeVVVSVVRZ3I2TFFxUTBuSHlVbnZtQXpCSTl4aVA5SWg0VTl3dUppaDZuZ29uUW11MkNKMmhiTkRLSW5YSWJLcWRpYlRZb2pONHNwVzNQTW9tRDI5cUR5aldMY0RIMWFya2piOEFnZXB0NzRxQnN3NTNxQkRwZWlyeHNRRzQ?oc=5"
+      },
+      {
+        "label": "MojaObčina.si — Kolesarjenje po Spodnji Savinjski dolini 2026 - MojaObčina.si",
+        "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPSjNQUXZpUW1NTC16TC00X0dZMWlUNFNDVFJac2d3bUMwV0ZYek5yWnR6Qy1ybGQydWhqaTVGZ1dId2FJUFVMQWg0azhtbmdkdFFWaG5DUnozTFpFUTlpSWJnYjMwLTV4TTRaazZIb1hodFdld1EtNDdpMFFYaEVVUEpNVzJ1Wl94NVJBc0NBOV9lZFZ4?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-10T07:40:25+02:00",
+    "updatedAt": "2026-10-10T07:40:25+02:00"
+  },
+
+  {
     "id": "catering-lulu-s-mexican-food-751228e3",
     "title": "Catering — LuLu's Mexican Food",
     "excerpt": "Gourmet: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Catering — LuLu's Mexican Food«.",
