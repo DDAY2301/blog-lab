@@ -247,8 +247,17 @@ def audit_workflows(audit: Audit) -> None:
 
 def audit_worker(audit: Audit) -> None:
     source = read_text("terminal/worker/src/index.js")
+    # Accept a production auth marker at or above the minimum audited version.
+    # Requiring one literal version creates false CI failures after upgrades.
+    versions = [
+        (int(major), int(minor))
+        for major, minor in re.findall(r"auth-v(\d+)\.(\d+)-production", source)
+    ]
+    audit.require(
+        any(version >= (6, 28) for version in versions),
+        "worker production auth version >= 6.28",
+    )
     for marker in [
-        "auth-v6.28-production",
         "DAN_LOGIN_PASSWORD",
         "MAJ_LOGIN_PASSWORD",
         "GITHUB_DISPATCH_TOKEN",
