@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-10T02:44:33+02:00",
-  "loop_count": 4209,
+  "updated_at": "2026-10-10T02:53:56+02:00",
+  "loop_count": 4210,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-10T02:44:12+02:00",
+      "last_learning_run": "2026-10-10T02:53:35+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -36,10 +36,10 @@
       ],
       "preferred_hosts": [
         "lonelyplanet.com",
+        "city-data.com",
         "news.google.com",
         "answers.com",
         "support.microsoft.com",
-        "city-data.com",
         "aarp.org",
         "sutterhealth.org",
         "nike.com",
@@ -56,13 +56,20 @@
           "last_title": "11 things to know before booking a trip to Slovenia - Lonely Planet",
           "last_provider": "bing-web"
         },
+        "city-data.com": {
+          "score": 3.322,
+          "seen": 5,
+          "last_seen": "2026-10-10T02:53:35+02:00",
+          "last_title": "Politics and Other Controversies Forum - The premier community for US politics, elections, and government debate. Join Democrats, Republicans, and Independents to discuss Congress,",
+          "last_provider": "bing-web"
+        },
         "news.google.com": {
           "score": 2.502,
           "seen": 110686,
           "last_seen": "2026-10-10T02:44:12+02:00",
           "last_title": "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
           "last_provider": "google-news-si",
-          "published": 229349,
+          "published": 229421,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -77,13 +84,6 @@
           "seen": 4,
           "last_seen": "2026-10-10T00:23:34+02:00",
           "last_title": "Contact Us - Microsoft Support",
-          "last_provider": "bing-web"
-        },
-        "city-data.com": {
-          "score": 1.726,
-          "seen": 2,
-          "last_seen": "2026-09-30T18:38:23+02:00",
-          "last_title": "What is DEATH? - Christianity - - Page 106 - City-Data Forum",
           "last_provider": "bing-web"
         },
         "aarp.org": {
@@ -227,17 +227,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 9,
+      "current_source_count": 3,
       "example_titles": {
-        "news.google.com": [
-          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
-          "*〜?[[Živý=šport!!]++] Škotska Slovenija prenos 26. september 2026 - Business and Investment Development Agency - CzechInvest",
-          "Kot v sanjah: Slovenija že drugič v dveh tednih evropski prvak! (VIDEO) - Šport TV"
+        "city-data.com": [
+          "Consequence of failing DMV vision test??? (Asheville: house, legal, safety) - North Carolina (NC) -North Carolina relocation guide and forum",
+          "CT road test (Hamden, Windsor: DMV, inspections, license) - Connecticut -Connecticut forum covering CT property taxes, schools, and commutin",
+          "Politics and Other Controversies Forum - The premier community for US politics, elections, and government debate. Join Democrats, Republican"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-10T02:44:23+02:00",
+      "last_learning_run": "2026-10-10T02:53:45+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -275,7 +275,7 @@
           "last_seen": "2026-10-10T02:44:23+02:00",
           "last_title": "Golob pravi: Slovenija potrebuje široko koalicijo. NSi ne bo na sestanek - Svet24.si",
           "last_provider": "google-news-si",
-          "published": 253269,
+          "published": 253349,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -356,17 +356,11 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 16,
-      "example_titles": {
-        "news.google.com": [
-          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
-          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer",
-          "Golob: Ne predstavljam si, da bi kdo želel živeti v državi, v kateri bi politika imela pooblastila policije - N1 Slovenija"
-        ]
-      }
+      "current_source_count": 0,
+      "example_titles": {}
     },
     "aktualno": {
-      "last_learning_run": "2026-10-10T02:44:33+02:00",
+      "last_learning_run": "2026-10-10T02:53:56+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -425,7 +419,7 @@
           "last_seen": "2026-10-10T02:44:33+02:00",
           "last_title": "\"Slovenija je zaradi socialistične preteklosti še danes ekonomsko šibkejša, kot bi lahko bila\" - Klub slovenskih podjetnikov",
           "last_provider": "google-news-si",
-          "published": 221133,
+          "published": 221175,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "reddit.com": {
@@ -454,7 +448,7 @@
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 4111,
+          "published": 4112,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
@@ -464,12 +458,12 @@
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 4111,
+          "published": 4112,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 4111,
+          "published": 4112,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
@@ -509,7 +503,7 @@
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 4111,
+          "published": 4112,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
@@ -522,6 +516,13 @@
           "seen": 2,
           "last_seen": "2026-10-10T00:24:03+02:00",
           "last_title": "Atlantic Alumina Announces $450 Million Strategic Partnership ... - Atalco",
+          "last_provider": "bing-web"
+        },
+        "local.wenatcheeworld.com": {
+          "score": 1.823,
+          "seen": 2,
+          "last_seen": "2026-10-10T02:53:56+02:00",
+          "last_title": "Local Guide",
           "last_provider": "bing-web"
         },
         "locations.dollartree.com": {
@@ -537,21 +538,13 @@
           "last_seen": "2026-10-05T10:24:26+02:00",
           "last_title": "The official travel guide to Slovenia | I feel Slovenia",
           "last_provider": "bing-web"
-        },
-        "worldatlas.com": {
-          "score": 1.085,
-          "seen": 1,
-          "last_seen": "2026-10-05T20:22:53+02:00",
-          "last_title": "Slovenia Maps & Facts",
-          "last_provider": "bing-web"
         }
       },
-      "current_source_count": 22,
+      "current_source_count": 2,
       "example_titles": {
-        "news.google.com": [
-          "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
-          "Pred Stevanovićevim obiskom v Srbiji znova aktualno vprašanje statusa srbske skupnosti v Sloveniji - Siol.net",
-          "Ko so bile ZDA stare toliko kot danes Slovenija, so bile na robu razpada - Zanima.me"
+        "local.wenatcheeworld.com": [
+          "The Wenatchee World - Wenatchee World",
+          "Local Guide"
         ]
       }
     }
