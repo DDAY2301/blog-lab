@@ -78,7 +78,7 @@ function safeInitialLanguage() {
 
 function safeInitialCollapsed() {
   if (typeof window === "undefined") return false;
-  return window.localStorage.getItem(COLLAPSE_STORAGE_KEY) === "1";
+  return window.localStorage.getItem(COLLAPSE_STORAGE_KEY) !== "0";
 }
 
 function expireGoogleTranslateCookies() {
@@ -101,7 +101,7 @@ function setGoogleTranslateCookie(targetCode) {
   }
 }
 
-function loadTranslateScript(setReady) {
+function loadTranslateScript(setReady, setFailed) {
   if (typeof window === "undefined") return;
 
   if (!document.getElementById(ELEMENT_ID)) {
@@ -122,6 +122,7 @@ function loadTranslateScript(setReady) {
       ELEMENT_ID
     );
     setReady(true);
+    setFailed(false);
   };
 
   if (window.google?.translate?.TranslateElement) {
@@ -135,6 +136,7 @@ function loadTranslateScript(setReady) {
   script.id = SCRIPT_ID;
   script.async = true;
   script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+  script.onerror = () => setFailed(true);
   document.body.appendChild(script);
 }
 
@@ -157,11 +159,13 @@ function applyGoogleTranslate(targetCode) {
     return true;
   }
 
-  setGoogleTranslateCookie(targetCode);
   const select = findTranslateSelect();
   if (!select) return false;
-  select.value = targetCode;
-  dispatchNativeChange(select);
+  setGoogleTranslateCookie(targetCode);
+  if (select.value !== targetCode) {
+    select.value = targetCode;
+    dispatchNativeChange(select);
+  }
   return true;
 }
 
@@ -169,6 +173,7 @@ export default function LanguageTools() {
   const [language, setLanguage] = useState(safeInitialLanguage);
   const [isCollapsed, setIsCollapsed] = useState(safeInitialCollapsed);
   const [translatorReady, setTranslatorReady] = useState(false);
+  const [translatorFailed, setTranslatorFailed] = useState(false);
   const retryRef = useRef(null);
   const mutationTimerRef = useRef(null);
   const active = useMemo(
@@ -177,7 +182,7 @@ export default function LanguageTools() {
   );
 
   useEffect(() => {
-    loadTranslateScript(setTranslatorReady);
+    loadTranslateScript(setTranslatorReady, setTranslatorFailed);
     return () => {
       if (retryRef.current) window.clearInterval(retryRef.current);
       if (mutationTimerRef.current) window.clearTimeout(mutationTimerRef.current);
@@ -207,15 +212,24 @@ export default function LanguageTools() {
     if (retryRef.current) window.clearInterval(retryRef.current);
 
     const target = active.googleCode;
-    const tryApply = () => applyGoogleTranslate(target);
+    if (target === "sl") return undefined;
+    setTranslatorReady(false);
+    setTranslatorFailed(false);
+    const tryApply = () => {
+      if (!applyGoogleTranslate(target)) return false;
+      setTranslatorReady(true);
+      setTranslatorFailed(false);
+      return true;
+    };
+    if (tryApply()) return undefined;
 
-    if (tryApply()) return;
-
+    let attempts = 0;
     retryRef.current = window.setInterval(() => {
-      if (tryApply() && retryRef.current) {
+      attempts += 1;
+      if (tryApply() || attempts >= 18) {
         window.clearInterval(retryRef.current);
         retryRef.current = null;
-        setTranslatorReady(true);
+        if (attempts >= 18 && !findTranslateSelect()) setTranslatorFailed(true);
       }
     }, 700);
 
@@ -228,13 +242,14 @@ export default function LanguageTools() {
   }, [active.googleCode]);
 
   useEffect(() => {
-    if (language === "sl") return undefined;
+    if (language === "sl" || !translatorReady) return undefined;
 
     const observer = new MutationObserver(() => {
       if (mutationTimerRef.current) window.clearTimeout(mutationTimerRef.current);
       mutationTimerRef.current = window.setTimeout(() => {
-        applyGoogleTranslate(active.googleCode);
-      }, 450);
+        const select = findTranslateSelect();
+        if (select && select.value !== active.googleCode) applyGoogleTranslate(active.googleCode);
+      }, 900);
     });
 
     observer.observe(document.getElementById("root") || document.body, {
@@ -250,9 +265,14 @@ export default function LanguageTools() {
         mutationTimerRef.current = null;
       }
     };
-  }, [active.googleCode, language]);
+  }, [active.googleCode, language, translatorReady]);
 
   function chooseLanguage(code) {
+    if (code === language) return;
+    if (code === "sl") {
+      resetOriginal();
+      return;
+    }
     setLanguage(code);
   }
 
@@ -263,7 +283,7 @@ export default function LanguageTools() {
   }
 
   return (
-    <aside className={`language-tools ${isCollapsed ? "is-collapsed" : ""}`} aria-label={active.aria}>
+    <aside className={`language-tools notranslate ${isCollapsed ? "is-collapsed" : ""}`} translate="no" aria-label={active.aria}>
       <div className="language-tools__topline">
         <span>{isCollapsed ? active.short : active.title}</span>
         <div className="language-tools__top-actions">
@@ -312,7 +332,9 @@ export default function LanguageTools() {
             )}
           </div>
           <small>
-            {translatorReady ? active.statusTranslated : active.statusLoading} {active.note}
+            {translatorFailed
+              ? "Samodejno prevajanje ni dosegljivo. Preveri povezavo ali nastavitve blokiranja skript."
+              : translatorReady ? active.statusTranslated : active.statusLoading} {active.note}
           </small>
         </>
       )}
