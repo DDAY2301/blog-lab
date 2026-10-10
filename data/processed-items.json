@@ -4617,5 +4617,33 @@
     "provider": "google-news-si",
     "processed_at": "2026-10-10T10:45:43+02:00",
     "output_id": "slovenski-fenomen-grad-ki-ni-bil-nikoli-pozgan-porusen-ali-nacionaliziran-614ea009"
+  },
+  {
+    "source_name": "Metropolitan.si",
+    "category": "sezonsko",
+    "title": "Video: N1 podkast s Suzano Lovec: Slovenija je lepše delala z biseri kot Hrvaška - Metroplay - Metropolitan.si",
+    "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQUUYycVFCUDRNWjhBalc0LWRKVHRiWjViQXpPX205QXBaUzhtZGF1T3RISmZ2TnRvOFp2Mjc3RW9sdmpCalBRRmkzaHV3TWpLR1ZyZ3RvSEZRTUU0Zl9NampRaEx0dTlualFZSWJ4QXlPcmNXdFAyMUtUZVVkaXcyOHhLUEFOSS1OWTRyVkNDNkFENEhGcWt1V3R2QWdlc2RsZ0d4RnBtNTR6TXpaNk96UkVzY2ZNVmxFMTlOYVd1T09OanN2bmlfdGNZLUNIcjJWTWFEVjdfRzI4NEQtSkppeEZuQ01WSXBfbEMyRGNUZw?oc=5",
+    "summary": "Video: N1 podkast s Suzano Lovec: Slovenija je lepše delala z biseri kot Hrvaška - Metroplay Metropolitan.si",
+    "published": "Fri, 12 Sep 2025 07:00:00 GMT",
+    "image_url": "",
+    "video_url": "",
+    "hash": "be39c795e14ace1b530d57e7369639c43cc7189c43315971bac29639b7b368a8",
+    "provider": "google-news-si",
+    "processed_at": "2026-10-10T13:40:24+02:00",
+    "output_id": "video-n1-podkast-s-suzano-lovec-slovenija-je-lepse-delala-z-biseri-kot-hrvaska-metroplay-412e6a21"
+  },
+  {
+    "source_name": "24ur.com",
+    "category": "sezonsko",
+    "title": "Hrvaška: številke v turizmu v nebo, denarnice domačinov pa vse bolj prazne - 24ur.com",
+    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1saWJFTHFrMHZ5LXZPMjlRREsyS0RXSHQ4SDRpbkpGYmxsX3hsVmdEUExIbE1zNDlyMXpOQlBpa1hhOC1KcmRUdE9MUVBDRm5ock4wVmxCQjJlNVZ1RUEtNlNR?oc=5",
+    "summary": "Hrvaška: številke v turizmu v nebo, denarnice domačinov pa vse bolj prazne 24ur.com",
+    "published": "Thu, 03 Jul 2025 07:00:00 GMT",
+    "image_url": "",
+    "video_url": "",
+    "hash": "193e413918bd771c1effff8b2be180fb82aed38840a87fc0422cf9c6f4b2f112",
+    "provider": "",
+    "processed_at": "2026-10-10T13:40:24+02:00",
+    "output_id": "video-n1-podkast-s-suzano-lovec-slovenija-je-lepse-delala-z-biseri-kot-hrvaska-metroplay-412e6a21"
   }
 ]

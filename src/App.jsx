@@ -30,6 +30,37 @@ const CATEGORY_EMPTY_COPY = {
 
 const starterArticles = [
   {
+    "id": "video-n1-podkast-s-suzano-lovec-slovenija-je-lepse-delala-z-biseri-kot-hrvaska-metroplay-412e6a21",
+    "title": "Video: N1 podkast s Suzano Lovec: Slovenija je lepše delala z biseri kot Hrvaška - Metroplay",
+    "excerpt": "Sezonsko: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Video: N1 podkast s Suzano Lovec: Slovenija je lepše delala z biseri kot Hrvaška - Metroplay«.",
+    "seoDescription": "Sezonsko: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Video: N1 podkast s Suzano Lovec: Slovenija je lepše delala z biseri kot Hrva",
+    "content": "**Sezonsko, 10. 10. 2026.** Video: N1 podkast s Suzano Lovec: Slovenija je lepše delala z biseri kot Hrvaška - Metroplay Metropolitan.si\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Metropolitan.si. Objavljeno: Fri, 12 Sep 2025 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMi7wFBVV95cUxQUUYycVFCUDRNWjhBalc0LWRKVHRiWjViQXpPX205QXBaUzhtZGF1T3RISmZ2TnRvOFp2Mjc3RW9sdmpCalBRRmkzaHV3TWpLR1ZyZ3RvSEZRTUU0Zl9NampRaEx0dTlualFZSWJ4QXlPcmNXdFAyMUtUZVVkaXcyOHhLUEFOSS1OWTRyVkNDNkFENEhGcWt1V3R2QWdlc2RsZ0d4RnBtNTR6TXpaNk96UkVzY2ZNVmxFMTlOYVd1T09OanN2bmlfdGNZLUNIcjJWTWFEVjdfRzI4NEQtSkppeEZuQ01WSXBfbEMyRGNUZw?oc=5)\n\n## Dopolnitev vira 2: 24ur.com\n\nHrvaška: številke v turizmu v nebo, denarnice domačinov pa vse bolj prazne 24ur.com\n\n Vir: 24ur.com. Objavljeno: Thu, 03 Jul 2025 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiYkFVX3lxTE1saWJFTHFrMHZ5LXZPMjlRREsyS0RXSHQ4SDRpbkpGYmxsX3hsVmdEUExIbE1zNDlyMXpOQlBpa1hhOC1KcmRUdE9MUVBDRm5ock4wVmxCQjJlNVZ1RUEtNlNR?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Sezonsko",
+    "author": "Blog Lab Slovenia Publisher",
+    "status": "published",
+    "heroImage": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Frozen_Lake_Bled_%28156843859%29.jpeg/1920px-Frozen_Lake_Bled_%28156843859%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "alt": "500px provided description: This picture has been taken on a nice, sunny, but cold winter day. It is amazing to see lake Bled frozen! [#landscape ,#lake ,#frozen ,#mountains ,#wint",
+      "caption": "Anita · Wikimedia Commons · CC0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Frozen_Lake_Bled_(156843859).jpeg"
+    },
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Metropolitan.si — Video: N1 podkast s Suzano Lovec: Slovenija je lepše delala z biseri kot Hrvaška - Metroplay - Metropolitan.si",
+        "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQUUYycVFCUDRNWjhBalc0LWRKVHRiWjViQXpPX205QXBaUzhtZGF1T3RISmZ2TnRvOFp2Mjc3RW9sdmpCalBRRmkzaHV3TWpLR1ZyZ3RvSEZRTUU0Zl9NampRaEx0dTlualFZSWJ4QXlPcmNXdFAyMUtUZVVkaXcyOHhLUEFOSS1OWTRyVkNDNkFENEhGcWt1V3R2QWdlc2RsZ0d4RnBtNTR6TXpaNk96UkVzY2ZNVmxFMTlOYVd1T09OanN2bmlfdGNZLUNIcjJWTWFEVjdfRzI4NEQtSkppeEZuQ01WSXBfbEMyRGNUZw?oc=5"
+      },
+      {
+        "label": "24ur.com — Hrvaška: številke v turizmu v nebo, denarnice domačinov pa vse bolj prazne - 24ur.com",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1saWJFTHFrMHZ5LXZPMjlRREsyS0RXSHQ4SDRpbkpGYmxsX3hsVmdEUExIbE1zNDlyMXpOQlBpa1hhOC1KcmRUdE9MUVBDRm5ock4wVmxCQjJlNVZ1RUEtNlNR?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-10T13:40:24+02:00",
+    "updatedAt": "2026-10-10T13:40:24+02:00"
+  },
+
+  {
     "id": "slovenski-fenomen-grad-ki-ni-bil-nikoli-pozgan-porusen-ali-nacionaliziran-614ea009",
     "title": "Slovenski fenomen: grad, ki ni bil nikoli požgan, porušen ali nacionaliziran",
     "excerpt": "Dediščina: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Slovenski fenomen: grad, ki ni bil nikoli požgan, porušen ali nacionaliziran«.",
