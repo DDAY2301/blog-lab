@@ -10,7 +10,7 @@ from fastapi.responses import HTMLResponse
 from pydantic import BaseModel
 
 from .autofix_v3 import AutoFixV3
-from .autopilot import AutopilotDisabled, AutonomousRepairExecutor
+from .autopilot import AutopilotDisabled, AutonomousRepairExecutor, MAX_CODER_FIX_ATTEMPTS
 from .coder_prompt_v1 import (
     CODER_FIX_PROMPT,
     CODER_FIX_VERSION,
@@ -260,7 +260,7 @@ async def coder_brain():
             "prompt": CODER_FIX_PROMPT,
         },
         "workflow": "inspect -> root cause -> minimal patch -> tests -> bounded coder-fix -> health gate -> branch -> PR",
-        "max_fix_attempts": __import__("manager.autopilot", fromlist=["MAX_CODER_FIX_ATTEMPTS"]).MAX_CODER_FIX_ATTEMPTS,
+        "max_fix_attempts": MAX_CODER_FIX_ATTEMPTS,
         "write_enabled": s.write_enabled,
         "write_policy": "isolated-worktree-tests-health-gate-branch-pr-no-direct-main",
     }
