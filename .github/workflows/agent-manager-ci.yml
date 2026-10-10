@@ -1,0 +1,72 @@
+name: Agent Manager CI
+
+on:
+  pull_request:
+    branches: [main, agent-manager-v1, feature/agent-manager-v3]
+    paths:
+      - "agent-manager/**"
+      - ".github/workflows/agent-manager-ci.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: agent-manager
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: agent-manager/requirements.txt
+
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Compile
+        run: |
+          python -m compileall -q manager run.py
+
+      - name: Tests
+        run: |
+          python -m pytest -q
+
+      - name: Parse PowerShell lifecycle scripts
+        shell: pwsh
+        run: |
+          $failed = $false
+          Get-ChildItem scripts -Filter *.ps1 -Recurse | ForEach-Object {
+            $tokens = $null
+            $errors = $null
+            [void][System.Management.Automation.Language.Parser]::ParseFile($_.FullName, [ref]$tokens, [ref]$errors)
+            if ($errors.Count -gt 0) {
+              Write-Host "::error file=$($_.FullName)::$($errors | Out-String)"
+              $failed = $true
+            }
+          }
+          if ($failed) { exit 1 }
+
+      - name: Scan manager files for obvious committed credentials
+        shell: bash
+        run: |
+          if git grep -I -n -E "(ghp_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|sk-[A-Za-z0-9_-]{20,})" -- agent-manager; then
+            echo "Credential-like material detected in Agent Manager."
+            exit 1
+          fi
+
+      - name: Agent Manager FastAPI import smoke
+        run: |
+          python -c "from manager.service_v3 import app; assert app.title.startswith('Agent Manager'); print(app.version)"
+
+      - name: Legacy import compatibility
+        run: |
+          python -c "from manager.service import app; print(app.version)"
