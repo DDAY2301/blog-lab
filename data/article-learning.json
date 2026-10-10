@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-10T10:23:55+02:00",
-  "loop_count": 4281,
+  "updated_at": "2026-10-10T10:24:47+02:00",
+  "loop_count": 4282,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-10T10:23:32+02:00",
+      "last_learning_run": "2026-10-10T10:24:22+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -39,14 +39,14 @@
         "city-data.com",
         "news.google.com",
         "answers.com",
+        "wallpaperaccess.com",
         "support.microsoft.com",
         "aarp.org",
         "sutterhealth.org",
         "nike.com",
         "amazon.de",
         "blackfriday.com",
-        "set-timer.com",
-        "footlocker.com"
+        "set-timer.com"
       ],
       "source_health": {
         "lonelyplanet.com": {
@@ -69,7 +69,7 @@
           "last_seen": "2026-10-10T10:23:32+02:00",
           "last_title": "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
           "last_provider": "google-news-si",
-          "published": 234533,
+          "published": 234605,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -77,6 +77,13 @@
           "seen": 2,
           "last_seen": "2026-10-04T18:38:06+02:00",
           "last_title": "Answers - The Most Trusted Place for Answering Life's Questions",
+          "last_provider": "bing-web"
+        },
+        "wallpaperaccess.com": {
+          "score": 2.425,
+          "seen": 2,
+          "last_seen": "2026-10-10T10:24:22+02:00",
+          "last_title": "Awesome Warm Autumn Wallpapers - WallpaperAccess",
           "last_provider": "bing-web"
         },
         "support.microsoft.com": {
@@ -218,26 +225,21 @@
           "last_seen": "2026-09-28T14:24:02+02:00",
           "last_title": "How to Enable or Disable Cortana in Windows 11",
           "last_provider": "bing-web"
-        },
-        "psychologytoday.com": {
-          "score": 0.77,
-          "seen": 1,
-          "last_seen": "2026-10-08T03:24:13+02:00",
-          "last_title": "Sutter Center for Psychiatry, Treatment Center, Sacramento, CA, 95826 | Psychology Today",
-          "last_provider": "bing-web"
         }
       },
-      "current_source_count": 9,
+      "current_source_count": 3,
       "example_titles": {
-        "news.google.com": [
-          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
-          "*〜?[[Živý=šport!!]++] Škotska Slovenija prenos 26. september 2026 - Business and Investment Development Agency - CzechInvest",
-          "Kot v sanjah: Slovenija že drugič v dveh tednih evropski prvak! (VIDEO) - Šport TV"
+        "wallpapers.com": [
+          "Cozy Fall Desktop Wallpapers"
+        ],
+        "wallpaperaccess.com": [
+          "Awesome Cozy Fall Desktop Wallpapers - WallpaperAccess",
+          "Awesome Warm Autumn Wallpapers - WallpaperAccess"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-10T10:23:40+02:00",
+      "last_learning_run": "2026-10-10T10:24:35+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -275,7 +277,7 @@
           "last_seen": "2026-10-10T10:23:40+02:00",
           "last_title": "Golob pravi: Slovenija potrebuje široko koalicijo. NSi ne bo na sestanek - Svet24.si",
           "last_provider": "google-news-si",
-          "published": 259029,
+          "published": 259109,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -356,17 +358,11 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 16,
-      "example_titles": {
-        "news.google.com": [
-          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
-          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer",
-          "Golob: Ne predstavljam si, da bi kdo želel živeti v državi, v kateri bi politika imela pooblastila policije - N1 Slovenija"
-        ]
-      }
+      "current_source_count": 0,
+      "example_titles": {}
     },
     "aktualno": {
-      "last_learning_run": "2026-10-10T10:23:55+02:00",
+      "last_learning_run": "2026-10-10T10:24:47+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -425,7 +421,7 @@
           "last_seen": "2026-10-10T10:23:55+02:00",
           "last_title": "Aktualno - trg motociklov v Sloveniji: Vsak četrti je že kitajec Novice - AVTO FOKUS -",
           "last_provider": "google-news-si",
-          "published": 224017,
+          "published": 224054,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "reddit.com": {
@@ -454,7 +450,7 @@
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 4183,
+          "published": 4184,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
@@ -464,12 +460,12 @@
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 4183,
+          "published": 4184,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 4183,
+          "published": 4184,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
@@ -509,7 +505,7 @@
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 4183,
+          "published": 4184,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
@@ -546,12 +542,10 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 23,
+      "current_source_count": 1,
       "example_titles": {
-        "news.google.com": [
-          "(AKTUALNO) Varuhinja človekovih pravic Simona Drenik Bavdek: Pravica do dostojnega pokopa temeljna človekova pravica - Demokracija",
-          "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
-          "Ko so bile ZDA stare toliko kot danes Slovenija, so bile na robu razpada - Zanima.me"
+        "finance.yahoo.com": [
+          "Tesla, Inc. (TSLA) Stock Price, News, Quote & History - Yahoo Finance"
         ]
       }
     }
