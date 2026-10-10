@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-10T09:54:24+02:00",
-  "loop_count": 4278,
+  "updated_at": "2026-10-10T10:08:51+02:00",
+  "loop_count": 4279,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-10T09:54:04+02:00",
+      "last_learning_run": "2026-10-10T10:08:31+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -65,11 +65,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 111252,
-          "last_seen": "2026-10-10T09:54:04+02:00",
+          "seen": 111261,
+          "last_seen": "2026-10-10T10:08:31+02:00",
           "last_title": "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
           "last_provider": "google-news-si",
-          "published": 234317,
+          "published": 234389,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-10T09:54:16+02:00",
+      "last_learning_run": "2026-10-10T10:08:41+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -271,11 +271,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 116824,
-          "last_seen": "2026-10-10T09:54:16+02:00",
+          "seen": 116840,
+          "last_seen": "2026-10-10T10:08:41+02:00",
           "last_title": "Golob pravi: Slovenija potrebuje široko koalicijo. NSi ne bo na sestanek - Svet24.si",
           "last_provider": "google-news-si",
-          "published": 258789,
+          "published": 258869,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -366,7 +366,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-10T09:54:24+02:00",
+      "last_learning_run": "2026-10-10T10:08:51+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -421,11 +421,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 121192,
-          "last_seen": "2026-10-10T09:54:24+02:00",
-          "last_title": "Aktualno - trg motociklov v Sloveniji: Vsak četrti je že kitajec Novice - AVTO FOKUS -",
+          "seen": 121214,
+          "last_seen": "2026-10-10T10:08:51+02:00",
+          "last_title": "Vreme se bo danes hitro obrnilo: nevihte bodo zajele večji del Slovenije, na Primorskem tudi burja - Dnevne Novice",
           "last_provider": "google-news-si",
-          "published": 223906,
+          "published": 223943,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "reddit.com": {
@@ -454,7 +454,7 @@
         },
         "definitions.net": {
           "score": 2.498,
-          "published": 4180,
+          "published": 4181,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "differentiatedteaching.com": {
@@ -464,12 +464,12 @@
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 4180,
+          "published": 4181,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 4180,
+          "published": 4181,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
@@ -509,7 +509,7 @@
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 4180,
+          "published": 4181,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
@@ -546,11 +546,11 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 23,
+      "current_source_count": 22,
       "example_titles": {
         "news.google.com": [
-          "(AKTUALNO) Varuhinja človekovih pravic Simona Drenik Bavdek: Pravica do dostojnega pokopa temeljna človekova pravica - Demokracija",
           "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
+          "Pred Stevanovićevim obiskom v Srbiji znova aktualno vprašanje statusa srbske skupnosti v Sloveniji - Siol.net",
           "Ko so bile ZDA stare toliko kot danes Slovenija, so bile na robu razpada - Zanima.me"
         ]
       }
