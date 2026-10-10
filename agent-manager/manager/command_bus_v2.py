@@ -13,6 +13,7 @@ from .ai_router_v4 import AIRouterV4
 from .artifacts_v2 import ArtifactStoreV2
 from .capabilities_v2 import CapabilityRegistryV2
 from .db_v3 import StoreV3, utcnow
+from .manager_prompt_v5 import MANAGER_PROMPT_VERSION, planner_prompt, prompt_digest
 from .remote_v4 import _dispatch
 
 BLOG_LAB_BASE = os.getenv("BLOG_LAB_WORKER_URL", "https://blog-lab.dan-grmusa.workers.dev").rstrip("/")
@@ -131,17 +132,10 @@ class UniversalCommandBusV2:
             }
 
         artifact_view = [self.artifacts.public_view(x) for x in (artifacts or [])]
-        system = (
-            "You are the planner for a local multi-agent command bus. "
-            "Split the operator request into the smallest useful executable steps. "
-            "Use only registered targets. Independent steps may have no dependencies; "
-            "dependent steps must name earlier step ids. Never invent credentials or shell commands. "
-            "Return JSON only with shape: "
-            "{\"summary\":\"...\",\"steps\":[{\"id\":\"s1\",\"target\":\"REGISTERED_TARGET_ID_OR_all\","
-            "\"command\":\"...\",\"depends_on\":[],\"use_artifacts\":true}]}. "
-            "The target value must exactly match one registered agent id or all."
-        )
+        system = planner_prompt(max_steps=MAX_STEPS, concurrency=COMMAND_CONCURRENCY)
         user = (
+            f"MANAGER_PROMPT_VERSION: {MANAGER_PROMPT_VERSION}\n"
+            f"MANAGER_PROMPT_DIGEST: {prompt_digest()}\n\n"
             f"REGISTERED AGENTS:\n{self.registry.planner_text()}\n\n"
             f"ARTIFACTS:\n{json.dumps(artifact_view, ensure_ascii=False)}\n\n"
             f"OPERATOR REQUEST:\n{command[:12000]}"
@@ -403,7 +397,14 @@ class UniversalCommandBusV2:
             "job_started",
             explicit_target or "auto",
             "running",
-            {"job_id": job_id, "planner": planner, "steps": len(plan["steps"]), "artifacts": len(artifact_rows)},
+            {
+                "job_id": job_id,
+                "planner": planner,
+                "manager_prompt_version": MANAGER_PROMPT_VERSION,
+                "manager_prompt_digest": prompt_digest(),
+                "steps": len(plan["steps"]),
+                "artifacts": len(artifact_rows),
+            },
         )
 
         pending = {step["id"]: dict(step) for step in plan["steps"]}
@@ -467,6 +468,8 @@ class UniversalCommandBusV2:
             "job_id": job_id,
             "status": status,
             "planner": planner,
+            "manager_prompt_version": MANAGER_PROMPT_VERSION,
+            "manager_prompt_digest": prompt_digest(),
             "plan_summary": plan.get("summary"),
             "steps": ordered,
             "artifacts": [self.artifacts.public_view(x) for x in artifact_rows],
