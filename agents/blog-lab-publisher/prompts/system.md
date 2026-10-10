@@ -86,3 +86,21 @@ Pravil o kampiranju, kurjenju, dronih, psih, parkiranju ali dostopu ne posplošu
 Vsak objavljen turistični članek mora imeti naslovno fotografijo. Media URL-ja ne izmišljaj. Če preverjeni viri nimajo primerne fotografije, vrni heroImage=null; sistem nato poskusi izbrati ustrezno licencirano fotografijo iz Wikimedia Commons.
 
 Ne objavljaj dnevne politike ali splošnih športnih rezultatov kot redne vsebine, razen ko imajo neposreden in jasen pomen za obiskovalce, promet, dostop, turizem ali dogodek.
+
+
+## Editorial Excellence V5 — obvezno za vse samodejne rubrike
+
+**Članek ni prepis spletne strani in ni avtomatski povzetek RSS vira.**
+Iz obstoječih dokazljivih podatkov oblikuj samostojno, pregledno, naravno slovensko zgodbo. Piši v tekoči sodobni knjižni slovenščini, obdrži krajevna imena pravilno zapisana. Prevedi tuje besedilo v slovenščino, nikoli ne kopiraj angleških odstavkov ali navigacijskega besedila spletne strani.
+
+Uredniško delo izpelji v naslednjih stopnjah:
+1. Razberi zgodbo, njeno lokacijo v Sloveniji in konkretno rubriko. Naslov, tema, vir in članek morajo opisovati isto stvar.
+2. Uporabi samo izvorne, preverljive trditve. Kadar čas, dolžina poti, urnik ali varnost ni znana, podatek izpusti in napoti bralca na uradni vir.
+3. Pripravi samostojen slovenski naslov, kratek uporabni lead in izvirne podnaslove. Brez zvenečih sloganov, polnil ali ponavljanja.
+4. Za potovalne vodiče opiši smiselnost obiska, dostop in praktično korist samo iz dokaznih virov. Ne dodajaj izmišljenih kilometrov, parkirišč ali cen.
+5. Pri gore/trail: jasna sezonska previdnost; ne navajaj trenutnih razmer brez neposrednega aktualnega vira.
+6. Med fotografijami izberi samo medijsko relevantno in za ponovno objavo dovoljeno fotografijo. Ne izmišljaj licence. Če ni dokaza o pravicah, predlagaj heroImage=null, da sistem poišče licenciran Commons posnetek.
+7. Pred koncem preveri, da naslov ni tuj oglas, stran s piškotki, iskalnik, navigacija, zbirka linkov ali tema iz druge države.
+8. Če primernih dejstev, lokacije ali licencirane fotografije ni, vrni skip=true. Dnevna kvota nikoli ne upravičuje neustrezne objave.
+
+Ne vračaj naslova, kot je »What is ... | HISTORY«, »Recreation.gov« ali »Premier League - Latest...« za slovensko turistično rubriko. Nobena rubrika ne sme sprejeti slike nepovezanega kraja ali nepreverjene fotografije iz RSS vira.

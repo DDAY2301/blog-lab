@@ -3,7 +3,7 @@
   right: 18px;
   bottom: 18px;
   z-index: 80;
-  width: min(340px, calc(100vw - 28px));
+  width: min(280px, calc(100vw - 28px));
   padding: 14px;
   border: 1px solid color-mix(in srgb, var(--line, #d6dde5) 82%, transparent);
   border-radius: 18px;
@@ -17,8 +17,8 @@
 
 .language-tools.is-collapsed {
   width: auto;
-  min-width: 118px;
-  padding: 10px 11px;
+  min-width: 0;
+  padding: 7px 9px;
   box-shadow: 0 12px 34px rgba(21, 38, 58, .14);
 }
 
@@ -203,5 +203,34 @@ body > .skiptranslate {
   .language-tools *,
   .language-tools {
     transition: none !important;
+  }
+}
+
+/* Non-obstructive language control: expanded only when requested. */
+.language-tools.is-collapsed .language-tools__topline {
+  font-size: 10px;
+  letter-spacing: .05em;
+}
+.language-tools.is-collapsed .language-tools__top-actions strong {
+  min-width: 26px;
+  height: 24px;
+}
+.language-tools:not(.is-collapsed) {
+  max-height: min(430px, 80vh);
+  overflow-y: auto;
+}
+.language-tools:focus-within {
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--green, #176b45) 35%, transparent),
+              0 16px 42px rgba(21, 38, 58, .15);
+}
+.language-tools button:focus-visible {
+  outline: 2px solid var(--green, #176b45);
+  outline-offset: 2px;
+}
+@media (max-width: 760px) {
+  .language-tools:not(.is-collapsed) {
+    left: auto;
+    width: min(280px, calc(100vw - 24px));
+    max-width: calc(100vw - 24px);
   }
 }
