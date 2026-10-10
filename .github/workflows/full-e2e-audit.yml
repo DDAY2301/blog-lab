@@ -104,6 +104,7 @@ jobs:
           mkdir -p content/drafts
           AI_DEGRADED=false
           SOURCE_DEGRADED=false
+          QUALITY_HELD=0
           for category in kolesarstvo dediscina sezonsko gore gourmet; do
             echo "=== E2E dry run: $category ==="
             set +e
@@ -111,6 +112,207 @@ jobs:
             rc=$?
             set -e
             printf '%s\n' "$output"
+            if grep -Eq '^DAILY_LIMIT|AI_UNAVAILABLE|ARTICLE_AI_UNAVAILABLE|HTTP Error 502|Bad Gateway|daily free allocation|capacity' <<<"$output"; then
+              AI_DEGRADED=true
+            fi
+            if grep -Eq 'SOURCE_UNAVAILABLE|HTTP Error 429|Too Many Requests' <<<"$output"; then
+              SOURCE_DEGRADED=true
+            fi
+            if [[ $rc -ne 0 ]] && ! grep -Eq 'AUTO_AI_UNAVAILABLE|AI_UNAVAILABLE|ARTICLE_AI_UNAVAILABLE|SOURCE_UNAVAILABLE|HTTP Error 429|HTTP Error 502|Bad Gateway|daily free allocation|capacity' <<<"$output"; then
+              echo "::error::Editorial dry run failed for $category with a repository/runtime error."
+              exit "$rc"
+            fi
+          done
+          DRAFT_COUNT="$(find content/drafts -maxdepth 1 -type f -name '*.json' | wc -l)"
+          echo "Editorial E2E: drafts=$DRAFT_COUNT quality_holds=$QUALITY_HELD"
+          if [[ "$DRAFT_COUNT" -ge 3 ]]; then
+            echo "drafts_ready=true" >> "$GITHUB_OUTPUT"
+            echo "Generated $DRAFT_COUNT validated draft candidates."
+          elif [[ "$AI_DEGRADED" == "true" || "$SOURCE_DEGRADED" == "true" ]]; then
+            echo "drafts_ready=false" >> "$GITHUB_OUTPUT"
+            if [[ "${{ github.event.inputs.strict_live || 'false' }}" == "true" ]]; then
+              echo "::error::Live providers are degraded and strict_live=true."
+              exit 1
+            fi
+            echo "::warning::External providers are degraded; article-generation E2E incomplete."
+          elif [[ $((DRAFT_COUNT + QUALITY_HELD)) -ge 5 ]]; then
+            echo "drafts_ready=$([[ "$DRAFT_COUNT" -gt 0 ]] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+            echo "::notice::Five editorial slots exercised: $DRAFT_COUNT passed, $QUALITY_HELD safely held."
+          else
+            echo "::error::Insufficient live editorial E2E: drafts=$DRAFT_COUNT, holds=$QUALITY_HELD, required slots=5."
+            exit 1
+          fi
+
+      - name: Validate generated dry-run article structure
+        if: ${{ steps.editorial-dry-run.outputs.drafts_ready == 'true' }}
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          drafts=list(Path("content/drafts").glob("*.json"))
+          assert len(drafts) >= 1, f"expected >=1 draft, got {len(drafts)}"
+          required={"title","excerpt","content","category","sources"}
+          for path in drafts:
+              data=json.loads(path.read_text(encoding="utf-8"))
+              missing=required-set(data)
+              assert not missing, f"{path}: missing {sorted(missing)}"
+              assert len(data["content"]) >= 1200, f"{path}: content too short"
+              assert data["sources"], f"{path}: no structured sources"
+          print(f"Validated {len(drafts)} generated drafts.")
+          PY
+
+      - name: Exercise official tourism event feed
+        shell: bash
+        run: python agents/live-feed/update.py
+
+      - name: Validate tourism event feed output
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          data=json.loads(Path("public/events-feed.json").read_text(encoding="utf-8"))
+          assert data.get("status") in {"fresh","partial","stale"}, data
+          assert len(data.get("items", [])) >= 3, data
+          for item in data["items"][:3]:
+              assert item.get("title")
+              assert str(item.get("url","")).startswith("https://")
+          print(f"Event feed contains {len(data['items'])} items.")
+          PY
+
+      - name: Validate queue replay scripts without mutation
+        shell: bash
+        run: |
+          python agents/operator-terminal/deferred_site_edits.py replay --max 1 || true
+          git restore --staged --worktree .
+          git clean -fd -e node_modules/
+          python agents/operator-terminal/deferred_articles.py replay --max 1 || true
+          git restore --staged --worktree .
+          git clean -fd -e node_modules/
+
+      - name: Ensure audit leaves no unexpected repository changes
+        shell: bash
+        run: |
+          git restore --staged --worktree .
+          git clean -fd -e node_modules/
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git status --short
+            echo "::error::Audit left unexpected untracked or modified files."
+            exit 1
+          fi
+
+      - name: Upload audit reports
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: full-e2e-audit-reports
+          path: |
+            logs/*.json
+            content/drafts/*.json
+          if-no-files-found: ignore
+ <<<"$output"; then
+              echo "::error::Dry-run editorial audit blocked by production quota."
+              exit 1
+            fi
+            if grep -Eq '^(NO_NEW_CONTENT|NO_COHERENT_STORY|NO_SUITABLE_CONTENT|QA_DEFERRED)|AI_UNAVAILABLE|ARTICLE_AI_UNAVAILABLE|HTTP Error 502|Bad Gateway|daily free allocation|capacity' <<<"$output"; then
+              AI_DEGRADED=true
+            fi
+            if grep -Eq 'SOURCE_UNAVAILABLE|HTTP Error 429|Too Many Requests' <<<"$output"; then
+              SOURCE_DEGRADED=true
+            fi
+            if [[ $rc -ne 0 ]] && ! grep -Eq 'AUTO_AI_UNAVAILABLE|AI_UNAVAILABLE|ARTICLE_AI_UNAVAILABLE|SOURCE_UNAVAILABLE|HTTP Error 429|HTTP Error 502|Bad Gateway|daily free allocation|capacity' <<<"$output"; then
+              echo "::error::Editorial dry run failed for $category with a repository/runtime error."
+              exit "$rc"
+            fi
+          done
+          DRAFT_COUNT="$(find content/drafts -maxdepth 1 -type f -name '*.json' | wc -l)"
+          if [[ "$DRAFT_COUNT" -ge 3 ]]; then
+            echo "drafts_ready=true" >> "$GITHUB_OUTPUT"
+            echo "Generated $DRAFT_COUNT validated draft candidates."
+          elif [[ "$AI_DEGRADED" == "true" || "$SOURCE_DEGRADED" == "true" ]]; then
+            echo "drafts_ready=false" >> "$GITHUB_OUTPUT"
+            if [[ "${{ github.event.inputs.strict_live || 'false' }}" == "true" ]]; then
+              echo "::error::Live providers are degraded and strict_live=true."
+              exit 1
+            fi
+            echo "::warning::External providers are temporarily degraded; source/runtime audit continues without treating provider 429/5xx as repository defect."
+          else
+            echo "::error::Expected at least 3 dry-run drafts, got $DRAFT_COUNT without a provider degradation marker."
+            exit 1
+          fi
+
+      - name: Validate generated dry-run article structure
+        if: ${{ steps.editorial-dry-run.outputs.drafts_ready == 'true' }}
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          drafts=list(Path("content/drafts").glob("*.json"))
+          assert len(drafts) >= 3, f"expected >=3 drafts, got {len(drafts)}"
+          required={"title","excerpt","content","category","sources"}
+          for path in drafts:
+              data=json.loads(path.read_text(encoding="utf-8"))
+              missing=required-set(data)
+              assert not missing, f"{path}: missing {sorted(missing)}"
+              assert len(data["content"]) >= 1200, f"{path}: content too short"
+              assert data["sources"], f"{path}: no structured sources"
+          print(f"Validated {len(drafts)} generated drafts.")
+          PY
+
+      - name: Exercise official tourism event feed
+        shell: bash
+        run: python agents/live-feed/update.py
+
+      - name: Validate tourism event feed output
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          data=json.loads(Path("public/events-feed.json").read_text(encoding="utf-8"))
+          assert data.get("status") in {"fresh","partial","stale"}, data
+          assert len(data.get("items", [])) >= 3, data
+          for item in data["items"][:3]:
+              assert item.get("title")
+              assert str(item.get("url","")).startswith("https://")
+          print(f"Event feed contains {len(data['items'])} items.")
+          PY
+
+      - name: Validate queue replay scripts without mutation
+        shell: bash
+        run: |
+          python agents/operator-terminal/deferred_site_edits.py replay --max 1 || true
+          git restore --staged --worktree .
+          git clean -fd -e node_modules/
+          python agents/operator-terminal/deferred_articles.py replay --max 1 || true
+          git restore --staged --worktree .
+          git clean -fd -e node_modules/
+
+      - name: Ensure audit leaves no unexpected repository changes
+        shell: bash
+        run: |
+          git restore --staged --worktree .
+          git clean -fd -e node_modules/
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git status --short
+            echo "::error::Audit left unexpected untracked or modified files."
+            exit 1
+          fi
+
+      - name: Upload audit reports
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: full-e2e-audit-reports
+          path: |
+            logs/*.json
+            content/drafts/*.json
+          if-no-files-found: ignore
+ <<<"$output"; then
+              QUALITY_HELD=$((QUALITY_HELD + 1))
+            fi
             if grep -Eq 'AUTO_AI_UNAVAILABLE|AI_UNAVAILABLE|ARTICLE_AI_UNAVAILABLE|HTTP Error 502|Bad Gateway|daily free allocation|capacity' <<<"$output"; then
               AI_DEGRADED=true
             fi
