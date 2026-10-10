@@ -23,6 +23,7 @@ from services.state import load_json, atomic_json
 from services.learning import learning_source_ok, rank_sources_with_learning
 from services.article_templates import apply_article_template, template_prompt
 from services.media_library import commons_image_for
+from services.editorial_guard import validate_automatic_story, CATEGORY_SIGNALS, SLOVENIA_SIGNALS, fold, _has_any
 
 STATE = BASE / "data/agent-state.json"
 CONTROL = BASE / "data/agent-control.json"
@@ -375,8 +376,15 @@ def automatic_source_usable(item: dict, category: str, *, trusted_primary: bool 
     if _automatic_generic_result(item):
         return False
 
-    # The configured category RSS is already a trusted scoped search. Global
-    # discovery needs an additional semantic category gate.
+    # Google/aggregator queries frequently return unrelated pages despite a
+    # Slovenia-themed search term. Require evidence in the RESULT itself.
+    if category in CATEGORY_SIGNALS:
+        raw_evidence = fold(combined)
+        if not _has_any(raw_evidence, CATEGORY_SIGNALS[category]):
+            return False
+        if not _has_any(raw_evidence, SLOVENIA_SIGNALS):
+            return False
+
     if not trusted_primary:
         provider = str(item.get("provider") or "").lower()
         localized_search = provider == "google-news-si"
@@ -599,7 +607,7 @@ def main():
     ap.add_argument("--force", action="store_true")
     ap.add_argument("--manual", action="store_true", help="Manual/editorial request; does not consume scheduled daily quota")
     ap.add_argument("--scheduled-slot", default="", help="Resolved automatic schedule slot id for catch-up tracking")
-    ap.add_argument("--category", choices=sorted(VALID_CATEGORIES), default=os.getenv("RUN_CATEGORY", "aktualno"))
+    ap.add_argument("--category", choices=sorted(VALID_CATEGORIES), default=os.getenv("RUN_CATEGORY", "sezonsko"))
     ap.add_argument("--topic", default="")
     ap.add_argument("--output-category", default="")
     args = ap.parse_args()
@@ -800,6 +808,9 @@ def main():
 
     article["id"] = slugify(article.get("title", "")) + "-" + hashlib.sha1(used_for_article[0]["url"].encode()).hexdigest()[:8]
     errors = validate(article, min_chars, max_chars, titles, used_urls, allowed_urls)
+    if not manual_request:
+        errors.extend(validate_automatic_story(article, evidence_pool, args.category))
+        errors = list(dict.fromkeys(errors))
     if manual_request and args.topic.strip():
         errors.extend(manual_topic_alignment_errors(args.topic, article, evidence_pool))
         errors = list(dict.fromkeys(errors))
@@ -815,6 +826,9 @@ def main():
             if not repaired.get("skip"):
                 repaired["id"] = slugify(repaired.get("title", "")) + "-" + hashlib.sha1(used_for_article[0]["url"].encode()).hexdigest()[:8]
                 repaired_errors = validate(repaired, min_chars, max_chars, titles, used_urls, allowed_urls)
+                if not manual_request:
+                    repaired_errors.extend(validate_automatic_story(repaired, evidence_pool, args.category))
+                    repaired_errors = list(dict.fromkeys(repaired_errors))
                 if manual_request and args.topic.strip():
                     repaired_errors.extend(manual_topic_alignment_errors(args.topic, repaired, evidence_pool))
                     repaired_errors = list(dict.fromkeys(repaired_errors))
@@ -864,6 +878,9 @@ def main():
                         used_urls,
                         allowed_urls,
                     )
+                    if not manual_request:
+                        repaired_errors.extend(validate_automatic_story(repaired, evidence_pool, args.category))
+                        repaired_errors = list(dict.fromkeys(repaired_errors))
                     if manual_request and args.topic.strip():
                         repaired_errors.extend(manual_topic_alignment_errors(args.topic, repaired, evidence_pool))
                         repaired_errors = list(dict.fromkeys(repaired_errors))
