@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-10T20:44:54+02:00",
-  "loop_count": 4389,
+  "updated_at": "2026-10-10T20:46:34+02:00",
+  "loop_count": 4390,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-10T20:44:37+02:00",
+      "last_learning_run": "2026-10-10T20:46:13+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -65,11 +65,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 112156,
-          "last_seen": "2026-10-10T20:44:37+02:00",
+          "seen": 112165,
+          "last_seen": "2026-10-10T20:46:13+02:00",
           "last_title": "Premier Janša ob ogledu finala mladih košarkarjev udaril po RTV Slovenija: »Plačujemo vas več kot Inštitut Jožef Stefan!« - Slovenske novice",
           "last_provider": "google-news-si",
-          "published": 242309,
+          "published": 242381,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-10T20:44:45+02:00",
+      "last_learning_run": "2026-10-10T20:46:23+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -271,11 +271,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 118600,
-          "last_seen": "2026-10-10T20:44:45+02:00",
+          "seen": 118616,
+          "last_seen": "2026-10-10T20:46:23+02:00",
           "last_title": "Golob pravi: Slovenija potrebuje široko koalicijo. NSi ne bo na sestanek - Svet24.si",
           "last_provider": "google-news-si",
-          "published": 267669,
+          "published": 267749,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -366,7 +366,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-10T20:44:54+02:00",
+      "last_learning_run": "2026-10-10T20:46:34+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -430,11 +430,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 123675,
-          "last_seen": "2026-10-10T20:44:54+02:00",
+          "seen": 123698,
+          "last_seen": "2026-10-10T20:46:34+02:00",
           "last_title": "Aktualno - trg motociklov v Sloveniji: Vsak četrti je že kitajec Novice - AVTO FOKUS -",
           "last_provider": "google-news-si",
-          "published": 227829,
+          "published": 227864,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "reddit.com": {
@@ -562,12 +562,6 @@
   },
   "recent_articles": [
     {
-      "id": "what-is-juneteenth-history-fcb6fddd",
-      "title": "What Is Juneteenth? | HISTORY",
-      "category": "Gourmet",
-      "createdAt": "2026-10-10T19:25:04+02:00"
-    },
-    {
       "id": "guardian-pohodnisko-pot-v-slovenskih-alpah-razglasil-za-eno-najboljsih-v-evropi-03bbfda9",
       "title": "Guardian pohodniško pot v slovenskih Alpah razglasil za eno najboljših v Evropi",
       "category": "Gore & traili",
@@ -598,28 +592,10 @@
       "createdAt": "2026-10-10T07:40:25+02:00"
     },
     {
-      "id": "catering-lulu-s-mexican-food-751228e3",
-      "title": "Catering — LuLu's Mexican Food",
-      "category": "Gourmet",
-      "createdAt": "2026-10-09T19:28:58+02:00"
-    },
-    {
-      "id": "recreation-gov-21adf42a",
-      "title": "Recreation.gov",
-      "category": "Gore & traili",
-      "createdAt": "2026-10-09T16:57:32+02:00"
-    },
-    {
       "id": "rdeci-alarm-za-hrvaski-turizem-po-junijskem-padcu-se-zacenja-bitka-za-julijske-in-avgustov-792c4d39",
       "title": "Rdeči alarm za hrvaški turizem: Po junijskem padcu se začenja bitka za julijske in avgustovske goste",
       "category": "Sezonsko",
       "createdAt": "2026-10-09T13:39:23+02:00"
-    },
-    {
-      "id": "premier-league-football-latest-news-results-stats-transfers-bbc-sport-59f1acb2",
-      "title": "Premier League Football - Latest news, results, stats & transfers - BBC Sport",
-      "category": "Dediščina",
-      "createdAt": "2026-10-09T10:54:00+02:00"
     },
     {
       "id": "iski-vintgar-day-trip-from-ljubljana",
@@ -632,6 +608,30 @@
       "title": "Aidan Cerar: zakaj bi morali gradnjo kolesarskih stez podpirati predvsem vozniki",
       "category": "Kolesarstvo",
       "createdAt": "2026-10-09T07:39:47+02:00"
+    },
+    {
+      "id": "skofja-loka-passion-play-unesco-visitor-guide",
+      "title": "Škofja Loka Passion Play: UNESCO Heritage Beyond the Performance",
+      "category": "Vodniki",
+      "createdAt": "2026-10-08T15:01:23+02:00"
+    },
+    {
+      "id": "slovenski-turizem-kljub-negotovosti-racuna-na-uspesno-sezono-895ff827",
+      "title": "Slovenski turizem kljub negotovosti računa na uspešno sezono",
+      "category": "Sezonsko",
+      "createdAt": "2026-10-08T13:39:47+02:00"
+    },
+    {
+      "id": "slovenia-history-geography-people-britannica-ff6791f3",
+      "title": "Slovenia | History, Geography, & People | Britannica",
+      "category": "Dediščina",
+      "createdAt": "2026-10-08T10:53:51+02:00"
+    },
+    {
+      "id": "napoleons-ljubljana-illyrian-provinces-history-walk",
+      "title": "Napoleon’s Ljubljana: The Illyrian Provinces History Walk",
+      "category": "Dediščina",
+      "createdAt": "2026-10-08T08:56:22+02:00"
     }
   ],
   "recent_failures": [
