@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-10T13:40:35+02:00",
-  "loop_count": 4310,
+  "updated_at": "2026-10-10T13:41:24+02:00",
+  "loop_count": 4311,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-10T13:40:13+02:00",
+      "last_learning_run": "2026-10-10T13:41:03+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -65,11 +65,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 111512,
-          "last_seen": "2026-10-10T13:40:13+02:00",
+          "seen": 111520,
+          "last_seen": "2026-10-10T13:41:03+02:00",
           "last_title": "Kje gledati finale košarkarskega EP med Slovenci in Italijani? Televizijski prenos bo! - Dnevnik",
           "last_provider": "google-news-si",
-          "published": 236621,
+          "published": 236693,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-10T13:40:25+02:00",
+      "last_learning_run": "2026-10-10T13:41:13+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -271,11 +271,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 117330,
-          "last_seen": "2026-10-10T13:40:25+02:00",
+          "seen": 117347,
+          "last_seen": "2026-10-10T13:41:13+02:00",
           "last_title": "Golob pravi: Slovenija potrebuje široko koalicijo. NSi ne bo na sestanek - Svet24.si",
           "last_provider": "google-news-si",
-          "published": 261349,
+          "published": 261429,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -366,7 +366,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-10T13:40:35+02:00",
+      "last_learning_run": "2026-10-10T13:41:24+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -421,11 +421,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 121904,
-          "last_seen": "2026-10-10T13:40:35+02:00",
+          "seen": 121927,
+          "last_seen": "2026-10-10T13:41:24+02:00",
           "last_title": "Aktualno - trg motociklov v Sloveniji: Vsak četrti je že kitajec Novice - AVTO FOKUS -",
           "last_provider": "google-news-si",
-          "published": 225064,
+          "published": 225099,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "reddit.com": {
@@ -464,12 +464,12 @@
         },
         "en.wiktionary.org": {
           "score": 2.498,
-          "published": 4212,
+          "published": 4213,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "genecards.org": {
           "score": 2.498,
-          "published": 4212,
+          "published": 4213,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "kachelmannwetter.com": {
@@ -509,7 +509,7 @@
         },
         "youtube.com": {
           "score": 2.498,
-          "published": 4212,
+          "published": 4213,
           "last_output_id": "what-does-potem-mean-9df2e44a"
         },
         "zhihu.com": {
@@ -557,6 +557,12 @@
     }
   },
   "recent_articles": [
+    {
+      "id": "video-n1-podkast-s-suzano-lovec-slovenija-je-lepse-delala-z-biseri-kot-hrvaska-metroplay-412e6a21",
+      "title": "Video: N1 podkast s Suzano Lovec: Slovenija je lepše delala z biseri kot Hrvaška - Metroplay",
+      "category": "Sezonsko",
+      "createdAt": "2026-10-10T13:40:24+02:00"
+    },
     {
       "id": "slovenski-fenomen-grad-ki-ni-bil-nikoli-pozgan-porusen-ali-nacionaliziran-614ea009",
       "title": "Slovenski fenomen: grad, ki ni bil nikoli požgan, porušen ali nacionaliziran",
@@ -622,12 +628,6 @@
       "title": "Olympic National Park (U.S. National Park Service)",
       "category": "Gore & traili",
       "createdAt": "2026-10-08T17:18:13+02:00"
-    },
-    {
-      "id": "skofja-loka-passion-play-unesco-visitor-guide",
-      "title": "Škofja Loka Passion Play: UNESCO Heritage Beyond the Performance",
-      "category": "Vodniki",
-      "createdAt": "2026-10-08T15:01:23+02:00"
     }
   ],
   "recent_failures": [
