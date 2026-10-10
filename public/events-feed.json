@@ -1,14 +1,12 @@
 {
-  "updatedAt": "2026-10-10T07:06:04+02:00",
+  "updatedAt": "2026-10-10T07:08:24+02:00",
   "status": "fresh",
   "sourcesChecked": [
-    "Kino Šiška",
-    "Ljubljana Castle",
-    "Klub K4",
     "Visit Ljubljana",
-    "Cankarjev dom",
+    "Kino Šiška",
     "Gala Hala",
-    "MGL"
+    "Klub K4",
+    "Cirkus Klub"
   ],
   "sourcesFailed": [],
   "items": [
