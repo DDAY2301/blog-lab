@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-10T08:01:31+02:00",
+  "updatedAt": "2026-10-10T16:31:02+02:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -85,16 +85,6 @@
       "startAt": "2026-10-09T09:00:00+02:00",
       "endAt": "2027-01-10T18:00:00+01:00",
       "description": "Illustrations in Motion is confirmed at Casemate · Ljubljana Castle. Check the official source for any late programme or ticket changes."
-    },
-    {
-      "title": "MIR|ЯOR x Shockwerk x Disco Sour presents Tarkno",
-      "url": "https://www.klub-k4.si/",
-      "source": "Klub K4",
-      "type": "Club · elektronika",
-      "place": "Klub K4 · Ljubljana",
-      "startAt": "2026-10-09T23:00:00+02:00",
-      "endAt": "",
-      "id": "event-05-mir-or-x-shockwerk-x-disco-sour-presents-tarkno"
     },
     {
       "id": "artish-2026-10-10",
