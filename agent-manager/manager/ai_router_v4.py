@@ -298,6 +298,37 @@ class AIRouterV4:
         return await self._start_colibri_for_triage()
 
     async def triage(self, state: str) -> dict[str, Any] | None:
+        # Agent Focus on 8 GB hardware: reuse resident Ollama instead of
+        # spawning Colibri and evicting the currently loaded coding model.
+        # This remains advisory triage only; no repair action is executed here.
+        if os.getenv("AGENT_MANAGER_LOW_MEMORY_MODE", "0") == "1":
+            system = (
+                "You classify operational incidents for a local multi-agent service. "
+                "Return JSON only with severity (P0, P1, P2 or P3), action "
+                "(observe, restart, self_heal or human) and reason. "
+                "Use only supplied evidence. Do not invent outages or recommend "
+                "credential bypass or destructive recovery."
+            )
+            try:
+                async with self._resource_lock:
+                    model, result = await self.ollama.chat_json(system, state[:8000])
+                if not isinstance(result, dict):
+                    return None
+                severity = str(result.get("severity") or "").upper()
+                action = str(result.get("action") or "").lower()
+                if severity not in {"P0", "P1", "P2", "P3"}:
+                    return None
+                if action not in {"observe", "restart", "self_heal", "human"}:
+                    return None
+                return {
+                    "severity": severity,
+                    "action": action,
+                    "reason": str(result.get("reason") or "")[:1200],
+                    "provider": f"ollama/{model}",
+                }
+            except Exception:
+                return None
+
         if self._fail_until.get("colibri", 0) > time.time():
             return None
         questions = {
