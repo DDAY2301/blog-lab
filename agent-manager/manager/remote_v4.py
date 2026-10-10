@@ -159,6 +159,31 @@ async def _fleet_status() -> dict[str, Any]:
     }
 
 
+def _coder_target(command: str) -> str:
+    low = _fold(command)
+    if "project visibility" in low or re.search(r"\bpv\b", low):
+        return "project_visibility"
+    if "bloglab" in low or "blog lab" in low:
+        return "bloglab"
+    return "manager"
+
+
+def _is_coder_command(command: str) -> bool:
+    low = _fold(command)
+    markers = (
+        "coder",
+        "programer",
+        "programmer",
+        "code fix",
+        "popravi kodo",
+        "popravi code",
+        "repair code",
+        "code repair",
+        "programerski",
+    )
+    return any(marker in low for marker in markers)
+
+
 async def _manager_command(command: str) -> dict[str, Any]:
     low = _fold(command)
     if low in {"status", "health", "stanje"} or "preveri status" in low:
@@ -171,6 +196,32 @@ async def _manager_command(command: str) -> dict[str, Any]:
         return {"action": "providers", "result": await _http("GET", f"{MANAGER_BASE}/providers", timeout=20)}
     if "check" in low or "preveri agente" in low or "preglej agente" in low:
         return {"action": "check_all", "result": await _http("POST", f"{MANAGER_BASE}/managed-agents/check", timeout=90)}
+    if _is_coder_command(command):
+        target_id = _coder_target(command)
+        wants_fix = any(
+            marker in low
+            for marker in (
+                "coder fix",
+                "code fix",
+                "popravi kodo",
+                "popravi code",
+                "repair code",
+                "code repair",
+                "izvedi popravek",
+            )
+        )
+        endpoint = "/coder/fix" if wants_fix else "/coder/plan"
+        action = "coder_fix" if wants_fix else "coder_plan"
+        return {
+            "action": action,
+            "target_id": target_id,
+            "result": await _http(
+                "POST",
+                f"{MANAGER_BASE}{endpoint}",
+                json={"target_id": target_id, "objective": command, "base_branch": "main"},
+                timeout=900 if wants_fix else 240,
+            ),
+        }
     if "restart project" in low or "restart visibility" in low or "ponovno zazeni project" in low:
         return {
             "action": "restart_project_visibility",
@@ -191,7 +242,8 @@ async def _manager_command(command: str) -> dict[str, Any]:
         return {"action": "restart_manager", "accepted": True}
     raise RuntimeError(
         "Unsupported Agent Manager command. Use: status, maintenance/preglej in popravi, "
-        "preveri agente, incidenti, modeli/providers, test email, restart Project Visibility, restart manager."
+        "preveri agente, incidenti, modeli/providers, programmer/coder plan, coder fix, "
+        "test email, restart Project Visibility, restart manager."
     )
 
 
