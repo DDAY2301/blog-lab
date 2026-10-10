@@ -30,6 +30,33 @@ const CATEGORY_EMPTY_COPY = {
 
 const starterArticles = [
   {
+    "id": "slovenski-fenomen-grad-ki-ni-bil-nikoli-pozgan-porusen-ali-nacionaliziran-614ea009",
+    "title": "Slovenski fenomen: grad, ki ni bil nikoli požgan, porušen ali nacionaliziran",
+    "excerpt": "Dediščina: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Slovenski fenomen: grad, ki ni bil nikoli požgan, porušen ali nacionaliziran«.",
+    "seoDescription": "Dediščina: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Slovenski fenomen: grad, ki ni bil nikoli požgan, porušen ali nacionaliziran",
+    "content": "**Dediščina, 10. 10. 2026.** Slovenski fenomen: grad, ki ni bil nikoli požgan, porušen ali nacionaliziran Dnevnik\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Dnevnik. Objavljeno: Sun, 19 Apr 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMixAFBVV95cUxOSjNHY1pURWpVNEZpRDNJNUpZcUhhUi1hMkg3T0lYd0hfMlVCeDl5WWFPcXQ1azY5T2hsQkdXbGJiRjh0SEp3bjJRQWVmcFBjdnhYYWNwVm9CZmEzUzNkT3lBSDJ4eThuMGhhUGhEUnpuV3hmYzJxTG9yeWV4UmQ3NWdrd041amlhbUdzVHJ4Q19CODM0X29SdDVPekkyU05Ea0I2eUJDWEw4UXE4Y3FGS2NkeGp4clJGUVRhX2hIS3RvZHZJ?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Dediščina",
+    "author": "Blog Lab Slovenia Publisher",
+    "status": "published",
+    "heroImage": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Tustanj_Castle_Slovenia_-_plaque.JPG/1920px-Tustanj_Castle_Slovenia_-_plaque.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "alt": "Plaque over the entrance to Tuštanj Castle, Zgornji Tuštanj, Municipality of Moravče, Slovenia",
+      "caption": "Doremo · Wikimedia Commons · CC BY-SA 3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tustanj_Castle_Slovenia_-_plaque.JPG"
+    },
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Dnevnik — Slovenski fenomen: grad, ki ni bil nikoli požgan, porušen ali nacionaliziran - Dnevnik",
+        "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOSjNHY1pURWpVNEZpRDNJNUpZcUhhUi1hMkg3T0lYd0hfMlVCeDl5WWFPcXQ1azY5T2hsQkdXbGJiRjh0SEp3bjJRQWVmcFBjdnhYYWNwVm9CZmEzUzNkT3lBSDJ4eThuMGhhUGhEUnpuV3hmYzJxTG9yeWV4UmQ3NWdrd041amlhbUdzVHJ4Q19CODM0X29SdDVPekkyU05Ea0I2eUJDWEw4UXE4Y3FGS2NkeGp4clJGUVRhX2hIS3RvZHZJ?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-10T10:45:43+02:00",
+    "updatedAt": "2026-10-10T10:45:43+02:00"
+  },
+
+  {
     "id": "sveta-ana-hike-from-ljubljana-guide",
     "title": "Sveta Ana Hike: A Short Viewpoint Walk from Ljubljana",
     "excerpt": "Climb from Podpeč Lake to Sveta Ana on an easy marked trail, with public-transport advice, family notes and weather-aware autumn safety.",
