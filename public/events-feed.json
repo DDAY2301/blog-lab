@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-10T16:31:02+02:00",
+  "updatedAt": "2026-10-10T22:09:27+02:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -104,25 +104,6 @@
       "status": "confirmed",
       "lastCheckedAt": "2026-10-10T07:03:43+02:00",
       "description": "ARTish is confirmed at Kongresni trg · Ljubljana. Free entry; check the official source for any late programme changes."
-    },
-    {
-      "id": "tinta-comics-fair-2026-10-10",
-      "title": "TINTA 2026 | Comics Fair",
-      "url": "https://www.kinosiska.si/en",
-      "source": "Kino Šiška",
-      "type": "Visual arts · comics fair",
-      "place": "Kino Šiška · Ljubljana",
-      "startAt": "2026-10-10T10:00:00+02:00",
-      "endAt": null,
-      "price": "Free entry",
-      "languages": [],
-      "touristFriendly": true,
-      "familyFriendly": true,
-      "accessibility": null,
-      "ticketUrl": "https://www.kinosiska.si/en",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-10T07:03:43+02:00",
-      "description": "TINTA 2026 | Comics Fair is confirmed at Kino Šiška · Ljubljana. Check the official source for any late programme or ticket changes."
     },
     {
       "price": null,
@@ -992,6 +973,16 @@
       "startAt": "2026-10-23T23:00:00+02:00",
       "endAt": "",
       "id": "event-53-forestdelic-label-night-klub-k4"
+    },
+    {
+      "title": "DNBKONFERENCA: 17. OBLETNICA @ Gala hala",
+      "url": "https://www.galahala.com/",
+      "source": "Gala Hala",
+      "type": "Koncert · Metelkova",
+      "place": "Gala Hala · AKC Metelkova",
+      "startAt": "2026-10-24T22:00:00+02:00",
+      "endAt": "",
+      "id": "event-52-dnbkonferenca-17-obletnica-gala-hala"
     }
   ]
 }
