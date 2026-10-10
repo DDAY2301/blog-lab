@@ -37,6 +37,7 @@ from agent import (  # noqa: E402
 from services.fallback_writer import build_digest  # noqa: E402
 from services.publisher import publish_to_app, slugify  # noqa: E402
 from services.validator import validate  # noqa: E402
+from services.editorial_guard import validate_automatic_story  # noqa: E402
 from services.learning import learning_source_ok, rank_sources_with_learning  # noqa: E402
 
 
@@ -224,6 +225,8 @@ def run(category: str, scheduled_slot: str = "", dry_run: bool = False) -> int:
     used_urls = {x.get("url") for x in processed if x.get("url")}
     allowed_urls = allowed_source_urls(evidence_pool)
     errors = validate(article, min_chars, max_chars, titles, used_urls, allowed_urls)
+    errors.extend(validate_automatic_story(article, evidence_pool, category))
+    errors = list(dict.fromkeys(errors))
     if errors:
         diag = BASE / "logs" / f"fallback-failed-{now().strftime('%Y%m%d-%H%M%S')}.json"
         diag.parent.mkdir(parents=True, exist_ok=True)
@@ -275,7 +278,7 @@ def run(category: str, scheduled_slot: str = "", dry_run: bool = False) -> int:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--category", choices=["sport", "politika", "aktualno"], required=True)
+    ap.add_argument("--category", choices=sorted(OUTPUT_CATEGORY_LABELS), required=True)
     ap.add_argument("--scheduled-slot", default="")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
