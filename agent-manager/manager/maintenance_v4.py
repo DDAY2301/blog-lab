@@ -14,6 +14,7 @@ from .notifications_v4 import NotificationCenterV4
 from .settings_v3 import SettingsV3
 from .summary_v4 import SummaryReporterV4
 from .gmail_v4 import GmailV4
+from .manager_prompt_v5 import DIAGNOSIS_PROMPT, MANAGER_PROMPT_VERSION, prompt_digest
 from .daily_email_v4 import DailyEmailReporterV4
 
 
@@ -155,13 +156,11 @@ class MaintenanceLoopV4:
             )
 
     async def diagnose_incident(self, incident: dict[str, Any]) -> dict[str, Any]:
-        system = (
-            "You are the local Agent Manager maintenance engineer. "
-            "Use evidence only. Return JSON with summary, likely_cause, safe_actions, confidence. "
-            "Do not propose destructive actions, credential bypasses, or direct production edits."
-        )
+        system = DIAGNOSIS_PROMPT
         user = (
-            "Diagnose this incident and propose reversible recovery steps.\n"
+            f"MANAGER_PROMPT_VERSION: {MANAGER_PROMPT_VERSION}\n"
+            f"MANAGER_PROMPT_DIGEST: {prompt_digest()}\n\n"
+            "Diagnose this incident and propose the smallest safe recovery sequence.\n"
             + str(incident)[:12000]
         )
         model, result = await self.ai.chat_json(system, user)
@@ -170,7 +169,12 @@ class MaintenanceLoopV4:
             "ai_diagnosis",
             str(incident.get("id", "")),
             "completed",
-            {"provider": model, "result": result},
+            {
+                "provider": model,
+                "manager_prompt_version": MANAGER_PROMPT_VERSION,
+                "manager_prompt_digest": prompt_digest(),
+                "result": result,
+            },
         )
         return {"provider": model, "diagnosis": result}
 
