@@ -1,15 +1,12 @@
 {
-  "updatedAt": "2026-10-10T07:03:43+02:00",
+  "updatedAt": "2026-10-10T07:06:04+02:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
-    "Cankarjev dom",
-    "Ljubljana Castle",
-    "MGL",
     "Kino Šiška",
     "Gala Hala",
     "Klub K4",
-    "National Gallery of Slovenia"
+    "Cirkus Klub"
   ],
   "sourcesFailed": [],
   "items": [
@@ -88,6 +85,16 @@
       "startAt": "2026-10-09T09:00:00+02:00",
       "endAt": "2027-01-10T18:00:00+01:00",
       "description": "Illustrations in Motion is confirmed at Casemate · Ljubljana Castle. Check the official source for any late programme or ticket changes."
+    },
+    {
+      "title": "MIR|ЯOR x Shockwerk x Disco Sour presents Tarkno",
+      "url": "https://www.klub-k4.si/",
+      "source": "Klub K4",
+      "type": "Club · elektronika",
+      "place": "Klub K4 · Ljubljana",
+      "startAt": "2026-10-09T23:00:00+02:00",
+      "endAt": "",
+      "id": "event-05-mir-or-x-shockwerk-x-disco-sour-presents-tarkno"
     },
     {
       "id": "artish-2026-10-10",
@@ -987,23 +994,14 @@
       "description": "BALANS (SI): ALBUM RELEASE KONCERT @ Gala hala is confirmed at Gala Hala · AKC Metelkova. Check the official source for any late programme or ticket changes."
     },
     {
-      "id": "romantic-souls-2026-10-24",
-      "title": "Romantic Souls",
-      "url": "https://www.mgl.si/en/schedule/",
-      "source": "MGL",
-      "type": "Theatre · drama",
-      "place": "MGL Main Stage · Ljubljana",
-      "startAt": "2026-10-24T19:30:00+02:00",
-      "endAt": null,
-      "price": null,
-      "languages": [],
-      "touristFriendly": null,
-      "familyFriendly": null,
-      "accessibility": null,
-      "ticketUrl": "https://www.mgl.si/en/schedule/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-10T07:03:43+02:00",
-      "description": "Romantic Souls is confirmed at MGL Main Stage · Ljubljana. Check the official source for any late programme or ticket changes."
+      "title": "FORESTDELIC / LABEL NIGHT / KLUB K4",
+      "url": "https://www.klub-k4.si/",
+      "source": "Klub K4",
+      "type": "Club · elektronika",
+      "place": "Klub K4 · Ljubljana",
+      "startAt": "2026-10-23T23:00:00+02:00",
+      "endAt": "",
+      "id": "event-53-forestdelic-label-night-klub-k4"
     }
   ]
 }
