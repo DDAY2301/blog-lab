@@ -30,6 +30,33 @@ const CATEGORY_EMPTY_COPY = {
 
 const starterArticles = [
   {
+    "id": "guardian-pohodnisko-pot-v-slovenskih-alpah-razglasil-za-eno-najboljsih-v-evropi-03bbfda9",
+    "title": "Guardian pohodniško pot v slovenskih Alpah razglasil za eno najboljših v Evropi",
+    "excerpt": "Gore & traili: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Guardian pohodniško pot v slovenskih Alpah razglasil za eno najboljših v Evropi«.",
+    "seoDescription": "Gore & traili: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Guardian pohodniško pot v slovenskih Alpah razglasil za eno najboljših v",
+    "content": "**Gore & traili, 10. 10. 2026.** Guardian pohodniško pot v slovenskih Alpah razglasil za eno najboljših v Evropi Delo.si\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Delo.si. Objavljeno: Wed, 01 Jul 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiuwFBVV95cUxPUkt1cmQ3dVdOTVV5LUlpRldJYXV0MGJNOTAtelY4ekNPbFRPRUlSdE9zY0pJejg3YkRUS0M1Q2NFdk4yUHN1V0JpZmUxd0t4ek8yOWV0ZkVxdGY1elgzbk9ZNDlXZDIwUmI1QU5ZbGcwNms4X0Z0SE96OHd3WmZVOGIzYWxQbS1DYWFmMDU3b044bGlUMXhnYnpkOVJjem5yNjEtU0xTU0ZBenE0a1cxVWc3ZGh0NE05U09Z?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Gore & traili",
+    "author": "Blog Lab Slovenia Publisher",
+    "status": "published",
+    "heroImage": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/172nd_Slovenian_Mountain_Training_%285229491885%29.jpg/1920px-172nd_Slovenian_Mountain_Training_%285229491885%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "alt": "BOHINJSKA BELA, Slovenia -- Soldiers with U.S. Army Europe's 172nd Infantry Brigade pause during their hike up the mountain at the Slovenian Armed Forces Mountain Training Center 3",
+      "caption": "U.S. Army Europe from Wiesbaden, Germany · Wikimedia Commons · Public domain",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:172nd_Slovenian_Mountain_Training_(5229491885).jpg"
+    },
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Delo.si — Guardian pohodniško pot v slovenskih Alpah razglasil za eno najboljših v Evropi - Delo.si",
+        "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPUkt1cmQ3dVdOTVV5LUlpRldJYXV0MGJNOTAtelY4ekNPbFRPRUlSdE9zY0pJejg3YkRUS0M1Q2NFdk4yUHN1V0JpZmUxd0t4ek8yOWV0ZkVxdGY1elgzbk9ZNDlXZDIwUmI1QU5ZbGcwNms4X0Z0SE96OHd3WmZVOGIzYWxQbS1DYWFmMDU3b044bGlUMXhnYnpkOVJjem5yNjEtU0xTU0ZBenE0a1cxVWc3ZGh0NE05U09Z?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-10T16:24:40+02:00",
+    "updatedAt": "2026-10-10T16:24:40+02:00"
+  },
+
+  {
     "id": "video-n1-podkast-s-suzano-lovec-slovenija-je-lepse-delala-z-biseri-kot-hrvaska-metroplay-412e6a21",
     "title": "Video: N1 podkast s Suzano Lovec: Slovenija je lepše delala z biseri kot Hrvaška - Metroplay",
     "excerpt": "Sezonsko: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Video: N1 podkast s Suzano Lovec: Slovenija je lepše delala z biseri kot Hrvaška - Metroplay«.",

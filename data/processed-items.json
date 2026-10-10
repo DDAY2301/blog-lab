@@ -4645,5 +4645,19 @@
     "provider": "",
     "processed_at": "2026-10-10T13:40:24+02:00",
     "output_id": "video-n1-podkast-s-suzano-lovec-slovenija-je-lepse-delala-z-biseri-kot-hrvaska-metroplay-412e6a21"
+  },
+  {
+    "source_name": "Delo.si",
+    "category": "gore",
+    "title": "Guardian pohodniško pot v slovenskih Alpah razglasil za eno najboljših v Evropi - Delo.si",
+    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPUkt1cmQ3dVdOTVV5LUlpRldJYXV0MGJNOTAtelY4ekNPbFRPRUlSdE9zY0pJejg3YkRUS0M1Q2NFdk4yUHN1V0JpZmUxd0t4ek8yOWV0ZkVxdGY1elgzbk9ZNDlXZDIwUmI1QU5ZbGcwNms4X0Z0SE96OHd3WmZVOGIzYWxQbS1DYWFmMDU3b044bGlUMXhnYnpkOVJjem5yNjEtU0xTU0ZBenE0a1cxVWc3ZGh0NE05U09Z?oc=5",
+    "summary": "Guardian pohodniško pot v slovenskih Alpah razglasil za eno najboljših v Evropi Delo.si",
+    "published": "Wed, 01 Jul 2026 07:00:00 GMT",
+    "image_url": "",
+    "video_url": "",
+    "hash": "5edb6161169bfb3ad9f9e6d20c481b6010bea9e445fa6510309c9b8d0639f4a7",
+    "provider": "google-news-si",
+    "processed_at": "2026-10-10T16:24:40+02:00",
+    "output_id": "guardian-pohodnisko-pot-v-slovenskih-alpah-razglasil-za-eno-najboljsih-v-evropi-03bbfda9"
   }
 ]

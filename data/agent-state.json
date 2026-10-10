@@ -1,27 +1,28 @@
 {
-  "last_success": "2026-10-10T13:40:24+02:00",
+  "last_success": "2026-10-10T16:24:40+02:00",
   "last_failure": "2026-09-21T20:56:52+02:00",
   "consecutive_failures": 0,
   "posts_date": "2026-10-10",
-  "posts_today": 3,
-  "last_output": "video-n1-podkast-s-suzano-lovec-slovenija-je-lepse-delala-z-biseri-kot-hrvaska-metroplay-412e6a21",
+  "posts_today": 4,
+  "last_output": "guardian-pohodnisko-pot-v-slovenskih-alpah-razglasil-za-eno-najboljsih-v-evropi-03bbfda9",
   "last_error": null,
   "agent_version": "3.0.0-learning-guarded-fallback",
-  "current_category": "sezonsko",
-  "scheduled_posts_today": 3,
+  "current_category": "gore",
+  "scheduled_posts_today": 4,
   "manual_posts_today": 0,
   "writer_mode": "deterministic_fallback",
   "scheduled_slots_done": [
     "2026-10-10|07:35|kolesarstvo",
     "2026-10-10|10:45|dediscina",
-    "2026-10-10|13:30|sezonsko"
+    "2026-10-10|13:30|sezonsko",
+    "2026-10-10|16:20|gore"
   ],
   "scheduled_slots_deferred": [],
   "last_editorial_hold": null,
-  "publisher_guardian_last_run": "2026-10-10T13:40:24+02:00",
+  "publisher_guardian_last_run": "2026-10-10T16:24:40+02:00",
   "publisher_guardian_last_action": {
-    "category": "sezonsko",
-    "slot": "2026-10-10|13:30|sezonsko",
+    "category": "gore",
+    "slot": "2026-10-10|16:20|gore",
     "remaining_repairs": 0
   },
   "schedule_counter_normalized_at": "2026-10-07T16:45:00+02:00"
