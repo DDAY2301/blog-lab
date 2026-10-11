@@ -6290,6 +6290,7 @@ export default function Home() {
               {visiblePublished.length ? visiblePublished.slice(0, 12).map((article, index) => (
                 <a
                   className={`post-card article-card--${articleTemplateKey(article)} ${index === 0 ? "featured" : ""}`}
+                  data-art-category={article.category}
                   href={`?article=${encodeURIComponent(article.id)}`}
                   key={article.id}
                   onClick={(event) => {
@@ -6481,7 +6482,7 @@ export default function Home() {
         <p>{siteSettings.footerText}</p>
         <span>Potovanja · dogodki · lokalne zgodbe</span>
         <small className="travel-photo-credit">
-          Slikarska naslovnica: <a href="https://commons.wikimedia.org/wiki/File:Marko_Pernhart_-_Bled.jpg" target="_blank" rel="noopener noreferrer">Marko Pernhart, Bled (1854), javna domena</a>.
+          Slikarska podoba: izvirne digitalne ilustracije BlogLab (deterministično generirane v izvorni kodi).
           {" · "}Fotografska ozadja:
           {" "}<a href="https://commons.wikimedia.org/wiki/File:Soca_River_Slovenia.JPG" target="_blank" rel="noopener noreferrer">Lucash / Soča, CC BY-SA 3.0</a>
           {" · "}<a href="https://commons.wikimedia.org/wiki/File:Bled_Lake,_Slovenia,_20240504_0851_8264.jpg" target="_blank" rel="noopener noreferrer">Jakub Hałun / Bled, CC BY 4.0</a>

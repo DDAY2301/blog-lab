@@ -4,12 +4,13 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "npm run art:generate && vite",
+    "build": "npm run art:generate && vite build",
     "preview": "vite preview",
     "guardian:check": "python agents/production-guardian/guardian.py check --report logs/guardian-report.json",
     "guardian:repair": "python agents/production-guardian/guardian.py repair",
-    "test:guardian": "python -m pytest -q agents/production-guardian/tests"
+    "test:guardian": "python -m pytest -q agents/production-guardian/tests",
+    "art:generate": "node tools/generate-painted-assets.mjs"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^6.0.2",
