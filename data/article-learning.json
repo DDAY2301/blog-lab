@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-11T03:38:17+02:00",
-  "loop_count": 4465,
+  "updated_at": "2026-10-11T03:39:09+02:00",
+  "loop_count": 4466,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-11T03:38:00+02:00",
+      "last_learning_run": "2026-10-11T03:38:43+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -41,12 +41,12 @@
         "answers.com",
         "wallpaperaccess.com",
         "support.microsoft.com",
+        "offerup.com",
         "9454wilshire.com",
         "aarp.org",
         "sutterhealth.org",
         "nike.com",
-        "amazon.de",
-        "blackfriday.com"
+        "amazon.de"
       ],
       "source_health": {
         "lonelyplanet.com": {
@@ -69,7 +69,7 @@
           "last_seen": "2026-10-11T03:38:00+02:00",
           "last_title": "Premier Janša ob ogledu finala mladih košarkarjev udaril po RTV Slovenija: »Plačujemo vas več kot Inštitut Jožef Stefan!« - Slovenske novice",
           "last_provider": "google-news-si",
-          "published": 247781,
+          "published": 247853,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -91,6 +91,13 @@
           "seen": 4,
           "last_seen": "2026-10-10T00:23:34+02:00",
           "last_title": "Contact Us - Microsoft Support",
+          "last_provider": "bing-web"
+        },
+        "offerup.com": {
+          "score": 1.97,
+          "seen": 2,
+          "last_seen": "2026-10-11T03:38:43+02:00",
+          "last_title": "Buy & Sell Locally - OfferUp - Buy. Sell. Simple.",
           "last_provider": "bing-web"
         },
         "9454wilshire.com": {
@@ -218,26 +225,21 @@
           "last_seen": "2026-10-04T07:54:06+02:00",
           "last_title": "Tom Hanks Height, Weight, Age, Spouse, Family, Facts, Biography",
           "last_provider": "bing-web"
-        },
-        "learn.microsoft.com": {
-          "score": 0.77,
-          "seen": 1,
-          "last_seen": "2026-09-28T14:24:02+02:00",
-          "last_title": "Configure Cortana in Windows 10 and Windows 11 - Windows 10",
-          "last_provider": "bing-web"
         }
       },
-      "current_source_count": 9,
+      "current_source_count": 3,
       "example_titles": {
-        "news.google.com": [
-          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
-          "Kot v sanjah: Slovenija že drugič v dveh tednih evropski prvak! (VIDEO) - Šport TV",
-          "Poljaki gladko boljši, Slovenci po porazu 0:3 v boj za bron proti Japoncem - rtvslo.si"
+        "offerup.com": [
+          "Buy & Sell Locally - OfferUp - Buy. Sell. Simple. - OfferUp",
+          "Buy & Sell Locally - OfferUp - Buy. Sell. Simple."
+        ],
+        "help.offerup.com": [
+          "Post an item to sell - OfferUp Support"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-11T03:38:09+02:00",
+      "last_learning_run": "2026-10-11T03:38:58+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -275,7 +277,7 @@
           "last_seen": "2026-10-11T03:38:09+02:00",
           "last_title": "Pirc Musar: Mala zmaga za neko politično opcijo, pa hkrati velik poraz za državo - Delo.si",
           "last_provider": "google-news-si",
-          "published": 273749,
+          "published": 273829,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -356,17 +358,11 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 16,
-      "example_titles": {
-        "news.google.com": [
-          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
-          "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si",
-          "Na Radiu Ognjišče zadnje predvolilno soočenje: v ospredju prisluhi, zdravstvo, zunanja politika in sprava - Radio Ognjišče"
-        ]
-      }
+      "current_source_count": 0,
+      "example_titles": {}
     },
     "aktualno": {
-      "last_learning_run": "2026-10-11T03:38:17+02:00",
+      "last_learning_run": "2026-10-11T03:39:09+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -385,9 +381,9 @@
       ],
       "preferred_hosts": [
         "lonelyplanet.com",
+        "youtube.com",
         "the-slovenia.com",
         "britannica.com",
-        "youtube.com",
         "news.google.com",
         "reddit.com",
         "account.microsoft.com",
@@ -405,6 +401,15 @@
           "last_title": "11 things to know before booking a trip to Slovenia - Lonely Planet",
           "last_provider": "bing-web"
         },
+        "youtube.com": {
+          "score": 4.62,
+          "published": 4269,
+          "last_output_id": "what-does-potem-mean-9df2e44a",
+          "seen": 4,
+          "last_seen": "2026-10-11T03:39:09+02:00",
+          "last_title": "Top Forrest Frank Songs | Best Vibe Playlist 2025 - YouTube",
+          "last_provider": "bing-web"
+        },
         "the-slovenia.com": {
           "score": 4.41,
           "seen": 3,
@@ -419,22 +424,13 @@
           "last_title": "Slovenia | History, Geography, & People | Britannica",
           "last_provider": "bing-web"
         },
-        "youtube.com": {
-          "score": 2.657,
-          "published": 4269,
-          "last_output_id": "what-does-potem-mean-9df2e44a",
-          "seen": 2,
-          "last_seen": "2026-10-10T17:53:50+02:00",
-          "last_title": "Až to se mnu sekne - YouTube",
-          "last_provider": "bing-web"
-        },
         "news.google.com": {
           "score": 2.502,
           "seen": 125427,
           "last_seen": "2026-10-11T03:38:17+02:00",
           "last_title": "Aktualno - trg motociklov v Sloveniji: Vsak četrti je že kitajec Novice - AVTO FOKUS -",
           "last_provider": "google-news-si",
-          "published": 230489,
+          "published": 230524,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "reddit.com": {
@@ -550,12 +546,14 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 23,
+      "current_source_count": 3,
       "example_titles": {
-        "news.google.com": [
-          "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
-          "Ko so bile ZDA stare toliko kot danes Slovenija, so bile na robu razpada - Zanima.me",
-          "Jugoslavija je imela zmagovalni recept za smučanje, Slovenija ga danes nima - Dnevnik"
+        "youtube.com": [
+          "This Christian Song Is Going Viral Right Now: Forrest Frank ... - YouTube",
+          "Top Forrest Frank Songs | Best Vibe Playlist 2025 - YouTube"
+        ],
+        "hottubvalueguide.com": [
+          "Do Hot Tubs Add Home Value? What Appraisers Actually Count - Hot Tub Value Guide"
         ]
       }
     }
