@@ -277,7 +277,6 @@ async def _manager_command(command: str) -> dict[str, Any]:
         return {
             "action": "email_status",
             "result": {
-                "enabled": data.get("enabled"),
                 "gmail": data.get("gmail_state"),
                 "command_bus": data.get("command_bus"),
             },
