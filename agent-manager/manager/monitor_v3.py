@@ -8,12 +8,24 @@ class MonitorLoopV3:
     def __init__(self,s:SettingsV3,store:StoreV3): self.s=s; self.store=store; self.inc=IncidentEngineV3(store); self.running=False; self.last={}
     async def cycle(self):
         loop_id=uuid.uuid4().hex[:10]; self.store.heartbeat("manager","running",loop_id)
-        resources=system_resources(); pv=await http_health(self.s.pv_health_url); ollama=await http_health(self.s.ollama_base_url+"/api/tags")
-        self.last={"loop_id":loop_id,"resources":resources,"project_visibility":pv,"ollama":ollama}; self.store.event("HEALTH_CYCLE","manager","info",self.last)
-        if not pv.get("ok"):
-            self.inc.raise_or_update("project_visibility","Health endpoint unreachable","P1",[str(pv)])
+        resources=system_resources()
+        if self.s.supervisor_only:
+            # The production PV agent intentionally runs elsewhere in this mode.
+            # Remote code/workflow health is checked by ManagedAgentSupervisorV4.
+            # An absent local port 8000 must never become a P1 outage.
+            pv={"ok": None, "state": "not_applicable", "reason": "supervisor_only; monitored by GitHub managed target"}
+            self.inc.resolve_matching(
+                "project_visibility", "Health endpoint unreachable",
+                {"reason": "Local PV health probe disabled in supervisor-only mode; not a remote service recovery"}
+            )
         else:
-            self.inc.resolve_matching("project_visibility","Health endpoint unreachable",{"health": pv})
+            pv=await http_health(self.s.pv_health_url)
+            if not pv.get("ok"):
+                self.inc.raise_or_update("project_visibility","Health endpoint unreachable","P1",[str(pv)])
+            else:
+                self.inc.resolve_matching("project_visibility","Health endpoint unreachable",{"health": pv})
+        ollama=await http_health(self.s.ollama_base_url+"/api/tags")
+        self.last={"loop_id":loop_id,"resources":resources,"project_visibility":pv,"ollama":ollama}; self.store.event("HEALTH_CYCLE","manager","info",self.last)
         if not ollama.get("ok"):
             self.inc.raise_or_update("ollama","Local AI runtime unreachable","P2",[str(ollama)])
         else:
