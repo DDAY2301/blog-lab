@@ -27,7 +27,11 @@
       "enabled": true,
       "repo": "DDAY2301/PROJEKT",
       "branch": "main",
-      "workflows": null,
+      "workflows": [
+        "Agent API CI",
+        "Objavi spletno stran",
+        "pages build and deployment"
+      ],
       "repair_adapter": "",
       "interval_seconds": 300
     },
