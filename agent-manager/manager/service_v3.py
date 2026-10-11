@@ -84,6 +84,7 @@ async def health():
         "ok": True,
         "version": VERSION,
         "mode": "24x7-maintenance",
+        "supervisor_only": s.supervisor_only,
         "write_enabled": s.write_enabled,
         "gmail": maintenance.gmail.auth_state(),
         "gmail_commands": mail_commands.status(),
