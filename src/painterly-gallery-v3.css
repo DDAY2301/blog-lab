@@ -552,3 +552,11 @@ main.tourism-site > .home-content.container.paint-story-paper .section-heading .
 @media(prefers-reduced-motion:reduce){
  .tourism-site .paint-rubric-art {transition:none;}
 }
+
+/* Header overlaps the painting only on the homepage; article and product
+   views keep their own undisturbed top spacing. */
+main.tourism-site:not(:has(> .hero.paint-hero)) > .site-header {
+  margin-bottom: 0;
+  position: sticky;
+  top: 0;
+}
