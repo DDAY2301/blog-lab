@@ -917,6 +917,25 @@
       "startAt": "2026-10-24T23:00:00+02:00",
       "endAt": "",
       "id": "event-50-grand-prix-invites-upper90"
+    },
+    {
+      "id": "sunday-flea-market-2026-10-25",
+      "title": "Sunday Flea Market",
+      "url": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/antique-flea-market/",
+      "source": "Visit Ljubljana",
+      "type": "Market · antiques and vintage",
+      "place": "Breg · Ljubljana",
+      "startAt": "2026-10-25T08:00:00+01:00",
+      "endAt": "2026-10-25T15:00:00+01:00",
+      "price": "Free entry",
+      "languages": [],
+      "touristFriendly": true,
+      "familyFriendly": true,
+      "accessibility": null,
+      "ticketUrl": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/antique-flea-market/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-11T06:59:24+02:00",
+      "description": "The antiques and vintage market is scheduled on Breg from 08:00 to 15:00 with free admission."
     }
   ]
 }
