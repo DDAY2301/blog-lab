@@ -1,0 +1,558 @@
+/*
+ * BLOG LAB / PAINTERLY EDITION — 2026-10-11
+ * A CSS-only visual interpretation of the supplied expressive landscape painting.
+ * Existing photographed Slovenian scenery, copy, article images and functionality
+ * remain in place. No new copyrighted artwork is embedded.
+ * Loaded after final-polish.css to keep the change reversible.
+ */
+
+/* Museum-canvas palette: bark, dark olive, river blue, ochre and warm paper. */
+.tourism-site {
+  --forest: #293a30;
+  --green: #354738;
+  --green-dark: #24342b;
+  --navy: #344247;
+  --ink: #282c28;
+  --muted: #6f705f;
+  --sand: #bc955e;
+  --orange: #ba8c51;
+  --mint: #d3d3ad;
+  --sage: #8d9572;
+  --paper: #efe6d3;
+  --cream: #f3ead8;
+  --white: #f9f3e6;
+  --line: #c8bea7;
+  --shadow: 0 18px 42px rgba(27, 34, 28, .15);
+  color: var(--ink);
+  background: #d7d1b8;
+  font-family: "Palatino Linotype", Palatino, Georgia, serif;
+}
+
+/* Keep UI/controls clear and accessible even on patterned surfaces. */
+.tourism-site button,
+.tourism-site input,
+.tourism-site select,
+.tourism-site textarea {
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+.tourism-site button:focus-visible,
+.tourism-site a:focus-visible {
+  outline: 3px solid #e8b979;
+  outline-offset: 4px;
+}
+
+/* The existing licensed Slovenian images now read as a muted oil-paint backdrop. */
+.tourism-site .travel-motion-bg {
+  background: #344039;
+}
+.tourism-site .travel-bg-scene {
+  filter: saturate(.66) contrast(1.14) sepia(.20);
+}
+.tourism-site .travel-motion-bg::after {
+  background:
+    linear-gradient(90deg, rgba(17, 27, 23, .82) 0%, rgba(29, 39, 31, .55) 44%, rgba(28, 40, 36, .22) 100%),
+    linear-gradient(0deg, rgba(101, 85, 55, .23), rgba(32, 59, 55, .20)),
+    radial-gradient(ellipse at 80% 24%, rgba(198, 163, 105, .15), transparent 52%);
+}
+
+/* A painter's grain, not a heavyweight video or JavaScript filter. */
+.tourism-site > .hero::before,
+main.tourism-site > .home-content.container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: none;
+  border-radius: inherit;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.68' numOctaves='3' seed='9' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23000' filter='url(%23g)' opacity='.52' d='M0 0h180v180H0z'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+  opacity: .16;
+  mix-blend-mode: multiply;
+}
+
+/* Dark linen navigation with an engraved, understated wordmark. */
+.tourism-site > .site-header {
+  min-height: 76px;
+  background:
+    repeating-linear-gradient(109deg, rgba(245, 230, 196, .025) 0 1px, transparent 1px 12px),
+    rgba(30, 43, 38, .93);
+  border-bottom: 1px solid rgba(227, 203, 155, .25);
+  box-shadow: 0 9px 24px rgba(10, 22, 17, .18);
+  backdrop-filter: blur(14px);
+}
+.tourism-site > .site-header .brand {
+  color: #f4ead6;
+  font-size: clamp(20px, 2vw, 27px);
+  font-family: "Palatino Linotype", Palatino, Georgia, serif;
+  font-weight: 500;
+  letter-spacing: -.025em;
+}
+.tourism-site > .site-header .brand-mark {
+  border: 1px solid rgba(244, 228, 189, .34);
+  background: #a5834f;
+  color: #fff5e2;
+  box-shadow: 0 3px 13px rgba(0, 0, 0, .18);
+}
+.tourism-site > .site-header nav button {
+  color: #eee4ce;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 5px 12px 5px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .01em;
+}
+.tourism-site > .site-header nav button:hover,
+.tourism-site > .site-header nav button.active {
+  color: #fff8e7;
+  background: rgba(198, 166, 108, .21);
+  border-color: rgba(229, 211, 165, .20);
+}
+.tourism-site > .site-header .events-jump {
+  background: #eee0c5;
+  border: 1px solid #ccb98e;
+  color: #25372d;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, .13);
+}
+.tourism-site > .site-header .events-jump span {
+  color: #8d6640;
+}
+
+/* Large editorial painting area: sunlight, brushy hills and river-tone glazes. */
+.tourism-site > .hero {
+  isolation: isolate;
+  min-height: clamp(555px, 63vw, 735px);
+  padding: clamp(88px, 10vw, 148px) max(6vw, calc((100vw - 1160px)/2)) 132px;
+  color: #fff7e5;
+  border: none;
+  background:
+    radial-gradient(ellipse at 81% 17%, rgba(227, 193, 121, .17), transparent 42%),
+    linear-gradient(105deg, rgba(21, 30, 26, .92) 0%, rgba(35, 47, 39, .75) 44%, rgba(43, 54, 49, .18) 100%),
+    linear-gradient(160deg, rgba(86, 92, 63, .18), rgba(59, 91, 103, .22));
+}
+.tourism-site > .hero::before {
+  z-index: 0;
+  opacity: .23;
+  mix-blend-mode: screen;
+}
+.tourism-site > .hero::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  right: -1%;
+  bottom: -2px;
+  left: -1%;
+  width: auto;
+  height: clamp(31px, 4.5vw, 66px);
+  border: 0;
+  border-radius: 0;
+  transform: none;
+  background: #efe6d3;
+  clip-path: polygon(0 60%, 4% 47%, 9% 64%, 14% 48%, 19% 59%, 25% 42%, 30% 58%, 36% 45%, 41% 69%, 47% 47%, 53% 56%, 59% 41%, 65% 59%, 71% 44%, 77% 60%, 84% 41%, 89% 58%, 95% 44%, 100% 57%, 100% 100%, 0 100%);
+  box-shadow: none;
+}
+.tourism-site > .hero > * {
+  z-index: 1;
+}
+.tourism-site > .hero .eyebrow {
+  color: #e0c89a;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: .22em;
+}
+.tourism-site > .hero .eyebrow span {
+  width: 31px;
+  height: 2px;
+  background: #c29a60;
+}
+.tourism-site > .hero h1 {
+  max-width: 880px;
+  margin: 26px 0 25px;
+  color: #fff6e5;
+  font-family: "Palatino Linotype", Palatino, Georgia, serif;
+  font-size: clamp(51px, 7.3vw, 104px);
+  font-weight: 500;
+  line-height: .99;
+  letter-spacing: -.052em;
+  text-wrap: balance;
+  text-shadow: 0 3px 25px rgba(13, 25, 19, .37);
+}
+.tourism-site > .hero h1 em {
+  color: #e0bd7e;
+  font-style: italic;
+  font-weight: 400;
+}
+.tourism-site > .hero p {
+  max-width: 600px;
+  margin-bottom: 32px;
+  color: #f0e6d2;
+  font: 400 clamp(17px, 1.55vw, 21px)/1.63 "Palatino Linotype", Palatino, Georgia, serif;
+  text-shadow: 0 1px 13px rgba(0, 0, 0, .32);
+}
+.tourism-site > .hero .primary {
+  min-height: 53px;
+  padding: 12px 25px;
+  color: #2c352c;
+  background: #f2e4c6;
+  border: 1px solid rgba(250, 240, 214, .95);
+  border-radius: 7px 21px 8px 19px;
+  box-shadow: 5px 6px 0 rgba(54, 59, 44, .20);
+  font-size: 12px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.tourism-site > .hero .primary:hover {
+  color: #26372a;
+  background: #fff2d7;
+}
+
+/* A thin painted margin connects the hero to the magazine pages. */
+.tourism-site > .ad-leaderboard-wrap {
+  background: transparent;
+  padding-top: 20px;
+}
+.tourism-site .ad-leaderboard-wrap .ad-slot {
+  background: rgba(40, 53, 44, .72);
+  border-color: rgba(236, 221, 186, .20);
+  color: #efe7d3;
+}
+
+/* Old CSS uses !important for a dark shell, so explicitly change the surface
+ * while keeping the event/sidebar component dark and comfortably readable. */
+main.tourism-site > .home-content.container {
+  position: relative;
+  width: min(1250px, calc(100% - 42px));
+  margin-top: 25px;
+  margin-bottom: 44px;
+  padding: 14px clamp(14px, 2.8vw, 35px) 35px;
+  gap: clamp(18px, 2.8vw, 34px);
+  overflow: hidden;
+  color: #35382f !important;
+  border: 1px solid rgba(234, 219, 189, .84) !important;
+  border-radius: 6px 27px 8px 23px;
+  background:
+    radial-gradient(ellipse at 90% 0%, rgba(185, 147, 83, .17), transparent 37%),
+    repeating-linear-gradient(0deg, rgba(79, 72, 49, .016) 0 1px, transparent 1px 7px),
+    linear-gradient(145deg, #f5ecd7 0%, #e9dec8 100%) !important;
+  box-shadow: 0 27px 74px rgba(15, 26, 19, .25), inset 0 0 0 6px rgba(255, 248, 232, .29);
+}
+main.tourism-site > .home-content.container::before {
+  background:
+    radial-gradient(ellipse at 92% 98%, rgba(147, 145, 105, .10), transparent 30%),
+    linear-gradient(128deg, rgba(250, 241, 220, .32), transparent 50%);
+}
+main.tourism-site > .home-content.container::after {
+  z-index: 0;
+  opacity: .075;
+}
+main.tourism-site > .home-content.container > * {
+  position: relative;
+  z-index: 1;
+}
+.tourism-site .feed {
+  padding: 43px 0 24px;
+}
+main.tourism-site > .home-content.container .section-heading {
+  position: relative;
+  margin-bottom: 23px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(93, 88, 70, .25) !important;
+}
+main.tourism-site > .home-content.container .section-heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 128px;
+  height: 3px;
+  transform: rotate(-.8deg);
+  background: #9e8559;
+  opacity: .6;
+}
+main.tourism-site > .home-content.container .section-heading h2 {
+  max-width: 690px;
+  color: #2f3c32 !important;
+  font: 500 clamp(29px, 3.4vw, 49px)/1.06 "Palatino Linotype", Palatino, Georgia, serif;
+  letter-spacing: -.038em;
+}
+main.tourism-site > .home-content.container .section-heading .kicker {
+  color: #896b42 !important;
+  font-size: 11px;
+  letter-spacing: .17em;
+}
+main.tourism-site > .home-content.container .section-heading .count {
+  color: #655e4f !important;
+  border: 1px solid #d0c2a6;
+  background: #efe3cb;
+}
+
+/* Magazine cards: rough-edged paper, original photo content, no fake paintings. */
+.tourism-site .post-grid {
+  gap: clamp(15px, 2.1vw, 24px);
+}
+.tourism-site .post-card,
+.tourism-site .post-card.featured {
+  overflow: hidden;
+  border: 1px solid rgba(182, 164, 132, .70);
+  border-radius: 6px 19px 5px 17px;
+  background: #f9f2e4;
+  box-shadow: 5px 7px 0 rgba(102, 89, 67, .08), 0 13px 25px rgba(43, 45, 34, .08);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.tourism-site .post-card:hover {
+  transform: translateY(-3px);
+  border-color: #a1885a;
+  box-shadow: 5px 9px 0 rgba(102, 89, 67, .10), 0 22px 36px rgba(43, 45, 34, .16);
+}
+.tourism-site .post-card .card-copy {
+  padding: clamp(22px, 2.7vw, 36px);
+  background:
+    repeating-linear-gradient(112deg, rgba(143, 120, 82, .017) 0 2px, transparent 2px 12px),
+    #f9f2e4;
+}
+.tourism-site .post-card.featured .card-copy {
+  padding: clamp(28px, 4vw, 55px);
+}
+.tourism-site .post-card h3,
+.tourism-site .post-card.featured h3 {
+  margin-top: 15px;
+  color: #30382e;
+  font-family: "Palatino Linotype", Palatino, Georgia, serif;
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -.025em;
+}
+.tourism-site .post-card p {
+  color: #65695b;
+  font-family: "Palatino Linotype", Palatino, Georgia, serif;
+  line-height: 1.55;
+}
+.tourism-site .post-card .meta,
+.tourism-site .post-card .card-foot {
+  color: #777265;
+}
+.tourism-site .post-card .meta span:first-child {
+  color: #7b613f;
+  background: #eee0c4;
+  border: 1px solid #e0cba4;
+}
+.tourism-site .post-card .card-foot {
+  border-color: #ded2bd;
+}
+.tourism-site .post-card .card-art,
+.tourism-site .post-card .card-art-fallback {
+  background:
+    radial-gradient(ellipse at 65% 24%, rgba(207, 186, 120, .55), transparent 43%),
+    linear-gradient(145deg, #909e86, #b0a47f 53%, #587780);
+}
+.tourism-site .post-card .card-art-image img {
+  filter: saturate(.78) contrast(1.07) sepia(.11);
+  transition: filter .25s ease, transform .35s ease;
+}
+.tourism-site .post-card:hover .card-art-image img {
+  filter: saturate(.92) contrast(1.08) sepia(.055);
+}
+
+/* Dark painted sidebar/event feed, isolated against the ivory-paper editorial page. */
+main.tourism-site > .home-content.container .live-pulse,
+main.tourism-site > .home-content.container .events-pulse {
+  color: #f3ebd9 !important;
+  border: 1px solid rgba(202, 177, 128, .36) !important;
+  border-radius: 6px 22px 7px 18px;
+  background:
+    radial-gradient(ellipse at 10% 0%, rgba(155, 150, 105, .20), transparent 56%),
+    linear-gradient(160deg, #384d42, #263e36 57%, #273832) !important;
+  box-shadow: 8px 13px 0 rgba(76, 77, 57, .13), 0 20px 34px rgba(24, 36, 27, .13) !important;
+}
+main.tourism-site > .home-content.container .live-pulse-head strong,
+main.tourism-site > .home-content.container .live-pulse-item h3 {
+  color: #f9f0dd !important;
+}
+main.tourism-site > .home-content.container .live-pulse-head > span,
+main.tourism-site > .home-content.container .live-pulse-intro,
+main.tourism-site > .home-content.container .live-pulse-foot,
+main.tourism-site > .home-content.container .live-pulse-meta,
+main.tourism-site > .home-content.container .event-pulse-top,
+main.tourism-site > .home-content.container .event-place {
+  color: #d6d2bf !important;
+}
+main.tourism-site > .home-content.container .event-type {
+  background: #52604a !important;
+  color: #fff3df !important;
+}
+main.tourism-site > .home-content.container .live-pulse-ad {
+  background: rgba(24, 39, 32, .38) !important;
+  color: #eee0c4 !important;
+}
+
+/* Article detail also belongs to the same art-book, rather than a second site. */
+.tourism-site .article-page--premium {
+  border-color: rgba(224, 207, 175, .7);
+  background: #f3ead9;
+  border-radius: 7px 26px 7px 26px;
+  box-shadow: 0 28px 64px rgba(12, 29, 20, .28);
+}
+.tourism-site .article-heading--premium {
+  border-radius: 6px 22px 7px 19px;
+  border-color: #d7c7a9;
+  background:
+    radial-gradient(ellipse at 92% 20%, rgba(168, 161, 115, .20), transparent 42%),
+    linear-gradient(145deg, #f9f1e0, #eae0cb);
+}
+.tourism-site .article-heading--premium::after {
+  border-color: rgba(164, 143, 96, .15);
+}
+.tourism-site .article-heading--premium h1,
+.tourism-site .article-body h2,
+.tourism-site .article-body h3 {
+  color: #2f4034;
+  font-family: "Palatino Linotype", Palatino, Georgia, serif;
+  font-weight: 600;
+}
+.tourism-site .article-main-copy,
+.tourism-site .article-side-card {
+  border-color: #d9cab2;
+  border-radius: 7px 20px 7px 19px;
+  background: #f9f3e7;
+}
+.tourism-site .article-summary-card {
+  border-left-color: #aa8858;
+  border-radius: 4px 17px 5px 12px;
+  background: #eee1c6;
+}
+.tourism-site .article-body p,
+.tourism-site .article-body li {
+  color: #3e473e;
+}
+.tourism-site .article-hero {
+  border-radius: 7px 22px 7px 19px;
+  border-color: #ccb995;
+}
+.tourism-site .article-hero figcaption,
+.tourism-site .article-image figcaption {
+  background: #f2e7d0;
+  color: #6d6959;
+}
+
+/* Final brush stroke. Existing Wikimedia attribution remains visible. */
+.tourism-site > footer {
+  position: relative;
+  background:
+    repeating-linear-gradient(112deg, rgba(236, 211, 167, .024) 0 2px, transparent 2px 14px),
+    linear-gradient(155deg, #293b33, #202e29);
+  border-top: 5px solid #a18454;
+  color: #e7dbc7;
+}
+.tourism-site > footer > span:first-child {
+  color: #f5ead3;
+  font-family: "Palatino Linotype", Palatino, Georgia, serif;
+  font-weight: 500;
+  letter-spacing: -.03em;
+}
+.tourism-site .travel-photo-credit,
+.tourism-site .travel-photo-credit a {
+  color: #d2c7af;
+}
+
+/* Compact, unobtrusive language selector on top of the painting. */
+.language-tools {
+  color: #2c3a2f;
+  border-color: #ccb88f;
+  background: rgba(247, 239, 219, .96);
+  box-shadow: 0 12px 38px rgba(28, 38, 31, .20);
+}
+.language-tools__topline strong,
+.language-tools__buttons button:hover,
+.language-tools__buttons button.active,
+.language-tools__collapse:hover {
+  background: #384a3d;
+}
+.language-tools__buttons,
+.language-tools__collapse {
+  background: #f4e9d3;
+}
+
+/* Preserve usable hierarchy across mobile and tablets. */
+@media (max-width: 1024px) {
+  .tourism-site > .site-header nav button {
+    padding: 7px 9px;
+    font-size: 11px;
+  }
+  main.tourism-site > .home-content.container {
+    gap: 21px;
+  }
+  .tourism-site > .hero {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+}
+@media (max-width: 900px) {
+  main.tourism-site > .home-content.container {
+    width: min(100% - 24px, 1250px);
+    padding: 12px 19px 25px;
+  }
+  .tourism-site > .hero {
+    min-height: 580px;
+    padding: 94px 30px 104px;
+  }
+}
+@media (max-width: 650px) {
+  .tourism-site > .site-header {
+    padding: 11px 13px;
+  }
+  .tourism-site > .site-header .brand {
+    font-size: 21px;
+  }
+  .tourism-site > .site-header nav {
+    max-width: 100%;
+    scrollbar-width: thin;
+  }
+  .tourism-site > .hero {
+    min-height: 530px;
+    padding: 82px 22px 100px;
+    background:
+      linear-gradient(94deg, rgba(19, 30, 26, .86), rgba(34, 48, 40, .56)),
+      radial-gradient(ellipse at 90% 20%, rgba(211, 178, 121, .16), transparent 60%);
+  }
+  .tourism-site > .hero h1 {
+    font-size: clamp(45px, 12vw, 66px);
+    line-height: 1.03;
+  }
+  .tourism-site > .hero p {
+    font-size: 17px;
+  }
+  main.tourism-site > .home-content.container {
+    width: calc(100% - 18px);
+    margin-top: 16px;
+    padding: 6px 11px 18px;
+    border-radius: 6px 19px 8px 16px;
+  }
+  .tourism-site .feed {
+    padding-top: 28px;
+  }
+  main.tourism-site > .home-content.container .section-heading h2 {
+    font-size: clamp(30px, 9vw, 42px);
+  }
+  .tourism-site .post-card,
+  .tourism-site .post-card.featured {
+    border-radius: 5px 17px 6px 14px;
+  }
+  .tourism-site .post-card .card-copy,
+  .tourism-site .post-card.featured .card-copy {
+    padding: 23px 19px;
+  }
+  .tourism-site .post-card h3,
+  .tourism-site .post-card.featured h3 {
+    font-size: clamp(25px, 6.7vw, 31px);
+  }
+  .tourism-site .article-page--premium {
+    border-radius: 6px 17px 8px 17px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tourism-site .post-card,
+  .tourism-site .post-card .card-art-image img {
+    transition: none;
+  }
+}
