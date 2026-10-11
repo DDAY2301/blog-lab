@@ -30,6 +30,33 @@ const CATEGORY_EMPTY_COPY = {
 
 const starterArticles = [
   {
+    "id": "nizke-turisticne-sezone-morda-sploh-ne-bo-vec-kaj-to-pomeni-in-kje-so-razlogi-df90a45e",
+    "title": "Nizke turistične sezone morda sploh ne bo več: kaj to pomeni in kje so razlogi",
+    "excerpt": "Sezonsko: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Nizke turistične sezone morda sploh ne bo več: kaj to pomeni in kje so razlogi«.",
+    "seoDescription": "Sezonsko: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Nizke turistične sezone morda sploh ne bo več: kaj to pomeni in kje so razlog",
+    "content": "**Sezonsko, 11. 10. 2026.** Nizke turistične sezone morda sploh ne bo več: kaj to pomeni in kje so razlogi N1 Slovenija\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: N1 Slovenija. Objavljeno: Sat, 12 Oct 2024 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMitAFBVV95cUxQbGhVbFVpWTBjODdDbzVLb2FSdG9nN3BWRENnVTl3YmxiZUxyOEI0aG1OdDUydUc5RUtPcnI3NE1SdmprcnMtZWN4Q0k0bXlJUmJ0TTJlYXh2cW4tSGYzcUVhQWdDYUZpRFFEdG1iQ1RaeGx4MTVJTWtraWM4Y3ZQZFotTXZGTy0wcEFFUEFYR1lRbGF4Y09ZYl9ZQkFKUWpEbnJWMXdpXzZvQndSM2VLdzlXSlE?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Sezonsko",
+    "author": "Blog Lab Slovenia Publisher",
+    "status": "published",
+    "heroImage": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Frozen_Lake_Bled_%28156843859%29.jpeg/1920px-Frozen_Lake_Bled_%28156843859%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "alt": "500px provided description: This picture has been taken on a nice, sunny, but cold winter day. It is amazing to see lake Bled frozen! [#landscape ,#lake ,#frozen ,#mountains ,#wint",
+      "caption": "Anita · Wikimedia Commons · CC0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Frozen_Lake_Bled_(156843859).jpeg"
+    },
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "N1 Slovenija — Nizke turistične sezone morda sploh ne bo več: kaj to pomeni in kje so razlogi - N1 Slovenija",
+        "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQbGhVbFVpWTBjODdDbzVLb2FSdG9nN3BWRENnVTl3YmxiZUxyOEI0aG1OdDUydUc5RUtPcnI3NE1SdmprcnMtZWN4Q0k0bXlJUmJ0TTJlYXh2cW4tSGYzcUVhQWdDYUZpRFFEdG1iQ1RaeGx4MTVJTWtraWM4Y3ZQZFotTXZGTy0wcEFFUEFYR1lRbGF4Y09ZYl9ZQkFKUWpEbnJWMXdpXzZvQndSM2VLdzlXSlE?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-11T13:39:14+02:00",
+    "updatedAt": "2026-10-11T13:39:14+02:00"
+  },
+
+  {
     "id": "zelenci-nature-reserve-day-trip-ljubljana",
     "title": "Zelenci Nature Reserve: An Easy Day Trip from Ljubljana",
     "excerpt": "Plan a responsible visit to Zelenci’s emerald springs, with easy route options, transport checks, autumn safety, family advice and protected-wetland rules.",
