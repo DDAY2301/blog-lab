@@ -510,6 +510,11 @@ class ManagedAgentSupervisorV4:
 
     def status_rows(self) -> list[dict[str, Any]]:
         rows = self.store.query("SELECT * FROM managed_target_status ORDER BY name")
+        if os.getenv("AGENT_MANAGER_SUPERVISOR_ONLY", "0") == "1":
+            rows = [
+                row for row in rows
+                if row.get("target_id") not in {"project_visibility", "project_visibility_process"}
+            ]
         for row in rows:
             try:
                 row["details"] = json.loads(row["details"])
