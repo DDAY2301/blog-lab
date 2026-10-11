@@ -15,8 +15,8 @@ land=["#293c33","#405043","#61735c","#898264","#af976e","#d0b586","#ab874e"];
 const x=[];
 x.push('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">');
 x.push('<title>'+name+' — izvirna slikarska ilustracija BlogLab</title>');
-x.push('<defs><linearGradient id="sky" x2=".3" y2="1"><stop stop-color="#aabbb9"/><stop offset=".53" stop-color="#d6c6a1"/><stop offset="1" stop-color="#d6bc94"/></linearGradient><linearGradient id="lake" x2=".12" y2="1"><stop stop-color="#6f8c8c"/><stop offset=".56" stop-color="#426c74"/><stop offset="1" stop-color="#425c59"/></linearGradient><filter id="grain" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency=".15" numOctaves="3" seed="'+(seed%17+2)+'" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope=".25"/></feComponentTransfer></filter></defs>');
-x.push('<rect width="1600" height="900" fill="url(#sky)"/>');
+x.push('<defs><linearGradient id="sky" x2=".3" y2="1"><stop stop-color="#aabbb9"/><stop offset=".53" stop-color="#d6c6a1"/><stop offset="1" stop-color="#d6bc94"/></linearGradient><linearGradient id="lake" x2=".12" y2="1"><stop stop-color="#6f8c8c"/><stop offset=".56" stop-color="#426c74"/><stop offset="1" stop-color="#425c59"/></linearGradient><filter id="grain" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency=".15" numOctaves="3" seed="'+(seed%17+2)+'" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope=".25"/></feComponentTransfer></filter><filter id="oil" x="-3%" y="-3%" width="106%" height="106%"><feTurbulence type="fractalNoise" baseFrequency=".012" numOctaves="2" seed="11" result="warping"/><feDisplacementMap in="SourceGraphic" in2="warping" scale="9" xChannelSelector="R" yChannelSelector="G"/></filter></defs>');
+x.push('<g filter="url(#oil)"><rect width="1600" height="900" fill="url(#sky)"/>');
 for(let i=0;i<(name==="hero"?165:62);i++)x.push(b(r(0,1600),r(-50,370),r(22,160),r(-15,23),pick(sky),r(.10,.41)));
 x.push('<path d="M0 384L118 304 254 354 413 220 574 309 733 137 868 230 1083 96 1202 189 1334 142 1480 220 1600 180V658H0Z" fill="#9da8a1"/>');
 x.push('<path d="M0 445L148 360 307 405 490 239 630 330 758 224 874 274 1087 136 1240 215 1360 182 1525 280 1600 247V651H0Z" fill="#687f82"/>');
@@ -40,6 +40,6 @@ if(name==="dediscina")x.push('<path d="M495 599L650 480 821 600V784H495Z" fill="
 if(name==="sezonsko")for(let i=0;i<100;i++)x.push(e(r(0,1600),r(0,895),r(4,13),r(2,8),pick(["#d0aa58","#b58a43","#d7ba71","#a36c45"]),r(.25,.71),r(-90,90)));
 if(name==="gore-traili")x.push('<path d="M620 900Q796 711 926 655T1251 591" fill="none" stroke="#d6c6a0" stroke-width="91" opacity=".73"/>');
 for(let i=0;i<(name==="hero"?225:65);i++)x.push(b(r(0,1600),r(0,900),r(6,90),r(-9,9),pick(["#efdbb5","#1d3435","#8e865f"]),r(.03,.19)));
-x.push('<rect width="1600" height="900" fill="#d8c7a2" filter="url(#grain)" opacity=".15" style="mix-blend-mode:multiply"/></svg>');
+x.push('</g><rect width="1600" height="900" fill="#d8c7a2" filter="url(#grain)" opacity=".15" style="mix-blend-mode:multiply"/></svg>');
 return x.join("\n");}
 for(const [name,seed] of [["hero",1063],["kolesarstvo",1070],["dediscina",1083],["sezonsko",1096],["gore-traili",1101],["gourmet",1111],["vodniki",1121]]){const svg=scene(name,seed);writeFileSync(join(out,name+".svg"),svg,"utf8");console.log("painted "+name+" "+(svg.length/1024).toFixed(1)+" KiB");}
