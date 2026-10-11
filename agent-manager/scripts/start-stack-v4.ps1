@@ -12,13 +12,13 @@ if ($lowMemoryEnabled) {
   $focusDefaults = @{
     "OLLAMA_MAX_LOADED_MODELS" = "1"
     "OLLAMA_NUM_PARALLEL" = "1"
-    "OLLAMA_KEEP_ALIVE" = "60s"
-    "OLLAMA_FAST_KEEP_ALIVE" = "60s"
+    "OLLAMA_KEEP_ALIVE" = "0s"
+    "OLLAMA_FAST_KEEP_ALIVE" = "0s"
     "OLLAMA_CONTEXT_LENGTH" = "4096"
     "AGENT_MANAGER_CONTEXT" = "4096"
     "AGENT_MANAGER_MODEL" = "qwen2.5-coder:3b"
     "AGENT_MANAGER_AI_PRIORITY" = "ollama"
-    "AGENT_MANAGER_OLLAMA_KEEP_ALIVE" = "60s"
+    "AGENT_MANAGER_OLLAMA_KEEP_ALIVE" = "0s"
     "MODEL_CONCURRENCY" = "1"
     "VISUAL_QA_CONCURRENCY" = "1"
     "PRODUCTION_WORKERS" = "1"
@@ -37,7 +37,7 @@ if ($lowMemoryEnabled) {
     $env:AGENT_MANAGER_SUPERVISOR_ONLY="1"
     Write-Host "Agent Focus: supervisor-only - BlogLab and Project Visibility run elsewhere; no local production agent will be started." -ForegroundColor Cyan
   } else {
-    Write-Host "Agent Focus: 8 GB profile active. One AI model, one inference lane; optional Colibri launch disabled." -ForegroundColor Cyan
+    Write-Host "Agent Focus: 8 GB RAM-first profile. One AI model, unload after replies; optional Colibri disabled." -ForegroundColor Cyan
   }
 } else {
   # Preserve normal behavior when the operator has not enabled Agent Focus.
