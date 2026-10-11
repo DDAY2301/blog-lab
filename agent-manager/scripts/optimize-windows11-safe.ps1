@@ -294,6 +294,23 @@ if ($Mode -in @("Apply", "Focus")) {
       user_variables = $before
     } | ConvertTo-Json -Depth 5 | Set-Content -LiteralPath $backupPath -Encoding UTF8
     Write-Host "Saved reversible settings backup: $backupPath"
+  } else {
+    # Preserve the original backup while extending it for newly introduced
+    # focus settings. Without this, Restore would leave new flags enabled.
+    $existing = Get-Content -LiteralPath $backupPath -Raw | ConvertFrom-Json
+    $expanded = $false
+    foreach ($key in $settings.Keys) {
+      if (-not $existing.user_variables.PSObject.Properties[$key]) {
+        $existing.user_variables | Add-Member -NotePropertyName $key -NotePropertyValue (Get-UserSetting $key)
+        $expanded = $true
+      }
+    }
+    if ($expanded) {
+      $newBackup = "$backupPath.tmp"
+      $existing | ConvertTo-Json -Depth 7 | Set-Content -LiteralPath $newBackup -Encoding UTF8
+      Move-Item -LiteralPath $newBackup -Destination $backupPath -Force
+      Write-Host "Extended existing settings backup with new reversible keys."
+    }
   }
   foreach ($key in $settings.Keys) { Set-UserSetting $key $settings[$key] }
   Write-Host "Applied user-scope low-memory AI settings. Already-running Ollama and agents retain their original environment until a controlled restart." -ForegroundColor Green
