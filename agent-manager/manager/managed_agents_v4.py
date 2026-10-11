@@ -188,10 +188,15 @@ class ManagedAgentSupervisorV4:
         wanted = target.workflows or []
         latest: dict[str, dict[str, Any]] = {}
         pages_checked = 0
+        # Without an explicit workflow allowlist, review only the latest 100
+        # runs; scanning 500 historical runs can flag retired workflow names as
+        # current outages and wastes GitHub API rate-limit budget.
+        max_pages = 5 if wanted else 1
+        headers = self._github_headers()
         async with httpx.AsyncClient(timeout=15.0) as client:
-            for page in range(1, 6):
+            for page in range(1, max_pages + 1):
                 params = {"branch": target.branch, "per_page": 100, "page": page}
-                r = await client.get(url, headers=self._github_headers(), params=params)
+                r = await client.get(url, headers=headers, params=params)
                 pages_checked = page
                 if r.status_code >= 400:
                     return {
