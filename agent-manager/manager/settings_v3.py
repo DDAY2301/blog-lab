@@ -15,6 +15,7 @@ class SettingsV3:
     heartbeat_interval: int = max(10, int(os.getenv("AGENT_MANAGER_HEARTBEAT_INTERVAL", "30")))
     write_enabled: bool = _bool("AGENT_MANAGER_WRITE_ENABLED", False)
     roots_raw: str = os.getenv("AGENT_MANAGER_ROOTS", "")
+    supervisor_only: bool = _bool("AGENT_MANAGER_SUPERVISOR_ONLY", False)
     pv_root: str = os.getenv("PROJECT_VISIBILITY_ROOT", "")
     pv_health_url: str = os.getenv("PROJECT_VISIBILITY_HEALTH_URL", "http://127.0.0.1:8000/health")
     ollama_base_url: str = os.getenv("OLLAMA_BASE_URL", "http://127.0.0.1:11434")
