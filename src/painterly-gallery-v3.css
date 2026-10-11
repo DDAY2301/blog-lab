@@ -1,0 +1,554 @@
+/* Blog Lab — real art-book layout, 2026-10-11.
+   The painting is Marko Pernhart's 1854 "Bled" (public domain,
+   https://commons.wikimedia.org/wiki/File:Marko_Pernhart_-_Bled.jpg).
+   All links, articles, ads and event feeds remain genuine live UI.
+   Override layer imported after painterly-theme.css. */
+
+:root {
+  --art-paper: #f3e9d5;
+  --art-cream: #fbf3e4;
+  --art-ink: #2f342d;
+  --art-olive: #293a36;
+  --art-bronze: #ad8755;
+  --art-blue: #3f5b62;
+}
+body:has(.tourism-site) { background: #253632; }
+
+/* Apply an actual oil painting rather than a darkened tourism photograph. */
+.tourism-site > .travel-motion-bg { opacity: 0; }
+.tourism-site > .site-header {
+  position: relative;
+  z-index: 5;
+  min-height: 65px;
+  margin-bottom: -65px;
+  background: rgba(28, 43, 40, .91);
+  border-bottom-color: rgba(246, 233, 201, .14);
+  box-shadow: none;
+}
+.tourism-site > .site-header .brand {
+  font: 400 clamp(23px, 2.5vw, 32px)/1.1 Georgia, "Palatino Linotype", serif;
+  letter-spacing: -.025em;
+}
+.tourism-site > .site-header .brand-mark { display: none; }
+.tourism-site > .site-header nav {
+  gap: 2px;
+  justify-content: center;
+}
+.tourism-site > .site-header nav button {
+  color: #ece3cd;
+  padding: 10px 11px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.tourism-site > .site-header nav button.active {
+  background: rgba(227, 211, 170, .14);
+  color: #fff7e3;
+}
+.tourism-site > .site-header .events-jump {
+  border-radius: 2px 17px 3px 16px;
+  font-weight: 750;
+  font-size: 11px;
+  letter-spacing: .075em;
+  text-transform: uppercase;
+}
+
+/* The hero's painterly asset is an actual public-domain landscape painting,
+   with shaded copy area. CSS gradients add the darker ink of the mockup. */
+.tourism-site > .hero.paint-hero {
+  z-index: 1;
+  position: relative;
+  min-height: clamp(555px, 51vw, 730px);
+  padding: 135px max(6vw, calc((100vw - 1230px)/2)) 112px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  border: 0;
+  color: #fff8e9;
+  background-color: #40565a;
+  background-image:
+    linear-gradient(90deg, rgba(19,32,30,.90) 0%, rgba(25,38,34,.69) 34%, rgba(27,42,40,.20) 65%, rgba(24,36,33,.05) 100%),
+    linear-gradient(0deg, rgba(24,34,28,.24), transparent 38%),
+    url("https://upload.wikimedia.org/wikipedia/commons/a/a8/Marko_Pernhart_-_Bled.jpg");
+  background-position: center, center, center 50%;
+  background-size: cover, cover, cover;
+  background-repeat: no-repeat;
+}
+.tourism-site > .hero.paint-hero::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  opacity: .27;
+  border:0;
+  border-radius:0;
+  background-image:
+    repeating-linear-gradient(6deg, rgba(200,172,117,.11) 0 2px, transparent 2px 29px),
+    repeating-linear-gradient(96deg, rgba(17,38,37,.13) 0 1px, transparent 1px 22px);
+  mix-blend-mode: soft-light;
+}
+.tourism-site > .hero.paint-hero::after {
+  z-index: 3;
+  height: clamp(30px,4.1vw,63px);
+  background: var(--art-paper);
+  clip-path: polygon(0% 61%,4% 51%,10% 69%,16% 52%,22% 62%,29% 45%,35% 60%,42% 50%,48% 70%,55% 45%,62% 62%,69% 46%,75% 64%,83% 48%,91% 61%,96% 44%,100% 58%,100% 100%,0% 100%);
+}
+.tourism-site > .hero .paint-hero-copy {
+  position: relative;
+  z-index: 2;
+  width: min(670px, 67%);
+  flex-shrink: 0;
+}
+.tourism-site > .hero .paint-hero-copy h1 {
+  max-width: 680px;
+  font: 400 clamp(60px, 7.0vw, 99px)/.96 Georgia, "Palatino Linotype", serif;
+  letter-spacing: -.055em;
+  text-wrap: balance;
+  margin: 24px 0 22px;
+  color: #fff4e4;
+  text-shadow: 0 3px 23px rgba(14, 28, 27, .48);
+}
+.tourism-site > .hero .paint-hero-copy h1 em {
+  display: inline;
+  color: #fff4e4;
+  font-weight: 400;
+  font-style: normal;
+}
+.tourism-site > .hero .paint-hero-copy p {
+  max-width: 510px;
+  font: 400 clamp(16px,1.65vw,21px)/1.48 Georgia,serif;
+  color:#f2e9d5;
+}
+.tourism-site > .hero .eyebrow {
+  color:#f1d6a3;
+  font-size: 11px;
+  letter-spacing: .2em;
+  text-shadow: 0 2px 9px rgba(0,0,0,.3);
+}
+.tourism-site > .hero .primary {
+  min-height:50px;
+  border-radius: 6px 19px 4px 18px;
+  padding: 13px 25px;
+  background: #f6ebd6;
+  color: #2e3a30;
+  font-size: 11px;
+  letter-spacing: .095em;
+  box-shadow: 0 5px 0 rgba(23,38,31,.15);
+}
+.tourism-site > .hero .paint-hero-handnote {
+  z-index:2;
+  position: relative;
+  align-self:center;
+  max-width: 230px;
+  margin-top: 60px;
+  color:rgba(255,244,224,.90);
+  font: italic clamp(21px, 2.5vw, 35px)/1.27 "Brush Script MT", "Segoe Print", cursive;
+  transform:rotate(-8deg);
+  text-align:left;
+  text-shadow:0 2px 11px rgba(22,37,34,.36);
+}
+
+/* A full-width creamy parchment, no floating dark dashboard. */
+main.tourism-site > .home-content.container.paint-story-paper {
+  display:block !important;
+  position:relative;
+  z-index:2;
+  width:100%;
+  max-width:none;
+  margin: -2px 0 0;
+  padding: 7px max(4vw,calc((100vw - 1320px)/2)) 39px;
+  overflow: visible;
+  border:0 !important;
+  border-radius:0;
+  background:
+    repeating-linear-gradient(111deg, rgba(141,118,81,.018) 0px 2px, transparent 2px 17px),
+    linear-gradient(180deg,#f3e9d5,#f6eddd 78%,#f0e5d0) !important;
+  box-shadow:none;
+  color:var(--art-ink) !important;
+}
+main.tourism-site > .home-content.container.paint-story-paper::before {
+  pointer-events:none;
+  background:radial-gradient(ellipse at 98% 4%,rgba(165,134,85,.09),transparent 34%);
+}
+main.tourism-site > .home-content.container.paint-story-paper::after {
+  opacity:.065;
+}
+.tourism-site .paint-story-paper .feed {
+  padding: 14px 0 0;
+}
+main.tourism-site > .home-content.container.paint-story-paper .section-heading {
+  margin: 10px 0 25px;
+  padding: 8px 0 19px;
+  border-bottom: 1px solid rgba(82,78,64,.23) !important;
+}
+main.tourism-site > .home-content.container.paint-story-paper .section-heading .kicker {
+  font-size:10px;
+  color:#826b45 !important;
+}
+main.tourism-site > .home-content.container.paint-story-paper .section-heading h2 {
+  font: 400 clamp(35px,4vw,56px)/1.05 Georgia,serif;
+  letter-spacing: -.035em;
+  color:#2b302b !important;
+}
+main.tourism-site > .home-content.container.paint-story-paper .section-heading .count {
+  font: 700 11px/1.2 system-ui,sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  color:#555646 !important;
+  background:transparent;
+  border:0;
+}
+.tourism-site .paint-story-paper .post-grid {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  gap:clamp(13px,1.65vw,24px);
+  align-items:stretch;
+}
+.tourism-site .paint-story-paper .post-card,
+.tourism-site .paint-story-paper .post-card.featured {
+  display:grid;
+  grid-column:auto;
+  grid-template-columns: minmax(0, .91fr) minmax(0, 1fr);
+  min-height:217px;
+  border:1px solid #e8dcc5;
+  border-radius:4px 13px 4px 12px;
+  overflow:hidden;
+  color:#2a3029;
+  background:#faf2e2;
+  box-shadow:0 4px 13px rgba(66,56,40,.045);
+}
+.tourism-site .paint-story-paper .post-card .card-art,
+.tourism-site .paint-story-paper .post-card.featured .card-art {
+  min-height:217px;
+  height:100%;
+  border-radius:0;
+  background:#758a75;
+}
+.tourism-site .paint-story-paper .post-card .card-art-image img {
+  filter:saturate(.75) contrast(1.08) sepia(.16);
+  min-height:100%;
+  object-fit:cover;
+}
+.tourism-site .paint-story-paper .post-card .card-copy,
+.tourism-site .paint-story-paper .post-card.featured .card-copy {
+  min-width:0;
+  justify-content:center;
+  padding: 18px clamp(13px,1.6vw,26px);
+  background: #faf2e2;
+}
+.tourism-site .paint-story-paper .post-card h3,
+.tourism-site .paint-story-paper .post-card.featured h3 {
+  margin:13px 0 10px;
+  font: 500 clamp(17px,1.48vw,23px)/1.13 Georgia,serif;
+  letter-spacing:-.022em;
+  color:#27342c;
+  overflow-wrap:anywhere;
+}
+.tourism-site .paint-story-paper .post-card p {
+  font: 400 clamp(12px,.95vw,15px)/1.44 Georgia,serif;
+  color:#655f52;
+  -webkit-line-clamp:3;
+}
+.tourism-site .paint-story-paper .post-card .meta {
+  flex-wrap:wrap;
+  font-size:10px;
+  gap:6px;
+}
+.tourism-site .paint-story-paper .post-card .meta span:first-child {
+  padding:0;
+  min-height:0;
+  background:transparent;
+  border:0;
+  font-weight:800;
+  color:#89714d;
+  letter-spacing:.09em;
+}
+.tourism-site .paint-story-paper .post-card .card-foot {
+  margin-top:auto;
+  padding-top:12px;
+  font-size:10px;
+  gap:8px;
+}
+.tourism-site .paint-story-paper .post-card .card-foot span:first-child {
+  overflow:hidden;
+  max-width:60%;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.tourism-site .paint-story-paper .post-card:hover {
+  box-shadow: 0 14px 30px rgba(52,57,43,.14);
+  border-color:#b9a782;
+}
+
+/* Full-bleed olive painted stripe containing ACTUAL clickable categories. */
+.tourism-site .paint-rubrics-band {
+  position:relative;
+  z-index:2;
+  margin:-1px 0 0;
+  padding:45px 0 60px;
+  border:0;
+  background:
+    radial-gradient(ellipse at 10% 80%,rgba(179,149,93,.15),transparent 38%),
+    radial-gradient(ellipse at 85% 0%,rgba(89,119,114,.19),transparent 44%),
+    repeating-linear-gradient(2deg,rgba(224,208,160,.018) 0 3px,transparent 3px 19px),
+    linear-gradient(145deg,#354640,#243b3d 70%,#2e413d);
+}
+.tourism-site .paint-rubrics-band::before,
+.tourism-site .paint-rubrics-band::after {
+  content:"";
+  position:absolute;
+  left:0;right:0;
+  height:22px;
+  pointer-events:none;
+  background:#efe6d3;
+}
+.tourism-site .paint-rubrics-band::before {
+  top:-1px;
+  clip-path:polygon(0 0,100% 0,100% 51%,95% 71%,87% 39%,79% 64%,71% 42%,63% 61%,54% 38%,47% 56%,38% 42%,30% 66%,22% 36%,16% 54%,10% 42%,4% 71%,0 54%);
+}
+.tourism-site .paint-rubrics-band::after {
+  bottom:-1px;
+  transform:rotate(180deg);
+  clip-path:polygon(0 0,100% 0,100% 51%,95% 71%,87% 39%,79% 64%,71% 42%,63% 61%,54% 38%,47% 56%,38% 42%,30% 66%,22% 36%,16% 54%,10% 42%,4% 71%,0 54%);
+}
+.tourism-site .paint-rubrics-inner.container {
+  width:min(1250px,calc(100% - 48px));
+  position:relative;
+  z-index:1;
+}
+.tourism-site .paint-band-heading {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:16px;
+  margin-bottom:18px;
+}
+.tourism-site .paint-band-heading h2 {
+  margin:0;
+  color:#f3ead7;
+  font:400 clamp(30px,3.8vw,45px)/1.05 Georgia,serif;
+}
+.tourism-site .paint-band-heading button {
+  color:#ebdec4;
+  background:transparent;
+  border:0;
+  border-bottom:1px solid rgba(239,218,175,.6);
+  padding:7px 0;
+  font-size:11px;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  cursor:pointer;
+}
+.tourism-site .paint-rubrics-grid {
+  display:grid;
+  grid-template-columns:repeat(6,minmax(0,1fr));
+  gap:clamp(12px,2vw,30px);
+}
+.tourism-site .paint-rubric-tile {
+  display:grid;
+  justify-items:center;
+  align-content:start;
+  gap:11px;
+  min-width:0;
+  padding:0;
+  border:0;
+  background:transparent;
+  cursor:pointer;
+  color:#f7edda;
+}
+.tourism-site .paint-rubric-art {
+  display:block;
+  width:100%;
+  aspect-ratio:1.42/1;
+  border:2px solid rgba(227,204,153,.25);
+  border-radius:32% 23% 28% 25% / 28% 32% 25% 26%;
+  background-color:#75887c;
+  background-size:cover;
+  box-shadow:inset 0 0 0 1px rgba(255,235,189,.13),0 8px 18px rgba(9,24,23,.16);
+  overflow:hidden;
+  transition:transform .2s ease,border-color .2s ease;
+  filter:saturate(.79) contrast(1.09) sepia(.10);
+}
+.tourism-site .paint-rubric-tile:hover .paint-rubric-art,
+.tourism-site .paint-rubric-tile.active .paint-rubric-art {
+  transform:translateY(-4px) rotate(-1.5deg);
+  border-color:#e8cf99;
+}
+.tourism-site .paint-rubric-label {
+  font:400 clamp(13px,1.2vw,18px)/1.25 Georgia,serif;
+  color:#f3e6cf;
+}
+.tourism-site .paint-rubric-art--1 {
+  background-image:linear-gradient(0deg,rgba(34,57,46,.15),transparent),url("https://upload.wikimedia.org/wikipedia/commons/a/a8/Marko_Pernhart_-_Bled.jpg");
+  background-position:25% 72%;
+}
+.tourism-site .paint-rubric-art--2 {
+  background-image:linear-gradient(0deg,rgba(66,50,22,.12),transparent),url("https://upload.wikimedia.org/wikipedia/commons/a/a8/Marko_Pernhart_-_Bled.jpg");
+  background-position:36% 72%;
+}
+.tourism-site .paint-rubric-art--3 {
+  background-image:url("https://upload.wikimedia.org/wikipedia/commons/e/e3/Matija_Jama_-_Bled.jpg");
+  background-position:center 25%;
+}
+.tourism-site .paint-rubric-art--4 {
+  background-image:url("https://upload.wikimedia.org/wikipedia/commons/a/a8/Marko_Pernhart_-_Bled.jpg");
+  background-position:85% 28%;
+}
+.tourism-site .paint-rubric-art--5 {
+  background-image:url("https://upload.wikimedia.org/wikipedia/commons/e/e3/Matija_Jama_-_Bled.jpg");
+  background-position:10% 81%;
+}
+.tourism-site .paint-rubric-art--6 {
+  background-image:url("https://upload.wikimedia.org/wikipedia/commons/a/a8/Marko_Pernhart_-_Bled.jpg");
+  background-position:60% 60%;
+}
+
+/* Bottom page remains functional, with genuine editor choice, not a dummy newsletter. */
+.tourism-site .paint-afterword {
+  position:relative;
+  padding:49px 0 58px;
+  background:
+    radial-gradient(ellipse at 2% 50%,rgba(144,149,95,.15),transparent 28%),
+    linear-gradient(170deg,#f4e9d4,#f3e8d3);
+}
+.tourism-site .paint-afterword-inner.container {
+  width:min(1250px,calc(100% - 48px));
+  display:grid;
+  grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);
+  gap:clamp(35px,7vw,110px);
+}
+.tourism-site .paint-afterword-manifesto {
+  border-right:1px solid #c8b995;
+  padding-right:clamp(20px,4vw,70px);
+}
+.tourism-site .paint-overline {
+  font:800 10px/1.5 system-ui,sans-serif;
+  letter-spacing:.18em;
+  color:#8a7050;
+}
+.tourism-site .paint-afterword h2 {
+  margin:8px 0 12px;
+  font:400 clamp(32px,3.8vw,54px)/1.02 Georgia,serif;
+  letter-spacing:-.04em;
+  color:#27392e;
+}
+.tourism-site .paint-afterword p {
+  max-width:47ch;
+  margin:0 0 15px;
+  font:400 16px/1.6 Georgia,serif;
+  color:#5b6257;
+}
+.tourism-site .paint-manifesto-link,
+.tourism-site .paint-editorial-link {
+  display:inline-flex;
+  align-items:center;
+  gap:20px;
+  min-height:43px;
+  color:#2b4034;
+  text-decoration:none;
+  border:0;
+  border-bottom:1px solid #bda77e;
+  padding:0 4px;
+  background:transparent;
+  font:700 12px/1.4 system-ui,sans-serif;
+  cursor:pointer;
+}
+.tourism-site .paint-afterword-editorial { padding:8px 0 8px 10px; }
+.tourism-site .paint-afterword-editorial h2 { font-size:clamp(29px,3.1vw,43px); }
+.tourism-site .paint-inline-ad { position:relative;z-index:2;margin:0 auto;padding:18px 0;background:transparent; }
+.tourism-site .paint-inline-ad .ad-slot { border-color:rgba(231,211,171,.22);background:rgba(25,44,35,.62); }
+
+/* Existing LivePulse now full-width as a clearly labeled working section. */
+.tourism-site .paint-events-section.container {
+  position:relative;
+  z-index:2;
+  width:min(1250px,calc(100% - 48px));
+  margin:32px auto 60px;
+  display:grid;
+  grid-template-columns:minmax(180px,.30fr) minmax(0,1fr);
+  gap:30px;
+  align-items:start;
+  scroll-margin-top:90px;
+}
+.tourism-site .paint-events-intro .paint-overline {color:#d5b987;}
+.tourism-site .paint-events-intro h2 {
+  margin:8px 0;
+  color:#f7edda;
+  font:400 clamp(30px,3.2vw,46px)/1.08 Georgia,serif;
+}
+.tourism-site .paint-events-section .live-pulse,
+.tourism-site .paint-events-section .events-pulse {
+  position:relative;
+  top:auto;
+  width:100%;
+  margin:0;
+  max-height:none;
+  color:#f4e5ce;
+  border:1px solid rgba(214,193,154,.28);
+  border-radius:5px 23px 5px 22px;
+  background:linear-gradient(135deg,#3a544a,#233b39 85%);
+  box-shadow:0 25px 55px rgba(13,26,24,.20);
+}
+.tourism-site .paint-events-section .live-pulse-head strong,
+.tourism-site .paint-events-section .live-pulse-item h3 {
+  color:#fbf1dc;
+}
+.tourism-site .paint-events-section .live-pulse-head>span,
+.tourism-site .paint-events-section .live-pulse-intro,
+.tourism-site .paint-events-section .live-pulse-foot,
+.tourism-site .paint-events-section .live-pulse-meta,
+.tourism-site .paint-events-section .event-pulse-top,
+.tourism-site .paint-events-section .event-place { color:#d9d5c5; }
+.tourism-site .paint-events-section .event-type { background:#536e5a;color:#fff7e3; }
+.tourism-site > footer {z-index:2;}
+.tourism-site > footer .travel-photo-credit a {text-decoration:underline;text-underline-offset:3px;}
+
+/* Keep the article body and platform usable. No layout reordering outside home. */
+.tourism-site .article-page--premium {background:var(--art-paper);}
+.tourism-site .article-heading--premium h1 {overflow-wrap:anywhere;}
+
+/* Responsive layout and practical targets, including keyboard focus states. */
+@media(max-width:1180px){
+ .tourism-site .paint-story-paper .post-grid {grid-template-columns:repeat(2,minmax(0,1fr)) !important;}
+ .tourism-site .paint-rubrics-grid {grid-template-columns:repeat(3,minmax(0,1fr));max-width:900px;margin:auto;}
+ .tourism-site > .hero .paint-hero-copy h1 {font-size:clamp(52px,7.2vw,82px);}
+}
+@media(max-width:760px){
+ .tourism-site > .site-header {margin-bottom:0;min-height:67px;}
+ .tourism-site > .site-header nav {width:100%;justify-content:flex-start;}
+ .tourism-site > .hero.paint-hero {min-height:530px;padding:75px 23px 100px;align-items:center;}
+ .tourism-site > .hero .paint-hero-copy {width:100%;}
+ .tourism-site > .hero .paint-hero-copy h1 {max-width:640px;font-size:clamp(47px,11.5vw,72px);line-height:1.02;}
+ .tourism-site > .hero .paint-hero-handnote {display:none;}
+ .tourism-site .paint-story-paper .post-grid {grid-template-columns:1fr !important;}
+ .tourism-site .paint-story-paper .post-card,.tourism-site .paint-story-paper .post-card.featured {
+   grid-template-columns:minmax(120px,.43fr) minmax(0,.57fr);min-height:190px;
+ }
+ .tourism-site .paint-story-paper .post-card .card-art,.tourism-site .paint-story-paper .post-card.featured .card-art {min-height:190px;}
+ .tourism-site .paint-rubrics-grid {grid-template-columns:repeat(3,minmax(0,1fr));}
+ .tourism-site .paint-afterword-inner.container {grid-template-columns:1fr;gap:23px;}
+ .tourism-site .paint-afterword-manifesto {border-right:0;border-bottom:1px solid #c8b995;padding:0 0 24px;}
+ .tourism-site .paint-events-section.container {grid-template-columns:1fr;gap:16px;}
+ .tourism-site .paint-events-intro h2 {font-size:32px;}
+}
+@media(max-width:480px){
+ .tourism-site > .site-header .brand {font-size:23px;}
+ .tourism-site > .hero.paint-hero {min-height:535px;background-position:center,center,47% center;}
+ .tourism-site > .hero .paint-hero-copy h1 {font-size:clamp(43px,12.3vw,59px);}
+ .tourism-site > .hero .paint-hero-copy p {font-size:16px;}
+ .tourism-site .paint-story-paper .post-card,.tourism-site .paint-story-paper .post-card.featured {grid-template-columns:1fr;}
+ .tourism-site .paint-story-paper .post-card .card-art,.tourism-site .paint-story-paper .post-card.featured .card-art {height:170px;min-height:170px;}
+ .tourism-site .paint-story-paper .post-card .card-copy,.tourism-site .paint-story-paper .post-card.featured .card-copy {padding:17px 19px;}
+ .tourism-site .paint-rubrics-grid {gap:14px 10px;}
+ .tourism-site .paint-rubric-label {font-size:13px;}
+ .tourism-site .paint-band-heading button {font-size:10px;}
+ main.tourism-site > .home-content.container.paint-story-paper {padding-left:18px;padding-right:18px;}
+ .tourism-site .paint-rubrics-inner.container,.tourism-site .paint-afterword-inner.container {width:calc(100% - 36px);}
+}
+@media(prefers-reduced-motion:reduce){
+ .tourism-site .paint-rubric-art {transition:none;}
+}
