@@ -11,6 +11,8 @@ $ErrorActionPreference = "Stop"
 # antivirus settings, disable updates, change power plans or require admin.
 # Focus additionally gives only VERIFIED local agent listeners modest CPU scheduling
 # preference. CPU priority cannot reserve RAM and cannot change running Ollama env.
+# RAM-first deliberately unloads Ollama models after each completed AI answer;
+# it does not kill the Ollama service or interfere with in-flight requests.
 $settings = [ordered]@{
   OLLAMA_MAX_LOADED_MODELS       = "1"
   OLLAMA_NUM_PARALLEL            = "1"
@@ -20,9 +22,9 @@ $settings = [ordered]@{
   AGENT_MANAGER_SUPERVISOR_ONLY = "1"
   AGENT_MANAGER_MODEL            = "qwen2.5-coder:3b"
   AGENT_MANAGER_AI_PRIORITY      = "ollama"
-  OLLAMA_KEEP_ALIVE              = "60s"
-  OLLAMA_FAST_KEEP_ALIVE         = "60s"
-  AGENT_MANAGER_OLLAMA_KEEP_ALIVE = "60s"
+  OLLAMA_KEEP_ALIVE              = "0s"
+  OLLAMA_FAST_KEEP_ALIVE         = "0s"
+  AGENT_MANAGER_OLLAMA_KEEP_ALIVE = "0s"
   MODEL_CONCURRENCY              = "1"
   PRODUCTION_WORKERS             = "1"
   VISUAL_QA_CONCURRENCY          = "1"
@@ -163,6 +165,7 @@ function Get-SystemSnapshot {
     project_visibility = @{}
     ollama_model_names = @()
     ollama_loaded_models = @()
+    target_idle_free_ram_gb = 3.0
     prioritized_agent_processes = @()
     active_agent_incidents = $null
     ai_user_settings = [ordered]@{}
@@ -280,6 +283,13 @@ function Get-SystemSnapshot {
   if (-not $snapshot.agent_manager.reachable) {
     $snapshot.recommendations += "Agent Manager API on 127.0.0.1:8787 is offline: verify existing service before changing any runtime settings."
   }
+  if ($snapshot.memory.available_gb -ne $null -and $snapshot.memory.available_gb -lt 3.0) {
+    if (@($snapshot.ollama_loaded_models).Count -gt 0) {
+      $snapshot.recommendations += "Goal: >=3 GB available RAM when idle. One Ollama model is loaded; RAM-first keep_alive=0s frees it after future Manager AI replies. If no inference is running, use 'ollama stop qwen2.5-coder:3b' to release it immediately."
+    } else {
+      $snapshot.recommendations += "Goal: >=3 GB available RAM when idle. No Ollama model is loaded; inspect the top memory processes below before changing startup apps."
+    }
+  }
   $snapshot.recommendations += "Review Windows Task Manager > Startup apps manually; keep security, backup, sync and hardware driver utilities you need."
   $snapshot.recommendations += "Do not disable Defender, Windows Update, SysMain, memory compression, or the paging file as a blanket performance tweak."
   return $snapshot
@@ -313,7 +323,8 @@ if ($Mode -in @("Apply", "Focus")) {
     }
   }
   foreach ($key in $settings.Keys) { Set-UserSetting $key $settings[$key] }
-  Write-Host "Applied user-scope low-memory AI settings. Already-running Ollama and agents retain their original environment until a controlled restart." -ForegroundColor Green
+  Write-Host "Applied RAM-first AI settings: unload models after each completed Manager AI response; monitor stays online." -ForegroundColor Green
+  Write-Host "Already-running Manager processes need a controlled restart to import the new per-request keep_alive." -ForegroundColor Yellow
   if ($Mode -eq "Focus") { Set-AgentCpuPriority }
 } elseif ($Mode -eq "Restore") {
   if (-not (Test-Path -LiteralPath $backupPath -PathType Leaf)) {
@@ -337,7 +348,7 @@ $report | ConvertTo-Json -Depth 12 | Set-Content -LiteralPath $reportPath -Encod
 Write-Host ""
 Write-Host "Windows 11 + Agent Manager performance report" -ForegroundColor Cyan
 Write-Host "Mode: $Mode"
-Write-Host "RAM available (GB): $($report.memory.available_gb)"
+Write-Host "RAM available (GB): $($report.memory.available_gb) / idle goal: $($report.target_idle_free_ram_gb) GB"
 Write-Host "CPU load (%): $($report.cpu.load_percent)"
 Write-Host "Free system disk (GB): $($report.system_disk.free_gb)"
 Write-Host "Windows-managed pagefile: $($report.pagefile_automatic)"
