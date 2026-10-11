@@ -6277,10 +6277,6 @@ export default function Home() {
             <div className="paint-hero-handnote" aria-hidden="true">Kraji.<br />Ljudje.<br />Zgodbe, ki<br />povezujejo.</div>
           </section>
 
-          <div className="container ad-leaderboard-wrap">
-            <AdSlot slot="home-leaderboard" />
-          </div>
-
           <div className="home-content container paint-story-paper no-live-pulse">
             <section className="feed">
             <div className="section-heading">
@@ -6357,6 +6353,10 @@ export default function Home() {
               </div>
             </div>
           </section>
+
+          <div className="container ad-leaderboard-wrap paint-inline-ad">
+            <AdSlot slot="home-leaderboard" />
+          </div>
 
           {siteSettings.showLivePulse && (
             <section className="paint-events-section container" aria-label="Sveže informacije o dogodkih">
