@@ -52,9 +52,13 @@ function Set-UserSetting([string]$name, [AllowNull()][string]$value) {
 function Get-VerifiedAgentProcesses {
   $services = @(
     @{ port = 8787; url = "http://127.0.0.1:8787/health"; type = "manager"; names = @("python", "pythonw", "uvicorn") },
-    @{ port = 8000; url = "http://127.0.0.1:8000/health"; type = "project_visibility"; names = @("python", "pythonw", "uvicorn") },
     @{ port = 11434; url = "http://127.0.0.1:11434/api/tags"; type = "ollama"; names = @("ollama") }
   )
+  $supervisor = [Environment]::GetEnvironmentVariable("AGENT_MANAGER_SUPERVISOR_ONLY", "User")
+  if (-not $supervisor) { $supervisor = $env:AGENT_MANAGER_SUPERVISOR_ONLY }
+  if ($supervisor -ne "1") {
+    $services += @{ port = 8000; url = "http://127.0.0.1:8000/health"; type = "project_visibility"; names = @("python", "pythonw", "uvicorn") }
+  }
   $verified = @()
   foreach ($service in $services) {
     try {
