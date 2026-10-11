@@ -12,6 +12,7 @@ import "./final-polish.css";
 import "./painterly-theme.css";
 import "./painterly-gallery-v3.css";
 import "./painterly-original-v4.css";
+import "./painterly-atelier-v5.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
