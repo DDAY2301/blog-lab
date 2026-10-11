@@ -224,19 +224,22 @@ MANAGER_MAIL_HELP = {
         "[AGENT]": "Samodejna usmeritev - za kratke ukaze brez uporabe lokalnega AI",
         "[AGENT MANAGER]": "Ukazi za centralni nadzorni sistem",
         "[AGENT BLOGLAB]": "Ukazi za oddaljeni BlogLab worker (zahteva FLEET_AGENT_TOKEN)",
-        "[AGENT PV]": "PV Github nadzor; oddaljeno izvajanje ukazov se ni povezano",
+        "[AGENT PV]": "PV GitHub nadzor + CI diagnostika; za gradnjo strani se vedno potrebujemo remote agenta",
         "[AGENT ALL]": "Pregled flote; izvajanje sprememb pri vseh le po potrebi",
     },
     "read_only_commands": [
         "POMOC", "STATUS", "INCIDENTI", "PREVERI AGENTE", "RAM",
         "MODELI", "EMAIL STATUS", "OPRAVILA"
     ],
+    "remote_pv_diagnostics": [
+        "[AGENT PV] STATUS", "[AGENT PV] TEST API", "[AGENT PV] FRONTEND BENCHMARK"
+    ],
     "manager_actions": [
         "VZDRZEVANJE", "TEST EMAIL", "POPRAVI KODO BLOG LAB",
         "POPRAVI KODO PROJECT VISIBILITY (le, ko je repozitorij lokalno zaupanja vreden)"
     ],
     "recovery_policy": "Git branch + test + PR; brez neposrednega merge/deploy iz e-poste.",
-    "remote_project_visibility": "Github CI/Pages nadzor deluje. Live PV fleet commands zahtevajo posebej povezan, avtenticiran oddaljeni runner.",
+    "remote_project_visibility": "Github CI/Pages nadzor in GitHub CI/benchmark dispatch delujeta ob ustreznem tokenu. Za izdelavo strani in live fleet commands je potreben oddaljeni runner.",
     "security": "Samo izrecno dovoljeni in avtenticirani posiljatelji; brez gesel ali tokenov v sporocilu.",
 }
 
@@ -360,13 +363,79 @@ async def _manager_command(command: str) -> dict[str, Any]:
     )
 
 
-async def _project_command(command: str) -> dict[str, Any]:
-    if os.getenv("AGENT_MANAGER_SUPERVISOR_ONLY", "0") == "1":
+async def _pv_github_workflow_dispatch(workflow: str) -> dict[str, Any]:
+    """Dispatch only predefined GitHub-hosted, read-only diagnostic workflows."""
+    allowed = {"agent-api-ci.yml", "frontend-benchmark.yml"}
+    if workflow not in allowed:
+        raise RuntimeError("PV workflow is not in the explicit diagnostic allowlist.")
+    token = (
+        _secret("AGENT_MANAGER_GITHUB_TOKEN")
+        or _secret("GITHUB_TOKEN")
+        or _secret("GH_TOKEN")
+    )
+    if not token:
         raise RuntimeError(
-            "Supervisor-only mode: Project Visibility local API is intentionally not running. "
-            "GitHub Actions monitoring works remotely, but live agent commands require a "
-            "separately configured and authenticated remote command endpoint."
+            "Project Visibility remote CI requires a GitHub fine-grained token "
+            "with Actions: Read and write for DDAY2301/PROJEKT. "
+            "Configure AGENT_MANAGER_GITHUB_TOKEN locally; never email tokens."
         )
+    url = f"https://api.github.com/repos/DDAY2301/PROJEKT/actions/workflows/{workflow}/dispatches"
+    async with httpx.AsyncClient(timeout=20.0) as client:
+        response = await client.post(
+            url,
+            headers={
+                "Authorization": f"Bearer {token}",
+                "Accept": "application/vnd.github+json",
+                "X-GitHub-Api-Version": "2022-11-28",
+            },
+            json={"ref": "main"},
+        )
+    if response.status_code != 204:
+        raise RuntimeError(
+            f"Project Visibility CI dispatch failed HTTP {response.status_code}; "
+            "verify Actions permission and that the workflow supports workflow_dispatch."
+        )
+    return {
+        "ok": True,
+        "accepted": True,
+        "completed": False,
+        "operation": "remote_github_ci_dispatch",
+        "workflow": workflow,
+        "repo": "DDAY2301/PROJEKT",
+        "ref": "main",
+        "runs_page": "https://github.com/DDAY2301/PROJEKT/actions",
+        "notice": "Dispatch accepted, not yet confirmed passing. Watch GitHub Actions to verify result.",
+    }
+
+
+async def _project_command(command: str) -> dict[str, Any]:
+    low = _fold(command)
+    if os.getenv("AGENT_MANAGER_SUPERVISOR_ONLY", "0") == "1":
+        if low in {"status", "health", "stanje", "preveri status", "github status"}:
+            managed = await _http("GET", f"{MANAGER_BASE}/managed-agents", timeout=10)
+            row = next(
+                (x for x in managed.get("status", [])
+                 if x.get("target_id") == "project_visibility_github"),
+                None,
+            )
+            return {
+                "action": "project_visibility_github_status",
+                "ok": bool(row and row.get("ok")),
+                "monitor_type": "github_workflows_not_live_agent",
+                "last_check": row.get("last_check") if row else None,
+                "details": row.get("details") if row else None,
+            }
+        if low in {"ci", "test api", "api ci", "preveri ci", "zaženi ci", "zazeni ci"}:
+            return await _pv_github_workflow_dispatch("agent-api-ci.yml")
+        if low in {"frontend benchmark", "lighthouse", "frontend qa", "test frontend"}:
+            return await _pv_github_workflow_dispatch("frontend-benchmark.yml")
+        raise RuntimeError(
+            "Project Visibility supervisor-only: supported remote commands are "
+            "STATUS, TEST API/CI, FRONTEND BENCHMARK. "
+            "Live website builds, preflight and code repairs require a separately "
+            "authenticated remote PV agent; no local PV process will be started."
+        )
+
     token = _secret("FLEET_LOCAL_TOKEN")
     if not token:
         raise RuntimeError("FLEET_LOCAL_TOKEN is not configured.")
