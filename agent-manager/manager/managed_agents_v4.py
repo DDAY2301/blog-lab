@@ -69,6 +69,17 @@ class ManagedAgentSupervisorV4:
         return active
 
     async def check_all(self) -> list[dict[str, Any]]:
+        if os.getenv("AGENT_MANAGER_SUPERVISOR_ONLY", "0") == "1":
+            # Retire *only* the stale local-process expectations; remote PV
+            # GitHub incidents remain open until independently verified.
+            for target_id, title in (
+                ("project_visibility", "Project Visibility health degraded"),
+                ("project_visibility_process", "Project Visibility Local Process health degraded"),
+            ):
+                self.incidents.resolve_matching(
+                    target_id, title,
+                    {"reason": "Local PV runtime is out of scope in supervisor-only mode; remote GitHub monitoring remains active"},
+                )
         results: list[dict[str, Any]] = []
         for target in self.targets():
             now = time.time()
