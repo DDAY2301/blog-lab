@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-11T14:53:49+02:00",
-  "loop_count": 4570,
+  "updated_at": "2026-10-11T15:03:57+02:00",
+  "loop_count": 4571,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-11T14:53:35+02:00",
+      "last_learning_run": "2026-10-11T15:03:34+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -65,11 +65,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 113812,
-          "last_seen": "2026-10-11T14:53:35+02:00",
+          "seen": 113823,
+          "last_seen": "2026-10-11T15:03:34+02:00",
           "last_title": "Premier Janša ob ogledu finala mladih košarkarjev udaril po RTV Slovenija: »Plačujemo vas več kot Inštitut Jožef Stefan!« - Slovenske novice",
           "last_provider": "google-news-si",
-          "published": 255329,
+          "published": 255400,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-11T14:53:43+02:00",
+      "last_learning_run": "2026-10-11T15:03:46+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -271,11 +271,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 121401,
-          "last_seen": "2026-10-11T14:53:43+02:00",
+          "seen": 121417,
+          "last_seen": "2026-10-11T15:03:46+02:00",
           "last_title": "Pirc Musar: Mala zmaga za neko politično opcijo, pa hkrati velik poraz za državo - Delo.si",
           "last_provider": "google-news-si",
-          "published": 282149,
+          "published": 282229,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -366,7 +366,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-11T14:53:49+02:00",
+      "last_learning_run": "2026-10-11T15:03:57+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -430,11 +430,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 127902,
-          "last_seen": "2026-10-11T14:53:49+02:00",
+          "seen": 127927,
+          "last_seen": "2026-10-11T15:03:57+02:00",
           "last_title": "Vreme se bo danes hitro obrnilo: nevihte bodo zajele večji del Slovenije, na Primorskem tudi burja - Dnevne Novice",
           "last_provider": "google-news-si",
-          "published": 233839,
+          "published": 233869,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "reddit.com": {
@@ -562,6 +562,12 @@
   },
   "recent_articles": [
     {
+      "id": "idrija-lace-unesco-heritage-guide",
+      "title": "Idrija Lace: A Visitor’s Guide to Slovenia’s Living Thread Heritage",
+      "category": "Vodniki",
+      "createdAt": "2026-10-11T15:12:00+02:00"
+    },
+    {
       "id": "nizke-turisticne-sezone-morda-sploh-ne-bo-vec-kaj-to-pomeni-in-kje-so-razlogi-df90a45e",
       "title": "Nizke turistične sezone morda sploh ne bo več: kaj to pomeni in kje so razlogi",
       "category": "Sezonsko",
@@ -626,12 +632,6 @@
       "title": "Aidan Cerar: zakaj bi morali gradnjo kolesarskih stez podpirati predvsem vozniki",
       "category": "Kolesarstvo",
       "createdAt": "2026-10-09T07:39:47+02:00"
-    },
-    {
-      "id": "skofja-loka-passion-play-unesco-visitor-guide",
-      "title": "Škofja Loka Passion Play: UNESCO Heritage Beyond the Performance",
-      "category": "Vodniki",
-      "createdAt": "2026-10-08T15:01:23+02:00"
     }
   ],
   "recent_failures": [
