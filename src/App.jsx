@@ -6239,7 +6239,7 @@ export default function Home() {
         </button>
         <nav aria-label="Glavna navigacija">
           <button className={view === "home" && !publicCategory ? "active" : ""} onClick={() => showPublicCategory("")}>
-            <Icon name="home" /> Objave
+            <Icon name="home" /> Zgodbe
           </button>
           {rubrics.map((rubric) => (
             <button
@@ -6267,24 +6267,22 @@ export default function Home() {
 
       {view === "home" && (
         <>
-          <section className="hero">
-            <div className="eyebrow"><span /> {siteSettings.heroEyebrow}</div>
-            <h1>{siteSettings.heroTitle}<br /><em>{siteSettings.heroEmphasis}</em></h1>
-            <p>{siteSettings.heroSubtitle}</p>
-            <button className="primary" onClick={() => document.querySelector(".feed")?.scrollIntoView({ behavior: "smooth", block: "start" })}>{siteSettings.heroCta} <Icon name="arrow" /></button>
+          <section className="hero paint-hero" aria-labelledby="paint-hero-title">
+            <div className="paint-hero-copy">
+              <div className="eyebrow"><span /> {siteSettings.heroEyebrow}</div>
+              <h1 id="paint-hero-title">{siteSettings.heroTitle}<br /><em>{siteSettings.heroEmphasis}</em></h1>
+              <p>{siteSettings.heroSubtitle}</p>
+              <button className="primary" onClick={() => document.querySelector(".feed")?.scrollIntoView({ behavior: "smooth", block: "start" })}>{siteSettings.heroCta} <Icon name="arrow" /></button>
+            </div>
+            <div className="paint-hero-handnote" aria-hidden="true">Kraji.<br />Ljudje.<br />Zgodbe, ki<br />povezujejo.</div>
           </section>
 
-          <div className="container ad-leaderboard-wrap">
-            <AdSlot slot="home-leaderboard" />
-          </div>
-
-          <div className={`home-content container ${siteSettings.showLivePulse ? "" : "no-live-pulse"}`}>
-            {siteSettings.showLivePulse && <LivePulse />}
+          <div className="home-content container paint-story-paper no-live-pulse">
             <section className="feed">
             <div className="section-heading">
               <div>
-                <span className="kicker">{publicCategory ? "RUBRIKA" : "SLOVENIJA DANES"}</span>
-                <h2>{publicCategory || "Najnovejše poti, okusi in zgodbe"}</h2>
+                <span className="kicker">{publicCategory ? "IZBRANA RUBRIKA" : "ZGODBE IN NAVDIH"}</span>
+                <h2>{publicCategory || "Izbrane zgodbe iz Slovenije"}</h2>
               </div>
               <span className="count">{visiblePublished.length} {visiblePublished.length === 1 ? "objava" : "objav"}</span>
             </div>
@@ -6317,6 +6315,55 @@ export default function Home() {
             </div>
             </section>
           </div>
+
+          <section className="paint-rubrics-band" aria-labelledby="paint-rubrics-title">
+            <div className="paint-rubrics-inner container">
+              <div className="paint-band-heading">
+                <h2 id="paint-rubrics-title">Odkrij rubrike</h2>
+                <button type="button" onClick={() => showPublicCategory("")}>Vse zgodbe <span aria-hidden="true">↗</span></button>
+              </div>
+              <div className="paint-rubrics-grid">
+                {["Kolesarstvo", "Dediščina", "Sezonsko", "Gore & traili", "Gourmet", "Vodniki"].map((category, index) => (
+                  <button type="button" className={`paint-rubric-tile ${publicCategory === category ? "active" : ""}`} key={category} onClick={() => showPublicCategory(category)} aria-pressed={publicCategory === category}>
+                    <span className={`paint-rubric-art paint-rubric-art--${index + 1}`} aria-hidden="true" />
+                    <span className="paint-rubric-label">{category}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="paint-afterword" aria-label="O uredniških zgodbah">
+            <div className="paint-afterword-inner container">
+              <div className="paint-afterword-manifesto">
+                <span className="paint-overline">SKUPAJ RAZISKUJEMO</span>
+                <h2>Zgodbe, ki ostanejo.</h2>
+                <p>Od skritih poti do lokalnih okusov. Slovenija skozi zgodbe, ki jih je vredno prebrati in doživeti.</p>
+                <button type="button" className="paint-manifesto-link" onClick={() => document.querySelector(".feed")?.scrollIntoView({ behavior: "smooth", block: "start" })}>Razišči najnovejše zgodbe <span aria-hidden="true">→</span></button>
+              </div>
+              <div className="paint-afterword-editorial">
+                <span className="paint-overline">IZ UREDNIŠTVA</span>
+                <h2>Slovenija drugače.</h2>
+                <p>Praktične ideje, preverjeni viri in drugačen pogled na znane ter manj znane kraje.</p>
+                {tourismPublished.length > 0 && (
+                  <a className="paint-editorial-link" href={`?article=${encodeURIComponent(tourismPublished[0].id)}`} onClick={(event) => { event.preventDefault(); openArticle(tourismPublished[0]); }}>
+                    Preberi izbrano zgodbo <span aria-hidden="true">→</span>
+                  </a>
+                )}
+              </div>
+            </div>
+          </section>
+
+          <div className="container ad-leaderboard-wrap paint-inline-ad">
+            <AdSlot slot="home-leaderboard" />
+          </div>
+
+          {siteSettings.showLivePulse && (
+            <section className="paint-events-section container" aria-label="Sveže informacije o dogodkih">
+              <div className="paint-events-intro"><span className="paint-overline">NA TERENU</span><h2>Dogodki in aktualno</h2></div>
+              <LivePulse />
+            </section>
+          )}
         </>
       )}
 
@@ -6434,7 +6481,8 @@ export default function Home() {
         <p>{siteSettings.footerText}</p>
         <span>Potovanja · dogodki · lokalne zgodbe</span>
         <small className="travel-photo-credit">
-          Ozadje:
+          Slikarska naslovnica: <a href="https://commons.wikimedia.org/wiki/File:Marko_Pernhart_-_Bled.jpg" target="_blank" rel="noopener noreferrer">Marko Pernhart, Bled (1854), javna domena</a>.
+          {" · "}Fotografska ozadja:
           {" "}<a href="https://commons.wikimedia.org/wiki/File:Soca_River_Slovenia.JPG" target="_blank" rel="noopener noreferrer">Lucash / Soča, CC BY-SA 3.0</a>
           {" · "}<a href="https://commons.wikimedia.org/wiki/File:Bled_Lake,_Slovenia,_20240504_0851_8264.jpg" target="_blank" rel="noopener noreferrer">Jakub Hałun / Bled, CC BY 4.0</a>
           {" · "}<a href="https://commons.wikimedia.org/wiki/File:Ljubljana_old_town_and_river_Ljubljanica.jpg" target="_blank" rel="noopener noreferrer">Petar Milošević / Ljubljana, CC BY-SA 4.0</a>
