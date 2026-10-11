@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-11T06:39:12+02:00",
-  "loop_count": 4493,
+  "updated_at": "2026-10-11T06:53:20+02:00",
+  "loop_count": 4494,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-11T06:38:48+02:00",
+      "last_learning_run": "2026-10-11T06:52:59+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -69,7 +69,7 @@
           "last_seen": "2026-10-11T06:38:48+02:00",
           "last_title": "Premier Janša ob ogledu finala mladih košarkarjev udaril po RTV Slovenija: »Plačujemo vas več kot Inštitut Jožef Stefan!« - Slovenske novice",
           "last_provider": "google-news-si",
-          "published": 249797,
+          "published": 249869,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,17 +227,11 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 9,
-      "example_titles": {
-        "news.google.com": [
-          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
-          "Kot v sanjah: Slovenija že drugič v dveh tednih evropski prvak! (VIDEO) - Šport TV",
-          "Poljaki gladko boljši, Slovenci po porazu 0:3 v boj za bron proti Japoncem - rtvslo.si"
-        ]
-      }
+      "current_source_count": 0,
+      "example_titles": {}
     },
     "politika": {
-      "last_learning_run": "2026-10-11T06:38:58+02:00",
+      "last_learning_run": "2026-10-11T06:53:08+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -275,7 +269,7 @@
           "last_seen": "2026-10-11T06:38:58+02:00",
           "last_title": "Pirc Musar: Mala zmaga za neko politično opcijo, pa hkrati velik poraz za državo - Delo.si",
           "last_provider": "google-news-si",
-          "published": 275989,
+          "published": 276069,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -356,17 +350,11 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 15,
-      "example_titles": {
-        "news.google.com": [
-          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
-          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer",
-          "Golob: Ne predstavljam si, da bi kdo želel živeti v državi, v kateri bi politika imela pooblastila policije - N1 Slovenija"
-        ]
-      }
+      "current_source_count": 0,
+      "example_titles": {}
     },
     "aktualno": {
-      "last_learning_run": "2026-10-11T06:39:12+02:00",
+      "last_learning_run": "2026-10-11T06:53:20+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -434,7 +422,7 @@
           "last_seen": "2026-10-11T06:39:12+02:00",
           "last_title": "Vreme se bo danes hitro obrnilo: nevihte bodo zajele večji del Slovenije, na Primorskem tudi burja - Dnevne Novice",
           "last_provider": "google-news-si",
-          "published": 231469,
+          "published": 231504,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "reddit.com": {
@@ -542,20 +530,25 @@
           "last_title": "Dollar Tree",
           "last_provider": "bing-web"
         },
-        "slovenia.info": {
-          "score": 1.715,
-          "seen": 7,
-          "last_seen": "2026-10-05T10:24:26+02:00",
-          "last_title": "The official travel guide to Slovenia | I feel Slovenia",
+        "usps.com": {
+          "score": 1.732,
+          "seen": 2,
+          "last_seen": "2026-10-11T06:53:20+02:00",
+          "last_title": "Contact Us | USPS",
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 23,
+      "current_source_count": 4,
       "example_titles": {
-        "news.google.com": [
-          "(AKTUALNO) Varuhinja človekovih pravic Simona Drenik Bavdek: Pravica do dostojnega pokopa temeljna človekova pravica - Demokracija",
-          "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
-          "Ko so bile ZDA stare toliko kot danes Slovenija, so bile na robu razpada - Zanima.me"
+        "usps.com": [
+          "Welcome | USPS",
+          "Contact Us | USPS"
+        ],
+        "about.usps.com": [
+          "Careers – USPS is Hiring – About.usps.com"
+        ],
+        "m.tiktok.com": [
+          "Log in | TikTok"
         ]
       }
     }
