@@ -7,18 +7,23 @@
   "last_output": "nizke-turisticne-sezone-morda-sploh-ne-bo-vec-kaj-to-pomeni-in-kje-so-razlogi-df90a45e",
   "last_error": "ze_uporabljen_vir",
   "agent_version": "3.0.0-learning-guarded-fallback",
-  "current_category": "dediscina",
+  "current_category": "gore",
   "scheduled_posts_today": 2,
   "manual_posts_today": 0,
-  "writer_mode": "deterministic_fallback",
+  "writer_mode": "workers_ai",
   "scheduled_slots_done": [
     "2026-10-11|07:35|kolesarstvo",
     "2026-10-11|13:30|sezonsko"
   ],
   "scheduled_slots_deferred": [
-    "2026-10-11|10:45|dediscina"
+    "2026-10-11|10:45|dediscina",
+    "2026-10-11|16:20|gore"
   ],
-  "last_editorial_hold": null,
+  "last_editorial_hold": {
+    "slot": "2026-10-11|16:20|gore",
+    "reason": "ponavljanje,naslov_ni_v_rubriki,clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike,besedilo_ni_v_slovenscini",
+    "at": "2026-10-11T18:09:04+02:00"
+  },
   "publisher_guardian_last_run": "2026-10-11T17:53:46+02:00",
   "publisher_guardian_last_action": {
     "category": "dediscina",

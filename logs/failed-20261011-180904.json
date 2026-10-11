@@ -1,0 +1,42 @@
+{
+  "category": "gore",
+  "errors": [
+    "ponavljanje",
+    "naslov_ni_v_rubriki",
+    "clanek_brez_slovenskega_konteksta",
+    "viri_ne_podpirajo_slovenske_rubrike",
+    "besedilo_ni_v_slovenscini"
+  ],
+  "article": {
+    "title": "Porozumejte svetu a komunikujte v rôznych jazykoch",
+    "excerpt": "Porozumejte svetu a komunikujte v rôznych jazykoch pomocou Prekladača Google. Prekladajte text, reč, obrázky, dokumenty, weby a ďalší obsah vo svojich zariadeniach. Prekladač Google – osobný tlmočník v telefóne alebo poč",
+    "seoDescription": "Porozumejte svetu a komunikujte v rôznych jazykoch pomocou Prekladača Google. Prekladajte text, reč, obrázky, dokumenty, weby a ďalší obsah vo svojich zari",
+    "content": "Pregled za rubriko gore povzema trenutno razpoložljive informacije iz spodaj navedenih virov. Besedilo je pripravljeno brez dodajanja nepodprtih dejstev.\n\n## Porozumejte svetu a komunikujte v rôznych jazykoch\nPorozumejte svetu a komunikujte v rôznych jazykoch pomocou Prekladača Google. Prekladajte text, reč, obrázky, dokumenty, weby a ďalší obsah vo svojich zariadeniach. Prekladač Google – osobný tlmočník v telefóne alebo počítači Prejsť na obsah Prekladač Preložiť teraz Prekladač Preložiť teraz Porozumejte svetu a komunikujte v rôznych jazykoch Stiahnuť aplikáciu Nadviažte kontakt s ľuďmi, miestami a kultúrami bez jazykových bariér Prekladajte pomocou fotoaparátu Ak chcete okamžite preložiť, čo vidíte, stačí na to namieriť fotoaparát Žiadny internet? Žiadny problém. Stiahnite si jazyk a prekladajte bez internetového pripojenia Porozprávajte sa Porozprávajte sa s niekým, kto hovorí iným jazykom Prekladajte reč simultánne Zapnite prepis a budete rozumieť tomu, čo sa hovorí Prekladajte v ľubovoľnej aplikácii Bez ohľadu na to, akú aplikáciu máte otvorenú, stačí skopírovať text a klepnutím ho preložiť Zadávajte, hovorte alebo píšte Znaky a slová, ktoré klávesnica nepodporuje, zadávajte hlasovým vstupom alebo ich napíšte Uložené Preklad dokumentu Preklad webu Ukladajte si preklady Ak slová a výrazy uložíte, budete k nim mať rýchly prístup v každom zariadení Čo je v dokumente? Nahrajte súbory, aby mohli byť rýchlo preložené priamo na mieste, pričom sa zachová ich formátovanie Prekladajte celé weby Potrebujete preložiť celú webovú stránku? Na jej preloženie stačí zadať webovú adresu. Prekladajte pomocou fotoaparátu Ak chcete okamžite preložiť, čo vidíte, stačí na to namieriť fotoaparát Žiadny internet? Žiadny problém. Stiahnite si jazyk a prekladajte bez internetového pripojenia Porozprávajte sa Porozprávajte sa s niekým, kto hovorí iným jazykom Prekladajte reč simultánne Zapnite prepis a budete rozumieť tomu, čo sa hovorí Prekladajte v ľubovoľnej aplikácii Bez ohľadu na to, akú aplikáciu máte otvorenú, stačí skopírovať text a klepnutím ho preložiť Zadávajte, hovorte alebo píšte Znaky a slová, ktoré klávesnica nepodporuje, zadávajte hlasovým vstupom alebo ich napíšte Ukladajte si preklady Ak slová a výrazy uložíte, budete k nim mať rýchly prístup v každom zariadení Čo je v dokumente? Nahrajte súbory, aby mohli byť rýchlo preložené priamo na mieste, pričom sa zachová ich formátovanie Prekladajte celé weby Potrebujete preložiť celú webovú stránku? Na jej preloženie stačí zadať webovú adresu. Vyskúšať Prekladač Google Začnite používať Prekladač Google vo svojom prehliadači . Prípadne naskenujte QR kód, stiahnite si aplikáciu a používajte ju v mobilnom zariadení. Stiahnite si aplikáciu, aby ste mohli objavovať svet a komunikovať s ľuďmi v mnohých jazykoch. Android iOS S\n\nVir: translate.google.com — https://translate.google.com/intl/sk/about/",
+    "category": "Gore & traili",
+    "tags": [
+      "gore",
+      "Slovenija",
+      "porozumejte",
+      "svetu",
+      "komunikujte"
+    ],
+    "sources": [
+      {
+        "title": "Porozumejte svetu a komunikujte v rôznych jazykoch",
+        "url": "https://translate.google.com/intl/sk/about/",
+        "source_name": "translate.google.com"
+      }
+    ],
+    "fallback": false,
+    "heroImage": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/172nd_Slovenian_Mountain_Training_%285229491885%29.jpg/1920px-172nd_Slovenian_Mountain_Training_%285229491885%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "alt": "BOHINJSKA BELA, Slovenia -- Soldiers with U.S. Army Europe's 172nd Infantry Brigade pause during their hike up the mountain at the Slovenian Armed Forces Mountain Training Center 3",
+      "caption": "U.S. Army Europe from Wiesbaden, Germany · Wikimedia Commons · Public domain",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:172nd_Slovenian_Mountain_Training_(5229491885).jpg"
+    },
+    "gallery": [],
+    "visualTemplate": "studio",
+    "templateLabel": "Studio",
+    "id": "porozumejte-svetu-a-komunikujte-v-r-znych-jazykoch-dcab2e5e"
+  }
+}
