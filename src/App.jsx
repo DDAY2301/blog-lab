@@ -29,6 +29,49 @@ const CATEGORY_EMPTY_COPY = {
 };
 
 const starterArticles = [
+  {
+    "id": "kolesarjenje-slovenija-kolesari-nad-evropskim-povprecjem-vendar-izzivi-ostajajo-0a0bef11",
+    "title": "Kolesarjenje: Slovenija kolesari nad evropskim povprečjem, vendar izzivi ostajajo",
+    "excerpt": "Kolesarstvo: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Kolesarjenje: Slovenija kolesari nad evropskim povprečjem, vendar izzivi ostajajo«.",
+    "seoDescription": "Kolesarstvo: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Kolesarjenje: Slovenija kolesari nad evropskim povprečjem, vendar izzivi o",
+    "content": "**Kolesarstvo, 11. 10. 2026.** Kolesarjenje: Slovenija kolesari nad evropskim povprečjem, vendar izzivi ostajajo Ljubljanske novice\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Ljubljanske novice. Objavljeno: Thu, 23 Jul 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMisAFBVV95cUxQUFg4MzFwN05teHBrVVM0VkUtMnZwNkozallNUTdQT3dvQVN1alE3alBRQUJzMS1rOTlqc0QwT2MwMVo3Y2l5TkliczlCUmhQckRveVdEUHRRMlZlMDlpVFNVN3JqV2JneGQ0U2dYRzR5d29zQmF5cFJHbTVGc0RUc3JpdmZSaUs5dVFja2NjZUNKQXE2NC1PR3hoRWVHR1JhaDFBMnBRUHpvMC0zZmJDUA?oc=5)\n\n## Dopolnitev vira 2: Dnevnik\n\nSlovenija postaja raj za kolesarjenje: V zadnjih nekaj letih 300 kilometrov novih stez Dnevnik\n\n Vir: Dnevnik. Objavljeno: Fri, 03 Jul 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMizwFBVV95cUxQOC1VcEJUbW5IYkxTZHh6LVRrTHE0eXZGTlpVYU0zYmVPdV9FM0VkQjZTZGQ2dGp3NjM5Y3A2YnJEaXkwdG9uUzZ4eFZlX0M3YWRuMXBYYW04d0VpcURFb2hxUkdNUkhUTFRtOHczNU9VbDRfQ29IalpPV0ZHdXdLdDlXLVEtUTlEZ1l1NTQ2dzZKdmhHYmpGWFNvU2wxeXhreEhOUEVWcEhfMnRBcWl3WUR2aER4UmZ0cXlxTVpXaENiVnF4RHU0MVBRSzF4aU0?oc=5)\n\n## Dopolnitev vira 3: Slovenske novice\n\nMakadamkanje postaja hit: zakaj so gravel kolesa prihodnost kolesarjenja Slovenske novice\n\n Vir: Slovenske novice. Objavljeno: Thu, 21 Aug 2025 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMi8wFBVV95cUxQMEx3T2NiN09CMk9fUVJWYjF4VFB0UGcxQWVjRW4xdGRHVlhjOVZYb29NWEp3N2Exb1ROcGFLZWtPV2xTaUVkS3RkOEdHa2ROUnpia0F2b0xLeHNMdnNLd0RpeTZtWF9EYi1zeUxNOW9paGF2OGZNRFNoTUpmVUtON0RuVnpQcXNVWE1XWk1UUE10ZjdJbFBNV0FENm9yaTM0SEw4MVNMTHRxTUZ0WFFDQW5LcW5XOEo2U2lhSTdvWGJBdnpYWXNiOGZEUUs3QnFiZXhMLW5EYlU4TG5yWGUzNHd6aEhfMVRZMVFkRWFGM0x1WlU?oc=5)\n\n## Dopolnitev vira 4: Slovenske novice\n\nDoživite Kočevsko na kolesu. Tukaj se začne prava gozdna avantura Slovenske novice\n\n Vir: Slovenske novice. Objavljeno: Fri, 28 Aug 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMi6gFBVV95cUxNcDZxaFp1ekk4QmFUWmJzbkRoaTJLbnhlOVphNmhlQXFWa1VfdnNxZ0p3TmdTUFEtUTFJa1BoRHZESWliem5wMl9ZSmhmYjBTcy1mVmt1elVyMkh5M2tNUUNxMUp2SEJVMUVITmNEVmN6NWlVTzZ2VEhJNW85eFJqR3A1Z0dHMWVLaURwQ2dfN20zb1pISHZyajA5MktfVWtpWk56VHBzLXpfUWpvMjIyN0d1elhwMndQWnRuZUpMdEx4Q0lJcGtyaVFkRXRkcXQ5M1c4Y3lRaDR3Y19SQ1hJc3IwV1dpRG0xYXc?oc=5)\n\n## Dopolnitev vira 5: Slovenske novice\n\nRadlje ob Dravi utrjujejo svoj status trajnostne, kolesarske in kulturne destinacije Slovenske novice\n\n Vir: Slovenske novice. Objavljeno: Fri, 15 May 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiywFBVV95cUxPSVI1amYxVjdzeG8xbkFQX2doSXBjbkhmZG9ZVDJhT1hLOFJwZ1F0V1V0UjdoT3VRRVdjT09YYU1UeDVaclFkTmlxd3hBS1JIcGtfeUJTZWNxTjVmblVXamNZbDFsVU9ybFh5T1M4cXh3aG1sSzE3dnNBaVR0dE5ERGEyRjUwVlhGbjZxRTdtZjM4WWNxT2pSRWN6QXczVVpNYmpRUFhlM0xGOFo5WnlvYlJpLUI3d1JyLVdsS2xTQ001RnlsZzlKakNQOA?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Kolesarstvo",
+    "author": "Blog Lab Slovenia Publisher",
+    "status": "published",
+    "heroImage": {
+      "url": "/media/articles/8bad06fec502189cebd8.webp",
+      "alt": "Three male cyclists wearing helmets during a summer bicycle tour in rural Slovenia near Luže.",
+      "caption": "Marek Ślusarczyk ( Tupungato ) Photo gallery · Wikimedia Commons · CC BY 3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:08_Slovenia_rural_landscape_-_bicycle_expedition_with_panniers.jpg"
+    },
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Ljubljanske novice — Kolesarjenje: Slovenija kolesari nad evropskim povprečjem, vendar izzivi ostajajo - Ljubljanske novice",
+        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQUFg4MzFwN05teHBrVVM0VkUtMnZwNkozallNUTdQT3dvQVN1alE3alBRQUJzMS1rOTlqc0QwT2MwMVo3Y2l5TkliczlCUmhQckRveVdEUHRRMlZlMDlpVFNVN3JqV2JneGQ0U2dYRzR5d29zQmF5cFJHbTVGc0RUc3JpdmZSaUs5dVFja2NjZUNKQXE2NC1PR3hoRWVHR1JhaDFBMnBRUHpvMC0zZmJDUA?oc=5"
+      },
+      {
+        "label": "Dnevnik — Slovenija postaja raj za kolesarjenje: V zadnjih nekaj letih 300 kilometrov novih stez - Dnevnik",
+        "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQOC1VcEJUbW5IYkxTZHh6LVRrTHE0eXZGTlpVYU0zYmVPdV9FM0VkQjZTZGQ2dGp3NjM5Y3A2YnJEaXkwdG9uUzZ4eFZlX0M3YWRuMXBYYW04d0VpcURFb2hxUkdNUkhUTFRtOHczNU9VbDRfQ29IalpPV0ZHdXdLdDlXLVEtUTlEZ1l1NTQ2dzZKdmhHYmpGWFNvU2wxeXhreEhOUEVWcEhfMnRBcWl3WUR2aER4UmZ0cXlxTVpXaENiVnF4RHU0MVBRSzF4aU0?oc=5"
+      },
+      {
+        "label": "Slovenske novice — Makadamkanje postaja hit: zakaj so gravel kolesa prihodnost kolesarjenja - Slovenske novice",
+        "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQMEx3T2NiN09CMk9fUVJWYjF4VFB0UGcxQWVjRW4xdGRHVlhjOVZYb29NWEp3N2Exb1ROcGFLZWtPV2xTaUVkS3RkOEdHa2ROUnpia0F2b0xLeHNMdnNLd0RpeTZtWF9EYi1zeUxNOW9paGF2OGZNRFNoTUpmVUtON0RuVnpQcXNVWE1XWk1UUE10ZjdJbFBNV0FENm9yaTM0SEw4MVNMTHRxTUZ0WFFDQW5LcW5XOEo2U2lhSTdvWGJBdnpYWXNiOGZEUUs3QnFiZXhMLW5EYlU4TG5yWGUzNHd6aEhfMVRZMVFkRWFGM0x1WlU?oc=5"
+      },
+      {
+        "label": "Slovenske novice — Doživite Kočevsko na kolesu. Tukaj se začne prava gozdna avantura - Slovenske novice",
+        "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNcDZxaFp1ekk4QmFUWmJzbkRoaTJLbnhlOVphNmhlQXFWa1VfdnNxZ0p3TmdTUFEtUTFJa1BoRHZESWliem5wMl9ZSmhmYjBTcy1mVmt1elVyMkh5M2tNUUNxMUp2SEJVMUVITmNEVmN6NWlVTzZ2VEhJNW85eFJqR3A1Z0dHMWVLaURwQ2dfN20zb1pISHZyajA5MktfVWtpWk56VHBzLXpfUWpvMjIyN0d1elhwMndQWnRuZUpMdEx4Q0lJcGtyaVFkRXRkcXQ5M1c4Y3lRaDR3Y19SQ1hJc3IwV1dpRG0xYXc?oc=5"
+      },
+      {
+        "label": "Slovenske novice — Radlje ob Dravi utrjujejo svoj status trajnostne, kolesarske in kulturne destinacije - Slovenske novice",
+        "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPSVI1amYxVjdzeG8xbkFQX2doSXBjbkhmZG9ZVDJhT1hLOFJwZ1F0V1V0UjdoT3VRRVdjT09YYU1UeDVaclFkTmlxd3hBS1JIcGtfeUJTZWNxTjVmblVXamNZbDFsVU9ybFh5T1M4cXh3aG1sSzE3dnNBaVR0dE5ERGEyRjUwVlhGbjZxRTdtZjM4WWNxT2pSRWN6QXczVVpNYmpRUFhlM0xGOFo5WnlvYlJpLUI3d1JyLVdsS2xTQ001RnlsZzlKakNQOA?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-11T07:39:31+02:00",
+    "updatedAt": "2026-10-11T07:39:31+02:00"
+  },
+
 
   {
     "id": "guardian-pohodnisko-pot-v-slovenskih-alpah-razglasil-za-eno-najboljsih-v-evropi-03bbfda9",
