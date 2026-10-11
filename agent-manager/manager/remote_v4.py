@@ -218,10 +218,90 @@ def _is_coder_command(command: str) -> bool:
     return any(marker in low for marker in markers)
 
 
+MANAGER_MAIL_HELP = {
+    "v": "manager-email-control-v7",
+    "subject_formats": {
+        "[AGENT]": "Samodejna usmeritev - za kratke ukaze brez uporabe lokalnega AI",
+        "[AGENT MANAGER]": "Ukazi za centralni nadzorni sistem",
+        "[AGENT BLOGLAB]": "Ukazi za oddaljeni BlogLab worker (zahteva FLEET_AGENT_TOKEN)",
+        "[AGENT PV]": "PV Github nadzor; oddaljeno izvajanje ukazov se ni povezano",
+        "[AGENT ALL]": "Pregled flote; izvajanje sprememb pri vseh le po potrebi",
+    },
+    "read_only_commands": [
+        "POMOC", "STATUS", "INCIDENTI", "PREVERI AGENTE", "RAM",
+        "MODELI", "EMAIL STATUS", "OPRAVILA"
+    ],
+    "manager_actions": [
+        "VZDRZEVANJE", "TEST EMAIL", "POPRAVI KODO BLOG LAB",
+        "POPRAVI KODO PROJECT VISIBILITY (le, ko je repozitorij lokalno zaupanja vreden)"
+    ],
+    "recovery_policy": "Git branch + test + PR; brez neposrednega merge/deploy iz e-poste.",
+    "remote_project_visibility": "Github CI/Pages nadzor deluje. Live PV fleet commands zahtevajo posebej povezan, avtenticiran oddaljeni runner.",
+    "security": "Samo izrecno dovoljeni in avtenticirani posiljatelji; brez gesel ali tokenov v sporocilu.",
+}
+
+
 async def _manager_command(command: str) -> dict[str, Any]:
     low = _fold(command)
-    if low in {"status", "health", "stanje"} or "preveri status" in low:
-        return {"action": "status", "result": await _http("GET", f"{MANAGER_BASE}/health", timeout=10)}
+    if low in {"pomoc", "help", "komande", "ukazi", "navodila"}:
+        return {"action": "help", "result": MANAGER_MAIL_HELP}
+    if low in {"status", "health", "stanje", "preveri status"}:
+        manager, managed = await asyncio.gather(
+            _http("GET", f"{MANAGER_BASE}/health", timeout=10),
+            _http("GET", f"{MANAGER_BASE}/managed-agents", timeout=10),
+        )
+        targets = [
+            {
+                "id": row.get("target_id"), "ok": bool(row.get("ok")),
+                "last_check": row.get("last_check"),
+            } for row in managed.get("status", [])
+        ]
+        return {
+            "action": "status",
+            "result": {
+                "manager_ok": manager.get("ok"),
+                "supervisor_only": manager.get("supervisor_only"),
+                "open_incidents": manager.get("open_incidents"),
+                "available_ram_gb": manager.get("resources", {}).get("ram_available_gb"),
+                "targets": targets,
+            },
+        }
+    if low in {"ram", "pomnilnik", "memory"}:
+        manager = await _http("GET", f"{MANAGER_BASE}/health", timeout=10)
+        return {"action": "ram", "result": manager.get("resources", {})}
+    if low in {"opravila", "jobs", "queue"}:
+        jobs = await _http("GET", f"{MANAGER_BASE}/command-bus/jobs", timeout=10)
+        return {"action": "jobs", "result": (jobs.get("jobs") or [])[:20]}
+    if low in {"e posta", "email status", "gmail status"}:
+        data = await _http("GET", f"{MANAGER_BASE}/email-command-status", timeout=10)
+        return {
+            "action": "email_status",
+            "result": {
+                "enabled": data.get("enabled"),
+                "gmail": data.get("gmail_state"),
+                "command_bus": data.get("command_bus"),
+            },
+        }
+    if low in {"status vseh agentov", "flota", "fleet status"}:
+        return {"action": "fleet_status", "result": await _fleet_status()}
+    if low in {"incidenti", "incidents", "napake"}:
+        data = await _http("GET", f"{MANAGER_BASE}/incidents", timeout=10)
+        return {
+            "action": "incidents",
+            "result": [
+                {
+                    "id": row.get("id"), "severity": row.get("severity"),
+                    "component": row.get("component"), "title": row.get("title"),
+                    "last_seen": row.get("last_seen"),
+                }
+                for row in data.get("incidents", [])
+                if row.get("status") != "resolved"
+            ],
+        }
+    if low in {"preveri agente", "preglej agente", "check agents"}:
+        return {"action": "check_all", "result": await _http(
+            "POST", f"{MANAGER_BASE}/managed-agents/check", timeout=90
+        )}
     if "email" in low and ("test" in low or "mail" in low):
         return {"action": "email_test", "result": await _http("POST", f"{MANAGER_BASE}/email/send-test", timeout=45)}
     if "incident" in low:
