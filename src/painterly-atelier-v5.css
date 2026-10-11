@@ -1,0 +1,654 @@
+/*
+ * BLOG LAB — ATELIER EDITORIAL V5
+ * Designed for the original painterly SVG asset family generated at build time.
+ * All magazine elements are functioning React controls, not a flat mockup.
+ * Last-loaded, reversible visual layer; no backend/editorial agent changes.
+ */
+:root {
+  --atelier-ink: #23332f;
+  --atelier-night: #172d2b;
+  --atelier-paper: #f6ebd7;
+  --atelier-light: #fbf4e6;
+  --atelier-gold: #d6b87a;
+  --atelier-rust: #a9824f;
+  --atelier-forest: #385048;
+  --atelier-brush: #8e774e;
+}
+.tourism-site {
+  font-family: "Iowan Old Style", "Baskerville", "Palatino Linotype", Georgia, serif;
+}
+.tourism-site > .site-header {
+  min-height: 76px;
+  padding: 0 max(4vw,calc((100vw - 1370px)/2));
+  border-bottom: 1px solid rgba(244,226,181,.19);
+  background: linear-gradient(90deg,rgba(21,37,33,.94),rgba(26,43,40,.88) 64%,rgba(26,43,40,.78));
+  box-shadow: 0 4px 0 rgba(209,179,120,.035);
+  backdrop-filter: blur(15px) saturate(1.1);
+}
+.tourism-site > .site-header .brand {
+  flex: 0 0 auto;
+  font-size: clamp(27px,2.55vw,37px);
+  font-weight:400;
+  letter-spacing:-.06em;
+  line-height:1;
+  color:#f9f1df;
+  white-space:nowrap;
+}
+.tourism-site > .site-header nav {
+  justify-content:center;
+  gap:clamp(2px,.6vw,10px);
+  flex: 1 1 auto;
+  min-width:0;
+}
+.tourism-site > .site-header nav button {
+  padding: 10px clamp(7px,.8vw,14px);
+  font-size:10.6px;
+  font-weight:650;
+  letter-spacing:.125em;
+  color:#ecdfc5;
+  border-radius:0;
+  position:relative;
+}
+.tourism-site > .site-header nav button.active {
+  color:#fdf2da;
+  background:transparent;
+  border:1px solid transparent;
+  box-shadow:none;
+}
+.tourism-site > .site-header nav button.active::after,
+.tourism-site > .site-header nav button:hover::after {
+  content:"";
+  position:absolute;
+  left:20%;
+  bottom:1px;
+  width:60%;
+  height:2px;
+  background:linear-gradient(90deg,transparent,#d8b879 20%,#e8c993 70%,transparent);
+  transform:rotate(-1.5deg);
+}
+.tourism-site > .site-header .events-jump {
+  flex:0 0 auto;
+  min-height:37px;
+  padding:8px 16px;
+  color:#2b3d33;
+  border:none;
+  border-radius:34% 9% 18% 9% / 16% 32% 10% 28%;
+  background:#f3e4c5;
+  box-shadow:inset 0 0 0 1px rgba(255,245,224,.45);
+  letter-spacing:.09em;
+}
+.tourism-site > .site-header .events-jump:hover {
+  background:#fff1d3;
+  color:#213c32;
+}
+
+/* Compose the original illustrated lake as one panoramic oil painting. */
+.tourism-site > .hero.paint-hero {
+  min-height:clamp(495px,36vw,565px);
+  padding:clamp(97px,7.4vw,115px) max(5.6vw,calc((100vw - 1280px)/2)) clamp(68px,5vw,85px);
+  background-image:
+    linear-gradient(90deg,rgba(18,30,27,.82) 0%,rgba(21,33,28,.69) 25%,rgba(37,47,34,.23) 52%,rgba(42,60,57,.02) 80%),
+    linear-gradient(0deg,rgba(29,45,39,.11),rgba(43,56,46,.02) 65%),
+    url("/art/generated/hero.svg") !important;
+  background-size:cover,cover,cover !important;
+  background-position:center,center,center 49% !important;
+  overflow:hidden;
+}
+.tourism-site > .hero.paint-hero::before {
+  content:"";
+  inset:0;
+  opacity:.28;
+  background-image:
+    radial-gradient(ellipse at 79% 14%,rgba(254,218,145,.22),transparent 35%),
+    repeating-linear-gradient(109deg,rgba(234,212,161,.05) 0 2px,transparent 2px 31px);
+  mix-blend-mode:soft-light;
+}
+.tourism-site > .hero.paint-hero::after {
+  height:clamp(48px,5.1vw,81px);
+  background:#f7edda;
+  clip-path:polygon(0 57%,3% 46%,7% 67%,11% 48%,14% 63%,21% 41%,27% 58%,34% 43%,39% 66%,45% 42%,50% 69%,56% 47%,62% 61%,67% 40%,73% 60%,81% 42%,86% 66%,92% 39%,97% 63%,100% 46%,100% 100%,0 100%);
+}
+.tourism-site > .hero .paint-hero-copy {
+  z-index:2;
+  max-width:700px;
+  width:62%;
+  text-wrap:pretty;
+}
+.tourism-site > .hero .paint-hero-copy::before {
+  content:"";
+  position:absolute;
+  inset:-25px -10px -32px -40px;
+  z-index:-1;
+  pointer-events:none;
+  background:radial-gradient(ellipse at 30% 45%,rgba(14,28,26,.23),transparent 73%);
+}
+.tourism-site > .hero .paint-hero-folio {
+  display:flex;
+  align-items:center;
+  width:min(375px,100%);
+  justify-content:space-between;
+  gap:16px;
+  padding-bottom:16px;
+  margin-bottom:21px;
+  border-bottom:1px solid rgba(245,223,174,.4);
+  color:#eddfbe;
+  font:700 10px/1.3 ui-sans-serif,system-ui,sans-serif;
+  letter-spacing:.145em;
+}
+.tourism-site > .hero .eyebrow {
+  margin:0 0 8px;
+  color:#f4dfb3;
+  font-size:10px;
+  letter-spacing:.25em;
+  font-weight:780;
+}
+.tourism-site > .hero .eyebrow span {
+  width:27px;
+  height:2px;
+  background:#e3bc75;
+}
+.tourism-site > .hero .paint-hero-copy h1 {
+  max-width:730px;
+  margin:10px 0 20px;
+  color:#fff6e5;
+  font-family:"Iowan Old Style","Baskerville","Palatino Linotype",Georgia,serif;
+  font-weight:400;
+  font-size:clamp(55px,5.15vw,78px);
+  line-height:.96;
+  letter-spacing:-.052em;
+  text-shadow:0 4px 20px rgba(17,30,26,.38);
+}
+.tourism-site > .hero .paint-hero-copy h1 em {
+  font-family:inherit;
+  font-style:italic;
+  font-weight:400;
+  color:#efdfc1;
+  letter-spacing:-.042em;
+}
+.tourism-site > .hero .paint-hero-copy p {
+  max-width:525px;
+  margin:0 0 31px;
+  color:#f6ead4;
+  font:400 clamp(17px,1.55vw,20px)/1.57 Georgia,serif;
+  text-shadow:0 2px 8px rgba(12,30,25,.31);
+}
+.tourism-site > .hero .primary {
+  position:relative;
+  min-height:54px;
+  padding:15px 30px;
+  border-radius:26% 7% 20% 6% / 22% 36% 14% 32%;
+  color:#28392e;
+  background:#f7ebd2;
+  box-shadow:4px 8px 0 rgba(27,32,26,.17),inset 0 1px 0 rgba(255,255,255,.5);
+  font-size:11px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  transition:transform .2s ease,background-color .2s ease;
+}
+.tourism-site > .hero .primary:hover { transform:translateY(-2px) rotate(0deg);background:#fff3db; }
+.tourism-site > .hero .paint-hero-handnote {
+  max-width:210px;
+  width:18%;
+  margin-top:105px;
+  text-align:left;
+  color:#f5e9ce;
+  font:italic clamp(23px,2.5vw,37px)/1.3 "Segoe Print","Bradley Hand",cursive;
+  letter-spacing:-.035em;
+  text-shadow:0 3px 10px rgba(28,37,31,.53);
+  transform:rotate(-9deg);
+}
+
+/* Edged art paper is one uninterrupted composition. */
+main.tourism-site > .home-content.container.paint-story-paper {
+  margin-top:-2px;
+  padding-top:2px;
+  padding-bottom:clamp(30px,4vw,62px);
+  background:
+    radial-gradient(ellipse at 93% 12%,rgba(194,154,92,.13),transparent 43%),
+    radial-gradient(ellipse at 3% 94%,rgba(157,145,99,.07),transparent 34%),
+    repeating-linear-gradient(97deg,rgba(118,97,61,.018) 0 2px,transparent 2px 27px),
+    linear-gradient(180deg,#f7edda,#f8eedc 55%,#f2e5ce) !important;
+}
+.tourism-site .paint-story-paper .feed {
+  padding-top:12px;
+}
+main.tourism-site > .home-content.container.paint-story-paper .section-heading {
+  margin:0 0 0;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:20px;
+  border-bottom:0 !important;
+  padding:10px 0 4px;
+}
+main.tourism-site > .home-content.container.paint-story-paper .section-heading::after{
+  height:3px;
+  width:145px;
+  bottom:0;
+  left:0;
+  opacity:.72;
+  background:linear-gradient(90deg,#a07b45,#e0bb7b 55%,transparent);
+}
+main.tourism-site > .home-content.container.paint-story-paper .section-heading h2 {
+  max-width:850px;
+  font:400 clamp(36px,3.7vw,54px)/1.03 "Iowan Old Style",Baskerville,Georgia,serif;
+  letter-spacing:-.04em;
+  color:#2c352e !important;
+}
+main.tourism-site > .home-content.container.paint-story-paper .section-heading .kicker {
+  color:#857048 !important;
+  font:800 10px/1.4 ui-sans-serif,system-ui,sans-serif;
+  letter-spacing:.20em;
+}
+main.tourism-site > .home-content.container.paint-story-paper .section-heading .count {
+  font:700 11px/1.4 ui-sans-serif,system-ui,sans-serif;
+  color:#6e6755 !important;
+  white-space:nowrap;
+}
+.tourism-site .paint-section-deck {
+  margin:11px 0 27px;
+  max-width:710px;
+  color:#626357;
+  font:400 16px/1.55 Georgia,serif;
+}
+.tourism-site .paint-story-paper .post-grid {
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  gap:clamp(16px,1.85vw,28px);
+  align-items:stretch;
+}
+.tourism-site .paint-story-paper .post-card,
+.tourism-site .paint-story-paper .post-card.featured {
+  position:relative;
+  min-height:236px;
+  grid-template-columns:minmax(0,.92fr) minmax(0,1fr);
+  border:1px solid rgba(148,124,84,.26);
+  border-radius:3px 14px 4px 13px;
+  box-shadow:0 2px 0 rgba(141,120,77,.08),0 14px 28px rgba(44,39,27,.065);
+  background:#faf1e0;
+  transform:translateZ(0);
+  transition:transform .23s ease,box-shadow .23s ease;
+}
+.tourism-site .paint-story-paper .post-card::before {
+  content:"";
+  position:absolute;
+  z-index:3;
+  inset:0;
+  pointer-events:none;
+  border-radius:inherit;
+  box-shadow:inset 0 0 0 4px rgba(255,248,233,.15);
+}
+.tourism-site .paint-story-paper .post-card:hover {
+  border-color:rgba(140,114,75,.4);
+  transform:translateY(-4px) rotate(-.25deg);
+  box-shadow:0 3px 0 rgba(141,120,77,.09),0 20px 35px rgba(44,39,27,.12);
+}
+.tourism-site .paint-story-paper .post-card .card-art,
+.tourism-site .paint-story-paper .post-card.featured .card-art {
+  height:100%;
+  min-height:236px;
+  background-size:cover !important;
+  background-position:52% center !important;
+  filter:saturate(.95) contrast(1.07);
+}
+.tourism-site .paint-story-paper .post-card .card-art::after {
+  left:10px;bottom:12px;
+  background:rgba(26,43,35,.72);
+  color:#fff1d9;
+  border:1px solid rgba(238,219,177,.22);
+  padding:4px 7px;
+  font-size:8px;
+}
+.tourism-site .paint-story-paper .post-card .card-copy,
+.tourism-site .paint-story-paper .post-card.featured .card-copy {
+  min-width:0;
+  padding:clamp(15px,1.65vw,25px);
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:flex-start;
+  background:
+    repeating-linear-gradient(103deg,rgba(147,117,67,.016) 0 2px,transparent 2px 17px),
+    #faf1e0;
+}
+.tourism-site .paint-story-paper .post-card .meta,
+.tourism-site .paint-story-paper .post-card .meta span:first-child {
+  color:#8d6f45;
+  font-family:ui-sans-serif,system-ui,sans-serif;
+  font-size:10px;
+  line-height:1.25;
+}
+.tourism-site .paint-story-paper .post-card h3,
+.tourism-site .paint-story-paper .post-card.featured h3 {
+  margin:15px 0 11px;
+  color:#25362b;
+  font:500 clamp(18px,1.52vw,24px)/1.15 "Iowan Old Style",Baskerville,Georgia,serif;
+  letter-spacing:-.025em;
+  overflow-wrap:anywhere;
+}
+.tourism-site .paint-story-paper .post-card p {
+  color:#686455;
+  font:400 clamp(12px,1vw,14px)/1.42 Georgia,serif;
+  -webkit-line-clamp:3;
+}
+.tourism-site .paint-story-paper .post-card .paint-card-readmore {
+  display:inline-flex;
+  gap:13px;
+  align-items:center;
+  margin-top:auto;
+  padding-top:17px;
+  color:#5d563d;
+  font:700 11px/1.2 ui-sans-serif,system-ui,sans-serif;
+  letter-spacing:.015em;
+}
+.tourism-site .paint-story-paper .post-card .paint-card-readmore span{
+  font-size:19px;
+  transition:transform .2s ease;
+}
+.tourism-site .paint-story-paper .post-card:hover .paint-card-readmore span{
+  transform:translateX(5px);
+}
+.tourism-site .paint-story-paper .post-card .card-foot {
+  margin-top:13px;
+  padding-top:8px;
+  width:100%;
+  color:#857d69;
+  border-top:1px solid rgba(123,104,68,.13);
+  font:500 9px/1.2 ui-sans-serif,system-ui,sans-serif;
+}
+/* A real clickable gallery continuation, never a dead decorative label. */
+.tourism-site .paint-stories-more {
+  display:flex;
+  align-items:center;
+  gap:22px;
+  margin:28px 0 0;
+}
+.tourism-site .paint-stories-more button {
+  flex:0 0 auto;
+  display:inline-flex;
+  align-items:center;
+  gap:17px;
+  padding:12px 19px;
+  min-height:44px;
+  color:#2f4538;
+  font:750 11px/1.2 ui-sans-serif,system-ui,sans-serif;
+  letter-spacing:.07em;
+  background:transparent;
+  border:1px solid #a78c5d;
+  border-radius:3px 12px 4px 11px;
+  cursor:pointer;
+  transition:background-color .2s ease;
+}
+.tourism-site .paint-stories-more button:hover {background:rgba(210,179,123,.16);}
+.tourism-site .paint-more-stroke {
+  width:100%;
+  height:2px;
+  background:linear-gradient(90deg,#b9a279,rgba(177,149,104,.34),transparent);
+  transform:rotate(-.4deg);
+}
+/* Illustrated galleries behave like a museum collection. */
+.tourism-site .paint-rubrics-band {
+  padding:58px 0 69px;
+  isolation:isolate;
+  background:
+    radial-gradient(ellipse at 18% 45%,rgba(135,137,85,.11),transparent 40%),
+    radial-gradient(ellipse at 83% 28%,rgba(82,114,116,.20),transparent 45%),
+    repeating-linear-gradient(19deg,rgba(246,224,169,.025) 0px 3px,transparent 3px 27px),
+    linear-gradient(155deg,#33483f,#1e3839 70%,#2a3b36) !important;
+}
+.tourism-site .paint-rubrics-band::before,
+.tourism-site .paint-rubrics-band::after {
+  height:32px;
+  background:#f5ead6;
+  clip-path:polygon(0 0,100% 0,100% 42%,96% 54%,90% 38%,82% 62%,75% 36%,68% 59%,59% 34%,52% 58%,45% 41%,36% 65%,28% 35%,20% 58%,14% 41%,7% 64%,0 45%);
+}
+.tourism-site .paint-rubrics-inner.container {
+  width:min(1310px,calc(100% - 70px));
+}
+.tourism-site .paint-band-heading {margin-bottom:30px;}
+.tourism-site .paint-band-heading h2 {
+  color:#f6e9cf;
+  font:400 clamp(33px,3.7vw,50px)/1 "Iowan Old Style",Baskerville,Georgia,serif;
+  letter-spacing:-.03em;
+}
+.tourism-site .paint-band-heading button {
+  font:750 10px/1.3 ui-sans-serif,system-ui,sans-serif;
+  letter-spacing:.13em;
+  border-bottom-color:#bfaa7c;
+}
+.tourism-site .paint-rubrics-grid {
+  grid-template-columns:repeat(6,minmax(0,1fr));
+  gap:clamp(14px,2.4vw,34px);
+}
+.tourism-site .paint-rubric-tile {
+  position:relative;
+  gap:14px;
+  padding:0 0 6px;
+  border-radius:4px;
+}
+.tourism-site .paint-rubric-tile:focus-visible {
+  outline:3px solid #f3cc83;
+  outline-offset:8px;
+}
+.tourism-site .paint-rubric-art {
+  aspect-ratio:1.32;
+  position:relative;
+  border:2px solid rgba(226,200,148,.39);
+  border-radius:26% 19% 24% 18% / 23% 27% 18% 24%;
+  box-shadow:0 1px 0 rgba(241,224,176,.1),0 12px 26px rgba(10,22,22,.24);
+  filter:saturate(.93) contrast(1.09);
+  transition:transform .25s ease,filter .25s ease;
+}
+.tourism-site .paint-rubric-tile:hover .paint-rubric-art {
+  transform:translateY(-5px) rotate(-1.5deg);
+  filter:saturate(1.03) contrast(1.08);
+  border-color:rgba(243,215,158,.8);
+}
+.tourism-site .paint-rubric-art::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  pointer-events:none;
+  box-shadow:inset 0 0 16px rgba(34,44,32,.18);
+}
+.tourism-site .paint-rubric-index {
+  position:absolute;
+  top:10px;left:12px;
+  font:600 11px/1 "Iowan Old Style",Georgia,serif;
+  color:#fff2d2;
+  text-shadow:0 1px 7px rgba(0,0,0,.7);
+  letter-spacing:.08em;
+}
+.tourism-site .paint-rubric-label {
+  color:#f5e7cd;
+  font:400 clamp(16px,1.28vw,19px)/1.2 "Iowan Old Style",Baskerville,Georgia,serif;
+}
+.tourism-site .paint-rubric-tile.active .paint-rubric-label{
+  text-decoration:underline;
+  text-decoration-color:#d4b577;
+  text-underline-offset:6px;
+}
+.tourism-site .paint-afterword {
+  padding:70px 0;
+  background:
+    linear-gradient(90deg,rgba(247,236,214,.96) 0%,rgba(249,239,217,.93) 60%,rgba(244,225,188,.46) 100%),
+    url("/art/generated/sezonsko.svg") 103% center / min(52vw,700px) auto no-repeat,
+    #f1e4cd;
+}
+.tourism-site .paint-afterword-inner.container {
+  width:min(1290px,calc(100% - 80px));
+}
+.tourism-site .paint-afterword h2 {
+  margin:10px 0 13px;
+  color:#273c32;
+  font:400 clamp(38px,4.3vw,61px)/1.05 "Iowan Old Style",Baskerville,Georgia,serif;
+  letter-spacing:-.042em;
+}
+.tourism-site .paint-afterword-editorial h2 {
+  font-size:clamp(31px,3.3vw,46px);
+}
+.tourism-site .paint-afterword p {
+  max-width:450px;
+  color:#4f5f50;
+  font:400 16px/1.7 Georgia,serif;
+}
+.tourism-site .paint-manifesto-link,.tourism-site .paint-editorial-link {
+  color:#284235;
+  font-weight:750;
+  letter-spacing:.045em;
+  border-color:#b59a6b;
+}
+.tourism-site .paint-events-section.container {
+  width:min(1270px,calc(100% - 70px));
+  margin-top:45px;
+  margin-bottom:63px;
+  gap:40px;
+}
+.tourism-site .paint-events-section .live-pulse,
+.tourism-site .paint-events-section .events-pulse{
+  background:
+    radial-gradient(ellipse at 8% 9%,rgba(154,148,93,.1),transparent 50%),
+    linear-gradient(150deg,#385346,#243b37) !important;
+  border-color:rgba(229,207,161,.29);
+  border-radius:5px 21px 4px 20px;
+}
+/* Article detail stays readable even against the atmospheric page surroundings. */
+.tourism-site .article-page--premium{
+  background:#f5ecd8;
+}
+.tourism-site .article-body p{
+  line-height:1.85;
+}
+.tourism-site a:focus-visible,.tourism-site button:focus-visible {
+  outline:3px solid #d9ac60;
+  outline-offset:4px;
+}
+@media(max-width:1320px){
+  .tourism-site > .site-header {padding-inline:24px;gap:14px;}
+  .tourism-site > .site-header nav button {letter-spacing:.04em;font-size:10px;padding-inline:6px;}
+  .tourism-site .paint-story-paper .post-card,
+  .tourism-site .paint-story-paper .post-card.featured {min-height:245px;}
+  .tourism-site .paint-story-paper .post-card .card-art {min-height:245px;}
+}
+@media(max-width:1120px){
+  .tourism-site .paint-story-paper .post-grid {grid-template-columns:repeat(2,minmax(0,1fr)) !important;}
+  .tourism-site .paint-story-paper .post-card,
+  .tourism-site .paint-story-paper .post-card.featured {min-height:252px;}
+  .tourism-site .paint-story-paper .post-card .card-art {min-height:252px;}
+  .tourism-site .paint-rubrics-grid {grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;}
+  .tourism-site .paint-rubrics-inner.container {max-width:880px;}
+  .tourism-site > .hero .paint-hero-copy {width:73%;}
+  .tourism-site > .hero .paint-hero-handnote {width:20%;}
+}
+@media(max-width:760px){
+  .tourism-site > .site-header {
+    padding:10px 15px 8px;
+    margin-bottom:0;
+    flex-wrap:wrap;
+    gap:7px 14px;
+    min-height:70px;
+  }
+  .tourism-site > .site-header nav {order:3;width:100%;flex:1 0 100%;padding-bottom:4px;justify-content:flex-start;}
+  .tourism-site > .site-header nav button {min-height:38px;}
+  .tourism-site > .hero.paint-hero {
+    min-height:550px;
+    padding:73px 23px 88px;
+    background-image:
+      linear-gradient(90deg,rgba(18,30,27,.86),rgba(32,47,39,.56) 67%,rgba(34,50,42,.39)),
+      url("/art/generated/hero.svg") !important;
+    background-position:center,44% center !important;
+  }
+  .tourism-site > .hero .paint-hero-copy {width:100%;}
+  .tourism-site > .hero .paint-hero-folio {max-width:360px;margin-bottom:18px;}
+  .tourism-site > .hero .paint-hero-copy h1 {font-size:clamp(49px,10.7vw,74px);line-height:1.01;}
+  .tourism-site > .hero .paint-hero-handnote {display:none;}
+  .tourism-site .paint-story-paper .post-grid {grid-template-columns:1fr !important;}
+  .tourism-site .paint-story-paper .post-card,
+  .tourism-site .paint-story-paper .post-card.featured {grid-template-columns:minmax(0,.94fr) minmax(0,1fr);min-height:235px;}
+  .tourism-site .paint-story-paper .post-card .card-art,
+  .tourism-site .paint-story-paper .post-card.featured .card-art {min-height:235px;}
+  .tourism-site .paint-rubrics-grid {grid-template-columns:repeat(3,minmax(0,1fr));gap:22px 12px;}
+  .tourism-site .paint-afterword {padding:53px 0;}
+  .tourism-site .paint-afterword-inner.container {width:calc(100% - 40px);}
+  .tourism-site .paint-rubrics-inner.container {width:calc(100% - 40px);}
+  .tourism-site .paint-events-section.container {width:calc(100% - 40px);gap:18px;}
+}
+@media(max-width:480px){
+  .tourism-site > .hero.paint-hero {min-height:540px;padding:64px 19px 86px;}
+  .tourism-site > .hero .paint-hero-folio {font-size:9px;gap:8px;}
+  .tourism-site > .hero .paint-hero-copy h1 {font-size:clamp(44px,11.65vw,61px);}
+  .tourism-site > .hero .paint-hero-copy p {font-size:16px;line-height:1.5;}
+  .tourism-site .paint-story-paper .post-card,
+  .tourism-site .paint-story-paper .post-card.featured {grid-template-columns:1fr;min-height:0;}
+  .tourism-site .paint-story-paper .post-card .card-art,
+  .tourism-site .paint-story-paper .post-card.featured .card-art {height:200px;min-height:200px;}
+  .tourism-site .paint-story-paper .post-card .card-copy,
+  .tourism-site .paint-story-paper .post-card.featured .card-copy {padding:22px 20px;}
+  .tourism-site .paint-story-paper .post-card h3 {font-size:24px;}
+  .tourism-site .paint-story-paper .post-card p {font-size:14px;}
+  .tourism-site .paint-rubrics-grid {gap:17px 10px;}
+  .tourism-site .paint-rubric-label {font-size:14px;}
+  .tourism-site .paint-rubric-index {font-size:9px;left:7px;top:7px;}
+  .tourism-site .paint-afterword {background:linear-gradient(90deg,rgba(246,236,215,.96),rgba(246,236,215,.88)),url("/art/generated/sezonsko.svg") center/cover;}
+  .tourism-site .paint-story-paper .section-heading {align-items:flex-start;}
+  main.tourism-site > .home-content.container.paint-story-paper .section-heading h2 {font-size:35px;}
+  main.tourism-site > .home-content.container.paint-story-paper .section-heading .count {align-self:flex-end;}
+}
+@media(prefers-reduced-motion:reduce){
+  .tourism-site .paint-rubric-art,
+  .tourism-site .paint-card-readmore span,
+  .tourism-site .paint-story-paper .post-card {transition:none;}
+  .tourism-site .paint-story-paper .post-card:hover {transform:none;}
+}
+
+
+/* Visual QA follow-up: short magazine headlines in narrow illustrated covers.
+ * Full titles and complete text remain in the underlying linked article. */
+.tourism-site .paint-story-paper .post-card h3,
+.tourism-site .paint-story-paper .post-card.featured h3 {
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:4;
+  line-clamp:4;
+  overflow:hidden;
+  font-size:clamp(18px,1.37vw,21px);
+  line-height:1.18;
+  hyphens:auto;
+}
+.tourism-site .paint-story-paper .post-card p {
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+  line-clamp:2;
+  overflow:hidden;
+}
+.tourism-site .paint-story-paper .post-card[data-art-category="Gourmet"] .card-art {
+  background-position:77% 86% !important;
+  filter:contrast(1.06) saturate(1.1) sepia(.13);
+}
+.tourism-site .paint-story-paper .post-card[data-art-category="Vodniki"] .card-art {
+  background-position:74% 89% !important;
+  filter:contrast(1.06) saturate(.83) sepia(.16);
+}
+.tourism-site .paint-story-paper .post-card[data-art-category="Sezonsko"] .card-art {
+  background-position:43% 23% !important;
+  filter:contrast(1.05) saturate(1.1) sepia(.11);
+}
+.tourism-site .paint-story-paper .post-card[data-art-category="Dediščina"] .card-art {
+  background-position:43% 83% !important;
+}
+.tourism-site .paint-story-paper .post-card[data-art-category="Kolesarstvo"] .card-art {
+  background-position:70% 87% !important;
+}
+.tourism-site .paint-story-paper .post-card[data-art-category="Gore & traili"] .card-art {
+  background-position:76% 25% !important;
+}
+@media(max-width:480px) {
+  .tourism-site .paint-story-paper .post-card h3,
+  .tourism-site .paint-story-paper .post-card.featured h3 {
+    font-size:23px;
+    -webkit-line-clamp:3;
+    line-clamp:3;
+  }
+}

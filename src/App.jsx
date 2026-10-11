@@ -6001,6 +6001,7 @@ export default function Home() {
   const [rubrics, setRubrics] = useState([]);
   const [siteSettings, setSiteSettings] = useState(DEFAULT_SITE_SETTINGS);
   const [publicCategory, setPublicCategory] = useState("");
+  const [showAllStories, setShowAllStories] = useState(false);
   const [view, setView] = useState("home");
   const [draft, setDraft] = useState(emptyDraft());
   const [selectedId, setSelectedId] = useState("");
@@ -6143,6 +6144,7 @@ export default function Home() {
   }
 
   function showPublicCategory(name = "") {
+    setShowAllStories(false);
     setPublicCategory(name);
     navigate("home");
   }
@@ -6296,6 +6298,7 @@ export default function Home() {
         <>
           <section className="hero paint-hero" aria-labelledby="paint-hero-title">
             <div className="paint-hero-copy">
+              <div className="paint-hero-folio"><span>BL / REVIJA O SLOVENIJI</span><span>EST. 2026</span></div>
               <div className="eyebrow"><span /> {siteSettings.heroEyebrow}</div>
               <h1 id="paint-hero-title">{siteSettings.heroTitle}<br /><em>{siteSettings.heroEmphasis}</em></h1>
               <p>{siteSettings.heroSubtitle}</p>
@@ -6313,8 +6316,9 @@ export default function Home() {
               </div>
               <span className="count">{visiblePublished.length} {visiblePublished.length === 1 ? "objava" : "objav"}</span>
             </div>
+            <p className="paint-section-deck">{publicCategory ? `Zgodbe, izbrane za rubriko ${publicCategory}.` : "Naši zadnji zapisi o krajih, poteh in ljudeh. Za radovedne, ki radi odkrijejo več."}</p>
             <div className="post-grid">
-              {visiblePublished.length ? visiblePublished.slice(0, 12).map((article, index) => (
+              {visiblePublished.length ? visiblePublished.slice(0, showAllStories ? 12 : 3).map((article, index) => (
                 <a
                   className={`post-card article-card--${articleTemplateKey(article)} ${index === 0 ? "featured" : ""}`}
                   data-art-category={article.category}
@@ -6330,6 +6334,7 @@ export default function Home() {
                     <div className="meta"><span>{article.category}</span><span>{readingTime(article.content)} min branja</span></div>
                     <h3>{article.title}</h3>
                     <p>{article.excerpt}</p>
+                    <span className="paint-card-readmore" aria-hidden="true">Preberi zgodbo <span>→</span></span>
                     <div className="card-foot"><span>{article.author}</span><span>{formatDate(article.updatedAt)}</span></div>
                   </div>
                 </a>
@@ -6341,6 +6346,15 @@ export default function Home() {
                 </div>
               )}
             </div>
+            {visiblePublished.length > 3 && (
+              <div className="paint-stories-more">
+                <button type="button" aria-expanded={showAllStories} onClick={() => setShowAllStories((previous) => !previous)}>
+                  {showAllStories ? "Prikaži samo izbrane" : `Odkrij še ${Math.min(9, visiblePublished.length - 3)} zgodb`}
+                  <span aria-hidden="true">{showAllStories ? "↑" : "↗"}</span>
+                </button>
+                <span className="paint-more-stroke" aria-hidden="true" />
+              </div>
+            )}
             </section>
           </div>
 
@@ -6353,7 +6367,7 @@ export default function Home() {
               <div className="paint-rubrics-grid">
                 {["Kolesarstvo", "Dediščina", "Sezonsko", "Gore & traili", "Gourmet", "Vodniki"].map((category, index) => (
                   <button type="button" className={`paint-rubric-tile ${publicCategory === category ? "active" : ""}`} key={category} onClick={() => showPublicCategory(category)} aria-pressed={publicCategory === category}>
-                    <span className={`paint-rubric-art paint-rubric-art--${index + 1}`} aria-hidden="true" />
+                    <span className={`paint-rubric-art paint-rubric-art--${index + 1}`} aria-hidden="true"><small className="paint-rubric-index">0{index + 1}</small></span>
                     <span className="paint-rubric-label">{category}</span>
                   </button>
                 ))}
