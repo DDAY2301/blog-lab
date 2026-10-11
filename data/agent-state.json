@@ -7,7 +7,7 @@
   "last_output": "nizke-turisticne-sezone-morda-sploh-ne-bo-vec-kaj-to-pomeni-in-kje-so-razlogi-df90a45e",
   "last_error": "ze_uporabljen_vir",
   "agent_version": "3.0.0-learning-guarded-fallback",
-  "current_category": "gore",
+  "current_category": "dediscina",
   "scheduled_posts_today": 2,
   "manual_posts_today": 0,
   "writer_mode": "deterministic_fallback",
@@ -19,7 +19,7 @@
     "2026-10-11|10:45|dediscina"
   ],
   "last_editorial_hold": null,
-  "publisher_guardian_last_run": "2026-10-11T17:08:55+02:00",
+  "publisher_guardian_last_run": "2026-10-11T17:23:55+02:00",
   "publisher_guardian_last_action": {
     "category": "dediscina",
     "slot": "2026-10-11|10:45|dediscina",
