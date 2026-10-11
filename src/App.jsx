@@ -6307,6 +6307,7 @@ export default function Home() {
                     <div className="meta"><span>{article.category}</span><span>{readingTime(article.content)} min branja</span></div>
                     <h3>{article.title}</h3>
                     <p>{article.excerpt}</p>
+                    <span className="paint-card-readmore" aria-hidden="true">Preberi zgodbo <span>→</span></span>
                     <div className="card-foot"><span>{article.author}</span><span>{formatDate(article.updatedAt)}</span></div>
                   </div>
                 </a>
