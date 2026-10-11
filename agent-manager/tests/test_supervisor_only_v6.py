@@ -84,3 +84,29 @@ def test_normal_monitor_keeps_local_probe(tmp_path, monkeypatch):
     data = asyncio.run(loop.cycle())
     assert data["project_visibility"]["ok"] is True
     assert "http://127.0.0.1:8000/health" in urls
+
+
+
+def test_supervisor_check_resolves_only_old_local_pv_incidents(tmp_path, monkeypatch):
+    monkeypatch.setenv("AGENT_MANAGER_SUPERVISOR_ONLY", "1")
+    store = StoreV3(tmp_path / "agent.db")
+    sup = ManagedAgentSupervisorV4(store, _default_targets_path())
+    for target_id, title in (
+        ("project_visibility", "Project Visibility health degraded"),
+        ("project_visibility_process", "Project Visibility Local Process health degraded"),
+        ("project_visibility_github", "Project Visibility GitHub health degraded"),
+    ):
+        sup.incidents.raise_or_update(target_id, title, "P1", ["historic"])
+    # No unrelated remote incident may be marked healthy by disabling local PV.
+    async def fake_check(target):
+        return {"id": target.id, "name": target.name, "ok": False, "error": "unverified remote"}
+    monkeypatch.setattr(sup, "check", fake_check)
+    asyncio.run(sup.check_all())
+    rows = {
+        row["component"]: row["status"]
+        for row in store.query("SELECT * FROM incidents")
+        if row["title"].startswith("Project Visibility")
+    }
+    assert rows["project_visibility"] == "resolved"
+    assert rows["project_visibility_process"] == "resolved"
+    assert rows["project_visibility_github"] == "open"
