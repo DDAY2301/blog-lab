@@ -5,12 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "npm run art:generate && vite",
-    "build": "npm run art:generate && vite build",
+    "build": "npm run art:generate && npm run art:check && vite build",
     "preview": "vite preview",
     "guardian:check": "python agents/production-guardian/guardian.py check --report logs/guardian-report.json",
     "guardian:repair": "python agents/production-guardian/guardian.py repair",
     "test:guardian": "python -m pytest -q agents/production-guardian/tests",
-    "art:generate": "node tools/generate-painted-assets.mjs"
+    "art:generate": "node tools/generate-painted-assets.mjs",
+    "art:check": "node tools/verify-atelier-v5.mjs"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^6.0.2",
