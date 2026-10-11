@@ -24,6 +24,52 @@ def _is_owned_manager_process(proc: psutil.Process) -> bool:
     return in_root and "run.py" in cmd
 
 
+def _is_owned_fleet_remote_process(proc: psutil.Process) -> bool:
+    """Verify that the 8788 owner is this exact manager's uvicorn instance."""
+    try:
+        cwd = Path(proc.cwd()).resolve()
+        cmdline = " ".join(proc.cmdline()).lower()
+    except (psutil.NoSuchProcess, psutil.AccessDenied, FileNotFoundError):
+        return False
+    try:
+        in_root = cwd == ROOT or cwd.is_relative_to(ROOT)
+    except AttributeError:
+        in_root = cwd == ROOT or ROOT in cwd.parents
+    return in_root and "uvicorn" in cmdline and "manager.remote_v4:app" in cmdline
+
+
+def stop_remote_listener(port: int = 8788) -> tuple[bool, str]:
+    """Stop only the verified Fleet Remote listener; never a foreign port owner."""
+    listeners = [
+        c for c in psutil.net_connections(kind="inet")
+        if c.laddr and c.laddr.port == port and c.status == psutil.CONN_LISTEN and c.pid
+    ]
+    if not listeners:
+        return True, "remote listener already stopped"
+    for conn in listeners:
+        try:
+            proc = psutil.Process(conn.pid)
+        except psutil.NoSuchProcess:
+            continue
+        if not _is_owned_fleet_remote_process(proc):
+            return False, f"port {port} belongs to unrelated PID {conn.pid}"
+        proc.terminate()
+        try:
+            proc.wait(timeout=8)
+        except psutil.TimeoutExpired:
+            proc.kill()
+            proc.wait(timeout=5)
+    deadline = time.time() + 5
+    while time.time() < deadline:
+        if not any(
+            c.laddr and c.laddr.port == port and c.status == psutil.CONN_LISTEN
+            for c in psutil.net_connections(kind="inet")
+        ):
+            return True, "owned Fleet Remote listener stopped"
+        time.sleep(0.25)
+    return False, f"port {port} is still listening after stop"
+
+
 def stop_manager_listener(port: int = 8787) -> tuple[bool, str]:
     listeners = [
         c for c in psutil.net_connections(kind="inet")
@@ -58,12 +104,19 @@ def stop_manager_listener(port: int = 8787) -> tuple[bool, str]:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--manager", action="store_true")
+    parser.add_argument("--remote", action="store_true")
     args = parser.parse_args()
+    if args.remote and args.manager:
+        parser.error("choose only one reconcile target")
+    if args.remote:
+        ok, message = stop_remote_listener()
+        print(message)
+        return 0 if ok else 2
     if args.manager:
         ok, message = stop_manager_listener()
         print(message)
         return 0 if ok else 2
-    parser.error("choose a reconcile target")
+    parser.error("choose --manager or --remote")
     return 2
 
 
