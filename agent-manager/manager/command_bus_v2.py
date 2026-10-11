@@ -107,6 +107,27 @@ class UniversalCommandBusV2:
             "steps": valid,
         }
 
+    @classmethod
+    def _simple_operator_target(cls, command: str) -> str:
+        # Deterministic read-only operator commands bypass the AI planner:
+        # this saves the 8GB supervisor's RAM and avoids accidental rerouting.
+        from .remote_v4 import _fold
+        phrase = _fold(command)
+        if phrase in {"status", "stanje", "health", "status vseh agentov",
+                      "preveri status", "flota", "fleet status"}:
+            return "all"
+        if phrase in {
+            "pomoc", "help", "komande", "ukazi", "navodila",
+            "incidenti", "incidents", "napake",
+            "ram", "pomnilnik", "memory",
+            "modeli", "models", "providers",
+            "e posta", "email status", "gmail status",
+            "opravila", "jobs", "queue",
+            "preveri agente", "preglej agente", "check agents",
+        }:
+            return "manager"
+        return ""
+
     async def plan(
         self,
         command: str,
@@ -127,6 +148,18 @@ class UniversalCommandBusV2:
                         "command": command,
                         "depends_on": [],
                         "use_artifacts": True,
+                    }
+                ],
+            }
+
+        simple_target = self._simple_operator_target(command)
+        if simple_target:
+            return "deterministic", {
+                "summary": "Fast read-only operator command, no local AI inference.",
+                "steps": [
+                    {
+                        "id": "s1", "target": simple_target, "command": command,
+                        "depends_on": [], "use_artifacts": False,
                     }
                 ],
             }

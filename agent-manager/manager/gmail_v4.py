@@ -4,6 +4,7 @@ import argparse
 import base64
 import json
 import os
+import re
 from datetime import datetime
 from email.message import EmailMessage
 from email.utils import parseaddr
@@ -212,10 +213,37 @@ class GmailV4:
             body = str(message.get("snippet") or "").strip()
 
         sender = parseaddr(headers.get("from", ""))[1].strip().lower()
+        # Gmail sends its own authentication result headers for external mail.
+        # Verify an aligned pass before treating From: as a command identity.
+        # Messages genuinely sent by the owner's authenticated mailbox can
+        # instead be identified through the Gmail API SENT label.
+        sender_domain = sender.rsplit("@", 1)[-1] if "@" in sender else ""
+        own_address = parseaddr(self.sender)[1].strip().lower()
+        labels = {str(x).upper() for x in message.get("labelIds", [])}
+        own_sent = "SENT" in labels and sender == own_address
+        auth_headers = [
+            str(h.get("value") or "")
+            for h in payload.get("headers", [])
+            if str(h.get("name") or "").lower() == "authentication-results"
+        ]
+        dmarc_aligned = False
+        for result in auth_headers:
+            if not re.search(r"^\s*mx\.google\.com\s*;", result, re.IGNORECASE):
+                continue
+            from_match = re.search(r"\bheader\.from=([\w.-]+)", result, re.IGNORECASE)
+            dmarc_pass = re.search(r"\bdmarc=pass\b", result, re.IGNORECASE)
+            if from_match and dmarc_pass and from_match.group(1).lower() == sender_domain:
+                dmarc_aligned = True
+            # Only trust the first matching Gmail authentication result:
+            # a later forged header cannot override a failed first result.
+            break
+        authenticated = bool(own_sent or dmarc_aligned)
         return {
             "id": str(message.get("id") or ""),
             "thread_id": str(message.get("threadId") or ""),
             "sender": sender,
+            "sender_authenticated": authenticated,
+            "authentication_method": "gmail_sent" if own_sent else "aligned_dmarc" if dmarc_aligned else "unverified",
             "subject": headers.get("subject", "").strip(),
             "body": body,
             "message_id_header": headers.get("message-id", "").strip(),

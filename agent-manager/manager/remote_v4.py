@@ -218,10 +218,92 @@ def _is_coder_command(command: str) -> bool:
     return any(marker in low for marker in markers)
 
 
+MANAGER_MAIL_HELP = {
+    "v": "manager-email-control-v7",
+    "subject_formats": {
+        "[AGENT]": "Samodejna usmeritev - za kratke ukaze brez uporabe lokalnega AI",
+        "[AGENT MANAGER]": "Ukazi za centralni nadzorni sistem",
+        "[AGENT BLOGLAB]": "Ukazi za oddaljeni BlogLab worker (zahteva FLEET_AGENT_TOKEN)",
+        "[AGENT PV]": "PV GitHub nadzor + CI diagnostika; za gradnjo strani se vedno potrebujemo remote agenta",
+        "[AGENT ALL]": "Pregled flote; izvajanje sprememb pri vseh le po potrebi",
+    },
+    "read_only_commands": [
+        "POMOC", "STATUS", "INCIDENTI", "PREVERI AGENTE", "RAM",
+        "MODELI", "EMAIL STATUS", "OPRAVILA"
+    ],
+    "remote_pv_diagnostics": [
+        "[AGENT PV] STATUS", "[AGENT PV] TEST API", "[AGENT PV] FRONTEND BENCHMARK"
+    ],
+    "manager_actions": [
+        "VZDRZEVANJE", "TEST EMAIL", "POPRAVI KODO BLOG LAB",
+        "POPRAVI KODO PROJECT VISIBILITY (le, ko je repozitorij lokalno zaupanja vreden)"
+    ],
+    "recovery_policy": "Git branch + test + PR; brez neposrednega merge/deploy iz e-poste.",
+    "remote_project_visibility": "Github CI/Pages nadzor in GitHub CI/benchmark dispatch delujeta ob ustreznem tokenu. Za izdelavo strani in live fleet commands je potreben oddaljeni runner.",
+    "security": "Samo izrecno dovoljeni in avtenticirani posiljatelji; brez gesel ali tokenov v sporocilu.",
+}
+
+
 async def _manager_command(command: str) -> dict[str, Any]:
     low = _fold(command)
-    if low in {"status", "health", "stanje"} or "preveri status" in low:
-        return {"action": "status", "result": await _http("GET", f"{MANAGER_BASE}/health", timeout=10)}
+    if low in {"pomoc", "help", "komande", "ukazi", "navodila"}:
+        return {"action": "help", "result": MANAGER_MAIL_HELP}
+    if low in {"status", "health", "stanje", "preveri status"}:
+        manager, managed = await asyncio.gather(
+            _http("GET", f"{MANAGER_BASE}/health", timeout=10),
+            _http("GET", f"{MANAGER_BASE}/managed-agents", timeout=10),
+        )
+        targets = [
+            {
+                "id": row.get("target_id"), "ok": bool(row.get("ok")),
+                "last_check": row.get("last_check"),
+            } for row in managed.get("status", [])
+        ]
+        return {
+            "action": "status",
+            "result": {
+                "manager_ok": manager.get("ok"),
+                "supervisor_only": manager.get("supervisor_only"),
+                "open_incidents": manager.get("open_incidents"),
+                "available_ram_gb": manager.get("resources", {}).get("ram_available_gb"),
+                "targets": targets,
+            },
+        }
+    if low in {"ram", "pomnilnik", "memory"}:
+        manager = await _http("GET", f"{MANAGER_BASE}/health", timeout=10)
+        return {"action": "ram", "result": manager.get("resources", {})}
+    if low in {"opravila", "jobs", "queue"}:
+        jobs = await _http("GET", f"{MANAGER_BASE}/command-bus/jobs", timeout=10)
+        return {"action": "jobs", "result": (jobs.get("jobs") or [])[:20]}
+    if low in {"e posta", "email status", "gmail status"}:
+        data = await _http("GET", f"{MANAGER_BASE}/email-command-status", timeout=10)
+        return {
+            "action": "email_status",
+            "result": {
+                "gmail": data.get("gmail_state"),
+                "command_bus": data.get("command_bus"),
+            },
+        }
+    if low in {"status vseh agentov", "flota", "fleet status"}:
+        return {"action": "fleet_status", "result": await _fleet_status()}
+    if low in {"incidenti", "incidents", "napake"}:
+        data = await _http("GET", f"{MANAGER_BASE}/incidents", timeout=10)
+        return {
+            "action": "incidents",
+            "result": [
+                {
+                    "id": row.get("id"), "severity": row.get("severity"),
+                    "component": row.get("component"), "title": row.get("title"),
+                    "last_seen": row.get("last_seen"),
+                }
+                for row in data.get("incidents", [])
+                if row.get("status") != "resolved"
+            ],
+        }
+    if low in {"preveri agente", "preglej agente", "check agents"}:
+        return {"action": "check_all", "result": await _http(
+            "POST", f"{MANAGER_BASE}/managed-agents/check", timeout=90
+        )}
     if "email" in low and ("test" in low or "mail" in low):
         return {"action": "email_test", "result": await _http("POST", f"{MANAGER_BASE}/email/send-test", timeout=45)}
     if "incident" in low:
@@ -281,13 +363,79 @@ async def _manager_command(command: str) -> dict[str, Any]:
     )
 
 
-async def _project_command(command: str) -> dict[str, Any]:
-    if os.getenv("AGENT_MANAGER_SUPERVISOR_ONLY", "0") == "1":
+async def _pv_github_workflow_dispatch(workflow: str) -> dict[str, Any]:
+    """Dispatch only predefined GitHub-hosted, read-only diagnostic workflows."""
+    allowed = {"agent-api-ci.yml", "frontend-benchmark.yml"}
+    if workflow not in allowed:
+        raise RuntimeError("PV workflow is not in the explicit diagnostic allowlist.")
+    token = (
+        _secret("AGENT_MANAGER_GITHUB_TOKEN")
+        or _secret("GITHUB_TOKEN")
+        or _secret("GH_TOKEN")
+    )
+    if not token:
         raise RuntimeError(
-            "Supervisor-only mode: Project Visibility local API is intentionally not running. "
-            "GitHub Actions monitoring works remotely, but live agent commands require a "
-            "separately configured and authenticated remote command endpoint."
+            "Project Visibility remote CI requires a GitHub fine-grained token "
+            "with Actions: Read and write for DDAY2301/PROJEKT. "
+            "Configure AGENT_MANAGER_GITHUB_TOKEN locally; never email tokens."
         )
+    url = f"https://api.github.com/repos/DDAY2301/PROJEKT/actions/workflows/{workflow}/dispatches"
+    async with httpx.AsyncClient(timeout=20.0) as client:
+        response = await client.post(
+            url,
+            headers={
+                "Authorization": f"Bearer {token}",
+                "Accept": "application/vnd.github+json",
+                "X-GitHub-Api-Version": "2022-11-28",
+            },
+            json={"ref": "main"},
+        )
+    if response.status_code != 204:
+        raise RuntimeError(
+            f"Project Visibility CI dispatch failed HTTP {response.status_code}; "
+            "verify Actions permission and that the workflow supports workflow_dispatch."
+        )
+    return {
+        "ok": True,
+        "accepted": True,
+        "completed": False,
+        "operation": "remote_github_ci_dispatch",
+        "workflow": workflow,
+        "repo": "DDAY2301/PROJEKT",
+        "ref": "main",
+        "runs_page": "https://github.com/DDAY2301/PROJEKT/actions",
+        "notice": "Dispatch accepted, not yet confirmed passing. Watch GitHub Actions to verify result.",
+    }
+
+
+async def _project_command(command: str) -> dict[str, Any]:
+    low = _fold(command)
+    if os.getenv("AGENT_MANAGER_SUPERVISOR_ONLY", "0") == "1":
+        if low in {"status", "health", "stanje", "preveri status", "github status"}:
+            managed = await _http("GET", f"{MANAGER_BASE}/managed-agents", timeout=10)
+            row = next(
+                (x for x in managed.get("status", [])
+                 if x.get("target_id") == "project_visibility_github"),
+                None,
+            )
+            return {
+                "action": "project_visibility_github_status",
+                "ok": bool(row and row.get("ok")),
+                "monitor_type": "github_workflows_not_live_agent",
+                "last_check": row.get("last_check") if row else None,
+                "details": row.get("details") if row else None,
+            }
+        if low in {"ci", "test api", "api ci", "preveri ci", "zaženi ci", "zazeni ci"}:
+            return await _pv_github_workflow_dispatch("agent-api-ci.yml")
+        if low in {"frontend benchmark", "lighthouse", "frontend qa", "test frontend"}:
+            return await _pv_github_workflow_dispatch("frontend-benchmark.yml")
+        raise RuntimeError(
+            "Project Visibility supervisor-only: supported remote commands are "
+            "STATUS, TEST API/CI, FRONTEND BENCHMARK. "
+            "Live website builds, preflight and code repairs require a separately "
+            "authenticated remote PV agent; no local PV process will be started."
+        )
+
     token = _secret("FLEET_LOCAL_TOKEN")
     if not token:
         raise RuntimeError("FLEET_LOCAL_TOKEN is not configured.")

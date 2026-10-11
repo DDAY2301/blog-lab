@@ -34,6 +34,7 @@ class GmailCommandLoopV4:
             "enabled": self.enabled,
             "poll_seconds": self.interval,
             "allowed_senders": sorted(self.allowed_senders),
+            "require_authenticated_sender": os.getenv("GMAIL_COMMAND_REQUIRE_AUTH", "1") != "0",
             "last": self.last,
         }
 
@@ -64,6 +65,23 @@ class GmailCommandLoopV4:
     def _seen(self, message_id: str) -> dict[str, Any] | None:
         rows = self.store.query("SELECT * FROM mail_commands WHERE message_id=?", (message_id,))
         return rows[0] if rows else None
+
+    def _deny(self, details: dict[str, Any], reason: str) -> dict[str, Any]:
+        # Keep rejected messages unread, but do not repeatedly process them.
+        # Never send rejection details to a potentially spoofed From address.
+        self.store.execute(
+            """
+            INSERT OR IGNORE INTO mail_commands(
+              message_id,thread_id,sender,subject,target,command_text,status,received_at,processed_at,error
+            ) VALUES(?,?,?,?,?,?,?,?,?,?)
+            """,
+            (
+                details["id"], details.get("thread_id", ""),
+                details.get("sender", ""), details.get("subject", ""),
+                "denied", "", "denied", utcnow(), utcnow(), reason[:200],
+            ),
+        )
+        return {"id": details["id"], "status": "denied", "reason": reason}
 
     def _insert_processing(self, details: dict[str, str], target: str, command: str) -> None:
         self.store.execute(
@@ -146,7 +164,7 @@ class GmailCommandLoopV4:
             # Completed/failed command mail can be marked read. Messages that were
             # merely false-positive Gmail search candidates must keep their inbox
             # state untouched.
-            if existing.get("status") != "ignored":
+            if existing.get("status") not in {"ignored", "denied"}:
                 try:
                     await asyncio.to_thread(self.gmail.mark_read, message_id)
                 except Exception:
@@ -182,20 +200,47 @@ class GmailCommandLoopV4:
             return {"id": message_id, "status": "ignored"}
 
         sender = details["sender"]
-        if sender not in self.allowed_senders:
+        auth_required = os.getenv("GMAIL_COMMAND_REQUIRE_AUTH", "1") != "0"
+        if sender not in self.allowed_senders or (
+            auth_required and not details.get("sender_authenticated", False)
+        ):
             self.store.action(
                 "gmail-command-v4",
                 "reject_sender",
                 message_id,
                 "denied",
-                {"sender": sender, "subject": details["subject"]},
+                {
+                    "sender": sender,
+                    "subject": details["subject"],
+                    "reason": "sender_not_allowed" if sender not in self.allowed_senders else "authentication_not_verified",
+                    "authentication_method": details.get("authentication_method", "unverified"),
+                },
             )
-            await asyncio.to_thread(self.gmail.mark_read, message_id)
-            return {"id": message_id, "status": "denied", "sender": sender}
+            # Reject spoofed or otherwise unverified mail without executing a
+            # command or erasing the message. Keep available for manual review.
+            return self._deny(
+                details,
+                "sender_not_allowed" if sender not in self.allowed_senders else "authentication_not_verified",
+            )
 
         command = str(details.get("body") or "").strip()
+        # Quoted replies/forwarded chains can contain old commands. Only
+        # current unquoted text is eligible for command execution.
+        command = re.split(
+            r"(?im)^\s*(?:On .+ wrote:|From:\s+\S+|-----Original Message-----)",
+            command,
+            maxsplit=1,
+        )[0]
+        command = "\n".join(
+            line for line in command.splitlines() if not line.lstrip().startswith(">")
+        ).strip()
         if subject_tail:
-            command = f"{subject_tail}\n\n{command}".strip()
+            # A short read-only subject like [AGENT] STATUS takes precedence
+            # over phone signatures and boilerplate in the email body.
+            if self.bus._simple_operator_target(subject_tail):
+                command = subject_tail
+            else:
+                command = f"{subject_tail}\n\n{command}".strip()
         if not command:
             await asyncio.to_thread(
                 self.gmail.send,
@@ -208,6 +253,10 @@ class GmailCommandLoopV4:
 
         explicit_target = subject_target or ""
         target_label = explicit_target or "auto"
+        if len(command) > 4000:
+            self.store.action("gmail-command-v4", "reject_oversized_command",
+                              message_id, "denied", {"length": len(command)})
+            return self._deny(details, "command_too_long")
         self._insert_processing(details, target_label, command)
 
         artifacts: list[dict[str, Any]] = []
