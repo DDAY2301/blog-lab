@@ -292,7 +292,7 @@ class GmailCommandLoopV4:
             await asyncio.to_thread(self.gmail.mark_read, message_id)
             self.store.action(
                 "gmail-command-v4",
-                "command_completed" if ok else "command_partial",
+                "command_completed" if ok else "command_dispatched" if final_status == "dispatched" else "command_partial",
                 target_label,
                 final_status,
                 {

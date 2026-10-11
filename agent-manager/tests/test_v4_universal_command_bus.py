@@ -101,7 +101,8 @@ def test_explicit_bloglab_command_uploads_image_and_passes_url(tmp_path, monkeyp
             explicit_target="bloglab",
             artifacts=[artifact],
         )
-        assert result["status"] == "completed"
+        assert result["status"] == "dispatched"
+        assert result["steps"][0]["status"] == "dispatched"
         assert captured["target"] == "bloglab"
         assert "https://example.invalid/hero.jpg" in captured["command"]
         assert "hero.jpg" in captured["command"]
@@ -180,3 +181,66 @@ def test_ai_planner_receives_manager_brain_v5(tmp_path, monkeypatch):
         assert "REGISTERED AGENTS" in seen["user"]
 
     asyncio.run(run())
+
+
+def test_downstream_negative_response_is_not_reported_as_success(tmp_path, monkeypatch):
+    async def run():
+        store = _store(tmp_path, monkeypatch)
+        bus = UniversalCommandBusV2(store)
+
+        async def fake_dispatch(target, command):
+            return {"ok": False, "error": "publisher rejected article"}
+
+        monkeypatch.setattr("manager.command_bus_v2._dispatch", fake_dispatch)
+        result = await bus.execute(
+            "Publish a test article",
+            source="test",
+            source_id="rejected-1",
+            explicit_target="bloglab",
+        )
+        assert result["status"] == "failed"
+        assert result["ok"] is False
+        assert result["steps"][0]["status"] == "failed"
+        persisted = store.query("SELECT status FROM command_jobs WHERE id=?", (result["job_id"],))
+        assert persisted[0]["status"] == "failed"
+
+    asyncio.run(run())
+
+
+def test_deferred_dispatch_does_not_unlock_dependent_steps(tmp_path, monkeypatch):
+    async def run():
+        store = _store(tmp_path, monkeypatch)
+        bus = UniversalCommandBusV2(store)
+        calls = []
+
+        async def fake_plan(system, user):
+            return "test", {
+                "summary": "Dispatch then verify",
+                "steps": [
+                    {"id": "dispatch", "target": "bloglab", "command": "publish", "depends_on": []},
+                    {"id": "verify", "target": "manager", "command": "verify live", "depends_on": ["dispatch"]},
+                ],
+            }
+
+        async def fake_dispatch(target, command):
+            calls.append((target, command))
+            return {"accepted": True, "status": "queued", "job_id": "downstream-1"}
+
+        monkeypatch.setattr(bus.ai, "chat_json", fake_plan)
+        monkeypatch.setattr("manager.command_bus_v2._dispatch", fake_dispatch)
+        result = await bus.execute("Publish then verify", source="test", source_id="pending-1")
+        assert result["status"] == "partial"
+        assert result["steps"][0]["status"] == "dispatched"
+        assert result["steps"][1]["status"] == "skipped"
+        assert calls == [("bloglab", "publish")]
+
+    asyncio.run(run())
+
+
+def test_nested_failures_and_accepted_only_are_not_completed():
+    outcome = UniversalCommandBusV2._dispatch_outcome
+    assert outcome({"accepted": True}) == "dispatched"
+    assert outcome({"status": "running", "ok": True}) == "dispatched"
+    assert outcome({"ok": True, "result": {"accepted": True}}) == "dispatched"
+    assert outcome({"targets": {"manager": {"ok": True}, "bloglab": {"ok": False}}}) == "failed"
+    assert outcome({"status": "completed", "ok": True}) == "completed"
