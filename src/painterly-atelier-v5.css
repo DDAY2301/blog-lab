@@ -84,8 +84,8 @@
 
 /* Compose the original illustrated lake as one panoramic oil painting. */
 .tourism-site > .hero.paint-hero {
-  min-height:clamp(620px,56vw,785px);
-  padding:clamp(135px,13vw,183px) max(5.6vw,calc((100vw - 1280px)/2)) clamp(126px,11vw,166px);
+  min-height:clamp(495px,36vw,565px);
+  padding:clamp(97px,7.4vw,115px) max(5.6vw,calc((100vw - 1280px)/2)) clamp(68px,5vw,85px);
   background-image:
     linear-gradient(90deg,rgba(18,30,27,.82) 0%,rgba(21,33,28,.69) 25%,rgba(37,47,34,.23) 52%,rgba(42,60,57,.02) 80%),
     linear-gradient(0deg,rgba(29,45,39,.11),rgba(43,56,46,.02) 65%),
@@ -153,7 +153,7 @@
   color:#fff6e5;
   font-family:"Iowan Old Style","Baskerville","Palatino Linotype",Georgia,serif;
   font-weight:400;
-  font-size:clamp(63px,6.6vw,105px);
+  font-size:clamp(55px,5.15vw,78px);
   line-height:.96;
   letter-spacing:-.052em;
   text-shadow:0 4px 20px rgba(17,30,26,.38);
@@ -260,7 +260,7 @@ main.tourism-site > .home-content.container.paint-story-paper .section-heading .
 .tourism-site .paint-story-paper .post-card,
 .tourism-site .paint-story-paper .post-card.featured {
   position:relative;
-  min-height:266px;
+  min-height:236px;
   grid-template-columns:minmax(0,.92fr) minmax(0,1fr);
   border:1px solid rgba(148,124,84,.26);
   border-radius:3px 14px 4px 13px;
@@ -286,7 +286,7 @@ main.tourism-site > .home-content.container.paint-story-paper .section-heading .
 .tourism-site .paint-story-paper .post-card .card-art,
 .tourism-site .paint-story-paper .post-card.featured .card-art {
   height:100%;
-  min-height:266px;
+  min-height:236px;
   background-size:cover !important;
   background-position:52% center !important;
   filter:saturate(.95) contrast(1.07);
@@ -528,8 +528,8 @@ main.tourism-site > .home-content.container.paint-story-paper .section-heading .
   .tourism-site > .site-header {padding-inline:24px;gap:14px;}
   .tourism-site > .site-header nav button {letter-spacing:.04em;font-size:10px;padding-inline:6px;}
   .tourism-site .paint-story-paper .post-card,
-  .tourism-site .paint-story-paper .post-card.featured {min-height:285px;}
-  .tourism-site .paint-story-paper .post-card .card-art {min-height:285px;}
+  .tourism-site .paint-story-paper .post-card.featured {min-height:245px;}
+  .tourism-site .paint-story-paper .post-card .card-art {min-height:245px;}
 }
 @media(max-width:1120px){
   .tourism-site .paint-story-paper .post-grid {grid-template-columns:repeat(2,minmax(0,1fr)) !important;}
@@ -552,8 +552,8 @@ main.tourism-site > .home-content.container.paint-story-paper .section-heading .
   .tourism-site > .site-header nav {order:3;width:100%;flex:1 0 100%;padding-bottom:4px;justify-content:flex-start;}
   .tourism-site > .site-header nav button {min-height:38px;}
   .tourism-site > .hero.paint-hero {
-    min-height:605px;
-    padding:75px 23px 105px;
+    min-height:550px;
+    padding:73px 23px 88px;
     background-image:
       linear-gradient(90deg,rgba(18,30,27,.86),rgba(32,47,39,.56) 67%,rgba(34,50,42,.39)),
       url("/art/generated/hero.svg") !important;
@@ -575,7 +575,7 @@ main.tourism-site > .home-content.container.paint-story-paper .section-heading .
   .tourism-site .paint-events-section.container {width:calc(100% - 40px);gap:18px;}
 }
 @media(max-width:480px){
-  .tourism-site > .hero.paint-hero {min-height:570px;padding:70px 19px 100px;}
+  .tourism-site > .hero.paint-hero {min-height:540px;padding:64px 19px 86px;}
   .tourism-site > .hero .paint-hero-folio {font-size:9px;gap:8px;}
   .tourism-site > .hero .paint-hero-copy h1 {font-size:clamp(44px,11.65vw,61px);}
   .tourism-site > .hero .paint-hero-copy p {font-size:16px;line-height:1.5;}
