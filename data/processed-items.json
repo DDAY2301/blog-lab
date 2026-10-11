@@ -4772,5 +4772,19 @@
     "provider": "google-news-si",
     "processed_at": "2026-10-11T13:39:14+02:00",
     "output_id": "nizke-turisticne-sezone-morda-sploh-ne-bo-vec-kaj-to-pomeni-in-kje-so-razlogi-df90a45e"
+  },
+  {
+    "source_name": "Slovenske novice",
+    "category": "gourmet",
+    "title": "Ko se Brda spremenijo v raj za gurmane! V Šmartnem kraljevala hrana, vino in sonce - Slovenske novice",
+    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNRF92cU9ubzNwYUloYVk0U0NGU3ZPemJHWEpMeFBHYTNYS2ZPd0pGT0piU211dlZxMHJTY183bmxBQjR6STlYc2ZkVUxfbzkzYzlrR1RFN2FjRGQ0eWJ1VmpQZlQteVFSNU00RWtKRnFtcHpXclFDcU1qTkVVNU42TUktMk9BbjJpMTlIdHJySndBRVFfZk5paWdHQ2dYOE45M2U2cGc3cXMyLWh3WHpDNlgwa1FmV0g5cnFkQ192MXJvMmVaaU4wNg?oc=5",
+    "summary": "Ko se Brda spremenijo v raj za gurmane! V Šmartnem kraljevala hrana, vino in sonce Slovenske novice",
+    "published": "Tue, 29 Apr 2025 07:00:00 GMT",
+    "image_url": "",
+    "video_url": "",
+    "hash": "031eadaf102ad0adb37315e5172995b6c43e39f8bd5c35245a736fe14166fc5b",
+    "provider": "google-news-si",
+    "processed_at": "2026-10-11T19:23:59+02:00",
+    "output_id": "ko-se-brda-spremenijo-v-raj-za-gurmane-v-smartnem-kraljevala-hrana-vino-in-sonce-slovenske-eb9acfc1"
   }
 ]

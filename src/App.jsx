@@ -30,6 +30,33 @@ const CATEGORY_EMPTY_COPY = {
 
 const starterArticles = [
   {
+    "id": "ko-se-brda-spremenijo-v-raj-za-gurmane-v-smartnem-kraljevala-hrana-vino-in-sonce-slovenske-eb9acfc1",
+    "title": "Ko se Brda spremenijo v raj za gurmane! V Šmartnem kraljevala hrana, vino in sonce - Slovenske novice",
+    "excerpt": "Ko se Brda spremenijo v raj za gurmane! V Šmartnem kraljevala hrana, vino in sonce Slovenske novice",
+    "seoDescription": "Ko se Brda spremenijo v raj za gurmane! V Šmartnem kraljevala hrana, vino in sonce Slovenske novice",
+    "content": "Pregled za rubriko gourmet povzema trenutno razpoložljive informacije iz spodaj navedenih virov. Besedilo je pripravljeno brez dodajanja nepodprtih dejstev.\n\n## Ko se Brda spremenijo v raj za gurmane! V Šmartnem kraljevala hrana, vino in sonce - Slovenske novice\nKo se Brda spremenijo v raj za gurmane! V Šmartnem kraljevala hrana, vino in sonce Slovenske novice\n\nVir: Slovenske novice — https://news.google.com/rss/articles/CBMiyAFBVV95cUxNRF92cU9ubzNwYUloYVk0U0NGU3ZPemJHWEpMeFBHYTNYS2ZPd0pGT0piU211dlZxMHJTY183bmxBQjR6STlYc2ZkVUxfbzkzYzlrR1RFN2FjRGQ0eWJ1VmpQZlQteVFSNU00RWtKRnFtcHpXclFDcU1qTkVVNU42TUktMk9BbjJpMTlIdHJySndBRVFfZk5paWdHQ2dYOE45M2U2cGc3cXMyLWh3WHpDNlgwa1FmV0g5cnFkQ192MXJvMmVaaU4wNg?oc=5\n\n## Kako brati ta pregled\nTa članek je v varnem nadomestnem načinu sestavljen izključno iz podanih virov. Ne dodaja dejstev, ki jih v podlagi ni, zato so navedene povezave sestavni del članka in omogočajo neposredno preverjanje informacij.\n\n## Kaj preveriti pred obiskom\nDatumi, odpiralni časi, dostopnost, prometne razmere, vreme in programi dogodkov se lahko spremenijo. Pred odhodom preveri najnovejše podatke neposredno pri organizatorju, upravljavcu ali drugem uradnem viru, ki je naveden v članku.",
+    "category": "Gourmet",
+    "author": "Blog Lab Slovenia Publisher",
+    "status": "published",
+    "heroImage": {
+      "url": "/media/articles/ff67e115195b828e8778.webp",
+      "alt": "Sirovi štruklji (skutini); \" cheese-\"dumplings\" \", slovenian food",
+      "caption": "Sl-Ziga · Wikimedia Commons · Public domain",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:SiroviStruklji.jpg"
+    },
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Ko se Brda spremenijo v raj za gurmane! V Šmartnem kraljevala hrana, vino in sonce - Slovenske novice",
+        "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNRF92cU9ubzNwYUloYVk0U0NGU3ZPemJHWEpMeFBHYTNYS2ZPd0pGT0piU211dlZxMHJTY183bmxBQjR6STlYc2ZkVUxfbzkzYzlrR1RFN2FjRGQ0eWJ1VmpQZlQteVFSNU00RWtKRnFtcHpXclFDcU1qTkVVNU42TUktMk9BbjJpMTlIdHJySndBRVFfZk5paWdHQ2dYOE45M2U2cGc3cXMyLWh3WHpDNlgwa1FmV0g5cnFkQ192MXJvMmVaaU4wNg?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-11T19:23:59+02:00",
+    "updatedAt": "2026-10-11T19:23:59+02:00"
+  },
+
+  {
     "id": "idrija-lace-unesco-heritage-guide",
     "title": "Idrija Lace: A Visitor’s Guide to Slovenia’s Living Thread Heritage",
     "excerpt": "Discover how Idrija’s bobbin-lace tradition became living UNESCO heritage, where to see it, and how to visit respectfully without confusing a regional style with the wider Slovenian craft.",
