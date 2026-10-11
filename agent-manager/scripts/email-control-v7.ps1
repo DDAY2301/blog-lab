@@ -36,6 +36,10 @@ function Check-Mail {
     strict_authentication = ($env:GMAIL_COMMAND_REQUIRE_AUTH -ne "0")
     owner_configured = (-not [string]::IsNullOrWhiteSpace($env:REPORT_TO_EMAIL))
     allowed_senders_configured = (-not [string]::IsNullOrWhiteSpace($env:GMAIL_COMMAND_ALLOWED_SENDERS))
+    project_ci_token_configured = [bool](
+      (Read-User "AGENT_MANAGER_GITHUB_TOKEN") -or (Read-User "GITHUB_TOKEN") -or (Read-User "GH_TOKEN")
+    )
+    bloglab_token_configured = [bool](Read-User "FLEET_AGENT_TOKEN")
     manager_available = $false
     gmail_state = "unknown"
     polling_enabled = $false
