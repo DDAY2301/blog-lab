@@ -35,7 +35,7 @@ if ($lowMemoryEnabled) {
   if (-not $supervisorOnly) { $supervisorOnly = $env:AGENT_MANAGER_SUPERVISOR_ONLY }
   if ($supervisorOnly -eq "1") {
     $env:AGENT_MANAGER_SUPERVISOR_ONLY="1"
-    Write-Host "Agent Focus: supervisor-only — BlogLab and Project Visibility run elsewhere; no local production agent will be started." -ForegroundColor Cyan
+    Write-Host "Agent Focus: supervisor-only - BlogLab and Project Visibility run elsewhere; no local production agent will be started." -ForegroundColor Cyan
   } else {
     Write-Host "Agent Focus: 8 GB profile active. One AI model, one inference lane; optional Colibri launch disabled." -ForegroundColor Cyan
   }

@@ -70,3 +70,34 @@ jobs:
       - name: Legacy import compatibility
         run: |
           python -c "from manager.service import app; print(app.version)"
+
+  windows-powershell-51:
+    runs-on: windows-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate Windows PowerShell 5.1 stack entrypoint
+        shell: powershell
+        run: |
+          if ($PSVersionTable.PSVersion.Major -ne 5) {
+            throw "This guard must run in classic Windows PowerShell 5.1, not pwsh 7."
+          }
+          $script = Join-Path $env:GITHUB_WORKSPACE "agent-manager\scripts\start-stack-v4.ps1"
+          # Windows PowerShell 5.1 reads BOM-less .ps1 using the system ANSI
+          # code page, which can turn UTF-8 punctuation into quote delimiters.
+          $bytes = [System.IO.File]::ReadAllBytes($script)
+          $nonAscii = @($bytes | Where-Object { $_ -gt 127 })
+          if ($nonAscii.Count -gt 0) {
+            throw "start-stack-v4.ps1 must remain ASCII-only for Windows PowerShell 5.1 compatibility."
+          }
+          $tokens = $null
+          $parseErrors = $null
+          [void][System.Management.Automation.Language.Parser]::ParseFile(
+            $script, [ref]$tokens, [ref]$parseErrors
+          )
+          if ($parseErrors.Count -gt 0) {
+            $parseErrors | Format-List | Out-String | Write-Host
+            throw "Windows PowerShell 5.1 parser rejected start-stack-v4.ps1."
+          }
+          Write-Host "PASS: Windows PowerShell 5.1 parsed ASCII startup script."
