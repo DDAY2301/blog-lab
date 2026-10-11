@@ -601,3 +601,54 @@ main.tourism-site > .home-content.container.paint-story-paper .section-heading .
   .tourism-site .paint-story-paper .post-card {transition:none;}
   .tourism-site .paint-story-paper .post-card:hover {transform:none;}
 }
+
+
+/* Visual QA follow-up: short magazine headlines in narrow illustrated covers.
+ * Full titles and complete text remain in the underlying linked article. */
+.tourism-site .paint-story-paper .post-card h3,
+.tourism-site .paint-story-paper .post-card.featured h3 {
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:4;
+  line-clamp:4;
+  overflow:hidden;
+  font-size:clamp(18px,1.37vw,21px);
+  line-height:1.18;
+  hyphens:auto;
+}
+.tourism-site .paint-story-paper .post-card p {
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+  line-clamp:2;
+  overflow:hidden;
+}
+.tourism-site .paint-story-paper .post-card[data-art-category="Gourmet"] .card-art {
+  background-position:77% 86% !important;
+  filter:contrast(1.06) saturate(1.1) sepia(.13);
+}
+.tourism-site .paint-story-paper .post-card[data-art-category="Vodniki"] .card-art {
+  background-position:74% 89% !important;
+  filter:contrast(1.06) saturate(.83) sepia(.16);
+}
+.tourism-site .paint-story-paper .post-card[data-art-category="Sezonsko"] .card-art {
+  background-position:43% 23% !important;
+  filter:contrast(1.05) saturate(1.1) sepia(.11);
+}
+.tourism-site .paint-story-paper .post-card[data-art-category="Dediščina"] .card-art {
+  background-position:43% 83% !important;
+}
+.tourism-site .paint-story-paper .post-card[data-art-category="Kolesarstvo"] .card-art {
+  background-position:70% 87% !important;
+}
+.tourism-site .paint-story-paper .post-card[data-art-category="Gore & traili"] .card-art {
+  background-position:76% 25% !important;
+}
+@media(max-width:480px) {
+  .tourism-site .paint-story-paper .post-card h3,
+  .tourism-site .paint-story-paper .post-card.featured h3 {
+    font-size:23px;
+    -webkit-line-clamp:3;
+    line-clamp:3;
+  }
+}
