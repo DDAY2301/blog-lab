@@ -17,6 +17,7 @@ $settings = [ordered]@{
   OLLAMA_CONTEXT_LENGTH          = "4096"
   AGENT_MANAGER_CONTEXT          = "4096"
   AGENT_MANAGER_LOW_MEMORY_MODE  = "1"
+  AGENT_MANAGER_SUPERVISOR_ONLY = "1"
   AGENT_MANAGER_MODEL            = "qwen2.5-coder:3b"
   AGENT_MANAGER_AI_PRIORITY      = "ollama"
   OLLAMA_KEEP_ALIVE              = "60s"
