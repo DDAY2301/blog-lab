@@ -58,9 +58,28 @@ class ManagedAgentSupervisorV4:
                 out.append(ManagedTarget(**row))
             except TypeError:
                 continue
-        return [x for x in out if x.enabled]
+        active = [x for x in out if x.enabled]
+        if os.getenv("AGENT_MANAGER_SUPERVISOR_ONLY", "0") == "1":
+            # Keep existing saved target configuration untouched. Only disable
+            # local PV runtime/process expectations for this manager instance.
+            active = [
+                x for x in active
+                if x.id not in {"project_visibility", "project_visibility_process"}
+            ]
+        return active
 
     async def check_all(self) -> list[dict[str, Any]]:
+        if os.getenv("AGENT_MANAGER_SUPERVISOR_ONLY", "0") == "1":
+            # Retire *only* the stale local-process expectations; remote PV
+            # GitHub incidents remain open until independently verified.
+            for target_id, title in (
+                ("project_visibility", "Project Visibility health degraded"),
+                ("project_visibility_process", "Project Visibility Local Process health degraded"),
+            ):
+                self.incidents.resolve_matching(
+                    target_id, title,
+                    {"reason": "Local PV runtime is out of scope in supervisor-only mode; remote GitHub monitoring remains active"},
+                )
         results: list[dict[str, Any]] = []
         for target in self.targets():
             now = time.time()
@@ -260,6 +279,14 @@ class ManagedAgentSupervisorV4:
 
     def repair(self, target: ManagedTarget) -> dict[str, Any]:
         adapter = target.repair_adapter
+        if os.getenv("AGENT_MANAGER_SUPERVISOR_ONLY", "0") == "1" and adapter in {
+            "project_visibility_restart", "local_process_restart"
+        }:
+            return {
+                "ok": False,
+                "stage": "policy",
+                "summary": "Supervisor-only workstation: local production process repairs are disabled."
+            }
         if adapter == "project_visibility_restart":
             return self._restart_project_visibility(target)
         if adapter == "bloglab_self_heal":
@@ -494,6 +521,11 @@ class ManagedAgentSupervisorV4:
 
     def status_rows(self) -> list[dict[str, Any]]:
         rows = self.store.query("SELECT * FROM managed_target_status ORDER BY name")
+        if os.getenv("AGENT_MANAGER_SUPERVISOR_ONLY", "0") == "1":
+            rows = [
+                row for row in rows
+                if row.get("target_id") not in {"project_visibility", "project_visibility_process"}
+            ]
         for row in rows:
             try:
                 row["details"] = json.loads(row["details"])

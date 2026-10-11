@@ -141,6 +141,40 @@ async def _fleet_status() -> dict[str, Any]:
         except Exception as exc:
             return {"ok": False, "error": str(exc)[:1200]}
 
+    if os.getenv("AGENT_MANAGER_SUPERVISOR_ONLY", "0") == "1":
+        manager, registered = await asyncio.gather(
+            grab(f"{MANAGER_BASE}/health"),
+            grab(f"{MANAGER_BASE}/managed-agents"),
+        )
+        rows = registered.get("data", {}).get("status", []) if registered["ok"] else []
+        def managed_status(target_id: str, kind: str) -> dict[str, Any]:
+            matching = next((row for row in rows if row.get("target_id") == target_id), None)
+            if not matching:
+                return {"ok": False, "state": "not_yet_checked", "type": kind}
+            return {
+                "ok": bool(matching.get("ok")),
+                "state": "last_monitor_result",
+                "type": kind,
+                "last_check": matching.get("last_check"),
+                "details": matching.get("details"),
+            }
+        project = managed_status("project_visibility_github", "github_workflows_only")
+        bloglab = managed_status("bloglab_worker", "cloudflare_worker_health")
+        bloglab_actions = managed_status("bloglab_github", "github_workflows_only")
+        return {
+            "ok": bool(manager["ok"] and project["ok"] and bloglab["ok"]),
+            "mode": "supervisor_only",
+            "manager": manager,
+            "project_visibility": project,
+            "bloglab": bloglab,
+            "bloglab_github": bloglab_actions,
+            "integrations": {
+                "project_token_ready": bool(_secret("FLEET_LOCAL_TOKEN")),
+                "bloglab_token_ready": bool(_secret("FLEET_AGENT_TOKEN")),
+                "remote_password_ready": bool(_remote_password()),
+            },
+        }
+
     manager, project, bloglab = await asyncio.gather(
         grab(f"{MANAGER_BASE}/health"),
         grab(f"{PROJECT_BASE}/health"),
@@ -248,6 +282,12 @@ async def _manager_command(command: str) -> dict[str, Any]:
 
 
 async def _project_command(command: str) -> dict[str, Any]:
+    if os.getenv("AGENT_MANAGER_SUPERVISOR_ONLY", "0") == "1":
+        raise RuntimeError(
+            "Supervisor-only mode: Project Visibility local API is intentionally not running. "
+            "GitHub Actions monitoring works remotely, but live agent commands require a "
+            "separately configured and authenticated remote command endpoint."
+        )
     token = _secret("FLEET_LOCAL_TOKEN")
     if not token:
         raise RuntimeError("FLEET_LOCAL_TOKEN is not configured.")
