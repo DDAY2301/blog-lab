@@ -140,3 +140,20 @@ def test_manager_ram_returns_health_resources_no_inference(monkeypatch):
     monkeypatch.setattr(remote_v4, "_http", fake_http)
     response = asyncio.run(remote_v4._manager_command("RAM"))
     assert response["result"]["ram_available_gb"] == 3.09
+
+
+
+def test_all_status_aliases_never_fan_out_remote_agent_commands(monkeypatch):
+    calls = []
+    async def fake_status():
+        calls.append("fleet")
+        return {"ok": True, "manager": {"ok": True}}
+    async def forbidden(*args, **kwargs):
+        raise AssertionError("Status must not become an executable remote command")
+    monkeypatch.setattr(remote_v4, "_fleet_status", fake_status)
+    monkeypatch.setattr(remote_v4, "_project_command", forbidden)
+    monkeypatch.setattr(remote_v4, "_bloglab_command", forbidden)
+    for name in ("STATUS", "STATUS VSEH AGENTOV", "PREVERI STATUS", "FLOTA"):
+        result = asyncio.run(remote_v4._dispatch("all", name))
+        assert result["ok"]
+    assert calls == ["fleet"] * 4

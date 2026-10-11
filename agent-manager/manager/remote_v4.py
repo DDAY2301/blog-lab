@@ -469,7 +469,12 @@ async def _dispatch(target: str, command: str) -> dict[str, Any]:
     if target == "bloglab":
         return await _bloglab_command(command)
     if target == "all":
-        if _fold(command) in {"status", "health", "stanje"}:
+        # Keep all status aliases read-only. Never fan out a status phrase as
+        # arbitrary agent commands to remote production workers.
+        if _fold(command) in {
+            "status", "health", "stanje", "status vseh agentov",
+            "preveri status", "flota", "fleet status",
+        }:
             return await _fleet_status()
         results: dict[str, Any] = {}
         for name, fn in (
