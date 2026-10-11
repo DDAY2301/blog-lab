@@ -3,11 +3,11 @@
   "status": "waiting",
   "enabled": true,
   "category": "dediscina",
-  "last_run": "2026-10-11T12:08:08+02:00",
+  "last_run": "2026-10-11T12:09:21+02:00",
   "last_success": "2026-10-11T07:39:31+02:00",
   "last_output": "kolesarjenje-slovenija-kolesari-nad-evropskim-povprecjem-vendar-izzivi-ostajajo-0a0bef11",
   "next_run": null,
-  "message": "Fallback QA ni uspel: ze_uporabljen_vir",
+  "message": "Fallback ni našel dovolj preverljivih virov za zahtevano kategorijo.",
   "posts_today": 1,
   "scheduled_posts_today": 1,
   "manual_posts_today": 0,
@@ -17,5 +17,5 @@
   ],
   "scheduled_slots_deferred": [],
   "last_editorial_hold": null,
-  "last_error": "ze_uporabljen_vir"
+  "last_error": "fallback_no_category_evidence"
 }
