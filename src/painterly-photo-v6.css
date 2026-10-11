@@ -1,0 +1,83 @@
+/* Blog Lab / Gallery V6 — original paintings generated for this website.
+ * Seven optimized JPEGs are stored locally under /public/art/painted,
+ * not linked to short-lived external endpoints.
+ * Paintings are decorative illustrations; article source photos remain intact.
+ */
+.tourism-site > .hero.paint-hero {
+  background-image:
+    linear-gradient(90deg, rgba(16,29,26,.87) 0%, rgba(20,33,28,.66) 30%, rgba(27,46,40,.16) 66%, rgba(37,56,47,.04) 100%),
+    url("/art/painted/hero.jpg") !important;
+  background-position:center, center 49% !important;
+  background-size:cover, cover !important;
+  background-color:#4e655e;
+}
+.tourism-site > .hero.paint-hero::before {
+  opacity:.12;
+  background:repeating-linear-gradient(107deg, rgba(255,237,184,.12) 0 1px, transparent 1px 28px);
+}
+.tourism-site .paint-story-paper .post-card .card-art {
+  --painting:url("/art/painted/hero.jpg");
+  background-image:var(--painting) !important;
+  background-size:cover !important;
+  background-position:center !important;
+  filter:contrast(1.045) saturate(.93) !important;
+}
+.tourism-site .paint-story-paper .post-card[data-art-category="Kolesarstvo"] .card-art {
+  --painting:url("/art/painted/kolesarstvo.jpg");
+  background-position:56% 55% !important;
+}
+.tourism-site .paint-story-paper .post-card[data-art-category="Dediščina"] .card-art {
+  --painting:url("/art/painted/dediscina.jpg");
+  background-position:67% center !important;
+}
+.tourism-site .paint-story-paper .post-card[data-art-category="Sezonsko"] .card-art {
+  --painting:url("/art/painted/sezonsko.jpg");
+  background-position:40% 55% !important;
+}
+.tourism-site .paint-story-paper .post-card[data-art-category="Gore & traili"] .card-art {
+  --painting:url("/art/painted/gore-traili.jpg");
+  background-position:52% 55% !important;
+}
+.tourism-site .paint-story-paper .post-card[data-art-category="Gourmet"] .card-art {
+  --painting:url("/art/painted/gourmet.jpg");
+  background-position:44% 75% !important;
+}
+.tourism-site .paint-story-paper .post-card[data-art-category="Vodniki"] .card-art {
+  --painting:url("/art/painted/vodniki.jpg");
+  background-position:30% 65% !important;
+}
+.tourism-site .paint-rubric-art--1 {background-image:url("/art/painted/kolesarstvo.jpg") !important;}
+.tourism-site .paint-rubric-art--2 {background-image:url("/art/painted/dediscina.jpg") !important;}
+.tourism-site .paint-rubric-art--3 {background-image:url("/art/painted/sezonsko.jpg") !important;}
+.tourism-site .paint-rubric-art--4 {background-image:url("/art/painted/gore-traili.jpg") !important;}
+.tourism-site .paint-rubric-art--5 {background-image:url("/art/painted/gourmet.jpg") !important;}
+.tourism-site .paint-rubric-art--6 {background-image:url("/art/painted/vodniki.jpg") !important;}
+.tourism-site .paint-rubric-art {
+  background-size:cover !important;
+  background-position:center !important;
+  filter:contrast(1.06) saturate(.95);
+}
+.tourism-site .paint-afterword {
+  background:
+    linear-gradient(90deg,rgba(247,236,214,.98) 0%,rgba(249,239,217,.95) 54%,rgba(244,225,188,.42) 100%),
+    url("/art/painted/sezonsko.jpg") 100% center / min(59vw,850px) auto no-repeat,
+    #f1e4cd;
+}
+.tourism-site .paint-story-paper .post-card .card-art::after {
+  content:"UMETNIŠKA ILUSTRACIJA";
+  font:700 8px/1.2 ui-sans-serif,system-ui,sans-serif;
+  letter-spacing:.10em;
+}
+@media (max-width:760px) {
+  .tourism-site > .hero.paint-hero {
+    background-image:
+      linear-gradient(90deg,rgba(16,29,26,.85),rgba(27,45,39,.44)),
+      url("/art/painted/hero.jpg") !important;
+    background-position:center, 43% center !important;
+  }
+  .tourism-site .paint-afterword {
+    background:
+      linear-gradient(90deg,rgba(247,236,214,.94),rgba(249,239,217,.87)),
+      url("/art/painted/sezonsko.jpg") center / cover;
+  }
+}
