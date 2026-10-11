@@ -31,7 +31,14 @@ if ($lowMemoryEnabled) {
       [Environment]::SetEnvironmentVariable($key, $focusDefaults[$key], "Process")
     }
   }
-  Write-Host "Agent Focus: 8 GB profile active. One AI model, one inference lane; optional Colibri launch disabled." -ForegroundColor Cyan
+  $supervisorOnly = [Environment]::GetEnvironmentVariable("AGENT_MANAGER_SUPERVISOR_ONLY", "User")
+  if (-not $supervisorOnly) { $supervisorOnly = $env:AGENT_MANAGER_SUPERVISOR_ONLY }
+  if ($supervisorOnly -eq "1") {
+    $env:AGENT_MANAGER_SUPERVISOR_ONLY="1"
+    Write-Host "Agent Focus: supervisor-only — BlogLab and Project Visibility run elsewhere; no local production agent will be started." -ForegroundColor Cyan
+  } else {
+    Write-Host "Agent Focus: 8 GB profile active. One AI model, one inference lane; optional Colibri launch disabled." -ForegroundColor Cyan
+  }
 } else {
   # Preserve normal behavior when the operator has not enabled Agent Focus.
   $env:OLLAMA_MAX_LOADED_MODELS="1"
@@ -243,7 +250,11 @@ if ($lowMemoryEnabled) {
 } else {
   Start-Colibri
 }
-Start-ProjectVisibility
+if ($env:AGENT_MANAGER_SUPERVISOR_ONLY -eq "1") {
+  Write-Host "Supervisor-only: skip local Project Visibility API startup; monitor remote targets instead." -ForegroundColor Yellow
+} else {
+  Start-ProjectVisibility
+}
 Start-Manager
 Start-RemoteControl
 Start-FleetTunnel
