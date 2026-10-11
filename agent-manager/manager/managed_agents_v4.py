@@ -58,7 +58,15 @@ class ManagedAgentSupervisorV4:
                 out.append(ManagedTarget(**row))
             except TypeError:
                 continue
-        return [x for x in out if x.enabled]
+        active = [x for x in out if x.enabled]
+        if os.getenv("AGENT_MANAGER_SUPERVISOR_ONLY", "0") == "1":
+            # Keep existing saved target configuration untouched. Only disable
+            # local PV runtime/process expectations for this manager instance.
+            active = [
+                x for x in active
+                if x.id not in {"project_visibility", "project_visibility_process"}
+            ]
+        return active
 
     async def check_all(self) -> list[dict[str, Any]]:
         results: list[dict[str, Any]] = []
@@ -260,6 +268,14 @@ class ManagedAgentSupervisorV4:
 
     def repair(self, target: ManagedTarget) -> dict[str, Any]:
         adapter = target.repair_adapter
+        if os.getenv("AGENT_MANAGER_SUPERVISOR_ONLY", "0") == "1" and adapter in {
+            "project_visibility_restart", "local_process_restart"
+        }:
+            return {
+                "ok": False,
+                "stage": "policy",
+                "summary": "Supervisor-only workstation: local production process repairs are disabled."
+            }
         if adapter == "project_visibility_restart":
             return self._restart_project_visibility(target)
         if adapter == "bloglab_self_heal":
