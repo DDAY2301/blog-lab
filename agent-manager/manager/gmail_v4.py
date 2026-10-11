@@ -234,7 +234,9 @@ class GmailV4:
             dmarc_pass = re.search(r"\bdmarc=pass\b", result, re.IGNORECASE)
             if from_match and dmarc_pass and from_match.group(1).lower() == sender_domain:
                 dmarc_aligned = True
-                break
+            # Only trust the first matching Gmail authentication result:
+            # a later forged header cannot override a failed first result.
+            break
         authenticated = bool(own_sent or dmarc_aligned)
         return {
             "id": str(message.get("id") or ""),
