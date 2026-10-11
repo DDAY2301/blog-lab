@@ -110,7 +110,9 @@ def valid_future(item):
         if start.tzinfo is None:start=start.replace(tzinfo=TZ)
         if end.tzinfo is None:end=end.replace(tzinfo=TZ)
         now=datetime.now(TZ)
-        return end.astimezone(TZ)>=now-timedelta(hours=12) and start.astimezone(TZ)<=now+timedelta(days=14)
+        today_start=datetime.combine(now.date(),datetime.min.time(),tzinfo=TZ)
+        window_end=datetime.combine((now+timedelta(days=14)).date(),datetime.max.time(),tzinfo=TZ)
+        return end.astimezone(TZ)>=today_start and start.astimezone(TZ)<=window_end
     except Exception:return False
 
 def main():
