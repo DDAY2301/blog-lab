@@ -37,7 +37,14 @@ Te kratke besede se usmerijo deterministicno, **brez nalaganja lokalnega Ollama 
 | `[AGENT BLOGLAB]` | Pripravi objavo in uporabi prilozene slike | Enako; priloge se obravnavajo kot nezaupan vhod |
 | `[AGENT]` | Preveri BlogLab in Project Visibility ter razlozi incidente | Univerzalni nacrtovalnik; za kompleksne ukaze lahko uporabi Ollama |
 
-**Important: Project Visibility remote commands** (`[AGENT PV]` za gradnjo, popravila ali zagon oddaljenega agenta) v supervisor-only nacinu trenutno **niso povezani**. Deluje nadzor uspeha GitHub Actions in Pages. Dokler ni nastavljen preverjen, avtenticiran remote worker/endpoint, lahko Manager spremlja PV stanje, ne pa neposredno izvajati njegovega oddaljenega agenta. GitHub CI success ni enako dokazu, da je runtime online.
+**Project Visibility remote commands** v nacinu supervisor-only so zdaj omejeni na:
+- `[AGENT PV] STATUS` - pregled trenutnega GitHub CI stanja, ne runtime API.
+- `[AGENT PV] TEST API` - ob pravilno omejenem GitHub tokenu sprozi `agent-api-ci.yml` na GitHub Actions.
+- `[AGENT PV] FRONTEND BENCHMARK` - na GitHub Actions sprozi `frontend-benchmark.yml`.
+- Ostali ukazi (npr. gradnja novih spletnih strani, preflight lokalnega projekta, edit kode prek PV runtime) **niso** na voljo, dokler ni povezan posebej avtenticiran remote PV runner. GitHub workflow dispatch pomeni le sprejeto zahtevo, ne se rezultatov koncanega testa.
+
+Token `AGENT_MANAGER_GITHUB_TOKEN` nastavi **lokalno** z dovoljenjem Actions: Read and write za repozitorij `DDAY2301/PROJEKT`; ne posiljaj tokena prek e-postnega ukaza. Diagnosticni workflow uporablja fiksno ime in fiksno vejo `main`, ne sprejema shell ukazov.
+
 
 **Code fix** je zasnovan za branch, test in GitHub PR, brez samodejnega merge v produkcijsko vejo. Zgolj opisane moznosti v prirocniku ne dokazujejo pripravljene GitHub avtentikacije, lokalnega izvora kode ali dejanske uspesnosti posameznega ukaza.
 
