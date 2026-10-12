@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-12T23:38:15+02:00",
-  "loop_count": 4866,
+  "updated_at": "2026-10-12T23:39:17+02:00",
+  "loop_count": 4867,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-12T23:37:49+02:00",
+      "last_learning_run": "2026-10-12T23:38:53+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -76,7 +76,7 @@
           "last_seen": "2026-10-12T23:37:49+02:00",
           "last_title": "Sin znanih slovenskih športnikov navdušuje na SP, danes pa nastopa proti Sloveniji! - Siol.net",
           "last_provider": "google-news-si",
-          "published": 275683,
+          "published": 275750,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,17 +227,11 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 13,
-      "example_titles": {
-        "news.google.com": [
-          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
-          "*〜?[[Živý=šport!!]++] Škotska Slovenija prenos 26. september 2026 - Business and Investment Development Agency - CzechInvest",
-          "Finci premagali Slovenijo in osvojili prvo medaljo na velikih tekmovanjih - 24ur.com"
-        ]
-      }
+      "current_source_count": 0,
+      "example_titles": {}
     },
     "politika": {
-      "last_learning_run": "2026-10-12T23:38:00+02:00",
+      "last_learning_run": "2026-10-12T23:39:03+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -276,7 +270,7 @@
           "last_seen": "2026-10-12T23:38:00+02:00",
           "last_title": "Golob: Ne predstavljam si, da bi kdo želel živeti v državi, v kateri bi politika imela pooblastila policije - N1 Slovenija",
           "last_provider": "google-news-si",
-          "published": 305829,
+          "published": 305909,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -356,6 +350,13 @@
           "last_title": "Vaccine Administration: Needle Gauge and Length",
           "last_provider": "bing-web"
         },
+        "getasuperbuy.com": {
+          "score": 0.245,
+          "seen": 1,
+          "last_seen": "2026-10-12T23:39:03+02:00",
+          "last_title": "Recliners in Rochester, Southern Minnesota | Furniture Superstore ...",
+          "last_provider": "bing-web"
+        },
         "britannica.com": {
           "score": -4.2,
           "seen": 15,
@@ -364,17 +365,15 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 19,
+      "current_source_count": 1,
       "example_titles": {
-        "news.google.com": [
-          "V Sloveniji odprta volišča: Volivci danes odločajo o štirih pomembnih vprašanjih - Mariborinfo.com",
-          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
-          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer"
+        "getasuperbuy.com": [
+          "Recliners in Rochester, Southern Minnesota | Furniture Superstore ..."
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-12T23:38:15+02:00",
+      "last_learning_run": "2026-10-12T23:39:17+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -449,7 +448,7 @@
           "last_seen": "2026-10-12T23:38:15+02:00",
           "last_title": "Vreme se bo danes hitro obrnilo: nevihte bodo zajele večji del Slovenije, na Primorskem tudi burja - Dnevne Novice",
           "last_provider": "google-news-si",
-          "published": 242719,
+          "published": 242749,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "reddit.com": {
@@ -558,12 +557,10 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 24,
+      "current_source_count": 1,
       "example_titles": {
-        "news.google.com": [
-          "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
-          "Ko so bile ZDA stare toliko kot danes Slovenija, so bile na robu razpada - Zanima.me",
-          "Slovenska glasbenica ostro nad aktualno oblast: \"Ne vem, ali naj temu rečem ironija, paradoks ali vzporedni svet\" - Večer"
+        "support.google.com": [
+          "Advertiser-friendly content guidelines - YouTube Help"
         ]
       }
     }
@@ -644,14 +641,6 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20261012-212740.json",
-      "category": "dediscina",
-      "errors": [
-        "ze_uporabljen_vir"
-      ],
-      "title": "Grad Grad na Goričkem: Največji baročni grad v Sloveniji s skrivnostno zgodovino"
-    },
-    {
       "file": "fallback-failed-20261012-213939.json",
       "category": "gourmet",
       "errors": [
@@ -717,6 +706,14 @@
     },
     {
       "file": "fallback-failed-20261012-232303.json",
+      "category": "dediscina",
+      "errors": [
+        "ze_uporabljen_vir"
+      ],
+      "title": "Grad Grad na Goričkem: Največji baročni grad v Sloveniji s skrivnostno zgodovino"
+    },
+    {
+      "file": "fallback-failed-20261012-233755.json",
       "category": "dediscina",
       "errors": [
         "ze_uporabljen_vir"
