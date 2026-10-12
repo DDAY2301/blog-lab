@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-12T11:54:34+02:00",
-  "loop_count": 4768,
+  "updated_at": "2026-10-12T11:55:24+02:00",
+  "loop_count": 4769,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-12T11:54:11+02:00",
+      "last_learning_run": "2026-10-12T11:55:00+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -65,11 +65,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 115924,
-          "last_seen": "2026-10-12T11:54:11+02:00",
+          "seen": 115936,
+          "last_seen": "2026-10-12T11:55:00+02:00",
           "last_title": "Slovenska blamaža na igrah! Zakaj sploh tekmujemo, če je šport pri nas umrl - Ekipa",
           "last_provider": "google-news-si",
-          "published": 269117,
+          "published": 269184,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-12T11:54:25+02:00",
+      "last_learning_run": "2026-10-12T11:55:12+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -272,11 +272,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 124612,
-          "last_seen": "2026-10-12T11:54:25+02:00",
+          "seen": 124629,
+          "last_seen": "2026-10-12T11:55:12+02:00",
           "last_title": "Kučan napadel Janšo! »Kaj se je zgodilo s 'črno kocko', kdo je imel za to interese, to so vprašanja, ki bodo zahtevala odgovor« - Slovenske novice",
           "last_provider": "google-news-si",
-          "published": 297989,
+          "published": 298069,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -367,7 +367,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-12T11:54:34+02:00",
+      "last_learning_run": "2026-10-12T11:55:24+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -438,11 +438,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 132533,
-          "last_seen": "2026-10-12T11:54:34+02:00",
+          "seen": 132557,
+          "last_seen": "2026-10-12T11:55:24+02:00",
           "last_title": "Vreme se bo danes hitro obrnilo: nevihte bodo zajele večji del Slovenije, na Primorskem tudi burja - Dnevne Novice",
           "last_provider": "google-news-si",
-          "published": 239779,
+          "published": 239809,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "reddit.com": {
@@ -637,14 +637,6 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20261012-105418.json",
-      "category": "dediscina",
-      "errors": [
-        "ze_uporabljen_vir"
-      ],
-      "title": "Grad Grad na Goričkem: Največji baročni grad v Sloveniji s skrivnostno zgodovino"
-    },
-    {
       "file": "fallback-failed-20261012-110821.json",
       "category": "dediscina",
       "errors": [
@@ -726,16 +718,23 @@
       "title": "Obiščite sedem najlepših gradov v Sloveniji"
     },
     {
+      "file": "fallback-failed-20261012-115426.json",
+      "category": "dediscina",
+      "errors": [
+        "ze_uporabljen_vir"
+      ],
+      "title": "Grad Grad na Goričkem: Največji baročni grad v Sloveniji s skrivnostno zgodovino"
+    },
+    {
       "file": "agent-state",
       "category": "dediscina",
       "errors": [
-        "prekratek,ze_uporabljen_vir"
+        "ze_uporabljen_vir"
       ]
     }
   ],
   "failure_summary": {
-    "ze_uporabljen_vir": 20,
-    "prekratek": 1,
-    "prekratek,ze_uporabljen_vir": 1
+    "ze_uporabljen_vir": 21,
+    "prekratek": 1
   }
 }
