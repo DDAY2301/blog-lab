@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-12T14:24:31+02:00",
-  "loop_count": 4788,
+  "updated_at": "2026-10-12T14:25:18+02:00",
+  "loop_count": 4789,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-12T14:24:05+02:00",
+      "last_learning_run": "2026-10-12T14:24:58+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 116119,
-          "last_seen": "2026-10-12T14:24:05+02:00",
+          "seen": 116130,
+          "last_seen": "2026-10-12T14:24:58+02:00",
           "last_title": "Slovenska blamaža na igrah! Zakaj sploh tekmujemo, če je šport pri nas umrl - Ekipa",
           "last_provider": "google-news-si",
-          "published": 270457,
+          "published": 270524,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-12T14:24:20+02:00",
+      "last_learning_run": "2026-10-12T14:25:08+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -272,11 +272,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 124886,
-          "last_seen": "2026-10-12T14:24:20+02:00",
+          "seen": 124903,
+          "last_seen": "2026-10-12T14:25:08+02:00",
           "last_title": "Kučan napadel Janšo! »Kaj se je zgodilo s 'črno kocko', kdo je imel za to interese, to so vprašanja, ki bodo zahtevala odgovor« - Slovenske novice",
           "last_provider": "google-news-si",
-          "published": 299589,
+          "published": 299669,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -374,7 +374,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-12T14:24:31+02:00",
+      "last_learning_run": "2026-10-12T14:25:18+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -445,11 +445,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 132905,
-          "last_seen": "2026-10-12T14:24:31+02:00",
+          "seen": 132928,
+          "last_seen": "2026-10-12T14:25:18+02:00",
           "last_title": "Vreme se bo danes hitro obrnilo: nevihte bodo zajele večji del Slovenije, na Primorskem tudi burja - Dnevne Novice",
           "last_provider": "google-news-si",
-          "published": 240379,
+          "published": 240409,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "reddit.com": {
@@ -644,15 +644,6 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20261012-125424.json",
-      "category": "dediscina",
-      "errors": [
-        "prekratek",
-        "ze_uporabljen_vir"
-      ],
-      "title": "Obiščite sedem najlepših gradov v Sloveniji"
-    },
-    {
       "file": "fallback-failed-20261012-130828.json",
       "category": "dediscina",
       "errors": [
@@ -733,15 +724,24 @@
       "title": "Grad Grad na Goričkem: Največji baročni grad v Sloveniji s skrivnostno zgodovino"
     },
     {
+      "file": "fallback-failed-20261012-142407.json",
+      "category": "dediscina",
+      "errors": [
+        "viri_ne_podpirajo_slovenske_rubrike"
+      ],
+      "title": "94 Cds/tvs/etc ideas in 2026 | crossdress fashion, crossdressing ..."
+    },
+    {
       "file": "agent-state",
       "category": "dediscina",
       "errors": [
-        "ze_uporabljen_vir"
+        "viri_ne_podpirajo_slovenske_rubrike"
       ]
     }
   ],
   "failure_summary": {
-    "ze_uporabljen_vir": 21,
-    "prekratek": 3
+    "ze_uporabljen_vir": 19,
+    "prekratek": 2,
+    "viri_ne_podpirajo_slovenske_rubrike": 2
   }
 }
