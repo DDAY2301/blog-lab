@@ -1,0 +1,48 @@
+{
+  "category": "dediscina",
+  "errors": [
+    "viri_ne_podpirajo_slovenske_rubrike"
+  ],
+  "article": {
+    "title": "Pinterest",
+    "excerpt": "Dediščina: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Pinterest«.",
+    "seoDescription": "Dediščina: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Pinterest«.",
+    "content": "**Dediščina, 12. 10. 2026.** Discover recipes, home ideas, style inspiration and other ideas to try. Pinterest…\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: pinterest.com. Objavljeno: Sun, 11 Oct 2026 19:37:00 GMT. [Odpri izvirni vir](https://www.pinterest.com/)\n\n## Dopolnitev vira 2: pinterest.com\n\n{\"adsAPIDomain\":\"https://api.pinterest.com\",\"appVersion\":\"45d1a26\",\"context\":{\"analysis_ua\":{\"app_type\":5,\"app_version\":\"\",\"browser_name\":\"Other\",\"browser_version\":\"\",\"device_type\":null,\"device\":\"Other\",\"os_name\":\"Other\",\"os_version\":\"\"},\"app_type_detailed\":5,\"app_version\":\"45d1a26\",\"autologin\":null,\"browser_name\":\"Other\",\"browser_type\":null,\"browser_version\":\"\",\"country\":\"US\",\"country_from_hostname\":\"US\",\"country_from_ip\":\"US\",\"csp_nonce\":\"78445cce02e2608c49aca25bb8064ad6\",\"current_url\":\"https://www.pinterest.com/login/\",\"debug\":false,\"deep_link\":\"\",\"enabled_advertiser_countries\":[\"AR\",\"AT\",\"AU\",\"BE\",\"BR\",\"CA\",\"CH\",\"CL\",\"CO\",\"DE\",\"DK\",\"ES\",\"FI\",\"FR\",\"GB\",\"IE\",\"IT\",\"JP\",\"LU\",\"MX\",\"NL\",\"NO\",\"NZ\",\"PT\",\"SE\",\"US\"]…\n\n Vir: pinterest.com. Objavljeno: Sun, 11 Oct 2026 23:26:00 GMT. [Odpri izvirni vir](https://www.pinterest.com/login/)\n\n## Dopolnitev vira 3: ca.pinterest.com\n\n{\"adsAPIDomain\":\"https://api.pinterest.com\",\"appVersion\":\"45d1a26\",\"context\":{\"analysis_ua\":{\"app_type\":5,\"app_version\":\"\",\"browser_name\":\"Other\",\"browser_version\":\"\",\"device_type\":null,\"device\":\"Other\",\"os_name\":\"Other\",\"os_version\":\"\"},\"app_type_detailed\":5,\"app_version\":\"45d1a26\",\"autologin\":null,\"browser_name\":\"Other\",\"browser_type\":null,\"browser_version\":\"\",\"country\":\"US\",\"country_from_hostname\":\"CA\",\"country_from_ip\":\"US\",\"csp_nonce\":\"49a790ae9d19a8510abfe091622a80e1\",\"current_url\":\"https://ca.pinterest.com/login/\",\"debug\":false,\"deep_link\":\"\",\"enabled_advertiser_countries\":[\"AR\",\"AT\",\"AU\",\"BE\",\"BR\",\"CA\",\"CH\",\"CL\",\"CO\",\"DE\",\"DK\",\"ES\",\"FI\",\"FR\",\"GB\",\"IE\",\"IT\",\"JP\",\"LU\",\"MX\",\"NL\",\"NO\",\"NZ\",\"PT\",\"SE\",\"US\"],…\n\n Vir: ca.pinterest.com. Objavljeno: Sun, 11 Oct 2026 14:58:00 GMT. [Odpri izvirni vir](https://ca.pinterest.com/login/)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Dediščina",
+    "tags": [
+      "dediščina",
+      "pregled"
+    ],
+    "heroImage": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Tustanj_Castle_Slovenia_-_plaque.JPG/1920px-Tustanj_Castle_Slovenia_-_plaque.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "alt": "Plaque over the entrance to Tuštanj Castle, Zgornji Tuštanj, Municipality of Moravče, Slovenia",
+      "caption": "Doremo · Wikimedia Commons · CC BY-SA 3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tustanj_Castle_Slovenia_-_plaque.JPG"
+    },
+    "gallery": [],
+    "video": null,
+    "sources": [
+      {
+        "label": "pinterest.com — Pinterest",
+        "url": "https://www.pinterest.com/"
+      },
+      {
+        "label": "pinterest.com — Pinterest",
+        "url": "https://www.pinterest.com/login/"
+      },
+      {
+        "label": "ca.pinterest.com — Pinterest",
+        "url": "https://ca.pinterest.com/login/"
+      }
+    ],
+    "source_urls": [
+      "https://www.pinterest.com/",
+      "https://www.pinterest.com/login/",
+      "https://ca.pinterest.com/login/"
+    ],
+    "fallback": true,
+    "visualTemplate": "fieldnote",
+    "templateLabel": "Field Note",
+    "id": "pinterest-6a26263a"
+  }
+}

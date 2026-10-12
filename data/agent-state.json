@@ -5,7 +5,7 @@
   "posts_date": "2026-10-12",
   "posts_today": 1,
   "last_output": "epic-rides-prvic-v-sloveniji-kocevsko-gosti-jubilejno-40-izvedbo-priljubljenega-gravel-dog-6b903c0d",
-  "last_error": "ze_uporabljen_vir",
+  "last_error": "viri_ne_podpirajo_slovenske_rubrike",
   "agent_version": "3.0.0-learning-guarded-fallback",
   "current_category": "dediscina",
   "scheduled_posts_today": 1,
@@ -25,7 +25,7 @@
     "reason": "ponavljanje",
     "at": "2026-10-12T21:39:27+02:00"
   },
-  "publisher_guardian_last_run": "2026-10-12T22:08:03+02:00",
+  "publisher_guardian_last_run": "2026-10-12T22:23:03+02:00",
   "publisher_guardian_last_action": {
     "category": "dediscina",
     "slot": "2026-10-12|10:45|dediscina",
