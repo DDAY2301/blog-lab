@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-12T08:23:23+02:00",
-  "loop_count": 4737,
+  "updated_at": "2026-10-12T08:24:21+02:00",
+  "loop_count": 4738,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-12T08:23:01+02:00",
+      "last_learning_run": "2026-10-12T08:23:55+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -69,7 +69,7 @@
           "last_seen": "2026-10-12T08:23:01+02:00",
           "last_title": "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
           "last_provider": "google-news-si",
-          "published": 267040,
+          "published": 267107,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,17 +227,11 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 12,
-      "example_titles": {
-        "news.google.com": [
-          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
-          "*〜?[[Živý=šport!!]++] Škotska Slovenija prenos 26. september 2026 - Business and Investment Development Agency - CzechInvest",
-          "Finci premagali Slovenijo in osvojili prvo medaljo na velikih tekmovanjih - 24ur.com"
-        ]
-      }
+      "current_source_count": 0,
+      "example_titles": {}
     },
     "politika": {
-      "last_learning_run": "2026-10-12T08:23:12+02:00",
+      "last_learning_run": "2026-10-12T08:24:05+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -276,7 +270,7 @@
           "last_seen": "2026-10-12T08:23:12+02:00",
           "last_title": "Pirc Musar: Mala zmaga za neko politično opcijo, pa hkrati velik poraz za državo - Delo.si",
           "last_provider": "google-news-si",
-          "published": 295509,
+          "published": 295589,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -357,17 +351,11 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 17,
-      "example_titles": {
-        "news.google.com": [
-          "V Sloveniji odprta volišča: Volivci danes odločajo o štirih pomembnih vprašanjih - Mariborinfo.com",
-          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
-          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer"
-        ]
-      }
+      "current_source_count": 0,
+      "example_titles": {}
     },
     "aktualno": {
-      "last_learning_run": "2026-10-12T08:23:23+02:00",
+      "last_learning_run": "2026-10-12T08:24:21+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -389,14 +377,14 @@
         "youtube.com",
         "the-slovenia.com",
         "britannica.com",
+        "medicalnewstoday.com",
         "news.google.com",
         "reddit.com",
         "account.microsoft.com",
         "account.revealcellcam.com",
         "accounts.google.com",
         "definitions.net",
-        "differentiatedteaching.com",
-        "en.wiktionary.org"
+        "differentiatedteaching.com"
       ],
       "source_health": {
         "lonelyplanet.com": {
@@ -429,13 +417,20 @@
           "last_title": "Slovenia | History, Geography, & People | Britannica",
           "last_provider": "bing-web"
         },
+        "medicalnewstoday.com": {
+          "score": 2.793,
+          "seen": 4,
+          "last_seen": "2026-10-12T08:24:21+02:00",
+          "last_title": "What supplements should you take for arrhythmia?",
+          "last_provider": "bing-web"
+        },
         "news.google.com": {
           "score": 2.502,
           "seen": 131846,
           "last_seen": "2026-10-12T08:23:23+02:00",
           "last_title": "Vreme se bo danes hitro obrnilo: nevihte bodo zajele večji del Slovenije, na Primorskem tudi burja - Dnevne Novice",
           "last_provider": "google-news-si",
-          "published": 238849,
+          "published": 238879,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "reddit.com": {
@@ -542,21 +537,14 @@
           "last_seen": "2026-10-08T03:24:41+02:00",
           "last_title": "Dollar Tree",
           "last_provider": "bing-web"
-        },
-        "usps.com": {
-          "score": 1.732,
-          "seen": 2,
-          "last_seen": "2026-10-11T06:53:20+02:00",
-          "last_title": "Contact Us | USPS",
-          "last_provider": "bing-web"
         }
       },
-      "current_source_count": 23,
+      "current_source_count": 4,
       "example_titles": {
-        "news.google.com": [
-          "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
-          "Ko so bile ZDA stare toliko kot danes Slovenija, so bile na robu razpada - Zanima.me",
-          "Poljska potegnila črto: Otrokom od danes prepovedani telefoni v šolah, država se je odločila udariti po digitalni zasvojenosti | Portal OS n"
+        "medicalnewstoday.com": [
+          "Medical and health information | MedicalNewsToday",
+          "Eye health: Eating 2 ounces of pistachios daily may help",
+          "Abortion News from Medical News Today"
         ]
       }
     }
