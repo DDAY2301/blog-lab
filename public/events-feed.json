@@ -1,16 +1,12 @@
 {
-  "updatedAt": "2026-10-12T06:57:15+02:00",
+  "updatedAt": "2026-10-12T06:59:12+02:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
-    "Cankarjev dom",
-    "European Table Tennis Championships Ljubljana 2026",
-    "Ljubljana Castle",
     "Kino Šiška",
-    "MGL",
     "Gala Hala",
     "Klub K4",
-    "National Gallery of Slovenia"
+    "Cirkus Klub"
   ],
   "sourcesFailed": [],
   "items": [
@@ -131,25 +127,6 @@
       "description": "A practical concert-production workshop at Kino Šiška begins at 17:00. It is aimed at young people interested in event production and is primarily conducted in Slovenian."
     },
     {
-      "id": "lepa-brena-project-2026-10-12-1800",
-      "title": "Lepa Brena Project",
-      "url": "https://www.cd-cc.si/en",
-      "source": "Cankarjev dom",
-      "type": "Lease event",
-      "place": "Cankarjev dom · Ljubljana",
-      "startAt": "2026-10-12T18:00:00+02:00",
-      "endAt": null,
-      "price": null,
-      "languages": [],
-      "touristFriendly": null,
-      "familyFriendly": null,
-      "accessibility": null,
-      "ticketUrl": "https://vstopnice.cd-cc.si/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
-      "description": "Cankarjev dom lists the first Lepa Brena Project performance at 18:00. This is a lease event; confirm remaining tickets through the official box office."
-    },
-    {
       "id": "sunken-treasure-lecture-2026-10-12",
       "title": "A Priceless Sunken Treasure: Discovery of a 7th-century Shipwreck",
       "url": "https://www.cd-cc.si/en",
@@ -169,25 +146,6 @@
       "description": "A Priceless Sunken Treasure: Discovery of a 7th-century Shipwreck is confirmed at Cankarjev dom · Ljubljana. Check the official source for any late programme or ticket changes."
     },
     {
-      "id": "dino-pesut-air-raid-2026-10-12",
-      "title": "Dino Pešut: Air Raid",
-      "url": "https://www.cd-cc.si/en",
-      "source": "Cankarjev dom",
-      "type": "Theatre and dance",
-      "place": "Cankarjev dom · Ljubljana",
-      "startAt": "2026-10-12T20:00:00+02:00",
-      "endAt": null,
-      "price": null,
-      "languages": [],
-      "touristFriendly": null,
-      "familyFriendly": null,
-      "accessibility": null,
-      "ticketUrl": "https://vstopnice.cd-cc.si/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
-      "description": "Dino Pešut: Air Raid is confirmed at Cankarjev dom · Ljubljana. Check the official source for any late programme or ticket changes."
-    },
-    {
       "price": null,
       "languages": [],
       "touristFriendly": true,
@@ -205,6 +163,25 @@
       "startAt": "2026-10-12T20:00:00+02:00",
       "ticketUrl": "https://vstopnice.cd-cc.si/",
       "description": "Cankarjev dom lists a second Lepa Brena Project performance at 20:00. Confirm remaining tickets through the official box office."
+    },
+    {
+      "id": "dino-pesut-air-raid-2026-10-12",
+      "title": "Dino Pešut: Air Raid",
+      "url": "https://www.cd-cc.si/en",
+      "source": "Cankarjev dom",
+      "type": "Theatre and dance",
+      "place": "Cankarjev dom · Ljubljana",
+      "startAt": "2026-10-12T20:00:00+02:00",
+      "endAt": null,
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://vstopnice.cd-cc.si/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
+      "description": "Dino Pešut: Air Raid is confirmed at Cankarjev dom · Ljubljana. Check the official source for any late programme or ticket changes."
     },
     {
       "id": "from-duet-to-ensemble-2026-10-13",
