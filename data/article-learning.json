@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-12T13:09:28+02:00",
-  "loop_count": 4778,
+  "updated_at": "2026-10-12T13:10:28+02:00",
+  "loop_count": 4779,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-12T13:08:59+02:00",
+      "last_learning_run": "2026-10-12T13:10:04+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -76,7 +76,7 @@
           "last_seen": "2026-10-12T13:08:59+02:00",
           "last_title": "Slovenska blamaža na igrah! Zakaj sploh tekmujemo, če je šport pri nas umrl - Ekipa",
           "last_provider": "google-news-si",
-          "published": 269787,
+          "published": 269854,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,17 +227,11 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 11,
-      "example_titles": {
-        "news.google.com": [
-          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
-          "*〜?[[Živý=šport!!]++] Škotska Slovenija prenos 26. september 2026 - Business and Investment Development Agency - CzechInvest",
-          "Finci premagali Slovenijo in osvojili prvo medaljo na velikih tekmovanjih - 24ur.com"
-        ]
-      }
+      "current_source_count": 0,
+      "example_titles": {}
     },
     "politika": {
-      "last_learning_run": "2026-10-12T13:09:11+02:00",
+      "last_learning_run": "2026-10-12T13:10:16+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -265,9 +259,9 @@
         "comgateway.com",
         "creditkaren.ai",
         "github.com",
+        "calculator.net",
         "worldtimebuddy.com",
-        "cdc.gov",
-        "britannica.com"
+        "cdc.gov"
       ],
       "source_health": {
         "news.google.com": {
@@ -276,7 +270,7 @@
           "last_seen": "2026-10-12T12:55:04+02:00",
           "last_title": "Golob: Ne predstavljam si, da bi kdo želel živeti v državi, v kateri bi politika imela pooblastila policije - N1 Slovenija",
           "last_provider": "google-news-si",
-          "published": 298789,
+          "published": 298869,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -335,6 +329,13 @@
           "last_title": "GitHub - bramses/chatgpt-md: A (nearly) seamless integration of ChatGPT into Obsidian.",
           "last_provider": "bing-web"
         },
+        "calculator.net": {
+          "score": 0.805,
+          "seen": 1,
+          "last_seen": "2026-10-12T13:10:16+02:00",
+          "last_title": "Date Calculator",
+          "last_provider": "bing-web"
+        },
         "worldtimebuddy.com": {
           "score": 0.805,
           "seen": 1,
@@ -357,11 +358,15 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 0,
-      "example_titles": {}
+      "current_source_count": 1,
+      "example_titles": {
+        "calculator.net": [
+          "Date Calculator"
+        ]
+      }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-12T13:09:28+02:00",
+      "last_learning_run": "2026-10-12T13:10:28+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -436,7 +441,7 @@
           "last_seen": "2026-10-12T12:55:15+02:00",
           "last_title": "Vreme se bo danes hitro obrnilo: nevihte bodo zajele večji del Slovenije, na Primorskem tudi burja - Dnevne Novice",
           "last_provider": "google-news-si",
-          "published": 240079,
+          "published": 240109,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "reddit.com": {
@@ -545,8 +550,16 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 0,
-      "example_titles": {}
+      "current_source_count": 3,
+      "example_titles": {
+        "tdsb.on.ca": [
+          "Alternative Schools"
+        ],
+        "schoolweb.tdsb.on.ca": [
+          "Ryerson Community School",
+          "Flemington Public School"
+        ]
+      }
     }
   },
   "recent_articles": [
@@ -719,12 +732,13 @@
       "file": "agent-state",
       "category": "dediscina",
       "errors": [
-        "ze_uporabljen_vir"
+        "fallback_no_category_evidence"
       ]
     }
   ],
   "failure_summary": {
-    "ze_uporabljen_vir": 21,
-    "prekratek": 3
+    "ze_uporabljen_vir": 20,
+    "prekratek": 3,
+    "fallback_no_category_evidence": 1
   }
 }
