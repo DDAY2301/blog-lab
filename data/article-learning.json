@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-12T15:10:11+02:00",
-  "loop_count": 4794,
+  "updated_at": "2026-10-12T15:24:25+02:00",
+  "loop_count": 4795,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-12T15:09:49+02:00",
+      "last_learning_run": "2026-10-12T15:23:58+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 116186,
-          "last_seen": "2026-10-12T15:09:49+02:00",
-          "last_title": "Slovenska blamaža na igrah! Zakaj sploh tekmujemo, če je šport pri nas umrl - Ekipa",
+          "seen": 116197,
+          "last_seen": "2026-10-12T15:23:58+02:00",
+          "last_title": "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
           "last_provider": "google-news-si",
-          "published": 270859,
+          "published": 270926,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-12T15:10:01+02:00",
+      "last_learning_run": "2026-10-12T15:24:14+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -272,11 +272,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 124993,
-          "last_seen": "2026-10-12T15:10:01+02:00",
-          "last_title": "Golob: Ne predstavljam si, da bi kdo želel živeti v državi, v kateri bi politika imela pooblastila policije - N1 Slovenija",
-          "last_provider": "google-news-si",
-          "published": 300069,
+          "seen": 124995,
+          "last_seen": "2026-10-12T15:24:14+02:00",
+          "last_title": "Brskali tudi po računih žene pomembnega politika: \"To je svinjarija prve vrste\" - N1 Slovenija",
+          "last_provider": "google-news-global",
+          "published": 300149,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -364,17 +364,16 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 18,
+      "current_source_count": 2,
       "example_titles": {
         "news.google.com": [
-          "V Sloveniji odprta volišča: Volivci danes odločajo o štirih pomembnih vprašanjih - Mariborinfo.com",
-          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
-          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer"
+          "Video: Luka Simonič iz SDM: \"Če se mi ne ukvarjamo s politiko, se politika ukvarja z nami\" - Metroplay - Metropolitan.si",
+          "Brskali tudi po računih žene pomembnega politika: \"To je svinjarija prve vrste\" - N1 Slovenija"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-12T15:10:11+02:00",
+      "last_learning_run": "2026-10-12T15:24:25+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -445,11 +444,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 133044,
-          "last_seen": "2026-10-12T15:10:11+02:00",
+          "seen": 133067,
+          "last_seen": "2026-10-12T15:24:25+02:00",
           "last_title": "Vreme se bo danes hitro obrnilo: nevihte bodo zajele večji del Slovenije, na Primorskem tudi burja - Dnevne Novice",
           "last_provider": "google-news-si",
-          "published": 240559,
+          "published": 240589,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "reddit.com": {
@@ -558,12 +557,12 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 24,
+      "current_source_count": 23,
       "example_titles": {
         "news.google.com": [
           "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
           "Ko so bile ZDA stare toliko kot danes Slovenija, so bile na robu razpada - Zanima.me",
-          "Slovenska glasbenica ostro nad aktualno oblast: \"Ne vem, ali naj temu rečem ironija, paradoks ali vzporedni svet\" - Večer"
+          "Poljska potegnila črto: Otrokom od danes prepovedani telefoni v šolah, država se je odločila udariti po digitalni zasvojenosti | Portal OS n"
         ]
       }
     }
@@ -644,14 +643,6 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20261012-135430.json",
-      "category": "dediscina",
-      "errors": [
-        "ze_uporabljen_vir"
-      ],
-      "title": "Grad Grad na Goričkem: Največji baročni grad v Sloveniji s skrivnostno zgodovino"
-    },
-    {
       "file": "fallback-failed-20261012-140838.json",
       "category": "dediscina",
       "errors": [
@@ -725,6 +716,14 @@
     },
     {
       "file": "fallback-failed-20261012-150902.json",
+      "category": "dediscina",
+      "errors": [
+        "ze_uporabljen_vir"
+      ],
+      "title": "Grad Grad na Goričkem: Največji baročni grad v Sloveniji s skrivnostno zgodovino"
+    },
+    {
+      "file": "fallback-failed-20261012-152325.json",
       "category": "dediscina",
       "errors": [
         "ze_uporabljen_vir"
