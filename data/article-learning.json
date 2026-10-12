@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-12T10:24:24+02:00",
-  "loop_count": 4754,
+  "updated_at": "2026-10-12T10:38:19+02:00",
+  "loop_count": 4755,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-12T10:23:46+02:00",
+      "last_learning_run": "2026-10-12T10:37:59+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -65,11 +65,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 115775,
-          "last_seen": "2026-10-12T10:23:46+02:00",
+          "seen": 115787,
+          "last_seen": "2026-10-12T10:37:59+02:00",
           "last_title": "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
           "last_provider": "google-news-si",
-          "published": 268179,
+          "published": 268246,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-12T10:24:06+02:00",
+      "last_learning_run": "2026-10-12T10:38:09+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -272,11 +272,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 124372,
-          "last_seen": "2026-10-12T10:24:06+02:00",
-          "last_title": "Pirc Musar: Mala zmaga za neko politično opcijo, pa hkrati velik poraz za državo - Delo.si",
+          "seen": 124390,
+          "last_seen": "2026-10-12T10:38:09+02:00",
+          "last_title": "Kučan napadel Janšo! »Kaj se je zgodilo s 'črno kocko', kdo je imel za to interese, to so vprašanja, ki bodo zahtevala odgovor« - Slovenske novice",
           "last_provider": "google-news-si",
-          "published": 296869,
+          "published": 296949,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -357,7 +357,7 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 17,
+      "current_source_count": 18,
       "example_titles": {
         "news.google.com": [
           "V Sloveniji odprta volišča: Volivci danes odločajo o štirih pomembnih vprašanjih - Mariborinfo.com",
@@ -367,7 +367,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-12T10:24:24+02:00",
+      "last_learning_run": "2026-10-12T10:38:19+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -438,11 +438,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 132212,
-          "last_seen": "2026-10-12T10:24:24+02:00",
+          "seen": 132236,
+          "last_seen": "2026-10-12T10:38:19+02:00",
           "last_title": "Vreme se bo danes hitro obrnilo: nevihte bodo zajele večji del Slovenije, na Primorskem tudi burja - Dnevne Novice",
           "last_provider": "google-news-si",
-          "published": 239359,
+          "published": 239389,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "reddit.com": {
