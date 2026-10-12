@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-12T11:45:14+02:00",
-  "loop_count": 4766,
+  "updated_at": "2026-10-12T11:46:44+02:00",
+  "loop_count": 4767,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-12T11:44:55+02:00",
+      "last_learning_run": "2026-10-12T11:46:18+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -69,7 +69,7 @@
           "last_seen": "2026-10-12T11:44:55+02:00",
           "last_title": "Slovenska blamaža na igrah! Zakaj sploh tekmujemo, če je šport pri nas umrl - Ekipa",
           "last_provider": "google-news-si",
-          "published": 268983,
+          "published": 269050,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -191,6 +191,13 @@
           "last_title": "Donate in Your Neighborhood - Greater DC Diaper Bank",
           "last_provider": "bing-web"
         },
+        "xnxx.com": {
+          "score": 1.179,
+          "seen": 2,
+          "last_seen": "2026-10-12T11:46:18+02:00",
+          "last_title": "Free Porn, Sex, Tube Videos, XXX Pics, Pussy in Porno Movies - XNXX.COM",
+          "last_provider": "bing-web"
+        },
         "adobe.com": {
           "score": 0.77,
           "seen": 1,
@@ -218,26 +225,21 @@
           "last_seen": "2026-09-28T14:24:02+02:00",
           "last_title": "How to start using Cortana in Windows 11 or Windows 10",
           "last_provider": "bing-web"
-        },
-        "healthyceleb.com": {
-          "score": 0.77,
-          "seen": 1,
-          "last_seen": "2026-10-04T07:54:06+02:00",
-          "last_title": "Tom Hanks Height, Weight, Age, Spouse, Family, Facts, Biography",
-          "last_provider": "bing-web"
         }
       },
-      "current_source_count": 12,
+      "current_source_count": 3,
       "example_titles": {
-        "news.google.com": [
-          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
-          "*〜?[[Živý=šport!!]++] Škotska Slovenija prenos 26. september 2026 - Business and Investment Development Agency - CzechInvest",
-          "Finci premagali Slovenijo in osvojili prvo medaljo na velikih tekmovanjih - 24ur.com"
+        "xnxx.com": [
+          "Today's selection - XNXX.COM",
+          "Free Porn, Sex, Tube Videos, XXX Pics, Pussy in Porno Movies - XNXX.COM"
+        ],
+        "m-xnxx.com": [
+          "Today's selection - XNXX.COM"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-12T11:45:04+02:00",
+      "last_learning_run": "2026-10-12T11:46:32+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -272,11 +274,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 124578,
-          "last_seen": "2026-10-12T11:45:04+02:00",
+          "seen": 124595,
+          "last_seen": "2026-10-12T11:46:32+02:00",
           "last_title": "Kučan napadel Janšo! »Kaj se je zgodilo s 'črno kocko', kdo je imel za to interese, to so vprašanja, ki bodo zahtevala odgovor« - Slovenske novice",
           "last_provider": "google-news-si",
-          "published": 297829,
+          "published": 297909,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -367,7 +369,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-12T11:45:14+02:00",
+      "last_learning_run": "2026-10-12T11:46:44+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -438,11 +440,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 132500,
-          "last_seen": "2026-10-12T11:45:14+02:00",
-          "last_title": "Aktualno - trg motociklov v Sloveniji: Vsak četrti je že kitajec Novice - AVTO FOKUS -",
-          "last_provider": "google-news-si",
-          "published": 239719,
+          "seen": 132509,
+          "last_seen": "2026-10-12T11:46:44+02:00",
+          "last_title": "Slovenija preprečila pristanek izraelskega letala: tako se odziva Fraport - Info360",
+          "last_provider": "google-news-global",
+          "published": 239749,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "reddit.com": {
@@ -551,12 +553,12 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 24,
+      "current_source_count": 9,
       "example_titles": {
         "news.google.com": [
-          "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
-          "Ko so bile ZDA stare toliko kot danes Slovenija, so bile na robu razpada - Zanima.me",
-          "Slovenska glasbenica ostro nad aktualno oblast: \"Ne vem, ali naj temu rečem ironija, paradoks ali vzporedni svet\" - Večer"
+          "K izidom referendumov bodo danes prešteti še glasovi po pošti iz Slovenije - N1 Slovenija",
+          "K izidom referendumov bodo danes prešteti še glasovi po pošti iz Slovenije - Dnevnik",
+          "Vode, pokojnine ... Kateri referendum je na volišča privabil največ ljudi? - Delo.si"
         ]
       }
     }
@@ -637,14 +639,6 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20261011-233758.json",
-      "category": "dediscina",
-      "errors": [
-        "ze_uporabljen_vir"
-      ],
-      "title": "Grad Grad na Goričkem: Največji baročni grad v Sloveniji s skrivnostno zgodovino"
-    },
-    {
       "file": "fallback-failed-20261012-105340.json",
       "category": "dediscina",
       "errors": [
@@ -718,6 +712,14 @@
     },
     {
       "file": "fallback-failed-20261012-114425.json",
+      "category": "dediscina",
+      "errors": [
+        "ze_uporabljen_vir"
+      ],
+      "title": "Grad Grad na Goričkem: Največji baročni grad v Sloveniji s skrivnostno zgodovino"
+    },
+    {
+      "file": "fallback-failed-20261012-114500.json",
       "category": "dediscina",
       "errors": [
         "ze_uporabljen_vir"
