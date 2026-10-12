@@ -4786,5 +4786,47 @@
     "provider": "google-news-si",
     "processed_at": "2026-10-11T19:23:59+02:00",
     "output_id": "ko-se-brda-spremenijo-v-raj-za-gurmane-v-smartnem-kraljevala-hrana-vino-in-sonce-slovenske-eb9acfc1"
+  },
+  {
+    "source_name": "E-utrip",
+    "category": "kolesarstvo",
+    "title": "EPIC RIDES prvič v Sloveniji: Kočevsko gosti jubilejno 40. izvedbo priljubljenega gravel dogodka - E-utrip",
+    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQWWlEZHExcGZsNDlsRDhxODJrMWhabzFqUDRYaG9PWHQ4QlZzQUNKWXFLdzYzNzRoVzNjMnQyVXNwbFF6MkhUMHQwM0dQY2ZGLWhJaEozUmhzeHg4aGlBdDZhQzJXWU5jaWlzZ3Bld19rX2xua2ttTk5fdlZWZXMtUjViVktndDRPeFhfYjlfNGNRdHpUNG54cFRuWGs0NHJPY1lVQk0tcWRYWVQ5ZGpJZUZHdVY?oc=5",
+    "summary": "EPIC RIDES prvič v Sloveniji: Kočevsko gosti jubilejno 40. izvedbo priljubljenega gravel dogodka E-utrip",
+    "published": "Wed, 03 Jun 2026 07:00:00 GMT",
+    "image_url": "",
+    "video_url": "",
+    "hash": "4f1b577e466dc1ea0af04f601e436b352949cb8266e8993af88704c229cc0506",
+    "provider": "google-news-si",
+    "processed_at": "2026-10-12T07:39:21+02:00",
+    "output_id": "epic-rides-prvic-v-sloveniji-kocevsko-gosti-jubilejno-40-izvedbo-priljubljenega-gravel-dog-6b903c0d"
+  },
+  {
+    "source_name": "Slovenske novice",
+    "category": "kolesarstvo",
+    "title": "Slovenija pri tujih kolesarjih vse bolj priljubljena destinacija - Slovenske novice",
+    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNalVEaUFDQl9KT1BabHZRM3FtTTVJSGtiU3p4ekpvZHpBOVVKNG4tWU12SlI1MG1UUWh0SWVrOVY3UC1RNEZ4Rl9UNWQtNnVSY1Bhc3VRaHdKSUJ1NW5mX1pEX20xZUpDWTRvaTZwZ0gwR2pQa1A5UEozcnU2OVZESXJCSkFJbXpQc2NGQlhmcnZpVko0b1YwS2tMNEJuQ3hwbTJkeEJFSFFEWkJYcVJ0NXVn?oc=5",
+    "summary": "Slovenija pri tujih kolesarjih vse bolj priljubljena destinacija Slovenske novice",
+    "published": "Tue, 15 Apr 2025 07:00:00 GMT",
+    "image_url": "",
+    "video_url": "",
+    "hash": "3a213afc043e55fa319d0ba5e2bd0754591e87fa1f0de88ace79c5c54eb7224c",
+    "provider": "",
+    "processed_at": "2026-10-12T07:39:21+02:00",
+    "output_id": "epic-rides-prvic-v-sloveniji-kocevsko-gosti-jubilejno-40-izvedbo-priljubljenega-gravel-dog-6b903c0d"
+  },
+  {
+    "source_name": "Najdi.si novice",
+    "category": "kolesarstvo",
+    "title": "S kolesom na vlak: trajnostna mobilnost v Sloveniji - Najdi.si novice",
+    "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxORUo0SFNtOURqYUQzM2ZROGctRnRTbUw3bmg1V2d1d1RWY2U5UDc2RTU0U1l2ZHczVkYtVHJBMUpxU1ZzSFZBRjBHdnRqSTVEUk9JZlMxbG41YTJVNnZDeC1TeWtBNXpxR2RLWG9GR05yYTVLNGY5bHVnRGdaUHJfdlgtd282elJYMG9FS3lwa0o3MUVLRWswY05Jb2dlR2RvRUNyeUdFZlV5Vm5kRDhCbTlKWXd5emFQODVaODUyVDhKUmxhZHJGa0lqcWl6ei0zUVdSUGxfdDlydw?oc=5",
+    "summary": "S kolesom na vlak: trajnostna mobilnost v Sloveniji Najdi.si novice",
+    "published": "Thu, 23 Jul 2026 07:00:00 GMT",
+    "image_url": "",
+    "video_url": "",
+    "hash": "13e53e0b1b466354a7aabbfe037697bd8c3d2f5889761c4fd0e67f4e46771d18",
+    "provider": "",
+    "processed_at": "2026-10-12T07:39:21+02:00",
+    "output_id": "epic-rides-prvic-v-sloveniji-kocevsko-gosti-jubilejno-40-izvedbo-priljubljenega-gravel-dog-6b903c0d"
   }
 ]

@@ -30,6 +30,41 @@ const CATEGORY_EMPTY_COPY = {
 
 const starterArticles = [
   {
+    "id": "epic-rides-prvic-v-sloveniji-kocevsko-gosti-jubilejno-40-izvedbo-priljubljenega-gravel-dog-6b903c0d",
+    "title": "EPIC RIDES prvič v Sloveniji: Kočevsko gosti jubilejno 40. izvedbo priljubljenega gravel dogodka - E-utrip",
+    "excerpt": "Kolesarstvo: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »EPIC RIDES prvič v Sloveniji: Kočevsko gosti jubilejno 40. izvedbo priljubljenega gravel dogodka - E-utrip«.",
+    "seoDescription": "Kolesarstvo: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »EPIC RIDES prvič v Sloveniji: Kočevsko gosti jubilejno 40. izvedbo priljub",
+    "content": "**Kolesarstvo, 12. 10. 2026.** EPIC RIDES prvič v Sloveniji: Kočevsko gosti jubilejno 40. izvedbo priljubljenega gravel dogodka E-utrip\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: E-utrip. Objavljeno: Wed, 03 Jun 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMitAFBVV95cUxQWWlEZHExcGZsNDlsRDhxODJrMWhabzFqUDRYaG9PWHQ4QlZzQUNKWXFLdzYzNzRoVzNjMnQyVXNwbFF6MkhUMHQwM0dQY2ZGLWhJaEozUmhzeHg4aGlBdDZhQzJXWU5jaWlzZ3Bld19rX2xua2ttTk5fdlZWZXMtUjViVktndDRPeFhfYjlfNGNRdHpUNG54cFRuWGs0NHJPY1lVQk0tcWRYWVQ5ZGpJZUZHdVY?oc=5)\n\n## Dopolnitev vira 2: Slovenske novice\n\nSlovenija pri tujih kolesarjih vse bolj priljubljena destinacija Slovenske novice\n\n Vir: Slovenske novice. Objavljeno: Tue, 15 Apr 2025 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMisgFBVV95cUxNalVEaUFDQl9KT1BabHZRM3FtTTVJSGtiU3p4ekpvZHpBOVVKNG4tWU12SlI1MG1UUWh0SWVrOVY3UC1RNEZ4Rl9UNWQtNnVSY1Bhc3VRaHdKSUJ1NW5mX1pEX20xZUpDWTRvaTZwZ0gwR2pQa1A5UEozcnU2OVZESXJCSkFJbXpQc2NGQlhmcnZpVko0b1YwS2tMNEJuQ3hwbTJkeEJFSFFEWkJYcVJ0NXVn?oc=5)\n\n## Dopolnitev vira 3: Najdi.si novice\n\nS kolesom na vlak: trajnostna mobilnost v Sloveniji Najdi.si novice\n\n Vir: Najdi.si novice. Objavljeno: Thu, 23 Jul 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMi2gFBVV95cUxORUo0SFNtOURqYUQzM2ZROGctRnRTbUw3bmg1V2d1d1RWY2U5UDc2RTU0U1l2ZHczVkYtVHJBMUpxU1ZzSFZBRjBHdnRqSTVEUk9JZlMxbG41YTJVNnZDeC1TeWtBNXpxR2RLWG9GR05yYTVLNGY5bHVnRGdaUHJfdlgtd282elJYMG9FS3lwa0o3MUVLRWswY05Jb2dlR2RvRUNyeUdFZlV5Vm5kRDhCbTlKWXd5emFQODVaODUyVDhKUmxhZHJGa0lqcWl6ei0zUVdSUGxfdDlydw?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Kolesarstvo",
+    "author": "Blog Lab Slovenia Publisher",
+    "status": "published",
+    "heroImage": {
+      "url": "/media/articles/8bad06fec502189cebd8.webp",
+      "alt": "Three male cyclists wearing helmets during a summer bicycle tour in rural Slovenia near Luže.",
+      "caption": "Marek Ślusarczyk ( Tupungato ) Photo gallery · Wikimedia Commons · CC BY 3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:08_Slovenia_rural_landscape_-_bicycle_expedition_with_panniers.jpg"
+    },
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "E-utrip — EPIC RIDES prvič v Sloveniji: Kočevsko gosti jubilejno 40. izvedbo priljubljenega gravel dogodka - E-utrip",
+        "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQWWlEZHExcGZsNDlsRDhxODJrMWhabzFqUDRYaG9PWHQ4QlZzQUNKWXFLdzYzNzRoVzNjMnQyVXNwbFF6MkhUMHQwM0dQY2ZGLWhJaEozUmhzeHg4aGlBdDZhQzJXWU5jaWlzZ3Bld19rX2xua2ttTk5fdlZWZXMtUjViVktndDRPeFhfYjlfNGNRdHpUNG54cFRuWGs0NHJPY1lVQk0tcWRYWVQ5ZGpJZUZHdVY?oc=5"
+      },
+      {
+        "label": "Slovenske novice — Slovenija pri tujih kolesarjih vse bolj priljubljena destinacija - Slovenske novice",
+        "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNalVEaUFDQl9KT1BabHZRM3FtTTVJSGtiU3p4ekpvZHpBOVVKNG4tWU12SlI1MG1UUWh0SWVrOVY3UC1RNEZ4Rl9UNWQtNnVSY1Bhc3VRaHdKSUJ1NW5mX1pEX20xZUpDWTRvaTZwZ0gwR2pQa1A5UEozcnU2OVZESXJCSkFJbXpQc2NGQlhmcnZpVko0b1YwS2tMNEJuQ3hwbTJkeEJFSFFEWkJYcVJ0NXVn?oc=5"
+      },
+      {
+        "label": "Najdi.si novice — S kolesom na vlak: trajnostna mobilnost v Sloveniji - Najdi.si novice",
+        "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxORUo0SFNtOURqYUQzM2ZROGctRnRTbUw3bmg1V2d1d1RWY2U5UDc2RTU0U1l2ZHczVkYtVHJBMUpxU1ZzSFZBRjBHdnRqSTVEUk9JZlMxbG41YTJVNnZDeC1TeWtBNXpxR2RLWG9GR05yYTVLNGY5bHVnRGdaUHJfdlgtd282elJYMG9FS3lwa0o3MUVLRWswY05Jb2dlR2RvRUNyeUdFZlV5Vm5kRDhCbTlKWXd5emFQODVaODUyVDhKUmxhZHJGa0lqcWl6ei0zUVdSUGxfdDlydw?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-12T07:39:21+02:00",
+    "updatedAt": "2026-10-12T07:39:21+02:00"
+  },
+
+  {
     "id": "ko-se-brda-spremenijo-v-raj-za-gurmane-v-smartnem-kraljevala-hrana-vino-in-sonce-slovenske-eb9acfc1",
     "title": "Ko se Brda spremenijo v raj za gurmane! V Šmartnem kraljevala hrana, vino in sonce - Slovenske novice",
     "excerpt": "Ko se Brda spremenijo v raj za gurmane! V Šmartnem kraljevala hrana, vino in sonce Slovenske novice",
