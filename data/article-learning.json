@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-12T19:55:08+02:00",
-  "loop_count": 4834,
+  "updated_at": "2026-10-12T20:09:10+02:00",
+  "loop_count": 4835,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-12T19:54:47+02:00",
+      "last_learning_run": "2026-10-12T20:08:46+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 116617,
-          "last_seen": "2026-10-12T19:54:47+02:00",
+          "seen": 116628,
+          "last_seen": "2026-10-12T20:08:46+02:00",
           "last_title": "Slovenska blamaža na igrah! Zakaj sploh tekmujemo, če je šport pri nas umrl - Ekipa",
           "last_provider": "google-news-si",
-          "published": 273539,
+          "published": 273606,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-12T19:54:57+02:00",
+      "last_learning_run": "2026-10-12T20:08:58+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -272,11 +272,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 125675,
-          "last_seen": "2026-10-12T19:54:57+02:00",
+          "seen": 125693,
+          "last_seen": "2026-10-12T20:08:58+02:00",
           "last_title": "Golob: Ne predstavljam si, da bi kdo želel živeti v državi, v kateri bi politika imela pooblastila policije - N1 Slovenija",
           "last_provider": "google-news-si",
-          "published": 303269,
+          "published": 303349,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -374,7 +374,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-12T19:55:08+02:00",
+      "last_learning_run": "2026-10-12T20:09:10+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -445,11 +445,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 133969,
-          "last_seen": "2026-10-12T19:55:08+02:00",
+          "seen": 133993,
+          "last_seen": "2026-10-12T20:09:10+02:00",
           "last_title": "Vreme se bo danes hitro obrnilo: nevihte bodo zajele večji del Slovenije, na Primorskem tudi burja - Dnevne Novice",
           "last_provider": "google-news-si",
-          "published": 241759,
+          "published": 241789,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "reddit.com": {
@@ -644,14 +644,6 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20261012-185322.json",
-      "category": "gore",
-      "errors": [
-        "ze_uporabljen_vir"
-      ],
-      "title": "Svetovni hit v severovzhodni Sloveniji: uradno odprta 187 kilometrov dolga pohodniška pravljica"
-    },
-    {
       "file": "fallback-failed-20261012-185359.json",
       "category": "dediscina",
       "errors": [
@@ -724,15 +716,23 @@
       "title": "Grad Grad na Goričkem: Največji baročni grad v Sloveniji s skrivnostno zgodovino"
     },
     {
+      "file": "fallback-failed-20261012-200812.json",
+      "category": "gore",
+      "errors": [
+        "ze_uporabljen_vir"
+      ],
+      "title": "Svetovni hit v severovzhodni Sloveniji: uradno odprta 187 kilometrov dolga pohodniška pravljica"
+    },
+    {
       "file": "agent-state",
-      "category": "dediscina",
+      "category": "gore",
       "errors": [
         "ze_uporabljen_vir"
       ]
     },
     {
       "file": "agent-state",
-      "category": "dediscina",
+      "category": "gore",
       "errors": [
         "manjka_fotografija,ponavljanje"
       ],
