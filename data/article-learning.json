@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-12T02:23:59+02:00",
-  "loop_count": 4682,
+  "updated_at": "2026-10-12T02:38:13+02:00",
+  "loop_count": 4683,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-12T02:23:41+02:00",
+      "last_learning_run": "2026-10-12T02:37:53+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -50,9 +50,9 @@
       ],
       "source_health": {
         "lonelyplanet.com": {
-          "score": 6.16,
-          "seen": 8,
-          "last_seen": "2026-10-11T17:38:33+02:00",
+          "score": 6.93,
+          "seen": 9,
+          "last_seen": "2026-10-12T02:37:53+02:00",
           "last_title": "11 things to know before booking a trip to Slovenia - Lonely Planet",
           "last_provider": "bing-web"
         },
@@ -69,7 +69,7 @@
           "last_seen": "2026-10-12T02:23:41+02:00",
           "last_title": "Slovenska blamaža na igrah! Zakaj sploh tekmujemo, če je šport pri nas umrl - Ekipa",
           "last_provider": "google-news-si",
-          "published": 263214,
+          "published": 263284,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,17 +227,15 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 10,
+      "current_source_count": 1,
       "example_titles": {
-        "news.google.com": [
-          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
-          "*〜?[[Živý=šport!!]++] Škotska Slovenija prenos 26. september 2026 - Business and Investment Development Agency - CzechInvest",
-          "Finci premagali Slovenijo in osvojili prvo medaljo na velikih tekmovanjih - 24ur.com"
+        "lonelyplanet.com": [
+          "11 things to know before booking a trip to Slovenia - Lonely Planet"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-12T02:23:50+02:00",
+      "last_learning_run": "2026-10-12T02:38:03+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -245,6 +243,7 @@
         "Vsak politični članek mora imeti preverljive vire in jasen časovni okvir."
       ],
       "blocked_hosts": [
+        "britannica.com",
         "en.wikipedia.org",
         "namu.wiki",
         "physics.stanford.edu",
@@ -275,7 +274,7 @@
           "last_seen": "2026-10-12T02:23:50+02:00",
           "last_title": "Golob: Ne predstavljam si, da bi kdo želel živeti v državi, v kateri bi politika imela pooblastila policije - N1 Slovenija",
           "last_provider": "google-news-si",
-          "published": 291109,
+          "published": 291189,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -349,24 +348,22 @@
           "last_provider": "bing-web"
         },
         "britannica.com": {
-          "score": -3.92,
-          "seen": 14,
-          "last_seen": "2026-10-11T17:38:43+02:00",
+          "score": -4.2,
+          "seen": 15,
+          "last_seen": "2026-10-12T02:38:03+02:00",
           "last_title": "Slovenia | History, Geography, & People | Britannica",
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 18,
+      "current_source_count": 1,
       "example_titles": {
-        "news.google.com": [
-          "V Sloveniji odprta volišča: Volivci danes odločajo o štirih pomembnih vprašanjih - Mariborinfo.com",
-          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
-          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer"
+        "britannica.com": [
+          "Slovenia | History, Geography, & People | Britannica"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-12T02:23:59+02:00",
+      "last_learning_run": "2026-10-12T02:38:13+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -399,9 +396,9 @@
       ],
       "source_health": {
         "lonelyplanet.com": {
-          "score": 11.76,
-          "seen": 8,
-          "last_seen": "2026-10-11T17:38:54+02:00",
+          "score": 13.23,
+          "seen": 9,
+          "last_seen": "2026-10-12T02:38:13+02:00",
           "last_title": "11 things to know before booking a trip to Slovenia - Lonely Planet",
           "last_provider": "bing-web"
         },
@@ -422,9 +419,9 @@
           "last_provider": "bing-web"
         },
         "britannica.com": {
-          "score": 3.43,
-          "seen": 14,
-          "last_seen": "2026-10-11T17:38:54+02:00",
+          "score": 3.675,
+          "seen": 15,
+          "last_seen": "2026-10-12T02:38:13+02:00",
           "last_title": "Slovenia | History, Geography, & People | Britannica",
           "last_provider": "bing-web"
         },
@@ -434,7 +431,7 @@
           "last_seen": "2026-10-12T02:23:59+02:00",
           "last_title": "Vreme se bo danes hitro obrnilo: nevihte bodo zajele večji del Slovenije, na Primorskem tudi burja - Dnevne Novice",
           "last_provider": "google-news-si",
-          "published": 237199,
+          "published": 237229,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "reddit.com": {
@@ -550,12 +547,13 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 24,
+      "current_source_count": 2,
       "example_titles": {
-        "news.google.com": [
-          "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
-          "Ko so bile ZDA stare toliko kot danes Slovenija, so bile na robu razpada - Zanima.me",
-          "Slovenska glasbenica ostro nad aktualno oblast: \"Ne vem, ali naj temu rečem ironija, paradoks ali vzporedni svet\" - Večer"
+        "lonelyplanet.com": [
+          "11 things to know before booking a trip to Slovenia - Lonely Planet"
+        ],
+        "britannica.com": [
+          "Slovenia | History, Geography, & People | Britannica"
         ]
       }
     }
