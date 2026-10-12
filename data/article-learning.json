@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-12T13:25:07+02:00",
-  "loop_count": 4780,
+  "updated_at": "2026-10-12T13:26:03+02:00",
+  "loop_count": 4781,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-12T13:24:28+02:00",
+      "last_learning_run": "2026-10-12T13:25:39+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 116031,
-          "last_seen": "2026-10-12T13:08:59+02:00",
+          "seen": 116042,
+          "last_seen": "2026-10-12T13:25:39+02:00",
           "last_title": "Slovenska blamaža na igrah! Zakaj sploh tekmujemo, če je šport pri nas umrl - Ekipa",
           "last_provider": "google-news-si",
-          "published": 269921,
+          "published": 269988,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,19 +227,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 3,
+      "current_source_count": 11,
       "example_titles": {
-        "support.microsoft.com": [
-          "Cancel an order or pre-order from Microsoft Store | Microsoft Support",
-          "Contact Us - Microsoft Support"
-        ],
-        "techcommunity.microsoft.com": [
-          "Windows Insider Program | Microsoft Community Hub"
+        "news.google.com": [
+          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
+          "*〜?[[Živý=šport!!]++] Škotska Slovenija prenos 26. september 2026 - Business and Investment Development Agency - CzechInvest",
+          "Finci premagali Slovenijo in osvojili prvo medaljo na velikih tekmovanjih - 24ur.com"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-12T13:24:42+02:00",
+      "last_learning_run": "2026-10-12T13:25:50+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -274,11 +272,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 124749,
-          "last_seen": "2026-10-12T12:55:04+02:00",
-          "last_title": "Golob: Ne predstavljam si, da bi kdo želel živeti v državi, v kateri bi politika imela pooblastila policije - N1 Slovenija",
+          "seen": 124766,
+          "last_seen": "2026-10-12T13:25:50+02:00",
+          "last_title": "Kučan napadel Janšo! »Kaj se je zgodilo s 'črno kocko', kdo je imel za to interese, to so vprašanja, ki bodo zahtevala odgovor« - Slovenske novice",
           "last_provider": "google-news-si",
-          "published": 298949,
+          "published": 299029,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -366,11 +364,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 0,
-      "example_titles": {}
+      "current_source_count": 17,
+      "example_titles": {
+        "news.google.com": [
+          "V Sloveniji odprta volišča: Volivci danes odločajo o štirih pomembnih vprašanjih - Mariborinfo.com",
+          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
+          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer"
+        ]
+      }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-12T13:25:07+02:00",
+      "last_learning_run": "2026-10-12T13:26:03+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -441,11 +445,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 132719,
-          "last_seen": "2026-10-12T12:55:15+02:00",
+          "seen": 132743,
+          "last_seen": "2026-10-12T13:26:03+02:00",
           "last_title": "Vreme se bo danes hitro obrnilo: nevihte bodo zajele večji del Slovenije, na Primorskem tudi burja - Dnevne Novice",
           "last_provider": "google-news-si",
-          "published": 240139,
+          "published": 240169,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "reddit.com": {
@@ -554,10 +558,12 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 1,
+      "current_source_count": 24,
       "example_titles": {
-        "miami.gov": [
-          "Official City of Miami Website"
+        "news.google.com": [
+          "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
+          "Ko so bile ZDA stare toliko kot danes Slovenija, so bile na robu razpada - Zanima.me",
+          "Slovenska glasbenica ostro nad aktualno oblast: \"Ne vem, ali naj temu rečem ironija, paradoks ali vzporedni svet\" - Večer"
         ]
       }
     }
@@ -638,14 +644,6 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20261012-115426.json",
-      "category": "dediscina",
-      "errors": [
-        "ze_uporabljen_vir"
-      ],
-      "title": "Grad Grad na Goričkem: Največji baročni grad v Sloveniji s skrivnostno zgodovino"
-    },
-    {
       "file": "fallback-failed-20261012-120906.json",
       "category": "dediscina",
       "errors": [
@@ -721,6 +719,14 @@
     },
     {
       "file": "fallback-failed-20261012-132350.json",
+      "category": "dediscina",
+      "errors": [
+        "ze_uporabljen_vir"
+      ],
+      "title": "Grad Grad na Goričkem: Največji baročni grad v Sloveniji s skrivnostno zgodovino"
+    },
+    {
+      "file": "fallback-failed-20261012-132427.json",
       "category": "dediscina",
       "errors": [
         "ze_uporabljen_vir"
