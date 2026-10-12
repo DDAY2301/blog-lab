@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-12T17:13:40+02:00",
-  "loop_count": 4812,
+  "updated_at": "2026-10-12T17:24:34+02:00",
+  "loop_count": 4813,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-12T17:13:15+02:00",
+      "last_learning_run": "2026-10-12T17:24:09+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -76,7 +76,7 @@
           "last_seen": "2026-10-12T17:13:15+02:00",
           "last_title": "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
           "last_provider": "google-news-si",
-          "published": 272065,
+          "published": 272132,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,17 +227,11 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 11,
-      "example_titles": {
-        "news.google.com": [
-          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
-          "*〜?[[Živý=šport!!]++] Škotska Slovenija prenos 26. september 2026 - Business and Investment Development Agency - CzechInvest",
-          "Finci premagali Slovenijo in osvojili prvo medaljo na velikih tekmovanjih - 24ur.com"
-        ]
-      }
+      "current_source_count": 0,
+      "example_titles": {}
     },
     "politika": {
-      "last_learning_run": "2026-10-12T17:13:26+02:00",
+      "last_learning_run": "2026-10-12T17:24:24+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -276,7 +270,7 @@
           "last_seen": "2026-10-12T17:13:26+02:00",
           "last_title": "Pirc Musar: Mala zmaga za neko politično opcijo, pa hkrati velik poraz za državo - Delo.si",
           "last_provider": "google-news-si",
-          "published": 301509,
+          "published": 301589,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -364,17 +358,11 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 17,
-      "example_titles": {
-        "news.google.com": [
-          "V Sloveniji odprta volišča: Volivci danes odločajo o štirih pomembnih vprašanjih - Mariborinfo.com",
-          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
-          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer"
-        ]
-      }
+      "current_source_count": 0,
+      "example_titles": {}
     },
     "aktualno": {
-      "last_learning_run": "2026-10-12T17:13:40+02:00",
+      "last_learning_run": "2026-10-12T17:24:34+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -449,7 +437,7 @@
           "last_seen": "2026-10-12T17:13:40+02:00",
           "last_title": "Vreme se bo danes hitro obrnilo: nevihte bodo zajele večji del Slovenije, na Primorskem tudi burja - Dnevne Novice",
           "last_provider": "google-news-si",
-          "published": 241099,
+          "published": 241129,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "reddit.com": {
@@ -558,12 +546,13 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 24,
+      "current_source_count": 2,
       "example_titles": {
-        "news.google.com": [
-          "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
-          "Ko so bile ZDA stare toliko kot danes Slovenija, so bile na robu razpada - Zanima.me",
-          "Slovenska glasbenica ostro nad aktualno oblast: \"Ne vem, ali naj temu rečem ironija, paradoks ali vzporedni svet\" - Večer"
+        "time.gov": [
+          "The Official U.S. Time | NIST"
+        ],
+        "24timezones.com": [
+          "United States local time"
         ]
       }
     }
@@ -643,14 +632,6 @@
     }
   ],
   "recent_failures": [
-    {
-      "file": "fallback-failed-20261012-160631.json",
-      "category": "dediscina",
-      "errors": [
-        "ze_uporabljen_vir"
-      ],
-      "title": "Grad Grad na Goričkem: Največji baročni grad v Sloveniji s skrivnostno zgodovino"
-    },
     {
       "file": "fallback-failed-20261012-160715.json",
       "category": "dediscina",
@@ -733,17 +714,27 @@
       "title": "Grad Grad na Goričkem: Največji baročni grad v Sloveniji s skrivnostno zgodovino"
     },
     {
+      "file": "fallback-failed-20261012-172336.json",
+      "category": "dediscina",
+      "errors": [
+        "clanek_brez_slovenskega_konteksta",
+        "viri_ne_podpirajo_slovenske_rubrike"
+      ],
+      "title": "Dr. Ramon M Soriano, MD - Laredo, TX - Orthopedic Surgery"
+    },
+    {
       "file": "agent-state",
       "category": "dediscina",
       "errors": [
-        "ze_uporabljen_vir"
+        "clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike"
       ]
     }
   ],
   "failure_summary": {
-    "ze_uporabljen_vir": 20,
+    "ze_uporabljen_vir": 18,
+    "clanek_brez_slovenskega_konteksta": 2,
+    "viri_ne_podpirajo_slovenske_rubrike": 2,
     "prekratek": 1,
-    "clanek_brez_slovenskega_konteksta": 1,
-    "viri_ne_podpirajo_slovenske_rubrike": 1
+    "clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike": 1
   }
 }
