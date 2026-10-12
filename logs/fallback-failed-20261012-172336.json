@@ -1,0 +1,39 @@
+{
+  "category": "dediscina",
+  "errors": [
+    "clanek_brez_slovenskega_konteksta",
+    "viri_ne_podpirajo_slovenske_rubrike"
+  ],
+  "article": {
+    "title": "Dr. Ramon M Soriano, MD - Laredo, TX - Orthopedic Surgery",
+    "excerpt": "Dediščina: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Dr. Ramon M Soriano, MD - Laredo, TX - Orthopedic Surgery«.",
+    "seoDescription": "Dediščina: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Dr. Ramon M Soriano, MD - Laredo, TX - Orthopedic Surgery«.",
+    "content": "**Dediščina, 12. 10. 2026.** Find information about and book an appointment with Dr. Ramon M Soriano, MD in Laredo, TX. Specialties: Orthopedic Surgery. Dr. Ramon M Soriano, MD - Laredo, TX - Orthopedic Surgery - Request Appointment 65\"],\"aha_id\":null,\"always_available_provider\":false,\"appointment_ehr_purposes\":[],\"awards\":null,\"board_certifications\":[],\"book_online_override_url\":null,\"book_online_url\":null,\"canonical_url\":\"doctorshosplaredo.com\",\"clinic_location_url\":null,\"clinical_contact\":null,\"clinical_interests\":null,\"clinical_special_interests\":[],\"clinical_trial_text\":null,\"clinical_trials\":[],\"contact_info\":null,\"contacts\":[{\"contact_type\":\"phone\",\"value\":\"(956)…\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: doctors.doctorshosplaredo.com. Objavljeno: Fri, 09 Oct 2026 05:14:00 GMT. [Odpri izvirni vir](https://doctors.doctorshosplaredo.com/provider/ramon-m-soriano/1679920)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Dediščina",
+    "tags": [
+      "dediščina",
+      "pregled"
+    ],
+    "heroImage": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Tustanj_Castle_Slovenia_-_plaque.JPG/1920px-Tustanj_Castle_Slovenia_-_plaque.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "alt": "Plaque over the entrance to Tuštanj Castle, Zgornji Tuštanj, Municipality of Moravče, Slovenia",
+      "caption": "Doremo · Wikimedia Commons · CC BY-SA 3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tustanj_Castle_Slovenia_-_plaque.JPG"
+    },
+    "gallery": [],
+    "video": null,
+    "sources": [
+      {
+        "label": "doctors.doctorshosplaredo.com — Dr. Ramon M Soriano, MD - Laredo, TX - Orthopedic Surgery - Request Appointment",
+        "url": "https://doctors.doctorshosplaredo.com/provider/ramon-m-soriano/1679920"
+      }
+    ],
+    "source_urls": [
+      "https://doctors.doctorshosplaredo.com/provider/ramon-m-soriano/1679920"
+    ],
+    "fallback": true,
+    "visualTemplate": "fieldnote",
+    "templateLabel": "Field Note",
+    "id": "dr-ramon-m-soriano-md-laredo-tx-orthopedic-surgery-1a76d864"
+  }
+}
