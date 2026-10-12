@@ -1,0 +1,34 @@
+{
+  "category": "sezonsko",
+  "errors": [
+    "prekratek",
+    "manjka_fotografija"
+  ],
+  "article": {
+    "title": "Nova sezona, novo zvišanje cen: za kampiranje boste zdaj mogli odšteti kar ...",
+    "excerpt": "Sezonsko: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Nova sezona, novo zvišanje cen: za kampiranje boste zdaj mogli odšteti kar ...«.",
+    "seoDescription": "Sezonsko: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Nova sezona, novo zvišanje cen: za kampiranje boste zdaj mogli odšteti kar ..",
+    "content": "**Sezonsko, 12. 10. 2026.** Nova sezona, novo zvišanje cen: za kampiranje boste zdaj mogli odšteti kar ... Metropolitan.si\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Metropolitan.si. Objavljeno: Sun, 11 May 2025 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiekFVX3lxTFB3WmNaWmZsYzZ5bThRTUdiczhsbWM1SWRZRG1BNl9WWEZhVEQwZHo5bEIxZlRhRFVGT2FDeTVpU0J4U0lTNERweFR3S1J4UF9ob3dWU0k3UE1UQTUwOGNDUHQ1emg5SThkNkxaZ0luazJ5V2xEc0xqdTBR?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Sezonsko",
+    "tags": [
+      "sezonsko",
+      "pregled"
+    ],
+    "heroImage": null,
+    "gallery": [],
+    "video": null,
+    "sources": [
+      {
+        "label": "Metropolitan.si — Nova sezona, novo zvišanje cen: za kampiranje boste zdaj mogli odšteti kar ... - Metropolitan.si",
+        "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFB3WmNaWmZsYzZ5bThRTUdiczhsbWM1SWRZRG1BNl9WWEZhVEQwZHo5bEIxZlRhRFVGT2FDeTVpU0J4U0lTNERweFR3S1J4UF9ob3dWU0k3UE1UQTUwOGNDUHQ1emg5SThkNkxaZ0luazJ5V2xEc0xqdTBR?oc=5"
+      }
+    ],
+    "source_urls": [
+      "https://news.google.com/rss/articles/CBMiekFVX3lxTFB3WmNaWmZsYzZ5bThRTUdiczhsbWM1SWRZRG1BNl9WWEZhVEQwZHo5bEIxZlRhRFVGT2FDeTVpU0J4U0lTNERweFR3S1J4UF9ob3dWU0k3UE1UQTUwOGNDUHQ1emg5SThkNkxaZ0luazJ5V2xEc0xqdTBR?oc=5"
+    ],
+    "fallback": true,
+    "visualTemplate": "fieldnote",
+    "templateLabel": "Field Note",
+    "id": "nova-sezona-novo-zvisanje-cen-za-kampiranje-boste-zdaj-mogli-odsteti-kar-24e9848f"
+  }
+}
