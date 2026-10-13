@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-13T18:23:10+02:00",
-  "loop_count": 5084,
+  "updated_at": "2026-10-13T18:24:06+02:00",
+  "loop_count": 5085,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-13T18:22:51+02:00",
+      "last_learning_run": "2026-10-13T18:23:38+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -76,7 +76,7 @@
           "last_seen": "2026-10-13T18:22:51+02:00",
           "last_title": "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
           "last_provider": "google-news-si",
-          "published": 290289,
+          "published": 290356,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -198,6 +198,13 @@
           "last_title": "Donate in Your Neighborhood - Greater DC Diaper Bank",
           "last_provider": "bing-web"
         },
+        "powerball.com": {
+          "score": 1.179,
+          "seen": 2,
+          "last_seen": "2026-10-13T18:23:38+02:00",
+          "last_title": "Powerball Draw Result - Wed, Aug 26, 2026",
+          "last_provider": "bing-web"
+        },
         "xnxx.com": {
           "score": 1.179,
           "seen": 2,
@@ -218,26 +225,24 @@
           "last_seen": "2026-09-25T13:08:31+02:00",
           "last_title": "What Color Is the Sky Actually? The Science Explained",
           "last_provider": "bing-web"
-        },
-        "careers.dollargeneral.com": {
-          "score": 0.77,
-          "seen": 1,
-          "last_seen": "2026-10-05T19:09:00+02:00",
-          "last_title": "Explore Job Opportunities | Dollar General",
-          "last_provider": "bing-web"
         }
       },
-      "current_source_count": 10,
+      "current_source_count": 4,
       "example_titles": {
-        "news.google.com": [
-          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
-          "*〜?[[Živý=šport!!]++] Škotska Slovenija prenos 26. september 2026 - Business and Investment Development Agency - CzechInvest",
-          "Kot v sanjah: Slovenija že drugič v dveh tednih evropski prvak! (VIDEO) - Šport TV"
+        "powerball.com": [
+          "Home | Powerball",
+          "Powerball Draw Result - Wed, Aug 26, 2026"
+        ],
+        "shop.powerball.com": [
+          "Shop Powerball®"
+        ],
+        "cdn.powerball.com": [
+          "Powerball Report For Monday, October 12, 2026"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-13T18:23:01+02:00",
+      "last_learning_run": "2026-10-13T18:23:47+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -276,7 +281,7 @@
           "last_seen": "2026-10-13T18:23:01+02:00",
           "last_title": "Pirc Musar: Mala zmaga za neko politično opcijo, pa hkrati velik poraz za državo - Delo.si",
           "last_provider": "google-news-si",
-          "published": 322971,
+          "published": 323049,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -378,17 +383,11 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 18,
-      "example_titles": {
-        "news.google.com": [
-          "V Sloveniji odprta volišča: Volivci danes odločajo o štirih pomembnih vprašanjih - Mariborinfo.com",
-          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
-          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer"
-        ]
-      }
+      "current_source_count": 0,
+      "example_titles": {}
     },
     "aktualno": {
-      "last_learning_run": "2026-10-13T18:23:10+02:00",
+      "last_learning_run": "2026-10-13T18:24:06+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -463,7 +462,7 @@
           "last_seen": "2026-10-13T18:23:10+02:00",
           "last_title": "Podpisan drugi dodatek k Dogovoru za razvoj regije Jugovzhodna Slovenija - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "google-news-si",
-          "published": 249259,
+          "published": 249289,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "reddit.com": {
@@ -572,12 +571,11 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 22,
+      "current_source_count": 2,
       "example_titles": {
-        "news.google.com": [
-          "(AKTUALNO) Še danes v prodaji 36. št. revije Demokracija: 30 let Demokracije, ki udejanja pravico vedeti več! Načrt za demografsko obnovo sl",
-          "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
-          "Ko so bile ZDA stare toliko kot danes Slovenija, so bile na robu razpada - Zanima.me"
+        "symrise.com": [
+          "Welcome to Symrise",
+          "Our company"
         ]
       }
     }
@@ -658,14 +656,6 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20261013-173922.json",
-      "category": "gore",
-      "errors": [
-        "ze_uporabljen_vir"
-      ],
-      "title": "Svetovni hit v severovzhodni Sloveniji: uradno odprta 187 kilometrov dolga pohodniška pravljica"
-    },
-    {
       "file": "fallback-failed-20261013-173958.json",
       "category": "dediscina",
       "errors": [
@@ -731,6 +721,14 @@
     },
     {
       "file": "fallback-failed-20261013-180938.json",
+      "category": "dediscina",
+      "errors": [
+        "ze_uporabljen_vir"
+      ],
+      "title": "Grad Grad na Goričkem: Največji baročni grad v Sloveniji s skrivnostno zgodovino"
+    },
+    {
+      "file": "fallback-failed-20261013-182255.json",
       "category": "dediscina",
       "errors": [
         "ze_uporabljen_vir"
