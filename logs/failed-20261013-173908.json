@@ -1,0 +1,41 @@
+{
+  "category": "gore",
+  "errors": [
+    "naslov_ni_v_rubriki",
+    "clanek_brez_slovenskega_konteksta",
+    "viri_ne_podpirajo_slovenske_rubrike",
+    "besedilo_ni_v_slovenscini"
+  ],
+  "article": {
+    "title": "Rochester News, Weather, Sports, Breaking News",
+    "excerpt": "13WHAM ABC Rochester provides local news, weather forecasts, traffic updates, health reports, notices of events and items of interest in the community, local sports and entertainment programming for Rochester and nearby ",
+    "seoDescription": "13WHAM ABC Rochester provides local news, weather forecasts, traffic updates, health reports, notices of events and items of interest in the community, loc",
+    "content": "Pregled za rubriko gore povzema trenutno razpoložljive informacije iz spodaj navedenih virov. Besedilo je pripravljeno brez dodajanja nepodprtih dejstev.\n\n## Rochester News, Weather, Sports, Breaking News\n13WHAM ABC Rochester provides local news, weather forecasts, traffic updates, health reports, notices of events and items of interest in the community, local sports and entertainment programming for Rochester and nearby towns and communities including Greece, Victor, Pittsford, Penfield, Henrietta, Webster, Irondequoit, Fairport, Chili, Gates, Rush, Wheatland, Canandaigua, Farmington, Spencerport and Hilton. Jury selection begins in federal death penalty trial of Buffalo Tops mass shooter The suspect opened fire in a racist attack that killed 10 Black people and injured several others. Bills Mafia comes together across WNY as Buffalo beats Rams in overtime thriller Bills Mafia turned out in full force across Western New York Monday night, cheering on Buffalo as the team bounced back from its first loss of the season with a win over the Los Angeles Rams. Developers plan to turn shuttered Livingston County prison into rock salt mine A shuttered Livingston County prison could become a massive salt mine. Liberty Rock Salt bought the 160-acre site for $1.1M, plans two shafts, 300 jobs, and aims to ease regional rock salt shortages within 5 years. New White House press secretary says she'll 'amplify' Trump agenda as midterms near Trump called her a \"loyal and brilliant supporter\" who has the respect of the media, the American people and his administration. Bills outlast Rams with help from blocked FG for 37-34 win in OT Josh Allen realized that his extraordinary efforts throughout this frenetic game might all amount to nothing Monday night when the Buffalo Bills fumbled deep in Rams territory early in overtime. Waterview Heights closure delayed again as 11 residents await placement A troubled nursing home in Rochester's Charlotte neighborhood has missed another deadline to close, with 11 residents still waiting to be moved to new facilities. Rochester father creates lasting memorials for two sons lost to heroin overdoses A father who lost both of his sons to heroin overdoses is turning his grief into a mission to ensure their memories live on. Loved ones remember woman fatally shot by Gates police officer Family and friends gathered Sunday at Durand Eastman Park to remember the 27-year-old woman who was fatally shot by a Gates police officer last week. Wegmans to close Amore Italian Restaurant & Lounge in Rochester Wegmans is permanently closing Amore Italian Restaurant & Lounge at its East Avenue store later this month, the company announced Tuesday. IRS warns of scams targeting older adults as New Yorkers lose millions The IRS Criminal Investigation Division\n\nVir: 13wham.com — https://13wham.com/",
+    "category": "Gore & traili",
+    "tags": [
+      "gore",
+      "Slovenija",
+      "rochester",
+      "weather",
+      "sports"
+    ],
+    "sources": [
+      {
+        "title": "Rochester News, Weather, Sports, Breaking News",
+        "url": "https://13wham.com/",
+        "source_name": "13wham.com"
+      }
+    ],
+    "fallback": false,
+    "heroImage": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/172nd_Slovenian_Mountain_Training_%285229491885%29.jpg/1920px-172nd_Slovenian_Mountain_Training_%285229491885%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "alt": "BOHINJSKA BELA, Slovenia -- Soldiers with U.S. Army Europe's 172nd Infantry Brigade pause during their hike up the mountain at the Slovenian Armed Forces Mountain Training Center 3",
+      "caption": "U.S. Army Europe from Wiesbaden, Germany · Wikimedia Commons · Public domain",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:172nd_Slovenian_Mountain_Training_(5229491885).jpg"
+    },
+    "gallery": [],
+    "visualTemplate": "pulse",
+    "templateLabel": "Pulse",
+    "id": "rochester-news-weather-sports-breaking-news-a9923667"
+  }
+}

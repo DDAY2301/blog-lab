@@ -2,8 +2,8 @@
   "agent": "Blog Lab Slovenia Publisher",
   "status": "waiting",
   "enabled": true,
-  "category": "dediscina",
-  "last_run": "2026-10-13T17:29:01+02:00",
+  "category": "gore",
+  "last_run": "2026-10-13T17:39:22+02:00",
   "last_success": "2026-10-13T07:39:14+02:00",
   "last_output": "dnevna-na-dravski-kolesarski-poti-tudi-vlecnica-cez-dravo-med-duplekom-in-starsami-83e1c8c7",
   "next_run": null,
@@ -17,12 +17,13 @@
   ],
   "scheduled_slots_deferred": [
     "2026-10-13|10:45|dediscina",
-    "2026-10-13|13:30|sezonsko"
+    "2026-10-13|13:30|sezonsko",
+    "2026-10-13|16:20|gore"
   ],
   "last_editorial_hold": {
-    "slot": "2026-10-13|13:30|sezonsko",
-    "reason": "manjka_fotografija,ponavljanje",
-    "at": "2026-10-13T13:39:03+02:00"
+    "slot": "2026-10-13|16:20|gore",
+    "reason": "naslov_ni_v_rubriki,clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike,besedilo_ni_v_slovenscini",
+    "at": "2026-10-13T17:39:08+02:00"
   },
   "last_error": "ze_uporabljen_vir"
 }
