@@ -1,0 +1,39 @@
+{
+  "category": "dediscina",
+  "errors": [
+    "clanek_brez_slovenskega_konteksta",
+    "viri_ne_podpirajo_slovenske_rubrike"
+  ],
+  "article": {
+    "title": "Bing Homepage Quiz – Play the Daily Trivia Challenge",
+    "excerpt": "Dediščina: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Bing Homepage Quiz – Play the Daily Trivia Challenge«.",
+    "seoDescription": "Dediščina: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Bing Homepage Quiz – Play the Daily Trivia Challenge«.",
+    "content": "**Dediščina, 13. 10. 2026.** Play today's Bing Homepage Quiz: an interactive 10-question daily trivia challenge on today's Bing photo, with a timer, your score and a new quiz every day. Bing Quiz › Bing Homepage Quiz Bing Homepage Quiz: Play the Daily Challenge The Bing Homepage Quiz is the daily trivia challenge built around the photo on the Bing.com homepage. Here you can play today’s quiz right away: an interactive 10-question quiz on today’s photo, with a timer, your score and a short fact after every question. A new quiz goes live every day when Bing changes its photo, so come back tomorrow for a fresh challenge and keep your daily streak going. Updated October 13, 2026 · USA edition · not affiliated with Microsoft By the…\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: bingquiz.net. Objavljeno: Tue, 13 Oct 2026 14:27:00 GMT. [Odpri izvirni vir](https://bingquiz.net/bing-homepage-quiz-today/)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Dediščina",
+    "tags": [
+      "dediščina",
+      "pregled"
+    ],
+    "heroImage": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Tustanj_Castle_Slovenia_-_plaque.JPG/1920px-Tustanj_Castle_Slovenia_-_plaque.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "alt": "Plaque over the entrance to Tuštanj Castle, Zgornji Tuštanj, Municipality of Moravče, Slovenia",
+      "caption": "Doremo · Wikimedia Commons · CC BY-SA 3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tustanj_Castle_Slovenia_-_plaque.JPG"
+    },
+    "gallery": [],
+    "video": null,
+    "sources": [
+      {
+        "label": "bingquiz.net — Bing Homepage Quiz – Play the Daily Trivia Challenge",
+        "url": "https://bingquiz.net/bing-homepage-quiz-today/"
+      }
+    ],
+    "source_urls": [
+      "https://bingquiz.net/bing-homepage-quiz-today/"
+    ],
+    "fallback": true,
+    "visualTemplate": "studio",
+    "templateLabel": "Studio",
+    "id": "bing-homepage-quiz-play-the-daily-trivia-challenge-80097bc0"
+  }
+}
