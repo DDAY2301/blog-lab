@@ -5,9 +5,9 @@
   "posts_date": "2026-10-13",
   "posts_today": 1,
   "last_output": "dnevna-na-dravski-kolesarski-poti-tudi-vlecnica-cez-dravo-med-duplekom-in-starsami-83e1c8c7",
-  "last_error": "prekratek,manjka_fotografija",
+  "last_error": "ze_uporabljen_vir",
   "agent_version": "3.0.0-learning-guarded-fallback",
-  "current_category": "sezonsko",
+  "current_category": "dediscina",
   "scheduled_posts_today": 1,
   "manual_posts_today": 0,
   "writer_mode": "workers_ai",
@@ -23,11 +23,11 @@
     "reason": "manjka_fotografija,ponavljanje",
     "at": "2026-10-13T13:39:03+02:00"
   },
-  "publisher_guardian_last_run": "2026-10-13T13:23:43+02:00",
+  "publisher_guardian_last_run": "2026-10-13T13:40:09+02:00",
   "publisher_guardian_last_action": {
     "category": "dediscina",
     "slot": "2026-10-13|10:45|dediscina",
-    "remaining_repairs": 0
+    "remaining_repairs": 1
   },
   "schedule_counter_normalized_at": "2026-10-07T16:45:00+02:00"
 }
