@@ -1,0 +1,39 @@
+{
+  "category": "kolesarstvo",
+  "errors": [
+    "manjka_fotografija",
+    "ponavljanje"
+  ],
+  "article": {
+    "title": "DNEVNA: Na Dravski kolesarski poti tudi vlečnica čez Dravo med Duplekom in Staršami - Maribor24.si",
+    "excerpt": "DNEVNA: Na Dravski kolesarski poti tudi vlečnica čez Dravo med Duplekom in Staršami Maribor24.si",
+    "seoDescription": "DNEVNA: Na Dravski kolesarski poti tudi vlečnica čez Dravo med Duplekom in Staršami Maribor24.si",
+    "content": "Pregled za rubriko kolesarstvo povzema trenutno razpoložljive informacije iz spodaj navedenih virov. Besedilo je pripravljeno brez dodajanja nepodprtih dejstev.\n\n## DNEVNA: Na Dravski kolesarski poti tudi vlečnica čez Dravo med Duplekom in Staršami - Maribor24.si\nDNEVNA: Na Dravski kolesarski poti tudi vlečnica čez Dravo med Duplekom in Staršami Maribor24.si\n\nVir: Maribor24.si — https://news.google.com/rss/articles/CBMisgFBVV95cUxNZ3ptZmdmRVk3SG5wdmVTWGpxSEhqWHFwSENxX25aUTlzZXZQc2FyRE1JbW9veEJaMU4xMk5lZlhwYnV3em1XZnNiM1otOWxtMDZZbjJYazZsM0VNZUlzRlVmYjF2M3JydTdZU1MzUHpxYWs5elF5UUJmTjBvaG00QThzVGpaZWdrRndxWUxBTDZKT0RmODY5Q3o1ZW9nb1lXdHdxZHlSa3c1VlVXYUhtbl93?oc=5\n\n## Slovenija doživlja kolesarski razcvet - Delo.si\nSlovenija doživlja kolesarski razcvet Delo.si\n\nVir: Delo.si — https://news.google.com/rss/articles/CBMickFVX3lxTE5LdHFwNkNBOF90YV9ZbVpkVlUwbVZuLWF3LVhkV28wN3dnSlBJa01pQTBHSmxjUTBHNnNCR2VaN1Ixd2JlUmhtdUx3aHVjY2NaRjlwMjBtQjNBbklPdHhKNzlrNTFJU0psaVN3TFZsNHV5UQ?oc=5\n\n## Kako brati ta pregled\nTa članek je v varnem nadomestnem načinu sestavljen izključno iz podanih virov. Ne dodaja dejstev, ki jih v podlagi ni, zato so navedene povezave sestavni del članka in omogočajo neposredno preverjanje informacij.",
+    "category": "Kolesarstvo",
+    "tags": [
+      "kolesarstvo",
+      "Slovenija",
+      "dnevna",
+      "dravski",
+      "kolesarski"
+    ],
+    "sources": [
+      {
+        "title": "DNEVNA: Na Dravski kolesarski poti tudi vlečnica čez Dravo med Duplekom in Staršami - Maribor24.si",
+        "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNZ3ptZmdmRVk3SG5wdmVTWGpxSEhqWHFwSENxX25aUTlzZXZQc2FyRE1JbW9veEJaMU4xMk5lZlhwYnV3em1XZnNiM1otOWxtMDZZbjJYazZsM0VNZUlzRlVmYjF2M3JydTdZU1MzUHpxYWs5elF5UUJmTjBvaG00QThzVGpaZWdrRndxWUxBTDZKT0RmODY5Q3o1ZW9nb1lXdHdxZHlSa3c1VlVXYUhtbl93?oc=5",
+        "source_name": "Maribor24.si"
+      },
+      {
+        "title": "Slovenija doživlja kolesarski razcvet - Delo.si",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5LdHFwNkNBOF90YV9ZbVpkVlUwbVZuLWF3LVhkV28wN3dnSlBJa01pQTBHSmxjUTBHNnNCR2VaN1Ixd2JlUmhtdUx3aHVjY2NaRjlwMjBtQjNBbklPdHhKNzlrNTFJU0psaVN3TFZsNHV5UQ?oc=5",
+        "source_name": "Delo.si"
+      }
+    ],
+    "fallback": false,
+    "gallery": [],
+    "heroImage": null,
+    "visualTemplate": "pulse",
+    "templateLabel": "Pulse",
+    "id": "dnevna-na-dravski-kolesarski-poti-tudi-vlecnica-cez-dravo-med-duplekom-in-starsami-maribor-83e1c8c7"
+  }
+}

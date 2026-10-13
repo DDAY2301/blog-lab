@@ -4828,5 +4828,33 @@
     "provider": "",
     "processed_at": "2026-10-12T07:39:21+02:00",
     "output_id": "epic-rides-prvic-v-sloveniji-kocevsko-gosti-jubilejno-40-izvedbo-priljubljenega-gravel-dog-6b903c0d"
+  },
+  {
+    "source_name": "Maribor24.si",
+    "category": "kolesarstvo",
+    "title": "DNEVNA: Na Dravski kolesarski poti tudi vlečnica čez Dravo med Duplekom in Staršami - Maribor24.si",
+    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNZ3ptZmdmRVk3SG5wdmVTWGpxSEhqWHFwSENxX25aUTlzZXZQc2FyRE1JbW9veEJaMU4xMk5lZlhwYnV3em1XZnNiM1otOWxtMDZZbjJYazZsM0VNZUlzRlVmYjF2M3JydTdZU1MzUHpxYWs5elF5UUJmTjBvaG00QThzVGpaZWdrRndxWUxBTDZKT0RmODY5Q3o1ZW9nb1lXdHdxZHlSa3c1VlVXYUhtbl93?oc=5",
+    "summary": "DNEVNA: Na Dravski kolesarski poti tudi vlečnica čez Dravo med Duplekom in Staršami Maribor24.si",
+    "published": "Thu, 22 Jul 2021 07:00:00 GMT",
+    "image_url": "",
+    "video_url": "",
+    "hash": "1124888db294d5d001e76e3a4d9badc70de4b2c1e5e8a6b42d2e7aa1c5ce2f9d",
+    "provider": "",
+    "processed_at": "2026-10-13T07:39:14+02:00",
+    "output_id": "dnevna-na-dravski-kolesarski-poti-tudi-vlecnica-cez-dravo-med-duplekom-in-starsami-83e1c8c7"
+  },
+  {
+    "source_name": "Delo.si",
+    "category": "kolesarstvo",
+    "title": "Slovenija doživlja kolesarski razcvet - Delo.si",
+    "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5LdHFwNkNBOF90YV9ZbVpkVlUwbVZuLWF3LVhkV28wN3dnSlBJa01pQTBHSmxjUTBHNnNCR2VaN1Ixd2JlUmhtdUx3aHVjY2NaRjlwMjBtQjNBbklPdHhKNzlrNTFJU0psaVN3TFZsNHV5UQ?oc=5",
+    "summary": "Slovenija doživlja kolesarski razcvet Delo.si",
+    "published": "Mon, 01 Jun 2026 07:00:00 GMT",
+    "image_url": "",
+    "video_url": "",
+    "hash": "31d3ae6e06ffbac964ad9aec2ca9c65b8d66e6f20040f2cd9e963388487d2e92",
+    "provider": "",
+    "processed_at": "2026-10-13T07:39:14+02:00",
+    "output_id": "dnevna-na-dravski-kolesarski-poti-tudi-vlecnica-cez-dravo-med-duplekom-in-starsami-83e1c8c7"
   }
 ]

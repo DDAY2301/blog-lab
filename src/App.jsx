@@ -30,6 +30,37 @@ const CATEGORY_EMPTY_COPY = {
 
 const starterArticles = [
   {
+    "id": "dnevna-na-dravski-kolesarski-poti-tudi-vlecnica-cez-dravo-med-duplekom-in-starsami-83e1c8c7",
+    "title": "DNEVNA: Na Dravski kolesarski poti tudi vlečnica čez Dravo med Duplekom in Staršami",
+    "excerpt": "Kolesarstvo: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »DNEVNA: Na Dravski kolesarski poti tudi vlečnica čez Dravo med Duplekom in Staršami«.",
+    "seoDescription": "Kolesarstvo: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »DNEVNA: Na Dravski kolesarski poti tudi vlečnica čez Dravo med Duplekom in",
+    "content": "**Kolesarstvo, 13. 10. 2026.** DNEVNA: Na Dravski kolesarski poti tudi vlečnica čez Dravo med Duplekom in Staršami Maribor24.si\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Maribor24.si. Objavljeno: Thu, 22 Jul 2021 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMisgFBVV95cUxNZ3ptZmdmRVk3SG5wdmVTWGpxSEhqWHFwSENxX25aUTlzZXZQc2FyRE1JbW9veEJaMU4xMk5lZlhwYnV3em1XZnNiM1otOWxtMDZZbjJYazZsM0VNZUlzRlVmYjF2M3JydTdZU1MzUHpxYWs5elF5UUJmTjBvaG00QThzVGpaZWdrRndxWUxBTDZKT0RmODY5Q3o1ZW9nb1lXdHdxZHlSa3c1VlVXYUhtbl93?oc=5)\n\n## Dopolnitev vira 2: Delo.si\n\nSlovenija doživlja kolesarski razcvet Delo.si\n\n Vir: Delo.si. Objavljeno: Mon, 01 Jun 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMickFVX3lxTE5LdHFwNkNBOF90YV9ZbVpkVlUwbVZuLWF3LVhkV28wN3dnSlBJa01pQTBHSmxjUTBHNnNCR2VaN1Ixd2JlUmhtdUx3aHVjY2NaRjlwMjBtQjNBbklPdHhKNzlrNTFJU0psaVN3TFZsNHV5UQ?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Kolesarstvo",
+    "author": "Blog Lab Slovenia Publisher",
+    "status": "published",
+    "heroImage": {
+      "url": "/media/articles/8bad06fec502189cebd8.webp",
+      "alt": "Three male cyclists wearing helmets during a summer bicycle tour in rural Slovenia near Luže.",
+      "caption": "Marek Ślusarczyk ( Tupungato ) Photo gallery · Wikimedia Commons · CC BY 3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:08_Slovenia_rural_landscape_-_bicycle_expedition_with_panniers.jpg"
+    },
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Maribor24.si — DNEVNA: Na Dravski kolesarski poti tudi vlečnica čez Dravo med Duplekom in Staršami - Maribor24.si",
+        "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNZ3ptZmdmRVk3SG5wdmVTWGpxSEhqWHFwSENxX25aUTlzZXZQc2FyRE1JbW9veEJaMU4xMk5lZlhwYnV3em1XZnNiM1otOWxtMDZZbjJYazZsM0VNZUlzRlVmYjF2M3JydTdZU1MzUHpxYWs5elF5UUJmTjBvaG00QThzVGpaZWdrRndxWUxBTDZKT0RmODY5Q3o1ZW9nb1lXdHdxZHlSa3c1VlVXYUhtbl93?oc=5"
+      },
+      {
+        "label": "Delo.si — Slovenija doživlja kolesarski razcvet - Delo.si",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5LdHFwNkNBOF90YV9ZbVpkVlUwbVZuLWF3LVhkV28wN3dnSlBJa01pQTBHSmxjUTBHNnNCR2VaN1Ixd2JlUmhtdUx3aHVjY2NaRjlwMjBtQjNBbklPdHhKNzlrNTFJU0psaVN3TFZsNHV5UQ?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-13T07:39:14+02:00",
+    "updatedAt": "2026-10-13T07:39:14+02:00"
+  },
+
+  {
     "id": "zice-charterhouse-history-legend-visitor-guide",
     "title": "Žiče Charterhouse: Medieval Silence, Manuscripts and a White-Hind Legend",
     "excerpt": "Explore one of Slovenia’s most important medieval monasteries, separate the documented Carthusian story from its white-hind legend, and plan a respectful visit.",
