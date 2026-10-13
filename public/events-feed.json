@@ -1,15 +1,12 @@
 {
-  "updatedAt": "2026-10-13T06:56:00+02:00",
+  "updatedAt": "2026-10-13T06:58:07+02:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
-    "Cankarjev dom",
     "Kino Šiška",
-    "MGL",
-    "Ljubljana Castle",
-    "European Table Tennis Championships Ljubljana 2026",
     "Gala Hala",
-    "Klub K4"
+    "Klub K4",
+    "Cirkus Klub"
   ],
   "sourcesFailed": [],
   "items": [
