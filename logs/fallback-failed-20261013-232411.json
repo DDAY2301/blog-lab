@@ -1,0 +1,44 @@
+{
+  "category": "dediscina",
+  "errors": [
+    "clanek_brez_slovenskega_konteksta",
+    "besedilo_ni_v_slovenscini"
+  ],
+  "article": {
+    "title": "Yahoo Fantasy Hockey",
+    "excerpt": "Dediščina: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Yahoo Fantasy Hockey«.",
+    "seoDescription": "Dediščina: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Yahoo Fantasy Hockey«.",
+    "content": "**Dediščina, 13. 10. 2026.** Yahoo Fantasy Hockey: Your home for crushing fantasy hockey with friends this year Fantasy Hockey 2026: Create or Join a League, Rankings, Analysis & More | Fantasy Hockey | Yahoo! Sports ')}._yb_1vht69d{display:flex;height:46px;max-width:646px;width:calc(100% - 120px);margin-left:35px;position:relative}._yb_109k2ga{width:100%;height:42px;top:-3px;position:absolute;border-radius:25px;z-index:-1;margin-left:-3px;transition:height .3s ease-in;padding:2px 3px}.typing ._yb_109k2ga{width:100%;margin-left:-2px;padding:0 2px;top:-2px}._yb_vljmzl{background:linear-gradient(90deg,rgb(201 56 227) 0,rgb(73 65 251) 100%)}.ybar-ytheme-crunch.search-gradient ._yb_1vht69d{outline:solid…\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: hockey.fantasysports.yahoo.com. Objavljeno: Mon, 29 Sep 2025 20:09:00 GMT. [Odpri izvirni vir](https://hockey.fantasysports.yahoo.com/hockey)\n\n## Dopolnitev vira 2: hockey.fantasysports.yahoo.com\n\nFantasy Hockey | Yahoo! Sports ')}._yb_1vht69d{display:flex;height:46px;max-width:646px;width:calc(100% - 120px);margin-left:35px;position:relative}._yb_109k2ga{width:100%;height:42px;top:-3px;position:absolute;border-radius:25px;z-index:-1;margin-left:-3px;transition:height .3s ease-in;padding:2px 3px}.typing ._yb_109k2ga{width:100%;margin-left:-2px;padding:0 2px;top:-2px}._yb_vljmzl{background:linear-gradient(90deg,rgb(201 56 227) 0,rgb(73 65 251) 100%)}.ybar-ytheme-crunch.search-gradient ._yb_1vht69d{outline:solid #e5e7eb;border-radius:25px}html[data-color-theme-enabled][data-color-scheme=dark] .ybar-ytheme-crunch.search-gradient ._yb_1vht69d{outline:solid…\n\n Vir: hockey.fantasysports.yahoo.com. Objavljeno: Thu, 18 Dec 2025 23:49:00 GMT. [Odpri izvirni vir](https://hockey.fantasysports.yahoo.com/hockey/myleagues)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Dediščina",
+    "tags": [
+      "dediščina",
+      "pregled"
+    ],
+    "heroImage": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Tustanj_Castle_Slovenia_-_plaque.JPG/1920px-Tustanj_Castle_Slovenia_-_plaque.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "alt": "Plaque over the entrance to Tuštanj Castle, Zgornji Tuštanj, Municipality of Moravče, Slovenia",
+      "caption": "Doremo · Wikimedia Commons · CC BY-SA 3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tustanj_Castle_Slovenia_-_plaque.JPG"
+    },
+    "gallery": [],
+    "video": null,
+    "sources": [
+      {
+        "label": "hockey.fantasysports.yahoo.com — Yahoo Fantasy Hockey",
+        "url": "https://hockey.fantasysports.yahoo.com/hockey"
+      },
+      {
+        "label": "hockey.fantasysports.yahoo.com — Fantasy Hockey | Yahoo! Sports",
+        "url": "https://hockey.fantasysports.yahoo.com/hockey/myleagues"
+      }
+    ],
+    "source_urls": [
+      "https://hockey.fantasysports.yahoo.com/hockey",
+      "https://hockey.fantasysports.yahoo.com/hockey/myleagues"
+    ],
+    "fallback": true,
+    "visualTemplate": "fieldnote",
+    "templateLabel": "Field Note",
+    "id": "yahoo-fantasy-hockey-afbfb739"
+  }
+}
