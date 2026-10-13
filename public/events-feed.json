@@ -1,12 +1,15 @@
 {
-  "updatedAt": "2026-10-13T04:05:49+02:00",
+  "updatedAt": "2026-10-13T06:56:00+02:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
+    "Cankarjev dom",
     "Kino Šiška",
+    "MGL",
+    "Ljubljana Castle",
+    "European Table Tennis Championships Ljubljana 2026",
     "Gala Hala",
-    "Klub K4",
-    "Cirkus Klub"
+    "Klub K4"
   ],
   "sourcesFailed": [],
   "items": [
@@ -106,6 +109,25 @@
       "description": "Europe’s leading individual table-tennis championships run at Stožice from 12 to 18 October. The official ticket listing shows the opening day from 08:30; check the championship programme before travelling."
     },
     {
+      "id": "cosmos-kosovel-through-2027-05-09",
+      "title": "COSMOS KOSOVEL",
+      "url": "https://cd-cc.si/en",
+      "source": "Cankarjev dom",
+      "type": "Exhibition · literature",
+      "place": "Cankarjev dom · Ljubljana",
+      "startAt": "2026-10-13T10:00:00+02:00",
+      "endAt": "2027-05-09T20:00:00+02:00",
+      "price": "€8",
+      "languages": [],
+      "touristFriendly": true,
+      "familyFriendly": true,
+      "accessibility": null,
+      "ticketUrl": "https://vstopnice.cd-cc.si/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-13T06:56:00+02:00",
+      "description": "The exhibition marking the centenary of Srečko Kosovel’s death is open at Cankarjev dom; admission is €8. Check the venue for daily gallery hours."
+    },
+    {
       "id": "from-duet-to-ensemble-2026-10-13",
       "title": "From Duet to Ensemble",
       "url": "https://www.cd-cc.si/en",
@@ -121,7 +143,7 @@
       "accessibility": null,
       "ticketUrl": "https://vstopnice.cd-cc.si/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
+      "lastCheckedAt": "2026-10-13T06:56:00+02:00",
       "description": "From Duet to Ensemble is confirmed at Cankarjev dom · Ljubljana. Check the official source for any late programme or ticket changes."
     },
     {
@@ -140,7 +162,7 @@
       "accessibility": null,
       "ticketUrl": "https://vstopnice.cd-cc.si/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
+      "lastCheckedAt": "2026-10-13T06:56:00+02:00",
       "description": "Amirtha Kidambi's Elder Ones is confirmed at Cankarjev dom · Ljubljana. Check the official source for any late programme or ticket changes."
     },
     {
@@ -151,7 +173,7 @@
       "accessibility": null,
       "ticketUrl": "https://cd-cc.si/en",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
+      "lastCheckedAt": "2026-10-13T06:56:00+02:00",
       "id": "borderless-body-2026-10-13",
       "title": "MN Dance Company & Silence: Borderless Body",
       "url": "https://cd-cc.si/en",
@@ -178,7 +200,7 @@
       "accessibility": null,
       "ticketUrl": "https://vstopnice.cd-cc.si/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
+      "lastCheckedAt": "2026-10-13T06:56:00+02:00",
       "description": "Dino Pešut: Air Raid is confirmed at Cankarjev dom · Ljubljana. Check the official source for any late programme or ticket changes."
     },
     {
@@ -198,9 +220,9 @@
       "familyFriendly": true,
       "accessibility": null,
       "ticketUrl": "https://ljubljanskigrad.si/sl/dogodki/lisicka-sestricka",
-      "status": "sold_out",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
-      "description": "Lisička sestrička is scheduled at Hribar Hall · Ljubljana Castle; the official venue currently marks this performance as sold out."
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-13T06:56:00+02:00",
+      "description": "Lisička sestrička runs from 17:30 to 18:10 in Hribar Hall. The official page currently offers a ticket-purchase link and no longer marks the performance as sold out."
     },
     {
       "id": "mystical-worlds-2026-10-14",
@@ -218,7 +240,7 @@
       "accessibility": null,
       "ticketUrl": "https://vstopnice.cd-cc.si/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
+      "lastCheckedAt": "2026-10-13T06:56:00+02:00",
       "description": "An Evening Among Mystical Worlds is confirmed at Cankarjev dom · Ljubljana. Check the official source for any late programme or ticket changes."
     },
     {
@@ -237,7 +259,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.kinosiska.si/dogodek/pussy-riot-riot-days/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
+      "lastCheckedAt": "2026-10-13T06:56:00+02:00",
       "description": "Pussy Riot: Riot Days is confirmed at Katedrala Hall · Kino Šiška. Check the official source for any late programme or ticket changes."
     },
     {
@@ -256,7 +278,7 @@
       "accessibility": null,
       "ticketUrl": "https://vstopnice.cd-cc.si/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
+      "lastCheckedAt": "2026-10-13T06:56:00+02:00",
       "description": "The Ministry for the Future: Kim Stanley Robinson and Matjaž Gruden is confirmed at Cankarjev dom · Ljubljana. Check the official source for any late programme or ticket changes."
     },
     {
@@ -267,7 +289,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.ljubljanskigrad.si/en/castle-events/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
+      "lastCheckedAt": "2026-10-13T06:56:00+02:00",
       "id": "stretch-3789-from-2026-10-15",
       "title": "Stretch 3789",
       "url": "https://www.ljubljanskigrad.si/en/castle-events/",
@@ -275,8 +297,8 @@
       "type": "Exhibition · spatial installation",
       "place": "S Gallery · Ljubljana Castle",
       "startAt": "2026-10-15T09:00:00+02:00",
-      "endAt": "2026-10-23T18:00:00+02:00",
-      "description": "Stretch 3789 is confirmed at S Gallery · Ljubljana Castle. Check the official source for any late programme or ticket changes."
+      "endAt": "2027-01-31T18:00:00+01:00",
+      "description": "The spatial installation Stretch 3789 opens on 15 October 2026 and runs daily from 09:00 to 18:00 through 31 January 2027 in the S Gallery."
     },
     {
       "price": null,
@@ -296,6 +318,25 @@
       "startAt": "2026-10-15T19:30:00+02:00",
       "ticketUrl": "https://vstopnice.cd-cc.si/",
       "description": "The SMS 2: New Generation concert begins at 19:30. Ticket availability and hall details should be reconfirmed through Cankarjev dom."
+    },
+    {
+      "id": "whos-writing-out-there-2026-10-15",
+      "title": "Who's Writing Out There: Natalija Milovanović and Tanja Božić",
+      "url": "https://www.cd-cc.si/en",
+      "source": "Cankarjev dom",
+      "type": "Literature and humanities",
+      "place": "Cankarjev dom · Ljubljana",
+      "startAt": "2026-10-15T19:30:00+02:00",
+      "endAt": null,
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": false,
+      "accessibility": null,
+      "ticketUrl": "https://vstopnice.cd-cc.si/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-13T06:56:00+02:00",
+      "description": "The literary event with Natalija Milovanović and Tanja Božić begins at 19:30. Check Cankarjev dom for language details and current ticket availability."
     },
     {
       "price": null,
@@ -393,6 +434,25 @@
       "description": "Sentido Project is confirmed at Rock Hall · Ljubljana Castle. Check the official source for any late programme or ticket changes."
     },
     {
+      "id": "jan-rozman-wetware-2026-10-16",
+      "title": "Jan Rozman: Wetware",
+      "url": "https://www.cd-cc.si/en",
+      "source": "Cankarjev dom",
+      "type": "Theatre · dance",
+      "place": "Cankarjev dom · Ljubljana",
+      "startAt": "2026-10-16T20:00:00+02:00",
+      "endAt": null,
+      "price": null,
+      "languages": [],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": null,
+      "ticketUrl": "https://vstopnice.cd-cc.si/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-13T06:56:00+02:00",
+      "description": "The second confirmed performance of Jan Rozman’s Wetware begins at 20:00. Check the official page for language and accessibility details."
+    },
+    {
       "title": "KARABRUKE @ Gala hala",
       "url": "https://www.galahala.com/",
       "source": "Gala Hala",
@@ -486,6 +546,25 @@
       "startAt": "2026-10-17T19:00:00+02:00",
       "ticketUrl": "https://www.kinosiska.si/dogodek/",
       "description": "A concert marking 25 years of Društvo Ključ starts at 19:00 with viaEntropia, Čedahuči and Yoko Nono. The official listing does not display a ticket price in its overview."
+    },
+    {
+      "id": "marc-coppey-andrew-von-oeyen-2026-10-17",
+      "title": "Marc Coppey, cello & Andrew von Oeyen, piano",
+      "url": "https://www.cd-cc.si/en",
+      "source": "Cankarjev dom",
+      "type": "Concert · classical music",
+      "place": "Cankarjev dom · Ljubljana",
+      "startAt": "2026-10-17T19:30:00+02:00",
+      "endAt": null,
+      "price": null,
+      "languages": [],
+      "touristFriendly": true,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://vstopnice.cd-cc.si/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-13T06:56:00+02:00",
+      "description": "Cellist Marc Coppey and pianist Andrew von Oeyen perform at 19:30. Use the official ticket source for hall and price details."
     },
     {
       "price": null,
@@ -916,7 +995,15 @@
       "startAt": "2026-10-23T23:00:00+02:00",
       "endAt": "",
       "id": "event-53-forestdelic-label-night-klub-k4",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00"
+      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.klub-k4.si/",
+      "status": "confirmed",
+      "description": "FORESTDELIC / LABEL NIGHT / KLUB K4 is confirmed at Klub K4 · Ljubljana. Check the official source for late programme or ticket changes."
     },
     {
       "price": null,
@@ -965,7 +1052,15 @@
       "startAt": "2026-10-24T22:00:00+02:00",
       "endAt": "",
       "id": "event-52-dnbkonferenca-17-obletnica-gala-hala",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00"
+      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.galahala.com/",
+      "status": "confirmed",
+      "description": "DNBKONFERENCA: 17. OBLETNICA @ Gala hala is confirmed at Gala Hala · AKC Metelkova. Check the official source for late programme or ticket changes."
     },
     {
       "title": "Grand Prix invites Upper90",
@@ -976,7 +1071,15 @@
       "startAt": "2026-10-24T23:00:00+02:00",
       "endAt": "",
       "id": "event-50-grand-prix-invites-upper90",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00"
+      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.klub-k4.si/",
+      "status": "confirmed",
+      "description": "Grand Prix invites Upper90 is confirmed at Klub K4 · Ljubljana. Check the official source for late programme or ticket changes."
     },
     {
       "id": "sunday-flea-market-2026-10-25",
