@@ -31,7 +31,7 @@ class GmailCommandLoopV4:
         self.schedules = ReadonlySchedulesV8(store, self.bus, gmail)
         # One slow remote job must not block incoming STATUS or CANCEL mails.
         self._active: dict[str, asyncio.Task] = {}
-        self.max_inflight = max(2, min(4, int(os.getenv("GMAIL_COMMAND_MAX_INFLIGHT", "3"))))
+        self.max_inflight = max(1, min(3, int(os.getenv("GMAIL_COMMAND_MAX_INFLIGHT", "2"))))
     def recover_interrupted(self) -> None:
         # Called only when the real Manager service starts, never during
         # imports or diagnostics against an already-running Manager.
