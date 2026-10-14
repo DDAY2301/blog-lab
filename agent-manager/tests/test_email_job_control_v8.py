@@ -11,6 +11,7 @@ def _make_loop(tmp_path, monkeypatch):
     monkeypatch.setenv("GMAIL_COMMAND_ALLOWED_SENDERS", "owner@gmail.com")
     monkeypatch.setenv("GMAIL_COMMANDS_ENABLED", "1")
     monkeypatch.setenv("GMAIL_REPORTING_ENABLED", "1")
+    monkeypatch.setenv("AGENT_MANAGER_EMAIL_V8_ENABLED", "1")
     store = StoreV3(tmp_path / "manager.db")
     gmail = GmailV4()
     loop = GmailCommandLoopV4(store, gmail)
