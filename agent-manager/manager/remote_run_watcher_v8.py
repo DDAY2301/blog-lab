@@ -216,11 +216,11 @@ class RemoteRunWatcherV8:
             if not existing:
                 artifact = receipt.get("artifact") or {}
                 message = (
-                    f"Project Visibility remote preview: {status.upper()}\\n"
-                    f"Job: {row['job_id']}\\n"
-                    f"GitHub run: {receipt.get('run_url', '')}\\n"
-                    f"Artifact: {artifact.get('name', 'unavailable')}\\n"
-                    f"Error: {error or 'none'}\\n"
+                    f"Project Visibility remote preview: {status.upper()}\n"
+                    f"Job: {row['job_id']}\n"
+                    f"GitHub run: {receipt.get('run_url', '')}\n"
+                    f"Artifact: {artifact.get('name', 'unavailable')}\n"
+                    f"Error: {error or 'none'}\n"
                     "A verified preview is not a production deployment."
                 )
                 self.store.execute(
