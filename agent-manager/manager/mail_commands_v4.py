@@ -313,7 +313,13 @@ class GmailCommandLoopV4:
         if subject_tail:
             # A short read-only subject like [AGENT] STATUS takes precedence
             # over phone signatures and boilerplate in the email body.
-            if self.bus._simple_operator_target(subject_tail):
+            job_subject = self.bus.controls.parse(subject_tail)
+            if job_subject:
+                if job_subject[0] in {"CONTINUE", "REVISE"} and not job_subject[2]:
+                    command = f"{subject_tail} : {command}".strip()
+                else:
+                    command = subject_tail
+            elif self.bus._simple_operator_target(subject_tail):
                 command = subject_tail
             else:
                 command = f"{subject_tail}\n\n{command}".strip()
