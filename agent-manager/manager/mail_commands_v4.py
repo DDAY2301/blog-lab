@@ -158,6 +158,66 @@ class GmailCommandLoopV4:
         )
         return "\n".join(lines)
 
+    async def _handle_job_control(
+        self, message_id: str, sender: str, target: str,
+        explicit_target: str, original: str, parsed: tuple[str, str, str],
+    ) -> dict[str, Any]:
+        action, job_id, text = parsed
+        result: dict[str, Any] | None = None
+        status, error = "completed", ""
+        try:
+            controls = self.bus.controls
+            if action == "STATUS":
+                result = controls.inspect(job_id, sender)
+            elif action == "CANCEL":
+                result = controls.cancel(job_id, sender)
+            elif action in {"REVIEW", "REJECT", "APPROVE"}:
+                result = controls.review(job_id, sender, action)
+            elif action in {"RETRY", "CONTINUE", "REVISE"}:
+                previous = controls.previous(job_id, sender)
+                if action == "RETRY":
+                    if previous["status"] not in {
+                        "failed", "partial", "interrupted", "cancelled"
+                    } or not self.bus._simple_operator_target(previous["request_text"]):
+                        raise ValueError("Retry is limited to failed read-only jobs.")
+                    next_command = previous["request_text"]
+                else:
+                    next_command = text.strip()
+                    if not next_command:
+                        raise ValueError("Include new instructions after the job ID.")
+                result = await self.bus.execute(
+                    next_command, source="gmail", source_id=message_id,
+                    explicit_target=explicit_target,
+                )
+                if result.get("job_id"):
+                    self.store.execute(
+                        "UPDATE job_control_v8 SET parent_id=?,updated_at=? "
+                        "WHERE job_id=?",
+                        (job_id, utcnow(), result["job_id"]),
+                    )
+            else:
+                raise ValueError("Unsupported job control command.")
+        except Exception as exc:
+            status, error = "failed", f"{type(exc).__name__}: {exc}"
+        reply_id = None
+        try:
+            reply_id = await asyncio.to_thread(
+                self.gmail.send,
+                f"[AGENT RESULT] JOB {action} - {status.upper()}",
+                self._reply_body(target, original, status, result, error),
+                sender,
+            )
+        except Exception as exc:
+            if not error:
+                status, error = "reply_failed", str(exc)
+        self._finish(message_id, status, result=result, error=error,
+                     reply_message_id=reply_id)
+        try:
+            await asyncio.to_thread(self.gmail.mark_read, message_id)
+        except Exception:
+            pass
+        return {"id": message_id, "status": status, "action": action, "result": result}
+
     async def process_one(self, message_id: str) -> dict[str, Any]:
         existing = self._seen(message_id)
         if existing:
