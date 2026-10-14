@@ -119,6 +119,8 @@ print("SQLite consistent backup saved")
     }
 }
 
+[Environment]::SetEnvironmentVariable("AGENT_MANAGER_EMAIL_V8_ENABLED", "1", "User")
+[Environment]::SetEnvironmentVariable("AGENT_MANAGER_EMAIL_V8_ENABLED", "1", "Process")
 Write-Host "Restarting Agent Manager only; PV/BlogLab production workers remain remote." -ForegroundColor Cyan
 & "$PSScriptRoot\restart-agent-manager.ps1"
 $health = Assert-ManagerState
