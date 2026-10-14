@@ -169,3 +169,34 @@ class JobControlV8:
             "executed": False,
             "message": "APPROVE by email cannot deploy. Independent authenticated review required.",
         }
+
+    def console_approve(self, rid: str) -> dict[str, Any]:
+        """Authenticated Fleet Remote review: approve record, never execute a step."""
+        from datetime import datetime, timedelta, timezone
+        rows = self.store.query(
+            "SELECT * FROM job_reviews_v8 WHERE review_id=?", (rid,)
+        )
+        if not rows:
+            raise ValueError("Review request was not found.")
+        row = rows[0]
+        if row["status"] != "pending":
+            raise ValueError("Review is not pending.")
+        issued = datetime.fromisoformat(row["updated_at"])
+        if datetime.now(timezone.utc) - issued > timedelta(hours=24):
+            raise ValueError("Review expired; request a fresh review.")
+        with self.store.conn() as conn:
+            updated = conn.execute(
+                "UPDATE job_reviews_v8 SET status='approved',updated_at=? "
+                "WHERE review_id=? AND status='pending'", (utcnow(), rid),
+            )
+            if updated.rowcount != 1:
+                raise ValueError("Review state changed concurrently.")
+        self.store.action(
+            "fleet-console-v8", "approve_review", row["job_id"], "approved",
+            {"review_id": rid, "target": row["target"], "executed": False},
+        )
+        return {
+            "review": rid, "status": "approved", "executed": False,
+            "note": "Review approved by authenticated console, but no production "
+                    "action is executed until a separate delivery gate exists.",
+        }
