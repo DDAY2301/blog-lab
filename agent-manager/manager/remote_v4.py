@@ -409,9 +409,63 @@ async def _pv_github_workflow_dispatch(workflow: str) -> dict[str, Any]:
     }
 
 
+async def _pv_remote_preview_dispatch(command: str) -> dict[str, Any]:
+    """Off-host preview build only; requires explicit JSON brief, never deploys."""
+    import uuid
+    raw = command.strip().split(None, 1)
+    if len(raw) != 2 or raw[0].upper() != "PREVIEW_JSON":
+        raise ValueError("Use PREVIEW_JSON followed by a bounded JSON brief.")
+    body = raw[1].strip()
+    if len(body.encode("utf-8")) > 12000:
+        raise ValueError("Preview brief exceeds 12 KB.")
+    brief = json.loads(body)
+    if not isinstance(brief, dict):
+        raise ValueError("Preview brief must be a JSON object.")
+    if not isinstance(brief.get("pages"), list) or not 1 <= len(brief["pages"]) <= 8:
+        raise ValueError("Preview requires 1 to 8 pages.")
+    if not str(brief.get("name") or "").strip():
+        raise ValueError("Preview requires a project name.")
+    # Only non-secret content should be sent to GitHub Actions inputs.
+    request_id = uuid.uuid4().hex
+    token = (
+        _secret("AGENT_MANAGER_GITHUB_TOKEN") or
+        _secret("GITHUB_TOKEN") or _secret("GH_TOKEN")
+    )
+    if not token:
+        raise RuntimeError("GitHub Actions token required for remote PV previews.")
+    async with httpx.AsyncClient(timeout=20.0) as client:
+        response = await client.post(
+            "https://api.github.com/repos/DDAY2301/PROJEKT/actions/"
+            "workflows/pv-remote-preview-v8.yml/dispatches",
+            headers={
+                "Authorization": f"Bearer {token}",
+                "Accept": "application/vnd.github+json",
+                "X-GitHub-Api-Version": "2022-11-28",
+            },
+            json={
+                "ref": "main",
+                "inputs": {"brief_json": body, "request_id": request_id},
+            },
+        )
+    if response.status_code != 204:
+        raise RuntimeError(
+            f"Remote PV preview dispatch failed HTTP {response.status_code}."
+        )
+    return {
+        "ok": True, "accepted": True, "completed": False,
+        "operation": "remote_preview", "request_id": request_id,
+        "workflow": "pv-remote-preview-v8.yml", "repo": "DDAY2301/PROJEKT",
+        "runs_page": "https://github.com/DDAY2301/PROJEKT/actions/workflows/pv-remote-preview-v8.yml",
+        "notice": "Preview queued on GitHub-hosted runner; no production deployment performed. "
+                  "Do not include confidential customer information in workflow inputs.",
+    }
+
+
 async def _project_command(command: str) -> dict[str, Any]:
     low = _fold(command)
     if os.getenv("AGENT_MANAGER_SUPERVISOR_ONLY", "0") == "1":
+        if command.strip().upper().startswith("PREVIEW_JSON "):
+            return await _pv_remote_preview_dispatch(command)
         if low in {"status", "health", "stanje", "preveri status", "github status"}:
             managed = await _http("GET", f"{MANAGER_BASE}/managed-agents", timeout=10)
             row = next(
