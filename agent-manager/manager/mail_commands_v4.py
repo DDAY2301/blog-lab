@@ -53,6 +53,7 @@ class GmailCommandLoopV4:
             "poll_seconds": self.interval,
             "inflight": len(self._active),
             "max_inflight": self.max_inflight,
+            "role_configuration_valid": not bool(self.roles.config_error),
             "allowed_senders": sorted(self.allowed_senders),
             "require_authenticated_sender": os.getenv("GMAIL_COMMAND_REQUIRE_AUTH", "1") != "0",
             "last": self.last,
@@ -333,6 +334,8 @@ class GmailCommandLoopV4:
             return {"id": message_id, "status": "ignored"}
 
         sender = details["sender"]
+        if self.roles.config_error:
+            return self._deny(details, "role_configuration_invalid")
         auth_required = os.getenv("GMAIL_COMMAND_REQUIRE_AUTH", "1") != "0"
         if sender not in self.allowed_senders or (
             auth_required and not details.get("sender_authenticated", False)
