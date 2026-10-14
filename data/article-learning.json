@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-14T18:55:21+02:00",
-  "loop_count": 5463,
+  "updated_at": "2026-10-14T19:09:28+02:00",
+  "loop_count": 5464,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-14T18:54:58+02:00",
+      "last_learning_run": "2026-10-14T19:09:04+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 123183,
-          "last_seen": "2026-10-14T18:54:58+02:00",
-          "last_title": "Slovenska blamaža na igrah! Zakaj sploh tekmujemo, če je šport pri nas umrl - Ekipa",
+          "seen": 123194,
+          "last_seen": "2026-10-14T19:09:04+02:00",
+          "last_title": "S tribune: Športni trenutki, zaradi katerih se mi še danes naježijo dlake - Svet24.si",
           "last_provider": "google-news-si",
-          "published": 315682,
+          "published": 315749,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-14T18:55:10+02:00",
+      "last_learning_run": "2026-10-14T19:09:17+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -272,11 +272,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 136384,
-          "last_seen": "2026-10-14T18:55:10+02:00",
+          "seen": 136401,
+          "last_seen": "2026-10-14T19:09:17+02:00",
           "last_title": "Protestnik, ki je postal predsednik: Stevanović nekoč glas anticepilcev, danes pa enfant terrible, ki je vse postavil na glavo - Metropolitan.si",
           "last_provider": "google-news-si",
-          "published": 352125,
+          "published": 352201,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -381,14 +381,14 @@
       "current_source_count": 17,
       "example_titles": {
         "news.google.com": [
-          "V Sloveniji odprta volišča: Volivci danes odločajo o štirih pomembnih vprašanjih - Mariborinfo.com",
           "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
-          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer"
+          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer",
+          "Pirc Musar: Ne bom tiho, ko zunanja politika ne bo skladna z ustavnimi vrednotami države - Siol.net"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-14T18:55:21+02:00",
+      "last_learning_run": "2026-10-14T19:09:28+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -468,11 +468,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 148382,
-          "last_seen": "2026-10-14T18:55:21+02:00",
-          "last_title": "Naša dežela bo danes razdeljena na srečneže na soncu in nas ostale v loncu - Dnevnik",
+          "seen": 148405,
+          "last_seen": "2026-10-14T19:09:28+02:00",
+          "last_title": "Vreme se bo danes hitro obrnilo: nevihte bodo zajele večji del Slovenije, na Primorskem tudi burja - Dnevne Novice",
           "last_provider": "google-news-si",
-          "published": 260629,
+          "published": 260659,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "reddit.com": {
@@ -581,7 +581,7 @@
         "news.google.com": [
           "(AKTUALNO) Še danes v prodaji 36. št. revije Demokracija: 30 let Demokracije, ki udejanja pravico vedeti več! Načrt za demografsko obnovo sl",
           "140 let Kmetijske šole Grm, najstarejše v Sloveniji - Novice - Aktualno - Mestna občina Novo mesto",
-          "Pred Stevanovićevim obiskom v Srbiji znova aktualno vprašanje statusa srbske skupnosti v Sloveniji - Siol.net"
+          "Ko so bile ZDA stare toliko kot danes Slovenija, so bile na robu razpada - Zanima.me"
         ]
       }
     }
@@ -662,14 +662,6 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20261014-173839.json",
-      "category": "dediscina",
-      "errors": [
-        "ze_uporabljen_vir"
-      ],
-      "title": "Slovenia Maps & Facts"
-    },
-    {
       "file": "fallback-failed-20261014-173923.json",
       "category": "dediscina",
       "errors": [
@@ -742,6 +734,14 @@
       "title": "Grad Grad na Goričkem: Največji baročni grad v Sloveniji s skrivnostno zgodovino"
     },
     {
+      "file": "fallback-failed-20261014-190831.json",
+      "category": "dediscina",
+      "errors": [
+        "ze_uporabljen_vir"
+      ],
+      "title": "Grad Grad na Goričkem: Največji baročni grad v Sloveniji s skrivnostno zgodovino"
+    },
+    {
       "file": "agent-state",
       "category": "dediscina",
       "errors": [
@@ -758,9 +758,9 @@
     }
   ],
   "failure_summary": {
-    "ze_uporabljen_vir": 19,
-    "clanek_brez_slovenskega_konteksta": 2,
-    "viri_ne_podpirajo_slovenske_rubrike": 2,
+    "ze_uporabljen_vir": 20,
+    "clanek_brez_slovenskega_konteksta": 1,
+    "viri_ne_podpirajo_slovenske_rubrike": 1,
     "manjka_fotografija,ponavljanje": 1
   }
 }
