@@ -1,5 +1,5 @@
 param(
-    [ValidateSet("Preflight","Activate")]
+    [ValidateSet("Preflight","Activate","Upgrade")]
     [string]$Mode = "Preflight"
 )
 
@@ -60,6 +60,33 @@ function Test-Preflight {
         version_under_test = "V8 email command engine (Manager V4 base)"
         code_verified = $true
     } | Format-List
+}
+
+if ($Mode -eq "Upgrade") {
+    $branch = (& git -C $repo branch --show-current).Trim()
+    if ($branch -ne $needBranch) { throw "Expected agent-manager-v1, got $branch" }
+    $dirty = & git -C $repo status --porcelain
+    if ($LASTEXITCODE -ne 0 -or $dirty) {
+        throw "Uncommitted work detected. Not pulling or restarting."
+    }
+    $priorSha = (& git -C $repo rev-parse HEAD).Trim()
+    $marker = Join-Path $agent "data\v8-pre-upgrade-commit.txt"
+    Write-Host "Fetching reviewed Manager code..." -ForegroundColor Cyan
+    & git -C $repo pull --ff-only origin $needBranch
+    if ($LASTEXITCODE -ne 0) {
+        throw "Fast-forward Git update failed; Manager was not restarted."
+    }
+    Set-Content -Path $marker -Value $priorSha -Encoding ASCII
+    Write-Host "Saved pre-upgrade revision SHA for a deliberate rollback." -ForegroundColor Cyan
+}
+
+if ($Mode -in @("Upgrade","Activate")) {
+    # Update missing Python requirements before changing a running service.
+    # No local Project Visibility production worker is launched.
+    & $py -m pip install -r (Join-Path $agent "requirements.txt")
+    if ($LASTEXITCODE -ne 0) {
+        throw "Installing existing Manager dependencies failed; no restart."
+    }
 }
 
 Test-Preflight
