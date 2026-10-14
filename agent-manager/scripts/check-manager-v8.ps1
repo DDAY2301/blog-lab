@@ -96,7 +96,14 @@ if ($Mode -eq "Preflight") {
 }
 
 # Backup live SQLite using sqlite3 backup API; no unsafe Copy-Item on a live DB.
-$database = Join-Path $agent "data\agent_manager.db"
+$dbSetting = [Environment]::GetEnvironmentVariable("AGENT_MANAGER_DB", "User")
+if ([string]::IsNullOrWhiteSpace($dbSetting)) {
+    $database = Join-Path $agent "data\agent_manager.db"
+} elseif ([System.IO.Path]::IsPathRooted($dbSetting)) {
+    $database = $dbSetting
+} else {
+    $database = Join-Path $agent $dbSetting
+}
 if (Test-Path -LiteralPath $database) {
     $timestamp = Get-Date -Format "yyyyMMdd-HHmmss"
     $backup = Join-Path $agent "data\agent_manager-before-v8-$timestamp.sqlite"
@@ -119,28 +126,45 @@ print("SQLite consistent backup saved")
     }
 }
 
+$originalPilot = [Environment]::GetEnvironmentVariable("AGENT_MANAGER_EMAIL_V8_ENABLED", "User")
 [Environment]::SetEnvironmentVariable("AGENT_MANAGER_EMAIL_V8_ENABLED", "1", "User")
 [Environment]::SetEnvironmentVariable("AGENT_MANAGER_EMAIL_V8_ENABLED", "1", "Process")
-Write-Host "Restarting Agent Manager only; PV/BlogLab production workers remain remote." -ForegroundColor Cyan
-& "$PSScriptRoot\restart-agent-manager.ps1"
-$health = Assert-ManagerState
-if (-not $health.pv_remote_verifier) {
-    throw "New V8 watcher missing after restart. Inspect Manager logs."
+try {
+    Write-Host "Restarting Agent Manager only; PV/BlogLab production workers remain remote." -ForegroundColor Cyan
+    & "$PSScriptRoot\restart-agent-manager.ps1"
+    $health = Assert-ManagerState
+    if (-not $health.email_v8_enabled -or -not $health.pv_remote_verifier) {
+        throw "V8 pilot mode not active after restart."
+    }
+    & "$PSScriptRoot\restart-remote-v4.ps1"
+    $remote = Invoke-RestMethod "http://127.0.0.1:8788/health" -TimeoutSec 5
+    if (-not $remote.ok) {
+        throw "Fleet Remote failed health check after restart."
+    }
+    $state = Invoke-RestMethod "http://127.0.0.1:8787/email-command-status" -TimeoutSec 5
+    Write-Host "V8 pilot active; Gmail end-to-end remains to be confirmed." -ForegroundColor Green
+    [PSCustomObject]@{
+        manager_up = $health.ok
+        supervisor_only = $health.supervisor_only
+        remote_up = $remote.ok
+        pv_watcher = $health.pv_remote_verifier.status
+        gmail_status = $health.gmail
+        commands_enabled = $state.command_bus.enabled
+        v8_enabled = $health.email_v8_enabled
+    } | Format-List
+} catch {
+    Write-Warning "V8 activation failed. Restoring previous email control mode."
+    [Environment]::SetEnvironmentVariable(
+        "AGENT_MANAGER_EMAIL_V8_ENABLED", $originalPilot, "User"
+    )
+    [Environment]::SetEnvironmentVariable(
+        "AGENT_MANAGER_EMAIL_V8_ENABLED", $originalPilot, "Process"
+    )
+    try {
+        & "$PSScriptRoot\restart-agent-manager.ps1"
+        Write-Host "Previous mail mode requested after failed V8 activation." -ForegroundColor Yellow
+    } catch {
+        Write-Warning "Automatic fallback restart failed. Verify port 8787 using the existing stack script."
+    }
+    throw
 }
-& "$PSScriptRoot\restart-remote-v4.ps1"
-$remote = Invoke-RestMethod "http://127.0.0.1:8788/health" -TimeoutSec 5
-if (-not $remote.ok) {
-    throw "Fleet Remote failed health check after restart."
-}
-
-$state = Invoke-RestMethod "http://127.0.0.1:8787/email-command-status" -TimeoutSec 5
-Write-Host "V8 local activation verified. Check Gmail OAuth separately." -ForegroundColor Green
-[PSCustomObject]@{
-    manager_up = $health.ok
-    supervisor_only = $health.supervisor_only
-    remote_up = $remote.ok
-    pv_watcher = $health.pv_remote_verifier.status
-    gmail_status = $health.gmail
-    commands_enabled = $state.command_bus.enabled
-    no_local_pv_started = $true
-} | Format-List
