@@ -11,6 +11,7 @@ READ_ONLY = {
     "ram", "pomnilnik", "memory", "modeli", "models",
     "providers", "email status", "gmail status",
     "opravila", "jobs", "queue",
+    "github status", "rollback plan bloglab", "rollback plan pv",
 }
 PV_DIAGNOSTICS = {
     "test api", "ci", "preveri ci", "frontend benchmark", "lighthouse",
