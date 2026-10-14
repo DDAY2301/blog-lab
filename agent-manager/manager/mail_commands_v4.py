@@ -470,6 +470,18 @@ class GmailCommandLoopV4:
             )
             return {"id": message_id, "status": "failed", "target": target_label, "error": error}
 
+    def _background_done(self, key: str, completed: asyncio.Task) -> None:
+        self._active.pop(key, None)
+        if completed.cancelled():
+            return
+        try:
+            completed.result()
+        except Exception as exc:
+            self.store.event(
+                "gmail_background_error", "gmail-command-v4", "error",
+                {"message_id": key, "error": str(exc)[:1000]},
+            )
+
     async def cycle(self) -> dict[str, Any]:
         if not self.enabled:
             self.last = {"ok": True, "enabled": False}
@@ -495,7 +507,7 @@ class GmailCommandLoopV4:
                 break
             task = asyncio.create_task(self.process_one(mid))
             self._active[mid] = task
-            task.add_done_callback(lambda done, key=mid: self._active.pop(key, None))
+            task.add_done_callback(lambda done, key=mid: self._background_done(key, done))
             results.append({"id": mid, "status": "accepted"})
         self.last = {
             "ok": not any(x.get("status") == "failed" for x in results),
