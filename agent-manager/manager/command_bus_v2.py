@@ -13,6 +13,7 @@ from .ai_router_v4 import AIRouterV4
 from .artifacts_v2 import ArtifactStoreV2
 from .capabilities_v2 import CapabilityRegistryV2
 from .db_v3 import StoreV3, utcnow
+from .job_control_v8 import JobControlV8
 from .manager_prompt_v5 import MANAGER_PROMPT_VERSION, planner_prompt, prompt_digest
 from .remote_v4 import _dispatch
 
@@ -29,6 +30,7 @@ class UniversalCommandBusV2:
         self.registry = CapabilityRegistryV2(store)
         self.artifacts = ArtifactStoreV2(store)
         self.ai = AIRouterV4()
+        self.controls = JobControlV8(store)
         self._execution_gate = asyncio.Semaphore(COMMAND_CONCURRENCY)
 
     @staticmethod
@@ -209,6 +211,13 @@ class UniversalCommandBusV2:
                 now,
             ),
         )
+        if source == "gmail":
+            rows = self.store.query(
+                "SELECT sender,thread_id FROM mail_commands WHERE message_id=?",
+                (source_id,),
+            )
+            if rows:
+                self.controls.bind(job_id, rows[0]["sender"], rows[0]["thread_id"] or "")
         artifact_ids = [str(x.get("id")) for x in artifacts if x.get("id")]
         for step in plan["steps"]:
             self.store.execute(
@@ -368,6 +377,29 @@ class UniversalCommandBusV2:
         upload_cache: dict[str, dict[str, Any]],
     ) -> dict[str, Any]:
         step_id = step["id"]
+        if self.controls.cancelled(job_id):
+            self.store.execute(
+                "UPDATE command_steps SET status='cancelled',finished_at=? "
+                "WHERE job_id=? AND step_id=?",
+                (utcnow(), job_id, step_id),
+            )
+            return {"id": step_id, "target": step["target"], "status": "cancelled",
+                    "note": "Not dispatched because cancellation was requested."}
+        owners = self.store.query(
+            "SELECT sender FROM job_control_v8 WHERE job_id=?", (job_id,)
+        )
+        if owners and self.controls.requires_review(step["target"], step["command"]):
+            review_id = self.controls.request_review(
+                job_id, step_id, step["target"], step["command"], owners[0]["sender"]
+            )
+            self.store.execute(
+                "UPDATE command_steps SET status='waiting_approval',finished_at=? "
+                "WHERE job_id=? AND step_id=?",
+                (utcnow(), job_id, step_id),
+            )
+            return {"id": step_id, "target": step["target"],
+                    "status": "waiting_approval", "review_id": review_id,
+                    "note": "Not executed. Email approval alone is insufficient."}
         started = utcnow()
         self.store.execute(
             "UPDATE command_steps SET status='running',started_at=? WHERE job_id=? AND step_id=?",
@@ -375,6 +407,14 @@ class UniversalCommandBusV2:
         )
         try:
             async with self._execution_gate:
+                if self.controls.cancelled(job_id):
+                    self.store.execute(
+                        "UPDATE command_steps SET status='cancelled',finished_at=? "
+                        "WHERE job_id=? AND step_id=?",
+                        (utcnow(), job_id, step_id),
+                    )
+                    return {"id": step_id, "target": step["target"],
+                            "status": "cancelled", "note": "Stopped before dispatch."}
                 result = await self._execute_target(
                     step["target"],
                     step["command"],
@@ -495,7 +535,14 @@ class UniversalCommandBusV2:
 
         ordered = [results.get(step["id"], {"id": step["id"], "status": "unknown"}) for step in plan["steps"]]
         failed = any(row.get("status") in {"failed", "skipped"} for row in ordered)
-        status = "partial" if failed and any(row.get("status") == "completed" for row in ordered) else "failed" if failed else "completed"
+        held = any(row.get("status") == "waiting_approval" for row in ordered)
+        cancelled = any(row.get("status") == "cancelled" for row in ordered)
+        status = (
+            "waiting_approval" if held else
+            "cancelled" if cancelled else
+            "partial" if failed and any(row.get("status") == "completed" for row in ordered) else
+            "failed" if failed else "completed"
+        )
         response = {
             "ok": status == "completed",
             "job_id": job_id,
