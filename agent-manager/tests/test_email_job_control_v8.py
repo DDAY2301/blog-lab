@@ -90,3 +90,32 @@ def test_approval_email_never_executes_pending_mutation(tmp_path, monkeypatch):
     assert result["status"] == "completed"
     assert result["result"]["executed"] is False
     assert "Independent authenticated review" in result["result"]["message"]
+
+
+def test_gmail_poll_returns_while_a_task_waits(tmp_path, monkeypatch):
+    store, gmail, loop, responses = _make_loop(tmp_path, monkeypatch)
+    monkeypatch.setattr(gmail, "auth_state", lambda: "CONFIGURED")
+    monkeypatch.setattr(gmail, "list_messages", lambda query, limit: [{"id": "long-1"}])
+    monkeypatch.setattr(gmail, "get_message", lambda mid: _mail(
+        mid, "[AGENT MANAGER] PREVERI AGENTE", ""
+    ))
+    gate = asyncio.Event()
+    async def long_running(*args, **kwargs):
+        await gate.wait()
+        return {"status": "completed", "job_id": "stub-job"}
+    monkeypatch.setattr(loop.bus, "execute", long_running)
+
+    async def run():
+        first = await loop.cycle()
+        assert first["processed"][0]["status"] == "accepted"
+        await asyncio.sleep(0.02)
+        assert len(loop._active) == 1
+        second = await loop.cycle()
+        assert not second["processed"]
+        assert len(loop._active) == 1
+        gate.set()
+        await asyncio.gather(*loop._active.values())
+        await asyncio.sleep(0)
+        assert not loop._active
+
+    asyncio.run(run())
