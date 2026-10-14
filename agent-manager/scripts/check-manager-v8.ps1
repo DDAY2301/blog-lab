@@ -30,6 +30,10 @@ function Test-Preflight {
         throw "Repository contains uncommitted changes. Safely resolve them before activation."
     }
     $env:PYTHONPATH = $agent
+    # Smoke tests must never touch the live 24/7 Manager SQLite database.
+    $previousDb = $env:AGENT_MANAGER_DB
+    $testDb = Join-Path $env:TEMP "agent-manager-v8-preflight-$PID.sqlite"
+    $env:AGENT_MANAGER_DB = $testDb
     Push-Location $agent
     try {
         & $py -m pytest -q tests
@@ -42,6 +46,10 @@ function Test-Preflight {
         }
     } finally {
         Pop-Location
+        $env:AGENT_MANAGER_DB = $previousDb
+        Remove-Item -LiteralPath $testDb -ErrorAction SilentlyContinue
+        Remove-Item -LiteralPath "$testDb-wal" -ErrorAction SilentlyContinue
+        Remove-Item -LiteralPath "$testDb-shm" -ErrorAction SilentlyContinue
     }
     $health = Assert-ManagerState
     $token = [Environment]::GetEnvironmentVariable("AGENT_MANAGER_GITHUB_TOKEN","User")
