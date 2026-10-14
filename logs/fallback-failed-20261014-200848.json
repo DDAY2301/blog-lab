@@ -1,0 +1,39 @@
+{
+  "category": "dediscina",
+  "errors": [
+    "prekratek",
+    "ze_uporabljen_vir"
+  ],
+  "article": {
+    "title": "Obiščite sedem najlepših gradov v Sloveniji",
+    "excerpt": "Dediščina: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Obiščite sedem najlepših gradov v Sloveniji«.",
+    "seoDescription": "Dediščina: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Obiščite sedem najlepših gradov v Sloveniji«.",
+    "content": "**Dediščina, 14. 10. 2026.** Obiščite sedem najlepših gradov v Sloveniji Vandraj\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Vandraj. Objavljeno: Fri, 15 Apr 2022 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMidkFVX3lxTFA3b0V1Z1RBcjBWbGpOeWN4N3JMYUxMZU5lU0piRS1LM2ZxR21ieWI3QndQX2NwbGRjemdhaXNzdXZ4dnhPODlXN0dIYU5KMGJ2TEw5WmFHSkhpMXdZVG9tUjlDRDRvVllwaHl5QnBCRzlQcERfQmc?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Dediščina",
+    "tags": [
+      "dediščina",
+      "pregled"
+    ],
+    "heroImage": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Tustanj_Castle_Slovenia_-_plaque.JPG/1920px-Tustanj_Castle_Slovenia_-_plaque.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "alt": "Plaque over the entrance to Tuštanj Castle, Zgornji Tuštanj, Municipality of Moravče, Slovenia",
+      "caption": "Doremo · Wikimedia Commons · CC BY-SA 3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tustanj_Castle_Slovenia_-_plaque.JPG"
+    },
+    "gallery": [],
+    "video": null,
+    "sources": [
+      {
+        "label": "Vandraj — Obiščite sedem najlepših gradov v Sloveniji - Vandraj",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFA3b0V1Z1RBcjBWbGpOeWN4N3JMYUxMZU5lU0piRS1LM2ZxR21ieWI3QndQX2NwbGRjemdhaXNzdXZ4dnhPODlXN0dIYU5KMGJ2TEw5WmFHSkhpMXdZVG9tUjlDRDRvVllwaHl5QnBCRzlQcERfQmc?oc=5"
+      }
+    ],
+    "source_urls": [
+      "https://news.google.com/rss/articles/CBMidkFVX3lxTFA3b0V1Z1RBcjBWbGpOeWN4N3JMYUxMZU5lU0piRS1LM2ZxR21ieWI3QndQX2NwbGRjemdhaXNzdXZ4dnhPODlXN0dIYU5KMGJ2TEw5WmFHSkhpMXdZVG9tUjlDRDRvVllwaHl5QnBCRzlQcERfQmc?oc=5"
+    ],
+    "fallback": true,
+    "visualTemplate": "fieldnote",
+    "templateLabel": "Field Note",
+    "id": "obiscite-sedem-najlepsih-gradov-v-sloveniji-2054d731"
+  }
+}
