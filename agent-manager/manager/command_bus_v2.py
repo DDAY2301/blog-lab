@@ -125,6 +125,7 @@ class UniversalCommandBusV2:
             "modeli", "models", "providers",
             "e posta", "email status", "gmail status",
             "opravila", "jobs", "queue",
+            "github status", "rollback plan bloglab", "rollback plan pv",
             "preveri agente", "preglej agente", "check agents",
         }:
             return "manager"
