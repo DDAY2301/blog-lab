@@ -31,6 +31,7 @@ class UniversalCommandBusV2:
         self.artifacts = ArtifactStoreV2(store)
         self.ai = AIRouterV4()
         self.controls = JobControlV8(store)
+        self.v8_enabled = os.getenv("AGENT_MANAGER_EMAIL_V8_ENABLED", "0") == "1"
         self._execution_gate = asyncio.Semaphore(COMMAND_CONCURRENCY)
 
     @staticmethod
@@ -212,7 +213,7 @@ class UniversalCommandBusV2:
                 now,
             ),
         )
-        if source == "gmail":
+        if source == "gmail" and self.v8_enabled:
             rows = self.store.query(
                 "SELECT sender,thread_id FROM mail_commands WHERE message_id=?",
                 (source_id,),
@@ -378,7 +379,7 @@ class UniversalCommandBusV2:
         upload_cache: dict[str, dict[str, Any]],
     ) -> dict[str, Any]:
         step_id = step["id"]
-        if self.controls.cancelled(job_id):
+        if self.v8_enabled and self.controls.cancelled(job_id):
             self.store.execute(
                 "UPDATE command_steps SET status='cancelled',finished_at=? "
                 "WHERE job_id=? AND step_id=?",
@@ -389,7 +390,7 @@ class UniversalCommandBusV2:
         owners = self.store.query(
             "SELECT sender FROM job_control_v8 WHERE job_id=?", (job_id,)
         )
-        if owners and self.controls.requires_review(step["target"], step["command"]):
+        if self.v8_enabled and owners and self.controls.requires_review(step["target"], step["command"]):
             review_id = self.controls.request_review(
                 job_id, step_id, step["target"], step["command"], owners[0]["sender"]
             )
@@ -408,7 +409,7 @@ class UniversalCommandBusV2:
         )
         try:
             async with self._execution_gate:
-                if self.controls.cancelled(job_id):
+                if self.v8_enabled and self.controls.cancelled(job_id):
                     self.store.execute(
                         "UPDATE command_steps SET status='cancelled',finished_at=? "
                         "WHERE job_id=? AND step_id=?",
