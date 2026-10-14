@@ -243,9 +243,23 @@ class GmailCommandLoopV4:
                     next_command = text.strip()
                     if not next_command:
                         raise ValueError("Include new instructions after the job ID.")
+                prior_steps = self.store.query(
+                    "SELECT DISTINCT target FROM command_steps WHERE job_id=?",
+                    (job_id,),
+                )
+                original_targets = {r["target"] for r in prior_steps}
+                if len(original_targets) != 1 or not original_targets <= {
+                    "manager", "project_visibility", "bloglab"
+                }:
+                    raise ValueError(
+                        "Cannot safely resume an ambiguous multi-agent job. "
+                        "Start a new email with an explicit [AGENT PV] or "
+                        "[AGENT BLOGLAB] subject."
+                    )
+                original_target = next(iter(original_targets))
                 result = await self.bus.execute(
                     next_command, source="gmail", source_id=message_id,
-                    explicit_target=explicit_target,
+                    explicit_target=original_target,
                 )
                 if result.get("job_id"):
                     self.store.execute(
