@@ -71,6 +71,9 @@ class JobControlV8:
             return False
         if target == "project_visibility" and command in diagnostics:
             return False
+        if target == "project_visibility" and command.startswith("preview_json ") and len(command) <= 4000:
+            # Generates an isolated preview artifact; cannot publish or edit a repository.
+            return False
         return True
 
     def bind(self, job: str, sender: str, thread: str = "", parent: str = "") -> None:
