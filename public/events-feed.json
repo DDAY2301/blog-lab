@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-14T22:14:33+02:00",
+  "updatedAt": "2026-10-15T01:18:47+02:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -123,84 +123,6 @@
       "status": "confirmed",
       "lastCheckedAt": "2026-10-14T06:57:00+02:00",
       "description": "The exhibition marking the centenary of Srečko Kosovel’s death is open at Cankarjev dom; admission is €8. Check the venue for daily gallery hours."
-    },
-    {
-      "id": "lisicka-sestricna-2026-10-14",
-      "title": "Lisička sestrička",
-      "url": "https://ljubljanskigrad.si/sl/dogodki/lisicka-sestricka",
-      "source": "Ljubljana Castle",
-      "type": "Družine · predstava",
-      "place": "Hribar Hall · Ljubljana Castle",
-      "startAt": "2026-10-14T17:30:00+02:00",
-      "endAt": "2026-10-14T18:10:00+02:00",
-      "price": "€5",
-      "languages": [
-        "Slovenian"
-      ],
-      "touristFriendly": false,
-      "familyFriendly": true,
-      "accessibility": null,
-      "ticketUrl": "https://ljubljanskigrad.si/sl/dogodki/lisicka-sestricka",
-      "status": "sold_out",
-      "lastCheckedAt": "2026-10-14T06:57:00+02:00",
-      "description": "The storytelling-and-music performance runs from 17:30 to 18:10 in Hribar Hall. Ljubljana Castle’s current events listing marks this performance as sold out."
-    },
-    {
-      "id": "mystical-worlds-2026-10-14",
-      "title": "An Evening Among Mystical Worlds",
-      "url": "https://www.cd-cc.si/en",
-      "source": "Cankarjev dom",
-      "type": "Lecture · lease event",
-      "place": "Cankarjev dom · Ljubljana",
-      "startAt": "2026-10-14T18:00:00+02:00",
-      "endAt": null,
-      "price": null,
-      "languages": [],
-      "touristFriendly": null,
-      "familyFriendly": null,
-      "accessibility": null,
-      "ticketUrl": "https://vstopnice.cd-cc.si/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-14T06:57:00+02:00",
-      "description": "An Evening Among Mystical Worlds is confirmed at Cankarjev dom · Ljubljana. Check the official source for any late programme or ticket changes."
-    },
-    {
-      "id": "pussy-riot-riot-days-2026-10-14",
-      "title": "Pussy Riot: Riot Days",
-      "url": "https://www.kinosiska.si/dogodek/pussy-riot-riot-days/",
-      "source": "Kino Šiška",
-      "type": "Concert · electro-punk performance",
-      "place": "Katedrala Hall · Kino Šiška",
-      "startAt": "2026-10-14T20:00:00+02:00",
-      "endAt": null,
-      "price": "€25 advance; €29 event day; €18.75 discount",
-      "languages": [],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": null,
-      "ticketUrl": "https://www.kinosiska.si/dogodek/pussy-riot-riot-days/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-14T06:57:00+02:00",
-      "description": "Pussy Riot: Riot Days is confirmed at Katedrala Hall · Kino Šiška. Check the official source for any late programme or ticket changes."
-    },
-    {
-      "id": "ministry-for-future-2026-10-14",
-      "title": "The Ministry for the Future: Kim Stanley Robinson and Matjaž Gruden",
-      "url": "https://www.cd-cc.si/en",
-      "source": "Cankarjev dom",
-      "type": "Literature and humanities",
-      "place": "Cankarjev dom · Ljubljana",
-      "startAt": "2026-10-14T20:00:00+02:00",
-      "endAt": null,
-      "price": null,
-      "languages": [],
-      "touristFriendly": null,
-      "familyFriendly": null,
-      "accessibility": null,
-      "ticketUrl": "https://vstopnice.cd-cc.si/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-14T06:57:00+02:00",
-      "description": "The Ministry for the Future: Kim Stanley Robinson and Matjaž Gruden is confirmed at Cankarjev dom · Ljubljana. Check the official source for any late programme or ticket changes."
     },
     {
       "price": null,
@@ -1134,6 +1056,16 @@
       "startAt": "2026-10-26T20:00:00+01:00",
       "ticketUrl": "https://www.mgl.si/en/schedule/",
       "description": "Prima Facie begins at 20:00 on the MGL Small Stage. The official schedule marks this performance as sold out."
+    },
+    {
+      "title": "BBBBBBB (JP), MALA ROZA MUCA & PIXEL.BAMBI, SSMKOSK @ Channel Zero",
+      "url": "https://www.galahala.com/",
+      "source": "Gala Hala",
+      "type": "Koncert · Metelkova",
+      "place": "Gala Hala · AKC Metelkova",
+      "startAt": "2026-10-29T20:00:00+01:00",
+      "endAt": "",
+      "id": "event-56-bbbbbbb-jp-mala-roza-muca-pixel-bambi-ssmkosk-channel-zero"
     }
   ]
 }
