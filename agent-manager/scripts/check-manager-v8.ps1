@@ -78,7 +78,7 @@ if ($Mode -eq "Upgrade") {
         throw "Uncommitted work detected. Not pulling or restarting."
     }
     $priorSha = (& git -C $repo rev-parse HEAD).Trim()
-    $marker = Join-Path $agent "data\v8-pre-upgrade-commit.txt"
+    $marker = Join-Path $agent "data\v8-pre-upgrade-commit.tmp"
     Write-Host "Fetching reviewed Manager code..." -ForegroundColor Cyan
     & git -C $repo pull --ff-only origin $needBranch
     if ($LASTEXITCODE -ne 0) {
