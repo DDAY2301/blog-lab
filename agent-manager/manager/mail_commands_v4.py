@@ -488,7 +488,15 @@ class GmailCommandLoopV4:
         )
         results: list[dict[str, Any]] = []
         for row in reversed(rows):
-            results.append(await self.process_one(row["id"]))
+            mid = row["id"]
+            if mid in self._active or self._seen(mid):
+                continue
+            if len(self._active) >= self.max_inflight:
+                break
+            task = asyncio.create_task(self.process_one(mid))
+            self._active[mid] = task
+            task.add_done_callback(lambda done, key=mid: self._active.pop(key, None))
+            results.append({"id": mid, "status": "accepted"})
         self.last = {
             "ok": not any(x.get("status") == "failed" for x in results),
             "enabled": True,
