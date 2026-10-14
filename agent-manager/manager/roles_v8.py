@@ -21,15 +21,20 @@ PV_DIAGNOSTICS = {
 class EmailRolesV8:
     def __init__(self, owner: str):
         self.owner = owner.strip().lower()
+        self.config_error = ""
         try:
             overrides = json.loads(os.getenv("GMAIL_COMMAND_ROLES", "{}"))
-        except (ValueError, TypeError) as exc:
-            raise ValueError("GMAIL_COMMAND_ROLES must be JSON object.") from exc
-        if not isinstance(overrides, dict):
-            raise ValueError("GMAIL_COMMAND_ROLES must be a JSON object.")
-        if any(role not in {"owner", "operator", "viewer"} for role in overrides.values()):
-            raise ValueError("Unknown role in GMAIL_COMMAND_ROLES.")
-        self.roles = {str(k).lower(): str(v) for k, v in overrides.items()}
+            if not isinstance(overrides, dict):
+                raise ValueError("Role overrides must be a JSON object.")
+            if any(role not in {"owner", "operator", "viewer"}
+                   for role in overrides.values()):
+                raise ValueError("Unsupported Gmail role.")
+            self.roles = {str(k).lower(): str(v) for k, v in overrides.items()}
+        except (ValueError, TypeError):
+            # Never take down the 24/7 Manager over a configuration typo.
+            # All mail execution is disabled until the operator corrects it.
+            self.roles = {}
+            self.config_error = "GMAIL_COMMAND_ROLES is invalid; no email commands allowed."
 
     def role(self, sender: str) -> str:
         sender = sender.strip().lower()
