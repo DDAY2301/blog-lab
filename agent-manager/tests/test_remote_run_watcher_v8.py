@@ -6,6 +6,7 @@ import json
 from types import SimpleNamespace
 
 from manager.db_v3 import StoreV3, utcnow
+from manager.job_control_v8 import JobControlV8
 from manager.remote_run_watcher_v8 import RemoteRunWatcherV8
 
 
@@ -21,6 +22,7 @@ def _store(tmp_path):
         ("job-1", "gmail", "mail-1", "preview", "submitted",
          "{}", utcnow(), utcnow()),
     )
+    JobControlV8(store).bind("job-1", "owner@example.com", "mail-thread-1")
     receipt = {
         "operation": "remote_preview", "workflow": "pv-remote-preview-v8.yml",
         "repo": "DDAY2301/PROJEKT", "request_id": REQUEST,
@@ -85,6 +87,10 @@ def test_succeeds_only_with_matching_run_and_artifact(monkeypatch, tmp_path):
     assert receipt["run_id"] == 501
     assert receipt["artifact"]["name"] == "pv-preview-501"
     assert store.query("SELECT status FROM command_jobs")[0]["status"] == "completed"
+    emails = store.query("SELECT * FROM email_queue WHERE kind='v8-remote-pv'")
+    assert len(emails) == 1
+    assert emails[0]["recipient"] == "owner@example.com"
+    assert "pv-preview-501" in emails[0]["body"]
     assert asyncio.run(watcher.cycle())["status"] == "idle"
 
 
