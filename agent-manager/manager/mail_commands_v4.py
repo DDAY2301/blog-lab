@@ -40,7 +40,7 @@ class GmailCommandLoopV4:
 
     @staticmethod
     def _subject_target(subject: str) -> tuple[str | None, str]:
-        text = str(subject or "").strip()
+        text = re.sub(r"(?i)^\s*re:\s*", "", str(subject or "").strip())
         match = re.match(
             r"^\[AGENT(?:\s+(ALL|BLOG(?:LAB)?|PV|PROJECT(?:\s+VISIBILITY)?|MANAGER|AM))?\]\s*(.*)$",
             text,
@@ -258,6 +258,12 @@ class GmailCommandLoopV4:
                               message_id, "denied", {"length": len(command)})
             return self._deny(details, "command_too_long")
         self._insert_processing(details, target_label, command)
+
+        parsed = self.bus.controls.parse(command)
+        if parsed:
+            return await self._handle_job_control(
+                message_id, sender, target_label, explicit_target, command, parsed
+            )
 
         artifacts: list[dict[str, Any]] = []
         total_bytes = 0
