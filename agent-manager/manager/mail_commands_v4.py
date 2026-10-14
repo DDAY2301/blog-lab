@@ -10,6 +10,7 @@ from .artifacts_v2 import MAX_EMAIL_ARTIFACT_BYTES
 from .command_bus_v2 import UniversalCommandBusV2
 from .db_v3 import StoreV3, utcnow
 from .gmail_v4 import GmailV4
+from .roles_v8 import EmailRolesV8
 
 
 class GmailCommandLoopV4:
@@ -25,6 +26,7 @@ class GmailCommandLoopV4:
         self._stop = asyncio.Event()
         self.last: dict[str, Any] = {}
         self.bus = UniversalCommandBusV2(store)
+        self.roles = EmailRolesV8(os.getenv("GMAIL_COMMAND_OWNER_EMAIL", gmail.recipient or ""))
         # One slow remote job must not block incoming STATUS or CANCEL mails.
         self._active: dict[str, asyncio.Task] = {}
         self.max_inflight = max(2, min(4, int(os.getenv("GMAIL_COMMAND_MAX_INFLIGHT", "3"))))
@@ -339,6 +341,11 @@ class GmailCommandLoopV4:
             self.store.action("gmail-command-v4", "reject_oversized_command",
                               message_id, "denied", {"length": len(command)})
             return self._deny(details, "command_too_long")
+        parsed_control = self.bus.controls.parse(command)
+        if not parsed_control and not self.roles.allowed(sender, explicit_target or "all", command):
+            return self._deny(details, "role_not_permitted")
+        if parsed_control and self.roles.role(sender) != "owner":
+            return self._deny(details, "job_control_requires_owner")
         self._insert_processing(details, target_label, command)
 
         parsed = self.bus.controls.parse(command)
