@@ -287,7 +287,19 @@ class GmailCommandLoopV4:
 
         message = await asyncio.to_thread(self.gmail.get_message, message_id)
         details = self.gmail.message_details(message)
-        subject_target, subject_tail = self._subject_target(details["subject"])
+        raw_subject = details.get("subject", "")
+        reply_job = re.match(
+            r"(?i)^\s*re:\s*\[AGENT RESULT\]\s+JOB\s+"
+            r"([0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12})(?:\s|$)",
+            raw_subject,
+        )
+        subject_target, subject_tail = self._subject_target(raw_subject)
+        if reply_job:
+            subject_target, subject_tail = "manager", ""
+        if details.get("agent_generated") or (
+            not reply_job and re.match(r"(?i)^\s*\[AGENT RESULT\]", raw_subject)
+        ):
+            subject_target = None
         if subject_target is None:
             # Gmail subject search is token-based and can match e.g. "Agent
             # Manager V4" alerts. Remember the immutable message id so we do not
@@ -348,6 +360,8 @@ class GmailCommandLoopV4:
         command = "\n".join(
             line for line in command.splitlines() if not line.lstrip().startswith(">")
         ).strip()
+        if reply_job and command and not self.bus.controls.parse(command):
+            command = f"CONTINUE JOB {reply_job.group(1).lower()} : {command}"
         if subject_tail:
             # A short read-only subject like [AGENT] STATUS takes precedence
             # over phone signatures and boilerplate in the email body.
@@ -475,7 +489,7 @@ class GmailCommandLoopV4:
             ok = final_status == "completed"
             reply_id = await asyncio.to_thread(
                 self.gmail.send,
-                f"[AGENT RESULT] {target_label.upper()} — {final_status.upper()}",
+                f"[AGENT RESULT] JOB {result.get('job_id')} - {final_status.upper()}",
                 self._reply_body(target_label, command, final_status, result=result),
                 sender,
             )
@@ -549,7 +563,7 @@ class GmailCommandLoopV4:
         # [AGENT ...] validation and message-id idempotency happen locally.
         rows = await asyncio.to_thread(
             self.gmail.list_messages,
-            'newer_than:7d subject:AGENT -subject:"[AGENT RESULT]" -subject:"Agent Manager V4"',
+            'newer_than:7d subject:AGENT -subject:"Agent Manager V4"',
             100,
         )
         results: list[dict[str, Any]] = []
