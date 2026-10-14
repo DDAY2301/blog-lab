@@ -61,6 +61,7 @@ def test_async_dispatch_receipt_has_submitted_status(tmp_path, monkeypatch):
         ("m1", "owner@example.com", "[AGENT PV]", "project_visibility",
          "TEST API", "processing", "now"),
     )
+    monkeypatch.setenv("AGENT_MANAGER_EMAIL_V8_ENABLED", "1")
     bus = UniversalCommandBusV2(store)
 
     async def remote_dispatch(target, command):
