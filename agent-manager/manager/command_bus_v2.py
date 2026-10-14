@@ -568,7 +568,7 @@ class UniversalCommandBusV2:
                 status,
                 utcnow(),
                 json.dumps(response, ensure_ascii=False, default=str)[:100000],
-                None if status == "completed" else "One or more steps failed.",
+                None if status in {"completed", "submitted", "waiting_approval", "cancelled"} else "One or more steps failed.",
                 job_id,
             ),
         )
