@@ -30,6 +30,37 @@ const CATEGORY_EMPTY_COPY = {
 
 const starterArticles = [
   {
+    "id": "dobre-zgodbe-evrope-ena-najbolj-urejenih-kolesarskih-poti-v-sloveniji-je-nastala-na-trasi--ae15283a",
+    "title": "Dobre zgodbe Evrope: Ena najbolj urejenih kolesarskih poti v Sloveniji je nastala na trasi stare proge -…",
+    "excerpt": "Kolesarstvo: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Dobre zgodbe Evrope: Ena najbolj urejenih kolesarskih poti v Sloveniji je nastala na trasi stare proge -…«.",
+    "seoDescription": "Kolesarstvo: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Dobre zgodbe Evrope: Ena najbolj urejenih kolesarskih poti v Sloveniji je ",
+    "content": "**Kolesarstvo, 14. 10. 2026.** Dobre zgodbe Evrope: Ena najbolj urejenih kolesarskih poti v Sloveniji je nastala na trasi stare proge Maribor24.si\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Maribor24.si. Objavljeno: Wed, 01 Jul 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMizgFBVV95cUxPLU1tWFpzb3VSWFBic2cwYzZwZWdvQlQtakZ3YXpUa21uSXJGd2RFRXJsXzBReERtVmlFZk13c1p4bFU3alRfdFZvNk92RjQ4aHVHNjBRM3JWV01VV2tibXVvdEs4RWE4WklZaW81bmkwNkZNdnhSaEcxOHVqcmVaSlRKVU1McVFUaENOcV82RDdnZTF1MlE4aERkSUVBRWZ2bjhLeWxYNDBMY2x6clg5SWZudjkzcGtieUR4dEJyNHNaNXZrX3lRbC1HZWxrUQ?oc=5)\n\n## Dopolnitev vira 2: MojaObčina.si\n\nSevnica je del kolesarskega doživetja Slovenia Green Gourmet Route | Občina Sevnica MojaObčina.si\n\n Vir: MojaObčina.si. Objavljeno: Mon, 21 Jun 2021 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMirwFBVV95cUxOUkZuNDl3LVUzRlVpbnNuVDV4enl3RUhZcXJfdm4wbWxXSmlwR3lieE5tblY1VDJLb25XWmJzWlZ2QkE0WnViWUFqM0Yybm9MWWFyeEswWHo2My1hcUNWbnBhcVRoYXpJMVlnTXdJVC0xaFJlek1ydkZfTkwzal9BMG56NS16WWRUa3d4dlpuc3hWTGhXamxiN29JUWR3ZUJDUE1ENm5jMmtsV2E5WFVF?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Kolesarstvo",
+    "author": "Blog Lab Slovenia Publisher",
+    "status": "published",
+    "heroImage": {
+      "url": "/media/articles/8bad06fec502189cebd8.webp",
+      "alt": "Three male cyclists wearing helmets during a summer bicycle tour in rural Slovenia near Luže.",
+      "caption": "Marek Ślusarczyk ( Tupungato ) Photo gallery · Wikimedia Commons · CC BY 3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:08_Slovenia_rural_landscape_-_bicycle_expedition_with_panniers.jpg"
+    },
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Maribor24.si — Dobre zgodbe Evrope: Ena najbolj urejenih kolesarskih poti v Sloveniji je nastala na trasi stare proge - Maribor24.si",
+        "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPLU1tWFpzb3VSWFBic2cwYzZwZWdvQlQtakZ3YXpUa21uSXJGd2RFRXJsXzBReERtVmlFZk13c1p4bFU3alRfdFZvNk92RjQ4aHVHNjBRM3JWV01VV2tibXVvdEs4RWE4WklZaW81bmkwNkZNdnhSaEcxOHVqcmVaSlRKVU1McVFUaENOcV82RDdnZTF1MlE4aERkSUVBRWZ2bjhLeWxYNDBMY2x6clg5SWZudjkzcGtieUR4dEJyNHNaNXZrX3lRbC1HZWxrUQ?oc=5"
+      },
+      {
+        "label": "MojaObčina.si — Sevnica je del kolesarskega doživetja Slovenia Green Gourmet Route | Občina Sevnica - MojaObčina.si",
+        "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOUkZuNDl3LVUzRlVpbnNuVDV4enl3RUhZcXJfdm4wbWxXSmlwR3lieE5tblY1VDJLb25XWmJzWlZ2QkE0WnViWUFqM0Yybm9MWWFyeEswWHo2My1hcUNWbnBhcVRoYXpJMVlnTXdJVC0xaFJlek1ydkZfTkwzal9BMG56NS16WWRUa3d4dlpuc3hWTGhXamxiN29JUWR3ZUJDUE1ENm5jMmtsV2E5WFVF?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-14T07:38:38+02:00",
+    "updatedAt": "2026-10-14T07:38:38+02:00"
+  },
+
+  {
     "id": "veronika-deseniska-history-celje-castle-guide",
     "title": "Veronika of Desenice: History, Trial and Legend at Celje Castle",
     "excerpt": "Separate the documented life and trial of Veronika Deseniška from later legend, then plan a responsible visit to Celje Castle and its museum.",
