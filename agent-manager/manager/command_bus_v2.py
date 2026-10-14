@@ -421,15 +421,20 @@ class UniversalCommandBusV2:
                     artifacts if step.get("use_artifacts", True) else [],
                     upload_cache,
                 )
+            accepted_remote = (
+                isinstance(result, dict) and result.get("accepted") is True and
+                result.get("completed") is False
+            )
+            step_status = "submitted" if accepted_remote else "completed"
             self.store.execute(
                 """
                 UPDATE command_steps
-                SET status='completed',finished_at=?,result_json=?,error=NULL
+                SET status=?,finished_at=?,result_json=?,error=NULL
                 WHERE job_id=? AND step_id=?
                 """,
-                (utcnow(), json.dumps(result, ensure_ascii=False, default=str)[:50000], job_id, step_id),
+                (step_status, utcnow(), json.dumps(result, ensure_ascii=False, default=str)[:50000], job_id, step_id),
             )
-            return {"id": step_id, "target": step["target"], "status": "completed", "result": result}
+            return {"id": step_id, "target": step["target"], "status": step_status, "result": result}
         except Exception as exc:
             error = f"{type(exc).__name__}: {exc}"
             self.store.execute(
@@ -537,9 +542,11 @@ class UniversalCommandBusV2:
         failed = any(row.get("status") in {"failed", "skipped"} for row in ordered)
         held = any(row.get("status") == "waiting_approval" for row in ordered)
         cancelled = any(row.get("status") == "cancelled" for row in ordered)
+        submitted = any(row.get("status") == "submitted" for row in ordered)
         status = (
             "waiting_approval" if held else
             "cancelled" if cancelled else
+            "submitted" if submitted and not failed else
             "partial" if failed and any(row.get("status") == "completed" for row in ordered) else
             "failed" if failed else "completed"
         )
