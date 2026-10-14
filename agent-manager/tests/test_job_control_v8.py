@@ -50,6 +50,7 @@ def test_high_impact_steps_wait_and_never_dispatch(tmp_path, monkeypatch):
         ("m1", "owner@example.com", "[AGENT BLOGLAB]", "bloglab",
          "objavi clanek", "processing", "now"),
     )
+    monkeypatch.setenv("AGENT_MANAGER_EMAIL_V8_ENABLED", "1")
     bus = UniversalCommandBusV2(s)
     async def forbid(*args, **kwargs):
         raise AssertionError("Must not execute production publication")
@@ -72,6 +73,7 @@ def test_readonly_email_job_does_not_wake_model(tmp_path, monkeypatch):
         ("m2", "owner@example.com", "[AGENT MANAGER]", "manager",
          "status", "processing", "now"),
     )
+    monkeypatch.setenv("AGENT_MANAGER_EMAIL_V8_ENABLED", "1")
     bus = UniversalCommandBusV2(s)
     calls = []
     async def fake_dispatch(target, command):
