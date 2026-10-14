@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-14T04:53:27+02:00",
-  "loop_count": 5222,
+  "updated_at": "2026-10-14T04:54:21+02:00",
+  "loop_count": 5223,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-14T04:53:07+02:00",
+      "last_learning_run": "2026-10-14T04:54:02+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 120918,
-          "last_seen": "2026-10-14T04:53:07+02:00",
+          "seen": 120928,
+          "last_seen": "2026-10-14T04:54:02+02:00",
           "last_title": "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
           "last_provider": "google-news-si",
-          "published": 299535,
+          "published": 299602,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-14T04:53:16+02:00",
+      "last_learning_run": "2026-10-14T04:54:12+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -272,11 +272,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 132234,
-          "last_seen": "2026-10-14T04:53:16+02:00",
+          "seen": 132250,
+          "last_seen": "2026-10-14T04:54:12+02:00",
           "last_title": "Protestnik, ki je postal predsednik: Stevanović nekoč glas anticepilcev, danes pa enfant terrible, ki je vse postavil na glavo - Metropolitan.si",
           "last_provider": "google-news-si",
-          "published": 333735,
+          "published": 333813,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -388,7 +388,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-14T04:53:27+02:00",
+      "last_learning_run": "2026-10-14T04:54:21+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -468,11 +468,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 142813,
-          "last_seen": "2026-10-14T04:53:27+02:00",
-          "last_title": "Naša dežela bo danes razdeljena na srečneže na soncu in nas ostale v loncu - Dnevnik",
+          "seen": 142827,
+          "last_seen": "2026-10-14T04:54:21+02:00",
+          "last_title": "Knjiga ob 18.03: Literarna potovanja na meji med Evropo in Azijo #foto - Goriške novice",
           "last_provider": "google-news-si",
-          "published": 253399,
+          "published": 253429,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "reddit.com": {
@@ -576,12 +576,12 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 24,
+      "current_source_count": 14,
       "example_titles": {
         "news.google.com": [
           "(AKTUALNO) Še danes v prodaji 36. št. revije Demokracija: 30 let Demokracije, ki udejanja pravico vedeti več! Načrt za demografsko obnovo sl",
-          "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
-          "Ko so bile ZDA stare toliko kot danes Slovenija, so bile na robu razpada - Zanima.me"
+          "Od danes nove cene goriv, kmalu pa bi se lahko bencin pocenil še za 28 centov na liter - Goriške novice",
+          "Kako svet vidi Slovenijo danes in kako je postala tako vroča evropska destinacija - Dnevnik"
         ]
       }
     }
