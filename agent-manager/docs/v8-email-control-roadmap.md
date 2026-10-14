@@ -7,18 +7,18 @@ The dedicated Windows 11 8 GB PC runs only Agent Manager, Guardian, Watchdog, Fl
 
 | Feature | Existing capability | V8 acceptance gate |
 |---|---|---|
-| Two-way conversations | V7 independent command emails | Continue/revise by durable job ID; true Gmail thread-aware follow-up still pending |
-| Remote Project Visibility worker | CI and Pages checks/dispatch | Authenticated off-host worker accepts bounded build/QA/deploy jobs with receipts and health probe |
-| Job Manager | SQLite command_jobs, steps, audit | Owner-bound STATUS, cooperative CANCEL, read-only RETRY, CONTINUE; nonblocking Gmail intake and remote cancellation still needed |
-| Approvals | None | Stage high-impact steps; approved **independently via authenticated Fleet console** before they can execute; email alone never authorizes deployment |
+| Two-way conversations | V7 independent command emails | Owner-scoped job replies: Re: [AGENT RESULT] JOB <uuid> plus new message body creates a linked job; real Gmail round trip not yet verified |
+| Remote Project Visibility worker | CI and Pages checks/dispatch | GitHub-hosted preview generator merged in PROJEKT/main; request ID correlation. Full AI builder and live publishing callback remain pending |
+| Job Manager | SQLite command_jobs, steps, audit | Owner-bound STATUS, cooperative CANCEL, read-only RETRY, CONTINUE; bounded nonblocking inbox; remote running jobs are not forcibly cancelled |
+| Approvals | None | Stage mutating steps. Independent authenticated Fleet Remote endpoint can record approval, but it does NOT execute any production action. A reviewed-action worker remains pending |
 | Self-healing | Manager diagnostic and coder/PR tools | Observe → bounded repair branch → tests → visual checks → PR → verified rollout |
 | GitHub management | Actions status, CI dispatch, code PR | Inspect, rerun allowlisted tests, compare changes; merge/release/rollback require verified approval |
 | Attachments | Existing artifact store + Gmail ingestion | TXT/DOCX/PDF/ZIP/images: MIME sniff, size caps, zip traversal checks, attachment-to-job tracing |
-| Visual QA | Project Visibility QA modules | Off-host screenshots, before/after comparison, mobile QA, attach reports to job |
-| Schedules | Reporting/maintenance intervals | Persistent per-job schedule with Europe/Ljubljana timezone, idempotency and cancellation |
+| Visual QA | Project Visibility QA modules | Remote Chromium desktop/mobile screenshots + JSON QA workflow merged in PROJEKT/main; automated baseline comparison and mail report linking pending |
+| Schedules | Reporting/maintenance intervals | Persistent one-shot read-only SCHEDULE/SCHEDULES/UNSCHEDULE in Europe/Ljubljana timezone; recurring scheduling pending |
 | Alerts & reports | Incidents, notifications, Gmail | P0/P1 alert with event evidence; accurate job completion/failure and daily digest |
 | Resource management | RAM Focus + psutil/Ollama | Alert on memory trends; never disable Defender, pagefile or Memory Compression |
-| Security and roles | Gmail exact sender allowlist and verification | Owner/operator/viewer permissions, immutable audit, least-privilege GitHub tokens, two-factor approval for high-impact actions |
+| Security and roles | Gmail exact sender allowlist and verification | Owner/operator/viewer command restrictions in V8 draft; independent console session approval record; full RBAC and MFA pending |
 
 ## V8 job control foundation in this PR
 
@@ -28,15 +28,27 @@ The dedicated Windows 11 8 GB PC runs only Agent Manager, Guardian, Watchdog, Fl
 - `[AGENT] RETRY JOB <uuid>` is intentionally limited to failed read-only monitoring commands.
 - `[AGENT] CANCEL JOB <uuid>` sets a cooperative cancellation flag; actions already sent to external providers may still finish.
 - `[AGENT] REVIEW REV-...` and `REJECT REV-...` inspect/decline held operations. `APPROVE REV-...` **does not execute anything**, to prevent forged/compromised emails from publishing or deleting content.
-- Email-origin actions containing high-impact terms such as publishing, deleting, merging or restarting, including steps invented by an AI planner, are held before dispatch and logged for review.
+- Email-origin free-form actions are held by a **fail-closed allowlist**. Only exact read-only and bounded off-host diagnostics/preview operations can run without production approval.
 - Existing exact-sender + Gmail authentication gating remains in place.
 
-## Release blockers (do not claim the product is complete)
+## More working V8 draft features
 
-1. Current Gmail command polling processes each message serially. CANCEL sent by email may not be picked up while a long job is running. Implement bounded background queue and transactional recovery before promising in-flight cancellation; do **not** auto-replay interrupted mutating commands.
-2. Add an independently authenticated approval endpoint in Fleet Remote, with expiry and one-time tokens, then a narrow approved-action dispatcher. Email APPROVE alone must remain insufficient.
-3. Add a true off-host Project Visibility worker with authenticated callback and durable job receipt. Existing GitHub CI dispatch only runs predetermined tests.
-4. Add robust binary attachment validation and visual QA artifacts. Do not assume all DOCX/PDF/ZIP files are currently safely handled.
-5. Validate on the actual Windows host: Gmail OAuth, inbound command → job → reply, Fleet Remote auth, memory idle >=3 GB, watchdog recovery. CI alone does not prove production usability.
+- Bounded asynchronous Gmail intake (maximum 2-4 tasks) so a slow command does not block all new mail. Interrupted tasks are recorded but never blindly replayed.
+- Generated email replies carry a marker and are never treated as new commands. Replies referencing a real job UUID can continue work with a new instruction.
+- A separate, session-authenticated Fleet Remote API allows an independent review record to be approved (24-hour expiry, same-origin intent header); this still **does not** deploy.
+- Remote Project Visibility PREVIEW_JSON requests build static preview artifacts on GitHub-hosted runner (not local PC). Their result is SUBMITTED, not COMPLETED, until verified. Never include secrets in workflow inputs.
+- GITHUB STATUS and ROLLBACK PLAN BLOGLAB/PV are strictly read-only: they show recent commit and CI evidence, never revert a commit.
+- Read-only SCHEDULE <local ISO> <command>, SCHEDULES, UNSCHEDULE SCH-... are persisted in SQLite. Failed execution is not replayed after restart; results are added to the email delivery queue.
+- RAM/disk incidents resolve when usage falls sufficiently after alerting, avoiding outdated incident counts.
+- Default sender role is viewer unless sender matches the configured owner; optional GMAIL_COMMAND_ROLES JSON assigns operator/viewer/owner. Malformed role config denies email commands instead of taking down the Manager.
 
-The PR should remain **draft** until cancellation and approval semantics can be verified end-to-end and regression tests demonstrate that a real untrusted email cannot cause a production mutation.
+## Remaining blockers before shipping V8 to the dedicated Windows PC
+
+1. CI tests exercise the implementation in simulation; the real Gmail OAuth/send/receive and real sender headers must be tested on the user's Windows machine, with 3+ GB free at idle. This PR remains DRAFT; V7 must not be replaced blindly.
+2. No remote production website deployment or autonomous PV AI worker exists yet. PROJEKT preview and screenshot workflows are remote **diagnostic and preview** jobs, not full publishing.
+3. An authenticated console approval is *recorded only*; a narrowly scoped, separately audited action-release executor with rollback/QA is not implemented. Email APPROVE is never sufficient.
+4. GitHub workflow dispatch returns a receipt, not completion; a run watcher must correlate request_id with GitHub run status and artifacts to close V8 jobs accurately.
+5. Attachment MIME/magic validation, safe ZIP/PDF/DOCX extraction, baseline visual diffs, custom recurring schedules, alert deduplication and full roles/MFA still require additional testing and implementation.
+6. A full end-to-end test from owner email -> dispatch -> authenticated remote runner -> verified artifact -> response has not yet been run.
+
+Do not merge this draft as a claim of full V8 completion.
