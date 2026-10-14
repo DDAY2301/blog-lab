@@ -219,6 +219,65 @@ def _is_coder_command(command: str) -> bool:
     return any(marker in low for marker in markers)
 
 
+async def _github_operations_v8(command: str) -> dict[str, Any]:
+    """Fixed-repository, strictly read-only GitHub visibility and revert planning."""
+    low = _fold(command)
+    repos = {"bloglab": "DDAY2301/blog-lab", "pv": "DDAY2301/PROJEKT"}
+    token = (
+        _secret("AGENT_MANAGER_GITHUB_TOKEN") or
+        _secret("GITHUB_TOKEN") or _secret("GH_TOKEN")
+    )
+    headers = {"Accept": "application/vnd.github+json",
+               "X-GitHub-Api-Version": "2022-11-28"}
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+
+    async def inspect(repo_name: str) -> dict[str, Any]:
+        root = f"https://api.github.com/repos/{repo_name}"
+        async with httpx.AsyncClient(timeout=12.0) as client:
+            commits, actions = await asyncio.gather(
+                client.get(f"{root}/commits", headers=headers,
+                           params={"sha": "main", "per_page": 3}),
+                client.get(f"{root}/actions/runs", headers=headers,
+                           params={"branch": "main", "per_page": 10}),
+            )
+        if commits.status_code != 200 or actions.status_code != 200:
+            return {"repo": repo_name, "ok": False,
+                    "error": "GitHub read permission or API unavailable"}
+        previous = [
+            {
+                "sha": row.get("sha"), "subject": (
+                    row.get("commit", {}).get("message") or ""
+                ).splitlines()[0][:160],
+                "url": row.get("html_url"),
+            }
+            for row in commits.json()[:3]
+        ]
+        runs = [
+            {
+                "workflow": x.get("name"), "conclusion": x.get("conclusion"),
+                "status": x.get("status"), "url": x.get("html_url"),
+            }
+            for x in actions.json().get("workflow_runs", [])[:10]
+        ]
+        return {"repo": repo_name, "ok": True,
+                "recent_commits": previous, "recent_runs": runs}
+
+    if low == "github status":
+        return {"mode": "read_only", "repos": await asyncio.gather(
+            *(inspect(x) for x in repos.values())
+        )}
+    if low in {"rollback plan bloglab", "rollback plan pv"}:
+        key = "bloglab" if "bloglab" in low else "pv"
+        report = await inspect(repos[key])
+        return {
+            "mode": "plan_only", "target": key, "status": report,
+            "note": "No rollback was performed. A revert requires separately "
+                    "reviewed GitHub PR, passing QA and independent deployment approval.",
+        }
+    raise ValueError("Use GITHUB STATUS or ROLLBACK PLAN BLOGLAB/PV.")
+
+
 MANAGER_MAIL_HELP = {
     "v": "manager-email-control-v7",
     "subject_formats": {
@@ -247,6 +306,8 @@ MANAGER_MAIL_HELP = {
 
 async def _manager_command(command: str) -> dict[str, Any]:
     low = _fold(command)
+    if low in {"github status", "rollback plan bloglab", "rollback plan pv"}:
+        return {"action": "github_operations", "result": await _github_operations_v8(command)}
     if low in {"pomoc", "help", "komande", "ukazi", "navodila"}:
         return {"action": "help", "result": MANAGER_MAIL_HELP}
     if low in {"status", "health", "stanje", "preveri status"}:
