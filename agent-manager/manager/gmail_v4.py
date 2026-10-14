@@ -120,6 +120,7 @@ class GmailV4:
         msg["From"] = sender
         msg["To"] = to
         msg["Subject"] = subject
+        msg["X-Agent-Manager-Response"] = "v8"
         msg.set_content(body)
         raw = base64.urlsafe_b64encode(msg.as_bytes()).decode("ascii")
         sent = service.users().messages().send(userId="me", body={"raw": raw}).execute()
@@ -245,6 +246,7 @@ class GmailV4:
             "sender_authenticated": authenticated,
             "authentication_method": "gmail_sent" if own_sent else "aligned_dmarc" if dmarc_aligned else "unverified",
             "subject": headers.get("subject", "").strip(),
+            "agent_generated": headers.get("x-agent-manager-response", "").lower() == "v8",
             "body": body,
             "message_id_header": headers.get("message-id", "").strip(),
             "attachments": attachments,
