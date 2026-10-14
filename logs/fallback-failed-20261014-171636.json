@@ -1,0 +1,39 @@
+{
+  "category": "dediscina",
+  "errors": [
+    "clanek_brez_slovenskega_konteksta",
+    "viri_ne_podpirajo_slovenske_rubrike"
+  ],
+  "article": {
+    "title": "Send signature requests and sign documents with eSignature",
+    "excerpt": "Dediščina: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Send signature requests and sign documents with eSignature«.",
+    "seoDescription": "Dediščina: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Send signature requests and sign documents with eSignature«.",
+    "content": "**Dediščina, 14. 10. 2026.** With eSignature, you can create documents for signatures and send signature requests in Google Docs and Google Drive. To complete eSignature requests, signers can easily fill in requested information. Send signature requests and sign documents with eSignature With eSignature, you can create documents for signatures and send signature requests in Google Docs and Google Drive. Eligibility The eSignature feature for Google Docs and PDFs is available to: Workspace Individual accounts. These Workspace plans when your administrator enables the feature: Business Standard and Plus Enterprise Starter, Standard and Plus Enterprise Essentials and Enterprise Essentials Plus Education Plus users Microsoft Word files…\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: support.google.com. Objavljeno: Mon, 12 Oct 2026 23:47:00 GMT. [Odpri izvirni vir](https://support.google.com/docs/answer/12315692?hl=en-GB)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Dediščina",
+    "tags": [
+      "dediščina",
+      "pregled"
+    ],
+    "heroImage": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Tustanj_Castle_Slovenia_-_plaque.JPG/1920px-Tustanj_Castle_Slovenia_-_plaque.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "alt": "Plaque over the entrance to Tuštanj Castle, Zgornji Tuštanj, Municipality of Moravče, Slovenia",
+      "caption": "Doremo · Wikimedia Commons · CC BY-SA 3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tustanj_Castle_Slovenia_-_plaque.JPG"
+    },
+    "gallery": [],
+    "video": null,
+    "sources": [
+      {
+        "label": "support.google.com — Send signature requests and sign documents with eSignature - Google Docs Editors Help",
+        "url": "https://support.google.com/docs/answer/12315692?hl=en-GB"
+      }
+    ],
+    "source_urls": [
+      "https://support.google.com/docs/answer/12315692?hl=en-GB"
+    ],
+    "fallback": true,
+    "visualTemplate": "fieldnote",
+    "templateLabel": "Field Note",
+    "id": "send-signature-requests-and-sign-documents-with-esignature-76b101f9"
+  }
+}
