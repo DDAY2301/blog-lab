@@ -63,6 +63,10 @@ def test_continue_links_new_job_not_rerun_original(tmp_path, monkeypatch):
         (jid, "gmail", "old-1", "status", "completed", "now", "now"),
     )
     loop.bus.controls.bind(jid, "owner@gmail.com", "thread-123")
+    store.execute(
+        "INSERT INTO command_steps(job_id,step_id,target,command_text,status) "
+        "VALUES(?,?,?,?,?)", (jid, "s1", "manager", "status", "completed"),
+    )
     monkeypatch.setattr(gmail, "get_message", lambda mid: _mail(
         mid, f"[AGENT MANAGER] CONTINUE JOB {jid}", "status"
     ))
@@ -130,17 +134,21 @@ def test_reply_to_job_result_continues_existing_job(tmp_path, monkeypatch):
         (jid, "gmail", "original", "status", "completed", "now", "now"),
     )
     loop.bus.controls.bind(jid, "owner@gmail.com", "t1")
+    store.execute(
+        "INSERT INTO command_steps(job_id,step_id,target,command_text,status) "
+        "VALUES(?,?,?,?,?)", (jid, "s1", "project_visibility", "preview", "completed"),
+    )
     monkeypatch.setattr(gmail, "get_message", lambda mid: _mail(
         mid, f"Re: [AGENT RESULT] JOB {jid} - COMPLETED", "spremeni barvo"
     ))
     calls = []
     async def fake_execute(command, **kwargs):
-        calls.append(command)
+        calls.append((command, kwargs["explicit_target"]))
         return {"job_id": "33333333-3333-3333-3333-333333333333", "status": "completed"}
     monkeypatch.setattr(loop.bus, "execute", fake_execute)
     result = asyncio.run(loop.process_one("followup-1"))
     assert result["status"] == "completed"
-    assert calls == ["spremeni barvo"]
+    assert calls == [("spremeni barvo", "project_visibility")]
     assert "33333333-3333-3333-3333-333333333333" in responses[0][0]
 
 
