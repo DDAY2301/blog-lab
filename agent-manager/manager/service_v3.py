@@ -55,12 +55,14 @@ _tasks: list[asyncio.Task] = []
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     # Recovery is a startup operation, never an import-time side effect.
-    mail_commands.recover_interrupted()
+    if mail_commands.v8_enabled:
+        mail_commands.recover_interrupted()
     discovery.discover_roots(s.roots())
     _tasks.append(asyncio.create_task(monitor.run(), name="system-monitor"))
     _tasks.append(asyncio.create_task(maintenance.run(), name="maintenance-v4"))
     _tasks.append(asyncio.create_task(mail_commands.run(), name="gmail-command-v4"))
-    _tasks.append(asyncio.create_task(remote_watcher.run(), name="pv-preview-verifier-v8"))
+    if mail_commands.v8_enabled:
+        _tasks.append(asyncio.create_task(remote_watcher.run(), name="pv-preview-verifier-v8"))
     yield
     monitor.stop()
     maintenance.stop()
@@ -94,6 +96,7 @@ async def health():
         "write_enabled": s.write_enabled,
         "gmail": maintenance.gmail.auth_state(),
         "gmail_commands": mail_commands.status(),
+        "email_v8_enabled": mail_commands.v8_enabled,
         "pv_remote_verifier": remote_watcher.last,
         "open_incidents": len(incidents.open()),
         "resources": system_resources(),
