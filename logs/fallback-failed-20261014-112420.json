@@ -1,0 +1,39 @@
+{
+  "category": "dediscina",
+  "errors": [
+    "clanek_brez_slovenskega_konteksta",
+    "viri_ne_podpirajo_slovenske_rubrike"
+  ],
+  "article": {
+    "title": "iPhone 17 Pro: Using the New 8x Optical Zoom",
+    "excerpt": "Dediščina: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »iPhone 17 Pro: Using the New 8x Optical Zoom«.",
+    "seoDescription": "Dediščina: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »iPhone 17 Pro: Using the New 8x Optical Zoom«.",
+    "content": "**Dediščina, 14. 10. 2026.** The iPhone 17 Pro introduces a powerful new 48MP Pro Fusion camera system, giving you sharp, detailed photos no matter which lens you use. The Main, Ultra Wide, and Telephoto cameras all shoot at 48MP, so your pictures stay consistent in quality whether you're zoomed in or out. The new Telephoto lens reaches an impressive 200mm focal length with 8x optical-quality zoom – that's the longest zoom ever on an iPhone. It means you can capture distant subjects clearly without relying on digital zoom or carrying extra lenses, opening up new creative possibilities for your photography. The iPhone 17 Pro supports both 4x and 8x optical-quality zoom in, as well as 2x optical zoom out. Meanwhile, there's up to 40x…\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: macrumors.com. Objavljeno: Fri, 19 Sep 2025 03:46:00 GMT. [Odpri izvirni vir](https://www.macrumors.com/how-to/iphone-17-pro-using-8x-optical-zoom/)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Dediščina",
+    "tags": [
+      "dediščina",
+      "pregled"
+    ],
+    "heroImage": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Tustanj_Castle_Slovenia_-_plaque.JPG/1920px-Tustanj_Castle_Slovenia_-_plaque.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "alt": "Plaque over the entrance to Tuštanj Castle, Zgornji Tuštanj, Municipality of Moravče, Slovenia",
+      "caption": "Doremo · Wikimedia Commons · CC BY-SA 3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tustanj_Castle_Slovenia_-_plaque.JPG"
+    },
+    "gallery": [],
+    "video": null,
+    "sources": [
+      {
+        "label": "macrumors.com — iPhone 17 Pro: Using the New 8x Optical Zoom",
+        "url": "https://www.macrumors.com/how-to/iphone-17-pro-using-8x-optical-zoom/"
+      }
+    ],
+    "source_urls": [
+      "https://www.macrumors.com/how-to/iphone-17-pro-using-8x-optical-zoom/"
+    ],
+    "fallback": true,
+    "visualTemplate": "fieldnote",
+    "templateLabel": "Field Note",
+    "id": "iphone-17-pro-using-the-new-8x-optical-zoom-cebf5f27"
+  }
+}
