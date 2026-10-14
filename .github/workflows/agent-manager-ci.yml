@@ -116,3 +116,18 @@ jobs:
             throw "Windows PowerShell 5.1 parser rejected email-control-v7.ps1."
           }
           Write-Host "PASS: Windows PowerShell 5.1 parsed email-control-v7.ps1."
+          $v8Script = Join-Path $env:GITHUB_WORKSPACE "agent-manager\scripts\check-manager-v8.ps1"
+          $v8Bytes = [System.IO.File]::ReadAllBytes($v8Script)
+          if (@($v8Bytes | Where-Object { $_ -gt 127 }).Count -gt 0) {
+            throw "check-manager-v8.ps1 must remain ASCII for Windows PowerShell 5.1."
+          }
+          $tokens = $null
+          $parseErrors = $null
+          [void][System.Management.Automation.Language.Parser]::ParseFile(
+            $v8Script, [ref]$tokens, [ref]$parseErrors
+          )
+          if ($parseErrors.Count -gt 0) {
+            $parseErrors | Format-List | Out-String | Write-Host
+            throw "Windows PowerShell 5.1 rejected check-manager-v8.ps1."
+          }
+          Write-Host "PASS: Windows PowerShell 5.1 parsed V8 preflight and activation."

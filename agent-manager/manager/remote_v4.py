@@ -18,6 +18,7 @@ from fastapi.responses import HTMLResponse, JSONResponse
 from pydantic import BaseModel, Field
 
 from .db_v3 import StoreV3
+from .job_control_v8 import JobControlV8
 from .settings_v3 import SettingsV3
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -218,6 +219,65 @@ def _is_coder_command(command: str) -> bool:
     return any(marker in low for marker in markers)
 
 
+async def _github_operations_v8(command: str) -> dict[str, Any]:
+    """Fixed-repository, strictly read-only GitHub visibility and revert planning."""
+    low = _fold(command)
+    repos = {"bloglab": "DDAY2301/blog-lab", "pv": "DDAY2301/PROJEKT"}
+    token = (
+        _secret("AGENT_MANAGER_GITHUB_TOKEN") or
+        _secret("GITHUB_TOKEN") or _secret("GH_TOKEN")
+    )
+    headers = {"Accept": "application/vnd.github+json",
+               "X-GitHub-Api-Version": "2022-11-28"}
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+
+    async def inspect(repo_name: str) -> dict[str, Any]:
+        root = f"https://api.github.com/repos/{repo_name}"
+        async with httpx.AsyncClient(timeout=12.0) as client:
+            commits, actions = await asyncio.gather(
+                client.get(f"{root}/commits", headers=headers,
+                           params={"sha": "main", "per_page": 3}),
+                client.get(f"{root}/actions/runs", headers=headers,
+                           params={"branch": "main", "per_page": 10}),
+            )
+        if commits.status_code != 200 or actions.status_code != 200:
+            return {"repo": repo_name, "ok": False,
+                    "error": "GitHub read permission or API unavailable"}
+        previous = [
+            {
+                "sha": row.get("sha"), "subject": (
+                    row.get("commit", {}).get("message") or ""
+                ).splitlines()[0][:160],
+                "url": row.get("html_url"),
+            }
+            for row in commits.json()[:3]
+        ]
+        runs = [
+            {
+                "workflow": x.get("name"), "conclusion": x.get("conclusion"),
+                "status": x.get("status"), "url": x.get("html_url"),
+            }
+            for x in actions.json().get("workflow_runs", [])[:10]
+        ]
+        return {"repo": repo_name, "ok": True,
+                "recent_commits": previous, "recent_runs": runs}
+
+    if low == "github status":
+        return {"mode": "read_only", "repos": await asyncio.gather(
+            *(inspect(x) for x in repos.values())
+        )}
+    if low in {"rollback plan bloglab", "rollback plan pv"}:
+        key = "bloglab" if "bloglab" in low else "pv"
+        report = await inspect(repos[key])
+        return {
+            "mode": "plan_only", "target": key, "status": report,
+            "note": "No rollback was performed. A revert requires separately "
+                    "reviewed GitHub PR, passing QA and independent deployment approval.",
+        }
+    raise ValueError("Use GITHUB STATUS or ROLLBACK PLAN BLOGLAB/PV.")
+
+
 MANAGER_MAIL_HELP = {
     "v": "manager-email-control-v7",
     "subject_formats": {
@@ -246,6 +306,8 @@ MANAGER_MAIL_HELP = {
 
 async def _manager_command(command: str) -> dict[str, Any]:
     low = _fold(command)
+    if low in {"github status", "rollback plan bloglab", "rollback plan pv"}:
+        return {"action": "github_operations", "result": await _github_operations_v8(command)}
     if low in {"pomoc", "help", "komande", "ukazi", "navodila"}:
         return {"action": "help", "result": MANAGER_MAIL_HELP}
     if low in {"status", "health", "stanje", "preveri status"}:
@@ -408,9 +470,63 @@ async def _pv_github_workflow_dispatch(workflow: str) -> dict[str, Any]:
     }
 
 
+async def _pv_remote_preview_dispatch(command: str) -> dict[str, Any]:
+    """Off-host preview build only; requires explicit JSON brief, never deploys."""
+    import uuid
+    raw = command.strip().split(None, 1)
+    if len(raw) != 2 or raw[0].upper() != "PREVIEW_JSON":
+        raise ValueError("Use PREVIEW_JSON followed by a bounded JSON brief.")
+    body = raw[1].strip()
+    if len(body.encode("utf-8")) > 12000:
+        raise ValueError("Preview brief exceeds 12 KB.")
+    brief = json.loads(body)
+    if not isinstance(brief, dict):
+        raise ValueError("Preview brief must be a JSON object.")
+    if not isinstance(brief.get("pages"), list) or not 1 <= len(brief["pages"]) <= 8:
+        raise ValueError("Preview requires 1 to 8 pages.")
+    if not str(brief.get("name") or "").strip():
+        raise ValueError("Preview requires a project name.")
+    # Only non-secret content should be sent to GitHub Actions inputs.
+    request_id = uuid.uuid4().hex
+    token = (
+        _secret("AGENT_MANAGER_GITHUB_TOKEN") or
+        _secret("GITHUB_TOKEN") or _secret("GH_TOKEN")
+    )
+    if not token:
+        raise RuntimeError("GitHub Actions token required for remote PV previews.")
+    async with httpx.AsyncClient(timeout=20.0) as client:
+        response = await client.post(
+            "https://api.github.com/repos/DDAY2301/PROJEKT/actions/"
+            "workflows/pv-remote-preview-v8.yml/dispatches",
+            headers={
+                "Authorization": f"Bearer {token}",
+                "Accept": "application/vnd.github+json",
+                "X-GitHub-Api-Version": "2022-11-28",
+            },
+            json={
+                "ref": "main",
+                "inputs": {"brief_json": body, "request_id": request_id},
+            },
+        )
+    if response.status_code != 204:
+        raise RuntimeError(
+            f"Remote PV preview dispatch failed HTTP {response.status_code}."
+        )
+    return {
+        "ok": True, "accepted": True, "completed": False,
+        "operation": "remote_preview", "request_id": request_id,
+        "workflow": "pv-remote-preview-v8.yml", "repo": "DDAY2301/PROJEKT",
+        "runs_page": "https://github.com/DDAY2301/PROJEKT/actions/workflows/pv-remote-preview-v8.yml",
+        "notice": "Preview queued on GitHub-hosted runner; no production deployment performed. "
+                  "Do not include confidential customer information in workflow inputs.",
+    }
+
+
 async def _project_command(command: str) -> dict[str, Any]:
     low = _fold(command)
     if os.getenv("AGENT_MANAGER_SUPERVISOR_ONLY", "0") == "1":
+        if command.strip().upper().startswith("PREVIEW_JSON "):
+            return await _pv_remote_preview_dispatch(command)
         if low in {"status", "health", "stanje", "preveri status", "github status"}:
             managed = await _http("GET", f"{MANAGER_BASE}/managed-agents", timeout=10)
             row = next(
@@ -549,6 +665,49 @@ async def logout():
     response = _json({"ok": True})
     response.delete_cookie(SESSION_COOKIE, path="/")
     return response
+
+
+def _review_intent_ok(request: Request, review_id: str) -> bool:
+    # SameSite=Strict sessions plus an explicit same-origin + custom header
+    # check prevent a cross-site form submit from approving a queued review.
+    origin = request.headers.get("origin", "")
+    host = request.headers.get("host", "").lower()
+    from urllib.parse import urlsplit
+    try:
+        url = urlsplit(origin)
+        same_origin = (
+            url.scheme in {"https", "http"} and
+            url.netloc.lower() == host and bool(host)
+        )
+    except ValueError:
+        return False
+    intent = request.headers.get("x-agent-review-intent", "")
+    return same_origin and intent == review_id
+
+
+@app.get("/api/reviews")
+async def pending_reviews(request: Request):
+    if not _authorized(request):
+        raise HTTPException(401, "Login required")
+    rows = store.query(
+        "SELECT review_id,job_id,target,status,summary,updated_at "
+        "FROM job_reviews_v8 WHERE status='pending' ORDER BY updated_at DESC LIMIT 50"
+    )
+    return {"reviews": rows, "note": "No review is executed by this endpoint."}
+
+
+@app.post("/api/reviews/{review_id}/approve")
+async def approve_review(review_id: str, request: Request):
+    if not _authorized(request):
+        raise HTTPException(401, "Login required")
+    if not re.fullmatch(r"REV-[0-9A-F]{12}", review_id):
+        raise HTTPException(422, "Invalid review identifier.")
+    if not _review_intent_ok(request, review_id):
+        raise HTTPException(403, "Explicit same-origin review confirmation required.")
+    try:
+        return JobControlV8(store).console_approve(review_id)
+    except ValueError as exc:
+        raise HTTPException(409, str(exc)) from exc
 
 
 @app.get("/api/status")
