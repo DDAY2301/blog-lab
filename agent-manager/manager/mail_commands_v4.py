@@ -32,15 +32,18 @@ class GmailCommandLoopV4:
         # One slow remote job must not block incoming STATUS or CANCEL mails.
         self._active: dict[str, asyncio.Task] = {}
         self.max_inflight = max(2, min(4, int(os.getenv("GMAIL_COMMAND_MAX_INFLIGHT", "3"))))
-        # Interrupted jobs must never be blindly replayed on reboot.
-        store.execute(
+    def recover_interrupted(self) -> None:
+        # Called only when the real Manager service starts, never during
+        # imports or diagnostics against an already-running Manager.
+        self.store.execute(
             "UPDATE command_jobs SET status='interrupted',updated_at=? "
             "WHERE status='running' AND source='gmail'", (utcnow(),),
         )
-        store.execute(
+        self.store.execute(
             "UPDATE mail_commands SET status='interrupted',processed_at=? "
             "WHERE status='processing'", (utcnow(),),
         )
+        self.schedules.recover_interrupted()
 
     def stop(self) -> None:
         self._stop.set()
