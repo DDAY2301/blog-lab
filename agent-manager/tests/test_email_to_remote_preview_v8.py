@@ -25,6 +25,7 @@ def test_owner_email_to_verified_remote_artifact(tmp_path, monkeypatch):
     monkeypatch.setenv("GMAIL_COMMANDS_ENABLED", "1")
     monkeypatch.setenv("GMAIL_REPORTING_ENABLED", "1")
     monkeypatch.setenv("AGENT_MANAGER_SUPERVISOR_ONLY", "1")
+    monkeypatch.setenv("AGENT_MANAGER_EMAIL_V8_ENABLED", "1")
     monkeypatch.setenv("AGENT_MANAGER_GITHUB_TOKEN", "unit-test-gh-token")
     store = StoreV3(tmp_path / "end-to-end.sqlite")
     gmail = GmailV4()
