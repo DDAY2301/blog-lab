@@ -7,14 +7,14 @@ from typing import Any
 from .db_v3 import StoreV3, utcnow
 
 JOB_CMD = re.compile(
-    r"^(STATUS|CANCEL|RETRY|CONTINUE|REVISE)\\s+(?:JOB[\\s:-]*)?"
-    r"([0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12})(?:\\s*[:\\-]\\s*|\\s+)?(.*)$",
+    r"^(STATUS|CANCEL|RETRY|CONTINUE|REVISE)\s+(?:JOB[\s:-]*)?"
+    r"([0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12})(?:\s*[:\-]\s*|\s+)?(.*)$",
     re.I | re.S,
 )
-REVIEW_CMD = re.compile(r"^(APPROVE|REJECT|REVIEW)\\s+(REV-[0-9a-f]{12})$", re.I)
+REVIEW_CMD = re.compile(r"^(APPROVE|REJECT|REVIEW)\s+(REV-[0-9a-f]{12})$", re.I)
 RISK = re.compile(
-    r"\\b(deploy|publish|merge|delete|rollback|objavi|izbrisi|odstrani|"
-    r"restart|ponovno zazeni|ustavi|production)\\b", re.I,
+    r"\b(deploy|publish|merge|delete|rollback|objavi|izbrisi|odstrani|"
+    r"restart|ponovno zazeni|ustavi|production)\b", re.I,
 )
 
 
