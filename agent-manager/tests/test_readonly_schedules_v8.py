@@ -72,5 +72,7 @@ def test_reboot_does_not_repeat_inflight_schedules(tmp_path):
         "UPDATE readonly_schedules_v8 SET status='running' WHERE schedule_id=?",
         (sid,),
     )
-    ReadonlySchedulesV8(store, FakeBus(), None)
+    restarted = ReadonlySchedulesV8(store, FakeBus(), None)
+    assert runner.list_owned("owner@example.com")[0]["status"] == "running"
+    restarted.recover_interrupted()
     assert runner.list_owned("owner@example.com")[0]["status"] == "interrupted"
