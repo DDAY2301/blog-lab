@@ -25,14 +25,30 @@ class GmailCommandLoopV4:
         self._stop = asyncio.Event()
         self.last: dict[str, Any] = {}
         self.bus = UniversalCommandBusV2(store)
+        # One slow remote job must not block incoming STATUS or CANCEL mails.
+        self._active: dict[str, asyncio.Task] = {}
+        self.max_inflight = max(2, min(4, int(os.getenv("GMAIL_COMMAND_MAX_INFLIGHT", "3"))))
+        # Interrupted jobs must never be blindly replayed on reboot.
+        store.execute(
+            "UPDATE command_jobs SET status='interrupted',updated_at=? "
+            "WHERE status='running' AND source='gmail'", (utcnow(),),
+        )
+        store.execute(
+            "UPDATE mail_commands SET status='interrupted',processed_at=? "
+            "WHERE status='processing'", (utcnow(),),
+        )
 
     def stop(self) -> None:
         self._stop.set()
+        for task in list(self._active.values()):
+            task.cancel()
 
     def status(self) -> dict[str, Any]:
         return {
             "enabled": self.enabled,
             "poll_seconds": self.interval,
+            "inflight": len(self._active),
+            "max_inflight": self.max_inflight,
             "allowed_senders": sorted(self.allowed_senders),
             "require_authenticated_sender": os.getenv("GMAIL_COMMAND_REQUIRE_AUTH", "1") != "0",
             "last": self.last,
