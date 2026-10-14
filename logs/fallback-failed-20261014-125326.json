@@ -1,0 +1,39 @@
+{
+  "category": "dediscina",
+  "errors": [
+    "clanek_brez_slovenskega_konteksta",
+    "viri_ne_podpirajo_slovenske_rubrike"
+  ],
+  "article": {
+    "title": "Online ticket sales",
+    "excerpt": "Dediščina: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Online ticket sales«.",
+    "seoDescription": "Dediščina: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Online ticket sales«.",
+    "content": "**Dediščina, 14. 10. 2026.** Paris Musées Online ticket sales - Paris Musées We are sorry but your browser is not supported by this website. For security reasons, the payment of your purchases is not possible. We suggest you change browsers to improve the purchase process. Close You may experience problems when displaying the seat map with your current browser; please use another browser. Close Skip to content Français Current Language English My cart Dialog My account Sign in Register Français Current Language English GROUPS Adhésions Programmation Activités Cours d'Histoire de l'Art This element can\"t use with screen readers Paris Musées - Online ticket sales html, body { position: relative; overflow-y: auto; padding: 0px; margin: 0px;…\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: billetterie-parismusees.paris.fr. Objavljeno: Wed, 14 Oct 2026 06:12:00 GMT. [Odpri izvirni vir](https://www.billetterie-parismusees.paris.fr/content)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Dediščina",
+    "tags": [
+      "dediščina",
+      "pregled"
+    ],
+    "heroImage": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Tustanj_Castle_Slovenia_-_plaque.JPG/1920px-Tustanj_Castle_Slovenia_-_plaque.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "alt": "Plaque over the entrance to Tuštanj Castle, Zgornji Tuštanj, Municipality of Moravče, Slovenia",
+      "caption": "Doremo · Wikimedia Commons · CC BY-SA 3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tustanj_Castle_Slovenia_-_plaque.JPG"
+    },
+    "gallery": [],
+    "video": null,
+    "sources": [
+      {
+        "label": "billetterie-parismusees.paris.fr — Online ticket sales - Paris Musées",
+        "url": "https://www.billetterie-parismusees.paris.fr/content"
+      }
+    ],
+    "source_urls": [
+      "https://www.billetterie-parismusees.paris.fr/content"
+    ],
+    "fallback": true,
+    "visualTemplate": "fieldnote",
+    "templateLabel": "Field Note",
+    "id": "online-ticket-sales-980ad568"
+  }
+}
