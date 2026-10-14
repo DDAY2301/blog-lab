@@ -32,6 +32,7 @@ from .monitor_v3 import MonitorLoopV3
 from .repair import RepairPlanner
 from .policy_v3 import evaluate
 from .reporting_v3 import ReporterV3
+from .remote_run_watcher_v8 import RemoteRunWatcherV8
 from .settings_v3 import SettingsV3
 
 VERSION = "4.0.0"
@@ -43,6 +44,7 @@ reporter = ReporterV3(s, store)
 monitor = MonitorLoopV3(s, store)
 maintenance = MaintenanceLoopV4(s, store)
 mail_commands = GmailCommandLoopV4(store, maintenance.gmail)
+remote_watcher = RemoteRunWatcherV8(store)
 autofix = AutoFixV3(store)
 coder_planner = RepairPlanner(maintenance.ai)
 coder_autopilot = AutonomousRepairExecutor(coder_planner)
@@ -56,10 +58,12 @@ async def lifespan(app: FastAPI):
     _tasks.append(asyncio.create_task(monitor.run(), name="system-monitor"))
     _tasks.append(asyncio.create_task(maintenance.run(), name="maintenance-v4"))
     _tasks.append(asyncio.create_task(mail_commands.run(), name="gmail-command-v4"))
+    _tasks.append(asyncio.create_task(remote_watcher.run(), name="pv-preview-verifier-v8"))
     yield
     monitor.stop()
     maintenance.stop()
     mail_commands.stop()
+    remote_watcher.stop()
     for task in _tasks:
         task.cancel()
     for task in _tasks:
@@ -88,6 +92,7 @@ async def health():
         "write_enabled": s.write_enabled,
         "gmail": maintenance.gmail.auth_state(),
         "gmail_commands": mail_commands.status(),
+        "pv_remote_verifier": remote_watcher.last,
         "open_incidents": len(incidents.open()),
         "resources": system_resources(),
         "last_system_cycle": monitor.last,
