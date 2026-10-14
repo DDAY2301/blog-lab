@@ -97,7 +97,7 @@ class JobControlV8:
             (job,),
         )
         steps = self.store.query(
-            """SELECT step_id,target,status,error FROM command_steps
+            """SELECT step_id,target,status,error,result_json FROM command_steps
                WHERE job_id=? ORDER BY rowid""", (job,),
         )
         reviews = self.store.query(
