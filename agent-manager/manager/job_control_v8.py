@@ -50,12 +50,28 @@ class JobControlV8:
 
     @staticmethod
     def requires_review(target: str, command: str) -> bool:
-        if target == "all" and command.strip().lower() not in {
-            "status", "stanje", "health", "status vseh agentov",
-            "preveri status", "flota", "fleet status",
-        }:
-            return True
-        return bool(RISK.search(command))
+        # Fail closed. Free-form instructions and AI-planned steps are untrusted,
+        # even when they avoid the known risky keywords.
+        command = command.strip().lower()
+        readonly = {
+            "status", "stanje", "health", "preveri status",
+            "status vseh agentov", "flota", "fleet status", "pomoc",
+            "help", "incidenti", "incidents", "napake", "ram",
+            "pomnilnik", "memory", "modeli", "models", "providers",
+            "email status", "gmail status", "opravila", "jobs", "queue",
+        }
+        diagnostics = {"test api", "api ci", "ci", "preveri ci",
+                       "frontend benchmark", "frontend qa", "lighthouse"}
+        if target == "all":
+            return command not in {
+                "status", "stanje", "health", "status vseh agentov",
+                "preveri status", "flota", "fleet status",
+            }
+        if command in readonly:
+            return False
+        if target == "project_visibility" and command in diagnostics:
+            return False
+        return True
 
     def bind(self, job: str, sender: str, thread: str = "", parent: str = "") -> None:
         if sender:
