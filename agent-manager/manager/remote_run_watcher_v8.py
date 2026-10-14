@@ -200,6 +200,36 @@ class RemoteRunWatcherV8:
             status, {"request_id": receipt["request_id"],
                      "run_url": receipt.get("run_url", ""), "error": error[:200]},
         )
+        # Queue one final email to the authenticated owner; the existing
+        # Gmail sender retries delivery separately without executing commands.
+        owner = self.store.query(
+            "SELECT sender FROM job_control_v8 WHERE job_id=?", (row["job_id"],),
+        )
+        if owner:
+            subject = (
+                f"[AGENT RESULT] JOB {row['job_id']} - {job_status.upper()}"
+            )
+            existing = self.store.query(
+                "SELECT id FROM email_queue WHERE kind=? AND subject=?",
+                ("v8-remote-pv", subject),
+            )
+            if not existing:
+                artifact = receipt.get("artifact") or {}
+                message = (
+                    f"Project Visibility remote preview: {status.upper()}\\n"
+                    f"Job: {row['job_id']}\\n"
+                    f"GitHub run: {receipt.get('run_url', '')}\\n"
+                    f"Artifact: {artifact.get('name', 'unavailable')}\\n"
+                    f"Error: {error or 'none'}\\n"
+                    "A verified preview is not a production deployment."
+                )
+                self.store.execute(
+                    """INSERT INTO email_queue(
+                        created_at,kind,priority,recipient,subject,body,status
+                    ) VALUES(?,?,?,?,?,?,'pending')""",
+                    (utcnow(), "v8-remote-pv", 3, owner[0]["sender"],
+                     subject, message),
+                )
 
     async def run(self) -> None:
         while not self._stop.is_set():
