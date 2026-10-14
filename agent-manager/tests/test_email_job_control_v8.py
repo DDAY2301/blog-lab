@@ -119,3 +119,42 @@ def test_gmail_poll_returns_while_a_task_waits(tmp_path, monkeypatch):
         assert not loop._active
 
     asyncio.run(run())
+
+
+def test_reply_to_job_result_continues_existing_job(tmp_path, monkeypatch):
+    store, gmail, loop, responses = _make_loop(tmp_path, monkeypatch)
+    jid = "12345678-1234-1234-1234-123456789abc"
+    store.execute(
+        """INSERT INTO command_jobs(id,source,source_id,request_text,status,created_at,updated_at)
+           VALUES(?,?,?,?,?,?,?)""",
+        (jid, "gmail", "original", "status", "completed", "now", "now"),
+    )
+    loop.bus.controls.bind(jid, "owner@gmail.com", "t1")
+    monkeypatch.setattr(gmail, "get_message", lambda mid: _mail(
+        mid, f"Re: [AGENT RESULT] JOB {jid} - COMPLETED", "spremeni barvo"
+    ))
+    calls = []
+    async def fake_execute(command, **kwargs):
+        calls.append(command)
+        return {"job_id": "33333333-3333-3333-3333-333333333333", "status": "completed"}
+    monkeypatch.setattr(loop.bus, "execute", fake_execute)
+    result = asyncio.run(loop.process_one("followup-1"))
+    assert result["status"] == "completed"
+    assert calls == ["spremeni barvo"]
+    assert "33333333-3333-3333-3333-333333333333" in responses[0][0]
+
+
+def test_managers_outbound_result_is_never_reexecuted(tmp_path, monkeypatch):
+    store, gmail, loop, responses = _make_loop(tmp_path, monkeypatch)
+    jid = "12345678-1234-1234-1234-123456789abc"
+    outgoing = _mail("response-mail", f"[AGENT RESULT] JOB {jid} - COMPLETED", "Results")
+    outgoing["payload"]["headers"].append(
+        {"name": "X-Agent-Manager-Response", "value": "v8"}
+    )
+    monkeypatch.setattr(gmail, "get_message", lambda mid: outgoing)
+    async def forbidden(*args, **kwargs):
+        raise AssertionError("Generated response must never execute as a command")
+    monkeypatch.setattr(loop.bus, "execute", forbidden)
+    result = asyncio.run(loop.process_one("response-mail"))
+    assert result["status"] == "ignored"
+    assert not responses
