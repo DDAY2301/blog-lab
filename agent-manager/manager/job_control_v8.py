@@ -59,6 +59,7 @@ class JobControlV8:
             "help", "incidenti", "incidents", "napake", "ram",
             "pomnilnik", "memory", "modeli", "models", "providers",
             "email status", "gmail status", "opravila", "jobs", "queue",
+            "github status", "rollback plan bloglab", "rollback plan pv",
         }
         diagnostics = {"test api", "api ci", "ci", "preveri ci",
                        "frontend benchmark", "frontend qa", "lighthouse"}
