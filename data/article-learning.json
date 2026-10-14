@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-14T13:58:22+02:00",
-  "loop_count": 5396,
+  "updated_at": "2026-10-14T13:59:07+02:00",
+  "loop_count": 5397,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-14T13:57:58+02:00",
+      "last_learning_run": "2026-10-14T13:58:47+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 122557,
-          "last_seen": "2026-10-14T13:57:58+02:00",
+          "seen": 122566,
+          "last_seen": "2026-10-14T13:58:47+02:00",
           "last_title": "Slovenska blamaža na igrah! Zakaj sploh tekmujemo, če je šport pri nas umrl - Ekipa",
           "last_provider": "google-news-si",
-          "published": 311193,
+          "published": 311260,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-14T13:58:08+02:00",
+      "last_learning_run": "2026-10-14T13:58:57+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -272,11 +272,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 135192,
-          "last_seen": "2026-10-14T13:58:08+02:00",
+          "seen": 135210,
+          "last_seen": "2026-10-14T13:58:57+02:00",
           "last_title": "Janša diplomatom: Zunanjo politiko vodi vlada in samo to je uradna politika Slovenije - N1 Slovenija",
           "last_provider": "google-news-si",
-          "published": 347033,
+          "published": 347109,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -388,7 +388,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-14T13:58:22+02:00",
+      "last_learning_run": "2026-10-14T13:59:07+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -468,11 +468,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 146851,
-          "last_seen": "2026-10-14T13:58:22+02:00",
-          "last_title": "Tomc: Demokracija, pravna država in svoboda medijev pod aktualno vlado propadajo - Dnevnik",
+          "seen": 146874,
+          "last_seen": "2026-10-14T13:59:07+02:00",
+          "last_title": "Podpisan drugi dodatek k Dogovoru za razvoj regije Jugovzhodna Slovenija - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "google-news-si",
-          "published": 258619,
+          "published": 258649,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "reddit.com": {
@@ -662,14 +662,6 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20261014-132503.json",
-      "category": "dediscina",
-      "errors": [
-        "ze_uporabljen_vir"
-      ],
-      "title": "Grad Grad na Goričkem: Največji baročni grad v Sloveniji s skrivnostno zgodovino"
-    },
-    {
       "file": "fallback-failed-20261014-132616.json",
       "category": "dediscina",
       "errors": [
@@ -742,6 +734,14 @@
       "title": "Grad Grad na Goričkem: Največji baročni grad v Sloveniji s skrivnostno zgodovino"
     },
     {
+      "file": "fallback-failed-20261014-135803.json",
+      "category": "dediscina",
+      "errors": [
+        "ze_uporabljen_vir"
+      ],
+      "title": "Grad Grad na Goričkem: Največji baročni grad v Sloveniji s skrivnostno zgodovino"
+    },
+    {
       "file": "agent-state",
       "category": "dediscina",
       "errors": [
@@ -758,9 +758,7 @@
     }
   ],
   "failure_summary": {
-    "ze_uporabljen_vir": 20,
-    "clanek_brez_slovenskega_konteksta": 1,
-    "viri_ne_podpirajo_slovenske_rubrike": 1,
+    "ze_uporabljen_vir": 21,
     "podvojen_naslov": 1,
     "manjka_fotografija,ponavljanje": 1
   }
