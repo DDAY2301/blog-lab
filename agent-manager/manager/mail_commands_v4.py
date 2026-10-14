@@ -11,6 +11,7 @@ from .command_bus_v2 import UniversalCommandBusV2
 from .db_v3 import StoreV3, utcnow
 from .gmail_v4 import GmailV4
 from .roles_v8 import EmailRolesV8
+from .readonly_schedules_v8 import ReadonlySchedulesV8, SCHEDULE_RE, UNSCHEDULE_RE
 
 
 class GmailCommandLoopV4:
@@ -27,6 +28,7 @@ class GmailCommandLoopV4:
         self.last: dict[str, Any] = {}
         self.bus = UniversalCommandBusV2(store)
         self.roles = EmailRolesV8(os.getenv("GMAIL_COMMAND_OWNER_EMAIL", gmail.recipient or ""))
+        self.schedules = ReadonlySchedulesV8(store, self.bus, gmail)
         # One slow remote job must not block incoming STATUS or CANCEL mails.
         self._active: dict[str, asyncio.Task] = {}
         self.max_inflight = max(2, min(4, int(os.getenv("GMAIL_COMMAND_MAX_INFLIGHT", "3"))))
@@ -175,6 +177,40 @@ class GmailCommandLoopV4:
             ]
         )
         return "\n".join(lines)
+
+    async def _schedule_operator(
+        self, mid: str, sender: str, target: str, original: str, line: str,
+    ) -> dict[str, Any]:
+        status, error, result = "completed", "", None
+        try:
+            item = SCHEDULE_RE.fullmatch(line)
+            cancelled = UNSCHEDULE_RE.fullmatch(line)
+            if item:
+                result = self.schedules.create(sender, item.group(1), item.group(2).strip())
+            elif cancelled:
+                result = self.schedules.cancel(sender, cancelled.group(1).upper())
+            else:
+                result = {"schedules": self.schedules.list_owned(sender)}
+        except Exception as exc:
+            status, error = "failed", f"{type(exc).__name__}: {exc}"
+        reply_id = None
+        try:
+            reply_id = await asyncio.to_thread(
+                self.gmail.send,
+                f"[AGENT SCHEDULE RESULT] {status.upper()}",
+                self._reply_body(target, original, status, result, error),
+                sender,
+            )
+        except Exception as exc:
+            if not error:
+                status, error = "reply_failed", str(exc)
+        self._finish(mid, status, result=result, error=error,
+                     reply_message_id=reply_id)
+        try:
+            await asyncio.to_thread(self.gmail.mark_read, mid)
+        except Exception:
+            pass
+        return {"id": mid, "status": status, "result": result}
 
     async def _handle_job_control(
         self, message_id: str, sender: str, target: str,
@@ -346,7 +382,18 @@ class GmailCommandLoopV4:
             return self._deny(details, "role_not_permitted")
         if parsed_control and self.roles.role(sender) != "owner":
             return self._deny(details, "job_control_requires_owner")
+        schedule_line = command.splitlines()[0].strip()
+        is_schedule = bool(
+            SCHEDULE_RE.fullmatch(schedule_line) or
+            UNSCHEDULE_RE.fullmatch(schedule_line) or schedule_line.upper() == "SCHEDULES"
+        )
+        if is_schedule and self.roles.role(sender) != "owner":
+            return self._deny(details, "scheduling_requires_owner")
         self._insert_processing(details, target_label, command)
+        if is_schedule:
+            return await self._schedule_operator(
+                message_id, sender, target_label, command, schedule_line
+            )
 
         parsed = self.bus.controls.parse(command)
         if parsed:
@@ -530,6 +577,7 @@ class GmailCommandLoopV4:
         while not self._stop.is_set():
             try:
                 await self.cycle()
+                await self.schedules.run_due()
             except asyncio.CancelledError:
                 raise
             except Exception as exc:
