@@ -36,7 +36,7 @@ function Test-Preflight {
         if ($LASTEXITCODE -ne 0) {
             throw "V8 regression tests failed; V7 will remain untouched."
         }
-        & $py -c "import manager.service_v3, manager.remote_v4, manager.remote_run_watcher_v8; print('V8 imports OK')"
+        & $py -c "import manager.mail_commands_v4, manager.remote_run_watcher_v8; print('V8 imports OK')"
         if ($LASTEXITCODE -ne 0) {
             throw "V8 import smoke failed; V7 will remain untouched."
         }
