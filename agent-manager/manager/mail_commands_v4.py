@@ -254,10 +254,17 @@ class GmailCommandLoopV4:
         except Exception as exc:
             status, error = "failed", f"{type(exc).__name__}: {exc}"
         reply_id = None
+        reply_job_id = (result or {}).get("job_id") if isinstance(result, dict) else None
+        if not reply_job_id and len(job_id) == 36:
+            reply_job_id = job_id
+        subject = (
+            f"[AGENT RESULT] JOB {reply_job_id} - {status.upper()}"
+            if reply_job_id else f"[AGENT RESULT] {action} - {status.upper()}"
+        )
         try:
             reply_id = await asyncio.to_thread(
                 self.gmail.send,
-                f"[AGENT RESULT] JOB {action} - {status.upper()}",
+                subject,
                 self._reply_body(target, original, status, result, error),
                 sender,
             )
