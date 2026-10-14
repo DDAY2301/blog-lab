@@ -394,7 +394,7 @@ class GmailCommandLoopV4:
         if subject_tail:
             # A short read-only subject like [AGENT] STATUS takes precedence
             # over phone signatures and boilerplate in the email body.
-            job_subject = self.bus.controls.parse(subject_tail)
+            job_subject = self.bus.controls.parse(subject_tail) if self.v8_enabled else None
             if job_subject:
                 if job_subject[0] in {"CONTINUE", "REVISE"} and not job_subject[2]:
                     command = f"{subject_tail} : {command}".strip()
@@ -592,9 +592,12 @@ class GmailCommandLoopV4:
         # Do not depend on Gmail UNREAD state: an operator may open a command on
         # their phone before the 30s poll. Gmail only narrows candidates; exact
         # [AGENT ...] validation and message-id idempotency happen locally.
+        query = 'newer_than:7d subject:AGENT -subject:"Agent Manager V4"'
+        if not self.v8_enabled:
+            query += ' -subject:"[AGENT RESULT]"'
         rows = await asyncio.to_thread(
             self.gmail.list_messages,
-            'newer_than:7d subject:AGENT -subject:"Agent Manager V4"',
+            query,
             100,
         )
         results: list[dict[str, Any]] = []
