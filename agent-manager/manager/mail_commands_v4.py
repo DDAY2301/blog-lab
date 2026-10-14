@@ -27,6 +27,7 @@ class GmailCommandLoopV4:
         self._stop = asyncio.Event()
         self.last: dict[str, Any] = {}
         self.bus = UniversalCommandBusV2(store)
+        self.v8_enabled = self.bus.v8_enabled
         self.roles = EmailRolesV8(os.getenv("GMAIL_COMMAND_OWNER_EMAIL", gmail.recipient or ""))
         self.schedules = ReadonlySchedulesV8(store, self.bus, gmail)
         # One slow remote job must not block incoming STATUS or CANCEL mails.
@@ -53,6 +54,7 @@ class GmailCommandLoopV4:
     def status(self) -> dict[str, Any]:
         return {
             "enabled": self.enabled,
+            "email_control_version": "v8-preview" if self.v8_enabled else "v7-compat",
             "poll_seconds": self.interval,
             "inflight": len(self._active),
             "max_inflight": self.max_inflight,
@@ -319,7 +321,7 @@ class GmailCommandLoopV4:
             raw_subject,
         )
         subject_target, subject_tail = self._subject_target(raw_subject)
-        if reply_job:
+        if self.v8_enabled and reply_job:
             subject_target, subject_tail = "manager", ""
         if details.get("agent_generated") or (
             not reply_job and re.match(r"(?i)^\s*\[AGENT RESULT\]", raw_subject)
@@ -351,7 +353,7 @@ class GmailCommandLoopV4:
             return {"id": message_id, "status": "ignored"}
 
         sender = details["sender"]
-        if self.roles.config_error:
+        if self.v8_enabled and self.roles.config_error:
             return self._deny(details, "role_configuration_invalid")
         auth_required = os.getenv("GMAIL_COMMAND_REQUIRE_AUTH", "1") != "0"
         if sender not in self.allowed_senders or (
@@ -387,7 +389,7 @@ class GmailCommandLoopV4:
         command = "\n".join(
             line for line in command.splitlines() if not line.lstrip().startswith(">")
         ).strip()
-        if reply_job and command and not self.bus.controls.parse(command):
+        if self.v8_enabled and reply_job and command and not self.bus.controls.parse(command):
             command = f"CONTINUE JOB {reply_job.group(1).lower()} : {command}"
         if subject_tail:
             # A short read-only subject like [AGENT] STATUS takes precedence
@@ -419,25 +421,25 @@ class GmailCommandLoopV4:
                               message_id, "denied", {"length": len(command)})
             return self._deny(details, "command_too_long")
         parsed_control = self.bus.controls.parse(command)
-        if not parsed_control and not self.roles.allowed(sender, explicit_target or "all", command):
+        if self.v8_enabled and not parsed_control and not self.roles.allowed(sender, explicit_target or "all", command):
             return self._deny(details, "role_not_permitted")
-        if parsed_control and self.roles.role(sender) != "owner":
+        if self.v8_enabled and parsed_control and self.roles.role(sender) != "owner":
             return self._deny(details, "job_control_requires_owner")
         schedule_line = command.splitlines()[0].strip()
         is_schedule = bool(
             SCHEDULE_RE.fullmatch(schedule_line) or
             UNSCHEDULE_RE.fullmatch(schedule_line) or schedule_line.upper() == "SCHEDULES"
         )
-        if is_schedule and self.roles.role(sender) != "owner":
+        if self.v8_enabled and is_schedule and self.roles.role(sender) != "owner":
             return self._deny(details, "scheduling_requires_owner")
         self._insert_processing(details, target_label, command)
-        if is_schedule:
+        if self.v8_enabled and is_schedule:
             return await self._schedule_operator(
                 message_id, sender, target_label, command, schedule_line
             )
 
         parsed = self.bus.controls.parse(command)
-        if parsed:
+        if self.v8_enabled and parsed:
             return await self._handle_job_control(
                 message_id, sender, target_label, explicit_target, command, parsed
             )
@@ -516,7 +518,9 @@ class GmailCommandLoopV4:
             ok = final_status == "completed"
             reply_id = await asyncio.to_thread(
                 self.gmail.send,
-                f"[AGENT RESULT] JOB {result.get('job_id')} - {final_status.upper()}",
+                (f"[AGENT RESULT] JOB {result.get('job_id')} - {final_status.upper()}"
+                 if self.v8_enabled else
+                 f"[AGENT RESULT] {target_label.upper()} - {final_status.upper()}"),
                 self._reply_body(target_label, command, final_status, result=result),
                 sender,
             )
@@ -594,6 +598,16 @@ class GmailCommandLoopV4:
             100,
         )
         results: list[dict[str, Any]] = []
+        if not self.v8_enabled:
+            for row in reversed(rows):
+                results.append(await self.process_one(row["id"]))
+            self.last = {
+                "ok": not any(x.get("status") == "failed" for x in results),
+                "enabled": True, "candidates": len(rows),
+                "processed": results, "ts": utcnow(),
+            }
+            self.store.heartbeat("gmail-command-loop", "running")
+            return self.last
         for row in reversed(rows):
             mid = row["id"]
             if mid in self._active or self._seen(mid):
@@ -618,7 +632,8 @@ class GmailCommandLoopV4:
         while not self._stop.is_set():
             try:
                 await self.cycle()
-                await self.schedules.run_due()
+                if self.v8_enabled:
+                    await self.schedules.run_due()
             except asyncio.CancelledError:
                 raise
             except Exception as exc:
