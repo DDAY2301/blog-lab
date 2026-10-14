@@ -34,7 +34,10 @@ class ReadonlySchedulesV8:
                 CREATE INDEX IF NOT EXISTS idx_schedules_due_v8
                 ON readonly_schedules_v8(status,run_at_utc);
             """)
-        store.execute(
+    def recover_interrupted(self) -> None:
+        # Only the actual Manager startup can declare abandoned timer work;
+        # a CLI import or smoke check must not change live job states.
+        self.store.execute(
             "UPDATE readonly_schedules_v8 SET status='interrupted',updated_at=? "
             "WHERE status='running'", (utcnow(),),
         )
