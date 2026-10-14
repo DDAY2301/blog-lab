@@ -42,6 +42,35 @@ The dedicated Windows 11 8 GB PC runs only Agent Manager, Guardian, Watchdog, Fl
 - RAM/disk incidents resolve when usage falls sufficiently after alerting, avoiding outdated incident counts.
 - Default sender role is viewer unless sender matches the configured owner; optional GMAIL_COMMAND_ROLES JSON assigns operator/viewer/owner. Malformed role config denies email commands instead of taking down the Manager.
 
+## V8 staged Windows pilot (opt-in, no duplicate local workers)
+
+This branch adds V8 email features **disabled by default**. The existing V7 mode is retained unless the operator explicitly sets `AGENT_MANAGER_EMAIL_V8_ENABLED=1` through the controlled activation script. Tests and a consistent SQLite backup are mandatory before switching.
+
+When the reviewed V8 foundation has been merged into `agent-manager-v1`, on the dedicated PC:
+
+```powershell
+$repo = "$env:LOCALAPPDATA\AgentManagerV4\blog-lab"
+$agent = Join-Path $repo "agent-manager"
+git -C $repo status --short
+git -C $repo pull --ff-only origin agent-manager-v1
+if ($LASTEXITCODE -ne 0) { throw "Git update failed." }
+& "$agent\scripts\check-manager-v8.ps1" -Mode Preflight
+& "$agent\scripts\check-manager-v8.ps1" -Mode Activate
+```
+
+Activation checks the existing `.venv`, installs Python requirements, runs the test suite in an **isolated** temporary DB, verifies supervisor-only health, backs up the live SQLite DB with SQLite backup API, enables the V8 opt-in flag, restarts only the Manager and Fleet Remote, then verifies both. On failure it restores the prior V7 email mode. The preview watcher polls GitHub only while V8 is active and a suitable job is pending, to preserve RAM.
+
+To disable the pilot without removing the code:
+
+```powershell
+[Environment]::SetEnvironmentVariable("AGENT_MANAGER_EMAIL_V8_ENABLED", "0", "User")
+& "$agent\scripts\restart-agent-manager.ps1"
+```
+
+**Live validation is separate:** Only the PC operator can verify that configured Gmail OAuth actually receives `[AGENT] STATUS`, that a result arrives, and that `[AGENT PV] PREVIEW_JSON {...}` completes with a GitHub artifact. Never send passwords or tokens in email. The preview workflow input is visible to permitted GitHub repository readers: use only non-sensitive/public example briefs.
+
+The remote preview job verifier matches the exact workflow run by a random 32-hex request ID and requires a successful GitHub conclusion **and** the corresponding preview artifact before changing `SUBMITTED` to `COMPLETED`. It queues a final owner notification via the existing Gmail email queue. CI simulates this roundtrip; the live email/GitHub path remains unverified until performed on the Windows host.
+
 ## Remaining blockers before shipping V8 to the dedicated Windows PC
 
 1. CI tests exercise the implementation in simulation; the real Gmail OAuth/send/receive and real sender headers must be tested on the user's Windows machine, with 3+ GB free at idle. This PR remains DRAFT; V7 must not be replaced blindly.
