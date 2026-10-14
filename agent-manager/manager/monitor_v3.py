@@ -30,9 +30,24 @@ class MonitorLoopV3:
             self.inc.raise_or_update("ollama","Local AI runtime unreachable","P2",[str(ollama)])
         else:
             self.inc.resolve_matching("ollama","Local AI runtime unreachable",{"health": ollama})
-        if resources.get("ram_percent",0)>=92: self.inc.raise_or_update("system","RAM critical","P1",[str(resources)])
-        elif resources.get("ram_percent",0)>=85: self.inc.raise_or_update("system","RAM elevated","P2",[str(resources)])
-        if resources.get("disk_percent",0)>=95: self.inc.raise_or_update("system","Disk critical","P0",[str(resources)])
+        # Hysteresis avoids noisy alert flapping and closes stale incidents
+        # once resources genuinely recover (including after Ollama unload).
+        ram = resources.get("ram_percent")
+        disk = resources.get("disk_percent")
+        if isinstance(ram, (int, float)):
+            if ram >= 92:
+                self.inc.raise_or_update("system", "RAM critical", "P1", [str(resources)])
+            elif ram <= 88:
+                self.inc.resolve_matching("system", "RAM critical", {"ram_percent": ram})
+            if ram >= 85:
+                self.inc.raise_or_update("system", "RAM elevated", "P2", [str(resources)])
+            elif ram <= 80:
+                self.inc.resolve_matching("system", "RAM elevated", {"ram_percent": ram})
+        if isinstance(disk, (int, float)):
+            if disk >= 95:
+                self.inc.raise_or_update("system", "Disk critical", "P0", [str(resources)])
+            elif disk <= 90:
+                self.inc.resolve_matching("system", "Disk critical", {"disk_percent": disk})
         return self.last
     async def run(self):
         self.running=True
