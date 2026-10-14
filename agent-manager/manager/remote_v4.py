@@ -18,6 +18,7 @@ from fastapi.responses import HTMLResponse, JSONResponse
 from pydantic import BaseModel, Field
 
 from .db_v3 import StoreV3
+from .job_control_v8 import JobControlV8
 from .settings_v3 import SettingsV3
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -549,6 +550,49 @@ async def logout():
     response = _json({"ok": True})
     response.delete_cookie(SESSION_COOKIE, path="/")
     return response
+
+
+def _review_intent_ok(request: Request, review_id: str) -> bool:
+    # SameSite=Strict sessions plus an explicit same-origin + custom header
+    # check prevent a cross-site form submit from approving a queued review.
+    origin = request.headers.get("origin", "")
+    host = request.headers.get("host", "").lower()
+    from urllib.parse import urlsplit
+    try:
+        url = urlsplit(origin)
+        same_origin = (
+            url.scheme in {"https", "http"} and
+            url.netloc.lower() == host and bool(host)
+        )
+    except ValueError:
+        return False
+    intent = request.headers.get("x-agent-review-intent", "")
+    return same_origin and intent == review_id
+
+
+@app.get("/api/reviews")
+async def pending_reviews(request: Request):
+    if not _authorized(request):
+        raise HTTPException(401, "Login required")
+    rows = store.query(
+        "SELECT review_id,job_id,target,status,summary,updated_at "
+        "FROM job_reviews_v8 WHERE status='pending' ORDER BY updated_at DESC LIMIT 50"
+    )
+    return {"reviews": rows, "note": "No review is executed by this endpoint."}
+
+
+@app.post("/api/reviews/{review_id}/approve")
+async def approve_review(review_id: str, request: Request):
+    if not _authorized(request):
+        raise HTTPException(401, "Login required")
+    if not re.fullmatch(r"REV-[0-9A-F]{12}", review_id):
+        raise HTTPException(422, "Invalid review identifier.")
+    if not _review_intent_ok(request, review_id):
+        raise HTTPException(403, "Explicit same-origin review confirmation required.")
+    try:
+        return JobControlV8(store).console_approve(review_id)
+    except ValueError as exc:
+        raise HTTPException(409, str(exc)) from exc
 
 
 @app.get("/api/status")
