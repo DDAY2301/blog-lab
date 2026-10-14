@@ -5,11 +5,14 @@ import asyncio
 import re
 import uuid
 from datetime import datetime, timedelta, timezone
-from zoneinfo import ZoneInfo
+from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
 from .db_v3 import StoreV3, utcnow
 
-LOCAL_TZ = ZoneInfo("Europe/Ljubljana")
+try:
+    LOCAL_TZ = ZoneInfo("Europe/Ljubljana")
+except ZoneInfoNotFoundError:
+    LOCAL_TZ = None  # Windows requires tzdata; keep the Manager online.
 SCHEDULE_RE = re.compile(
     r"^SCHEDULE\s+(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(?::\d{2})?)\s+(.+)$",
     re.I,
@@ -39,6 +42,8 @@ class ReadonlySchedulesV8:
     def create(self, sender: str, local_iso: str, command: str) -> dict:
         if not self.bus._simple_operator_target(command):
             raise ValueError("Scheduled jobs are limited to read-only operator commands.")
+        if LOCAL_TZ is None:
+            raise ValueError("Timezone data unavailable. Install the tzdata Python package.")
         dt = datetime.fromisoformat(local_iso)
         if dt.tzinfo is not None:
             raise ValueError("Use local Europe/Ljubljana time without an offset.")
