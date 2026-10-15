@@ -30,6 +30,41 @@ const CATEGORY_EMPTY_COPY = {
 
 const starterArticles = [
   {
+    "id": "po-kolesarski-hudi-nesreci-roberta-kranjca-vec-kot-polovica-kolesarskih-poti-v-slovenskih--03ca25dd",
+    "title": "Po kolesarski hudi nesreči Roberta Kranjca: Več kot polovica kolesarskih poti v slovenskih mestih ocenjenih kot…",
+    "excerpt": "Kolesarstvo: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Po kolesarski hudi nesreči Roberta Kranjca: Več kot polovica kolesarskih poti v slovenskih mestih ocenjenih kot…«.",
+    "seoDescription": "Kolesarstvo: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Po kolesarski hudi nesreči Roberta Kranjca: Več kot polovica kolesarskih p",
+    "content": "**Kolesarstvo, 15. 10. 2026.** Po kolesarski hudi nesreči Roberta Kranjca: Več kot polovica kolesarskih poti v slovenskih mestih ocenjenih kot nevarnih Slovenske novice\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Slovenske novice. Objavljeno: Fri, 24 Apr 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMi-wFBVV95cUxPYktzWm41QTEyazlya2tNaHlXLWprSnBJNU8xZzhuSTFpdUZkQmt5U3B5OWFJeHhXZ1ozSmZjQmZNaE9CbnlUSXBDQXRIZ19XdnRZbVE0a1ZPU25MUkJwcjNGVENaMWtoYnFSTFlJSUU5bEVwZmd6UXhFc3hRUnljMHdVQkZSWVU4WXNNVkRidHY5X0g1R0xVaTFuZWN5aWtLTkFTcFczWldxVXoxYi1EYWhSUnhvbUpINXhSc3E0RUF1eEx0dU9mV1Bya3RvRzA2UUtsWVpjcVpsN0ZVNTdBcGxDSUp0QnJJYnRJWEdrUlppbmMyQW1FNTJfOA?oc=5)\n\n## Dopolnitev vira 2: Avto-magazin.si\n\nNajtežje pričakovana kolesarska pot v Sloveniji je tudi uradno odprta. Povezuje pa dva najbolj slikovita kraja Avto-magazin.si\n\n Vir: Avto-magazin.si. Objavljeno: Wed, 15 Jul 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMijAFBVV95cUxNcUxrNnJZZ2s3Ujd1UHNHRDZIWnpBMVlwZVNKV1NlbmdmNFRRV3A4M29ILW5Da2xuN00yVFg4cFRUYmdrTUNPM3RMRDc4V3MtZzZQdm1icS1GdE9VYkdMaXZiaU1vNUYxZE0taEVYblItTWxqOWhHcy1ubjQtNlB0ZjExdUhTd3hjU2xURw?oc=5)\n\n## Dopolnitev vira 3: Lokalne Ajdovščina\n\nNa področju gorsko kolesarskega turizma v Vipavski dolini se je vendarle začelo premikati Lokalne Ajdovščina\n\n Vir: Lokalne Ajdovščina. Objavljeno: Tue, 09 Oct 2018 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMi4gFBVV95cUxOdDN0QWY3TGpjTThKQ0VIMEVvOFUwcWU4R0xldVpXZFE2V21FOVdzVUxHMW11SWpqZ1NsVWtxdF9ycVdMbTJGekxMSmp2V1RibGFHRUJDV3dfaXZLWlVBWW8zdFJ1RUlWMkFJcFhnVjlUcXNzTVdONDVqYWdzdFRiZ0RWMHdBR2FYNXNBRm5zb2FQTEhRUWVFTF95QnVYdldZNHA1ZFFSeUtxR1c2VVpoOFd4WVBPTkIzYVZlTjA0ZUtNN1J4WHRYOHRCRXB1UHhKek9lUnRjSmZ6elpLU2w2OVdB?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Kolesarstvo",
+    "author": "Blog Lab Slovenia Publisher",
+    "status": "published",
+    "heroImage": {
+      "url": "/media/articles/8bad06fec502189cebd8.webp",
+      "alt": "Three male cyclists wearing helmets during a summer bicycle tour in rural Slovenia near Luže.",
+      "caption": "Marek Ślusarczyk ( Tupungato ) Photo gallery · Wikimedia Commons · CC BY 3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:08_Slovenia_rural_landscape_-_bicycle_expedition_with_panniers.jpg"
+    },
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Slovenske novice — Po kolesarski hudi nesreči Roberta Kranjca: Več kot polovica kolesarskih poti v slovenskih mestih ocenjenih kot…",
+        "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxPYktzWm41QTEyazlya2tNaHlXLWprSnBJNU8xZzhuSTFpdUZkQmt5U3B5OWFJeHhXZ1ozSmZjQmZNaE9CbnlUSXBDQXRIZ19XdnRZbVE0a1ZPU25MUkJwcjNGVENaMWtoYnFSTFlJSUU5bEVwZmd6UXhFc3hRUnljMHdVQkZSWVU4WXNNVkRidHY5X0g1R0xVaTFuZWN5aWtLTkFTcFczWldxVXoxYi1EYWhSUnhvbUpINXhSc3E0RUF1eEx0dU9mV1Bya3RvRzA2UUtsWVpjcVpsN0ZVNTdBcGxDSUp0QnJJYnRJWEdrUlppbmMyQW1FNTJfOA?oc=5"
+      },
+      {
+        "label": "Avto-magazin.si — Najtežje pričakovana kolesarska pot v Sloveniji je tudi uradno odprta. Povezuje pa dva najbolj slikovita kraja -…",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNcUxrNnJZZ2s3Ujd1UHNHRDZIWnpBMVlwZVNKV1NlbmdmNFRRV3A4M29ILW5Da2xuN00yVFg4cFRUYmdrTUNPM3RMRDc4V3MtZzZQdm1icS1GdE9VYkdMaXZiaU1vNUYxZE0taEVYblItTWxqOWhHcy1ubjQtNlB0ZjExdUhTd3hjU2xURw?oc=5"
+      },
+      {
+        "label": "Lokalne Ajdovščina — Na področju gorsko kolesarskega turizma v Vipavski dolini se je vendarle začelo premikati - Lokalne Ajdovščina",
+        "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOdDN0QWY3TGpjTThKQ0VIMEVvOFUwcWU4R0xldVpXZFE2V21FOVdzVUxHMW11SWpqZ1NsVWtxdF9ycVdMbTJGekxMSmp2V1RibGFHRUJDV3dfaXZLWlVBWW8zdFJ1RUlWMkFJcFhnVjlUcXNzTVdONDVqYWdzdFRiZ0RWMHdBR2FYNXNBRm5zb2FQTEhRUWVFTF95QnVYdldZNHA1ZFFSeUtxR1c2VVpoOFd4WVBPTkIzYVZlTjA0ZUtNN1J4WHRYOHRCRXB1UHhKek9lUnRjSmZ6elpLU2w2OVdB?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-15T07:39:35+02:00",
+    "updatedAt": "2026-10-15T07:39:35+02:00"
+  },
+
+  {
     "id": "vevce-swimming-pool-ljubljana-guide",
     "title": "Swimming in Ljubljana: A Practical Vevče Pool Guide",
     "excerpt": "Plan an all-season swim at Ljubljana’s Vevče pool, with current hours, ticket prices, lane advice, family facilities, accessibility and public transport.",

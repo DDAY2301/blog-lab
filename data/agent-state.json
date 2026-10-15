@@ -1,27 +1,21 @@
 {
-  "last_success": "2026-10-14T07:38:38+02:00",
+  "last_success": "2026-10-15T07:39:35+02:00",
   "last_failure": "2026-09-21T20:56:52+02:00",
   "consecutive_failures": 0,
-  "posts_date": "2026-10-14",
+  "posts_date": "2026-10-15",
   "posts_today": 1,
-  "last_output": "dobre-zgodbe-evrope-ena-najbolj-urejenih-kolesarskih-poti-v-sloveniji-je-nastala-na-trasi--ae15283a",
-  "last_error": "ze_uporabljen_vir",
+  "last_output": "po-kolesarski-hudi-nesreci-roberta-kranjca-vec-kot-polovica-kolesarskih-poti-v-slovenskih--03ca25dd",
+  "last_error": null,
   "agent_version": "3.0.0-learning-guarded-fallback",
-  "current_category": "dediscina",
+  "current_category": "kolesarstvo",
   "scheduled_posts_today": 1,
   "manual_posts_today": 0,
-  "writer_mode": "workers_ai",
+  "writer_mode": "deterministic_fallback",
   "scheduled_slots_done": [
-    "2026-10-14|07:35|kolesarstvo"
+    "2026-10-15|07:35|kolesarstvo"
   ],
-  "scheduled_slots_deferred": [
-    "2026-10-14|07:35|kolesarstvo"
-  ],
-  "last_editorial_hold": {
-    "slot": "2026-10-14|07:35|kolesarstvo",
-    "reason": "manjka_fotografija,ponavljanje",
-    "at": "2026-10-14T07:43:23+02:00"
-  },
+  "scheduled_slots_deferred": [],
+  "last_editorial_hold": null,
   "publisher_guardian_last_run": "2026-10-14T23:54:28+02:00",
   "publisher_guardian_last_action": {
     "category": "dediscina",
