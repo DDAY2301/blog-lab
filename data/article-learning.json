@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-15T07:24:12+02:00",
-  "loop_count": 5575,
+  "updated_at": "2026-10-15T07:40:33+02:00",
+  "loop_count": 5576,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-15T07:23:44+02:00",
+      "last_learning_run": "2026-10-15T07:40:11+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 124448,
-          "last_seen": "2026-10-15T07:23:44+02:00",
+          "seen": 124460,
+          "last_seen": "2026-10-15T07:40:11+02:00",
           "last_title": "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
           "last_provider": "google-news-si",
-          "published": 323186,
+          "published": 323253,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-15T07:24:02+02:00",
+      "last_learning_run": "2026-10-15T07:40:23+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -272,11 +272,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 138221,
-          "last_seen": "2026-10-15T07:24:02+02:00",
-          "last_title": "Protestnik, ki je postal predsednik: Stevanović nekoč glas anticepilcev, danes pa enfant terrible, ki je vse postavil na glavo - Metropolitan.si",
+          "seen": 138238,
+          "last_seen": "2026-10-15T07:40:23+02:00",
+          "last_title": "Pirc Musar: Mala zmaga za neko politično opcijo, pa hkrati velik poraz za državo - Delo.si",
           "last_provider": "google-news-si",
-          "published": 360637,
+          "published": 360710,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -378,17 +378,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 16,
+      "current_source_count": 17,
       "example_titles": {
         "news.google.com": [
           "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
           "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer",
-          "Pirc Musar: Ne bom tiho, ko zunanja politika ne bo skladna z ustavnimi vrednotami države - Siol.net"
+          "Golob: Ne predstavljam si, da bi kdo želel živeti v državi, v kateri bi politika imela pooblastila policije - N1 Slovenija"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-15T07:24:12+02:00",
+      "last_learning_run": "2026-10-15T07:40:33+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -468,11 +468,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 150947,
-          "last_seen": "2026-10-15T07:24:12+02:00",
+          "seen": 150970,
+          "last_seen": "2026-10-15T07:40:33+02:00",
           "last_title": "Vreme se bo danes hitro obrnilo: nevihte bodo zajele večji del Slovenije, na Primorskem tudi burja - Dnevne Novice",
           "last_provider": "google-news-si",
-          "published": 263989,
+          "published": 264019,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "reddit.com": {
@@ -588,6 +588,12 @@
   },
   "recent_articles": [
     {
+      "id": "po-kolesarski-hudi-nesreci-roberta-kranjca-vec-kot-polovica-kolesarskih-poti-v-slovenskih--03ca25dd",
+      "title": "Po kolesarski hudi nesreči Roberta Kranjca: Več kot polovica kolesarskih poti v slovenskih mestih ocenjenih kot…",
+      "category": "Kolesarstvo",
+      "createdAt": "2026-10-15T07:39:35+02:00"
+    },
+    {
       "id": "vevce-swimming-pool-ljubljana-guide",
       "title": "Swimming in Ljubljana: A Practical Vevče Pool Guide",
       "category": "Vodniki",
@@ -652,15 +658,25 @@
       "title": "Nizke turistične sezone morda sploh ne bo več: kaj to pomeni in kje so razlogi",
       "category": "Sezonsko",
       "createdAt": "2026-10-11T13:39:14+02:00"
-    },
-    {
-      "id": "zelenci-nature-reserve-day-trip-ljubljana",
-      "title": "Zelenci Nature Reserve: An Easy Day Trip from Ljubljana",
-      "category": "Sezonsko",
-      "createdAt": "2026-10-11T09:00:00+02:00"
     }
   ],
   "recent_failures": [
+    {
+      "file": "fallback-failed-20261014-223830.json",
+      "category": "dediscina",
+      "errors": [
+        "ze_uporabljen_vir"
+      ],
+      "title": "Grad Grad na Goričkem: Največji baročni grad v Sloveniji s skrivnostno zgodovino"
+    },
+    {
+      "file": "fallback-failed-20261014-223911.json",
+      "category": "dediscina",
+      "errors": [
+        "ze_uporabljen_vir"
+      ],
+      "title": "Slovenia Maps & Facts"
+    },
     {
       "file": "fallback-failed-20261014-225320.json",
       "category": "dediscina",
@@ -740,25 +756,9 @@
         "ze_uporabljen_vir"
       ],
       "title": "Grad Grad na Goričkem: Največji baročni grad v Sloveniji s skrivnostno zgodovino"
-    },
-    {
-      "file": "agent-state",
-      "category": "dediscina",
-      "errors": [
-        "ze_uporabljen_vir"
-      ]
-    },
-    {
-      "file": "agent-state",
-      "category": "dediscina",
-      "errors": [
-        "manjka_fotografija,ponavljanje"
-      ],
-      "slot": "2026-10-14|07:35|kolesarstvo"
     }
   ],
   "failure_summary": {
-    "ze_uporabljen_vir": 21,
-    "manjka_fotografija,ponavljanje": 1
+    "ze_uporabljen_vir": 20
   }
 }
