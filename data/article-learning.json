@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-16T11:10:36+02:00",
-  "loop_count": 5838,
+  "updated_at": "2026-10-16T11:24:29+02:00",
+  "loop_count": 5839,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-16T11:10:14+02:00",
+      "last_learning_run": "2026-10-16T11:24:09+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 127406,
-          "last_seen": "2026-10-16T11:10:14+02:00",
+          "seen": 127416,
+          "last_seen": "2026-10-16T11:24:09+02:00",
           "last_title": "Slovenska blamaža na igrah! Zakaj sploh tekmujemo, če je šport pri nas umrl - Ekipa",
           "last_provider": "google-news-si",
-          "published": 340807,
+          "published": 340874,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,17 +227,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 11,
+      "current_source_count": 10,
       "example_titles": {
         "news.google.com": [
           "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
-          "*〜?[[Živý=šport!!]++] Škotska Slovenija prenos 26. september 2026 - Business and Investment Development Agency - CzechInvest",
-          "Finci premagali Slovenijo in osvojili prvo medaljo na velikih tekmovanjih - 24ur.com"
+          "Kot v sanjah: Slovenija že drugič v dveh tednih evropski prvak! (VIDEO) - Šport TV",
+          "Slovenci prekinili japonski urok in osvojili zgodovinski bron v Ligi narodov - rtvslo.si"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-16T11:10:24+02:00",
+      "last_learning_run": "2026-10-16T11:24:19+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -272,11 +272,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 142438,
-          "last_seen": "2026-10-16T11:10:24+02:00",
+          "seen": 142455,
+          "last_seen": "2026-10-16T11:24:19+02:00",
           "last_title": "Janez Janša: V Sloveniji je štiri leta imela oblast vlada, ki ne zna šteti - Svet24.si",
           "last_provider": "google-news-si",
-          "published": 379836,
+          "published": 379909,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -388,7 +388,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-16T11:10:36+02:00",
+      "last_learning_run": "2026-10-16T11:24:29+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -468,11 +468,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 156808,
-          "last_seen": "2026-10-16T11:10:36+02:00",
+          "seen": 156831,
+          "last_seen": "2026-10-16T11:24:29+02:00",
           "last_title": "Vreme se bo danes hitro obrnilo: nevihte bodo zajele večji del Slovenije, na Primorskem tudi burja - Dnevne Novice",
           "last_provider": "google-news-si",
-          "published": 271879,
+          "published": 271909,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "reddit.com": {
@@ -662,15 +662,6 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20261016-092342.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek",
-        "manjka_fotografija"
-      ],
-      "title": "Ste pripravljeni? Kmalu s kolesom od Ljubljane do Beograda"
-    },
-    {
       "file": "fallback-failed-20261016-093828.json",
       "category": "kolesarstvo",
       "errors": [
@@ -749,15 +740,23 @@
       "title": "Kolesarjenje: Slovenija kolesari nad evropskim povprečjem, vendar izzivi ostajajo"
     },
     {
-      "file": "agent-state",
-      "category": "kolesarstvo",
+      "file": "fallback-failed-20261016-112340.json",
+      "category": "dediscina",
       "errors": [
-        "podvojen_naslov,ze_uporabljen_vir"
+        "ze_uporabljen_vir"
+      ],
+      "title": "Grad Grad na Goričkem: Največji baročni grad v Sloveniji s skrivnostno zgodovino"
+    },
+    {
+      "file": "agent-state",
+      "category": "dediscina",
+      "errors": [
+        "ze_uporabljen_vir"
       ]
     },
     {
       "file": "agent-state",
-      "category": "kolesarstvo",
+      "category": "dediscina",
       "errors": [
         "manjka_fotografija"
       ],
@@ -765,10 +764,9 @@
     }
   ],
   "failure_summary": {
+    "ze_uporabljen_vir": 11,
     "manjka_fotografija": 11,
-    "ze_uporabljen_vir": 10,
     "prekratek": 9,
-    "podvojen_naslov": 7,
-    "podvojen_naslov,ze_uporabljen_vir": 1
+    "podvojen_naslov": 7
   }
 }
