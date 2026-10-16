@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-16T14:24:47+02:00",
-  "loop_count": 5867,
+  "updated_at": "2026-10-16T14:25:39+02:00",
+  "loop_count": 5868,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-16T14:24:22+02:00",
+      "last_learning_run": "2026-10-16T14:25:17+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 127674,
-          "last_seen": "2026-10-16T14:24:22+02:00",
+          "seen": 127683,
+          "last_seen": "2026-10-16T14:25:17+02:00",
           "last_title": "Slovenska blamaža na igrah! Zakaj sploh tekmujemo, če je šport pri nas umrl - Ekipa",
           "last_provider": "google-news-si",
-          "published": 342750,
+          "published": 342817,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-16T14:24:37+02:00",
+      "last_learning_run": "2026-10-16T14:25:28+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -272,11 +272,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 142943,
-          "last_seen": "2026-10-16T14:24:37+02:00",
+          "seen": 142960,
+          "last_seen": "2026-10-16T14:25:28+02:00",
           "last_title": "Pirc Musar Janši: Ne bom tiho, ko zunanja politika ne bo skladna z ustavnimi vrednotami - Dnevnik",
           "last_provider": "google-news-si",
-          "published": 381953,
+          "published": 382026,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -381,14 +381,14 @@
       "current_source_count": 17,
       "example_titles": {
         "news.google.com": [
-          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
           "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si",
+          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
           "Na Radiu Ognjišče zadnje predvolilno soočenje: v ospredju prisluhi, zdravstvo, zunanja politika in sprava - Radio Ognjišče"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-16T14:24:47+02:00",
+      "last_learning_run": "2026-10-16T14:25:39+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -468,11 +468,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 157470,
-          "last_seen": "2026-10-16T14:24:47+02:00",
+          "seen": 157493,
+          "last_seen": "2026-10-16T14:25:39+02:00",
           "last_title": "Podpisan drugi dodatek k Dogovoru za razvoj regije Jugovzhodna Slovenija - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "google-news-si",
-          "published": 272749,
+          "published": 272779,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "reddit.com": {
@@ -662,15 +662,6 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20261016-130943.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek",
-        "manjka_fotografija"
-      ],
-      "title": "Ste pripravljeni? Kmalu s kolesom od Ljubljane do Beograda"
-    },
-    {
       "file": "fallback-failed-20261016-132335.json",
       "category": "dediscina",
       "errors": [
@@ -747,15 +738,24 @@
       "title": "Slovenia Maps & Facts"
     },
     {
-      "file": "agent-state",
-      "category": "dediscina",
+      "file": "fallback-failed-20261016-142427.json",
+      "category": "kolesarstvo",
       "errors": [
-        "ze_uporabljen_vir"
+        "prekratek",
+        "manjka_fotografija"
+      ],
+      "title": "Ste pripravljeni? Kmalu s kolesom od Ljubljane do Beograda"
+    },
+    {
+      "file": "agent-state",
+      "category": "kolesarstvo",
+      "errors": [
+        "prekratek,manjka_fotografija"
       ]
     },
     {
       "file": "agent-state",
-      "category": "dediscina",
+      "category": "kolesarstvo",
       "errors": [
         "manjka_fotografija"
       ],
@@ -763,9 +763,10 @@
     }
   ],
   "failure_summary": {
-    "ze_uporabljen_vir": 12,
+    "ze_uporabljen_vir": 11,
     "manjka_fotografija": 10,
     "prekratek": 9,
-    "podvojen_naslov": 1
+    "podvojen_naslov": 1,
+    "prekratek,manjka_fotografija": 1
   }
 }
