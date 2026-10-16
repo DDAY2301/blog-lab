@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-16T18:40:23+02:00",
-  "loop_count": 5906,
+  "updated_at": "2026-10-16T18:54:47+02:00",
+  "loop_count": 5907,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-16T18:39:59+02:00",
+      "last_learning_run": "2026-10-16T18:54:25+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -71,12 +71,12 @@
           "last_provider": "bing-web"
         },
         "news.google.com": {
-          "score": 2.502,
-          "seen": 128032,
-          "last_seen": "2026-10-16T18:39:59+02:00",
-          "last_title": "Kje gledati finale košarkarskega EP med Slovenci in Italijani? Televizijski prenos bo! - Dnevnik",
-          "last_provider": "google-news-si",
-          "published": 345363,
+          "score": 2.498,
+          "seen": 128038,
+          "last_seen": "2026-10-16T18:54:25+02:00",
+          "last_title": "(FOTO) Naveza Šeško-Vipotnik v zadnji minuti obdržala Slovenijo nad gladino: Kekovi iztržili točko proti Švedski - Večer",
+          "last_provider": "google-news-global",
+          "published": 345430,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,17 +227,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 10,
+      "current_source_count": 6,
       "example_titles": {
         "news.google.com": [
-          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
-          "*〜?[[Živý=šport!!]++] Škotska Slovenija prenos 26. september 2026 - Business and Investment Development Agency - CzechInvest",
-          "Finci premagali Slovenijo in osvojili prvo medaljo na velikih tekmovanjih - 24ur.com"
+          "Slovenke po veliki vrnitvi in zmagi nad Latvijo na pragu osmine finala - rtvslo.si",
+          "S tribune: Športni trenutki, zaradi katerih se mi še danes naježijo dlake - Svet24.si",
+          "Slovenija proti Danski danes odpira svoje nastope na letošnjem evropskem prvenstvu - Šport TV"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-16T18:40:13+02:00",
+      "last_learning_run": "2026-10-16T18:54:37+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -272,11 +272,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 143587,
-          "last_seen": "2026-10-16T18:40:13+02:00",
+          "seen": 143603,
+          "last_seen": "2026-10-16T18:54:37+02:00",
           "last_title": "Protestnik, ki je postal predsednik: Stevanović nekoč glas anticepilcev, danes pa enfant terrible, ki je vse postavil na glavo - Metropolitan.si",
           "last_provider": "google-news-si",
-          "published": 384800,
+          "published": 384873,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -388,7 +388,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-16T18:40:23+02:00",
+      "last_learning_run": "2026-10-16T18:54:47+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -468,11 +468,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 158336,
-          "last_seen": "2026-10-16T18:40:23+02:00",
-          "last_title": "Kajzer: zunanjepolitična strategija mora odražati aktualno geopolitično okolje - 24ur.com",
+          "seen": 158359,
+          "last_seen": "2026-10-16T18:54:47+02:00",
+          "last_title": "Vreme se bo danes hitro obrnilo: nevihte bodo zajele večji del Slovenije, na Primorskem tudi burja - Dnevne Novice",
           "last_provider": "google-news-si",
-          "published": 273919,
+          "published": 273949,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "reddit.com": {
@@ -576,7 +576,7 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 22,
+      "current_source_count": 23,
       "example_titles": {
         "news.google.com": [
           "(AKTUALNO) Še danes v prodaji 36. št. revije Demokracija: 30 let Demokracije, ki udejanja pravico vedeti več! Načrt za demografsko obnovo sl",
@@ -662,14 +662,6 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20261016-173846.json",
-      "category": "dediscina",
-      "errors": [
-        "ze_uporabljen_vir"
-      ],
-      "title": "Slovenia Maps & Facts"
-    },
-    {
       "file": "fallback-failed-20261016-173923.json",
       "category": "kolesarstvo",
       "errors": [
@@ -747,15 +739,23 @@
       "title": "Kolesarjenje: Slovenija kolesari nad evropskim povprečjem, vendar izzivi ostajajo"
     },
     {
-      "file": "agent-state",
-      "category": "kolesarstvo",
+      "file": "fallback-failed-20261016-185352.json",
+      "category": "dediscina",
       "errors": [
-        "podvojen_naslov,ze_uporabljen_vir"
+        "ze_uporabljen_vir"
+      ],
+      "title": "Grad Grad na Goričkem: Največji baročni grad v Sloveniji s skrivnostno zgodovino"
+    },
+    {
+      "file": "agent-state",
+      "category": "dediscina",
+      "errors": [
+        "ze_uporabljen_vir"
       ]
     },
     {
       "file": "agent-state",
-      "category": "kolesarstvo",
+      "category": "dediscina",
       "errors": [
         "manjka_fotografija"
       ],
@@ -763,10 +763,9 @@
     }
   ],
   "failure_summary": {
-    "ze_uporabljen_vir": 14,
+    "ze_uporabljen_vir": 15,
     "manjka_fotografija": 7,
     "prekratek": 6,
-    "podvojen_naslov": 5,
-    "podvojen_naslov,ze_uporabljen_vir": 1
+    "podvojen_naslov": 4
   }
 }
