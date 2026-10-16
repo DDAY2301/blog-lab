@@ -1,15 +1,12 @@
 {
-  "updatedAt": "2026-10-16T07:02:34+02:00",
+  "updatedAt": "2026-10-16T07:06:08+02:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
-    "Cankarjev dom",
     "Kino Šiška",
-    "Ljubljana Castle",
-    "MGL",
     "Gala Hala",
     "Klub K4",
-    "European Table Tennis Championships Ljubljana 2026"
+    "Cirkus Klub"
   ],
   "sourcesFailed": [],
   "items": [
@@ -1013,7 +1010,9 @@
       "endAt": null,
       "id": "noc-carovnic-special-kiki-2026-10-30",
       "price": "€12 advance; €15 on the day",
-      "languages": ["Slovenian"],
+      "languages": [
+        "Slovenian"
+      ],
       "touristFriendly": true,
       "familyFriendly": false,
       "accessibility": null,
