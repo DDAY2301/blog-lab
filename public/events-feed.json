@@ -1,12 +1,15 @@
 {
-  "updatedAt": "2026-10-16T06:40:56+02:00",
+  "updatedAt": "2026-10-16T07:02:34+02:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
+    "Cankarjev dom",
     "Kino Šiška",
+    "Ljubljana Castle",
+    "MGL",
     "Gala Hala",
     "Klub K4",
-    "Cirkus Klub"
+    "European Table Tennis Championships Ljubljana 2026"
   ],
   "sourcesFailed": [],
   "items": [
@@ -140,7 +143,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/open-kitchen/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
+      "lastCheckedAt": "2026-10-16T07:02:34+02:00",
       "description": "Ljubljana's outdoor food market is scheduled from 10:00 to 21:00 at Pogačarjev trg; it is weather-dependent, so check the official listing before visiting."
     },
     {
@@ -150,7 +153,7 @@
       "familyFriendly": false,
       "accessibility": null,
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
+      "lastCheckedAt": "2026-10-16T07:02:34+02:00",
       "endAt": null,
       "id": "sms-2-new-generation-2026-10-16",
       "title": "SMS 2: New Generation",
@@ -178,7 +181,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.kinosiska.si/en",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
+      "lastCheckedAt": "2026-10-16T07:02:34+02:00",
       "description": "Jimmy Barka Experience: Not Feeling So Good is confirmed at Katedrala Hall · Kino Šiška. Check the official source for any late programme or ticket changes."
     },
     {
@@ -197,7 +200,7 @@
       "accessibility": null,
       "ticketUrl": "https://shop.ljubljanskigrad.si/en/all.html",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
+      "lastCheckedAt": "2026-10-16T07:02:34+02:00",
       "description": "Sentido Project is confirmed at Rock Hall · Ljubljana Castle. Check the official source for any late programme or ticket changes."
     },
     {
@@ -216,7 +219,7 @@
       "accessibility": null,
       "ticketUrl": "https://vstopnice.cd-cc.si/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-13T06:56:00+02:00",
+      "lastCheckedAt": "2026-10-16T07:02:34+02:00",
       "description": "The second confirmed performance of Jan Rozman’s Wetware begins at 20:00. Check the official page for language and accessibility details."
     },
     {
@@ -229,7 +232,7 @@
       "endAt": null,
       "id": "karabruke-2026-10-16",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
+      "lastCheckedAt": "2026-10-16T07:02:34+02:00",
       "price": null,
       "languages": [],
       "touristFriendly": null,
@@ -248,7 +251,7 @@
       "endAt": null,
       "id": "odyssey-club-2026-10-16",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
+      "lastCheckedAt": "2026-10-16T07:02:34+02:00",
       "price": null,
       "languages": [],
       "touristFriendly": null,
@@ -273,7 +276,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/nlb-30-ljubljanski-maraton",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
+      "lastCheckedAt": "2026-10-16T07:02:34+02:00",
       "description": "NLB 30. Ljubljanski maraton is confirmed at Ljubljana · mestno središče. Check the official source for any late programme or ticket changes."
     },
     {
@@ -283,7 +286,7 @@
       "familyFriendly": false,
       "accessibility": null,
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
+      "lastCheckedAt": "2026-10-16T07:02:34+02:00",
       "endAt": null,
       "id": "candlelight-coldplay-imagine-dragons-2026-10-17",
       "title": "Candlelight: Coldplay and Imagine Dragons",
@@ -302,7 +305,7 @@
       "familyFriendly": false,
       "accessibility": null,
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
+      "lastCheckedAt": "2026-10-16T07:02:34+02:00",
       "endAt": null,
       "id": "concert-drustvo-kljuc-25-years-2026-10-17",
       "title": "25 Years of Društvo Ključ: viaEntropia, Čedahuči and Yoko Nono",
@@ -330,7 +333,7 @@
       "accessibility": null,
       "ticketUrl": "https://vstopnice.cd-cc.si/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-13T06:56:00+02:00",
+      "lastCheckedAt": "2026-10-16T07:02:34+02:00",
       "description": "Cellist Marc Coppey and pianist Andrew von Oeyen perform at 19:30. Use the official ticket source for hall and price details."
     },
     {
@@ -341,7 +344,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.mgl.si/en/schedule/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
+      "lastCheckedAt": "2026-10-16T07:02:34+02:00",
       "id": "prima-facie-2026-10-17",
       "title": "Prima Facie",
       "url": "https://www.mgl.si/en/schedule/",
@@ -362,7 +365,7 @@
       "endAt": null,
       "id": "rapetek-immortal-technique-2026-10-17",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
+      "lastCheckedAt": "2026-10-16T07:02:34+02:00",
       "price": null,
       "languages": [],
       "touristFriendly": null,
@@ -378,7 +381,7 @@
       "familyFriendly": false,
       "accessibility": null,
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
+      "lastCheckedAt": "2026-10-16T07:02:34+02:00",
       "endAt": null,
       "id": "candlelight-michael-jackson-2026-10-17",
       "title": "Candlelight: Tribute to Michael Jackson",
@@ -982,24 +985,42 @@
       "description": "Prima Facie begins at 20:00 on the MGL Small Stage. The official schedule marks this performance as sold out."
     },
     {
-      "title": "BBBBBBB (JP), MALA ROZA MUCA & PIXEL.BAMBI, SSMKOSK @ Channel Zero",
-      "url": "https://www.galahala.com/",
+      "title": "BBBBBBB (JP), Mala Roza Muca & Pixel.Bambi, SsmKOSK",
+      "url": "https://www.galahala.com/program/",
       "source": "Gala Hala",
       "type": "Koncert · Metelkova",
-      "place": "Gala Hala · AKC Metelkova",
+      "place": "Channel Zero · AKC Metelkova",
       "startAt": "2026-10-29T20:00:00+01:00",
-      "endAt": "",
-      "id": "event-56-bbbbbbb-jp-mala-roza-muca-pixel-bambi-ssmkosk-channel-zero"
+      "endAt": null,
+      "id": "bbbbbbb-mala-roza-muca-pixel-bambi-ssmkosk-2026-10-29",
+      "price": null,
+      "languages": [],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": null,
+      "ticketUrl": "https://www.galahala.com/program/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-16T07:02:34+02:00",
+      "description": "The official Gala Hala programme lists this concert at Channel Zero at 20:00. Check the organiser page for ticket and accessibility details."
     },
     {
-      "title": "NOČ ČAROVNIC SPECIAL: KIKI @ Gala hala",
-      "url": "https://www.galahala.com/",
+      "title": "Noč čarovnic special: KIKI",
+      "url": "https://www.galahala.com/program/halloweeki-gala-hala/34706/",
       "source": "Gala Hala",
       "type": "Koncert · Metelkova",
       "place": "Gala Hala · AKC Metelkova",
       "startAt": "2026-10-30T20:00:00+01:00",
-      "endAt": "",
-      "id": "event-53-no-arovnic-special-kiki-gala-hala"
+      "endAt": null,
+      "id": "noc-carovnic-special-kiki-2026-10-30",
+      "price": "€12 advance; €15 on the day",
+      "languages": ["Slovenian"],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": null,
+      "ticketUrl": "https://www.galahala.com/program/halloweeki-gala-hala/34706/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-16T07:02:34+02:00",
+      "description": "KiKi performs a Halloween-themed folk-pop concert at Gala Hala at 20:00. Advance tickets cost €12 and the door price is €15."
     }
   ]
 }
