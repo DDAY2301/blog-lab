@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-16T17:54:19+02:00",
-  "loop_count": 5898,
+  "updated_at": "2026-10-16T17:55:07+02:00",
+  "loop_count": 5899,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-16T17:54:01+02:00",
+      "last_learning_run": "2026-10-16T17:54:46+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 127956,
-          "last_seen": "2026-10-16T17:54:01+02:00",
+          "seen": 127966,
+          "last_seen": "2026-10-16T17:54:46+02:00",
           "last_title": "Kje gledati finale košarkarskega EP med Slovenci in Italijani? Televizijski prenos bo! - Dnevnik",
           "last_provider": "google-news-si",
-          "published": 344827,
+          "published": 344894,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -232,12 +232,12 @@
         "news.google.com": [
           "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
           "*〜?[[Živý=šport!!]++] Škotska Slovenija prenos 26. september 2026 - Business and Investment Development Agency - CzechInvest",
-          "Finci premagali Slovenijo in osvojili prvo medaljo na velikih tekmovanjih - 24ur.com"
+          "Kot v sanjah: Slovenija že drugič v dveh tednih evropski prvak! (VIDEO) - Šport TV"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-16T17:54:10+02:00",
+      "last_learning_run": "2026-10-16T17:54:57+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -272,11 +272,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 143458,
-          "last_seen": "2026-10-16T17:54:10+02:00",
-          "last_title": "Protestnik, ki je postal predsednik: Stevanović nekoč glas anticepilcev, danes pa enfant terrible, ki je vse postavil na glavo - Metropolitan.si",
+          "seen": 143475,
+          "last_seen": "2026-10-16T17:54:57+02:00",
+          "last_title": "Pirc Musar Janši: Ne bom tiho, ko zunanja politika ne bo skladna z ustavnimi vrednotami - Dnevnik",
           "last_provider": "google-news-si",
-          "published": 384216,
+          "published": 384289,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -378,17 +378,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 16,
+      "current_source_count": 17,
       "example_titles": {
         "news.google.com": [
+          "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si",
           "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
-          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer",
-          "Golob: Ne predstavljam si, da bi kdo želel živeti v državi, v kateri bi politika imela pooblastila policije - N1 Slovenija"
+          "Na Radiu Ognjišče zadnje predvolilno soočenje: v ospredju prisluhi, zdravstvo, zunanja politika in sprava - Radio Ognjišče"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-16T17:54:19+02:00",
+      "last_learning_run": "2026-10-16T17:55:07+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -468,11 +468,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 158160,
-          "last_seen": "2026-10-16T17:54:19+02:00",
+          "seen": 158182,
+          "last_seen": "2026-10-16T17:55:07+02:00",
           "last_title": "Kajzer: zunanjepolitična strategija mora odražati aktualno geopolitično okolje - 24ur.com",
           "last_provider": "google-news-si",
-          "published": 273679,
+          "published": 273709,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "reddit.com": {
@@ -662,14 +662,6 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20261016-164845.json",
-      "category": "dediscina",
-      "errors": [
-        "ze_uporabljen_vir"
-      ],
-      "title": "Grad Grad na Goričkem: Največji baročni grad v Sloveniji s skrivnostno zgodovino"
-    },
-    {
       "file": "fallback-failed-20261016-164923.json",
       "category": "kolesarstvo",
       "errors": [
@@ -747,15 +739,24 @@
       "title": "Slovenia Maps & Facts"
     },
     {
-      "file": "agent-state",
-      "category": "dediscina",
+      "file": "fallback-failed-20261016-175415.json",
+      "category": "kolesarstvo",
       "errors": [
+        "podvojen_naslov",
         "ze_uporabljen_vir"
+      ],
+      "title": "Kolesarjenje: Slovenija kolesari nad evropskim povprečjem, vendar izzivi ostajajo"
+    },
+    {
+      "file": "agent-state",
+      "category": "kolesarstvo",
+      "errors": [
+        "podvojen_naslov,ze_uporabljen_vir"
       ]
     },
     {
       "file": "agent-state",
-      "category": "dediscina",
+      "category": "kolesarstvo",
       "errors": [
         "manjka_fotografija"
       ],
@@ -763,9 +764,10 @@
     }
   ],
   "failure_summary": {
-    "ze_uporabljen_vir": 13,
+    "ze_uporabljen_vir": 12,
     "manjka_fotografija": 9,
     "prekratek": 8,
-    "podvojen_naslov": 3
+    "podvojen_naslov": 3,
+    "podvojen_naslov,ze_uporabljen_vir": 1
   }
 }
