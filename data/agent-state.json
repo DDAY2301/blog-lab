@@ -5,9 +5,9 @@
   "posts_date": "2026-10-16",
   "posts_today": 0,
   "last_output": "po-kolesarski-hudi-nesreci-roberta-kranjca-vec-kot-polovica-kolesarskih-poti-v-slovenskih--03ca25dd",
-  "last_error": "prekratek,manjka_fotografija",
+  "last_error": "prekratek",
   "agent_version": "3.0.0-learning-guarded-fallback",
-  "current_category": "kolesarstvo",
+  "current_category": "gourmet",
   "scheduled_posts_today": 0,
   "manual_posts_today": 0,
   "writer_mode": "workers_ai",
@@ -16,12 +16,13 @@
     "2026-10-16|07:35|kolesarstvo",
     "2026-10-16|10:45|dediscina",
     "2026-10-16|13:30|sezonsko",
-    "2026-10-16|16:20|gore"
+    "2026-10-16|16:20|gore",
+    "2026-10-16|19:10|gourmet"
   ],
   "last_editorial_hold": {
-    "slot": "2026-10-16|16:20|gore",
-    "reason": "naslov_ni_v_rubriki,clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike,besedilo_ni_v_slovenscini",
-    "at": "2026-10-16T23:09:33+02:00"
+    "slot": "2026-10-16|19:10|gourmet",
+    "reason": "ponavljanje",
+    "at": "2026-10-16T23:24:37+02:00"
   },
   "publisher_guardian_last_run": "2026-10-16T23:10:29+02:00",
   "publisher_guardian_last_action": {
