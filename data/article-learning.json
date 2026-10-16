@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-16T10:08:48+02:00",
-  "loop_count": 5829,
+  "updated_at": "2026-10-16T10:09:36+02:00",
+  "loop_count": 5830,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-16T10:08:20+02:00",
+      "last_learning_run": "2026-10-16T10:09:16+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 127315,
-          "last_seen": "2026-10-16T09:54:03+02:00",
+          "seen": 127326,
+          "last_seen": "2026-10-16T10:09:16+02:00",
           "last_title": "Slovenska blamaža na igrah! Zakaj sploh tekmujemo, če je šport pri nas umrl - Ekipa",
           "last_provider": "google-news-si",
-          "published": 340204,
+          "published": 340271,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,18 +227,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 2,
+      "current_source_count": 11,
       "example_titles": {
-        "lonelyplanet.com": [
-          "11 things to know before booking a trip to Slovenia - Lonely Planet"
-        ],
-        "worldatlas.com": [
-          "Slovenia Maps & Facts"
+        "news.google.com": [
+          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
+          "*〜?[[Živý=šport!!]++] Škotska Slovenija prenos 26. september 2026 - Business and Investment Development Agency - CzechInvest",
+          "Finci premagali Slovenijo in osvojili prvo medaljo na velikih tekmovanjih - 24ur.com"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-16T10:08:32+02:00",
+      "last_learning_run": "2026-10-16T10:09:26+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -273,11 +272,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 142284,
-          "last_seen": "2026-10-16T09:54:13+02:00",
-          "last_title": "Protestnik, ki je postal predsednik: Stevanović nekoč glas anticepilcev, danes pa enfant terrible, ki je vse postavil na glavo - Metropolitan.si",
+          "seen": 142301,
+          "last_seen": "2026-10-16T10:09:26+02:00",
+          "last_title": "Janez Janša: V Sloveniji je štiri leta imela oblast vlada, ki ne zna šteti - Svet24.si",
           "last_provider": "google-news-si",
-          "published": 379179,
+          "published": 379252,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -379,11 +378,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 0,
-      "example_titles": {}
+      "current_source_count": 17,
+      "example_titles": {
+        "news.google.com": [
+          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
+          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer",
+          "Golob: Ne predstavljam si, da bi kdo želel živeti v državi, v kateri bi politika imela pooblastila policije - N1 Slovenija"
+        ]
+      }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-16T10:08:48+02:00",
+      "last_learning_run": "2026-10-16T10:09:36+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -463,11 +468,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 156602,
-          "last_seen": "2026-10-16T09:54:23+02:00",
-          "last_title": "Vreme se bo danes hitro obrnilo: nevihte bodo zajele večji del Slovenije, na Primorskem tudi burja - Dnevne Novice",
+          "seen": 156625,
+          "last_seen": "2026-10-16T10:09:36+02:00",
+          "last_title": "Podpisan drugi dodatek k Dogovoru za razvoj regije Jugovzhodna Slovenija - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "google-news-si",
-          "published": 271609,
+          "published": 271639,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "reddit.com": {
@@ -571,16 +576,12 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 3,
+      "current_source_count": 23,
       "example_titles": {
-        "lonelyplanet.com": [
-          "11 things to know before booking a trip to Slovenia - Lonely Planet"
-        ],
-        "britannica.com": [
-          "Slovenia | History, Geography, & People | Britannica"
-        ],
-        "worldatlas.com": [
-          "Slovenia Maps & Facts"
+        "news.google.com": [
+          "(AKTUALNO) Še danes v prodaji 36. št. revije Demokracija: 30 let Demokracije, ki udejanja pravico vedeti več! Načrt za demografsko obnovo sl",
+          "140 let Kmetijske šole Grm, najstarejše v Sloveniji - Novice - Aktualno - Mestna občina Novo mesto",
+          "Ko so bile ZDA stare toliko kot danes Slovenija, so bile na robu razpada - Zanima.me"
         ]
       }
     }
@@ -660,15 +661,6 @@
     }
   ],
   "recent_failures": [
-    {
-      "file": "fallback-failed-20261016-075332.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "podvojen_naslov",
-        "ze_uporabljen_vir"
-      ],
-      "title": "Kolesarjenje: Slovenija kolesari nad evropskim povprečjem, vendar izzivi ostajajo"
-    },
     {
       "file": "fallback-failed-20261016-080823.json",
       "category": "kolesarstvo",
@@ -751,10 +743,19 @@
       "title": "Ste pripravljeni? Kmalu s kolesom od Ljubljane do Beograda"
     },
     {
+      "file": "fallback-failed-20261016-100817.json",
+      "category": "kolesarstvo",
+      "errors": [
+        "podvojen_naslov",
+        "ze_uporabljen_vir"
+      ],
+      "title": "Kolesarjenje: Slovenija kolesari nad evropskim povprečjem, vendar izzivi ostajajo"
+    },
+    {
       "file": "agent-state",
       "category": "kolesarstvo",
       "errors": [
-        "prekratek,manjka_fotografija"
+        "podvojen_naslov,ze_uporabljen_vir"
       ]
     },
     {
@@ -770,7 +771,7 @@
     "ze_uporabljen_vir": 12,
     "manjka_fotografija": 9,
     "prekratek": 8,
-    "podvojen_naslov": 4,
-    "prekratek,manjka_fotografija": 1
+    "podvojen_naslov": 5,
+    "podvojen_naslov,ze_uporabljen_vir": 1
   }
 }
