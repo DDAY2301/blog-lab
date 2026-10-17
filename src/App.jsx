@@ -30,6 +30,37 @@ const CATEGORY_EMPTY_COPY = {
 
 const starterArticles = [
   {
+    "id": "bo-pot-ob-soci-postala-hrbtenica-sirse-turisticno-kolesarske-mreze-5a175519",
+    "title": "Bo pot ob Soči postala hrbtenica širše turistično kolesarske mreže?",
+    "excerpt": "Kolesarstvo: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Bo pot ob Soči postala hrbtenica širše turistično kolesarske mreže?«.",
+    "seoDescription": "Kolesarstvo: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Bo pot ob Soči postala hrbtenica širše turistično kolesarske mreže?«.",
+    "content": "**Kolesarstvo, 17. 10. 2026.** Bo pot ob Soči postala hrbtenica širše turistično kolesarske mreže? www.primorski.eu\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: www.primorski.eu. Objavljeno: Sun, 21 Mar 2021 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMirAFBVV95cUxQazJ2TWxPWURrdFdmdThaTU9yTmxpem56b0oybnVrLU5lS3VSVHZYM0VZeEs1UkdtUGNQXzlCRGFPSk1KamJYLWNIc0FuaWRLVlVaRENiT2FTbkxod3RpWm0xWHNtMnVQS2JKd3NydDJ4N0JIc3Mwci1KN3ZQRmp4QklJQkFBSV9TcGNoWGFkWFVKQllqZ0duQ3NUUEIxS0YyTkFNdHlhUmdDbjA3?oc=5)\n\n## Dopolnitev vira 2: 24ur.com\n\nSlovenija bo leta 2026 gostila evropsko kolesarsko prvenstvo 24ur.com\n\n Vir: 24ur.com. Objavljeno: Mon, 17 Nov 2025 08:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMirgFBVV95cUxObXF1ZmVqT3lKRDcyRDFFaXVlU1BiY09NRzRuWFZQeW5MR1ZMdUpaazNSQVBFaThwQk5VMXY5b2xYUlJVQkJiWFlOQ2phREZDSUc5M3FPWXlDZE1MeHpWLV83MVZwbnFnQUJac2dzVVc3djZ5aW5kZHRZU0xqWU1XOFY3bEJzMDljQlUzaTdSZ3l4VVlZZ0s1Z1hWMWxrclhTcVZpM3hOalEzczZYTWc?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Kolesarstvo",
+    "author": "Blog Lab Slovenia Publisher",
+    "status": "published",
+    "heroImage": {
+      "url": "/media/articles/8bad06fec502189cebd8.webp",
+      "alt": "Three male cyclists wearing helmets during a summer bicycle tour in rural Slovenia near Luže.",
+      "caption": "Marek Ślusarczyk ( Tupungato ) Photo gallery · Wikimedia Commons · CC BY 3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:08_Slovenia_rural_landscape_-_bicycle_expedition_with_panniers.jpg"
+    },
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "www.primorski.eu — Bo pot ob Soči postala hrbtenica širše turistično kolesarske mreže? - www.primorski.eu",
+        "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQazJ2TWxPWURrdFdmdThaTU9yTmxpem56b0oybnVrLU5lS3VSVHZYM0VZeEs1UkdtUGNQXzlCRGFPSk1KamJYLWNIc0FuaWRLVlVaRENiT2FTbkxod3RpWm0xWHNtMnVQS2JKd3NydDJ4N0JIc3Mwci1KN3ZQRmp4QklJQkFBSV9TcGNoWGFkWFVKQllqZ0duQ3NUUEIxS0YyTkFNdHlhUmdDbjA3?oc=5"
+      },
+      {
+        "label": "24ur.com — Slovenija bo leta 2026 gostila evropsko kolesarsko prvenstvo - 24ur.com",
+        "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxObXF1ZmVqT3lKRDcyRDFFaXVlU1BiY09NRzRuWFZQeW5MR1ZMdUpaazNSQVBFaThwQk5VMXY5b2xYUlJVQkJiWFlOQ2phREZDSUc5M3FPWXlDZE1MeHpWLV83MVZwbnFnQUJac2dzVVc3djZ5aW5kZHRZU0xqWU1XOFY3bEJzMDljQlUzaTdSZ3l4VVlZZ0s1Z1hWMWxrclhTcVZpM3hOalEzczZYTWc?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-17T22:09:28+02:00",
+    "updatedAt": "2026-10-17T22:09:28+02:00"
+  },
+
+  {
     "id": "indoor-climbing-ljubljana-beginner-guide",
     "title": "Indoor Climbing in Ljubljana: A Beginner-Friendly Visitor Guide",
     "excerpt": "Plan a safe indoor climbing session in Ljubljana with current opening hours, day-pass prices, equipment rental and clear options for first-time climbers.",
