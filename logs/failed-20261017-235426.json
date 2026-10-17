@@ -1,0 +1,39 @@
+{
+  "category": "gore",
+  "errors": [
+    "naslov_ni_v_rubriki",
+    "clanek_brez_slovenskega_konteksta",
+    "viri_ne_podpirajo_slovenske_rubrike",
+    "besedilo_ni_v_slovenscini"
+  ],
+  "article": {
+    "title": "Find and Hire Talent",
+    "excerpt": "Post job listings to hire talent. Latest Find and Hire Talent topics - Developer Forum | Roblox Developer Forum | Roblox Collaboration Find and Hire Talent Topic Replies Views Activity About the Find and Hire Talent cate",
+    "seoDescription": "Post job listings to hire talent. Latest Find and Hire Talent topics - Developer Forum | Roblox Developer Forum | Roblox Collaboration Find and Hire Talent",
+    "content": "Pregled za rubriko gore povzema trenutno razpoložljive informacije iz spodaj navedenih virov. Besedilo je pripravljeno brez dodajanja nepodprtih dejstev.\n\n## Find and Hire Talent\nPost job listings to hire talent. Latest Find and Hire Talent topics - Developer Forum | Roblox Developer Forum | Roblox Collaboration Find and Hire Talent Topic Replies Views Activity About the Find and Hire Talent category Post job listings to hire talent. This category is for creators to post job offers for long-term partnerships or short-term contract work. Creators looking for work can find opportunities here. How should I write my ow… 0 54144 July 27, 2018 Template for Find and Hire Talent topics About Us Hi there! We are Big Studios, a small upcoming game development team. We’re looking for builders who are willing to join our team and work with us on our new game, Big Game! The Team @username - Environment De… 1 20789 October 24, 2025 Searching UI Designers/VFX/Animator/ Builder/Modeller/Scripter gui , building , modeling , gfx , sfx 0 835 September 13, 2026 [CLOSED] 3D Asset Wrangler | Asset Zoo Layout & Org (Action MMORPG) 0 86 October 16, 2026 Exfil studio | developer hiring animations 0 134 October 14, 2026 [open] [volunteer / %] Looking for Builders, Lore Idealists, QA Testers, Sound Designers & Artists 1 338 October 16, 2026 Seeking QA & Beta Testers for Upcoming Tycoon/Management Game 2 304 October 15, 2026 Looking for game testers help 0 200 October 15, 2026 [HIRING] Grave & Thorn Studios | Seeking Studio Co-Leader / Operations Lead studio , help , hiring 0 129 October 14, 2026 looking for beta testers, every game pass free + exclusive pet for testers beta , bug , help , tester , hiring 0 167 October 14, 2026 [OPEN] SkullWorks Studios | Long-Term Part-Time Scripter & Builder | Weekly Robux Pay 1 227 October 13, 2026 Looking for beta testers for my game, you feed a monster and try not to get eaten bugs , tester , betatesters 0 105 October 13, 2026 Looking for an Investor – BONKLAND 0 120 October 13, 2026 [FOR HIRE] Roblox Scripter (Luau) - gameplay, co-op & data systems studio , scripting 0 171 October 13, 2026 [CLOSED] Scripter - Idle Factory, Sandbox Tycoon scripting , hiring 0 223 October 12, 2026 Looking for testers for an upcoming RTS / TD game! building , studio , scripting , bug , help 0 143 October 12, 2026 [HOURLY PAY] Looking for Professional Programming and UI/UX 5 778 October 12, 2026 [CLOSED] Looking for Scripter -- Gun Framework/System scripting 0 164 October 11, 2026 [OPEN] CVGS — Closed Beta Recruitment (25 spots) tester , hiring , betatesters 1 242 October 10, 2026 [HIRING] Game Playtesters needed for upcoming game release! betatesters 1 503 October 10, 2026 Looking for builders, vfx artists 0 180 October 10, 2026 [CLOSED]\n\nVir: devforum.roblox.com — https://devforum.roblox.com/c/collaboration/recruitment/82",
+    "category": "Gore & traili",
+    "tags": [
+      "gore",
+      "Slovenija",
+      "talent"
+    ],
+    "sources": [
+      {
+        "title": "Find and Hire Talent",
+        "url": "https://devforum.roblox.com/c/collaboration/recruitment/82",
+        "source_name": "devforum.roblox.com"
+      }
+    ],
+    "fallback": false,
+    "heroImage": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/172nd_Slovenian_Mountain_Training_%285229491885%29.jpg/1920px-172nd_Slovenian_Mountain_Training_%285229491885%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "alt": "BOHINJSKA BELA, Slovenia -- Soldiers with U.S. Army Europe's 172nd Infantry Brigade pause during their hike up the mountain at the Slovenian Armed Forces Mountain Training Center 3",
+      "caption": "U.S. Army Europe from Wiesbaden, Germany · Wikimedia Commons · Public domain",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:172nd_Slovenian_Mountain_Training_(5229491885).jpg"
+    },
+    "gallery": [],
+    "visualTemplate": "studio",
+    "templateLabel": "Studio",
+    "id": "find-and-hire-talent-55685b03"
+  }
+}
