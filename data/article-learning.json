@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-17T20:39:37+02:00",
-  "loop_count": 6142,
+  "updated_at": "2026-10-17T20:40:29+02:00",
+  "loop_count": 6143,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-17T20:39:18+02:00",
+      "last_learning_run": "2026-10-17T20:40:07+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 130463,
-          "last_seen": "2026-10-17T20:39:18+02:00",
+          "seen": 130473,
+          "last_seen": "2026-10-17T20:40:07+02:00",
           "last_title": "Slovenija proti Danski danes odpira svoje nastope na letošnjem evropskem prvenstvu - Šport TV",
           "last_provider": "google-news-si",
-          "published": 361175,
+          "published": 361242,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-17T20:39:28+02:00",
+      "last_learning_run": "2026-10-17T20:40:17+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -272,11 +272,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 147267,
-          "last_seen": "2026-10-17T20:39:28+02:00",
+          "seen": 147283,
+          "last_seen": "2026-10-17T20:40:17+02:00",
           "last_title": "Pirc Musar: Mala zmaga za neko politično opcijo, pa hkrati velik poraz za državo - Delo.si",
           "last_provider": "google-news-si",
-          "published": 402028,
+          "published": 402101,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -388,7 +388,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-17T20:39:37+02:00",
+      "last_learning_run": "2026-10-17T20:40:29+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -477,11 +477,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 163295,
-          "last_seen": "2026-10-17T20:39:37+02:00",
+          "seen": 163316,
+          "last_seen": "2026-10-17T20:40:29+02:00",
           "last_title": "Vreme se bo danes hitro obrnilo: nevihte bodo zajele večji del Slovenije, na Primorskem tudi burja - Dnevne Novice",
           "last_provider": "google-news-si",
-          "published": 280999,
+          "published": 281029,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -576,12 +576,12 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 22,
+      "current_source_count": 21,
       "example_titles": {
         "news.google.com": [
           "(AKTUALNO) Še danes v prodaji 36. št. revije Demokracija: 30 let Demokracije, ki udejanja pravico vedeti več! Načrt za demografsko obnovo sl",
-          "Kdor bo 11. oktobra v tujini, mora urediti prijavo za glasovanje danes - Goriške novice",
-          "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto"
+          "140 let Kmetijske šole Grm, najstarejše v Sloveniji - Novice - Aktualno - Mestna občina Novo mesto",
+          "(AKTUALNO) Varuhinja človekovih pravic Simona Drenik Bavdek: Pravica do dostojnega pokopa temeljna človekova pravica - Demokracija"
         ]
       }
     }
@@ -662,14 +662,6 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20261017-193841.json",
-      "category": "dediscina",
-      "errors": [
-        "ze_uporabljen_vir"
-      ],
-      "title": "Grad Grad na Goričkem: Največji baročni grad v Sloveniji s skrivnostno zgodovino"
-    },
-    {
       "file": "fallback-failed-20261017-193919.json",
       "category": "kolesarstvo",
       "errors": [
@@ -748,15 +740,24 @@
       "title": "Send signature requests and sign documents with eSignature"
     },
     {
-      "file": "agent-state",
-      "category": "gore",
+      "file": "fallback-failed-20261017-203930.json",
+      "category": "kolesarstvo",
       "errors": [
-        "clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike"
+        "podvojen_naslov",
+        "ze_uporabljen_vir"
+      ],
+      "title": "Kolesarjenje: Slovenija kolesari nad evropskim povprečjem, vendar izzivi ostajajo"
+    },
+    {
+      "file": "agent-state",
+      "category": "kolesarstvo",
+      "errors": [
+        "podvojen_naslov,ze_uporabljen_vir"
       ]
     },
     {
       "file": "agent-state",
-      "category": "gore",
+      "category": "kolesarstvo",
       "errors": [
         "manjka_fotografija,ponavljanje"
       ],
@@ -765,12 +766,12 @@
   ],
   "failure_summary": {
     "ze_uporabljen_vir": 18,
-    "podvojen_naslov": 9,
+    "podvojen_naslov": 10,
     "prekratek": 1,
     "manjka_fotografija": 1,
     "clanek_brez_slovenskega_konteksta": 1,
     "viri_ne_podpirajo_slovenske_rubrike": 1,
-    "clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike": 1,
+    "podvojen_naslov,ze_uporabljen_vir": 1,
     "manjka_fotografija,ponavljanje": 1
   }
 }
