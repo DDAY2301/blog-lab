@@ -1,15 +1,12 @@
 {
-  "updatedAt": "2026-10-17T07:03:07+02:00",
+  "updatedAt": "2026-10-17T07:08:11+02:00",
   "status": "fresh",
   "sourcesChecked": [
-    "NLB Ljubljana Marathon",
     "Visit Ljubljana",
-    "Ljubljana Castle",
-    "Cankarjev dom",
-    "MGL",
     "Kino Šiška",
     "Gala Hala",
-    "Klub K4"
+    "Klub K4",
+    "Cirkus Klub"
   ],
   "sourcesFailed": [],
   "items": [
