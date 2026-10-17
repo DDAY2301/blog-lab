@@ -1,0 +1,42 @@
+{
+  "category": "dediscina",
+  "errors": [
+    "ponavljanje",
+    "naslov_ni_v_rubriki",
+    "clanek_brez_slovenskega_konteksta",
+    "viri_ne_podpirajo_slovenske_rubrike",
+    "besedilo_ni_v_slovenscini"
+  ],
+  "article": {
+    "title": "Send signature requests and sign documents with eSignature - Google Docs Editors Help",
+    "excerpt": "With eSignature, you can create documents for signatures and send signature requests in Google Docs and Google Drive. To complete eSignature requests, signers can easily fill in requested information. Send signature requ",
+    "seoDescription": "With eSignature, you can create documents for signatures and send signature requests in Google Docs and Google Drive. To complete eSignature requests, sign",
+    "content": "Pregled za rubriko dediscina povzema trenutno razpoložljive informacije iz spodaj navedenih virov. Besedilo je pripravljeno brez dodajanja nepodprtih dejstev.\n\n## Send signature requests and sign documents with eSignature - Google Docs Editors Help\nWith eSignature, you can create documents for signatures and send signature requests in Google Docs and Google Drive. To complete eSignature requests, signers can easily fill in requested information. Send signature requests and sign documents with eSignature With eSignature, you can create documents for signatures and send signature requests in Google Docs and Google Drive. To complete eSignature requests, signers can easily fill in requested information. Eligibility The eSignature feature for Google Docs and PDFs is available to: Workspace Individual accounts. These Workspace plans when your administrator enables the feature: Business Standard and Plus Enterprise Starter, Standard and Plus Enterprise Essentials and Enterprise Essentials Plus Education Plus users Microsoft Word files opened in Google Docs If you don't have a Workspace subscription plan, you can gain access to this feature today. Sign up for a Workspace Individual plan . Tip : If you upgraded your account to access the eSignature feature, it can take a few minutes for the feature to become fully available. Wait a few minutes and refresh your page to try again. Create and send a document for eSignature Prepare an eSignature document Important: This is available to certain eligible users . Open the eSignature side panel. If you start from PDF files in Google Drive: On your computer, go to drive.google.com . Upload a new PDF file or find an existing one that you want to use. Open the PDF file in viewing mode. At the top right, click Menu eSignature . If you start from Google Docs: On your computer, go to drive.google.com . Create a new Google Doc or open an existing one. At the top, click Tools eSignature . If you have multiple signers, under 'Insert fields for', select the specific signer who you want to insert an eSignature field for. To update the list of available signers in the drop-down, select Manage signers . It'll open the Manage signers dialogue. In the Manage signers dialogue, you can add up to 10 signers and assign labels for each signer to identify the signers in the document. Drag one or more of the following fields to add to your document: Signature Initials Name Text field Date signed To find who the field is assigned to, click the field. To update signer assignment for the field, use the Assigned to drop-down in the pop-up. To update the list of signers in the Google Doc and open the same dialogue as above, in the drop-down, click Manage signers . When you select a 'Text field', you can add a description and select the font size in the pop-up. The description informs signer\n\nVir: support.google.com — https://support.google.com/docs/answer/12315692?hl=en-GB",
+    "category": "Dediščina",
+    "tags": [
+      "dediscina",
+      "Slovenija",
+      "signature",
+      "requests",
+      "documents"
+    ],
+    "sources": [
+      {
+        "title": "Send signature requests and sign documents with eSignature - Google Docs Editors Help",
+        "url": "https://support.google.com/docs/answer/12315692?hl=en-GB",
+        "source_name": "support.google.com"
+      }
+    ],
+    "fallback": false,
+    "gallery": [],
+    "heroImage": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Tustanj_Castle_Slovenia_-_plaque.JPG/1920px-Tustanj_Castle_Slovenia_-_plaque.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "alt": "Plaque over the entrance to Tuštanj Castle, Zgornji Tuštanj, Municipality of Moravče, Slovenia",
+      "caption": "Doremo · Wikimedia Commons · CC BY-SA 3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tustanj_Castle_Slovenia_-_plaque.JPG"
+    },
+    "visualTemplate": "fieldnote",
+    "templateLabel": "Field Note",
+    "id": "send-signature-requests-and-sign-documents-with-esignature-google-docs-editors-help-76b101f9"
+  }
+}
