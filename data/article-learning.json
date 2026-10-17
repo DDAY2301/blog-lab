@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-17T13:00:16+02:00",
-  "loop_count": 6071,
+  "updated_at": "2026-10-17T13:09:34+02:00",
+  "loop_count": 6072,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-17T12:59:51+02:00",
+      "last_learning_run": "2026-10-17T13:09:15+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 129730,
-          "last_seen": "2026-10-17T12:59:51+02:00",
+          "seen": 129740,
+          "last_seen": "2026-10-17T13:09:15+02:00",
           "last_title": "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
           "last_provider": "google-news-si",
-          "published": 356418,
+          "published": 356485,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-17T13:00:06+02:00",
+      "last_learning_run": "2026-10-17T13:09:24+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -272,11 +272,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 146105,
-          "last_seen": "2026-10-17T13:00:06+02:00",
-          "last_title": "Pirc Musar: Mala zmaga za neko politično opcijo, pa hkrati velik poraz za državo - Delo.si",
+          "seen": 146121,
+          "last_seen": "2026-10-17T13:09:24+02:00",
+          "last_title": "Janša diplomatom: Zunanjo politiko vodi vlada in samo to je uradna politika Slovenije - N1 Slovenija",
           "last_provider": "google-news-si",
-          "published": 396845,
+          "published": 396918,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -378,7 +378,7 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 17,
+      "current_source_count": 16,
       "example_titles": {
         "news.google.com": [
           "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
@@ -388,7 +388,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-17T13:00:16+02:00",
+      "last_learning_run": "2026-10-17T13:09:34+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -477,11 +477,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 161780,
-          "last_seen": "2026-10-17T13:00:16+02:00",
+          "seen": 161801,
+          "last_seen": "2026-10-17T13:09:34+02:00",
           "last_title": "Vreme se bo danes hitro obrnilo: nevihte bodo zajele večji del Slovenije, na Primorskem tudi burja - Dnevne Novice",
           "last_provider": "google-news-si",
-          "published": 278869,
+          "published": 278899,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -662,14 +662,6 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20261017-115400.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek"
-      ],
-      "title": "Slovenija bo leta 2026 gostila evropsko kolesarsko prvenstvo"
-    },
-    {
       "file": "fallback-failed-20261017-120840.json",
       "category": "dediscina",
       "errors": [
@@ -744,15 +736,23 @@
       "title": "Bo pot ob Soči postala hrbtenica širše turistično kolesarske mreže?"
     },
     {
-      "file": "agent-state",
-      "category": "kolesarstvo",
+      "file": "fallback-failed-20261017-130846.json",
+      "category": "dediscina",
       "errors": [
-        "prekratek"
+        "ze_uporabljen_vir"
+      ],
+      "title": "Grad Grad na Goričkem: Največji baročni grad v Sloveniji s skrivnostno zgodovino"
+    },
+    {
+      "file": "agent-state",
+      "category": "dediscina",
+      "errors": [
+        "ze_uporabljen_vir"
       ]
     },
     {
       "file": "agent-state",
-      "category": "kolesarstvo",
+      "category": "dediscina",
       "errors": [
         "manjka_fotografija"
       ],
@@ -760,10 +760,10 @@
     }
   ],
   "failure_summary": {
-    "ze_uporabljen_vir": 12,
-    "prekratek": 8,
-    "manjka_fotografija": 3,
+    "ze_uporabljen_vir": 14,
+    "prekratek": 6,
     "podvojen_naslov": 3,
+    "manjka_fotografija": 2,
     "clanek_brez_slovenskega_konteksta": 1,
     "viri_ne_podpirajo_slovenske_rubrike": 1
   }
