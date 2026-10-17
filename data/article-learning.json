@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-17T07:53:29+02:00",
-  "loop_count": 6024,
+  "updated_at": "2026-10-17T07:54:04+02:00",
+  "loop_count": 6025,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-17T07:53:14+02:00",
+      "last_learning_run": "2026-10-17T07:53:51+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 129219,
-          "last_seen": "2026-10-17T07:53:14+02:00",
+          "seen": 129230,
+          "last_seen": "2026-10-17T07:53:51+02:00",
           "last_title": "Premier Janša ob ogledu finala mladih košarkarjev udaril po RTV Slovenija: »Plačujemo vas več kot Inštitut Jožef Stefan!« - Slovenske novice",
           "last_provider": "google-news-si",
-          "published": 353269,
+          "published": 353336,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-17T07:53:22+02:00",
+      "last_learning_run": "2026-10-17T07:53:57+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -272,11 +272,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 145364,
-          "last_seen": "2026-10-17T07:53:22+02:00",
-          "last_title": "Janez Janša: V Sloveniji je štiri leta imela oblast vlada, ki ne zna šteti - Svet24.si",
+          "seen": 145379,
+          "last_seen": "2026-10-17T07:53:57+02:00",
+          "last_title": "Pirc Musar: Mala zmaga za neko politično opcijo, pa hkrati velik poraz za državo - Delo.si",
           "last_provider": "google-news-si",
-          "published": 393414,
+          "published": 393487,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -378,17 +378,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 16,
+      "current_source_count": 15,
       "example_titles": {
         "news.google.com": [
           "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
           "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer",
-          "Pirc Musar: Ne bom tiho, ko zunanja politika ne bo skladna z ustavnimi vrednotami države - Siol.net"
+          "Golob: Ne predstavljam si, da bi kdo želel živeti v državi, v kateri bi politika imela pooblastila policije - N1 Slovenija"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-17T07:53:29+02:00",
+      "last_learning_run": "2026-10-17T07:54:04+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -477,11 +477,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 160819,
-          "last_seen": "2026-10-17T07:53:29+02:00",
+          "seen": 160840,
+          "last_seen": "2026-10-17T07:54:04+02:00",
           "last_title": "Vreme se bo danes hitro obrnilo: nevihte bodo zajele večji del Slovenije, na Primorskem tudi burja - Dnevne Novice",
           "last_provider": "google-news-si",
-          "published": 277459,
+          "published": 277489,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -662,14 +662,6 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20261016-230951.json",
-      "category": "gore",
-      "errors": [
-        "ze_uporabljen_vir"
-      ],
-      "title": "Svetovni hit v severovzhodni Sloveniji: uradno odprta 187 kilometrov dolga pohodniška pravljica"
-    },
-    {
       "file": "fallback-failed-20261016-231029.json",
       "category": "kolesarstvo",
       "errors": [
@@ -750,6 +742,15 @@
       "title": "Ste pripravljeni? Kmalu s kolesom od Ljubljane do Beograda"
     },
     {
+      "file": "fallback-failed-20261017-075323.json",
+      "category": "kolesarstvo",
+      "errors": [
+        "prekratek",
+        "manjka_fotografija"
+      ],
+      "title": "Ste pripravljeni? Kmalu s kolesom od Ljubljane do Beograda"
+    },
+    {
       "file": "agent-state",
       "category": "kolesarstvo",
       "errors": [
@@ -766,9 +767,9 @@
     }
   ],
   "failure_summary": {
-    "prekratek": 14,
-    "manjka_fotografija": 14,
-    "ze_uporabljen_vir": 6,
+    "prekratek": 15,
+    "manjka_fotografija": 15,
+    "ze_uporabljen_vir": 5,
     "prekratek,manjka_fotografija": 1
   }
 }
