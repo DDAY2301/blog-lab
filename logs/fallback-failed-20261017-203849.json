@@ -1,0 +1,39 @@
+{
+  "category": "gore",
+  "errors": [
+    "clanek_brez_slovenskega_konteksta",
+    "viri_ne_podpirajo_slovenske_rubrike"
+  ],
+  "article": {
+    "title": "Send signature requests and sign documents with eSignature",
+    "excerpt": "Gore & traili: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Send signature requests and sign documents with eSignature«.",
+    "seoDescription": "Gore & traili: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Send signature requests and sign documents with eSignature«.",
+    "content": "**Gore & traili, 17. 10. 2026.** With eSignature, you can create documents for signatures and send signature requests in Google Docs and Google Drive. To complete eSignature requests, signers can easily fill in requested information. Send signature requests and sign documents with eSignature With eSignature, you can create documents for signatures and send signature requests in Google Docs and Google Drive. Eligibility The eSignature feature for Google Docs and PDFs is available to: Workspace Individual accounts. These Workspace plans when your administrator enables the feature: Business Standard and Plus Enterprise Starter, Standard and Plus Enterprise Essentials and Enterprise Essentials Plus Education Plus users Microsoft Word files…\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: support.google.com. Objavljeno: Sat, 17 Oct 2026 00:46:00 GMT. [Odpri izvirni vir](https://support.google.com/docs/answer/12315692?hl=en-GB)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Gore & traili",
+    "tags": [
+      "gore & traili",
+      "pregled"
+    ],
+    "heroImage": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/172nd_Slovenian_Mountain_Training_%285229491885%29.jpg/1920px-172nd_Slovenian_Mountain_Training_%285229491885%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "alt": "BOHINJSKA BELA, Slovenia -- Soldiers with U.S. Army Europe's 172nd Infantry Brigade pause during their hike up the mountain at the Slovenian Armed Forces Mountain Training Center 3",
+      "caption": "U.S. Army Europe from Wiesbaden, Germany · Wikimedia Commons · Public domain",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:172nd_Slovenian_Mountain_Training_(5229491885).jpg"
+    },
+    "gallery": [],
+    "video": null,
+    "sources": [
+      {
+        "label": "support.google.com — Send signature requests and sign documents with eSignature - Google Docs Editors Help",
+        "url": "https://support.google.com/docs/answer/12315692?hl=en-GB"
+      }
+    ],
+    "source_urls": [
+      "https://support.google.com/docs/answer/12315692?hl=en-GB"
+    ],
+    "fallback": true,
+    "visualTemplate": "studio",
+    "templateLabel": "Studio",
+    "id": "send-signature-requests-and-sign-documents-with-esignature-76b101f9"
+  }
+}
