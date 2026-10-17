@@ -1,0 +1,39 @@
+{
+  "category": "kolesarstvo",
+  "errors": [
+    "clanek_brez_slovenskega_konteksta",
+    "viri_ne_podpirajo_slovenske_rubrike"
+  ],
+  "article": {
+    "title": "Bikes for Sale",
+    "excerpt": "Kolesarstvo: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Bikes for Sale«.",
+    "seoDescription": "Kolesarstvo: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Bikes for Sale«.",
+    "content": "**Kolesarstvo, 17. 10. 2026.** Shop Sunnyside Sports latest inventory of bikes for sale available at our bike shop in the heart of Bend, Oregon. We carry Trek, Ibis and Yeti bikes. Filter Sort Close Relevance Price Low to High Price High to Low Brand A to Z Brand Z to A Customer Reviews Close Filter By: Categories Road (2) Mountain (18) Commuter/Urban (5) Fitness (3) Hybrid (5) Children's (8) Brands Trek 16 Ibis 14 Yeti Cycles 2 Strider Sports 1 Gender Unisex 27 Kids 5 Not Designated 1 Size 12-inch 2 16-inch 2 20-inch 3 24-inch 1 Large 10 Medium 9 Show More Sizes Medium/Large 2 Small 6 X-Large 10 X-Small 7 X-Medium 1 XX-Large 1 Show Fewer Sizes Price Up to $10 6 $125 to $199.99 1 $200 to $499.99 5 $500 to $749.99 1 $750 to $999.99 7 $1000…\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: sunnysidesports.com. Objavljeno: Thu, 15 Oct 2026 07:22:00 GMT. [Odpri izvirni vir](https://www.sunnysidesports.com/product-list/shop-bikes-pg208/)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Kolesarstvo",
+    "tags": [
+      "kolesarstvo",
+      "pregled"
+    ],
+    "heroImage": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/08_Slovenia_rural_landscape_-_bicycle_expedition_with_panniers.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "alt": "Three male cyclists wearing helmets during a summer bicycle tour in rural Slovenia near Luže.",
+      "caption": "Marek Ślusarczyk ( Tupungato ) Photo gallery · Wikimedia Commons · CC BY 3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:08_Slovenia_rural_landscape_-_bicycle_expedition_with_panniers.jpg"
+    },
+    "gallery": [],
+    "video": null,
+    "sources": [
+      {
+        "label": "sunnysidesports.com — Bikes for Sale - Bend, Oregon | Sunnyside Sports",
+        "url": "https://www.sunnysidesports.com/product-list/shop-bikes-pg208/"
+      }
+    ],
+    "source_urls": [
+      "https://www.sunnysidesports.com/product-list/shop-bikes-pg208/"
+    ],
+    "fallback": true,
+    "visualTemplate": "pulse",
+    "templateLabel": "Pulse",
+    "id": "bikes-for-sale-85b6aee4"
+  }
+}
