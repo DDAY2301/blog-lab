@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-17T21:39:31+02:00",
-  "loop_count": 6151,
+  "updated_at": "2026-10-17T21:40:12+02:00",
+  "loop_count": 6152,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-17T21:39:10+02:00",
+      "last_learning_run": "2026-10-17T21:39:54+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 130558,
-          "last_seen": "2026-10-17T21:39:10+02:00",
+          "seen": 130570,
+          "last_seen": "2026-10-17T21:39:54+02:00",
           "last_title": "Slovenija proti Danski danes odpira svoje nastope na letošnjem evropskem prvenstvu - Šport TV",
           "last_provider": "google-news-si",
-          "published": 361778,
+          "published": 361845,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,7 +227,7 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 10,
+      "current_source_count": 12,
       "example_titles": {
         "news.google.com": [
           "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-17T21:39:23+02:00",
+      "last_learning_run": "2026-10-17T21:40:02+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -272,11 +272,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 147413,
-          "last_seen": "2026-10-17T21:39:23+02:00",
-          "last_title": "Pirc Musar: Mala zmaga za neko politično opcijo, pa hkrati velik poraz za državo - Delo.si",
+          "seen": 147430,
+          "last_seen": "2026-10-17T21:40:02+02:00",
+          "last_title": "Janša ali Golob? Anketa je pokazala, komu po uporu v Novem mestu zaupa ljudstvo - Žurnal24",
           "last_provider": "google-news-si",
-          "published": 402685,
+          "published": 402758,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -378,7 +378,7 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 16,
+      "current_source_count": 17,
       "example_titles": {
         "news.google.com": [
           "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
@@ -388,7 +388,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-17T21:39:31+02:00",
+      "last_learning_run": "2026-10-17T21:40:12+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -477,11 +477,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 163486,
-          "last_seen": "2026-10-17T21:39:31+02:00",
+          "seen": 163508,
+          "last_seen": "2026-10-17T21:40:12+02:00",
           "last_title": "Vreme se bo danes hitro obrnilo: nevihte bodo zajele večji del Slovenije, na Primorskem tudi burja - Dnevne Novice",
           "last_provider": "google-news-si",
-          "published": 281269,
+          "published": 281299,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -576,7 +576,7 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 21,
+      "current_source_count": 22,
       "example_titles": {
         "news.google.com": [
           "(AKTUALNO) Še danes v prodaji 36. št. revije Demokracija: 30 let Demokracije, ki udejanja pravico vedeti več! Načrt za demografsko obnovo sl",
@@ -662,15 +662,6 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20261017-203849.json",
-      "category": "gore",
-      "errors": [
-        "clanek_brez_slovenskega_konteksta",
-        "viri_ne_podpirajo_slovenske_rubrike"
-      ],
-      "title": "Send signature requests and sign documents with eSignature"
-    },
-    {
       "file": "fallback-failed-20261017-203930.json",
       "category": "kolesarstvo",
       "errors": [
@@ -748,15 +739,24 @@
       "title": "Svetovni hit v severovzhodni Sloveniji: uradno odprta 187 kilometrov dolga pohodniška pravljica"
     },
     {
-      "file": "agent-state",
-      "category": "gore",
+      "file": "fallback-failed-20261017-213922.json",
+      "category": "kolesarstvo",
       "errors": [
+        "podvojen_naslov",
         "ze_uporabljen_vir"
+      ],
+      "title": "Kolesarjenje: Slovenija kolesari nad evropskim povprečjem, vendar izzivi ostajajo"
+    },
+    {
+      "file": "agent-state",
+      "category": "kolesarstvo",
+      "errors": [
+        "podvojen_naslov,ze_uporabljen_vir"
       ]
     },
     {
       "file": "agent-state",
-      "category": "gore",
+      "category": "kolesarstvo",
       "errors": [
         "manjka_fotografija,ponavljanje"
       ],
@@ -764,12 +764,13 @@
     }
   ],
   "failure_summary": {
-    "ze_uporabljen_vir": 19,
-    "podvojen_naslov": 9,
+    "ze_uporabljen_vir": 18,
+    "podvojen_naslov": 10,
     "prekratek": 1,
     "manjka_fotografija": 1,
     "clanek_brez_slovenskega_konteksta": 1,
     "viri_ne_podpirajo_slovenske_rubrike": 1,
+    "podvojen_naslov,ze_uporabljen_vir": 1,
     "manjka_fotografija,ponavljanje": 1
   }
 }
