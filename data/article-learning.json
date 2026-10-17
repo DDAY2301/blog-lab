@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-17T08:23:33+02:00",
-  "loop_count": 6029,
+  "updated_at": "2026-10-17T08:24:23+02:00",
+  "loop_count": 6030,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-17T08:23:16+02:00",
+      "last_learning_run": "2026-10-17T08:24:04+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 129274,
-          "last_seen": "2026-10-17T08:23:16+02:00",
+          "seen": 129285,
+          "last_seen": "2026-10-17T08:24:04+02:00",
           "last_title": "Premier Janša ob ogledu finala mladih košarkarjev udaril po RTV Slovenija: »Plačujemo vas več kot Inštitut Jožef Stefan!« - Slovenske novice",
           "last_provider": "google-news-si",
-          "published": 353604,
+          "published": 353671,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-17T08:23:25+02:00",
+      "last_learning_run": "2026-10-17T08:24:14+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -272,11 +272,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 145442,
-          "last_seen": "2026-10-17T08:23:25+02:00",
+          "seen": 145458,
+          "last_seen": "2026-10-17T08:24:14+02:00",
           "last_title": "Janez Janša: V Sloveniji je štiri leta imela oblast vlada, ki ne zna šteti - Svet24.si",
           "last_provider": "google-news-si",
-          "published": 393779,
+          "published": 393852,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -388,7 +388,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-17T08:23:33+02:00",
+      "last_learning_run": "2026-10-17T08:24:23+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -477,11 +477,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 160924,
-          "last_seen": "2026-10-17T08:23:33+02:00",
+          "seen": 160945,
+          "last_seen": "2026-10-17T08:24:23+02:00",
           "last_title": "Vreme se bo danes hitro obrnilo: nevihte bodo zajele večji del Slovenije, na Primorskem tudi burja - Dnevne Novice",
           "last_provider": "google-news-si",
-          "published": 277609,
+          "published": 277639,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -581,7 +581,7 @@
         "news.google.com": [
           "(AKTUALNO) Še danes v prodaji 36. št. revije Demokracija: 30 let Demokracije, ki udejanja pravico vedeti več! Načrt za demografsko obnovo sl",
           "140 let Kmetijske šole Grm, najstarejše v Sloveniji - Novice - Aktualno - Mestna občina Novo mesto",
-          "(AKTUALNO) Varuhinja človekovih pravic Simona Drenik Bavdek: Pravica do dostojnega pokopa temeljna človekova pravica - Demokracija"
+          "Ko so bile ZDA stare toliko kot danes Slovenija, so bile na robu razpada - Zanima.me"
         ]
       }
     }
@@ -661,14 +661,6 @@
     }
   ],
   "recent_failures": [
-    {
-      "file": "fallback-failed-20261016-232452.json",
-      "category": "gourmet",
-      "errors": [
-        "prekratek"
-      ],
-      "title": "Gostilna Pri planinskem orlu je, z nekaj primorskega navdiha, znova odprta"
-    },
     {
       "file": "fallback-failed-20261016-232529.json",
       "category": "kolesarstvo",
@@ -751,10 +743,19 @@
       "title": "Ste pripravljeni? Kmalu s kolesom od Ljubljane do Beograda"
     },
     {
+      "file": "fallback-failed-20261017-082334.json",
+      "category": "kolesarstvo",
+      "errors": [
+        "prekratek",
+        "manjka_fotografija"
+      ],
+      "title": "Ste pripravljeni? Kmalu s kolesom od Ljubljane do Beograda"
+    },
+    {
       "file": "agent-state",
       "category": "kolesarstvo",
       "errors": [
-        "fallback_no_category_evidence"
+        "prekratek,manjka_fotografija"
       ]
     },
     {
@@ -767,9 +768,9 @@
     }
   ],
   "failure_summary": {
-    "prekratek": 15,
-    "manjka_fotografija": 15,
-    "ze_uporabljen_vir": 5,
-    "fallback_no_category_evidence": 1
+    "prekratek": 16,
+    "manjka_fotografija": 16,
+    "ze_uporabljen_vir": 4,
+    "prekratek,manjka_fotografija": 1
   }
 }
