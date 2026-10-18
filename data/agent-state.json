@@ -16,10 +16,10 @@
   ],
   "scheduled_slots_deferred": [],
   "last_editorial_hold": null,
-  "publisher_guardian_last_run": "2026-10-18T08:23:26+02:00",
+  "publisher_guardian_last_run": "2026-10-18T10:54:29+02:00",
   "publisher_guardian_last_action": {
-    "category": "kolesarstvo",
-    "slot": "2026-10-18|07:35|kolesarstvo",
+    "category": "dediscina",
+    "slot": "2026-10-18|10:45|dediscina",
     "remaining_repairs": 0
   },
   "schedule_counter_normalized_at": "2026-10-07T16:45:00+02:00"
