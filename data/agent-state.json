@@ -5,9 +5,9 @@
   "posts_date": "2026-10-18",
   "posts_today": 2,
   "last_output": "contact-old-7296ec1a",
-  "last_error": null,
+  "last_error": "ze_uporabljen_vir",
   "agent_version": "3.0.0-learning-guarded-fallback",
-  "current_category": "gore",
+  "current_category": "dediscina",
   "scheduled_posts_today": 2,
   "manual_posts_today": 0,
   "writer_mode": "deterministic_fallback",
@@ -20,11 +20,11 @@
     "2026-10-18|13:30|sezonsko"
   ],
   "last_editorial_hold": null,
-  "publisher_guardian_last_run": "2026-10-18T21:09:41+02:00",
+  "publisher_guardian_last_run": "2026-10-18T21:24:39+02:00",
   "publisher_guardian_last_action": {
     "category": "dediscina",
     "slot": "2026-10-18|10:45|dediscina",
-    "remaining_repairs": 3
+    "remaining_repairs": 2
   },
   "schedule_counter_normalized_at": "2026-10-07T16:45:00+02:00"
 }
