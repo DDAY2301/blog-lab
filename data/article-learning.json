@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-18T07:51:31+02:00",
-  "loop_count": 6248,
+  "updated_at": "2026-10-18T07:54:22+02:00",
+  "loop_count": 6249,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-18T07:51:09+02:00",
+      "last_learning_run": "2026-10-18T07:54:03+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 131723,
-          "last_seen": "2026-10-18T07:51:09+02:00",
-          "last_title": "Slovenska blamaža na igrah! Zakaj sploh tekmujemo, če je šport pri nas umrl - Ekipa",
+          "seen": 131734,
+          "last_seen": "2026-10-18T07:54:03+02:00",
+          "last_title": "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
           "last_provider": "google-news-si",
-          "published": 368277,
+          "published": 368344,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,17 +227,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 12,
+      "current_source_count": 11,
       "example_titles": {
         "news.google.com": [
           "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
           "Poljakinje pokazale svojo moč in še petič s 3:0 odpravile slovenske odbojkarice - rtvslo.si",
-          "*〜?[[Živý=šport!!]++] Škotska Slovenija prenos 26. september 2026 - Business and Investment Development Agency - CzechInvest"
+          "Slovenke po veliki vrnitvi in zmagi nad Latvijo na pragu osmine finala - rtvslo.si"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-18T07:51:21+02:00",
+      "last_learning_run": "2026-10-18T07:54:13+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -272,11 +272,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 149019,
-          "last_seen": "2026-10-18T07:51:21+02:00",
+          "seen": 149037,
+          "last_seen": "2026-10-18T07:54:13+02:00",
           "last_title": "Golob pravi: Slovenija potrebuje široko koalicijo. NSi ne bo na sestanek - Svet24.si",
           "last_provider": "google-news-si",
-          "published": 409580,
+          "published": 409651,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -388,7 +388,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-18T07:51:31+02:00",
+      "last_learning_run": "2026-10-18T07:54:22+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -477,11 +477,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 165534,
-          "last_seen": "2026-10-18T07:51:31+02:00",
+          "seen": 165555,
+          "last_seen": "2026-10-18T07:54:22+02:00",
           "last_title": "Ko so bile ZDA stare toliko kot danes Slovenija, so bile na robu razpada - Zanima.me",
           "last_provider": "google-news-si",
-          "published": 284179,
+          "published": 284209,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -662,14 +662,6 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20261017-232333.json",
-      "category": "gore",
-      "errors": [
-        "ze_uporabljen_vir"
-      ],
-      "title": "Svetovni hit v severovzhodni Sloveniji: uradno odprta 187 kilometrov dolga pohodniška pravljica"
-    },
-    {
       "file": "fallback-failed-20261017-232417.json",
       "category": "dediscina",
       "errors": [
@@ -745,6 +737,15 @@
       "title": "Ste pripravljeni? Kmalu s kolesom od Ljubljane do Beograda"
     },
     {
+      "file": "fallback-failed-20261018-075330.json",
+      "category": "kolesarstvo",
+      "errors": [
+        "prekratek",
+        "manjka_fotografija"
+      ],
+      "title": "Ste pripravljeni? Kmalu s kolesom od Ljubljane do Beograda"
+    },
+    {
       "file": "agent-state",
       "category": "kolesarstvo",
       "errors": [
@@ -761,9 +762,9 @@
     }
   ],
   "failure_summary": {
-    "ze_uporabljen_vir": 17,
-    "manjka_fotografija": 4,
-    "prekratek": 3,
+    "ze_uporabljen_vir": 16,
+    "manjka_fotografija": 5,
+    "prekratek": 4,
     "prekratek,manjka_fotografija": 1
   }
 }
