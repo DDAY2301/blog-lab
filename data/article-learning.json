@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-18T13:55:11+02:00",
-  "loop_count": 6304,
+  "updated_at": "2026-10-18T14:09:48+02:00",
+  "loop_count": 6305,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-18T13:54:51+02:00",
+      "last_learning_run": "2026-10-18T14:09:25+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 132370,
-          "last_seen": "2026-10-18T13:54:51+02:00",
+          "seen": 132380,
+          "last_seen": "2026-10-18T14:09:25+02:00",
           "last_title": "Slovenija proti Danski danes odpira svoje nastope na letošnjem evropskem prvenstvu - Šport TV",
           "last_provider": "google-news-si",
-          "published": 372029,
+          "published": 372096,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-18T13:55:01+02:00",
+      "last_learning_run": "2026-10-18T14:09:37+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -272,11 +272,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 150006,
-          "last_seen": "2026-10-18T13:55:01+02:00",
-          "last_title": "Golob pravi: Slovenija potrebuje široko koalicijo. NSi ne bo na sestanek - Svet24.si",
+          "seen": 150025,
+          "last_seen": "2026-10-18T14:09:37+02:00",
+          "last_title": "Janez Janša: V Sloveniji je štiri leta imela oblast vlada, ki ne zna šteti - Svet24.si",
           "last_provider": "google-news-si",
-          "published": 413504,
+          "published": 413574,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -388,7 +388,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-18T13:55:11+02:00",
+      "last_learning_run": "2026-10-18T14:09:48+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -477,11 +477,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 166749,
-          "last_seen": "2026-10-18T13:55:11+02:00",
+          "seen": 166771,
+          "last_seen": "2026-10-18T14:09:48+02:00",
           "last_title": "Ko so bile ZDA stare toliko kot danes Slovenija, so bile na robu razpada - Zanima.me",
           "last_provider": "google-news-si",
-          "published": 285859,
+          "published": 285889,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -576,12 +576,12 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 21,
+      "current_source_count": 22,
       "example_titles": {
         "news.google.com": [
           "(AKTUALNO) Še danes v prodaji 36. št. revije Demokracija: 30 let Demokracije, ki udejanja pravico vedeti več! Načrt za demografsko obnovo sl",
           "(AKTUALNO) Varuhinja človekovih pravic Simona Drenik Bavdek: Pravica do dostojnega pokopa temeljna človekova pravica - Demokracija",
-          "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto"
+          "Kdor bo 11. oktobra v tujini, mora urediti prijavo za glasovanje danes - Goriške novice"
         ]
       }
     }
@@ -662,14 +662,6 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20261018-125333.json",
-      "category": "dediscina",
-      "errors": [
-        "ze_uporabljen_vir"
-      ],
-      "title": "Grad Grad na Goričkem: Največji baročni grad v Sloveniji s skrivnostno zgodovino"
-    },
-    {
       "file": "fallback-failed-20261018-125406.json",
       "category": "dediscina",
       "errors": [
@@ -743,6 +735,14 @@
     },
     {
       "file": "fallback-failed-20261018-135420.json",
+      "category": "dediscina",
+      "errors": [
+        "ze_uporabljen_vir"
+      ],
+      "title": "Grad Grad na Goričkem: Največji baročni grad v Sloveniji s skrivnostno zgodovino"
+    },
+    {
+      "file": "fallback-failed-20261018-140849.json",
       "category": "dediscina",
       "errors": [
         "ze_uporabljen_vir"
