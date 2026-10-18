@@ -5,7 +5,7 @@
   "posts_date": "2026-10-18",
   "posts_today": 2,
   "last_output": "contact-old-7296ec1a",
-  "last_error": "clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike",
+  "last_error": "viri_ne_podpirajo_slovenske_rubrike",
   "agent_version": "3.0.0-learning-guarded-fallback",
   "current_category": "dediscina",
   "scheduled_posts_today": 2,
@@ -25,7 +25,7 @@
     "reason": "ponavljanje",
     "at": "2026-10-18T21:32:19+02:00"
   },
-  "publisher_guardian_last_run": "2026-10-18T21:38:22+02:00",
+  "publisher_guardian_last_run": "2026-10-18T21:45:09+02:00",
   "publisher_guardian_last_action": {
     "category": "dediscina",
     "slot": "2026-10-18|10:45|dediscina",

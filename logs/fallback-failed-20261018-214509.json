@@ -1,0 +1,53 @@
+{
+  "category": "dediscina",
+  "errors": [
+    "viri_ne_podpirajo_slovenske_rubrike"
+  ],
+  "article": {
+    "title": "Pinterest",
+    "excerpt": "Dediščina: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Pinterest«.",
+    "seoDescription": "Dediščina: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Pinterest«.",
+    "content": "**Dediščina, 18. 10. 2026.** Discover recipes, home ideas, style inspiration and other ideas to try. Pinterest…\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: pinterest.com. Objavljeno: Thu, 15 Oct 2026 23:36:00 GMT. [Odpri izvirni vir](https://www.pinterest.com/)\n\n## Dopolnitev vira 2: pinterest.com\n\n{\"adsAPIDomain\":\"https://api.pinterest.com\",\"appVersion\":\"23e4fdc\",\"context\":{\"analysis_ua\":{\"app_type\":5,\"app_version\":\"\",\"browser_name\":\"Other\",\"browser_version\":\"\",\"device_type\":null,\"device\":\"Other\",\"os_name\":\"Other\",\"os_version\":\"\"},\"app_type_detailed\":5,\"app_version\":\"23e4fdc\",\"autologin\":null,\"browser_name\":\"Other\",\"browser_type\":null,\"browser_version\":\"\",\"country\":\"US\",\"country_from_hostname\":\"US\",\"country_from_ip\":\"US\",\"csp_nonce\":\"58c8e01c9476e5db787c7d78ee1df797\",\"current_url\":\"https://www.pinterest.com/pinterest/\",\"debug\":false,\"deep_link\":\"\",\"enabled_advertiser_countries\":[\"AR\",\"AT\",\"AU\",\"BE\",\"BR\",\"CA\",\"CH\",\"CL\",\"CO\",\"DE\",\"DK\",\"ES\",\"FI\",\"FR\",\"GB\",\"IE\",\"IT\",\"JP\",\"LU\",\"MX\",\"NL\",\"NO\",\"NZ\",\"PT\",\"SE\",\"…\n\n Vir: pinterest.com. Objavljeno: Sun, 18 Oct 2026 09:28:00 GMT. [Odpri izvirni vir](https://www.pinterest.com/pinterest/)\n\n## Dopolnitev vira 3: mx.pinterest.com\n\n{\"adsAPIDomain\":\"https://api.pinterest.com\",\"appVersion\":\"23e4fdc\",\"context\":{\"analysis_ua\":{\"app_type\":5,\"app_version\":\"\",\"browser_name\":\"Other\",\"browser_version\":\"\",\"device_type\":null,\"device\":\"Other\",\"os_name\":\"Other\",\"os_version\":\"\"},\"app_type_detailed\":5,\"app_version\":\"23e4fdc\",\"autologin\":null,\"browser_name\":\"Other\",\"browser_type\":null,\"browser_version\":\"\",\"country\":\"US\",\"country_from_hostname\":\"MX\",\"country_from_ip\":\"US\",\"csp_nonce\":\"4897a147d042d700e6c297b41153f3a4\",\"current_url\":\"https://mx.pinterest.com/login/\",\"debug\":false,\"deep_link\":\"\",\"enabled_advertiser_countries\":[\"AR\",\"AT\",\"AU\",\"BE\",\"BR\",\"CA\",\"CH\",\"CL\",\"CO\",\"DE\",\"DK\",\"ES\",\"FI\",\"FR\",\"GB\",\"IE\",\"IT\",\"JP\",\"LU\",\"MX\",\"NL\",\"NO\",\"NZ\",\"PT\",\"SE\",\"US\"],…\n\n Vir: mx.pinterest.com. Objavljeno: Sun, 18 Oct 2026 14:14:00 GMT. [Odpri izvirni vir](https://mx.pinterest.com/login/)\n\n## Dopolnitev vira 4: kr.pinterest.com\n\n{\"adsAPIDomain\":\"https://api.pinterest.com\",\"appVersion\":\"23e4fdc\",\"context\":{\"analysis_ua\":{\"app_type\":5,\"app_version\":\"\",\"browser_name\":\"Other\",\"browser_version\":\"\",\"device_type\":null,\"device\":\"Other\",\"os_name\":\"Other\",\"os_version\":\"\"},\"app_type_detailed\":5,\"app_version\":\"23e4fdc\",\"autologin\":null,\"browser_name\":\"Other\",\"browser_type\":null,\"browser_version\":\"\",\"country\":\"US\",\"country_from_hostname\":\"KR\",\"country_from_ip\":\"US\",\"csp_nonce\":\"0d64a5c0a83fc7b9f4f6e256caf94e3e\",\"current_url\":\"https://kr.pinterest.com/login/\",\"debug\":false,\"deep_link\":\"\",\"enabled_advertiser_countries\":[\"AR\",\"AT\",\"AU\",\"BE\",\"BR\",\"CA\",\"CH\",\"CL\",\"CO\",\"DE\",\"DK\",\"ES\",\"FI\",\"FR\",\"GB\",\"IE\",\"IT\",\"JP\",\"LU\",\"MX\",\"NL\",\"NO\",\"NZ\",\"PT\",\"SE\",\"US\"],…\n\n Vir: kr.pinterest.com. Objavljeno: Sun, 18 Oct 2026 04:06:00 GMT. [Odpri izvirni vir](https://kr.pinterest.com/login/)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Dediščina",
+    "tags": [
+      "dediščina",
+      "pregled"
+    ],
+    "heroImage": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Tustanj_Castle_Slovenia_-_plaque.JPG/1920px-Tustanj_Castle_Slovenia_-_plaque.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "alt": "Plaque over the entrance to Tuštanj Castle, Zgornji Tuštanj, Municipality of Moravče, Slovenia",
+      "caption": "Doremo · Wikimedia Commons · CC BY-SA 3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tustanj_Castle_Slovenia_-_plaque.JPG"
+    },
+    "gallery": [],
+    "video": null,
+    "sources": [
+      {
+        "label": "pinterest.com — Pinterest",
+        "url": "https://www.pinterest.com/"
+      },
+      {
+        "label": "pinterest.com — Pinterest (pinterest) - Profile | Pinterest",
+        "url": "https://www.pinterest.com/pinterest/"
+      },
+      {
+        "label": "mx.pinterest.com — Pinterest",
+        "url": "https://mx.pinterest.com/login/"
+      },
+      {
+        "label": "kr.pinterest.com — Pinterest",
+        "url": "https://kr.pinterest.com/login/"
+      }
+    ],
+    "source_urls": [
+      "https://www.pinterest.com/",
+      "https://www.pinterest.com/pinterest/",
+      "https://mx.pinterest.com/login/",
+      "https://kr.pinterest.com/login/"
+    ],
+    "fallback": true,
+    "visualTemplate": "fieldnote",
+    "templateLabel": "Field Note",
+    "id": "pinterest-6a26263a"
+  }
+}
