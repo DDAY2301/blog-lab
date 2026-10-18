@@ -1,12 +1,16 @@
 {
-  "updatedAt": "2026-10-18T06:43:52+02:00",
+  "updatedAt": "2026-10-18T07:22:00+02:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
+    "NLB Ljubljana Marathon",
+    "Cankarjev dom",
     "Kino Šiška",
+    "MGL",
+    "Ljubljana Castle",
     "Gala Hala",
     "Klub K4",
-    "Cirkus Klub"
+    "European Table Tennis Championships Ljubljana 2026"
   ],
   "sourcesFailed": [],
   "items": [
@@ -18,7 +22,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.ljubljanskigrad.si/en/castle-events/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-17T07:03:07+02:00",
+      "lastCheckedAt": "2026-10-18T07:22:00+02:00",
       "id": "ehosistem-through-2026-11-15",
       "title": "Aleksandra Atanasovski and Maja Licul: Ehosistem",
       "url": "https://www.ljubljanskigrad.si/en/castle-events/",
@@ -37,7 +41,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.ljubljanskigrad.si/en/castle-events/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-17T07:03:07+02:00",
+      "lastCheckedAt": "2026-10-18T07:22:00+02:00",
       "id": "illustrations-in-motion-through-2027-01-10",
       "title": "Illustrations in Motion",
       "url": "https://www.ljubljanskigrad.si/en/castle-events/",
@@ -64,7 +68,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.visitljubljana.com/en/visitors/events/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-17T07:03:07+02:00",
+      "lastCheckedAt": "2026-10-18T07:22:00+02:00",
       "description": "The seasonal corn labyrinth in Stanežiče is listed daily from 09:00 to 20:00; outdoor operation may depend on conditions, so recheck before travel."
     },
     {
@@ -83,7 +87,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.eventim.si/en/artist/evropsko-prvenstvo-v-namiznem-tenisu/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-17T07:03:07+02:00",
+      "lastCheckedAt": "2026-10-18T07:22:00+02:00",
       "description": "Europe’s leading individual table-tennis championships run at Stožice from 12 to 18 October. The official ticket listing shows the opening day from 08:30; check the championship programme before travelling."
     },
     {
@@ -102,7 +106,7 @@
       "accessibility": null,
       "ticketUrl": "https://vstopnice.cd-cc.si/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-17T07:03:07+02:00",
+      "lastCheckedAt": "2026-10-18T07:22:00+02:00",
       "description": "The exhibition marking the centenary of Srečko Kosovel’s death is open at Cankarjev dom; admission is €8. Check the venue for daily gallery hours."
     },
     {
@@ -113,7 +117,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.ljubljanskigrad.si/en/castle-events/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-17T07:03:07+02:00",
+      "lastCheckedAt": "2026-10-18T07:22:00+02:00",
       "id": "stretch-3789-from-2026-10-15",
       "title": "Stretch 3789",
       "url": "https://www.ljubljanskigrad.si/en/castle-events/",
@@ -140,7 +144,7 @@
       "accessibility": null,
       "ticketUrl": "https://ljubljanskimaraton.si/en/schedule",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-17T07:03:07+02:00",
+      "lastCheckedAt": "2026-10-18T07:22:00+02:00",
       "description": "Saturday starts with the free VITA Kids Run at 09:30 and includes the Garmin 10 km at 16:30; the marathon and half marathon start Sunday at 09:00. Major road closures and changed city-bus routes apply across central Ljubljana."
     },
     {
@@ -159,7 +163,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/antique-flea-market/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-17T07:03:07+02:00",
+      "lastCheckedAt": "2026-10-18T07:22:00+02:00",
       "description": "The free antiques and vintage market runs on Breg from 08:00 to 15:00. In rain or poor weather, individual sellers may leave early."
     },
     {
@@ -170,7 +174,7 @@
       "accessibility": null,
       "ticketUrl": "https://cd-cc.si/en/culture/music/cleveland-orchestra",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-17T07:03:07+02:00",
+      "lastCheckedAt": "2026-10-18T07:22:00+02:00",
       "id": "cleveland-orchestra-2026-10-18",
       "title": "The Cleveland Orchestra",
       "url": "https://cd-cc.si/en/culture/music/cleveland-orchestra",
@@ -197,7 +201,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.kinosiska.si/dogodek/cellofest-ljubljana-2026-peter-gregson/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-17T07:03:07+02:00",
+      "lastCheckedAt": "2026-10-18T07:22:00+02:00",
       "description": "Peter Gregson performs a solo cello programme combining acoustic cello and electronics at 20:00. Tickets cost €25 in advance, €30 on the day, or €20 with the listed concession."
     },
     {
@@ -208,7 +212,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.mgl.si/en/schedule/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
+      "lastCheckedAt": "2026-10-18T07:22:00+02:00",
       "id": "romantic-souls-2026-10-19",
       "title": "Romantic Souls",
       "url": "https://www.mgl.si/en/schedule/",
@@ -227,7 +231,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.mgl.si/en/schedule/",
       "status": "sold_out",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
+      "lastCheckedAt": "2026-10-18T07:22:00+02:00",
       "id": "prima-facie-2026-10-19",
       "title": "Prima Facie",
       "url": "https://www.mgl.si/en/schedule/",
@@ -245,7 +249,7 @@
       "familyFriendly": false,
       "accessibility": null,
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
+      "lastCheckedAt": "2026-10-18T07:22:00+02:00",
       "endAt": null,
       "id": "dub-pistols-2026-10-19",
       "title": "Dub Pistols",
@@ -488,6 +492,25 @@
       "description": "Sarah Sommers, Nobena and Joondroid appear in the Planet Pink modular programme at 20:00. Tickets are linked from Kino Šiška."
     },
     {
+      "id": "open-kitchen-2026-10-23",
+      "title": "Open Kitchen",
+      "url": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/open-kitchen",
+      "source": "Visit Ljubljana",
+      "type": "Food market · outdoor",
+      "place": "Pogačarjev trg · Ljubljana",
+      "startAt": "2026-10-23T10:00:00+02:00",
+      "endAt": "2026-10-23T21:00:00+02:00",
+      "price": "Free entry; food and drinks charged separately",
+      "languages": [],
+      "touristFriendly": true,
+      "familyFriendly": true,
+      "accessibility": null,
+      "ticketUrl": null,
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-18T07:22:00+02:00",
+      "description": "Ljubljana’s outdoor food market is listed at Pogačarjev trg from 10:00 to 21:00. Entry is free; the market is weather-dependent, so recheck before travelling."
+    },
+    {
       "title": "BALANS (SI): ALBUM RELEASE KONCERT @ Gala hala",
       "url": "https://www.galahala.com/",
       "source": "Gala Hala",
@@ -497,14 +520,14 @@
       "endAt": null,
       "id": "event-40-balans-si-album-release-koncert-gala-hala",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
-      "price": null,
+      "lastCheckedAt": "2026-10-18T07:22:00+02:00",
+      "price": "€15 advance / €20 on the day",
       "languages": [],
       "touristFriendly": null,
       "familyFriendly": null,
       "accessibility": null,
-      "ticketUrl": "https://www.galahala.com/",
-      "description": "BALANS (SI): ALBUM RELEASE KONCERT @ Gala hala is confirmed at Gala Hala · AKC Metelkova. Check the official source for any late programme or ticket changes."
+      "ticketUrl": "https://www.galahala.com/program/balans-si-album-release-koncert-gala-hala/34597/",
+      "description": "Balans present their new album at Gala Hala at 21:00, followed by a DJ afterparty. Tickets cost €15 in advance or €20 on the day."
     },
     {
       "title": "FORESTDELIC / LABEL NIGHT / KLUB K4",
@@ -515,7 +538,7 @@
       "startAt": "2026-10-23T23:00:00+02:00",
       "endAt": "",
       "id": "event-53-forestdelic-label-night-klub-k4",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
+      "lastCheckedAt": "2026-10-18T07:22:00+02:00",
       "price": null,
       "languages": [],
       "touristFriendly": null,
@@ -572,13 +595,13 @@
       "startAt": "2026-10-24T22:00:00+02:00",
       "endAt": "",
       "id": "event-52-dnbkonferenca-17-obletnica-gala-hala",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
-      "price": null,
+      "lastCheckedAt": "2026-10-18T07:22:00+02:00",
+      "price": "€22 early bird / €25 advance / €30 on the day",
       "languages": [],
       "touristFriendly": null,
       "familyFriendly": null,
       "accessibility": null,
-      "ticketUrl": "https://www.galahala.com/",
+      "ticketUrl": "https://www.galahala.com/program/dnbkonferenca-17-obletnica-gala-hala/34640/",
       "status": "confirmed",
       "description": "DNBKONFERENCA: 17. OBLETNICA @ Gala hala is confirmed at Gala Hala · AKC Metelkova. Check the official source for late programme or ticket changes."
     },
@@ -591,7 +614,7 @@
       "startAt": "2026-10-24T23:00:00+02:00",
       "endAt": "",
       "id": "event-50-grand-prix-invites-upper90",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
+      "lastCheckedAt": "2026-10-18T07:22:00+02:00",
       "price": null,
       "languages": [],
       "touristFriendly": null,
@@ -600,25 +623,6 @@
       "ticketUrl": "https://www.klub-k4.si/",
       "status": "confirmed",
       "description": "Grand Prix invites Upper90 is confirmed at Klub K4 · Ljubljana. Check the official source for late programme or ticket changes."
-    },
-    {
-      "id": "sunday-flea-market-2026-10-25",
-      "title": "Sunday Flea Market",
-      "url": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/antique-flea-market/",
-      "source": "Visit Ljubljana",
-      "type": "Market · antiques and vintage",
-      "place": "Breg · Ljubljana",
-      "startAt": "2026-10-25T08:00:00+01:00",
-      "endAt": "2026-10-25T15:00:00+01:00",
-      "price": "Free entry",
-      "languages": [],
-      "touristFriendly": true,
-      "familyFriendly": true,
-      "accessibility": null,
-      "ticketUrl": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/antique-flea-market/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
-      "description": "The antiques and vintage market is scheduled on Breg from 08:00 to 15:00 with free admission."
     },
     {
       "price": null,
@@ -743,14 +747,14 @@
       "startAt": "2026-10-29T20:00:00+01:00",
       "endAt": null,
       "id": "bbbbbbb-mala-roza-muca-pixel-bambi-ssmkosk-2026-10-29",
-      "price": null,
+      "price": "€10 advance / €13 on the day / €8 under 24",
       "languages": [],
       "touristFriendly": true,
       "familyFriendly": false,
       "accessibility": null,
-      "ticketUrl": "https://www.galahala.com/program/",
+      "ticketUrl": "https://www.galahala.com/program/bbbbbbb-jp-channel-zero/34798/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-16T07:02:34+02:00",
+      "lastCheckedAt": "2026-10-18T07:22:00+02:00",
       "description": "The official Gala Hala programme lists this concert at Channel Zero at 20:00. Check the organiser page for ticket and accessibility details."
     },
     {
@@ -771,7 +775,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.galahala.com/program/halloweeki-gala-hala/34706/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-16T07:02:34+02:00",
+      "lastCheckedAt": "2026-10-18T07:22:00+02:00",
       "description": "KiKi performs a Halloween-themed folk-pop concert at Gala Hala at 20:00. Advance tickets cost €12 and the door price is €15."
     },
     {
@@ -790,8 +794,46 @@
       "accessibility": null,
       "ticketUrl": "https://www.galahala.com/program/halloween-bright-side-of-the-80s-gala-hala/34710/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-17T07:03:07+02:00",
+      "lastCheckedAt": "2026-10-18T07:22:00+02:00",
       "description": "Gala Hala’s traditional Halloween party starts at 22:00 with a 1980s-focused music programme. Entry costs €10 in costume or €13 without costume."
+    },
+    {
+      "id": "the-years-2026-10-29",
+      "title": "The Years",
+      "url": "https://www.mgl.si/en/schedule/",
+      "source": "MGL",
+      "type": "Theatre · dramatisation",
+      "place": "MGL Small Stage · Ljubljana",
+      "startAt": "2026-10-29T20:00:00+01:00",
+      "endAt": null,
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": false,
+      "accessibility": null,
+      "ticketUrl": "https://www.mgl.si/en/schedule/",
+      "status": "sold_out",
+      "lastCheckedAt": "2026-10-18T07:22:00+02:00",
+      "description": "MGL schedules The Years on the Small Stage at 20:00. The official programme currently marks this performance as sold out."
+    },
+    {
+      "id": "november-gourmet-ljubljana-2026",
+      "title": "November Gourmet Ljubljana",
+      "url": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/november-gourmet-ljubljana",
+      "source": "Visit Ljubljana",
+      "type": "Festival · food and drink",
+      "place": "Various venues · Ljubljana",
+      "startAt": "2026-11-01T00:00:00+01:00",
+      "endAt": "2026-11-30T23:59:00+01:00",
+      "price": null,
+      "languages": [],
+      "touristFriendly": true,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/november-gourmet-ljubljana",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-18T07:22:00+02:00",
+      "description": "The month-long culinary festival begins on 1 November across Ljubljana, with individual tastings, menus and workshops announced separately. Prices and accessibility vary by participating venue."
     }
   ]
 }
