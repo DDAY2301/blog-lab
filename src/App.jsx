@@ -30,6 +30,33 @@ const CATEGORY_EMPTY_COPY = {
 
 const starterArticles = [
   {
+    "id": "contact-old-7296ec1a",
+    "title": "Contact old",
+    "excerpt": "Gore & traili: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Contact old«.",
+    "seoDescription": "Gore & traili: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Contact old«.",
+    "content": "**Gore & traili, 18. 10. 2026.** D & R Canal State Park Contact old - D & R Canal Latest News Christopher Meyers home display LATEST NEWS Read more Explore Our Trails Christopher Meyers home display The historic towpath along the main canal from Bakers Basin Road (Trenton) to New Brunswick has a natural surface for... Read more A Historic Place Vicki Chirco home display \"You have constructed for sixty-five miles, through the heart of New Jersey, the most spacious canal, which adds year after... Read more Contact & Staff Information Patricia Kallesser Park Superintendent 145 Mapleton Road Princeton, NJ 08540 Phone: 609.924.5705 E-Mail: This email address is being protected from spambots. You need JavaScript enabled to view it. Bulls Island…\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: dandrcanal.org. Objavljeno: Tue, 29 Sep 2026 05:40:00 GMT. [Odpri izvirni vir](https://dandrcanal.org/20-contact/9-contact-old)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Gore & traili",
+    "author": "Blog Lab Slovenia Publisher",
+    "status": "published",
+    "heroImage": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/172nd_Slovenian_Mountain_Training_%285229491885%29.jpg/1920px-172nd_Slovenian_Mountain_Training_%285229491885%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "alt": "BOHINJSKA BELA, Slovenia -- Soldiers with U.S. Army Europe's 172nd Infantry Brigade pause during their hike up the mountain at the Slovenian Armed Forces Mountain Training Center 3",
+      "caption": "U.S. Army Europe from Wiesbaden, Germany · Wikimedia Commons · Public domain",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:172nd_Slovenian_Mountain_Training_(5229491885).jpg"
+    },
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "dandrcanal.org — Contact old - D & R Canal",
+        "url": "https://dandrcanal.org/20-contact/9-contact-old"
+      }
+    ],
+    "createdAt": "2026-10-18T21:23:41+02:00",
+    "updatedAt": "2026-10-18T21:23:41+02:00"
+  },
+
+  {
     "id": "draga-ponds-forest-trail-day-trip-ljubljana",
     "title": "Draga Ponds and Forest Trail: A Quiet Day Trip from Ljubljana",
     "excerpt": "Walk a marked forest learning trail above seven protected ponds near Ig, with practical advice for birdwatching, families, autumn conditions and low-impact access.",
