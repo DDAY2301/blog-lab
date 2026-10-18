@@ -5,9 +5,9 @@
   "posts_date": "2026-10-18",
   "posts_today": 1,
   "last_output": "to-so-najbolj-idilicne-kolesarske-poti-v-sloveniji-se-strinjate-b86af7dc",
-  "last_error": "ze_uporabljen_vir",
+  "last_error": "prekratek,manjka_fotografija",
   "agent_version": "3.0.0-learning-guarded-fallback",
-  "current_category": "dediscina",
+  "current_category": "sezonsko",
   "scheduled_posts_today": 1,
   "manual_posts_today": 0,
   "writer_mode": "workers_ai",
@@ -15,12 +15,13 @@
     "2026-10-18|07:35|kolesarstvo"
   ],
   "scheduled_slots_deferred": [
-    "2026-10-18|10:45|dediscina"
+    "2026-10-18|10:45|dediscina",
+    "2026-10-18|13:30|sezonsko"
   ],
   "last_editorial_hold": {
-    "slot": "2026-10-18|10:45|dediscina",
-    "reason": "ponavljanje,naslov_ni_v_rubriki,clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike,besedilo_ni_v_slovenscini",
-    "at": "2026-10-18T19:39:29+02:00"
+    "slot": "2026-10-18|13:30|sezonsko",
+    "reason": "manjka_fotografija,ponavljanje",
+    "at": "2026-10-18T19:54:25+02:00"
   },
   "publisher_guardian_last_run": "2026-10-18T19:42:01+02:00",
   "publisher_guardian_last_action": {
