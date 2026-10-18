@@ -30,6 +30,33 @@ const CATEGORY_EMPTY_COPY = {
 
 const starterArticles = [
   {
+    "id": "to-so-najbolj-idilicne-kolesarske-poti-v-sloveniji-se-strinjate-b86af7dc",
+    "title": "To so najbolj idilične kolesarske poti v Sloveniji! Se strinjate?",
+    "excerpt": "Kolesarstvo: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »To so najbolj idilične kolesarske poti v Sloveniji! Se strinjate?«.",
+    "seoDescription": "Kolesarstvo: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »To so najbolj idilične kolesarske poti v Sloveniji! Se strinjate?«.",
+    "content": "**Kolesarstvo, 18. 10. 2026.** To so najbolj idilične kolesarske poti v Sloveniji! Se strinjate? Žurnal24\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Žurnal24. Objavljeno: Mon, 30 May 2022 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMipgFBVV95cUxPcHJCeWZsRTQzcnVCNWlnSXBQTmJwS2dTcy1sbEpVMWFBeVB1bVVBa05YMjhjSUlYTmlPZ19SNlZIdmtLdVpkeDkzREVPNWJtRUVfN1lLMnFzb1VRTGhDankwOVVSMVpxTzlOOVNZd1ZLZEhGQTFOclFWMDVZc3FXUVYtS1FsMDg4UmtDZjgtWkVPbVNuc2xQdlBmWWZkNUxXWno2R3d30gGrAUFVX3lxTE52WmQyN0lwSDd6Nk1RYy1VeWZoOG5wWkItU1Q1a0l0MlhQRWxSWnJocmZQUlRYTU55NkRYX3lDWkxzSGcwQlJzRk1ZcnBFZDc1ZU9sMU9XYkVKSDZWVEJXQ1BhMGh0bzZJYXdpZnB2R3F6dU5hdXVUV3YwOUYzcVprMVBHZDdSbTVmcjZZa3BzYVhwbTRjSHhXeVdJYTNtLUtiLUM3QkluN00wMA?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Kolesarstvo",
+    "author": "Blog Lab Slovenia Publisher",
+    "status": "published",
+    "heroImage": {
+      "url": "/media/articles/8bad06fec502189cebd8.webp",
+      "alt": "Three male cyclists wearing helmets during a summer bicycle tour in rural Slovenia near Luže.",
+      "caption": "Marek Ślusarczyk ( Tupungato ) Photo gallery · Wikimedia Commons · CC BY 3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:08_Slovenia_rural_landscape_-_bicycle_expedition_with_panniers.jpg"
+    },
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Žurnal24 — To so najbolj idilične kolesarske poti v Sloveniji! Se strinjate? - Žurnal24",
+        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPcHJCeWZsRTQzcnVCNWlnSXBQTmJwS2dTcy1sbEpVMWFBeVB1bVVBa05YMjhjSUlYTmlPZ19SNlZIdmtLdVpkeDkzREVPNWJtRUVfN1lLMnFzb1VRTGhDankwOVVSMVpxTzlOOVNZd1ZLZEhGQTFOclFWMDVZc3FXUVYtS1FsMDg4UmtDZjgtWkVPbVNuc2xQdlBmWWZkNUxXWno2R3d30gGrAUFVX3lxTE52WmQyN0lwSDd6Nk1RYy1VeWZoOG5wWkItU1Q1a0l0MlhQRWxSWnJocmZQUlRYTU55NkRYX3lDWkxzSGcwQlJzRk1ZcnBFZDc1ZU9sMU9XYkVKSDZWVEJXQ1BhMGh0bzZJYXdpZnB2R3F6dU5hdXVUV3YwOUYzcVprMVBHZDdSbTVmcjZZa3BzYVhwbTRjSHhXeVdJYTNtLUtiLUM3QkluN00wMA?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-18T08:23:26+02:00",
+    "updatedAt": "2026-10-18T08:23:26+02:00"
+  },
+
+  {
     "id": "bo-pot-ob-soci-postala-hrbtenica-sirse-turisticno-kolesarske-mreze-5a175519",
     "title": "Bo pot ob Soči postala hrbtenica širše turistično kolesarske mreže?",
     "excerpt": "Kolesarstvo: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Bo pot ob Soči postala hrbtenica širše turistično kolesarske mreže?«.",
