@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-18T08:23:34+02:00",
-  "loop_count": 6252,
+  "updated_at": "2026-10-18T08:24:24+02:00",
+  "loop_count": 6253,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-18T08:23:15+02:00",
+      "last_learning_run": "2026-10-18T08:24:01+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 131773,
-          "last_seen": "2026-10-18T08:23:15+02:00",
+          "seen": 131786,
+          "last_seen": "2026-10-18T08:24:01+02:00",
           "last_title": "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
           "last_provider": "google-news-si",
-          "published": 368545,
+          "published": 368612,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-18T08:23:25+02:00",
+      "last_learning_run": "2026-10-18T08:24:11+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -272,11 +272,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 149090,
-          "last_seen": "2026-10-18T08:23:25+02:00",
+          "seen": 149107,
+          "last_seen": "2026-10-18T08:24:11+02:00",
           "last_title": "Golob pravi: Slovenija potrebuje široko koalicijo. NSi ne bo na sestanek - Svet24.si",
           "last_provider": "google-news-si",
-          "published": 409864,
+          "published": 409934,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -388,7 +388,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-18T08:23:34+02:00",
+      "last_learning_run": "2026-10-18T08:24:24+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -477,11 +477,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 165618,
-          "last_seen": "2026-10-18T08:23:34+02:00",
+          "seen": 165639,
+          "last_seen": "2026-10-18T08:24:24+02:00",
           "last_title": "Ko so bile ZDA stare toliko kot danes Slovenija, so bile na robu razpada - Zanima.me",
           "last_provider": "google-news-si",
-          "published": 284299,
+          "published": 284329,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -588,6 +588,12 @@
   },
   "recent_articles": [
     {
+      "id": "to-so-najbolj-idilicne-kolesarske-poti-v-sloveniji-se-strinjate-b86af7dc",
+      "title": "To so najbolj idilične kolesarske poti v Sloveniji! Se strinjate?",
+      "category": "Kolesarstvo",
+      "createdAt": "2026-10-18T08:23:26+02:00"
+    },
+    {
       "id": "bo-pot-ob-soci-postala-hrbtenica-sirse-turisticno-kolesarske-mreze-5a175519",
       "title": "Bo pot ob Soči postala hrbtenica širše turistično kolesarske mreže?",
       "category": "Kolesarstvo",
@@ -652,15 +658,25 @@
       "title": "DNEVNA: Na Dravski kolesarski poti tudi vlečnica čez Dravo med Duplekom in Staršami",
       "category": "Kolesarstvo",
       "createdAt": "2026-10-13T07:39:14+02:00"
-    },
-    {
-      "id": "zice-charterhouse-history-legend-visitor-guide",
-      "title": "Žiče Charterhouse: Medieval Silence, Manuscripts and a White-Hind Legend",
-      "category": "Vodniki",
-      "createdAt": "2026-10-12T16:12:00+02:00"
     }
   ],
   "recent_failures": [
+    {
+      "file": "fallback-failed-20261017-232333.json",
+      "category": "gore",
+      "errors": [
+        "ze_uporabljen_vir"
+      ],
+      "title": "Svetovni hit v severovzhodni Sloveniji: uradno odprta 187 kilometrov dolga pohodniška pravljica"
+    },
+    {
+      "file": "fallback-failed-20261017-232417.json",
+      "category": "dediscina",
+      "errors": [
+        "ze_uporabljen_vir"
+      ],
+      "title": "Grad Grad na Goričkem: Največji baročni grad v Sloveniji s skrivnostno zgodovino"
+    },
     {
       "file": "fallback-failed-20261017-233847.json",
       "category": "gore",
@@ -745,28 +761,12 @@
         "ze_uporabljen_vir"
       ],
       "title": "Kolesarjenje: Slovenija kolesari nad evropskim povprečjem, vendar izzivi ostajajo"
-    },
-    {
-      "file": "agent-state",
-      "category": "kolesarstvo",
-      "errors": [
-        "podvojen_naslov,ze_uporabljen_vir"
-      ]
-    },
-    {
-      "file": "agent-state",
-      "category": "kolesarstvo",
-      "errors": [
-        "manjka_fotografija"
-      ],
-      "slot": "2026-10-18|07:35|kolesarstvo"
     }
   ],
   "failure_summary": {
     "ze_uporabljen_vir": 16,
-    "manjka_fotografija": 5,
     "prekratek": 4,
-    "podvojen_naslov": 1,
-    "podvojen_naslov,ze_uporabljen_vir": 1
+    "manjka_fotografija": 4,
+    "podvojen_naslov": 1
   }
 }
