@@ -1,0 +1,42 @@
+{
+  "category": "dediscina",
+  "errors": [
+    "ponavljanje",
+    "naslov_ni_v_rubriki",
+    "clanek_brez_slovenskega_konteksta",
+    "viri_ne_podpirajo_slovenske_rubrike",
+    "besedilo_ni_v_slovenscini"
+  ],
+  "article": {
+    "title": "First preview build for Windows 11 in 2026 is out with fixes for File Explorer and more",
+    "excerpt": "The Windows Insider Program team is back from holiday vacation with the first Windows 11 preview build in 2026. Build 26220.7535 is now available for download with a few important features, namely Copilot-powered image d",
+    "seoDescription": "The Windows Insider Program team is back from holiday vacation with the first Windows 11 preview build in 2026. Build 26220.7535 is now available for downl",
+    "content": "Pregled za rubriko dediscina povzema trenutno razpoložljive informacije iz spodaj navedenih virov. Besedilo je pripravljeno brez dodajanja nepodprtih dejstev.\n\n## First preview build for Windows 11 in 2026 is out with fixes for File Explorer and more\nThe Windows Insider Program team is back from holiday vacation with the first Windows 11 preview build in 2026. Build 26220.7535 is now available for download with a few important features, namely Copilot-powered image descriptions in Narrator, a redesigned Windows Spotlight icon, fixes for File ... The Windows Insider Program team is back from holiday vacation with the first Windows 11 preview build in 2026. Build 26220.7535 is now available for download with a few important features, namely Copilot-powered image descriptions in Narrator, a redesigned Windows Spotlight icon, fixes for File Explorer, and more. Here are the new features: Bringing Copilot-powered image descriptions to Narrator Last year, we introduced rich image descriptions in Narrator on Copilot+ PCs—making it possible for blind and low-vision users to hear detailed, AI-generated descriptions of images, charts, and graphs. Narrator can now work with Copilot on all Windows 11 devices to further understand images and visual elements on your screen. You can press Narrator key + Ctrl + D to describe the focused image or press Narrator key + Ctrl + S to describe the full screen. Copilot opens with the image ready, allowing you to enter your own prompt and generate a description tailored to what you want to know. Importantly, the image is only shared after you choose to describe it. You remain in control at every step. When you want more detail or follow-up insights, simply select Ask Copilot to continue exploring. This feature is not available in the European Economic Area (EEA). Uninstalling Microsoft Copilot App on managed devices Admins can now uninstall Microsoft Copilot for a user in a targeted way by enabling a new policy titled RemoveMicrosoftCopilotApp. It will apply for devices/users that meet the below conditions: Microsoft 365 Copilot and Microsoft Copilot are both installed The Microsoft Copilot app was not installed by the user The Microsoft Copilot app was not launched in the last 28 days If this policy is enabled, the Microsoft Copilot app will be uninstalled, once. Users can still re-install if they choose to. This policy is available on Enterprise, Pro, and EDU SKUs. To enable this policy, open the Group policy editor and go to: User Configuration -> Administrative Templates -> Windows AI -> Remove Microsoft Copilot App. Changes and Improvements gradually being rolled out with toggle on [ For Developers ] We’re excited to share an enhancement to the Cross Device Resume capability that we announced earlier. Until now, app developers could integrate with Resume using a solution\n\nVir: nsaneforums.com — https://nsaneforums.com/news/software-news/first-preview-build-for-windows-11-in-2026-is-out-with-fixes-for-file-explorer-and-more-r33151/",
+    "category": "Dediščina",
+    "tags": [
+      "dediscina",
+      "Slovenija",
+      "first",
+      "preview",
+      "build"
+    ],
+    "sources": [
+      {
+        "title": "First preview build for Windows 11 in 2026 is out with fixes for File Explorer and more",
+        "url": "https://nsaneforums.com/news/software-news/first-preview-build-for-windows-11-in-2026-is-out-with-fixes-for-file-explorer-and-more-r33151/",
+        "source_name": "nsaneforums.com"
+      }
+    ],
+    "fallback": false,
+    "gallery": [],
+    "heroImage": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Tustanj_Castle_Slovenia_-_plaque.JPG/1920px-Tustanj_Castle_Slovenia_-_plaque.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "alt": "Plaque over the entrance to Tuštanj Castle, Zgornji Tuštanj, Municipality of Moravče, Slovenia",
+      "caption": "Doremo · Wikimedia Commons · CC BY-SA 3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tustanj_Castle_Slovenia_-_plaque.JPG"
+    },
+    "visualTemplate": "fieldnote",
+    "templateLabel": "Field Note",
+    "id": "first-preview-build-for-windows-11-in-2026-is-out-with-fixes-for-file-explorer-and-more-c80a989b"
+  }
+}
