@@ -30,6 +30,51 @@ const CATEGORY_EMPTY_COPY = {
 
 const starterArticles = [
   {
+    "id": "draga-ponds-forest-trail-day-trip-ljubljana",
+    "title": "Draga Ponds and Forest Trail: A Quiet Day Trip from Ljubljana",
+    "excerpt": "Walk a marked forest learning trail above seven protected ponds near Ig, with practical advice for birdwatching, families, autumn conditions and low-impact access.",
+    "seoDescription": "Plan a Draga Ponds day trip from Ljubljana: a marked 3 km forest trail, protected wetland, birdwatching, family, access and autumn safety advice.",
+    "content": "# Draga Ponds and Forest Trail: A Quiet Day Trip from Ljubljana\n\nA chain of seven ponds hides at the wooded edge of the Ljubljana Marshes near Ig. The **Draga Forest Learning Trail** rises above them in a short marked circuit, combining wetland views with 27 interpretation boards about trees, forestry and the life of the forest. It is a useful day trip for visitors who want nature without an alpine drive or a summit hike.\n\nThe ponds are part of a protected nature area and the Natura 2000 network. Visit slowly: this is habitat first and an attraction second.\n\n**Last checked: 18 October 2026.** Review the nature park, Ljubljana Tourism, ARSO, LPP and Promet.si again on the day of travel.\n\n## Why visit Draga?\n\nLjubljana Tourism says the ponds originated in the 18th century, when clay was extracted for a nearby brickworks. The flooded excavations developed into an important wetland with waterbirds, amphibians, dragonflies, otters and the protected European pond turtle among the species associated with the area.\n\nThe visit has two complementary parts:\n\n- quiet observation beside the large pond and other permitted viewpoints;\n- a wooded circular learning trail marked with a **white water-lily symbol**.\n\nThe official Ljubljana Marshes Nature Park description gives the trail as a little over **3 km**, taking **two to three hours**, with 27 information boards. The distance is modest, but the time estimate makes sense if you stop to read and observe wildlife.\n\n## A simple self-guided route\n\n### 1. Begin beside the large pond\n\nLjubljana Tourism places the start and finish beside the large pond near the Draga Hunting Lodge, where parking is available. Read the main information board before walking and check for temporary signs, habitat closures or maintenance.\n\nDo not assume that every track around every pond is a visitor route. Remain on the marked trail and established public paths. Reeds, muddy banks and quiet water edges are wildlife habitat, not shortcuts.\n\n### 2. Follow the white water-lily markers\n\nThe route climbs into the forest above the ponds on forest tracks. It is officially described as not demanding, but that rating assumes ordinary dry conditions. Roots, leaves, mud and forestry work can change a gentle path quickly.\n\nFollow the water-lily markers at junctions and keep an offline map or the official leaflet as backup. If markings disappear, return to the last confirmed point instead of making a new path through the woods.\n\n### 3. Return for a quiet pond-side finish\n\nAfter the forest circuit, spend time at an established viewing place by the water. Binoculars are more useful than trying to approach birds. There is no need to identify a rare species for the visit to succeed: common ducks, grebes, dragonflies and changing reflections reward patient observation.\n\n## Getting there from Ljubljana\n\n### Public transport\n\nLPP line **19I** connects Ljubljana with Ig, but the ponds are outside the town centre and the final approach requires additional walking or a local transfer. Search the live LPP journey planner for your exact date, compare the Ig stops with the official trail map and save the last return option before leaving.\n\nDo not present the journey as a simple door-to-trail bus ride. If the connection and pedestrian approach do not fit comfortably in daylight, use a taxi for the final leg or choose a city nature walk instead.\n\n### By car\n\nUse the official map for the Draga Hunting Lodge and designated trail parking, then obey signs on arrival. Check [Promet.si](https://www.promet.si/en) for roadworks and incidents. Never park on a meadow, forest track, private entrance or emergency access, even if the small visitor area is full.\n\n### By bicycle\n\nIg is within cycling distance of Ljubljana for experienced riders, but the approach uses ordinary roads rather than a continuous protected family cycleway. Use a current cycling map, lights and visible clothing. Leave the bicycle at an appropriate point and walk the learning trail; forest paths should not become a slalom around pedestrians.\n\n## Autumn weather and safety\n\nConditions around Ig were cool and foggy on the morning of 18 October before a milder afternoon. That snapshot is not a promise for another date. Check the official [ARSO forecast and warnings](https://meteo.arso.gov.si/met/en/) immediately before departure.\n\nIn autumn, fog can reduce road visibility, wet leaves conceal roots and shaded mud dries slowly. Wear closed shoes with grip, carry a warm layer and finish well before dark. Postpone during thunderstorms, strong wind or official warnings; woodland is not a safe shelter when branches may fall.\n\nThe ponds are not a swimming or skating recommendation. Stay back from unstable banks, supervise children beside water and never test winter ice.\n\n## Birdwatching without disturbance\n\nThe reserve is especially valuable because water, reed beds, wet ground and forest meet in a small area. Protect that mosaic:\n\n- watch from established paths and viewpoints;\n- keep voices low and speakers off;\n- never feed, call or flush birds;\n- do not enter reeds or circle a nest for a photograph;\n- keep dogs on a short lead and follow posted restrictions;\n- carry every piece of litter away;\n- avoid dawn or dusk visits if access and daylight are uncertain.\n\nSpecies vary by season and no sighting is guaranteed. The official destination page reports rich birdlife, but a checklist is not a viewing promise.\n\n## Families and accessibility\n\nThe short distance and interpretation boards can make the trail engaging for school-age children. Allow time for stops, bring snacks and turn the boards into a tree-identification game. Adults must keep children close beside ponds and on muddy descents. A child carrier is generally more practical than a pushchair in the forest.\n\nThe official pages do not provide a complete step-free specification. Forest tracks, gradients, roots and wet surfaces mean the circular trail should not be described as wheelchair-accessible. Visitors who need firm, level access should contact Ljubljana Marshes Nature Park or the Municipality of Ig before travelling and ask about the parking surface and the accessible portion beside the large pond.\n\n## Facilities, price and opening\n\nThe reviewed official pages describe an outdoor trail and parking but do not publish an admission fee, staffed entrance or fixed gate hours. Treat access as free unless current signage states otherwise, and treat facilities as unconfirmed. Bring water and do not rely on an open café, toilet or visitor desk.\n\nA lack of a ticket does not mean unrestricted access. Temporary closures, forestry work and conservation signs take priority.\n\n## Pair Draga with the wider marsh landscape\n\nFor the human history of the wetland, continue with the [Ljubljana Marshes pile-dwellings guide](?article=ljubljana-marshes-pile-dwellings-history). For a longer karst walk, compare the [Rakov Škocjan hiking guide](?article=rakov-skocjan-hiking-guide). If weather makes forest ground unsuitable, the [Ljubljana cycling guide](?article=cycling-ljubljana-city-guide) offers a flexible urban alternative.\n\n## Quick checklist\n\nBefore leaving Ljubljana:\n\n1. Download the official Draga trail description or leaflet.\n2. Check ARSO weather and warnings.\n3. Confirm LPP connections or Promet.si road conditions.\n4. Pack grippy shoes, water, layers and binoculars.\n5. Stay on the white water-lily route and public pond-side paths.\n6. Turn back at closures, machinery, flooding or unclear wayfinding.\n\nDraga is at its best when nothing dramatic happens: a few quiet kilometres, trees explained one by one and wildlife left undisturbed on the water below.\n\n## Sources\n\nInformation was verified on 18 October 2026 using Ljubljana Marshes Nature Park, Ljubljana Tourism, the Municipality of Ig, the Slovenia Forest Service, ARSO, LPP and Promet.si. Recheck operational details immediately before travel.",
+    "category": "Vodniki",
+    "author": "Uredništvo Blog Lab",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Ljubljana Marshes Nature Park — Draga Forest Learning Trail",
+        "url": "https://www.ljubljanskobarje.si/obiscite-park/vodeni-ogledi/gozdna-ucna-pot-draga-pri-igu/"
+      },
+      {
+        "label": "Ljubljana Tourism — Ponds in the Draga Valley",
+        "url": "https://www.visitljubljana.com/en/poi/ponds-in-the-draga-valley"
+      },
+      {
+        "label": "Municipality of Ig — Tourism information",
+        "url": "https://www.obcina-ig.si/predstavitev/turisticne-karte/"
+      },
+      {
+        "label": "Slovenia Forest Service — Forest Learning Trails 2026",
+        "url": "https://www.zgs.si/informacije/sporocila-za-javnost/naj-gozdne-ucne-poti-2026-vabijo-k-obisku"
+      },
+      {
+        "label": "ARSO — Weather forecast and warnings",
+        "url": "https://meteo.arso.gov.si/met/en/"
+      },
+      {
+        "label": "LPP — Ljubljana public transport",
+        "url": "https://www.lpp.si/en"
+      },
+      {
+        "label": "Promet.si — Current road conditions",
+        "url": "https://www.promet.si/en"
+      }
+    ],
+    "createdAt": "2026-10-18T09:00:00+02:00",
+    "updatedAt": "2026-10-18T09:00:00+02:00"
+  },
+  {
     "id": "to-so-najbolj-idilicne-kolesarske-poti-v-sloveniji-se-strinjate-b86af7dc",
     "title": "To so najbolj idilične kolesarske poti v Sloveniji! Se strinjate?",
     "excerpt": "Kolesarstvo: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »To so najbolj idilične kolesarske poti v Sloveniji! Se strinjate?«.",
