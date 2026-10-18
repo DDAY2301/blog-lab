@@ -1,0 +1,39 @@
+{
+  "category": "dediscina",
+  "errors": [
+    "clanek_brez_slovenskega_konteksta",
+    "viri_ne_podpirajo_slovenske_rubrike"
+  ],
+  "article": {
+    "title": "End of Microsoft assistant. The company said goodbye to Cortana",
+    "excerpt": "Dediščina: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »End of Microsoft assistant. The company said goodbye to Cortana«.",
+    "seoDescription": "Dediščina: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »End of Microsoft assistant. The company said goodbye to Cortana«.",
+    "content": "**Dediščina, 18. 10. 2026.** Microsoft finally got rid of Cortana. The earlier design of the assistant, somewhat similar to Apple Siri, was heavily overshadowed by ChatGPT and Bing AI.... Technology End of Microsoft assistant. The company said goodbye to Cortana By Valeska August 12, 2023 Microsoft finally got rid of Cortana. The earlier design of the assistant, somewhat similar to Apple Siri, was heavily overshadowed by ChatGPT and Bing AI. In August, the giant officially ended support for the project. Microsoft officially announced the end of the Cortana project. The company’s voice assistant has been in development for nearly 10 years, but has never found many dedicated users. Microsoft ends Cortana – the application loses support We…\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: orla.fm. Objavljeno: Sun, 18 Oct 2026 02:11:00 GMT. [Odpri izvirni vir](https://www.orla.fm/end-of-microsoft-assistant-the-company-said-goodbye-to-cortana/)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Dediščina",
+    "tags": [
+      "dediščina",
+      "pregled"
+    ],
+    "heroImage": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Tustanj_Castle_Slovenia_-_plaque.JPG/1920px-Tustanj_Castle_Slovenia_-_plaque.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "alt": "Plaque over the entrance to Tuštanj Castle, Zgornji Tuštanj, Municipality of Moravče, Slovenia",
+      "caption": "Doremo · Wikimedia Commons · CC BY-SA 3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tustanj_Castle_Slovenia_-_plaque.JPG"
+    },
+    "gallery": [],
+    "video": null,
+    "sources": [
+      {
+        "label": "orla.fm — End of Microsoft assistant. The company said goodbye to Cortana",
+        "url": "https://www.orla.fm/end-of-microsoft-assistant-the-company-said-goodbye-to-cortana/"
+      }
+    ],
+    "source_urls": [
+      "https://www.orla.fm/end-of-microsoft-assistant-the-company-said-goodbye-to-cortana/"
+    ],
+    "fallback": true,
+    "visualTemplate": "studio",
+    "templateLabel": "Studio",
+    "id": "end-of-microsoft-assistant-the-company-said-goodbye-to-cortana-ea97c2dd"
+  }
+}
