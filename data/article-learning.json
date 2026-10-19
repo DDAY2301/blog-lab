@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-19T21:40:21+02:00",
-  "loop_count": 6593,
+  "updated_at": "2026-10-19T21:54:50+02:00",
+  "loop_count": 6594,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-19T21:39:59+02:00",
+      "last_learning_run": "2026-10-19T21:54:24+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 135616,
-          "last_seen": "2026-10-19T21:39:59+02:00",
+          "seen": 135629,
+          "last_seen": "2026-10-19T21:54:24+02:00",
           "last_title": "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
           "last_provider": "google-news-si",
-          "published": 391392,
+          "published": 391459,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-19T21:40:11+02:00",
+      "last_learning_run": "2026-10-19T21:54:40+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -272,11 +272,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 154965,
-          "last_seen": "2026-10-19T21:40:11+02:00",
+          "seen": 154983,
+          "last_seen": "2026-10-19T21:54:40+02:00",
           "last_title": "Pirc Musar: Mala zmaga za neko politično opcijo, pa hkrati velik poraz za državo - Delo.si",
           "last_provider": "google-news-si",
-          "published": 433734,
+          "published": 433804,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -388,7 +388,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-19T21:40:21+02:00",
+      "last_learning_run": "2026-10-19T21:54:50+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -477,11 +477,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 173296,
-          "last_seen": "2026-10-19T21:40:21+02:00",
-          "last_title": "Janša v New Yorku jasno o Ukrajini: Slovenija bo nadaljevala politično, vojaško, humanitarno in finančno pomoč - Najdi.si novice",
+          "seen": 173319,
+          "last_seen": "2026-10-19T21:54:50+02:00",
+          "last_title": "Vreme se bo danes hitro obrnilo: nevihte bodo zajele večji del Slovenije, na Primorskem tudi burja - Dnevne Novice",
           "last_provider": "google-news-si",
-          "published": 294306,
+          "published": 294335,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -576,7 +576,7 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 24,
+      "current_source_count": 23,
       "example_titles": {
         "news.google.com": [
           "(AKTUALNO) Še danes v prodaji 36. št. revije Demokracija: 30 let Demokracije, ki udejanja pravico vedeti več! Načrt za demografsko obnovo sl",
@@ -662,14 +662,6 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20261019-203858.json",
-      "category": "dediscina",
-      "errors": [
-        "ze_uporabljen_vir"
-      ],
-      "title": "Grad Grad na Goričkem: Največji baročni grad v Sloveniji s skrivnostno zgodovino"
-    },
-    {
       "file": "fallback-failed-20261019-203944.json",
       "category": "kolesarstvo",
       "errors": [
@@ -746,15 +738,23 @@
       "title": "Kolesarjenje: Slovenija kolesari nad evropskim povprečjem, vendar izzivi ostajajo"
     },
     {
-      "file": "agent-state",
-      "category": "kolesarstvo",
+      "file": "fallback-failed-20261019-215349.json",
+      "category": "dediscina",
       "errors": [
-        "podvojen_naslov,ze_uporabljen_vir"
+        "ze_uporabljen_vir"
+      ],
+      "title": "Grad Grad na Goričkem: Največji baročni grad v Sloveniji s skrivnostno zgodovino"
+    },
+    {
+      "file": "agent-state",
+      "category": "dediscina",
+      "errors": [
+        "ze_uporabljen_vir"
       ]
     },
     {
       "file": "agent-state",
-      "category": "kolesarstvo",
+      "category": "dediscina",
       "errors": [
         "manjka_fotografija"
       ],
@@ -762,10 +762,9 @@
     }
   ],
   "failure_summary": {
-    "ze_uporabljen_vir": 19,
+    "ze_uporabljen_vir": 20,
     "podvojen_naslov": 9,
     "prekratek": 1,
-    "podvojen_naslov,ze_uporabljen_vir": 1,
     "manjka_fotografija": 1
   }
 }
