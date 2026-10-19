@@ -20,11 +20,11 @@
     "reason": "manjka_fotografija",
     "at": "2026-10-19T07:39:28+02:00"
   },
-  "publisher_guardian_last_run": "2026-10-18T23:58:24+02:00",
+  "publisher_guardian_last_run": "2026-10-19T07:40:15+02:00",
   "publisher_guardian_last_action": {
-    "category": "dediscina",
-    "slot": "2026-10-18|10:45|dediscina",
-    "remaining_repairs": 2
+    "category": "kolesarstvo",
+    "slot": "2026-10-19|07:35|kolesarstvo",
+    "remaining_repairs": 0
   },
   "schedule_counter_normalized_at": "2026-10-07T16:45:00+02:00"
 }
