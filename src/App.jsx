@@ -30,6 +30,33 @@ const CATEGORY_EMPTY_COPY = {
 
 const starterArticles = [
   {
+    "id": "ali-slovenija-postaja-nova-zvezda-buticnega-turizma-24ur-com-0302e27d",
+    "title": "Ali Slovenija postaja nova zvezda butičnega turizma? - 24ur.com",
+    "excerpt": "Ali Slovenija postaja nova zvezda butičnega turizma? 24ur.com",
+    "seoDescription": "Ali Slovenija postaja nova zvezda butičnega turizma? 24ur.com",
+    "content": "Pregled za rubriko sezonsko povzema trenutno razpoložljive informacije iz spodaj navedenih virov. Besedilo je pripravljeno brez dodajanja nepodprtih dejstev.\n\n## Ali Slovenija postaja nova zvezda butičnega turizma? - 24ur.com\nAli Slovenija postaja nova zvezda butičnega turizma? 24ur.com\n\nVir: 24ur.com — https://news.google.com/rss/articles/CBMimgFBVV95cUxNLVV2Rlo1RWZUdW9fdlBPS0E2NXdQMTZKaHp5ZmJ0R3VCMEVjOW80cUhRNjFsYWR5UkdIZHgzb05jc3NmY1RHdVBRcDVlQmhqZnVNU0dwZUhzOUJmTUwyU3haQ2tHQ2haUXFMNmdPcWkxWml1Mi1RX0pqQm9RWWFUaGNXZ0NUeHFkcmNJcWJ4MC1Hb19jTUlnZEFB?oc=5\n\n## Kako brati ta pregled\nTa članek je v varnem nadomestnem načinu sestavljen izključno iz podanih virov. Ne dodaja dejstev, ki jih v podlagi ni, zato so navedene povezave sestavni del članka in omogočajo neposredno preverjanje informacij.\n\n## Kaj preveriti pred obiskom\nDatumi, odpiralni časi, dostopnost, prometne razmere, vreme in programi dogodkov se lahko spremenijo. Pred odhodom preveri najnovejše podatke neposredno pri organizatorju, upravljavcu ali drugem uradnem viru, ki je naveden v članku.",
+    "category": "Sezonsko",
+    "author": "Blog Lab Slovenia Publisher",
+    "status": "published",
+    "heroImage": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Frozen_Lake_Bled_%28156843859%29.jpeg/1920px-Frozen_Lake_Bled_%28156843859%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "alt": "500px provided description: This picture has been taken on a nice, sunny, but cold winter day. It is amazing to see lake Bled frozen! [#landscape ,#lake ,#frozen ,#mountains ,#wint",
+      "caption": "Anita · Wikimedia Commons · CC0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Frozen_Lake_Bled_(156843859).jpeg"
+    },
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Ali Slovenija postaja nova zvezda butičnega turizma? - 24ur.com",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNLVV2Rlo1RWZUdW9fdlBPS0E2NXdQMTZKaHp5ZmJ0R3VCMEVjOW80cUhRNjFsYWR5UkdIZHgzb05jc3NmY1RHdVBRcDVlQmhqZnVNU0dwZUhzOUJmTUwyU3haQ2tHQ2haUXFMNmdPcWkxWml1Mi1RX0pqQm9RWWFUaGNXZ0NUeHFkcmNJcWJ4MC1Hb19jTUlnZEFB?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-19T23:54:31+02:00",
+    "updatedAt": "2026-10-19T23:54:31+02:00"
+  },
+
+  {
     "id": "contact-old-7296ec1a",
     "title": "Contact old",
     "excerpt": "Gore & traili: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Contact old«.",
