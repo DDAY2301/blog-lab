@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-19T23:24:27+02:00",
-  "loop_count": 6608,
+  "updated_at": "2026-10-19T23:25:37+02:00",
+  "loop_count": 6609,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-19T23:24:08+02:00",
+      "last_learning_run": "2026-10-19T23:25:16+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 135800,
-          "last_seen": "2026-10-19T23:24:08+02:00",
+          "seen": 135813,
+          "last_seen": "2026-10-19T23:25:16+02:00",
           "last_title": "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
           "last_provider": "google-news-si",
-          "published": 392397,
+          "published": 392464,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-19T23:24:18+02:00",
+      "last_learning_run": "2026-10-19T23:25:27+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -272,11 +272,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 155229,
-          "last_seen": "2026-10-19T23:24:18+02:00",
+          "seen": 155245,
+          "last_seen": "2026-10-19T23:25:27+02:00",
           "last_title": "Pirc Musar: Mala zmaga za neko politično opcijo, pa hkrati velik poraz za državo - Delo.si",
           "last_provider": "google-news-si",
-          "published": 434784,
+          "published": 434854,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -388,7 +388,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-19T23:24:27+02:00",
+      "last_learning_run": "2026-10-19T23:25:37+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -477,11 +477,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 173651,
-          "last_seen": "2026-10-19T23:24:27+02:00",
+          "seen": 173674,
+          "last_seen": "2026-10-19T23:25:37+02:00",
           "last_title": "Vreme se bo danes hitro obrnilo: nevihte bodo zajele večji del Slovenije, na Primorskem tudi burja - Dnevne Novice",
           "last_provider": "google-news-si",
-          "published": 294741,
+          "published": 294770,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -662,14 +662,6 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20261019-222425.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek"
-      ],
-      "title": "Nova kolesarska pot bo povezala Slovenijo, Italijo in Hrvaško"
-    },
-    {
       "file": "fallback-failed-20261019-223837.json",
       "category": "kolesarstvo",
       "errors": [
@@ -748,15 +740,23 @@
       "title": "Grad Grad na Goričkem: Največji baročni grad v Sloveniji s skrivnostno zgodovino"
     },
     {
-      "file": "agent-state",
-      "category": "dediscina",
+      "file": "fallback-failed-20261019-232424.json",
+      "category": "kolesarstvo",
       "errors": [
-        "ze_uporabljen_vir"
+        "prekratek"
+      ],
+      "title": "Nova kolesarska pot bo povezala Slovenijo, Italijo in Hrvaško"
+    },
+    {
+      "file": "agent-state",
+      "category": "kolesarstvo",
+      "errors": [
+        "prekratek"
       ]
     },
     {
       "file": "agent-state",
-      "category": "dediscina",
+      "category": "kolesarstvo",
       "errors": [
         "manjka_fotografija"
       ],
@@ -764,9 +764,9 @@
     }
   ],
   "failure_summary": {
-    "ze_uporabljen_vir": 18,
-    "podvojen_naslov": 9,
-    "prekratek": 3,
+    "ze_uporabljen_vir": 16,
+    "podvojen_naslov": 8,
+    "prekratek": 5,
     "manjka_fotografija": 1
   }
 }
