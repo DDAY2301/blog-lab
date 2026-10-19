@@ -1,0 +1,41 @@
+{
+  "category": "dediscina",
+  "errors": [
+    "naslov_ni_v_rubriki",
+    "clanek_brez_slovenskega_konteksta",
+    "viri_ne_podpirajo_slovenske_rubrike",
+    "besedilo_ni_v_slovenscini"
+  ],
+  "article": {
+    "title": "GitHub - metril/ha-glinet: Home Assistant integration for GL.iNet firmware-4.x routers (GL-MT3000 and similar), installable via HACS.",
+    "excerpt": "Home Assistant integration for GL.iNet firmware-4.x routers (GL-MT3000 and similar), installable via HACS. - metril/ha-glinet GL.iNet Router — Home Assistant Integration Monitor and control GL.iNet firmware-4.x routers (",
+    "seoDescription": "Home Assistant integration for GL.iNet firmware-4.x routers (GL-MT3000 and similar), installable via HACS. - metril/ha-glinet GL.iNet Router — Home Assista",
+    "content": "Pregled za rubriko dediscina povzema trenutno razpoložljive informacije iz spodaj navedenih virov. Besedilo je pripravljeno brez dodajanja nepodprtih dejstev.\n\n## GitHub - metril/ha-glinet: Home Assistant integration for GL.iNet firmware-4.x routers (GL-MT3000 and similar), installable via HACS.\nHome Assistant integration for GL.iNet firmware-4.x routers (GL-MT3000 and similar), installable via HACS. - metril/ha-glinet GL.iNet Router — Home Assistant Integration Monitor and control GL.iNet firmware-4.x routers (GL-MT3000 \"Beryl AX\", GL-MT6000, GL-AXT1800, GL-AX1800, GL-A1300, and similar) from Home Assistant. Local polling, UI config flow, no cloud, no third-party Python dependencies. Requires Home Assistant 2026.9 or newer (which validates with probatio ; voluptuous is no longer a guaranteed dependency, so this integration uses probatio ; Python 3.14). Features Type Entities Switches Wi-Fi radios (2.4/5 GHz + guest, on/off), VPN client (on/off), Repeater (on/off), Tor , router LEDs, WireGuard/OpenVPN server, Tailscale Select VPN client (which profile), Repeater network (which saved upstream) Button Reboot Sensors Uptime, CPU temperature, load average, memory used %, connected clients, WAN public IP, WAN interface, operating mode, last boot (timestamp), VPN client profile, repeater upstream SSID / signal / state, cellular modem state / signal Binary sensors Internet, WAN, 2.4/5 GHz & guest Wi-Fi, VPN client, Tailscale, repeater, WAN cable, USB tethering, Dynamic DNS, cellular modem Device trackers Per-client home/away presence (all or selected clients); see below Update Firmware — shows when a newer firmware is offered and installs it (one-click online upgrade) Services glinet.block_client , glinet.scan_repeater , glinet.connect_repeater , glinet.set_wifi , glinet.set_mode Entities for features a given model lacks (e.g. cellular modem, a VPN type that isn't configured, no repeater uplink) are automatically omitted. The design keeps simple, frequent actions as entities and pushes complex or rare configuration to services (where a richer form and confirmation fit better). Wi-Fi Each radio (2.4 GHz, 5 GHz, and their guest networks) has an on/off switch . Changing the SSID, password, or security is done with the glinet.set_wifi service — it accepts iface_name (e.g. wifi2g ), ssid , key , encryption ( none / psk2 / psk-mixed / sae / sae-mixed for open/WPA2/mixed/WPA3), hidden , and enabled . These call wifi.set_config exactly as the router UI does, verified on a live GL-MT3000. Choosing / switching VPNs Two complementary controls: the VPN client select chooses which profile is the target, and the VPN client switch turns it on/off. Picking a different profile while a VPN is active switches over immediately; otherwise it just sets the target the switch will use. Only one client is ever active (the switch enforces it, matching the router). Operating mod\n\nVir: github.com — https://github.com/metril/ha-glinet/tree/main",
+    "category": "Dediščina",
+    "tags": [
+      "dediscina",
+      "Slovenija",
+      "github",
+      "metril",
+      "glinet"
+    ],
+    "sources": [
+      {
+        "title": "GitHub - metril/ha-glinet: Home Assistant integration for GL.iNet firmware-4.x routers (GL-MT3000 and similar), installable via HACS.",
+        "url": "https://github.com/metril/ha-glinet/tree/main",
+        "source_name": "github.com"
+      }
+    ],
+    "fallback": false,
+    "heroImage": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Tustanj_Castle_Slovenia_-_plaque.JPG/1920px-Tustanj_Castle_Slovenia_-_plaque.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "alt": "Plaque over the entrance to Tuštanj Castle, Zgornji Tuštanj, Municipality of Moravče, Slovenia",
+      "caption": "Doremo · Wikimedia Commons · CC BY-SA 3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tustanj_Castle_Slovenia_-_plaque.JPG"
+    },
+    "gallery": [],
+    "visualTemplate": "fieldnote",
+    "templateLabel": "Field Note",
+    "id": "github-metril-ha-glinet-home-assistant-integration-for-gl-inet-firmware-4-x-routers-gl-mt3-695ff7e9"
+  }
+}
