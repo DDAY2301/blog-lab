@@ -5,9 +5,9 @@
   "posts_date": "2026-10-19",
   "posts_today": 1,
   "last_output": "ali-slovenija-postaja-nova-zvezda-buticnega-turizma-24ur-com-0302e27d",
-  "last_error": null,
+  "last_error": "podvojen_naslov,ze_uporabljen_vir",
   "agent_version": "2.7.0",
-  "current_category": "sezonsko",
+  "current_category": "kolesarstvo",
   "scheduled_posts_today": 1,
   "manual_posts_today": 0,
   "writer_mode": "workers_ai",
@@ -23,11 +23,11 @@
     "reason": "naslov_ni_v_rubriki,clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike,besedilo_ni_v_slovenscini",
     "at": "2026-10-19T23:39:32+02:00"
   },
-  "publisher_guardian_last_run": "2026-10-19T23:40:19+02:00",
+  "publisher_guardian_last_run": "2026-10-19T23:55:19+02:00",
   "publisher_guardian_last_action": {
     "category": "kolesarstvo",
     "slot": "2026-10-19|07:35|kolesarstvo",
-    "remaining_repairs": 4
+    "remaining_repairs": 3
   },
   "schedule_counter_normalized_at": "2026-10-07T16:45:00+02:00"
 }
