@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-19T08:08:45+02:00",
-  "loop_count": 6472,
+  "updated_at": "2026-10-19T08:09:32+02:00",
+  "loop_count": 6473,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-19T08:08:22+02:00",
+      "last_learning_run": "2026-10-19T08:09:10+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 134241,
-          "last_seen": "2026-10-19T08:08:22+02:00",
-          "last_title": "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
+          "seen": 134252,
+          "last_seen": "2026-10-19T08:09:10+02:00",
+          "last_title": "Janja Garnbret do vrha v Kopru! Slovenska šampionka brez težav skozi kvalifikacije (VIDEO in FOTO) - OBALAplus",
           "last_provider": "google-news-si",
-          "published": 383285,
+          "published": 383352,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,7 +227,7 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 12,
+      "current_source_count": 11,
       "example_titles": {
         "news.google.com": [
           "Poljakinje pokazale svojo moč in še petič s 3:0 odpravile slovenske odbojkarice - rtvslo.si",
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-19T08:08:33+02:00",
+      "last_learning_run": "2026-10-19T08:09:21+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -272,11 +272,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 152870,
-          "last_seen": "2026-10-19T08:08:33+02:00",
+          "seen": 152887,
+          "last_seen": "2026-10-19T08:09:21+02:00",
           "last_title": "Svoboda ali SDS? Tako bi volili Slovenci, če bi bile volitve danes - Metropolitan.si",
           "last_provider": "google-news-si",
-          "published": 425264,
+          "published": 425334,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -388,7 +388,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-19T08:08:45+02:00",
+      "last_learning_run": "2026-10-19T08:09:32+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -477,11 +477,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 170425,
-          "last_seen": "2026-10-19T08:08:45+02:00",
+          "seen": 170448,
+          "last_seen": "2026-10-19T08:09:32+02:00",
           "last_title": "Vreme se bo danes hitro obrnilo: nevihte bodo zajele večji del Slovenije, na Primorskem tudi burja - Dnevne Novice",
           "last_provider": "google-news-si",
-          "published": 290797,
+          "published": 290826,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -662,14 +662,6 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20261018-223824.json",
-      "category": "dediscina",
-      "errors": [
-        "ze_uporabljen_vir"
-      ],
-      "title": "Grad Grad na Goričkem: Največji baročni grad v Sloveniji s skrivnostno zgodovino"
-    },
-    {
       "file": "fallback-failed-20261018-225330.json",
       "category": "dediscina",
       "errors": [
@@ -745,10 +737,19 @@
       "title": "Ste pripravljeni? Kmalu s kolesom od Ljubljane do Beograda"
     },
     {
+      "file": "fallback-failed-20261019-080826.json",
+      "category": "kolesarstvo",
+      "errors": [
+        "podvojen_naslov",
+        "ze_uporabljen_vir"
+      ],
+      "title": "Kolesarjenje: Slovenija kolesari nad evropskim povprečjem, vendar izzivi ostajajo"
+    },
+    {
       "file": "agent-state",
       "category": "kolesarstvo",
       "errors": [
-        "prekratek,manjka_fotografija"
+        "podvojen_naslov,ze_uporabljen_vir"
       ]
     },
     {
@@ -766,6 +767,7 @@
     "manjka_fotografija": 4,
     "viri_ne_podpirajo_slovenske_rubrike": 2,
     "clanek_brez_slovenskega_konteksta": 1,
-    "prekratek,manjka_fotografija": 1
+    "podvojen_naslov": 1,
+    "podvojen_naslov,ze_uporabljen_vir": 1
   }
 }
