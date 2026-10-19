@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-19T21:55:41+02:00",
-  "loop_count": 6595,
+  "updated_at": "2026-10-19T22:09:48+02:00",
+  "loop_count": 6596,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-19T21:55:20+02:00",
+      "last_learning_run": "2026-10-19T22:09:27+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 135642,
-          "last_seen": "2026-10-19T21:55:20+02:00",
-          "last_title": "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
-          "last_provider": "google-news-si",
-          "published": 391526,
+          "seen": 135647,
+          "last_seen": "2026-10-19T22:09:27+02:00",
+          "last_title": "Slovenia 1 Denmark 1: Christian Eriksen's fairytale goal cancelled out as Erik Janza scores vital Euro 2024 equaliser - The Sun",
+          "last_provider": "google-news-global",
+          "published": 391593,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,17 +227,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 13,
+      "current_source_count": 5,
       "example_titles": {
         "news.google.com": [
-          "Poljakinje pokazale svojo moč in še petič s 3:0 odpravile slovenske odbojkarice - rtvslo.si",
-          "*〜?[[Živý=šport!!]++] Škotska Slovenija prenos 26. september 2026 - Business and Investment Development Agency - CzechInvest",
-          "Slovenke po veliki vrnitvi in zmagi nad Latvijo na pragu osmine finala - rtvslo.si"
+          "Slovenke po veliki vrnitvi in zmagi nad Latvijo na pragu osmine finala - rtvslo.si",
+          "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
+          "S tribune: Športni trenutki, zaradi katerih se mi še danes naježijo dlake - Svet24.si"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-19T21:55:31+02:00",
+      "last_learning_run": "2026-10-19T22:09:38+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -272,11 +272,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 155001,
-          "last_seen": "2026-10-19T21:55:31+02:00",
+          "seen": 155019,
+          "last_seen": "2026-10-19T22:09:38+02:00",
           "last_title": "Pirc Musar: Mala zmaga za neko politično opcijo, pa hkrati velik poraz za državo - Delo.si",
           "last_provider": "google-news-si",
-          "published": 433874,
+          "published": 433944,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -388,7 +388,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-19T21:55:41+02:00",
+      "last_learning_run": "2026-10-19T22:09:48+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -477,11 +477,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 173343,
-          "last_seen": "2026-10-19T21:55:41+02:00",
-          "last_title": "Janša v New Yorku jasno o Ukrajini: Slovenija bo nadaljevala politično, vojaško, humanitarno in finančno pomoč - Najdi.si novice",
+          "seen": 173366,
+          "last_seen": "2026-10-19T22:09:48+02:00",
+          "last_title": "Vreme se bo danes hitro obrnilo: nevihte bodo zajele večji del Slovenije, na Primorskem tudi burja - Dnevne Novice",
           "last_provider": "google-news-si",
-          "published": 294364,
+          "published": 294393,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -576,7 +576,7 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 24,
+      "current_source_count": 23,
       "example_titles": {
         "news.google.com": [
           "(AKTUALNO) Še danes v prodaji 36. št. revije Demokracija: 30 let Demokracije, ki udejanja pravico vedeti več! Načrt za demografsko obnovo sl",
@@ -662,14 +662,6 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20261019-205413.json",
-      "category": "dediscina",
-      "errors": [
-        "ze_uporabljen_vir"
-      ],
-      "title": "Grad Grad na Goričkem: Največji baročni grad v Sloveniji s skrivnostno zgodovino"
-    },
-    {
       "file": "fallback-failed-20261019-205452.json",
       "category": "kolesarstvo",
       "errors": [
@@ -746,15 +738,23 @@
       "title": "Nova kolesarska pot bo povezala Slovenijo, Italijo in Hrvaško"
     },
     {
-      "file": "agent-state",
-      "category": "kolesarstvo",
+      "file": "fallback-failed-20261019-220851.json",
+      "category": "dediscina",
       "errors": [
-        "prekratek"
+        "ze_uporabljen_vir"
+      ],
+      "title": "Grad Grad na Goričkem: Največji baročni grad v Sloveniji s skrivnostno zgodovino"
+    },
+    {
+      "file": "agent-state",
+      "category": "dediscina",
+      "errors": [
+        "ze_uporabljen_vir"
       ]
     },
     {
       "file": "agent-state",
-      "category": "kolesarstvo",
+      "category": "dediscina",
       "errors": [
         "manjka_fotografija"
       ],
@@ -762,9 +762,9 @@
     }
   ],
   "failure_summary": {
-    "ze_uporabljen_vir": 18,
+    "ze_uporabljen_vir": 19,
     "podvojen_naslov": 8,
-    "prekratek": 3,
+    "prekratek": 2,
     "manjka_fotografija": 1
   }
 }
