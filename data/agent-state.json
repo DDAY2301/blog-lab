@@ -5,9 +5,9 @@
   "posts_date": "2026-10-19",
   "posts_today": 0,
   "last_output": "contact-old-7296ec1a",
-  "last_error": "ze_uporabljen_vir",
+  "last_error": "podvojen_naslov,ze_uporabljen_vir",
   "agent_version": "3.0.0-learning-guarded-fallback",
-  "current_category": "dediscina",
+  "current_category": "kolesarstvo",
   "scheduled_posts_today": 0,
   "manual_posts_today": 0,
   "writer_mode": "workers_ai",
@@ -20,7 +20,7 @@
     "reason": "manjka_fotografija",
     "at": "2026-10-19T07:39:28+02:00"
   },
-  "publisher_guardian_last_run": "2026-10-19T20:54:52+02:00",
+  "publisher_guardian_last_run": "2026-10-19T21:09:27+02:00",
   "publisher_guardian_last_action": {
     "category": "kolesarstvo",
     "slot": "2026-10-19|07:35|kolesarstvo",
