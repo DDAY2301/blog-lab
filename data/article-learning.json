@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-19T12:24:35+02:00",
-  "loop_count": 6508,
+  "updated_at": "2026-10-19T12:25:23+02:00",
+  "loop_count": 6509,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-19T12:24:17+02:00",
+      "last_learning_run": "2026-10-19T12:25:02+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 134632,
-          "last_seen": "2026-10-19T12:24:17+02:00",
+          "seen": 134644,
+          "last_seen": "2026-10-19T12:25:02+02:00",
           "last_title": "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
           "last_provider": "google-news-si",
-          "published": 385697,
+          "published": 385764,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,17 +227,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 10,
+      "current_source_count": 12,
       "example_titles": {
         "news.google.com": [
           "Poljakinje pokazale svojo moč in še petič s 3:0 odpravile slovenske odbojkarice - rtvslo.si",
           "Slovenke po veliki vrnitvi in zmagi nad Latvijo na pragu osmine finala - rtvslo.si",
-          "Slovenija pred največjim kolesarskim dogodkom leta: Šport imate v svojem DNK - Siol.net"
+          "Slovenija z ekipno predstavo domače prvenstvo začela z zmago nad Češko - rtvslo.si"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-19T12:24:26+02:00",
+      "last_learning_run": "2026-10-19T12:25:12+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -272,11 +272,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 153514,
-          "last_seen": "2026-10-19T12:24:26+02:00",
-          "last_title": "Pirc Musar: Mala zmaga za neko politično opcijo, pa hkrati velik poraz za državo - Delo.si",
+          "seen": 153533,
+          "last_seen": "2026-10-19T12:25:12+02:00",
+          "last_title": "Golob pravi: Slovenija potrebuje široko koalicijo. NSi ne bo na sestanek - Svet24.si",
           "last_provider": "google-news-si",
-          "published": 427784,
+          "published": 427854,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -378,7 +378,7 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 18,
+      "current_source_count": 19,
       "example_titles": {
         "news.google.com": [
           "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
@@ -388,7 +388,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-19T12:24:35+02:00",
+      "last_learning_run": "2026-10-19T12:25:23+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -477,11 +477,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 171265,
-          "last_seen": "2026-10-19T12:24:35+02:00",
+          "seen": 171289,
+          "last_seen": "2026-10-19T12:25:23+02:00",
           "last_title": "Janša v New Yorku jasno o Ukrajini: Slovenija bo nadaljevala politično, vojaško, humanitarno in finančno pomoč - Najdi.si novice",
           "last_provider": "google-news-si",
-          "published": 291841,
+          "published": 291870,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -662,14 +662,6 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20261019-112335.json",
-      "category": "dediscina",
-      "errors": [
-        "ze_uporabljen_vir"
-      ],
-      "title": "Grad Grad na Goričkem: Največji baročni grad v Sloveniji s skrivnostno zgodovino"
-    },
-    {
       "file": "fallback-failed-20261019-112428.json",
       "category": "kolesarstvo",
       "errors": [
@@ -747,15 +739,24 @@
       "title": "Grad Grad na Goričkem: Največji baročni grad v Sloveniji s skrivnostno zgodovino"
     },
     {
-      "file": "agent-state",
-      "category": "dediscina",
+      "file": "fallback-failed-20261019-122426.json",
+      "category": "kolesarstvo",
       "errors": [
+        "podvojen_naslov",
         "ze_uporabljen_vir"
+      ],
+      "title": "Kolesarjenje: Slovenija kolesari nad evropskim povprečjem, vendar izzivi ostajajo"
+    },
+    {
+      "file": "agent-state",
+      "category": "kolesarstvo",
+      "errors": [
+        "podvojen_naslov,ze_uporabljen_vir"
       ]
     },
     {
       "file": "agent-state",
-      "category": "dediscina",
+      "category": "kolesarstvo",
       "errors": [
         "manjka_fotografija"
       ],
@@ -763,8 +764,9 @@
     }
   ],
   "failure_summary": {
-    "ze_uporabljen_vir": 21,
+    "ze_uporabljen_vir": 20,
     "podvojen_naslov": 13,
+    "podvojen_naslov,ze_uporabljen_vir": 1,
     "manjka_fotografija": 1
   }
 }
