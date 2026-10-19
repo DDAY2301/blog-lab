@@ -1,9 +1,12 @@
 {
-  "updatedAt": "2026-10-19T06:51:40+02:00",
+  "updatedAt": "2026-10-19T07:00:00+02:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
+    "MGL",
     "Kino Šiška",
+    "Ljubljana Castle",
+    "Cankarjev dom",
     "Gala Hala",
     "Klub K4",
     "Cirkus Klub"
@@ -18,14 +21,14 @@
       "accessibility": null,
       "ticketUrl": "https://www.ljubljanskigrad.si/en/castle-events/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-18T07:22:00+02:00",
+      "lastCheckedAt": "2026-10-19T07:00:00+02:00",
       "id": "ehosistem-through-2026-11-15",
       "title": "Aleksandra Atanasovski and Maja Licul: Ehosistem",
       "url": "https://www.ljubljanskigrad.si/en/castle-events/",
       "source": "Ljubljana Castle",
       "type": "Exhibition · jewellery",
       "place": "Pentagonal Tower · Ljubljana Castle",
-      "startAt": "2026-10-09T09:00:00+02:00",
+      "startAt": "2026-09-24T09:00:00+02:00",
       "endAt": "2026-11-15T18:00:00+01:00",
       "description": "Aleksandra Atanasovski and Maja Licul: Ehosistem is confirmed at Pentagonal Tower · Ljubljana Castle. Check the official source for any late programme or ticket changes."
     },
@@ -37,7 +40,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.ljubljanskigrad.si/en/castle-events/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-18T07:22:00+02:00",
+      "lastCheckedAt": "2026-10-19T07:00:00+02:00",
       "id": "illustrations-in-motion-through-2027-01-10",
       "title": "Illustrations in Motion",
       "url": "https://www.ljubljanskigrad.si/en/castle-events/",
@@ -64,7 +67,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.visitljubljana.com/en/visitors/events/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-18T07:22:00+02:00",
+      "lastCheckedAt": "2026-10-19T07:00:00+02:00",
       "description": "The seasonal corn labyrinth in Stanežiče is listed daily from 09:00 to 20:00; outdoor operation may depend on conditions, so recheck before travel."
     },
     {
@@ -83,7 +86,7 @@
       "accessibility": null,
       "ticketUrl": "https://vstopnice.cd-cc.si/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-18T07:22:00+02:00",
+      "lastCheckedAt": "2026-10-19T07:00:00+02:00",
       "description": "The exhibition marking the centenary of Srečko Kosovel’s death is open at Cankarjev dom; admission is €8. Check the venue for daily gallery hours."
     },
     {
@@ -113,7 +116,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.mgl.si/en/schedule/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-18T07:22:00+02:00",
+      "lastCheckedAt": "2026-10-19T07:00:00+02:00",
       "id": "romantic-souls-2026-10-19",
       "title": "Romantic Souls",
       "url": "https://www.mgl.si/en/schedule/",
@@ -132,7 +135,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.mgl.si/en/schedule/",
       "status": "sold_out",
-      "lastCheckedAt": "2026-10-18T07:22:00+02:00",
+      "lastCheckedAt": "2026-10-19T07:00:00+02:00",
       "id": "prima-facie-2026-10-19",
       "title": "Prima Facie",
       "url": "https://www.mgl.si/en/schedule/",
@@ -150,7 +153,7 @@
       "familyFriendly": false,
       "accessibility": null,
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-18T07:22:00+02:00",
+      "lastCheckedAt": "2026-10-19T07:00:00+02:00",
       "endAt": null,
       "id": "dub-pistols-2026-10-19",
       "title": "Dub Pistols",
@@ -163,7 +166,7 @@
       "description": "Dub Pistols perform at Kino Šiška at 20:00. Tickets are available through the venue’s official event listing."
     },
     {
-      "price": null,
+      "price": "Free",
       "languages": [
         "Slovenian"
       ],
@@ -171,7 +174,7 @@
       "familyFriendly": false,
       "accessibility": null,
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
+      "lastCheckedAt": "2026-10-19T07:00:00+02:00",
       "endAt": null,
       "id": "prostori-kulture-vision-ljubljana-2026-10-20",
       "title": "Spaces of Culture: A Vision for Ljubljana Before the 2026 Local Elections",
@@ -191,7 +194,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.mgl.si/en/schedule/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
+      "lastCheckedAt": "2026-10-19T07:00:00+02:00",
       "id": "romantic-souls-2026-10-20",
       "title": "Romantic Souls",
       "url": "https://www.mgl.si/en/schedule/",
@@ -201,6 +204,25 @@
       "startAt": "2026-10-20T20:00:00+02:00",
       "endAt": null,
       "description": "Romantic Souls is confirmed at MGL Main Stage · Ljubljana. Check the official source for any late programme or ticket changes."
+    },
+    {
+      "price": "Free",
+      "languages": [],
+      "touristFriendly": true,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.kinosiska.si/en/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-19T07:00:00+02:00",
+      "id": "perceptions-of-music-2026-10-23",
+      "title": "Perceptions of Music",
+      "url": "https://www.kinosiska.si/en/",
+      "source": "Kino Šiška",
+      "type": "Music · public programme",
+      "place": "Komuna Hall · Kino Šiška",
+      "startAt": "2026-10-23T16:00:00+02:00",
+      "endAt": null,
+      "description": "Kino Šiška lists Perceptions of Music in Komuna Hall at 16:00 with free admission. Check the official programme before travelling."
     },
     {
       "price": null,
