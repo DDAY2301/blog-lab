@@ -1,12 +1,9 @@
 {
-  "updatedAt": "2026-10-19T07:00:00+02:00",
+  "updatedAt": "2026-10-19T07:04:25+02:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
-    "MGL",
     "Kino Šiška",
-    "Ljubljana Castle",
-    "Cankarjev dom",
     "Gala Hala",
     "Klub K4",
     "Cirkus Klub"
@@ -206,25 +203,6 @@
       "description": "Romantic Souls is confirmed at MGL Main Stage · Ljubljana. Check the official source for any late programme or ticket changes."
     },
     {
-      "price": "Free",
-      "languages": [],
-      "touristFriendly": true,
-      "familyFriendly": null,
-      "accessibility": null,
-      "ticketUrl": "https://www.kinosiska.si/en/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-19T07:00:00+02:00",
-      "id": "perceptions-of-music-2026-10-23",
-      "title": "Perceptions of Music",
-      "url": "https://www.kinosiska.si/en/",
-      "source": "Kino Šiška",
-      "type": "Music · public programme",
-      "place": "Komuna Hall · Kino Šiška",
-      "startAt": "2026-10-23T16:00:00+02:00",
-      "endAt": null,
-      "description": "Kino Šiška lists Perceptions of Music in Komuna Hall at 16:00 with free admission. Check the official programme before travelling."
-    },
-    {
       "price": null,
       "languages": [],
       "touristFriendly": null,
@@ -375,6 +353,25 @@
       "status": "confirmed",
       "lastCheckedAt": "2026-10-18T07:22:00+02:00",
       "description": "Ljubljana’s outdoor food market is listed at Pogačarjev trg from 10:00 to 21:00. Entry is free; the market is weather-dependent, so recheck before travelling."
+    },
+    {
+      "price": "Free",
+      "languages": [],
+      "touristFriendly": true,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.kinosiska.si/en/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-19T07:00:00+02:00",
+      "id": "perceptions-of-music-2026-10-23",
+      "title": "Perceptions of Music",
+      "url": "https://www.kinosiska.si/en/",
+      "source": "Kino Šiška",
+      "type": "Music · public programme",
+      "place": "Komuna Hall · Kino Šiška",
+      "startAt": "2026-10-23T16:00:00+02:00",
+      "endAt": null,
+      "description": "Kino Šiška lists Perceptions of Music in Komuna Hall at 16:00 with free admission. Check the official programme before travelling."
     },
     {
       "id": "romantic-souls-2026-10-23",
