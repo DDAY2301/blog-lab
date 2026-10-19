@@ -1,0 +1,38 @@
+{
+  "category": "kolesarstvo",
+  "errors": [
+    "prekratek"
+  ],
+  "article": {
+    "title": "Nova kolesarska pot bo povezala Slovenijo, Italijo in Hrvaško",
+    "excerpt": "Kolesarstvo: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Nova kolesarska pot bo povezala Slovenijo, Italijo in Hrvaško«.",
+    "seoDescription": "Kolesarstvo: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Nova kolesarska pot bo povezala Slovenijo, Italijo in Hrvaško«.",
+    "content": "**Kolesarstvo, 19. 10. 2026.** Nova kolesarska pot bo povezala Slovenijo, Italijo in Hrvaško megafon.si\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: megafon.si. Objavljeno: Fri, 20 Jun 2025 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMilAFBVV95cUxQYUlTMGhuYVJNXzNXdTVqZWFOR1VrYnE0ejlheVN3bFh1UE00V2Q1SldYQ1oxLVVYX29NR1ZQY2g1RW52QkRoTzdlMWx2a1VrU0h0UDYtYlh4ektUMkxqY2RTekFKbmQwb2tkV3Qta1RKOUNJanA0OGF2eUZKX1ZBTF9QUGRmRFh0d2xQZEJvY3BQeHdV?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Kolesarstvo",
+    "tags": [
+      "kolesarstvo",
+      "pregled"
+    ],
+    "heroImage": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/08_Slovenia_rural_landscape_-_bicycle_expedition_with_panniers.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "alt": "Three male cyclists wearing helmets during a summer bicycle tour in rural Slovenia near Luže.",
+      "caption": "Marek Ślusarczyk ( Tupungato ) Photo gallery · Wikimedia Commons · CC BY 3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:08_Slovenia_rural_landscape_-_bicycle_expedition_with_panniers.jpg"
+    },
+    "gallery": [],
+    "video": null,
+    "sources": [
+      {
+        "label": "megafon.si — Nova kolesarska pot bo povezala Slovenijo, Italijo in Hrvaško - megafon.si",
+        "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQYUlTMGhuYVJNXzNXdTVqZWFOR1VrYnE0ejlheVN3bFh1UE00V2Q1SldYQ1oxLVVYX29NR1ZQY2g1RW52QkRoTzdlMWx2a1VrU0h0UDYtYlh4ektUMkxqY2RTekFKbmQwb2tkV3Qta1RKOUNJanA0OGF2eUZKX1ZBTF9QUGRmRFh0d2xQZEJvY3BQeHdV?oc=5"
+      }
+    ],
+    "source_urls": [
+      "https://news.google.com/rss/articles/CBMilAFBVV95cUxQYUlTMGhuYVJNXzNXdTVqZWFOR1VrYnE0ejlheVN3bFh1UE00V2Q1SldYQ1oxLVVYX29NR1ZQY2g1RW52QkRoTzdlMWx2a1VrU0h0UDYtYlh4ektUMkxqY2RTekFKbmQwb2tkV3Qta1RKOUNJanA0OGF2eUZKX1ZBTF9QUGRmRFh0d2xQZEJvY3BQeHdV?oc=5"
+    ],
+    "fallback": true,
+    "visualTemplate": "pulse",
+    "templateLabel": "Pulse",
+    "id": "nova-kolesarska-pot-bo-povezala-slovenijo-italijo-in-hrvasko-42223e2a"
+  }
+}
