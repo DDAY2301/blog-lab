@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-20T15:54:55+02:00",
-  "loop_count": 6756,
+  "updated_at": "2026-10-20T15:55:54+02:00",
+  "loop_count": 6757,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-20T15:54:33+02:00",
+      "last_learning_run": "2026-10-20T15:55:27+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 137460,
-          "last_seen": "2026-10-20T15:54:33+02:00",
-          "last_title": "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
+          "seen": 137471,
+          "last_seen": "2026-10-20T15:55:27+02:00",
+          "last_title": "Janja Garnbret do vrha v Kopru! Slovenska šampionka brez težav skozi kvalifikacije (VIDEO in FOTO) - OBALAplus",
           "last_provider": "google-news-si",
-          "published": 402313,
+          "published": 402380,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,17 +227,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 10,
+      "current_source_count": 11,
       "example_titles": {
         "news.google.com": [
+          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
           "Poljakinje pokazale svojo moč in še petič s 3:0 odpravile slovenske odbojkarice - rtvslo.si",
-          "*〜?[[Živý=šport!!]++] Škotska Slovenija prenos 26. september 2026 - Business and Investment Development Agency - CzechInvest",
-          "Slovenke po veliki vrnitvi in zmagi nad Latvijo na pragu osmine finala - rtvslo.si"
+          "*〜?[[Živý=šport!!]++] Škotska Slovenija prenos 26. september 2026 - Business and Investment Development Agency - CzechInvest"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-20T15:54:44+02:00",
+      "last_learning_run": "2026-10-20T15:55:44+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -272,11 +272,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 157640,
-          "last_seen": "2026-10-20T15:54:44+02:00",
-          "last_title": "Pirc Musar: Mala zmaga za neko politično opcijo, pa hkrati velik poraz za državo - Delo.si",
+          "seen": 157653,
+          "last_seen": "2026-10-20T15:55:44+02:00",
+          "last_title": "Dimitrij Rupel: Slovenska zunanja politika nekoč in danes - Slovenska demokratska stranka - SDS",
           "last_provider": "google-news-si",
-          "published": 445144,
+          "published": 445214,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -378,17 +378,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 19,
+      "current_source_count": 13,
       "example_titles": {
         "news.google.com": [
-          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
+          "Za župana najbolj zadolžene občine v Sloveniji trije kandidati. Kdo so? - Sobotainfo.com",
           "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si",
           "Na Radiu Ognjišče zadnje predvolilno soočenje: v ospredju prisluhi, zdravstvo, zunanja politika in sprava - Radio Ognjišče"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-20T15:54:55+02:00",
+      "last_learning_run": "2026-10-20T15:55:54+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -477,11 +477,11 @@
         },
         "news.google.com": {
           "score": 2.504,
-          "seen": 176970,
-          "last_seen": "2026-10-20T15:54:55+02:00",
+          "seen": 176993,
+          "last_seen": "2026-10-20T15:55:54+02:00",
           "last_title": "Janša v New Yorku jasno o Ukrajini: Slovenija bo nadaljevala politično, vojaško, humanitarno in finančno pomoč - Najdi.si novice",
           "last_provider": "google-news-si",
-          "published": 298816,
+          "published": 298843,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -662,14 +662,6 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20261020-143842.json",
-      "category": "dediscina",
-      "errors": [
-        "ze_uporabljen_vir"
-      ],
-      "title": "Grad Grad na Goričkem: Največji baročni grad v Sloveniji s skrivnostno zgodovino"
-    },
-    {
       "file": "fallback-failed-20261020-143923.json",
       "category": "dediscina",
       "errors": [
@@ -743,6 +735,14 @@
     },
     {
       "file": "fallback-failed-20261020-155353.json",
+      "category": "dediscina",
+      "errors": [
+        "ze_uporabljen_vir"
+      ],
+      "title": "Grad Grad na Goričkem: Največji baročni grad v Sloveniji s skrivnostno zgodovino"
+    },
+    {
+      "file": "fallback-failed-20261020-155436.json",
       "category": "dediscina",
       "errors": [
         "ze_uporabljen_vir"
