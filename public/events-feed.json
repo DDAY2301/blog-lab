@@ -1,13 +1,9 @@
 {
-  "updatedAt": "2026-10-20T07:18:00+02:00",
+  "updatedAt": "2026-10-20T07:09:24+02:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
     "Kino Šiška",
-    "Cankarjev dom",
-    "MGL",
-    "Ljubljana Castle",
-    "SNG Opera and Ballet Ljubljana",
     "Gala Hala",
     "Klub K4",
     "Cirkus Klub"
@@ -131,6 +127,25 @@
       "description": "A public debate on Ljubljana’s cultural spaces and the 2026 local elections starts at 13:00. The programme is primarily relevant to Slovenian-speaking local audiences."
     },
     {
+      "id": "tomoki-sanders-quartet-2026-10-20",
+      "title": "Tomoki Sanders Quartet",
+      "url": "https://www.cd-cc.si/en/culture/music/tomoki-sanders-quartet",
+      "source": "Cankarjev dom",
+      "type": "Concert · jazz",
+      "place": "CD Club · Cankarjev dom",
+      "startAt": "2026-10-20T19:30:00+02:00",
+      "endAt": null,
+      "price": "€18; €15 concession",
+      "languages": [],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": null,
+      "ticketUrl": "https://www.cd-cc.si/en/culture/music/tomoki-sanders-quartet",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-20T07:18:00+02:00",
+      "description": "Tomoki Sanders makes a Slovenian debut with an original jazz programme at 19:30. Standard admission is €18, with a €15 concession listed by Cankarjev dom."
+    },
+    {
       "price": null,
       "languages": [],
       "touristFriendly": null,
@@ -150,23 +165,23 @@
       "description": "Romantic Souls is confirmed at MGL Main Stage · Ljubljana. Check the official source for any late programme or ticket changes."
     },
     {
-      "id": "tomoki-sanders-quartet-2026-10-20",
-      "title": "Tomoki Sanders Quartet",
-      "url": "https://www.cd-cc.si/en/culture/music/tomoki-sanders-quartet",
+      "id": "persistence-2026-10-21",
+      "title": "Persistence",
+      "url": "https://www.cd-cc.si/en/culture/literature-and-humanities/persistence",
       "source": "Cankarjev dom",
-      "type": "Concert · jazz",
-      "place": "CD Club · Cankarjev dom",
-      "startAt": "2026-10-20T19:30:00+02:00",
+      "type": "Talk · philosophy",
+      "place": "Cankarjev dom · Ljubljana",
+      "startAt": "2026-10-21T19:00:00+02:00",
       "endAt": null,
-      "price": "€18; €15 concession",
+      "price": null,
       "languages": [],
-      "touristFriendly": true,
+      "touristFriendly": null,
       "familyFriendly": false,
       "accessibility": null,
-      "ticketUrl": "https://www.cd-cc.si/en/culture/music/tomoki-sanders-quartet",
+      "ticketUrl": "https://www.cd-cc.si/en/culture/literature-and-humanities/persistence",
       "status": "confirmed",
       "lastCheckedAt": "2026-10-20T07:18:00+02:00",
-      "description": "Tomoki Sanders makes a Slovenian debut with an original jazz programme at 19:30. Standard admission is €18, with a €15 concession listed by Cankarjev dom."
+      "description": "Philosopher Rebecca Comay discusses persistence with Mirt Komel at 19:00. The official page does not state a language or price, so visitors should confirm both before attending."
     },
     {
       "price": null,
@@ -224,25 +239,6 @@
       "startAt": "2026-10-21T20:00:00+02:00",
       "ticketUrl": "https://www.kinosiska.si/dogodek/",
       "description": "Jet Black Diamonds present their second album at 20:00. Tickets are linked from the official Kino Šiška programme."
-    },
-    {
-      "id": "persistence-2026-10-21",
-      "title": "Persistence",
-      "url": "https://www.cd-cc.si/en/culture/literature-and-humanities/persistence",
-      "source": "Cankarjev dom",
-      "type": "Talk · philosophy",
-      "place": "Cankarjev dom · Ljubljana",
-      "startAt": "2026-10-21T19:00:00+02:00",
-      "endAt": null,
-      "price": null,
-      "languages": [],
-      "touristFriendly": null,
-      "familyFriendly": false,
-      "accessibility": null,
-      "ticketUrl": "https://www.cd-cc.si/en/culture/literature-and-humanities/persistence",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-20T07:18:00+02:00",
-      "description": "Philosopher Rebecca Comay discusses persistence with Mirt Komel at 19:00. The official page does not state a language or price, so visitors should confirm both before attending."
     },
     {
       "price": null,
@@ -406,7 +402,9 @@
       "startAt": "2026-10-23T19:30:00+02:00",
       "endAt": null,
       "price": "€15; €12 concession",
-      "languages": ["Slovenian"],
+      "languages": [
+        "Slovenian"
+      ],
       "touristFriendly": true,
       "familyFriendly": null,
       "accessibility": null,
