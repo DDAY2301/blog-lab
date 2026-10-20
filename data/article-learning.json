@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-20T09:53:37+02:00",
-  "loop_count": 6703,
+  "updated_at": "2026-10-20T09:54:20+02:00",
+  "loop_count": 6704,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-20T09:53:15+02:00",
+      "last_learning_run": "2026-10-20T09:54:04+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -71,12 +71,12 @@
           "last_provider": "bing-web"
         },
         "news.google.com": {
-          "score": 2.502,
-          "seen": 136873,
-          "last_seen": "2026-10-20T09:53:15+02:00",
-          "last_title": "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
-          "last_provider": "google-news-si",
-          "published": 398762,
+          "score": 2.498,
+          "seen": 136878,
+          "last_seen": "2026-10-20T09:54:04+02:00",
+          "last_title": "(FOTO) Naveza Šeško-Vipotnik v zadnji minuti obdržala Slovenijo nad gladino: Kekovi iztržili točko proti Švedski - Večer",
+          "last_provider": "google-news-global",
+          "published": 398829,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,17 +227,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 11,
+      "current_source_count": 5,
       "example_titles": {
         "news.google.com": [
-          "Poljakinje pokazale svojo moč in še petič s 3:0 odpravile slovenske odbojkarice - rtvslo.si",
-          "*〜?[[Živý=šport!!]++] Škotska Slovenija prenos 26. september 2026 - Business and Investment Development Agency - CzechInvest",
-          "Slovenke po veliki vrnitvi in zmagi nad Latvijo na pragu osmine finala - rtvslo.si"
+          "Slovenke po veliki vrnitvi in zmagi nad Latvijo na pragu osmine finala - rtvslo.si",
+          "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
+          "S tribune: Športni trenutki, zaradi katerih se mi še danes naježijo dlake - Svet24.si"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-20T09:53:23+02:00",
+      "last_learning_run": "2026-10-20T09:54:12+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -272,11 +272,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 156758,
-          "last_seen": "2026-10-20T09:53:23+02:00",
+          "seen": 156776,
+          "last_seen": "2026-10-20T09:54:12+02:00",
           "last_title": "Pirc Musar: Mala zmaga za neko politično opcijo, pa hkrati velik poraz za državo - Delo.si",
           "last_provider": "google-news-si",
-          "published": 441434,
+          "published": 441504,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -388,7 +388,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-20T09:53:37+02:00",
+      "last_learning_run": "2026-10-20T09:54:20+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -477,11 +477,11 @@
         },
         "news.google.com": {
           "score": 2.504,
-          "seen": 175796,
-          "last_seen": "2026-10-20T09:53:37+02:00",
+          "seen": 175819,
+          "last_seen": "2026-10-20T09:54:20+02:00",
           "last_title": "Podpisan drugi dodatek k Dogovoru za razvoj regije Jugovzhodna Slovenija - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "google-news-si",
-          "published": 297385,
+          "published": 297412,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
