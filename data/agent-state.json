@@ -5,7 +5,7 @@
   "posts_date": "2026-10-20",
   "posts_today": 1,
   "last_output": "nova-kolesarska-pot-bo-povezala-slovenijo-italijo-in-hrvasko-megafon-si-42223e2a",
-  "last_error": "ze_uporabljen_vir",
+  "last_error": "ze_uporabljen_vir,manjka_fotografija",
   "agent_version": "2.7.0",
   "current_category": "dediscina",
   "scheduled_posts_today": 1,
@@ -16,7 +16,7 @@
   ],
   "scheduled_slots_deferred": [],
   "last_editorial_hold": null,
-  "publisher_guardian_last_run": "2026-10-20T20:09:32+02:00",
+  "publisher_guardian_last_run": "2026-10-20T20:10:08+02:00",
   "publisher_guardian_last_action": {
     "category": "dediscina",
     "slot": "2026-10-20|10:45|dediscina",
