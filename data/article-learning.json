@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-20T14:54:43+02:00",
-  "loop_count": 6748,
+  "updated_at": "2026-10-20T14:55:40+02:00",
+  "loop_count": 6749,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-20T14:54:20+02:00",
+      "last_learning_run": "2026-10-20T14:55:20+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 137372,
-          "last_seen": "2026-10-20T14:54:20+02:00",
+          "seen": 137384,
+          "last_seen": "2026-10-20T14:55:20+02:00",
           "last_title": "Danes praznuje slovenski šport: Zakaj je prav 23. september postal njegov dan? - telegraf.si",
           "last_provider": "google-news-si",
-          "published": 401777,
+          "published": 401844,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-20T14:54:33+02:00",
+      "last_learning_run": "2026-10-20T14:55:30+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -272,11 +272,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 157501,
-          "last_seen": "2026-10-20T14:54:33+02:00",
+          "seen": 157519,
+          "last_seen": "2026-10-20T14:55:30+02:00",
           "last_title": "Pirc Musar: Mala zmaga za neko politično opcijo, pa hkrati velik poraz za državo - Delo.si",
           "last_provider": "google-news-si",
-          "published": 444584,
+          "published": 444654,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -388,7 +388,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-20T14:54:43+02:00",
+      "last_learning_run": "2026-10-20T14:55:40+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -477,11 +477,11 @@
         },
         "news.google.com": {
           "score": 2.504,
-          "seen": 176786,
-          "last_seen": "2026-10-20T14:54:43+02:00",
+          "seen": 176809,
+          "last_seen": "2026-10-20T14:55:40+02:00",
           "last_title": "Vreme se bo danes hitro obrnilo: nevihte bodo zajele večji del Slovenije, na Primorskem tudi burja - Dnevne Novice",
           "last_provider": "google-news-si",
-          "published": 298600,
+          "published": 298627,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -662,14 +662,6 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20261020-133856.json",
-      "category": "dediscina",
-      "errors": [
-        "ze_uporabljen_vir"
-      ],
-      "title": "Slovenia Maps & Facts"
-    },
-    {
       "file": "fallback-failed-20261020-133930.json",
       "category": "dediscina",
       "errors": [
@@ -743,6 +735,14 @@
     },
     {
       "file": "fallback-failed-20261020-145348.json",
+      "category": "dediscina",
+      "errors": [
+        "ze_uporabljen_vir"
+      ],
+      "title": "Slovenia Maps & Facts"
+    },
+    {
+      "file": "fallback-failed-20261020-145432.json",
       "category": "dediscina",
       "errors": [
         "ze_uporabljen_vir"
