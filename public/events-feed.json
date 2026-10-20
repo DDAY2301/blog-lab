@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-20T22:01:57+02:00",
+  "updatedAt": "2026-10-21T01:13:54+02:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -104,65 +104,6 @@
       "startAt": "2026-10-15T09:00:00+02:00",
       "endAt": "2027-01-31T18:00:00+01:00",
       "description": "The spatial installation Stretch 3789 opens on 15 October 2026 and runs daily from 09:00 to 18:00 through 31 January 2027 in the S Gallery."
-    },
-    {
-      "price": "Free",
-      "languages": [
-        "Slovenian"
-      ],
-      "touristFriendly": false,
-      "familyFriendly": false,
-      "accessibility": null,
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-20T07:18:00+02:00",
-      "endAt": null,
-      "id": "prostori-kulture-vision-ljubljana-2026-10-20",
-      "title": "Spaces of Culture: A Vision for Ljubljana Before the 2026 Local Elections",
-      "url": "https://www.kinosiska.si/dogodek/",
-      "source": "Kino Šiška",
-      "type": "Public debate · culture",
-      "place": "Kino Šiška · Ljubljana",
-      "startAt": "2026-10-20T13:00:00+02:00",
-      "ticketUrl": "https://www.kinosiska.si/dogodek/",
-      "description": "A public debate on Ljubljana’s cultural spaces and the 2026 local elections starts at 13:00. The programme is primarily relevant to Slovenian-speaking local audiences."
-    },
-    {
-      "id": "tomoki-sanders-quartet-2026-10-20",
-      "title": "Tomoki Sanders Quartet",
-      "url": "https://www.cd-cc.si/en/culture/music/tomoki-sanders-quartet",
-      "source": "Cankarjev dom",
-      "type": "Concert · jazz",
-      "place": "CD Club · Cankarjev dom",
-      "startAt": "2026-10-20T19:30:00+02:00",
-      "endAt": null,
-      "price": "€18; €15 concession",
-      "languages": [],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": null,
-      "ticketUrl": "https://www.cd-cc.si/en/culture/music/tomoki-sanders-quartet",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-20T07:18:00+02:00",
-      "description": "Tomoki Sanders makes a Slovenian debut with an original jazz programme at 19:30. Standard admission is €18, with a €15 concession listed by Cankarjev dom."
-    },
-    {
-      "price": null,
-      "languages": [],
-      "touristFriendly": null,
-      "familyFriendly": null,
-      "accessibility": null,
-      "ticketUrl": "https://www.mgl.si/en/schedule/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-20T07:18:00+02:00",
-      "id": "romantic-souls-2026-10-20",
-      "title": "Romantic Souls",
-      "url": "https://www.mgl.si/en/schedule/",
-      "source": "MGL",
-      "type": "Theatre · drama",
-      "place": "MGL Main Stage · Ljubljana",
-      "startAt": "2026-10-20T20:00:00+02:00",
-      "endAt": null,
-      "description": "Romantic Souls is confirmed at MGL Main Stage · Ljubljana. Check the official source for any late programme or ticket changes."
     },
     {
       "id": "persistence-2026-10-21",
