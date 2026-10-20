@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-19T23:08:10+02:00",
+  "updatedAt": "2026-10-20T07:00:16+02:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -104,63 +104,6 @@
       "startAt": "2026-10-15T09:00:00+02:00",
       "endAt": "2027-01-31T18:00:00+01:00",
       "description": "The spatial installation Stretch 3789 opens on 15 October 2026 and runs daily from 09:00 to 18:00 through 31 January 2027 in the S Gallery."
-    },
-    {
-      "price": null,
-      "languages": [],
-      "touristFriendly": null,
-      "familyFriendly": null,
-      "accessibility": null,
-      "ticketUrl": "https://www.mgl.si/en/schedule/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-19T07:00:00+02:00",
-      "id": "romantic-souls-2026-10-19",
-      "title": "Romantic Souls",
-      "url": "https://www.mgl.si/en/schedule/",
-      "source": "MGL",
-      "type": "Theatre · drama",
-      "place": "MGL Main Stage · Ljubljana",
-      "startAt": "2026-10-19T19:30:00+02:00",
-      "endAt": null,
-      "description": "Romantic Souls is confirmed at MGL Main Stage · Ljubljana. Check the official source for any late programme or ticket changes."
-    },
-    {
-      "price": null,
-      "languages": [],
-      "touristFriendly": null,
-      "familyFriendly": null,
-      "accessibility": null,
-      "ticketUrl": "https://www.mgl.si/en/schedule/",
-      "status": "sold_out",
-      "lastCheckedAt": "2026-10-19T07:00:00+02:00",
-      "id": "prima-facie-2026-10-19",
-      "title": "Prima Facie",
-      "url": "https://www.mgl.si/en/schedule/",
-      "source": "MGL",
-      "type": "Theatre · legal drama",
-      "place": "MGL Small Stage · Ljubljana",
-      "startAt": "2026-10-19T20:00:00+02:00",
-      "endAt": null,
-      "description": "Prima Facie is scheduled at MGL Small Stage · Ljubljana; the official venue currently marks this performance as sold out."
-    },
-    {
-      "price": null,
-      "languages": [],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": null,
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-19T07:00:00+02:00",
-      "endAt": null,
-      "id": "dub-pistols-2026-10-19",
-      "title": "Dub Pistols",
-      "url": "https://www.kinosiska.si/dogodek/",
-      "source": "Kino Šiška",
-      "type": "Concert",
-      "place": "Katedrala Hall · Kino Šiška",
-      "startAt": "2026-10-19T20:00:00+02:00",
-      "ticketUrl": "https://www.kinosiska.si/dogodek/",
-      "description": "Dub Pistols perform at Kino Šiška at 20:00. Tickets are available through the venue’s official event listing."
     },
     {
       "price": "Free",
@@ -754,6 +697,16 @@
       "status": "confirmed",
       "lastCheckedAt": "2026-10-18T07:22:00+02:00",
       "description": "The month-long culinary festival begins on 1 November across Ljubljana, with individual tastings, menus and workshops announced separately. Prices and accessibility vary by participating venue."
+    },
+    {
+      "title": "CODEFENDANTS (ZDA) + JAKOB'S CASTLE @ Gala hala",
+      "url": "https://www.galahala.com/",
+      "source": "Gala Hala",
+      "type": "Koncert · Metelkova",
+      "place": "Gala Hala · AKC Metelkova",
+      "startAt": "2026-11-03T20:00:00+01:00",
+      "endAt": "",
+      "id": "event-37-codefendants-zda-jakob-s-castle-gala-hala"
     }
   ]
 }
