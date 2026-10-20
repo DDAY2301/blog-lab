@@ -30,6 +30,138 @@ const CATEGORY_EMPTY_COPY = {
 
 const starterArticles = [
   {
+    id: "mostnica-gorge-voje-valley-day-trip-ljubljana",
+    title: "Mostnica Gorge and Voje Valley: An Autumn Day Trip from Ljubljana",
+    excerpt: "Follow the Mostnica through a narrow Alpine gorge into the glacial Voje Valley, with current autumn fees, transport, safety and low-impact visiting advice.",
+    seoDescription: "Plan a Mostnica Gorge day trip from Ljubljana: autumn trail, €4 admission, Voje Valley, waterfall, transport, parking and wet-weather safety.",
+    content: `# Mostnica Gorge and Voje Valley: An Autumn Day Trip from Ljubljana
+
+Mostnica Gorge offers a different side of Bohinj from the familiar lake panorama. Beginning above Stara Fužina, the route follows clear Alpine water through a narrow limestone gorge before opening into the broad, glacially shaped Voje Valley. Continue far enough and the landscape closes again around the Mostnica waterfall.
+
+This is a rewarding autumn day trip from Ljubljana, but it is not a paved sightseeing promenade. Roots, wet leaves, exposed gorge edges and rapidly changing weather require suitable shoes and conservative decisions.
+
+**Last checked: 20 October 2026.** Check Bohinj Tourism, Triglav National Park, Promet Bohinj and ARSO again immediately before travel.
+
+## Why Mostnica is worth a separate trip
+
+Triglav National Park describes the gorge as roughly two kilometres long. Near Devil's Bridge it reaches about 20 metres deep and in places narrows to around one metre. Farther upstream, the central Voje Valley forms a wide U-shaped glacial landscape before the Mostnica descends in a series of falls; the most prominent central fall is 21 metres high.
+
+The appeal is the transition rather than a single viewpoint: village, shaded gorge, pasture valley and waterfall unfold in sequence. Autumn adds colour and quieter paths, while rain can make the stream more dramatic and the trail less forgiving.
+
+## Choose the right version
+
+### Short gorge circuit
+
+Start in Stara Fužina, walk toward Devil's Bridge and follow the signed footpath beside the gorge. Paths on both sides allow a circuit, subject to current signs and conditions. This shorter option focuses on pools, water-shaped rock and the formation nicknamed the Little Elephant.
+
+Do not judge the path by distance alone. Damp limestone, roots and fallen leaves can be slippery, and the official destination specifically calls for caution near gorge edges in humid conditions.
+
+### Full walk through Voje
+
+For a longer day, continue from the upper gorge toward Koča na Vojah and through the Voje Valley to the waterfall. The valley section is more open, but the complete outing requires enough daylight and energy for the return.
+
+Hut service is seasonal and should never be assumed. Confirm opening directly before departure and carry enough water and food to complete the walk without relying on refreshments.
+
+### Road alternative
+
+Bohinj Tourism notes that visitors may walk or cycle to Voje by road without paying the gorge admission fee. This bypasses the gorge trail, so it is an alternative route rather than a free version of the same experience. It may be preferable when the gorge path is too wet, snowy or uncomfortable for a member of the group.
+
+## Admission and current season
+
+The official 2026 tariff applies from **1 April through 30 November**:
+
+- adults: **€4**;
+- children aged 7–14: **€2**;
+- students, pupils and visitors aged 65 or over: **€2.50**;
+- children through age six: free for individual visits.
+
+The listed payment method is cash; bring euros rather than assuming card payment. Eligible Julian Alps guest-card holders are exempt under the published conditions. Prices and collection arrangements can change, so use the official page as the final authority.
+
+An admission period is not a guarantee that every path is safe or staffed every day. Temporary closure signs and local instructions take precedence.
+
+## Getting there from Ljubljana
+
+### Without a car
+
+Use the live Slovenian Railways or Arriva planner for Ljubljana–Bohinj, then connect toward Stara Fužina. Promet Bohinj's current autumn notice says **Line 9 operates daily until 1 November 2026** between Bohinjska Bistrica, Lake Bohinj, Stara Fužina and Savica Waterfall. A Bohinj 24-hour ticket must be bought before boarding; tickets are not sold on the vehicle.
+
+Line 4 is scheduled to return from **24 October to 1 November**, but travellers should not combine old summer timetables with the current service. Save the final return connection before beginning the walk.
+
+### By car
+
+Use an official car park in or near Stara Fužina and pay for the correct parking area. Promet Bohinj states that parking is allowed only in marked spaces and that a ticket is valid only for the car park where it was purchased.
+
+Do not stop on village streets, meadows, road verges or forest access. Motorhomes and camper vans are not permitted on the Voje–Vogar–Blato forest road. If the closest parking is full, use a designated alternative rather than creating an informal space.
+
+## Autumn weather and safety
+
+The forecast checked on 20 October showed cool, cloudy conditions in Bohinj, with showers possible and wetter weather expected over the following days. This snapshot will expire quickly. Read the official ARSO forecast and warnings on the morning of travel.
+
+Bohinj Tourism warns that the first valley snow can fall as early as October and does not recommend walking the gorge alone in snow. Postpone or use the road alternative when snow, ice, flooding, strong wind or poor visibility makes the route uncertain.
+
+Carry:
+
+- hiking shoes with a reliable sole;
+- waterproof and insulating layers;
+- water and food independent of hut opening;
+- a charged phone and offline map;
+- a small light if the return could approach dusk.
+
+Stay behind barriers, keep away from unprotected edges and never climb down toward pools for a photograph. The water is cold, fast and unsuitable for swimming. In an emergency call **112**.
+
+## Families and accessibility
+
+Sure-footed school-age children may enjoy the shorter gorge circuit when it is dry and adults supervise them closely. Keep children within reach near water and edges. A child carrier is more practical than a pushchair.
+
+The gorge footpath should not be presented as step-free or wheelchair-accessible: it includes forest surfaces, roots, gradients and narrow sections. Visitors needing a firm route should ask Bohinj Tourism about the village, road approach and accessible valley options before travel.
+
+Dogs should be kept on a lead, especially around livestock and other walkers. Give cattle generous space and never walk between a cow and calf.
+
+## Visit as a national-park guest
+
+Mostnica lies inside Triglav National Park. Stay on established paths, carry out all waste, leave plants and stones in place and keep noise low. Do not build cairns, enter the stream or take shortcuts around muddy sections.
+
+The Voje pastures are a working cultural landscape, not an empty recreation ground. Close gates as instructed, respect grazing animals and avoid disturbing farm work.
+
+## A realistic day plan
+
+Leave Ljubljana early enough to reach Stara Fužina in daylight. Begin with the gorge circuit and decide at the upper end whether weather, time and energy support continuing through Voje. Turn around before the waterfall if the return margin becomes tight.
+
+After the walk, use Lake Bohinj as a flexible final stop rather than committing to another long attraction. If the gorge is unsuitable, switch to a lower-risk lakeside plan instead of forcing the original itinerary.
+
+For another gentle Alpine wetland, compare the [Zelenci Nature Reserve guide](?article=zelenci-nature-reserve-day-trip-ljubljana). For a broader valley walk, see [Planica and Tamar Valley](?article=planica-tamar-valley-day-trip-ljubljana). Travellers looking for a closer forest-and-water outing can use the [Draga Ponds guide](?article=draga-ponds-forest-trail-day-trip-ljubljana).
+
+## Quick checklist
+
+1. Check the official attraction page and national-park conditions.
+2. Read ARSO warnings and the current Bohinj transport notice.
+3. Carry cash for the gorge fee.
+4. Confirm the final return connection or legal parking place.
+5. Choose the gorge circuit or longer Voje walk only after seeing conditions.
+6. Turn back at snow, ice, high water, closure signs or fading daylight.
+
+Mostnica rewards flexibility. The best visit is not necessarily the longest one; it is the version that lets you experience the water-shaped landscape without taking unnecessary risks or leaving a mark on it.`,
+    category: "Vodniki",
+    author: "Uredništvo Blog Lab",
+    status: "published",
+    heroImage: null,
+    video: null,
+    gallery: [],
+    sources: [
+      { label: "Bohinj Tourism — Mostnica Gorge and Voje Valley", url: "https://www.bohinj.si/en/mostnica-gorge-and-voje-valley/" },
+      { label: "Triglav National Park — Mostnica Gorge and Waterfalls", url: "https://www.tnp.si/en/visiting-park/landmaks/the-mostnica-gorge-and-waterfalls/" },
+      { label: "Bohinj Tourism — Autumn in Bohinj", url: "https://www.bohinj.si/en/all-seasons/autumn-in-bohinj/" },
+      { label: "Promet Bohinj — current autumn transport changes", url: "https://promet.bohinj.si/en/2026/09/summer-transfers/" },
+      { label: "Promet Bohinj — parking rules", url: "https://promet.bohinj.si/en/parking/" },
+      { label: "Triglav National Park — current conditions", url: "https://www.tnp.si/en/visiting-park/latest/" },
+      { label: "ARSO — weather and warnings", url: "https://meteo.arso.gov.si/met/en/" },
+      { label: "Planinska zveza Slovenije — trail conditions", url: "https://stanje-poti.pzs.si/en.php" }
+    ],
+    createdAt: "2026-10-20T09:00:00+02:00",
+    updatedAt: "2026-10-20T09:00:00+02:00"
+  },
+
+  {
     "id": "nova-kolesarska-pot-bo-povezala-slovenijo-italijo-in-hrvasko-megafon-si-42223e2a",
     "title": "Nova kolesarska pot bo povezala Slovenijo, Italijo in Hrvaško - megafon.si",
     "excerpt": "Nova kolesarska pot bo povezala Slovenijo, Italijo in Hrvaško megafon.si",
