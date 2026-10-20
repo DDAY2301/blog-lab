@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-20T22:10:34+02:00",
-  "loop_count": 6818,
+  "updated_at": "2026-10-20T22:25:31+02:00",
+  "loop_count": 6819,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-20T22:10:08+02:00",
+      "last_learning_run": "2026-10-20T22:25:06+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 138182,
-          "last_seen": "2026-10-20T22:10:08+02:00",
+          "seen": 138194,
+          "last_seen": "2026-10-20T22:25:06+02:00",
           "last_title": "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
           "last_provider": "google-news-si",
-          "published": 406467,
+          "published": 406534,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -232,12 +232,12 @@
         "news.google.com": [
           "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
           "Poljakinje pokazale svojo moč in še petič s 3:0 odpravile slovenske odbojkarice - rtvslo.si",
-          "*〜?[[Živý=šport!!]++] Škotska Slovenija prenos 26. september 2026 - Business and Investment Development Agency - CzechInvest"
+          "Slovenke po veliki vrnitvi in zmagi nad Latvijo na pragu osmine finala - rtvslo.si"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-20T22:10:18+02:00",
+      "last_learning_run": "2026-10-20T22:25:18+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -272,11 +272,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 158692,
-          "last_seen": "2026-10-20T22:10:18+02:00",
+          "seen": 158709,
+          "last_seen": "2026-10-20T22:25:18+02:00",
           "last_title": "Svoboda ali SDS? Tako bi volili Slovenci, če bi bile volitve danes - Metropolitan.si",
           "last_provider": "google-news-si",
-          "published": 449484,
+          "published": 449554,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -388,7 +388,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-20T22:10:34+02:00",
+      "last_learning_run": "2026-10-20T22:25:31+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -477,11 +477,11 @@
         },
         "news.google.com": {
           "score": 2.504,
-          "seen": 178400,
-          "last_seen": "2026-10-20T22:10:34+02:00",
+          "seen": 178423,
+          "last_seen": "2026-10-20T22:25:31+02:00",
           "last_title": "Janša v New Yorku jasno o Ukrajini: Slovenija bo nadaljevala politično, vojaško, humanitarno in finančno pomoč - Najdi.si novice",
           "last_provider": "google-news-si",
-          "published": 300490,
+          "published": 300517,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -662,14 +662,6 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20261020-210923.json",
-      "category": "dediscina",
-      "errors": [
-        "ze_uporabljen_vir"
-      ],
-      "title": "Grad Grad na Goričkem: Največji baročni grad v Sloveniji s skrivnostno zgodovino"
-    },
-    {
       "file": "fallback-failed-20261020-212346.json",
       "category": "dediscina",
       "errors": [
@@ -748,6 +740,14 @@
         "ze_uporabljen_vir"
       ],
       "title": "Grad Grad na Goričkem: Največji baročni grad v Sloveniji s skrivnostno zgodovino"
+    },
+    {
+      "file": "fallback-failed-20261020-222349.json",
+      "category": "dediscina",
+      "errors": [
+        "ze_uporabljen_vir"
+      ],
+      "title": "Slovenia Maps & Facts"
     },
     {
       "file": "agent-state",
