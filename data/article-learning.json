@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-20T07:28:11+02:00",
-  "loop_count": 6682,
+  "updated_at": "2026-10-20T07:40:37+02:00",
+  "loop_count": 6683,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-20T07:27:53+02:00",
+      "last_learning_run": "2026-10-20T07:40:15+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 136653,
-          "last_seen": "2026-10-20T07:27:53+02:00",
-          "last_title": "Danes praznuje slovenski šport: Zakaj je prav 23. september postal njegov dan? - telegraf.si",
+          "seen": 136664,
+          "last_seen": "2026-10-20T07:40:15+02:00",
+          "last_title": "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
           "last_provider": "google-news-si",
-          "published": 397355,
+          "published": 397422,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-20T07:28:01+02:00",
+      "last_learning_run": "2026-10-20T07:40:26+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -272,11 +272,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 156425,
-          "last_seen": "2026-10-20T07:28:01+02:00",
+          "seen": 156441,
+          "last_seen": "2026-10-20T07:40:26+02:00",
           "last_title": "Pirc Musar: Mala zmaga za neko politično opcijo, pa hkrati velik poraz za državo - Delo.si",
           "last_provider": "google-news-si",
-          "published": 439964,
+          "published": 440034,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -388,7 +388,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-20T07:28:11+02:00",
+      "last_learning_run": "2026-10-20T07:40:37+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -476,12 +476,12 @@
           "last_provider": "bing-web"
         },
         "news.google.com": {
-          "score": 2.503,
-          "seen": 175336,
-          "last_seen": "2026-10-20T07:28:11+02:00",
+          "score": 2.504,
+          "seen": 175359,
+          "last_seen": "2026-10-20T07:40:37+02:00",
           "last_title": "Podpisan drugi dodatek k Dogovoru za razvoj regije Jugovzhodna Slovenija - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "google-news-si",
-          "published": 296818,
+          "published": 296845,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -588,6 +588,12 @@
   },
   "recent_articles": [
     {
+      "id": "nova-kolesarska-pot-bo-povezala-slovenijo-italijo-in-hrvasko-megafon-si-42223e2a",
+      "title": "Nova kolesarska pot bo povezala Slovenijo, Italijo in Hrvaško - megafon.si",
+      "category": "Kolesarstvo",
+      "createdAt": "2026-10-20T07:39:31+02:00"
+    },
+    {
       "id": "ali-slovenija-postaja-nova-zvezda-buticnega-turizma-24ur-com-0302e27d",
       "title": "Ali Slovenija postaja nova zvezda butičnega turizma? - 24ur.com",
       "category": "Sezonsko",
@@ -652,15 +658,26 @@
       "title": "Swimming in Ljubljana: A Practical Vevče Pool Guide",
       "category": "Vodniki",
       "createdAt": "2026-10-14T09:00:00+02:00"
-    },
-    {
-      "id": "dobre-zgodbe-evrope-ena-najbolj-urejenih-kolesarskih-poti-v-sloveniji-je-nastala-na-trasi--ae15283a",
-      "title": "Dobre zgodbe Evrope: Ena najbolj urejenih kolesarskih poti v Sloveniji je nastala na trasi stare proge -…",
-      "category": "Kolesarstvo",
-      "createdAt": "2026-10-14T07:38:38+02:00"
     }
   ],
   "recent_failures": [
+    {
+      "file": "fallback-failed-20261019-224120.json",
+      "category": "kolesarstvo",
+      "errors": [
+        "podvojen_naslov",
+        "ze_uporabljen_vir"
+      ],
+      "title": "Kolesarjenje: Slovenija kolesari nad evropskim povprečjem, vendar izzivi ostajajo"
+    },
+    {
+      "file": "fallback-failed-20261019-225341.json",
+      "category": "dediscina",
+      "errors": [
+        "ze_uporabljen_vir"
+      ],
+      "title": "Grad Grad na Goričkem: Največji baročni grad v Sloveniji s skrivnostno zgodovino"
+    },
     {
       "file": "fallback-failed-20261019-225419.json",
       "category": "kolesarstvo",
@@ -743,28 +760,11 @@
         "ze_uporabljen_vir"
       ],
       "title": "Kolesarjenje: Slovenija kolesari nad evropskim povprečjem, vendar izzivi ostajajo"
-    },
-    {
-      "file": "agent-state",
-      "category": "kolesarstvo",
-      "errors": [
-        "podvojen_naslov,ze_uporabljen_vir"
-      ]
-    },
-    {
-      "file": "agent-state",
-      "category": "kolesarstvo",
-      "errors": [
-        "naslov_ni_v_rubriki,clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike,besedilo_ni_v_slovenscini"
-      ],
-      "slot": "2026-10-19|10:45|dediscina"
     }
   ],
   "failure_summary": {
     "ze_uporabljen_vir": 14,
     "podvojen_naslov": 7,
-    "prekratek": 6,
-    "podvojen_naslov,ze_uporabljen_vir": 1,
-    "naslov_ni_v_rubriki,clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike,besedilo_ni_v_slovenscini": 1
+    "prekratek": 6
   }
 }
