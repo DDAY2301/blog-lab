@@ -30,6 +30,33 @@ const CATEGORY_EMPTY_COPY = {
 
 const starterArticles = [
   {
+    "id": "nova-kolesarska-pot-bo-povezala-slovenijo-italijo-in-hrvasko-megafon-si-42223e2a",
+    "title": "Nova kolesarska pot bo povezala Slovenijo, Italijo in Hrvaško - megafon.si",
+    "excerpt": "Nova kolesarska pot bo povezala Slovenijo, Italijo in Hrvaško megafon.si",
+    "seoDescription": "Nova kolesarska pot bo povezala Slovenijo, Italijo in Hrvaško megafon.si",
+    "content": "Pregled za rubriko kolesarstvo povzema trenutno razpoložljive informacije iz spodaj navedenih virov. Besedilo je pripravljeno brez dodajanja nepodprtih dejstev.\n\n## Nova kolesarska pot bo povezala Slovenijo, Italijo in Hrvaško - megafon.si\nNova kolesarska pot bo povezala Slovenijo, Italijo in Hrvaško megafon.si\n\nVir: megafon.si — https://news.google.com/rss/articles/CBMilAFBVV95cUxQYUlTMGhuYVJNXzNXdTVqZWFOR1VrYnE0ejlheVN3bFh1UE00V2Q1SldYQ1oxLVVYX29NR1ZQY2g1RW52QkRoTzdlMWx2a1VrU0h0UDYtYlh4ektUMkxqY2RTekFKbmQwb2tkV3Qta1RKOUNJanA0OGF2eUZKX1ZBTF9QUGRmRFh0d2xQZEJvY3BQeHdV?oc=5\n\n## Kako brati ta pregled\nTa članek je v varnem nadomestnem načinu sestavljen izključno iz podanih virov. Ne dodaja dejstev, ki jih v podlagi ni, zato so navedene povezave sestavni del članka in omogočajo neposredno preverjanje informacij.\n\n## Kaj preveriti pred obiskom\nDatumi, odpiralni časi, dostopnost, prometne razmere, vreme in programi dogodkov se lahko spremenijo. Pred odhodom preveri najnovejše podatke neposredno pri organizatorju, upravljavcu ali drugem uradnem viru, ki je naveden v članku.",
+    "category": "Kolesarstvo",
+    "author": "Blog Lab Slovenia Publisher",
+    "status": "published",
+    "heroImage": {
+      "url": "/media/articles/8bad06fec502189cebd8.webp",
+      "alt": "Three male cyclists wearing helmets during a summer bicycle tour in rural Slovenia near Luže.",
+      "caption": "Marek Ślusarczyk ( Tupungato ) Photo gallery · Wikimedia Commons · CC BY 3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:08_Slovenia_rural_landscape_-_bicycle_expedition_with_panniers.jpg"
+    },
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Nova kolesarska pot bo povezala Slovenijo, Italijo in Hrvaško - megafon.si",
+        "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQYUlTMGhuYVJNXzNXdTVqZWFOR1VrYnE0ejlheVN3bFh1UE00V2Q1SldYQ1oxLVVYX29NR1ZQY2g1RW52QkRoTzdlMWx2a1VrU0h0UDYtYlh4ektUMkxqY2RTekFKbmQwb2tkV3Qta1RKOUNJanA0OGF2eUZKX1ZBTF9QUGRmRFh0d2xQZEJvY3BQeHdV?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-20T07:39:31+02:00",
+    "updatedAt": "2026-10-20T07:39:31+02:00"
+  },
+
+  {
     "id": "ali-slovenija-postaja-nova-zvezda-buticnega-turizma-24ur-com-0302e27d",
     "title": "Ali Slovenija postaja nova zvezda butičnega turizma? - 24ur.com",
     "excerpt": "Ali Slovenija postaja nova zvezda butičnega turizma? 24ur.com",
