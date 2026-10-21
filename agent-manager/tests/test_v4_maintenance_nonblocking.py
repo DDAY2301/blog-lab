@@ -42,3 +42,56 @@ def test_slow_ai_triage_does_not_block_health_cycle(tmp_path: Path, monkeypatch)
     result, elapsed = asyncio.run(run())
     assert elapsed < 1.0
     assert result["ai_jobs_pending"] >= 1
+
+
+def test_slow_gmail_auth_does_not_block_monitoring_cycle(tmp_path: Path, monkeypatch):
+    """Expired OAuth tokens must not stall deterministic health checks."""
+    settings = SettingsV3(db_path=tmp_path / "oauth.db")
+    store = StoreV3(settings.db_path)
+    loop = MaintenanceLoopV4(settings, store)
+
+    async def checks():
+        return [{"id": "demo", "name": "Demo", "ok": True}]
+
+    async def provider_status():
+        return {"ollama": {"ok": True}}
+
+    async def slow_oauth():
+        await asyncio.sleep(4.0)
+
+    monkeypatch.setattr(loop.supervisor, "check_all", checks)
+    monkeypatch.setattr(loop.ai, "status", provider_status)
+    monkeypatch.setattr(loop, "_email_maintenance", lambda report: slow_oauth())
+
+    async def run():
+        started = time.perf_counter()
+        result = await loop.cycle()
+        elapsed = time.perf_counter() - started
+        assert result["gmail"]["state"] == "PENDING"
+        assert "gmail:maintenance" in loop._inflight
+        loop.stop()
+        await asyncio.sleep(0)
+        return elapsed
+
+    assert asyncio.run(run()) < 1.0
+
+
+def test_gmail_background_flush_retains_reporting_and_auth_status(tmp_path: Path, monkeypatch):
+    settings = SettingsV3(db_path=tmp_path / "mail.db")
+    store = StoreV3(settings.db_path)
+    loop = MaintenanceLoopV4(settings, store)
+    queued = []
+
+    monkeypatch.setattr(loop.daily_email, "queue_if_due",
+                        lambda report: queued.append(report) or True)
+    monkeypatch.setattr(loop.gmail, "flush_queue",
+                        lambda: {"sent": 1, "failed": 0})
+    monkeypatch.setattr(loop.gmail, "auth_state", lambda: "CONFIGURED")
+
+    async def run():
+        await loop._email_maintenance({"state": "HEALTHY"})
+        assert loop._gmail_last["state"] == "CONFIGURED"
+        assert loop._gmail_last["flush"]["sent"] == 1
+
+    asyncio.run(run())
+    assert len(queued) == 1
