@@ -25,6 +25,11 @@ def test_slow_ai_triage_does_not_block_health_cycle(tmp_path: Path, monkeypatch)
     monkeypatch.setattr(loop.supervisor, "check_all", checks)
     monkeypatch.setattr(loop.ai, "status", provider_status)
     monkeypatch.setattr(loop.ai, "triage", slow_triage)
+    # This tests scheduling, not real Gmail OAuth. Windows can have a live
+    # OAuth token that refreshes over the network during unrelated tests.
+    monkeypatch.setattr(loop.gmail, "auth_state", lambda: "DISABLED")
+    monkeypatch.setattr(loop.gmail, "flush_queue", lambda: {"sent": 0, "failed": 0})
+    monkeypatch.setattr(loop.daily_email, "queue_if_due", lambda report: False)
 
     async def run():
         started = time.perf_counter()
