@@ -276,13 +276,19 @@ def run(category: str, scheduled_slot: str = "", dry_run: bool = False) -> int:
         break
 
     if article is None:
+        reasons = list(dict.fromkeys(reason for item in diagnostics for reason in item["errors"]))
         diag = BASE / "logs" / f"fallback-failed-{now().strftime('%Y%m%d-%H%M%S')}.json"
         diag.parent.mkdir(parents=True, exist_ok=True)
+        # Keep the legacy top-level error/title keys for the 24h learning agent.
         diag.write_text(
-            json.dumps({"category": category, "attempts": diagnostics}, ensure_ascii=False, indent=2),
+            json.dumps({
+                "category": category,
+                "errors": reasons,
+                "article": {"title": diagnostics[0]["title"]} if diagnostics else {},
+                "attempts": diagnostics,
+            }, ensure_ascii=False, indent=2),
             encoding="utf-8",
         )
-        reasons = list(dict.fromkeys(reason for item in diagnostics for reason in item["errors"]))
         state["last_error"] = ",".join(reasons)[:240] or "fallback_no_acceptable_story"
         atomic_json(str(STATE), state)
         _write_status(cfg, state, "waiting", "Nobena sveža zgodba ni prestala uredniškega QA: " + state["last_error"])
