@@ -4,7 +4,7 @@ import re
 import unicodedata
 import urllib.request
 from html import unescape
-from urllib.parse import quote, urlencode
+from urllib.parse import quote, urlencode, unquote
 
 API = "https://commons.wikimedia.org/w/api.php"
 USER_AGENT = "BlogLabSloveniaMedia/1.0 (+https://bloglab.eu/)"
@@ -41,6 +41,7 @@ PLACE_GROUPS = (
     ("ljubljan",), ("piran",), ("postojn",), ("idrij",),
     ("ptuj",), ("maribor",), ("vintgar",), ("skofj", "skofja loka"),
     ("logarsk",), ("pohor",), ("tolmin",), ("bovec",),
+    ("gorick",), ("tustanj",),
     ("vipav",), ("radovljic",), ("koper",), ("izol",),
 )
 
@@ -53,6 +54,26 @@ def _fold(value: str) -> str:
 def _location_filter(topic: str) -> tuple[str, ...]:
     text = _fold(topic)
     return tuple(term for group in PLACE_GROUPS if any(t in text for t in group) for term in group)
+
+
+def commons_image_matches_topic(topic: str, image: dict) -> bool:
+    """Reject a Commons hero depicting another known place.
+
+    Place terms must be supported by the actual image metadata, not just by
+    the user's article title, its search query, or a category-level match.
+    Missing metadata is deliberately not interpreted as proof of a match.
+    """
+    expected = _location_filter(topic)
+    if not expected:
+        return True
+    if not isinstance(image, dict):
+        return False
+    metadata = _fold(" ".join([
+        str(image.get("alt") or ""),
+        str(image.get("caption") or ""),
+        unquote(str(image.get("sourceUrl") or "")),
+    ]))
+    return any(place in metadata for place in expected)
 
 
 FOREIGN_LOCATION_TERMS = (
