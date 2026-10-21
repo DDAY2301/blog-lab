@@ -82,7 +82,8 @@ def main() -> int:
             dom = result.stdout
             print(f"  browser_exit={result.returncode} dom_bytes={len(dom)}", flush=True)
             print(f"  react_rubrics={sum(marker in dom for marker in ('Kolesarstvo','Dediščina','Sezonsko','Gourmet'))}", flush=True)
-            print(f"  reacted_root={'id=\"root\"' in dom and len(dom) > 1600}", flush=True)
+            has_rendered_root = 'id="root"' in dom and len(dom) > 1600
+            print(f"  reacted_root={has_rendered_root}", flush=True)
             if len(dom) <= 1600:
                 print(f"  dom_sample={dom[:450]!r}", flush=True)
             errors = [
