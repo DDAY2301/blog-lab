@@ -45,6 +45,9 @@ def test_decision_only_colibri_skips_chat_and_uses_ollama(monkeypatch):
 
 
 def test_low_memory_triage_starts_and_releases_colibri(monkeypatch):
+    # This specifically tests optional Colibri swap, NOT the Windows
+    # Focus profile. Focus deliberately routes triage to on-demand Ollama.
+    monkeypatch.setenv("AGENT_MANAGER_LOW_MEMORY_MODE", "0")
     monkeypatch.setenv("AGENT_MANAGER_COLIBRI_PROFILE", "decision-laya")
     monkeypatch.setenv("AGENT_MANAGER_LOW_MEMORY_AI_SWAP", "1")
     router = AIRouterV4()
