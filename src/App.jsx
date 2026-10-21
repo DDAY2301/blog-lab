@@ -30,6 +30,130 @@ const CATEGORY_EMPTY_COPY = {
 
 const starterArticles = [
   {
+    id: "ice-skating-ljubljana-tivoli-zalog-guide",
+    title: "Ice Skating in Ljubljana: Tivoli and Zalog Visitor Guide",
+    excerpt: "Plan a recreational ice-skating session in Ljubljana with the verified 2026 timetable, skate rental, access options and beginner safety advice.",
+    seoDescription: "Go ice skating in Ljubljana at Tivoli or Zalog: verified 2026 public sessions, skate rental, transport, accessibility and beginner safety tips.",
+    content: `# Ice Skating in Ljubljana: Tivoli and Zalog Visitor Guide
+
+Ljubljana's public ice-skating season is underway at two covered city rinks: the large arena at Tivoli Hall and Zalog Ice Hall. Both work well for an active break from museums and cafés, but their public sessions are limited blocks around training and matches rather than all-day opening hours.
+
+This guide uses the official 2026 timetable published by Šport Ljubljana. **Last checked: 21 October 2026.** Recheck the venue page on the day you plan to skate because events, ice maintenance and capacity can change the programme.
+
+## Quick comparison
+
+### Tivoli: easiest for city-centre visitors
+
+Tivoli Hall stands beside Tivoli Park, within walking distance of central Ljubljana for many visitors. The official public-skating timetable, valid from 8 October 2026, is:
+
+- Thursday: **19:00–20:30**;
+- Saturday: **10:00–12:00** and **20:00–22:00**;
+- Sunday: **10:00–12:00**.
+
+Tivoli is the practical choice when location matters most. The nearest stop is Tivoli, served by LPP lines 1, 1B, 3, 5, 7, 8, 25 and 60. A BicikeLJ station is nearby, while drivers can use the signed Tivoli I, Tivoli II or other legal public parking.
+
+### Zalog: smaller sessions in eastern Ljubljana
+
+Zalog Ice Hall is farther from the centre but offers its own regular recreational programme. The official season began on 9 October 2026, with sessions on:
+
+- Friday: **18:30–20:00**;
+- Saturday: **11:00–12:30**;
+- Sunday: **11:00–12:30**.
+
+The venue lists a capacity of 200 recreational skaters. The nearest public-transport stop is Center Zalog, served by LPP lines 10 and 11, and there is a BicikeLJ station in Zalog. Confirm the live journey and last return connection in the LPP planner before leaving the centre.
+
+## Tickets and skate rental
+
+Šport Ljubljana's current venue pages list shared packages of **10 sessions for €35** and **30 sessions for €85**. They do not clearly display a single-entry price in the English online table checked for this article, so ask the rink directly rather than relying on an old third-party listing.
+
+At both venues, rental of plastic skates or a skating aid known as a “penguin” is listed at **€4 per person**. Tivoli also lists skate sharpening at €6 and changing-room use at €0.50. Rental stock and sizes are finite, so bringing your own skates is the safest plan if fit is important.
+
+Arrive early enough to pay, collect equipment, change and still use the scheduled session. A time block is not extended because a visitor arrives late.
+
+## A safe first session
+
+Public skating is recreation, not an unsupervised lesson. A complete beginner should ask staff where to enter the ice and whether a skating aid is available. If you cannot stop or turn reliably, remain near the edge and avoid busy central lanes.
+
+### What to wear
+
+- gloves to protect hands from cold and minor falls;
+- long, flexible trousers and warm layers;
+- socks that fit without bunching inside the boot;
+- a properly fitted helmet, especially for children and beginners;
+- no long scarves, loose straps or jewellery that could catch.
+
+Do not skate with a phone in your hand. Stop at the side before taking a photograph, and never sit on the barrier or block an entrance gate.
+
+### On the ice
+
+Follow the announced direction of travel and the instructions of rink staff. Faster skaters should pass with space; beginners should keep a predictable line. Do not race, weave through groups, form chains, push companions or throw ice.
+
+When falling, try to keep fingers away from other skaters' blades. Move to the side when it is safe rather than remaining on the ice. Report damaged rental equipment or an injury immediately. For a serious emergency in Slovenia, call **112**.
+
+## Families and children
+
+Weekend daytime sessions are usually easier to combine with a family itinerary than late evening skating. An adult should remain close enough to help a child without pulling them at speed. A penguin aid can support balance, but it does not replace supervision or make collisions harmless.
+
+The official pages do not publish one universal minimum age or child-equipment guarantee. Contact the chosen rink before travelling with a very young child and confirm skate sizes, helmet expectations, admission rules and whether aids can be rented during that session.
+
+## Accessibility
+
+Zalog's official page states that access for people with disabilities is provided. That statement does not describe every part of the experience, including transfer onto the ice, changing facilities or adaptive equipment. Tivoli's general venue information also does not provide a detailed adaptive-skating specification.
+
+Visitors who need step-free access or assistance should contact the rink directly before purchase and describe the exact support required. Do not assume that building access automatically means independent access to the ice.
+
+## Weather and seasonal planning
+
+Both rinks are covered, so rain is less important than it would be at an outdoor rink. The journey still matters: cold rain, fog or early ice can affect pavements, cycling and driving. Check ARSO warnings and current road or LPP information before setting out.
+
+Dress in removable layers. Indoor ice arenas feel cold when you stand still but quickly become warm during active skating. Keep wet outerwear away from the ice entrance and use lockers or changing areas as staff direct.
+
+## Build it into a Ljubljana day
+
+For Tivoli, combine a daytime session with a walk through Tivoli Park or an indoor visit nearby. Avoid promising another timed activity immediately after skating; queues and equipment return can take longer than expected.
+
+Zalog works better as a dedicated outing from the centre. Save the return bus before entering the hall, especially for Friday evening sessions.
+
+For another all-weather activity, compare the [indoor climbing guide](?article=indoor-climbing-ljubljana-beginner-guide). Visitors who prefer an outdoor workout can use the [Tivoli and Rožnik running guide](?article=running-ljubljana-tivoli-roznik-guide), while the [Ljubljana cycling guide](?article=cycling-ljubljana-city-guide) covers a flexible city route.
+
+## Before you go
+
+1. Check the rink's current page for schedule changes or events.
+2. Confirm the single-entry price directly if it is still absent online.
+3. Verify skate size or bring your own skates and helmet.
+4. Arrive before the session begins.
+5. Follow staff instructions and the skating direction.
+6. Confirm LPP return times, especially from Zalog.
+
+Public skating in Ljubljana is easy to try when planned around the real timetable. Tivoli is the convenient central option; Zalog offers a quieter alternative in the east. In either rink, the best first visit is controlled, warm and unhurried rather than ambitious.
+
+## Official sources
+
+- [Šport Ljubljana — Large Hall of Tivoli Hall](https://www.sport-ljubljana.si/en/velika-dvorana-hale-tivoli/)
+- [Šport Ljubljana — Zalog Ice Hall](https://www.sport-ljubljana.si/en/ledena-dvorana-zalog/)
+- [Šport Ljubljana — current news and operational notices](https://www.sport-ljubljana.si/en/newsletter/)
+- [Šport Ljubljana — general terms and current price policy](https://www.sport-ljubljana.si/en/pogoji-uporabe/)
+- [LPP — Ljubljana public transport](https://www.lpp.si/en/)
+- [ARSO — weather forecasts and warnings](https://meteo.arso.gov.si/met/en/)`,
+    category: "Vodniki",
+    author: "Uredništvo Blog Lab",
+    status: "published",
+    heroImage: null,
+    video: null,
+    gallery: [],
+    sources: [
+      { label: "Šport Ljubljana — Large Hall of Tivoli Hall", url: "https://www.sport-ljubljana.si/en/velika-dvorana-hale-tivoli/" },
+      { label: "Šport Ljubljana — Zalog Ice Hall", url: "https://www.sport-ljubljana.si/en/ledena-dvorana-zalog/" },
+      { label: "Šport Ljubljana — news and operational notices", url: "https://www.sport-ljubljana.si/en/newsletter/" },
+      { label: "Šport Ljubljana — general terms", url: "https://www.sport-ljubljana.si/en/pogoji-uporabe/" },
+      { label: "LPP — Ljubljana public transport", url: "https://www.lpp.si/en/" },
+      { label: "ARSO — weather and warnings", url: "https://meteo.arso.gov.si/met/en/" }
+    ],
+    createdAt: "2026-10-21T09:00:00+02:00",
+    updatedAt: "2026-10-21T09:00:00+02:00"
+  },
+
+  {
     "id": "s-kolesom-na-vlak-in-odkrij-cudovito-korosko-vandraj-a2952589",
     "title": "S kolesom na vlak in odkrij čudovito Koroško - Vandraj",
     "excerpt": "S kolesom na vlak in odkrij čudovito Koroško Vandraj",
