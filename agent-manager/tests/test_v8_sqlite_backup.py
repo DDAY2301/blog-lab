@@ -42,15 +42,21 @@ class SqliteBackupV8Tests(unittest.TestCase):
             self.assertTrue(result["ok"])
             self.assertEqual(result["integrity_check"], "ok")
             self.assertGreater(result["size_bytes"], 0)
-            with sqlite3.connect(str(self.destination)) as copied:
+            copied = sqlite3.connect(str(self.destination))
+            try:
                 self.assertEqual(
                     copied.execute("SELECT message FROM job_events").fetchone()[0],
                     "Live manager intact",
                 )
-            with sqlite3.connect(str(self.source)) as original:
+            finally:
+                copied.close()
+            original = sqlite3.connect(str(self.source))
+            try:
                 self.assertEqual(
                     original.execute("SELECT COUNT(*) FROM job_events").fetchone()[0], 1
                 )
+            finally:
+                original.close()
         finally:
             live.close()
 
@@ -96,8 +102,12 @@ class SqliteBackupV8Tests(unittest.TestCase):
         self.assertFalse(list(self.home.glob("*.tmp")))
 
     def test_empty_database_does_not_produce_a_claimed_backup(self):
-        with sqlite3.connect(str(self.source)) as empty:
+        empty = sqlite3.connect(str(self.source))
+        try:
             empty.execute("PRAGMA user_version=42")
+            empty.commit()
+        finally:
+            empty.close()
         with self.assertRaises(RuntimeError):
             backup_sqlite(self.source, self.destination)
         self.assertFalse(self.destination.exists())
