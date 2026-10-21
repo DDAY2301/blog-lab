@@ -131,3 +131,16 @@ jobs:
             throw "Windows PowerShell 5.1 rejected check-manager-v8.ps1."
           }
           Write-Host "PASS: Windows PowerShell 5.1 parsed V8 preflight and activation."
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Windows SQLite backup integration with paths containing spaces
+        shell: powershell
+        run: |
+          $env:PYTHONPATH = Join-Path $env:GITHUB_WORKSPACE "agent-manager"
+          & python -m unittest discover -s agent-manager/tests -p test_v8_sqlite_backup.py -v
+          if ($LASTEXITCODE -ne 0) {
+            throw "Windows real SQLite backup regression test failed."
+          }
