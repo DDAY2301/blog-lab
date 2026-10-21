@@ -95,6 +95,10 @@ jobs:
           path: ${{ runner.temp }}/atelier-*.png
           if-no-files-found: ignore
           retention-days: 7
+      - name: Inspect live public DNS, HTML, and asset delivery
+        if: github.event_name == 'pull_request'
+        run: python scripts/diagnose_public_site.py
+
       - name: Parse Worker embedded browser JavaScript
         run: node scripts/test-worker-browser-js.mjs
       - name: Test Worker auth on a fresh device
