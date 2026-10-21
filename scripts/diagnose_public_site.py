@@ -5,6 +5,9 @@ Run from an internet-connected runner. Does not read secrets or mutate deploymen
 from __future__ import annotations
 
 import re
+import os
+import shutil
+import subprocess
 import socket
 import ssl
 import urllib.error
@@ -62,6 +65,50 @@ def main() -> int:
                 print(f"  ASSET_ERROR url={resolved} error={type(exc).__name__}: {exc}", flush=True)
         if not assets:
             print(f"  sample={html[:160]!r}", flush=True)
+    # HTTP status 200 and valid JS assets do not prove the React app renders.
+    chrome = next(
+        (path for name in ("google-chrome", "google-chrome-stable", "chromium", "chromium-browser")
+         if (path := shutil.which(name))),
+        None,
+    )
+    if chrome:
+        print("PUBLIC_REACT_RENDER_CHECK url=https://bloglab.eu/", flush=True)
+        try:
+            result = subprocess.run(
+                [chrome, "--headless", "--disable-gpu", "--no-sandbox",
+                 "--virtual-time-budget=7000", "--dump-dom", "https://bloglab.eu/"],
+                capture_output=True, text=True, timeout=34,
+            )
+            dom = result.stdout
+            print(f"  browser_exit={result.returncode} dom_bytes={len(dom)}", flush=True)
+            print(f"  react_rubrics={sum(marker in dom for marker in ('Kolesarstvo','Dediščina','Sezonsko','Gourmet'))}", flush=True)
+            print(f"  reacted_root={'id=\"root\"' in dom and len(dom) > 1600}", flush=True)
+            if len(dom) <= 1600:
+                print(f"  dom_sample={dom[:450]!r}", flush=True)
+            errors = [
+                line.strip()[:320] for line in result.stderr.splitlines()
+                if "CONSOLE" in line or "Uncaught" in line or "SyntaxError" in line
+            ]
+            print(f"  browser_js_errors={len(errors)}", flush=True)
+            for error in errors[:8]:
+                print(f"    {error}", flush=True)
+        except Exception as exc:
+            print(f"  BROWSER_ERROR {type(exc).__name__}: {exc}", flush=True)
+        for size, label in (("1440,1000", "desktop"), ("390,844", "mobile")):
+            try:
+                shot = os.path.join(os.environ.get("RUNNER_TEMP", "/tmp"), f"atelier-live-{label}.png")
+                process = subprocess.run(
+                    [chrome, "--headless", "--disable-gpu", "--no-sandbox",
+                     "--hide-scrollbars", f"--window-size={size}",
+                     "--virtual-time-budget=7000", f"--screenshot={shot}",
+                     "https://bloglab.eu/"],
+                    capture_output=True, text=True, timeout=34,
+                )
+                print(f"  screenshot={label} exit={process.returncode} exists={os.path.exists(shot)}", flush=True)
+            except Exception as exc:
+                print(f"  SCREENSHOT_ERROR label={label} error={type(exc).__name__}: {exc}", flush=True)
+    else:
+        print("PUBLIC_REACT_RENDER_CHECK browser_missing", flush=True)
     return 0
 
 
