@@ -30,6 +30,33 @@ const CATEGORY_EMPTY_COPY = {
 
 const starterArticles = [
   {
+    "id": "s-kolesom-na-vlak-in-odkrij-cudovito-korosko-vandraj-a2952589",
+    "title": "S kolesom na vlak in odkrij čudovito Koroško - Vandraj",
+    "excerpt": "S kolesom na vlak in odkrij čudovito Koroško Vandraj",
+    "seoDescription": "S kolesom na vlak in odkrij čudovito Koroško Vandraj",
+    "content": "Pregled za rubriko kolesarstvo povzema trenutno razpoložljive informacije iz spodaj navedenih virov. Besedilo je pripravljeno brez dodajanja nepodprtih dejstev.\n\n## S kolesom na vlak in odkrij čudovito Koroško - Vandraj\nS kolesom na vlak in odkrij čudovito Koroško Vandraj\n\nVir: Vandraj — https://news.google.com/rss/articles/CBMid0FVX3lxTE5rYW1LVDZBVmN3Y251d0Vnd2Q4Y0twVUYtcEJTVkc4Y2ZtR3JhV0hPZXJQZ1ZIcHh6dHVVc3E0dW0wazFfTUxNREhqRkxlSjg1S201NDJBSEI4M2RzZEdYMmNCdVlrN1BvdmVBR0FDOVlIYTJXUEp3?oc=5\n\n## Kako brati ta pregled\nTa članek je v varnem nadomestnem načinu sestavljen izključno iz podanih virov. Ne dodaja dejstev, ki jih v podlagi ni, zato so navedene povezave sestavni del članka in omogočajo neposredno preverjanje informacij.\n\n## Kaj preveriti pred obiskom\nDatumi, odpiralni časi, dostopnost, prometne razmere, vreme in programi dogodkov se lahko spremenijo. Pred odhodom preveri najnovejše podatke neposredno pri organizatorju, upravljavcu ali drugem uradnem viru, ki je naveden v članku.\n\n## Uredniška sledljivost\nKjer več virov opisuje isto temo, so informacije predstavljene ločeno, brez združevanja v nove trditve. Če se podatki med viri razlikujejo, za končno odločitev uporabi neposredni in časovno najnovejši vir.",
+    "category": "Kolesarstvo",
+    "author": "Blog Lab Slovenia Publisher",
+    "status": "published",
+    "heroImage": {
+      "url": "/media/articles/8bad06fec502189cebd8.webp",
+      "alt": "Three male cyclists wearing helmets during a summer bicycle tour in rural Slovenia near Luže.",
+      "caption": "Marek Ślusarczyk ( Tupungato ) Photo gallery · Wikimedia Commons · CC BY 3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:08_Slovenia_rural_landscape_-_bicycle_expedition_with_panniers.jpg"
+    },
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "S kolesom na vlak in odkrij čudovito Koroško - Vandraj",
+        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5rYW1LVDZBVmN3Y251d0Vnd2Q4Y0twVUYtcEJTVkc4Y2ZtR3JhV0hPZXJQZ1ZIcHh6dHVVc3E0dW0wazFfTUxNREhqRkxlSjg1S201NDJBSEI4M2RzZEdYMmNCdVlrN1BvdmVBR0FDOVlIYTJXUEp3?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-21T07:39:36+02:00",
+    "updatedAt": "2026-10-21T07:39:36+02:00"
+  },
+
+  {
     id: "mostnica-gorge-voje-valley-day-trip-ljubljana",
     title: "Mostnica Gorge and Voje Valley: An Autumn Day Trip from Ljubljana",
     excerpt: "Follow the Mostnica through a narrow Alpine gorge into the glacial Voje Valley, with current autumn fees, transport, safety and low-impact visiting advice.",
