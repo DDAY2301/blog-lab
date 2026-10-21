@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-21T13:10:33+02:00",
-  "loop_count": 6951,
+  "updated_at": "2026-10-21T13:25:41+02:00",
+  "loop_count": 6952,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-21T13:10:11+02:00",
+      "last_learning_run": "2026-10-21T13:25:20+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 139688,
-          "last_seen": "2026-10-21T13:10:11+02:00",
-          "last_title": "Slovenski nogometni junaki se vračajo iz Nemčije, doma jih čaka sprejem: poglejte, kdaj in kje - Metropolitan.si",
-          "last_provider": "google-news-global",
-          "published": 415378,
+          "seen": 139700,
+          "last_seen": "2026-10-21T13:25:20+02:00",
+          "last_title": "Premier Janša ob ogledu finala mladih košarkarjev udaril po RTV Slovenija: »Plačujemo vas več kot Inštitut Jožef Stefan!« - Slovenske novice",
+          "last_provider": "google-news-si",
+          "published": 415445,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,20 +227,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 7,
+      "current_source_count": 12,
       "example_titles": {
         "news.google.com": [
-          "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
+          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
           "Slovenke po veliki vrnitvi in zmagi nad Latvijo na pragu osmine finala - rtvslo.si",
-          "S tribune: Športni trenutki, zaradi katerih se mi še danes naježijo dlake - Svet24.si"
-        ],
-        "congressvotetracker.org": [
-          "Senate Voting Records & Scorecards | Congress Vote Tracker"
+          "Finci premagali Slovenijo in osvojili prvo medaljo na velikih tekmovanjih - 24ur.com"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-21T13:10:23+02:00",
+      "last_learning_run": "2026-10-21T13:25:31+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -275,11 +272,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 160822,
-          "last_seen": "2026-10-21T13:10:23+02:00",
+          "seen": 160838,
+          "last_seen": "2026-10-21T13:25:31+02:00",
           "last_title": "Protestnik, ki je postal predsednik: Stevanović nekoč glas anticepilcev, danes pa enfant terrible, ki je vse postavil na glavo - Metropolitan.si",
           "last_provider": "google-news-si",
-          "published": 458794,
+          "published": 458864,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -391,7 +388,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-21T13:10:33+02:00",
+      "last_learning_run": "2026-10-21T13:25:41+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -480,11 +477,11 @@
         },
         "news.google.com": {
           "score": 2.505,
-          "seen": 181365,
-          "last_seen": "2026-10-21T13:10:33+02:00",
-          "last_title": "(AKTUALNO) Danes druga runda narodne borbe v ZD Slovenska Bistrica: Vrsta za vpis ginekologa, potem, ko je prejšnji ušel v Avstrijo! - Demokracija",
+          "seen": 181389,
+          "last_seen": "2026-10-21T13:25:41+02:00",
+          "last_title": "Je bila Svetlana Makarovič do Možine vulgarna brez kakšne umetniške vrednosti? - Najdi.si novice",
           "last_provider": "google-news-si",
-          "published": 304029,
+          "published": 304055,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -579,12 +576,12 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 11,
+      "current_source_count": 24,
       "example_titles": {
         "news.google.com": [
           "(AKTUALNO) Še danes v prodaji 36. št. revije Demokracija: 30 let Demokracije, ki udejanja pravico vedeti več! Načrt za demografsko obnovo sl",
           "Janša napoveduje velike spremembe: Čez 15 let šol, kot jih poznamo danes, morda ne bo več! - Najdi.si novice",
-          "Pavel Rupar poziva na popoldanski shod z začetkom pred RTV Slovenija, policija pripravljena - Info360"
+          "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto"
         ]
       }
     }
@@ -664,14 +661,6 @@
     }
   ],
   "recent_failures": [
-    {
-      "file": "fallback-failed-20261021-120839.json",
-      "category": "dediscina",
-      "errors": [
-        "ze_uporabljen_vir"
-      ],
-      "title": "Grad Grad na Goričkem: Največji baročni grad v Sloveniji s skrivnostno zgodovino"
-    },
     {
       "file": "fallback-failed-20261021-120916.json",
       "category": "dediscina",
@@ -754,17 +743,26 @@
       "title": "Slovenia Maps & Facts"
     },
     {
+      "file": "fallback-failed-20261021-132450.json",
+      "category": "dediscina",
+      "errors": [
+        "prekratek",
+        "ze_uporabljen_vir"
+      ],
+      "title": "Slovenia Maps & Facts"
+    },
+    {
       "file": "agent-state",
       "category": "dediscina",
       "errors": [
-        "ze_uporabljen_vir"
+        "prekratek,ze_uporabljen_vir"
       ]
     }
   ],
   "failure_summary": {
     "ze_uporabljen_vir": 20,
-    "clanek_brez_slovenskega_konteksta": 1,
-    "viri_ne_podpirajo_slovenske_rubrike": 1,
-    "podvojen_naslov": 1
+    "podvojen_naslov": 1,
+    "prekratek": 1,
+    "prekratek,ze_uporabljen_vir": 1
   }
 }
