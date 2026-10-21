@@ -40,6 +40,26 @@ class MaintenanceLoopV4:
         self._inflight: set[str] = set()
         self._last_ai_at: dict[str, float] = {}
         self.ai_cooldown = max(120, int(os.getenv("AGENT_MANAGER_AI_DIAGNOSIS_COOLDOWN", "300")))
+        self._gmail_last: dict[str, Any] = {
+            "state": "PENDING", "recipient": self.gmail.recipient or None,
+            "flush": None,
+        }
+
+    async def _email_maintenance(self, live_report: dict[str, Any]) -> None:
+        """Keep OAuth refresh and SMTP-like Gmail API calls off the health path.
+
+        The existing _spawn guard limits this to one background email task:
+        no overlapping queue flush, no duplicate scheduler work and no
+        blocking the event loop while credentials refresh on Windows.
+        """
+        await asyncio.to_thread(self.daily_email.queue_if_due, live_report)
+        flushed = await asyncio.to_thread(self.gmail.flush_queue)
+        state = await asyncio.to_thread(self.gmail.auth_state)
+        self._gmail_last = {
+            "state": state,
+            "recipient": self.gmail.recipient or None,
+            "flush": flushed,
+        }
 
     async def cycle(self) -> dict[str, Any]:
         loop_id = uuid.uuid4().hex[:10]
@@ -54,8 +74,9 @@ class MaintenanceLoopV4:
         summary = self.summary.emit(targets, providers)
         live_report = self.summary.build(targets, providers)
         live_report["targets"] = targets
-        self.daily_email.queue_if_due(live_report)
-        gmail_flush = await asyncio.to_thread(self.gmail.flush_queue)
+        # Gmail auth can synchronously refresh OAuth through the network.
+        # Never block the deterministic monitoring cycle on that external I/O.
+        self._spawn("gmail:maintenance", lambda: self._email_maintenance(live_report))
 
         self.last = {
             "loop_id": loop_id,
@@ -63,11 +84,7 @@ class MaintenanceLoopV4:
             "ai_providers": providers,
             "ai_jobs_pending": len(self._background),
             "summary": summary,
-            "gmail": {
-                "state": self.gmail.auth_state(),
-                "recipient": self.gmail.recipient or None,
-                "flush": gmail_flush,
-            },
+            "gmail": dict(self._gmail_last),
         }
         self.store.heartbeat("maintenance-v4", "running", loop_id)
         self.store.event("MAINTENANCE_CYCLE", "maintenance-v4", "info", self.last)
