@@ -453,6 +453,12 @@ STORY_STOPWORDS = {
     "igralci", "liga", "prvenstvo", "turnir", "zmaga", "zmago", "nov", "nova",
     "novo", "proti", "pred", "med", "after", "with", "from", "this", "that",
     "team", "match", "game", "news", "today", "league", "sport",
+    # Shared editorial/category words do not establish that two pages concern
+    # the same place or event (e.g. unrelated Slovenian castles).
+    "dediscina", "heritage", "grad", "gradovi", "castle", "castles",
+    "muzej", "muzeji", "museum", "zgodovina", "history", "turizem",
+    "tourism", "sezonsko", "gourmet", "kulinarika", "sloveniji",
+    "slovenske", "slovenskega", "slovenski", "slovenska",
 }
 
 
