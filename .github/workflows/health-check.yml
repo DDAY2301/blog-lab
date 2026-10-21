@@ -37,6 +37,8 @@ jobs:
         run: |
           pip install -r requirements-agent.txt
           npm ci
+      - name: Check Worker version contract across workflows
+        run: python scripts/check_worker_version_contract.py
       - name: Compile agent code
         run: python -m py_compile agents/operator-terminal/*.py agents/blog-lab-publisher/agent.py agents/blog-lab-publisher/services/*.py agents/self-heal/*.py agents/production-guardian/guardian.py agents/production_guardian_import.py
       - name: Run agent tests
