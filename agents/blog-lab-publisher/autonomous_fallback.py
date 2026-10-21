@@ -36,7 +36,7 @@ from agent import (  # noqa: E402
 )
 from services.fallback_writer import build_digest  # noqa: E402
 from services.publisher import publish_to_app, slugify  # noqa: E402
-from services.validator import validate  # noqa: E402
+from services.validator import validate, _canonical_url  # noqa: E402
 from services.editorial_guard import validate_automatic_story  # noqa: E402
 from services.image_optimizer import optimize_commons_hero  # noqa: E402
 from services.learning import learning_source_ok, rank_sources_with_learning  # noqa: E402
@@ -122,6 +122,48 @@ def _filter_category_pool(items: list[dict], category: str) -> list[dict]:
     return filtered
 
 
+
+def _fresh_story_pools(
+    items: list[dict], processed: list[dict], category: str, max_attempts: int = 4
+) -> list[list[dict]]:
+    """Try distinct *unpublished* stories; never recycle old evidence as fallback.
+
+    Compare both hashes and normalized URLs because RSS tracking parameters can
+    change without making an already-published article a new source.
+    """
+    used_hashes = {str(row["hash"]) for row in processed if row.get("hash")}
+    used_urls = {
+        canonical for row in processed
+        if (canonical := _canonical_url(str(row.get("url") or "")))
+    }
+    filtered = [
+        item for item in _filter_category_pool(items, category)
+        if _canonical_url(str(item.get("url") or ""))
+        and _canonical_url(str(item.get("url") or "")) not in used_urls
+        and (not item.get("hash") or str(item["hash"]) not in used_hashes)
+    ]
+    remaining = rank_sources_with_learning(filtered, category)
+    pools = []
+    for _ in range(max_attempts):
+        if not remaining:
+            break
+        pool = automatic_story_pool(remaining, category, max_items=5)
+        if not pool:
+            break
+        pools.append(pool)
+        # Remove this entire story from consideration, not just its lead.
+        # Otherwise the next attempt can reselect the same rejected story.
+        selected_urls = {_canonical_url(str(x.get("url") or "")) for x in pool}
+        remaining = [
+            item for item in remaining
+            if _canonical_url(str(item.get("url") or "")) not in selected_urls
+        ]
+    print(
+        f"FALLBACK_FRESH_STORIES category={category} fresh={len(filtered)} "
+        f"attempts={len(pools)}"
+    )
+    return pools
+
 def _reset_daily_state(state: dict, today: str) -> dict:
     if state.get("posts_date") != today:
         state["posts_date"] = today
@@ -179,66 +221,72 @@ def run(category: str, scheduled_slot: str = "", dry_run: bool = False) -> int:
         print("FALLBACK_DAILY_LIMIT")
         return 0
 
-    items = rank_sources_with_learning(_filter_category_pool(collect_automatic_sources(cfg, category), category), category)
-    seen_hashes = {x.get("hash") for x in processed}
-    fresh = [x for x in items if x.get("hash") not in seen_hashes]
-    source_pool = fresh or items
-    source_pool = rank_sources_with_learning(_filter_category_pool(source_pool, category), category)
-    evidence_pool = automatic_story_pool(source_pool, category, max_items=6)
-    evidence_pool = rank_sources_with_learning(_filter_category_pool(evidence_pool, category), category)
-    if not evidence_pool:
-        state["last_error"] = "fallback_no_category_evidence"
+    items = collect_automatic_sources(cfg, category)
+    story_pools = _fresh_story_pools(items, processed, category)
+    if not story_pools:
+        state["last_error"] = "fallback_no_fresh_evidence"
         atomic_json(str(STATE), state)
-        _write_status(cfg, state, "waiting", "Fallback ni našel dovolj preverljivih virov za zahtevano kategorijo.")
-        print("FALLBACK_NO_CATEGORY_EVIDENCE")
+        _write_status(cfg, state, "waiting", "Ni novih neuporabljenih virov; objava se varno odloži.")
+        print("FALLBACK_NO_FRESH_EVIDENCE")
         return 0
-
-    article = build_digest(evidence_pool, category)
-    if article.get("skip"):
-        state["last_error"] = str(article.get("reason") or "fallback_skip")[:240]
-        atomic_json(str(STATE), state)
-        _write_status(cfg, state, "waiting", state["last_error"])
-        print("FALLBACK_SKIP")
-        return 0
-
-    used_for_article = article_used_items(article, evidence_pool)
-    if not used_for_article:
-        used_for_article = evidence_pool[:1]
-    used_for_article = _filter_category_pool(used_for_article, category)
-    if not used_for_article:
-        state["last_error"] = "fallback_used_sources_failed_category_guard"
-        atomic_json(str(STATE), state)
-        _write_status(cfg, state, "waiting", "Fallback viri niso prestali kategorijskega preverjanja.")
-        print("FALLBACK_USED_SOURCES_FAILED_CATEGORY_GUARD")
-        return 0
-
-    output_category = OUTPUT_CATEGORY_LABELS.get(category, category)
-    article = prepare_article_candidate(article, used_for_article, "", output_category)
-    article["category"] = output_category
-    article["fallback"] = True
-    article["id"] = slugify(article.get("title", "")) + "-" + hashlib.sha1(
-        str(used_for_article[0].get("url", "fallback")).encode("utf-8")
-    ).hexdigest()[:8]
 
     min_chars = int(cfg["min_article_chars"])
     max_chars = int(cfg["max_article_chars"])
     titles = existing_titles()
-    used_urls = {x.get("url") for x in processed if x.get("url")}
-    allowed_urls = allowed_source_urls(evidence_pool)
-    errors = validate(article, min_chars, max_chars, titles, used_urls, allowed_urls)
-    errors.extend(validate_automatic_story(article, evidence_pool, category))
-    errors = list(dict.fromkeys(errors))
-    if errors:
+    used_urls = {str(x.get("url")) for x in processed if x.get("url")}
+    output_category = OUTPUT_CATEGORY_LABELS.get(category, category)
+    diagnostics = []
+    article = None
+    evidence_pool = []
+
+    for attempt, pool in enumerate(story_pools, start=1):
+        candidate = build_digest(pool, category)
+        if candidate.get("skip"):
+            errors = [str(candidate.get("reason") or "fallback_skip")]
+        else:
+            used_for_article = _filter_category_pool(article_used_items(candidate, pool), category)
+            if not used_for_article:
+                errors = ["fallback_used_sources_failed_category_guard"]
+            else:
+                candidate = prepare_article_candidate(candidate, used_for_article, "", output_category)
+                candidate["category"] = output_category
+                candidate["fallback"] = True
+                candidate["id"] = slugify(candidate.get("title", "")) + "-" + hashlib.sha1(
+                    str(used_for_article[0].get("url", "fallback")).encode("utf-8")
+                ).hexdigest()[:8]
+                errors = validate(
+                    candidate, min_chars, max_chars, titles, used_urls, allowed_source_urls(pool)
+                )
+                errors.extend(validate_automatic_story(candidate, pool, category))
+                errors = list(dict.fromkeys(errors))
+
+        if errors:
+            diagnostics.append({
+                "attempt": attempt,
+                "lead_url": str(pool[0].get("url") or ""),
+                "title": str(pool[0].get("title") or "")[:180],
+                "errors": errors,
+            })
+            print(f"FALLBACK_CANDIDATE_REJECTED attempt={attempt} reasons={','.join(errors)}")
+            continue
+
+        article = candidate
+        evidence_pool = pool
+        print(f"FALLBACK_CANDIDATE_ACCEPTED attempt={attempt} id={article['id']}")
+        break
+
+    if article is None:
         diag = BASE / "logs" / f"fallback-failed-{now().strftime('%Y%m%d-%H%M%S')}.json"
         diag.parent.mkdir(parents=True, exist_ok=True)
         diag.write_text(
-            json.dumps({"category": category, "errors": errors, "article": article}, ensure_ascii=False, indent=2),
+            json.dumps({"category": category, "attempts": diagnostics}, ensure_ascii=False, indent=2),
             encoding="utf-8",
         )
-        state["last_error"] = ",".join(errors)
+        reasons = list(dict.fromkeys(reason for item in diagnostics for reason in item["errors"]))
+        state["last_error"] = ",".join(reasons)[:240] or "fallback_no_acceptable_story"
         atomic_json(str(STATE), state)
-        _write_status(cfg, state, "waiting", "Fallback QA ni uspel: " + ",".join(errors))
-        print("FALLBACK_QA_FAILED " + ",".join(errors))
+        _write_status(cfg, state, "waiting", "Nobena sveža zgodba ni prestala uredniškega QA: " + state["last_error"])
+        print("FALLBACK_QA_FAILED " + state["last_error"])
         return 0
 
     if dry_run:
