@@ -506,9 +506,9 @@ def automatic_story_pool(items: list[dict], category: str, max_items: int = 6) -
             if other_index == index:
                 continue
             shared = tokens & other
-            # Two shared title concepts, or one distinctive long concept,
-            # is enough to treat two source records as the same story.
-            if len(shared) >= 2 or any(len(token) >= 7 for token in shared):
+            # Require two separate shared title concepts. One long generic
+            # verb (e.g. "predstavlja") must not merge unrelated places.
+            if len(shared) >= 2:
                 members.append(other_index)
         direct = 1 if candidates[index].get("verified_direct") else 0
         localized = 1 if str(candidates[index].get("provider") or "") == "google-news-si" else 0
