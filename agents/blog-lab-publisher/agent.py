@@ -22,7 +22,7 @@ from services.publisher import publish_to_app, slugify
 from services.state import load_json, atomic_json
 from services.learning import learning_source_ok, rank_sources_with_learning
 from services.article_templates import apply_article_template, template_prompt
-from services.media_library import commons_image_for
+from services.media_library import commons_image_for, commons_image_matches_topic
 from services.editorial_guard import validate_automatic_story, CATEGORY_SIGNALS, SLOVENIA_SIGNALS, fold, _has_any
 from services.image_optimizer import optimize_commons_hero
 
@@ -585,6 +585,11 @@ def prepare_article_candidate(
             and "Wikimedia Commons" in str(hero.get("caption") or "")
             and "cc" in str(hero.get("caption") or "").lower()
         )
+        if known_commons and not commons_image_matches_topic(
+            str(article.get("title") or topic or ""), hero
+        ):
+            print("COMMONS_HERO_REJECTED reason=unmatched_destination")
+            known_commons = False
         if not known_commons:
             article["heroImage"] = None
             article["gallery"] = []
