@@ -103,8 +103,12 @@ if ($Mode -eq "Preflight") {
     return
 }
 
-# Backup live SQLite using sqlite3 backup API; no unsafe Copy-Item on a live DB.
-$dbSetting = [Environment]::GetEnvironmentVariable("AGENT_MANAGER_DB", "User")
+# Safely back up the exact SQLite database before touching running processes.
+# A separate Python file avoids Windows PowerShell 5.1 quoting of multiline -c.
+$dbSetting = [Environment]::GetEnvironmentVariable("AGENT_MANAGER_DB", "Process")
+if ([string]::IsNullOrWhiteSpace($dbSetting)) {
+    $dbSetting = [Environment]::GetEnvironmentVariable("AGENT_MANAGER_DB", "User")
+}
 if ([string]::IsNullOrWhiteSpace($dbSetting)) {
     $database = Join-Path $agent "data\agent_manager.db"
 } elseif ([System.IO.Path]::IsPathRooted($dbSetting)) {
@@ -112,27 +116,23 @@ if ([string]::IsNullOrWhiteSpace($dbSetting)) {
 } else {
     $database = Join-Path $agent $dbSetting
 }
-if (Test-Path -LiteralPath $database) {
-    $timestamp = Get-Date -Format "yyyyMMdd-HHmmss"
-    $backup = Join-Path $agent "data\agent_manager-before-v8-$timestamp.sqlite"
-    $env:MANAGER_V8_DB_SOURCE = $database
-    $env:MANAGER_V8_DB_BACKUP = $backup
-    $code = @'
-import os, sqlite3
-source = sqlite3.connect(os.environ["MANAGER_V8_DB_SOURCE"], timeout=15)
-destination = sqlite3.connect(os.environ["MANAGER_V8_DB_BACKUP"])
-try:
-    source.backup(destination)
-finally:
-    destination.close()
-    source.close()
-print("SQLite consistent backup saved")
-'@
-    & $py -c $code
-    if ($LASTEXITCODE -ne 0 -or -not (Test-Path -LiteralPath $backup)) {
-        throw "Could not make a verified SQLite backup. No restart."
-    }
+if (-not (Test-Path -LiteralPath $database -PathType Leaf)) {
+    throw "SQLite database does not exist at expected path: $database. No restart."
 }
+$timestamp = Get-Date -Format "yyyyMMdd-HHmmss"
+$backup = Join-Path $agent "data\agent_manager-before-v8-$timestamp.sqlite"
+$backupTool = Join-Path $PSScriptRoot "backup_sqlite_v8.py"
+if (-not (Test-Path -LiteralPath $backupTool -PathType Leaf)) {
+    throw "Verified SQLite backup helper is missing. No restart."
+}
+& $py $backupTool --source $database --destination $backup
+if ($LASTEXITCODE -ne 0 -or -not (Test-Path -LiteralPath $backup -PathType Leaf)) {
+    throw "SQLite hot backup/verification failed. No restart or V8 switch."
+}
+if ((Get-Item -LiteralPath $backup).Length -le 0) {
+    throw "SQLite backup is empty. No restart or V8 switch."
+}
+Write-Host "Verified consistent SQLite backup: $backup" -ForegroundColor Green
 
 $originalPilot = [Environment]::GetEnvironmentVariable("AGENT_MANAGER_EMAIL_V8_ENABLED", "User")
 [Environment]::SetEnvironmentVariable("AGENT_MANAGER_EMAIL_V8_ENABLED", "1", "User")
