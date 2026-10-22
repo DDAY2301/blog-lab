@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-22T13:53:47+02:00",
-  "loop_count": 7025,
+  "updated_at": "2026-10-22T13:54:36+02:00",
+  "loop_count": 7026,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-22T13:53:22+02:00",
+      "last_learning_run": "2026-10-22T13:54:15+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 140451,
-          "last_seen": "2026-10-22T13:53:22+02:00",
+          "seen": 140462,
+          "last_seen": "2026-10-22T13:54:15+02:00",
           "last_title": "Sin znanih slovenskih športnikov navdušuje na SP, danes pa nastopa proti Sloveniji! - Siol.net",
           "last_provider": "google-news-si",
-          "published": 420336,
+          "published": 420403,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-22T13:53:32+02:00",
+      "last_learning_run": "2026-10-22T13:54:25+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -272,11 +272,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 162073,
-          "last_seen": "2026-10-22T13:53:32+02:00",
-          "last_title": "Video: Luka Simonič iz SDM: \"Če se mi ne ukvarjamo s politiko, se politika ukvarja z nami\" - Metroplay - Metropolitan.si",
-          "last_provider": "google-news-global",
-          "published": 463974,
+          "seen": 162090,
+          "last_seen": "2026-10-22T13:54:25+02:00",
+          "last_title": "Svoboda ali SDS? Tako bi volili Slovenci, če bi bile volitve danes - Metropolitan.si",
+          "last_provider": "google-news-si",
+          "published": 464044,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -378,17 +378,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 12,
+      "current_source_count": 17,
       "example_titles": {
         "news.google.com": [
-          "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si",
-          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer",
-          "Po Janši, ki noče feministične zunanje politike, se je s kritiko na njegov račun oglasila predsednica Pirc Musar - Info360"
+          "Odnosi z Izraelom: diplomacija ne sme biti izgovor za normalizacijo zločinov - Dnevnik",
+          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
+          "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-22T13:53:47+02:00",
+      "last_learning_run": "2026-10-22T13:54:36+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -477,11 +477,11 @@
         },
         "news.google.com": {
           "score": 2.506,
-          "seen": 183055,
-          "last_seen": "2026-10-22T13:53:47+02:00",
-          "last_title": "Janša v New Yorku jasno o Ukrajini: Slovenija bo nadaljevala politično, vojaško, humanitarno in finančno pomoč - Najdi.si novice",
+          "seen": 183069,
+          "last_seen": "2026-10-22T13:54:36+02:00",
+          "last_title": "(AKTUALNO) Danes druga runda narodne borbe v ZD Slovenska Bistrica: Vrsta za vpis ginekologa, potem, ko je prejšnji ušel v Avstrijo! - Demokracija",
           "last_provider": "google-news-si",
-          "published": 305946,
+          "published": 305971,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -576,12 +576,12 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 25,
+      "current_source_count": 14,
       "example_titles": {
         "news.google.com": [
           "(AKTUALNO) Še danes v prodaji 36. št. revije Demokracija: 30 let Demokracije, ki udejanja pravico vedeti več! Načrt za demografsko obnovo sl",
-          "Janša napoveduje velike spremembe: Čez 15 let šol, kot jih poznamo danes, morda ne bo več! - Najdi.si novice",
-          "(AKTUALNO) Varuhinja človekovih pravic Simona Drenik Bavdek: Pravica do dostojnega pokopa temeljna človekova pravica - Demokracija"
+          "Kajzer: zunanjepolitična strategija mora odražati aktualno geopolitično okolje - 24ur.com",
+          "Kako svet vidi Slovenijo danes in kako je postala tako vroča evropska destinacija - Dnevnik"
         ]
       }
     }
@@ -662,15 +662,6 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20261022-085112.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "podvojen_naslov",
-        "ze_uporabljen_vir"
-      ],
-      "title": "Kolesarjenje: Slovenija kolesari nad evropskim povprečjem, vendar izzivi ostajajo"
-    },
-    {
       "file": "fallback-failed-20261022-085605.json",
       "category": "kolesarstvo",
       "errors": [
@@ -750,6 +741,15 @@
       "title": "Ste pripravljeni? Kmalu s kolesom od Ljubljane do Beograda - Dnevnik"
     },
     {
+      "file": "fallback-failed-20261022-135326.json",
+      "category": "kolesarstvo",
+      "errors": [
+        "prekratek",
+        "manjka_fotografija"
+      ],
+      "title": "Ste pripravljeni? Kmalu s kolesom od Ljubljane do Beograda - Dnevnik"
+    },
+    {
       "file": "agent-state",
       "category": "kolesarstvo",
       "errors": [
@@ -766,9 +766,9 @@
     }
   ],
   "failure_summary": {
-    "ze_uporabljen_vir": 10,
-    "prekratek": 10,
-    "manjka_fotografija": 8,
+    "prekratek": 11,
+    "ze_uporabljen_vir": 9,
+    "manjka_fotografija": 9,
     "podvojen_naslov": 1,
     "prekratek,manjka_fotografija": 1,
     "manjka_fotografija,ponavljanje": 1
