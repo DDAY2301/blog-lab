@@ -1,0 +1,19 @@
+{
+  "category": "kolesarstvo",
+  "errors": [
+    "prekratek"
+  ],
+  "article": {
+    "title": "Slovenija je bela lisa na kolesarskem zemljevidu - Delo.si"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "lead_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNSXNfUWFJaEpsUmQ4R1RPMHplYlBOUkJwa1NvY0kzQldEaFZlck1haXFzMTI4cm5oY3Myb2c4RExBQ1R4VlUxYkxOM3hiOGJ6bHIyczF6ZkZNUEctZXBEcF9RV1dJWk1kNjBaVTVJT3A1TE0wTUhnemZkdjg2aWo2LUxWYkIwQ0RYSC1vMFpR?oc=5",
+      "title": "Slovenija je bela lisa na kolesarskem zemljevidu - Delo.si",
+      "errors": [
+        "prekratek"
+      ]
+    }
+  ]
+}
