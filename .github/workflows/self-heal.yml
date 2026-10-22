@@ -29,7 +29,6 @@ on:
       - "Blog Lab Health Check"
       - "Blog Lab External Smoke Test"
       - "Blog Lab Full E2E Audit"
-      - "Blog Lab Production Guardian"
     types: [completed]
   schedule:
     - cron: "11 * * * *"
