@@ -30,6 +30,33 @@ const CATEGORY_EMPTY_COPY = {
 
 const starterArticles = [
   {
+    "id": "razstava-lepota-po-slovensko-v-celju-na-ogled-dragocena-dediscina-jozeta-karlovska-velikan-c05e0902",
+    "title": "Razstava Lepota po slovensko: V Celju na ogled dragocena dediščina Jožeta Karlovška, velikana slovenske…",
+    "excerpt": "Dediščina: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Razstava Lepota po slovensko: V Celju na ogled dragocena dediščina Jožeta Karlovška, velikana slovenske…«.",
+    "seoDescription": "Dediščina: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Razstava Lepota po slovensko: V Celju na ogled dragocena dediščina Jožeta Ka",
+    "content": "**Dediščina, 22. 10. 2026.** Razstava Lepota po slovensko: V Celju na ogled dragocena dediščina Jožeta Karlovška, velikana slovenske narodopisne kulturne dediščine Demokracija\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Demokracija. Objavljeno: Wed, 01 Sep 2021 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMi9wFBVV95cUxNeUE5OHN0SFpfTzlPSXotZU5jVFZlbVJnck43RkJiQS1TZFRYX3EwU05vT0xxMTFVQTAwckNmWS14MTVQMXg4T1lYRVNaMjZYb0dsN0UyYW1ha2ZpWVN4UXJaQWRLLU1hc3lxS3V0TW4zcE15Mlh0M2NnNW5XcGJYX3pkT3c3ME9NdjZuZnZrSGh2ckdrLXk1eVJHUTBHQUhxUUxsTW0yQ2hsc2ptaXFENTFLV0FCOFA4MUk0aW5mR19qZFJ5X2dHVEZOdzZCNExITENfWDk4SzhoN0doWUt2emhHcngxRExvdEpFUy1DWkJQd3NuVExn?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Dediščina",
+    "author": "Blog Lab Slovenia Publisher",
+    "status": "published",
+    "heroImage": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Tustanj_Castle_Slovenia_-_plaque.JPG/1920px-Tustanj_Castle_Slovenia_-_plaque.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "alt": "Plaque over the entrance to Tuštanj Castle, Zgornji Tuštanj, Municipality of Moravče, Slovenia",
+      "caption": "Doremo · Wikimedia Commons · CC BY-SA 3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tustanj_Castle_Slovenia_-_plaque.JPG"
+    },
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Demokracija — Razstava Lepota po slovensko: V Celju na ogled dragocena dediščina Jožeta Karlovška, velikana slovenske narodopisne…",
+        "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNeUE5OHN0SFpfTzlPSXotZU5jVFZlbVJnck43RkJiQS1TZFRYX3EwU05vT0xxMTFVQTAwckNmWS14MTVQMXg4T1lYRVNaMjZYb0dsN0UyYW1ha2ZpWVN4UXJaQWRLLU1hc3lxS3V0TW4zcE15Mlh0M2NnNW5XcGJYX3pkT3c3ME9NdjZuZnZrSGh2ckdrLXk1eVJHUTBHQUhxUUxsTW0yQ2hsc2ptaXFENTFLV0FCOFA4MUk0aW5mR19qZFJ5X2dHVEZOdzZCNExITENfWDk4SzhoN0doWUt2emhHcngxRExvdEpFUy1DWkJQd3NuVExn?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-22T13:18:51+02:00",
+    "updatedAt": "2026-10-22T13:18:51+02:00"
+  },
+
+  {
     id: "robba-fountain-ljubljana-original-replica-history",
     title: "Robba Fountain in Ljubljana: Original, Replica and Baroque History",
     excerpt: "Discover why Ljubljana has two Robba Fountains, where to see the original and how to read the river gods without confusing tradition with proven history.",
