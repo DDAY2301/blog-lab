@@ -23,6 +23,7 @@ from agent import (  # noqa: E402
     article_used_items,
     atomic_json,
     automatic_story_pool,
+    automatic_source_usable,
     collect_automatic_sources,
     control,
     enabled,
@@ -37,6 +38,7 @@ from agent import (  # noqa: E402
 from services.fallback_writer import build_digest  # noqa: E402
 from services.publisher import publish_to_app, slugify  # noqa: E402
 from services.validator import validate, _canonical_url  # noqa: E402
+from services.source_discovery_v2 import collect_focused_sources, unpublished_items  # noqa: E402
 from services.editorial_guard import validate_automatic_story  # noqa: E402
 from services.image_optimizer import optimize_commons_hero  # noqa: E402
 from services.learning import learning_source_ok, rank_sources_with_learning  # noqa: E402
@@ -223,6 +225,24 @@ def run(category: str, scheduled_slot: str = "", dry_run: bool = False) -> int:
 
     items = collect_automatic_sources(cfg, category)
     story_pools = _fresh_story_pools(items, processed, category)
+    if not story_pools:
+        # A category-specific second search is bounded to two different lenses;
+        # do not relax editorial QA or recycle existing links to fill a slot.
+        discovered = collect_focused_sources(
+            category, max_items=int(cfg.get("max_source_items", 30)),
+            cache_dir=os.environ.get("RUNNER_TEMP"),
+        )
+        qualified = [
+            item for item in discovered
+            if automatic_source_usable(item, category, trusted_primary=False)
+            and learning_source_ok(item, category)
+        ]
+        fresh = unpublished_items(qualified, processed, limit=int(cfg.get("max_source_items", 30)))
+        print(
+            f"DISCOVERY_V2_FALLBACK category={category} candidates={len(discovered)} "
+            f"usable={len(qualified)} fresh={len(fresh)}"
+        )
+        story_pools = _fresh_story_pools(fresh, processed, category)
     if not story_pools:
         state["last_error"] = "fallback_no_fresh_evidence"
         atomic_json(str(STATE), state)

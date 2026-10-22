@@ -1,0 +1,46 @@
+name: Blog Lab Source Discovery V2 Audit
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "agents/blog-lab-publisher/services/source_discovery_v2.py"
+      - "agents/blog-lab-publisher/agent.py"
+      - "agents/blog-lab-publisher/autonomous_fallback.py"
+      - "scripts/probe_source_discovery_v2.py"
+      - ".github/workflows/source-discovery-v2-audit.yml"
+  workflow_dispatch:
+    inputs:
+      category:
+        description: "Rubrika za preverjanje (brez objave)"
+        default: "dediscina"
+        required: true
+        type: choice
+        options: [dediscina, kolesarstvo, sezonsko, gore, gourmet]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: bloglab-source-discovery-probe-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  source-discovery-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-agent.txt
+      - name: Install publisher dependencies
+        run: pip install -r requirements-agent.txt
+      - name: Offline Source Discovery V2 regressions
+        run: python -m pytest -q agents/blog-lab-publisher/tests/test_source_discovery_v2.py
+      - name: Live public-search audit (read-only; no articles published)
+        env:
+          CATEGORY: ${{ inputs.category || 'dediscina' }}
+        run: python scripts/probe_source_discovery_v2.py --category "$CATEGORY" --limit 30
