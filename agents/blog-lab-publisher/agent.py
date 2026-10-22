@@ -22,7 +22,7 @@ from services.publisher import publish_to_app, slugify
 from services.state import load_json, atomic_json
 from services.learning import learning_source_ok, rank_sources_with_learning
 from services.article_templates import apply_article_template, template_prompt
-from services.media_library import commons_image_for
+from services.media_library import commons_image_for, commons_image_matches_topic
 from services.editorial_guard import validate_automatic_story, CATEGORY_SIGNALS, SLOVENIA_SIGNALS, fold, _has_any
 from services.image_optimizer import optimize_commons_hero
 
@@ -453,6 +453,12 @@ STORY_STOPWORDS = {
     "igralci", "liga", "prvenstvo", "turnir", "zmaga", "zmago", "nov", "nova",
     "novo", "proti", "pred", "med", "after", "with", "from", "this", "that",
     "team", "match", "game", "news", "today", "league", "sport",
+    # Shared editorial/category words do not establish that two pages concern
+    # the same place or event (e.g. unrelated Slovenian castles).
+    "dediscina", "heritage", "grad", "gradovi", "castle", "castles",
+    "muzej", "muzeji", "museum", "zgodovina", "history", "turizem",
+    "tourism", "sezonsko", "gourmet", "kulinarika", "sloveniji",
+    "slovenske", "slovenskega", "slovenski", "slovenska",
 }
 
 
@@ -500,9 +506,9 @@ def automatic_story_pool(items: list[dict], category: str, max_items: int = 6) -
             if other_index == index:
                 continue
             shared = tokens & other
-            # Two shared title concepts, or one distinctive long concept,
-            # is enough to treat two source records as the same story.
-            if len(shared) >= 2 or any(len(token) >= 7 for token in shared):
+            # Require two separate shared title concepts. One long generic
+            # verb (e.g. "predstavlja") must not merge unrelated places.
+            if len(shared) >= 2:
                 members.append(other_index)
         direct = 1 if candidates[index].get("verified_direct") else 0
         localized = 1 if str(candidates[index].get("provider") or "") == "google-news-si" else 0
@@ -585,6 +591,11 @@ def prepare_article_candidate(
             and "Wikimedia Commons" in str(hero.get("caption") or "")
             and "cc" in str(hero.get("caption") or "").lower()
         )
+        if known_commons and not commons_image_matches_topic(
+            str(article.get("title") or topic or ""), hero
+        ):
+            print("COMMONS_HERO_REJECTED reason=unmatched_destination")
+            known_commons = False
         if not known_commons:
             article["heroImage"] = None
             article["gallery"] = []

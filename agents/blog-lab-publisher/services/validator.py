@@ -110,10 +110,12 @@ def validate(article: dict, min_chars: int, max_chars: int, used_titles: set[str
     evidence_urls = list(dict.fromkeys(content_urls + source_urls))
     if not evidence_urls:
         errors.append("brez_virov")
+    used_canonical = {_canonical_url(url) for url in used_urls if _canonical_url(url)}
     for url in evidence_urls:
         if not _safe_external_url(url):
             errors.append("neveljaven_url")
-        if url in used_urls:
+        # Reject tracking-parameter variants of a previously published source.
+        if url in used_urls or (_canonical_url(url) and _canonical_url(url) in used_canonical):
             errors.append("ze_uporabljen_vir")
 
     if allowed_urls is not None:
