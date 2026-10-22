@@ -16,6 +16,7 @@ BASE = Path(__file__).resolve().parents[2]
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 from services.sources import collect, collect_topic, filter_topic_items, rank_topic_items, topic_relevance_score
+from services.source_discovery_v2 import collect_focused_sources, unpublished_items
 from services.ai_provider import generate, review_grounding, AIUnavailable
 from services.validator import validate
 from services.publisher import publish_to_app, slugify
@@ -690,17 +691,26 @@ def main():
             return 3
     else:
         items = collect_automatic_sources(cfg, args.category)
-    seen = {x.get("hash") for x in processed}
-    used_processed_urls = {
-        str(x.get("url") or "").strip()
-        for x in processed
-        if str(x.get("url") or "").strip()
-    }
-    fresh = [
-        x for x in items
-        if x.get("hash") not in seen
-        and str(x.get("url") or "").strip() not in used_processed_urls
-    ]
+    # Source Discovery V2: suppress canonical/tracking URL variants and
+    # previously reported headlines before invoking a potentially costly writer.
+    fresh = unpublished_items(items, processed, limit=int(cfg.get("max_source_items", 30)))
+    if not fresh and not args.topic.strip():
+        discovered = collect_focused_sources(
+            args.category, max_items=int(cfg.get("max_source_items", 30))
+        )
+        qualified = [
+            item for item in discovered
+            if automatic_source_usable(item, args.category, trusted_primary=False)
+            and learning_source_ok(item, args.category)
+        ]
+        fresh = rank_sources_with_learning(
+            unpublished_items(qualified, processed, limit=int(cfg.get("max_source_items", 30))),
+            args.category,
+        )
+        print(
+            f"DISCOVERY_V2_RESULT category={args.category} "
+            f"candidates={len(discovered)} usable={len(qualified)} fresh={len(fresh)}"
+        )
     # Authenticated manual topic requests use --force. If current sources were already
     # observed by the autonomous cycle, allow reusing them for the explicit editorial
     # request; title/QA validation still prevents an identical published article.
