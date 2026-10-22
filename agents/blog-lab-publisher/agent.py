@@ -696,7 +696,8 @@ def main():
     fresh = unpublished_items(items, processed, limit=int(cfg.get("max_source_items", 30)))
     if not fresh and not args.topic.strip():
         discovered = collect_focused_sources(
-            args.category, max_items=int(cfg.get("max_source_items", 30))
+            args.category, max_items=int(cfg.get("max_source_items", 30)),
+            cache_dir=os.environ.get("RUNNER_TEMP"),
         )
         qualified = [
             item for item in discovered
