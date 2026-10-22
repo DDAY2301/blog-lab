@@ -37,6 +37,8 @@ jobs:
         run: |
           pip install -r requirements-agent.txt
           npm ci
+      - name: Check Worker version contract across workflows
+        run: python scripts/check_worker_version_contract.py
       - name: Compile agent code
         run: python -m py_compile agents/operator-terminal/*.py agents/blog-lab-publisher/agent.py agents/blog-lab-publisher/services/*.py agents/self-heal/*.py agents/production-guardian/guardian.py agents/production_guardian_import.py
       - name: Run agent tests
@@ -87,6 +89,10 @@ jobs:
           # Visual QA snapshots of the actual built React page.
           "$BROWSER" --headless --disable-gpu --no-sandbox --hide-scrollbars --window-size=1440,1000 --virtual-time-budget=4500 --screenshot="$RUNNER_TEMP/atelier-desktop.png" http://127.0.0.1:4173/ > /dev/null 2>&1 || echo "::warning::Desktop screenshot unavailable"
           "$BROWSER" --headless --disable-gpu --no-sandbox --hide-scrollbars --window-size=390,844 --virtual-time-budget=4500 --screenshot="$RUNNER_TEMP/atelier-mobile.png" http://127.0.0.1:4173/ > /dev/null 2>&1 || echo "::warning::Mobile screenshot unavailable"
+      - name: Inspect live public DNS, HTML, and asset delivery
+        if: github.event_name == 'pull_request'
+        run: python scripts/diagnose_public_site.py
+
       - name: Upload Atelier visual QA
         if: always()
         uses: actions/upload-artifact@v4
