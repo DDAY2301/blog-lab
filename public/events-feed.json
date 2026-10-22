@@ -1,8 +1,11 @@
 {
-  "updatedAt": "2026-10-22T07:00:15+02:00",
+  "updatedAt": "2026-10-22T07:10:00+02:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
+    "MGL",
+    "Cankarjev dom",
+    "Ljubljana Castle",
     "Kino Šiška",
     "Gala Hala",
     "Klub K4",
@@ -113,7 +116,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.mgl.si/en/schedule/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-21T07:05:31+02:00",
+      "lastCheckedAt": "2026-10-22T07:00:00+02:00",
       "id": "when-it-comes-down-to-it-2026-10-22",
       "title": "When It Comes Down to It",
       "url": "https://www.mgl.si/en/schedule/",
@@ -132,7 +135,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.mgl.si/en/schedule/",
       "status": "sold_out",
-      "lastCheckedAt": "2026-10-21T07:05:31+02:00",
+      "lastCheckedAt": "2026-10-22T07:00:00+02:00",
       "id": "salome-2026-10-22",
       "title": "Salome",
       "url": "https://www.mgl.si/en/schedule/",
@@ -159,7 +162,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.cd-cc.si/en/culture/music/chromatics-1-0",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-21T07:05:31+02:00",
+      "lastCheckedAt": "2026-10-22T07:00:00+02:00",
       "description": "The RTV Slovenia Symphony Orchestra opens the Chromatics series in Gallus Hall at 19:30. Listed standard tickets range from €22 to €34."
     },
     {
@@ -169,8 +172,8 @@
       "familyFriendly": null,
       "accessibility": null,
       "ticketUrl": "https://www.mgl.si/en/schedule/",
-      "status": "sold_out",
-      "lastCheckedAt": "2026-10-21T07:05:31+02:00",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-22T07:00:00+02:00",
       "id": "man-overboard-2026-10-22",
       "title": "Man Overboard",
       "url": "https://www.mgl.si/en/schedule/",
@@ -179,7 +182,7 @@
       "place": "MGL Small Stage · Ljubljana",
       "startAt": "2026-10-22T20:00:00+02:00",
       "endAt": null,
-      "description": "Man Overboard is scheduled at MGL Small Stage · Ljubljana; the official venue currently marks this performance as sold out."
+      "description": "Man Overboard is scheduled at MGL Small Stage at 20:00. The official venue currently offers tickets for this performance."
     },
     {
       "price": null,
@@ -188,7 +191,7 @@
       "familyFriendly": false,
       "accessibility": null,
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
+      "lastCheckedAt": "2026-10-22T07:00:00+02:00",
       "endAt": null,
       "id": "danko-jones-split-dogs-2026-10-22",
       "title": "Danko Jones + Split Dogs",
@@ -216,7 +219,7 @@
       "accessibility": null,
       "ticketUrl": null,
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-18T07:22:00+02:00",
+      "lastCheckedAt": "2026-10-22T07:00:00+02:00",
       "description": "Ljubljana’s outdoor food market is listed at Pogačarjev trg from 10:00 to 21:00. Entry is free; the market is weather-dependent, so recheck before travelling."
     },
     {
@@ -227,7 +230,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.kinosiska.si/en/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-20T07:18:00+02:00",
+      "lastCheckedAt": "2026-10-22T07:00:00+02:00",
       "id": "perceptions-of-music-2026-10-23",
       "title": "Perceptions of Music",
       "url": "https://www.kinosiska.si/en/",
@@ -254,7 +257,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.mgl.si/en/schedule/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
+      "lastCheckedAt": "2026-10-22T07:00:00+02:00",
       "description": "Romantic Souls is confirmed at MGL Main Stage · Ljubljana. Check the official source for any late programme or ticket changes."
     },
     {
@@ -275,7 +278,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.cd-cc.si/en/culture/music/vocal-music-concert-marking-centennial-death-srecko-kosovel",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-20T07:18:00+02:00",
+      "lastCheckedAt": "2026-10-22T07:00:00+02:00",
       "description": "Four Slovenian choirs perform settings of Srečko Kosovel’s poetry with Slovenian recitation at 19:30. Standard admission is €15, with a €12 concession."
     },
     {
@@ -287,15 +290,15 @@
       "place": "Rock Hall · Ljubljana Castle",
       "startAt": "2026-10-23T20:00:00+02:00",
       "endAt": null,
-      "price": null,
+      "price": "€11, including return funicular fare",
       "languages": [],
       "touristFriendly": true,
       "familyFriendly": false,
       "accessibility": null,
       "ticketUrl": "https://www.ljubljanskigrad.si/en/castle-events/the-ljubljana-castle-jazz-club-2/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-20T07:18:00+02:00",
-      "description": "Seydou Yoni Kouyate performs in the Rock Hall at 20:00; the Jazz Club opens at 19:00. The concert ticket includes a return funicular journey."
+      "lastCheckedAt": "2026-10-22T07:00:00+02:00",
+      "description": "Seydou Yoni Kouyate performs in the Rock Hall at 20:00; the Jazz Club opens at 19:00. Admission is €11 and includes a return funicular journey."
     },
     {
       "id": "prima-facie-2026-10-23",
@@ -313,7 +316,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.mgl.si/en/schedule/",
       "status": "sold_out",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
+      "lastCheckedAt": "2026-10-22T07:00:00+02:00",
       "description": "Prima Facie is scheduled at MGL Small Stage · Ljubljana; the official venue currently marks this performance as sold out."
     },
     {
@@ -323,7 +326,7 @@
       "familyFriendly": false,
       "accessibility": null,
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
+      "lastCheckedAt": "2026-10-22T07:00:00+02:00",
       "endAt": null,
       "id": "planet-pink-modular-clockwork-voltage-2026-10-23",
       "title": "Planet Pink Goes Modular Clockwork Voltage 2026",
@@ -345,7 +348,7 @@
       "endAt": null,
       "id": "event-40-balans-si-album-release-koncert-gala-hala",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-18T07:22:00+02:00",
+      "lastCheckedAt": "2026-10-22T07:00:00+02:00",
       "price": "€15 advance / €20 on the day",
       "languages": [],
       "touristFriendly": null,
@@ -363,7 +366,7 @@
       "startAt": "2026-10-23T23:00:00+02:00",
       "endAt": "",
       "id": "event-53-forestdelic-label-night-klub-k4",
-      "lastCheckedAt": "2026-10-18T07:22:00+02:00",
+      "lastCheckedAt": "2026-10-22T07:00:00+02:00",
       "price": null,
       "languages": [],
       "touristFriendly": null,
