@@ -5,15 +5,21 @@
   "posts_date": "2026-10-22",
   "posts_today": 0,
   "last_output": "s-kolesom-na-vlak-in-odkrij-cudovito-korosko-vandraj-a2952589",
-  "last_error": "prekratek,manjka_fotografija",
+  "last_error": "podvojen_naslov,ze_uporabljen_vir",
   "agent_version": "2.7.0",
   "current_category": "kolesarstvo",
   "scheduled_posts_today": 0,
   "manual_posts_today": 0,
   "writer_mode": "workers_ai",
   "scheduled_slots_done": [],
-  "scheduled_slots_deferred": [],
-  "last_editorial_hold": null,
+  "scheduled_slots_deferred": [
+    "2026-10-22|07:35|kolesarstvo"
+  ],
+  "last_editorial_hold": {
+    "slot": "2026-10-22|07:35|kolesarstvo",
+    "reason": "manjka_fotografija",
+    "at": "2026-10-22T08:51:01+02:00"
+  },
   "publisher_guardian_last_run": "2026-10-22T08:12:32+02:00",
   "publisher_guardian_last_action": {
     "category": "kolesarstvo",
