@@ -37,6 +37,8 @@ jobs:
         run: |
           pip install -r requirements-agent.txt
           npm ci
+      - name: Check no recursive Guardian/Self-Heal triggers
+        run: python scripts/check_no_guardian_selfheal_cycle.py
       - name: Check Worker version contract across workflows
         run: python scripts/check_worker_version_contract.py
       - name: Compile agent code
