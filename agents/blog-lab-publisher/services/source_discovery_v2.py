@@ -7,6 +7,8 @@ from __future__ import annotations
 
 import re
 import unicodedata
+import json
+from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor
 from datetime import date, datetime
 from zoneinfo import ZoneInfo
@@ -118,12 +120,30 @@ def unpublished_items(items: list[dict], processed: list[dict], *, limit: int = 
 
 
 def collect_focused_sources(
-    category: str, *, max_items: int = 30, day: date | None = None
+    category: str, *, max_items: int = 30, day: date | None = None,
+    cache_dir: str | None = None
 ) -> list[dict]:
-    """Bounded provider-diverse fallback (<=6 feed requests, <=8 page checks)."""
+    """Bounded provider-diverse fallback (<=6 feeds, <=8 page checks).
+
+    The scheduled AI publisher and its fallback are separate Python processes,
+    so they may reuse the same results *within one GitHub Actions runner*. No
+    cache is committed to the repository and no cache is shared between runs.
+    """
     queries = focused_queries(category, day=day)
     if not queries:
         return []
+    cache_path = None
+    if cache_dir:
+        try:
+            cache_day = day or datetime.now(ZoneInfo("Europe/Ljubljana")).date()
+            cache_path = Path(cache_dir) / f"bloglab-discovery-v2-{category}-{cache_day.isoformat()}.json"
+            if cache_path.exists():
+                cache = json.loads(cache_path.read_text(encoding="utf-8"))
+                if isinstance(cache, list):
+                    print(f"DISCOVERY_V2_CACHE_HIT category={category} selected={len(cache)}")
+                    return cache[:max_items]
+        except (ValueError, OSError) as exc:
+            print(f"DISCOVERY_V2_CACHE_WARN {type(exc).__name__}")
     tasks = []
     with ThreadPoolExecutor(max_workers=6) as pool:
         for query in queries:
@@ -163,4 +183,9 @@ def collect_focused_sources(
         f"selected={len(final)} providers="
         + ",".join(f"{k}:{counts[k]}" for k in sorted(counts))
     )
+    if cache_path:
+        try:
+            cache_path.write_text(json.dumps(final, ensure_ascii=False), encoding="utf-8")
+        except OSError as exc:
+            print(f"DISCOVERY_V2_CACHE_WARN {type(exc).__name__}")
     return final
