@@ -7,17 +7,22 @@
   "last_output": "razstava-lepota-po-slovensko-v-celju-na-ogled-dragocena-dediscina-jozeta-karlovska-velikan-c05e0902",
   "last_error": "prekratek,manjka_fotografija",
   "agent_version": "3.0.0-learning-guarded-fallback",
-  "current_category": "kolesarstvo",
+  "current_category": "sezonsko",
   "scheduled_posts_today": 1,
   "manual_posts_today": 0,
-  "writer_mode": "deterministic_fallback",
+  "writer_mode": "workers_ai",
   "scheduled_slots_done": [
     "2026-10-22|10:45|dediscina"
   ],
   "scheduled_slots_deferred": [
-    "2026-10-22|07:35|kolesarstvo"
+    "2026-10-22|07:35|kolesarstvo",
+    "2026-10-22|13:30|sezonsko"
   ],
-  "last_editorial_hold": null,
+  "last_editorial_hold": {
+    "slot": "2026-10-22|13:30|sezonsko",
+    "reason": "manjka_fotografija,ponavljanje",
+    "at": "2026-10-22T13:39:30+02:00"
+  },
   "publisher_guardian_last_run": "2026-10-22T13:23:29+02:00",
   "publisher_guardian_last_action": {
     "category": "kolesarstvo",
