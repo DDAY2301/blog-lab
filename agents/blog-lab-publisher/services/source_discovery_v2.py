@@ -5,7 +5,6 @@ pass automatic_source_usable, learning policy and the full editorial QA.
 """
 from __future__ import annotations
 
-import hashlib
 import re
 import unicodedata
 from concurrent.futures import ThreadPoolExecutor
@@ -135,7 +134,7 @@ def collect_focused_sources(
                 query, "duckduckgo-web",
                 pool.submit(sources._duckduckgo_web, query, category, 10),
             ))
-        results, counts = [], {}
+        buckets, counts = [], {}
         for query, provider, future in tasks:
             try:
                 fetched = future.result()
@@ -147,8 +146,15 @@ def collect_focused_sources(
                 )
                 continue
             counts[provider] = counts.get(provider, 0) + len(fetched or [])
-            results.extend(fetched or [])
+            buckets.append(list(fetched or []))
 
+    # Interleave search providers: an early Google RSS feed can have dozens of
+    # headlines and must not crowd *all* direct Bing/DDG evidence out of 30.
+    results = []
+    for index in range(max((len(bucket) for bucket in buckets), default=0)):
+        for bucket in buckets:
+            if index < len(bucket):
+                results.append(bucket[index])
     diverse = sources._dedupe_diverse(results, max_items, per_source=3)
     enriched = sources._enrich_direct_sources(diverse, max_checks=min(8, max_items))
     final = sources._dedupe_diverse(enriched, max_items, per_source=3)
