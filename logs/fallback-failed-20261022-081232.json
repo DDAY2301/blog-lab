@@ -1,0 +1,34 @@
+{
+  "category": "kolesarstvo",
+  "errors": [
+    "prekratek",
+    "manjka_fotografija"
+  ],
+  "article": {
+    "title": "Ste pripravljeni? Kmalu s kolesom od Ljubljane do Beograda",
+    "excerpt": "Kolesarstvo: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Ste pripravljeni? Kmalu s kolesom od Ljubljane do Beograda«.",
+    "seoDescription": "Kolesarstvo: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Ste pripravljeni? Kmalu s kolesom od Ljubljane do Beograda«.",
+    "content": "**Kolesarstvo, 22. 10. 2026.** Ste pripravljeni? Kmalu s kolesom od Ljubljane do Beograda Dnevnik\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Dnevnik. Objavljeno: Sun, 28 Dec 2025 08:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiugFBVV95cUxPbTd4a05ST3pwTzdCUXRkaU5KZ09ULWZvd2NNVFpUV05EeHZvbTA0QXBGN0Z4Qjg5ZGVJU19iR085eVk4S0FWbWZ4RlpYdjJab2JvX2Z3NWExUlppZUpBbUdoV1J4N2dtdUpNc3NVN1RiSFpMV2FGUkphRlVLanVwVnAyenU4bEdKaWdkdWwxc0JCZk9hMjg5blIzb3h2anZiVUJONHI4Q2w4OW1KU3JnX1VGNEFXRUlrYnc?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Kolesarstvo",
+    "tags": [
+      "kolesarstvo",
+      "pregled"
+    ],
+    "heroImage": null,
+    "gallery": [],
+    "video": null,
+    "sources": [
+      {
+        "label": "Dnevnik — Ste pripravljeni? Kmalu s kolesom od Ljubljane do Beograda - Dnevnik",
+        "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPbTd4a05ST3pwTzdCUXRkaU5KZ09ULWZvd2NNVFpUV05EeHZvbTA0QXBGN0Z4Qjg5ZGVJU19iR085eVk4S0FWbWZ4RlpYdjJab2JvX2Z3NWExUlppZUpBbUdoV1J4N2dtdUpNc3NVN1RiSFpMV2FGUkphRlVLanVwVnAyenU4bEdKaWdkdWwxc0JCZk9hMjg5blIzb3h2anZiVUJONHI4Q2w4OW1KU3JnX1VGNEFXRUlrYnc?oc=5"
+      }
+    ],
+    "source_urls": [
+      "https://news.google.com/rss/articles/CBMiugFBVV95cUxPbTd4a05ST3pwTzdCUXRkaU5KZ09ULWZvd2NNVFpUV05EeHZvbTA0QXBGN0Z4Qjg5ZGVJU19iR085eVk4S0FWbWZ4RlpYdjJab2JvX2Z3NWExUlppZUpBbUdoV1J4N2dtdUpNc3NVN1RiSFpMV2FGUkphRlVLanVwVnAyenU4bEdKaWdkdWwxc0JCZk9hMjg5blIzb3h2anZiVUJONHI4Q2w4OW1KU3JnX1VGNEFXRUlrYnc?oc=5"
+    ],
+    "fallback": true,
+    "visualTemplate": "pulse",
+    "templateLabel": "Pulse",
+    "id": "ste-pripravljeni-kmalu-s-kolesom-od-ljubljane-do-beograda-7b41b4d7"
+  }
+}
