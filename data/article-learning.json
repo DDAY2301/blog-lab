@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-22T13:24:02+02:00",
-  "loop_count": 7021,
+  "updated_at": "2026-10-22T13:24:56+02:00",
+  "loop_count": 7022,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-22T13:23:35+02:00",
+      "last_learning_run": "2026-10-22T13:24:33+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 140405,
-          "last_seen": "2026-10-22T13:23:35+02:00",
-          "last_title": "Sin znanih slovenskih športnikov navdušuje na SP, danes pa nastopa proti Sloveniji! - Siol.net",
+          "seen": 140416,
+          "last_seen": "2026-10-22T13:24:33+02:00",
+          "last_title": "Slovenska blamaža na igrah! Zakaj sploh tekmujemo, če je šport pri nas umrl - Ekipa",
           "last_provider": "google-news-si",
-          "published": 420068,
+          "published": 420135,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -230,14 +230,14 @@
       "current_source_count": 11,
       "example_titles": {
         "news.google.com": [
-          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
-          "Slovenija sanja o velikem finalu, a zato bo potrebno presenetiti najboljšo ekipo na svetu - Šport TV",
-          "Slovenci upravičili vlogo favorita in Švedski niso prepustili niti niza - rtvslo.si"
+          "Slovenke po veliki vrnitvi in zmagi nad Latvijo na pragu osmine finala - rtvslo.si",
+          "Slovenci upravičili vlogo favorita in Švedski niso prepustili niti niza - rtvslo.si",
+          "Slovenija sanja o velikem finalu, a zato bo potrebno presenetiti najboljšo ekipo na svetu - Šport TV"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-22T13:23:50+02:00",
+      "last_learning_run": "2026-10-22T13:24:46+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -272,11 +272,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 162014,
-          "last_seen": "2026-10-22T13:23:50+02:00",
+          "seen": 162031,
+          "last_seen": "2026-10-22T13:24:46+02:00",
           "last_title": "Svoboda ali SDS? Tako bi volili Slovenci, če bi bile volitve danes - Metropolitan.si",
           "last_provider": "google-news-si",
-          "published": 463694,
+          "published": 463764,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -388,7 +388,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-22T13:24:02+02:00",
+      "last_learning_run": "2026-10-22T13:24:56+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -477,11 +477,11 @@
         },
         "news.google.com": {
           "score": 2.506,
-          "seen": 182955,
-          "last_seen": "2026-10-22T13:24:02+02:00",
+          "seen": 182980,
+          "last_seen": "2026-10-22T13:24:56+02:00",
           "last_title": "Janša v New Yorku jasno o Ukrajini: Slovenija bo nadaljevala politično, vojaško, humanitarno in finančno pomoč - Najdi.si novice",
           "last_provider": "google-news-si",
-          "published": 305846,
+          "published": 305871,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -662,14 +662,6 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20261021-212454.json",
-      "category": "dediscina",
-      "errors": [
-        "ze_uporabljen_vir"
-      ],
-      "title": "Slovenia Maps & Facts"
-    },
-    {
       "file": "fallback-failed-20261021-221553.json",
       "category": "dediscina",
       "errors": [
@@ -756,17 +748,27 @@
       "title": "Slovenija je bela lisa na kolesarskem zemljevidu - Delo.si"
     },
     {
+      "file": "fallback-failed-20261022-132329.json",
+      "category": "kolesarstvo",
+      "errors": [
+        "prekratek",
+        "manjka_fotografija"
+      ],
+      "title": "Ste pripravljeni? Kmalu s kolesom od Ljubljane do Beograda - Dnevnik"
+    },
+    {
       "file": "agent-state",
       "category": "kolesarstvo",
       "errors": [
-        "prekratek"
+        "prekratek,manjka_fotografija"
       ]
     }
   ],
   "failure_summary": {
-    "ze_uporabljen_vir": 13,
+    "ze_uporabljen_vir": 12,
     "prekratek": 8,
-    "manjka_fotografija": 5,
-    "podvojen_naslov": 2
+    "manjka_fotografija": 6,
+    "podvojen_naslov": 2,
+    "prekratek,manjka_fotografija": 1
   }
 }
