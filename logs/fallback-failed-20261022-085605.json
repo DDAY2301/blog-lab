@@ -1,0 +1,38 @@
+{
+  "category": "kolesarstvo",
+  "errors": [
+    "prekratek"
+  ],
+  "article": {
+    "title": "Slovenija je bela lisa na kolesarskem zemljevidu",
+    "excerpt": "Kolesarstvo: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Slovenija je bela lisa na kolesarskem zemljevidu«.",
+    "seoDescription": "Kolesarstvo: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Slovenija je bela lisa na kolesarskem zemljevidu«.",
+    "content": "**Kolesarstvo, 22. 10. 2026.** Slovenija je bela lisa na kolesarskem zemljevidu Delo.si\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Delo.si. Objavljeno: Thu, 25 Apr 2013 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMijgFBVV95cUxNSXNfUWFJaEpsUmQ4R1RPMHplYlBOUkJwa1NvY0kzQldEaFZlck1haXFzMTI4cm5oY3Myb2c4RExBQ1R4VlUxYkxOM3hiOGJ6bHIyczF6ZkZNUEctZXBEcF9RV1dJWk1kNjBaVTVJT3A1TE0wTUhnemZkdjg2aWo2LUxWYkIwQ0RYSC1vMFpR?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Kolesarstvo",
+    "tags": [
+      "kolesarstvo",
+      "pregled"
+    ],
+    "heroImage": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/08_Slovenia_rural_landscape_-_bicycle_expedition_with_panniers.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "alt": "Three male cyclists wearing helmets during a summer bicycle tour in rural Slovenia near Luže.",
+      "caption": "Marek Ślusarczyk ( Tupungato ) Photo gallery · Wikimedia Commons · CC BY 3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:08_Slovenia_rural_landscape_-_bicycle_expedition_with_panniers.jpg"
+    },
+    "gallery": [],
+    "video": null,
+    "sources": [
+      {
+        "label": "Delo.si — Slovenija je bela lisa na kolesarskem zemljevidu - Delo.si",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNSXNfUWFJaEpsUmQ4R1RPMHplYlBOUkJwa1NvY0kzQldEaFZlck1haXFzMTI4cm5oY3Myb2c4RExBQ1R4VlUxYkxOM3hiOGJ6bHIyczF6ZkZNUEctZXBEcF9RV1dJWk1kNjBaVTVJT3A1TE0wTUhnemZkdjg2aWo2LUxWYkIwQ0RYSC1vMFpR?oc=5"
+      }
+    ],
+    "source_urls": [
+      "https://news.google.com/rss/articles/CBMijgFBVV95cUxNSXNfUWFJaEpsUmQ4R1RPMHplYlBOUkJwa1NvY0kzQldEaFZlck1haXFzMTI4cm5oY3Myb2c4RExBQ1R4VlUxYkxOM3hiOGJ6bHIyczF6ZkZNUEctZXBEcF9RV1dJWk1kNjBaVTVJT3A1TE0wTUhnemZkdjg2aWo2LUxWYkIwQ0RYSC1vMFpR?oc=5"
+    ],
+    "fallback": true,
+    "visualTemplate": "pulse",
+    "templateLabel": "Pulse",
+    "id": "slovenija-je-bela-lisa-na-kolesarskem-zemljevidu-fa36076d"
+  }
+}
