@@ -5,7 +5,7 @@
   "posts_date": "2026-10-22",
   "posts_today": 2,
   "last_output": "timotej-becan-in-lucija-krkoc-naj-gorska-tekaca-sezone-petra-in-marko-tratnik-naj-trail-te-a33d1aed",
-  "last_error": "prekratek",
+  "last_error": "prekratek,manjka_fotografija",
   "agent_version": "3.0.0-learning-guarded-fallback",
   "current_category": "kolesarstvo",
   "scheduled_posts_today": 2,
@@ -25,7 +25,7 @@
     "reason": "ponavljanje",
     "at": "2026-10-22T19:24:36+02:00"
   },
-  "publisher_guardian_last_run": "2026-10-22T22:24:01+02:00",
+  "publisher_guardian_last_run": "2026-10-22T22:38:43+02:00",
   "publisher_guardian_last_action": {
     "category": "kolesarstvo",
     "slot": "2026-10-22|07:35|kolesarstvo",
