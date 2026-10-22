@@ -30,6 +30,37 @@ const CATEGORY_EMPTY_COPY = {
 
 const starterArticles = [
   {
+    "id": "timotej-becan-in-lucija-krkoc-naj-gorska-tekaca-sezone-petra-in-marko-tratnik-naj-trail-te-a33d1aed",
+    "title": "Timotej Bečan in Lucija Krkoč naj gorska tekača sezone, Petra in Marko Tratnik naj trail tekača",
+    "excerpt": "Gore & traili: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Timotej Bečan in Lucija Krkoč naj gorska tekača sezone, Petra in Marko Tratnik naj trail tekača«.",
+    "seoDescription": "Gore & traili: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Timotej Bečan in Lucija Krkoč naj gorska tekača sezone, Petra in Marko T",
+    "content": "**Gore & traili, 22. 10. 2026.** Timotej Bečan in Lucija Krkoč naj gorska tekača sezone, Petra in Marko Tratnik naj trail tekača ATLETSKA ZVEZA SLOVENIJE\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: ATLETSKA ZVEZA SLOVENIJE. Objavljeno: Tue, 17 Dec 2024 08:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiYkFVX3lxTE01MmEwN2U3N1RuOHFKWGhtams1MHFmeVRPSHltVi12T2tzVGM0b3NQSXFQVWh5Sm56Z3JXRkdicmgzdVBKYlFNR0ZvTDg1MFBKVWZ6X2wwRHBPZjU1cTctaXFB?oc=5)\n\n## Dopolnitev vira 2: ATLETSKA ZVEZA SLOVENIJE\n\nEvropsko prvenstvo v gorskih in trail tekih tudi za rekreativne tekače ATLETSKA ZVEZA SLOVENIJE\n\n Vir: ATLETSKA ZVEZA SLOVENIJE. Objavljeno: Mon, 27 Oct 2025 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMimgFBVV95cUxPSktxd3BYR3lST0Rqd2YyUl9uR1RyZmJCR3Q2Y3liVVVobVNOVXNPaVNlZ3VFLVppeW43RTVGM1F2ZHVvd0ZXNk8zZ3BqMXpMZGdYQW40WEZzLVJSWnpwbVYzOUpCcE5LbWdlNmxoNnNCTDdCRVpBTlUzM2Y2MHdHVGNFNl9CZE5WZG1IeTEtUUdGaV9ScEg0Y3Jn?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Gore & traili",
+    "author": "Blog Lab Slovenia Publisher",
+    "status": "published",
+    "heroImage": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/172nd_Slovenian_Mountain_Training_%285229491885%29.jpg/1920px-172nd_Slovenian_Mountain_Training_%285229491885%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "alt": "BOHINJSKA BELA, Slovenia -- Soldiers with U.S. Army Europe's 172nd Infantry Brigade pause during their hike up the mountain at the Slovenian Armed Forces Mountain Training Center 3",
+      "caption": "U.S. Army Europe from Wiesbaden, Germany · Wikimedia Commons · Public domain",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:172nd_Slovenian_Mountain_Training_(5229491885).jpg"
+    },
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "ATLETSKA ZVEZA SLOVENIJE — Timotej Bečan in Lucija Krkoč naj gorska tekača sezone, Petra in Marko Tratnik naj trail tekača - ATLETSKA ZVEZA…",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE01MmEwN2U3N1RuOHFKWGhtams1MHFmeVRPSHltVi12T2tzVGM0b3NQSXFQVWh5Sm56Z3JXRkdicmgzdVBKYlFNR0ZvTDg1MFBKVWZ6X2wwRHBPZjU1cTctaXFB?oc=5"
+      },
+      {
+        "label": "ATLETSKA ZVEZA SLOVENIJE — Evropsko prvenstvo v gorskih in trail tekih tudi za rekreativne tekače - ATLETSKA ZVEZA SLOVENIJE",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPSktxd3BYR3lST0Rqd2YyUl9uR1RyZmJCR3Q2Y3liVVVobVNOVXNPaVNlZ3VFLVppeW43RTVGM1F2ZHVvd0ZXNk8zZ3BqMXpMZGdYQW40WEZzLVJSWnpwbVYzOUpCcE5LbWdlNmxoNnNCTDdCRVpBTlUzM2Y2MHdHVGNFNl9CZE5WZG1IeTEtUUdGaV9ScEg0Y3Jn?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-22T16:29:00+02:00",
+    "updatedAt": "2026-10-22T16:29:00+02:00"
+  },
+
+  {
     "id": "razstava-lepota-po-slovensko-v-celju-na-ogled-dragocena-dediscina-jozeta-karlovska-velikan-c05e0902",
     "title": "Razstava Lepota po slovensko: V Celju na ogled dragocena dediščina Jožeta Karlovška, velikana slovenske…",
     "excerpt": "Dediščina: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Razstava Lepota po slovensko: V Celju na ogled dragocena dediščina Jožeta Karlovška, velikana slovenske…«.",
