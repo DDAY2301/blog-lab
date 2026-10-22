@@ -228,7 +228,10 @@ def run(category: str, scheduled_slot: str = "", dry_run: bool = False) -> int:
     if not story_pools:
         # A category-specific second search is bounded to two different lenses;
         # do not relax editorial QA or recycle existing links to fill a slot.
-        discovered = collect_focused_sources(category, max_items=int(cfg.get("max_source_items", 30)))
+        discovered = collect_focused_sources(
+            category, max_items=int(cfg.get("max_source_items", 30)),
+            cache_dir=os.environ.get("RUNNER_TEMP"),
+        )
         qualified = [
             item for item in discovered
             if automatic_source_usable(item, category, trusted_primary=False)
