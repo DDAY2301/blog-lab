@@ -21,3 +21,9 @@ if (!app.includes("aria-expanded={showAllStories}")) throw new Error("Missing ac
 if (!app.includes("setShowAllStories(false)")) throw new Error("Story expansion does not reset on category change");
 if (!app.includes("<LivePulse />")) throw new Error("Real live event feed missing");
 console.log("ATELIER_V5_VALID");
+
+const galleryV6Css = readFileSync("src/painterly-photo-v6.css", "utf8");
+if (!/\.tourism-site\s*>\s*\.site-header\s+nav\s*\{[^}]*display\s*:\s*flex\s*;/m.test(galleryV6Css)) {
+  throw new Error("Mobile rubric navigation is hidden: V6 must explicitly restore display:flex");
+}
+console.log("MOBILE_NAV_V6_VALID");

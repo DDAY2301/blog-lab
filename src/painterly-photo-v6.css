@@ -81,3 +81,43 @@
       url("/art/painted/sezonsko.jpg") center / cover;
   }
 }
+
+/* V6 mobile navigation: older base CSS hides nav below 680px.
+ * Keep every public rubric reachable without introducing a separate menu script.
+ * The category row scrolls horizontally instead of clipping labels on small screens.
+ */
+@media (max-width:760px) {
+  .tourism-site > .site-header {
+    height:auto;
+    min-height:76px;
+    flex-wrap:wrap;
+    align-content:center;
+    gap:6px 12px;
+    padding:10px 14px 8px;
+  }
+  .tourism-site > .site-header nav {
+    display:flex;
+    order:3;
+    flex:1 0 100%;
+    width:100%;
+    min-width:0;
+    max-width:100%;
+    justify-content:flex-start;
+    gap:3px;
+    padding:0 0 4px;
+    overflow-x:auto;
+    overscroll-behavior-x:contain;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:thin;
+  }
+  .tourism-site > .site-header nav button {
+    flex:0 0 auto;
+    min-height:42px;
+    white-space:nowrap;
+    padding:9px 12px;
+  }
+  .tourism-site > .site-header nav button:focus-visible {
+    outline:2px solid #f2d39d;
+    outline-offset:-3px;
+  }
+}
