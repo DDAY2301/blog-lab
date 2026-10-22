@@ -1,0 +1,21 @@
+{
+  "category": "kolesarstvo",
+  "errors": [
+    "prekratek",
+    "manjka_fotografija"
+  ],
+  "article": {
+    "title": "Ste pripravljeni? Kmalu s kolesom od Ljubljane do Beograda - Dnevnik"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "lead_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPbTd4a05ST3pwTzdCUXRkaU5KZ09ULWZvd2NNVFpUV05EeHZvbTA0QXBGN0Z4Qjg5ZGVJU19iR085eVk4S0FWbWZ4RlpYdjJab2JvX2Z3NWExUlppZUpBbUdoV1J4N2dtdUpNc3NVN1RiSFpMV2FGUkphRlVLanVwVnAyenU4bEdKaWdkdWwxc0JCZk9hMjg5blIzb3h2anZiVUJONHI4Q2w4OW1KU3JnX1VGNEFXRUlrYnc?oc=5",
+      "title": "Ste pripravljeni? Kmalu s kolesom od Ljubljane do Beograda - Dnevnik",
+      "errors": [
+        "prekratek",
+        "manjka_fotografija"
+      ]
+    }
+  ]
+}
