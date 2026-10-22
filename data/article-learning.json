@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-22T16:14:00+02:00",
-  "loop_count": 7046,
+  "updated_at": "2026-10-22T16:21:24+02:00",
+  "loop_count": 7047,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-22T16:13:40+02:00",
+      "last_learning_run": "2026-10-22T16:21:04+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 140669,
-          "last_seen": "2026-10-22T16:13:40+02:00",
+          "seen": 140679,
+          "last_seen": "2026-10-22T16:21:04+02:00",
           "last_title": "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
           "last_provider": "google-news-si",
-          "published": 421743,
+          "published": 421810,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-22T16:13:50+02:00",
+      "last_learning_run": "2026-10-22T16:21:14+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -272,11 +272,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 162414,
-          "last_seen": "2026-10-22T16:13:50+02:00",
+          "seen": 162431,
+          "last_seen": "2026-10-22T16:21:14+02:00",
           "last_title": "Svoboda ali SDS? Tako bi volili Slovenci, če bi bile volitve danes - Metropolitan.si",
           "last_provider": "google-news-si",
-          "published": 465444,
+          "published": 465514,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -388,7 +388,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-22T16:14:00+02:00",
+      "last_learning_run": "2026-10-22T16:21:24+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -477,11 +477,11 @@
         },
         "news.google.com": {
           "score": 2.506,
-          "seen": 183528,
-          "last_seen": "2026-10-22T16:14:00+02:00",
+          "seen": 183553,
+          "last_seen": "2026-10-22T16:21:24+02:00",
           "last_title": "Janša v New Yorku jasno o Ukrajini: Slovenija bo nadaljevala politično, vojaško, humanitarno in finančno pomoč - Najdi.si novice",
           "last_provider": "google-news-si",
-          "published": 306471,
+          "published": 306496,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -662,14 +662,6 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20261022-140833.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek"
-      ],
-      "title": "Slovenija je bela lisa na kolesarskem zemljevidu - Delo.si"
-    },
-    {
       "file": "fallback-failed-20261022-140915.json",
       "category": "kolesarstvo",
       "errors": [
@@ -748,10 +740,19 @@
       "title": "Slovenija je bela lisa na kolesarskem zemljevidu - Delo.si"
     },
     {
+      "file": "fallback-failed-20261022-161335.json",
+      "category": "kolesarstvo",
+      "errors": [
+        "prekratek",
+        "manjka_fotografija"
+      ],
+      "title": "Ste pripravljeni? Kmalu s kolesom od Ljubljane do Beograda - Dnevnik"
+    },
+    {
       "file": "agent-state",
       "category": "kolesarstvo",
       "errors": [
-        "prekratek"
+        "prekratek,manjka_fotografija"
       ]
     },
     {
@@ -764,8 +765,9 @@
     }
   ],
   "failure_summary": {
-    "prekratek": 21,
-    "manjka_fotografija": 14,
+    "prekratek": 20,
+    "manjka_fotografija": 15,
+    "prekratek,manjka_fotografija": 1,
     "manjka_fotografija,ponavljanje": 1
   }
 }
