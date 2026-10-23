@@ -275,24 +275,38 @@ def run(category: str, scheduled_slot: str = "", dry_run: bool = False) -> int:
             {"url": row.get("url", ""), "title": row.get("title", "")}
             for pool in primary_pools for row in pool
         ]
-        discovered = collect_focused_sources(
-            category, max_items=int(cfg.get("max_source_items", 30)),
-            cache_dir=os.environ.get("RUNNER_TEMP"),
-        )
-        qualified = [
-            item for item in discovered
-            if automatic_source_usable(item, category, trusted_primary=False)
-            and learning_source_ok(item, category)
-        ]
-        excluded = processed + tried_urls
-        fresh = unpublished_items(qualified, excluded, limit=int(cfg.get("max_source_items", 30)))
-        extra_pools = _fresh_story_pools(fresh, excluded, category, max_attempts=3)
-        print(
-            f"DISCOVERY_V2_RETRY category={category} candidates={len(discovered)} "
-            f"usable={len(qualified)} fresh={len(fresh)} pools={len(extra_pools)} "
-            f"prior_rejections={len(diagnostics)}"
-        )
-        article, evidence_pool = evaluate(extra_pools, attempt_offset=len(primary_pools))
+        extra_attempts = 0
+        # Two complementary pairs at most. The second pair runs only when the
+        # first found no publishable article; it never bypasses editorial QA.
+        for lens_offset in (0, 1):
+            excluded = processed + tried_urls
+            discovered = collect_focused_sources(
+                category, max_items=int(cfg.get("max_source_items", 30)),
+                cache_dir=os.environ.get("RUNNER_TEMP"),
+                lens_offset=lens_offset,
+            )
+            qualified = [
+                item for item in discovered
+                if automatic_source_usable(item, category, trusted_primary=False)
+                and learning_source_ok(item, category)
+            ]
+            fresh = unpublished_items(qualified, excluded, limit=int(cfg.get("max_source_items", 30)))
+            extra_pools = _fresh_story_pools(fresh, excluded, category, max_attempts=3)
+            print(
+                f"DISCOVERY_V2_RETRY category={category} lens={lens_offset} "
+                f"candidates={len(discovered)} usable={len(qualified)} fresh={len(fresh)} "
+                f"pools={len(extra_pools)} prior_rejections={len(diagnostics)}"
+            )
+            article, evidence_pool = evaluate(
+                extra_pools, attempt_offset=len(primary_pools) + extra_attempts
+            )
+            extra_attempts += len(extra_pools)
+            tried_urls.extend(
+                {"url": row.get("url", ""), "title": row.get("title", "")}
+                for pool in extra_pools for row in pool
+            )
+            if article is not None:
+                break
 
     if article is None and not diagnostics:
         state["last_error"] = "fallback_no_fresh_evidence"
