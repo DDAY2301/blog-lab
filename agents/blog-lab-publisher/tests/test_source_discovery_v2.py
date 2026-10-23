@@ -195,9 +195,11 @@ def test_source_v2_retries_when_primary_has_new_url_but_fails_editorial_qa(monke
     monkeypatch.setattr(fallback, "enabled", lambda *_: True)
     monkeypatch.setattr(fallback, "collect_automatic_sources", lambda *_: [primary])
     calls = []
-    def discovered(*_args, **_kwargs):
-        calls.append("focused")
-        return [primary, focused]
+    def discovered(*_args, lens_offset=0, **_kwargs):
+        calls.append(lens_offset)
+        # The first lens sees only a QA-rejected story; another lens finds
+        # independent evidence without reusing the rejected URL.
+        return [primary] if lens_offset == 0 else [primary, focused]
     monkeypatch.setattr(fallback, "collect_focused_sources", discovered)
     monkeypatch.setattr(fallback, "automatic_source_usable", lambda *_args, **_kwargs: True)
     monkeypatch.setattr(fallback, "learning_source_ok", lambda *_: True)
@@ -217,6 +219,6 @@ def test_source_v2_retries_when_primary_has_new_url_but_fails_editorial_qa(monke
     published = []
     monkeypatch.setattr(fallback, "publish_to_app", lambda _path, article, _name: published.append(article))
     assert fallback.run("dediscina") == 0
-    assert calls == ["focused"]
+    assert calls == [0, 1]
     assert [item["sources"][0]["url"] for item in published] == ["https://fresh.si/focused"]
     assert fallback.load_json(str(fallback.STATE), {})["scheduled_posts_today"] == 1
