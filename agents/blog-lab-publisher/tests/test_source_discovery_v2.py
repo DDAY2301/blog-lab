@@ -222,3 +222,36 @@ def test_source_v2_retries_when_primary_has_new_url_but_fails_editorial_qa(monke
     assert calls == [0, 1]
     assert [item["sources"][0]["url"] for item in published] == ["https://fresh.si/focused"]
     assert fallback.load_json(str(fallback.STATE), {})["scheduled_posts_today"] == 1
+
+
+
+def test_exhausted_search_never_republishes_processed_sources(monkeypatch, tmp_path):
+    monkeypatch.setattr(fallback, "HERE", tmp_path)
+    monkeypatch.setattr(fallback, "BASE", tmp_path)
+    monkeypatch.setattr(fallback, "STATE", tmp_path / "data/agent-state.json")
+    monkeypatch.setattr(fallback, "PROCESSED", tmp_path / "data/processed-items.json")
+    monkeypatch.setattr(fallback, "APP", tmp_path / "src/App.jsx")
+    (tmp_path / "config.yaml").write_text(
+        "agent_name: No Duplicate Test\nmaximum_outputs_per_day: 3\nmax_source_items: 30\n"
+        "min_article_chars: 100\nmax_article_chars: 10000\n",
+        encoding="utf-8",
+    )
+    used = _story("Grad Grad na Goričkem odpira razstavo", "https://source.si/used", fingerprint="old")
+    fallback.atomic_json(str(fallback.PROCESSED), [used])
+    monkeypatch.setattr(fallback, "enabled", lambda *_: True)
+    monkeypatch.setattr(fallback, "collect_automatic_sources", lambda *_: [used])
+    offsets = []
+    def same_used(*_a, lens_offset=0, **_k):
+        offsets.append(lens_offset)
+        return [used]
+    monkeypatch.setattr(fallback, "collect_focused_sources", same_used)
+    monkeypatch.setattr(fallback, "automatic_source_usable", lambda *_a, **_k: True)
+    monkeypatch.setattr(fallback, "learning_source_ok", lambda *_: True)
+    published = []
+    monkeypatch.setattr(fallback, "publish_to_app", lambda *_: published.append(True))
+    assert fallback.run("dediscina") == 0
+    assert offsets == [0, 1]
+    assert published == []
+    state = fallback.load_json(str(fallback.STATE), {})
+    assert state["last_error"] == "fallback_no_fresh_evidence"
+    assert state.get("scheduled_posts_today", 0) == 0
