@@ -1,12 +1,16 @@
 {
-  "updatedAt": "2026-10-23T07:01:32+02:00",
+  "updatedAt": "2026-10-23T07:15:00+02:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
     "Kino Šiška",
     "Gala Hala",
     "Klub K4",
-    "Cirkus Klub"
+    "Cankarjev dom",
+    "MGL",
+    "Ljubljana Castle",
+    "SNG Opera Ljubljana",
+    "Olaii"
   ],
   "sourcesFailed": [],
   "items": [
@@ -18,7 +22,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.ljubljanskigrad.si/en/castle-events/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-20T07:18:00+02:00",
+      "lastCheckedAt": "2026-10-23T07:15:00+02:00",
       "id": "ehosistem-through-2026-11-15",
       "title": "Aleksandra Atanasovski and Maja Licul: Ehosistem",
       "url": "https://www.ljubljanskigrad.si/en/castle-events/",
@@ -37,7 +41,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.ljubljanskigrad.si/en/castle-events/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-20T07:18:00+02:00",
+      "lastCheckedAt": "2026-10-23T07:15:00+02:00",
       "id": "illustrations-in-motion-through-2027-01-10",
       "title": "Illustrations in Motion",
       "url": "https://www.ljubljanskigrad.si/en/castle-events/",
@@ -64,7 +68,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.visitljubljana.com/en/visitors/events/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-19T07:00:00+02:00",
+      "lastCheckedAt": "2026-10-23T07:15:00+02:00",
       "description": "The seasonal corn labyrinth in Stanežiče is listed daily from 09:00 to 20:00; outdoor operation may depend on conditions, so recheck before travel."
     },
     {
@@ -83,7 +87,7 @@
       "accessibility": null,
       "ticketUrl": "https://vstopnice.cd-cc.si/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-19T07:00:00+02:00",
+      "lastCheckedAt": "2026-10-23T07:15:00+02:00",
       "description": "The exhibition marking the centenary of Srečko Kosovel’s death is open at Cankarjev dom; admission is €8. Check the venue for daily gallery hours."
     },
     {
@@ -94,7 +98,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.ljubljanskigrad.si/en/castle-events/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-18T07:22:00+02:00",
+      "lastCheckedAt": "2026-10-23T07:15:00+02:00",
       "id": "stretch-3789-from-2026-10-15",
       "title": "Stretch 3789",
       "url": "https://www.ljubljanskigrad.si/en/castle-events/",
@@ -121,7 +125,7 @@
       "accessibility": null,
       "ticketUrl": null,
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-22T07:00:00+02:00",
+      "lastCheckedAt": "2026-10-23T07:15:00+02:00",
       "description": "Ljubljana’s outdoor food market is listed at Pogačarjev trg from 10:00 to 21:00. Entry is free; the market is weather-dependent, so recheck before travelling."
     },
     {
@@ -132,7 +136,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.kinosiska.si/en/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-22T07:00:00+02:00",
+      "lastCheckedAt": "2026-10-23T07:15:00+02:00",
       "id": "perceptions-of-music-2026-10-23",
       "title": "Perceptions of Music",
       "url": "https://www.kinosiska.si/en/",
@@ -142,6 +146,25 @@
       "startAt": "2026-10-23T16:00:00+02:00",
       "endAt": null,
       "description": "Kino Šiška lists Perceptions of Music in Komuna Hall at 16:00 with free admission. Check the official programme before travelling."
+    },
+    {
+      "id": "river-of-seven-names-2026-10-23",
+      "title": "The River of Seven Names",
+      "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/reka-sedmerih-imen",
+      "source": "Visit Ljubljana",
+      "type": "Outdoor performance · urban legend",
+      "place": "Šuštarjevo nabrežje by Plečnik’s sluice gate · Ljubljana",
+      "startAt": "2026-10-23T19:30:00+02:00",
+      "endAt": null,
+      "price": "Free",
+      "languages": ["Slovenian"],
+      "touristFriendly": true,
+      "familyFriendly": true,
+      "accessibility": null,
+      "ticketUrl": null,
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-23T07:15:00+02:00",
+      "description": "Artists and visitors recreate an imaginative urban legend about the Ljubljanica at 19:30 beside Plečnik’s sluice gate. Admission is free; the programme is presented in Slovenian."
     },
     {
       "id": "romantic-souls-2026-10-23",
@@ -159,7 +182,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.mgl.si/en/schedule/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-22T07:00:00+02:00",
+      "lastCheckedAt": "2026-10-23T07:15:00+02:00",
       "description": "Romantic Souls is confirmed at MGL Main Stage · Ljubljana. Check the official source for any late programme or ticket changes."
     },
     {
@@ -180,7 +203,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.cd-cc.si/en/culture/music/vocal-music-concert-marking-centennial-death-srecko-kosovel",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-22T07:00:00+02:00",
+      "lastCheckedAt": "2026-10-23T07:15:00+02:00",
       "description": "Four Slovenian choirs perform settings of Srečko Kosovel’s poetry with Slovenian recitation at 19:30. Standard admission is €15, with a €12 concession."
     },
     {
@@ -199,7 +222,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.ljubljanskigrad.si/en/castle-events/the-ljubljana-castle-jazz-club-2/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-22T07:00:00+02:00",
+      "lastCheckedAt": "2026-10-23T07:15:00+02:00",
       "description": "Seydou Yoni Kouyate performs in the Rock Hall at 20:00; the Jazz Club opens at 19:00. Admission is €11 and includes a return funicular journey."
     },
     {
@@ -218,8 +241,27 @@
       "accessibility": null,
       "ticketUrl": "https://www.mgl.si/en/schedule/",
       "status": "sold_out",
-      "lastCheckedAt": "2026-10-22T07:00:00+02:00",
+      "lastCheckedAt": "2026-10-23T07:15:00+02:00",
       "description": "Prima Facie is scheduled at MGL Small Stage · Ljubljana; the official venue currently marks this performance as sold out."
+    },
+    {
+      "id": "umek-5-0-incompatible-2026-10-23",
+      "title": "UMEK 5.0 – (IN)COMPATIBLE",
+      "url": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/umek-5-0-incompatible",
+      "source": "Visit Ljubljana / Olaii",
+      "type": "Concert and club night · electronic",
+      "place": "Gospodarsko razstavišče · Dunajska cesta 18, Ljubljana",
+      "startAt": "2026-10-23T20:00:00+02:00",
+      "endAt": "2026-10-24T06:00:00+02:00",
+      "price": "€60 party / €70 full experience / €150 VIP; sold out",
+      "languages": [],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": null,
+      "ticketUrl": "https://olaii.com/event/9675/umek-5-0-ne-zdruzljivo/",
+      "status": "sold_out",
+      "lastCheckedAt": "2026-10-23T07:15:00+02:00",
+      "description": "UMEK’s birthday concert and two-arena electronic party runs from 20:00 until 06:00 at Gospodarsko razstavišče. The authorised ticket seller marks every listed ticket category as sold out."
     },
     {
       "price": null,
@@ -228,7 +270,7 @@
       "familyFriendly": false,
       "accessibility": null,
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-22T07:00:00+02:00",
+      "lastCheckedAt": "2026-10-23T07:15:00+02:00",
       "endAt": null,
       "id": "planet-pink-modular-clockwork-voltage-2026-10-23",
       "title": "Planet Pink Goes Modular Clockwork Voltage 2026",
@@ -250,7 +292,7 @@
       "endAt": null,
       "id": "event-40-balans-si-album-release-koncert-gala-hala",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-22T07:00:00+02:00",
+      "lastCheckedAt": "2026-10-23T07:15:00+02:00",
       "price": "€15 advance / €20 on the day",
       "languages": [],
       "touristFriendly": null,
@@ -268,7 +310,7 @@
       "startAt": "2026-10-23T23:00:00+02:00",
       "endAt": "",
       "id": "event-53-forestdelic-label-night-klub-k4",
-      "lastCheckedAt": "2026-10-22T07:00:00+02:00",
+      "lastCheckedAt": "2026-10-23T07:15:00+02:00",
       "price": null,
       "languages": [],
       "touristFriendly": null,
@@ -296,6 +338,44 @@
       "startAt": "2026-10-24T17:00:00+02:00",
       "ticketUrl": "https://www.ljubljanskigrad.si/sl/dogodki/",
       "description": "Storyteller Špela Frlic presents Calvin’s Fairy Tales from 17:00 to 17:45. The event is designed for children and families."
+    },
+    {
+      "id": "cirkuliranje-bs3-2026-10-24",
+      "title": "Cirkuliranje: Circus Performances and Skills Workshops",
+      "url": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/cirkuliranje-culture-at-your-doorstep",
+      "source": "Visit Ljubljana / Zavod Bufeto",
+      "type": "Circus · family workshop",
+      "place": "BS3 neighbourhood by Reboljeva ulica · Ljubljana",
+      "startAt": "2026-10-24T11:30:00+02:00",
+      "endAt": null,
+      "price": "Free",
+      "languages": [],
+      "touristFriendly": true,
+      "familyFriendly": true,
+      "accessibility": null,
+      "ticketUrl": null,
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-23T07:15:00+02:00",
+      "description": "Free circus performances and participatory skills workshops begin at 11:30 in BS3. The outdoor event is cancelled in bad weather, so check conditions before travelling."
+    },
+    {
+      "id": "river-of-seven-names-2026-10-24",
+      "title": "The River of Seven Names",
+      "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/reka-sedmerih-imen",
+      "source": "Visit Ljubljana",
+      "type": "Outdoor performance · urban legend",
+      "place": "Šuštarjevo nabrežje by Plečnik’s sluice gate · Ljubljana",
+      "startAt": "2026-10-24T19:30:00+02:00",
+      "endAt": null,
+      "price": "Free",
+      "languages": ["Slovenian"],
+      "touristFriendly": true,
+      "familyFriendly": true,
+      "accessibility": null,
+      "ticketUrl": null,
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-23T07:15:00+02:00",
+      "description": "The second free performance of the Ljubljanica urban legend starts at 19:30 beside Plečnik’s sluice gate. The programme is presented in Slovenian."
     },
     {
       "price": null,
@@ -391,6 +471,44 @@
       "startAt": "2026-10-25T18:30:00+01:00",
       "ticketUrl": "https://www.ljubljanskigrad.si/sl/dogodki/",
       "description": "A candlelight tribute to Adele begins at 18:30 in Hribar Hall. Check the linked organiser for ticket availability."
+    },
+    {
+      "id": "cirkuliranje-bs3-2026-10-25",
+      "title": "Cirkuliranje: Circus Squared and Bubble Show",
+      "url": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/cirkuliranje-culture-at-your-doorstep",
+      "source": "Visit Ljubljana / Zavod Bufeto",
+      "type": "Circus · family performance",
+      "place": "BS3 neighbourhood by Reboljeva ulica · Ljubljana",
+      "startAt": "2026-10-25T11:30:00+01:00",
+      "endAt": null,
+      "price": "Free",
+      "languages": [],
+      "touristFriendly": true,
+      "familyFriendly": true,
+      "accessibility": null,
+      "ticketUrl": null,
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-23T07:15:00+02:00",
+      "description": "A free circus performance and interactive bubble show begin at 11:30 in BS3. The outdoor programme is cancelled in bad weather."
+    },
+    {
+      "id": "kazimirs-colours-rossini-cards-2026-10-25",
+      "title": "Kazimir’s Colours / Rossini Cards",
+      "url": "https://www.opera.si/en/programme/event/ostalo/rossini-cards",
+      "source": "SNG Opera and Ballet Ljubljana",
+      "type": "Ballet · double bill",
+      "place": "SNG Opera and Ballet Ljubljana",
+      "startAt": "2026-10-25T18:00:00+01:00",
+      "endAt": null,
+      "price": null,
+      "languages": [],
+      "touristFriendly": true,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://opera.mojekarte.si/en/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-23T07:15:00+02:00",
+      "description": "SNG Opera presents Mauro Bigonzetti’s ballet double bill at 18:00. The official programme confirms the performance; check the authorised box office for current prices and availability."
     },
     {
       "price": null,
@@ -585,6 +703,25 @@
       "description": "Gala Hala’s traditional Halloween party starts at 22:00 with a 1980s-focused music programme. Entry costs €10 in costume or €13 without costume."
     },
     {
+      "id": "cirkuliranje-kodeljevo-2026-10-31",
+      "title": "Cirkuliranje: Circus Performances and Skills Workshops",
+      "url": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/cirkuliranje-culture-at-your-doorstep",
+      "source": "Visit Ljubljana / Zavod Bufeto",
+      "type": "Circus · family workshop",
+      "place": "Park Kodeljevo · Ljubljana",
+      "startAt": "2026-10-31T11:30:00+01:00",
+      "endAt": null,
+      "price": "Free",
+      "languages": [],
+      "touristFriendly": true,
+      "familyFriendly": true,
+      "accessibility": null,
+      "ticketUrl": null,
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-23T07:15:00+02:00",
+      "description": "Free circus performances and skills workshops begin at 11:30 in Park Kodeljevo. The outdoor event is cancelled in bad weather."
+    },
+    {
       "id": "november-gourmet-ljubljana-2026",
       "title": "November Gourmet Ljubljana",
       "url": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/november-gourmet-ljubljana",
@@ -623,14 +760,42 @@
       "description": "US groups Codefendants and Jakob's Castle perform at Gala Hala at 20:00. The official listing confirms the date, time and venue; price and accessibility details were not published."
     },
     {
+      "id": "cirkuliranje-kodeljevo-2026-11-01",
+      "title": "Cirkuliranje: Buffetto the Cyclist",
+      "url": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/cirkuliranje-culture-at-your-doorstep",
+      "source": "Visit Ljubljana / Zavod Bufeto",
+      "type": "Circus · family clown show",
+      "place": "Park Kodeljevo · Ljubljana",
+      "startAt": "2026-11-01T11:30:00+01:00",
+      "endAt": null,
+      "price": "Free",
+      "languages": [],
+      "touristFriendly": true,
+      "familyFriendly": true,
+      "accessibility": null,
+      "ticketUrl": null,
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-23T07:15:00+02:00",
+      "description": "Zavod Bufeto presents a free interactive clown show at 11:30 in Park Kodeljevo. The outdoor event is cancelled in bad weather."
+    },
+    {
       "title": "WAVE RIDERS!",
-      "url": "https://www.galahala.com/",
+      "url": "https://www.galahala.com/en/program/wave-riders-27/34774/",
       "source": "Gala Hala",
-      "type": "Koncert · Metelkova",
+      "type": "Club night · eclectic electronic",
       "place": "Gala Hala · AKC Metelkova",
       "startAt": "2026-11-06T22:00:00+01:00",
-      "endAt": "",
-      "id": "event-33-wave-riders"
+      "endAt": null,
+      "id": "event-33-wave-riders",
+      "price": "€5 until 23:00 / €8 afterwards",
+      "languages": [],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": null,
+      "ticketUrl": "https://www.galahala.com/en/program/wave-riders-27/34774/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-23T07:15:00+02:00",
+      "description": "Torulsson and Skinar host an eclectic electronic club night from 22:00. Admission costs €5 until 23:00 and €8 afterwards."
     }
   ]
 }
