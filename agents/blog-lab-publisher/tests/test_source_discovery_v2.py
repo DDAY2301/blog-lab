@@ -141,3 +141,82 @@ def test_fallback_searches_new_lens_after_used_baseline(monkeypatch, tmp_path):
     assert len(published) == 1
     assert published[0]["sources"][0]["url"] == fresh["url"]
     assert old["url"] != published[0]["sources"][0]["url"]
+
+
+
+def test_second_search_lens_can_change_without_waiting_next_day():
+    day = date(2026, 10, 23)
+    first = discovery.focused_queries("dediscina", day=day)
+    second = discovery.focused_queries("dediscina", day=day, offset=1)
+    assert first != second
+    assert all("Slovenija" in query for query in second)
+
+
+def test_same_title_mirrored_across_unrelated_urls_is_one_evidence_candidate():
+    story_title = "Slovenski muzej predstavlja novo arheološko razstavo"
+    sources = [
+        _story(story_title, "https://source-one.si/muzej"),
+        _story(story_title, "https://source-two.si/muzej"),
+        _story("Ptuj odpira prenovljene muzejske prostore", "https://source-three.si/ptuj"),
+    ]
+    kept = discovery.unpublished_items(sources, [])
+    assert [x["url"] for x in kept] == [
+        "https://source-one.si/muzej", "https://source-three.si/ptuj"
+    ]
+
+
+def test_category_is_grounded_in_headline_or_summary_not_search_wrapper():
+    item = {
+        "title": "Ponudba novih telefonov v trgovini",
+        "summary": "Prodajalna je predstavila mobilne telefone in dodatke.",
+        "source_name": "Iskanje: Slovenija kulturna dediščina gradovi muzeji",
+        "url": "https://unrelated.si/slovenija/dediscina/telefoni",
+    }
+    assert fallback._category_relevant(item, "dediscina") is False
+
+
+def test_source_v2_retries_when_primary_has_new_url_but_fails_editorial_qa(monkeypatch, tmp_path):
+    monkeypatch.setattr(fallback, "HERE", tmp_path)
+    monkeypatch.setattr(fallback, "BASE", tmp_path)
+    monkeypatch.setattr(fallback, "STATE", tmp_path / "data/agent-state.json")
+    monkeypatch.setattr(fallback, "PROCESSED", tmp_path / "data/processed-items.json")
+    monkeypatch.setattr(fallback, "APP", tmp_path / "src/App.jsx")
+    (tmp_path / "config.yaml").write_text(
+        "agent_name: Discovery QA Test\nmaximum_outputs_per_day: 3\nmax_source_items: 30\n"
+        "min_article_chars: 100\nmax_article_chars: 10000\n",
+        encoding="utf-8",
+    )
+    primary = _story(
+        "Grad Grad na Goričkem pripravlja prenovo", "https://source.si/primary", fingerprint="primary"
+    )
+    focused = _story(
+        "Mariborski muzej odpira zgodovinsko razstavo", "https://fresh.si/focused", fingerprint="fresh"
+    )
+    monkeypatch.setattr(fallback, "enabled", lambda *_: True)
+    monkeypatch.setattr(fallback, "collect_automatic_sources", lambda *_: [primary])
+    calls = []
+    def discovered(*_args, **_kwargs):
+        calls.append("focused")
+        return [primary, focused]
+    monkeypatch.setattr(fallback, "collect_focused_sources", discovered)
+    monkeypatch.setattr(fallback, "automatic_source_usable", lambda *_args, **_kwargs: True)
+    monkeypatch.setattr(fallback, "learning_source_ok", lambda *_: True)
+    monkeypatch.setattr(fallback, "rank_sources_with_learning", lambda xs, *_: xs)
+    monkeypatch.setattr(fallback, "existing_titles", lambda: set())
+    monkeypatch.setattr(fallback, "build_digest", lambda pool, *_: {
+        "title": pool[0]["title"],
+        "content": "Zapis iz preverljivih lokalnih virov.",
+        "sources": [{"label": "Viri", "url": pool[0]["url"]}],
+    })
+    monkeypatch.setattr(fallback, "prepare_article_candidate", lambda article, *_: article)
+    monkeypatch.setattr(fallback, "validate", lambda article, *_: (
+        ["manjka_fotografija"] if article["title"] == primary["title"] else []
+    ))
+    monkeypatch.setattr(fallback, "validate_automatic_story", lambda *_: [])
+    monkeypatch.setattr(fallback, "optimize_commons_hero", lambda article, *_: article)
+    published = []
+    monkeypatch.setattr(fallback, "publish_to_app", lambda _path, article, _name: published.append(article))
+    assert fallback.run("dediscina") == 0
+    assert calls == ["focused"]
+    assert [item["sources"][0]["url"] for item in published] == ["https://fresh.si/focused"]
+    assert fallback.load_json(str(fallback.STATE), {})["scheduled_posts_today"] == 1
