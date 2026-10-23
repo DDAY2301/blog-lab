@@ -1,16 +1,12 @@
 {
-  "updatedAt": "2026-10-23T07:15:00+02:00",
+  "updatedAt": "2026-10-23T07:08:02+02:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
     "Kino Šiška",
     "Gala Hala",
     "Klub K4",
-    "Cankarjev dom",
-    "MGL",
-    "Ljubljana Castle",
-    "SNG Opera Ljubljana",
-    "Olaii"
+    "Cirkus Klub"
   ],
   "sourcesFailed": [],
   "items": [
@@ -157,7 +153,9 @@
       "startAt": "2026-10-23T19:30:00+02:00",
       "endAt": null,
       "price": "Free",
-      "languages": ["Slovenian"],
+      "languages": [
+        "Slovenian"
+      ],
       "touristFriendly": true,
       "familyFriendly": true,
       "accessibility": null,
@@ -321,25 +319,6 @@
       "description": "FORESTDELIC / LABEL NIGHT / KLUB K4 is confirmed at Klub K4 · Ljubljana. Check the official source for late programme or ticket changes."
     },
     {
-      "price": null,
-      "languages": [],
-      "touristFriendly": true,
-      "familyFriendly": true,
-      "accessibility": null,
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
-      "endAt": "2026-10-24T17:45:00+02:00",
-      "id": "calvins-fairy-tales-2026-10-24",
-      "title": "Calvin’s Fairy Tales",
-      "url": "https://www.ljubljanskigrad.si/sl/dogodki/",
-      "source": "Ljubljana Castle",
-      "type": "Children · storytelling",
-      "place": "Castle Theatre · Ljubljana Castle",
-      "startAt": "2026-10-24T17:00:00+02:00",
-      "ticketUrl": "https://www.ljubljanskigrad.si/sl/dogodki/",
-      "description": "Storyteller Špela Frlic presents Calvin’s Fairy Tales from 17:00 to 17:45. The event is designed for children and families."
-    },
-    {
       "id": "cirkuliranje-bs3-2026-10-24",
       "title": "Cirkuliranje: Circus Performances and Skills Workshops",
       "url": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/cirkuliranje-culture-at-your-doorstep",
@@ -359,6 +338,25 @@
       "description": "Free circus performances and participatory skills workshops begin at 11:30 in BS3. The outdoor event is cancelled in bad weather, so check conditions before travelling."
     },
     {
+      "price": null,
+      "languages": [],
+      "touristFriendly": true,
+      "familyFriendly": true,
+      "accessibility": null,
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
+      "endAt": "2026-10-24T17:45:00+02:00",
+      "id": "calvins-fairy-tales-2026-10-24",
+      "title": "Calvin’s Fairy Tales",
+      "url": "https://www.ljubljanskigrad.si/sl/dogodki/",
+      "source": "Ljubljana Castle",
+      "type": "Children · storytelling",
+      "place": "Castle Theatre · Ljubljana Castle",
+      "startAt": "2026-10-24T17:00:00+02:00",
+      "ticketUrl": "https://www.ljubljanskigrad.si/sl/dogodki/",
+      "description": "Storyteller Špela Frlic presents Calvin’s Fairy Tales from 17:00 to 17:45. The event is designed for children and families."
+    },
+    {
       "id": "river-of-seven-names-2026-10-24",
       "title": "The River of Seven Names",
       "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/reka-sedmerih-imen",
@@ -368,7 +366,9 @@
       "startAt": "2026-10-24T19:30:00+02:00",
       "endAt": null,
       "price": "Free",
-      "languages": ["Slovenian"],
+      "languages": [
+        "Slovenian"
+      ],
       "touristFriendly": true,
       "familyFriendly": true,
       "accessibility": null,
@@ -454,25 +454,6 @@
       "description": "The weekly antiques and vintage market runs along Breg from 08:00 to 15:00. Admission is free and no ticket is required."
     },
     {
-      "price": null,
-      "languages": [],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": null,
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
-      "endAt": null,
-      "id": "candlelight-adele-2026-10-25",
-      "title": "Candlelight: Tribute to Adele",
-      "url": "https://www.ljubljanskigrad.si/sl/dogodki/",
-      "source": "Ljubljana Castle",
-      "type": "Concert · candlelight",
-      "place": "Hribar Hall · Ljubljana Castle",
-      "startAt": "2026-10-25T18:30:00+01:00",
-      "ticketUrl": "https://www.ljubljanskigrad.si/sl/dogodki/",
-      "description": "A candlelight tribute to Adele begins at 18:30 in Hribar Hall. Check the linked organiser for ticket availability."
-    },
-    {
       "id": "cirkuliranje-bs3-2026-10-25",
       "title": "Cirkuliranje: Circus Squared and Bubble Show",
       "url": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/cirkuliranje-culture-at-your-doorstep",
@@ -509,6 +490,25 @@
       "status": "confirmed",
       "lastCheckedAt": "2026-10-23T07:15:00+02:00",
       "description": "SNG Opera presents Mauro Bigonzetti’s ballet double bill at 18:00. The official programme confirms the performance; check the authorised box office for current prices and availability."
+    },
+    {
+      "price": null,
+      "languages": [],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": null,
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
+      "endAt": null,
+      "id": "candlelight-adele-2026-10-25",
+      "title": "Candlelight: Tribute to Adele",
+      "url": "https://www.ljubljanskigrad.si/sl/dogodki/",
+      "source": "Ljubljana Castle",
+      "type": "Concert · candlelight",
+      "place": "Hribar Hall · Ljubljana Castle",
+      "startAt": "2026-10-25T18:30:00+01:00",
+      "ticketUrl": "https://www.ljubljanskigrad.si/sl/dogodki/",
+      "description": "A candlelight tribute to Adele begins at 18:30 in Hribar Hall. Check the linked organiser for ticket availability."
     },
     {
       "price": null,
@@ -684,25 +684,6 @@
       "description": "Delta Riff and Kresnik headline the Castle Jazz Club’s Halloween night at 20:00. The venue opens at 19:00 and the concert ticket includes a return funicular journey."
     },
     {
-      "title": "HALLOWEEN: BRIGHT SIDE OF THE 80’S @ Gala hala",
-      "url": "https://www.galahala.com/program/halloween-bright-side-of-the-80s-gala-hala/34710/",
-      "source": "Gala Hala",
-      "type": "Nightlife · 1980s party",
-      "place": "Gala Hala · AKC Metelkova",
-      "startAt": "2026-10-31T22:00:00+01:00",
-      "endAt": null,
-      "id": "halloween-bright-side-of-the-80s-2026-10-31",
-      "price": "€10 in costume / €13 without costume",
-      "languages": [],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": null,
-      "ticketUrl": "https://www.galahala.com/program/halloween-bright-side-of-the-80s-gala-hala/34710/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-18T07:22:00+02:00",
-      "description": "Gala Hala’s traditional Halloween party starts at 22:00 with a 1980s-focused music programme. Entry costs €10 in costume or €13 without costume."
-    },
-    {
       "id": "cirkuliranje-kodeljevo-2026-10-31",
       "title": "Cirkuliranje: Circus Performances and Skills Workshops",
       "url": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/cirkuliranje-culture-at-your-doorstep",
@@ -720,6 +701,25 @@
       "status": "confirmed",
       "lastCheckedAt": "2026-10-23T07:15:00+02:00",
       "description": "Free circus performances and skills workshops begin at 11:30 in Park Kodeljevo. The outdoor event is cancelled in bad weather."
+    },
+    {
+      "title": "HALLOWEEN: BRIGHT SIDE OF THE 80’S @ Gala hala",
+      "url": "https://www.galahala.com/program/halloween-bright-side-of-the-80s-gala-hala/34710/",
+      "source": "Gala Hala",
+      "type": "Nightlife · 1980s party",
+      "place": "Gala Hala · AKC Metelkova",
+      "startAt": "2026-10-31T22:00:00+01:00",
+      "endAt": null,
+      "id": "halloween-bright-side-of-the-80s-2026-10-31",
+      "price": "€10 in costume / €13 without costume",
+      "languages": [],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": null,
+      "ticketUrl": "https://www.galahala.com/program/halloween-bright-side-of-the-80s-gala-hala/34710/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-18T07:22:00+02:00",
+      "description": "Gala Hala’s traditional Halloween party starts at 22:00 with a 1980s-focused music programme. Entry costs €10 in costume or €13 without costume."
     },
     {
       "id": "november-gourmet-ljubljana-2026",
@@ -741,25 +741,6 @@
       "description": "The month-long culinary festival begins on 1 November across Ljubljana, with individual tastings, menus and workshops announced separately. Prices and accessibility vary by participating venue."
     },
     {
-      "title": "CODEFENDANTS (ZDA) + JAKOB'S CASTLE @ Gala hala",
-      "url": "https://www.galahala.com/en/program/codefendants/33559/",
-      "source": "Gala Hala",
-      "type": "Koncert · Metelkova",
-      "place": "Gala Hala · AKC Metelkova",
-      "startAt": "2026-11-03T20:00:00+01:00",
-      "endAt": null,
-      "id": "event-37-codefendants-zda-jakob-s-castle-gala-hala",
-      "price": null,
-      "languages": [],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": null,
-      "ticketUrl": "https://www.galahala.com/en/program/codefendants/33559/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-21T07:05:31+02:00",
-      "description": "US groups Codefendants and Jakob's Castle perform at Gala Hala at 20:00. The official listing confirms the date, time and venue; price and accessibility details were not published."
-    },
-    {
       "id": "cirkuliranje-kodeljevo-2026-11-01",
       "title": "Cirkuliranje: Buffetto the Cyclist",
       "url": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/cirkuliranje-culture-at-your-doorstep",
@@ -777,6 +758,25 @@
       "status": "confirmed",
       "lastCheckedAt": "2026-10-23T07:15:00+02:00",
       "description": "Zavod Bufeto presents a free interactive clown show at 11:30 in Park Kodeljevo. The outdoor event is cancelled in bad weather."
+    },
+    {
+      "title": "CODEFENDANTS (ZDA) + JAKOB'S CASTLE @ Gala hala",
+      "url": "https://www.galahala.com/en/program/codefendants/33559/",
+      "source": "Gala Hala",
+      "type": "Koncert · Metelkova",
+      "place": "Gala Hala · AKC Metelkova",
+      "startAt": "2026-11-03T20:00:00+01:00",
+      "endAt": null,
+      "id": "event-37-codefendants-zda-jakob-s-castle-gala-hala",
+      "price": null,
+      "languages": [],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": null,
+      "ticketUrl": "https://www.galahala.com/en/program/codefendants/33559/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-21T07:05:31+02:00",
+      "description": "US groups Codefendants and Jakob's Castle perform at Gala Hala at 20:00. The official listing confirms the date, time and venue; price and accessibility details were not published."
     },
     {
       "title": "WAVE RIDERS!",
