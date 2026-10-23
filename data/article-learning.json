@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-23T16:31:50+02:00",
-  "loop_count": 7331,
+  "updated_at": "2026-10-23T16:33:24+02:00",
+  "loop_count": 7332,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-23T16:31:30+02:00",
+      "last_learning_run": "2026-10-23T16:32:58+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 143485,
-          "last_seen": "2026-10-23T16:31:30+02:00",
+          "seen": 143495,
+          "last_seen": "2026-10-23T16:32:58+02:00",
           "last_title": "Slovenska blamaža na igrah! Zakaj sploh tekmujemo, če je šport pri nas umrl - Ekipa",
           "last_provider": "google-news-si",
-          "published": 440270,
+          "published": 440335,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-23T16:31:40+02:00",
+      "last_learning_run": "2026-10-23T16:33:08+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -272,11 +272,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 166770,
-          "last_seen": "2026-10-23T16:31:40+02:00",
-          "last_title": "Protestnik, ki je postal predsednik: Stevanović nekoč glas anticepilcev, danes pa enfant terrible, ki je vse postavil na glavo - Metropolitan.si",
+          "seen": 166786,
+          "last_seen": "2026-10-23T16:33:08+02:00",
+          "last_title": "Janša ali Golob? Anketa je pokazala, komu po uporu v Novem mestu zaupa ljudstvo - Žurnal24",
           "last_provider": "google-news-si",
-          "published": 485394,
+          "published": 485464,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -388,7 +388,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-23T16:31:50+02:00",
+      "last_learning_run": "2026-10-23T16:33:24+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -477,11 +477,11 @@
         },
         "news.google.com": {
           "score": 2.506,
-          "seen": 190223,
-          "last_seen": "2026-10-23T16:31:50+02:00",
+          "seen": 190247,
+          "last_seen": "2026-10-23T16:33:24+02:00",
           "last_title": "Ko so bile ZDA stare toliko kot danes Slovenija, so bile na robu razpada - Zanima.me",
           "last_provider": "google-news-si",
-          "published": 313596,
+          "published": 313621,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
