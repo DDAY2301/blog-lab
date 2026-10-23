@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-23T22:54:29+02:00",
-  "loop_count": 7476,
+  "updated_at": "2026-10-23T22:55:22+02:00",
+  "loop_count": 7477,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-23T22:54:07+02:00",
+      "last_learning_run": "2026-10-23T22:54:56+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 144943,
-          "last_seen": "2026-10-23T22:54:07+02:00",
+          "seen": 144954,
+          "last_seen": "2026-10-23T22:54:56+02:00",
           "last_title": "Slovenska blamaža na igrah! Zakaj sploh tekmujemo, če je šport pri nas umrl - Ekipa",
           "last_provider": "google-news-si",
-          "published": 449695,
+          "published": 449760,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-23T22:54:18+02:00",
+      "last_learning_run": "2026-10-23T22:55:10+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -272,11 +272,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 169138,
-          "last_seen": "2026-10-23T22:54:18+02:00",
+          "seen": 169155,
+          "last_seen": "2026-10-23T22:55:10+02:00",
           "last_title": "Janša ali Golob? Anketa je pokazala, komu po uporu v Novem mestu zaupa ljudstvo - Žurnal24",
           "last_provider": "google-news-si",
-          "published": 495544,
+          "published": 495614,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -395,7 +395,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-23T22:54:29+02:00",
+      "last_learning_run": "2026-10-23T22:55:22+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -453,9 +453,9 @@
           "last_provider": "bing-web"
         },
         "britannica.com": {
-          "score": 4.9,
-          "seen": 20,
-          "last_seen": "2026-10-20T08:54:33+02:00",
+          "score": 5.145,
+          "seen": 21,
+          "last_seen": "2026-10-23T22:55:22+02:00",
           "last_title": "Slovenia | History, Geography, & People | Britannica",
           "last_provider": "bing-web"
         },
@@ -484,11 +484,11 @@
         },
         "news.google.com": {
           "score": 2.506,
-          "seen": 193561,
-          "last_seen": "2026-10-23T22:54:29+02:00",
-          "last_title": "Kajzer: zunanjepolitična strategija mora odražati aktualno geopolitično okolje - 24ur.com",
+          "seen": 193574,
+          "last_seen": "2026-10-23T22:55:22+02:00",
+          "last_title": "(AKTUALNO) Danes druga runda narodne borbe v ZD Slovenska Bistrica: Vrsta za vpis ginekologa, potem, ko je prejšnji ušel v Avstrijo! - Demokracija",
           "last_provider": "google-news-si",
-          "published": 317221,
+          "published": 317246,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -583,12 +583,18 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 24,
+      "current_source_count": 15,
       "example_titles": {
+        "britannica.com": [
+          "Slovenia | History, Geography, & People | Britannica"
+        ],
         "news.google.com": [
-          "(AKTUALNO) Še danes v prodaji 36. št. revije Demokracija: 30 let Demokracije, ki udejanja pravico vedeti več! Načrt za demografsko obnovo sl",
-          "Janša napoveduje velike spremembe: Čez 15 let šol, kot jih poznamo danes, morda ne bo več! - Najdi.si novice",
-          "(AKTUALNO) Varuhinja človekovih pravic Simona Drenik Bavdek: Pravica do dostojnega pokopa temeljna človekova pravica - Demokracija"
+          "Kako svet vidi Slovenijo danes in kako je postala tako vroča evropska destinacija - Dnevnik",
+          "Pavel Rupar poziva na popoldanski shod z začetkom pred RTV Slovenija, policija pripravljena - Info360",
+          "Slovenska glasbenica ostro nad aktualno oblast: \"Ne vem, ali naj temu rečem ironija, paradoks ali vzporedni svet\" - Večer"
+        ],
+        "worldatlas.com": [
+          "Slovenia Maps & Facts"
         ]
       }
     }
