@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-23T07:53:36+02:00",
-  "loop_count": 7185,
+  "updated_at": "2026-10-23T07:54:29+02:00",
+  "loop_count": 7186,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-23T07:53:17+02:00",
+      "last_learning_run": "2026-10-23T07:54:11+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 142057,
-          "last_seen": "2026-10-23T07:53:17+02:00",
-          "last_title": "Sin znanih slovenskih športnikov navdušuje na SP, danes pa nastopa proti Sloveniji! - Siol.net",
+          "seen": 142067,
+          "last_seen": "2026-10-23T07:54:11+02:00",
+          "last_title": "Slovenska blamaža na igrah! Zakaj sploh tekmujemo, če je šport pri nas umrl - Ekipa",
           "last_provider": "google-news-si",
-          "published": 430780,
+          "published": 430845,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -231,13 +231,13 @@
       "example_titles": {
         "news.google.com": [
           "Slovenci upravičili vlogo favorita in Švedski niso prepustili niti niza - rtvslo.si",
-          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
-          "Slovenija sanja o velikem finalu, a zato bo potrebno presenetiti najboljšo ekipo na svetu - Šport TV"
+          "Slovenija sanja o velikem finalu, a zato bo potrebno presenetiti najboljšo ekipo na svetu - Šport TV",
+          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-23T07:53:27+02:00",
+      "last_learning_run": "2026-10-23T07:54:20+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -272,11 +272,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 164525,
-          "last_seen": "2026-10-23T07:53:27+02:00",
+          "seen": 164540,
+          "last_seen": "2026-10-23T07:54:20+02:00",
           "last_title": "Protestnik, ki je postal predsednik: Stevanović nekoč glas anticepilcev, danes pa enfant terrible, ki je vse postavil na glavo - Metropolitan.si",
           "last_provider": "google-news-si",
-          "published": 475174,
+          "published": 475244,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -388,7 +388,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-23T07:53:36+02:00",
+      "last_learning_run": "2026-10-23T07:54:29+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -477,11 +477,11 @@
         },
         "news.google.com": {
           "score": 2.506,
-          "seen": 186821,
-          "last_seen": "2026-10-23T07:53:36+02:00",
-          "last_title": "Vreme se bo danes hitro obrnilo: nevihte bodo zajele večji del Slovenije, na Primorskem tudi burja - Dnevne Novice",
+          "seen": 186846,
+          "last_seen": "2026-10-23T07:54:29+02:00",
+          "last_title": "Ko zima odhaja, veselje prihaja: tradicija, ki povezuje generacije - MojaObčina.si",
           "last_provider": "google-news-si",
-          "published": 309946,
+          "published": 309971,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -576,7 +576,7 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 24,
+      "current_source_count": 25,
       "example_titles": {
         "news.google.com": [
           "(AKTUALNO) Še danes v prodaji 36. št. revije Demokracija: 30 let Demokracije, ki udejanja pravico vedeti več! Načrt za demografsko obnovo sl",
@@ -662,15 +662,6 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20261022-223843.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek",
-        "manjka_fotografija"
-      ],
-      "title": "Ste pripravljeni? Kmalu s kolesom od Ljubljane do Beograda - Dnevnik"
-    },
-    {
       "file": "fallback-failed-20261022-223917.json",
       "category": "kolesarstvo",
       "errors": [
@@ -751,10 +742,19 @@
       "title": "Slovenija je bela lisa na kolesarskem zemljevidu - Delo.si"
     },
     {
+      "file": "fallback-failed-20261023-075339.json",
+      "category": "kolesarstvo",
+      "errors": [
+        "prekratek",
+        "manjka_fotografija"
+      ],
+      "title": "Ste pripravljeni? Kmalu s kolesom od Ljubljane do Beograda - Dnevnik"
+    },
+    {
       "file": "agent-state",
       "category": "kolesarstvo",
       "errors": [
-        "prekratek"
+        "prekratek,manjka_fotografija"
       ]
     },
     {
@@ -767,7 +767,8 @@
     }
   ],
   "failure_summary": {
-    "prekratek": 21,
-    "manjka_fotografija": 18
+    "prekratek": 20,
+    "manjka_fotografija": 18,
+    "prekratek,manjka_fotografija": 1
   }
 }
