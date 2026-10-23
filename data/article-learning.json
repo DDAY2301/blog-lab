@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-23T16:57:22+02:00",
-  "loop_count": 7344,
+  "updated_at": "2026-10-23T16:58:22+02:00",
+  "loop_count": 7345,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-23T16:57:00+02:00",
+      "last_learning_run": "2026-10-23T16:58:00+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -76,7 +76,7 @@
           "last_seen": "2026-10-23T16:57:00+02:00",
           "last_title": "Slovenska blamaža na igrah! Zakaj sploh tekmujemo, če je šport pri nas umrl - Ekipa",
           "last_provider": "google-news-si",
-          "published": 441115,
+          "published": 441180,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,17 +227,15 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 10,
+      "current_source_count": 1,
       "example_titles": {
-        "news.google.com": [
-          "Slovenci upravičili vlogo favorita in Švedski niso prepustili niti niza - rtvslo.si",
-          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
-          "Slovenija sanja o velikem finalu, a zato bo potrebno presenetiti najboljšo ekipo na svetu - Šport TV"
+        "microsoft.com": [
+          "Microsoft – AI, Cloud, Productivity, Computing, Gaming & Apps"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-23T16:57:10+02:00",
+      "last_learning_run": "2026-10-23T16:58:10+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -276,7 +274,7 @@
           "last_seen": "2026-10-23T16:57:10+02:00",
           "last_title": "Janša ali Golob? Anketa je pokazala, komu po uporu v Novem mestu zaupa ljudstvo - Žurnal24",
           "last_provider": "google-news-si",
-          "published": 486304,
+          "published": 486374,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -378,17 +376,11 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 16,
-      "example_titles": {
-        "news.google.com": [
-          "Odnosi z Izraelom: diplomacija ne sme biti izgovor za normalizacijo zločinov - Dnevnik",
-          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
-          "Golob: Ne predstavljam si, da bi kdo želel živeti v državi, v kateri bi politika imela pooblastila policije - N1 Slovenija"
-        ]
-      }
+      "current_source_count": 0,
+      "example_titles": {}
     },
     "aktualno": {
-      "last_learning_run": "2026-10-23T16:57:22+02:00",
+      "last_learning_run": "2026-10-23T16:58:22+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -476,12 +468,12 @@
           "last_provider": "bing-web"
         },
         "news.google.com": {
-          "score": 2.506,
+          "score": 2.502,
           "seen": 190535,
           "last_seen": "2026-10-23T16:57:22+02:00",
           "last_title": "Ko so bile ZDA stare toliko kot danes Slovenija, so bile na robu razpada - Zanima.me",
           "last_provider": "google-news-si",
-          "published": 313921,
+          "published": 313946,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -561,27 +553,26 @@
           "last_title": "Atlantic Alumina Announces $450 Million Strategic Partnership ... - Atalco",
           "last_provider": "bing-web"
         },
+        "blog.thessaloniki.travel": {
+          "score": 1.963,
+          "seen": 2,
+          "last_seen": "2026-10-23T16:58:22+02:00",
+          "last_title": "The upcoming festivals in Thessaloniki that you just can´t miss - blog.thessaloniki.travel",
+          "last_provider": "bing-web"
+        },
         "local.wenatcheeworld.com": {
           "score": 1.823,
           "seen": 2,
           "last_seen": "2026-10-10T02:53:56+02:00",
           "last_title": "Local Guide",
           "last_provider": "bing-web"
-        },
-        "locations.dollartree.com": {
-          "score": 1.823,
-          "seen": 2,
-          "last_seen": "2026-10-08T03:24:41+02:00",
-          "last_title": "Dollar Tree",
-          "last_provider": "bing-web"
         }
       },
-      "current_source_count": 24,
+      "current_source_count": 2,
       "example_titles": {
-        "news.google.com": [
-          "(AKTUALNO) Še danes v prodaji 36. št. revije Demokracija: 30 let Demokracije, ki udejanja pravico vedeti več! Načrt za demografsko obnovo sl",
-          "Janša napoveduje velike spremembe: Čez 15 let šol, kot jih poznamo danes, morda ne bo več! - Najdi.si novice",
-          "(AKTUALNO) Varuhinja človekovih pravic Simona Drenik Bavdek: Pravica do dostojnega pokopa temeljna človekova pravica - Demokracija"
+        "blog.thessaloniki.travel": [
+          "Summer in the city| Α Guide to Summer Festivals and Events in Thessaloniki - blog.thessaloniki.travel",
+          "The upcoming festivals in Thessaloniki that you just can´t miss - blog.thessaloniki.travel"
         ]
       }
     }
