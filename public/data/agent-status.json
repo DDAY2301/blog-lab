@@ -2,12 +2,12 @@
   "agent": "Blog Lab Slovenia Publisher",
   "status": "waiting",
   "enabled": true,
-  "category": "gourmet",
-  "last_run": "2026-10-24T21:10:01+02:00",
+  "category": "kolesarstvo",
+  "last_run": "2026-10-24T23:58:04+02:00",
   "last_success": "2026-10-24T20:54:46+02:00",
   "last_output": "ljubezen-do-gora-planinska-zveza-slovenije-je-obelezila-hvalevredno-prelomnico-4e0792a9",
   "next_run": null,
-  "message": "Nobena sveža zgodba ni prestala uredniškega QA: prekratek",
+  "message": "Ni novih neuporabljenih virov; objava se varno odloži.",
   "posts_today": 2,
   "scheduled_posts_today": 2,
   "manual_posts_today": 0,
@@ -26,5 +26,5 @@
     "reason": "ponavljanje",
     "at": "2026-10-24T21:09:39+02:00"
   },
-  "last_error": "prekratek"
+  "last_error": "fallback_no_fresh_evidence"
 }

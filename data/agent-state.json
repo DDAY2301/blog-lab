@@ -5,9 +5,9 @@
   "posts_date": "2026-10-24",
   "posts_today": 2,
   "last_output": "ljubezen-do-gora-planinska-zveza-slovenije-je-obelezila-hvalevredno-prelomnico-4e0792a9",
-  "last_error": "prekratek",
+  "last_error": "fallback_no_fresh_evidence",
   "agent_version": "3.0.0-learning-guarded-fallback",
-  "current_category": "gourmet",
+  "current_category": "kolesarstvo",
   "scheduled_posts_today": 2,
   "manual_posts_today": 0,
   "writer_mode": "workers_ai",
@@ -25,11 +25,11 @@
     "reason": "ponavljanje",
     "at": "2026-10-24T21:09:39+02:00"
   },
-  "publisher_guardian_last_run": "2026-10-24T20:40:31+02:00",
+  "publisher_guardian_last_run": "2026-10-24T23:58:04+02:00",
   "publisher_guardian_last_action": {
     "category": "kolesarstvo",
     "slot": "2026-10-24|07:35|kolesarstvo",
-    "remaining_repairs": 4
+    "remaining_repairs": 2
   },
   "schedule_counter_normalized_at": "2026-10-07T16:45:00+02:00"
 }
