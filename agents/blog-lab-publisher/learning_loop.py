@@ -72,9 +72,21 @@ def _host(url: str) -> str:
 
 
 def _extract_current_articles() -> list[dict]:
+    """Use atomic V4 articles first while retaining the untouched legacy feed."""
+    out = []
+    atomic_dir = APP.parent / "articles" / "published"
+    if atomic_dir.is_dir():
+        for path in atomic_dir.glob("*.json"):
+            article = json.loads(path.read_text(encoding="utf-8"))
+            if isinstance(article, dict) and article.get("id"):
+                out.append({
+                    "id": str(article.get("id") or ""),
+                    "title": str(article.get("title") or ""),
+                    "category": str(article.get("category") or ""),
+                    "createdAt": str(article.get("createdAt") or ""),
+                })
     text = APP.read_text(encoding="utf-8") if APP.exists() else ""
     blocks = re.findall(r'\{\s*\n\s*"id":\s*"([^"]+)"(?P<body>.*?"updatedAt":\s*"[^"]+"\s*\n\s*\})', text, flags=re.S)
-    out = []
     for article_id, body in blocks[:40]:
         title = re.search(r'"title":\s*"([^"]+)"', body)
         category = re.search(r'"category":\s*"([^"]+)"', body)
@@ -85,7 +97,7 @@ def _extract_current_articles() -> list[dict]:
             "category": category.group(1) if category else "",
             "createdAt": created.group(1) if created else "",
         })
-    return out
+    return sorted(out, key=lambda item: item.get("createdAt") or "", reverse=True)[:40]
 
 
 def _failure_signals() -> list[dict]:
