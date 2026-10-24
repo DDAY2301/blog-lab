@@ -1,5 +1,6 @@
 from __future__ import annotations
-import json, re
+import json, os, re, tempfile
+from pathlib import Path
 from datetime import datetime
 from zoneinfo import ZoneInfo
 ANCHOR = "const starterArticles = ["
@@ -60,9 +61,63 @@ def to_js_object(article: dict, agent_name: str) -> str:
         "updatedAt": now,
     }
     return "  " + json.dumps(obj, ensure_ascii=False, indent=2).replace("\n", "\n  ") + ",\n"
+def _atomic_article_path(app_path: str, article_id: str) -> Path:
+    if not re.fullmatch(r"[a-z0-9][a-z0-9-]{1,119}", article_id):
+        raise ValueError("Invalid article ID for atomic publishing")
+    return Path(app_path).parent / "articles" / "published" / f"{article_id}.json"
+
+
+def _publish_atomic(app_path: str, article: dict, agent_name: str, text: str) -> None:
+    article_id = str(article.get("id") or "")
+    dest = _atomic_article_path(app_path, article_id)
+    # Legacy App still contains all earlier articles during the zero-loss transition.
+    if f'"{article_id}"' in text or f'id: "{article_id}"' in text:
+        raise RuntimeError("podvojen ID")
+    existing = dest.parent.glob("*.json") if dest.parent.is_dir() else []
+    for path in existing:
+        if path.name == dest.name:
+            raise RuntimeError("podvojen ID")
+        try:
+            if json.loads(path.read_text(encoding="utf-8")).get("id") == article_id:
+                raise RuntimeError("podvojen ID")
+        except (OSError, json.JSONDecodeError) as exc:
+            raise RuntimeError(f"Invalid existing atomic article: {path.name}") from exc
+    data = json.loads(to_js_object(article, agent_name).strip().removesuffix(","))
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    # One file per article; a crash never truncates App.jsx or a previous article.
+    with tempfile.NamedTemporaryFile(
+        "w", encoding="utf-8", newline="\n", dir=dest.parent,
+        prefix=f".{article_id}.", suffix=".tmp", delete=False,
+    ) as temp:
+        temp_path = Path(temp.name)
+        try:
+            json.dump(data, temp, ensure_ascii=False, indent=2)
+            temp.write("\n")
+            temp.flush()
+            os.fsync(temp.fileno())
+        except Exception:
+            temp_path.unlink(missing_ok=True)
+            raise
+    try:
+        # Never silently overwrite an existing publication.
+        if dest.exists():
+            raise RuntimeError("podvojen ID")
+        os.replace(temp_path, dest)
+    finally:
+        temp_path.unlink(missing_ok=True)
+
+
 def publish_to_app(app_path: str, article: dict, agent_name: str) -> None:
-    with open(app_path, "r", encoding="utf-8") as f: text = f.read()
-    if ANCHOR not in text: raise RuntimeError("starterArticles sidro ni najdeno")
-    if f'"{article["id"]}"' in text or f'id: "{article["id"]}"' in text: raise RuntimeError("podvojen ID")
+    with open(app_path, "r", encoding="utf-8") as f:
+        text = f.read()
+    if ANCHOR not in text:
+        raise RuntimeError("starterArticles sidro ni najdeno")
+    if 'import.meta.glob("./articles/published/*.json"' in text:
+        _publish_atomic(app_path, article, agent_name, text)
+        return
+    # Preserve legacy behavior for earlier releases and isolated test fixtures.
+    if f'"{article["id"]}"' in text or f'id: "{article["id"]}"' in text:
+        raise RuntimeError("podvojen ID")
     updated = text.replace(ANCHOR, ANCHOR + "\n" + to_js_object(article, agent_name), 1)
-    with open(app_path, "w", encoding="utf-8", newline="\n") as f: f.write(updated)
+    with open(app_path, "w", encoding="utf-8", newline="\n") as f:
+        f.write(updated)
