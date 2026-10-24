@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-24T11:25:46+02:00",
-  "loop_count": 7675,
+  "updated_at": "2026-10-24T11:26:40+02:00",
+  "loop_count": 7676,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-24T11:25:21+02:00",
+      "last_learning_run": "2026-10-24T11:26:19+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 146506,
-          "last_seen": "2026-10-24T11:25:21+02:00",
+          "seen": 146514,
+          "last_seen": "2026-10-24T11:26:19+02:00",
           "last_title": "Kje gledati finale košarkarskega EP med Slovenci in Italijani? Televizijski prenos bo! - Dnevnik",
           "last_provider": "google-news-si",
-          "published": 462630,
+          "published": 462695,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-24T11:25:36+02:00",
+      "last_learning_run": "2026-10-24T11:26:29+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -272,11 +272,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 172551,
-          "last_seen": "2026-10-24T11:25:36+02:00",
-          "last_title": "Janezovih 15: to so vsi ministri in ministrice v Janševi vladi (na glasovanju prejeli dovolj glasov, zdaj je vse uradno) - Metropolitan.si",
+          "seen": 172570,
+          "last_seen": "2026-10-24T11:26:29+02:00",
+          "last_title": "Golob pravi: Slovenija potrebuje široko koalicijo. NSi ne bo na sestanek - Svet24.si",
           "last_provider": "google-news-si",
-          "published": 509474,
+          "published": 509544,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -385,17 +385,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 13,
+      "current_source_count": 19,
       "example_titles": {
         "news.google.com": [
+          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
           "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si",
-          "Breznik: Zasebni obiski v Moskvi ne predstavljajo zunanje politike Slovenije - 24ur.com",
-          "Petra Kerčmar s tem preusmerila pozornost nase: en mali detajl, o katerem danes govorijo vsi - Elle.si"
+          "Na Radiu Ognjišče zadnje predvolilno soočenje: v ospredju prisluhi, zdravstvo, zunanja politika in sprava - Radio Ognjišče"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-24T11:25:46+02:00",
+      "last_learning_run": "2026-10-24T11:26:40+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -484,11 +484,11 @@
         },
         "news.google.com": {
           "score": 2.506,
-          "seen": 198014,
-          "last_seen": "2026-10-24T11:25:46+02:00",
+          "seen": 198038,
+          "last_seen": "2026-10-24T11:26:40+02:00",
           "last_title": "Spomin na prvo vlado po 2. svet. vojni: Zaobljuba dela v korist ljudi vladajoče zavezuje tudi danes - rtvslo.si",
           "last_provider": "google-news-si",
-          "published": 322196,
+          "published": 322221,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
