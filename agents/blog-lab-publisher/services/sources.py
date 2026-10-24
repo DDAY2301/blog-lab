@@ -412,6 +412,7 @@ def _article_body_paragraphs(html: str, limit: int = 4200) -> str:
 
     Uses already-fetched HTML, so no extra request, inference or invented fact.
     """
+    html = re.sub(r"(?is)<(?:script|style|noscript|template)[^>]*>.*?</(?:script|style|noscript|template)>", " ", html)
     scope = re.search(r"(?is)<article\b[^>]*>(.*?)</article>", html)
     if scope is None:
         scope = re.search(r"(?is)<main\b[^>]*>(.*?)</main>", html)
