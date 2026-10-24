@@ -1,8 +1,13 @@
 {
-  "updatedAt": "2026-10-24T06:46:22+02:00",
+  "updatedAt": "2026-10-24T07:18:00+02:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
+    "Ljubljana Castle",
+    "MGL",
+    "SNG Opera and Ballet Ljubljana",
+    "Fever",
+    "Olaii",
     "Kino Šiška",
     "Gala Hala",
     "Klub K4",
@@ -120,8 +125,8 @@
       "familyFriendly": false,
       "accessibility": null,
       "ticketUrl": "https://olaii.com/event/9675/umek-5-0-ne-zdruzljivo/",
-      "status": "sold_out",
-      "lastCheckedAt": "2026-10-23T07:15:00+02:00",
+      "status": "completed",
+      "lastCheckedAt": "2026-10-24T07:18:00+02:00",
       "description": "UMEK’s birthday concert and two-arena electronic party runs from 20:00 until 06:00 at Gospodarsko razstavišče. The authorised ticket seller marks every listed ticket category as sold out."
     },
     {
@@ -140,17 +145,19 @@
       "accessibility": null,
       "ticketUrl": null,
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-23T07:15:00+02:00",
+      "lastCheckedAt": "2026-10-24T07:18:00+02:00",
       "description": "Free circus performances and participatory skills workshops begin at 11:30 in BS3. The outdoor event is cancelled in bad weather, so check conditions before travelling."
     },
     {
-      "price": null,
-      "languages": [],
+      "price": "€5",
+      "languages": [
+        "Slovenian"
+      ],
       "touristFriendly": true,
       "familyFriendly": true,
-      "accessibility": null,
+      "accessibility": "The Castle Theatre is reached by stairs; contact the venue before booking if step-free access is required.",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
+      "lastCheckedAt": "2026-10-24T07:18:00+02:00",
       "endAt": "2026-10-24T17:45:00+02:00",
       "id": "calvins-fairy-tales-2026-10-24",
       "title": "Calvin’s Fairy Tales",
@@ -160,7 +167,7 @@
       "place": "Castle Theatre · Ljubljana Castle",
       "startAt": "2026-10-24T17:00:00+02:00",
       "ticketUrl": "https://www.ljubljanskigrad.si/sl/dogodki/",
-      "description": "Storyteller Špela Frlic presents Calvin’s Fairy Tales from 17:00 to 17:45. The event is designed for children and families."
+      "description": "Storyteller Špela Frlic presents Calvin’s Fairy Tales from 17:00 to 17:45 for children aged 5 and over. Admission is €5; the route to the Castle Theatre includes stairs."
     },
     {
       "id": "river-of-seven-names-2026-10-24",
@@ -180,17 +187,19 @@
       "accessibility": null,
       "ticketUrl": null,
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-23T07:15:00+02:00",
+      "lastCheckedAt": "2026-10-24T07:18:00+02:00",
       "description": "The second free performance of the Ljubljanica urban legend starts at 19:30 beside Plečnik’s sluice gate. The programme is presented in Slovenian."
     },
     {
       "price": null,
-      "languages": [],
+      "languages": [
+        "Slovenian"
+      ],
       "touristFriendly": true,
       "familyFriendly": false,
       "accessibility": null,
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
+      "lastCheckedAt": "2026-10-24T07:18:00+02:00",
       "endAt": null,
       "id": "romantic-souls-2026-10-24",
       "title": "Romantic Souls",
@@ -211,15 +220,17 @@
       "startAt": "2026-10-24T22:00:00+02:00",
       "endAt": "",
       "id": "event-52-dnbkonferenca-17-obletnica-gala-hala",
-      "lastCheckedAt": "2026-10-18T07:22:00+02:00",
+      "lastCheckedAt": "2026-10-24T07:18:00+02:00",
       "price": "€22 early bird / €25 advance / €30 on the day",
-      "languages": [],
-      "touristFriendly": null,
-      "familyFriendly": null,
+      "languages": [
+        "Music-led"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": false,
       "accessibility": null,
       "ticketUrl": "https://www.galahala.com/program/dnbkonferenca-17-obletnica-gala-hala/34640/",
       "status": "confirmed",
-      "description": "DNBKONFERENCA: 17. OBLETNICA @ Gala hala is confirmed at Gala Hala · AKC Metelkova. Check the official source for late programme or ticket changes."
+      "description": "The 17th-anniversary DNB conference opens outdoors at 18:00, with the three-club programme starting at 22:00. Tickets are €22 early bird, €25 in advance or €30 on the day."
     },
     {
       "title": "Grand Prix invites Upper90",
@@ -228,22 +239,24 @@
       "type": "Club · elektronika",
       "place": "Klub K4 · Ljubljana",
       "startAt": "2026-10-24T23:00:00+02:00",
-      "endAt": "",
+      "endAt": "2026-10-25T06:00:00+01:00",
       "id": "event-50-grand-prix-invites-upper90",
-      "lastCheckedAt": "2026-10-18T07:22:00+02:00",
-      "price": null,
-      "languages": [],
-      "touristFriendly": null,
-      "familyFriendly": null,
+      "lastCheckedAt": "2026-10-24T07:18:00+02:00",
+      "price": "€12 / €15 / €18 / €20 presale sold out; limited door tickets",
+      "languages": [
+        "Music-led"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": false,
       "accessibility": null,
-      "ticketUrl": "https://www.klub-k4.si/",
-      "status": "confirmed",
-      "description": "Grand Prix invites Upper90 is confirmed at Klub K4 · Ljubljana. Check the official source for late programme or ticket changes."
+      "ticketUrl": "https://olaii.com/event/9774/grand-prix-invites-upper90/",
+      "status": "limited_availability",
+      "description": "Upper90 headlines Klub K4 from 23:00 to 06:00. All presale tiers are sold out, but the authorised seller says a limited number of tickets will be available at the door."
     },
     {
       "id": "sunday-flea-market-2026-10-25",
       "title": "Sunday Flea Market",
-      "url": "https://www.visitljubljana.com/en/visitors/events/",
+      "url": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/antique-flea-market",
       "source": "Visit Ljubljana",
       "type": "Market · antiques and vintage",
       "place": "Breg · Ljubljana",
@@ -256,7 +269,7 @@
       "accessibility": null,
       "ticketUrl": null,
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-20T07:18:00+02:00",
+      "lastCheckedAt": "2026-10-24T07:18:00+02:00",
       "description": "The weekly antiques and vintage market runs along Breg from 08:00 to 15:00. Admission is free and no ticket is required."
     },
     {
@@ -275,7 +288,7 @@
       "accessibility": null,
       "ticketUrl": null,
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-23T07:15:00+02:00",
+      "lastCheckedAt": "2026-10-24T07:18:00+02:00",
       "description": "A free circus performance and interactive bubble show begin at 11:30 in BS3. The outdoor programme is cancelled in bad weather."
     },
     {
@@ -294,46 +307,50 @@
       "accessibility": null,
       "ticketUrl": "https://opera.mojekarte.si/en/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-23T07:15:00+02:00",
+      "lastCheckedAt": "2026-10-24T07:18:00+02:00",
       "description": "SNG Opera presents Mauro Bigonzetti’s ballet double bill at 18:00. The official programme confirms the performance; check the authorised box office for current prices and availability."
     },
     {
-      "price": null,
-      "languages": [],
+      "price": "From €39",
+      "languages": [
+        "Music-led"
+      ],
       "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": null,
+      "familyFriendly": true,
+      "accessibility": "Wheelchair accessible according to the ticket seller.",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
+      "lastCheckedAt": "2026-10-24T07:18:00+02:00",
       "endAt": null,
       "id": "candlelight-adele-2026-10-25",
       "title": "Candlelight: Tribute to Adele",
-      "url": "https://www.ljubljanskigrad.si/sl/dogodki/",
-      "source": "Ljubljana Castle",
+      "url": "https://feverup.com/m/519100/en",
+      "source": "Fever",
       "type": "Concert · candlelight",
       "place": "Hribar Hall · Ljubljana Castle",
       "startAt": "2026-10-25T18:30:00+01:00",
-      "ticketUrl": "https://www.ljubljanskigrad.si/sl/dogodki/",
-      "description": "A candlelight tribute to Adele begins at 18:30 in Hribar Hall. Check the linked organiser for ticket availability."
+      "ticketUrl": "https://feverup.com/m/519100/en",
+      "description": "A 60-minute string-quartet tribute to Adele begins at 18:30; guests must be aged 8 or over. Tickets start at €39, and the ticket seller lists wheelchair access."
     },
     {
-      "price": null,
-      "languages": [],
+      "price": "From €34.50",
+      "languages": [
+        "Music-led"
+      ],
       "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": null,
+      "familyFriendly": true,
+      "accessibility": "Wheelchair accessible according to the ticket seller.",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
+      "lastCheckedAt": "2026-10-24T07:18:00+02:00",
       "endAt": null,
-      "id": "candlelight-ennio-morricone-2026-10-25",
-      "title": "Candlelight: The Greatest Hits of Ennio Morricone",
-      "url": "https://www.ljubljanskigrad.si/sl/dogodki/",
-      "source": "Ljubljana Castle",
+      "id": "candlelight-michael-jackson-2026-10-25",
+      "title": "Candlelight: Michael Jackson Tribute",
+      "url": "https://feverup.com/m/679642/en",
+      "source": "Fever",
       "type": "Concert · candlelight",
       "place": "Hribar Hall · Ljubljana Castle",
       "startAt": "2026-10-25T20:30:00+01:00",
-      "ticketUrl": "https://www.ljubljanskigrad.si/sl/dogodki/",
-      "description": "A candlelight programme of Ennio Morricone’s best-known music begins at 20:30 in Hribar Hall. Ticket status is managed by the external organiser."
+      "ticketUrl": "https://feverup.com/m/679642/en",
+      "description": "A 60-minute string-quartet tribute to Michael Jackson begins at 20:30; guests must be aged 8 or over. Tickets start at €34.50, and the ticket seller lists wheelchair access."
     },
     {
       "price": null,
