@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-24T07:46:18+02:00",
-  "loop_count": 7583,
+  "updated_at": "2026-10-24T07:55:43+02:00",
+  "loop_count": 7584,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-24T07:45:57+02:00",
+      "last_learning_run": "2026-10-24T07:55:17+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 145809,
-          "last_seen": "2026-10-24T07:45:57+02:00",
-          "last_title": "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
+          "seen": 145815,
+          "last_seen": "2026-10-24T07:55:17+02:00",
+          "last_title": "Odlični obeti, Slovenija se bi lahko že danes razveselila novega globusa - Žurnal24",
           "last_provider": "google-news-si",
-          "published": 456650,
+          "published": 456715,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -230,14 +230,20 @@
       "current_source_count": 8,
       "example_titles": {
         "news.google.com": [
+          "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
           "Slovenke po veliki vrnitvi in zmagi nad Latvijo na pragu osmine finala - rtvslo.si",
-          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
-          "Slovenija sanja o velikem finalu, a zato bo potrebno presenetiti najboljšo ekipo na svetu - Šport TV"
+          "S tribune: Športni trenutki, zaradi katerih se mi še danes naježijo dlake - Svet24.si"
+        ],
+        "pixellineage.club": [
+          "Pixel Lineage Thief Class — Skills, Passive & Super Paths"
+        ],
+        "pixel-lineage.com": [
+          "Pixel Lineage Classes: Stats, Skills & Which to Pick"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-24T07:46:08+02:00",
+      "last_learning_run": "2026-10-24T07:55:33+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -272,11 +278,11 @@
       "source_health": {
         "news.google.com": {
           "score": 2.502,
-          "seen": 170957,
-          "last_seen": "2026-10-24T07:46:08+02:00",
+          "seen": 170976,
+          "last_seen": "2026-10-24T07:55:33+02:00",
           "last_title": "Svoboda ali SDS? Tako bi volili Slovenci, če bi bile volitve danes - Metropolitan.si",
           "last_provider": "google-news-si",
-          "published": 503034,
+          "published": 503104,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -395,7 +401,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-24T07:46:18+02:00",
+      "last_learning_run": "2026-10-24T07:55:43+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -484,11 +490,11 @@
         },
         "news.google.com": {
           "score": 2.506,
-          "seen": 195961,
-          "last_seen": "2026-10-24T07:46:18+02:00",
-          "last_title": "(AKTUALNO) Danes druga runda narodne borbe v ZD Slovenska Bistrica: Vrsta za vpis ginekologa, potem, ko je prejšnji ušel v Avstrijo! - Demokracija",
+          "seen": 195984,
+          "last_seen": "2026-10-24T07:55:43+02:00",
+          "last_title": "Vreme se bo danes hitro obrnilo: nevihte bodo zajele večji del Slovenije, na Primorskem tudi burja - Dnevne Novice",
           "last_provider": "google-news-si",
-          "published": 319896,
+          "published": 319921,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -583,15 +589,12 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 15,
+      "current_source_count": 23,
       "example_titles": {
-        "youtube.com": [
-          "𝟭 𝗠𝗶𝗻𝘂𝘁𝗲 𝗧𝗶𝗺𝗲𝗿 - YouTube"
-        ],
         "news.google.com": [
           "(AKTUALNO) Še danes v prodaji 36. št. revije Demokracija: 30 let Demokracije, ki udejanja pravico vedeti več! Načrt za demografsko obnovo sl",
-          "Pavel Rupar poziva na popoldanski shod z začetkom pred RTV Slovenija, policija pripravljena - Info360",
-          "Kako svet vidi Slovenijo danes in kako je postala tako vroča evropska destinacija - Dnevnik"
+          "Janša napoveduje velike spremembe: Čez 15 let šol, kot jih poznamo danes, morda ne bo več! - Najdi.si novice",
+          "(AKTUALNO) Varuhinja človekovih pravic Simona Drenik Bavdek: Pravica do dostojnega pokopa temeljna človekova pravica - Demokracija"
         ]
       }
     }
