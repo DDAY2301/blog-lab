@@ -2,24 +2,25 @@
   "agent": "Blog Lab Slovenia Publisher",
   "status": "waiting",
   "enabled": true,
-  "category": "kolesarstvo",
-  "last_run": "2026-10-24T20:24:21+02:00",
+  "category": "dediscina",
+  "last_run": "2026-10-24T20:39:53+02:00",
   "last_success": "2026-10-22T16:29:00+02:00",
   "last_output": "timotej-becan-in-lucija-krkoc-naj-gorska-tekaca-sezone-petra-in-marko-tratnik-naj-trail-te-a33d1aed",
   "next_run": null,
-  "message": "Nobena sveža zgodba ni prestala uredniškega QA: prekratek,manjka_fotografija",
+  "message": "Ni novih neuporabljenih virov; objava se varno odloži.",
   "posts_today": 0,
   "scheduled_posts_today": 0,
   "manual_posts_today": 0,
   "writer_mode": "workers_ai",
   "scheduled_slots_done": [],
   "scheduled_slots_deferred": [
-    "2026-10-24|07:35|kolesarstvo"
+    "2026-10-24|07:35|kolesarstvo",
+    "2026-10-24|10:45|dediscina"
   ],
   "last_editorial_hold": {
-    "slot": "2026-10-24|07:35|kolesarstvo",
-    "reason": "manjka_fotografija",
-    "at": "2026-10-24T19:36:05+02:00"
+    "slot": "2026-10-24|10:45|dediscina",
+    "reason": "naslov_ni_v_rubriki,clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike,besedilo_ni_v_slovenscini",
+    "at": "2026-10-24T20:39:39+02:00"
   },
-  "last_error": "prekratek,manjka_fotografija"
+  "last_error": "fallback_no_fresh_evidence"
 }

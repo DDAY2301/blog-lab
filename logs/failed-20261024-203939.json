@@ -1,0 +1,40 @@
+{
+  "category": "dediscina",
+  "errors": [
+    "naslov_ni_v_rubriki",
+    "clanek_brez_slovenskega_konteksta",
+    "viri_ne_podpirajo_slovenske_rubrike",
+    "besedilo_ni_v_slovenscini"
+  ],
+  "article": {
+    "title": "The top 10 travel destinations for 2023",
+    "excerpt": "From spiritual seaside towns to artistic capitals and hidden gems. Travel Articles Destinations Inspiration Travel Tips Search 6 min read Published 16 December 2022 The top 10 travel destinations for 2023 Culinary City t",
+    "seoDescription": "From spiritual seaside towns to artistic capitals and hidden gems. Travel Articles Destinations Inspiration Travel Tips Search 6 min read Published 16 Dece",
+    "content": "Pregled za rubriko dediscina povzema trenutno razpoložljive informacije iz spodaj navedenih virov. Besedilo je pripravljeno brez dodajanja nepodprtih dejstev.\n\n## The top 10 travel destinations for 2023\nFrom spiritual seaside towns to artistic capitals and hidden gems. Travel Articles Destinations Inspiration Travel Tips Search 6 min read Published 16 December 2022 The top 10 travel destinations for 2023 Culinary City trips Country trips Booking.com Editorial Team To help you find the ultimate travel hotspots for next year, Booking.com has delved into global booking trends** to share the top 10 trending destinations for 2023 – combined with tips from Booking.com’s community of travelers. From spiritual seaside towns to artistic capitals and hidden gems, this list of the top 10 trending places, experiences, and stays will inspire a year of incredible travel. São Paulo, Brazil Enjoy a traditional Mortadella sandwich from a São Paulo street food stand The energetic metropolis of São Paulo is home to 20 million locals known as “paulistanos” and a buzzing nightlife scene with underground clubs, art house cinemas, experimental theater, and Traditional Samba and Pagode Experiences . The city also has fantastic street food and nine of Brazil ’s 14 Michelin-starred restaurants, where you can sample delicacies like “coxinha” (a golden shredded chicken croquette) and “feijoada” (a rich black bean stew). For fashion-lovers, a stroll down Rua Oscar Freire—a tree-lined street with luxurious boutiques—is a must. For some downtime, escape the city with a short drive to the northern coast of the state of São Paulo, a hidden gem where the beaches rival those in Rio. Traveler tip from Daniele: “I'd recommend dinner at Skye Restaurant & Bar on the rooftop of Hotel Unique . Or Terraço Itália, a restaurant at the top of the Edificio Italia skyscraper, to enjoy breathtaking urban views and taste Michelin-starred local cuisine.” Where to stay: L´Hotel Portobay São Paulo is just a short walk from São Paulo's vibrant Avenida Paulista and the Modern Art Museum. Enjoy a caipirinha, Brazil’s national cocktail made from cachaça, sugar, and lime at the piano bar. Budva, Montenegro A view of the beach from Budva's old town If you want to relax on a beach next year, Budva in western Montenegro is the perfect European destination for you. Located on the shores of the Adriatic Sea, the town boasts a long, winding coastline known as the Budva Riviera, where golden sand is lapped by crystal clear waters. Budva’s medieval old town features Venetian stone walls, cobbled streets, and restaurants serving fresh grilled seafood, including octopus, a local specialty. For those seeking adventure, explore Boka Bay on the Mamula Island, Blue Cave & Lady of the Rocks Tour , where travelers can swim a\n\nVir: booking.com — https://www.booking.com/articles/top-travel-destinations-2023.html",
+    "category": "Dediščina",
+    "tags": [
+      "dediscina",
+      "Slovenija",
+      "travel",
+      "destinations"
+    ],
+    "sources": [
+      {
+        "title": "The top 10 travel destinations for 2023",
+        "url": "https://www.booking.com/articles/top-travel-destinations-2023.html",
+        "source_name": "booking.com"
+      }
+    ],
+    "fallback": false,
+    "gallery": [],
+    "heroImage": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Tustanj_Castle_Slovenia_-_plaque.JPG/1920px-Tustanj_Castle_Slovenia_-_plaque.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "alt": "Plaque over the entrance to Tuštanj Castle, Zgornji Tuštanj, Municipality of Moravče, Slovenia",
+      "caption": "Doremo · Wikimedia Commons · CC BY-SA 3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tustanj_Castle_Slovenia_-_plaque.JPG"
+    },
+    "visualTemplate": "fieldnote",
+    "templateLabel": "Field Note",
+    "id": "the-top-10-travel-destinations-for-2023-218b0479"
+  }
+}
