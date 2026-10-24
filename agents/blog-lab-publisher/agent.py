@@ -23,7 +23,7 @@ from services.publisher import publish_to_app, slugify
 from services.state import load_json, atomic_json
 from services.learning import learning_source_ok, rank_sources_with_learning
 from services.article_templates import apply_article_template, template_prompt
-from services.media_library import commons_image_for, commons_image_matches_topic
+from services.media_library import commons_image_for, commons_image_matches_topic, _license_is_reusable
 from services.editorial_guard import validate_automatic_story, CATEGORY_SIGNALS, SLOVENIA_SIGNALS, fold, _has_any
 from services.image_optimizer import optimize_commons_hero
 
@@ -590,7 +590,10 @@ def prepare_article_candidate(
             isinstance(hero, dict)
             and str(hero.get("sourceUrl") or "").startswith("https://commons.wikimedia.org/wiki/")
             and "Wikimedia Commons" in str(hero.get("caption") or "")
-            and "cc" in str(hero.get("caption") or "").lower()
+            and any(
+                _license_is_reusable(part.strip())
+                for part in str(hero.get("caption") or "").split("·")
+            )
         )
         if known_commons and not commons_image_matches_topic(
             str(article.get("title") or topic or ""), hero
