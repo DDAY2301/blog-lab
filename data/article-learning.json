@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-24T20:10:44+02:00",
-  "loop_count": 7884,
+  "updated_at": "2026-10-24T20:24:32+02:00",
+  "loop_count": 7885,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-24T20:10:24+02:00",
+      "last_learning_run": "2026-10-24T20:24:08+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 148087,
-          "last_seen": "2026-10-24T20:10:24+02:00",
-          "last_title": "Premier Janša ob ogledu finala mladih košarkarjev udaril po RTV Slovenija: »Plačujemo vas več kot Inštitut Jožef Stefan!« - Slovenske novice",
+          "seen": 148094,
+          "last_seen": "2026-10-24T20:24:08+02:00",
+          "last_title": "'Daj Francuze, da se igramo!' Oziroma kako se nam je zgodil šport, ne Kmetija - Ekipa",
           "last_provider": "google-news-si",
-          "published": 476215,
+          "published": 476280,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,17 +227,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 9,
+      "current_source_count": 7,
       "example_titles": {
         "news.google.com": [
-          "Poljakinje pokazale svojo moč in še petič s 3:0 odpravile slovenske odbojkarice - rtvslo.si",
-          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
-          "Slovenke po veliki vrnitvi in zmagi nad Latvijo na pragu osmine finala - rtvslo.si"
+          "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
+          "Slovenke po veliki vrnitvi in zmagi nad Latvijo na pragu osmine finala - rtvslo.si",
+          "S tribune: Športni trenutki, zaradi katerih se mi še danes naježijo dlake - Svet24.si"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-24T20:10:34+02:00",
+      "last_learning_run": "2026-10-24T20:24:20+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -279,11 +279,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 176329,
-          "last_seen": "2026-10-24T20:10:34+02:00",
+          "seen": 176348,
+          "last_seen": "2026-10-24T20:24:20+02:00",
           "last_title": "Golob pravi: Slovenija potrebuje široko koalicijo. NSi ne bo na sestanek - Svet24.si",
           "last_provider": "google-news-si",
-          "published": 524104,
+          "published": 524174,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -395,7 +395,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-24T20:10:44+02:00",
+      "last_learning_run": "2026-10-24T20:24:32+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -484,11 +484,11 @@
         },
         "news.google.com": {
           "score": 2.506,
-          "seen": 202690,
-          "last_seen": "2026-10-24T20:10:44+02:00",
+          "seen": 202714,
+          "last_seen": "2026-10-24T20:24:32+02:00",
           "last_title": "Spomin na prvo vlado po 2. svet. vojni: Zaobljuba dela v korist ljudi vladajoče zavezuje tudi danes - rtvslo.si",
           "last_provider": "google-news-si",
-          "published": 327421,
+          "published": 327446,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -759,14 +759,14 @@
     },
     {
       "file": "agent-state",
-      "category": "kolesarstvo",
+      "category": "dediscina",
       "errors": [
-        "prekratek,manjka_fotografija"
+        "fallback_no_fresh_evidence"
       ]
     },
     {
       "file": "agent-state",
-      "category": "kolesarstvo",
+      "category": "dediscina",
       "errors": [
         "manjka_fotografija"
       ],
@@ -776,6 +776,6 @@
   "failure_summary": {
     "prekratek": 20,
     "manjka_fotografija": 19,
-    "prekratek,manjka_fotografija": 1
+    "fallback_no_fresh_evidence": 1
   }
 }
