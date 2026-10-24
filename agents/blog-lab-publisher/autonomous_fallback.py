@@ -81,8 +81,6 @@ def _source_text(item: dict) -> str:
     return " ".join([
         str(item.get("title") or ""),
         str(item.get("summary") or ""),
-        str(item.get("source_name") or ""),
-        str(item.get("url") or ""),
     ]).lower()
 
 
@@ -224,31 +222,7 @@ def run(category: str, scheduled_slot: str = "", dry_run: bool = False) -> int:
         return 0
 
     items = collect_automatic_sources(cfg, category)
-    story_pools = _fresh_story_pools(items, processed, category)
-    if not story_pools:
-        # A category-specific second search is bounded to two different lenses;
-        # do not relax editorial QA or recycle existing links to fill a slot.
-        discovered = collect_focused_sources(
-            category, max_items=int(cfg.get("max_source_items", 30)),
-            cache_dir=os.environ.get("RUNNER_TEMP"),
-        )
-        qualified = [
-            item for item in discovered
-            if automatic_source_usable(item, category, trusted_primary=False)
-            and learning_source_ok(item, category)
-        ]
-        fresh = unpublished_items(qualified, processed, limit=int(cfg.get("max_source_items", 30)))
-        print(
-            f"DISCOVERY_V2_FALLBACK category={category} candidates={len(discovered)} "
-            f"usable={len(qualified)} fresh={len(fresh)}"
-        )
-        story_pools = _fresh_story_pools(fresh, processed, category)
-    if not story_pools:
-        state["last_error"] = "fallback_no_fresh_evidence"
-        atomic_json(str(STATE), state)
-        _write_status(cfg, state, "waiting", "Ni novih neuporabljenih virov; objava se varno odloži.")
-        print("FALLBACK_NO_FRESH_EVIDENCE")
-        return 0
+    primary_pools = _fresh_story_pools(items, processed, category, max_attempts=4)
 
     min_chars = int(cfg["min_article_chars"])
     max_chars = int(cfg["max_article_chars"])
@@ -256,44 +230,90 @@ def run(category: str, scheduled_slot: str = "", dry_run: bool = False) -> int:
     used_urls = {str(x.get("url")) for x in processed if x.get("url")}
     output_category = OUTPUT_CATEGORY_LABELS.get(category, category)
     diagnostics = []
-    article = None
-    evidence_pool = []
 
-    for attempt, pool in enumerate(story_pools, start=1):
-        candidate = build_digest(pool, category)
-        if candidate.get("skip"):
-            errors = [str(candidate.get("reason") or "fallback_skip")]
-        else:
-            used_for_article = _filter_category_pool(article_used_items(candidate, pool), category)
-            if not used_for_article:
-                errors = ["fallback_used_sources_failed_category_guard"]
+    def evaluate(pools: list[list[dict]], attempt_offset: int = 0):
+        for attempt, pool in enumerate(pools, start=attempt_offset + 1):
+            candidate = build_digest(pool, category)
+            if candidate.get("skip"):
+                errors = [str(candidate.get("reason") or "fallback_skip")]
             else:
-                candidate = prepare_article_candidate(candidate, used_for_article, "", output_category)
-                candidate["category"] = output_category
-                candidate["fallback"] = True
-                candidate["id"] = slugify(candidate.get("title", "")) + "-" + hashlib.sha1(
-                    str(used_for_article[0].get("url", "fallback")).encode("utf-8")
-                ).hexdigest()[:8]
-                errors = validate(
-                    candidate, min_chars, max_chars, titles, used_urls, allowed_source_urls(pool)
-                )
-                errors.extend(validate_automatic_story(candidate, pool, category))
-                errors = list(dict.fromkeys(errors))
+                used_for_article = _filter_category_pool(article_used_items(candidate, pool), category)
+                if not used_for_article:
+                    errors = ["fallback_used_sources_failed_category_guard"]
+                else:
+                    candidate = prepare_article_candidate(candidate, used_for_article, "", output_category)
+                    candidate["category"] = output_category
+                    candidate["fallback"] = True
+                    candidate["id"] = slugify(candidate.get("title", "")) + "-" + hashlib.sha1(
+                        str(used_for_article[0].get("url", "fallback")).encode("utf-8")
+                    ).hexdigest()[:8]
+                    errors = validate(
+                        candidate, min_chars, max_chars, titles, used_urls, allowed_source_urls(pool)
+                    )
+                    errors.extend(validate_automatic_story(candidate, pool, category))
+                    errors = list(dict.fromkeys(errors))
+            if errors:
+                diagnostics.append({
+                    "attempt": attempt,
+                    "lead_url": str(pool[0].get("url") or ""),
+                    "title": str(pool[0].get("title") or "")[:180],
+                    "errors": errors,
+                })
+                print(f"FALLBACK_CANDIDATE_REJECTED attempt={attempt} reasons={','.join(errors)}")
+                continue
+            print(f"FALLBACK_CANDIDATE_ACCEPTED attempt={attempt} id={candidate['id']}")
+            return candidate, pool
+        return None, []
 
-        if errors:
-            diagnostics.append({
-                "attempt": attempt,
-                "lead_url": str(pool[0].get("url") or ""),
-                "title": str(pool[0].get("title") or "")[:180],
-                "errors": errors,
-            })
-            print(f"FALLBACK_CANDIDATE_REJECTED attempt={attempt} reasons={','.join(errors)}")
-            continue
+    article, evidence_pool = evaluate(primary_pools)
 
-        article = candidate
-        evidence_pool = pool
-        print(f"FALLBACK_CANDIDATE_ACCEPTED attempt={attempt} id={article['id']}")
-        break
+    # Even a *new* indexed headline can lack a valid image or enough evidence.
+    # Do not abandon the scheduled slot after failing these QA gates; use a
+    # bounded second source-discovery pass rather than weaken the gates.
+    if article is None:
+        tried_urls = [
+            {"url": row.get("url", ""), "title": row.get("title", "")}
+            for pool in primary_pools for row in pool
+        ]
+        extra_attempts = 0
+        # Two complementary pairs at most. The second pair runs only when the
+        # first found no publishable article; it never bypasses editorial QA.
+        for lens_offset in (0, 1):
+            excluded = processed + tried_urls
+            discovered = collect_focused_sources(
+                category, max_items=int(cfg.get("max_source_items", 30)),
+                cache_dir=os.environ.get("RUNNER_TEMP"),
+                lens_offset=lens_offset,
+            )
+            qualified = [
+                item for item in discovered
+                if automatic_source_usable(item, category, trusted_primary=False)
+                and learning_source_ok(item, category)
+            ]
+            fresh = unpublished_items(qualified, excluded, limit=int(cfg.get("max_source_items", 30)))
+            extra_pools = _fresh_story_pools(fresh, excluded, category, max_attempts=3)
+            print(
+                f"DISCOVERY_V2_RETRY category={category} lens={lens_offset} "
+                f"candidates={len(discovered)} usable={len(qualified)} fresh={len(fresh)} "
+                f"pools={len(extra_pools)} prior_rejections={len(diagnostics)}"
+            )
+            article, evidence_pool = evaluate(
+                extra_pools, attempt_offset=len(primary_pools) + extra_attempts
+            )
+            extra_attempts += len(extra_pools)
+            tried_urls.extend(
+                {"url": row.get("url", ""), "title": row.get("title", "")}
+                for pool in extra_pools for row in pool
+            )
+            if article is not None:
+                break
+
+    if article is None and not diagnostics:
+        state["last_error"] = "fallback_no_fresh_evidence"
+        atomic_json(str(STATE), state)
+        _write_status(cfg, state, "waiting", "Ni novih neuporabljenih virov; objava se varno odloži.")
+        print("FALLBACK_NO_FRESH_EVIDENCE")
+        return 0
 
     if article is None:
         reasons = list(dict.fromkeys(reason for item in diagnostics for reason in item["errors"]))

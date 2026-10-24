@@ -1,21 +1,9 @@
 name: Blog Lab 24h Article Learning
 
 on:
+  # Bounded cadence: four learning passes per day; no event-driven cascade.
   schedule:
-    - cron: "13 * * * *"
-  push:
-    paths:
-      - ".github/workflows/publisher-learning.yml"
-      - "agents/blog-lab-publisher/**"
-      - "data/agent-state.json"
-      - "data/processed-items.json"
-      - "logs/**"
-  workflow_run:
-    workflows:
-      - "Blog Lab Publisher Agent"
-      - "Blog Lab Publisher Guardian"
-    types:
-      - completed
+    - cron: "13 */6 * * *"
   workflow_dispatch:
 
 permissions:
