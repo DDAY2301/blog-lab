@@ -3212,9 +3212,771 @@ Mostnica rewards flexibility. The best visit is not necessarily the longest one;
     "author": "Blog Lab Publisher",
     "status": "published",
     "heroImage": null,
-    "video": 
-... 133260 bytes omitted ...
-- The riverside and nearby Central Market make the bridge easy to include in an old-town walk.\n- The outdoor route is free, but castle attractions and the funicular may require tickets.\n- Do not present the Jason story as established ancient history; introduce it as Ljubljana's most famous legend.\n- Keep Slovene place names in their original form: **Zmajski most** means **Dragon Bridge**.\n\n## Fact, interpretation or legend?\n\n### Documented facts\n\n- Dragon Bridge was built between 1900 and 1901.\n- It was originally dedicated to Emperor Franz Joseph I.\n- It used reinforced concrete and is an important Art Nouveau and engineering landmark.\n- The dragon is a central element of Ljubljana's modern coat of arms and city identity.\n\n### Historical interpretations\n\n- The dragon may have developed from an earlier decorative heraldic element.\n- The tradition of Saint George may have influenced the symbol's meaning.\n- The marsh landscape may have helped later storytellers localise monster legends.\n\n### Legends and folklore\n\n- Jason and the Argonauts travelled through the Ljubljana Marshes.\n- Jason killed the monster that became Ljubljana's dragon.\n- The bridge dragons move their tails when a virgin passes.\n\nThose stories are valuable cultural heritage precisely because they are stories. Labelling them honestly does not make them less interesting; it shows how Ljubljana repeatedly reimagined its past.\n\n## Direct sources\n\n- [Ljubljana Tourism: Ljubljana, City of Dragons](https://www.visitljubljana.com/en/visitors/sights-and-activities/ljubljana-city-of-dragons)\n- [Ljubljana Tourism: Dragon Bridge](https://www.visitljubljana.com/en/poi/dragon-bridge)\n- [Museum and Galleries of Ljubljana: City Museum collection](https://zbirka.mgml.si/)\n\nHistorical and visitor information was last checked on **24 September 2026**.",
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "e-Maribor — Janša na Newsmaxu: \"Slovenija in ZDA imata poseben odnos« – razkril tudi, kaj mu je obljubil Trump!\" - e-Maribor",
+        "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQQm9DbWV3RVIzVjlxOEllVjlQZmwzLTJhbF9PS1ZtNmo5WERXdGtnTTZWYnpkMHMyUGpsMUVkQkQyeVVwWm54Q0kzVThxazd5SFNINXA3dUViYzk0d3d4Z3dhbEdia2tiWFVCRTM5bGQwaXJxVm12VkpFUHo1bmFSTUJIaEVMbUJxbUdpVWJEZ256RXVGYlNtcWp4cHhTVGp3UWxyYzh3TWpjaUxEM0xNR0x6Z3I?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-29T19:54:41+02:00",
+    "updatedAt": "2026-09-29T19:54:41+02:00"
+  },
+
+  {
+    "id": "volilna-pravila-o-zakonodajnem-referendumu-in-treh-posvetovalnih-referendumih-0c5c1f86",
+    "title": "Volilna pravila o zakonodajnem referendumu in treh posvetovalnih referendumih",
+    "excerpt": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Volilna pravila o zakonodajnem referendumu in treh posvetovalnih referendumih«.",
+    "seoDescription": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Volilna pravila o zakonodajnem referendumu in treh posvetovalnih referendumih",
+    "content": "**Politika, 29. 9. 2026.** Volilna pravila o zakonodajnem referendumu in treh posvetovalnih referendumih Dolenjskainfo.com\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nPri političnih temah Blog Lab ne podpira kandidatov, strank ali političnih odločitev; izjave in ocene so predstavljene kot stališča njihovih avtorjev ali virov, ne kot uredniška presoja.\n\nVir: Dolenjskainfo.com. Objavljeno: Tue, 29 Sep 2026 08:36:52 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiwAFBVV95cUxPRlM4aFN2Y0UwSUg1Z1RPdV9kdVhTclp4bV9vQWlpZmhlckJqRlJKaUctc0VHQVkwSGc3T1BYRExwN3IzV1RtaU9sNFVCTnFhcVQ5Nk1oWmNlNWxmdXB3ZENORmsweWEzd1lhRnFjSHgwM2RXOU12eDVyaTg4QVJ2NEhQd19ubEUwdHdGTWx4LVptbzIzcjBwZUNWc1BqTzJVOFV1WDVGZDh5REpLRVpuMGM0TzBibURsVjdnQ194Zlo?oc=5)\n\n## Dopolnitev vira 2: Ljubljanainfo.com\n\nVolilna tekma se širi: Za župana bo kandidiral tudi tekmovalec MasterChefa Slovenija Ljubljanainfo.com\n\n Vir: Ljubljanainfo.com. Objavljeno: Mon, 28 Sep 2026 14:04:58 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMizAFBVV95cUxOQmtodHhZNHJhUnhTQ3JSMEtGcUlOTExBODZBU2NQc04zMnBsUE5kblV5QkJOcnlxOGo2bXN2eFg4bnd3YWtSb2pWZzZrVnN6QnZtcGFIREpOcUNYa19YQng3ZUktS0FiTjlTUmZydDcwLUxNOTc1ZDNfYWZ3R05uclA2SXg1Z3pqNExoMnI1Y2RtNC1pTGF4Q3RBV1djaFNtYmxUS0FBTDJlcEZpWVFHbl9OMVVqcnpWTDVVM2RBemJrOHU2YUNIdFBvbnc?oc=5)\n\n## Dopolnitev vira 3: Delo.si\n\nKaj prinaša oktobrski referendum: koliko ljudi lahko izgubi volilno pravico? Delo.si\n\n Vir: Delo.si. Objavljeno: Tue, 29 Sep 2026 06:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiigFBVV95cUxQdWExY040bHRkN1BkeGJycnRGN3dxMUUydnZxMkhMb3NkdEphTlpIV3FadE1PSEFDQnJfdm9JcGwtbDJ6UW1pM0lMb3htaHU0cTRRWUN1XzhpdzFGcTdKU0V0U18wZTNQT196Q29zNFVseFNKM203UmNFbjFiaEtTNGpBLW1lQXRmd2c?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Politika",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Dolenjskainfo.com — Volilna pravila o zakonodajnem referendumu in treh posvetovalnih referendumih - Dolenjskainfo.com",
+        "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPRlM4aFN2Y0UwSUg1Z1RPdV9kdVhTclp4bV9vQWlpZmhlckJqRlJKaUctc0VHQVkwSGc3T1BYRExwN3IzV1RtaU9sNFVCTnFhcVQ5Nk1oWmNlNWxmdXB3ZENORmsweWEzd1lhRnFjSHgwM2RXOU12eDVyaTg4QVJ2NEhQd19ubEUwdHdGTWx4LVptbzIzcjBwZUNWc1BqTzJVOFV1WDVGZDh5REpLRVpuMGM0TzBibURsVjdnQ194Zlo?oc=5"
+      },
+      {
+        "label": "Ljubljanainfo.com — Volilna tekma se širi: Za župana bo kandidiral tudi tekmovalec MasterChefa Slovenija - Ljubljanainfo.com",
+        "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOQmtodHhZNHJhUnhTQ3JSMEtGcUlOTExBODZBU2NQc04zMnBsUE5kblV5QkJOcnlxOGo2bXN2eFg4bnd3YWtSb2pWZzZrVnN6QnZtcGFIREpOcUNYa19YQng3ZUktS0FiTjlTUmZydDcwLUxNOTc1ZDNfYWZ3R05uclA2SXg1Z3pqNExoMnI1Y2RtNC1pTGF4Q3RBV1djaFNtYmxUS0FBTDJlcEZpWVFHbl9OMVVqcnpWTDVVM2RBemJrOHU2YUNIdFBvbnc?oc=5"
+      },
+      {
+        "label": "Delo.si — Kaj prinaša oktobrski referendum: koliko ljudi lahko izgubi volilno pravico? - Delo.si",
+        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQdWExY040bHRkN1BkeGJycnRGN3dxMUUydnZxMkhMb3NkdEphTlpIV3FadE1PSEFDQnJfdm9JcGwtbDJ6UW1pM0lMb3htaHU0cTRRWUN1XzhpdzFGcTdKU0V0U18wZTNQT196Q29zNFVseFNKM203UmNFbjFiaEtTNGpBLW1lQXRmd2c?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-29T13:39:11+02:00",
+    "updatedAt": "2026-09-29T13:39:11+02:00"
+  },
+
+  {
+    "id": "arboretum-volcji-potok-day-trip-from-ljubljana",
+    "title": "Arboretum Volčji Potok: An Easy Nature Day Trip from Ljubljana",
+    "excerpt": "Plan a relaxed, car-light visit to Slovenia’s largest arboretum, with current opening hours, ticket prices, public transport, accessible routes and weather-safety advice.",
+    "seoDescription": "Plan an Arboretum Volčji Potok day trip from Ljubljana with current hours, ticket prices, public transport, accessible routes and weather safety.",
+    "content": "Last updated: 29 September 2026\n\nOnly about 20 kilometres from Ljubljana, Arboretum Volčji Potok is an easy nature escape when you want landscaped parkland rather than a strenuous hike. Its roughly 85 hectares combine broad lawns, woodland paths, ponds and extensive plant collections, so it works equally well for a quiet half-day, a family outing or a slower accessible visit.\n\n## Essential information for 2026\n\n### Opening hours\n\nThe park is open daily, including public holidays. In September it opens from 08:00 to 19:00; in October, from 08:00 to 18:00. Last admission is one hour before closing.\n\nHours can change for evening concerts, when the park may close at 16:00, and management may close the grounds in dangerous weather or during a red ARSO warning. Check the official opening-hours page on the morning of your visit.\n\n### Tickets\n\nCurrent standard admission is €11 for adults, €9.50 for students and pensioners, and €6 for children aged 3–18. A family ticket costs €30. Dogs require a €5 ticket, and the tourist train costs €4.\n\nBuy tickets at the entrance or follow the official ticket link. Prices and concessions can change, so verify them before travelling.\n\n### Weather check for 29 September 2026\n\nThe fresh forecast for the Kamnik area is sunny, with a daytime high around 23°C and a cool early-morning low near 5°C. Layers, water and sun protection are sensible. This snapshot is not a substitute for checking [ARSO](https://meteo.arso.gov.si/met/en/) immediately before departure.\n\n## How to get there from Ljubljana without a car\n\n### By regional bus\n\nBuses on the Ljubljana–Kamnik route stop several times a day at Volčji Potok Šraj, about 300 metres from the entrance. Services to Radomlje are more frequent, but the walk from there is about 1.5 kilometres. Use [Arriva’s live timetable](https://arriva.si/en/timetables/) for the exact date rather than relying on a static schedule.\n\n### By train and on foot\n\nHomec is the nearest railway stop, roughly 2 kilometres away. The signed walking approach crosses the pedestrian bridge over the Kamniška Bistrica. Check [Slovenian Railways](https://potniski.sz.si/en/) before leaving: works at Ljubljana station can mean temporary platforms or delays.\n\n### By bicycle or car\n\nThe arboretum publishes cycling approaches from Domžale and Kamnik. Free parking is available at the entrance, but overnight parking is not permitted.\n\n## A practical 2–4 hour walking plan\n\nBegin with the central historic park, where the main paths are generally firm and gently sloped. Continue past the ponds and major tree collections, then add the approximately one-kilometre Memory Path if you want a quiet, mostly level extension with benches and shade.\n\nThe electric tourist train is a useful alternative when walking the full grounds is too much. It normally operates from March to October in fine weather, takes about 30–40 minutes and can carry two wheelchair users. Confirm operation when you arrive.\n\n## Accessibility\n\nMuch of the central park can be visited with a wheelchair or pushchair, but some steeper areas and buildings are not fully accessible. The arboretum offers two wheelchairs free of charge if reserved in advance, accessible toilets, and a one-kilometre route designed for blind and partially sighted visitors.\n\nFor the gentlest option, use the firm-surfaced Memory Path and allow about an hour with stops. Visitors who need assistance should contact the park before travelling, because surfaces and access can change with weather.\n\n## Families, dogs and a slower visit\n\nChildren can use the playground and labyrinth, but the park asks adults not to leave them unattended. The broad lawns make this an easier family outing than a mountain trail, although ponds, changing surfaces and the size of the grounds still require supervision.\n\nDogs are welcome with a paid ticket and must remain on a lead except in the designated off-lead area. Bring water and waste bags.\n\n## Safety and seasonal limits\n\nThe park is a living landscape, not an all-weather indoor attraction. In strong wind or a storm, leave wooded areas and do not shelter under trees. After rain, expect wet leaves and softer side paths; choose the main routes if footing or mobility is a concern.\n\nAutumn daylight and opening hours shorten quickly. Plan to enter at least two hours before closing if you want more than the central circuit, and remember that the tourist train is weather-dependent and seasonal.\n\n## Pair it with another Slovenia nature day\n\nFor a wilder wetland landscape close to the capital, read [Ljubljana Marshes: Pile Dwellers and UNESCO History](?article=ljubljana-marshes-pile-dwellings-history). If you prefer a protected alpine spring, see the [Zelenci Nature Reserve guide](?article=zelenci-nature-reserve-guide). For a city-based alternative, follow the [Plečnik self-guided walk](?article=plecnik-ljubljana-self-guided-walking-tour).\n\n## Official sources\n\n- [Arboretum Volčji Potok](https://www.arboretum.si/en/)\n- [Opening hours and weather closures](https://www.arboretum.si/en/visit-us/opening-hours/)\n- [Admission prices](https://www.arboretum.si/en/visit-us/prices/)\n- [Public transport, cycling and parking](https://www.arboretum.si/en/visit-us/how-to-get-here/)\n- [Accessible park information](https://www.arboretum.si/en/visit-us/accessible-park/)\n- [Family visit information](https://www.arboretum.si/en/visit-us/kids/)\n- [Visit Ljubljana overview](https://www.visitljubljana.com/en/poi/volcji-potok-arboretum)\n- [ARSO weather](https://meteo.arso.gov.si/met/en/)",
+    "category": "Vodniki",
+    "author": "Slovenia Pulse Editorial",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Arboretum Volčji Potok — Opening hours",
+        "url": "https://www.arboretum.si/en/visit-us/opening-hours/"
+      },
+      {
+        "label": "Arboretum Volčji Potok — Prices",
+        "url": "https://www.arboretum.si/en/visit-us/prices/"
+      },
+      {
+        "label": "Arboretum Volčji Potok — How to get here",
+        "url": "https://www.arboretum.si/en/visit-us/how-to-get-here/"
+      },
+      {
+        "label": "Arboretum Volčji Potok — Accessible park",
+        "url": "https://www.arboretum.si/en/visit-us/accessible-park/"
+      },
+      {
+        "label": "ARSO — Weather",
+        "url": "https://meteo.arso.gov.si/met/en/"
+      },
+      {
+        "label": "Visit Ljubljana — Volčji Potok Arboretum",
+        "url": "https://www.visitljubljana.com/en/poi/volcji-potok-arboretum"
+      }
+    ],
+    "createdAt": "2026-09-29T08:58:45+02:00",
+    "updatedAt": "2026-09-29T08:58:45+02:00"
+  },
+  {
+    "id": "pogacar-zeli-nastopiti-na-evropskem-prvenstvu-zdravnik-je-dal-zeleno-luc-c47c285b",
+    "title": "Pogačar želi nastopiti na evropskem prvenstvu, zdravnik je dal zeleno luč",
+    "excerpt": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Pogačar želi nastopiti na evropskem prvenstvu, zdravnik je dal zeleno luč«.",
+    "seoDescription": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Pogačar želi nastopiti na evropskem prvenstvu, zdravnik je dal zeleno luč«.",
+    "content": "**Šport, 29. 9. 2026.** Pogačar želi nastopiti na evropskem prvenstvu, zdravnik je dal zeleno luč Delo.si\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Delo.si. Objavljeno: Tue, 29 Sep 2026 05:47:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMipgFBVV95cUxOTVJ3MTBUZ2VBcnBDQ0g1TGpWRmRLbmdfczFBd0dmcjdYQW1VQWxFSHVBQTdzWlNOY3JOSTJsQTJxNXdDQW1MY2NSUWI0alJHdjN2ZmQ0UXBBalZWdEJNd1g4N0htNUdlcGMyUE9vWnNOcWR1MEstcm0xNlFsMVVMamJ5TVJvY2tUOUIxd05BeUNid0ttdVRkbllsMnBZUWE3cFBLb2tn?oc=5)\n\n## Dopolnitev vira 2: rtvslo.si\n\nBrez medalje, a še vedno med evropsko elito rtvslo.si\n\n Vir: rtvslo.si. Objavljeno: Sun, 27 Sep 2026 09:44:27 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMipgFBVV95cUxPNkstdVZ4eEtQeVRlek1qbjljN01lUllVME5Vc0ZhYUdVWUpudi02ZGR2eDRWNHhZQmFSV2NDd2pkRGlnUWx3VFRGVXo0dC1FQ3VReE9jYUJHS0ZRZGVldnhvREdzanpmOW9JMU80aGV0bTRoZ2ZoaEY1OUNDTi1ud2ZDMHdya3ZEYkNCZjN2aVpFM3lNZEh3TGVLUExIRkI1X29tQVln?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Šport",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Delo.si — Pogačar želi nastopiti na evropskem prvenstvu, zdravnik je dal zeleno luč - Delo.si",
+        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOTVJ3MTBUZ2VBcnBDQ0g1TGpWRmRLbmdfczFBd0dmcjdYQW1VQWxFSHVBQTdzWlNOY3JOSTJsQTJxNXdDQW1MY2NSUWI0alJHdjN2ZmQ0UXBBalZWdEJNd1g4N0htNUdlcGMyUE9vWnNOcWR1MEstcm0xNlFsMVVMamJ5TVJvY2tUOUIxd05BeUNid0ttdVRkbllsMnBZUWE3cFBLb2tn?oc=5"
+      },
+      {
+        "label": "rtvslo.si — Brez medalje, a še vedno med evropsko elito - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPNkstdVZ4eEtQeVRlek1qbjljN01lUllVME5Vc0ZhYUdVWUpudi02ZGR2eDRWNHhZQmFSV2NDd2pkRGlnUWx3VFRGVXo0dC1FQ3VReE9jYUJHS0ZRZGVldnhvREdzanpmOW9JMU80aGV0bTRoZ2ZoaEY1OUNDTi1ud2ZDMHdya3ZEYkNCZjN2aVpFM3lNZEh3TGVLUExIRkI1X29tQVln?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-29T08:19:40+02:00",
+    "updatedAt": "2026-09-29T08:19:40+02:00"
+  },
+
+  {
+    "id": "prvic-obelezujemo-mednarodni-dan-jam-in-krasa-ki-je-bil-lani-razglasen-na-pobudo-slovenije-8f0aafa8",
+    "title": "Prvič obeležujemo Mednarodni dan jam in krasa, ki je bil lani razglašen na pobudo Slovenije",
+    "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Prvič obeležujemo Mednarodni dan jam in krasa, ki je bil lani razglašen na pobudo Slovenije«.",
+    "seoDescription": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Prvič obeležujemo Mednarodni dan jam in krasa, ki je bil lani razglašen na po",
+    "content": "**Aktualno, 28. 9. 2026.** Prvič obeležujemo Mednarodni dan jam in krasa, ki je bil lani razglašen na pobudo Slovenije MojaObčina.si\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: MojaObčina.si. Objavljeno: Wed, 16 Sep 2026 05:56:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMi0wFBVV95cUxNMFB2aU42anVxcFh4QWsyVEVqQWFWTHVwRWRRbzNKV2N3MmxNRFY1X1pmTDBaTzFyV295ZVI1N2dXMFBKbmR5Y3ZCWDR4NnViODhacmRja3d1d2laLUg0RjFGMDFxbm5HVXozZnNhY2FzcFVvUHRQNDlWVl92ZE0ybW4tellmSEFnTjIzSGpZMzgwUHlLYWtaZDM5TElMSUc3VHo5SkZMcC0zQ3h1Zk0xeTJlaGhiQUd2d1EwaTFsRnJFeV8wOWM4V2w1REdPOGdxOF80?oc=5)\n\n## Dopolnitev vira 2: MojaObčina.si\n\nPark vojaške zgodovine je po 20 letih delovanja največji muzejski kompleks v Sloveniji MojaObčina.si\n\n Vir: MojaObčina.si. Objavljeno: Mon, 21 Sep 2026 11:05:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMizgFBVV95cUxPNHo0ME54RjZWU19sYkFudFBlYnVQVGRPOHhQeFBTUjZZOWY2ZFlrVWF6a2wxa3p2YW1GZXhpbDBjOU1RT0E5cXlHaTR5b1hhVDFna05MaXZJWW1DUzZlOHlqSGFKRzNoU0d5RTZsZDFFYnlScjJ3ZVhaRXd3UjNHd3A5UVNjRjl2WTJPRTZ3VWdqTVY4YXRIZVV4OV9GQmF5NFlld2plQzVTWTZjcXJwNFNZNUhzdW8tVnpqR185OV81WVhOeHdPeVI5QnNOUQ?oc=5)\n\n## Dopolnitev vira 3: MojaObčina.si\n\nSlovenija lovi Guinnessov rekord v skupinskem igranju harmonike - prijave so odprte MojaObčina.si\n\n Vir: MojaObčina.si. Objavljeno: Fri, 27 Mar 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMixwFBVV95cUxQVGdJSjhwOUV5emwySjNOeS04Mno3TzhvUDRTMW1WYUVGYmxYWHcyWkdKaGdDM1pOM0JJaDE0amhMemVqSnFfVWVNRUpWWExEYXM2dEpHNmJNNUl4blQxSTBfajh3WWIyV1hSRC1HRTlOVGVmT0ZhU2dPbmtEc3RwVnpFOTNTS0hoMEtsUGVEMzdpdmFwZlM2aTl2cWFjekI3TXd1ZkU2SXpzRGNKaGpTNV9uT05pN1JDSk1RQmt6Z0VzYkRtLUZV?oc=5)\n\n## Dopolnitev vira 4: Mestna občina Novo mesto\n\nV Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno Mestna občina Novo mesto\n\n Vir: Mestna občina Novo mesto. Objavljeno: Thu, 02 Jul 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMisAFBVV95cUxPNHBQZW1tbVE5Z1FyZ3dOeEd3X0Q1SnMyQ3NydHNaX1BVclk3S0dZem1Zc2JfZ3Z0Rjhna0VIYnV6U0pvanRkenRrUjN2NTV4UllMeGtyLTFCUTROY3hjMWxlUGNMeVRLTlZLZmMxRmpmUVFGeWxVRElmQ1haUU9ZX1lFMlI3VWtvSEFNd09mbnVibGZrRy16VDZKSEhvNkNXX0QzXzQtLTJXX2JiZC0wUA?oc=5)\n\n## Dopolnitev vira 5: MojaObčina.si\n\nV Laškem podelili nagrade in priznanja Skupnosti občin Slovenije MojaObčina.si\n\n Vir: MojaObčina.si. Objavljeno: Wed, 16 Sep 2026 06:30:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMisAFBVV95cUxPZlRIdXA0azB6cXJsZGozdHVxZlVndE5odDdodVFlbUdpU3JuNkVzTzZ1UjJ2U2xhc0JOclRhZE1VUV92VHBJZXFsZGV1RDBnVlE2TnJfYzljUVFOalR2bFRHVEp5LTBKcEsybHZiUkFaU2dtYVBtb0UxdWhnbUMxRW41dmlFN2ZVdUlqTmVvSjd6a2lNOUsyQ3NwcWtCWHRUZTR2dVBhRUZ3VjI1dXpMeQ?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Aktualno",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "MojaObčina.si — Prvič obeležujemo Mednarodni dan jam in krasa, ki je bil lani razglašen na pobudo Slovenije - MojaObčina.si",
+        "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNMFB2aU42anVxcFh4QWsyVEVqQWFWTHVwRWRRbzNKV2N3MmxNRFY1X1pmTDBaTzFyV295ZVI1N2dXMFBKbmR5Y3ZCWDR4NnViODhacmRja3d1d2laLUg0RjFGMDFxbm5HVXozZnNhY2FzcFVvUHRQNDlWVl92ZE0ybW4tellmSEFnTjIzSGpZMzgwUHlLYWtaZDM5TElMSUc3VHo5SkZMcC0zQ3h1Zk0xeTJlaGhiQUd2d1EwaTFsRnJFeV8wOWM4V2w1REdPOGdxOF80?oc=5"
+      },
+      {
+        "label": "MojaObčina.si — Park vojaške zgodovine je po 20 letih delovanja največji muzejski kompleks v Sloveniji - MojaObčina.si",
+        "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPNHo0ME54RjZWU19sYkFudFBlYnVQVGRPOHhQeFBTUjZZOWY2ZFlrVWF6a2wxa3p2YW1GZXhpbDBjOU1RT0E5cXlHaTR5b1hhVDFna05MaXZJWW1DUzZlOHlqSGFKRzNoU0d5RTZsZDFFYnlScjJ3ZVhaRXd3UjNHd3A5UVNjRjl2WTJPRTZ3VWdqTVY4YXRIZVV4OV9GQmF5NFlld2plQzVTWTZjcXJwNFNZNUhzdW8tVnpqR185OV81WVhOeHdPeVI5QnNOUQ?oc=5"
+      },
+      {
+        "label": "MojaObčina.si — Slovenija lovi Guinnessov rekord v skupinskem igranju harmonike - prijave so odprte - MojaObčina.si",
+        "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQVGdJSjhwOUV5emwySjNOeS04Mno3TzhvUDRTMW1WYUVGYmxYWHcyWkdKaGdDM1pOM0JJaDE0amhMemVqSnFfVWVNRUpWWExEYXM2dEpHNmJNNUl4blQxSTBfajh3WWIyV1hSRC1HRTlOVGVmT0ZhU2dPbmtEc3RwVnpFOTNTS0hoMEtsUGVEMzdpdmFwZlM2aTl2cWFjekI3TXd1ZkU2SXpzRGNKaGpTNV9uT05pN1JDSk1RQmt6Z0VzYkRtLUZV?oc=5"
+      },
+      {
+        "label": "Mestna občina Novo mesto — V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
+        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPNHBQZW1tbVE5Z1FyZ3dOeEd3X0Q1SnMyQ3NydHNaX1BVclk3S0dZem1Zc2JfZ3Z0Rjhna0VIYnV6U0pvanRkenRrUjN2NTV4UllMeGtyLTFCUTROY3hjMWxlUGNMeVRLTlZLZmMxRmpmUVFGeWxVRElmQ1haUU9ZX1lFMlI3VWtvSEFNd09mbnVibGZrRy16VDZKSEhvNkNXX0QzXzQtLTJXX2JiZC0wUA?oc=5"
+      },
+      {
+        "label": "MojaObčina.si — V Laškem podelili nagrade in priznanja Skupnosti občin Slovenije - MojaObčina.si",
+        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPZlRIdXA0azB6cXJsZGozdHVxZlVndE5odDdodVFlbUdpU3JuNkVzTzZ1UjJ2U2xhc0JOclRhZE1VUV92VHBJZXFsZGV1RDBnVlE2TnJfYzljUVFOalR2bFRHVEp5LTBKcEsybHZiUkFaU2dtYVBtb0UxdWhnbUMxRW41dmlFN2ZVdUlqTmVvSjd6a2lNOUsyQ3NwcWtCWHRUZTR2dVBhRUZ3VjI1dXpMeQ?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-28T19:53:52+02:00",
+    "updatedAt": "2026-09-28T19:53:52+02:00"
+  },
+
+  {
+    "id": "doncicu-politiki-za-trditev-da-on-vodi-slovenijo-storili-tole-vse-jasno-e275e810",
+    "title": "Dončiću politiki za trditev, da on vodi Slovenijo, storili tole - vse jasno",
+    "excerpt": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Dončiću politiki za trditev, da on vodi Slovenijo, storili tole - vse jasno«.",
+    "seoDescription": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Dončiću politiki za trditev, da on vodi Slovenijo, storili tole - vse jasno«.",
+    "content": "**Politika, 28. 9. 2026.** Dončiću politiki za trditev, da on vodi Slovenijo, storili tole - vse jasno Ekipa\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nPri političnih temah Blog Lab ne podpira kandidatov, strank ali političnih odločitev; izjave in ocene so predstavljene kot stališča njihovih avtorjev ali virov, ne kot uredniška presoja.\n\nVir: Ekipa. Objavljeno: Sun, 27 Sep 2026 12:14:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiygFBVV95cUxNT2hGOFNCMWxjWnBKOGpoS2p2a1NLR2p4d2VRSGx1YXdBemZrTzJhSVJ0c2ozZmtNbkwtRnJIV2NjdkZGM3VOTUtSekZLVXdWUFRqNXV3dW1JcmhjQm82QThEX3B6QmtEazRRbmNSdGxVQk1ZTnZzSElmTEVLR0ZDbWFZaFpXVU5NYzBVeUUybV9iZTZ0ZVhJblp6RzhkWm02cVFTQWxNc0poRmZlSXU1Tl9LVlZKd0hjNjEtUXdIQzVFVkdsdGk1UzRn?oc=5)\n\n## Dopolnitev vira 2: zanima.me\n\nKaj premier Janša sporoča z govornice OZN in kaj bi Trumpa prepričalo v obisk Slovenije? zanima.me\n\n Vir: zanima.me. Objavljeno: Sun, 27 Sep 2026 15:27:44 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMirwFBVV95cUxQWW15Nk5ZckhhT0N2RzJCTDg4c0ZQcFhJSzc1YmVEUXJNdURYYTNwWk1zOTJDZHVqVVYwaFF5RndjRFBqcjM1Xy0wMVZ5cVZXU3VXYW1zSmJDLWh6b2lKOEY2R0RMaV81cm1wYWxxR3gzYjhvZWxCX1Fjb0JheTN4bUhEUGpmT1g2b1JaNDJ5ZWdzSFNKclFONnl4OXNQVVFFbG8tUEpNRTNiLXM3dE1V?oc=5)\n\n## Dopolnitev vira 3: novice.najdi.si\n\nFiskalni svet opozarja: rebalans odmika Slovenijo od fiskalnih ciljev novice.najdi.si\n\n Vir: novice.najdi.si. Objavljeno: Mon, 28 Sep 2026 08:22:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMi4gFBVV95cUxPVWRmT202dnZQbHlKQ0FpU3diNWFQcFFQQmNOd0VLdFFxZ00zQW8ydUVOekZ4VGE3QnFxSzQzWFFpaGdXb1dfYlpuQnpOOXlLM1lveVAyRzJaOEZGRTRPY09Pa0J5QmtMbTYySEtqSlgtUXJKMmNhUnZhREtZTjFhRjdnbXFfZDlZb1U5Q2xDdy1ncDNUU2tVT3lmeW05MDgtWjNha0xQWXo4YzZ4YS1kMWVTM2FySkhlemNQMGZjS0w4aUVzY0JBVzAxMkZkbmtZRkFEU19KQ0gwck1kQ2VRVjJ3?oc=5)\n\n## Dopolnitev vira 4: Ljubljanske novice\n\n»Ujeti med politiko in ceh: Komu sploh odgovarja RTV Slovenija?« Ljubljanske novice\n\n Vir: Ljubljanske novice. Objavljeno: Sun, 27 Sep 2026 23:02:41 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMilwFBVV95cUxNRHdWMEpXOGd6RUNBMmpTVVVfVTI4eWx6RWg2bVBhd1JFMFctdWtxWWNHUS1GeXhTX3h0bW9kdWZYV3Z5enpERUE0NFJJbFdOdElXdzlGMjZwclZKQTM4ejFoOFRGTlNqa3RJRTIzRGhwUzdmb05GSnFhTUJObXdZRHNNT2RqT1VBZ0FNS2hVZXFFV2lOVDRR?oc=5)\n\n## Dopolnitev vira 5: Reporter\n\nOzadje novega kurza slovenske zunanje politike Reporter\n\n Vir: Reporter. Objavljeno: Sun, 27 Sep 2026 18:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMijAFBVV95cUxNX0pzU2NwX3BGWHRqaVBIWDZ5ZEFEeVA2cFRwNDlRcE83OHotT2JXRVpra3A1elo4T055MDBYcGpSZ29vWlM0OExkczgzTmdEeFRvQW9hVm9iSFlscWJYakhGTV9uQ29VSkV0OUJTOERsMnF6VnJ4b2pfZy1YM0tmR2lrVnNXVHNYT0ZHVw?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Politika",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Ekipa — Dončiću politiki za trditev, da on vodi Slovenijo, storili tole - vse jasno - Ekipa",
+        "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNT2hGOFNCMWxjWnBKOGpoS2p2a1NLR2p4d2VRSGx1YXdBemZrTzJhSVJ0c2ozZmtNbkwtRnJIV2NjdkZGM3VOTUtSekZLVXdWUFRqNXV3dW1JcmhjQm82QThEX3B6QmtEazRRbmNSdGxVQk1ZTnZzSElmTEVLR0ZDbWFZaFpXVU5NYzBVeUUybV9iZTZ0ZVhJblp6RzhkWm02cVFTQWxNc0poRmZlSXU1Tl9LVlZKd0hjNjEtUXdIQzVFVkdsdGk1UzRn?oc=5"
+      },
+      {
+        "label": "zanima.me — Kaj premier Janša sporoča z govornice OZN in kaj bi Trumpa prepričalo v obisk Slovenije? - zanima.me",
+        "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQWW15Nk5ZckhhT0N2RzJCTDg4c0ZQcFhJSzc1YmVEUXJNdURYYTNwWk1zOTJDZHVqVVYwaFF5RndjRFBqcjM1Xy0wMVZ5cVZXU3VXYW1zSmJDLWh6b2lKOEY2R0RMaV81cm1wYWxxR3gzYjhvZWxCX1Fjb0JheTN4bUhEUGpmT1g2b1JaNDJ5ZWdzSFNKclFONnl4OXNQVVFFbG8tUEpNRTNiLXM3dE1V?oc=5"
+      },
+      {
+        "label": "novice.najdi.si — Fiskalni svet opozarja: rebalans odmika Slovenijo od fiskalnih ciljev - novice.najdi.si",
+        "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPVWRmT202dnZQbHlKQ0FpU3diNWFQcFFQQmNOd0VLdFFxZ00zQW8ydUVOekZ4VGE3QnFxSzQzWFFpaGdXb1dfYlpuQnpOOXlLM1lveVAyRzJaOEZGRTRPY09Pa0J5QmtMbTYySEtqSlgtUXJKMmNhUnZhREtZTjFhRjdnbXFfZDlZb1U5Q2xDdy1ncDNUU2tVT3lmeW05MDgtWjNha0xQWXo4YzZ4YS1kMWVTM2FySkhlemNQMGZjS0w4aUVzY0JBVzAxMkZkbmtZRkFEU19KQ0gwck1kQ2VRVjJ3?oc=5"
+      },
+      {
+        "label": "Ljubljanske novice — »Ujeti med politiko in ceh: Komu sploh odgovarja RTV Slovenija?« - Ljubljanske novice",
+        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNRHdWMEpXOGd6RUNBMmpTVVVfVTI4eWx6RWg2bVBhd1JFMFctdWtxWWNHUS1GeXhTX3h0bW9kdWZYV3Z5enpERUE0NFJJbFdOdElXdzlGMjZwclZKQTM4ejFoOFRGTlNqa3RJRTIzRGhwUzdmb05GSnFhTUJObXdZRHNNT2RqT1VBZ0FNS2hVZXFFV2lOVDRR?oc=5"
+      },
+      {
+        "label": "Reporter — Ozadje novega kurza slovenske zunanje politike - Reporter",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNX0pzU2NwX3BGWHRqaVBIWDZ5ZEFEeVA2cFRwNDlRcE83OHotT2JXRVpra3A1elo4T055MDBYcGpSZ29vWlM0OExkczgzTmdEeFRvQW9hVm9iSFlscWJYakhGTV9uQ29VSkV0OUJTOERsMnF6VnJ4b2pfZy1YM0tmR2lrVnNXVHNYT0ZHVw?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-28T13:39:32+02:00",
+    "updatedAt": "2026-09-28T13:39:32+02:00"
+  },
+
+  {
+    "id": "roman-emona-ljubljana-self-guided-walk",
+    "title": "Roman Emona in Ljubljana: A Self-Guided Archaeology Walk",
+    "excerpt": "Trace Roman Ljubljana on a practical city-centre walk linking the City Museum, Emona House, Mirje wall, the Early Christian Centre and Congress Square.",
+    "seoDescription": "Explore Roman Emona in Ljubljana on a self-guided walk with verified history, route stops, seasonal opening advice, accessibility notes and official sources.",
+    "content": "Modern Ljubljana hides a remarkably legible Roman town beneath its streets. You can follow it without a car on a compact walk from the City Museum to two archaeological sites, the surviving wall at Mirje and the former northern suburb around Congress Square.\n\nThis guide is designed for independent visitors who want archaeology rather than a costume-story version of the past. It distinguishes excavated evidence from later reconstruction, and it flags an important seasonal limitation before you set out.\n\n**Last verified: 28 September 2026.** Opening times, ticket prices and access to gated archaeological sites can change. Check the linked official pages on the day of your visit.\n\n## Emona in five minutes: what the evidence supports\n\nRoman Emona, or *Colonia Iulia Aemona*, occupied much of today's central Ljubljana. An imperial building inscription dated to 14 or 15 CE is the strongest public-facing evidence for the colony's early monumental phase. It does not prove a single ceremonial “birthday” for the town, so it is safer to say that Emona unquestionably existed by that date than to invent an exact foundation day.\n\nThe walled settlement followed a rectangular street plan. Its forum stood near today's Slovenska cesta and Rimska cesta, while suburbs and a cemetery extended north toward Congress Square. Original objects, inscriptions, streets, drains, floors and wall foundations allow archaeologists to reconstruct the city; recent excavations by the Drama theatre have continued to refine that picture.\n\n### Fact, interpretation and later additions\n\n**Fact:** Roman walls, house foundations, sewers, mosaics and inscriptions have been excavated in central Ljubljana.\n\n**Reasoned historical interpretation:** the inscription of 14/15 CE dates a major imperial construction project and helps establish when the colony was already functioning. It should not be treated as a birth certificate for one exact day.\n\n**Not Roman:** the pyramid, raised sections, passages, lapidarium and park arrangement at the Mirje wall were created during Jože Plečnik's 1930s intervention. They frame authentic Roman masonry but are themselves modern design.\n\n**Legend:** unlike Ljubljana's dragon story, Emona does not need a founding legend to explain it. Claims that every picturesque feature at Mirje is Roman are a modern misconception, not archaeological fact.\n\n## The self-guided Emona walk\n\nAllow **75–120 minutes** for the outdoor route, or half a day if you enter the City Museum and the archaeological parks. The walking distance is roughly two kilometres, depending on detours. Central Ljubljana is mostly flat, but paving, kerbs and the archaeological surfaces are uneven in places.\n\n### Stop 1: City Museum of Ljubljana\n\nStart at **Gosposka 15**. The permanent exhibition gives the route essential context through original finds and visible remains. The museum is also the sensible wet-weather option.\n\nAt the time of verification, the City Museum was open Tuesday–Sunday from 10:00 to 18:00 and closed on Mondays. The listed price for the permanent exhibition was €10 for an adult, €8 reduced and €22 for a family. The museum states that its exhibition areas, lift and wheelchair toilet are accessible.\n\nFrom the museum, walk south-west toward Mirje. If time is limited, go directly to the wall and use the museum at the end.\n\n### Stop 2: Emonan House\n\nThe **Emonan House at Mirje 4** preserves part of a Roman residential building, including floors, drains and rooms that changed over centuries. It is an archaeological site rather than a reconstructed Roman villa.\n\nThe gated site is seasonal. MGML's 2026 exhibition archive lists the Arheopark season as **15 May–15 September 2026**, so do not rely on access after that date even though a general information page may still display regular hours and prices. Outside the season, continue the walk and contact MGML in advance if interior access matters to you.\n\n### Stop 3: Roman Wall at Mirje\n\nContinue to the long surviving section of the southern wall. This is the clearest outdoor place to read Emona's scale: the original fortification enclosed a rectangular town and was reinforced with towers, gates and a moat.\n\nLook closely, but read the site in layers. The Roman core is genuine; the stone pyramid, colonnade-like composition and several openings belong to Plečnik's 20th-century treatment. That contrast is the stop's most interesting lesson: Ljubljana preserves antiquity while also revealing how later generations chose to present it.\n\nThe wall is visible outdoors without entering a museum. Stay off unstable masonry, respect barriers and avoid climbing.\n\n### Stop 4: Early Christian Centre\n\nWalk north to **Erjavčeva 18**. The remains document late-antique Christianity in Emona, including a building complex associated with an early church. This stop helps correct the idea that Roman Ljubljana belongs only to the empire's earliest centuries.\n\nLike the Emonan House, the centre is part of the seasonal Arheopark. If its gate is closed, do not try to enter; use the official interpretation and continue toward Congress Square.\n\n### Stop 5: Drama excavations and the Roman street grid\n\nNear the Drama theatre, pause to imagine the blocks inside Emona's north-western quarter. Excavations in 2023 and 2024 documented roads, a sewer, residential buildings and well-preserved mosaics at depths of about 0.7 to 3.3 metres. The finds are evidence of repeated rebuilding, not a frozen city from a single year.\n\nThe excavation area is not a casual visitor attraction. Observe construction fencing and pedestrian diversions, and do not enter work zones.\n\n### Stop 6: Congress Square and Zvezda Park\n\nFinish at Congress Square. This area lay outside the walled core, where archaeologists found parts of Emona's northern suburb and burial ground. The displayed “Emona Citizen” is a replica and interpretation point, not the original bronze statue.\n\nFrom here you can return to the old town, or add the National Museum of Slovenia. Its Roman exhibition includes more than a thousand objects, the imperial construction inscription dated to 14/15 CE and the original gilded bronze citizen of Emona. Check the museum's own current hours before going.\n\n## Practical visit plan for 28 September onward\n\nBecause the 2026 Arheopark season ended on 15 September, the best reliable autumn plan is:\n\n1. visit the City Museum during its published opening hours;\n2. walk past the Emonan House and Early Christian Centre without assuming the gates will open;\n3. spend most outdoor time at the freely visible Mirje wall;\n4. finish at Congress Square or the National Museum;\n5. contact MGML before travel if access to the gated sites is essential.\n\nDo not quote an old summer schedule as year-round opening information. The official Arheopark page lists standard hours and prices, while MGML's dated 2026 archive marks the season as finished; the dated season is the safer guide for this visit.\n\n## Families, accessibility and weather\n\nChildren who enjoy maps can treat the route as a search for the vanished rectangle of Emona. The museum offers the clearest explanations and shelter; the outdoor ruins require close supervision because of stone edges and uneven ground.\n\nWheelchair users and visitors with limited mobility will find the City Museum the most dependable stop. The street route is broadly manageable, but kerbs, historic paving and archaeological surfaces can interrupt a fully step-free journey. Ask MGML about the two gated sites before visiting.\n\nAfter heavy rain, stone and leaves can be slippery. Wear shoes with grip, carry water in warm weather and use marked crossings on the route. This is an urban history walk, not a hike, but ordinary city traffic remains the main practical hazard.\n\n## Continue exploring Ljubljana\n\nPair this route with [Plečnik's Ljubljana walking tour](?article=plecnik-ljubljana-self-guided-walking-tour) to see how a 20th-century architect reshaped the presentation of the Roman wall. For deeper pre-Roman context, read [Ljubljana Marshes pile dwellers](?article=ljubljana-marshes-pile-dwellings-history). If you want to separate another famous story from documented history, follow the [Ljubljana dragon walk](?article=why-ljubljana-symbol-is-a-dragon).\n\nEmona rewards careful looking precisely because it is incomplete. The surviving stones, objects and street traces do not recreate a perfect Roman city; together, they show how archaeologists build history from evidence and how modern Ljubljana continues to live above it.",
+    "category": "Vodniki",
+    "author": "Slovenia Pulse Editorial",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "MGML — Arheopark Emona",
+        "url": "https://mgml.si/en/city-museum/exhibitions/263/arheopark-emona/"
+      },
+      {
+        "label": "MGML — City Museum of Ljubljana visitor information",
+        "url": "https://mgml.si/en/city-museum/visit-us/"
+      },
+      {
+        "label": "MGML — 2026 exhibitions archive and Arheopark season",
+        "url": "https://mgml.si/en/city-museum/exhibitions/"
+      },
+      {
+        "label": "MGML — Emona around Drama excavations",
+        "url": "https://mgml.si/en/city-museum/exhibitions/721/emona-around-drama/"
+      },
+      {
+        "label": "Visit Ljubljana — Roman Ljubljana",
+        "url": "https://www.visitljubljana.com/en/visitors/art-and-culture/roman-ljubljana"
+      },
+      {
+        "label": "Visit Ljubljana — Roman Wall at Mirje",
+        "url": "https://www.visitljubljana.com/en/poi/roman-town-walls-in-mirje"
+      },
+      {
+        "label": "Visit Ljubljana — National Museum of Slovenia",
+        "url": "https://www.visitljubljana.com/en/poi/national-museum-of-slovenia"
+      }
+    ],
+    "createdAt": "2026-09-28T09:13:35+02:00",
+    "updatedAt": "2026-09-28T09:13:35+02:00"
+  },
+
+  {
+    "id": "slovenija-brez-osvojenega-niza-izgubila-boj-za-bron-finale-poljska-francija-24-24-prvi-niz-feefb9dc",
+    "title": "Slovenija brez osvojenega niza izgubila boj za bron; Finale: Poljska - Francija 24:24 (prvi niz)",
+    "excerpt": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Slovenija brez osvojenega niza izgubila boj za bron; Finale: Poljska - Francija 24:24 (prvi niz)«.",
+    "seoDescription": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Slovenija brez osvojenega niza izgubila boj za bron; Finale: Poljska - Francija ",
+    "content": "**Šport, 28. 9. 2026.** Slovenija brez osvojenega niza izgubila boj za bron; Finale: Poljska - Francija 24:24 (prvi niz) rtvslo.si\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: rtvslo.si. Objavljeno: Sat, 26 Sep 2026 16:39:46 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiqgFBVV95cUxOUXlEeDh4cEhkRmR6SUJ2dzJYRWJpZnZ3T1NKSnB5LXp5VmV0Sm8tUEdZRVAyeWpXUk9PNkFIVTB2TFVXUGFWNlN1dDRlUjd3OWc4TU1HdFlseVREX2ZCbXJqdXdJMFAyVmkxaU82RmEwWjlwdkx0RDZlUVdFdGRONjVYOUhpd3lmZDhGRFhRMkxiOERZSWZaN0lFNG15LUc2Yjh5WERRcFI0QQ?oc=5)\n\n## Dopolnitev vira 2: Delo.si\n\nSlovenija bo bron lovila proti Finski, Francija po štirih nizih v finale Delo.si\n\n Vir: Delo.si. Objavljeno: Fri, 25 Sep 2026 21:06:01 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMirwFBVV95cUxPZ181UTlGUWlKM1BwWjJnd2xRTXk4S0tkT2JEc1B6ZkpxcnBOaWV6SVR2M3l4UW1BNzQyaGVFcFlERFppdFZpb1JGbUdYX3lFbVpBODZGZmxDZndGaUtxZ0d4Y2FUd1JQYXFtODZLYmNBOHozS0FxVnFOOUZFQTNnWkRjR192NEFDMXlxdktHUWpsVExpR3p2RldvdEQxY1g0LUs0S09aT29vVTBMQkpr?oc=5)\n\n## Dopolnitev vira 3: rtvslo.si\n\nIzjemno kakovostni Poljaki Slovence poslali v boj za bron s Finci rtvslo.si\n\n Vir: rtvslo.si. Objavljeno: Fri, 25 Sep 2026 20:49:56 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMixAFBVV95cUxPUGpmTEE3Njc5QXZPMXRSRVNvaHJpd0dIb19yM3dpSUZ6TUdEcFlFbUx3emJ2MWs5M19aaFlaeE5PNnd2N3l2ckQxTFdlWV9IdEoxX09GT0dUM1JYbllFeTlMWWpmWTJOSUFTUUVPTWlWNGFoWHZVZDA2eFFuekpGLVlHbXZsNFJrU0V0M1FPczlzVXRERnlqTnZvaUUxQXViQ1BTendUMU8xRjJBSlpFOXRQckJuYmFmVWwyblI4ZFNGMkFQ?oc=5)\n\n## Dopolnitev vira 4: rtvslo.si\n\nPolfinale: Slovenija - Poljska 0:2 (11:7 v tretjem nizu) rtvslo.si\n\n Vir: rtvslo.si. Objavljeno: Fri, 25 Sep 2026 15:06:16 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMikgFBVV95cUxOSmt3ZE9Wa2J2NS05Y2dtM3FGVHUyd01WUWtZRFBwS05uU0NfTURtUnFZMV9kNmFpRV9ockpRb2VqcUhTNlBjNm5JdWI1eXVwaXYzM1FmaFFRNTJkTTAydXoxLUlaYnhhUTBkYnh5YWFUbUZBMlI2U2pvRTdwX0JiWHQ3dWtKa3BKaUdrUTFnbmlEZw?oc=5)\n\n## Dopolnitev vira 5: rtvslo.si\n\nSlovenija brez osvojenega niza izgubila v boju za bron rtvslo.si\n\n Vir: rtvslo.si. Objavljeno: Sat, 26 Sep 2026 15:43:09 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMimAFBVV95cUxNd05HaWNEQk1BQkFoQnVnZ05aV1FTdHloSzBSa2NfZnJlQ0VST1dqQW1QS2d1a2pYT3FQelpiRUhlOEJVVGNnWGxzU3RsM2R4S1RNQUVvbllOUGtBX0RERHEzWl9wMUtpR0traVBUX2pCSi1DNXh1RDRjSmNiQXZZcFU5ellFZzlseXpxcHdpbzdmUlg5a3RoQg?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Šport",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "rtvslo.si — Slovenija brez osvojenega niza izgubila boj za bron; Finale: Poljska - Francija 24:24 (prvi niz) - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOUXlEeDh4cEhkRmR6SUJ2dzJYRWJpZnZ3T1NKSnB5LXp5VmV0Sm8tUEdZRVAyeWpXUk9PNkFIVTB2TFVXUGFWNlN1dDRlUjd3OWc4TU1HdFlseVREX2ZCbXJqdXdJMFAyVmkxaU82RmEwWjlwdkx0RDZlUVdFdGRONjVYOUhpd3lmZDhGRFhRMkxiOERZSWZaN0lFNG15LUc2Yjh5WERRcFI0QQ?oc=5"
+      },
+      {
+        "label": "Delo.si — Slovenija bo bron lovila proti Finski, Francija po štirih nizih v finale - Delo.si",
+        "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPZ181UTlGUWlKM1BwWjJnd2xRTXk4S0tkT2JEc1B6ZkpxcnBOaWV6SVR2M3l4UW1BNzQyaGVFcFlERFppdFZpb1JGbUdYX3lFbVpBODZGZmxDZndGaUtxZ0d4Y2FUd1JQYXFtODZLYmNBOHozS0FxVnFOOUZFQTNnWkRjR192NEFDMXlxdktHUWpsVExpR3p2RldvdEQxY1g0LUs0S09aT29vVTBMQkpr?oc=5"
+      },
+      {
+        "label": "rtvslo.si — Izjemno kakovostni Poljaki Slovence poslali v boj za bron s Finci - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPUGpmTEE3Njc5QXZPMXRSRVNvaHJpd0dIb19yM3dpSUZ6TUdEcFlFbUx3emJ2MWs5M19aaFlaeE5PNnd2N3l2ckQxTFdlWV9IdEoxX09GT0dUM1JYbllFeTlMWWpmWTJOSUFTUUVPTWlWNGFoWHZVZDA2eFFuekpGLVlHbXZsNFJrU0V0M1FPczlzVXRERnlqTnZvaUUxQXViQ1BTendUMU8xRjJBSlpFOXRQckJuYmFmVWwyblI4ZFNGMkFQ?oc=5"
+      },
+      {
+        "label": "rtvslo.si — Polfinale: Slovenija - Poljska 0:2 (11:7 v tretjem nizu) - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOSmt3ZE9Wa2J2NS05Y2dtM3FGVHUyd01WUWtZRFBwS05uU0NfTURtUnFZMV9kNmFpRV9ockpRb2VqcUhTNlBjNm5JdWI1eXVwaXYzM1FmaFFRNTJkTTAydXoxLUlaYnhhUTBkYnh5YWFUbUZBMlI2U2pvRTdwX0JiWHQ3dWtKa3BKaUdrUTFnbmlEZw?oc=5"
+      },
+      {
+        "label": "rtvslo.si — Slovenija brez osvojenega niza izgubila v boju za bron - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNd05HaWNEQk1BQkFoQnVnZ05aV1FTdHloSzBSa2NfZnJlQ0VST1dqQW1QS2d1a2pYT3FQelpiRUhlOEJVVGNnWGxzU3RsM2R4S1RNQUVvbllOUGtBX0RERHEzWl9wMUtpR0traVBUX2pCSi1DNXh1RDRjSmNiQXZZcFU5ellFZzlseXpxcHdpbzdmUlg5a3RoQg?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-28T08:24:33+02:00",
+    "updatedAt": "2026-09-28T08:24:33+02:00"
+  },
+
+  {
+    "id": "ljubljana-ni-slovenija-zakaj-je-selitev-solskega-ministrstva-v-novo-mesto-odlicna-ideja-150359b0",
+    "title": "Ljubljana ni Slovenija: zakaj je selitev šolskega ministrstva v Novo mesto odlična ideja",
+    "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Ljubljana ni Slovenija: zakaj je selitev šolskega ministrstva v Novo mesto odlična ideja«.",
+    "seoDescription": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Ljubljana ni Slovenija: zakaj je selitev šolskega ministrstva v Novo mesto od",
+    "content": "**Aktualno, 27. 9. 2026.** Ljubljana ni Slovenija: zakaj je selitev šolskega ministrstva v Novo mesto odlična ideja Najdi.si novice\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Najdi.si novice. Objavljeno: Mon, 06 Jul 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMi8wFBVV95cUxQTkVvS1FTSXY0ZEhoQVZUaWhBT3FpbW5uMWFqSlhzMkVYVXJnM2pQekFXYmpjOGRWOTBQVTFYdUQ4SkVUOWdrUUZlRVNCQzZiQWxzM0UtNml3UGh5M0E5Tl8wcUxockVEUmNadGVYZGJuclhtNWdyRktHNVBTa2ZHbGFpVndBNVE4TGpwTEd1N2p3WE5wX3lNUEJpbXllSFU0RWRfU3ZtdURMQldZancxblJUZEUzOEg5VHA0VlVuRXl2dGlqcGdkR25abzdQR0p1UnRGcnVOelVVdWNQaG5pbTBVeTJyUi1Ma0dkbHM5aEVXT1k?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Aktualno",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Najdi.si novice — Ljubljana ni Slovenija: zakaj je selitev šolskega ministrstva v Novo mesto odlična ideja - Najdi.si novice",
+        "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQTkVvS1FTSXY0ZEhoQVZUaWhBT3FpbW5uMWFqSlhzMkVYVXJnM2pQekFXYmpjOGRWOTBQVTFYdUQ4SkVUOWdrUUZlRVNCQzZiQWxzM0UtNml3UGh5M0E5Tl8wcUxockVEUmNadGVYZGJuclhtNWdyRktHNVBTa2ZHbGFpVndBNVE4TGpwTEd1N2p3WE5wX3lNUEJpbXllSFU0RWRfU3ZtdURMQldZancxblJUZEUzOEg5VHA0VlVuRXl2dGlqcGdkR25abzdQR0p1UnRGcnVOelVVdWNQaG5pbTBVeTJyUi1Ma0dkbHM5aEVXT1k?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-27T19:51:40+02:00",
+    "updatedAt": "2026-09-27T19:51:40+02:00"
+  },
+
+  {
+    "id": "breznik-zasebni-obiski-v-moskvi-ne-predstavljajo-zunanje-politike-slovenije-45a4bf9f",
+    "title": "Breznik: Zasebni obiski v Moskvi ne predstavljajo zunanje politike Slovenije",
+    "excerpt": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Breznik: Zasebni obiski v Moskvi ne predstavljajo zunanje politike Slovenije«.",
+    "seoDescription": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Breznik: Zasebni obiski v Moskvi ne predstavljajo zunanje politike Slovenije«",
+    "content": "**Politika, 27. 9. 2026.** Breznik: Zasebni obiski v Moskvi ne predstavljajo zunanje politike Slovenije 24ur.com\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nPri političnih temah Blog Lab ne podpira kandidatov, strank ali političnih odločitev; izjave in ocene so predstavljene kot stališča njihovih avtorjev ali virov, ne kot uredniška presoja.\n\nVir: 24ur.com. Objavljeno: Tue, 11 Aug 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiugFBVV95cUxPRjZtZEExUGZqZUotMVRBa3BXX0FNaVBwR2pNdnlzYmlkck5HeWhRaVJaVUEzVV9PTUd6UElkaWVvcEF3dkc3YU5UaGJuS3VwMkhmejNPNk1IS0lLamxER0NGajJjN2Y3d2lmU1IyM3RBQWt6Ri0zbm1GdE5KY0NtbFYxM3RRTUR3V0FDN2pqN2tZOGZlVFd2dnpVTnBSXy14R0VwdC1lMWRIVVVyZUFuNXEwQ3NzSWlBU2c?oc=5)\n\n## Dopolnitev vira 2: Slovenske novice\n\nJanša in Netanjahu v New Yorku odprla »novo poglavje«: tako so se odzvali v Sloveniji Slovenske novice\n\n Vir: Slovenske novice. Objavljeno: Fri, 25 Sep 2026 16:34:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiywFBVV95cUxPckZ5ZGxaRFJ2eTM4SjAxVzdkY3owaHVyNGo5OGlFU25aOWNjQ2dfb1l3aU5JNV9nZU5XT0JucW5Gank2VEdFNEdWaFZEbVp3LWxEU1VDRXdhNUViUkpCVFpldHpzS19TTG9wZzJjRmplV1VtMW9BMVg5UkpHTVdtVlBRcXVCeHV5UTAwRE5iNDN1anFTdmFfMmxhZlMwRFJ2Rmk4bHREbFowWE5pcGdSUFg2UkVUVzJnVXF3Rlh6aFJhMnIxcVlIVmJfUQ?oc=5)\n\n## Dopolnitev vira 3: Dnevnik\n\nNataša Pirc Musar: Slovenija si zasluži povezanost v politiki Dnevnik\n\n Vir: Dnevnik. Objavljeno: Sat, 11 Jul 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMirwFBVV95cUxOVGhEQWFRaTc4VWxtSWdFYTRNZVotV20zYlZKcDJ2RVdNMGFVc0xkMXJxQ00wY05kalZRMDlCTThFeS1OUmh6UjVuRllDT2cyYmROcVVaQzBhWVBydDBVVEwteDhGeDI5UHJncG12NHExNmg1SWlpcVRDLXVzdG9qcU4zTGNrN2F6TXQydVVjc0lIdGJHWi1TeXo1aHBGNGxJd3hVM25oYThKSWVVU3U0?oc=5)\n\n## Dopolnitev vira 4: 24ur.com\n\nKdo vodi bolnišnice: stroka, politika ali osebni interesi? 24ur.com\n\n Vir: 24ur.com. Objavljeno: Thu, 24 Sep 2026 04:48:38 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiekFVX3lxTE81X3lWVlNPcDBUeldITUwzSzV3V1BMa1BGTTM0cDNWbzU2NVdLZTZaaV9WM0RSNWtFa0ZNNlkydHR6MTNlRndaVThVU1MzbnB0VDJQeHVzNUF6YjU4M3poSHRQdFVBWjZNd1FKU0xCRjROZTdUUTBoSWd3?oc=5)\n\n## Dopolnitev vira 5: Dnevnik\n\nNovinarji udarili po mizi: RTV ne damo politiki! Dnevnik\n\n Vir: Dnevnik. Objavljeno: Tue, 15 Sep 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMinwFBVV95cUxNQ05xTlRtMGlpUEJtVEU4X3ZnbWRHRWRySGl2MDdRaUp3YUtneHBwWm1BNUE3emo3Z2lXZUhxM0Q4UVgxSHRYUmxhc2trMkxzLUdZaEtBbTY0QlM1bmhwUzdqZ1F5Z3ZaaEFCOVNXY2M5eTN1YVpWQnp2UmhkS05jUUw5Ym84RE5pTVM1VkIyaXBORktQaFp4WlpFaGRwYjA?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Politika",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "24ur.com — Breznik: Zasebni obiski v Moskvi ne predstavljajo zunanje politike Slovenije - 24ur.com",
+        "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPRjZtZEExUGZqZUotMVRBa3BXX0FNaVBwR2pNdnlzYmlkck5HeWhRaVJaVUEzVV9PTUd6UElkaWVvcEF3dkc3YU5UaGJuS3VwMkhmejNPNk1IS0lLamxER0NGajJjN2Y3d2lmU1IyM3RBQWt6Ri0zbm1GdE5KY0NtbFYxM3RRTUR3V0FDN2pqN2tZOGZlVFd2dnpVTnBSXy14R0VwdC1lMWRIVVVyZUFuNXEwQ3NzSWlBU2c?oc=5"
+      },
+      {
+        "label": "Slovenske novice — Janša in Netanjahu v New Yorku odprla »novo poglavje«: tako so se odzvali v Sloveniji - Slovenske novice",
+        "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPckZ5ZGxaRFJ2eTM4SjAxVzdkY3owaHVyNGo5OGlFU25aOWNjQ2dfb1l3aU5JNV9nZU5XT0JucW5Gank2VEdFNEdWaFZEbVp3LWxEU1VDRXdhNUViUkpCVFpldHpzS19TTG9wZzJjRmplV1VtMW9BMVg5UkpHTVdtVlBRcXVCeHV5UTAwRE5iNDN1anFTdmFfMmxhZlMwRFJ2Rmk4bHREbFowWE5pcGdSUFg2UkVUVzJnVXF3Rlh6aFJhMnIxcVlIVmJfUQ?oc=5"
+      },
+      {
+        "label": "Dnevnik — Nataša Pirc Musar: Slovenija si zasluži povezanost v politiki - Dnevnik",
+        "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOVGhEQWFRaTc4VWxtSWdFYTRNZVotV20zYlZKcDJ2RVdNMGFVc0xkMXJxQ00wY05kalZRMDlCTThFeS1OUmh6UjVuRllDT2cyYmROcVVaQzBhWVBydDBVVEwteDhGeDI5UHJncG12NHExNmg1SWlpcVRDLXVzdG9qcU4zTGNrN2F6TXQydVVjc0lIdGJHWi1TeXo1aHBGNGxJd3hVM25oYThKSWVVU3U0?oc=5"
+      },
+      {
+        "label": "24ur.com — Kdo vodi bolnišnice: stroka, politika ali osebni interesi? - 24ur.com",
+        "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE81X3lWVlNPcDBUeldITUwzSzV3V1BMa1BGTTM0cDNWbzU2NVdLZTZaaV9WM0RSNWtFa0ZNNlkydHR6MTNlRndaVThVU1MzbnB0VDJQeHVzNUF6YjU4M3poSHRQdFVBWjZNd1FKU0xCRjROZTdUUTBoSWd3?oc=5"
+      },
+      {
+        "label": "Dnevnik — Novinarji udarili po mizi: RTV ne damo politiki! - Dnevnik",
+        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNQ05xTlRtMGlpUEJtVEU4X3ZnbWRHRWRySGl2MDdRaUp3YUtneHBwWm1BNUE3emo3Z2lXZUhxM0Q4UVgxSHRYUmxhc2trMkxzLUdZaEtBbTY0QlM1bmhwUzdqZ1F5Z3ZaaEFCOVNXY2M5eTN1YVpWQnp2UmhkS05jUUw5Ym84RE5pTVM1VkIyaXBORktQaFp4WlpFaGRwYjA?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-27T13:39:50+02:00",
+    "updatedAt": "2026-09-27T13:39:50+02:00"
+  },
+
+  {
+    "id": "zelenci-nature-reserve-day-trip-from-ljubljana",
+    "title": "Zelenci Nature Reserve: An Easy Alpine Day Trip from Ljubljana",
+    "excerpt": "Visit the emerald source of the Sava Dolinka with a low-impact route from Rateče, public-transport planning, family advice and clear wetland safety rules.",
+    "seoDescription": "Plan a Zelenci Nature Reserve day trip from Ljubljana: official access routes, bus planning, family and accessibility notes, weather safety and nature rules.",
+    "content": "Zelenci Nature Reserve is one of Slovenia's easiest places to experience an Alpine wetland without committing to a mountain hike. Emerald water rises through pale lake chalk, the young Sava Dolinka begins its visible journey, and the Julian Alps form a dramatic backdrop behind a short forest approach and wooden viewing platforms.\n\nThat easy access should not be mistaken for an ordinary park. Zelenci is a sensitive reserve, and the official guidance asks visitors to remain on the designated route and avoid disturbing the wetland. It works best as a slow half-day excursion or as one carefully planned stop in the Upper Sava Valley.\n\n**Last verified: 27 September 2026.** Access, transport, weather and surface conditions can change. Check the linked official sources again on the morning of travel.\n\n## Why visit Zelenci?\n\nTriglav National Park explains that the Sava Dolinka first appears as the Nadiža in the Tamar Valley, disappears underground and then emerges again at Zelenci. Water rises through small springs in the lake bed, creating the characteristic \"boiling\" effect beneath the clear green surface.\n\nThe official Kranjska Gora destination page describes a maintained forest path, a wooden footbridge across the marshy ground and an observation tower beside the lake. The visit is short, but the combination of water, wetland plants and mountain views makes it far more rewarding than a roadside photo stop.\n\n## The easiest route: Rateče to Zelenci\n\nThe most useful car-light starting point is **Rateče**, west of Kranjska Gora. The official walking description begins at the Rateče bus stop, follows the old road east, crosses the main road and reaches the parking area beside Gostilna Zelenci. From there, the reserve is approximately a five-minute walk.\n\nAllow more time than the final five-minute approach suggests. You still need to walk from the bus stop, cross a busy road carefully, explore the boardwalk and observation points, and return without rushing. Kranjska Gora's official FAQ says a visit to the reserve generally takes no more than one hour, excluding the longer approach from Rateče.\n\n### A simple visit sequence\n\n1. Leave the bus at Rateče and confirm the return stop and timetable.\n2. Follow the official walking route east along the old road.\n3. Cross the main road only where visibility is good and traffic permits.\n4. Enter from the signed parking area near Gostilna Zelenci.\n5. Stay on the forest path and wooden structures.\n6. Return to Rateče, or continue only on a route you have checked in advance.\n\nDo not create shortcuts through the reeds or soft ground. The boardwalk protects both visitors and the wetland.\n\n## Getting from Ljubljana without a car\n\nArriva operates regional bus connections from Ljubljana toward the Upper Sava Valley, but departure patterns vary by date and season. Search the live timetable using **Ljubljana AP** as the departure point and Rateče or Kranjska Gora as the destination. Do not copy an old seasonal timetable into your plan.\n\nA practical car-light plan is:\n\n- choose an early service with a comfortable arrival margin;\n- check whether your journey is direct or requires a transfer;\n- save the final return departure offline;\n- compare Rateče and Kranjska Gora stops before buying;\n- leave enough daylight for delays and the walk back.\n\nAnother option is travelling by train to Jesenice and continuing by bus. Kranjska Gora Tourism notes that Jesenice is the nearest railway station and that Kranjska Gora is about 20 kilometres away by bus. This combination can work, but only if the live rail and bus timetables align.\n\n## Driving and parking responsibly\n\nIf you drive, use an official parking area and check current road conditions on Promet.si before departure. Roadworks and weekend traffic can significantly lengthen journeys between Ljubljana and the Gorenjska region.\n\nThe presence of roadside parking does not make every verge a legal or safe stopping place. Never block agricultural access, the cycle route or emergency passage. If the closest spaces are full, continue to a regulated alternative rather than parking on the wetland edge.\n\n## Difficulty, footwear and seasonal conditions\n\nThe standard reserve visit is a short low-level walk, not an alpine ascent. The destination describes the forest approach as maintained and suitable for families. Even so, conditions can change:\n\n- wooden surfaces become slippery after rain, frost or fallen leaves;\n- the forest approach may be muddy;\n- mist and early darkness reduce visibility;\n- snow and ice can make a simple route unsafe;\n- water and sensitive vegetation lie immediately beside the visitor structures.\n\nWear closed shoes with useful grip. In autumn, bring a warm layer and rain protection even when Ljubljana feels mild. In winter, do not assume that a short boardwalk is automatically cleared or ice-free.\n\nCheck the [ARSO forecast](https://meteo.arso.gov.si/met/en/) immediately before leaving. If you intend to extend the day into higher terrain, also check [official PZS trail conditions](https://stanje-poti.pzs.si/en.php); conditions at Zelenci do not indicate safety on nearby mountain paths.\n\n## Families\n\nZelenci is a strong family option because the central experience does not require a long hike. Children can observe clear water, springs, marsh plants and mountain scenery within a compact area.\n\nAdults should nevertheless keep children close on wet wooden surfaces and beside open water. The reserve is not a playground: running, leaving the path, feeding wildlife and dropping objects into the springs can damage a protected habitat.\n\nA carrier is generally more practical than a pushchair when surfaces are wet or uneven. Families should use the official route description as guidance, not as a guarantee that every section will suit every child or mobility aid.\n\n## Accessibility\n\nThe maintained path and wooden footbridge reduce the physical challenge, but the official visitor information reviewed for this article does not provide a complete step-free specification. Surface gaps, gradients, weather damage and the observation tower may create barriers.\n\nWheelchair users and travellers with limited mobility should contact the Kranjska Gora Tourist Information Centre before setting out. Ask specifically about:\n\n- the current surface between parking and the lake;\n- gradients and widths on the wooden sections;\n- steps at viewing points;\n- accessible parking;\n- maintenance or temporary closures.\n\nDo not rely on the word \"easy\" as proof of independent wheelchair access.\n\n## Entry, opening and facilities\n\nThe official pages reviewed confirm the access routes and visitor features but do not publish a separate admission price or fixed gate schedule for the reserve. Treat Zelenci as an outdoor natural site rather than a staffed attraction.\n\nThere may be no guaranteed toilets, refreshments, shelter or on-site assistance at the exact moment of your visit. Use facilities in Rateče or Kranjska Gora, carry water and take all rubbish away. If you need a staffed visitor service, check the current opening hours of the Kranjska Gora Tourist Information Centre.\n\n## Protecting the reserve\n\nTriglav National Park's guidance for Zelenci is clear: remain on marked routes and do not fly drones. These rules are not cosmetic. The wooden route prevents trampling in a wetland where small detours can damage vegetation and disturb wildlife.\n\nFollow these low-impact principles:\n\n- stay on the designated path and platforms;\n- keep dogs under close control and follow posted instructions;\n- do not collect plants, stones or water;\n- keep voices and music low;\n- never launch a drone;\n- take litter back with you;\n- avoid crowding a viewpoint when others are waiting.\n\nEarly morning can be quieter, but only travel when paths, transport and daylight make the visit safe.\n\n## Combine Zelenci with another easy stop\n\n### Rateče\n\nRateče provides the most logical base for a short walk, a meal and the return bus. Confirm opening times before relying on a particular restaurant.\n\n### Kranjska Gora and Lake Jasna\n\nIf transport aligns, Kranjska Gora and Lake Jasna can extend the day without adding a high-mountain hike. The destination describes Lake Jasna as reachable on foot from the centre of Kranjska Gora. Keep the plan flexible rather than forcing several stops into a tight return schedule.\n\n### A longer walk or cycle\n\nOfficial local routes connect Rateče, Zelenci, Podkoren and Kranjska Gora. Use the current route description and daylight to decide whether to continue. A short nature visit should not turn into an improvised mountain outing.\n\nFor a different wetland ecosystem, compare this trip with the [Sečovlje Salt Pans nature guide](?article=secovlje-salt-pans-nature-park-guide). For a longer karst walk with natural bridges, see the [Rakov Škocjan hiking guide](?article=rakov-skocjan-hiking-guide).\n\n## Quick planning checklist\n\nBefore leaving Ljubljana:\n\n- check ARSO weather and recent precipitation;\n- search live Arriva departures and the return journey;\n- check Promet.si if driving;\n- pack shoes with grip and weather protection;\n- download the official route description;\n- carry water and leave no litter;\n- contact the tourist office if accessibility is essential;\n- abandon extensions into higher terrain if conditions are uncertain.\n\n## Sources and final check\n\nInformation was verified on 27 September 2026 using the official Kranjska Gora destination pages, Triglav National Park visitor guidance, Arriva Slovenia, ARSO, Promet.si and PZS. Recheck live transport, road, weather and path information immediately before departure.",
+    "category": "Vodniki",
+    "author": "Slovenia Pulse Editorial",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Kranjska Gora Tourism — Zelenci Nature Reserve",
+        "url": "https://kranjska-gora.si/en/attractions/zelenci-natural-reserve"
+      },
+      {
+        "label": "Kranjska Gora Tourism — Rateče to Zelenci Walking Route",
+        "url": "https://kranjska-gora.si/en/activities/from-ratece-to-zelenci-2nd-source-of-the-sava-river"
+      },
+      {
+        "label": "Kranjska Gora Tourism — Visitor FAQ",
+        "url": "https://kranjska-gora.si/en/faq"
+      },
+      {
+        "label": "Triglav National Park — Zelenci",
+        "url": "https://www.tnp.si/en/visiting-park/landmaks/zelenci/"
+      },
+      {
+        "label": "Triglav National Park — Zelenci Visitor Guidance",
+        "url": "https://www.tnp.si/en/visiting-park/latest/accommodation/podrobnosti/60/zelenci-natural-reserve.html"
+      },
+      {
+        "label": "Arriva Slovenia — Timetable Search",
+        "url": "https://arriva.si/en/timetables/"
+      },
+      {
+        "label": "ARSO — Weather Forecasts",
+        "url": "https://meteo.arso.gov.si/met/en/"
+      },
+      {
+        "label": "Promet.si — Current Road Information",
+        "url": "https://www.promet.si/en/home"
+      },
+      {
+        "label": "Alpine Association of Slovenia — Trail Conditions",
+        "url": "https://stanje-poti.pzs.si/en.php"
+      }
+    ],
+    "createdAt": "2026-09-27T09:00:00+02:00",
+    "updatedAt": "2026-09-27T09:00:00+02:00"
+  },
+  {
+    "id": "slovenci-so-se-krcevito-branili-in-se-ubranili-s-skotsko-so-remizirali-70821aca",
+    "title": "Slovenci so se krčevito branili in se ubranili: s Škotsko so remizirali",
+    "excerpt": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Slovenci so se krčevito branili in se ubranili: s Škotsko so remizirali«.",
+    "seoDescription": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Slovenci so se krčevito branili in se ubranili: s Škotsko so remizirali«.",
+    "content": "**Šport, 27. 9. 2026.** Slovenci so se krčevito branili in se ubranili: s Škotsko so remizirali Dnevnik\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Dnevnik. Objavljeno: Sat, 26 Sep 2026 16:19:16 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMirAFBVV95cUxNc0U4a0U0SUJUaW53WUFfTF9xclVDUC1CazkwZTFLRE5DV29hTUZhRVZ4ZDM5ajRCcENEb1JzQlB0cFZrQV82TFdndUF6ZFlSWTFqVWpraWVWZ29tLXozeHMwRzY4ZEdQdFZqOV9TQTY2aFl1Y3ZCTjZNYWpyc0NIaFFlaVJFVW1QRkstcHlfLWJVYi1wV0Vfb1NMOVFZV2h0OXV2N1NfTldHZExG?oc=5)\n\n## Dopolnitev vira 2: Maribor24.si\n\nSlovenija remizirala v uvodni tekmi, nogometaše že v torek čaka nova preizkušnja Maribor24.si\n\n Vir: Maribor24.si. Objavljeno: Sat, 26 Sep 2026 15:04:41 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiqwFBVV95cUxNcm5wZUs5WmkwRENuU1daRlFrY25id1h2Vl9jOHhuYl9oTEdVazM4VzI5Y2dRMXhQem1acWhDYzk1U3psY3duSm5vQ2ZNT0k0TTgwU2Nuc2dwSHJPRmN1SUZsZHRvcEdWb3JrQnluX1F0bFdXNkh3Zk5hWExVZElqbjB4OEhjdW5LRDJFQldCZHRmRU52Q1RSSG54S0ZHOVFWLTBmSDJ4dWZtLVk?oc=5)\n\n## Dopolnitev vira 3: Dnevnik\n\nDogodki po Sloveniji: od 70 vrst štrudlja do robota Jožeta, ki teče na maratonu Dnevnik\n\n Vir: Dnevnik. Objavljeno: Sun, 27 Sep 2026 04:46:01 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMivgFBVV95cUxORGRpZHRJNE1NS3h3V18wRE1kTk5WM2RQMVlBRUVTbGVUZXNfcmZyajE4VU93U0lHckx3UEhabWNxWi0zZVdPR3V1T0NZVWV5Wk02Nm9USDFzeHFmb0hBdlcwX2NJVk0wOU9hSHdRVkRzSGdEOFNza0xJWGN1ZDIwZHc3aTUtOUkzVkN6SGQxem53Z1VNZnpIelN4VVlnN25iYUlVV1RiVUFKYkZNVHduQm9WUWRKTm9pQ3RjY1p3?oc=5)\n\n## Dopolnitev vira 4: rtvslo.si\n\nSlovenci pogoreli v preveliki želji: \"Finci so bili enostavno premočni\" rtvslo.si\n\n Vir: rtvslo.si. Objavljeno: Sun, 27 Sep 2026 01:09:37 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiyAFBVV95cUxPX2xmRTAxME5fSVpwTmJvdXEtNVJwZVN1NmpBOFYxWUFKWEc5bGFiZEdEd3ZkQnh5bUFab2RNdXNPYjBuVkZVVVU3dmllQWFkbVluT1pPTm9aT3BEVUUyX2I4UF9WMGlqODRLNGQ3UklQM05iaVpEcHZENzhyTEZ3ZjFsZjdiXzNSaDFveEFFX21EazhvdE1Qa3l5UW11THVpUHl5TmljVV9EOU9tQ25URHBYUFM0QU9sdjhrdlBUbWItOXpDVUJmaQ?oc=5)\n\n## Dopolnitev vira 5: rtvslo.si\n\nSlovenci izgubili boj za bron; Poljaki drugič zapored evropski prvaki rtvslo.si\n\n Vir: rtvslo.si. Objavljeno: Sat, 26 Sep 2026 21:54:42 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiyAFBVV95cUxPVWh1cHNZMFUwcUljY1RXd3M0eUZZUGFmNWhmZjlxb0hEOUI4d3U1Qmk0cFVHQkU2ME9hVkJlU3Znc0J6TW5CQUcwc2U3LV96c3NhVW1WSnJ2dGNGeFFDVE5RdlJGZVFaTTlmRjBWUjAxMEQ4akJvU1hwdFByY0E3TGcwd0c5VXVfaS1KTkFQM0tLaFZfaDRJVEdFVkpBR0ZQLUJRaEd5THcydDg5dFJLVGNwOHhJakVROEtKbV9jWWw4Rkx1SFQ0VA?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Šport",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Dnevnik — Slovenci so se krčevito branili in se ubranili: s Škotsko so remizirali - Dnevnik",
+        "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNc0U4a0U0SUJUaW53WUFfTF9xclVDUC1CazkwZTFLRE5DV29hTUZhRVZ4ZDM5ajRCcENEb1JzQlB0cFZrQV82TFdndUF6ZFlSWTFqVWpraWVWZ29tLXozeHMwRzY4ZEdQdFZqOV9TQTY2aFl1Y3ZCTjZNYWpyc0NIaFFlaVJFVW1QRkstcHlfLWJVYi1wV0Vfb1NMOVFZV2h0OXV2N1NfTldHZExG?oc=5"
+      },
+      {
+        "label": "Maribor24.si — Slovenija remizirala v uvodni tekmi, nogometaše že v torek čaka nova preizkušnja - Maribor24.si",
+        "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNcm5wZUs5WmkwRENuU1daRlFrY25id1h2Vl9jOHhuYl9oTEdVazM4VzI5Y2dRMXhQem1acWhDYzk1U3psY3duSm5vQ2ZNT0k0TTgwU2Nuc2dwSHJPRmN1SUZsZHRvcEdWb3JrQnluX1F0bFdXNkh3Zk5hWExVZElqbjB4OEhjdW5LRDJFQldCZHRmRU52Q1RSSG54S0ZHOVFWLTBmSDJ4dWZtLVk?oc=5"
+      },
+      {
+        "label": "Dnevnik — Dogodki po Sloveniji: od 70 vrst štrudlja do robota Jožeta, ki teče na maratonu - Dnevnik",
+        "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxORGRpZHRJNE1NS3h3V18wRE1kTk5WM2RQMVlBRUVTbGVUZXNfcmZyajE4VU93U0lHckx3UEhabWNxWi0zZVdPR3V1T0NZVWV5Wk02Nm9USDFzeHFmb0hBdlcwX2NJVk0wOU9hSHdRVkRzSGdEOFNza0xJWGN1ZDIwZHc3aTUtOUkzVkN6SGQxem53Z1VNZnpIelN4VVlnN25iYUlVV1RiVUFKYkZNVHduQm9WUWRKTm9pQ3RjY1p3?oc=5"
+      },
+      {
+        "label": "rtvslo.si — Slovenci pogoreli v preveliki želji: \"Finci so bili enostavno premočni\" - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPX2xmRTAxME5fSVpwTmJvdXEtNVJwZVN1NmpBOFYxWUFKWEc5bGFiZEdEd3ZkQnh5bUFab2RNdXNPYjBuVkZVVVU3dmllQWFkbVluT1pPTm9aT3BEVUUyX2I4UF9WMGlqODRLNGQ3UklQM05iaVpEcHZENzhyTEZ3ZjFsZjdiXzNSaDFveEFFX21EazhvdE1Qa3l5UW11THVpUHl5TmljVV9EOU9tQ25URHBYUFM0QU9sdjhrdlBUbWItOXpDVUJmaQ?oc=5"
+      },
+      {
+        "label": "rtvslo.si — Slovenci izgubili boj za bron; Poljaki drugič zapored evropski prvaki - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPVWh1cHNZMFUwcUljY1RXd3M0eUZZUGFmNWhmZjlxb0hEOUI4d3U1Qmk0cFVHQkU2ME9hVkJlU3Znc0J6TW5CQUcwc2U3LV96c3NhVW1WSnJ2dGNGeFFDVE5RdlJGZVFaTTlmRjBWUjAxMEQ4akJvU1hwdFByY0E3TGcwd0c5VXVfaS1KTkFQM0tLaFZfaDRJVEdFVkpBR0ZQLUJRaEd5THcydDg5dFJLVGNwOHhJakVROEtKbV9jWWw4Rkx1SFQ0VA?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-27T08:24:45+02:00",
+    "updatedAt": "2026-09-27T08:24:45+02:00"
+  },
+
+  {
+    "id": "aktualno-prodaja-avtomobilov-v-sloveniji-julija-je-bil-vsak-cetrti-novi-avtomobilov-v-slov-828a08f7",
+    "title": "Aktualno: prodaja avtomobilov v Sloveniji: Julija je bil vsak četrti novi avtomobilov v Sloveniji električen…",
+    "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Aktualno: prodaja avtomobilov v Sloveniji: Julija je bil vsak četrti novi avtomobilov v Sloveniji električen…«.",
+    "seoDescription": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Aktualno: prodaja avtomobilov v Sloveniji: Julija je bil vsak četrti novi avt",
+    "content": "**Aktualno, 26. 9. 2026.** Aktualno: prodaja avtomobilov v Sloveniji: Julija je bil vsak četrti novi avtomobilov v Sloveniji električen Novice AVTO FOKUS -\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: AVTO FOKUS -. Objavljeno: Mon, 10 Aug 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiqAFBVV95cUxNRDRqdE9Tc3VFS2hidkRUVUxyTk52X0pSRzlfQmh3MDFKbnYyZUJjMjVQQ1Q3NVJ5S1ZSTnJndERMci1ocXVIb3pOQlNQMFRKR0NYN3Jabks4OEh5ejhrSU93NnVIS2ZBZ0ZfSlUtbWNuN1JWT2FaeWUxSTB4T3ZIX1NBWHR0R2FLVnphalNhZnRrc0l6VWhLa0pEMTNxaGJqSDlwdnk2NWQ?oc=5)\n\n## Dopolnitev vira 2: AVTO FOKUS -\n\nAktualno: RTV Slovenija: Revozu grozi stavka zaposlenih Novice AVTO FOKUS -\n\n Vir: AVTO FOKUS -. Objavljeno: Wed, 01 Apr 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiX0FVX3lxTE1QQ21QMUxUa00wc1RhVThrODlzN3JWVll6QmxFTU5HRnZkTC05djhCVmlHYUpUY010dVNjX2w1Y2UzRjl3eHVvUm84WWtsaFpqNGxfUEw5WkY5cXdXNE5R?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Aktualno",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "AVTO FOKUS - — Aktualno: prodaja avtomobilov v Sloveniji: Julija je bil vsak četrti novi avtomobilov v Sloveniji električen Novice -…",
+        "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNRDRqdE9Tc3VFS2hidkRUVUxyTk52X0pSRzlfQmh3MDFKbnYyZUJjMjVQQ1Q3NVJ5S1ZSTnJndERMci1ocXVIb3pOQlNQMFRKR0NYN3Jabks4OEh5ejhrSU93NnVIS2ZBZ0ZfSlUtbWNuN1JWT2FaeWUxSTB4T3ZIX1NBWHR0R2FLVnphalNhZnRrc0l6VWhLa0pEMTNxaGJqSDlwdnk2NWQ?oc=5"
+      },
+      {
+        "label": "AVTO FOKUS - — Aktualno: RTV Slovenija: Revozu grozi stavka zaposlenih Novice - AVTO FOKUS -",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1QQ21QMUxUa00wc1RhVThrODlzN3JWVll6QmxFTU5HRnZkTC05djhCVmlHYUpUY010dVNjX2w1Y2UzRjl3eHVvUm84WWtsaFpqNGxfUEw5WkY5cXdXNE5R?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-26T19:53:53+02:00",
+    "updatedAt": "2026-09-26T19:53:53+02:00"
+  },
+
+  {
+    "id": "solkan-bridge-history-visitor-guide",
+    "title": "Solkan Bridge: Engineering History and a Car-Light Visitor Guide",
+    "excerpt": "Discover the history of the Solkan railway bridge, its record-setting stone arch and a responsible way to see it beside the Soča River.",
+    "seoDescription": "Explore Solkan Bridge history, its 85-metre stone railway arch, wartime destruction and practical car-light visitor guidance near Nova Gorica.",
+    "content": "The Solkan Bridge crosses the emerald Soča near Nova Gorica with an **85-metre stone arch**. Official Slovenian tourism sources describe it as the world's longest stone-arch railway bridge. It is both a working piece of transport infrastructure and a striking introduction to the engineering history of western Slovenia.\n\n## Why the bridge matters\n\nThe bridge formed part of the Bohinj Railway, developed to connect Central Europe with the Adriatic. The official Vipava Valley tourism portal dates completion of the structure to 1905, while the railway connection was ceremonially opened in 1906. Its great arch was assembled from precisely shaped stone blocks rather than reinforced concrete or steel.\n\nThe record is specific: it concerns the span of a **stone railway arch**. Calling it simply the world's longest bridge would be incorrect. The complete viaduct is longer than its central arch, but the 85-metre opening is the feature that made the structure exceptional.\n\n## Destruction and reconstruction\n\nDuring the First World War, the bridge stood close to the Isonzo Front. Retreating forces destroyed its main arch in 1916. The official regional heritage account explains that the crossing was later rebuilt in stone, returning the bridge to the visual form visitors recognise today.\n\nThis is verified history, not folklore. There is no need to add a heroic legend to make the site compelling: its survival story already reflects the upheaval that repeatedly reshaped the borderland around Gorizia, Nova Gorica and the Soča.\n\n## How to Experience It Today\n\nThe bridge remains an active railway structure. **Do not enter the tracks, tunnels or railway land** to take photographs. Observe it only from lawful public paths and viewpoints, keep away from edges, and supervise children near the river. Wet stone, loose gravel and riverbanks can be slippery.\n\nA responsible visit can be simple:\n\n1. Use the [Slovenian Railways timetable](https://potniski.sz.si/en/timetable-finder/) to plan travel toward Nova Gorica or Solkan.\n2. Check [live travel updates](https://potniski.sz.si/en/help-and-travel-updates/) shortly before departure because engineering works can introduce replacement buses.\n3. Continue only on marked public streets and paths toward a legal viewpoint.\n4. Allow extra daylight rather than approaching unfamiliar river terrain after dark.\n5. Take all rubbish away and avoid drones unless you have confirmed every applicable aviation, privacy and local restriction.\n\nTrain frequency, connections and fares vary, so this guide deliberately does not freeze them into the article. Search the live planner using the exact station names and confirm the final return connection on the day. If step-free travel is required, contact the carrier in advance to confirm assistance and the accessibility of the chosen service.\n\n## Pairing the bridge with Nova Gorica\n\nThe bridge works well as one part of a wider car-light day rather than a rushed photo stop. Nova Gorica and neighbouring Gorizia form a cross-border urban area shaped by twentieth-century border changes. Visitors can combine the river landscape with the railway station area and Europe Square, while keeping the itinerary compact and using public transport.\n\nThe bridge itself is an outdoor landmark, not a ticketed attraction with fixed opening hours. There is **no admission fee to view it from public space**, but any guided activity, museum visit or transport journey nearby may have its own price and schedule.\n\n## Responsible viewing\n\n- Never climb fences or infrastructure for a better angle.\n- Keep clear when a train approaches and never place equipment near the line.\n- Respect residents and private land around Solkan.\n- Avoid swimming or entering the river based only on its calm appearance; water level, temperature and current can change.\n- Use the location tag `Solkanski most` when checking local maps, but follow on-site signs over an app shortcut.\n\n## Direct sources\n\n- [Vipava Valley official tourism portal: Solkan Bridge](https://www.vipavskadolina.si/en/odkrivaj/dediscina/kultura/arhitekturne-posebnosti/solkanski-most)\n- [Slovenian Tourist Board: The most beautiful train journeys in Slovenia](https://www.slovenia.info/en/stories/the-most-beautiful-train-journeys-in-slovenia)\n- [Slovenian Railways: Timetable finder](https://potniski.sz.si/en/timetable-finder/)\n- [Slovenian Railways: Help and travel updates](https://potniski.sz.si/en/help-and-travel-updates/)\n\nHistorical facts and visitor information were checked on **26 September 2026**. Recheck transport notices and local conditions before travelling.",
+    "category": "Vodniki",
+    "author": "Uredništvo Blog Lab",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Vipava Valley — Solkan Bridge",
+        "url": "https://www.vipavskadolina.si/en/odkrivaj/dediscina/kultura/arhitekturne-posebnosti/solkanski-most"
+      },
+      {
+        "label": "Slovenian Tourist Board — Beautiful train journeys",
+        "url": "https://www.slovenia.info/en/stories/the-most-beautiful-train-journeys-in-slovenia"
+      },
+      {
+        "label": "Slovenian Railways — Timetable finder",
+        "url": "https://potniski.sz.si/en/timetable-finder/"
+      },
+      {
+        "label": "Slovenian Railways — Help and travel updates",
+        "url": "https://potniski.sz.si/en/help-and-travel-updates/"
+      }
+    ],
+    "createdAt": "2026-09-26T15:00:00+02:00",
+    "updatedAt": "2026-09-26T15:00:00+02:00"
+  },
+
+  {
+    "id": "jansev-govor-v-zn-razburil-opozicijo-svoboda-sd-in-levica-kriticne-do-politike-do-izraela-5f1368df",
+    "title": "JANŠEV GOVOR V ZN RAZBURIL OPOZICIJO: Svoboda, SD in Levica kritične do politike do Izraela",
+    "excerpt": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »JANŠEV GOVOR V ZN RAZBURIL OPOZICIJO: Svoboda, SD in Levica kritične do politike do Izraela«.",
+    "seoDescription": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »JANŠEV GOVOR V ZN RAZBURIL OPOZICIJO: Svoboda, SD in Levica kritične do polit",
+    "content": "**Politika, 26. 9. 2026.** JANŠEV GOVOR V ZN RAZBURIL OPOZICIJO: Svoboda, SD in Levica kritične do politike do Izraela regionalobala.si\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nPri političnih temah Blog Lab ne podpira kandidatov, strank ali političnih odločitev; izjave in ocene so predstavljene kot stališča njihovih avtorjev ali virov, ne kot uredniška presoja.\n\nVir: regionalobala.si. Objavljeno: Fri, 25 Sep 2026 14:22:02 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMivgFBVV95cUxNamdBaVhrdVdwWXlCdGw5NE9EbUJ1VDE0SkVjUUpXSE4xZV9CdGFZTzR6U3hNUFZCcmlWMzdncmtoVGJrdTZyRXFHMFRxd2k1YUdndG1zbzlXWmxMNG9IdEhCV2FDSlZjdmRKSk9uSk8tc19qcWdOWTc5cFBjcXJ5WVRpVnc0RFdiRmxESkZJbzVNRXNtYmNlRHVueE5MSXZ3WmNmMjJOTEtWQ25pZDhPZGFibWhXNFhPYnpBdjF3?oc=5)\n\n## Dopolnitev vira 2: Dnevnik\n\nVabila so, odgovorov pa ne: spor zaradi nastopov politikov na RTV Slovenija Dnevnik\n\n Vir: Dnevnik. Objavljeno: Sat, 26 Sep 2026 09:36:26 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMibkFVX3lxTE1vdlhwZVdCaUVCX2hhbGEwcHVpSjNQMWJTcF9Ra3R3ME1ud2pGUTJocHNLaWVIU3NScFZCb2FFRU1ydTR0OTBFdFNTLWhfX3hLSFZzVGpEY0JtOHdXcXM1RE5zOURVWm9wa01iT1V3?oc=5)\n\n## Dopolnitev vira 3: had blog\n\nV čigavem imenu Slovenija postaja prijateljica Izraela? V mojem ne! had blog\n\n Vir: had blog. Objavljeno: Sat, 26 Sep 2026 03:21:35 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiowFBVV95cUxQZFNlRnRVOUxrTjl2UWlrT2s2SjZGaEVINFpzLTY0UktxWjZ2TmpuYXJCTGY1Qkt1OGJQeGxOR0RHQzFpR2hoX1ZWY3h1dWZfREtMX0phMzhOUGp2S3d2ZkZBY1VBYUhBZWJjdmh0OVptNGtsZ2JJNVc1dTlKX2tVN0RPZTRJNm85UW80TG14UkN1ZC1hRHExbV9ZQ1pVbnJDZWNN?oc=5)\n\n## Dopolnitev vira 4: 24ur.com\n\nObrat slovenske zunanje politike: se od Evrope obračamo k Ameriki? 24ur.com\n\n Vir: 24ur.com. Objavljeno: Sat, 26 Sep 2026 05:03:40 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiqwFBVV95cUxOV1lSZjdOcXFxUDAyMXA4Q1A0VHhlQi0xXzFOZlE1MHFQUXRhb0ZKbFFabTMyQWFEWVMxU1pPUEN3NjNWb3NPTGlrbjNQNFVRZTdTQzIwbFlnQ1dfdlQxdDBQQUlMUkRpVHlZeGJYUkY0OHd4RjByTk05ODRsSjNIT3pMUk5KWkk5M2RTczNWQlpKdjdtdHFjTlBQZkoxVnFoQ3c4QzRvV3J3Qm8?oc=5)\n\n## Dopolnitev vira 5: Žurnal24\n\nVelike spremembe: Naši politiki sprejeli vrsto novih zakonov Žurnal24\n\n Vir: Žurnal24. Objavljeno: Thu, 24 Sep 2026 19:25:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMihgFBVV95cUxPUzNlUjB5TlBkcjExR0pvNlNDSnN2MDlRNG16VHdrTEdtQU9kZHlFdzNHall5WEE0T3ZPSUFrUll5N2pIWkhqZWFKTVNveU9HSEg1OG1Bak1ycVN2YlRxNGtwUXlELU51MlBJYVdtWUJFR2pjM3U1VzdOaV9naDJyWkd2WDlSZ9IBiwFBVV95cUxQVk04UmQ3cGpwdVBqbnJDa2xQaFdtaHZvNjA0NUQwTjIyVWc0VGl6UjgxNVpiNTM4cERpdGh0VXRpOFltWHFqRGhQenJyS3VhQXVkeXhZNmJjcG5GWVFiVWNrdm42T2NBTy1YZjdjd3JkLW5lMkhYay1Od2VVYTVsU01PSTB4UlNlV2sw?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Politika",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "regionalobala.si — JANŠEV GOVOR V ZN RAZBURIL OPOZICIJO: Svoboda, SD in Levica kritične do politike do Izraela - regionalobala.si",
+        "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNamdBaVhrdVdwWXlCdGw5NE9EbUJ1VDE0SkVjUUpXSE4xZV9CdGFZTzR6U3hNUFZCcmlWMzdncmtoVGJrdTZyRXFHMFRxd2k1YUdndG1zbzlXWmxMNG9IdEhCV2FDSlZjdmRKSk9uSk8tc19qcWdOWTc5cFBjcXJ5WVRpVnc0RFdiRmxESkZJbzVNRXNtYmNlRHVueE5MSXZ3WmNmMjJOTEtWQ25pZDhPZGFibWhXNFhPYnpBdjF3?oc=5"
+      },
+      {
+        "label": "Dnevnik — Vabila so, odgovorov pa ne: spor zaradi nastopov politikov na RTV Slovenija - Dnevnik",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1vdlhwZVdCaUVCX2hhbGEwcHVpSjNQMWJTcF9Ra3R3ME1ud2pGUTJocHNLaWVIU3NScFZCb2FFRU1ydTR0OTBFdFNTLWhfX3hLSFZzVGpEY0JtOHdXcXM1RE5zOURVWm9wa01iT1V3?oc=5"
+      },
+      {
+        "label": "had blog — V čigavem imenu Slovenija postaja prijateljica Izraela? V mojem ne! - had blog",
+        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQZFNlRnRVOUxrTjl2UWlrT2s2SjZGaEVINFpzLTY0UktxWjZ2TmpuYXJCTGY1Qkt1OGJQeGxOR0RHQzFpR2hoX1ZWY3h1dWZfREtMX0phMzhOUGp2S3d2ZkZBY1VBYUhBZWJjdmh0OVptNGtsZ2JJNVc1dTlKX2tVN0RPZTRJNm85UW80TG14UkN1ZC1hRHExbV9ZQ1pVbnJDZWNN?oc=5"
+      },
+      {
+        "label": "24ur.com — Obrat slovenske zunanje politike: se od Evrope obračamo k Ameriki? - 24ur.com",
+        "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOV1lSZjdOcXFxUDAyMXA4Q1A0VHhlQi0xXzFOZlE1MHFQUXRhb0ZKbFFabTMyQWFEWVMxU1pPUEN3NjNWb3NPTGlrbjNQNFVRZTdTQzIwbFlnQ1dfdlQxdDBQQUlMUkRpVHlZeGJYUkY0OHd4RjByTk05ODRsSjNIT3pMUk5KWkk5M2RTczNWQlpKdjdtdHFjTlBQZkoxVnFoQ3c4QzRvV3J3Qm8?oc=5"
+      },
+      {
+        "label": "Žurnal24 — Velike spremembe: Naši politiki sprejeli vrsto novih zakonov - Žurnal24",
+        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPUzNlUjB5TlBkcjExR0pvNlNDSnN2MDlRNG16VHdrTEdtQU9kZHlFdzNHall5WEE0T3ZPSUFrUll5N2pIWkhqZWFKTVNveU9HSEg1OG1Bak1ycVN2YlRxNGtwUXlELU51MlBJYVdtWUJFR2pjM3U1VzdOaV9naDJyWkd2WDlSZ9IBiwFBVV95cUxQVk04UmQ3cGpwdVBqbnJDa2xQaFdtaHZvNjA0NUQwTjIyVWc0VGl6UjgxNVpiNTM4cERpdGh0VXRpOFltWHFqRGhQenJyS3VhQXVkeXhZNmJjcG5GWVFiVWNrdm42T2NBTy1YZjdjd3JkLW5lMkhYay1Od2VVYTVsU01PSTB4UlNlV2sw?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-26T13:39:36+02:00",
+    "updatedAt": "2026-09-26T13:39:36+02:00"
+  },
+
+  {
+    "id": "odbojka-m-slovenija-poljska-evropsko-prvenstvo-2026-polfinale-a0b3dbff",
+    "title": "Odbojka (M): Slovenija - Poljska, Evropsko prvenstvo 2026, Polfinale",
+    "excerpt": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Odbojka (M): Slovenija - Poljska, Evropsko prvenstvo 2026, Polfinale«.",
+    "seoDescription": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Odbojka (M): Slovenija - Poljska, Evropsko prvenstvo 2026, Polfinale«.",
+    "content": "**Šport, 26. 9. 2026.** Odbojka (M): Slovenija - Poljska, Evropsko prvenstvo 2026, Polfinale Siol.net\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Siol.net. Objavljeno: Fri, 25 Sep 2026 08:45:57 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMi0AFBVV95cUxNaW1GTWhKUTUxcktqdEhwTnMxbEZ3MGR4LThUUW54Yy1KbnBMMHkwZ2NXQ1Nma2lBcGhqZ05TVUVlcTNjb3FZdFdJTDJVMnBKUlBFZ3ZEUEVSbkNjRWF3V0ppcEstU2dEcnJrR05oamhYXy1wUmJ4RG5NTllfMFB3MW5jdmdxWVQwWm5IekNFRmhOSzRRQkk2amRkODJUUXVFMU1wZS0tb2xaWWpzVXZobGk3cTJ5dmVoTDNLSnE4U1ZJUVFLVE0wQXROT3QwTlpf?oc=5)\n\n## Dopolnitev vira 2: OBALAplus\n\nSlovenski odbojkarji ostali brez finala, zdaj jih čaka boj za bron OBALAplus\n\n Vir: OBALAplus. Objavljeno: Sat, 26 Sep 2026 05:36:09 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMibkFVX3lxTE1tckRwQ21iY2dMbHhWam5UdVN0XzF3OGR1aldaUHo2YkNoY3J6T2daOEZBVGgwZ3RKUGtwWTF6aE5LREZRZ0VzTXZlWERTblpKb1hqTEl0UUFsMFJZSVh2djFIZXM4SGZaUlA1Y3ZB?oc=5)\n\n## Dopolnitev vira 3: 24ur.com\n\nSlovenija prek Belgije v polfinale, kjer jih čakajo Poljaki 24ur.com\n\n Vir: 24ur.com. Objavljeno: Wed, 23 Sep 2026 13:09:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMirAFBVV95cUxNaXpfZ2FyenVFWEpXRU9OaTF6TjhDc0lGUmNERnRvcEJSRC16dFQ4T2l5endNVjd1V1FIaV95S01kSHp2bS1MMENZZy1JY052T1JEWU82NE8yWGxPTGRIeUVPYU50ek8wYzV5Q3NRV0ZnZnctRG1iZnFHMWxhbEFxWkp3NUVFblpYNkFZVTNOSE42d0lzdTFnNWJXbTFzeV9ZaXdIVFloclhKbHVr?oc=5)\n\n## Dopolnitev vira 4: rtvslo.si\n\nPolfinale: Slovenija - Poljska 0:2 (13:13 v tretjem nizu) rtvslo.si\n\n Vir: rtvslo.si. Objavljeno: Fri, 25 Sep 2026 16:31:56 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiswFBVV95cUxONkc0NTBVV3ZSX1JaUkVYRFFvVWREWW5KbE5kRHJwRDNXV2VnRTFPZDE5aU1IYWpTeWZVX1h6alM3RGZ3NEN6VWxac3JueGxLR1N2VVhEXzZQQ05mTGY5dVNuMm1pcGJrNGZZUjRoenVPX3o1T25FcUVIeVRtNkNIVksxbjNpai1MVndsVElySGpDZVp2SmhRd0NLdjJ1UGtEaDAyQ1Z1cm1EYkxOSWVnVllFOA?oc=5)\n\n## Dopolnitev vira 5: rtvslo.si\n\nPolfinale: Slovenija - Poljska 0:2 (23:25 v drugem nizu) rtvslo.si\n\n Vir: rtvslo.si. Objavljeno: Fri, 25 Sep 2026 16:01:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMisgFBVV95cUxOckFfd1ZzaWsyTU5ybFBTbmNGOGFWNG5aZDBxc3FxXzA5bE5VQlJqYnhRdndGRFNNOEgydGd1T3RDZXpjQ1NlaVE3aVJGczMwNUxzclNFelFHWE02ZTdrNW5fMnJaWFV4RVJsRlJDRzJnQ0ZGWE1mNDJVMHM1MER2djV1ODZSME1WTjd5aEI3dUdySlhnRHhkYW1IYUQxVl9MMXZlaEJEbW9idkRiOFR4SDZB?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Šport",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Siol.net — Odbojka (M): Slovenija - Poljska, Evropsko prvenstvo 2026, Polfinale - Siol.net",
+        "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNaW1GTWhKUTUxcktqdEhwTnMxbEZ3MGR4LThUUW54Yy1KbnBMMHkwZ2NXQ1Nma2lBcGhqZ05TVUVlcTNjb3FZdFdJTDJVMnBKUlBFZ3ZEUEVSbkNjRWF3V0ppcEstU2dEcnJrR05oamhYXy1wUmJ4RG5NTllfMFB3MW5jdmdxWVQwWm5IekNFRmhOSzRRQkk2amRkODJUUXVFMU1wZS0tb2xaWWpzVXZobGk3cTJ5dmVoTDNLSnE4U1ZJUVFLVE0wQXROT3QwTlpf?oc=5"
+      },
+      {
+        "label": "OBALAplus — Slovenski odbojkarji ostali brez finala, zdaj jih čaka boj za bron - OBALAplus",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1tckRwQ21iY2dMbHhWam5UdVN0XzF3OGR1aldaUHo2YkNoY3J6T2daOEZBVGgwZ3RKUGtwWTF6aE5LREZRZ0VzTXZlWERTblpKb1hqTEl0UUFsMFJZSVh2djFIZXM4SGZaUlA1Y3ZB?oc=5"
+      },
+      {
+        "label": "24ur.com — Slovenija prek Belgije v polfinale, kjer jih čakajo Poljaki - 24ur.com",
+        "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNaXpfZ2FyenVFWEpXRU9OaTF6TjhDc0lGUmNERnRvcEJSRC16dFQ4T2l5endNVjd1V1FIaV95S01kSHp2bS1MMENZZy1JY052T1JEWU82NE8yWGxPTGRIeUVPYU50ek8wYzV5Q3NRV0ZnZnctRG1iZnFHMWxhbEFxWkp3NUVFblpYNkFZVTNOSE42d0lzdTFnNWJXbTFzeV9ZaXdIVFloclhKbHVr?oc=5"
+      },
+      {
+        "label": "rtvslo.si — Polfinale: Slovenija - Poljska 0:2 (13:13 v tretjem nizu) - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxONkc0NTBVV3ZSX1JaUkVYRFFvVWREWW5KbE5kRHJwRDNXV2VnRTFPZDE5aU1IYWpTeWZVX1h6alM3RGZ3NEN6VWxac3JueGxLR1N2VVhEXzZQQ05mTGY5dVNuMm1pcGJrNGZZUjRoenVPX3o1T25FcUVIeVRtNkNIVksxbjNpai1MVndsVElySGpDZVp2SmhRd0NLdjJ1UGtEaDAyQ1Z1cm1EYkxOSWVnVllFOA?oc=5"
+      },
+      {
+        "label": "rtvslo.si — Polfinale: Slovenija - Poljska 0:2 (23:25 v drugem nizu) - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOckFfd1ZzaWsyTU5ybFBTbmNGOGFWNG5aZDBxc3FxXzA5bE5VQlJqYnhRdndGRFNNOEgydGd1T3RDZXpjQ1NlaVE3aVJGczMwNUxzclNFelFHWE02ZTdrNW5fMnJaWFV4RVJsRlJDRzJnQ0ZGWE1mNDJVMHM1MER2djV1ODZSME1WTjd5aEI3dUdySlhnRHhkYW1IYUQxVl9MMXZlaEJEbW9idkRiOFR4SDZB?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-26T08:24:38+02:00",
+    "updatedAt": "2026-09-26T08:24:38+02:00"
+  },
+
+  {
+    "id": "jansa-v-new-yorku-jasno-o-ukrajini-slovenija-bo-nadaljevala-politicno-vojasko-humanitarno--03200e1d",
+    "title": "Janša v New Yorku jasno o Ukrajini: Slovenija bo nadaljevala politično, vojaško, humanitarno in finančno pomoč -…",
+    "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Janša v New Yorku jasno o Ukrajini: Slovenija bo nadaljevala politično, vojaško, humanitarno in finančno pomoč -…«.",
+    "seoDescription": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Janša v New Yorku jasno o Ukrajini: Slovenija bo nadaljevala politično, vojaš",
+    "content": "**Aktualno, 25. 9. 2026.** Janša v New Yorku jasno o Ukrajini: Slovenija bo nadaljevala politično, vojaško, humanitarno in finančno pomoč Najdi.si novice\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Najdi.si novice. Objavljeno: Thu, 24 Sep 2026 07:38:33 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMijgJBVV95cUxOcjZZRjI2Y1l0OTVqTE1Bd0pOaHJlUGI1ekpsdkJYakRMeHRILWpMcmJqTm5XWXJ1eXJUZzAxbG81cHJNaDVvdEQ5V3FyY19KeEk2Q216YWVhNnVhQkxVV3hxRS1zUnpyLWJGSHp4cDdNdk9yeXdZNUJmMGdzNUUtMFRhYzM2cm84RXoxYzFGcmZiOXc2REEtMHEtSm9IMVk2cTVRdy11WVppT1FRM2g0OU5qWTVsQk1OYlF0Mm9uZE1iNnNBSWh3ZmhrYnhZRTBGZzdXN1ZyU3F2ekFLZ0psbTUwdGQ0d2gxSU9pWmdlX0gzTmF2Xzd0Tkdnb0FhcWpEMzhNYjJZbTRMM2diQ0E?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Aktualno",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Najdi.si novice — Janša v New Yorku jasno o Ukrajini: Slovenija bo nadaljevala politično, vojaško, humanitarno in finančno pomoč -…",
+        "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxOcjZZRjI2Y1l0OTVqTE1Bd0pOaHJlUGI1ekpsdkJYakRMeHRILWpMcmJqTm5XWXJ1eXJUZzAxbG81cHJNaDVvdEQ5V3FyY19KeEk2Q216YWVhNnVhQkxVV3hxRS1zUnpyLWJGSHp4cDdNdk9yeXdZNUJmMGdzNUUtMFRhYzM2cm84RXoxYzFGcmZiOXc2REEtMHEtSm9IMVk2cTVRdy11WVppT1FRM2g0OU5qWTVsQk1OYlF0Mm9uZE1iNnNBSWh3ZmhrYnhZRTBGZzdXN1ZyU3F2ekFLZ0psbTUwdGQ0d2gxSU9pWmdlX0gzTmF2Xzd0Tkdnb0FhcWpEMzhNYjJZbTRMM2diQ0E?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-25T19:54:00+02:00",
+    "updatedAt": "2026-09-25T19:54:00+02:00"
+  },
+
+  {
+    "id": "kajzer-zavrnil-ocitke-da-ne-vodi-suverene-zunanje-politike-cbe54319",
+    "title": "Kajzer zavrnil očitke, da ne vodi suverene zunanje politike",
+    "excerpt": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Kajzer zavrnil očitke, da ne vodi suverene zunanje politike«.",
+    "seoDescription": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Kajzer zavrnil očitke, da ne vodi suverene zunanje politike«.",
+    "content": "**Politika, 25. 9. 2026.** Kajzer zavrnil očitke, da ne vodi suverene zunanje politike Dnevnik\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nPri političnih temah Blog Lab ne podpira kandidatov, strank ali političnih odločitev; izjave in ocene so predstavljene kot stališča njihovih avtorjev ali virov, ne kot uredniška presoja.\n\nVir: Dnevnik. Objavljeno: Thu, 10 Sep 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiqwFBVV95cUxPUnlFRmxtaE1ZM0NqVEVYbEJMQ3cyWXVYeUtVOGkwaVlCc1d1MFExZnhNeFhtVnY5ejVVSFptc21aZ1J3UWIzWTdkTDJvZVNqYURDR29CWFNUYW8tQ2o3bGJxdUt5cThTYkVWNWRWeWRHbHJPcW1GbkZQM2RhTHBTSTRUWElDTzFGUnNSdHZXcWhjeFQ4Q0NlSjZORUFfVHF5NDJTRW1lZzlPeG8?oc=5)\n\n## Dopolnitev vira 2: Dnevnik\n\nOdnosi z Izraelom: diplomacija ne sme biti izgovor za normalizacijo zločinov Dnevnik\n\n Vir: Dnevnik. Objavljeno: Wed, 09 Sep 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMixAFBVV95cUxQZ0VoRERMZkVmbXVvTGdOVzQ3MTZwM1loeXpGZFpad0VlbWNKM296T2xZYTZCMVdTdjc4ZTltNHR2MUltUGxHNzJvUUI1LVlVT1R2QnVHTjRDdF9GOUgxT0hMWXF3NG1HUzZFaDJNMExwVURTN0k1U3FKU1d1eng3OWE1eEdzc3gzMkdvWDRtZEZzT0hmOG5CY2dJYlRDczRpWjlMWThVbXpKZEd3aXdLekNmZmpRdkVObG9WSTdYSC1RZUxy?oc=5)\n\n## Dopolnitev vira 3: Dnevnik\n\nNetanjahu napovedal srečanje z Janšo, številne voditelje je zavrnil Dnevnik\n\n Vir: Dnevnik. Objavljeno: Thu, 24 Sep 2026 10:55:39 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMikwFBVV95cUxPU3kxaWJJYzg2NUhoV1NRNTFpNU94Skh6ZVFuVHlHUXNGbkQ2RHZvNElwbXdialEtaWxQQXg4eHA1MXhzbDlBZFFRdU5TbGpoRmFfbzRqNTgyNlhPZkQycGVQalk3clBDdWdPNjJwU3JUN2h2dmhjem9uMENjVUVub0d0aTdKS0hSTnV5OFRvVnppU0k?oc=5)\n\n## Dopolnitev vira 4: 24ur.com\n\nAnatomija vodenja: kje se križajo interesi politike in stroke? 24ur.com\n\n Vir: 24ur.com. Objavljeno: Fri, 25 Sep 2026 04:21:12 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiowFBVV95cUxPZmtxdk8tZjB0R0s0Qkd5TnJBZ3N5U3BGUjlnTE9LTzJfLTBOMVJZZWc3NDFuaFI4RjcxOFJFOXcyeVFEbEpNdVV4ZjJvQkxZdV8xUU9NMDBEd2pXc0ljb1kxT1E4Ukh4cHZHdWNGY2Q2MHhiazExbTNySVhWVXgzRWd2dzhRakdwel9XZXpYaTU4blh6TUp3dC1mcVhqak1OUzgw?oc=5)\n\n## Dopolnitev vira 5: www.primorski.eu\n\n»Veliko bolj je razdeljena politika kot pa naš narod« www.primorski.eu\n\n Vir: www.primorski.eu. Objavljeno: Fri, 11 Sep 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMikwFBVV95cUxPc1RpdklfaWh3cFBrWG1UeFpQUlZvZ3ZzdUtmdnI3SlFCUXkzS1ZmcnhTMzlqcmtpbXFKdzlvQ01UeElwNG1JbFFyUmdHQ3UtS1VPUjZxZlNnYURNZm8tbE5RT19GXzZjb3NENWhfVE1fNTJXMzM4OFJ1Ml9XVXY5TldKVGFzZ2RTcDJxSm9XdE5nb0k?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Politika",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Dnevnik — Kajzer zavrnil očitke, da ne vodi suverene zunanje politike - Dnevnik",
+        "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPUnlFRmxtaE1ZM0NqVEVYbEJMQ3cyWXVYeUtVOGkwaVlCc1d1MFExZnhNeFhtVnY5ejVVSFptc21aZ1J3UWIzWTdkTDJvZVNqYURDR29CWFNUYW8tQ2o3bGJxdUt5cThTYkVWNWRWeWRHbHJPcW1GbkZQM2RhTHBTSTRUWElDTzFGUnNSdHZXcWhjeFQ4Q0NlSjZORUFfVHF5NDJTRW1lZzlPeG8?oc=5"
+      },
+      {
+        "label": "Dnevnik — Odnosi z Izraelom: diplomacija ne sme biti izgovor za normalizacijo zločinov - Dnevnik",
+        "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQZ0VoRERMZkVmbXVvTGdOVzQ3MTZwM1loeXpGZFpad0VlbWNKM296T2xZYTZCMVdTdjc4ZTltNHR2MUltUGxHNzJvUUI1LVlVT1R2QnVHTjRDdF9GOUgxT0hMWXF3NG1HUzZFaDJNMExwVURTN0k1U3FKU1d1eng3OWE1eEdzc3gzMkdvWDRtZEZzT0hmOG5CY2dJYlRDczRpWjlMWThVbXpKZEd3aXdLekNmZmpRdkVObG9WSTdYSC1RZUxy?oc=5"
+      },
+      {
+        "label": "Dnevnik — Netanjahu napovedal srečanje z Janšo, številne voditelje je zavrnil - Dnevnik",
+        "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPU3kxaWJJYzg2NUhoV1NRNTFpNU94Skh6ZVFuVHlHUXNGbkQ2RHZvNElwbXdialEtaWxQQXg4eHA1MXhzbDlBZFFRdU5TbGpoRmFfbzRqNTgyNlhPZkQycGVQalk3clBDdWdPNjJwU3JUN2h2dmhjem9uMENjVUVub0d0aTdKS0hSTnV5OFRvVnppU0k?oc=5"
+      },
+      {
+        "label": "24ur.com — Anatomija vodenja: kje se križajo interesi politike in stroke? - 24ur.com",
+        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPZmtxdk8tZjB0R0s0Qkd5TnJBZ3N5U3BGUjlnTE9LTzJfLTBOMVJZZWc3NDFuaFI4RjcxOFJFOXcyeVFEbEpNdVV4ZjJvQkxZdV8xUU9NMDBEd2pXc0ljb1kxT1E4Ukh4cHZHdWNGY2Q2MHhiazExbTNySVhWVXgzRWd2dzhRakdwel9XZXpYaTU4blh6TUp3dC1mcVhqak1OUzgw?oc=5"
+      },
+      {
+        "label": "www.primorski.eu — »Veliko bolj je razdeljena politika kot pa naš narod« - www.primorski.eu",
+        "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPc1RpdklfaWh3cFBrWG1UeFpQUlZvZ3ZzdUtmdnI3SlFCUXkzS1ZmcnhTMzlqcmtpbXFKdzlvQ01UeElwNG1JbFFyUmdHQ3UtS1VPUjZxZlNnYURNZm8tbE5RT19GXzZjb3NENWhfVE1fNTJXMzM4OFJ1Ml9XVXY5TldKVGFzZ2RTcDJxSm9XdE5nb0k?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-25T13:39:14+02:00",
+    "updatedAt": "2026-09-25T13:39:14+02:00"
+  },
+
+  {
+    "id": "skocjan-caves-day-trip-from-ljubljana",
+    "title": "Škocjan Caves: A Car-Light Day Trip from Ljubljana",
+    "excerpt": "Plan a responsible visit to Slovenia’s UNESCO-listed underground canyon, with 2026 prices, route choices, safety notes and practical transport planning from Ljubljana.",
+    "seoDescription": "Plan a Škocjan Caves day trip from Ljubljana with official 2026 prices, walking requirements, safety advice, accessibility notes and car-light travel tips.",
+    "content": "Škocjan Caves are the right choice for travellers who want to experience Slovenia's karst landscape as a powerful natural system rather than as a quick indoor attraction. The Reka River cuts through a vast underground canyon, waterfalls echo through dark chambers and the protected landscape continues above ground through collapse dolines and small Karst villages.\n\nA visit is possible as a day trip from Ljubljana, but it requires more planning than a city excursion. The main cave route is guided, physically demanding and cool throughout the year. Train travellers must also solve the final connection from Divača to the park before departure.\n\n**Last verified: 25 September 2026.** Opening times, tour places, transport and weather can change, so check the linked official sources again before travelling.\n\n## Why Škocjan Caves are internationally important\n\nUNESCO describes Škocjan as an exceptional limestone cave system with roughly six kilometres of underground passages, waterfalls, collapsed dolines and one of the world's largest known underground river canyons. The site was inscribed on the World Heritage List in 1986 under natural criteria relating to its beauty and geological importance.\n\nThis is not simply a large chamber decorated with stalactites. The defining feature is the Reka River, which disappears underground and has carved a canyon whose scale makes the visit both visual and strongly auditory.\n\n## The standard guided visit\n\nThe official tour begins at the reception centre in Matavun. Visitors walk with a guide to the cave entrance and continue through two contrasting sections.\n\n### Silent Cave\n\nThe first part is a dry fossil passage with stalactites, stalagmites and the Great Hall. It introduces the slower process of mineral deposition before the route reaches the active river system.\n\n### Murmuring Cave and the underground canyon\n\nThe route then enters the Murmuring Cave, where the Reka River flows through the canyon. The Cerkvenik Bridge crosses above the river and forms the most dramatic part of the standard visit.\n\nAfter returning to daylight, visitors can continue independently through the collapse-doline landscape. The exact exit route depends on season and conditions.\n\n## Distance, steps and difficulty\n\nThe park describes the longer experience as approximately **five kilometres**, **2.5–3 hours** and about **1,000 steps**. An earlier exit reduces it to around **three kilometres** and **500–800 steps**.\n\nThose numbers matter. This is not a flat cave promenade and it should not be presented as universally accessible. Expect sustained walking, stairs, damp surfaces and changes between underground and outdoor sections.\n\nVisitors with limited mobility, serious balance problems, heart or respiratory concerns should contact the park directly before purchasing tickets. Do not assume that an early exit removes every physical barrier.\n\n## Temperature, clothing and safety\n\nThe cave temperature is approximately **12 °C**, even when Ljubljana is warm. Wear closed shoes with reliable grip and bring a warm layer. Part of the route continues outdoors, so rain protection and water are useful.\n\nOfficial visitor rules include:\n\n- follow park staff and remain on the marked route;\n- do not take photographs inside the cave;\n- pets are not allowed on the cave visit;\n- wear suitable sports clothing and footwear;\n- protect the formations and avoid touching cave surfaces;\n- check the live timetable before leaving Ljubljana.\n\nHeavy rain can affect the river and parts of the experience. Check the [ARSO weather forecast](https://meteo.arso.gov.si/met/en/) and the park's notices on the morning of travel.\n\n## 2026 tickets and seasonal planning\n\nFor **September 2026**, the official standard-tour price is:\n\n- adults: **€22**;\n- seniors and students under 26: **€16**;\n- children: **€10**.\n\nThe official timetable shows several daily departures in September, but the visual schedule can change and places may sell out. Use the park's live booking system rather than relying on a copied departure time.\n\nIn October the listed standard prices fall to €18 for adults, €14 for seniors and students under 26, and €9 for children. The visitor route is shorter in October and the colder months, ending via the earlier exit from the Big Collapse Doline.\n\nArrive at the reception centre with enough time for parking, tickets and the walk to the entrance. Advance booking is the safer choice for weekends and good-weather days.\n\n## Getting there from Ljubljana without relying entirely on a car\n\nThe practical public-transport gateway is **Divača**, which has rail connections with Ljubljana. However, the caves are outside the station area, and the final transfer must be planned separately.\n\nBefore committing to a train:\n\n1. Check the current journey in the [Slovenian Railways timetable](https://potniski.sz.si/en/).\n2. Compare your arrival time with an available cave tour.\n3. Confirm the current local connection, transfer or taxi rather than assuming one will be waiting.\n4. Leave a generous buffer for the return journey.\n5. Save the park's contact details and ticket confirmation offline.\n\nA car-light day is realistic, but it is not a turn-up-and-improvise trip. If the final connection does not align, consider staying in the Karst region or using a properly licensed transfer.\n\n## A sensible day plan\n\n### Morning: travel and cave tour\n\nLeave Ljubljana early enough to arrive before your reserved slot. The cave visit should be the fixed point of the day; do not build a tight itinerary around an unreserved tour.\n\n### Midday: Education Trail\n\nIf weather and energy allow, follow part of the circular Škocjan Education Trail. The park states that the unguided surface trail is available throughout the year and is free. It explores the collapse dolines, Karst villages and cultural landscape.\n\nSurface trails can still be steep, wet or uneven. Turn back if the ground, weather or remaining daylight makes the continuation uncomfortable.\n\n### Afternoon: return without rushing\n\nAllow time for food and the transfer back to Divača. Confirm the return train before starting an optional walk.\n\n## Families and accessibility\n\nChildren who are comfortable with extended walking and stairs may find the underground river unforgettable. Adults should judge the route by the child's endurance rather than age alone and keep children close on steps and bridges.\n\nThe standard experience is not a good fit for pushchairs. Visitors needing step-free access should contact the park for current alternatives instead of relying on a general tourism description.\n\n## Responsible visiting\n\nŠkocjan is a living river system and a protected World Heritage landscape. Stay on paths, carry rubbish out, keep noise low and follow photography restrictions. Above ground, respect residents of Matavun, Škocjan and Betanja: these are villages, not themed extensions of the attraction.\n\nFor another protected landscape with a very different character, see the [Sečovlje Salt Pans guide](?article=secovlje-salt-pans-nature-park-guide). If you prefer a shorter forest-and-karst walk, compare it with the [Rakov Škocjan hiking guide](?article=rakov-skocjan-hiking-guide).\n\n## Quick decision guide\n\nChoose Škocjan Caves if you:\n\n- want a UNESCO natural site centred on an active underground river;\n- are comfortable with hundreds of steps;\n- can reserve a guided tour;\n- have suitable footwear and a warm layer;\n- can plan the final transfer from Divača.\n\nChoose a less demanding excursion if stairs, exposure, damp surfaces or a tightly timed public-transport connection would make the day stressful.\n\n## Sources and final check\n\nInformation was verified on 25 September 2026 using the official Škocjan Caves Park visitor information, UNESCO's World Heritage listing, ARSO and Slovenian Railways. Always recheck the park's live timetable, ticket availability, route status and weather immediately before departure.",
+    "category": "Vodniki",
+    "author": "Slovenia Pulse Editorial",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Škocjan Caves Park — Guided Tours, Timetable and 2026 Prices",
+        "url": "https://www.park-skocjanske-jame.si/en/read/tourist-information/skocjan-caves-guided-tours"
+      },
+      {
+        "label": "UNESCO World Heritage Centre — Škocjan Caves",
+        "url": "https://whc.unesco.org/en/list/390/"
+      },
+      {
+        "label": "ARSO — Weather Forecasts",
+        "url": "https://meteo.arso.gov.si/met/en/"
+      },
+      {
+        "label": "Slovenian Railways — Timetable",
+        "url": "https://potniski.sz.si/en/"
+      }
+    ],
+    "createdAt": "2026-09-25T09:00:00+02:00",
+    "updatedAt": "2026-09-25T09:00:00+02:00"
+  },
+  {
+    "id": "slovenci-imajo-z-ep-jev-lepe-spomine-na-poljake-razen-z-zadnjega-49e1ad92",
+    "title": "Slovenci imajo z EP-jev lepe spomine na Poljake, razen z zadnjega",
+    "excerpt": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Slovenci imajo z EP-jev lepe spomine na Poljake, razen z zadnjega«.",
+    "seoDescription": "Šport: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Slovenci imajo z EP-jev lepe spomine na Poljake, razen z zadnjega«.",
+    "content": "**Šport, 25. 9. 2026.** Slovenci imajo z EP-jev lepe spomine na Poljake, razen z zadnjega rtvslo.si\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: rtvslo.si. Objavljeno: Thu, 24 Sep 2026 06:27:15 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiwwFBVV95cUxNT0tDbEV6Q2dmcF9Vci1GUjhzWm12Y0ZUY1VNS1hqUzRYU2s0d2gzYVIwaTZHV2lYYVdSbHUtVkhJczhFdzZHQ2JEY0dzNExJTk01VTNVWUEtWk4tWEdfbTUtSktWQkpVVVBkM1Nja3V5MVlIYnhzSGRmNFM0aEg4blpxNndsd0dwZUpLRXh1bTVqRkRjbXdMMURvMEYydjNpdVFEQm1HbVdUaDRpWW9PZ2g1M3g5SzZRQmdhYmowU2dEemM?oc=5)\n\n## Dopolnitev vira 2: 24ur.com\n\nPoljaki na papirju favoriti, a pozor: Slovenci vedo, kako jih vreči s prestola! 24ur.com\n\n Vir: 24ur.com. Objavljeno: Thu, 24 Sep 2026 16:32:25 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiX0FVX3lxTE1TWlA0U3lzUzNSSVR2anh3X3V3RG9UMTR2cmJKOXpkR1k2RThGNkV6amROdDdibzl0RnpaRnZ6SE14R0JSNk96SF9ZMkhCTmIwSWh6NnBZWVVLcmhrSGhv?oc=5)\n\n## Dopolnitev vira 3: rtvslo.si\n\nGal Stare vse do zadnjega v igri za bron, ekipni uspeh mladincev rtvslo.si\n\n Vir: rtvslo.si. Objavljeno: Fri, 25 Sep 2026 05:03:45 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMi2wFBVV95cUxPdTFrWkpmY3VTT0pYemNzbVFjOHZkV0ZndHdicUFwc2R2ZzJUdlZYNTk5Nkh0eVFVLW9YYmFQbFVOQjhNZ1RaVDhBY19IbWZEcVB5Q3ZVSlVydDVwZGZZV3NUSllSSGlYb0Q5NkNzNGtBZlBBRmRnU2hJVnVtYlhyZk5KRWUzVUZlNzZ1dWpJZXVpTHBYdVVtYVVPdEVfdnlWVWxHNldiOFNMTUp3elVzckRHQldGZS1sdW5Ed2RkVjMwRWM5ZUVQdUZrYnZ1bER6aXVES2tsUlIwSE0?oc=5)\n\n## Dopolnitev vira 4: rtvslo.si\n\nOd leta 2015 v polfinalu EP-jev največkrat odbojkarji Slovenije rtvslo.si\n\n Vir: rtvslo.si. Objavljeno: Thu, 24 Sep 2026 07:35:13 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMirwFBVV95cUxOS21EVWdpd2NyRXpkYTdyNVdESk8xQVNvUFhPSmJvODRxc3JUbU9za1hqZnJGYVU1Z3RQc09vQjJRclpFRXdOblRJSXF5Z1hlQ3JCRDhKS2R4RU41a01yU2lmRDRkMnRpLUdyNFhuZnBRcEFZTmlKRUs0N1U3WjBnZGF2ZDlnRWR1OVl2VndndXpaNkczWjhhdnBWX1U5OTRId2JGNUFkeWJKSEMyMnlV?oc=5)\n\n## Dopolnitev vira 5: 24ur.com\n\nSlovenci ekspresno opravili s Srbi za četrtfinale EP 24ur.com\n\n Vir: 24ur.com. Objavljeno: Mon, 21 Sep 2026 21:37:18 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMilwFBVV95cUxNR3p6d0puR3BQd3B1RDZha3RuTHc5U2l5am1jTGJUUjBSd2NDQXdNSFIwZWk2RnRlMk5ZMHVYUWR4R0NVRnNzNVhlQmlFRDFJNDd4SGthcUpnTUVKMnNHTHVvVWFXdi1kbWRiY2FBczQ5RzZzcVZWYTVqbGlpcDBMN1BLS1B4OXE4d0dGWWFJRlpjMW1rMzdR?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Šport",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "rtvslo.si — Slovenci imajo z EP-jev lepe spomine na Poljake, razen z zadnjega - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNT0tDbEV6Q2dmcF9Vci1GUjhzWm12Y0ZUY1VNS1hqUzRYU2s0d2gzYVIwaTZHV2lYYVdSbHUtVkhJczhFdzZHQ2JEY0dzNExJTk01VTNVWUEtWk4tWEdfbTUtSktWQkpVVVBkM1Nja3V5MVlIYnhzSGRmNFM0aEg4blpxNndsd0dwZUpLRXh1bTVqRkRjbXdMMURvMEYydjNpdVFEQm1HbVdUaDRpWW9PZ2g1M3g5SzZRQmdhYmowU2dEemM?oc=5"
+      },
+      {
+        "label": "24ur.com — Poljaki na papirju favoriti, a pozor: Slovenci vedo, kako jih vreči s prestola! - 24ur.com",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1TWlA0U3lzUzNSSVR2anh3X3V3RG9UMTR2cmJKOXpkR1k2RThGNkV6amROdDdibzl0RnpaRnZ6SE14R0JSNk96SF9ZMkhCTmIwSWh6NnBZWVVLcmhrSGhv?oc=5"
+      },
+      {
+        "label": "rtvslo.si — Gal Stare vse do zadnjega v igri za bron, ekipni uspeh mladincev - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPdTFrWkpmY3VTT0pYemNzbVFjOHZkV0ZndHdicUFwc2R2ZzJUdlZYNTk5Nkh0eVFVLW9YYmFQbFVOQjhNZ1RaVDhBY19IbWZEcVB5Q3ZVSlVydDVwZGZZV3NUSllSSGlYb0Q5NkNzNGtBZlBBRmRnU2hJVnVtYlhyZk5KRWUzVUZlNzZ1dWpJZXVpTHBYdVVtYVVPdEVfdnlWVWxHNldiOFNMTUp3elVzckRHQldGZS1sdW5Ed2RkVjMwRWM5ZUVQdUZrYnZ1bER6aXVES2tsUlIwSE0?oc=5"
+      },
+      {
+        "label": "rtvslo.si — Od leta 2015 v polfinalu EP-jev največkrat odbojkarji Slovenije - rtvslo.si",
+        "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOS21EVWdpd2NyRXpkYTdyNVdESk8xQVNvUFhPSmJvODRxc3JUbU9za1hqZnJGYVU1Z3RQc09vQjJRclpFRXdOblRJSXF5Z1hlQ3JCRDhKS2R4RU41a01yU2lmRDRkMnRpLUdyNFhuZnBRcEFZTmlKRUs0N1U3WjBnZGF2ZDlnRWR1OVl2VndndXpaNkczWjhhdnBWX1U5OTRId2JGNUFkeWJKSEMyMnlV?oc=5"
+      },
+      {
+        "label": "24ur.com — Slovenci ekspresno opravili s Srbi za četrtfinale EP - 24ur.com",
+        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNR3p6d0puR3BQd3B1RDZha3RuTHc5U2l5am1jTGJUUjBSd2NDQXdNSFIwZWk2RnRlMk5ZMHVYUWR4R0NVRnNzNVhlQmlFRDFJNDd4SGthcUpnTUVKMnNHTHVvVWFXdi1kbWRiY2FBczQ5RzZzcVZWYTVqbGlpcDBMN1BLS1B4OXE4d0dGWWFJRlpjMW1rMzdR?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-25T08:24:10+02:00",
+    "updatedAt": "2026-09-25T08:24:10+02:00"
+  },
+
+  {
+    "id": "sramota-v-oddaji-marcel-na-tv-slovenija-ne-spostujejo-eticnega-in-poklicnega-kodeksa-e-mar-62369ae7",
+    "title": "Sramota! V oddaji Marcel na TV Slovenija, ne spoštujejo etičnega in poklicnega kodeksa - e-Maribor",
+    "excerpt": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Sramota! V oddaji Marcel na TV Slovenija, ne spoštujejo etičnega in poklicnega kodeksa - e-Maribor«.",
+    "seoDescription": "Aktualno: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Sramota! V oddaji Marcel na TV Slovenija, ne spoštujejo etičnega in poklicneg",
+    "content": "**Aktualno, 24. 9. 2026.** Sramota! V oddaji Marcel na TV Slovenija, ne spoštujejo etičnega in poklicnega kodeksa e-Maribor\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: e-Maribor. Objavljeno: Wed, 23 Sep 2026 14:56:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiqgFBVV95cUxPMGlJb2ZIV0xFSEh5bDBoUkxBU0JFd0hpMmVFMU5veW5YbkxYbWlMRzY1RE5DWXk2ZnpPQlFGd2hJSjJUckZ2UHpIRV9weVZkVVd3MWU1OU5BZmZYRWhEbGItYnlybWF3NXJLbDhJQkNGNlFNTVI4eGVkN1I3aHg0Qk90aUl0b3IyWHFxN0cxT09XOTlFRG1TV1MwTFJzTDYzb1VHcVVXVzVvUQ?oc=5)\n\n## Dopolnitev vira 2: e-Maribor\n\nSte za ukinitev RTV Slovenija in Slovenske tiskovne agencije? Glasujte v članku! e-Maribor\n\n Vir: e-Maribor. Objavljeno: Sat, 18 Jul 2026 18:37:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiogFBVV95cUxNMlp2Y214dk5vYlBBTk4yWXFydG9ncDR0czBHMjJmYXNjcFhXQ3FQQzlkZXdDYTBvNGZwREp2S2w0dXdrV2ZQZ285NmhjMVFIRFE3akhqWjlfNXZQNTlQUm0yU2l4UmVKZXZaS2h4RG5iUHdsNFdIbk9OSEtCNUwtbGI3eTFfN3FxSjRDU0d6STA2S05SdE1xamMtQlZzSjZaTHc?oc=5)\n\n## Dopolnitev vira 3: e-Maribor\n\nZačelo se je! Novinarji TV Koper zahtevajo odstop uprave RTV Slovenija e-Maribor\n\n Vir: e-Maribor. Objavljeno: Thu, 03 Sep 2026 15:53:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMilgFBVV95cUxPYWUwVkVVSUtrSlBWRXJXaVEzMXhlY0tDSVJ5WGtMRkhXaEU3UTZxSkZFMEUyWTFtODlIQWF2OFc1QlJkcGpHVUdrbTFMdmZBT0l1UjY0eEdxUV9rVmpYY0hPbFo1azdTZWVRWFNzcFVBT2dMZ1MwN1BrckxWT3c3WkdmMVJLU2M1TzdOZGpJd2VoemR0LUE?oc=5)\n\n## Dopolnitev vira 4: e-Maribor\n\nPred RTV Slovenija, se obeta shod za ukinitev RTV naročnine!\n\n Vir: e-Maribor. Objavljeno: Thu, 10 Sep 2026 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMihwFBVV95cUxQc0owWnpwUWhHSkd1aVZKbUpST2JjdWNQemRCUUxpSjNHZUh5QXhKeHN3c2lZUUpLUnJUb3FnNk5ockN2MkV3eFhBZDAyMEJwU2o2VGxhLUxSd21TWnFuaU5NYVNzMERfWmVfZW5mVXRNVUczU0tJSy1nZVY2SExibHJtRzJLMkk?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Aktualno",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "e-Maribor — Sramota! V oddaji Marcel na TV Slovenija, ne spoštujejo etičnega in poklicnega kodeksa - e-Maribor",
+        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPMGlJb2ZIV0xFSEh5bDBoUkxBU0JFd0hpMmVFMU5veW5YbkxYbWlMRzY1RE5DWXk2ZnpPQlFGd2hJSjJUckZ2UHpIRV9weVZkVVd3MWU1OU5BZmZYRWhEbGItYnlybWF3NXJLbDhJQkNGNlFNTVI4eGVkN1I3aHg0Qk90aUl0b3IyWHFxN0cxT09XOTlFRG1TV1MwTFJzTDYzb1VHcVVXVzVvUQ?oc=5"
+      },
+      {
+        "label": "e-Maribor — Ste za ukinitev RTV Slovenija in Slovenske tiskovne agencije? Glasujte v članku! - e-Maribor",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNMlp2Y214dk5vYlBBTk4yWXFydG9ncDR0czBHMjJmYXNjcFhXQ3FQQzlkZXdDYTBvNGZwREp2S2w0dXdrV2ZQZ285NmhjMVFIRFE3akhqWjlfNXZQNTlQUm0yU2l4UmVKZXZaS2h4RG5iUHdsNFdIbk9OSEtCNUwtbGI3eTFfN3FxSjRDU0d6STA2S05SdE1xamMtQlZzSjZaTHc?oc=5"
+      },
+      {
+        "label": "e-Maribor — Začelo se je! Novinarji TV Koper zahtevajo odstop uprave RTV Slovenija - e-Maribor",
+        "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPYWUwVkVVSUtrSlBWRXJXaVEzMXhlY0tDSVJ5WGtMRkhXaEU3UTZxSkZFMEUyWTFtODlIQWF2OFc1QlJkcGpHVUdrbTFMdmZBT0l1UjY0eEdxUV9rVmpYY0hPbFo1azdTZWVRWFNzcFVBT2dMZ1MwN1BrckxWT3c3WkdmMVJLU2M1TzdOZGpJd2VoemR0LUE?oc=5"
+      },
+      {
+        "label": "e-Maribor — Pred RTV Slovenija, se obeta shod za ukinitev RTV naročnine! - e-Maribor",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQc0owWnpwUWhHSkd1aVZKbUpST2JjdWNQemRCUUxpSjNHZUh5QXhKeHN3c2lZUUpLUnJUb3FnNk5ockN2MkV3eFhBZDAyMEJwU2o2VGxhLUxSd21TWnFuaU5NYVNzMERfWmVfZW5mVXRNVUczU0tJSy1nZVY2SExibHJtRzJLMkk?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-24T19:54:23+02:00",
+    "updatedAt": "2026-09-24T19:54:23+02:00"
+  },
+
+  {
+    "id": "rop-o-golobovi-vladi-politika-ne-bi-smela-biti-tako-plehka-ciljata-z-ursko-klakocar-zupanc-2b13995b",
+    "title": "Rop o Golobovi vladi: \"Politika ne bi smela biti tako plehka.\" Ciljata z Urško Klakočar Zupančič na državno…",
+    "excerpt": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Rop o Golobovi vladi: \"Politika ne bi smela biti tako plehka.\" Ciljata z Urško Klakočar Zupančič na državno…«.",
+    "seoDescription": "Politika: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Rop o Golobovi vladi: \"Politika ne bi smela biti tako plehka.\" Ciljata z Uršk",
+    "content": "**Politika, 24. 9. 2026.** Rop o Golobovi vladi: \"Politika ne bi smela biti tako plehka.\" Ciljata z Urško Klakočar Zupančič na državno raven? vecer.com\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nPri političnih temah Blog Lab ne podpira kandidatov, strank ali političnih odločitev; izjave in ocene so predstavljene kot stališča njihovih avtorjev ali virov, ne kot uredniška presoja.\n\nVir: vecer.com. Objavljeno: Thu, 24 Sep 2026 11:25:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMilAFBVV95cUxON08yMzRJdC1xVXd1cVlpRG1UZmwtbnc0RkVybm11b1UxMWdIc2dQcm12RVJ1c2c4ZmZwSzJaZWt2WDJ6R0R3RlJhZHB0Ty16WndWeHlaS0RKX2dFbWxNWTNTV0VSV09HVTEtVmFrZUJ3ZUJNLXRjUWlNc3FKSll3MHYtVkQ1LWJibFNtNUpkaEVKMXZV?oc=5)\n\n## Dopolnitev vira 2: N1 Slovenija\n\nKoalicija verjame v uspeh Skoka. Opozicija kritična tudi do ministra Zupančiča: \"Nismo na tekmovanju za mis sveta\" N1 Slovenija\n\n Vir: N1 Slovenija. Objavljeno: Thu, 24 Sep 2026 09:03:33 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMizwFBVV95cUxQcmZFaThmNWZQSmRGNXBEYkozWFNpNUtjTXdNYXdZYXA1Ymo3aFdfMGNqRi0yU2xWcmlQTnlFd2RXanhVMFFaUG5OdE9yV3lzdE8wdmxTekFscmJLeUcyWDRYNkc1dGRBdkZPbHVYRy1iRGFfaE15VjFMUkhSeXdOYjUzQlZaLTFRRkNhd0x6MDktT0VSbUlOUkJLQllCZHpWNXpJWWhIOUhOZ1JELUpCQ0owUnlPbWZnZl93VEs2QXpudTM2Rk5SMVIwY1VjbDQ?oc=5)\n\n## Dopolnitev vira 3: zurnal24.si\n\nKandidaturo za župana naj bi umaknil zaradi nasprotovanja dveh znanih politikov zurnal24.si\n\n Vir: zurnal24.si. Objavljeno: Wed, 23 Sep 2026 19:01:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMikAFBVV95cUxQSU5kMmxGV1phNkdGaUw1SnV4dC00R3NPcHFYTmxFbldpNjZQRFp3c3NybE5aaXJzT2R0UnBuTmJOY09odWltUWh2VXBodzZRM2dBOGVBX3JTbGdXOHNLM21aOTZiRG9aaXdURi1fSTluSnJmT1dtamUybWdLQlN5eDZfWDdac1JDVDduR2tsWlDSAZYBQVVfeXFMUGhHTEhXLWpYLVZ4RE1BRWlDVlBmTHJfM09rUGpuSC00bWVUbDczVlJBOVJNRlFWeFVvemJmTkdlRzloNE1qOXNTM2ZVbHE1b0doelctN25yU2RHMW5rNV85N01iV0UyMGQxX09NWk5SaFVmQ1BzNmo3elMzVjMxRVd2Qm9IRGFIVTFVYVZBZnpJSmZUSkxB?oc=5)\n\n## Dopolnitev vira 4: Lider.si\n\nCene hrane: Slovenci evropski kmetijski politiki zaupajo manj kot vsi sosedje Lider.si\n\n Vir: Lider.si. Objavljeno: Wed, 23 Sep 2026 09:58:39 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMimgFBVV95cUxPNHUwUFhhLTRNbU5mZEhRYjdYMHFxTVVaT19MZ3VodkwtNkhEdnlZLXQ4blFiZjdoX2lzS2h2cTdIS2lEWG1oQlA0RWxvOUo1UXlhajNoQjVraEJHQS1vVHJYQk9JcUdhRi0tWVVvUHhjSzFpOU5PNXlTN09kMTI3YlQ2bWVaQzR5Z0FMejM1d3JZc1ByS3d6ZVJn?oc=5)\n\n## Dopolnitev vira 5: 24ur.com\n\nStisk pesti in tapkanje v DZ: v kakšni fizični formi so politiki? 24ur.com\n\n Vir: 24ur.com. Objavljeno: Wed, 23 Sep 2026 16:31:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiogFBVV95cUxPeElydjFNY0ZOQ2hDVGFoUUVJZUQ5Rm1qYWh1bU5pV3BfbGpUOEFmU09RVDZQSm9YUlN3dUQ3WmRGTDZPU1Q3T2hUdTFoTkJNSlV1RHphQ0kzdUFsbHFvNG1mTDQ2WUlkUjl3OTlJZm5nSzBjcERINWlmSjc0UG9vRGNCdjdzVzc0eTN5TUpzLURKSkJPM2hRLU0wQW5iYk9ZQWc?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Politika",
+    "author": "Blog Lab Publisher",
+    "status": "published",
+    "heroImage": null,
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "vecer.com — Rop o Golobovi vladi: \"Politika ne bi smela biti tako plehka.\" Ciljata z Urško Klakočar Zupančič na državno raven? -…",
+        "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxON08yMzRJdC1xVXd1cVlpRG1UZmwtbnc0RkVybm11b1UxMWdIc2dQcm12RVJ1c2c4ZmZwSzJaZWt2WDJ6R0R3RlJhZHB0Ty16WndWeHlaS0RKX2dFbWxNWTNTV0VSV09HVTEtVmFrZUJ3ZUJNLXRjUWlNc3FKSll3MHYtVkQ1LWJibFNtNUpkaEVKMXZV?oc=5"
+      },
+      {
+        "label": "N1 Slovenija — Koalicija verjame v uspeh Skoka. Opozicija kritična tudi do ministra Zupančiča: \"Nismo na tekmovanju za mis sveta\" -…",
+        "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQcmZFaThmNWZQSmRGNXBEYkozWFNpNUtjTXdNYXdZYXA1Ymo3aFdfMGNqRi0yU2xWcmlQTnlFd2RXanhVMFFaUG5OdE9yV3lzdE8wdmxTekFscmJLeUcyWDRYNkc1dGRBdkZPbHVYRy1iRGFfaE15VjFMUkhSeXdOYjUzQlZaLTFRRkNhd0x6MDktT0VSbUlOUkJLQllCZHpWNXpJWWhIOUhOZ1JELUpCQ0owUnlPbWZnZl93VEs2QXpudTM2Rk5SMVIwY1VjbDQ?oc=5"
+      },
+      {
+        "label": "zurnal24.si — Kandidaturo za župana naj bi umaknil zaradi nasprotovanja dveh znanih politikov - zurnal24.si",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQSU5kMmxGV1phNkdGaUw1SnV4dC00R3NPcHFYTmxFbldpNjZQRFp3c3NybE5aaXJzT2R0UnBuTmJOY09odWltUWh2VXBodzZRM2dBOGVBX3JTbGdXOHNLM21aOTZiRG9aaXdURi1fSTluSnJmT1dtamUybWdLQlN5eDZfWDdac1JDVDduR2tsWlDSAZYBQVVfeXFMUGhHTEhXLWpYLVZ4RE1BRWlDVlBmTHJfM09rUGpuSC00bWVUbDczVlJBOVJNRlFWeFVvemJmTkdlRzloNE1qOXNTM2ZVbHE1b0doelctN25yU2RHMW5rNV85N01iV0UyMGQxX09NWk5SaFVmQ1BzNmo3elMzVjMxRVd2Qm9IRGFIVTFVYVZBZnpJSmZUSkxB?oc=5"
+      },
+      {
+        "label": "Lider.si — Cene hrane: Slovenci evropski kmetijski politiki zaupajo manj kot vsi sosedje - Lider.si",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPNHUwUFhhLTRNbU5mZEhRYjdYMHFxTVVaT19MZ3VodkwtNkhEdnlZLXQ4blFiZjdoX2lzS2h2cTdIS2lEWG1oQlA0RWxvOUo1UXlhajNoQjVraEJHQS1vVHJYQk9JcUdhRi0tWVVvUHhjSzFpOU5PNXlTN09kMTI3YlQ2bWVaQzR5Z0FMejM1d3JZc1ByS3d6ZVJn?oc=5"
+      },
+      {
+        "label": "24ur.com — Stisk pesti in tapkanje v DZ: v kakšni fizični formi so politiki? - 24ur.com",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPeElydjFNY0ZOQ2hDVGFoUUVJZUQ5Rm1qYWh1bU5pV3BfbGpUOEFmU09RVDZQSm9YUlN3dUQ3WmRGTDZPU1Q3T2hUdTFoTkJNSlV1RHphQ0kzdUFsbHFvNG1mTDQ2WUlkUjl3OTlJZm5nSzBjcERINWlmSjc0UG9vRGNCdjdzVzc0eTN5TUpzLURKSkJPM2hRLU0wQW5iYk9ZQWc?oc=5"
+      }
+    ],
+    "createdAt": "2026-09-24T13:39:21+02:00",
+    "updatedAt": "2026-09-24T13:39:21+02:00"
+  },
+
+  {
+    "id": "why-ljubljana-symbol-is-a-dragon",
+    "title": "Why Is Ljubljana’s Symbol a Dragon? Legend, History and a Self-Guided Walk",
+    "excerpt": "Separate the legend of Jason and the Argonauts from the documented history of Ljubljana’s dragon, then find the city’s most memorable dragon symbols on foot.",
+    "seoDescription": "Discover why Ljubljana uses a dragon as its symbol, what is legend and what is history, and follow a practical self-guided dragon walk through the city.",
+    "content": "Visitors meet Ljubljana's dragon almost immediately: on the city coat of arms, on souvenirs, above signs and, most famously, at Dragon Bridge. The short answer to “Why is Ljubljana's symbol a dragon?” is that several traditions gradually merged. A classical story connected Jason and the Argonauts with the Ljubljana Marshes, medieval heraldry placed a dragon above the city's castle, and modern Ljubljana transformed it into a friendly guardian and civic emblem.\n\nThe important distinction is simple: **Jason's battle with a marsh dragon is a legend, not a documented founding event**. Dragon Bridge, its construction dates and its original imperial dedication belong to verifiable history.\n\n## The famous legend: Jason and the Argonauts\n\nAccording to Ljubljana's best-known origin story, Jason and the Argonauts carried the Golden Fleece westward from Colchis. One version of their imagined return route takes them from the Black Sea into the Danube and Sava river systems, then along the Ljubljanica to the marshes south of today's city.\n\nHere, Jason is said to have fought and killed a monster that later became Ljubljana's dragon.\n\nThis is a compelling city legend, but there is no archaeological or historical evidence that Jason founded Ljubljana or fought a creature here. The Argonauts belong to Greek mythology, and the route is a later narrative connection between the classical story and Ljubljana's watery landscape.\n\n### Why the marshes fit the story so well\n\nThe Ljubljana Marshes were once a broad, changeable wetland shaped by water, floods and human settlement. Such a landscape provides a believable setting for stories about serpents, monsters and heroes, even though it does not prove the Jason legend.\n\nFor the documented prehistoric history of the marshes, read the [Ljubljana Marshes pile-dwellers guide](?article=ljubljana-marshes-pile-dwellings-history).\n\n## The historical dragon: from decoration to city guardian\n\nLjubljana Tourism explains that a dragon first appeared as a decorative element above the tower in the medieval city coat of arms. Over time it became more prominent and eventually developed into the central symbol visitors recognise today.\n\nOther interpretations connect the dragon with Saint George, the dragon-slaying saint associated with the chapel at Ljubljana Castle. These explanations should be treated as historical interpretations rather than a single proven origin story.\n\nWhat can be said safely is that the symbol evolved. The dragon was not created by one event or one artist; successive generations gave it new meanings. Today it commonly represents power, courage and wisdom, while tourism uses a warmer version of the creature as a protector and mascot.\n\n## Dragon Bridge: documented history rather than myth\n\nThe bridge is the clearest place where legend and modern engineering meet.\n\n### What is historically documented\n\nDragon Bridge was constructed between **1900 and 1901**. It was Ljubljana's first reinforced-concrete structure and one of Europe's largest bridges of its kind at the time. Its official name was originally the **Jubilee Bridge of Emperor Franz Joseph I**, commemorating the fortieth anniversary of the emperor's reign with the dates 1848–1888.\n\nThe bridge emerged during Ljubljana's modernisation after the destructive earthquake of 1895. Its Art Nouveau design and reinforced-concrete construction expressed a forward-looking city, even though the dragons made the structure feel ancient and mythical.\n\nFour large sheet-copper dragons stand at the corners, accompanied by smaller dragon decorations. They turned a technically innovative bridge into Ljubljana's most recognisable visual symbol.\n\n### What remains folklore\n\nA playful local story claims that the dragons move their tails when a virgin crosses the bridge. Treat this as folklore and humour—not as history, and certainly not as a reliable test of anyone crossing it.\n\n## A self-guided Ljubljana dragon walk\n\nThis compact walk can be completed in roughly 45–75 minutes, depending on stops. It works well as an addition to a first visit rather than as a full-day itinerary.\n\n### 1. Ljubljana Castle and the city coat of arms\n\nBegin by looking toward Ljubljana Castle, the central element beneath the dragon in the city's coat of arms. If you visit the castle, look for the Chapel of St George and consider how the saint's dragon story may have influenced later interpretations of the emblem.\n\nCastle paths include slopes, cobbles and steps. The funicular is the most practical alternative for visitors who want to avoid the steep ascent, but individual accessibility requirements should be checked with Ljubljana Castle before travel.\n\n### 2. Town Hall and the old city\n\nWalk through the historic centre and look for the city coat of arms on official signs, façades and street furniture. This stage shows how the dragon functions as a civic emblem rather than only a tourist character.\n\nContinue toward the Central Market. For the architecture surrounding this part of the river, use the [self-guided Plečnik walking tour](?article=plecnik-ljubljana-self-guided-walking-tour).\n\n### 3. Dragon Bridge\n\nApproach the bridge from Vodnik Square or the riverside. The four corner dragons are the main attraction, but also inspect the smaller decorative creatures and the dates connected with the original imperial dedication.\n\nDragon Bridge carries road traffic. Use marked pedestrian areas, do not step into the carriageway for photographs and keep children close. The bridge surface and nearby river paths can be slippery in rain or freezing weather.\n\n### 4. Follow the modern dragon\n\nFinish by noticing dragons on signs, sports imagery, souvenirs and children's products around the centre. These modern versions are part of the symbol's continuing evolution—from threatening monster to recognisable city guardian.\n\n## Best photography and visitor tips\n\n- Early morning usually offers more space around the main statues.\n- A close detail photograph works better than standing in the road for a symmetrical view.\n- The riverside and nearby Central Market make the bridge easy to include in an old-town walk.\n- The outdoor route is free, but castle attractions and the funicular may require tickets.\n- Do not present the Jason story as established ancient history; introduce it as Ljubljana's most famous legend.\n- Keep Slovene place names in their original form: **Zmajski most** means **Dragon Bridge**.\n\n## Fact, interpretation or legend?\n\n### Documented facts\n\n- Dragon Bridge was built between 1900 and 1901.\n- It was originally dedicated to Emperor Franz Joseph I.\n- It used reinforced concrete and is an important Art Nouveau and engineering landmark.\n- The dragon is a central element of Ljubljana's modern coat of arms and city identity.\n\n### Historical interpretations\n\n- The dragon may have developed from an earlier decorative heraldic element.\n- The tradition of Saint George may have influenced the symbol's meaning.\n- The marsh landscape may have helped later storytellers localise monster legends.\n\n### Legends and folklore\n\n- Jason and the Argonauts travelled through the Ljubljana Marshes.\n- Jason killed the monster that became Ljubljana's dragon.\n- The bridge dragons move their tails when a virgin passes.\n\nThose stories are valuable cultural heritage precisely because they are stories. Labelling them honestly does not make them less interesting; it shows how Ljubljana repeatedly reimagined its past.\n\n## Direct sources\n\n- [Ljubljana Tourism: Ljubljana, City of Dragons](https://www.visitljubljana.com/en/visitors/sights-and-activities/ljubljana-city-of-dragons)\n- [Ljubljana Tourism: Dragon Bridge](https://www.visitljubljana.com/en/poi/dragon-bridge)\n- [Museum and Galleries of Ljubljana: City Museum collection](https://zbirka.mgml.si/)\n\nHistorical and visitor information was last checked on **24 September 2026**.",
     "category": "Vodniki",
     "author": "Uredništvo Blog Lab",
     "status": "published",
