@@ -3,7 +3,7 @@
   "status": "waiting",
   "enabled": true,
   "category": "gourmet",
-  "last_run": "2026-10-24T21:07:44+02:00",
+  "last_run": "2026-10-24T21:10:01+02:00",
   "last_success": "2026-10-24T20:54:46+02:00",
   "last_output": "ljubezen-do-gora-planinska-zveza-slovenije-je-obelezila-hvalevredno-prelomnico-4e0792a9",
   "next_run": null,
@@ -24,7 +24,7 @@
   "last_editorial_hold": {
     "slot": "2026-10-24|19:10|gourmet",
     "reason": "ponavljanje",
-    "at": "2026-10-24T21:07:25+02:00"
+    "at": "2026-10-24T21:09:39+02:00"
   },
   "last_error": "prekratek"
 }
