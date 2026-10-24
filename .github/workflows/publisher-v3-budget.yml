@@ -1,0 +1,36 @@
+name: Blog Lab Publisher V3 Workflow Budget
+
+on:
+  schedule:
+    - cron: "35 4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: bloglab-v3-workflow-budget
+  cancel-in-progress: false
+
+jobs:
+  report:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Read-only daily workflow usage sample
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python scripts/publisher_v3_metrics.py usage
+      - name: Upload workflow budget evidence
+        if: always()
+        uses: actions/upload-artifact@v5
+        with:
+          name: workflow-budget-v3
+          path: ${{ runner.temp }}/workflow-budget-v3.json
+          if-no-files-found: ignore
+          retention-days: 14
