@@ -76,6 +76,17 @@ def commons_image_matches_topic(topic: str, image: dict) -> bool:
     return any(place in metadata for place in expected)
 
 
+
+def _license_is_reusable(label: str) -> bool:
+    """Whitelist Commons licenses; exclude noncommercial and no-derivatives."""
+    plain = _fold(label).replace("_", "-")
+    if re.search(r"(?:^|[\s-])(nc|nd)(?:$|[\s-])", plain):
+        return False
+    if "noncommercial" in plain or "no derivatives" in plain or "all rights reserved" in plain:
+        return False
+    compact = re.sub(r"[^a-z0-9]+", "", plain)
+    return compact.startswith(("cc0", "ccby", "publicdomain")) or compact in {"pd", "pdold"}
+
 FOREIGN_LOCATION_TERMS = (
     "paris", "france", "london", "england", "new york", "usa", "united states",
     "berlin", "germany", "rome", "italy", "madrid", "spain", "vienna", "austria",
@@ -107,7 +118,7 @@ def _image_relevant(title: str, description: str, category_key: str) -> bool:
 def _search_once(query: str, category_key: str, location_terms: tuple[str, ...] = ()) -> dict | None:
     payload = _api({
         "action":"query","generator":"search","gsrnamespace":"6","gsrsearch":query,"gsrlimit":"24",
-        "prop":"imageinfo","iiprop":"url|extmetadata|mime","iiurlwidth":"1600",
+        "prop":"imageinfo","iiprop":"url|extmetadata|mime|size","iiurlwidth":"1600",
         "format":"json","formatversion":"2","origin":"*"
     })
     for page in (payload.get("query") or {}).get("pages") or []:
@@ -117,7 +128,11 @@ def _search_once(query: str, category_key: str, location_terms: tuple[str, ...] 
             continue
         meta = info.get("extmetadata") or {}
         license_name = _clean((meta.get("LicenseShortName") or {}).get("value",""))
-        if not any(token in license_name.lower() for token in ALLOWED_LICENSE_TOKENS):
+        if not _license_is_reusable(license_name):
+            continue
+        width, height = int(info.get("width") or 0), int(info.get("height") or 0)
+        if width < 960 or height < 540 or width / height < 1.25:
+            print(f"COMMONS_MEDIA_REJECTED reason=low_resolution_or_portrait title={title!r}")
             continue
         author = _clean((meta.get("Artist") or {}).get("value","")) or "Wikimedia Commons"
         description = _clean((meta.get("ImageDescription") or {}).get("value",""))
@@ -148,6 +163,8 @@ def commons_image_for(topic: str, category: str) -> dict | None:
     attempts = []
     if topic_query:
         attempts.append(f"{topic_query} Slovenia")
+    if location_terms:
+        attempts.append(f"{location_terms[0]} {CATEGORY_FALLBACKS.get(category_key, 'Slovenia')}")
     if CATEGORY_FALLBACKS.get(category_key):
         attempts.append(CATEGORY_FALLBACKS[category_key])
     attempts.append("Slovenia tourism landscape")

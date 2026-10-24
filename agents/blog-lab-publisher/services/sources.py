@@ -406,6 +406,35 @@ def _visible_html_text(html: str, limit: int = 4200) -> str:
     text = _clean(text)
     return text[:limit]
 
+
+def _article_body_paragraphs(html: str, limit: int = 4200) -> str:
+    """Extract genuine article paragraphs before falling back to generic HTML.
+
+    Uses already-fetched HTML, so no extra request, inference or invented fact.
+    """
+    html = re.sub(r"(?is)<(?:script|style|noscript|template)[^>]*>.*?</(?:script|style|noscript|template)>", " ", html)
+    scope = re.search(r"(?is)<article\b[^>]*>(.*?)</article>", html)
+    if scope is None:
+        scope = re.search(r"(?is)<main\b[^>]*>(.*?)</main>", html)
+    if scope is None:
+        return ""
+    paragraphs = re.findall(r"(?is)<p\b[^>]*>(.*?)</p>", scope.group(1))
+    result, seen = [], set()
+    for raw in paragraphs[:45]:
+        paragraph = _clean(raw)
+        key = paragraph.casefold()
+        if len(paragraph) < 55 or key in seen:
+            continue
+        if re.search(r"(?i)cookie policy|privacy policy|subscribe to|all rights reserved|prijavite se na novice", paragraph):
+            continue
+        seen.add(key)
+        result.append(paragraph)
+        if sum(map(len, result)) >= limit:
+            break
+    body = " ".join(result)[:limit]
+    return body if len(body) >= 180 else ""
+
+
 def _direct_candidate(item: dict) -> bool:
     # Only hydrate direct web-index results. Google/Bing News aggregator URLs
     # may require consent/redirect logic and are already usable as indexed evidence.
@@ -458,7 +487,7 @@ def _enrich_direct_item(item: dict, timeout: int = 6) -> tuple[dict, bool]:
         or _meta_content(html, "og:description")
         or _meta_content(html, "twitter:description")
     )
-    body_text = _visible_html_text(html)
+    body_text = _article_body_paragraphs(html) or _visible_html_text(html)
     summary_parts = []
     for part in [description, body_text]:
         part = _clean(part)

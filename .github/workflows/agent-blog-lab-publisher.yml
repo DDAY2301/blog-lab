@@ -135,6 +135,7 @@ jobs:
       - name: Run autonomous publisher
         shell: bash
         run: |
+          echo "PUBLISHER_V3_START_EPOCH=$(date +%s)" >> "$GITHUB_ENV"
           ARGS=(--category "$RUN_CATEGORY")
           if [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.catch_up }}" != "true" ]]; then
             ARGS+=(--manual)
@@ -168,6 +169,23 @@ jobs:
         shell: bash
         run: |
           if git diff --quiet -- src/App.jsx; then echo "changed=false" >> "$GITHUB_OUTPUT"; else echo "changed=true" >> "$GITHUB_OUTPUT"; fi
+      - name: Record V3 published article IDs and QA holds
+        if: always()
+        continue-on-error: true
+        env:
+          PUBLISHER_CATEGORY: ${{ env.RUN_CATEGORY }}
+          PUBLISHER_SLOT: ${{ env.RUN_SCHEDULE_SLOT }}
+        run: python scripts/publisher_v3_metrics.py publisher
+
+      - name: Upload V3 publisher evidence
+        if: always()
+        uses: actions/upload-artifact@v5
+        with:
+          name: publisher-v3-outcome
+          path: ${{ runner.temp }}/publisher-v3-outcome.json
+          if-no-files-found: ignore
+          retention-days: 14
+
       - name: Commit verified agent state/content
         id: commit
         if: ${{ github.event_name != 'workflow_dispatch' || inputs.dry_run == false }}
