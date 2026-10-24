@@ -63,14 +63,14 @@ CATEGORY_LENSES = {
 }
 
 
-def focused_queries(category: str, *, day: date | None = None, count: int = 2) -> list[str]:
-    """Two complementary lenses rotate by Slovenia-local day, no random loops."""
+def focused_queries(category: str, *, day: date | None = None, count: int = 2, offset: int = 0) -> list[str]:
+    """Two distinct lenses rotate by local day; offset selects the next pair."""
     lenses = CATEGORY_LENSES.get(category, ())
     if not lenses:
         return []
     if day is None:
         day = datetime.now(ZoneInfo("Europe/Ljubljana")).date()
-    start = day.toordinal() % len(lenses)
+    start = (day.toordinal() + max(0, offset)) % len(lenses)
     positions = [start, (start + max(1, len(lenses) // 2)) % len(lenses)]
     return [lenses[i] for i in positions[:max(1, min(count, 2))]]
 
@@ -97,7 +97,7 @@ def unpublished_items(items: list[dict], processed: list[dict], *, limit: int = 
         if isinstance(row, dict)
         if (key := _title_key(row.get("title") or "")) and len(key) >= 24
     }
-    out, seen_urls, seen_hashes = [], set(), set()
+    out, seen_urls, seen_hashes, seen_titles = [], set(), set(), set()
     for item in items or []:
         if not isinstance(item, dict):
             continue
@@ -108,10 +108,12 @@ def unpublished_items(items: list[dict], processed: list[dict], *, limit: int = 
             continue
         if fingerprint and (fingerprint in used_hashes or fingerprint in seen_hashes):
             continue
-        if title_key and len(title_key) >= 24 and title_key in used_titles:
+        if title_key and len(title_key) >= 24 and (title_key in used_titles or title_key in seen_titles):
             continue
         out.append(item)
         seen_urls.add(canonical)
+        if title_key and len(title_key) >= 24:
+            seen_titles.add(title_key)
         if fingerprint:
             seen_hashes.add(fingerprint)
         if len(out) >= limit:
@@ -121,7 +123,7 @@ def unpublished_items(items: list[dict], processed: list[dict], *, limit: int = 
 
 def collect_focused_sources(
     category: str, *, max_items: int = 30, day: date | None = None,
-    cache_dir: str | None = None
+    cache_dir: str | None = None, lens_offset: int = 0
 ) -> list[dict]:
     """Bounded provider-diverse fallback (<=6 feeds, <=8 page checks).
 
@@ -129,14 +131,14 @@ def collect_focused_sources(
     so they may reuse the same results *within one GitHub Actions runner*. No
     cache is committed to the repository and no cache is shared between runs.
     """
-    queries = focused_queries(category, day=day)
+    queries = focused_queries(category, day=day, offset=lens_offset)
     if not queries:
         return []
     cache_path = None
     if cache_dir:
         try:
             cache_day = day or datetime.now(ZoneInfo("Europe/Ljubljana")).date()
-            cache_path = Path(cache_dir) / f"bloglab-discovery-v2-{category}-{cache_day.isoformat()}.json"
+            cache_path = Path(cache_dir) / f"bloglab-discovery-v2-{category}-{cache_day.isoformat()}-lens{lens_offset}.json"
             if cache_path.exists():
                 cache = json.loads(cache_path.read_text(encoding="utf-8"))
                 if isinstance(cache, list):
@@ -179,7 +181,7 @@ def collect_focused_sources(
     enriched = sources._enrich_direct_sources(diverse, max_checks=min(8, max_items))
     final = sources._dedupe_diverse(enriched, max_items, per_source=3)
     print(
-        f"DISCOVERY_V2_RAW category={category} queries={len(queries)} "
+        f"DISCOVERY_V2_RAW category={category} lens_offset={lens_offset} queries={len(queries)} "
         f"selected={len(final)} providers="
         + ",".join(f"{k}:{counts[k]}" for k in sorted(counts))
     )

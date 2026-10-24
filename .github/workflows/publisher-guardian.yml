@@ -1,13 +1,9 @@
 name: Blog Lab Publisher Guardian
 
 on:
+  # Hourly catch-up only; the publisher heartbeat handles normal slots.
   schedule:
-    - cron: "*/30 * * * *"
-  workflow_run:
-    workflows:
-      - "Blog Lab Publisher Agent"
-    types:
-      - completed
+    - cron: "47 * * * *"
   workflow_dispatch:
 
 permissions:
