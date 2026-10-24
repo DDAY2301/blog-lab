@@ -59,7 +59,7 @@ jobs:
       - name: Build and scan when changed
         shell: bash
         run: |
-          if git diff --quiet -- src/App.jsx data public/data logs; then
+          if git diff --quiet -- src/App.jsx data public/data logs && [[ -z "$(git status --porcelain -- src/articles/published)" ]]; then
             echo "No publisher repair changes."
             exit 0
           fi
@@ -74,7 +74,7 @@ jobs:
           set -euo pipefail
           git config user.name "blog-lab-publisher-guardian[bot]"
           git config user.email "blog-lab-publisher-guardian[bot]@users.noreply.github.com"
-          git add -A -- src/App.jsx data public/data || true
+          git add -A -- src/App.jsx src/articles/published data public/data || true
           if [[ -e logs ]]; then
             git add -A -- logs
           fi

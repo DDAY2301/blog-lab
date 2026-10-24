@@ -16,14 +16,9 @@ on:
       - ".github/workflows/**"
   pull_request:
     branches: [main]
-  workflow_run:
-    workflows:
-      - "Blog Lab Health Check"
-      - "Blog Lab External Smoke Test"
-      - "Blog Lab Full E2E Audit"
-    types: [completed]
+  # PR/push and scheduled health checks; no redundant completion fanout.
   schedule:
-    - cron: "17 * * * *"
+    - cron: "17 */3 * * *"
   workflow_dispatch:
     inputs:
       strict_remote:
