@@ -1,18 +1,19 @@
 {
-  "last_success": "2026-10-24T20:51:21+02:00",
+  "last_success": "2026-10-24T20:54:46+02:00",
   "last_failure": "2026-09-21T20:56:52+02:00",
   "consecutive_failures": 0,
   "posts_date": "2026-10-24",
-  "posts_today": 1,
-  "last_output": "kam-na-prvomajski-izlet-to-so-koticki-slovenije-ki-vabijo-na-spomladanski-potep-6a568a1b",
+  "posts_today": 2,
+  "last_output": "ljubezen-do-gora-planinska-zveza-slovenije-je-obelezila-hvalevredno-prelomnico-4e0792a9",
   "last_error": null,
   "agent_version": "3.0.0-learning-guarded-fallback",
-  "current_category": "sezonsko",
-  "scheduled_posts_today": 1,
+  "current_category": "gore",
+  "scheduled_posts_today": 2,
   "manual_posts_today": 0,
   "writer_mode": "deterministic_fallback",
   "scheduled_slots_done": [
-    "2026-10-24|13:30|sezonsko"
+    "2026-10-24|13:30|sezonsko",
+    "2026-10-24|16:20|gore"
   ],
   "scheduled_slots_deferred": [
     "2026-10-24|07:35|kolesarstvo",

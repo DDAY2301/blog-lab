@@ -30,6 +30,33 @@ const CATEGORY_EMPTY_COPY = {
 
 const starterArticles = [
   {
+    "id": "ljubezen-do-gora-planinska-zveza-slovenije-je-obelezila-hvalevredno-prelomnico-4e0792a9",
+    "title": "Ljubezen do gora: Planinska zveza Slovenije je obeležila hvalevredno prelomnico",
+    "excerpt": "Gore & traili: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Ljubezen do gora: Planinska zveza Slovenije je obeležila hvalevredno prelomnico«.",
+    "seoDescription": "Gore & traili: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Ljubezen do gora: Planinska zveza Slovenije je obeležila hvalevredno pre",
+    "content": "**Gore & traili, 24. 10. 2026.** Ljubezen do gora: Planinska zveza Slovenije je obeležila hvalevredno prelomnico Metropolitan.si\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Metropolitan.si. Objavljeno: Tue, 28 Feb 2023 08:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMiygFBVV95cUxNRjJfQVhERTdDa0YydGpwVEotNUgxaWVrdWVfRmdxV0FMcmhHMGdwS2lvUTRiLVhzRDBMQ3F0RlU2NE5tX1FwWkxxZDVWV3hKdW1qVWFHTUJIRXc2NEE2WC1DMXpCUmNsM3RyWk04cFljTEt1ZWVPOGxZclRqRWtnTUUtTmJWbkotZ29Nall3a0lvaEZkeU9Xc1RieDJXN3NUWWxsczR1amZ5LXpPSGlldzRyV2wyQnZRZXJpR3pUdnA4OG9STi1TZndB?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Gore & traili",
+    "author": "Blog Lab Slovenia Publisher",
+    "status": "published",
+    "heroImage": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/172nd_Slovenian_Mountain_Training_%285229491885%29.jpg/1920px-172nd_Slovenian_Mountain_Training_%285229491885%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "alt": "BOHINJSKA BELA, Slovenia -- Soldiers with U.S. Army Europe's 172nd Infantry Brigade pause during their hike up the mountain at the Slovenian Armed Forces Mountain Training Center 3",
+      "caption": "U.S. Army Europe from Wiesbaden, Germany · Wikimedia Commons · Public domain",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:172nd_Slovenian_Mountain_Training_(5229491885).jpg"
+    },
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Metropolitan.si — Ljubezen do gora: Planinska zveza Slovenije je obeležila hvalevredno prelomnico - Metropolitan.si",
+        "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNRjJfQVhERTdDa0YydGpwVEotNUgxaWVrdWVfRmdxV0FMcmhHMGdwS2lvUTRiLVhzRDBMQ3F0RlU2NE5tX1FwWkxxZDVWV3hKdW1qVWFHTUJIRXc2NEE2WC1DMXpCUmNsM3RyWk04cFljTEt1ZWVPOGxZclRqRWtnTUUtTmJWbkotZ29Nall3a0lvaEZkeU9Xc1RieDJXN3NUWWxsczR1amZ5LXpPSGlldzRyV2wyQnZRZXJpR3pUdnA4OG9STi1TZndB?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-24T20:54:46+02:00",
+    "updatedAt": "2026-10-24T20:54:46+02:00"
+  },
+
+  {
     "id": "kam-na-prvomajski-izlet-to-so-koticki-slovenije-ki-vabijo-na-spomladanski-potep-6a568a1b",
     "title": "Kam na prvomajski izlet? To so kotički Slovenije, ki vabijo na spomladanski potep",
     "excerpt": "Sezonsko: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Kam na prvomajski izlet? To so kotički Slovenije, ki vabijo na spomladanski potep«.",
