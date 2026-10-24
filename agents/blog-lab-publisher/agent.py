@@ -628,9 +628,19 @@ def qa_repair_task(task_prompt: str, errors: list[str], min_chars: int, max_char
 
 
 def existing_titles() -> set[str]:
-    if not APP.exists(): return set()
-    text = APP.read_text(encoding="utf-8", errors="ignore")
-    return {m.strip().lower() for m in re.findall(r'(?:title|"title")\s*:\s*"([^"]+)"', text)}
+    titles = set()
+    if APP.exists():
+        text = APP.read_text(encoding="utf-8", errors="ignore")
+        titles.update(m.strip().lower() for m in re.findall(r'(?:title|"title")\s*:\s*"([^"]+)"', text))
+    atomic_dir = APP.parent / "articles" / "published"
+    if atomic_dir.is_dir():
+        for path in atomic_dir.glob("*.json"):
+            # Fail closed: malformed articles must not silently disable deduplication.
+            record = json.loads(path.read_text(encoding="utf-8"))
+            if not isinstance(record, dict) or not record.get("title"):
+                raise RuntimeError(f"Invalid atomic article: {path.name}")
+            titles.add(str(record["title"]).strip().lower())
+    return titles
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry-run", action="store_true")
