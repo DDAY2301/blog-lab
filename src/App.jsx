@@ -28,7 +28,10 @@ const CATEGORY_EMPTY_COPY = {
   "Drugo": "Ko bo objavljena nova zgodba v tej rubriki, se bo prikazala tukaj."
 };
 
+// Atomic V4: newly published, schema-checked JSON files take precedence.
+const atomicPublishedArticles = Object.values(import.meta.glob("./articles/published/*.json", { eager: true, import: "default" }));
 const starterArticles = [
+  ...atomicPublishedArticles,
   {
     "id": "ljubezen-do-gora-planinska-zveza-slovenije-je-obelezila-hvalevredno-prelomnico-4e0792a9",
     "title": "Ljubezen do gora: Planinska zveza Slovenije je obeležila hvalevredno prelomnico",
