@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-24T18:28:56+02:00",
-  "loop_count": 7855,
+  "updated_at": "2026-10-24T18:30:03+02:00",
+  "loop_count": 7856,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-24T18:28:29+02:00",
+      "last_learning_run": "2026-10-24T18:29:37+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -76,7 +76,7 @@
           "last_seen": "2026-10-24T18:28:29+02:00",
           "last_title": "Premier Janša ob ogledu finala mladih košarkarjev udaril po RTV Slovenija: »Plačujemo vas več kot Inštitut Jožef Stefan!« - Slovenske novice",
           "last_provider": "google-news-si",
-          "published": 474330,
+          "published": 474395,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,17 +227,16 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 8,
+      "current_source_count": 2,
       "example_titles": {
-        "news.google.com": [
-          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
-          "Slovenke po veliki vrnitvi in zmagi nad Latvijo na pragu osmine finala - rtvslo.si",
-          "Kot v sanjah: Slovenija že drugič v dveh tednih evropski prvak! (VIDEO) - Šport TV"
+        "toyota.com": [
+          "2027 Toyota Corolla | Toyota.com",
+          "Toyota Deals & Incentives | New Toyota Special Offers"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-24T18:28:39+02:00",
+      "last_learning_run": "2026-10-24T18:29:53+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -256,9 +255,9 @@
         "wikipedia.org"
       ],
       "preferred_hosts": [
+        "support.microsoft.com",
         "news.google.com",
         "pewresearch.org",
-        "support.microsoft.com",
         "experian.com",
         "dictionary.com",
         "hellovein.com",
@@ -270,13 +269,20 @@
         "calculator.net"
       ],
       "source_health": {
+        "support.microsoft.com": {
+          "score": 2.835,
+          "seen": 3,
+          "last_seen": "2026-10-24T18:29:53+02:00",
+          "last_title": "Contact Microsoft customer support | Microsoft Support",
+          "last_provider": "bing-web"
+        },
         "news.google.com": {
           "score": 2.502,
           "seen": 175797,
           "last_seen": "2026-10-24T18:28:39+02:00",
           "last_title": "Golob pravi: Slovenija potrebuje široko koalicijo. NSi ne bo na sestanek - Svet24.si",
           "last_provider": "google-news-si",
-          "published": 522074,
+          "published": 522144,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -284,13 +290,6 @@
           "seen": 4,
           "last_seen": "2026-10-04T12:23:46+02:00",
           "last_title": "Key takeaways on Americans’ views of guns and gun ownership",
-          "last_provider": "bing-web"
-        },
-        "support.microsoft.com": {
-          "score": 1.89,
-          "seen": 2,
-          "last_seen": "2026-10-13T23:55:07+02:00",
-          "last_title": "Contact Microsoft customer support | Microsoft Support",
           "last_provider": "bing-web"
         },
         "experian.com": {
@@ -385,17 +384,15 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 19,
+      "current_source_count": 1,
       "example_titles": {
-        "news.google.com": [
-          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
-          "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si",
-          "Na Radiu Ognjišče zadnje predvolilno soočenje: v ospredju prisluhi, zdravstvo, zunanja politika in sprava - Radio Ognjišče"
+        "support.microsoft.com": [
+          "Contact Microsoft customer support | Microsoft Support"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-24T18:28:56+02:00",
+      "last_learning_run": "2026-10-24T18:30:03+02:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -483,12 +480,12 @@
           "last_provider": "bing-web"
         },
         "news.google.com": {
-          "score": 2.506,
+          "score": 2.502,
           "seen": 202046,
           "last_seen": "2026-10-24T18:28:56+02:00",
           "last_title": "Vreme se bo danes hitro obrnilo: nevihte bodo zajele večji del Slovenije, na Primorskem tudi burja - Dnevne Novice",
           "last_provider": "google-news-si",
-          "published": 326696,
+          "published": 326721,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -575,20 +572,19 @@
           "last_title": "The upcoming festivals in Thessaloniki that you just can´t miss - blog.thessaloniki.travel",
           "last_provider": "bing-web"
         },
-        "local.wenatcheeworld.com": {
-          "score": 1.823,
+        "tampanails.com": {
+          "score": 1.963,
           "seen": 2,
-          "last_seen": "2026-10-10T02:53:56+02:00",
-          "last_title": "Local Guide",
+          "last_seen": "2026-10-24T18:30:03+02:00",
+          "last_title": "Nail Care Tips, Trends & Lifestyle - Tampa Nails Blog",
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 23,
+      "current_source_count": 2,
       "example_titles": {
-        "news.google.com": [
-          "(AKTUALNO) Še danes v prodaji 36. št. revije Demokracija: 30 let Demokracije, ki udejanja pravico vedeti več! Načrt za demografsko obnovo sl",
-          "Janša napoveduje velike spremembe: Čez 15 let šol, kot jih poznamo danes, morda ne bo več! - Najdi.si novice",
-          "(AKTUALNO) Varuhinja človekovih pravic Simona Drenik Bavdek: Pravica do dostojnega pokopa temeljna človekova pravica - Demokracija"
+        "tampanails.com": [
+          "Tampa Nails Salon in Florida | Pedicure, Manicure & Nail Art",
+          "Nail Care Tips, Trends & Lifestyle - Tampa Nails Blog"
         ]
       }
     }
