@@ -52,6 +52,25 @@ def publisher_report() -> dict:
             except (ValueError, OSError):
                 continue
     result = outcome_from_text(before, after, failures)
+    # V4: count new atomic JSON articles before the verified commit.
+    atomic_dir = ROOT / "src" / "articles" / "published"
+    tracked_paths = set(subprocess.run(
+        ["git", "ls-files", "--", "src/articles/published"],
+        cwd=ROOT, capture_output=True, text=True, encoding="utf-8", check=True,
+    ).stdout.splitlines())
+    new_ids = set(result["new_article_ids"])
+    if atomic_dir.is_dir():
+        for path in atomic_dir.glob("*.json"):
+            relative = path.relative_to(ROOT).as_posix()
+            if relative in tracked_paths:
+                continue
+            record = json.loads(path.read_text(encoding="utf-8"))
+            if record.get("id") != path.stem:
+                raise RuntimeError(f"Atomic publication ID mismatch: {relative}")
+            new_ids.add(path.stem)
+    result["new_article_ids"] = sorted(new_ids)
+    result["published_count"] = len(new_ids)
+    result["outcome"] = "published" if new_ids else "no_article"
     result.update(schema="bloglab.publisher.v3",
                   github_run_id=os.getenv("GITHUB_RUN_ID", ""),
                   category=os.getenv("PUBLISHER_CATEGORY", ""),

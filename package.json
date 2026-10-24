@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "npm run art:generate && vite",
-    "build": "npm run art:generate && npm run art:check && vite build",
+    "build": "node scripts/verify-atomic-articles-v4.mjs && npm run art:generate && npm run art:check && vite build",
     "preview": "vite preview",
     "guardian:check": "python agents/production-guardian/guardian.py check --report logs/guardian-report.json",
     "guardian:repair": "python agents/production-guardian/guardian.py repair",

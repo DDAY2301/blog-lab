@@ -149,7 +149,7 @@ jobs:
         if: ${{ github.event_name != 'workflow_dispatch' || inputs.catch_up == true }}
         shell: bash
         run: |
-          if git diff --quiet -- src/App.jsx; then
+          if [[ -z "$(git status --porcelain -- src/App.jsx src/articles/published)" ]]; then
             echo "No article content change detected; running deterministic autonomous fallback."
             python agents/blog-lab-publisher/autonomous_fallback.py --category "$RUN_CATEGORY" --scheduled-slot "$RUN_SCHEDULE_SLOT"
           else
@@ -168,7 +168,7 @@ jobs:
         id: content
         shell: bash
         run: |
-          if git diff --quiet -- src/App.jsx; then echo "changed=false" >> "$GITHUB_OUTPUT"; else echo "changed=true" >> "$GITHUB_OUTPUT"; fi
+          if [[ -z "$(git status --porcelain -- src/App.jsx src/articles/published)" ]]; then echo "changed=false" >> "$GITHUB_OUTPUT"; else echo "changed=true" >> "$GITHUB_OUTPUT"; fi
       - name: Record V3 published article IDs and QA holds
         if: always()
         continue-on-error: true
@@ -195,7 +195,7 @@ jobs:
           if git diff --quiet && [[ -z "$(git status --porcelain)" ]]; then exit 0; fi
           git config user.name "blog-lab-publisher[bot]"
           git config user.email "blog-lab-publisher[bot]@users.noreply.github.com"
-          git add -A -- src/App.jsx data public/data
+          git add -A -- src/App.jsx src/articles/published data public/data
           if [[ -d public/media/articles ]]; then git add -A -- public/media/articles; fi
           for optional_path in content/drafts logs; do
             if [[ -e "$optional_path" ]]; then

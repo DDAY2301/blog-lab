@@ -18,7 +18,7 @@ def test_operator_staging_handles_optional_paths_safely():
 
 
 def test_publisher_staging_handles_optional_paths_safely():
-    assert "git add -A -- src/App.jsx data public/data" in PUBLISHER
+    assert "git add -A -- src/App.jsx src/articles/published data public/data" in PUBLISHER
     assert "for optional_path in content/drafts logs" in PUBLISHER
     assert "Agent produced repository changes, but no allowed changes were staged." in PUBLISHER
     assert "content/drafts logs 2>/dev/null || true" not in PUBLISHER
