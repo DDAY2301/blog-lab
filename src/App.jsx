@@ -30,6 +30,33 @@ const CATEGORY_EMPTY_COPY = {
 
 const starterArticles = [
   {
+    "id": "kam-na-prvomajski-izlet-to-so-koticki-slovenije-ki-vabijo-na-spomladanski-potep-6a568a1b",
+    "title": "Kam na prvomajski izlet? To so kotički Slovenije, ki vabijo na spomladanski potep",
+    "excerpt": "Sezonsko: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Kam na prvomajski izlet? To so kotički Slovenije, ki vabijo na spomladanski potep«.",
+    "seoDescription": "Sezonsko: pregled preverljivih informacij iz današnjih virov, z osrednjo zgodbo »Kam na prvomajski izlet? To so kotički Slovenije, ki vabijo na spomladanski p",
+    "content": "**Sezonsko, 24. 10. 2026.** Kam na prvomajski izlet? To so kotički Slovenije, ki vabijo na spomladanski potep Mariborinfo.com\n\nSpodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem.\n\nVir: Mariborinfo.com. Objavljeno: Mon, 29 Apr 2024 07:00:00 GMT. [Odpri izvirni vir](https://news.google.com/rss/articles/CBMivwFBVV95cUxOSENXUUNHUGp2cGU0YkZxZWFhOV9sUzI1UURlbDYzNEhiV0Y2UkRlRVk3Q2lydXhMZlljaE1MTGFLYk53ZmR1cG00VlZMcGtraTJhdWhUUzM3dy1TSzkxYndkc2RUM1NWWWZ6R0Qtb0tobE5ZQ0NGTGMySXJqOVZMOEE1XzVoUEVzZ0tXTGs1UW1iUHFpVXZBWENOWmcxMWU5THlxU0J4dEtNNUYySndVZHMxUGRtYnNTSEVCbG82OA?oc=5)\n\n## Kaj spremljati naprej\n\nZgodbe se lahko po prvi objavi še dopolnijo z novimi podatki, popravki ali odzivi. Za spremembe, ki še niso zajete v teh virih, je smiselno preveriti neposredne povezave in poznejše objave istih uredništev.",
+    "category": "Sezonsko",
+    "author": "Blog Lab Slovenia Publisher",
+    "status": "published",
+    "heroImage": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Frozen_Lake_Bled_%28156843859%29.jpeg/1920px-Frozen_Lake_Bled_%28156843859%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "alt": "500px provided description: This picture has been taken on a nice, sunny, but cold winter day. It is amazing to see lake Bled frozen! [#landscape ,#lake ,#frozen ,#mountains ,#wint",
+      "caption": "Anita · Wikimedia Commons · CC0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Frozen_Lake_Bled_(156843859).jpeg"
+    },
+    "video": null,
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Mariborinfo.com — Kam na prvomajski izlet? To so kotički Slovenije, ki vabijo na spomladanski potep - Mariborinfo.com",
+        "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOSENXUUNHUGp2cGU0YkZxZWFhOV9sUzI1UURlbDYzNEhiV0Y2UkRlRVk3Q2lydXhMZlljaE1MTGFLYk53ZmR1cG00VlZMcGtraTJhdWhUUzM3dy1TSzkxYndkc2RUM1NWWWZ6R0Qtb0tobE5ZQ0NGTGMySXJqOVZMOEE1XzVoUEVzZ0tXTGs1UW1iUHFpVXZBWENOWmcxMWU5THlxU0J4dEtNNUYySndVZHMxUGRtYnNTSEVCbG82OA?oc=5"
+      }
+    ],
+    "createdAt": "2026-10-24T20:51:21+02:00",
+    "updatedAt": "2026-10-24T20:51:21+02:00"
+  },
+
+  {
     id: "iska-river-okljuk-trail-day-trip-ljubljana",
     title: "Iška River Okljuk Trail: A Nature Day Trip from Ljubljana",
     excerpt: "Follow the Iška from its gorge toward the Ljubljana Marshes on a 13 km interpretive trail, with realistic transport, autumn safety and family advice.",

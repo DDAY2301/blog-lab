@@ -5067,5 +5067,19 @@
     "provider": "google-news-si",
     "processed_at": "2026-10-22T16:29:00+02:00",
     "output_id": "timotej-becan-in-lucija-krkoc-naj-gorska-tekaca-sezone-petra-in-marko-tratnik-naj-trail-te-a33d1aed"
+  },
+  {
+    "source_name": "Mariborinfo.com",
+    "category": "sezonsko",
+    "title": "Kam na prvomajski izlet? To so kotički Slovenije, ki vabijo na spomladanski potep - Mariborinfo.com",
+    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOSENXUUNHUGp2cGU0YkZxZWFhOV9sUzI1UURlbDYzNEhiV0Y2UkRlRVk3Q2lydXhMZlljaE1MTGFLYk53ZmR1cG00VlZMcGtraTJhdWhUUzM3dy1TSzkxYndkc2RUM1NWWWZ6R0Qtb0tobE5ZQ0NGTGMySXJqOVZMOEE1XzVoUEVzZ0tXTGs1UW1iUHFpVXZBWENOWmcxMWU5THlxU0J4dEtNNUYySndVZHMxUGRtYnNTSEVCbG82OA?oc=5",
+    "summary": "Kam na prvomajski izlet? To so kotički Slovenije, ki vabijo na spomladanski potep Mariborinfo.com",
+    "published": "Mon, 29 Apr 2024 07:00:00 GMT",
+    "image_url": "",
+    "video_url": "",
+    "hash": "c8d33cb1233364ebcba661276c225147aa41826100e8f085ed70fd88c21fb981",
+    "provider": "google-news-si",
+    "processed_at": "2026-10-24T20:51:21+02:00",
+    "output_id": "kam-na-prvomajski-izlet-to-so-koticki-slovenije-ki-vabijo-na-spomladanski-potep-6a568a1b"
   }
 ]
