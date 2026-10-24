@@ -1,25 +1,30 @@
 {
   "agent": "Blog Lab Slovenia Publisher",
-  "status": "completed",
+  "status": "waiting",
   "enabled": true,
-  "category": "gore",
-  "last_run": "2026-10-24T20:54:46+02:00",
+  "category": "gourmet",
+  "last_run": "2026-10-24T21:07:44+02:00",
   "last_success": "2026-10-24T20:54:46+02:00",
   "last_output": "ljubezen-do-gora-planinska-zveza-slovenije-je-obelezila-hvalevredno-prelomnico-4e0792a9",
   "next_run": null,
-  "message": "Fallback članek je objavljen brez zunanjega AI providerja.",
+  "message": "Nobena sveža zgodba ni prestala uredniškega QA: prekratek",
   "posts_today": 2,
   "scheduled_posts_today": 2,
   "manual_posts_today": 0,
-  "writer_mode": "deterministic_fallback",
+  "writer_mode": "workers_ai",
   "scheduled_slots_done": [
     "2026-10-24|13:30|sezonsko",
     "2026-10-24|16:20|gore"
   ],
   "scheduled_slots_deferred": [
     "2026-10-24|07:35|kolesarstvo",
-    "2026-10-24|10:45|dediscina"
+    "2026-10-24|10:45|dediscina",
+    "2026-10-24|19:10|gourmet"
   ],
-  "last_editorial_hold": null,
-  "last_error": null
+  "last_editorial_hold": {
+    "slot": "2026-10-24|19:10|gourmet",
+    "reason": "ponavljanje",
+    "at": "2026-10-24T21:07:25+02:00"
+  },
+  "last_error": "prekratek"
 }
