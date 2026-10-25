@@ -5109,5 +5109,19 @@
     "provider": "google-news-si",
     "processed_at": "2026-10-25T07:40:02+01:00",
     "output_id": "foto-do-leta-2023-bodo-v-slovenskih-goricah-zgradili-vec-kot-80-kilometrov-novih-kolesarsk-9d3a3075"
+  },
+  {
+    "source_name": "V Fokusu",
+    "category": "dediscina",
+    "title": "Jakopičevo sprehajališče v parku Tivoli, Ljubljana - razstava ob 200. obletnici Narodnega muzeja Slovenije - V Fokusu",
+    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNT2laQTdzYi1xYUJKdWd6RHNTZzBtdGpjb2RybWs5MjRLckM3VFJKaWgwd3lvTVN1RTVGNXFEOVRXcTd2cWRnNDhXV3dvMEpHVFVPRTNLR3V6STVHbzdrTU9FUXlLWUtYSk55TWs0d0Y3U1d6QkxLNnhxTWpaVzB1dFlrU2Q5bTExWk1jUlZHQlJDSEMtRmp3YldPSEZsdmUtZ2ZiazlqWV92cnJDTXNuOFloUTRVUjBtYms1Y1FjcmE?oc=5",
+    "summary": "Jakopičevo sprehajališče v parku Tivoli, Ljubljana - razstava ob 200. obletnici Narodnega muzeja Slovenije V Fokusu",
+    "published": "Sun, 19 Sep 2021 15:24:05 GMT",
+    "image_url": "",
+    "video_url": "",
+    "hash": "351f2c465336286d15a3bbff1e2d4cef89d896f15cbe4e864a8e0e18b4bd2994",
+    "provider": "google-news-si",
+    "processed_at": "2026-10-25T10:54:30+01:00",
+    "output_id": "jakopicevo-sprehajalisce-v-parku-tivoli-ljubljana-razstava-ob-200-obletnici-narodnega-muze-e6a4530b"
   }
 ]
