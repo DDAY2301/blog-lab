@@ -5,9 +5,9 @@
   "posts_date": "2026-10-25",
   "posts_today": 3,
   "last_output": "video-in-foto-zupanova-izina-ko-se-koroska-kulinaricna-dediscina-prenasa-iz-roda-v-rod-93160cbe",
-  "last_error": null,
+  "last_error": "prekratek",
   "agent_version": "3.0.0-learning-guarded-fallback",
-  "current_category": "gourmet",
+  "current_category": "sezonsko",
   "scheduled_posts_today": 3,
   "manual_posts_today": 0,
   "writer_mode": "deterministic_fallback",
@@ -21,7 +21,7 @@
     "2026-10-25|16:20|gore"
   ],
   "last_editorial_hold": null,
-  "publisher_guardian_last_run": "2026-10-25T18:53:44+01:00",
+  "publisher_guardian_last_run": "2026-10-25T22:16:19+01:00",
   "publisher_guardian_last_action": {
     "category": "sezonsko",
     "slot": "2026-10-25|13:30|sezonsko",
