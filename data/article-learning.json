@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-24T20:41:30+02:00",
-  "loop_count": 7888,
+  "updated_at": "2026-10-25T05:42:41+01:00",
+  "loop_count": 7889,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-24T20:41:09+02:00",
+      "last_learning_run": "2026-10-25T05:42:18+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 148116,
-          "last_seen": "2026-10-24T20:41:09+02:00",
-          "last_title": "Premier Janša ob ogledu finala mladih košarkarjev udaril po RTV Slovenija: »Plačujemo vas več kot Inštitut Jožef Stefan!« - Slovenske novice",
+          "seen": 148124,
+          "last_seen": "2026-10-25T05:42:18+01:00",
+          "last_title": "Kje gledati finale košarkarskega EP med Slovenci in Italijani? Televizijski prenos bo! - Dnevnik",
           "last_provider": "google-news-si",
-          "published": 476475,
+          "published": 476538,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -230,14 +230,14 @@
       "current_source_count": 8,
       "example_titles": {
         "news.google.com": [
-          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
           "Slovenke po veliki vrnitvi in zmagi nad Latvijo na pragu osmine finala - rtvslo.si",
-          "Kot v sanjah: Slovenija že drugič v dveh tednih evropski prvak! (VIDEO) - Šport TV"
+          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
+          "Pozor, vozniki: Danes bodo zaradi kolesarske dirke veljale obsežne zapore cest - Delo.si"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-24T20:41:20+02:00",
+      "last_learning_run": "2026-10-25T05:42:29+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -279,11 +279,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 176405,
-          "last_seen": "2026-10-24T20:41:20+02:00",
+          "seen": 176422,
+          "last_seen": "2026-10-25T05:42:29+01:00",
           "last_title": "Golob pravi: Slovenija potrebuje široko koalicijo. NSi ne bo na sestanek - Svet24.si",
           "last_provider": "google-news-si",
-          "published": 524384,
+          "published": 524454,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -385,7 +385,7 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 19,
+      "current_source_count": 17,
       "example_titles": {
         "news.google.com": [
           "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
@@ -395,7 +395,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-24T20:41:30+02:00",
+      "last_learning_run": "2026-10-25T05:42:41+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -484,11 +484,11 @@
         },
         "news.google.com": {
           "score": 2.506,
-          "seen": 202774,
-          "last_seen": "2026-10-24T20:41:30+02:00",
-          "last_title": "Spomin na prvo vlado po 2. svet. vojni: Zaobljuba dela v korist ljudi vladajoče zavezuje tudi danes - rtvslo.si",
+          "seen": 202798,
+          "last_seen": "2026-10-25T05:42:41+01:00",
+          "last_title": "Vreme se bo danes hitro obrnilo: nevihte bodo zajele večji del Slovenije, na Primorskem tudi burja - Dnevne Novice",
           "last_provider": "google-news-si",
-          "published": 327521,
+          "published": 327546,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -583,7 +583,7 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 23,
+      "current_source_count": 24,
       "example_titles": {
         "news.google.com": [
           "(AKTUALNO) Še danes v prodaji 36. št. revije Demokracija: 30 let Demokracije, ki udejanja pravico vedeti več! Načrt za demografsko obnovo sl",
@@ -594,6 +594,18 @@
     }
   },
   "recent_articles": [
+    {
+      "id": "ljubezen-do-gora-planinska-zveza-slovenije-je-obelezila-hvalevredno-prelomnico-4e0792a9",
+      "title": "Ljubezen do gora: Planinska zveza Slovenije je obeležila hvalevredno prelomnico",
+      "category": "Gore & traili",
+      "createdAt": "2026-10-24T20:54:46+02:00"
+    },
+    {
+      "id": "kam-na-prvomajski-izlet-to-so-koticki-slovenije-ki-vabijo-na-spomladanski-potep-6a568a1b",
+      "title": "Kam na prvomajski izlet? To so kotički Slovenije, ki vabijo na spomladanski potep",
+      "category": "Sezonsko",
+      "createdAt": "2026-10-24T20:51:21+02:00"
+    },
     {
       "id": "timotej-becan-in-lucija-krkoc-naj-gorska-tekaca-sezone-petra-in-marko-tratnik-naj-trail-te-a33d1aed",
       "title": "Timotej Bečan in Lucija Krkoč naj gorska tekača sezone, Petra in Marko Tratnik naj trail tekača",
@@ -653,38 +665,9 @@
       "title": "Indoor Climbing in Ljubljana: A Beginner-Friendly Visitor Guide",
       "category": "Vodniki",
       "createdAt": "2026-10-17T09:00:00+02:00"
-    },
-    {
-      "id": "skocjanski-zatok-birdwatching-day-trip-ljubljana",
-      "title": "Škocjanski Zatok: A Birdwatching Day Trip from Ljubljana",
-      "category": "Vodniki",
-      "createdAt": "2026-10-16T09:01:00+02:00"
-    },
-    {
-      "id": "france-preseren-vrba-birth-house-guide",
-      "title": "France Prešeren in Vrba: The Poet, the Anthem and the House Museum",
-      "category": "Vodniki",
-      "createdAt": "2026-10-15T15:00:00+02:00"
     }
   ],
   "recent_failures": [
-    {
-      "file": "fallback-failed-20261023-082333.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek",
-        "manjka_fotografija"
-      ],
-      "title": "Ste pripravljeni? Kmalu s kolesom od Ljubljane do Beograda - Dnevnik"
-    },
-    {
-      "file": "fallback-failed-20261023-083823.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek"
-      ],
-      "title": "Slovenija je bela lisa na kolesarskem zemljevidu - Delo.si"
-    },
     {
       "file": "fallback-failed-20261023-085334.json",
       "category": "kolesarstvo",
@@ -758,25 +741,41 @@
       "title": "Ste pripravljeni? Kmalu s kolesom od Ljubljane do Beograda - Dnevnik"
     },
     {
+      "file": "fallback-failed-20261024-210744.json",
+      "category": "gourmet",
+      "errors": [
+        "prekratek"
+      ],
+      "title": "Gostilna Pri planinskem orlu je, z nekaj primorskega navdiha, znova odprta - Kamnik.info"
+    },
+    {
+      "file": "fallback-failed-20261024-211001.json",
+      "category": "gourmet",
+      "errors": [
+        "prekratek"
+      ],
+      "title": "Gostilna Pri planinskem orlu je, z nekaj primorskega navdiha, znova odprta - Kamnik.info"
+    },
+    {
       "file": "agent-state",
       "category": "kolesarstvo",
       "errors": [
-        "prekratek,manjka_fotografija"
+        "fallback_no_fresh_evidence"
       ]
     },
     {
       "file": "agent-state",
       "category": "kolesarstvo",
       "errors": [
-        "naslov_ni_v_rubriki,clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike,besedilo_ni_v_slovenscini"
+        "ponavljanje"
       ],
-      "slot": "2026-10-24|10:45|dediscina"
+      "slot": "2026-10-24|19:10|gourmet"
     }
   ],
   "failure_summary": {
     "prekratek": 20,
-    "manjka_fotografija": 18,
-    "prekratek,manjka_fotografija": 1,
-    "naslov_ni_v_rubriki,clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike,besedilo_ni_v_slovenscini": 1
+    "manjka_fotografija": 16,
+    "fallback_no_fresh_evidence": 1,
+    "ponavljanje": 1
   }
 }
