@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-25T05:42:41+01:00",
-  "loop_count": 7889,
+  "updated_at": "2026-10-25T12:30:54+01:00",
+  "loop_count": 7890,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-25T05:42:18+01:00",
+      "last_learning_run": "2026-10-25T12:30:33+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 148124,
-          "last_seen": "2026-10-25T05:42:18+01:00",
+          "seen": 148135,
+          "last_seen": "2026-10-25T12:30:33+01:00",
           "last_title": "Kje gledati finale košarkarskega EP med Slovenci in Italijani? Televizijski prenos bo! - Dnevnik",
           "last_provider": "google-news-si",
-          "published": 476538,
+          "published": 476600,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,17 +227,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 8,
+      "current_source_count": 11,
       "example_titles": {
         "news.google.com": [
-          "Slovenke po veliki vrnitvi in zmagi nad Latvijo na pragu osmine finala - rtvslo.si",
+          "Poljakinje pokazale svojo moč in še petič s 3:0 odpravile slovenske odbojkarice - rtvslo.si",
           "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
-          "Pozor, vozniki: Danes bodo zaradi kolesarske dirke veljale obsežne zapore cest - Delo.si"
+          "Slovenke po veliki vrnitvi in zmagi nad Latvijo na pragu osmine finala - rtvslo.si"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-25T05:42:29+01:00",
+      "last_learning_run": "2026-10-25T12:30:44+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -279,11 +279,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 176422,
-          "last_seen": "2026-10-25T05:42:29+01:00",
+          "seen": 176438,
+          "last_seen": "2026-10-25T12:30:44+01:00",
           "last_title": "Golob pravi: Slovenija potrebuje široko koalicijo. NSi ne bo na sestanek - Svet24.si",
           "last_provider": "google-news-si",
-          "published": 524454,
+          "published": 524523,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -385,17 +385,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 17,
+      "current_source_count": 16,
       "example_titles": {
         "news.google.com": [
           "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
-          "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si",
-          "Na Radiu Ognjišče zadnje predvolilno soočenje: v ospredju prisluhi, zdravstvo, zunanja politika in sprava - Radio Ognjišče"
+          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer",
+          "Pirc Musar: Ne bom tiho, ko zunanja politika ne bo skladna z ustavnimi vrednotami države - Siol.net"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-25T05:42:41+01:00",
+      "last_learning_run": "2026-10-25T12:30:54+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -484,11 +484,11 @@
         },
         "news.google.com": {
           "score": 2.506,
-          "seen": 202798,
-          "last_seen": "2026-10-25T05:42:41+01:00",
+          "seen": 202823,
+          "last_seen": "2026-10-25T12:30:54+01:00",
           "last_title": "Vreme se bo danes hitro obrnilo: nevihte bodo zajele večji del Slovenije, na Primorskem tudi burja - Dnevne Novice",
           "last_provider": "google-news-si",
-          "published": 327546,
+          "published": 327571,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -583,17 +583,29 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 24,
+      "current_source_count": 25,
       "example_titles": {
         "news.google.com": [
           "(AKTUALNO) Še danes v prodaji 36. št. revije Demokracija: 30 let Demokracije, ki udejanja pravico vedeti več! Načrt za demografsko obnovo sl",
           "Janša napoveduje velike spremembe: Čez 15 let šol, kot jih poznamo danes, morda ne bo več! - Najdi.si novice",
-          "(AKTUALNO) Varuhinja človekovih pravic Simona Drenik Bavdek: Pravica do dostojnega pokopa temeljna človekova pravica - Demokracija"
+          "Pavel Rupar poziva na popoldanski shod z začetkom pred RTV Slovenija, policija pripravljena - Info360"
         ]
       }
     }
   },
   "recent_articles": [
+    {
+      "id": "jakopicevo-sprehajalisce-v-parku-tivoli-ljubljana-razstava-ob-200-obletnici-narodnega-muze-e6a4530b",
+      "title": "Jakopičevo sprehajališče v parku Tivoli, Ljubljana - razstava ob 200. obletnici Narodnega muzeja Slovenije - V Fokusu",
+      "category": "Dediščina",
+      "createdAt": "2026-10-25T10:54:30+01:00"
+    },
+    {
+      "id": "foto-do-leta-2023-bodo-v-slovenskih-goricah-zgradili-vec-kot-80-kilometrov-novih-kolesarsk-9d3a3075",
+      "title": "FOTO: Do leta 2023 bodo v Slovenskih goricah zgradili več kot 80 kilometrov novih kolesarskih poti",
+      "category": "Kolesarstvo",
+      "createdAt": "2026-10-25T07:40:02+01:00"
+    },
     {
       "id": "ljubezen-do-gora-planinska-zveza-slovenije-je-obelezila-hvalevredno-prelomnico-4e0792a9",
       "title": "Ljubezen do gora: Planinska zveza Slovenije je obeležila hvalevredno prelomnico",
@@ -653,21 +665,26 @@
       "title": "To so najbolj idilične kolesarske poti v Sloveniji! Se strinjate?",
       "category": "Kolesarstvo",
       "createdAt": "2026-10-18T08:23:26+02:00"
-    },
-    {
-      "id": "bo-pot-ob-soci-postala-hrbtenica-sirse-turisticno-kolesarske-mreze-5a175519",
-      "title": "Bo pot ob Soči postala hrbtenica širše turistično kolesarske mreže?",
-      "category": "Kolesarstvo",
-      "createdAt": "2026-10-17T22:09:28+02:00"
-    },
-    {
-      "id": "indoor-climbing-ljubljana-beginner-guide",
-      "title": "Indoor Climbing in Ljubljana: A Beginner-Friendly Visitor Guide",
-      "category": "Vodniki",
-      "createdAt": "2026-10-17T09:00:00+02:00"
     }
   ],
   "recent_failures": [
+    {
+      "file": "fallback-failed-20261023-082333.json",
+      "category": "kolesarstvo",
+      "errors": [
+        "prekratek",
+        "manjka_fotografija"
+      ],
+      "title": "Ste pripravljeni? Kmalu s kolesom od Ljubljane do Beograda - Dnevnik"
+    },
+    {
+      "file": "fallback-failed-20261023-083823.json",
+      "category": "kolesarstvo",
+      "errors": [
+        "prekratek"
+      ],
+      "title": "Slovenija je bela lisa na kolesarskem zemljevidu - Delo.si"
+    },
     {
       "file": "fallback-failed-20261023-085334.json",
       "category": "kolesarstvo",
@@ -755,27 +772,10 @@
         "prekratek"
       ],
       "title": "Gostilna Pri planinskem orlu je, z nekaj primorskega navdiha, znova odprta - Kamnik.info"
-    },
-    {
-      "file": "agent-state",
-      "category": "kolesarstvo",
-      "errors": [
-        "fallback_no_fresh_evidence"
-      ]
-    },
-    {
-      "file": "agent-state",
-      "category": "kolesarstvo",
-      "errors": [
-        "ponavljanje"
-      ],
-      "slot": "2026-10-24|19:10|gourmet"
     }
   ],
   "failure_summary": {
     "prekratek": 20,
-    "manjka_fotografija": 16,
-    "fallback_no_fresh_evidence": 1,
-    "ponavljanje": 1
+    "manjka_fotografija": 16
   }
 }
