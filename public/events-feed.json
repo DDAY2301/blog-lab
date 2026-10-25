@@ -1,8 +1,13 @@
 {
-  "updatedAt": "2026-10-25T05:53:30+01:00",
+  "updatedAt": "2026-10-25T07:22:00+01:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
+    "Ljubljana Castle",
+    "MGL",
+    "SNG Opera and Ballet Ljubljana",
+    "Fever",
+    "Olaii",
     "Kino Šiška",
     "Gala Hala",
     "Klub K4",
@@ -114,7 +119,7 @@
       "startAt": "2026-10-24T23:00:00+02:00",
       "endAt": "2026-10-25T06:00:00+01:00",
       "id": "event-50-grand-prix-invites-upper90",
-      "lastCheckedAt": "2026-10-24T07:18:00+02:00",
+      "lastCheckedAt": "2026-10-25T07:22:00+01:00",
       "price": "€12 / €15 / €18 / €20 presale sold out; limited door tickets",
       "languages": [
         "Music-led"
@@ -123,7 +128,7 @@
       "familyFriendly": false,
       "accessibility": null,
       "ticketUrl": "https://olaii.com/event/9774/grand-prix-invites-upper90/",
-      "status": "limited_availability",
+      "status": "completed",
       "description": "Upper90 headlines Klub K4 from 23:00 to 06:00. All presale tiers are sold out, but the authorised seller says a limited number of tickets will be available at the door."
     },
     {
@@ -142,7 +147,7 @@
       "accessibility": null,
       "ticketUrl": null,
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-24T07:18:00+02:00",
+      "lastCheckedAt": "2026-10-25T07:22:00+01:00",
       "description": "The weekly antiques and vintage market runs along Breg from 08:00 to 15:00. Admission is free and no ticket is required."
     },
     {
@@ -161,7 +166,7 @@
       "accessibility": null,
       "ticketUrl": null,
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-24T07:18:00+02:00",
+      "lastCheckedAt": "2026-10-25T07:22:00+01:00",
       "description": "A free circus performance and interactive bubble show begin at 11:30 in BS3. The outdoor programme is cancelled in bad weather."
     },
     {
@@ -180,19 +185,19 @@
       "accessibility": null,
       "ticketUrl": "https://opera.mojekarte.si/en/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-24T07:18:00+02:00",
+      "lastCheckedAt": "2026-10-25T07:22:00+01:00",
       "description": "SNG Opera presents Mauro Bigonzetti’s ballet double bill at 18:00. The official programme confirms the performance; check the authorised box office for current prices and availability."
     },
     {
-      "price": "From €39",
+      "price": "From €38.50; sold out",
       "languages": [
         "Music-led"
       ],
       "touristFriendly": true,
       "familyFriendly": true,
       "accessibility": "Wheelchair accessible according to the ticket seller.",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-24T07:18:00+02:00",
+      "status": "sold_out",
+      "lastCheckedAt": "2026-10-25T07:22:00+01:00",
       "endAt": null,
       "id": "candlelight-adele-2026-10-25",
       "title": "Candlelight: Tribute to Adele",
@@ -202,18 +207,18 @@
       "place": "Hribar Hall · Ljubljana Castle",
       "startAt": "2026-10-25T18:30:00+01:00",
       "ticketUrl": "https://feverup.com/m/519100/en",
-      "description": "A 60-minute string-quartet tribute to Adele begins at 18:30; guests must be aged 8 or over. Tickets start at €39, and the ticket seller lists wheelchair access."
+      "description": "A 60-minute string-quartet tribute to Adele begins at 18:30; guests must be aged 8 or over. The ticket seller lists the performance as sold out and confirms wheelchair access."
     },
     {
-      "price": "From €34.50",
+      "price": "From €34.50; sold out",
       "languages": [
         "Music-led"
       ],
       "touristFriendly": true,
       "familyFriendly": true,
       "accessibility": "Wheelchair accessible according to the ticket seller.",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-24T07:18:00+02:00",
+      "status": "sold_out",
+      "lastCheckedAt": "2026-10-25T07:22:00+01:00",
       "endAt": null,
       "id": "candlelight-michael-jackson-2026-10-25",
       "title": "Candlelight: Michael Jackson Tribute",
@@ -223,7 +228,7 @@
       "place": "Hribar Hall · Ljubljana Castle",
       "startAt": "2026-10-25T20:30:00+01:00",
       "ticketUrl": "https://feverup.com/m/679642/en",
-      "description": "A 60-minute string-quartet tribute to Michael Jackson begins at 20:30; guests must be aged 8 or over. Tickets start at €34.50, and the ticket seller lists wheelchair access."
+      "description": "A 60-minute string-quartet tribute to Michael Jackson begins at 20:30; guests must be aged 8 or over. The ticket seller lists the performance as sold out and confirms wheelchair access."
     },
     {
       "price": null,
@@ -232,7 +237,7 @@
       "familyFriendly": true,
       "accessibility": null,
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
+      "lastCheckedAt": "2026-10-25T07:22:00+01:00",
       "endAt": "2026-10-30T13:00:00+01:00",
       "id": "autumn-holidays-ljubljana-castle-2026-10-26",
       "title": "Autumn Holidays at Ljubljana Castle",
@@ -242,7 +247,7 @@
       "place": "Meeting point: bridge before the main entrance · Ljubljana Castle",
       "startAt": "2026-10-26T10:00:00+01:00",
       "ticketUrl": "https://www.ljubljanskigrad.si/sl/dogodki/jesenske-pocitnice/",
-      "description": "Friderik’s castle challenges and creative workshops run from 10:00 to 13:00 during the autumn holidays. The programme is aimed at children and families; consult the official page for booking details."
+      "description": "Friderik’s castle challenges and creative workshops run from 10:00 to 13:00 during the autumn holidays. The official October programme identifies the activity for children aged 6 and over; consult the venue for booking details."
     },
     {
       "price": null,
@@ -251,7 +256,7 @@
       "familyFriendly": true,
       "accessibility": null,
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
+      "lastCheckedAt": "2026-10-25T07:22:00+01:00",
       "endAt": null,
       "id": "theatre-for-a-dummy-2026-10-26",
       "title": "Theatre for a Dummy",
@@ -264,23 +269,23 @@
       "description": "MGL’s educational production Theatre for a Dummy begins at 12:00 on the Small Stage. The official schedule currently lists tickets."
     },
     {
-      "price": null,
+      "price": "€26 advance / €29 on the day / €19.50 reduced",
       "languages": [],
       "touristFriendly": true,
       "familyFriendly": false,
       "accessibility": null,
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
+      "lastCheckedAt": "2026-10-25T07:22:00+01:00",
       "endAt": null,
       "id": "and-so-i-watch-you-from-afar-caspian-2026-10-26",
       "title": "And So I Watch You from Afar & Caspian + OTAY:ONII",
-      "url": "https://www.kinosiska.si/dogodek/",
+      "url": "https://www.kinosiska.si/en/dogodek/and-so-i-watch-you-from-afar-caspian/",
       "source": "Kino Šiška",
       "type": "Concert",
       "place": "Katedrala Hall · Kino Šiška",
       "startAt": "2026-10-26T19:00:00+01:00",
-      "ticketUrl": "https://www.kinosiska.si/dogodek/",
-      "description": "And So I Watch You from Afar and Caspian perform with special guest OTAY:ONII at 19:00. Tickets are linked from the official Kino Šiška programme."
+      "ticketUrl": "https://www.kinosiska.si/en/dogodek/and-so-i-watch-you-from-afar-caspian/",
+      "description": "And So I Watch You from Afar and Caspian perform with special guest OTAY:ONII at 19:00. Tickets cost €26 in advance, €29 on the day or €19.50 at the reduced rate."
     },
     {
       "price": null,
@@ -289,7 +294,7 @@
       "familyFriendly": false,
       "accessibility": null,
       "status": "sold_out",
-      "lastCheckedAt": "2026-10-12T06:57:15+02:00",
+      "lastCheckedAt": "2026-10-25T07:22:00+01:00",
       "endAt": null,
       "id": "prima-facie-2026-10-26",
       "title": "Prima Facie",
@@ -495,13 +500,60 @@
     },
     {
       "title": ".travnik - 5 LET ALBUMA PUBECI NE JOČEJO @ Gala hala",
-      "url": "https://www.galahala.com/",
+      "url": "https://www.galahala.com/program/travnik-5-let-albuma-pubeci-ne-jocejo-gala-hala/34778/",
       "source": "Gala Hala",
-      "type": "Koncert · Metelkova",
+      "type": "Concert · hip-hop and electronic",
       "place": "Gala Hala · AKC Metelkova",
       "startAt": "2026-11-07T21:00:00+01:00",
-      "endAt": "",
-      "id": "event-32-travnik-5-let-albuma-pubeci-ne-jo-ejo-gala-hala"
+      "endAt": null,
+      "id": "event-32-travnik-5-let-albuma-pubeci-ne-jo-ejo-gala-hala",
+      "price": "€13 advance / €15 on the day",
+      "languages": ["Slovenian", "Music-led"],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": null,
+      "ticketUrl": "https://www.galahala.com/program/travnik-5-let-albuma-pubeci-ne-jocejo-gala-hala/34778/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-25T07:22:00+01:00",
+      "description": ".travnik marks the fifth anniversary of Pubeci ne jočejo with PTČ and Z☆JA from 21:00. Tickets cost €13 in advance or €15 on the day."
+    },
+    {
+      "id": "candlelight-queen-vs-abba-2026-11-08",
+      "title": "Candlelight: Queen vs. ABBA",
+      "url": "https://feverup.com/en/ljubljana-slovenija/candlelight",
+      "source": "Fever",
+      "type": "Concert · candlelight",
+      "place": "Academy of Music, University of Ljubljana",
+      "startAt": "2026-11-08T18:00:00+01:00",
+      "endAt": null,
+      "price": "From €37",
+      "languages": ["Music-led"],
+      "touristFriendly": true,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://feverup.com/en/ljubljana-slovenija/candlelight",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-25T07:22:00+01:00",
+      "description": "A Candlelight string programme contrasting Queen and ABBA starts at 18:00. The official seller lists tickets from €37."
+    },
+    {
+      "id": "candlelight-ed-sheeran-coldplay-2026-11-08",
+      "title": "Candlelight: Ed Sheeran Meets Coldplay",
+      "url": "https://feverup.com/en/ljubljana-slovenija/candlelight",
+      "source": "Fever",
+      "type": "Concert · candlelight",
+      "place": "Academy of Music, University of Ljubljana",
+      "startAt": "2026-11-08T20:30:00+01:00",
+      "endAt": null,
+      "price": "From €32",
+      "languages": ["Music-led"],
+      "touristFriendly": true,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://feverup.com/en/ljubljana-slovenija/candlelight",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-25T07:22:00+01:00",
+      "description": "A Candlelight tribute pairing the music of Ed Sheeran and Coldplay starts at 20:30. The official seller lists tickets from €32."
     }
   ]
 }
