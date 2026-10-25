@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-25T17:20:37+01:00",
-  "loop_count": 7891,
+  "updated_at": "2026-10-25T21:52:18+01:00",
+  "loop_count": 7892,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-25T17:20:17+01:00",
+      "last_learning_run": "2026-10-25T21:51:52+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 148144,
-          "last_seen": "2026-10-25T17:20:17+01:00",
+          "seen": 148154,
+          "last_seen": "2026-10-25T21:51:52+01:00",
           "last_title": "Kje gledati finale košarkarskega EP med Slovenci in Italijani? Televizijski prenos bo! - Dnevnik",
           "last_provider": "google-news-si",
-          "published": 476662,
+          "published": 476724,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,17 +227,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 9,
+      "current_source_count": 10,
       "example_titles": {
         "news.google.com": [
           "Slovenke po veliki vrnitvi in zmagi nad Latvijo na pragu osmine finala - rtvslo.si",
           "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
-          "Največji šok: Italijane potolkel malček, Slovenija po finale v tem terminu - Ekipa"
+          "Kot v sanjah: Slovenija že drugič v dveh tednih evropski prvak! (VIDEO) - Šport TV"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-25T17:20:27+01:00",
+      "last_learning_run": "2026-10-25T21:52:02+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -279,11 +279,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 176455,
-          "last_seen": "2026-10-25T17:20:27+01:00",
-          "last_title": "Golob pravi: Slovenija potrebuje široko koalicijo. NSi ne bo na sestanek - Svet24.si",
+          "seen": 176473,
+          "last_seen": "2026-10-25T21:52:02+01:00",
+          "last_title": "Janša ali Golob? Anketa je pokazala, komu po uporu v Novem mestu zaupa ljudstvo - Žurnal24",
           "last_provider": "google-news-si",
-          "published": 524592,
+          "published": 524660,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -385,7 +385,7 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 17,
+      "current_source_count": 18,
       "example_titles": {
         "news.google.com": [
           "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
@@ -395,7 +395,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-25T17:20:37+01:00",
+      "last_learning_run": "2026-10-25T21:52:18+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -484,11 +484,11 @@
         },
         "news.google.com": {
           "score": 2.506,
-          "seen": 202848,
-          "last_seen": "2026-10-25T17:20:37+01:00",
-          "last_title": "Vreme se bo danes hitro obrnilo: nevihte bodo zajele večji del Slovenije, na Primorskem tudi burja - Dnevne Novice",
+          "seen": 202873,
+          "last_seen": "2026-10-25T21:52:18+01:00",
+          "last_title": "Kajzer: zunanjepolitična strategija mora odražati aktualno geopolitično okolje - 24ur.com",
           "last_provider": "google-news-si",
-          "published": 327596,
+          "published": 327621,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -587,13 +587,19 @@
       "example_titles": {
         "news.google.com": [
           "(AKTUALNO) Še danes v prodaji 36. št. revije Demokracija: 30 let Demokracije, ki udejanja pravico vedeti več! Načrt za demografsko obnovo sl",
-          "Janša napoveduje velike spremembe: Čez 15 let šol, kot jih poznamo danes, morda ne bo več! - Najdi.si novice",
-          "Pavel Rupar poziva na popoldanski shod z začetkom pred RTV Slovenija, policija pripravljena - Info360"
+          "Revolut odpovedoval tudi v Sloveniji. Kaj imajo z izpadom Google Rusija, Ukrajina in napadi na podatkovne centre? - MojaObčina.si",
+          "Janša napoveduje velike spremembe: Čez 15 let šol, kot jih poznamo danes, morda ne bo več! - Najdi.si novice"
         ]
       }
     }
   },
   "recent_articles": [
+    {
+      "id": "video-in-foto-zupanova-izina-ko-se-koroska-kulinaricna-dediscina-prenasa-iz-roda-v-rod-93160cbe",
+      "title": "(VIDEO in FOTO) Županova ižina: Ko se koroška kulinarična dediščina prenaša iz roda v rod",
+      "category": "Gourmet",
+      "createdAt": "2026-10-25T19:24:56+01:00"
+    },
     {
       "id": "jakopicevo-sprehajalisce-v-parku-tivoli-ljubljana-razstava-ob-200-obletnici-narodnega-muze-e6a4530b",
       "title": "Jakopičevo sprehajališče v parku Tivoli, Ljubljana - razstava ob 200. obletnici Narodnega muzeja Slovenije - V Fokusu",
@@ -659,15 +665,18 @@
       "title": "Draga Ponds and Forest Trail: A Quiet Day Trip from Ljubljana",
       "category": "Vodniki",
       "createdAt": "2026-10-18T09:00:00+02:00"
-    },
-    {
-      "id": "to-so-najbolj-idilicne-kolesarske-poti-v-sloveniji-se-strinjate-b86af7dc",
-      "title": "To so najbolj idilične kolesarske poti v Sloveniji! Se strinjate?",
-      "category": "Kolesarstvo",
-      "createdAt": "2026-10-18T08:23:26+02:00"
     }
   ],
   "recent_failures": [
+    {
+      "file": "fallback-failed-20261024-193704.json",
+      "category": "kolesarstvo",
+      "errors": [
+        "prekratek",
+        "manjka_fotografija"
+      ],
+      "title": "Ste pripravljeni? Kmalu s kolesom od Ljubljane do Beograda - Dnevnik"
+    },
     {
       "file": "fallback-failed-20261024-193944.json",
       "category": "kolesarstvo",
@@ -756,25 +765,16 @@
       "title": "ŠPORTNI VIKEND LJUBLJANICA 2026 bo med 11. in 13. septembrom v središče Ljubljane pripeljal nočni tek, trail, pohodništvo, kolesarjenje in pestro družinsko športno dogajanje - 24ur"
     },
     {
-      "file": "agent-state",
-      "category": "gore",
+      "file": "fallback-failed-20261025-185344.json",
+      "category": "sezonsko",
       "errors": [
-        "manjka_fotografija,prekratek"
-      ]
-    },
-    {
-      "file": "agent-state",
-      "category": "gore",
-      "errors": [
-        "manjka_fotografija,ponavljanje"
+        "prekratek"
       ],
-      "slot": "2026-10-25|16:20|gore"
+      "title": "Iz Slovenije v Italijo nekoliko drugače: Jesenska pot, na kateri je že vožnja del doživetja - dnevne-novice.com"
     }
   ],
   "failure_summary": {
     "prekratek": 20,
-    "manjka_fotografija": 15,
-    "manjka_fotografija,prekratek": 1,
-    "manjka_fotografija,ponavljanje": 1
+    "manjka_fotografija": 14
   }
 }
