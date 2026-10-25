@@ -1,13 +1,8 @@
 {
-  "updatedAt": "2026-10-25T07:22:00+01:00",
+  "updatedAt": "2026-10-25T07:04:25+01:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
-    "Ljubljana Castle",
-    "MGL",
-    "SNG Opera and Ballet Ljubljana",
-    "Fever",
-    "Olaii",
     "Kino Šiška",
     "Gala Hala",
     "Klub K4",
@@ -508,7 +503,10 @@
       "endAt": null,
       "id": "event-32-travnik-5-let-albuma-pubeci-ne-jo-ejo-gala-hala",
       "price": "€13 advance / €15 on the day",
-      "languages": ["Slovenian", "Music-led"],
+      "languages": [
+        "Slovenian",
+        "Music-led"
+      ],
       "touristFriendly": true,
       "familyFriendly": false,
       "accessibility": null,
@@ -527,7 +525,9 @@
       "startAt": "2026-11-08T18:00:00+01:00",
       "endAt": null,
       "price": "From €37",
-      "languages": ["Music-led"],
+      "languages": [
+        "Music-led"
+      ],
       "touristFriendly": true,
       "familyFriendly": null,
       "accessibility": null,
@@ -546,7 +546,9 @@
       "startAt": "2026-11-08T20:30:00+01:00",
       "endAt": null,
       "price": "From €32",
-      "languages": ["Music-led"],
+      "languages": [
+        "Music-led"
+      ],
       "touristFriendly": true,
       "familyFriendly": null,
       "accessibility": null,
