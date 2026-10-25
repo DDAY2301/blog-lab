@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-25T12:30:54+01:00",
-  "loop_count": 7890,
+  "updated_at": "2026-10-25T17:20:37+01:00",
+  "loop_count": 7891,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-25T12:30:33+01:00",
+      "last_learning_run": "2026-10-25T17:20:17+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 148135,
-          "last_seen": "2026-10-25T12:30:33+01:00",
+          "seen": 148144,
+          "last_seen": "2026-10-25T17:20:17+01:00",
           "last_title": "Kje gledati finale košarkarskega EP med Slovenci in Italijani? Televizijski prenos bo! - Dnevnik",
           "last_provider": "google-news-si",
-          "published": 476600,
+          "published": 476662,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,17 +227,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 11,
+      "current_source_count": 9,
       "example_titles": {
         "news.google.com": [
-          "Poljakinje pokazale svojo moč in še petič s 3:0 odpravile slovenske odbojkarice - rtvslo.si",
+          "Slovenke po veliki vrnitvi in zmagi nad Latvijo na pragu osmine finala - rtvslo.si",
           "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
-          "Slovenke po veliki vrnitvi in zmagi nad Latvijo na pragu osmine finala - rtvslo.si"
+          "Največji šok: Italijane potolkel malček, Slovenija po finale v tem terminu - Ekipa"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-25T12:30:44+01:00",
+      "last_learning_run": "2026-10-25T17:20:27+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -279,11 +279,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 176438,
-          "last_seen": "2026-10-25T12:30:44+01:00",
+          "seen": 176455,
+          "last_seen": "2026-10-25T17:20:27+01:00",
           "last_title": "Golob pravi: Slovenija potrebuje široko koalicijo. NSi ne bo na sestanek - Svet24.si",
           "last_provider": "google-news-si",
-          "published": 524523,
+          "published": 524592,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -385,7 +385,7 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 16,
+      "current_source_count": 17,
       "example_titles": {
         "news.google.com": [
           "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
@@ -395,7 +395,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-25T12:30:54+01:00",
+      "last_learning_run": "2026-10-25T17:20:37+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -484,11 +484,11 @@
         },
         "news.google.com": {
           "score": 2.506,
-          "seen": 202823,
-          "last_seen": "2026-10-25T12:30:54+01:00",
+          "seen": 202848,
+          "last_seen": "2026-10-25T17:20:37+01:00",
           "last_title": "Vreme se bo danes hitro obrnilo: nevihte bodo zajele večji del Slovenije, na Primorskem tudi burja - Dnevne Novice",
           "last_provider": "google-news-si",
-          "published": 327571,
+          "published": 327596,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -669,50 +669,6 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20261023-082333.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek",
-        "manjka_fotografija"
-      ],
-      "title": "Ste pripravljeni? Kmalu s kolesom od Ljubljane do Beograda - Dnevnik"
-    },
-    {
-      "file": "fallback-failed-20261023-083823.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek"
-      ],
-      "title": "Slovenija je bela lisa na kolesarskem zemljevidu - Delo.si"
-    },
-    {
-      "file": "fallback-failed-20261023-085334.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek",
-        "manjka_fotografija"
-      ],
-      "title": "Ste pripravljeni? Kmalu s kolesom od Ljubljane do Beograda - Dnevnik"
-    },
-    {
-      "file": "fallback-failed-20261024-193622.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek",
-        "manjka_fotografija"
-      ],
-      "title": "Ste pripravljeni? Kmalu s kolesom od Ljubljane do Beograda - Dnevnik"
-    },
-    {
-      "file": "fallback-failed-20261024-193704.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek",
-        "manjka_fotografija"
-      ],
-      "title": "Ste pripravljeni? Kmalu s kolesom od Ljubljane do Beograda - Dnevnik"
-    },
-    {
       "file": "fallback-failed-20261024-193944.json",
       "category": "kolesarstvo",
       "errors": [
@@ -772,10 +728,53 @@
         "prekratek"
       ],
       "title": "Gostilna Pri planinskem orlu je, z nekaj primorskega navdiha, znova odprta - Kamnik.info"
+    },
+    {
+      "file": "fallback-failed-20261025-133451.json",
+      "category": "sezonsko",
+      "errors": [
+        "prekratek",
+        "manjka_fotografija"
+      ],
+      "title": "Iščete idejo za jesenski izlet? V Ljubljani se predstavlja destinacija, ki je Slovencem presenetljivo blizu - Metropolitan.si"
+    },
+    {
+      "file": "fallback-failed-20261025-153611.json",
+      "category": "sezonsko",
+      "errors": [
+        "prekratek"
+      ],
+      "title": "Iz Slovenije v Italijo nekoliko drugače: Jesenska pot, na kateri je že vožnja del doživetja - dnevne-novice.com"
+    },
+    {
+      "file": "fallback-failed-20261025-162454.json",
+      "category": "gore",
+      "errors": [
+        "manjka_fotografija",
+        "prekratek"
+      ],
+      "title": "ŠPORTNI VIKEND LJUBLJANICA 2026 bo med 11. in 13. septembrom v središče Ljubljane pripeljal nočni tek, trail, pohodništvo, kolesarjenje in pestro družinsko športno dogajanje - 24ur"
+    },
+    {
+      "file": "agent-state",
+      "category": "gore",
+      "errors": [
+        "manjka_fotografija,prekratek"
+      ]
+    },
+    {
+      "file": "agent-state",
+      "category": "gore",
+      "errors": [
+        "manjka_fotografija,ponavljanje"
+      ],
+      "slot": "2026-10-25|16:20|gore"
     }
   ],
   "failure_summary": {
     "prekratek": 20,
-    "manjka_fotografija": 16
+    "manjka_fotografija": 15,
+    "manjka_fotografija,prekratek": 1,
+    "manjka_fotografija,ponavljanje": 1
   }
 }
