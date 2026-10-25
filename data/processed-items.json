@@ -5123,5 +5123,19 @@
     "provider": "google-news-si",
     "processed_at": "2026-10-25T10:54:30+01:00",
     "output_id": "jakopicevo-sprehajalisce-v-parku-tivoli-ljubljana-razstava-ob-200-obletnici-narodnega-muze-e6a4530b"
+  },
+  {
+    "source_name": "Koroške Novice",
+    "category": "gourmet",
+    "title": "(VIDEO in FOTO) Županova ižina: Ko se koroška kulinarična dediščina prenaša iz roda v rod - Koroške Novice",
+    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNdmFtN25wbk8wcnVjc2tNLVZ3bllHLUd2VTAwOUZBQ0dFUktmcTJaTjhoQ0dHNkVMTkZ1X2MzU0N2cEplM3BkRHdRTzQzMHZIeXRrWTBqM1hiekZrVnJJQk90Z2R0QjZaRS1LUWRpM05HekMycGYwSU9VWnlQcGF5cjdKLXFZZ000OGhpUS1xSEpwaFQ2X2NuamdPWHd1bWY2YmRYNlNuT1FhWE9wVlgxQlJpRnRLaXFZUGY1Q0c2ZHk?oc=5",
+    "summary": "(VIDEO in FOTO) Županova ižina: Ko se koroška kulinarična dediščina prenaša iz roda v rod Koroške Novice",
+    "published": "Thu, 08 Oct 2026 07:00:00 GMT",
+    "image_url": "",
+    "video_url": "",
+    "hash": "65d166ccd97b2a04334d303627b7d106f671c60ee543622a729a104bbb70f745",
+    "provider": "google-news-si",
+    "processed_at": "2026-10-25T19:24:56+01:00",
+    "output_id": "video-in-foto-zupanova-izina-ko-se-koroska-kulinaricna-dediscina-prenasa-iz-roda-v-rod-93160cbe"
   }
 ]

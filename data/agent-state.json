@@ -1,29 +1,26 @@
 {
-  "last_success": "2026-10-25T10:54:30+01:00",
+  "last_success": "2026-10-25T19:24:56+01:00",
   "last_failure": "2026-09-21T20:56:52+02:00",
   "consecutive_failures": 0,
   "posts_date": "2026-10-25",
-  "posts_today": 2,
-  "last_output": "jakopicevo-sprehajalisce-v-parku-tivoli-ljubljana-razstava-ob-200-obletnici-narodnega-muze-e6a4530b",
-  "last_error": "prekratek",
-  "agent_version": "2.7.0",
-  "current_category": "sezonsko",
-  "scheduled_posts_today": 2,
+  "posts_today": 3,
+  "last_output": "video-in-foto-zupanova-izina-ko-se-koroska-kulinaricna-dediscina-prenasa-iz-roda-v-rod-93160cbe",
+  "last_error": null,
+  "agent_version": "3.0.0-learning-guarded-fallback",
+  "current_category": "gourmet",
+  "scheduled_posts_today": 3,
   "manual_posts_today": 0,
-  "writer_mode": "workers_ai",
+  "writer_mode": "deterministic_fallback",
   "scheduled_slots_done": [
     "2026-10-25|07:35|kolesarstvo",
-    "2026-10-25|10:45|dediscina"
+    "2026-10-25|10:45|dediscina",
+    "2026-10-25|19:10|gourmet"
   ],
   "scheduled_slots_deferred": [
     "2026-10-25|13:30|sezonsko",
     "2026-10-25|16:20|gore"
   ],
-  "last_editorial_hold": {
-    "slot": "2026-10-25|16:20|gore",
-    "reason": "manjka_fotografija,ponavljanje",
-    "at": "2026-10-25T16:24:39+01:00"
-  },
+  "last_editorial_hold": null,
   "publisher_guardian_last_run": "2026-10-25T18:53:44+01:00",
   "publisher_guardian_last_action": {
     "category": "sezonsko",
