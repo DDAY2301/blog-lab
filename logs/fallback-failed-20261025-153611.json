@@ -1,0 +1,27 @@
+{
+  "category": "sezonsko",
+  "errors": [
+    "prekratek"
+  ],
+  "article": {
+    "title": "Iz Slovenije v Italijo nekoliko drugače: Jesenska pot, na kateri je že vožnja del doživetja - dnevne-novice.com"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "lead_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9SYUsydTk3OS1SSThSdUFndEtKTmlKX3Rmb0dkbUhjRk9udXIwbF9vMzZReVNUYXNvcmd6YVdOdFIwbXdLZEZaclVxR1A1VUxhLTRJNGkzNE80UmxSMnp4bzF2ZjdZcnZ6cnZRSTNxX2tZT3B0QVRiRWVIZw?oc=5",
+      "title": "Iz Slovenije v Italijo nekoliko drugače: Jesenska pot, na kateri je že vožnja del doživetja - dnevne-novice.com",
+      "errors": [
+        "prekratek"
+      ]
+    },
+    {
+      "attempt": 2,
+      "lead_url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE12WFBsa1BPOVF1VjY1aDU3dVhTTHZiTTVBaEZQQk14X1Nia0NLWnFUYzd4Vkk4VkYwT0QzQl9DSmNaV0t1Qm41UWVZYnVYN2lFb3FzZmtWTEdtWFN1cGd6RmlUWFB1TjQyNEcxXy0tR3VMYXBTRkRDcVlR?oc=5",
+      "title": "27. september je Svetovni dan turizma: Kaj se bo ta vikend dogajalo po Sloveniji? - dnevne-novice.com",
+      "errors": [
+        "prekratek"
+      ]
+    }
+  ]
+}

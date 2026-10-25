@@ -3,11 +3,11 @@
   "status": "waiting",
   "enabled": true,
   "category": "sezonsko",
-  "last_run": "2026-10-25T13:34:51+01:00",
+  "last_run": "2026-10-25T15:36:11+01:00",
   "last_success": "2026-10-25T10:54:30+01:00",
   "last_output": "jakopicevo-sprehajalisce-v-parku-tivoli-ljubljana-razstava-ob-200-obletnici-narodnega-muze-e6a4530b",
   "next_run": null,
-  "message": "Nobena sveža zgodba ni prestala uredniškega QA: prekratek,manjka_fotografija",
+  "message": "Nobena sveža zgodba ni prestala uredniškega QA: prekratek",
   "posts_today": 2,
   "scheduled_posts_today": 2,
   "manual_posts_today": 0,
@@ -24,5 +24,5 @@
     "reason": "manjka_fotografija,ponavljanje",
     "at": "2026-10-25T13:34:34+01:00"
   },
-  "last_error": "prekratek,manjka_fotografija"
+  "last_error": "prekratek"
 }
