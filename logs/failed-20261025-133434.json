@@ -1,0 +1,34 @@
+{
+  "category": "sezonsko",
+  "errors": [
+    "manjka_fotografija",
+    "ponavljanje"
+  ],
+  "article": {
+    "title": "Iščete idejo za jesenski izlet? V Ljubljani se predstavlja destinacija, ki je Slovencem presenetljivo blizu - Metropolitan.si",
+    "excerpt": "Iščete idejo za jesenski izlet? V Ljubljani se predstavlja destinacija, ki je Slovencem presenetljivo blizu Metropolitan.si",
+    "seoDescription": "Iščete idejo za jesenski izlet? V Ljubljani se predstavlja destinacija, ki je Slovencem presenetljivo blizu Metropolitan.si",
+    "content": "Pregled za rubriko sezonsko povzema trenutno razpoložljive informacije iz spodaj navedenih virov. Besedilo je pripravljeno brez dodajanja nepodprtih dejstev.\n\n## Iščete idejo za jesenski izlet? V Ljubljani se predstavlja destinacija, ki je Slovencem presenetljivo blizu - Metropolitan.si\nIščete idejo za jesenski izlet? V Ljubljani se predstavlja destinacija, ki je Slovencem presenetljivo blizu Metropolitan.si\n\nVir: Metropolitan.si — https://news.google.com/rss/articles/CBMib0FVX3lxTE5md0hGX0NJYThjMDhCNnMxSy1SajVSUDBuTm9nN29oWUlWaW5QWFlZSUJ5RFFlZy1GbmxXOG0zNGJNR2R0OFBSRzNCdTNMd0FtVFVldzhnRjMzN2YzRW9WSWpWNlRIa1RSMjkwZTFjZw?oc=5\n\n## Kako brati ta pregled\nTa članek je v varnem nadomestnem načinu sestavljen izključno iz podanih virov. Ne dodaja dejstev, ki jih v podlagi ni, zato so navedene povezave sestavni del članka in omogočajo neposredno preverjanje informacij.\n\n## Kaj preveriti pred obiskom\nDatumi, odpiralni časi, dostopnost, prometne razmere, vreme in programi dogodkov se lahko spremenijo. Pred odhodom preveri najnovejše podatke neposredno pri organizatorju, upravljavcu ali drugem uradnem viru, ki je naveden v članku.",
+    "category": "Sezonsko",
+    "tags": [
+      "sezonsko",
+      "Slovenija",
+      "iscete",
+      "idejo",
+      "jesenski"
+    ],
+    "sources": [
+      {
+        "title": "Iščete idejo za jesenski izlet? V Ljubljani se predstavlja destinacija, ki je Slovencem presenetljivo blizu - Metropolitan.si",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5md0hGX0NJYThjMDhCNnMxSy1SajVSUDBuTm9nN29oWUlWaW5QWFlZSUJ5RFFlZy1GbmxXOG0zNGJNR2R0OFBSRzNCdTNMd0FtVFVldzhnRjMzN2YzRW9WSWpWNlRIa1RSMjkwZTFjZw?oc=5",
+        "source_name": "Metropolitan.si"
+      }
+    ],
+    "fallback": false,
+    "gallery": [],
+    "heroImage": null,
+    "visualTemplate": "fieldnote",
+    "templateLabel": "Field Note",
+    "id": "iscete-idejo-za-jesenski-izlet-v-ljubljani-se-predstavlja-destinacija-ki-je-slovencem-pres-fe0ded0c"
+  }
+}
