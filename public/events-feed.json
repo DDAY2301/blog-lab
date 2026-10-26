@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-25T23:38:27+01:00",
+  "updatedAt": "2026-10-26T05:57:26+01:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -104,126 +104,6 @@
       "startAt": "2026-10-15T09:00:00+02:00",
       "endAt": "2027-01-31T18:00:00+01:00",
       "description": "The spatial installation Stretch 3789 opens on 15 October 2026 and runs daily from 09:00 to 18:00 through 31 January 2027 in the S Gallery."
-    },
-    {
-      "title": "Grand Prix invites Upper90",
-      "url": "https://www.klub-k4.si/",
-      "source": "Klub K4",
-      "type": "Club · elektronika",
-      "place": "Klub K4 · Ljubljana",
-      "startAt": "2026-10-24T23:00:00+02:00",
-      "endAt": "2026-10-25T06:00:00+01:00",
-      "id": "event-50-grand-prix-invites-upper90",
-      "lastCheckedAt": "2026-10-25T07:22:00+01:00",
-      "price": "€12 / €15 / €18 / €20 presale sold out; limited door tickets",
-      "languages": [
-        "Music-led"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": null,
-      "ticketUrl": "https://olaii.com/event/9774/grand-prix-invites-upper90/",
-      "status": "completed",
-      "description": "Upper90 headlines Klub K4 from 23:00 to 06:00. All presale tiers are sold out, but the authorised seller says a limited number of tickets will be available at the door."
-    },
-    {
-      "id": "sunday-flea-market-2026-10-25",
-      "title": "Sunday Flea Market",
-      "url": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/antique-flea-market",
-      "source": "Visit Ljubljana",
-      "type": "Market · antiques and vintage",
-      "place": "Breg · Ljubljana",
-      "startAt": "2026-10-25T08:00:00+01:00",
-      "endAt": "2026-10-25T15:00:00+01:00",
-      "price": "Free",
-      "languages": [],
-      "touristFriendly": true,
-      "familyFriendly": true,
-      "accessibility": null,
-      "ticketUrl": null,
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-25T07:22:00+01:00",
-      "description": "The weekly antiques and vintage market runs along Breg from 08:00 to 15:00. Admission is free and no ticket is required."
-    },
-    {
-      "id": "cirkuliranje-bs3-2026-10-25",
-      "title": "Cirkuliranje: Circus Squared and Bubble Show",
-      "url": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/cirkuliranje-culture-at-your-doorstep",
-      "source": "Visit Ljubljana / Zavod Bufeto",
-      "type": "Circus · family performance",
-      "place": "BS3 neighbourhood by Reboljeva ulica · Ljubljana",
-      "startAt": "2026-10-25T11:30:00+01:00",
-      "endAt": null,
-      "price": "Free",
-      "languages": [],
-      "touristFriendly": true,
-      "familyFriendly": true,
-      "accessibility": null,
-      "ticketUrl": null,
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-25T07:22:00+01:00",
-      "description": "A free circus performance and interactive bubble show begin at 11:30 in BS3. The outdoor programme is cancelled in bad weather."
-    },
-    {
-      "id": "kazimirs-colours-rossini-cards-2026-10-25",
-      "title": "Kazimir’s Colours / Rossini Cards",
-      "url": "https://www.opera.si/en/programme/event/ostalo/rossini-cards",
-      "source": "SNG Opera and Ballet Ljubljana",
-      "type": "Ballet · double bill",
-      "place": "SNG Opera and Ballet Ljubljana",
-      "startAt": "2026-10-25T18:00:00+01:00",
-      "endAt": null,
-      "price": null,
-      "languages": [],
-      "touristFriendly": true,
-      "familyFriendly": null,
-      "accessibility": null,
-      "ticketUrl": "https://opera.mojekarte.si/en/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-25T07:22:00+01:00",
-      "description": "SNG Opera presents Mauro Bigonzetti’s ballet double bill at 18:00. The official programme confirms the performance; check the authorised box office for current prices and availability."
-    },
-    {
-      "price": "From €38.50; sold out",
-      "languages": [
-        "Music-led"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": true,
-      "accessibility": "Wheelchair accessible according to the ticket seller.",
-      "status": "sold_out",
-      "lastCheckedAt": "2026-10-25T07:22:00+01:00",
-      "endAt": null,
-      "id": "candlelight-adele-2026-10-25",
-      "title": "Candlelight: Tribute to Adele",
-      "url": "https://feverup.com/m/519100/en",
-      "source": "Fever",
-      "type": "Concert · candlelight",
-      "place": "Hribar Hall · Ljubljana Castle",
-      "startAt": "2026-10-25T18:30:00+01:00",
-      "ticketUrl": "https://feverup.com/m/519100/en",
-      "description": "A 60-minute string-quartet tribute to Adele begins at 18:30; guests must be aged 8 or over. The ticket seller lists the performance as sold out and confirms wheelchair access."
-    },
-    {
-      "price": "From €34.50; sold out",
-      "languages": [
-        "Music-led"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": true,
-      "accessibility": "Wheelchair accessible according to the ticket seller.",
-      "status": "sold_out",
-      "lastCheckedAt": "2026-10-25T07:22:00+01:00",
-      "endAt": null,
-      "id": "candlelight-michael-jackson-2026-10-25",
-      "title": "Candlelight: Michael Jackson Tribute",
-      "url": "https://feverup.com/m/679642/en",
-      "source": "Fever",
-      "type": "Concert · candlelight",
-      "place": "Hribar Hall · Ljubljana Castle",
-      "startAt": "2026-10-25T20:30:00+01:00",
-      "ticketUrl": "https://feverup.com/m/679642/en",
-      "description": "A 60-minute string-quartet tribute to Michael Jackson begins at 20:30; guests must be aged 8 or over. The ticket seller lists the performance as sold out and confirms wheelchair access."
     },
     {
       "price": null,
@@ -556,6 +436,16 @@
       "status": "confirmed",
       "lastCheckedAt": "2026-10-25T07:22:00+01:00",
       "description": "A Candlelight tribute pairing the music of Ed Sheeran and Coldplay starts at 20:30. The official seller lists tickets from €32."
+    },
+    {
+      "title": "KONCERTNA AKADEMIJA @ KINO ŠIŠKA: POSTPRODUKCIJA, RAČUNOVODSTVO",
+      "url": "https://www.galahala.com/",
+      "source": "Gala Hala",
+      "type": "Koncert · Metelkova",
+      "place": "Gala Hala · AKC Metelkova",
+      "startAt": "2026-11-09T17:00:00+01:00",
+      "endAt": "",
+      "id": "event-23-koncertna-akademija-kino-i-ka-postprodukcija-ra-unovodstvo"
     }
   ]
 }
