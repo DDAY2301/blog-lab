@@ -115,9 +115,27 @@ def valid_future(item):
         return end.astimezone(TZ)>=today_start and start.astimezone(TZ)<=window_end
     except Exception:return False
 
+def normalize_discovered(item, checked_at):
+    """Keep crawler additions compatible with the public calendar schema."""
+    item=dict(item)
+    item["endAt"]=item.get("endAt") or None
+    item.setdefault("price",None)
+    item.setdefault("languages",[])
+    item.setdefault("touristFriendly",None)
+    item.setdefault("familyFriendly",None)
+    item.setdefault("accessibility",None)
+    item.setdefault("ticketUrl",item.get("url") or None)
+    item.setdefault("status","confirmed")
+    item.setdefault("lastCheckedAt",checked_at)
+    item.setdefault("description",f"{item.get('title','This event')} is listed by {item.get('source','the organiser')}. Check the official event page for price, language and accessibility details.")
+    return item
+
 def main():
-    existing=[]
-    try:existing=json.loads(OUT.read_text(encoding="utf-8")).get("items",[])
+    existing=[]; existing_sources=[]
+    try:
+        previous=json.loads(OUT.read_text(encoding="utf-8"))
+        existing=previous.get("items",[])
+        existing_sources=previous.get("sourcesChecked",[])
     except Exception:pass
     discovered=[]; checked=[]; failed=[]
     for source in SOURCES:
@@ -130,13 +148,16 @@ def main():
     merged={}
     for item in existing:
         if isinstance(item,dict) and valid_future(item):merged[event_key(item)]=item
+    checked_at=datetime.now(TZ).isoformat(timespec="seconds")
     for item in discovered:
+        item=normalize_discovered(item,checked_at)
         if valid_future(item):merged.setdefault(event_key(item),item)
     items=sorted(merged.values(),key=lambda x:x.get("startAt",""))[:80]
     for i,item in enumerate(items):
         if not item.get("id"):item["id"]=f"event-{i+1:02d}-"+re.sub(r"[^a-z0-9]+","-",item.get("title","").lower()).strip("-")[:60]
     status="fresh" if checked and not failed else ("partial" if checked else "stale")
-    payload={"updatedAt":datetime.now(TZ).isoformat(timespec="seconds"),"status":status,"sourcesChecked":checked,"sourcesFailed":failed,"items":items}
+    all_checked=list(dict.fromkeys(existing_sources+checked))
+    payload={"updatedAt":checked_at,"status":status,"sourcesChecked":all_checked,"sourcesFailed":failed,"items":items}
     OUT.write_text(json.dumps(payload,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print(f"EVENTS_FEED_UPDATED items={len(items)} checked={len(checked)} failed={len(failed)}")
     return 0
