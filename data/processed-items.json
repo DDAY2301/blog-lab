@@ -5137,5 +5137,19 @@
     "provider": "google-news-si",
     "processed_at": "2026-10-25T19:24:56+01:00",
     "output_id": "video-in-foto-zupanova-izina-ko-se-koroska-kulinaricna-dediscina-prenasa-iz-roda-v-rod-93160cbe"
+  },
+  {
+    "source_name": "Finance.si",
+    "category": "kolesarstvo",
+    "title": "Kje so v Sloveniji daljinske kolesarske poti Eurovelo in kako nadzirajo njihovo kakovost - Finance.si",
+    "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPOURFbjVIUktQd0lEVE1JZHJCWkowUGYxMlVSYnNFaGZxNG5VdGNhTHdMazk5VURCOWZBVkdaU25YMzR1UHFrczdBN3dPaFRBX0pGRWotNFdDbHhVSVVmdl9Kb29DREsyM3FseUU4eE5TWmVremRibjdsQkM2R0p3bWgwZmF1R3pIa09aUGdQWWxhYTA1QWcyb3hMemRuT2dLMmlWMHlFMUliRGZiYk9DQVlySnowQkVJLTREUkN4U2pBMkhSdkZWdUpvdUZPSkp0dDZrN0dlNmNRcGcxcHpadGxiU3dBcUE?oc=5",
+    "summary": "Kje so v Sloveniji daljinske kolesarske poti Eurovelo in kako nadzirajo njihovo kakovost Finance.si",
+    "published": "Sun, 07 Nov 2021 07:00:00 GMT",
+    "image_url": "",
+    "video_url": "",
+    "hash": "e5d3ab05c10adfebc931753482b90bc0a1afecd2c4006bfcb01c2bcb1abf470a",
+    "provider": "google-news-si",
+    "processed_at": "2026-10-26T07:39:55+01:00",
+    "output_id": "kje-so-v-sloveniji-daljinske-kolesarske-poti-eurovelo-in-kako-nadzirajo-njihovo-kakovost-dc51abee"
   }
 ]

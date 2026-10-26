@@ -1,25 +1,20 @@
 {
-  "last_success": "2026-10-25T19:24:56+01:00",
+  "last_success": "2026-10-26T07:39:55+01:00",
   "last_failure": "2026-09-21T20:56:52+02:00",
   "consecutive_failures": 0,
-  "posts_date": "2026-10-25",
-  "posts_today": 3,
-  "last_output": "video-in-foto-zupanova-izina-ko-se-koroska-kulinaricna-dediscina-prenasa-iz-roda-v-rod-93160cbe",
-  "last_error": "prekratek",
+  "posts_date": "2026-10-26",
+  "posts_today": 1,
+  "last_output": "kje-so-v-sloveniji-daljinske-kolesarske-poti-eurovelo-in-kako-nadzirajo-njihovo-kakovost-dc51abee",
+  "last_error": null,
   "agent_version": "3.0.0-learning-guarded-fallback",
-  "current_category": "sezonsko",
-  "scheduled_posts_today": 3,
+  "current_category": "kolesarstvo",
+  "scheduled_posts_today": 1,
   "manual_posts_today": 0,
   "writer_mode": "deterministic_fallback",
   "scheduled_slots_done": [
-    "2026-10-25|07:35|kolesarstvo",
-    "2026-10-25|10:45|dediscina",
-    "2026-10-25|19:10|gourmet"
+    "2026-10-26|07:35|kolesarstvo"
   ],
-  "scheduled_slots_deferred": [
-    "2026-10-25|13:30|sezonsko",
-    "2026-10-25|16:20|gore"
-  ],
+  "scheduled_slots_deferred": [],
   "last_editorial_hold": null,
   "publisher_guardian_last_run": "2026-10-25T22:16:19+01:00",
   "publisher_guardian_last_action": {
