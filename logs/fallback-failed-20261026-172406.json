@@ -1,0 +1,21 @@
+{
+  "category": "dediscina",
+  "errors": [
+    "clanek_brez_slovenskega_konteksta",
+    "viri_ne_podpirajo_slovenske_rubrike"
+  ],
+  "article": {
+    "title": "Month of Giving - Jersey Mike's Subs"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "lead_url": "https://www.jerseymikes.ca/mog",
+      "title": "Month of Giving - Jersey Mike's Subs",
+      "errors": [
+        "clanek_brez_slovenskega_konteksta",
+        "viri_ne_podpirajo_slovenske_rubrike"
+      ]
+    }
+  ]
+}

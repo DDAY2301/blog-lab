@@ -3,11 +3,11 @@
   "status": "waiting",
   "enabled": true,
   "category": "dediscina",
-  "last_run": "2026-10-26T17:08:49+01:00",
+  "last_run": "2026-10-26T17:24:06+01:00",
   "last_success": "2026-10-26T07:39:55+01:00",
   "last_output": "kje-so-v-sloveniji-daljinske-kolesarske-poti-eurovelo-in-kako-nadzirajo-njihovo-kakovost-dc51abee",
   "next_run": null,
-  "message": "Ni novih neuporabljenih virov; objava se varno odloži.",
+  "message": "Nobena sveža zgodba ni prestala uredniškega QA: clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike",
   "posts_today": 1,
   "scheduled_posts_today": 1,
   "manual_posts_today": 0,
@@ -17,5 +17,5 @@
   ],
   "scheduled_slots_deferred": [],
   "last_editorial_hold": null,
-  "last_error": "fallback_no_fresh_evidence"
+  "last_error": "clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike"
 }
