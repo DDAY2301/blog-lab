@@ -5151,5 +5151,19 @@
     "provider": "google-news-si",
     "processed_at": "2026-10-26T07:39:55+01:00",
     "output_id": "kje-so-v-sloveniji-daljinske-kolesarske-poti-eurovelo-in-kako-nadzirajo-njihovo-kakovost-dc51abee"
+  },
+  {
+    "source_name": "Ljubljanainfo.com",
+    "category": "sezonsko",
+    "title": "Turistična sezona pred vrati, Slovenija stavi na kakovost namesto množic - Ljubljanainfo.com",
+    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOY0w1T1FocTVyaG9DaHpvVUtOU1pyNFBrcV8tRUlVZFpINmc4WDJsWDByazhpSW5ER2xtLS1rZTJVRjFvOHgwTzlaU3A4dnE4c2NBSVk3WDg1QW1KUHBSaGZ3dHRXekMzeE9LYlR3T0tSMFBzR3NGbm53dWxXQjI0SWQ2aEJ0WHpDSGtKOVgtcEJ5RDliVS1BZ016cTVpV2FSbWtzVFEwdDN1b2k5WTUxTDM5aWVVZ2NxSGxZOUZ3?oc=5",
+    "summary": "Turistična sezona pred vrati, Slovenija stavi na kakovost namesto množic Ljubljanainfo.com",
+    "published": "Sat, 13 Jun 2026 07:00:00 GMT",
+    "image_url": "",
+    "video_url": "",
+    "hash": "593932b50c927e264e6688c2c42788d63c1410554f7b58463ee621343bd2dd0c",
+    "provider": "google-news-si",
+    "processed_at": "2026-10-26T18:39:50+01:00",
+    "output_id": "turisticna-sezona-pred-vrati-slovenija-stavi-na-kakovost-namesto-mnozic-b322aeb8"
   }
 ]
