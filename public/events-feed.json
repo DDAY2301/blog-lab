@@ -1,16 +1,12 @@
 {
-  "updatedAt": "2026-10-26T06:58:00+01:00",
+  "updatedAt": "2026-10-26T07:00:49+01:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
-    "Ljubljana Castle",
-    "MGL",
-    "Cankarjev dom",
-    "SNG Opera and Ballet Ljubljana",
     "Kino Šiška",
     "Gala Hala",
-    "Fever",
-    "Festival Ljubljana"
+    "Klub K4",
+    "Cirkus Klub"
   ],
   "sourcesFailed": [],
   "items": [
@@ -190,6 +186,27 @@
       "description": "Prima Facie begins at 20:00 on the MGL Small Stage. The official schedule marks this performance as sold out."
     },
     {
+      "id": "shortcuts-courvoisier-rothenberg-waits-2026-10-27",
+      "title": "Shortcuts – Courvoisier / Rothenberg / Waits",
+      "url": "https://www.cd-cc.si/en",
+      "source": "Cankarjev dom",
+      "type": "Concert · improvised music",
+      "place": "Cankarjev dom · Ljubljana",
+      "startAt": "2026-10-27T19:30:00+01:00",
+      "endAt": null,
+      "price": null,
+      "languages": [
+        "Music-led"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": null,
+      "ticketUrl": "https://vstopnice.cd-cc.si/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-26T06:58:00+01:00",
+      "description": "Courvoisier, Rothenberg and Waits perform at Cankarjev dom at 19:30. Consult the venue’s ticket page for the current price and accessible seating."
+    },
+    {
       "title": "BBBBBBB (JP), Mala Roza Muca & Pixel.Bambi, SsmKOSK",
       "url": "https://www.galahala.com/program/",
       "source": "Gala Hala",
@@ -226,6 +243,28 @@
       "status": "sold_out",
       "lastCheckedAt": "2026-10-18T07:22:00+02:00",
       "description": "MGL schedules The Years on the Small Stage at 20:00. The official programme currently marks this performance as sold out."
+    },
+    {
+      "id": "open-kitchen-2026-10-30",
+      "title": "Open Kitchen",
+      "url": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/open-kitchen",
+      "source": "Visit Ljubljana",
+      "type": "Food market · outdoor",
+      "place": "Pogačarjev trg · Ljubljana",
+      "startAt": "2026-10-30T10:00:00+01:00",
+      "endAt": "2026-10-30T21:00:00+01:00",
+      "price": "Free entry; food and drinks charged separately",
+      "languages": [
+        "Slovenian",
+        "English-friendly"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": true,
+      "accessibility": "Outdoor market on a paved central square.",
+      "ticketUrl": null,
+      "status": "weather_dependent",
+      "lastCheckedAt": "2026-10-26T06:58:00+01:00",
+      "description": "Ljubljana’s outdoor food market runs from 10:00 to 21:00 on Pogačarjev trg. It operates on sunny Fridays, so check the official listing if rain is forecast."
     },
     {
       "title": "Noč čarovnic special: KIKI",
@@ -325,6 +364,28 @@
       "description": "The month-long culinary festival begins on 1 November across Ljubljana, with individual tastings, menus and workshops announced separately. Prices and accessibility vary by participating venue."
     },
     {
+      "id": "sunday-flea-market-2026-11-01",
+      "title": "Sunday Flea Market",
+      "url": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/antique-flea-market",
+      "source": "Visit Ljubljana",
+      "type": "Market · antiques and vintage",
+      "place": "Breg · Ljubljana",
+      "startAt": "2026-11-01T08:00:00+01:00",
+      "endAt": "2026-11-01T15:00:00+01:00",
+      "price": "Free",
+      "languages": [
+        "Slovenian",
+        "English-friendly"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": true,
+      "accessibility": "Outdoor riverside market on a mostly level paved route.",
+      "ticketUrl": null,
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-26T06:58:00+01:00",
+      "description": "The weekly antiques and vintage market runs along Breg from 08:00 to 15:00. Admission is free and no ticket is required."
+    },
+    {
       "id": "cirkuliranje-kodeljevo-2026-11-01",
       "title": "Cirkuliranje: Buffetto the Cyclist",
       "url": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/cirkuliranje-culture-at-your-doorstep",
@@ -344,63 +405,6 @@
       "description": "Zavod Bufeto presents a free interactive clown show at 11:30 in Park Kodeljevo. The outdoor event is cancelled in bad weather."
     },
     {
-      "id": "open-kitchen-2026-10-30",
-      "title": "Open Kitchen",
-      "url": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/open-kitchen",
-      "source": "Visit Ljubljana",
-      "type": "Food market · outdoor",
-      "place": "Pogačarjev trg · Ljubljana",
-      "startAt": "2026-10-30T10:00:00+01:00",
-      "endAt": "2026-10-30T21:00:00+01:00",
-      "price": "Free entry; food and drinks charged separately",
-      "languages": ["Slovenian", "English-friendly"],
-      "touristFriendly": true,
-      "familyFriendly": true,
-      "accessibility": "Outdoor market on a paved central square.",
-      "ticketUrl": null,
-      "status": "weather_dependent",
-      "lastCheckedAt": "2026-10-26T06:58:00+01:00",
-      "description": "Ljubljana’s outdoor food market runs from 10:00 to 21:00 on Pogačarjev trg. It operates on sunny Fridays, so check the official listing if rain is forecast."
-    },
-    {
-      "id": "sunday-flea-market-2026-11-01",
-      "title": "Sunday Flea Market",
-      "url": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/antique-flea-market",
-      "source": "Visit Ljubljana",
-      "type": "Market · antiques and vintage",
-      "place": "Breg · Ljubljana",
-      "startAt": "2026-11-01T08:00:00+01:00",
-      "endAt": "2026-11-01T15:00:00+01:00",
-      "price": "Free",
-      "languages": ["Slovenian", "English-friendly"],
-      "touristFriendly": true,
-      "familyFriendly": true,
-      "accessibility": "Outdoor riverside market on a mostly level paved route.",
-      "ticketUrl": null,
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-26T06:58:00+01:00",
-      "description": "The weekly antiques and vintage market runs along Breg from 08:00 to 15:00. Admission is free and no ticket is required."
-    },
-    {
-      "id": "shortcuts-courvoisier-rothenberg-waits-2026-10-27",
-      "title": "Shortcuts – Courvoisier / Rothenberg / Waits",
-      "url": "https://www.cd-cc.si/en",
-      "source": "Cankarjev dom",
-      "type": "Concert · improvised music",
-      "place": "Cankarjev dom · Ljubljana",
-      "startAt": "2026-10-27T19:30:00+01:00",
-      "endAt": null,
-      "price": null,
-      "languages": ["Music-led"],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": null,
-      "ticketUrl": "https://vstopnice.cd-cc.si/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-26T06:58:00+01:00",
-      "description": "Courvoisier, Rothenberg and Waits perform at Cankarjev dom at 19:30. Consult the venue’s ticket page for the current price and accessible seating."
-    },
-    {
       "id": "salome-mgl-2026-11-02",
       "title": "Salome",
       "url": "https://www.mgl.si/en/schedule/",
@@ -410,7 +414,9 @@
       "startAt": "2026-11-02T19:30:00+01:00",
       "endAt": null,
       "price": null,
-      "languages": ["Slovenian"],
+      "languages": [
+        "Slovenian"
+      ],
       "touristFriendly": false,
       "familyFriendly": false,
       "accessibility": null,
@@ -429,7 +435,9 @@
       "startAt": "2026-11-02T20:00:00+01:00",
       "endAt": null,
       "price": null,
-      "languages": ["Slovenian"],
+      "languages": [
+        "Slovenian"
+      ],
       "touristFriendly": false,
       "familyFriendly": false,
       "accessibility": null,
@@ -437,25 +445,6 @@
       "status": "sold_out",
       "lastCheckedAt": "2026-10-26T06:58:00+01:00",
       "description": "The documentary solo project starts on the MGL Small Stage at 20:00. The official schedule marks the performance as sold out."
-    },
-    {
-      "id": "gal-george-gjurin-gal25-2026-11-03",
-      "title": "Gal George Gjurin – #Gal25",
-      "url": "https://www.cd-cc.si/en",
-      "source": "Cankarjev dom",
-      "type": "Concert · anniversary gala",
-      "place": "Cankarjev dom · Ljubljana",
-      "startAt": "2026-11-03T20:00:00+01:00",
-      "endAt": null,
-      "price": "€22 / €28 / €34 / €40",
-      "languages": ["Music-led"],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": null,
-      "ticketUrl": "https://vstopnice.cd-cc.si/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-26T06:58:00+01:00",
-      "description": "Gal George Gjurin celebrates 25 years of artistic work at 20:00. Tickets cost €22, €28, €34 or €40."
     },
     {
       "id": "salome-mgl-2026-11-03",
@@ -467,7 +456,9 @@
       "startAt": "2026-11-03T19:30:00+01:00",
       "endAt": null,
       "price": null,
-      "languages": ["Slovenian"],
+      "languages": [
+        "Slovenian"
+      ],
       "touristFriendly": false,
       "familyFriendly": false,
       "accessibility": null,
@@ -475,6 +466,27 @@
       "status": "confirmed",
       "lastCheckedAt": "2026-10-26T06:58:00+01:00",
       "description": "Salome begins on MGL’s Main Stage at 19:30. The official schedule currently lists tickets."
+    },
+    {
+      "id": "gal-george-gjurin-gal25-2026-11-03",
+      "title": "Gal George Gjurin – #Gal25",
+      "url": "https://www.cd-cc.si/en",
+      "source": "Cankarjev dom",
+      "type": "Concert · anniversary gala",
+      "place": "Cankarjev dom · Ljubljana",
+      "startAt": "2026-11-03T20:00:00+01:00",
+      "endAt": null,
+      "price": "€22 / €28 / €34 / €40",
+      "languages": [
+        "Music-led"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": null,
+      "ticketUrl": "https://vstopnice.cd-cc.si/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-26T06:58:00+01:00",
+      "description": "Gal George Gjurin celebrates 25 years of artistic work at 20:00. Tickets cost €22, €28, €34 or €40."
     },
     {
       "id": "prima-facie-mgl-2026-11-03",
@@ -486,7 +498,9 @@
       "startAt": "2026-11-03T20:00:00+01:00",
       "endAt": null,
       "price": null,
-      "languages": ["Slovenian"],
+      "languages": [
+        "Slovenian"
+      ],
       "touristFriendly": false,
       "familyFriendly": false,
       "accessibility": null,
@@ -494,6 +508,25 @@
       "status": "sold_out",
       "lastCheckedAt": "2026-10-26T06:58:00+01:00",
       "description": "Prima Facie starts on the MGL Small Stage at 20:00. The official schedule marks this performance as sold out."
+    },
+    {
+      "title": "CODEFENDANTS (ZDA) + JAKOB'S CASTLE @ Gala hala",
+      "url": "https://www.galahala.com/en/program/codefendants/33559/",
+      "source": "Gala Hala",
+      "type": "Koncert · Metelkova",
+      "place": "Gala Hala · AKC Metelkova",
+      "startAt": "2026-11-03T20:00:00+01:00",
+      "endAt": null,
+      "id": "event-37-codefendants-zda-jakob-s-castle-gala-hala",
+      "price": "€23 advance / €28 on the day",
+      "languages": [],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": null,
+      "ticketUrl": "https://www.galahala.com/en/program/codefendants/33559/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-26T06:58:00+01:00",
+      "description": "US groups Codefendants and Jakob's Castle perform at Gala Hala at 20:00. Tickets cost €23 in advance or €28 on the day."
     },
     {
       "id": "romantic-souls-mgl-2026-11-04",
@@ -505,7 +538,9 @@
       "startAt": "2026-11-04T19:30:00+01:00",
       "endAt": null,
       "price": null,
-      "languages": ["Slovenian"],
+      "languages": [
+        "Slovenian"
+      ],
       "touristFriendly": false,
       "familyFriendly": false,
       "accessibility": null,
@@ -513,6 +548,27 @@
       "status": "confirmed",
       "lastCheckedAt": "2026-10-26T06:58:00+01:00",
       "description": "Romantic Souls is scheduled on MGL’s Main Stage at 19:30. The official schedule currently lists tickets."
+    },
+    {
+      "id": "salome-mgl-2026-11-05",
+      "title": "Salome",
+      "url": "https://www.mgl.si/en/schedule/",
+      "source": "MGL",
+      "type": "Theatre · drama",
+      "place": "MGL Main Stage · Ljubljana",
+      "startAt": "2026-11-05T18:00:00+01:00",
+      "endAt": null,
+      "price": null,
+      "languages": [
+        "Slovenian"
+      ],
+      "touristFriendly": false,
+      "familyFriendly": false,
+      "accessibility": null,
+      "ticketUrl": "https://www.mgl.si/en/schedule/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-26T06:58:00+01:00",
+      "description": "Salome begins on MGL’s Main Stage at 18:00. The official schedule currently lists tickets."
     },
     {
       "id": "young-virtuosi-colombo-cape-2026-11-05",
@@ -524,7 +580,9 @@
       "startAt": "2026-11-05T19:00:00+01:00",
       "endAt": "2026-11-05T21:00:00+01:00",
       "price": null,
-      "languages": ["Music-led"],
+      "languages": [
+        "Music-led"
+      ],
       "touristFriendly": true,
       "familyFriendly": true,
       "accessibility": null,
@@ -553,25 +611,6 @@
       "description": "Marjan Kozina’s four-act opera Equinox premieres at 19:30. Tickets are available through the opera’s authorised seller."
     },
     {
-      "id": "salome-mgl-2026-11-05",
-      "title": "Salome",
-      "url": "https://www.mgl.si/en/schedule/",
-      "source": "MGL",
-      "type": "Theatre · drama",
-      "place": "MGL Main Stage · Ljubljana",
-      "startAt": "2026-11-05T18:00:00+01:00",
-      "endAt": null,
-      "price": null,
-      "languages": ["Slovenian"],
-      "touristFriendly": false,
-      "familyFriendly": false,
-      "accessibility": null,
-      "ticketUrl": "https://www.mgl.si/en/schedule/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-26T06:58:00+01:00",
-      "description": "Salome begins on MGL’s Main Stage at 18:00. The official schedule currently lists tickets."
-    },
-    {
       "id": "prima-facie-mgl-2026-11-05",
       "title": "Prima Facie",
       "url": "https://www.mgl.si/en/schedule/",
@@ -581,7 +620,9 @@
       "startAt": "2026-11-05T20:00:00+01:00",
       "endAt": null,
       "price": null,
-      "languages": ["Slovenian"],
+      "languages": [
+        "Slovenian"
+      ],
       "touristFriendly": false,
       "familyFriendly": false,
       "accessibility": null,
@@ -619,7 +660,9 @@
       "startAt": "2026-11-06T20:00:00+01:00",
       "endAt": null,
       "price": null,
-      "languages": ["Slovenian"],
+      "languages": [
+        "Slovenian"
+      ],
       "touristFriendly": false,
       "familyFriendly": false,
       "accessibility": null,
@@ -627,6 +670,25 @@
       "status": "sold_out",
       "lastCheckedAt": "2026-10-26T06:58:00+01:00",
       "description": "Man Overboard begins on MGL’s Small Stage at 20:00. The official schedule marks this performance as sold out."
+    },
+    {
+      "title": "WAVE RIDERS!",
+      "url": "https://www.galahala.com/en/program/wave-riders-27/34774/",
+      "source": "Gala Hala",
+      "type": "Club night · eclectic electronic",
+      "place": "Gala Hala · AKC Metelkova",
+      "startAt": "2026-11-06T22:00:00+01:00",
+      "endAt": null,
+      "id": "event-33-wave-riders",
+      "price": "€5 until 23:00 / €8 afterwards",
+      "languages": [],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": null,
+      "ticketUrl": "https://www.galahala.com/en/program/wave-riders-27/34774/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-23T07:15:00+02:00",
+      "description": "Torulsson and Skinar host an eclectic electronic club night from 22:00. Admission costs €5 until 23:00 and €8 afterwards."
     },
     {
       "id": "equinox-opera-2026-11-07",
@@ -657,7 +719,9 @@
       "startAt": "2026-11-07T20:00:00+01:00",
       "endAt": "2026-11-07T22:00:00+01:00",
       "price": "Free",
-      "languages": ["Music-led"],
+      "languages": [
+        "Music-led"
+      ],
       "touristFriendly": true,
       "familyFriendly": true,
       "accessibility": null,
@@ -665,44 +729,6 @@
       "status": "confirmed",
       "lastCheckedAt": "2026-10-26T06:58:00+01:00",
       "description": "Nuova Orchestra Ferruccio Busoni performs in the ZRC SAZU atrium from 20:00 to 22:00. Admission is free."
-    },
-    {
-      "title": "CODEFENDANTS (ZDA) + JAKOB'S CASTLE @ Gala hala",
-      "url": "https://www.galahala.com/en/program/codefendants/33559/",
-      "source": "Gala Hala",
-      "type": "Koncert · Metelkova",
-      "place": "Gala Hala · AKC Metelkova",
-      "startAt": "2026-11-03T20:00:00+01:00",
-      "endAt": null,
-      "id": "event-37-codefendants-zda-jakob-s-castle-gala-hala",
-      "price": "€23 advance / €28 on the day",
-      "languages": [],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": null,
-      "ticketUrl": "https://www.galahala.com/en/program/codefendants/33559/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-26T06:58:00+01:00",
-      "description": "US groups Codefendants and Jakob's Castle perform at Gala Hala at 20:00. Tickets cost €23 in advance or €28 on the day."
-    },
-    {
-      "title": "WAVE RIDERS!",
-      "url": "https://www.galahala.com/en/program/wave-riders-27/34774/",
-      "source": "Gala Hala",
-      "type": "Club night · eclectic electronic",
-      "place": "Gala Hala · AKC Metelkova",
-      "startAt": "2026-11-06T22:00:00+01:00",
-      "endAt": null,
-      "id": "event-33-wave-riders",
-      "price": "€5 until 23:00 / €8 afterwards",
-      "languages": [],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": null,
-      "ticketUrl": "https://www.galahala.com/en/program/wave-riders-27/34774/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-23T07:15:00+02:00",
-      "description": "Torulsson and Skinar host an eclectic electronic club night from 22:00. Admission costs €5 until 23:00 and €8 afterwards."
     },
     {
       "title": ".travnik - 5 LET ALBUMA PUBECI NE JOČEJO @ Gala hala",
@@ -778,7 +804,9 @@
       "startAt": "2026-11-09T17:00:00+01:00",
       "endAt": null,
       "price": null,
-      "languages": ["Slovenian"],
+      "languages": [
+        "Slovenian"
+      ],
       "touristFriendly": false,
       "familyFriendly": false,
       "accessibility": null,
@@ -786,6 +814,16 @@
       "status": "confirmed",
       "lastCheckedAt": "2026-10-26T06:58:00+01:00",
       "description": "This practical Concert Academy workshop covers post-production and accounting at Kino Šiška from 17:00. It is primarily intended for young people interested in concert and festival production."
+    },
+    {
+      "title": "KONCERTNA AKADEMIJA @ KINO ŠIŠKA: POSTPRODUKCIJA, RAČUNOVODSTVO",
+      "url": "https://www.galahala.com/",
+      "source": "Gala Hala",
+      "type": "Koncert · Metelkova",
+      "place": "Gala Hala · AKC Metelkova",
+      "startAt": "2026-11-09T17:00:00+01:00",
+      "endAt": "",
+      "id": "event-41-koncertna-akademija-kino-i-ka-postprodukcija-ra-unovodstvo"
     }
   ]
 }
