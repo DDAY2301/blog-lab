@@ -1,0 +1,30 @@
+{
+  "category": "dediscina",
+  "errors": [
+    "clanek_brez_slovenskega_konteksta",
+    "viri_ne_podpirajo_slovenske_rubrike"
+  ],
+  "article": {
+    "title": "PimpBunny et les 49+ sites porno OnlyFans comme PimpBunny.com !"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "lead_url": "https://thepornguy.org/fr/pimpbunny/",
+      "title": "PimpBunny et les 49+ sites porno OnlyFans comme PimpBunny.com !",
+      "errors": [
+        "clanek_brez_slovenskega_konteksta",
+        "viri_ne_podpirajo_slovenske_rubrike"
+      ]
+    },
+    {
+      "attempt": 2,
+      "lead_url": "https://idolinsights.com/katseye-members/",
+      "title": "KATSEYE Members Profile (2026)",
+      "errors": [
+        "clanek_brez_slovenskega_konteksta",
+        "viri_ne_podpirajo_slovenske_rubrike"
+      ]
+    }
+  ]
+}
