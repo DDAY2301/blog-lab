@@ -1,19 +1,20 @@
 {
-  "last_success": "2026-10-26T18:39:50+01:00",
+  "last_success": "2026-10-26T18:54:34+01:00",
   "last_failure": "2026-09-21T20:56:52+02:00",
   "consecutive_failures": 0,
   "posts_date": "2026-10-26",
-  "posts_today": 2,
-  "last_output": "turisticna-sezona-pred-vrati-slovenija-stavi-na-kakovost-namesto-mnozic-b322aeb8",
+  "posts_today": 3,
+  "last_output": "tragedija-pod-vrhom-triglava-67-letnik-omahnil-v-globino-in-umrl-foto-504d5532",
   "last_error": null,
   "agent_version": "3.0.0-learning-guarded-fallback",
-  "current_category": "sezonsko",
-  "scheduled_posts_today": 2,
+  "current_category": "gore",
+  "scheduled_posts_today": 3,
   "manual_posts_today": 0,
   "writer_mode": "deterministic_fallback",
   "scheduled_slots_done": [
     "2026-10-26|07:35|kolesarstvo",
-    "2026-10-26|13:30|sezonsko"
+    "2026-10-26|13:30|sezonsko",
+    "2026-10-26|16:20|gore"
   ],
   "scheduled_slots_deferred": [
     "2026-10-26|10:45|dediscina"

@@ -5165,5 +5165,33 @@
     "provider": "google-news-si",
     "processed_at": "2026-10-26T18:39:50+01:00",
     "output_id": "turisticna-sezona-pred-vrati-slovenija-stavi-na-kakovost-namesto-mnozic-b322aeb8"
+  },
+  {
+    "source_name": "Slovenske novice",
+    "category": "gore",
+    "title": "Tragedija pod vrhom Triglava: 67-letnik omahnil v globino in umrl (FOTO) - Slovenske novice",
+    "url": "https://news.google.com/rss/articles/CBMikgJBVV95cUxQaFc4Y3dEaHQ3Uk5DTnljR0RjcVp0dTFBd003YzNfWWVUR0hPTzlhUHN6bTI3bVRaY3lSWHFfU2FRQUMzS2RFWV84aXh1bTktcDFJSzRLeVNoZDE2eS1GeC0wRmNURWp5R0Nibnh4RGNxQWU1WWxlUUs3OE9DR1NEVjAza2tMcVkxVjl2bkphQVppMkNfc0t3YWI4N19IeU03SU5Wcm9CUi1hc1FLLWVCWjNGc1FFMzE1YnFSQW42VU5QUWhKRW80SUZYNHotTERSUG5samdMbFNRNHNyWExUcllYeks0Q2t5MkhOb3JTTmtISlBnZkV3cGI0QThJZ3ZxRmRhTGZxLXRvMUZjQ3JmaVVR?oc=5",
+    "summary": "Tragedija pod vrhom Triglava: 67-letnik omahnil v globino in umrl (FOTO) Slovenske novice",
+    "published": "Mon, 07 Sep 2026 07:00:00 GMT",
+    "image_url": "",
+    "video_url": "",
+    "hash": "5155e084a6fae81e62c6af283166fe58b7d32d6b622b9a86d93ba0976f7ca7e4",
+    "provider": "google-news-si",
+    "processed_at": "2026-10-26T18:54:34+01:00",
+    "output_id": "tragedija-pod-vrhom-triglava-67-letnik-omahnil-v-globino-in-umrl-foto-504d5532"
+  },
+  {
+    "source_name": "Dnevnik",
+    "category": "gore",
+    "title": "Tragedija pod Triglavom: planinec pred očmi prijatelja omahnil v globino - Dnevnik",
+    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQTmMtRy04d3UwS0tDdS1PR0V1d3lXU1hLYjlkbmpOTmUtaVVTSjdaV0w1WnFoOTB4ZE50bFJ2SmFUSEp0dzFsU2ktVEFIVVRRdEFNb2QzLUxNcG94Q1ZTY0hvejZBQmNGMXJRdHBSMmxRRjBnYkEwSFFNNTFNbmdTMEJXbG5oa1pOZ29wNHZrNW9zRVFqRnFJOHN3cDFGek00SVoyMFliaVFPazlqSVc1Zl9sWnJ1eXZfU2c?oc=5",
+    "summary": "Tragedija pod Triglavom: planinec pred očmi prijatelja omahnil v globino Dnevnik",
+    "published": "Mon, 07 Sep 2026 07:00:00 GMT",
+    "image_url": "",
+    "video_url": "",
+    "hash": "b996feb6c345c66b9e904c2d0fdf0b2dcc3be9e2916e92ed75ba6ba00c1b1e03",
+    "provider": "google-news-si",
+    "processed_at": "2026-10-26T18:54:34+01:00",
+    "output_id": "tragedija-pod-vrhom-triglava-67-letnik-omahnil-v-globino-in-umrl-foto-504d5532"
   }
 ]
