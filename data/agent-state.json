@@ -5,7 +5,7 @@
   "posts_date": "2026-10-26",
   "posts_today": 1,
   "last_output": "kje-so-v-sloveniji-daljinske-kolesarske-poti-eurovelo-in-kako-nadzirajo-njihovo-kakovost-dc51abee",
-  "last_error": "besedilo_ni_v_slovenscini",
+  "last_error": "fallback_no_fresh_evidence",
   "agent_version": "3.0.0-learning-guarded-fallback",
   "current_category": "dediscina",
   "scheduled_posts_today": 1,
