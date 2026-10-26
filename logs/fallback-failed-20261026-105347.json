@@ -1,0 +1,21 @@
+{
+  "category": "dediscina",
+  "errors": [
+    "clanek_brez_slovenskega_konteksta",
+    "viri_ne_podpirajo_slovenske_rubrike"
+  ],
+  "article": {
+    "title": "Top 10 Best Ransomware Protection Solutions in 2026"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "lead_url": "https://cybersecuritynews.com/best-ransomware-protection-solutions-2/",
+      "title": "Top 10 Best Ransomware Protection Solutions in 2026",
+      "errors": [
+        "clanek_brez_slovenskega_konteksta",
+        "viri_ne_podpirajo_slovenske_rubrike"
+      ]
+    }
+  ]
+}
