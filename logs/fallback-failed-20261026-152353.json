@@ -1,0 +1,19 @@
+{
+  "category": "dediscina",
+  "errors": [
+    "besedilo_ni_v_slovenscini"
+  ],
+  "article": {
+    "title": "Brian Tooley Racing - Camshafts"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "lead_url": "https://briantooleyracing.com/camshafts-lifters-pushrods/camshafts.html",
+      "title": "Brian Tooley Racing - Camshafts",
+      "errors": [
+        "besedilo_ni_v_slovenscini"
+      ]
+    }
+  ]
+}
