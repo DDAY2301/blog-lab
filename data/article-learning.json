@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-26T14:04:38+01:00",
-  "loop_count": 7894,
+  "updated_at": "2026-10-26T23:41:33+01:00",
+  "loop_count": 7895,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-26T14:04:08+01:00",
+      "last_learning_run": "2026-10-26T23:41:13+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 148172,
-          "last_seen": "2026-10-26T14:04:08+01:00",
-          "last_title": "Premier Janša ob ogledu finala mladih košarkarjev udaril po RTV Slovenija: »Plačujemo vas več kot Inštitut Jožef Stefan!« - Slovenske novice",
+          "seen": 148181,
+          "last_seen": "2026-10-26T23:41:13+01:00",
+          "last_title": "Kje gledati finale košarkarskega EP med Slovenci in Italijani? Televizijski prenos bo! - Dnevnik",
           "last_provider": "google-news-si",
-          "published": 476848,
+          "published": 476910,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,7 +227,7 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 10,
+      "current_source_count": 9,
       "example_titles": {
         "news.google.com": [
           "Slovenke po veliki vrnitvi in zmagi nad Latvijo na pragu osmine finala - rtvslo.si",
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-26T14:04:18+01:00",
+      "last_learning_run": "2026-10-26T23:41:23+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -279,11 +279,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 176508,
-          "last_seen": "2026-10-26T14:04:18+01:00",
-          "last_title": "Janša ali Golob? Anketa je pokazala, komu po uporu v Novem mestu zaupa ljudstvo - Žurnal24",
+          "seen": 176525,
+          "last_seen": "2026-10-26T23:41:23+01:00",
+          "last_title": "Janša diplomatom: Zunanjo politiko vodi vlada in samo to je uradna politika Slovenije - N1 Slovenija",
           "last_provider": "google-news-si",
-          "published": 524795,
+          "published": 524860,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -385,7 +385,7 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 18,
+      "current_source_count": 17,
       "example_titles": {
         "news.google.com": [
           "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
@@ -395,7 +395,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-26T14:04:38+01:00",
+      "last_learning_run": "2026-10-26T23:41:33+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -483,12 +483,12 @@
           "last_provider": "bing-web"
         },
         "news.google.com": {
-          "score": 2.506,
-          "seen": 202923,
-          "last_seen": "2026-10-26T14:04:38+01:00",
-          "last_title": "Kajzer: zunanjepolitična strategija mora odražati aktualno geopolitično okolje - 24ur.com",
+          "score": 2.508,
+          "seen": 202947,
+          "last_seen": "2026-10-26T23:41:33+01:00",
+          "last_title": "Vreme se bo danes hitro obrnilo: nevihte bodo zajele večji del Slovenije, na Primorskem tudi burja - Dnevne Novice",
           "last_provider": "google-news-si",
-          "published": 327671,
+          "published": 327695,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -583,7 +583,7 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 25,
+      "current_source_count": 24,
       "example_titles": {
         "news.google.com": [
           "(AKTUALNO) Še danes v prodaji 36. št. revije Demokracija: 30 let Demokracije, ki udejanja pravico vedeti več! Načrt za demografsko obnovo sl",
@@ -594,6 +594,18 @@
     }
   },
   "recent_articles": [
+    {
+      "id": "tragedija-pod-vrhom-triglava-67-letnik-omahnil-v-globino-in-umrl-foto-504d5532",
+      "title": "Tragedija pod vrhom Triglava: 67-letnik omahnil v globino in umrl (FOTO)",
+      "category": "Gore & traili",
+      "createdAt": "2026-10-26T18:54:34+01:00"
+    },
+    {
+      "id": "turisticna-sezona-pred-vrati-slovenija-stavi-na-kakovost-namesto-mnozic-b322aeb8",
+      "title": "Turistična sezona pred vrati, Slovenija stavi na kakovost namesto množic",
+      "category": "Sezonsko",
+      "createdAt": "2026-10-26T18:39:50+01:00"
+    },
     {
       "id": "kje-so-v-sloveniji-daljinske-kolesarske-poti-eurovelo-in-kako-nadzirajo-njihovo-kakovost-dc51abee",
       "title": "Kje so v Sloveniji daljinske kolesarske poti Eurovelo in kako nadzirajo njihovo kakovost",
@@ -653,73 +665,9 @@
       "title": "Nova kolesarska pot bo povezala Slovenijo, Italijo in Hrvaško - megafon.si",
       "category": "Kolesarstvo",
       "createdAt": "2026-10-20T07:39:31+02:00"
-    },
-    {
-      "id": "ali-slovenija-postaja-nova-zvezda-buticnega-turizma-24ur-com-0302e27d",
-      "title": "Ali Slovenija postaja nova zvezda butičnega turizma? - 24ur.com",
-      "category": "Sezonsko",
-      "createdAt": "2026-10-19T23:54:31+02:00"
-    },
-    {
-      "id": "contact-old-7296ec1a",
-      "title": "Contact old",
-      "category": "Gore & traili",
-      "createdAt": "2026-10-18T21:23:41+02:00"
     }
   ],
   "recent_failures": [
-    {
-      "file": "fallback-failed-20261024-200948.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek",
-        "manjka_fotografija"
-      ],
-      "title": "Ste pripravljeni? Kmalu s kolesom od Ljubljane do Beograda - Dnevnik"
-    },
-    {
-      "file": "fallback-failed-20261024-202421.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek",
-        "manjka_fotografija"
-      ],
-      "title": "Ste pripravljeni? Kmalu s kolesom od Ljubljane do Beograda - Dnevnik"
-    },
-    {
-      "file": "fallback-failed-20261024-204031.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek",
-        "manjka_fotografija"
-      ],
-      "title": "Ste pripravljeni? Kmalu s kolesom od Ljubljane do Beograda - Dnevnik"
-    },
-    {
-      "file": "fallback-failed-20261024-210744.json",
-      "category": "gourmet",
-      "errors": [
-        "prekratek"
-      ],
-      "title": "Gostilna Pri planinskem orlu je, z nekaj primorskega navdiha, znova odprta - Kamnik.info"
-    },
-    {
-      "file": "fallback-failed-20261024-211001.json",
-      "category": "gourmet",
-      "errors": [
-        "prekratek"
-      ],
-      "title": "Gostilna Pri planinskem orlu je, z nekaj primorskega navdiha, znova odprta - Kamnik.info"
-    },
-    {
-      "file": "fallback-failed-20261025-133451.json",
-      "category": "sezonsko",
-      "errors": [
-        "prekratek",
-        "manjka_fotografija"
-      ],
-      "title": "Iščete idejo za jesenski izlet? V Ljubljani se predstavlja destinacija, ki je Slovencem presenetljivo blizu - Metropolitan.si"
-    },
     {
       "file": "fallback-failed-20261025-153611.json",
       "category": "sezonsko",
@@ -763,18 +711,73 @@
       "title": "Top 10 Best Ransomware Protection Solutions in 2026"
     },
     {
+      "file": "fallback-failed-20261026-140908.json",
+      "category": "dediscina",
+      "errors": [
+        "clanek_brez_slovenskega_konteksta",
+        "viri_ne_podpirajo_slovenske_rubrike",
+        "surov_spletni_izpis"
+      ],
+      "title": "The Best Online Music Streaming Services We've Tested for 2025"
+    },
+    {
+      "file": "fallback-failed-20261026-152353.json",
+      "category": "dediscina",
+      "errors": [
+        "besedilo_ni_v_slovenscini"
+      ],
+      "title": "Brian Tooley Racing - Camshafts"
+    },
+    {
+      "file": "fallback-failed-20261026-172406.json",
+      "category": "dediscina",
+      "errors": [
+        "clanek_brez_slovenskega_konteksta",
+        "viri_ne_podpirajo_slovenske_rubrike"
+      ],
+      "title": "Month of Giving - Jersey Mike's Subs"
+    },
+    {
+      "file": "fallback-failed-20261026-182052.json",
+      "category": "dediscina",
+      "errors": [
+        "clanek_brez_slovenskega_konteksta",
+        "viri_ne_podpirajo_slovenske_rubrike"
+      ],
+      "title": "PimpBunny et les 49+ sites porno OnlyFans comme PimpBunny.com !"
+    },
+    {
+      "file": "fallback-failed-20261026-192518.json",
+      "category": "gourmet",
+      "errors": [
+        "prekratek"
+      ],
+      "title": "Gostilna Pri planinskem orlu je, z nekaj primorskega navdiha, znova odprta - Kamnik.info"
+    },
+    {
       "file": "agent-state",
       "category": "dediscina",
       "errors": [
         "fallback_no_fresh_evidence"
       ]
+    },
+    {
+      "file": "agent-state",
+      "category": "dediscina",
+      "errors": [
+        "ponavljanje"
+      ],
+      "slot": "2026-10-26|19:10|gourmet"
     }
   ],
   "failure_summary": {
-    "prekratek": 19,
-    "manjka_fotografija": 13,
-    "clanek_brez_slovenskega_konteksta": 1,
-    "viri_ne_podpirajo_slovenske_rubrike": 1,
-    "fallback_no_fresh_evidence": 1
+    "prekratek": 15,
+    "manjka_fotografija": 9,
+    "clanek_brez_slovenskega_konteksta": 4,
+    "viri_ne_podpirajo_slovenske_rubrike": 4,
+    "surov_spletni_izpis": 1,
+    "besedilo_ni_v_slovenscini": 1,
+    "fallback_no_fresh_evidence": 1,
+    "ponavljanje": 1
   }
 }
