@@ -1,10 +1,16 @@
 {
-  "updatedAt": "2026-10-26T07:00:49+01:00",
+  "updatedAt": "2026-10-26T07:03:10+01:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
+    "Ljubljana Castle",
+    "MGL",
+    "Cankarjev dom",
+    "SNG Opera and Ballet Ljubljana",
     "Kino Šiška",
     "Gala Hala",
+    "Fever",
+    "Festival Ljubljana",
     "Klub K4",
     "Cirkus Klub"
   ],
@@ -30,7 +36,7 @@
       "description": "Aleksandra Atanasovski and Maja Licul: Ehosistem is confirmed at Pentagonal Tower · Ljubljana Castle. Check the official source for any late programme or ticket changes."
     },
     {
-      "price": "€23 advance / €28 on the day",
+      "price": null,
       "languages": [],
       "touristFriendly": true,
       "familyFriendly": true,
@@ -518,7 +524,7 @@
       "startAt": "2026-11-03T20:00:00+01:00",
       "endAt": null,
       "id": "event-37-codefendants-zda-jakob-s-castle-gala-hala",
-      "price": "€23 advance / €28 on the day",
+      "price": null,
       "languages": [],
       "touristFriendly": true,
       "familyFriendly": false,
@@ -796,7 +802,7 @@
     },
     {
       "id": "concert-academy-postproduction-accounting-2026-11-09",
-      "title": "Concert Academy: Post-production and Accounting",
+      "title": "KONCERTNA AKADEMIJA @ KINO ŠIŠKA: POSTPRODUKCIJA, RAČUNOVODSTVO",
       "url": "https://www.galahala.com/program/koncertna-akademija-kino-siska-postprodukcija-racunovodstvo/34670/",
       "source": "Gala Hala / Kino Šiška",
       "type": "Workshop · concert production",
@@ -814,16 +820,6 @@
       "status": "confirmed",
       "lastCheckedAt": "2026-10-26T06:58:00+01:00",
       "description": "This practical Concert Academy workshop covers post-production and accounting at Kino Šiška from 17:00. It is primarily intended for young people interested in concert and festival production."
-    },
-    {
-      "title": "KONCERTNA AKADEMIJA @ KINO ŠIŠKA: POSTPRODUKCIJA, RAČUNOVODSTVO",
-      "url": "https://www.galahala.com/",
-      "source": "Gala Hala",
-      "type": "Koncert · Metelkova",
-      "place": "Gala Hala · AKC Metelkova",
-      "startAt": "2026-11-09T17:00:00+01:00",
-      "endAt": "",
-      "id": "event-41-koncertna-akademija-kino-i-ka-postprodukcija-ra-unovodstvo"
     }
   ]
 }
