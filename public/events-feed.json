@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-27T07:03:53+01:00",
-  "status": "partial",
+  "updatedAt": "2026-10-27T15:38:12+01:00",
+  "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
     "Ljubljana Castle",
@@ -14,9 +14,7 @@
     "Klub K4",
     "Cirkus Klub"
   ],
-  "sourcesFailed": [
-    "Visit Ljubljana: TimeoutError"
-  ],
+  "sourcesFailed": [],
   "items": [
     {
       "price": null,
