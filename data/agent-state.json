@@ -5,9 +5,9 @@
   "posts_date": "2026-10-27",
   "posts_today": 1,
   "last_output": "madzarski-pohodnik-je-se-vedno-ujet-v-slovenskih-gorah-nadaljevanje-akcije-ta-hip-mocno-og-35b8e058",
-  "last_error": null,
+  "last_error": "prekratek,manjka_fotografija",
   "agent_version": "3.0.0-learning-guarded-fallback",
-  "current_category": "gore",
+  "current_category": "kolesarstvo",
   "scheduled_posts_today": 1,
   "manual_posts_today": 0,
   "writer_mode": "deterministic_fallback",
@@ -20,11 +20,11 @@
     "2026-10-27|13:30|sezonsko"
   ],
   "last_editorial_hold": null,
-  "publisher_guardian_last_run": "2026-10-27T12:03:44+01:00",
+  "publisher_guardian_last_run": "2026-10-27T17:52:50+01:00",
   "publisher_guardian_last_action": {
     "category": "kolesarstvo",
     "slot": "2026-10-27|07:35|kolesarstvo",
-    "remaining_repairs": 1
+    "remaining_repairs": 2
   },
   "schedule_counter_normalized_at": "2026-10-07T16:45:00+02:00"
 }
