@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-26T22:04:23+01:00",
+  "updatedAt": "2026-10-27T06:15:00+01:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -131,65 +131,6 @@
       "startAt": "2026-10-26T10:00:00+01:00",
       "ticketUrl": "https://www.ljubljanskigrad.si/sl/dogodki/jesenske-pocitnice/",
       "description": "Friderik’s castle challenges and creative workshops run daily from 10:00 to 13:00 for first-triad primary pupils. A daily ticket costs €7; places are limited and children may attend without an accompanying adult."
-    },
-    {
-      "price": null,
-      "languages": [
-        "Slovenian"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": true,
-      "accessibility": null,
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-26T06:58:00+01:00",
-      "endAt": null,
-      "id": "theatre-for-a-dummy-2026-10-26",
-      "title": "Theatre for a Dummy",
-      "url": "https://www.mgl.si/en/schedule/",
-      "source": "MGL",
-      "type": "Educational theatre",
-      "place": "MGL Small Stage · Ljubljana",
-      "startAt": "2026-10-26T12:00:00+01:00",
-      "ticketUrl": "https://www.mgl.si/en/schedule/",
-      "description": "MGL’s educational production Theatre for a Dummy begins at 12:00 on the Small Stage. The official schedule currently lists tickets."
-    },
-    {
-      "price": "€26 advance / €29 on the day / €19.50 reduced",
-      "languages": [],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": null,
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-26T06:58:00+01:00",
-      "endAt": null,
-      "id": "and-so-i-watch-you-from-afar-caspian-2026-10-26",
-      "title": "And So I Watch You from Afar & Caspian + OTAY:ONII",
-      "url": "https://www.kinosiska.si/en/dogodek/and-so-i-watch-you-from-afar-caspian/",
-      "source": "Kino Šiška",
-      "type": "Concert",
-      "place": "Katedrala Hall · Kino Šiška",
-      "startAt": "2026-10-26T19:00:00+01:00",
-      "ticketUrl": "https://www.kinosiska.si/en/dogodek/and-so-i-watch-you-from-afar-caspian/",
-      "description": "And So I Watch You from Afar and Caspian perform with special guest OTAY:ONII at 19:00. Tickets cost €26 in advance, €29 on the day or €19.50 at the reduced rate."
-    },
-    {
-      "price": null,
-      "languages": [],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": null,
-      "status": "sold_out",
-      "lastCheckedAt": "2026-10-26T06:58:00+01:00",
-      "endAt": null,
-      "id": "prima-facie-2026-10-26",
-      "title": "Prima Facie",
-      "url": "https://www.mgl.si/en/schedule/",
-      "source": "MGL",
-      "type": "Theatre · legal drama",
-      "place": "MGL Small Stage · Ljubljana",
-      "startAt": "2026-10-26T20:00:00+01:00",
-      "ticketUrl": "https://www.mgl.si/en/schedule/",
-      "description": "Prima Facie begins at 20:00 on the MGL Small Stage. The official schedule marks this performance as sold out."
     },
     {
       "id": "shortcuts-courvoisier-rothenberg-waits-2026-10-27",
