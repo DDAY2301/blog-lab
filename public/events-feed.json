@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-27T06:15:00+01:00",
+  "updatedAt": "2026-10-27T07:14:00+01:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -141,17 +141,60 @@
       "place": "Cankarjev dom · Ljubljana",
       "startAt": "2026-10-27T19:30:00+01:00",
       "endAt": null,
+      "price": "€18",
+      "languages": [
+        "Music-led"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": "Cankarjev dom publishes venue accessibility information; request accessible seating when booking.",
+      "ticketUrl": "https://vstopnice.cd-cc.si/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-27T07:14:00+01:00",
+      "description": "Courvoisier, Rothenberg and Waits perform at Cankarjev dom at 19:30. Consult the venue’s ticket page for the current price and accessible seating."
+    },
+    {
+      "id": "cracks-of-closeness-2026-10-27",
+      "title": "CRACKS OF CLOSENESS: fugue / flame / spasm",
+      "url": "https://www.kinosiska.si/en/dogodek/razpoke-blizine-fuga-plamen-krc/",
+      "source": "Kino Šiška",
+      "type": "Intermedia · new media performance",
+      "place": "Katedrala Hall · Kino Šiška",
+      "startAt": "2026-10-27T20:00:00+01:00",
+      "endAt": null,
+      "price": "€8 / €6 reduced",
+      "languages": [
+        "Slovenian",
+        "Poetry, sound and audiovisual performance"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": "Kino Šiška publishes general venue accessibility information; contact the venue for performance-specific arrangements.",
+      "ticketUrl": "https://www.kinosiska.si/en/dogodek/razpoke-blizine-fuga-plamen-krc/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-27T07:14:00+01:00",
+      "description": "The two-part new-media premiere combines poetry, voice, sound and real-time audiovisual imagery at 20:00. Admission is €8, or €6 at the reduced rate."
+    },
+    {
+      "id": "stereo-mcs-postponed-2026-10-28",
+      "title": "Stereo MC’s",
+      "url": "https://www.kinosiska.si/en/dogodek/",
+      "source": "Kino Šiška",
+      "type": "Concert · postponed",
+      "place": "Kino Šiška · Ljubljana",
+      "startAt": "2026-10-28T20:00:00+01:00",
+      "endAt": null,
       "price": null,
       "languages": [
         "Music-led"
       ],
       "touristFriendly": true,
       "familyFriendly": false,
-      "accessibility": null,
-      "ticketUrl": "https://vstopnice.cd-cc.si/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-26T06:58:00+01:00",
-      "description": "Courvoisier, Rothenberg and Waits perform at Cankarjev dom at 19:30. Consult the venue’s ticket page for the current price and accessible seating."
+      "accessibility": "Kino Šiška publishes general venue accessibility information.",
+      "ticketUrl": "https://www.kinosiska.si/en/dogodek/",
+      "status": "postponed",
+      "lastCheckedAt": "2026-10-27T07:14:00+01:00",
+      "description": "The concert originally listed for 28 October at 20:00 is officially marked as postponed. Do not travel for the original date; check Kino Šiška for a replacement date."
     },
     {
       "title": "BBBBBBB (JP), Mala Roza Muca & Pixel.Bambi, SsmKOSK",
@@ -415,6 +458,27 @@
       "description": "Salome begins on MGL’s Main Stage at 19:30. The official schedule currently lists tickets."
     },
     {
+      "id": "becoming-cankarjev-dom-2026-11-03",
+      "title": "(Be)coming",
+      "url": "https://www.cd-cc.si/en/culture/music/becoming",
+      "source": "Cankarjev dom",
+      "type": "Music and dance · premiere",
+      "place": "CD Club · Cankarjev dom",
+      "startAt": "2026-11-03T19:30:00+01:00",
+      "endAt": null,
+      "price": "€16 / €12 reduced",
+      "languages": [
+        "Music and dance-led"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": "Cankarjev dom publishes venue accessibility information; request accessible seating when booking.",
+      "ticketUrl": "https://vstopnice.cd-cc.si/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-27T07:14:00+01:00",
+      "description": "Maša Kagao Knez and an international ensemble premiere a music-dance contemplation at 19:30. Tickets cost €16, or €12 for eligible reduced-price visitors."
+    },
+    {
       "id": "gal-george-gjurin-gal25-2026-11-03",
       "title": "Gal George Gjurin – #Gal25",
       "url": "https://www.cd-cc.si/en",
@@ -495,6 +559,28 @@
       "status": "confirmed",
       "lastCheckedAt": "2026-10-26T06:58:00+01:00",
       "description": "Romantic Souls is scheduled on MGL’s Main Stage at 19:30. The official schedule currently lists tickets."
+    },
+    {
+      "id": "sleaford-mods-kino-siska-2026-11-04",
+      "title": "Sleaford Mods + mal pre mal",
+      "url": "https://www.kinosiska.si/en/dogodek/",
+      "source": "Kino Šiška",
+      "type": "Concert",
+      "place": "Kino Šiška · Ljubljana",
+      "startAt": "2026-11-04T20:00:00+01:00",
+      "endAt": null,
+      "price": null,
+      "languages": [
+        "English",
+        "Music-led"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": "Kino Šiška publishes general venue accessibility information; contact the venue for event-specific arrangements.",
+      "ticketUrl": "https://www.kinosiska.si/en/dogodek/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-27T07:14:00+01:00",
+      "description": "Sleaford Mods perform with mal pre mal at Kino Šiška at 20:00. Check the official event listing for current ticket price and availability."
     },
     {
       "id": "salome-mgl-2026-11-05",
@@ -619,6 +705,48 @@
       "description": "Man Overboard begins on MGL’s Small Stage at 20:00. The official schedule marks this performance as sold out."
     },
     {
+      "id": "liamere-ljubljana-castle-2026-11-06",
+      "title": "Liamere",
+      "url": "https://www.ljubljanskigrad.si/en/castle-events/liamere/",
+      "source": "Ljubljana Castle",
+      "type": "Concert · garage and trip-hop",
+      "place": "Rock Hall · Ljubljana Castle",
+      "startAt": "2026-11-06T20:00:00+01:00",
+      "endAt": "2026-11-06T23:00:00+01:00",
+      "price": "€11 including return funicular",
+      "languages": [
+        "Music-led"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": "Contact Ljubljana Castle before booking for step-free access arrangements to the Rock Hall.",
+      "ticketUrl": "https://www.ljubljanskigrad.si/en/castle-events/liamere/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-27T07:14:00+01:00",
+      "description": "Liamere perform at the Castle Jazz Club at 20:00; doors open at 19:00. The €11 ticket includes a return funicular journey, and seating is limited."
+    },
+    {
+      "id": "sment-2-kino-siska-2026-11-06",
+      "title": "šMENT #2: Svemirko, corto.alto, Nejc Pipp & Co., Zina band and IDZ",
+      "url": "https://www.kinosiska.si/en/dogodek/",
+      "source": "Kino Šiška",
+      "type": "Concert · showcase",
+      "place": "Kino Šiška · Ljubljana",
+      "startAt": "2026-11-06T20:00:00+01:00",
+      "endAt": null,
+      "price": null,
+      "languages": [
+        "Music-led"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": "Kino Šiška publishes general venue accessibility information; contact the venue for event-specific arrangements.",
+      "ticketUrl": "https://www.kinosiska.si/en/dogodek/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-27T07:14:00+01:00",
+      "description": "The second šMENT showcase presents five acts at Kino Šiška from 20:00. Check the official listing for current ticket price and availability."
+    },
+    {
       "title": "WAVE RIDERS!",
       "url": "https://www.galahala.com/en/program/wave-riders-27/34774/",
       "source": "Gala Hala",
@@ -676,6 +804,27 @@
       "status": "confirmed",
       "lastCheckedAt": "2026-10-26T06:58:00+01:00",
       "description": "Nuova Orchestra Ferruccio Busoni performs in the ZRC SAZU atrium from 20:00 to 22:00. Admission is free."
+    },
+    {
+      "id": "nate-smith-kino-siska-2026-11-07",
+      "title": "Nate Smith feat. CARRTOONS, J3PO and Hailey Niswanger",
+      "url": "https://www.kinosiska.si/en/dogodek/",
+      "source": "Kino Šiška",
+      "type": "Concert · jazz and groove",
+      "place": "Kino Šiška · Ljubljana",
+      "startAt": "2026-11-07T20:00:00+01:00",
+      "endAt": null,
+      "price": null,
+      "languages": [
+        "Music-led"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": "Kino Šiška publishes general venue accessibility information; contact the venue for event-specific arrangements.",
+      "ticketUrl": "https://www.kinosiska.si/en/dogodek/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-27T07:14:00+01:00",
+      "description": "Nate Smith performs with CARRTOONS, J3PO and Hailey Niswanger at 20:00. Check Kino Šiška for current ticket price and availability."
     },
     {
       "title": ".travnik - 5 LET ALBUMA PUBECI NE JOČEJO @ Gala hala",
@@ -761,6 +910,49 @@
       "status": "confirmed",
       "lastCheckedAt": "2026-10-26T06:58:00+01:00",
       "description": "This practical Concert Academy workshop covers post-production and accounting at Kino Šiška from 17:00. It is primarily intended for young people interested in concert and festival production."
+    },
+    {
+      "id": "miha-godec-reviviscence-2026-11-09",
+      "title": "Miha Godec: Reviviscence",
+      "url": "https://www.kinosiska.si/en/dogodek/miha-godec-reviviscence/",
+      "source": "Kino Šiška",
+      "type": "Intermedia · video installation",
+      "place": "Komuna Hall · Kino Šiška",
+      "startAt": "2026-11-09T19:00:00+01:00",
+      "endAt": "2026-11-10T20:00:00+01:00",
+      "price": "Free",
+      "languages": [
+        "Visual art",
+        "Opening programme may include Slovenian"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": true,
+      "accessibility": "Kino Šiška publishes general venue accessibility information.",
+      "ticketUrl": null,
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-27T07:14:00+01:00",
+      "description": "The free installation opens at 19:00 on 9 November after an 18:00 art-and-science round table and remains on view through 10 November. It explores threatened underwater algal forests through projections and spatial installation."
+    },
+    {
+      "id": "kristijan-krajncan-alchymia-xxi-2026-11-10",
+      "title": "Kristijan Krajnčan 5tet: Alchymia XXI",
+      "url": "https://cd-cc.si/en/culture/music/kristijan-krajncan-5tet-alchymia-xxi",
+      "source": "Cankarjev dom",
+      "type": "Concert · contemporary jazz",
+      "place": "CD Club · Cankarjev dom",
+      "startAt": "2026-11-10T19:30:00+01:00",
+      "endAt": null,
+      "price": "€16 / €12 reduced",
+      "languages": [
+        "Music-led"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": "Cankarjev dom publishes venue accessibility information; request accessible seating when booking.",
+      "ticketUrl": "https://vstopnice.cd-cc.si/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-27T07:14:00+01:00",
+      "description": "Kristijan Krajnčan’s quintet performs Alchymia XXI in the CD Club at 19:30. Tickets cost €16, or €12 for eligible reduced-price visitors."
     }
   ]
 }
