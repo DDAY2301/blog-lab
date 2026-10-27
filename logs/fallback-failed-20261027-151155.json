@@ -1,0 +1,46 @@
+{
+  "category": "sezonsko",
+  "errors": [
+    "prekratek",
+    "manjka_fotografija"
+  ],
+  "article": {
+    "title": "Nova sezona, novo zvišanje cen: za kampiranje boste zdaj mogli odšteti kar ... - Metropolitan.si"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "lead_url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFB3WmNaWmZsYzZ5bThRTUdiczhsbWM1SWRZRG1BNl9WWEZhVEQwZHo5bEIxZlRhRFVGT2FDeTVpU0J4U0lTNERweFR3S1J4UF9ob3dWU0k3UE1UQTUwOGNDUHQ1emg5SThkNkxaZ0luazJ5V2xEc0xqdTBR?oc=5",
+      "title": "Nova sezona, novo zvišanje cen: za kampiranje boste zdaj mogli odšteti kar ... - Metropolitan.si",
+      "errors": [
+        "prekratek",
+        "manjka_fotografija"
+      ]
+    },
+    {
+      "attempt": 2,
+      "lead_url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5md0hGX0NJYThjMDhCNnMxSy1SajVSUDBuTm9nN29oWUlWaW5QWFlZSUJ5RFFlZy1GbmxXOG0zNGJNR2R0OFBSRzNCdTNMd0FtVFVldzhnRjMzN2YzRW9WSWpWNlRIa1RSMjkwZTFjZw?oc=5",
+      "title": "Iščete idejo za jesenski izlet? V Ljubljani se predstavlja destinacija, ki je Slovencem presenetljivo blizu - Metropolitan.si",
+      "errors": [
+        "prekratek",
+        "manjka_fotografija"
+      ]
+    },
+    {
+      "attempt": 3,
+      "lead_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9SYUsydTk3OS1SSThSdUFndEtKTmlKX3Rmb0dkbUhjRk9udXIwbF9vMzZReVNUYXNvcmd6YVdOdFIwbXdLZEZaclVxR1A1VUxhLTRJNGkzNE80UmxSMnp4bzF2ZjdZcnZ6cnZRSTNxX2tZT3B0QVRiRWVIZw?oc=5",
+      "title": "Iz Slovenije v Italijo nekoliko drugače: Jesenska pot, na kateri je že vožnja del doživetja - dnevne-novice.com",
+      "errors": [
+        "prekratek"
+      ]
+    },
+    {
+      "attempt": 4,
+      "lead_url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE12WFBsa1BPOVF1VjY1aDU3dVhTTHZiTTVBaEZQQk14X1Nia0NLWnFUYzd4Vkk4VkYwT0QzQl9DSmNaV0t1Qm41UWVZYnVYN2lFb3FzZmtWTEdtWFN1cGd6RmlUWFB1TjQyNEcxXy0tR3VMYXBTRkRDcVlR?oc=5",
+      "title": "27. september je Svetovni dan turizma: Kaj se bo ta vikend dogajalo po Sloveniji? - dnevne-novice.com",
+      "errors": [
+        "prekratek"
+      ]
+    }
+  ]
+}

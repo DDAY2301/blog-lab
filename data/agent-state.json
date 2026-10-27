@@ -5,21 +5,22 @@
   "posts_date": "2026-10-27",
   "posts_today": 0,
   "last_output": "tragedija-pod-vrhom-triglava-67-letnik-omahnil-v-globino-in-umrl-foto-504d5532",
-  "last_error": "prekratek",
+  "last_error": "prekratek,manjka_fotografija",
   "agent_version": "3.0.0-learning-guarded-fallback",
-  "current_category": "dediscina",
+  "current_category": "sezonsko",
   "scheduled_posts_today": 0,
   "manual_posts_today": 0,
   "writer_mode": "workers_ai",
   "scheduled_slots_done": [],
   "scheduled_slots_deferred": [
     "2026-10-27|07:35|kolesarstvo",
-    "2026-10-27|10:45|dediscina"
+    "2026-10-27|10:45|dediscina",
+    "2026-10-27|13:30|sezonsko"
   ],
   "last_editorial_hold": {
-    "slot": "2026-10-27|10:45|dediscina",
-    "reason": "naslov_ni_v_rubriki,clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike,besedilo_ni_v_slovenscini",
-    "at": "2026-10-27T14:54:53+01:00"
+    "slot": "2026-10-27|13:30|sezonsko",
+    "reason": "manjka_fotografija,ponavljanje",
+    "at": "2026-10-27T15:11:32+01:00"
   },
   "publisher_guardian_last_run": "2026-10-27T12:03:44+01:00",
   "publisher_guardian_last_action": {
