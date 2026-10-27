@@ -5,9 +5,9 @@
   "posts_date": "2026-10-27",
   "posts_today": 2,
   "last_output": "kulinarika-slovenije-zajamcena-tradicionalna-posebnost-prehrana-si-7d34f2d5",
-  "last_error": null,
+  "last_error": "prekratek,manjka_fotografija",
   "agent_version": "2.7.0",
-  "current_category": "gourmet",
+  "current_category": "kolesarstvo",
   "scheduled_posts_today": 2,
   "manual_posts_today": 0,
   "writer_mode": "workers_ai",
@@ -21,7 +21,7 @@
     "2026-10-27|13:30|sezonsko"
   ],
   "last_editorial_hold": null,
-  "publisher_guardian_last_run": "2026-10-27T17:52:50+01:00",
+  "publisher_guardian_last_run": "2026-10-27T22:29:52+01:00",
   "publisher_guardian_last_action": {
     "category": "kolesarstvo",
     "slot": "2026-10-27|07:35|kolesarstvo",
