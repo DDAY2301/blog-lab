@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-26T23:41:33+01:00",
-  "loop_count": 7895,
+  "updated_at": "2026-10-27T06:06:44+01:00",
+  "loop_count": 7896,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-26T23:41:13+01:00",
+      "last_learning_run": "2026-10-27T06:06:23+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 148181,
-          "last_seen": "2026-10-26T23:41:13+01:00",
+          "seen": 148188,
+          "last_seen": "2026-10-27T06:06:23+01:00",
           "last_title": "Kje gledati finale košarkarskega EP med Slovenci in Italijani? Televizijski prenos bo! - Dnevnik",
           "last_provider": "google-news-si",
-          "published": 476910,
+          "published": 476972,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,17 +227,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 9,
+      "current_source_count": 7,
       "example_titles": {
         "news.google.com": [
-          "Slovenke po veliki vrnitvi in zmagi nad Latvijo na pragu osmine finala - rtvslo.si",
+          "Največji šok: Italijane potolkel malček, Slovenija po finale v tem terminu - Ekipa",
           "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
           "Kot v sanjah: Slovenija že drugič v dveh tednih evropski prvak! (VIDEO) - Šport TV"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-26T23:41:23+01:00",
+      "last_learning_run": "2026-10-27T06:06:34+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -279,11 +279,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 176525,
-          "last_seen": "2026-10-26T23:41:23+01:00",
-          "last_title": "Janša diplomatom: Zunanjo politiko vodi vlada in samo to je uradna politika Slovenije - N1 Slovenija",
+          "seen": 176544,
+          "last_seen": "2026-10-27T06:06:34+01:00",
+          "last_title": "Janša ali Golob? Anketa je pokazala, komu po uporu v Novem mestu zaupa ljudstvo - Žurnal24",
           "last_provider": "google-news-si",
-          "published": 524860,
+          "published": 524925,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -385,7 +385,7 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 17,
+      "current_source_count": 19,
       "example_titles": {
         "news.google.com": [
           "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
@@ -395,7 +395,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-26T23:41:33+01:00",
+      "last_learning_run": "2026-10-27T06:06:44+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -483,12 +483,12 @@
           "last_provider": "bing-web"
         },
         "news.google.com": {
-          "score": 2.508,
-          "seen": 202947,
-          "last_seen": "2026-10-26T23:41:33+01:00",
-          "last_title": "Vreme se bo danes hitro obrnilo: nevihte bodo zajele večji del Slovenije, na Primorskem tudi burja - Dnevne Novice",
-          "last_provider": "google-news-si",
-          "published": 327695,
+          "score": 2.506,
+          "seen": 202961,
+          "last_seen": "2026-10-27T06:06:44+01:00",
+          "last_title": "Slovenija preprečila pristanek izraelskega letala: tako se odziva Fraport - Info360",
+          "last_provider": "google-news-global",
+          "published": 327719,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -583,12 +583,12 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 24,
+      "current_source_count": 14,
       "example_titles": {
         "news.google.com": [
-          "(AKTUALNO) Še danes v prodaji 36. št. revije Demokracija: 30 let Demokracije, ki udejanja pravico vedeti več! Načrt za demografsko obnovo sl",
-          "Janša napoveduje velike spremembe: Čez 15 let šol, kot jih poznamo danes, morda ne bo več! - Najdi.si novice",
-          "Revolut odpovedoval tudi v Sloveniji. Kaj imajo z izpadom Google Rusija, Ukrajina in napadi na podatkovne centre? - MojaObčina.si"
+          "Če bi bile danes volitve bi močno zmagala SDS. Tudi interventni zakon bi uspel. - e-Maribor",
+          "Kako svet vidi Slovenijo danes in kako je postala tako vroča evropska destinacija - Dnevnik",
+          "Slovenska glasbenica ostro nad aktualno oblast: \"Ne vem, ali naj temu rečem ironija, paradoks ali vzporedni svet\" - Večer"
         ]
       }
     }
