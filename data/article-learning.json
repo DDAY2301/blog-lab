@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-27T13:13:15+01:00",
-  "loop_count": 7897,
+  "updated_at": "2026-10-27T19:05:15+01:00",
+  "loop_count": 7898,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-27T13:12:52+01:00",
+      "last_learning_run": "2026-10-27T19:04:43+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 148195,
-          "last_seen": "2026-10-27T13:12:52+01:00",
+          "seen": 148203,
+          "last_seen": "2026-10-27T19:04:43+01:00",
           "last_title": "Kje gledati finale košarkarskega EP med Slovenci in Italijani? Televizijski prenos bo! - Dnevnik",
           "last_provider": "google-news-si",
-          "published": 477034,
+          "published": 477096,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,7 +227,7 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 7,
+      "current_source_count": 8,
       "example_titles": {
         "news.google.com": [
           "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-27T13:13:05+01:00",
+      "last_learning_run": "2026-10-27T19:04:55+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -279,11 +279,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 176559,
-          "last_seen": "2026-10-27T13:13:05+01:00",
-          "last_title": "Njene hite je prepevala vsa Slovenija, potem pa je utonila v pozabo ... - Zadovoljna.si",
+          "seen": 176578,
+          "last_seen": "2026-10-27T19:04:55+01:00",
+          "last_title": "Janša ali Golob? Anketa je pokazala, komu po uporu v Novem mestu zaupa ljudstvo - Žurnal24",
           "last_provider": "google-news-si",
-          "published": 524990,
+          "published": 525055,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -385,17 +385,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 15,
+      "current_source_count": 19,
       "example_titles": {
         "news.google.com": [
-          "»Suverenost ni bila podarjena«: Lotrič pozval k odgovornosti za prihodnost Slovenije - Mariborinfo.com",
+          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
           "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer",
-          "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si"
+          "Pirc Musar: Ne bom tiho, ko zunanja politika ne bo skladna z ustavnimi vrednotami države - Siol.net"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-27T13:13:15+01:00",
+      "last_learning_run": "2026-10-27T19:05:15+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -483,12 +483,12 @@
           "last_provider": "bing-web"
         },
         "news.google.com": {
-          "score": 2.508,
-          "seen": 202985,
-          "last_seen": "2026-10-27T13:13:15+01:00",
-          "last_title": "Aktualno: Strateška povezava Etrela in vietnamskega Vinfasta se začenja v Sloveniji Novice - AVTO FOKUS -",
+          "score": 2.515,
+          "seen": 203010,
+          "last_seen": "2026-10-27T19:05:15+01:00",
+          "last_title": "Vreme se bo danes hitro obrnilo: nevihte bodo zajele večji del Slovenije, na Primorskem tudi burja - Dnevne Novice",
           "last_provider": "google-news-si",
-          "published": 327743,
+          "published": 327764,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -583,7 +583,7 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 24,
+      "current_source_count": 25,
       "example_titles": {
         "news.google.com": [
           "(AKTUALNO) Še danes v prodaji 36. št. revije Demokracija: 30 let Demokracije, ki udejanja pravico vedeti več! Načrt za demografsko obnovo sl",
@@ -594,6 +594,12 @@
     }
   },
   "recent_articles": [
+    {
+      "id": "madzarski-pohodnik-je-se-vedno-ujet-v-slovenskih-gorah-nadaljevanje-akcije-ta-hip-mocno-og-35b8e058",
+      "title": "Madžarski pohodnik je še vedno ujet v slovenskih gorah: \"Nadaljevanje akcije ta hip močno ogrožajoče za gorske…",
+      "category": "Gore & traili",
+      "createdAt": "2026-10-27T16:24:47+01:00"
+    },
     {
       "id": "tragedija-pod-vrhom-triglava-67-letnik-omahnil-v-globino-in-umrl-foto-504d5532",
       "title": "Tragedija pod vrhom Triglava: 67-letnik omahnil v globino in umrl (FOTO)",
@@ -659,88 +665,9 @@
       "title": "S kolesom na vlak in odkrij čudovito Koroško - Vandraj",
       "category": "Kolesarstvo",
       "createdAt": "2026-10-21T07:39:36+02:00"
-    },
-    {
-      "id": "nova-kolesarska-pot-bo-povezala-slovenijo-italijo-in-hrvasko-megafon-si-42223e2a",
-      "title": "Nova kolesarska pot bo povezala Slovenijo, Italijo in Hrvaško - megafon.si",
-      "category": "Kolesarstvo",
-      "createdAt": "2026-10-20T07:39:31+02:00"
     }
   ],
   "recent_failures": [
-    {
-      "file": "fallback-failed-20261027-110847.json",
-      "category": "dediscina",
-      "errors": [
-        "prekratek"
-      ],
-      "title": "Poletna muzejska noč v znamenju kulture, dediščine in umetnosti - ekopercapodistria.si"
-    },
-    {
-      "file": "fallback-failed-20261027-112401.json",
-      "category": "dediscina",
-      "errors": [
-        "prekratek"
-      ],
-      "title": "Judovska tradicija v Sloveniji: Lendava naredila POMEMBEN korak! - Metropolitan.si"
-    },
-    {
-      "file": "fallback-failed-20261027-113903.json",
-      "category": "dediscina",
-      "errors": [
-        "prekratek"
-      ],
-      "title": "Judovska tradicija v Sloveniji: Lendava naredila POMEMBEN korak! - Metropolitan.si"
-    },
-    {
-      "file": "fallback-failed-20261027-115353.json",
-      "category": "dediscina",
-      "errors": [
-        "prekratek"
-      ],
-      "title": "Poletna muzejska noč v znamenju kulture, dediščine in umetnosti - ekopercapodistria.si"
-    },
-    {
-      "file": "fallback-failed-20261027-120344.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek",
-        "manjka_fotografija"
-      ],
-      "title": "Merkur zavarovalnica L’Étape Slovenia by Tour de France kolesarsko doživetje - L'Etape Slovenia"
-    },
-    {
-      "file": "fallback-failed-20261027-120854.json",
-      "category": "dediscina",
-      "errors": [
-        "prekratek"
-      ],
-      "title": "Judovska tradicija v Sloveniji: Lendava naredila POMEMBEN korak! - Metropolitan.si"
-    },
-    {
-      "file": "fallback-failed-20261027-122345.json",
-      "category": "dediscina",
-      "errors": [
-        "prekratek"
-      ],
-      "title": "Poletna muzejska noč v znamenju kulture, dediščine in umetnosti - ekopercapodistria.si"
-    },
-    {
-      "file": "fallback-failed-20261027-123858.json",
-      "category": "dediscina",
-      "errors": [
-        "prekratek"
-      ],
-      "title": "Judovska tradicija v Sloveniji: Lendava naredila POMEMBEN korak! - Metropolitan.si"
-    },
-    {
-      "file": "fallback-failed-20261027-125351.json",
-      "category": "dediscina",
-      "errors": [
-        "prekratek"
-      ],
-      "title": "Judovska tradicija v Sloveniji: Lendava naredila POMEMBEN korak! - Metropolitan.si"
-    },
     {
       "file": "fallback-failed-20261027-130854.json",
       "category": "dediscina",
@@ -750,28 +677,98 @@
       "title": "Poletna muzejska noč v znamenju kulture, dediščine in umetnosti - ekopercapodistria.si"
     },
     {
-      "file": "agent-state",
+      "file": "fallback-failed-20261027-132355.json",
       "category": "dediscina",
       "errors": [
         "prekratek"
-      ]
+      ],
+      "title": "Judovska tradicija v Sloveniji: Lendava naredila POMEMBEN korak! - Metropolitan.si"
+    },
+    {
+      "file": "fallback-failed-20261027-132949.json",
+      "category": "dediscina",
+      "errors": [
+        "prekratek"
+      ],
+      "title": "Judovska tradicija v Sloveniji: Lendava naredila POMEMBEN korak! - Metropolitan.si"
+    },
+    {
+      "file": "fallback-failed-20261027-133901.json",
+      "category": "dediscina",
+      "errors": [
+        "prekratek"
+      ],
+      "title": "Poletna muzejska noč v znamenju kulture, dediščine in umetnosti - ekopercapodistria.si"
+    },
+    {
+      "file": "fallback-failed-20261027-135349.json",
+      "category": "dediscina",
+      "errors": [
+        "prekratek"
+      ],
+      "title": "Poletna muzejska noč v znamenju kulture, dediščine in umetnosti - ekopercapodistria.si"
+    },
+    {
+      "file": "fallback-failed-20261027-140854.json",
+      "category": "dediscina",
+      "errors": [
+        "prekratek"
+      ],
+      "title": "Poletna muzejska noč v znamenju kulture, dediščine in umetnosti - ekopercapodistria.si"
+    },
+    {
+      "file": "fallback-failed-20261027-142348.json",
+      "category": "dediscina",
+      "errors": [
+        "prekratek"
+      ],
+      "title": "Judovska tradicija v Sloveniji: Lendava naredila POMEMBEN korak! - Metropolitan.si"
+    },
+    {
+      "file": "fallback-failed-20261027-143846.json",
+      "category": "dediscina",
+      "errors": [
+        "prekratek"
+      ],
+      "title": "Poletna muzejska noč v znamenju kulture, dediščine in umetnosti - ekopercapodistria.si"
+    },
+    {
+      "file": "fallback-failed-20261027-145515.json",
+      "category": "dediscina",
+      "errors": [
+        "prekratek"
+      ],
+      "title": "Poletna muzejska noč v znamenju kulture, dediščine in umetnosti - ekopercapodistria.si"
+    },
+    {
+      "file": "fallback-failed-20261027-151155.json",
+      "category": "sezonsko",
+      "errors": [
+        "prekratek",
+        "manjka_fotografija"
+      ],
+      "title": "Nova sezona, novo zvišanje cen: za kampiranje boste zdaj mogli odšteti kar ... - Metropolitan.si"
+    },
+    {
+      "file": "fallback-failed-20261027-175250.json",
+      "category": "kolesarstvo",
+      "errors": [
+        "prekratek",
+        "manjka_fotografija"
+      ],
+      "title": "Merkur zavarovalnica L’Étape Slovenia by Tour de France kolesarsko doživetje - L'Etape Slovenia"
     },
     {
       "file": "agent-state",
-      "category": "dediscina",
+      "category": "kolesarstvo",
       "errors": [
-        "ponavljanje"
-      ],
-      "slot": "2026-10-27|07:35|kolesarstvo"
+        "prekratek,manjka_fotografija"
+      ]
     }
   ],
   "failure_summary": {
-    "prekratek": 16,
-    "clanek_brez_slovenskega_konteksta": 4,
-    "viri_ne_podpirajo_slovenske_rubrike": 4,
-    "manjka_fotografija": 2,
-    "surov_spletni_izpis": 1,
-    "besedilo_ni_v_slovenscini": 1,
-    "ponavljanje": 1
+    "prekratek": 20,
+    "manjka_fotografija": 3,
+    "prekratek,manjka_fotografija": 1
   }
 }
