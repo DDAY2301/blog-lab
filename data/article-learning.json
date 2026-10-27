@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-27T06:06:44+01:00",
-  "loop_count": 7896,
+  "updated_at": "2026-10-27T13:13:15+01:00",
+  "loop_count": 7897,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-27T06:06:23+01:00",
+      "last_learning_run": "2026-10-27T13:12:52+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 148188,
-          "last_seen": "2026-10-27T06:06:23+01:00",
+          "seen": 148195,
+          "last_seen": "2026-10-27T13:12:52+01:00",
           "last_title": "Kje gledati finale košarkarskega EP med Slovenci in Italijani? Televizijski prenos bo! - Dnevnik",
           "last_provider": "google-news-si",
-          "published": 476972,
+          "published": 477034,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -230,14 +230,14 @@
       "current_source_count": 7,
       "example_titles": {
         "news.google.com": [
-          "Največji šok: Italijane potolkel malček, Slovenija po finale v tem terminu - Ekipa",
           "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
+          "Največji šok: Italijane potolkel malček, Slovenija po finale v tem terminu - Ekipa",
           "Kot v sanjah: Slovenija že drugič v dveh tednih evropski prvak! (VIDEO) - Šport TV"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-27T06:06:34+01:00",
+      "last_learning_run": "2026-10-27T13:13:05+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -279,11 +279,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 176544,
-          "last_seen": "2026-10-27T06:06:34+01:00",
-          "last_title": "Janša ali Golob? Anketa je pokazala, komu po uporu v Novem mestu zaupa ljudstvo - Žurnal24",
+          "seen": 176559,
+          "last_seen": "2026-10-27T13:13:05+01:00",
+          "last_title": "Njene hite je prepevala vsa Slovenija, potem pa je utonila v pozabo ... - Zadovoljna.si",
           "last_provider": "google-news-si",
-          "published": 524925,
+          "published": 524990,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -385,17 +385,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 19,
+      "current_source_count": 15,
       "example_titles": {
         "news.google.com": [
-          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
+          "»Suverenost ni bila podarjena«: Lotrič pozval k odgovornosti za prihodnost Slovenije - Mariborinfo.com",
           "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer",
-          "Pirc Musar: Ne bom tiho, ko zunanja politika ne bo skladna z ustavnimi vrednotami države - Siol.net"
+          "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-27T06:06:44+01:00",
+      "last_learning_run": "2026-10-27T13:13:15+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -483,12 +483,12 @@
           "last_provider": "bing-web"
         },
         "news.google.com": {
-          "score": 2.506,
-          "seen": 202961,
-          "last_seen": "2026-10-27T06:06:44+01:00",
-          "last_title": "Slovenija preprečila pristanek izraelskega letala: tako se odziva Fraport - Info360",
-          "last_provider": "google-news-global",
-          "published": 327719,
+          "score": 2.508,
+          "seen": 202985,
+          "last_seen": "2026-10-27T13:13:15+01:00",
+          "last_title": "Aktualno: Strateška povezava Etrela in vietnamskega Vinfasta se začenja v Sloveniji Novice - AVTO FOKUS -",
+          "last_provider": "google-news-si",
+          "published": 327743,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -583,12 +583,12 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 14,
+      "current_source_count": 24,
       "example_titles": {
         "news.google.com": [
-          "Če bi bile danes volitve bi močno zmagala SDS. Tudi interventni zakon bi uspel. - e-Maribor",
-          "Kako svet vidi Slovenijo danes in kako je postala tako vroča evropska destinacija - Dnevnik",
-          "Slovenska glasbenica ostro nad aktualno oblast: \"Ne vem, ali naj temu rečem ironija, paradoks ali vzporedni svet\" - Večer"
+          "(AKTUALNO) Še danes v prodaji 36. št. revije Demokracija: 30 let Demokracije, ki udejanja pravico vedeti več! Načrt za demografsko obnovo sl",
+          "Janša napoveduje velike spremembe: Čez 15 let šol, kot jih poznamo danes, morda ne bo več! - Najdi.si novice",
+          "Revolut odpovedoval tudi v Sloveniji. Kaj imajo z izpadom Google Rusija, Ukrajina in napadi na podatkovne centre? - MojaObčina.si"
         ]
       }
     }
@@ -669,96 +669,91 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20261025-153611.json",
-      "category": "sezonsko",
+      "file": "fallback-failed-20261027-110847.json",
+      "category": "dediscina",
       "errors": [
         "prekratek"
       ],
-      "title": "Iz Slovenije v Italijo nekoliko drugače: Jesenska pot, na kateri je že vožnja del doživetja - dnevne-novice.com"
+      "title": "Poletna muzejska noč v znamenju kulture, dediščine in umetnosti - ekopercapodistria.si"
     },
     {
-      "file": "fallback-failed-20261025-162454.json",
-      "category": "gore",
-      "errors": [
-        "manjka_fotografija",
-        "prekratek"
-      ],
-      "title": "ŠPORTNI VIKEND LJUBLJANICA 2026 bo med 11. in 13. septembrom v središče Ljubljane pripeljal nočni tek, trail, pohodništvo, kolesarjenje in pestro družinsko športno dogajanje - 24ur"
-    },
-    {
-      "file": "fallback-failed-20261025-185344.json",
-      "category": "sezonsko",
+      "file": "fallback-failed-20261027-112401.json",
+      "category": "dediscina",
       "errors": [
         "prekratek"
       ],
-      "title": "Iz Slovenije v Italijo nekoliko drugače: Jesenska pot, na kateri je že vožnja del doživetja - dnevne-novice.com"
+      "title": "Judovska tradicija v Sloveniji: Lendava naredila POMEMBEN korak! - Metropolitan.si"
     },
     {
-      "file": "fallback-failed-20261025-221619.json",
-      "category": "sezonsko",
+      "file": "fallback-failed-20261027-113903.json",
+      "category": "dediscina",
       "errors": [
         "prekratek"
       ],
-      "title": "Hrvaška turistična sezona bo podrla rekorde, slovenska bo 'dobra' - 24ur.com"
+      "title": "Judovska tradicija v Sloveniji: Lendava naredila POMEMBEN korak! - Metropolitan.si"
     },
     {
-      "file": "fallback-failed-20261026-105347.json",
+      "file": "fallback-failed-20261027-115353.json",
       "category": "dediscina",
-      "errors": [
-        "clanek_brez_slovenskega_konteksta",
-        "viri_ne_podpirajo_slovenske_rubrike"
-      ],
-      "title": "Top 10 Best Ransomware Protection Solutions in 2026"
-    },
-    {
-      "file": "fallback-failed-20261026-140908.json",
-      "category": "dediscina",
-      "errors": [
-        "clanek_brez_slovenskega_konteksta",
-        "viri_ne_podpirajo_slovenske_rubrike",
-        "surov_spletni_izpis"
-      ],
-      "title": "The Best Online Music Streaming Services We've Tested for 2025"
-    },
-    {
-      "file": "fallback-failed-20261026-152353.json",
-      "category": "dediscina",
-      "errors": [
-        "besedilo_ni_v_slovenscini"
-      ],
-      "title": "Brian Tooley Racing - Camshafts"
-    },
-    {
-      "file": "fallback-failed-20261026-172406.json",
-      "category": "dediscina",
-      "errors": [
-        "clanek_brez_slovenskega_konteksta",
-        "viri_ne_podpirajo_slovenske_rubrike"
-      ],
-      "title": "Month of Giving - Jersey Mike's Subs"
-    },
-    {
-      "file": "fallback-failed-20261026-182052.json",
-      "category": "dediscina",
-      "errors": [
-        "clanek_brez_slovenskega_konteksta",
-        "viri_ne_podpirajo_slovenske_rubrike"
-      ],
-      "title": "PimpBunny et les 49+ sites porno OnlyFans comme PimpBunny.com !"
-    },
-    {
-      "file": "fallback-failed-20261026-192518.json",
-      "category": "gourmet",
       "errors": [
         "prekratek"
       ],
-      "title": "Gostilna Pri planinskem orlu je, z nekaj primorskega navdiha, znova odprta - Kamnik.info"
+      "title": "Poletna muzejska noč v znamenju kulture, dediščine in umetnosti - ekopercapodistria.si"
+    },
+    {
+      "file": "fallback-failed-20261027-120344.json",
+      "category": "kolesarstvo",
+      "errors": [
+        "prekratek",
+        "manjka_fotografija"
+      ],
+      "title": "Merkur zavarovalnica L’Étape Slovenia by Tour de France kolesarsko doživetje - L'Etape Slovenia"
+    },
+    {
+      "file": "fallback-failed-20261027-120854.json",
+      "category": "dediscina",
+      "errors": [
+        "prekratek"
+      ],
+      "title": "Judovska tradicija v Sloveniji: Lendava naredila POMEMBEN korak! - Metropolitan.si"
+    },
+    {
+      "file": "fallback-failed-20261027-122345.json",
+      "category": "dediscina",
+      "errors": [
+        "prekratek"
+      ],
+      "title": "Poletna muzejska noč v znamenju kulture, dediščine in umetnosti - ekopercapodistria.si"
+    },
+    {
+      "file": "fallback-failed-20261027-123858.json",
+      "category": "dediscina",
+      "errors": [
+        "prekratek"
+      ],
+      "title": "Judovska tradicija v Sloveniji: Lendava naredila POMEMBEN korak! - Metropolitan.si"
+    },
+    {
+      "file": "fallback-failed-20261027-125351.json",
+      "category": "dediscina",
+      "errors": [
+        "prekratek"
+      ],
+      "title": "Judovska tradicija v Sloveniji: Lendava naredila POMEMBEN korak! - Metropolitan.si"
+    },
+    {
+      "file": "fallback-failed-20261027-130854.json",
+      "category": "dediscina",
+      "errors": [
+        "prekratek"
+      ],
+      "title": "Poletna muzejska noč v znamenju kulture, dediščine in umetnosti - ekopercapodistria.si"
     },
     {
       "file": "agent-state",
       "category": "dediscina",
       "errors": [
-        "fallback_no_fresh_evidence"
+        "prekratek"
       ]
     },
     {
@@ -767,17 +762,16 @@
       "errors": [
         "ponavljanje"
       ],
-      "slot": "2026-10-26|19:10|gourmet"
+      "slot": "2026-10-27|07:35|kolesarstvo"
     }
   ],
   "failure_summary": {
-    "prekratek": 15,
-    "manjka_fotografija": 9,
+    "prekratek": 16,
     "clanek_brez_slovenskega_konteksta": 4,
     "viri_ne_podpirajo_slovenske_rubrike": 4,
+    "manjka_fotografija": 2,
     "surov_spletni_izpis": 1,
     "besedilo_ni_v_slovenscini": 1,
-    "fallback_no_fresh_evidence": 1,
     "ponavljanje": 1
   }
 }
