@@ -1,0 +1,53 @@
+{
+  "category": "kolesarstvo",
+  "errors": [
+    "prekratek",
+    "manjka_fotografija"
+  ],
+  "article": {
+    "title": "Merkur zavarovalnica L’Étape Slovenia by Tour de France kolesarsko doživetje - L'Etape Slovenia"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "lead_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOa3V2S3NRWlhocktxRVl0MWtfVzhMN2xGVUwwRjFUY0NQNEFaVXNNbnNHbUZuekd6QzN3eS1MUklZSUkzUDRnYWphY2xkVTlXVVZaekxYSHNJRFg2MUUwSnFGVUlURGl0b1h6bTBlZldRNl94TjhOdmI5amxtQ044YzZDM2Y1RXM?oc=5",
+      "title": "Merkur zavarovalnica L’Étape Slovenia by Tour de France kolesarsko doživetje - L'Etape Slovenia",
+      "errors": [
+        "prekratek"
+      ]
+    },
+    {
+      "attempt": 2,
+      "lead_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNSXNfUWFJaEpsUmQ4R1RPMHplYlBOUkJwa1NvY0kzQldEaFZlck1haXFzMTI4cm5oY3Myb2c4RExBQ1R4VlUxYkxOM3hiOGJ6bHIyczF6ZkZNUEctZXBEcF9RV1dJWk1kNjBaVTVJT3A1TE0wTUhnemZkdjg2aWo2LUxWYkIwQ0RYSC1vMFpR?oc=5",
+      "title": "Slovenija je bela lisa na kolesarskem zemljevidu - Delo.si",
+      "errors": [
+        "prekratek"
+      ]
+    },
+    {
+      "attempt": 3,
+      "lead_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQY2t1MjE3VUotOFZGY1BtSzdJYU4ycEhVcEdyTnRacnN6WDlTSnBVanlBYnVZT29qcEFBbFdrV1NhYW04NTVZUC1WU1VKcVdzcWR2bzNhX0l2UG10aVlMNnJKTHlxMkdzMzVEQTl3Yk9yRTMxZVA2dmtNa1pBT0JVMW9uNVJXeVo0cW9RLVdqUFRyS2JBVXFJ?oc=5",
+      "title": "Dravska kolesarska pot: Adamičevo naselje – dvoetažni most – 1. etapa - Mestna občina Maribor",
+      "errors": [
+        "prekratek"
+      ]
+    },
+    {
+      "attempt": 4,
+      "lead_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQTXd4MkRvSFJCUFYwWDdVZDdsaVhqTExSSnBHQnF0NmVscWFGR0dBVjh6SEpxclFaa0tueWNLYjFUdTVaTmFKTWJUV0ViVUdadDhIdTJPTW5PcEd5R0ZjSWQ1aTVyanhYMWdkQ05TOXNvMXo0VVhUVUg4NGlMWlU2SUpFcVZIYjgwOURSOWdKNWZtbkxKdWE0ZTg4TjVqZFk4OUI0d1hR?oc=5",
+      "title": "FOTO IN VIDEO: Maribor pozdravil kolesarje na drugi etapi Dirke po Sloveniji - Maribor24.si",
+      "errors": [
+        "manjka_fotografija"
+      ]
+    },
+    {
+      "attempt": 5,
+      "lead_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5lSHRXeHRBd1FMemlyOXlsRWxZTWswanNEd0RGOGI5RXg1dkFCUGdDc1ZmMlI0OE1zT2l2Q1FoV3RXeDRndTRuTDQ5VnRKTjhYMGFJM3piRng4Sk5ncnc?oc=5",
+      "title": "Med Bledom in Bohinjem je nastala 28-kilometrska kolesarska pot z razgledi, ki jemljejo dih - Bodi eko",
+      "errors": [
+        "prekratek",
+        "manjka_fotografija"
+      ]
+    }
+  ]
+}
