@@ -5235,5 +5235,19 @@
     "provider": "google-news-si",
     "processed_at": "2026-10-27T16:24:47+01:00",
     "output_id": "madzarski-pohodnik-je-se-vedno-ujet-v-slovenskih-gorah-nadaljevanje-akcije-ta-hip-mocno-og-35b8e058"
+  },
+  {
+    "source_name": "Prehrana.si",
+    "category": "gourmet",
+    "title": "Kulinarika Slovenije - zajamčena tradicionalna posebnost - Prehrana.si",
+    "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE40U0ZpRnZ6UjE3d1kyMFNTZ3EtdEdoeWhYUVhqeXpDNTN5OURaX1NXY1FTQUhGNjgzME1sdEw1WHBTbVdwZk1mN1VKVzlfbHFUTnRr?oc=5",
+    "summary": "Kulinarika Slovenije - zajamčena tradicionalna posebnost Prehrana.si",
+    "published": "Fri, 26 Jul 2019 07:00:00 GMT",
+    "image_url": "",
+    "video_url": "",
+    "hash": "2c278d3f09337835394d4db5c3e8a039aeaa23d9ac67b8f6a03fb2c112a9db5c",
+    "provider": "",
+    "processed_at": "2026-10-27T19:16:08+01:00",
+    "output_id": "kulinarika-slovenije-zajamcena-tradicionalna-posebnost-prehrana-si-7d34f2d5"
   }
 ]

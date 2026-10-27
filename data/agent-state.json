@@ -1,18 +1,19 @@
 {
-  "last_success": "2026-10-27T16:24:47+01:00",
+  "last_success": "2026-10-27T19:16:08+01:00",
   "last_failure": "2026-09-21T20:56:52+02:00",
   "consecutive_failures": 0,
   "posts_date": "2026-10-27",
-  "posts_today": 1,
-  "last_output": "madzarski-pohodnik-je-se-vedno-ujet-v-slovenskih-gorah-nadaljevanje-akcije-ta-hip-mocno-og-35b8e058",
-  "last_error": "prekratek,manjka_fotografija",
-  "agent_version": "3.0.0-learning-guarded-fallback",
-  "current_category": "kolesarstvo",
-  "scheduled_posts_today": 1,
+  "posts_today": 2,
+  "last_output": "kulinarika-slovenije-zajamcena-tradicionalna-posebnost-prehrana-si-7d34f2d5",
+  "last_error": null,
+  "agent_version": "2.7.0",
+  "current_category": "gourmet",
+  "scheduled_posts_today": 2,
   "manual_posts_today": 0,
-  "writer_mode": "deterministic_fallback",
+  "writer_mode": "workers_ai",
   "scheduled_slots_done": [
-    "2026-10-27|16:20|gore"
+    "2026-10-27|16:20|gore",
+    "2026-10-27|19:10|gourmet"
   ],
   "scheduled_slots_deferred": [
     "2026-10-27|07:35|kolesarstvo",
