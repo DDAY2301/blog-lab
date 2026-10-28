@@ -5,19 +5,25 @@
   "posts_date": "2026-10-28",
   "posts_today": 3,
   "last_output": "zaradi-kolesarske-dirke-v-soboto-obsezne-zapore-cest-na-gorenjskem-in-na-vrsicu-35483541",
-  "last_error": null,
+  "last_error": "manjka_fotografija,prekratek",
   "agent_version": "3.0.0-learning-guarded-fallback",
-  "current_category": "kolesarstvo",
+  "current_category": "gore",
   "scheduled_posts_today": 3,
   "manual_posts_today": 0,
-  "writer_mode": "deterministic_fallback",
+  "writer_mode": "workers_ai",
   "scheduled_slots_done": [
     "2026-10-28|10:45|dediscina",
     "2026-10-28|13:30|sezonsko",
     "2026-10-28|07:35|kolesarstvo"
   ],
-  "scheduled_slots_deferred": [],
-  "last_editorial_hold": null,
+  "scheduled_slots_deferred": [
+    "2026-10-28|16:20|gore"
+  ],
+  "last_editorial_hold": {
+    "slot": "2026-10-28|16:20|gore",
+    "reason": "manjka_fotografija,ponavljanje",
+    "at": "2026-10-28T16:24:33+01:00"
+  },
   "publisher_guardian_last_run": "2026-10-28T14:35:28+01:00",
   "publisher_guardian_last_action": {
     "category": "kolesarstvo",
