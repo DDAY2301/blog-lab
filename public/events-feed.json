@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-27T21:46:16+01:00",
+  "updatedAt": "2026-10-28T06:54:05+01:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -131,49 +131,6 @@
       "startAt": "2026-10-26T10:00:00+01:00",
       "ticketUrl": "https://www.ljubljanskigrad.si/sl/dogodki/jesenske-pocitnice/",
       "description": "Friderik’s castle challenges and creative workshops run daily from 10:00 to 13:00 for first-triad primary pupils. A daily ticket costs €7; places are limited and children may attend without an accompanying adult."
-    },
-    {
-      "id": "shortcuts-courvoisier-rothenberg-waits-2026-10-27",
-      "title": "Shortcuts – Courvoisier / Rothenberg / Waits",
-      "url": "https://www.cd-cc.si/en",
-      "source": "Cankarjev dom",
-      "type": "Concert · improvised music",
-      "place": "Cankarjev dom · Ljubljana",
-      "startAt": "2026-10-27T19:30:00+01:00",
-      "endAt": null,
-      "price": "€18",
-      "languages": [
-        "Music-led"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": "Cankarjev dom publishes venue accessibility information; request accessible seating when booking.",
-      "ticketUrl": "https://vstopnice.cd-cc.si/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-27T07:14:00+01:00",
-      "description": "Courvoisier, Rothenberg and Waits perform at Cankarjev dom at 19:30. Consult the venue’s ticket page for the current price and accessible seating."
-    },
-    {
-      "id": "cracks-of-closeness-2026-10-27",
-      "title": "CRACKS OF CLOSENESS: fugue / flame / spasm",
-      "url": "https://www.kinosiska.si/en/dogodek/razpoke-blizine-fuga-plamen-krc/",
-      "source": "Kino Šiška",
-      "type": "Intermedia · new media performance",
-      "place": "Katedrala Hall · Kino Šiška",
-      "startAt": "2026-10-27T20:00:00+01:00",
-      "endAt": null,
-      "price": "€8 / €6 reduced",
-      "languages": [
-        "Slovenian",
-        "Poetry, sound and audiovisual performance"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": "Kino Šiška publishes general venue accessibility information; contact the venue for performance-specific arrangements.",
-      "ticketUrl": "https://www.kinosiska.si/en/dogodek/razpoke-blizine-fuga-plamen-krc/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-27T07:14:00+01:00",
-      "description": "The two-part new-media premiere combines poetry, voice, sound and real-time audiovisual imagery at 20:00. Admission is €8, or €6 at the reduced rate."
     },
     {
       "id": "stereo-mcs-postponed-2026-10-28",
