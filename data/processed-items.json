@@ -5263,5 +5263,19 @@
     "provider": "google-news-si",
     "processed_at": "2026-10-28T10:54:53+01:00",
     "output_id": "23-poletna-muzejska-noc-kaj-bo-v-soboto-ob-neobicajnih-urah-na-ogled-v-mariborskih-muzejih-9d049ec9"
+  },
+  {
+    "source_name": "Najdi.si novice",
+    "category": "sezonsko",
+    "title": "ARSO: vremenski alarm za Slovenijo – danes lahko udari hitro in silovito - Najdi.si novice",
+    "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQLXVLZGE5Q2NZczhWa1p4S1YxelNlMTQ1NzFBRWtBRG9NbE5XOERhZVRIMmlLMWtKazZNUEpLVi1ERWJVUUpNTDBNSUtweW5FVEVIX3lWX0hRMzk5Sk83U0gyV0VtUGwwN2w4SmgyNkdrbXhpbmxYWV9zalpwNlplZkFsMmlMdkUwUm9kS1drcUlSS29SOEo1VVdVVFUzTjlmQnBnbGEzZFF6SzFSd01XdXFmcDctVU1kM1lBVDlZTkIxaHlDWTVVRUl0UmVwYUhteXlxRjF4bmZod2s?oc=5",
+    "summary": "ARSO: vremenski alarm za Slovenijo – danes lahko udari hitro in silovito Najdi.si novice",
+    "published": "Tue, 09 Jun 2026 07:00:00 GMT",
+    "image_url": "",
+    "video_url": "",
+    "hash": "9706c37568253c995c5139ba225d2a0c4d6248de1c61be14f6168e692e95349f",
+    "provider": "google-news-si",
+    "processed_at": "2026-10-28T13:39:51+01:00",
+    "output_id": "arso-vremenski-alarm-za-slovenijo-danes-lahko-udari-hitro-in-silovito-da9038a2"
   }
 ]
