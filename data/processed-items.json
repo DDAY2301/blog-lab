@@ -5277,5 +5277,19 @@
     "provider": "google-news-si",
     "processed_at": "2026-10-28T13:39:51+01:00",
     "output_id": "arso-vremenski-alarm-za-slovenijo-danes-lahko-udari-hitro-in-silovito-da9038a2"
+  },
+  {
+    "source_name": "Delo.si",
+    "category": "kolesarstvo",
+    "title": "Zaradi kolesarske dirke v soboto obsežne zapore cest na Gorenjskem in na Vršiču - Delo.si",
+    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNM050U0dGZThOeF9wYkV6VTlQbkZyN09lcVNTSUhYdUV6R0hPYTVsVU94NWQ3amE2c1dOaG1uZDh6TXIweFRpVXF5dmVMcXFPNnlydzUtUTF1UkxDaWFRRmI2MEQxbHN5Zk1NME9qU2dKZTJweHZKQWp2MjJEMmNpNjZsZ2JhN0NfWXRHQkdST3BLNW9yckdHbzFYemNzLTZsLXRlcWpSUjVWbXNMcjJhSTBTREFJSUpJ?oc=5",
+    "summary": "Zaradi kolesarske dirke v soboto obsežne zapore cest na Gorenjskem in na Vršiču Delo.si",
+    "published": "Sat, 20 Jun 2026 07:00:00 GMT",
+    "image_url": "",
+    "video_url": "",
+    "hash": "df727d89e83f7e8ff4789c406beffc48d42121e065eb7262fb9ffee6c9a6778e",
+    "provider": "google-news-si",
+    "processed_at": "2026-10-28T14:35:28+01:00",
+    "output_id": "zaradi-kolesarske-dirke-v-soboto-obsezne-zapore-cest-na-gorenjskem-in-na-vrsicu-35483541"
   }
 ]
