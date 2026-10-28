@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-28T06:43:39+01:00",
-  "loop_count": 7900,
+  "updated_at": "2026-10-28T13:55:55+01:00",
+  "loop_count": 7901,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-28T06:43:17+01:00",
+      "last_learning_run": "2026-10-28T13:55:31+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 148215,
-          "last_seen": "2026-10-28T06:43:17+01:00",
-          "last_title": "Slovenska blamaža na igrah! Zakaj sploh tekmujemo, če je šport pri nas umrl - Ekipa",
+          "seen": 148220,
+          "last_seen": "2026-10-28T13:55:31+01:00",
+          "last_title": "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
           "last_provider": "google-news-si",
-          "published": 477220,
+          "published": 477280,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -198,6 +198,13 @@
           "last_title": "Nike. Just Do It. Nike IN",
           "last_provider": "bing-web"
         },
+        "support.google.com": {
+          "score": 1.33,
+          "seen": 1,
+          "last_seen": "2026-10-28T13:55:31+01:00",
+          "last_title": "YouTube TV Help",
+          "last_provider": "bing-web"
+        },
         "dressbarn.com": {
           "score": 1.271,
           "seen": 2,
@@ -218,30 +225,25 @@
           "last_seen": "2026-09-30T14:39:11+02:00",
           "last_title": "Grand Sable Dunes - Pictured Rocks National Lakeshore (U.S. National Park Service)",
           "last_provider": "bing-web"
-        },
-        "pointclickcare.com": {
-          "score": 1.271,
-          "seen": 2,
-          "last_seen": "2026-09-25T15:09:27+02:00",
-          "last_title": "Healthcare Software for Smarter Care Delivery | PointClickCare",
-          "last_provider": "bing-web"
         }
       },
-      "current_source_count": 8,
+      "current_source_count": 7,
       "example_titles": {
         "news.google.com": [
+          "Slovenke po veliki vrnitvi in zmagi nad Latvijo na pragu osmine finala - rtvslo.si",
           "S tribune: Športni trenutki, zaradi katerih se mi še danes naježijo dlake - Svet24.si",
-          "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
           "Slovenija proti Danski danes odpira svoje nastope na letošnjem evropskem prvenstvu - Šport TV"
         ],
-        "dressbarn.com": [
-          "Women's Plus Size Clothing - Dressbarn",
-          "Returns, Store Credit & Order Cancellations"
+        "support.google.com": [
+          "YouTube TV Help"
+        ],
+        "obsproject.com": [
+          "youtube | OBS Forums"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-28T06:43:29+01:00",
+      "last_learning_run": "2026-10-28T13:55:44+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -283,11 +285,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 176612,
-          "last_seen": "2026-10-28T06:43:29+01:00",
+          "seen": 176631,
+          "last_seen": "2026-10-28T13:55:44+01:00",
           "last_title": "Predsednik vlade Janša za ministra za ministra za digitalno preobrazbo predlaga Marka Borisa Andrijaniča - prava.si",
           "last_provider": "google-news-si",
-          "published": 525185,
+          "published": 525250,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -389,17 +391,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 18,
+      "current_source_count": 19,
       "example_titles": {
         "news.google.com": [
           "Nov protest ob obisku Sara v DZ-ju. Janša: Protesti so refleks levičarskega antisemitizma. - rtvslo.si",
-          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer",
-          "Janša mladim ob njihovem dnevu: “Slovenska mladina je danes med politično najbolj aktivnimi v EU” - Nova24TV"
+          "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si",
+          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-28T06:43:39+01:00",
+      "last_learning_run": "2026-10-28T13:55:55+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -487,12 +489,12 @@
           "last_provider": "bing-web"
         },
         "news.google.com": {
-          "score": 2.519,
-          "seen": 203045,
-          "last_seen": "2026-10-28T06:43:39+01:00",
-          "last_title": "Ko so bile ZDA stare toliko kot danes Slovenija, so bile na robu razpada - Zanima.me",
-          "last_provider": "google-news-si",
-          "published": 327804,
+          "score": 2.515,
+          "seen": 203055,
+          "last_seen": "2026-10-28T13:55:55+01:00",
+          "last_title": "Slovenija preprečila pristanek izraelskega letala: tako se odziva Fraport - Info360",
+          "last_provider": "google-news-global",
+          "published": 327824,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -587,17 +589,32 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 23,
+      "current_source_count": 11,
       "example_titles": {
         "news.google.com": [
-          "(AKTUALNO) Še danes v prodaji 36. št. revije Demokracija: 30 let Demokracije, ki udejanja pravico vedeti več! Načrt za demografsko obnovo sl",
-          "Janša napoveduje velike spremembe: Čez 15 let šol, kot jih poznamo danes, morda ne bo več! - Najdi.si novice",
-          "Revolut odpovedoval tudi v Sloveniji. Kaj imajo z izpadom Google Rusija, Ukrajina in napadi na podatkovne centre? - MojaObčina.si"
+          "Bi lahko Slovenci že danes plačevali manj? Predsednik obrtne zbornice opozarja na pomen sprejetja razvojnega zakona! | Portal OS na najdi.si",
+          "Kako svet vidi Slovenijo danes in kako je postala tako vroča evropska destinacija - Dnevnik",
+          "Slovenska glasbenica ostro nad aktualno oblast: \"Ne vem, ali naj temu rečem ironija, paradoks ali vzporedni svet\" - Večer"
+        ],
+        "linkedin.com": [
+          "Brand Director Jobs in Dallas (1,000+ Open Roles) | LinkedIn"
         ]
       }
     }
   },
   "recent_articles": [
+    {
+      "id": "arso-vremenski-alarm-za-slovenijo-danes-lahko-udari-hitro-in-silovito-da9038a2",
+      "title": "ARSO: vremenski alarm za Slovenijo – danes lahko udari hitro in silovito",
+      "category": "Sezonsko",
+      "createdAt": "2026-10-28T13:39:51+01:00"
+    },
+    {
+      "id": "23-poletna-muzejska-noc-kaj-bo-v-soboto-ob-neobicajnih-urah-na-ogled-v-mariborskih-muzejih-9d049ec9",
+      "title": "23. Poletna muzejska noč: Kaj bo v soboto ob \"neobičajnih urah\" na ogled v mariborskih muzejih in galerijah",
+      "category": "Dediščina",
+      "createdAt": "2026-10-28T10:54:53+01:00"
+    },
     {
       "id": "kulinarika-slovenije-zajamcena-tradicionalna-posebnost-prehrana-si-7d34f2d5",
       "title": "Kulinarika Slovenije - zajamčena tradicionalna posebnost - Prehrana.si",
@@ -657,18 +674,6 @@
       "title": "Kam na prvomajski izlet? To so kotički Slovenije, ki vabijo na spomladanski potep",
       "category": "Sezonsko",
       "createdAt": "2026-10-24T20:51:21+02:00"
-    },
-    {
-      "id": "timotej-becan-in-lucija-krkoc-naj-gorska-tekaca-sezone-petra-in-marko-tratnik-naj-trail-te-a33d1aed",
-      "title": "Timotej Bečan in Lucija Krkoč naj gorska tekača sezone, Petra in Marko Tratnik naj trail tekača",
-      "category": "Gore & traili",
-      "createdAt": "2026-10-22T16:29:00+02:00"
-    },
-    {
-      "id": "razstava-lepota-po-slovensko-v-celju-na-ogled-dragocena-dediscina-jozeta-karlovska-velikan-c05e0902",
-      "title": "Razstava Lepota po slovensko: V Celju na ogled dragocena dediščina Jožeta Karlovška, velikana slovenske…",
-      "category": "Dediščina",
-      "createdAt": "2026-10-22T13:18:51+02:00"
     }
   ],
   "recent_failures": [
@@ -764,16 +769,17 @@
       "title": "Merkur zavarovalnica L’Étape Slovenia by Tour de France kolesarsko doživetje - L'Etape Slovenia"
     },
     {
-      "file": "agent-state",
+      "file": "fallback-failed-20261028-074001.json",
       "category": "kolesarstvo",
       "errors": [
-        "prekratek,manjka_fotografija"
-      ]
+        "prekratek",
+        "manjka_fotografija"
+      ],
+      "title": "Merkur zavarovalnica L’Étape Slovenia by Tour de France kolesarsko doživetje - L'Etape Slovenia"
     }
   ],
   "failure_summary": {
     "prekratek": 20,
-    "manjka_fotografija": 4,
-    "prekratek,manjka_fotografija": 1
+    "manjka_fotografija": 5
   }
 }
