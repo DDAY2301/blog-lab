@@ -5291,5 +5291,19 @@
     "provider": "google-news-si",
     "processed_at": "2026-10-28T14:35:28+01:00",
     "output_id": "zaradi-kolesarske-dirke-v-soboto-obsezne-zapore-cest-na-gorenjskem-in-na-vrsicu-35483541"
+  },
+  {
+    "source_name": "Outdooractive",
+    "category": "gore",
+    "title": "Via Alpina Slovenia: Stage 11 (Triglav lakes- Dolič) • Long-Distance Hiking ... - Outdooractive",
+    "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQd2loMzRqcXBHNmt4a0NFeUZPeWVzclUtcW5CXzc2NGJGclozY0UzYVl4OEt6WktmTWROaGdqMlRZX3hUQ25VYWZXbkhtWmxsZTVMczl1M1RuLVlPdWxFY0w3WVV2dHJTZkJnX3UxUmVOOGV1bTQxX2lYTm85MFNOcjgtUzN0RVRIcjFpLVVheFI1UDF1T3VHbVBzR2NSVG1fa21hejRocEVrcHA4MDNPRUUyWk1laEFHN3k2QTZYR2FxWGQxSm5VVzQ3eUpPck9tMWFwUGdn?oc=5",
+    "summary": "Via Alpina Slovenia: Stage 11 (Triglav lakes- Dolič) • Long-Distance Hiking ... Outdooractive",
+    "published": "Fri, 22 May 2026 19:08:22 GMT",
+    "image_url": "",
+    "video_url": "",
+    "hash": "495e0e3eb0ba5b6600d9c155483df2fd04a4171b416f994c6259825a779b28ba",
+    "provider": "google-news-global",
+    "processed_at": "2026-10-28T20:08:51+01:00",
+    "output_id": "via-alpina-slovenia-stage-11-triglav-lakes-dolic-long-distance-hiking-00c2f442"
   }
 ]
