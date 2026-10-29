@@ -2,12 +2,12 @@
   "agent": "Blog Lab Slovenia Publisher",
   "status": "waiting",
   "enabled": true,
-  "category": "kolesarstvo",
-  "last_run": "2026-10-29T18:06:34+01:00",
+  "category": "gourmet",
+  "last_run": "2026-10-29T19:23:48+01:00",
   "last_success": "2026-10-29T16:24:59+01:00",
   "last_output": "the-call-of-the-mountains-5-reasons-to-visit-northwest-slovenia-s-julian-alps-5ea65d4e",
   "next_run": null,
-  "message": "Nobena sveža zgodba ni prestala uredniškega QA: prekratek,manjka_fotografija",
+  "message": "Ni novih neuporabljenih virov; objava se varno odloži.",
   "posts_today": 1,
   "scheduled_posts_today": 1,
   "manual_posts_today": 0,
@@ -21,5 +21,5 @@
     "2026-10-29|13:30|sezonsko"
   ],
   "last_editorial_hold": null,
-  "last_error": "prekratek,manjka_fotografija"
+  "last_error": "fallback_no_fresh_evidence"
 }
