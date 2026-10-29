@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-28T23:36:28+01:00",
-  "loop_count": 7902,
+  "updated_at": "2026-10-29T06:49:41+01:00",
+  "loop_count": 7903,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-28T23:35:58+01:00",
+      "last_learning_run": "2026-10-29T06:49:18+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 148227,
-          "last_seen": "2026-10-28T23:35:58+01:00",
-          "last_title": "Slovenska blamaža na igrah! Zakaj sploh tekmujemo, če je šport pri nas umrl - Ekipa",
+          "seen": 148237,
+          "last_seen": "2026-10-29T06:49:18+01:00",
+          "last_title": "Janja Garnbret do vrha v Kopru! Slovenska šampionka brez težav skozi kvalifikacije (VIDEO in FOTO) - OBALAplus",
           "last_provider": "google-news-si",
-          "published": 477338,
+          "published": 477396,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,21 +227,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 9,
+      "current_source_count": 10,
       "example_titles": {
         "news.google.com": [
-          "Slovenke po veliki vrnitvi in zmagi nad Latvijo na pragu osmine finala - rtvslo.si",
-          "S tribune: Športni trenutki, zaradi katerih se mi še danes naježijo dlake - Svet24.si",
-          "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si"
-        ],
-        "youtube.com": [
-          "Megumi Meshes for JJS Skillbuilder - YouTube",
-          "Megumi mesh pack #jjkgame #jjs #custommoveset #jjk"
+          "Slovenija želi biti nova Švica, zdaj pa je Švica postala nova Slovenija. Trava, kriva je trava - Dnevnik",
+          "Slovenci pogoreli v preveliki želji: \"Finci so bili enostavno premočni\" - rtvslo.si",
+          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-28T23:36:08+01:00",
+      "last_learning_run": "2026-10-29T06:49:29+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -283,11 +279,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 176648,
-          "last_seen": "2026-10-28T23:36:08+01:00",
-          "last_title": "Predsednik vlade Janša za ministra za ministra za digitalno preobrazbo predlaga Marka Borisa Andrijaniča - prava.si",
+          "seen": 176668,
+          "last_seen": "2026-10-29T06:49:29+01:00",
+          "last_title": "Kučan: Politika mora povedati: to predlagamo in pri tem vabimo, da nas podprete, kot pri plebiscitu - rtvslo.si",
           "last_provider": "google-news-si",
-          "published": 525315,
+          "published": 525380,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -389,17 +385,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 17,
+      "current_source_count": 20,
       "example_titles": {
         "news.google.com": [
-          "Nov protest ob obisku Sara v DZ-ju. Janša: Protesti so refleks levičarskega antisemitizma. - rtvslo.si",
-          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer",
-          "Janša mladim ob njihovem dnevu: “Slovenska mladina je danes med politično najbolj aktivnimi v EU” - Nova24TV"
+          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
+          "Pirc Musar: Ne bom tiho, ko zunanja politika ne bo skladna z ustavnimi vrednotami države - Siol.net",
+          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-28T23:36:28+01:00",
+      "last_learning_run": "2026-10-29T06:49:41+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -487,12 +483,12 @@
           "last_provider": "bing-web"
         },
         "news.google.com": {
-          "score": 2.518,
-          "seen": 203068,
-          "last_seen": "2026-10-28T23:36:28+01:00",
-          "last_title": "Celje danes (skoraj) najbolj mrzel kraj v Sloveniji. Meščani se jezijo nad snegom na pločnikih (foto) - Celje.info",
+          "score": 2.519,
+          "seen": 203091,
+          "last_seen": "2026-10-29T06:49:41+01:00",
+          "last_title": "Podpisan drugi dodatek k Dogovoru za razvoj regije Jugovzhodna Slovenija - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "google-news-si",
-          "published": 327844,
+          "published": 327864,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -587,16 +583,12 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 15,
+      "current_source_count": 23,
       "example_titles": {
         "news.google.com": [
+          "(AKTUALNO) Še danes v prodaji 36. št. revije Demokracija: 30 let Demokracije, ki udejanja pravico vedeti več! Načrt za demografsko obnovo sl",
           "700 tisoč evrov za vožnjo z vlakom, milijoni za Litijsko in računalnike: kdo bo odgovarjal za davkoplačevalski denar? Je Skok rešitev? | Por",
-          "Bi lahko Slovenci že danes plačevali manj? Predsednik obrtne zbornice opozarja na pomen sprejetja razvojnega zakona! | Portal OS na najdi.si",
           "Revolut odpovedoval tudi v Sloveniji. Kaj imajo z izpadom Google Rusija, Ukrajina in napadi na podatkovne centre? - MojaObčina.si"
-        ],
-        "doe.sd.gov": [
-          "SD Department of Education",
-          "Career and Technical Education, SD Department of Education"
         ]
       }
     }
