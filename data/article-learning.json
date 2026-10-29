@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-29T14:02:25+01:00",
-  "loop_count": 7904,
+  "updated_at": "2026-10-29T23:46:20+01:00",
+  "loop_count": 7905,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-29T14:02:05+01:00",
+      "last_learning_run": "2026-10-29T23:46:00+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 148244,
-          "last_seen": "2026-10-29T14:02:05+01:00",
+          "seen": 148249,
+          "last_seen": "2026-10-29T23:46:00+01:00",
           "last_title": "Odlični obeti, Slovenija se bi lahko že danes razveselila novega globusa - Žurnal24",
           "last_provider": "google-news-si",
-          "published": 477454,
+          "published": 477511,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -230,14 +230,20 @@
       "current_source_count": 7,
       "example_titles": {
         "news.google.com": [
-          "S tribune: Športni trenutki, zaradi katerih se mi še danes naježijo dlake - Svet24.si",
           "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
+          "Slovenska blamaža na igrah! Zakaj sploh tekmujemo, če je šport pri nas umrl - Ekipa",
           "Slovenija proti Danski danes odpira svoje nastope na letošnjem evropskem prvenstvu - Šport TV"
+        ],
+        "fandango.com": [
+          "AMC Loews Factoria 8 Movie Showtimes Tickets | Bellevue"
+        ],
+        "atomtickets.com": [
+          "Atom Tickets - Check out showtimes and buy movie tickets for AMC Factoria 8 in Bellevue."
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-29T14:02:15+01:00",
+      "last_learning_run": "2026-10-29T23:46:10+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -279,11 +285,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 176687,
-          "last_seen": "2026-10-29T14:02:15+01:00",
-          "last_title": "Kučan: Politika mora povedati: to predlagamo in pri tem vabimo, da nas podprete, kot pri plebiscitu - rtvslo.si",
-          "last_provider": "google-news-si",
-          "published": 525445,
+          "seen": 176702,
+          "last_seen": "2026-10-29T23:46:10+01:00",
+          "last_title": "Video: Luka Simonič iz SDM: \"Če se mi ne ukvarjamo s politiko, se politika ukvarja z nami\" - Metroplay - Metropolitan.si",
+          "last_provider": "google-news-global",
+          "published": 525510,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -385,17 +391,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 19,
+      "current_source_count": 15,
       "example_titles": {
         "news.google.com": [
-          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
+          "Nov protest ob obisku Sara v DZ-ju. Janša: Protesti so refleks levičarskega antisemitizma. - rtvslo.si",
           "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer",
-          "Pirc Musar: Ne bom tiho, ko zunanja politika ne bo skladna z ustavnimi vrednotami države - Siol.net"
+          "Janša mladim ob njihovem dnevu: “Slovenska mladina je danes med politično najbolj aktivnimi v EU” - Nova24TV"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-29T14:02:25+01:00",
+      "last_learning_run": "2026-10-29T23:46:20+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -484,11 +490,11 @@
         },
         "news.google.com": {
           "score": 2.519,
-          "seen": 203116,
-          "last_seen": "2026-10-29T14:02:25+01:00",
+          "seen": 203142,
+          "last_seen": "2026-10-29T23:46:20+01:00",
           "last_title": "Podpisan drugi dodatek k Dogovoru za razvoj regije Jugovzhodna Slovenija - Novice - Aktualno - Mestna občina Novo mesto",
           "last_provider": "google-news-si",
-          "published": 327884,
+          "published": 327904,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -583,7 +589,7 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 25,
+      "current_source_count": 26,
       "example_titles": {
         "news.google.com": [
           "(AKTUALNO) Še danes v prodaji 36. št. revije Demokracija: 30 let Demokracije, ki udejanja pravico vedeti več! Načrt za demografsko obnovo sl",
@@ -594,6 +600,12 @@
     }
   },
   "recent_articles": [
+    {
+      "id": "the-call-of-the-mountains-5-reasons-to-visit-northwest-slovenia-s-julian-alps-5ea65d4e",
+      "title": "The call of the mountains: 5 reasons to visit northwest Slovenia’s Julian Alps",
+      "category": "Gore & traili",
+      "createdAt": "2026-10-29T16:24:59+01:00"
+    },
     {
       "id": "via-alpina-slovenia-stage-11-triglav-lakes-dolic-long-distance-hiking-00c2f442",
       "title": "Via Alpina Slovenia: Stage 11 (Triglav lakes- Dolič) • Long-Distance Hiking ...",
@@ -659,58 +671,9 @@
       "title": "Jakopičevo sprehajališče v parku Tivoli, Ljubljana - razstava ob 200. obletnici Narodnega muzeja Slovenije - V Fokusu",
       "category": "Dediščina",
       "createdAt": "2026-10-25T10:54:30+01:00"
-    },
-    {
-      "id": "foto-do-leta-2023-bodo-v-slovenskih-goricah-zgradili-vec-kot-80-kilometrov-novih-kolesarsk-9d3a3075",
-      "title": "FOTO: Do leta 2023 bodo v Slovenskih goricah zgradili več kot 80 kilometrov novih kolesarskih poti",
-      "category": "Kolesarstvo",
-      "createdAt": "2026-10-25T07:40:02+01:00"
     }
   ],
   "recent_failures": [
-    {
-      "file": "fallback-failed-20261027-143846.json",
-      "category": "dediscina",
-      "errors": [
-        "prekratek"
-      ],
-      "title": "Poletna muzejska noč v znamenju kulture, dediščine in umetnosti - ekopercapodistria.si"
-    },
-    {
-      "file": "fallback-failed-20261027-145515.json",
-      "category": "dediscina",
-      "errors": [
-        "prekratek"
-      ],
-      "title": "Poletna muzejska noč v znamenju kulture, dediščine in umetnosti - ekopercapodistria.si"
-    },
-    {
-      "file": "fallback-failed-20261027-151155.json",
-      "category": "sezonsko",
-      "errors": [
-        "prekratek",
-        "manjka_fotografija"
-      ],
-      "title": "Nova sezona, novo zvišanje cen: za kampiranje boste zdaj mogli odšteti kar ... - Metropolitan.si"
-    },
-    {
-      "file": "fallback-failed-20261027-175250.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek",
-        "manjka_fotografija"
-      ],
-      "title": "Merkur zavarovalnica L’Étape Slovenia by Tour de France kolesarsko doživetje - L'Etape Slovenia"
-    },
-    {
-      "file": "fallback-failed-20261027-222952.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek",
-        "manjka_fotografija"
-      ],
-      "title": "Merkur zavarovalnica L’Étape Slovenia by Tour de France kolesarsko doživetje - L'Etape Slovenia"
-    },
     {
       "file": "fallback-failed-20261028-074001.json",
       "category": "kolesarstvo",
@@ -756,25 +719,67 @@
       "title": "Merkur zavarovalnica L’Étape Slovenia by Tour de France kolesarsko doživetje - L'Etape Slovenia"
     },
     {
-      "file": "agent-state",
+      "file": "fallback-failed-20261029-142506.json",
       "category": "dediscina",
       "errors": [
-        "fallback_no_fresh_evidence"
+        "prekratek"
+      ],
+      "title": "Zapuščina izginulih slovenskih gradov v gradivu Arhiva Republike Slovenije - Portal GOV.SI"
+    },
+    {
+      "file": "fallback-failed-20261029-143955.json",
+      "category": "sezonsko",
+      "errors": [
+        "prekratek"
+      ],
+      "title": "Slovenski turizem: kje smo s cenami, naložbami in kakšna bo letošnja sezona - Finance.si"
+    },
+    {
+      "file": "fallback-failed-20261029-180634.json",
+      "category": "kolesarstvo",
+      "errors": [
+        "prekratek",
+        "manjka_fotografija"
+      ],
+      "title": "Merkur zavarovalnica L’Étape Slovenia by Tour de France kolesarsko doživetje - L'Etape Slovenia"
+    },
+    {
+      "file": "fallback-failed-20261029-195442.json",
+      "category": "gourmet",
+      "errors": [
+        "prekratek"
+      ],
+      "title": "Gostilna Pri planinskem orlu je, z nekaj primorskega navdiha, znova odprta - Kamnik.info"
+    },
+    {
+      "file": "fallback-failed-20261029-230237.json",
+      "category": "kolesarstvo",
+      "errors": [
+        "prekratek",
+        "manjka_fotografija"
+      ],
+      "title": "Merkur zavarovalnica L’Étape Slovenia by Tour de France kolesarsko doživetje - L'Etape Slovenia"
+    },
+    {
+      "file": "agent-state",
+      "category": "kolesarstvo",
+      "errors": [
+        "prekratek,manjka_fotografija"
       ]
     },
     {
       "file": "agent-state",
-      "category": "dediscina",
+      "category": "kolesarstvo",
       "errors": [
         "ponavljanje"
       ],
-      "slot": "2026-10-29|07:35|kolesarstvo"
+      "slot": "2026-10-29|19:10|gourmet"
     }
   ],
   "failure_summary": {
     "prekratek": 20,
-    "manjka_fotografija": 7,
-    "fallback_no_fresh_evidence": 1,
+    "manjka_fotografija": 9,
+    "prekratek,manjka_fotografija": 1,
     "ponavljanje": 1
   }
 }
