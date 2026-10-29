@@ -5,7 +5,7 @@
   "posts_date": "2026-10-29",
   "posts_today": 0,
   "last_output": "via-alpina-slovenia-stage-11-triglav-lakes-dolic-long-distance-hiking-00c2f442",
-  "last_error": "fallback_no_fresh_evidence",
+  "last_error": "prekratek",
   "agent_version": "3.0.0-learning-guarded-fallback",
   "current_category": "dediscina",
   "scheduled_posts_today": 0,
@@ -13,12 +13,13 @@
   "writer_mode": "workers_ai",
   "scheduled_slots_done": [],
   "scheduled_slots_deferred": [
-    "2026-10-29|07:35|kolesarstvo"
+    "2026-10-29|07:35|kolesarstvo",
+    "2026-10-29|10:45|dediscina"
   ],
   "last_editorial_hold": {
-    "slot": "2026-10-29|07:35|kolesarstvo",
+    "slot": "2026-10-29|10:45|dediscina",
     "reason": "ponavljanje",
-    "at": "2026-10-29T07:39:36+01:00"
+    "at": "2026-10-29T14:24:38+01:00"
   },
   "publisher_guardian_last_run": "2026-10-29T11:27:32+01:00",
   "publisher_guardian_last_action": {
