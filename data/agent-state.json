@@ -5,21 +5,26 @@
   "posts_date": "2026-10-29",
   "posts_today": 1,
   "last_output": "the-call-of-the-mountains-5-reasons-to-visit-northwest-slovenia-s-julian-alps-5ea65d4e",
-  "last_error": "fallback_no_fresh_evidence",
+  "last_error": "prekratek",
   "agent_version": "3.0.0-learning-guarded-fallback",
   "current_category": "gourmet",
   "scheduled_posts_today": 1,
   "manual_posts_today": 0,
-  "writer_mode": "deterministic_fallback",
+  "writer_mode": "workers_ai",
   "scheduled_slots_done": [
     "2026-10-29|16:20|gore"
   ],
   "scheduled_slots_deferred": [
     "2026-10-29|07:35|kolesarstvo",
     "2026-10-29|10:45|dediscina",
-    "2026-10-29|13:30|sezonsko"
+    "2026-10-29|13:30|sezonsko",
+    "2026-10-29|19:10|gourmet"
   ],
-  "last_editorial_hold": null,
+  "last_editorial_hold": {
+    "slot": "2026-10-29|19:10|gourmet",
+    "reason": "ponavljanje",
+    "at": "2026-10-29T19:54:27+01:00"
+  },
   "publisher_guardian_last_run": "2026-10-29T18:06:34+01:00",
   "publisher_guardian_last_action": {
     "category": "kolesarstvo",
