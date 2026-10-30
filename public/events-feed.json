@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-30T06:58:53+01:00",
+  "updatedAt": "2026-10-30T07:20:00+01:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -12,7 +12,8 @@
     "Fever",
     "Festival Ljubljana",
     "Klub K4",
-    "Cirkus Klub"
+    "Cirkus Klub",
+    "Bunker / Stara mestna elektrarna"
   ],
   "sourcesFailed": [],
   "items": [
@@ -69,8 +70,8 @@
       "familyFriendly": true,
       "accessibility": null,
       "ticketUrl": "https://www.visitljubljana.com/en/visitors/events/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-23T07:15:00+02:00",
+      "status": "weather_dependent",
+      "lastCheckedAt": "2026-10-30T07:20:00+01:00",
       "description": "The seasonal corn labyrinth in Stanežiče is listed daily from 09:00 to 20:00; outdoor operation may depend on conditions, so recheck before travel."
     },
     {
@@ -120,7 +121,7 @@
       "familyFriendly": true,
       "accessibility": "Programme explores the castle and collection is downstairs in the Dragon's Den; contact the organiser for step-free arrangements.",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-29T07:18:00+01:00",
+      "lastCheckedAt": "2026-10-30T07:20:00+01:00",
       "endAt": "2026-10-30T13:00:00+01:00",
       "id": "autumn-holidays-ljubljana-castle-2026-10-26",
       "title": "Autumn Holidays at Ljubljana Castle",
@@ -151,8 +152,8 @@
       "accessibility": "Outdoor market on a paved central square.",
       "ticketUrl": null,
       "status": "weather_dependent",
-      "lastCheckedAt": "2026-10-29T07:18:00+01:00",
-      "description": "Ljubljana’s outdoor food market runs from 10:00 to 21:00 on Pogačarjev trg. It operates on sunny Fridays, so check the official listing if rain is forecast."
+      "lastCheckedAt": "2026-10-30T07:20:00+01:00",
+      "description": "Ljubljana’s outdoor food market is listed from 10:00 to 21:00 on Pogačarjev trg. It remains weather-dependent; ARSO’s latest forecast indicates a dry, partly sunny day, but recheck before travel."
     },
     {
       "id": "halloween-delta-riff-kresnik-2026-10-30",
@@ -170,8 +171,29 @@
       "accessibility": "Contact Ljubljana Castle before booking for step-free access arrangements to the Rock Hall.",
       "ticketUrl": "https://www.ljubljanskigrad.si/en/castle-events/page-923/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-29T07:18:00+01:00",
+      "lastCheckedAt": "2026-10-30T07:20:00+01:00",
       "description": "Delta Riff and Kresnik headline the Castle Jazz Club’s Halloween night at 20:00. The venue opens at 19:00 and the concert ticket includes a return funicular journey."
+    },
+    {
+      "id": "mame-stara-mestna-elektrarna-2026-10-30",
+      "title": "Kolektiv Igralke and Rajna Racz: MAME",
+      "url": "https://www.bunker.si/events/kolektiv-igralke-in-rajna-racz-mame-2/?occurrence=2026-10-29&time=1793304000",
+      "source": "Bunker / Stara mestna elektrarna",
+      "type": "Theatre · documentary performance",
+      "place": "Stara mestna elektrarna · Slomškova 18",
+      "startAt": "2026-10-30T20:00:00+01:00",
+      "endAt": "2026-10-30T21:00:00+01:00",
+      "price": "€10 / €7 reduced",
+      "languages": [
+        "Language not stated by organiser"
+      ],
+      "touristFriendly": null,
+      "familyFriendly": false,
+      "accessibility": "Contact Bunker for event-specific step-free access and seating arrangements.",
+      "ticketUrl": "https://olaii.com/event/11620/kolektiv-igralke-in-rajna-racz-mame/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-30T07:20:00+01:00",
+      "description": "This documentary performance explores women’s decisions around motherhood through testimony, movement, music and visual art. It runs from 20:00 to 21:00; tickets cost €10 or €7 reduced."
     },
     {
       "title": "Noč čarovnic special: KIKI",
@@ -191,7 +213,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.galahala.com/program/halloweeki-gala-hala/34706/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-29T07:18:00+01:00",
+      "lastCheckedAt": "2026-10-30T07:20:00+01:00",
       "description": "KiKi performs a Halloween-themed folk-pop concert at Gala Hala at 20:00. Advance tickets cost €12 and the door price is €15."
     },
     {
@@ -209,9 +231,9 @@
       "familyFriendly": true,
       "accessibility": null,
       "ticketUrl": null,
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-23T07:15:00+02:00",
-      "description": "Free circus performances and skills workshops begin at 11:30 in Park Kodeljevo. The outdoor event is cancelled in bad weather."
+      "status": "weather_dependent",
+      "lastCheckedAt": "2026-10-30T07:20:00+01:00",
+      "description": "Free circus performances and skills workshops begin at 11:30 in Park Kodeljevo. The event is cancelled in bad weather; ARSO currently forecasts no rain for Ljubljana on Saturday."
     },
     {
       "title": "HALLOWEEN: BRIGHT SIDE OF THE 80’S @ Gala hala",
@@ -229,7 +251,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.galahala.com/program/halloween-bright-side-of-the-80s-gala-hala/34710/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-18T07:22:00+02:00",
+      "lastCheckedAt": "2026-10-30T07:20:00+01:00",
       "description": "Gala Hala’s traditional Halloween party starts at 22:00 with a 1980s-focused music programme. Entry costs €10 in costume or €13 without costume."
     },
     {
@@ -874,6 +896,48 @@
       "description": "Croatian stand-up comedian Goran Vinčić presents Comedy Is a Serious Thing in Gallus Hall at 20:00. The show is performed in the original language; tickets range from €28.90 to €48.90."
     },
     {
+      "id": "rijeka-paris-texas-ii-kino-siska-2026-11-11",
+      "title": "Rijeka–Paris–Texas II: The Siids, Chasing Nord and Turisti",
+      "url": "https://www.kinosiska.si/dogodek/rijeka-paris-texas-ii/",
+      "source": "Kino Šiška",
+      "type": "Concert · alternative rock and electronic",
+      "place": "Kino Šiška · Ljubljana",
+      "startAt": "2026-11-11T20:00:00+01:00",
+      "endAt": null,
+      "price": "€19 / €14.25 reduced",
+      "languages": [
+        "Music-led"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": "Kino Šiška publishes general venue accessibility information; contact the venue for event-specific arrangements.",
+      "ticketUrl": "https://www.kinosiska.si/dogodek/rijeka-paris-texas-ii/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-30T07:20:00+01:00",
+      "description": "The Siids, Chasing Nord and Turisti present the second chapter of Rijeka–Paris–Texas at 20:00. Tickets cost €19, or €14.25 at the reduced rate."
+    },
+    {
+      "id": "svetloba-od-zunaj-bunker-2026-11-11",
+      "title": "Tina Benko and Ema Križič: Svetloba od zunaj",
+      "url": "https://www.bunker.si/events/tina-benko-ema-krizic-svetloba-od-zunaj/?occurrence=2026-11-11&time=1794427200",
+      "source": "Bunker / Stara mestna elektrarna",
+      "type": "Dance performance",
+      "place": "Stara mestna elektrarna · Slomškova 18",
+      "startAt": "2026-11-11T20:00:00+01:00",
+      "endAt": "2026-11-11T21:00:00+01:00",
+      "price": "€10 / €7 reduced",
+      "languages": [
+        "Dance-led"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": null,
+      "accessibility": "Contact Bunker for event-specific step-free access and seating arrangements.",
+      "ticketUrl": "https://www.bunker.si/events/tina-benko-ema-krizic-svetloba-od-zunaj/?occurrence=2026-11-11&time=1794427200",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-30T07:20:00+01:00",
+      "description": "Tina Benko and Ema Križič present a one-hour dance work exploring movement, rhythm, sound and light. Tickets cost €10 or €7 reduced."
+    },
+    {
       "id": "tesla-cankarjev-dom-2026-11-12",
       "title": "Tesla",
       "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/tesla",
@@ -959,41 +1023,108 @@
       "description": "SONICA’s main concert night brings Marina Herlop, an AV performance by Estelle Schorpp and Charline Dally, and Litošt to Katedrala Hall at 20:00. Presale costs €25 and the walk-up price is €30."
     },
     {
+      "id": "svetloba-od-zunaj-bunker-2026-11-12",
+      "title": "Tina Benko and Ema Križič: Svetloba od zunaj",
+      "url": "https://www.bunker.si/events/tina-benko-ema-krizic-svetloba-od-zunaj/?occurrence=2026-11-11&time=1794427200",
+      "source": "Bunker / Stara mestna elektrarna",
+      "type": "Dance performance",
+      "place": "Stara mestna elektrarna · Slomškova 18",
+      "startAt": "2026-11-12T20:00:00+01:00",
+      "endAt": "2026-11-12T21:00:00+01:00",
+      "price": "€10 / €7 reduced",
+      "languages": [
+        "Dance-led"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": null,
+      "accessibility": "Contact Bunker for event-specific step-free access and seating arrangements.",
+      "ticketUrl": "https://www.bunker.si/events/tina-benko-ema-krizic-svetloba-od-zunaj/?occurrence=2026-11-11&time=1794427200",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-30T07:20:00+01:00",
+      "description": "The second Ljubljana performance of Svetloba od zunaj runs from 20:00 to 21:00. This dance-led work is suitable for visitors regardless of language; tickets cost €10 or €7 reduced."
+    },
+    {
+      "id": "goran-vojnovic-sum-cesnje-cankarjev-dom-2026-11-13",
+      "title": "Goran Vojnović: Šum češnje",
+      "url": "https://www.cd-cc.si/kultura/literatura-in-humanistika/goran-vojnovic-sum-cesnje",
+      "source": "Cankarjev dom",
+      "type": "Literature · author conversation",
+      "place": "CD Club · Cankarjev dom",
+      "startAt": "2026-11-13T19:00:00+01:00",
+      "endAt": null,
+      "price": "Free ticket required",
+      "languages": [
+        "Slovenian"
+      ],
+      "touristFriendly": false,
+      "familyFriendly": false,
+      "accessibility": "Contact Cankarjev dom for wheelchair seating and event-specific assistance.",
+      "ticketUrl": "https://www.cd-cc.si/kultura/literatura-in-humanistika/goran-vojnovic-sum-cesnje",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-30T07:20:00+01:00",
+      "description": "Goran Vojnović discusses his new novel Šum češnje with journalist and writer Jela Krečič at 19:00. Admission is free, but a free ticket is required; the conversation is in Slovenian."
+    },
+    {
+      "id": "romantic-souls-mgl-2026-11-13",
+      "title": "Romantic Souls",
+      "url": "https://www.mgl.si/en/shows/romantic-souls/",
+      "source": "MGL",
+      "type": "Theatre · drama",
+      "place": "MGL Main Stage · Ljubljana",
+      "startAt": "2026-11-13T19:30:00+01:00",
+      "endAt": null,
+      "price": null,
+      "languages": [
+        "Slovenian"
+      ],
+      "touristFriendly": false,
+      "familyFriendly": false,
+      "accessibility": "Contact MGL for performance-specific step-free seating arrangements.",
+      "ticketUrl": "https://www.mgl.si/en/schedule/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-30T07:20:00+01:00",
+      "description": "MGL stages Ivan Cankar’s Romantic Souls on the Main Stage at 19:30. The official schedule lists tickets; the performance is in Slovenian."
+    },
+    {
       "title": "DOUBLE DATE @ Gala hala",
-      "url": "https://www.galahala.com/",
+      "url": "https://www.galahala.com/program/double-date-gala-hala/34816/",
       "source": "Gala Hala",
       "type": "Koncert · Metelkova",
       "place": "Gala Hala · AKC Metelkova",
       "startAt": "2026-11-13T23:00:00+01:00",
       "endAt": null,
-      "price": null,
-      "languages": [],
-      "touristFriendly": null,
-      "familyFriendly": null,
-      "accessibility": null,
-      "ticketUrl": "https://www.galahala.com/",
+      "price": "€17 until midnight / €20 afterwards",
+      "languages": [
+        "Music-led"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": "Contact Gala Hala for event-specific accessibility information.",
+      "ticketUrl": "https://www.galahala.com/program/double-date-gala-hala/34816/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-30T06:58:53+01:00",
-      "description": "DOUBLE DATE @ Gala hala is listed by Gala Hala. Check the official event page for price, language and accessibility details.",
+      "lastCheckedAt": "2026-10-30T07:20:00+01:00",
+      "description": "Glorex, Pholia and RotorMotor lead a fast electronic club night from 23:00. Admission costs €17 until midnight and €20 afterwards.",
       "id": "event-47-double-date-gala-hala"
     },
     {
       "title": "In Between re|lined x AMOTIK",
-      "url": "https://www.klub-k4.si/",
+      "url": "https://www.klub-k4.si/en/",
       "source": "Klub K4",
       "type": "Club · elektronika",
       "place": "Klub K4 · Ljubljana",
       "startAt": "2026-11-13T23:00:00+01:00",
       "endAt": null,
       "price": null,
-      "languages": [],
-      "touristFriendly": null,
-      "familyFriendly": null,
-      "accessibility": null,
-      "ticketUrl": "https://www.klub-k4.si/",
+      "languages": [
+        "Music-led"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": "Basement club; contact Klub K4 for step-free access information.",
+      "ticketUrl": "https://www.klub-k4.si/en/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-30T06:58:53+01:00",
-      "description": "In Between re|lined x AMOTIK is listed by Klub K4. Check the official event page for price, language and accessibility details.",
+      "lastCheckedAt": "2026-10-30T07:20:00+01:00",
+      "description": "Klub K4 lists In Between re|lined x AMOTIK from 23:00. The event is 18+; the organiser has not published a ticket price on its official programme page.",
       "id": "event-48-in-between-re-lined-x-amotik"
     }
   ]
