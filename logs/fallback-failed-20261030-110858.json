@@ -1,0 +1,27 @@
+{
+  "category": "dediscina",
+  "errors": [
+    "prekratek"
+  ],
+  "article": {
+    "title": "Poletna muzejska noč v znamenju kulture, dediščine in umetnosti - ekopercapodistria.si"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "lead_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQMURWMWpyMHUwZWR6ekE5ZFdoWWo0N2p4MGpIUW1rS2c5NGd5Sl9DaFQwTV9yR2x1TjlfT3ctd2hVQUV0ZkltWmNrd3JhZEZpX0U2WGdmN21YQXNwYS12amdkV0hCSExUUnlsc0wtenA1Qkt5ZTdseE5LbjF4RU5EYU4tSkxSbFdybklWaU96VnZ5b0J2ZlZuWklPZlFNWVRZ?oc=5",
+      "title": "Poletna muzejska noč v znamenju kulture, dediščine in umetnosti - ekopercapodistria.si",
+      "errors": [
+        "prekratek"
+      ]
+    },
+    {
+      "attempt": 2,
+      "lead_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPRG9ielVMcDl0WFg5elpBRmFaNVBfdXMzaGNoM1poTmF3QXhCY3NKYzdPUTFlT0dlX2NGX2FHY09GSEhQZ0lhdmxNVFQ5MWUwWEtCN0ViR0prYnB0eV9kdVVJaG0wOWhPNS1QZG1aVkd2SGNDdVBYYzhvVVpHdDkwVW9IUlZCTUFYdzN1WGdSaEVBbXFRTzZzMFNMQUZjNGZJMVRhNHFqMk8?oc=5",
+      "title": "Judovska tradicija v Sloveniji: Lendava naredila POMEMBEN korak! - Metropolitan.si",
+      "errors": [
+        "prekratek"
+      ]
+    }
+  ]
+}
