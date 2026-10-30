@@ -13,12 +13,13 @@
   "writer_mode": "workers_ai",
   "scheduled_slots_done": [],
   "scheduled_slots_deferred": [
-    "2026-10-30|07:35|kolesarstvo"
+    "2026-10-30|07:35|kolesarstvo",
+    "2026-10-30|10:45|dediscina"
   ],
   "last_editorial_hold": {
-    "slot": "2026-10-30|07:35|kolesarstvo",
+    "slot": "2026-10-30|10:45|dediscina",
     "reason": "ponavljanje",
-    "at": "2026-10-30T07:39:35+01:00"
+    "at": "2026-10-30T13:54:38+01:00"
   },
   "publisher_guardian_last_run": "2026-10-30T10:03:30+01:00",
   "publisher_guardian_last_action": {
