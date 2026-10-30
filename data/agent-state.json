@@ -5,9 +5,9 @@
   "posts_date": "2026-10-30",
   "posts_today": 1,
   "last_output": "slovenian-hiking-trail-shows-the-best-bits-of-this-beautiful-country-644062ed",
-  "last_error": "prekratek",
+  "last_error": "prekratek,manjka_fotografija",
   "agent_version": "3.0.0-learning-guarded-fallback",
-  "current_category": "gourmet",
+  "current_category": "kolesarstvo",
   "scheduled_posts_today": 1,
   "manual_posts_today": 0,
   "writer_mode": "workers_ai",
@@ -25,11 +25,11 @@
     "reason": "ponavljanje",
     "at": "2026-10-30T19:24:41+01:00"
   },
-  "publisher_guardian_last_run": "2026-10-30T17:16:51+01:00",
+  "publisher_guardian_last_run": "2026-10-30T22:07:06+01:00",
   "publisher_guardian_last_action": {
     "category": "kolesarstvo",
     "slot": "2026-10-30|07:35|kolesarstvo",
-    "remaining_repairs": 2
+    "remaining_repairs": 3
   },
   "schedule_counter_normalized_at": "2026-10-07T16:45:00+02:00"
 }
