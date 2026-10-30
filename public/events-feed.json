@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-29T22:13:20+01:00",
+  "updatedAt": "2026-10-30T06:58:53+01:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -131,65 +131,6 @@
       "startAt": "2026-10-26T10:00:00+01:00",
       "ticketUrl": "https://www.ljubljanskigrad.si/sl/dogodki/jesenske-pocitnice/",
       "description": "Friderik’s castle challenges and creative workshops run daily from 10:00 to 13:00 for first-triad primary pupils. A daily ticket costs €7; places are limited and children may attend without an accompanying adult."
-    },
-    {
-      "id": "mavra-ravel-child-magic-cankarjev-dom-2026-10-29",
-      "title": "Igor Stravinsky: Mavra / Maurice Ravel: L’Enfant et les sortilèges",
-      "url": "https://www.cd-cc.si/kultura/glasba/igor-stravinski-mavra-maurice-ravel-otrok-in-carobni-urok-lenfant-et-les-sortileges",
-      "source": "Cankarjev dom",
-      "type": "Opera double bill · student production",
-      "place": "Linhart Hall · Cankarjev dom",
-      "startAt": "2026-10-29T18:00:00+01:00",
-      "endAt": null,
-      "price": "€14 / €10 reduced",
-      "languages": [
-        "Sung opera; surtitles not confirmed"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": null,
-      "accessibility": "Contact Cankarjev dom for wheelchair seating and event-specific assistance.",
-      "ticketUrl": "https://www.cd-cc.si/kultura/glasba/igor-stravinski-mavra-maurice-ravel-otrok-in-carobni-urok-lenfant-et-les-sortileges",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-29T07:18:00+01:00",
-      "description": "A student opera double bill pairs Stravinsky’s Mavra with Ravel’s L’Enfant et les sortilèges in Linhart Hall at 18:00. Tickets cost €14, or €10 at the reduced rate."
-    },
-    {
-      "title": "BBBBBBB (JP), Mala Roza Muca & Pixel.Bambi, SsmKOSK",
-      "url": "https://www.galahala.com/program/",
-      "source": "Gala Hala",
-      "type": "Koncert · Metelkova",
-      "place": "Channel Zero · AKC Metelkova",
-      "startAt": "2026-10-29T20:00:00+01:00",
-      "endAt": null,
-      "id": "bbbbbbb-mala-roza-muca-pixel-bambi-ssmkosk-2026-10-29",
-      "price": "€10 advance / €13 on the day / €8 under 24",
-      "languages": [],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": null,
-      "ticketUrl": "https://www.galahala.com/program/bbbbbbb-jp-channel-zero/34798/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-29T07:18:00+01:00",
-      "description": "The official Gala Hala programme lists this concert at Channel Zero at 20:00. Check the organiser page for ticket and accessibility details."
-    },
-    {
-      "id": "the-years-2026-10-29",
-      "title": "The Years",
-      "url": "https://www.mgl.si/en/schedule/",
-      "source": "MGL",
-      "type": "Theatre · dramatisation",
-      "place": "MGL Small Stage · Ljubljana",
-      "startAt": "2026-10-29T20:00:00+01:00",
-      "endAt": null,
-      "price": null,
-      "languages": [],
-      "touristFriendly": null,
-      "familyFriendly": false,
-      "accessibility": null,
-      "ticketUrl": "https://www.mgl.si/en/schedule/",
-      "status": "sold_out",
-      "lastCheckedAt": "2026-10-29T07:18:00+01:00",
-      "description": "MGL schedules The Years on the Small Stage at 20:00. The official programme currently marks this performance as sold out."
     },
     {
       "id": "open-kitchen-2026-10-30",
@@ -1016,6 +957,44 @@
       "status": "confirmed",
       "lastCheckedAt": "2026-10-29T07:18:00+01:00",
       "description": "SONICA’s main concert night brings Marina Herlop, an AV performance by Estelle Schorpp and Charline Dally, and Litošt to Katedrala Hall at 20:00. Presale costs €25 and the walk-up price is €30."
+    },
+    {
+      "title": "DOUBLE DATE @ Gala hala",
+      "url": "https://www.galahala.com/",
+      "source": "Gala Hala",
+      "type": "Koncert · Metelkova",
+      "place": "Gala Hala · AKC Metelkova",
+      "startAt": "2026-11-13T23:00:00+01:00",
+      "endAt": null,
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.galahala.com/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-30T06:58:53+01:00",
+      "description": "DOUBLE DATE @ Gala hala is listed by Gala Hala. Check the official event page for price, language and accessibility details.",
+      "id": "event-47-double-date-gala-hala"
+    },
+    {
+      "title": "In Between re|lined x AMOTIK",
+      "url": "https://www.klub-k4.si/",
+      "source": "Klub K4",
+      "type": "Club · elektronika",
+      "place": "Klub K4 · Ljubljana",
+      "startAt": "2026-11-13T23:00:00+01:00",
+      "endAt": null,
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.klub-k4.si/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-30T06:58:53+01:00",
+      "description": "In Between re|lined x AMOTIK is listed by Klub K4. Check the official event page for price, language and accessibility details.",
+      "id": "event-48-in-between-re-lined-x-amotik"
     }
   ]
 }
