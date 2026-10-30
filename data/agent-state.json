@@ -7,19 +7,20 @@
   "last_output": "the-call-of-the-mountains-5-reasons-to-visit-northwest-slovenia-s-julian-alps-5ea65d4e",
   "last_error": "prekratek",
   "agent_version": "3.0.0-learning-guarded-fallback",
-  "current_category": "dediscina",
+  "current_category": "sezonsko",
   "scheduled_posts_today": 0,
   "manual_posts_today": 0,
   "writer_mode": "workers_ai",
   "scheduled_slots_done": [],
   "scheduled_slots_deferred": [
     "2026-10-30|07:35|kolesarstvo",
-    "2026-10-30|10:45|dediscina"
+    "2026-10-30|10:45|dediscina",
+    "2026-10-30|13:30|sezonsko"
   ],
   "last_editorial_hold": {
-    "slot": "2026-10-30|10:45|dediscina",
+    "slot": "2026-10-30|13:30|sezonsko",
     "reason": "ponavljanje",
-    "at": "2026-10-30T13:54:38+01:00"
+    "at": "2026-10-30T14:09:08+01:00"
   },
   "publisher_guardian_last_run": "2026-10-30T10:03:30+01:00",
   "publisher_guardian_last_action": {
