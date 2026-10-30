@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-30T06:50:27+01:00",
-  "loop_count": 7906,
+  "updated_at": "2026-10-30T13:57:43+01:00",
+  "loop_count": 7907,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-30T06:50:04+01:00",
+      "last_learning_run": "2026-10-30T13:57:21+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 148255,
-          "last_seen": "2026-10-30T06:50:04+01:00",
-          "last_title": "Odlični obeti, Slovenija se bi lahko že danes razveselila novega globusa - Žurnal24",
+          "seen": 148264,
+          "last_seen": "2026-10-30T13:57:21+01:00",
+          "last_title": "Kje gledati finale košarkarskega EP med Slovenci in Italijani? Televizijski prenos bo! - Dnevnik",
           "last_provider": "google-news-si",
-          "published": 477568,
+          "published": 477625,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,23 +227,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 8,
+      "current_source_count": 9,
       "example_titles": {
-        "lonelyplanet.com": [
-          "11 Things to Know Before Traveling to Slovenia - Lonely Planet"
-        ],
         "news.google.com": [
           "Slovenija želi biti nova Švica, zdaj pa je Švica postala nova Slovenija. Trava, kriva je trava - Dnevnik",
-          "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
-          "Slovenska blamaža na igrah! Zakaj sploh tekmujemo, če je šport pri nas umrl - Ekipa"
-        ],
-        "worldatlas.com": [
-          "Slovenia Maps & Facts"
+          "Slovenci pogoreli v preveliki želji: \"Finci so bili enostavno premočni\" - rtvslo.si",
+          "Slovenija po neverjetnem tretjem nizu četrtič v polfinale Lige narodov - rtvslo.si"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-30T06:50:15+01:00",
+      "last_learning_run": "2026-10-30T13:57:32+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -285,11 +279,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 176720,
-          "last_seen": "2026-10-30T06:50:15+01:00",
+          "seen": 176736,
+          "last_seen": "2026-10-30T13:57:32+01:00",
           "last_title": "Protestnik, ki je postal predsednik: Stevanović nekoč glas anticepilcev, danes pa enfant terrible, ki je vse postavil na glavo - Metropolitan.si",
           "last_provider": "google-news-si",
-          "published": 525575,
+          "published": 525640,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -391,7 +385,7 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 18,
+      "current_source_count": 16,
       "example_titles": {
         "news.google.com": [
           "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
@@ -401,7 +395,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-30T06:50:27+01:00",
+      "last_learning_run": "2026-10-30T13:57:43+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -490,11 +484,11 @@
         },
         "news.google.com": {
           "score": 2.519,
-          "seen": 203158,
-          "last_seen": "2026-10-30T06:50:27+01:00",
+          "seen": 203172,
+          "last_seen": "2026-10-30T13:57:43+01:00",
           "last_title": "Test, uporabljen v danes začeti raziskavi o razširjenosti covida-19 v Sloveniji, ima odlično občutljivost in specifičnost - Hudo Slovenija",
           "last_provider": "google-news-si",
-          "published": 327924,
+          "published": 327944,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -589,11 +583,11 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 16,
+      "current_source_count": 14,
       "example_titles": {
         "news.google.com": [
-          "700 tisoč evrov za vožnjo z vlakom, milijoni za Litijsko in računalnike: kdo bo odgovarjal za davkoplačevalski denar? Je Skok rešitev? | Por",
-          "Španija ima največ hitrih železnic v Evropi, a letos že 115 smrtnih žrtev: kaj je narobe s španskimi železnicami? - Najdi.si novice",
+          "Bi danes sploh razumeli Primoža Trubarja? Poglejte, kako je bila videti slovenščina pred skoraj 500 leti! - Najdi.si novice",
+          "Bi lahko Slovenci že danes plačevali manj? Predsednik obrtne zbornice opozarja na pomen sprejetja razvojnega zakona! | Portal OS na najdi.si",
           "Pavel Rupar poziva na popoldanski shod z začetkom pred RTV Slovenija, policija pripravljena - Info360"
         ]
       }
@@ -675,111 +669,108 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20261028-074001.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek",
-        "manjka_fotografija"
-      ],
-      "title": "Merkur zavarovalnica L’Étape Slovenia by Tour de France kolesarsko doživetje - L'Etape Slovenia"
-    },
-    {
-      "file": "fallback-failed-20261028-162453.json",
-      "category": "gore",
-      "errors": [
-        "manjka_fotografija",
-        "prekratek"
-      ],
-      "title": "ŠPORTNI VIKEND LJUBLJANICA 2026 bo med 11. in 13. septembrom v središče Ljubljane pripeljal nočni tek, trail, pohodništvo, kolesarjenje in pestro družinsko športno dogajanje - 24ur"
-    },
-    {
-      "file": "fallback-failed-20261028-195456.json",
-      "category": "gourmet",
-      "errors": [
-        "prekratek"
-      ],
-      "title": "Gostilna Pri planinskem orlu je, z nekaj primorskega navdiha, znova odprta - Kamnik.info"
-    },
-    {
-      "file": "fallback-failed-20261029-074000.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek",
-        "manjka_fotografija"
-      ],
-      "title": "Merkur zavarovalnica L’Étape Slovenia by Tour de France kolesarsko doživetje - L'Etape Slovenia"
-    },
-    {
-      "file": "fallback-failed-20261029-112732.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek",
-        "manjka_fotografija"
-      ],
-      "title": "Merkur zavarovalnica L’Étape Slovenia by Tour de France kolesarsko doživetje - L'Etape Slovenia"
-    },
-    {
-      "file": "fallback-failed-20261029-142506.json",
+      "file": "fallback-failed-20261030-113839.json",
       "category": "dediscina",
       "errors": [
         "prekratek"
       ],
-      "title": "Zapuščina izginulih slovenskih gradov v gradivu Arhiva Republike Slovenije - Portal GOV.SI"
+      "title": "Poletna muzejska noč v znamenju kulture, dediščine in umetnosti - ekopercapodistria.si"
     },
     {
-      "file": "fallback-failed-20261029-143955.json",
-      "category": "sezonsko",
+      "file": "fallback-failed-20261030-115410.json",
+      "category": "dediscina",
       "errors": [
         "prekratek"
       ],
-      "title": "Slovenski turizem: kje smo s cenami, naložbami in kakšna bo letošnja sezona - Finance.si"
+      "title": "Poletna muzejska noč v znamenju kulture, dediščine in umetnosti - ekopercapodistria.si"
     },
     {
-      "file": "fallback-failed-20261029-180634.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek",
-        "manjka_fotografija"
-      ],
-      "title": "Merkur zavarovalnica L’Étape Slovenia by Tour de France kolesarsko doživetje - L'Etape Slovenia"
-    },
-    {
-      "file": "fallback-failed-20261029-195442.json",
-      "category": "gourmet",
+      "file": "fallback-failed-20261030-120857.json",
+      "category": "dediscina",
       "errors": [
         "prekratek"
       ],
-      "title": "Gostilna Pri planinskem orlu je, z nekaj primorskega navdiha, znova odprta - Kamnik.info"
+      "title": "Judovska tradicija v Sloveniji: Lendava naredila POMEMBEN korak! - Metropolitan.si"
     },
     {
-      "file": "fallback-failed-20261029-230237.json",
-      "category": "kolesarstvo",
+      "file": "fallback-failed-20261030-122349.json",
+      "category": "dediscina",
       "errors": [
-        "prekratek",
-        "manjka_fotografija"
+        "prekratek"
       ],
-      "title": "Merkur zavarovalnica L’Étape Slovenia by Tour de France kolesarsko doživetje - L'Etape Slovenia"
+      "title": "Poletna muzejska noč v znamenju kulture, dediščine in umetnosti - ekopercapodistria.si"
+    },
+    {
+      "file": "fallback-failed-20261030-123902.json",
+      "category": "dediscina",
+      "errors": [
+        "prekratek"
+      ],
+      "title": "Judovska tradicija v Sloveniji: Lendava naredila POMEMBEN korak! - Metropolitan.si"
+    },
+    {
+      "file": "fallback-failed-20261030-125409.json",
+      "category": "dediscina",
+      "errors": [
+        "clanek_brez_slovenskega_konteksta",
+        "viri_ne_podpirajo_slovenske_rubrike",
+        "prekratek"
+      ],
+      "title": "Cal-Maine Foods, Inc. (CALM) Stock Price, News, Quote & History - Yahoo Finance"
+    },
+    {
+      "file": "fallback-failed-20261030-130852.json",
+      "category": "dediscina",
+      "errors": [
+        "prekratek"
+      ],
+      "title": "Judovska tradicija v Sloveniji: Lendava naredila POMEMBEN korak! - Metropolitan.si"
+    },
+    {
+      "file": "fallback-failed-20261030-132359.json",
+      "category": "dediscina",
+      "errors": [
+        "prekratek"
+      ],
+      "title": "Judovska tradicija v Sloveniji: Lendava naredila POMEMBEN korak! - Metropolitan.si"
+    },
+    {
+      "file": "fallback-failed-20261030-133842.json",
+      "category": "dediscina",
+      "errors": [
+        "prekratek"
+      ],
+      "title": "Poletna muzejska noč v znamenju kulture, dediščine in umetnosti - ekopercapodistria.si"
+    },
+    {
+      "file": "fallback-failed-20261030-135454.json",
+      "category": "dediscina",
+      "errors": [
+        "prekratek"
+      ],
+      "title": "Plečnikov stadion med najbolj ogroženimi primeri kulturne dediščine - www.primorski.eu"
     },
     {
       "file": "agent-state",
-      "category": "kolesarstvo",
+      "category": "dediscina",
       "errors": [
-        "prekratek,manjka_fotografija"
+        "prekratek"
       ]
     },
     {
       "file": "agent-state",
-      "category": "kolesarstvo",
+      "category": "dediscina",
       "errors": [
         "ponavljanje"
       ],
-      "slot": "2026-10-29|19:10|gourmet"
+      "slot": "2026-10-30|10:45|dediscina"
     }
   ],
   "failure_summary": {
-    "prekratek": 20,
-    "manjka_fotografija": 9,
-    "prekratek,manjka_fotografija": 1,
+    "prekratek": 21,
+    "manjka_fotografija": 4,
+    "clanek_brez_slovenskega_konteksta": 1,
+    "viri_ne_podpirajo_slovenske_rubrike": 1,
     "ponavljanje": 1
   }
 }
