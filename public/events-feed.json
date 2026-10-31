@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-30T21:52:55+01:00",
+  "updatedAt": "2026-10-31T06:54:51+01:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -111,110 +111,6 @@
       "startAt": "2026-10-15T09:00:00+02:00",
       "endAt": "2027-01-31T18:00:00+01:00",
       "description": "The spatial installation Stretch 3789 opens on 15 October 2026 and runs daily from 09:00 to 18:00 through 31 January 2027 in the S Gallery."
-    },
-    {
-      "price": "€7 per day",
-      "languages": [
-        "Slovenian"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": true,
-      "accessibility": "Programme explores the castle and collection is downstairs in the Dragon's Den; contact the organiser for step-free arrangements.",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-30T07:20:00+01:00",
-      "endAt": "2026-10-30T13:00:00+01:00",
-      "id": "autumn-holidays-ljubljana-castle-2026-10-26",
-      "title": "Autumn Holidays at Ljubljana Castle",
-      "url": "https://www.ljubljanskigrad.si/sl/dogodki/jesenske-pocitnice/",
-      "source": "Ljubljana Castle",
-      "type": "Family · workshop",
-      "place": "Meeting point: bridge before the main entrance · Ljubljana Castle",
-      "startAt": "2026-10-26T10:00:00+01:00",
-      "ticketUrl": "https://www.ljubljanskigrad.si/sl/dogodki/jesenske-pocitnice/",
-      "description": "Friderik’s castle challenges and creative workshops run daily from 10:00 to 13:00 for first-triad primary pupils. A daily ticket costs €7; places are limited and children may attend without an accompanying adult."
-    },
-    {
-      "id": "open-kitchen-2026-10-30",
-      "title": "Open Kitchen",
-      "url": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/open-kitchen",
-      "source": "Visit Ljubljana",
-      "type": "Food market · outdoor",
-      "place": "Pogačarjev trg · Ljubljana",
-      "startAt": "2026-10-30T10:00:00+01:00",
-      "endAt": "2026-10-30T21:00:00+01:00",
-      "price": "Free entry; food and drinks charged separately",
-      "languages": [
-        "Slovenian",
-        "English-friendly"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": true,
-      "accessibility": "Outdoor market on a paved central square.",
-      "ticketUrl": null,
-      "status": "weather_dependent",
-      "lastCheckedAt": "2026-10-30T07:20:00+01:00",
-      "description": "Ljubljana’s outdoor food market is listed from 10:00 to 21:00 on Pogačarjev trg. It remains weather-dependent; ARSO’s latest forecast indicates a dry, partly sunny day, but recheck before travel."
-    },
-    {
-      "id": "halloween-delta-riff-kresnik-2026-10-30",
-      "title": "Halloween Party: Delta Riff and Kresnik",
-      "url": "https://www.ljubljanskigrad.si/en/castle-events/page-923/",
-      "source": "Ljubljana Castle",
-      "type": "Concert · Halloween",
-      "place": "Rock Hall · Ljubljana Castle",
-      "startAt": "2026-10-30T20:00:00+01:00",
-      "endAt": null,
-      "price": "€11 including return funicular",
-      "languages": [],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": "Contact Ljubljana Castle before booking for step-free access arrangements to the Rock Hall.",
-      "ticketUrl": "https://www.ljubljanskigrad.si/en/castle-events/page-923/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-30T07:20:00+01:00",
-      "description": "Delta Riff and Kresnik headline the Castle Jazz Club’s Halloween night at 20:00. The venue opens at 19:00 and the concert ticket includes a return funicular journey."
-    },
-    {
-      "id": "mame-stara-mestna-elektrarna-2026-10-30",
-      "title": "Kolektiv Igralke and Rajna Racz: MAME",
-      "url": "https://www.bunker.si/events/kolektiv-igralke-in-rajna-racz-mame-2/?occurrence=2026-10-29&time=1793304000",
-      "source": "Bunker / Stara mestna elektrarna",
-      "type": "Theatre · documentary performance",
-      "place": "Stara mestna elektrarna · Slomškova 18",
-      "startAt": "2026-10-30T20:00:00+01:00",
-      "endAt": "2026-10-30T21:00:00+01:00",
-      "price": "€10 / €7 reduced",
-      "languages": [
-        "Language not stated by organiser"
-      ],
-      "touristFriendly": null,
-      "familyFriendly": false,
-      "accessibility": "Contact Bunker for event-specific step-free access and seating arrangements.",
-      "ticketUrl": "https://olaii.com/event/11620/kolektiv-igralke-in-rajna-racz-mame/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-30T07:20:00+01:00",
-      "description": "This documentary performance explores women’s decisions around motherhood through testimony, movement, music and visual art. It runs from 20:00 to 21:00; tickets cost €10 or €7 reduced."
-    },
-    {
-      "title": "Noč čarovnic special: KIKI",
-      "url": "https://www.galahala.com/program/halloweeki-gala-hala/34706/",
-      "source": "Gala Hala",
-      "type": "Koncert · Metelkova",
-      "place": "Gala Hala · AKC Metelkova",
-      "startAt": "2026-10-30T20:00:00+01:00",
-      "endAt": null,
-      "id": "noc-carovnic-special-kiki-2026-10-30",
-      "price": "€12 advance; €15 on the day",
-      "languages": [
-        "Slovenian"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": null,
-      "ticketUrl": "https://www.galahala.com/program/halloweeki-gala-hala/34706/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-30T07:20:00+01:00",
-      "description": "KiKi performs a Halloween-themed folk-pop concert at Gala Hala at 20:00. Advance tickets cost €12 and the door price is €15."
     },
     {
       "id": "cirkuliranje-kodeljevo-2026-10-31",
@@ -1126,6 +1022,25 @@
       "lastCheckedAt": "2026-10-30T07:20:00+01:00",
       "description": "Klub K4 lists In Between re|lined x AMOTIK from 23:00. The event is 18+; the organiser has not published a ticket price on its official programme page.",
       "id": "event-48-in-between-re-lined-x-amotik"
+    },
+    {
+      "title": "OTI - SAMOSPEV RELEASE KONCERT @ Gala hala",
+      "url": "https://www.galahala.com/",
+      "source": "Gala Hala",
+      "type": "Koncert · Metelkova",
+      "place": "Gala Hala · AKC Metelkova",
+      "startAt": "2026-11-14T20:00:00+01:00",
+      "endAt": null,
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.galahala.com/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-31T06:54:51+01:00",
+      "description": "OTI - SAMOSPEV RELEASE KONCERT @ Gala hala is listed by Gala Hala. Check the official event page for price, language and accessibility details.",
+      "id": "event-50-oti-samospev-release-koncert-gala-hala"
     }
   ]
 }
