@@ -1,0 +1,28 @@
+{
+  "category": "gore",
+  "errors": [
+    "manjka_fotografija",
+    "prekratek"
+  ],
+  "article": {
+    "title": "ŠPORTNI VIKEND LJUBLJANICA 2026 bo med 11. in 13. septembrom v središče Ljubljane pripeljal nočni tek, trail, pohodništvo, kolesarjenje in pestro družinsko športno dogajanje - 24ur"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "lead_url": "https://news.google.com/rss/articles/CBMitgJBVV95cUxQTlkwYlh3QWNaVUdkUlAyZjVPMUpCSURFbFY4Vzk4MlU3TnNuU0VVS3pxbllBVDJUZXRJWVl1STVydWZnbnFERlZhZlJ2b25xY0tNOVJ0aEs2cC03d0I1UURIRWdnRVRsVGlybFpkeFJQTGNMRWNXZFZJQ3Nxb2lyWVp2MzFSanR3YmxrQmlnQWVUMFZuM25TRXVqN09BTnBReFdKem5MZEFZMHJuakFJWTd2OFB1bERDR1JiWlRjMlBDQnRocGdhOVltdGtGYl9lY0hOaEhIWmxBZWo2NXY0M2s0N2g2cDdla1pZVGM2S3RHdzNrb212dWE1STFFWWRrV3Q5UHBuaHNMTU9MeHgzSWFQSVN3WEJ1N3dSQ0I3VGU1cWhaSEFEOURzT2t0MXRPMFViczhB?oc=5",
+      "title": "ŠPORTNI VIKEND LJUBLJANICA 2026 bo med 11. in 13. septembrom v središče Ljubljane pripeljal nočni tek, trail, pohodništvo, kolesarjenje in pestro družinsko športno dogajanje - 24ur",
+      "errors": [
+        "manjka_fotografija"
+      ]
+    },
+    {
+      "attempt": 2,
+      "lead_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNcGJkbEVpNFhsQ3ZCRHNLelh6M1I1LThvaGNzb19LSE04V09FZ0lSVDY2N0NaM25zOFoxbFFxcE1sOFFOUXNwdmZRb3k4LVhpZXRsLXZuNERqdWZnVDVOMFFtaDEwYURxMldvMW56ck5fRURnOUdEVjgxNWNIWHR1U1h3REtlZENsempuenNBc1g1T2w1Z0pHUmlZZXNFVU9hOFVyeA?oc=5",
+      "title": "Planinstvo in alpinizem vpisana v register nesnovne kulturne dediščine Slovenije - e-Koroška",
+      "errors": [
+        "prekratek"
+      ]
+    }
+  ]
+}
