@@ -5361,5 +5361,19 @@
     "provider": "google-news-si",
     "processed_at": "2026-10-31T10:54:25+01:00",
     "output_id": "judovska-tradicija-v-sloveniji-lendava-naredila-pomemben-korak-metropolitan-si-1b377c04"
+  },
+  {
+    "source_name": "Delo.si",
+    "category": "sezonsko",
+    "title": "Hrvaški turizem po slabem juniju navzgor, pomagali tudi Slovenci - Delo.si",
+    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQcDF2ZjFyRkM3bEgxYkdQdHJ0OUlDaVhaSTdUaWV4c21yVzFUVWNnX1lfRnlJNXozV2UwSnlwZDVCY1N2SVdfU1pQdlBjeFRac1lDNkRKd1hOSFpNa095YW1JUFBWODVNRDNTcHkzYTRZYUVkN1lJak1CSlpaLVdfWVRjQ3I4OFZUWUE?oc=5",
+    "summary": "Hrvaški turizem po slabem juniju navzgor, pomagali tudi Slovenci Delo.si",
+    "published": "Mon, 10 Aug 2026 07:00:00 GMT",
+    "image_url": "",
+    "video_url": "",
+    "hash": "d5913f57ac8e16e5e9f44696b13c5d260be83e40163b6e1cc49eaa0db13c211c",
+    "provider": "",
+    "processed_at": "2026-10-31T13:39:32+01:00",
+    "output_id": "hrvaski-turizem-po-slabem-juniju-navzgor-pomagali-tudi-slovenci-delo-si-3d62ff2d"
   }
 ]
