@@ -5,9 +5,9 @@
   "posts_date": "2026-10-31",
   "posts_today": 3,
   "last_output": "hrvaski-turizem-po-slabem-juniju-navzgor-pomagali-tudi-slovenci-delo-si-3d62ff2d",
-  "last_error": "manjka_fotografija,prekratek",
+  "last_error": "prekratek",
   "agent_version": "2.7.0",
-  "current_category": "gore",
+  "current_category": "gourmet",
   "scheduled_posts_today": 3,
   "manual_posts_today": 0,
   "writer_mode": "workers_ai",
@@ -17,12 +17,13 @@
     "2026-10-31|13:30|sezonsko"
   ],
   "scheduled_slots_deferred": [
-    "2026-10-31|16:20|gore"
+    "2026-10-31|16:20|gore",
+    "2026-10-31|19:10|gourmet"
   ],
   "last_editorial_hold": {
-    "slot": "2026-10-31|16:20|gore",
+    "slot": "2026-10-31|19:10|gourmet",
     "reason": "ponavljanje",
-    "at": "2026-10-31T16:24:35+01:00"
+    "at": "2026-10-31T19:24:31+01:00"
   },
   "publisher_guardian_last_run": "2026-10-31T08:31:52+01:00",
   "publisher_guardian_last_action": {
