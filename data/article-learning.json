@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-10-31T13:30:57+01:00",
-  "loop_count": 7910,
+  "updated_at": "2026-10-31T22:35:59+01:00",
+  "loop_count": 7911,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-10-31T13:30:36+01:00",
+      "last_learning_run": "2026-10-31T22:35:38+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 148287,
-          "last_seen": "2026-10-31T13:30:36+01:00",
-          "last_title": "Kje gledati finale košarkarskega EP med Slovenci in Italijani? Televizijski prenos bo! - Dnevnik",
+          "seen": 148294,
+          "last_seen": "2026-10-31T22:35:38+01:00",
+          "last_title": "Odlični obeti, Slovenija se bi lahko že danes razveselila novega globusa - Žurnal24",
           "last_provider": "google-news-si",
-          "published": 477796,
+          "published": 477853,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -231,13 +231,16 @@
       "example_titles": {
         "news.google.com": [
           "Slovenija želi biti nova Švica, zdaj pa je Švica postala nova Slovenija. Trava, kriva je trava - Dnevnik",
-          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
-          "Slovenci pogoreli v preveliki želji: \"Finci so bili enostavno premočni\" - rtvslo.si"
+          "S tribune: Športni trenutki, zaradi katerih se mi še danes naježijo dlake - Svet24.si",
+          "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si"
+        ],
+        "worldatlas.com": [
+          "Slovenia Maps & Facts"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-10-31T13:30:47+01:00",
+      "last_learning_run": "2026-10-31T22:35:48+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -279,11 +282,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 176786,
-          "last_seen": "2026-10-31T13:30:47+01:00",
-          "last_title": "Video: Luka Simonič iz SDM: \"Če se mi ne ukvarjamo s politiko, se politika ukvarja z nami\" - Metroplay - Metropolitan.si",
-          "last_provider": "google-news-global",
-          "published": 525830,
+          "seen": 176803,
+          "last_seen": "2026-10-31T22:35:48+01:00",
+          "last_title": "Protestnik, ki je postal predsednik: Stevanović nekoč glas anticepilcev, danes pa enfant terrible, ki je vse postavil na glavo - Metropolitan.si",
+          "last_provider": "google-news-si",
+          "published": 525891,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -385,17 +388,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 16,
+      "current_source_count": 17,
       "example_titles": {
         "news.google.com": [
-          "Nov protest ob obisku Sara v DZ-ju. Janša: Protesti so refleks levičarskega antisemitizma. - rtvslo.si",
-          "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si",
-          "Janša mladim ob njihovem dnevu: “Slovenska mladina je danes med politično najbolj aktivnimi v EU” - Nova24TV"
+          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
+          "Pirc Musar: Ne bom tiho, ko zunanja politika ne bo skladna z ustavnimi vrednotami države - Siol.net",
+          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-10-31T13:30:57+01:00",
+      "last_learning_run": "2026-10-31T22:35:59+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -483,12 +486,12 @@
           "last_provider": "bing-web"
         },
         "news.google.com": {
-          "score": 2.517,
-          "seen": 203213,
-          "last_seen": "2026-10-31T13:30:57+01:00",
-          "last_title": "Slovenija preprečila pristanek izraelskega letala: tako se odziva Fraport - Info360",
-          "last_provider": "google-news-global",
-          "published": 328004,
+          "score": 2.519,
+          "seen": 203237,
+          "last_seen": "2026-10-31T22:35:59+01:00",
+          "last_title": "Podpisan drugi dodatek k Dogovoru za razvoj regije Jugovzhodna Slovenija - Novice - Aktualno - Mestna občina Novo mesto",
+          "last_provider": "google-news-si",
+          "published": 328024,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -583,17 +586,23 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 12,
+      "current_source_count": 24,
       "example_titles": {
         "news.google.com": [
-          "Praznik 1. november je letos na nedeljo: preveri v katerih evropskih državah je praznik dela prost - Najdi.si novice",
-          "Bi danes sploh razumeli Primoža Trubarja? Poglejte, kako je bila videti slovenščina pred skoraj 500 leti! - Najdi.si novice",
-          "Kako svet vidi Slovenijo danes in kako je postala tako vroča evropska destinacija - Dnevnik"
+          "(AKTUALNO) Še danes v prodaji 36. št. revije Demokracija: 30 let Demokracije, ki udejanja pravico vedeti več! Načrt za demografsko obnovo sl",
+          "Če bi bile danes volitve bi močno zmagala SDS. Tudi interventni zakon bi uspel. - e-Maribor",
+          "Bi danes sploh razumeli Primoža Trubarja? Poglejte, kako je bila videti slovenščina pred skoraj 500 leti! - Najdi.si novice"
         ]
       }
     }
   },
   "recent_articles": [
+    {
+      "id": "hrvaski-turizem-po-slabem-juniju-navzgor-pomagali-tudi-slovenci-delo-si-3d62ff2d",
+      "title": "Hrvaški turizem po slabem juniju navzgor, pomagali tudi Slovenci - Delo.si",
+      "category": "Sezonsko",
+      "createdAt": "2026-10-31T13:39:32+01:00"
+    },
     {
       "id": "judovska-tradicija-v-sloveniji-lendava-naredila-pomemben-korak-metropolitan-si-1b377c04",
       "title": "Judovska tradicija v Sloveniji: Lendava naredila POMEMBEN korak! - Metropolitan.si",
@@ -659,57 +668,9 @@
       "title": "Tragedija pod vrhom Triglava: 67-letnik omahnil v globino in umrl (FOTO)",
       "category": "Gore & traili",
       "createdAt": "2026-10-26T18:54:34+01:00"
-    },
-    {
-      "id": "turisticna-sezona-pred-vrati-slovenija-stavi-na-kakovost-namesto-mnozic-b322aeb8",
-      "title": "Turistična sezona pred vrati, Slovenija stavi na kakovost namesto množic",
-      "category": "Sezonsko",
-      "createdAt": "2026-10-26T18:39:50+01:00"
     }
   ],
   "recent_failures": [
-    {
-      "file": "fallback-failed-20261030-122349.json",
-      "category": "dediscina",
-      "errors": [
-        "prekratek"
-      ],
-      "title": "Poletna muzejska noč v znamenju kulture, dediščine in umetnosti - ekopercapodistria.si"
-    },
-    {
-      "file": "fallback-failed-20261030-123902.json",
-      "category": "dediscina",
-      "errors": [
-        "prekratek"
-      ],
-      "title": "Judovska tradicija v Sloveniji: Lendava naredila POMEMBEN korak! - Metropolitan.si"
-    },
-    {
-      "file": "fallback-failed-20261030-125409.json",
-      "category": "dediscina",
-      "errors": [
-        "clanek_brez_slovenskega_konteksta",
-        "viri_ne_podpirajo_slovenske_rubrike",
-        "prekratek"
-      ],
-      "title": "Cal-Maine Foods, Inc. (CALM) Stock Price, News, Quote & History - Yahoo Finance"
-    },
-    {
-      "file": "fallback-failed-20261030-130852.json",
-      "category": "dediscina",
-      "errors": [
-        "prekratek"
-      ],
-      "title": "Judovska tradicija v Sloveniji: Lendava naredila POMEMBEN korak! - Metropolitan.si"
-    },
-    {
-      "file": "fallback-failed-20261030-132359.json",
-      "category": "dediscina",
-      "errors": [
-        "prekratek"
-      ],
-      "title": "Judovska tradicija v Sloveniji: Lendava naredila POMEMBEN korak! - Metropolitan.si"
-    },
     {
       "file": "fallback-failed-20261030-133842.json",
       "category": "dediscina",
@@ -768,12 +729,55 @@
         "manjka_fotografija"
       ],
       "title": "Haloze stavijo na kolesarski turizem: Nove kolesarnice in 20 električnih koles ~ - Portal24"
+    },
+    {
+      "file": "fallback-failed-20261031-162459.json",
+      "category": "gore",
+      "errors": [
+        "manjka_fotografija",
+        "prekratek"
+      ],
+      "title": "ŠPORTNI VIKEND LJUBLJANICA 2026 bo med 11. in 13. septembrom v središče Ljubljane pripeljal nočni tek, trail, pohodništvo, kolesarjenje in pestro družinsko športno dogajanje - 24ur"
+    },
+    {
+      "file": "fallback-failed-20261031-192444.json",
+      "category": "gourmet",
+      "errors": [
+        "prekratek"
+      ],
+      "title": "Gostilna Pri planinskem orlu je, z nekaj primorskega navdiha, znova odprta - Kamnik.info"
+    },
+    {
+      "file": "fallback-failed-20261031-194840.json",
+      "category": "gore",
+      "errors": [
+        "manjka_fotografija",
+        "prekratek"
+      ],
+      "title": "ŠPORTNI VIKEND LJUBLJANICA 2026 bo med 11. in 13. septembrom v središče Ljubljane pripeljal nočni tek, trail, pohodništvo, kolesarjenje in pestro družinsko športno dogajanje - 24ur"
+    },
+    {
+      "file": "agent-state",
+      "category": "gore",
+      "errors": [
+        "manjka_fotografija,prekratek"
+      ]
+    },
+    {
+      "file": "agent-state",
+      "category": "gore",
+      "errors": [
+        "ponavljanje"
+      ],
+      "slot": "2026-10-31|19:10|gourmet"
     }
   ],
   "failure_summary": {
     "prekratek": 20,
     "manjka_fotografija": 5,
     "clanek_brez_slovenskega_konteksta": 1,
-    "viri_ne_podpirajo_slovenske_rubrike": 1
+    "viri_ne_podpirajo_slovenske_rubrike": 1,
+    "manjka_fotografija,prekratek": 1,
+    "ponavljanje": 1
   }
 }
