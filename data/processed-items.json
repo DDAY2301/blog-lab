@@ -5333,5 +5333,19 @@
     "provider": "google-news-global",
     "processed_at": "2026-10-30T16:24:53+01:00",
     "output_id": "slovenian-hiking-trail-shows-the-best-bits-of-this-beautiful-country-644062ed"
+  },
+  {
+    "source_name": "rtvslo.si",
+    "category": "kolesarstvo",
+    "title": "Kolesarska rajža v Slovenskih goricah z obiskom slikovitih gradov - rtvslo.si",
+    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQUjg0TWNSZ3ZTUVJSVUxTQ0VaRHRwcmZzcFBVcFZuTTltUGl6d3gzSzF2TUd4RVdVMUZXajhQRnlEQ2FWUTBSeHBXUHNYaFh5cGVfMDctNGc3OGp4Qzk1bFpuUU1HWGVlbTVuUzBOSkI4NlJNMmczSTlxN3lzb29vaU5zcnF4M2kwdFhkSk1NM0xtdjEwSWdkSUwxWXhPX3hpVHMtNDViN3A2b2RwNWl1REZuZ01peDBCVXNkaEFZOFQ?oc=5",
+    "summary": "Kolesarska rajža v Slovenskih goricah z obiskom slikovitih gradov rtvslo.si",
+    "published": "Fri, 19 Jun 2026 07:00:00 GMT",
+    "image_url": "",
+    "video_url": "",
+    "hash": "59163f584cdca224d2eb61a4392ff0b402532962eb512847c9d9d464aed5fa97",
+    "provider": "",
+    "processed_at": "2026-10-31T08:31:52+01:00",
+    "output_id": "kolesarska-rajza-v-slovenskih-goricah-z-obiskom-slikovitih-gradov-1f033a67"
   }
 ]

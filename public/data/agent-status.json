@@ -1,25 +1,21 @@
 {
   "agent": "Blog Lab Slovenia Publisher",
-  "status": "waiting",
+  "status": "completed",
   "enabled": true,
   "category": "kolesarstvo",
-  "last_run": "2026-10-31T07:39:50+01:00",
-  "last_success": "2026-10-30T16:24:53+01:00",
-  "last_output": "slovenian-hiking-trail-shows-the-best-bits-of-this-beautiful-country-644062ed",
+  "last_run": "2026-10-31T08:31:52+01:00",
+  "last_success": "2026-10-31T08:31:52+01:00",
+  "last_output": "kolesarska-rajza-v-slovenskih-goricah-z-obiskom-slikovitih-gradov-1f033a67",
   "next_run": null,
-  "message": "Nobena sveža zgodba ni prestala uredniškega QA: prekratek,manjka_fotografija",
-  "posts_today": 0,
-  "scheduled_posts_today": 0,
+  "message": "Fallback članek je objavljen brez zunanjega AI providerja.",
+  "posts_today": 1,
+  "scheduled_posts_today": 1,
   "manual_posts_today": 0,
-  "writer_mode": "workers_ai",
-  "scheduled_slots_done": [],
-  "scheduled_slots_deferred": [
+  "writer_mode": "deterministic_fallback",
+  "scheduled_slots_done": [
     "2026-10-31|07:35|kolesarstvo"
   ],
-  "last_editorial_hold": {
-    "slot": "2026-10-31|07:35|kolesarstvo",
-    "reason": "ponavljanje",
-    "at": "2026-10-31T07:39:33+01:00"
-  },
-  "last_error": "prekratek,manjka_fotografija"
+  "scheduled_slots_deferred": [],
+  "last_editorial_hold": null,
+  "last_error": null
 }
