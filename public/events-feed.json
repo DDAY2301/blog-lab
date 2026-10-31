@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-31T21:03:41+01:00",
+  "updatedAt": "2026-11-01T00:28:05+01:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -57,25 +57,6 @@
       "description": "Illustrations in Motion is confirmed at Casemate · Ljubljana Castle. Check the official source for any late programme or ticket changes."
     },
     {
-      "id": "corn-labyrinth-ljubljana-through-2026-10-31",
-      "title": "Corn Labyrinth Ljubljana",
-      "url": "https://www.visitljubljana.com/en/visitors/events/",
-      "source": "Visit Ljubljana",
-      "type": "Family · outdoor attraction",
-      "place": "Koruzni labirint Ljubljana · Stanežiče",
-      "startAt": "2026-10-11T09:00:00+02:00",
-      "endAt": "2026-10-31T20:00:00+01:00",
-      "price": "Children under 2 free; children up to 15 €7; adults €10; family ticket (4 people) €32",
-      "languages": [],
-      "touristFriendly": true,
-      "familyFriendly": true,
-      "accessibility": null,
-      "ticketUrl": "https://www.visitljubljana.com/en/visitors/events/",
-      "status": "weather_dependent",
-      "lastCheckedAt": "2026-10-31T07:18:00+01:00",
-      "description": "The seasonal corn labyrinth in Stanežiče is open on its final day from 09:00 to 20:00. Tickets cost €7 for children up to 15, €10 for adults or €32 for a family of four; children under two enter free."
-    },
-    {
       "id": "cosmos-kosovel-through-2027-05-09",
       "title": "COSMOS KOSOVEL",
       "url": "https://cd-cc.si/en",
@@ -112,44 +93,6 @@
       "startAt": "2026-10-15T09:00:00+02:00",
       "endAt": "2027-01-31T18:00:00+01:00",
       "description": "The spatial installation Stretch 3789 opens on 15 October 2026 and runs daily from 09:00 to 18:00 through 31 January 2027 in the S Gallery."
-    },
-    {
-      "id": "cirkuliranje-kodeljevo-2026-10-31",
-      "title": "Cirkuliranje: Circus Performances and Skills Workshops",
-      "url": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/cirkuliranje-culture-at-your-doorstep",
-      "source": "Visit Ljubljana / Zavod Bufeto",
-      "type": "Circus · family workshop",
-      "place": "Park Kodeljevo · Ljubljana",
-      "startAt": "2026-10-31T11:30:00+01:00",
-      "endAt": null,
-      "price": "Free",
-      "languages": [],
-      "touristFriendly": true,
-      "familyFriendly": true,
-      "accessibility": null,
-      "ticketUrl": null,
-      "status": "weather_dependent",
-      "lastCheckedAt": "2026-10-31T07:18:00+01:00",
-      "description": "Free circus performances and skills workshops begin at 11:30 in Park Kodeljevo. The event is cancelled in bad weather; ARSO reported cloudy conditions in Ljubljana early Saturday, so recheck before travelling."
-    },
-    {
-      "title": "HALLOWEEN: BRIGHT SIDE OF THE 80’S @ Gala hala",
-      "url": "https://www.galahala.com/program/halloween-bright-side-of-the-80s-gala-hala/34710/",
-      "source": "Gala Hala",
-      "type": "Nightlife · 1980s party",
-      "place": "Gala Hala · AKC Metelkova",
-      "startAt": "2026-10-31T22:00:00+01:00",
-      "endAt": null,
-      "id": "halloween-bright-side-of-the-80s-2026-10-31",
-      "price": "€10 in costume / €13 without costume",
-      "languages": [],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": null,
-      "ticketUrl": "https://www.galahala.com/program/halloween-bright-side-of-the-80s-gala-hala/34710/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-31T07:18:00+01:00",
-      "description": "Gala Hala’s traditional Halloween party starts at 22:00 with a 1980s-focused music programme. Entry costs €10 in costume or €13 without costume."
     },
     {
       "id": "november-gourmet-ljubljana-2026",
