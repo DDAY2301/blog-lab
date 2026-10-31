@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-31T06:54:51+01:00",
+  "updatedAt": "2026-10-31T07:18:00+01:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -13,7 +13,8 @@
     "Festival Ljubljana",
     "Klub K4",
     "Cirkus Klub",
-    "Bunker / Stara mestna elektrarna"
+    "Bunker / Stara mestna elektrarna",
+    "ARSO"
   ],
   "sourcesFailed": [],
   "items": [
@@ -64,15 +65,15 @@
       "place": "Koruzni labirint Ljubljana · Stanežiče",
       "startAt": "2026-10-11T09:00:00+02:00",
       "endAt": "2026-10-31T20:00:00+01:00",
-      "price": null,
+      "price": "Children under 2 free; children up to 15 €7; adults €10; family ticket (4 people) €32",
       "languages": [],
       "touristFriendly": true,
       "familyFriendly": true,
       "accessibility": null,
       "ticketUrl": "https://www.visitljubljana.com/en/visitors/events/",
       "status": "weather_dependent",
-      "lastCheckedAt": "2026-10-30T07:20:00+01:00",
-      "description": "The seasonal corn labyrinth in Stanežiče is listed daily from 09:00 to 20:00; outdoor operation may depend on conditions, so recheck before travel."
+      "lastCheckedAt": "2026-10-31T07:18:00+01:00",
+      "description": "The seasonal corn labyrinth in Stanežiče is open on its final day from 09:00 to 20:00. Tickets cost €7 for children up to 15, €10 for adults or €32 for a family of four; children under two enter free."
     },
     {
       "id": "cosmos-kosovel-through-2027-05-09",
@@ -128,8 +129,8 @@
       "accessibility": null,
       "ticketUrl": null,
       "status": "weather_dependent",
-      "lastCheckedAt": "2026-10-30T07:20:00+01:00",
-      "description": "Free circus performances and skills workshops begin at 11:30 in Park Kodeljevo. The event is cancelled in bad weather; ARSO currently forecasts no rain for Ljubljana on Saturday."
+      "lastCheckedAt": "2026-10-31T07:18:00+01:00",
+      "description": "Free circus performances and skills workshops begin at 11:30 in Park Kodeljevo. The event is cancelled in bad weather; ARSO reported cloudy conditions in Ljubljana early Saturday, so recheck before travelling."
     },
     {
       "title": "HALLOWEEN: BRIGHT SIDE OF THE 80’S @ Gala hala",
@@ -147,7 +148,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.galahala.com/program/halloween-bright-side-of-the-80s-gala-hala/34710/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-30T07:20:00+01:00",
+      "lastCheckedAt": "2026-10-31T07:18:00+01:00",
       "description": "Gala Hala’s traditional Halloween party starts at 22:00 with a 1980s-focused music programme. Entry costs €10 in costume or €13 without costume."
     },
     {
@@ -187,9 +188,9 @@
       "familyFriendly": true,
       "accessibility": "Outdoor riverside market on a mostly level paved route.",
       "ticketUrl": null,
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-26T06:58:00+01:00",
-      "description": "The weekly antiques and vintage market runs along Breg from 08:00 to 15:00. Admission is free and no ticket is required."
+      "status": "weather_dependent",
+      "lastCheckedAt": "2026-10-31T07:18:00+01:00",
+      "description": "The weekly antiques and vintage market runs along Breg from 08:00 to 15:00 with free entry. ARSO forecasts 0 mm of rain for Ljubljana on Sunday, but exhibitors may leave early if conditions worsen."
     },
     {
       "id": "cirkuliranje-kodeljevo-2026-11-01",
@@ -206,9 +207,9 @@
       "familyFriendly": true,
       "accessibility": null,
       "ticketUrl": null,
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-23T07:15:00+02:00",
-      "description": "Zavod Bufeto presents a free interactive clown show at 11:30 in Park Kodeljevo. The outdoor event is cancelled in bad weather."
+      "status": "weather_dependent",
+      "lastCheckedAt": "2026-10-31T07:18:00+01:00",
+      "description": "Zavod Bufeto presents a free interactive clown show at 11:30 in Park Kodeljevo. ARSO forecasts 0 mm of rain for Ljubljana on Sunday, but the organiser will cancel the outdoor event in bad weather."
     },
     {
       "id": "salome-mgl-2026-11-02",
@@ -1024,22 +1025,68 @@
       "id": "event-48-in-between-re-lined-x-amotik"
     },
     {
-      "title": "OTI - SAMOSPEV RELEASE KONCERT @ Gala hala",
-      "url": "https://www.galahala.com/",
+      "id": "il-barbiere-di-siviglia-opera-2026-11-14",
+      "title": "Il barbiere di Siviglia",
+      "url": "https://www.opera.si/en/programme/event/opera/seviljski-brivec-il-barbiere-di-siviglia-2",
+      "source": "SNG Opera and Ballet Ljubljana",
+      "type": "Opera · comic opera",
+      "place": "SNG Opera and Ballet Ljubljana",
+      "startAt": "2026-11-14T18:00:00+01:00",
+      "endAt": null,
+      "price": null,
+      "languages": [
+        "Italian opera",
+        "Supertitles available; languages not specified on the event page"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": true,
+      "accessibility": "Contact the opera house for wheelchair seating and event-specific assistance.",
+      "ticketUrl": "https://opera.mojekarte.si/en/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-31T07:18:00+01:00",
+      "description": "Rossini’s comic opera begins at 18:00 in a family-subscription performance. The production is semi-staged with the orchestra on stage; confirm current seat prices and supertitle languages when booking."
+    },
+    {
+      "id": "the-deceased-mgl-2026-11-14",
+      "title": "The Deceased",
+      "url": "https://www.mgl.si/en/shows/the-deceased/",
+      "source": "MGL",
+      "type": "Theatre · comedy",
+      "place": "MGL Main Stage · Ljubljana",
+      "startAt": "2026-11-14T19:00:00+01:00",
+      "endAt": "2026-11-14T21:45:00+01:00",
+      "price": null,
+      "languages": [
+        "Slovenian"
+      ],
+      "touristFriendly": false,
+      "familyFriendly": false,
+      "accessibility": "Contact MGL for performance-specific step-free seating arrangements.",
+      "ticketUrl": "https://www.mgl.si/en/schedule/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-31T07:18:00+01:00",
+      "description": "MGL stages Branislav Nušić’s comedy on the Main Stage at 19:00. The Slovenian-language performance runs for 2 hours 45 minutes including two intervals."
+    },
+    {
+      "title": "OTI – Samospev Release Concert",
+      "url": "https://www.galahala.com/program/samodejni-osnutek-7/34787/",
       "source": "Gala Hala",
-      "type": "Koncert · Metelkova",
+      "type": "Concert · indie rock and pop",
       "place": "Gala Hala · AKC Metelkova",
       "startAt": "2026-11-14T20:00:00+01:00",
       "endAt": null,
-      "price": null,
-      "languages": [],
-      "touristFriendly": null,
-      "familyFriendly": null,
-      "accessibility": null,
-      "ticketUrl": "https://www.galahala.com/",
+      "price": "€10 advance / €15 on the day",
+      "languages": [
+        "Slovenian",
+        "Music-led"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": "Contact Gala Hala for event-specific accessibility information.",
+      "ticketUrl": "https://www.mojekarte.si/si/oti-release-koncert-ob-izdaji-ep-ja-samospev/vstopnice-1237401.html",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-31T06:54:51+01:00",
-      "description": "OTI - SAMOSPEV RELEASE KONCERT @ Gala hala is listed by Gala Hala. Check the official event page for price, language and accessibility details.",
+      "lastCheckedAt": "2026-10-31T07:18:00+01:00",
+      "description": "OTI launches the EP Samospev with Slatkor and special guest Leyre at 20:00. Tickets cost €10 in advance or €15 on the day.",
       "id": "event-50-oti-samospev-release-koncert-gala-hala"
     }
   ]
