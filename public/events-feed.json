@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-31T07:18:00+01:00",
+  "updatedAt": "2026-10-31T07:05:30+01:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -1088,6 +1088,25 @@
       "lastCheckedAt": "2026-10-31T07:18:00+01:00",
       "description": "OTI launches the EP Samospev with Slatkor and special guest Leyre at 20:00. Tickets cost €10 in advance or €15 on the day.",
       "id": "event-50-oti-samospev-release-koncert-gala-hala"
+    },
+    {
+      "title": "OTI - SAMOSPEV RELEASE KONCERT @ Gala hala",
+      "url": "https://www.galahala.com/",
+      "source": "Gala Hala",
+      "type": "Koncert · Metelkova",
+      "place": "Gala Hala · AKC Metelkova",
+      "startAt": "2026-11-14T20:00:00+01:00",
+      "endAt": null,
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.galahala.com/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-31T07:05:30+01:00",
+      "description": "OTI - SAMOSPEV RELEASE KONCERT @ Gala hala is listed by Gala Hala. Check the official event page for price, language and accessibility details.",
+      "id": "event-53-oti-samospev-release-koncert-gala-hala"
     }
   ]
 }
