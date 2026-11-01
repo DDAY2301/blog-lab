@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-01T00:28:05+01:00",
+  "updatedAt": "2026-11-01T07:20:00+01:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -14,7 +14,8 @@
     "Klub K4",
     "Cirkus Klub",
     "Bunker / Stara mestna elektrarna",
-    "ARSO"
+    "ARSO",
+    "LIFFE"
   ],
   "sourcesFailed": [],
   "items": [
@@ -95,6 +96,28 @@
       "description": "The spatial installation Stretch 3789 opens on 15 October 2026 and runs daily from 09:00 to 18:00 through 31 January 2027 in the S Gallery."
     },
     {
+      "id": "dia-de-muertos-patron-2026-11-01",
+      "title": "Día de Muertos: Remembering Our Loved Ones",
+      "url": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/dia-de-muertos-praznik-spomina-na-nase-najdrazje",
+      "source": "Visit Ljubljana / Patrón Tacos & Bar",
+      "type": "Food and culture · family",
+      "place": "Patrón Tacos & Bar · Gornji trg 23",
+      "startAt": "2026-11-01T00:00:00+01:00",
+      "endAt": "2026-11-02T23:59:00+01:00",
+      "price": null,
+      "languages": [
+        "Spanish music",
+        "Slovenian / English service not confirmed"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": true,
+      "accessibility": "Contact Patrón Tacos & Bar for step-free access details.",
+      "ticketUrl": null,
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-01T07:20:00+01:00",
+      "description": "A traditional Mexican altar, pan de muerto, mariachi and ranchera music, and children’s face painting are presented on 1–2 November. The official listing gives no fixed start time or admission price, so visit during venue hours and confirm locally."
+    },
+    {
       "id": "november-gourmet-ljubljana-2026",
       "title": "November Gourmet Ljubljana",
       "url": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/november-gourmet-ljubljana",
@@ -110,8 +133,8 @@
       "accessibility": null,
       "ticketUrl": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/november-gourmet-ljubljana",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-18T07:22:00+02:00",
-      "description": "The month-long culinary festival begins on 1 November across Ljubljana, with individual tastings, menus and workshops announced separately. Prices and accessibility vary by participating venue."
+      "lastCheckedAt": "2026-11-01T07:20:00+01:00",
+      "description": "The month-long culinary festival begins today across Ljubljana, with tastings, menus, workshops and live events announced separately. Prices, languages and accessibility vary by participating venue."
     },
     {
       "id": "sunday-flea-market-2026-11-01",
@@ -132,8 +155,8 @@
       "accessibility": "Outdoor riverside market on a mostly level paved route.",
       "ticketUrl": null,
       "status": "weather_dependent",
-      "lastCheckedAt": "2026-10-31T07:18:00+01:00",
-      "description": "The weekly antiques and vintage market runs along Breg from 08:00 to 15:00 with free entry. ARSO forecasts 0 mm of rain for Ljubljana on Sunday, but exhibitors may leave early if conditions worsen."
+      "lastCheckedAt": "2026-11-01T07:20:00+01:00",
+      "description": "The antiques and vintage market runs along Breg from 08:00 to 15:00 with free entry. ARSO allows for a small amount of rain in central Slovenia, and exhibitors may leave early if conditions worsen."
     },
     {
       "id": "cirkuliranje-kodeljevo-2026-11-01",
@@ -151,8 +174,8 @@
       "accessibility": null,
       "ticketUrl": null,
       "status": "weather_dependent",
-      "lastCheckedAt": "2026-10-31T07:18:00+01:00",
-      "description": "Zavod Bufeto presents a free interactive clown show at 11:30 in Park Kodeljevo. ARSO forecasts 0 mm of rain for Ljubljana on Sunday, but the organiser will cancel the outdoor event in bad weather."
+      "lastCheckedAt": "2026-11-01T07:20:00+01:00",
+      "description": "Zavod Bufeto presents the free interactive clown show Buffetto the Cyclist at 11:30 in Park Kodeljevo. The organiser cancels in bad weather, so check conditions before travelling."
     },
     {
       "id": "salome-mgl-2026-11-02",
@@ -1031,6 +1054,95 @@
       "lastCheckedAt": "2026-10-31T07:18:00+01:00",
       "description": "OTI launches the EP Samospev with Slatkor and special guest Leyre at 20:00. Tickets cost €10 in advance or €15 on the day.",
       "id": "event-50-oti-samospev-release-koncert-gala-hala"
+    },
+    {
+      "id": "sunday-flea-market-2026-11-15",
+      "title": "Sunday Flea Market",
+      "url": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/antique-flea-market",
+      "source": "Visit Ljubljana",
+      "type": "Market · antiques and vintage",
+      "place": "Breg · Ljubljana",
+      "startAt": "2026-11-15T08:00:00+01:00",
+      "endAt": "2026-11-15T15:00:00+01:00",
+      "price": "Free",
+      "languages": [
+        "Slovenian",
+        "English-friendly"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": true,
+      "accessibility": "Outdoor riverside market on a mostly level paved route.",
+      "ticketUrl": null,
+      "status": "weather_dependent",
+      "lastCheckedAt": "2026-11-01T07:20:00+01:00",
+      "description": "The weekly antiques and vintage market runs along Breg from 08:00 to 15:00 with free entry. Exhibitors may leave early in rain or bad weather."
+    },
+    {
+      "id": "minotaur-liffe-kino-siska-2026-11-15",
+      "title": "LIFFe: Minotaur",
+      "url": "https://urnik.liffe.si/Film.aspx?idF=3961&ln=en",
+      "source": "LIFFE / Kino Šiška",
+      "type": "Film · festival screening",
+      "place": "Kino Šiška Cinema · Ljubljana",
+      "startAt": "2026-11-15T16:00:00+01:00",
+      "endAt": "2026-11-15T18:15:00+01:00",
+      "price": null,
+      "languages": [
+        "Russian",
+        "Slovenian subtitles"
+      ],
+      "touristFriendly": false,
+      "familyFriendly": false,
+      "accessibility": "Kino Šiška has step-free hall access, ramps, accessible toilets and hearing loops.",
+      "ticketUrl": "https://www.liffe.si/en/tickets/tickets",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-01T07:20:00+01:00",
+      "description": "Andrey Zvyagintsev’s 135-minute drama screens at Kino Šiška at 16:00 in Russian with Slovenian subtitles. The official schedule lists tickets, but the current single-ticket price is not shown on the event page."
+    },
+    {
+      "id": "teenage-sex-death-camp-miasma-liffe-2026-11-15",
+      "title": "LIFFe: Teenage Sex and Death at Camp Miasma",
+      "url": "https://urnik.liffe.si/Film.aspx?idF=3963&ln=en",
+      "source": "LIFFE / Kino Šiška",
+      "type": "Film · festival screening",
+      "place": "Kino Šiška Cinema · Ljubljana",
+      "startAt": "2026-11-15T18:40:00+01:00",
+      "endAt": "2026-11-15T20:25:00+01:00",
+      "price": null,
+      "languages": [
+        "English",
+        "Slovenian subtitles"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": "Kino Šiška has step-free hall access, ramps, accessible toilets and hearing loops.",
+      "ticketUrl": "https://www.liffe.si/en/tickets/tickets",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-01T07:20:00+01:00",
+      "description": "Jane Schoenbrun’s 105-minute film screens at 18:40 in English with Slovenian subtitles. The official schedule lists tickets, but does not show the current single-ticket price on the film page."
+    },
+    {
+      "id": "wild-horse-nine-liffe-kino-siska-2026-11-15",
+      "title": "LIFFe: Wild Horse Nine",
+      "url": "https://urnik.liffe.si/Film.aspx?idF=3977&ln=en",
+      "source": "LIFFE / Kino Šiška",
+      "type": "Film · festival screening",
+      "place": "Kino Šiška Cinema · Ljubljana",
+      "startAt": "2026-11-15T21:00:00+01:00",
+      "endAt": "2026-11-15T22:57:00+01:00",
+      "price": null,
+      "languages": [
+        "English",
+        "Spanish",
+        "Slovenian subtitles"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": "Kino Šiška has step-free hall access, ramps, accessible toilets and hearing loops.",
+      "ticketUrl": "https://www.liffe.si/en/tickets/tickets",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-01T07:20:00+01:00",
+      "description": "Martin McDonagh’s 117-minute comedy thriller screens at 21:00 in English and Spanish with Slovenian subtitles. The official schedule lists tickets, but the film page does not display a current single-ticket price."
     }
   ]
 }
