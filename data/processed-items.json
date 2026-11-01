@@ -5389,5 +5389,19 @@
     "provider": "google-news-si",
     "processed_at": "2026-11-01T07:39:59+01:00",
     "output_id": "iz-velenja-v-dravograd-odslej-s-kolesom-odprli-9-4-kilometrsko-pot-do-mislinje-9b98b3c5"
+  },
+  {
+    "source_name": "ePosavje",
+    "category": "dediscina",
+    "title": "Brežiški grad: ko se 3D-doživetja in mobilna aplikacija oziroma soba pobega srečajo z zgodovino - ePosavje",
+    "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNVjVxX0hGQmNPdUd6QUY4MWRHcXAzak5YR2ZvdmRIODZrZUstdUJhSDZ2bWVjamJuY3JWZW9yVkIwUl9iYXQ2REhnY1lQNEhXdjJaTXA4ekJHQUVvRDYxNlhpY3hTb1lEWXRvcE1ud0ZidlVDRVZXbjYxdjNHbXF4UFZxNk1IX0c5TXNpYjhWdi1lUzdLWlljWkhtb2R4NGJabnRTX0RaN19SNXk2cGhOOWt1Wk1qckMyT1NQN3dIX2ppSU40Wi1nTGZ1SENrZmZLLVFpWA?oc=5",
+    "summary": "Brežiški grad: ko se 3D-doživetja in mobilna aplikacija oziroma soba pobega srečajo z zgodovino ePosavje",
+    "published": "Sat, 31 Oct 2026 10:51:43 GMT",
+    "image_url": "",
+    "video_url": "",
+    "hash": "265cb4d8fb50200eb64736e8b8019985bfbb729e0f49c12139c089b8aeca6666",
+    "provider": "google-news-si",
+    "processed_at": "2026-11-01T10:46:54+01:00",
+    "output_id": "breziski-grad-ko-se-3d-dozivetja-in-mobilna-aplikacija-oziroma-soba-pobega-srecajo-z-zgodo-63d97c16"
   }
 ]
