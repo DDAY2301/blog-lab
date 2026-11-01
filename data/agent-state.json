@@ -5,18 +5,24 @@
   "posts_date": "2026-11-01",
   "posts_today": 2,
   "last_output": "breziski-grad-ko-se-3d-dozivetja-in-mobilna-aplikacija-oziroma-soba-pobega-srecajo-z-zgodo-63d97c16",
-  "last_error": null,
+  "last_error": "prekratek,manjka_fotografija",
   "agent_version": "3.0.0-learning-guarded-fallback",
-  "current_category": "dediscina",
+  "current_category": "sezonsko",
   "scheduled_posts_today": 2,
   "manual_posts_today": 0,
-  "writer_mode": "deterministic_fallback",
+  "writer_mode": "workers_ai",
   "scheduled_slots_done": [
     "2026-11-01|07:35|kolesarstvo",
     "2026-11-01|10:45|dediscina"
   ],
-  "scheduled_slots_deferred": [],
-  "last_editorial_hold": null,
+  "scheduled_slots_deferred": [
+    "2026-11-01|13:30|sezonsko"
+  ],
+  "last_editorial_hold": {
+    "slot": "2026-11-01|13:30|sezonsko",
+    "reason": "manjka_fotografija,ponavljanje",
+    "at": "2026-11-01T13:39:36+01:00"
+  },
   "publisher_guardian_last_run": "2026-11-01T10:46:54+01:00",
   "publisher_guardian_last_action": {
     "category": "dediscina",
