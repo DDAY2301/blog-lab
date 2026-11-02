@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-02T07:18:00+01:00",
+  "updatedAt": "2026-11-02T07:02:46+01:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -1144,6 +1144,25 @@
       "status": "registration_required",
       "lastCheckedAt": "2026-11-02T07:18:00+01:00",
       "description": "A free songwriting and guitar workshop for selected participants aged 12–18 begins at 17:00. Participation requires an application; the published application deadline is 2 November."
+    },
+    {
+      "title": "OJAČEVALNICA, 1. DELAVNICA @ Gala hala",
+      "url": "https://www.galahala.com/",
+      "source": "Gala Hala",
+      "type": "Koncert · Metelkova",
+      "place": "Gala Hala · AKC Metelkova",
+      "startAt": "2026-11-16T17:00:00+01:00",
+      "endAt": null,
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.galahala.com/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-02T07:02:46+01:00",
+      "description": "OJAČEVALNICA, 1. DELAVNICA @ Gala hala is listed by Gala Hala. Check the official event page for price, language and accessibility details.",
+      "id": "event-55-oja-evalnica-1-delavnica-gala-hala"
     },
     {
       "id": "il-barbiere-di-siviglia-opera-2026-11-16",
