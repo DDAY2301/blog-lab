@@ -5403,5 +5403,33 @@
     "provider": "google-news-si",
     "processed_at": "2026-11-01T10:46:54+01:00",
     "output_id": "breziski-grad-ko-se-3d-dozivetja-in-mobilna-aplikacija-oziroma-soba-pobega-srecajo-z-zgodo-63d97c16"
+  },
+  {
+    "source_name": "24ur.com",
+    "category": "sezonsko",
+    "title": "Hrvaška turistična sezona bo podrla rekorde, slovenska bo 'dobra' - 24ur.com",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOVmpqcjBSaXc0NzBGNUR5blVDZWJhX3VvY1BKb00xeFFtWi02YU9XR3RRTmdGVUtKWkpBTEpxMWN1bV80VDJsOUxfUjJqazFIb2xuOHNQNnVIYWVwMDBzSzVNUC03LVZKNFBUNUs5ZVFIR0lEY0F5VmR3cnJkb0tUMGV6RF8zQ0ZaTmVZd3RRaHc0QzNiVHlJb1hia2VQS0l1YnZ3dlJQbw?oc=5",
+    "summary": "Hrvaška turistična sezona bo podrla rekorde, slovenska bo 'dobra' 24ur.com",
+    "published": "Thu, 18 Aug 2022 07:00:00 GMT",
+    "image_url": "",
+    "video_url": "",
+    "hash": "fc595295a346f5ea69e6873ba3c4d24d94e1a23283a00bc489e6c050655f95ee",
+    "provider": "",
+    "processed_at": "2026-11-02T13:39:39+01:00",
+    "output_id": "hrvaska-turisticna-sezona-bo-podrla-rekorde-slovenska-bo-dobra-24ur-com-148ab55f"
+  },
+  {
+    "source_name": "24ur.com",
+    "category": "sezonsko",
+    "title": "Zima, zima bela, smučarska sezona se je v Sloveniji uradno začela - 24ur.com",
+    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOZmYyNVlFckRrbk03RFhIcVpsNDVYSnc0Q2tsRmFSNEFrbURMTWZ4MHZtWGg4b0FlVnR0a0Y5RXRha1B3MVg1WVo3LU5FM21mQWM4dmVxd2hZd3E0N2lRc0lGbDM5SFVGYTVGOHpSZDg3NTlMV2ZpMFBSS05PMi1Qc05GV0ZBX0FwRVZCV1lmaV9jUTI4MlNCTUpFdWp3WXBYLWNkemdBLV9rQQ?oc=5",
+    "summary": "Zima, zima bela, smučarska sezona se je v Sloveniji uradno začela 24ur.com",
+    "published": "Sun, 03 Dec 2023 08:00:00 GMT",
+    "image_url": "",
+    "video_url": "",
+    "hash": "fd9034b66380e6402d2963493f8b9cf8b738a87edad3d238aa3b95e023d69465",
+    "provider": "",
+    "processed_at": "2026-11-02T13:39:39+01:00",
+    "output_id": "hrvaska-turisticna-sezona-bo-podrla-rekorde-slovenska-bo-dobra-24ur-com-148ab55f"
   }
 ]

@@ -1,18 +1,20 @@
 {
   "agent": "Blog Lab Slovenia Publisher",
-  "status": "waiting",
+  "status": "completed",
   "enabled": true,
-  "category": "dediscina",
-  "last_run": "2026-11-02T10:55:01+01:00",
-  "last_success": "2026-11-01T10:46:54+01:00",
-  "last_output": "breziski-grad-ko-se-3d-dozivetja-in-mobilna-aplikacija-oziroma-soba-pobega-srecajo-z-zgodo-63d97c16",
+  "category": "sezonsko",
+  "last_run": "2026-11-02T13:39:39+01:00",
+  "last_success": "2026-11-02T13:39:39+01:00",
+  "last_output": "hrvaska-turisticna-sezona-bo-podrla-rekorde-slovenska-bo-dobra-24ur-com-148ab55f",
   "next_run": null,
-  "message": "Nobena sveža zgodba ni prestala uredniškega QA: podvojen_naslov,prekratek",
-  "posts_today": 0,
-  "scheduled_posts_today": 0,
+  "message": "Članek je uspešno pripravljen za objavo.",
+  "posts_today": 1,
+  "scheduled_posts_today": 1,
   "manual_posts_today": 0,
   "writer_mode": "workers_ai",
-  "scheduled_slots_done": [],
+  "scheduled_slots_done": [
+    "2026-11-02|13:30|sezonsko"
+  ],
   "scheduled_slots_deferred": [
     "2026-11-02|07:35|kolesarstvo",
     "2026-11-02|10:45|dediscina"
@@ -22,5 +24,5 @@
     "reason": "ponavljanje",
     "at": "2026-11-02T10:54:40+01:00"
   },
-  "last_error": "podvojen_naslov,prekratek"
+  "last_error": null
 }
