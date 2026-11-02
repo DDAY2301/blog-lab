@@ -1,0 +1,28 @@
+{
+  "category": "dediscina",
+  "errors": [
+    "podvojen_naslov",
+    "prekratek"
+  ],
+  "article": {
+    "title": "Brežiški grad: ko se 3D-doživetja in mobilna aplikacija oziroma soba pobega srečajo z zgodovino - ePosavje"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "lead_url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQcFozOV8xYVN1aHhDMXgta2hTRlkzbmUwNG1SSW5pbVFQZDdhZHBaMXBCcEMxUUdCVmNkV0dGa2w4RWtCVC1ZZDlVemVRVFJudU9ZSnZmbnZxZlVJZzl1V2t4MEN6NjNVVnBtcTlfZ1lTZEtyaGVQWUtwamp0NHo4WmlKME93TXh5MjRzTXBTaVhLRjdUUUkxY2ZMZWc1VnlYSW9LR0dRelNVbXdZRTBpNEhCcEdMWmJvY1pqeEhudHFPSllQUWZhT09tS1Q?oc=5",
+      "title": "Brežiški grad: ko se 3D-doživetja in mobilna aplikacija oziroma soba pobega srečajo z zgodovino - ePosavje",
+      "errors": [
+        "podvojen_naslov"
+      ]
+    },
+    {
+      "attempt": 2,
+      "lead_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQQXNRa0ZnVkVBcFlXZkxGM2p1YVI0cTNrT1NpMXVYQzRIUVNjSmVLWGF0ZWR3Rk1QVGo0Ukd1ZTk5RDBoV01zdGtkRmZCWE9taHJNRGZOdGFFbHJSenU1ZGpuMFhxQzk4SkN5UTNVQ1pUdFV3d1c4bWNITlRSWkc1S2pDTGl4YWtiMk1PWm9UZUNTYm1fVVJUMnNQekQ3ekVHSFExc0d5NA?oc=5",
+      "title": "Plečnikov stadion med najbolj ogroženimi primeri kulturne dediščine - www.primorski.eu",
+      "errors": [
+        "prekratek"
+      ]
+    }
+  ]
+}
