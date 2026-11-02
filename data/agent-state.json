@@ -5,7 +5,7 @@
   "posts_date": "2026-11-02",
   "posts_today": 1,
   "last_output": "hrvaska-turisticna-sezona-bo-podrla-rekorde-slovenska-bo-dobra-24ur-com-148ab55f",
-  "last_error": "fallback_no_fresh_evidence",
+  "last_error": "prekratek",
   "agent_version": "2.7.0",
   "current_category": "gourmet",
   "scheduled_posts_today": 1,
@@ -17,12 +17,13 @@
   "scheduled_slots_deferred": [
     "2026-11-02|07:35|kolesarstvo",
     "2026-11-02|10:45|dediscina",
-    "2026-11-02|16:20|gore"
+    "2026-11-02|16:20|gore",
+    "2026-11-02|19:10|gourmet"
   ],
   "last_editorial_hold": {
-    "slot": "2026-11-02|16:20|gore",
+    "slot": "2026-11-02|19:10|gourmet",
     "reason": "ponavljanje",
-    "at": "2026-11-02T16:24:41+01:00"
+    "at": "2026-11-02T19:39:33+01:00"
   },
   "publisher_guardian_last_run": "2026-11-02T09:21:44+01:00",
   "publisher_guardian_last_action": {
