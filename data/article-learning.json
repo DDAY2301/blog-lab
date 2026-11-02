@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-11-02T07:04:48+01:00",
-  "loop_count": 7915,
+  "updated_at": "2026-11-02T16:54:48+01:00",
+  "loop_count": 7916,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-11-02T07:04:28+01:00",
+      "last_learning_run": "2026-11-02T16:54:26+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 148328,
-          "last_seen": "2026-11-02T07:04:28+01:00",
-          "last_title": "Premier Janša ob ogledu finala mladih košarkarjev udaril po RTV Slovenija: »Plačujemo vas več kot Inštitut Jožef Stefan!« - Slovenske novice",
-          "last_provider": "google-news-si",
-          "published": 478081,
+          "seen": 148335,
+          "last_seen": "2026-11-02T16:54:26+01:00",
+          "last_title": "Slovenski nogometni junaki se vračajo iz Nemčije, doma jih čaka sprejem: poglejte, kdaj in kje - Metropolitan.si",
+          "last_provider": "google-news-global",
+          "published": 478138,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,17 +227,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 10,
+      "current_source_count": 7,
       "example_titles": {
         "news.google.com": [
-          "Slovenija želi biti nova Švica, zdaj pa je Švica postala nova Slovenija. Trava, kriva je trava - Dnevnik",
-          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
-          "Slovenci pogoreli v preveliki želji: \"Finci so bili enostavno premočni\" - rtvslo.si"
+          "S tribune: Športni trenutki, zaradi katerih se mi še danes naježijo dlake - Svet24.si",
+          "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
+          "\"Danes je enostavno biti kritičen, ker se je moč skriti za anonimnost\" - rtvslo.si"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-11-02T07:04:38+01:00",
+      "last_learning_run": "2026-11-02T16:54:36+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -279,11 +279,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 176874,
-          "last_seen": "2026-11-02T07:04:38+01:00",
-          "last_title": "Kučan: Politika mora povedati: to predlagamo in pri tem vabimo, da nas podprete, kot pri plebiscitu - rtvslo.si",
-          "last_provider": "google-news-si",
-          "published": 526132,
+          "seen": 176889,
+          "last_seen": "2026-11-02T16:54:36+01:00",
+          "last_title": "Video: Luka Simonič iz SDM: \"Če se mi ne ukvarjamo s politiko, se politika ukvarja z nami\" - Metroplay - Metropolitan.si",
+          "last_provider": "google-news-global",
+          "published": 526192,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -385,17 +385,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 20,
+      "current_source_count": 15,
       "example_titles": {
         "news.google.com": [
-          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
+          "Nov protest ob obisku Sara v DZ-ju. Janša: Protesti so refleks levičarskega antisemitizma. - rtvslo.si",
           "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si",
-          "Na Radiu Ognjišče zadnje predvolilno soočenje: v ospredju prisluhi, zdravstvo, zunanja politika in sprava - Radio Ognjišče"
+          "V Sloveniji odprta volišča: Volivci danes odločajo o štirih referendumskih vprašanjih - Sobotainfo.com"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-11-02T07:04:48+01:00",
+      "last_learning_run": "2026-11-02T16:54:48+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -483,12 +483,12 @@
           "last_provider": "bing-web"
         },
         "news.google.com": {
-          "score": 2.524,
-          "seen": 203326,
-          "last_seen": "2026-11-02T07:04:48+01:00",
-          "last_title": "Podpisan drugi dodatek k Dogovoru za razvoj regije Jugovzhodna Slovenija - Novice - Aktualno - Mestna občina Novo mesto",
-          "last_provider": "google-news-si",
-          "published": 328101,
+          "score": 2.527,
+          "seen": 203342,
+          "last_seen": "2026-11-02T16:54:48+01:00",
+          "last_title": "Slovenija preprečila pristanek izraelskega letala: tako se odziva Fraport - Info360",
+          "last_provider": "google-news-global",
+          "published": 328118,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -583,17 +583,23 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 24,
+      "current_source_count": 16,
       "example_titles": {
         "news.google.com": [
-          "(AKTUALNO) Še danes v prodaji 36. št. revije Demokracija: 30 let Demokracije, ki udejanja pravico vedeti več! Načrt za demografsko obnovo sl",
-          "Bi danes sploh razumeli Primoža Trubarja? Poglejte, kako je bila videti slovenščina pred skoraj 500 leti! - Najdi.si novice",
-          "Pavel Rupar poziva na popoldanski shod z začetkom pred RTV Slovenija, policija pripravljena - Info360"
+          "Na RTV o protestih mladih in boju za boljše življenje, v Franciji pa gorele stavbe in ropali trgovine! Kje je meja med protestom in nasiljem",
+          "Na Trnovem pri Gorici danes poseben poklon preteklosti: Župan Samo Turel bo nagovoril zbrane v obnovljenem spominskem parku - Goriške novice",
+          "Danes zadnji rok: mladi iz Ajdovščine in Vipave lahko sodelujejo na natečaju Jaz in narava - Najdi.si novice"
         ]
       }
     }
   },
   "recent_articles": [
+    {
+      "id": "hrvaska-turisticna-sezona-bo-podrla-rekorde-slovenska-bo-dobra-24ur-com-148ab55f",
+      "title": "Hrvaška turistična sezona bo podrla rekorde, slovenska bo 'dobra' - 24ur.com",
+      "category": "Sezonsko",
+      "createdAt": "2026-11-02T13:39:39+01:00"
+    },
     {
       "id": "breziski-grad-ko-se-3d-dozivetja-in-mobilna-aplikacija-oziroma-soba-pobega-srecajo-z-zgodo-63d97c16",
       "title": "Brežiški grad: ko se 3D-doživetja in mobilna aplikacija oziroma soba pobega srečajo z zgodovino",
@@ -659,50 +665,9 @@
       "title": "23. Poletna muzejska noč: Kaj bo v soboto ob \"neobičajnih urah\" na ogled v mariborskih muzejih in galerijah",
       "category": "Dediščina",
       "createdAt": "2026-10-28T10:54:53+01:00"
-    },
-    {
-      "id": "kulinarika-slovenije-zajamcena-tradicionalna-posebnost-prehrana-si-7d34f2d5",
-      "title": "Kulinarika Slovenije - zajamčena tradicionalna posebnost - Prehrana.si",
-      "category": "Gourmet",
-      "createdAt": "2026-10-27T19:16:08+01:00"
     }
   ],
   "recent_failures": [
-    {
-      "file": "fallback-failed-20261031-073950.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek",
-        "manjka_fotografija"
-      ],
-      "title": "Haloze stavijo na kolesarski turizem: Nove kolesarnice in 20 električnih koles ~ - Portal24"
-    },
-    {
-      "file": "fallback-failed-20261031-162459.json",
-      "category": "gore",
-      "errors": [
-        "manjka_fotografija",
-        "prekratek"
-      ],
-      "title": "ŠPORTNI VIKEND LJUBLJANICA 2026 bo med 11. in 13. septembrom v središče Ljubljane pripeljal nočni tek, trail, pohodništvo, kolesarjenje in pestro družinsko športno dogajanje - 24ur"
-    },
-    {
-      "file": "fallback-failed-20261031-192444.json",
-      "category": "gourmet",
-      "errors": [
-        "prekratek"
-      ],
-      "title": "Gostilna Pri planinskem orlu je, z nekaj primorskega navdiha, znova odprta - Kamnik.info"
-    },
-    {
-      "file": "fallback-failed-20261031-194840.json",
-      "category": "gore",
-      "errors": [
-        "manjka_fotografija",
-        "prekratek"
-      ],
-      "title": "ŠPORTNI VIKEND LJUBLJANICA 2026 bo med 11. in 13. septembrom v središče Ljubljane pripeljal nočni tek, trail, pohodništvo, kolesarjenje in pestro družinsko športno dogajanje - 24ur"
-    },
     {
       "file": "fallback-failed-20261031-235144.json",
       "category": "gore",
@@ -755,27 +720,60 @@
       "title": "Nova sezona, novo zvišanje cen: za kampiranje boste zdaj mogli odšteti kar ... - Metropolitan.si"
     },
     {
-      "file": "agent-state",
-      "category": "sezonsko",
+      "file": "fallback-failed-20261102-074003.json",
+      "category": "kolesarstvo",
       "errors": [
-        "prekratek,manjka_fotografija"
+        "prekratek",
+        "manjka_fotografija"
+      ],
+      "title": "Haloze stavijo na kolesarski turizem: Nove kolesarnice in 20 električnih koles ~ - Portal24"
+    },
+    {
+      "file": "fallback-failed-20261102-092144.json",
+      "category": "kolesarstvo",
+      "errors": [
+        "prekratek",
+        "manjka_fotografija"
+      ],
+      "title": "Haloze stavijo na kolesarski turizem: Nove kolesarnice in 20 električnih koles ~ - Portal24"
+    },
+    {
+      "file": "fallback-failed-20261102-105501.json",
+      "category": "dediscina",
+      "errors": [
+        "podvojen_naslov",
+        "prekratek"
+      ],
+      "title": "Brežiški grad: ko se 3D-doživetja in mobilna aplikacija oziroma soba pobega srečajo z zgodovino - ePosavje"
+    },
+    {
+      "file": "fallback-failed-20261102-162501.json",
+      "category": "gore",
+      "errors": [
+        "manjka_fotografija"
+      ],
+      "title": "ŠPORTNI VIKEND LJUBLJANICA 2026 bo med 11. in 13. septembrom v središče Ljubljane pripeljal nočni tek, trail, pohodništvo, kolesarjenje in pestro družinsko športno dogajanje - 24ur"
+    },
+    {
+      "file": "agent-state",
+      "category": "gore",
+      "errors": [
+        "manjka_fotografija"
       ]
     },
     {
       "file": "agent-state",
-      "category": "sezonsko",
+      "category": "gore",
       "errors": [
         "ponavljanje"
       ],
-      "slot": "2026-11-01|19:10|gourmet"
+      "slot": "2026-11-02|16:20|gore"
     }
   ],
   "failure_summary": {
-    "prekratek": 20,
-    "manjka_fotografija": 8,
-    "clanek_brez_slovenskega_konteksta": 1,
-    "viri_ne_podpirajo_slovenske_rubrike": 1,
-    "prekratek,manjka_fotografija": 1,
+    "prekratek": 19,
+    "manjka_fotografija": 12,
+    "podvojen_naslov": 1,
     "ponavljanje": 1
   }
 }
