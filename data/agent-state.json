@@ -20,11 +20,11 @@
     "reason": "ponavljanje",
     "at": "2026-11-02T07:39:40+01:00"
   },
-  "publisher_guardian_last_run": "2026-11-01T21:52:13+01:00",
+  "publisher_guardian_last_run": "2026-11-02T09:21:44+01:00",
   "publisher_guardian_last_action": {
-    "category": "sezonsko",
-    "slot": "2026-11-01|13:30|sezonsko",
-    "remaining_repairs": 2
+    "category": "kolesarstvo",
+    "slot": "2026-11-02|07:35|kolesarstvo",
+    "remaining_repairs": 0
   },
   "schedule_counter_normalized_at": "2026-10-07T16:45:00+02:00"
 }
