@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-02T19:30:19+01:00",
+  "updatedAt": "2026-11-03T03:25:46+01:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -96,28 +96,6 @@
       "description": "The spatial installation Stretch 3789 opens on 15 October 2026 and runs daily from 09:00 to 18:00 through 31 January 2027 in the S Gallery."
     },
     {
-      "id": "dia-de-muertos-patron-2026-11-01",
-      "title": "Día de Muertos: Remembering Our Loved Ones",
-      "url": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/dia-de-muertos-praznik-spomina-na-nase-najdrazje",
-      "source": "Visit Ljubljana / Patrón Tacos & Bar",
-      "type": "Food and culture · family",
-      "place": "Patrón Tacos & Bar · Gornji trg 23",
-      "startAt": "2026-11-01T00:00:00+01:00",
-      "endAt": "2026-11-02T23:59:00+01:00",
-      "price": null,
-      "languages": [
-        "Spanish music",
-        "Slovenian / English service not confirmed"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": true,
-      "accessibility": "Contact Patrón Tacos & Bar for step-free access details.",
-      "ticketUrl": null,
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-02T07:18:00+01:00",
-      "description": "The two-day Día de Muertos programme continues today at Patrón Tacos & Bar with a traditional altar, pan de muerto, Mexican music and children’s face painting. The official listing gives no fixed start time or admission price."
-    },
-    {
       "id": "november-gourmet-ljubljana-2026",
       "title": "November Gourmet Ljubljana",
       "url": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/november-gourmet-ljubljana",
@@ -135,69 +113,6 @@
       "status": "confirmed",
       "lastCheckedAt": "2026-11-01T07:20:00+01:00",
       "description": "The month-long culinary festival begins today across Ljubljana, with tastings, menus, workshops and live events announced separately. Prices, languages and accessibility vary by participating venue."
-    },
-    {
-      "id": "salome-mgl-2026-11-02",
-      "title": "Salome",
-      "url": "https://www.mgl.si/en/schedule/",
-      "source": "MGL",
-      "type": "Theatre · drama",
-      "place": "MGL Main Stage · Ljubljana",
-      "startAt": "2026-11-02T19:30:00+01:00",
-      "endAt": null,
-      "price": null,
-      "languages": [
-        "Slovenian"
-      ],
-      "touristFriendly": false,
-      "familyFriendly": false,
-      "accessibility": null,
-      "ticketUrl": "https://www.mgl.si/en/schedule/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-02T07:18:00+01:00",
-      "description": "MGL stages Salome on the Main Stage at 19:30. The official schedule currently lists tickets."
-    },
-    {
-      "id": "coltrane-100-cankarjev-dom-2026-11-02",
-      "title": "Coltrane 100",
-      "url": "https://cd-cc.si/en/culture/music/coltrane-100",
-      "source": "Cankarjev dom",
-      "type": "Music · jazz",
-      "place": "Linhart Hall · Cankarjev dom",
-      "startAt": "2026-11-02T20:00:00+01:00",
-      "endAt": "2026-11-02T21:30:00+01:00",
-      "price": "€25–€34; concessions €22–€30",
-      "languages": [
-        "Instrumental music"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": "Wheelchair spaces should be reserved with the box office; Entrance I has a ramp.",
-      "ticketUrl": "https://cd-cc.si/en/culture/music/coltrane-100",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-02T07:18:00+01:00",
-      "description": "Joe Lovano, Melissa Aldana, Nduduzo Makhathini, Linda May Oh and Jeff “Tain” Watts mark John Coltrane’s centenary. The concert starts at 20:00 and the published running time is 90 minutes."
-    },
-    {
-      "id": "man-overboard-mgl-2026-11-02",
-      "title": "Man Overboard",
-      "url": "https://www.mgl.si/en/schedule/",
-      "source": "MGL",
-      "type": "Theatre · documentary solo",
-      "place": "MGL Small Stage · Ljubljana",
-      "startAt": "2026-11-02T20:00:00+01:00",
-      "endAt": null,
-      "price": null,
-      "languages": [
-        "Slovenian"
-      ],
-      "touristFriendly": false,
-      "familyFriendly": false,
-      "accessibility": null,
-      "ticketUrl": "https://www.mgl.si/en/schedule/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-02T07:18:00+01:00",
-      "description": "The documentary solo project starts on the MGL Small Stage at 20:00. The official schedule currently lists tickets; it is no longer marked sold out."
     },
     {
       "id": "becoming-cankarjev-dom-2026-11-03",
