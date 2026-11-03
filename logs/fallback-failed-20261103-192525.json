@@ -1,0 +1,28 @@
+{
+  "category": "gourmet",
+  "errors": [
+    "prekratek",
+    "naslov_ni_v_rubriki"
+  ],
+  "article": {
+    "title": "Gostilna Pri planinskem orlu je, z nekaj primorskega navdiha, znova odprta - Kamnik.info"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "lead_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQWFg5bUI1djZaVUNOR2xodTFVaS1jTkNhcmdPbDBsdmxENlRsOGttTVJ3YlVjZUNtV214Y2pFZm9ORE1oT3VJNmxZTjdWWkNKbnZrUXF2VjJDOFJESkxRcmlWRlJ3T3BlMW1iblQ5UVJjdXJfOF9FbFhmVlVHSmhZNTJFYWFxR1RzVVI5OXZIYTFpZHZOVjF4VDBxUFRRUQ?oc=5",
+      "title": "Gostilna Pri planinskem orlu je, z nekaj primorskega navdiha, znova odprta - Kamnik.info",
+      "errors": [
+        "prekratek"
+      ]
+    },
+    {
+      "attempt": 2,
+      "lead_url": "https://www.slovenia.info/en",
+      "title": "The official travel guide to Slovenia | I feel Slovenia",
+      "errors": [
+        "naslov_ni_v_rubriki"
+      ]
+    }
+  ]
+}

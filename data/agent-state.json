@@ -5,9 +5,9 @@
   "posts_date": "2026-11-03",
   "posts_today": 1,
   "last_output": "planinsko-orientacijsko-tekmovanje-je-priljubljena-ucna-metoda-foto-f5a91d15",
-  "last_error": "prekratek,manjka_fotografija",
+  "last_error": "prekratek,naslov_ni_v_rubriki",
   "agent_version": "3.0.0-learning-guarded-fallback",
-  "current_category": "kolesarstvo",
+  "current_category": "gourmet",
   "scheduled_posts_today": 1,
   "manual_posts_today": 0,
   "writer_mode": "workers_ai",
@@ -18,12 +18,13 @@
     "2026-11-03|07:35|kolesarstvo",
     "2026-11-03|10:45|dediscina",
     "2026-11-03|13:30|sezonsko",
-    "2026-11-03|16:20|gore"
+    "2026-11-03|16:20|gore",
+    "2026-11-03|19:10|gourmet"
   ],
   "last_editorial_hold": {
-    "slot": "2026-11-03|16:20|gore",
+    "slot": "2026-11-03|19:10|gourmet",
     "reason": "ponavljanje",
-    "at": "2026-11-03T16:37:24+01:00"
+    "at": "2026-11-03T19:25:10+01:00"
   },
   "publisher_guardian_last_run": "2026-11-03T19:05:21+01:00",
   "publisher_guardian_last_action": {
