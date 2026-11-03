@@ -1,0 +1,45 @@
+{
+  "category": "kolesarstvo",
+  "errors": [
+    "prekratek",
+    "manjka_fotografija"
+  ],
+  "article": {
+    "title": "Haloze stavijo na kolesarski turizem: Nove kolesarnice in 20 električnih koles ~ - Portal24"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "lead_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPVDgwcUpXWTcwTHdZQi1pZWFCdzhYR3pjank1LWJBbGZPdnZGcTY0Z2hNbUlkTjFISU5IU2JKLW1qYVRFWjNMSUFLV3BxUS0tcl9YTF9hSmNuYlNNTW9VX3VpYzZUZGFtczRDeDFpbHBwSmVnSEVTN1pHMjdLN0FEc3ZBdkg0WnYzM0VxT20wdkU2QjRWdmxFa3ljUjItUnM?oc=5",
+      "title": "Haloze stavijo na kolesarski turizem: Nove kolesarnice in 20 električnih koles ~ - Portal24",
+      "errors": [
+        "prekratek"
+      ]
+    },
+    {
+      "attempt": 2,
+      "lead_url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1Rb2lDdlVKVzZZSV9BM1Q1UFJQWUtUME85VGhVUXdPZ3Z4ZEFmRHcxZ3QwdURZRUJDbWcxdWNNQUJmMGF5Ym9RTGVaZWZGamMzVVo3QmpVeElidGJQUVJBZ0I0dTEzMzVjdUE?oc=5",
+      "title": "Daljinske kolesarske poti v Sloveniji - V Fokusu",
+      "errors": [
+        "prekratek"
+      ]
+    },
+    {
+      "attempt": 3,
+      "lead_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5lSHRXeHRBd1FMemlyOXlsRWxZTWswanNEd0RGOGI5RXg1dkFCUGdDc1ZmMlI0OE1zT2l2Q1FoV3RXeDRndTRuTDQ5VnRKTjhYMGFJM3piRng4Sk5ncnc?oc=5",
+      "title": "Med Bledom in Bohinjem je nastala 28-kilometrska kolesarska pot z razgledi, ki jemljejo dih - Bodi eko",
+      "errors": [
+        "prekratek",
+        "manjka_fotografija"
+      ]
+    },
+    {
+      "attempt": 4,
+      "lead_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOdXR3TTU3SnEwYTRnZjQ0aWVEZm1nV3dWVk9WTklwbXhLSWZiYjZrVkthdEhra21YTW44eHJXaU1pRGxsejBZWVJnb1U1ZWotVHJNTHhUZlZuTWZTdGJ2cE5DcXRHeE5qLXBxUGpMRERKcndWbXFCX2tDZGVnbEVJV3VLNmxNajZhN09oXzVnMXhfX0tpdmtnV3hXSHg3dVBwOGZoSUJ3?oc=5",
+      "title": "Razkrite podrobnosti 32. kolesarske dirke po Sloveniji, Omrzel še neznanka - Svet24.si",
+      "errors": [
+        "prekratek"
+      ]
+    }
+  ]
+}
