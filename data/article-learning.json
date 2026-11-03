@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-11-03T01:58:57+01:00",
-  "loop_count": 7917,
+  "updated_at": "2026-11-03T15:16:05+01:00",
+  "loop_count": 7918,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-11-03T01:58:34+01:00",
+      "last_learning_run": "2026-11-03T15:15:43+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 148345,
-          "last_seen": "2026-11-03T01:58:34+01:00",
+          "seen": 148356,
+          "last_seen": "2026-11-03T15:15:43+01:00",
           "last_title": "Kje gledati finale košarkarskega EP med Slovenci in Italijani? Televizijski prenos bo! - Dnevnik",
           "last_provider": "google-news-si",
-          "published": 478195,
+          "published": 478252,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,7 +227,7 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 10,
+      "current_source_count": 11,
       "example_titles": {
         "news.google.com": [
           "Slovenija želi biti nova Švica, zdaj pa je Švica postala nova Slovenija. Trava, kriva je trava - Dnevnik",
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-11-03T01:58:43+01:00",
+      "last_learning_run": "2026-11-03T15:15:53+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -279,11 +279,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 176905,
-          "last_seen": "2026-11-03T01:58:43+01:00",
+          "seen": 176921,
+          "last_seen": "2026-11-03T15:15:53+01:00",
           "last_title": "Video: Luka Simonič iz SDM: \"Če se mi ne ukvarjamo s politiko, se politika ukvarja z nami\" - Metroplay - Metropolitan.si",
           "last_provider": "google-news-global",
-          "published": 526252,
+          "published": 526312,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -390,12 +390,12 @@
         "news.google.com": [
           "Nov protest ob obisku Sara v DZ-ju. Janša: Protesti so refleks levičarskega antisemitizma. - rtvslo.si",
           "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si",
-          "Petra Kerčmar s tem preusmerila pozornost nase: en mali detajl, o katerem danes govorijo vsi - Elle.si"
+          "Fox News o preobratu v slovenski politiki: Janša je izjemno uspešen pogajalec - Nova24TV"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-11-03T01:58:57+01:00",
+      "last_learning_run": "2026-11-03T15:16:05+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -484,11 +484,11 @@
         },
         "news.google.com": {
           "score": 2.538,
-          "seen": 203352,
-          "last_seen": "2026-11-03T01:58:57+01:00",
+          "seen": 203363,
+          "last_seen": "2026-11-03T15:16:05+01:00",
           "last_title": "Slovenija preprečila pristanek izraelskega letala: tako se odziva Fraport - Info360",
           "last_provider": "google-news-global",
-          "published": 328134,
+          "published": 328150,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -583,12 +583,12 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 10,
+      "current_source_count": 11,
       "example_titles": {
         "news.google.com": [
-          "Podgane, droge in skiroji: kaj Ljubljančane danes najbolj spravlja ob živce? - Info360",
+          "Kako svet vidi Slovenijo danes in kako je postala tako vroča evropska destinacija - Dnevnik",
           "Golob je “depolitiziral” RTV SLO, jo bo tudi Janša? Ustavno sodišče je dalo “blagoslov”, a Gregorčič in Avbelj gresta na ESČP - Zanima.me",
-          "Kako svet vidi Slovenijo danes in kako je postala tako vroča evropska destinacija - Dnevnik"
+          "Pred Stevanovićevim obiskom v Srbiji znova aktualno vprašanje statusa srbske skupnosti v Sloveniji - Siol.net"
         ]
       }
     }
@@ -669,42 +669,79 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20261031-194840.json",
-      "category": "gore",
+      "file": "fallback-failed-20261103-115346.json",
+      "category": "dediscina",
       "errors": [
-        "manjka_fotografija",
-        "prekratek"
+        "podvojen_naslov"
       ],
-      "title": "ŠPORTNI VIKEND LJUBLJANICA 2026 bo med 11. in 13. septembrom v središče Ljubljane pripeljal nočni tek, trail, pohodništvo, kolesarjenje in pestro družinsko športno dogajanje - 24ur"
+      "title": "Brežiški grad: ko se 3D-doživetja in mobilna aplikacija oziroma soba pobega srečajo z zgodovino - ePosavje"
     },
     {
-      "file": "fallback-failed-20261031-235144.json",
-      "category": "gore",
+      "file": "fallback-failed-20261103-120906.json",
+      "category": "dediscina",
       "errors": [
-        "manjka_fotografija",
-        "prekratek"
+        "podvojen_naslov"
       ],
-      "title": "ŠPORTNI VIKEND LJUBLJANICA 2026 bo med 11. in 13. septembrom v središče Ljubljane pripeljal nočni tek, trail, pohodništvo, kolesarjenje in pestro družinsko športno dogajanje - 24ur"
+      "title": "Brežiški grad: ko se 3D-doživetja in mobilna aplikacija oziroma soba pobega srečajo z zgodovino - ePosavje"
     },
     {
-      "file": "fallback-failed-20261101-134007.json",
-      "category": "sezonsko",
+      "file": "fallback-failed-20261103-123903.json",
+      "category": "dediscina",
       "errors": [
-        "prekratek",
-        "manjka_fotografija"
+        "podvojen_naslov"
       ],
-      "title": "Nova sezona, novo zvišanje cen: za kampiranje boste zdaj mogli odšteti kar ... - Metropolitan.si"
+      "title": "Brežiški grad: ko se 3D-doživetja in mobilna aplikacija oziroma soba pobega srečajo z zgodovino - ePosavje"
     },
     {
-      "file": "fallback-failed-20261101-162505.json",
-      "category": "gore",
+      "file": "fallback-failed-20261103-125349.json",
+      "category": "dediscina",
       "errors": [
-        "prekratek"
+        "podvojen_naslov"
       ],
-      "title": "Planinstvo in alpinizem vpisana v register nesnovne kulturne dediščine Slovenije - e-Koroška"
+      "title": "Brežiški grad: ko se 3D-doživetja in mobilna aplikacija oziroma soba pobega srečajo z zgodovino - ePosavje"
     },
     {
-      "file": "fallback-failed-20261101-172842.json",
+      "file": "fallback-failed-20261103-130852.json",
+      "category": "dediscina",
+      "errors": [
+        "podvojen_naslov"
+      ],
+      "title": "Brežiški grad: ko se 3D-doživetja in mobilna aplikacija oziroma soba pobega srečajo z zgodovino - ePosavje"
+    },
+    {
+      "file": "fallback-failed-20261103-132342.json",
+      "category": "dediscina",
+      "errors": [
+        "podvojen_naslov"
+      ],
+      "title": "Brežiški grad: ko se 3D-doživetja in mobilna aplikacija oziroma soba pobega srečajo z zgodovino - ePosavje"
+    },
+    {
+      "file": "fallback-failed-20261103-133857.json",
+      "category": "dediscina",
+      "errors": [
+        "podvojen_naslov"
+      ],
+      "title": "Brežiški grad: ko se 3D-doživetja in mobilna aplikacija oziroma soba pobega srečajo z zgodovino - ePosavje"
+    },
+    {
+      "file": "fallback-failed-20261103-135427.json",
+      "category": "dediscina",
+      "errors": [
+        "podvojen_naslov"
+      ],
+      "title": "Brežiški grad: ko se 3D-doživetja in mobilna aplikacija oziroma soba pobega srečajo z zgodovino - ePosavje"
+    },
+    {
+      "file": "fallback-failed-20261103-141003.json",
+      "category": "dediscina",
+      "errors": [
+        "podvojen_naslov"
+      ],
+      "title": "Brežiški grad: ko se 3D-doživetja in mobilna aplikacija oziroma soba pobega srečajo z zgodovino - ePosavje"
+    },
+    {
+      "file": "fallback-failed-20261103-142450.json",
       "category": "sezonsko",
       "errors": [
         "prekratek"
@@ -712,69 +749,25 @@
       "title": "Slovenski turizem: kje smo s cenami, naložbami in kakšna bo letošnja sezona - Finance.si"
     },
     {
-      "file": "fallback-failed-20261101-192503.json",
-      "category": "gourmet",
-      "errors": [
-        "prekratek"
-      ],
-      "title": "Gostilna Pri planinskem orlu je, z nekaj primorskega navdiha, znova odprta - Kamnik.info"
-    },
-    {
-      "file": "fallback-failed-20261101-215213.json",
+      "file": "agent-state",
       "category": "sezonsko",
       "errors": [
-        "prekratek",
-        "manjka_fotografija"
-      ],
-      "title": "Nova sezona, novo zvišanje cen: za kampiranje boste zdaj mogli odšteti kar ... - Metropolitan.si"
-    },
-    {
-      "file": "fallback-failed-20261102-074003.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek",
-        "manjka_fotografija"
-      ],
-      "title": "Haloze stavijo na kolesarski turizem: Nove kolesarnice in 20 električnih koles ~ - Portal24"
-    },
-    {
-      "file": "fallback-failed-20261102-092144.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek",
-        "manjka_fotografija"
-      ],
-      "title": "Haloze stavijo na kolesarski turizem: Nove kolesarnice in 20 električnih koles ~ - Portal24"
-    },
-    {
-      "file": "fallback-failed-20261102-105501.json",
-      "category": "dediscina",
-      "errors": [
-        "podvojen_naslov",
         "prekratek"
-      ],
-      "title": "Brežiški grad: ko se 3D-doživetja in mobilna aplikacija oziroma soba pobega srečajo z zgodovino - ePosavje"
+      ]
     },
     {
-      "file": "fallback-failed-20261102-162501.json",
-      "category": "gore",
+      "file": "agent-state",
+      "category": "sezonsko",
       "errors": [
-        "manjka_fotografija"
+        "ponavljanje"
       ],
-      "title": "ŠPORTNI VIKEND LJUBLJANICA 2026 bo med 11. in 13. septembrom v središče Ljubljane pripeljal nočni tek, trail, pohodništvo, kolesarjenje in pestro družinsko športno dogajanje - 24ur"
-    },
-    {
-      "file": "fallback-failed-20261102-193953.json",
-      "category": "gourmet",
-      "errors": [
-        "prekratek"
-      ],
-      "title": "Gostilna Pri planinskem orlu je, z nekaj primorskega navdiha, znova odprta - Kamnik.info"
+      "slot": "2026-11-03|13:30|sezonsko"
     }
   ],
   "failure_summary": {
-    "prekratek": 19,
-    "manjka_fotografija": 11,
-    "podvojen_naslov": 1
+    "podvojen_naslov": 15,
+    "prekratek": 6,
+    "manjka_fotografija": 3,
+    "ponavljanje": 1
   }
 }
