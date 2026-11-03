@@ -1,25 +1,30 @@
 {
   "agent": "Blog Lab Slovenia Publisher",
-  "status": "completed",
+  "status": "waiting",
   "enabled": true,
   "category": "gore",
-  "last_run": "2026-11-03T16:25:05+01:00",
+  "last_run": "2026-11-03T16:37:46+01:00",
   "last_success": "2026-11-03T16:25:05+01:00",
   "last_output": "planinsko-orientacijsko-tekmovanje-je-priljubljena-ucna-metoda-foto-f5a91d15",
   "next_run": null,
-  "message": "Fallback članek je objavljen brez zunanjega AI providerja.",
+  "message": "Nobena sveža zgodba ni prestala uredniškega QA: manjka_fotografija,prekratek",
   "posts_today": 1,
   "scheduled_posts_today": 1,
   "manual_posts_today": 0,
-  "writer_mode": "deterministic_fallback",
+  "writer_mode": "workers_ai",
   "scheduled_slots_done": [
     "2026-11-03|16:20|gore"
   ],
   "scheduled_slots_deferred": [
     "2026-11-03|07:35|kolesarstvo",
     "2026-11-03|10:45|dediscina",
-    "2026-11-03|13:30|sezonsko"
+    "2026-11-03|13:30|sezonsko",
+    "2026-11-03|16:20|gore"
   ],
-  "last_editorial_hold": null,
-  "last_error": null
+  "last_editorial_hold": {
+    "slot": "2026-11-03|16:20|gore",
+    "reason": "ponavljanje",
+    "at": "2026-11-03T16:37:24+01:00"
+  },
+  "last_error": "manjka_fotografija,prekratek"
 }
