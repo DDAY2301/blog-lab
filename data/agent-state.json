@@ -5,21 +5,22 @@
   "posts_date": "2026-11-03",
   "posts_today": 0,
   "last_output": "tragedija-v-kranju-zakaj-je-izkuseni-kolesar-na-spustu-v-ovinku-zapeljal-s-ceste-b29ec746",
-  "last_error": "podvojen_naslov",
+  "last_error": "prekratek",
   "agent_version": "3.0.0-learning-guarded-fallback",
-  "current_category": "dediscina",
+  "current_category": "sezonsko",
   "scheduled_posts_today": 0,
   "manual_posts_today": 0,
   "writer_mode": "workers_ai",
   "scheduled_slots_done": [],
   "scheduled_slots_deferred": [
     "2026-11-03|07:35|kolesarstvo",
-    "2026-11-03|10:45|dediscina"
+    "2026-11-03|10:45|dediscina",
+    "2026-11-03|13:30|sezonsko"
   ],
   "last_editorial_hold": {
-    "slot": "2026-11-03|10:45|dediscina",
-    "reason": "naslov_ni_v_rubriki,clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike,besedilo_ni_v_slovenscini",
-    "at": "2026-11-03T14:09:43+01:00"
+    "slot": "2026-11-03|13:30|sezonsko",
+    "reason": "ponavljanje",
+    "at": "2026-11-03T14:24:36+01:00"
   },
   "publisher_guardian_last_run": "2026-11-03T11:07:54+01:00",
   "publisher_guardian_last_action": {
