@@ -5,7 +5,7 @@
   "posts_date": "2026-11-03",
   "posts_today": 0,
   "last_output": "tragedija-v-kranju-zakaj-je-izkuseni-kolesar-na-spustu-v-ovinku-zapeljal-s-ceste-b29ec746",
-  "last_error": "podvojen_naslov",
+  "last_error": "fallback_no_fresh_evidence",
   "agent_version": "3.0.0-learning-guarded-fallback",
   "current_category": "dediscina",
   "scheduled_posts_today": 0,

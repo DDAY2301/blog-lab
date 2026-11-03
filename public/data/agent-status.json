@@ -3,11 +3,11 @@
   "status": "waiting",
   "enabled": true,
   "category": "dediscina",
-  "last_run": "2026-11-03T12:09:06+01:00",
+  "last_run": "2026-11-03T12:25:14+01:00",
   "last_success": "2026-11-02T19:52:01+01:00",
   "last_output": "tragedija-v-kranju-zakaj-je-izkuseni-kolesar-na-spustu-v-ovinku-zapeljal-s-ceste-b29ec746",
   "next_run": null,
-  "message": "Nobena sveža zgodba ni prestala uredniškega QA: podvojen_naslov",
+  "message": "Ni novih neuporabljenih virov; objava se varno odloži.",
   "posts_today": 0,
   "scheduled_posts_today": 0,
   "manual_posts_today": 0,
@@ -21,5 +21,5 @@
     "reason": "naslov_ni_v_rubriki,besedilo_ni_v_slovenscini",
     "at": "2026-11-03T07:39:37+01:00"
   },
-  "last_error": "podvojen_naslov"
+  "last_error": "fallback_no_fresh_evidence"
 }
