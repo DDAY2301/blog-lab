@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-03T03:25:46+01:00",
+  "updatedAt": "2026-11-03T07:16:00+01:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -132,7 +132,7 @@
       "accessibility": "Cankarjev dom publishes venue accessibility information; request accessible seating when booking.",
       "ticketUrl": "https://vstopnice.cd-cc.si/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-11-02T07:18:00+01:00",
+      "lastCheckedAt": "2026-11-03T07:16:00+01:00",
       "description": "Maša Kagao Knez and an international ensemble premiere a music-dance contemplation at 19:30. Tickets cost €16, or €12 for eligible reduced-price visitors."
     },
     {
@@ -153,7 +153,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.mgl.si/en/schedule/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-11-02T07:18:00+01:00",
+      "lastCheckedAt": "2026-11-03T07:16:00+01:00",
       "description": "Salome begins on MGL’s Main Stage at 19:30. The official schedule currently lists tickets."
     },
     {
@@ -172,7 +172,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.galahala.com/en/program/codefendants/33559/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-11-02T07:18:00+01:00",
+      "lastCheckedAt": "2026-11-03T07:16:00+01:00",
       "description": "US groups Codefendants and Jakob's Castle perform at Gala Hala at 20:00. Tickets cost €23 in advance or €28 on the day."
     },
     {
@@ -193,7 +193,7 @@
       "accessibility": null,
       "ticketUrl": "https://vstopnice.cd-cc.si/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-11-02T07:18:00+01:00",
+      "lastCheckedAt": "2026-11-03T07:16:00+01:00",
       "description": "Gal George Gjurin celebrates 25 years of artistic work at 20:00. Tickets cost €22, €28, €34 or €40."
     },
     {
@@ -214,7 +214,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.mgl.si/en/schedule/",
       "status": "sold_out",
-      "lastCheckedAt": "2026-11-02T07:18:00+01:00",
+      "lastCheckedAt": "2026-11-03T07:16:00+01:00",
       "description": "Prima Facie starts on the MGL Small Stage at 20:00. The official schedule marks this performance as sold out."
     },
     {
@@ -235,7 +235,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.mgl.si/en/schedule/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-26T06:58:00+01:00",
+      "lastCheckedAt": "2026-11-03T07:16:00+01:00",
       "description": "Romantic Souls is scheduled on MGL’s Main Stage at 19:30. The official schedule currently lists tickets."
     },
     {
@@ -247,18 +247,40 @@
       "place": "Kino Šiška · Ljubljana",
       "startAt": "2026-11-04T20:00:00+01:00",
       "endAt": null,
-      "price": null,
+      "price": "€36.20 presale / €41.20 walk-up / €27.45 reduced",
       "languages": [
         "English",
         "Music-led"
       ],
       "touristFriendly": true,
       "familyFriendly": false,
-      "accessibility": "Kino Šiška publishes general venue accessibility information; contact the venue for event-specific arrangements.",
+      "accessibility": "Kino Šiška provides step-free access; visitors with physical or sensory impairments and one assistant are eligible for free admission under the venue’s current policy.",
       "ticketUrl": "https://www.kinosiska.si/en/dogodek/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-27T07:14:00+01:00",
-      "description": "Sleaford Mods perform with mal pre mal at Kino Šiška at 20:00. Check the official event listing for current ticket price and availability."
+      "lastCheckedAt": "2026-11-03T07:16:00+01:00",
+      "description": "Sleaford Mods perform with mal pre mal in Katedrala Hall at 20:00. Tickets cost €36.20 in presale, €41.20 at the door or €27.45 reduced, including the stated €1.20 PLUS1 contribution."
+    },
+    {
+      "id": "tommy-emmanuel-cankarjev-dom-2026-11-04",
+      "title": "Tommy Emmanuel, CGP",
+      "url": "https://www.cd-cc.si/en/culture/lease-event/tommy-emmanuel-cgp",
+      "source": "Cankarjev dom",
+      "type": "Concert · acoustic guitar",
+      "place": "Linhart Hall · Cankarjev dom",
+      "startAt": "2026-11-04T20:00:00+01:00",
+      "endAt": null,
+      "price": "€55 / €60",
+      "languages": [
+        "Instrumental music",
+        "English-language stage remarks possible"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": true,
+      "accessibility": "Contact Cankarjev dom when booking wheelchair spaces or other assistance.",
+      "ticketUrl": "https://vstopnice.cd-cc.si/si/skupina/226490/koncert-tommy-emmanuel-cgp.html",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-03T07:16:00+01:00",
+      "description": "Grammy-winning Australian fingerstyle guitarist Tommy Emmanuel performs in Linhart Hall at 20:00. Tickets cost €55 or €60."
     },
     {
       "id": "salome-mgl-2026-11-05",
@@ -1144,6 +1166,71 @@
       "status": "sold_out",
       "lastCheckedAt": "2026-11-02T07:18:00+01:00",
       "description": "The legal drama begins on the MGL Small Stage at 20:00. The official schedule marks this performance as sold out."
+    },
+    {
+      "id": "dresden-philharmonic-cankarjev-dom-2026-11-17",
+      "title": "Dresden Philharmonic",
+      "url": "https://www.cd-cc.si/en/culture/music/dresden-philharmonic",
+      "source": "Cankarjev dom",
+      "type": "Concert · classical",
+      "place": "Gallus Hall · Cankarjev dom",
+      "startAt": "2026-11-17T19:30:00+01:00",
+      "endAt": null,
+      "price": "€38 / €50 / €62 / €70; reduced €34 / €45 / €57 / €65",
+      "languages": [
+        "Instrumental music"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": true,
+      "accessibility": "Contact Cankarjev dom when booking wheelchair spaces or other assistance.",
+      "ticketUrl": "https://www.cd-cc.si/en/culture/music/dresden-philharmonic",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-03T07:16:00+01:00",
+      "description": "Sir Donald Runnicles conducts the Dresden Philharmonic with pianist Emanuel Ax in Beethoven and Bruckner at 19:30. Standard tickets range from €38 to €70."
+    },
+    {
+      "id": "tom-skinner-cankarjev-dom-2026-11-17",
+      "title": "Tom Skinner",
+      "url": "https://www.cd-cc.si/en/culture/music/tom-skinner",
+      "source": "Cankarjev dom",
+      "type": "Concert · contemporary jazz",
+      "place": "CD Club · Cankarjev dom",
+      "startAt": "2026-11-17T19:30:00+01:00",
+      "endAt": "2026-11-17T21:00:00+01:00",
+      "price": "€18 / €15 reduced",
+      "languages": [
+        "Instrumental music",
+        "English-language stage remarks possible"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": "Contact Cankarjev dom when booking wheelchair spaces or other assistance.",
+      "ticketUrl": "https://www.cd-cc.si/en/culture/music/tom-skinner",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-03T07:16:00+01:00",
+      "description": "Tom Skinner leads a 90-minute contemporary jazz concert in the CD Club at 19:30. Tickets cost €18, or €15 for eligible reduced-price visitors."
+    },
+    {
+      "id": "personae-opera-2026-11-17",
+      "title": "PersonaE",
+      "url": "https://www.opera.si/sl/program/predstava/ostalo/personae",
+      "source": "SNG Opera and Ballet Ljubljana",
+      "type": "Music theatre · experimental",
+      "place": "Stage -3 · SNG Opera and Ballet Ljubljana",
+      "startAt": "2026-11-17T20:30:00+01:00",
+      "endAt": "2026-11-17T21:40:00+01:00",
+      "price": null,
+      "languages": [
+        "Music-led",
+        "Slovenian-language information"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": "The production uses comfortable reclining surfaces instead of seats; contact the opera house for mobility requirements.",
+      "ticketUrl": "https://opera.mojekarte.si/en/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-03T07:16:00+01:00",
+      "description": "The experimental music-theatre installation by Rocc, Raiven and Vít Zouhar begins on Stage -3 at 20:30 and lasts about 70 minutes. The official calendar confirms the date; verify the current ticket price and access requirements before booking."
     }
   ]
 }
