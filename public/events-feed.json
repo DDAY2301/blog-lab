@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-04T07:06:03+01:00",
+  "updatedAt": "2026-11-04T07:08:00+01:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -199,6 +199,27 @@
       "status": "confirmed",
       "lastCheckedAt": "2026-11-04T07:03:00+01:00",
       "description": "Grammy-winning Australian fingerstyle guitarist Tommy Emmanuel performs in Linhart Hall at 20:00. Tickets cost €55 or €60."
+    },
+    {
+      "id": "magdalena-reiter-untitled-2026-11-05-1700",
+      "title": "Magdalena Reiter: Untitled — 17:00 performance",
+      "url": "https://www.bunker.si/events/magdalena-reiter-brez-naslova-2/",
+      "source": "Bunker / Stara mestna elektrarna",
+      "type": "Dance · choreographic installation",
+      "place": "Stara mestna elektrarna · Ljubljana",
+      "startAt": "2026-11-05T17:00:00+01:00",
+      "endAt": "2026-11-05T18:00:00+01:00",
+      "price": "€10 / €7 reduced",
+      "languages": [
+        "Movement-led"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": null,
+      "ticketUrl": "https://www.bunker.si/events/magdalena-reiter-brez-naslova-2/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-04T07:08:00+01:00",
+      "description": "An early performance of Magdalena Reiter’s choreographic installation begins at 17:00. Tickets cost €10 or €7 reduced; a separate evening performance begins at 20:00."
     },
     {
       "id": "salome-mgl-2026-11-05",
