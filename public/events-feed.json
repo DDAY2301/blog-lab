@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-04T01:40:25+01:00",
+  "updatedAt": "2026-11-04T07:03:00+01:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -123,7 +123,7 @@
       "place": "MGL Main Stage · Ljubljana",
       "startAt": "2026-11-04T19:30:00+01:00",
       "endAt": null,
-      "price": null,
+      "price": "€12.50–€18",
       "languages": [
         "Slovenian"
       ],
@@ -132,8 +132,29 @@
       "accessibility": null,
       "ticketUrl": "https://www.mgl.si/en/schedule/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-11-03T07:16:00+01:00",
-      "description": "Romantic Souls is scheduled on MGL’s Main Stage at 19:30. The official schedule currently lists tickets."
+      "lastCheckedAt": "2026-11-04T07:03:00+01:00",
+      "description": "Romantic Souls begins on MGL’s Main Stage at 19:30. Tickets currently cost €12.50–€18; the performance is in Slovenian."
+    },
+    {
+      "id": "magdalena-reiter-untitled-2026-11-04-2000",
+      "title": "Magdalena Reiter: Untitled",
+      "url": "https://www.bunker.si/events/magdalena-reiter-brez-naslova-2/",
+      "source": "Bunker / Stara mestna elektrarna",
+      "type": "Dance · choreographic installation",
+      "place": "Stara mestna elektrarna · Ljubljana",
+      "startAt": "2026-11-04T20:00:00+01:00",
+      "endAt": null,
+      "price": "€10 / €7 reduced",
+      "languages": [
+        "Movement-led"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": null,
+      "ticketUrl": "https://www.bunker.si/events/magdalena-reiter-brez-naslova-2/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-04T07:03:00+01:00",
+      "description": "Magdalena Reiter’s choreographic installation combines dance and audiovisual media at Stara mestna elektrarna. Tickets cost €10 or €7 reduced; check the organiser for accessibility arrangements."
     },
     {
       "id": "sleaford-mods-kino-siska-2026-11-04",
@@ -154,7 +175,7 @@
       "accessibility": "Kino Šiška provides step-free access; visitors with physical or sensory impairments and one assistant are eligible for free admission under the venue’s current policy.",
       "ticketUrl": "https://www.kinosiska.si/en/dogodek/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-11-03T07:16:00+01:00",
+      "lastCheckedAt": "2026-11-04T07:03:00+01:00",
       "description": "Sleaford Mods perform with mal pre mal in Katedrala Hall at 20:00. Tickets cost €36.20 in presale, €41.20 at the door or €27.45 reduced, including the stated €1.20 PLUS1 contribution."
     },
     {
@@ -176,8 +197,29 @@
       "accessibility": "Contact Cankarjev dom when booking wheelchair spaces or other assistance.",
       "ticketUrl": "https://vstopnice.cd-cc.si/si/skupina/226490/koncert-tommy-emmanuel-cgp.html",
       "status": "confirmed",
-      "lastCheckedAt": "2026-11-03T07:16:00+01:00",
+      "lastCheckedAt": "2026-11-04T07:03:00+01:00",
       "description": "Grammy-winning Australian fingerstyle guitarist Tommy Emmanuel performs in Linhart Hall at 20:00. Tickets cost €55 or €60."
+    },
+    {
+      "id": "magdalena-reiter-untitled-2026-11-05-1700",
+      "title": "Magdalena Reiter: Untitled",
+      "url": "https://www.bunker.si/events/magdalena-reiter-brez-naslova-2/",
+      "source": "Bunker / Stara mestna elektrarna",
+      "type": "Dance · choreographic installation",
+      "place": "Stara mestna elektrarna · Ljubljana",
+      "startAt": "2026-11-05T17:00:00+01:00",
+      "endAt": null,
+      "price": "€10 / €7 reduced",
+      "languages": [
+        "Movement-led"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": null,
+      "ticketUrl": "https://www.bunker.si/events/magdalena-reiter-brez-naslova-2/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-04T07:03:00+01:00",
+      "description": "Magdalena Reiter’s choreographic installation combines dance and audiovisual media at Stara mestna elektrarna. Tickets cost €10 or €7 reduced; check the organiser for accessibility arrangements."
     },
     {
       "id": "salome-mgl-2026-11-05",
@@ -197,7 +239,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.mgl.si/en/schedule/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-26T06:58:00+01:00",
+      "lastCheckedAt": "2026-11-04T07:03:00+01:00",
       "description": "Salome begins on MGL’s Main Stage at 18:00. The official schedule currently lists tickets."
     },
     {
@@ -218,7 +260,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.ljubljanafestival.si/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-26T06:58:00+01:00",
+      "lastCheckedAt": "2026-11-04T07:03:00+01:00",
       "description": "Laura Colombo and Silvia Capè perform in the Young Virtuosi series from 19:00 to 21:00. Check Festival Ljubljana for ticket and accessibility details."
     },
     {
@@ -230,15 +272,38 @@
       "place": "SNG Opera and Ballet Ljubljana",
       "startAt": "2026-11-05T19:30:00+01:00",
       "endAt": null,
-      "price": null,
-      "languages": [],
+      "price": "€19–€65 plus €1 processing fee online",
+      "languages": [
+        "Slovenian"
+      ],
       "touristFriendly": true,
       "familyFriendly": false,
       "accessibility": null,
       "ticketUrl": "https://opera.mojekarte.si/en/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-26T06:58:00+01:00",
-      "description": "Marjan Kozina’s four-act opera Equinox premieres at 19:30. Tickets are available through the opera’s authorised seller."
+      "lastCheckedAt": "2026-11-04T07:03:00+01:00",
+      "description": "Marjan Kozina’s four-act opera Equinox premieres at 19:30 in Slovenian. Current authorised ticket prices range from €19 to €65, with a stated €1 online processing fee per ticket."
+    },
+    {
+      "id": "magdalena-reiter-untitled-2026-11-05-2000",
+      "title": "Magdalena Reiter: Untitled",
+      "url": "https://www.bunker.si/events/magdalena-reiter-brez-naslova-2/",
+      "source": "Bunker / Stara mestna elektrarna",
+      "type": "Dance · choreographic installation",
+      "place": "Stara mestna elektrarna · Ljubljana",
+      "startAt": "2026-11-05T20:00:00+01:00",
+      "endAt": null,
+      "price": "€10 / €7 reduced",
+      "languages": [
+        "Movement-led"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": null,
+      "ticketUrl": "https://www.bunker.si/events/magdalena-reiter-brez-naslova-2/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-04T07:03:00+01:00",
+      "description": "Magdalena Reiter’s choreographic installation combines dance and audiovisual media at Stara mestna elektrarna. Tickets cost €10 or €7 reduced; check the organiser for accessibility arrangements."
     },
     {
       "id": "prima-facie-mgl-2026-11-05",
@@ -258,7 +323,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.mgl.si/en/schedule/",
       "status": "sold_out",
-      "lastCheckedAt": "2026-10-26T06:58:00+01:00",
+      "lastCheckedAt": "2026-11-04T07:03:00+01:00",
       "description": "Prima Facie begins on MGL’s Small Stage at 20:00. The official schedule marks this performance as sold out."
     },
     {
@@ -300,6 +365,27 @@
       "status": "confirmed",
       "lastCheckedAt": "2026-10-27T07:14:00+01:00",
       "description": "Liamere perform at the Castle Jazz Club at 20:00; doors open at 19:00. The €11 ticket includes a return funicular journey, and seating is limited."
+    },
+    {
+      "id": "magdalena-reiter-untitled-2026-11-06-2000",
+      "title": "Magdalena Reiter: Untitled",
+      "url": "https://www.bunker.si/events/magdalena-reiter-brez-naslova-2/",
+      "source": "Bunker / Stara mestna elektrarna",
+      "type": "Dance · choreographic installation",
+      "place": "Stara mestna elektrarna · Ljubljana",
+      "startAt": "2026-11-06T20:00:00+01:00",
+      "endAt": null,
+      "price": "€10 / €7 reduced",
+      "languages": [
+        "Movement-led"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": null,
+      "ticketUrl": "https://www.bunker.si/events/magdalena-reiter-brez-naslova-2/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-04T07:03:00+01:00",
+      "description": "Magdalena Reiter’s choreographic installation combines dance and audiovisual media at Stara mestna elektrarna. Tickets cost €10 or €7 reduced; check the organiser for accessibility arrangements."
     },
     {
       "id": "man-overboard-mgl-2026-11-06",
@@ -344,25 +430,6 @@
       "description": "The second šMENT showcase presents five acts at Kino Šiška from 20:00. Check the official listing for current ticket price and availability."
     },
     {
-      "title": "WAVE RIDERS!",
-      "url": "https://www.galahala.com/en/program/wave-riders-27/34774/",
-      "source": "Gala Hala",
-      "type": "Club night · eclectic electronic",
-      "place": "Gala Hala · AKC Metelkova",
-      "startAt": "2026-11-06T22:00:00+01:00",
-      "endAt": null,
-      "id": "event-33-wave-riders",
-      "price": "€5 until 23:00 / €8 afterwards",
-      "languages": [],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": null,
-      "ticketUrl": "https://www.galahala.com/en/program/wave-riders-27/34774/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-23T07:15:00+02:00",
-      "description": "Torulsson and Skinar host an eclectic electronic club night from 22:00. Admission costs €5 until 23:00 and €8 afterwards."
-    },
-    {
       "title": "STELLAR x K4: Janeret & Twineffect",
       "url": "https://www.klub-k4.si/",
       "source": "Klub K4",
@@ -380,6 +447,25 @@
       "lastCheckedAt": "2026-11-04T01:40:25+01:00",
       "description": "STELLAR x K4: Janeret & Twineffect is listed by Klub K4. Check the official event page for price, language and accessibility details.",
       "id": "event-18-stellar-x-k4-janeret-twineffect"
+    },
+    {
+      "title": "WAVE RIDERS!",
+      "url": "https://www.galahala.com/en/program/wave-riders-27/34774/",
+      "source": "Gala Hala",
+      "type": "Club night · eclectic electronic",
+      "place": "Gala Hala · AKC Metelkova",
+      "startAt": "2026-11-06T22:00:00+01:00",
+      "endAt": null,
+      "id": "event-33-wave-riders",
+      "price": "€5 until 23:00 / €8 afterwards",
+      "languages": [],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": null,
+      "ticketUrl": "https://www.galahala.com/en/program/wave-riders-27/34774/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-10-23T07:15:00+02:00",
+      "description": "Torulsson and Skinar host an eclectic electronic club night from 22:00. Admission costs €5 until 23:00 and €8 afterwards."
     },
     {
       "id": "equinox-opera-2026-11-07",
@@ -1166,6 +1252,69 @@
       "status": "confirmed",
       "lastCheckedAt": "2026-11-03T07:16:00+01:00",
       "description": "The experimental music-theatre installation by Rocc, Raiven and Vít Zouhar begins on Stage -3 at 20:30 and lasts about 70 minutes. The official calendar confirms the date; verify the current ticket price and access requirements before booking."
+    },
+    {
+      "id": "prima-facie-mgl-2026-11-18",
+      "title": "Prima Facie",
+      "url": "https://www.mgl.si/en/schedule/",
+      "source": "MGL",
+      "type": "Theatre · legal drama",
+      "place": "MGL Small Stage · Ljubljana",
+      "startAt": "2026-11-18T17:00:00+01:00",
+      "endAt": null,
+      "price": "€19 / €15.20 pensioners / €13.30 students",
+      "languages": [
+        "Slovenian"
+      ],
+      "touristFriendly": false,
+      "familyFriendly": false,
+      "accessibility": null,
+      "ticketUrl": "https://mgl.mojekarte.si/si/prima-facie/vstopnice-1238214.html",
+      "status": "sold_out",
+      "lastCheckedAt": "2026-11-04T07:03:00+01:00",
+      "description": "Prima Facie begins on MGL’s Small Stage at 17:00 in Slovenian. MGL’s current schedule marks the performance as sold out."
+    },
+    {
+      "id": "nora-mgl-2026-11-18",
+      "title": "Nora",
+      "url": "https://www.mgl.si/en/schedule/",
+      "source": "MGL",
+      "type": "Theatre · drama",
+      "place": "MGL Main Stage · Ljubljana",
+      "startAt": "2026-11-18T19:30:00+01:00",
+      "endAt": null,
+      "price": "€20–€22; reduced €14–€17.60",
+      "languages": [
+        "Slovenian"
+      ],
+      "touristFriendly": false,
+      "familyFriendly": false,
+      "accessibility": null,
+      "ticketUrl": "https://mgl.mojekarte.si/si/nora/vstopnice-1238201.html",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-04T07:03:00+01:00",
+      "description": "Nora begins on MGL’s Main Stage at 19:30 in Slovenian. Standard tickets cost €20–€22, with student and pensioner reductions."
+    },
+    {
+      "id": "now-2-mother-cankarjev-dom-2026-11-18",
+      "title": "NOW 2: Mother",
+      "url": "https://cd-cc.si/en/culture/music/now-2-mother",
+      "source": "Cankarjev dom",
+      "type": "Concert · contemporary orchestral music",
+      "place": "Gallus Hall · Cankarjev dom",
+      "startAt": "2026-11-18T19:30:00+01:00",
+      "endAt": null,
+      "price": "€9 / €21 / €34 / €42; reduced €5 / €17 / €27 / €34",
+      "languages": [
+        "Music-led"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": true,
+      "accessibility": "Contact Cankarjev dom when booking wheelchair spaces or other assistance.",
+      "ticketUrl": "https://cd-cc.si/en/culture/music/now-2-mother",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-04T07:03:00+01:00",
+      "description": "The Slovenian Philharmonic Orchestra and GrauSchumacher Piano Duo perform new orchestral works at 19:30. Standard tickets cost €9–€42 and reduced tickets €5–€34."
     }
   ]
 }
