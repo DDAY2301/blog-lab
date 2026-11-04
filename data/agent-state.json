@@ -22,11 +22,11 @@
     "reason": "ponavljanje",
     "at": "2026-11-04T10:54:29+01:00"
   },
-  "publisher_guardian_last_run": "2026-11-03T19:05:21+01:00",
+  "publisher_guardian_last_run": "2026-11-04T12:37:36+01:00",
   "publisher_guardian_last_action": {
-    "category": "kolesarstvo",
-    "slot": "2026-11-03|07:35|kolesarstvo",
-    "remaining_repairs": 2
+    "category": "dediscina",
+    "slot": "2026-11-04|10:45|dediscina",
+    "remaining_repairs": 0
   },
   "schedule_counter_normalized_at": "2026-10-07T16:45:00+02:00"
 }

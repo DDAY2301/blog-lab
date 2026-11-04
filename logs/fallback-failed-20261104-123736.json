@@ -1,0 +1,21 @@
+{
+  "category": "dediscina",
+  "errors": [
+    "prekratek",
+    "manjka_fotografija"
+  ],
+  "article": {
+    "title": "V pohorski garaži skrita smučarska zgodovina sveta, Slovenije in »našega brega« - Maribor24.si"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "lead_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNSGRoLVNVdkp3RjNic3poZ2pDSW9QNHh4ZkpKMHowczg5a2otUlo1ajlfUFRjdWRlVUdKNkZuTTJPSUg4eTZNd1lfcTMyaUNVdEpDVW1BM0x3UDJxcm9ndUZzbGJzTG04TF9Cbk40blF3NzRzUGZzZ0VqbW45cXNJelBDTnZhN2wzZVB4ZkVyaUppR0FkM3FsWE1YZkJXZDlXemNrRFdqT1dmQQ?oc=5",
+      "title": "V pohorski garaži skrita smučarska zgodovina sveta, Slovenije in »našega brega« - Maribor24.si",
+      "errors": [
+        "prekratek",
+        "manjka_fotografija"
+      ]
+    }
+  ]
+}
