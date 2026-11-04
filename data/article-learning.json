@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-11-04T07:23:50+01:00",
-  "loop_count": 7920,
+  "updated_at": "2026-11-04T20:46:20+01:00",
+  "loop_count": 7921,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-11-04T07:23:21+01:00",
+      "last_learning_run": "2026-11-04T20:46:00+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 148372,
-          "last_seen": "2026-11-04T07:23:21+01:00",
-          "last_title": "(VIDEO) Domen Prevc je olimpijski prvak! \"Kot otrok o tem nisem niti sanjal\" - Dnevnik",
+          "seen": 148379,
+          "last_seen": "2026-11-04T20:46:00+01:00",
+          "last_title": "Slovenija korak bližje gostiteljstvu ene največjih kolesarskih dirk na svetu - Morel.si",
           "last_provider": "google-news-si",
-          "published": 478364,
+          "published": 478419,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,17 +227,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 8,
+      "current_source_count": 7,
       "example_titles": {
         "news.google.com": [
-          "Slovenija želi biti nova Švica, zdaj pa je Švica postala nova Slovenija. Trava, kriva je trava - Dnevnik",
-          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
-          "Slovenke po veliki vrnitvi in zmagi nad Latvijo na pragu osmine finala - rtvslo.si"
+          "S tribune: Športni trenutki, zaradi katerih se mi še danes naježijo dlake - Svet24.si",
+          "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
+          "Kozamernik: \"Rekli smo, da želimo rasti skozi turnir, in to je bila danes dobra prva stopnička\" - rtvslo.si"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-11-04T07:23:31+01:00",
+      "last_learning_run": "2026-11-04T20:46:10+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -279,11 +279,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 176960,
-          "last_seen": "2026-11-04T07:23:31+01:00",
-          "last_title": "Golob pravi: Slovenija potrebuje široko koalicijo. NSi ne bo na sestanek - Svet24.si",
-          "last_provider": "google-news-si",
-          "published": 526432,
+          "seen": 176977,
+          "last_seen": "2026-11-04T20:46:10+01:00",
+          "last_title": "Video: Luka Simonič iz SDM: \"Če se mi ne ukvarjamo s politiko, se politika ukvarja z nami\" - Metroplay - Metropolitan.si",
+          "last_provider": "google-news-global",
+          "published": 526492,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -385,17 +385,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 19,
+      "current_source_count": 17,
       "example_titles": {
         "news.google.com": [
-          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice",
-          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer",
-          "Pirc Musar: Ne bom tiho, ko zunanja politika ne bo skladna z ustavnimi vrednotami države - Siol.net"
+          "Premier Janša ob obisku v JV Sloveniji: “Danes izpolnjujemo predvolilno obljubo, da ta del Slovenije ne bo pozabljen” - Nova24TV",
+          "Nov protest ob obisku Sara v DZ-ju. Janša: Protesti so refleks levičarskega antisemitizma. - rtvslo.si",
+          "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-11-04T07:23:50+01:00",
+      "last_learning_run": "2026-11-04T20:46:20+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -483,12 +483,12 @@
           "last_provider": "bing-web"
         },
         "news.google.com": {
-          "score": 2.537,
-          "seen": 203389,
-          "last_seen": "2026-11-04T07:23:50+01:00",
+          "score": 2.534,
+          "seen": 203400,
+          "last_seen": "2026-11-04T20:46:20+01:00",
           "last_title": "Slovenija preprečila pristanek izraelskega letala: tako se odziva Fraport - Info360",
           "last_provider": "google-news-global",
-          "published": 328182,
+          "published": 328198,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -583,20 +583,23 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 14,
+      "current_source_count": 11,
       "example_titles": {
         "news.google.com": [
-          "Golob je “depolitiziral” RTV SLO, jo bo tudi Janša? Ustavno sodišče je dalo “blagoslov”, a Gregorčič in Avbelj gresta na ESČP - Zanima.me",
-          "Kako svet vidi Slovenijo danes in kako je postala tako vroča evropska destinacija - Dnevnik",
-          "Lakersi med najbolj gledanimi in branimi vsebinami RTV Slovenija - Marketing Magazin"
-        ],
-        "payscale.com": [
-          "Bachelor's Degree, Accounting Salary | PayScale"
+          "SDS presenetila s številčnostjo novih članov: Letos skoraj 8.000 novih pristopov, premier Janša napoveduje nova množična srečanja po Sloveni",
+          "Lokalne volitve se bližajo: Danes se izteče pomemben rok, ki ga nekateri volivci ne smejo zamuditi - Goriške novice",
+          "Golob je “depolitiziral” RTV SLO, jo bo tudi Janša? Ustavno sodišče je dalo “blagoslov”, a Gregorčič in Avbelj gresta na ESČP - Zanima.me"
         ]
       }
     }
   },
   "recent_articles": [
+    {
+      "id": "daljinske-kolesarske-poti-v-sloveniji-v-fokusu-28058edc",
+      "title": "Daljinske kolesarske poti v Sloveniji - V Fokusu",
+      "category": "Kolesarstvo",
+      "createdAt": "2026-11-04T07:39:30+01:00"
+    },
     {
       "id": "planinsko-orientacijsko-tekmovanje-je-priljubljena-ucna-metoda-foto-f5a91d15",
       "title": "Planinsko orientacijsko tekmovanje je priljubljena učna metoda (FOTO)",
@@ -662,55 +665,9 @@
       "title": "Via Alpina Slovenia: Stage 11 (Triglav lakes- Dolič) • Long-Distance Hiking ...",
       "category": "Gore & traili",
       "createdAt": "2026-10-28T20:08:51+01:00"
-    },
-    {
-      "id": "zaradi-kolesarske-dirke-v-soboto-obsezne-zapore-cest-na-gorenjskem-in-na-vrsicu-35483541",
-      "title": "Zaradi kolesarske dirke v soboto obsežne zapore cest na Gorenjskem in na Vršiču",
-      "category": "Kolesarstvo",
-      "createdAt": "2026-10-28T14:35:28+01:00"
     }
   ],
   "recent_failures": [
-    {
-      "file": "fallback-failed-20261103-125349.json",
-      "category": "dediscina",
-      "errors": [
-        "podvojen_naslov"
-      ],
-      "title": "Brežiški grad: ko se 3D-doživetja in mobilna aplikacija oziroma soba pobega srečajo z zgodovino - ePosavje"
-    },
-    {
-      "file": "fallback-failed-20261103-130852.json",
-      "category": "dediscina",
-      "errors": [
-        "podvojen_naslov"
-      ],
-      "title": "Brežiški grad: ko se 3D-doživetja in mobilna aplikacija oziroma soba pobega srečajo z zgodovino - ePosavje"
-    },
-    {
-      "file": "fallback-failed-20261103-132342.json",
-      "category": "dediscina",
-      "errors": [
-        "podvojen_naslov"
-      ],
-      "title": "Brežiški grad: ko se 3D-doživetja in mobilna aplikacija oziroma soba pobega srečajo z zgodovino - ePosavje"
-    },
-    {
-      "file": "fallback-failed-20261103-133857.json",
-      "category": "dediscina",
-      "errors": [
-        "podvojen_naslov"
-      ],
-      "title": "Brežiški grad: ko se 3D-doživetja in mobilna aplikacija oziroma soba pobega srečajo z zgodovino - ePosavje"
-    },
-    {
-      "file": "fallback-failed-20261103-135427.json",
-      "category": "dediscina",
-      "errors": [
-        "podvojen_naslov"
-      ],
-      "title": "Brežiški grad: ko se 3D-doživetja in mobilna aplikacija oziroma soba pobega srečajo z zgodovino - ePosavje"
-    },
     {
       "file": "fallback-failed-20261103-141003.json",
       "category": "dediscina",
@@ -755,27 +712,74 @@
       "title": "Gostilna Pri planinskem orlu je, z nekaj primorskega navdiha, znova odprta - Kamnik.info"
     },
     {
-      "file": "agent-state",
+      "file": "fallback-failed-20261104-105450.json",
+      "category": "dediscina",
+      "errors": [
+        "prekratek",
+        "manjka_fotografija"
+      ],
+      "title": "V pohorski garaži skrita smučarska zgodovina sveta, Slovenije in »našega brega« - Maribor24.si"
+    },
+    {
+      "file": "fallback-failed-20261104-123736.json",
+      "category": "dediscina",
+      "errors": [
+        "prekratek",
+        "manjka_fotografija"
+      ],
+      "title": "V pohorski garaži skrita smučarska zgodovina sveta, Slovenije in »našega brega« - Maribor24.si"
+    },
+    {
+      "file": "fallback-failed-20261104-133948.json",
+      "category": "sezonsko",
+      "errors": [
+        "prekratek",
+        "manjka_fotografija"
+      ],
+      "title": "Nova sezona, novo zvišanje cen: za kampiranje boste zdaj mogli odšteti kar ... - Metropolitan.si"
+    },
+    {
+      "file": "fallback-failed-20261104-162455.json",
+      "category": "gore",
+      "errors": [
+        "prekratek"
+      ],
+      "title": "Planinstvo in alpinizem vpisana v register nesnovne kulturne dediščine Slovenije - e-Koroška"
+    },
+    {
+      "file": "fallback-failed-20261104-192455.json",
       "category": "gourmet",
       "errors": [
-        "prekratek,naslov_ni_v_rubriki"
+        "naslov_ni_v_rubriki",
+        "clanek_brez_slovenskega_konteksta",
+        "viri_ne_podpirajo_slovenske_rubrike"
+      ],
+      "title": "Norwegian Cruise Line Menus — Norwegian Cruise Blog"
+    },
+    {
+      "file": "agent-state",
+      "category": "dediscina",
+      "errors": [
+        "fallback_no_fresh_evidence"
       ]
     },
     {
       "file": "agent-state",
-      "category": "gourmet",
+      "category": "dediscina",
       "errors": [
-        "ponavljanje"
+        "naslov_ni_v_rubriki,clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike,besedilo_ni_v_slovenscini"
       ],
-      "slot": "2026-11-03|19:10|gourmet"
+      "slot": "2026-11-04|19:10|gourmet"
     }
   ],
   "failure_summary": {
-    "podvojen_naslov": 14,
-    "prekratek": 6,
-    "manjka_fotografija": 4,
-    "naslov_ni_v_rubriki": 1,
-    "prekratek,naslov_ni_v_rubriki": 1,
-    "ponavljanje": 1
+    "podvojen_naslov": 11,
+    "prekratek": 8,
+    "manjka_fotografija": 5,
+    "naslov_ni_v_rubriki": 2,
+    "clanek_brez_slovenskega_konteksta": 1,
+    "viri_ne_podpirajo_slovenske_rubrike": 1,
+    "fallback_no_fresh_evidence": 1,
+    "naslov_ni_v_rubriki,clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike,besedilo_ni_v_slovenscini": 1
   }
 }
