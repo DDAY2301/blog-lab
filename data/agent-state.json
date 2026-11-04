@@ -5,17 +5,23 @@
   "posts_date": "2026-11-04",
   "posts_today": 1,
   "last_output": "daljinske-kolesarske-poti-v-sloveniji-v-fokusu-28058edc",
-  "last_error": null,
+  "last_error": "prekratek,manjka_fotografija",
   "agent_version": "2.7.0",
-  "current_category": "kolesarstvo",
+  "current_category": "dediscina",
   "scheduled_posts_today": 1,
   "manual_posts_today": 0,
   "writer_mode": "workers_ai",
   "scheduled_slots_done": [
     "2026-11-04|07:35|kolesarstvo"
   ],
-  "scheduled_slots_deferred": [],
-  "last_editorial_hold": null,
+  "scheduled_slots_deferred": [
+    "2026-11-04|10:45|dediscina"
+  ],
+  "last_editorial_hold": {
+    "slot": "2026-11-04|10:45|dediscina",
+    "reason": "ponavljanje",
+    "at": "2026-11-04T10:54:29+01:00"
+  },
   "publisher_guardian_last_run": "2026-11-03T19:05:21+01:00",
   "publisher_guardian_last_action": {
     "category": "kolesarstvo",
