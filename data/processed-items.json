@@ -5459,5 +5459,19 @@
     "provider": "google-news-si",
     "processed_at": "2026-11-03T16:25:05+01:00",
     "output_id": "planinsko-orientacijsko-tekmovanje-je-priljubljena-ucna-metoda-foto-f5a91d15"
+  },
+  {
+    "source_name": "V Fokusu",
+    "category": "kolesarstvo",
+    "title": "Daljinske kolesarske poti v Sloveniji - V Fokusu",
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1Rb2lDdlVKVzZZSV9BM1Q1UFJQWUtUME85VGhVUXdPZ3Z4ZEFmRHcxZ3QwdURZRUJDbWcxdWNNQUJmMGF5Ym9RTGVaZWZGamMzVVo3QmpVeElidGJQUVJBZ0I0dTEzMzVjdUE?oc=5",
+    "summary": "Daljinske kolesarske poti v Sloveniji V Fokusu",
+    "published": "Mon, 25 Oct 2021 04:22:19 GMT",
+    "image_url": "",
+    "video_url": "",
+    "hash": "0f0538779accb94af6571650f57b10f3240ec4d655354b866e8425e57f77e099",
+    "provider": "",
+    "processed_at": "2026-11-04T07:39:30+01:00",
+    "output_id": "daljinske-kolesarske-poti-v-sloveniji-v-fokusu-28058edc"
   }
 ]
