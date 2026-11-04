@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-03T20:35:29+01:00",
+  "updatedAt": "2026-11-04T01:40:25+01:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -113,109 +113,6 @@
       "status": "confirmed",
       "lastCheckedAt": "2026-11-01T07:20:00+01:00",
       "description": "The month-long culinary festival begins today across Ljubljana, with tastings, menus, workshops and live events announced separately. Prices, languages and accessibility vary by participating venue."
-    },
-    {
-      "id": "becoming-cankarjev-dom-2026-11-03",
-      "title": "(Be)coming",
-      "url": "https://www.cd-cc.si/en/culture/music/becoming",
-      "source": "Cankarjev dom",
-      "type": "Music and dance · premiere",
-      "place": "CD Club · Cankarjev dom",
-      "startAt": "2026-11-03T19:30:00+01:00",
-      "endAt": null,
-      "price": "€16 / €12 reduced",
-      "languages": [
-        "Music and dance-led"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": "Cankarjev dom publishes venue accessibility information; request accessible seating when booking.",
-      "ticketUrl": "https://vstopnice.cd-cc.si/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-03T07:16:00+01:00",
-      "description": "Maša Kagao Knez and an international ensemble premiere a music-dance contemplation at 19:30. Tickets cost €16, or €12 for eligible reduced-price visitors."
-    },
-    {
-      "id": "salome-mgl-2026-11-03",
-      "title": "Salome",
-      "url": "https://www.mgl.si/en/schedule/",
-      "source": "MGL",
-      "type": "Theatre · drama",
-      "place": "MGL Main Stage · Ljubljana",
-      "startAt": "2026-11-03T19:30:00+01:00",
-      "endAt": null,
-      "price": null,
-      "languages": [
-        "Slovenian"
-      ],
-      "touristFriendly": false,
-      "familyFriendly": false,
-      "accessibility": null,
-      "ticketUrl": "https://www.mgl.si/en/schedule/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-03T07:16:00+01:00",
-      "description": "Salome begins on MGL’s Main Stage at 19:30. The official schedule currently lists tickets."
-    },
-    {
-      "title": "CODEFENDANTS (ZDA) + JAKOB'S CASTLE @ Gala hala",
-      "url": "https://www.galahala.com/en/program/codefendants/33559/",
-      "source": "Gala Hala",
-      "type": "Koncert · Metelkova",
-      "place": "Gala Hala · AKC Metelkova",
-      "startAt": "2026-11-03T20:00:00+01:00",
-      "endAt": null,
-      "id": "event-37-codefendants-zda-jakob-s-castle-gala-hala",
-      "price": "€23 advance / €28 on the day",
-      "languages": [],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": null,
-      "ticketUrl": "https://www.galahala.com/en/program/codefendants/33559/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-03T07:16:00+01:00",
-      "description": "US groups Codefendants and Jakob's Castle perform at Gala Hala at 20:00. Tickets cost €23 in advance or €28 on the day."
-    },
-    {
-      "id": "gal-george-gjurin-gal25-2026-11-03",
-      "title": "Gal George Gjurin – #Gal25",
-      "url": "https://www.cd-cc.si/en",
-      "source": "Cankarjev dom",
-      "type": "Concert · anniversary gala",
-      "place": "Cankarjev dom · Ljubljana",
-      "startAt": "2026-11-03T20:00:00+01:00",
-      "endAt": null,
-      "price": "€22 / €28 / €34 / €40",
-      "languages": [
-        "Music-led"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": null,
-      "ticketUrl": "https://vstopnice.cd-cc.si/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-03T07:16:00+01:00",
-      "description": "Gal George Gjurin celebrates 25 years of artistic work at 20:00. Tickets cost €22, €28, €34 or €40."
-    },
-    {
-      "id": "prima-facie-mgl-2026-11-03",
-      "title": "Prima Facie",
-      "url": "https://www.mgl.si/en/schedule/",
-      "source": "MGL",
-      "type": "Theatre · legal drama",
-      "place": "MGL Small Stage · Ljubljana",
-      "startAt": "2026-11-03T20:00:00+01:00",
-      "endAt": null,
-      "price": null,
-      "languages": [
-        "Slovenian"
-      ],
-      "touristFriendly": false,
-      "familyFriendly": false,
-      "accessibility": null,
-      "ticketUrl": "https://www.mgl.si/en/schedule/",
-      "status": "sold_out",
-      "lastCheckedAt": "2026-11-03T07:16:00+01:00",
-      "description": "Prima Facie starts on the MGL Small Stage at 20:00. The official schedule marks this performance as sold out."
     },
     {
       "id": "romantic-souls-mgl-2026-11-04",
@@ -464,6 +361,25 @@
       "status": "confirmed",
       "lastCheckedAt": "2026-10-23T07:15:00+02:00",
       "description": "Torulsson and Skinar host an eclectic electronic club night from 22:00. Admission costs €5 until 23:00 and €8 afterwards."
+    },
+    {
+      "title": "STELLAR x K4: Janeret & Twineffect",
+      "url": "https://www.klub-k4.si/",
+      "source": "Klub K4",
+      "type": "Club · elektronika",
+      "place": "Klub K4 · Ljubljana",
+      "startAt": "2026-11-06T22:00:00+01:00",
+      "endAt": null,
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.klub-k4.si/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-04T01:40:25+01:00",
+      "description": "STELLAR x K4: Janeret & Twineffect is listed by Klub K4. Check the official event page for price, language and accessibility details.",
+      "id": "event-18-stellar-x-k4-janeret-twineffect"
     },
     {
       "id": "equinox-opera-2026-11-07",
@@ -971,6 +887,25 @@
       "lastCheckedAt": "2026-10-31T07:18:00+01:00",
       "description": "OTI launches the EP Samospev with Slatkor and special guest Leyre at 20:00. Tickets cost €10 in advance or €15 on the day.",
       "id": "event-50-oti-samospev-release-koncert-gala-hala"
+    },
+    {
+      "title": "Just A Dance",
+      "url": "https://www.klub-k4.si/",
+      "source": "Klub K4",
+      "type": "Club · elektronika",
+      "place": "Klub K4 · Ljubljana",
+      "startAt": "2026-11-14T23:00:00+01:00",
+      "endAt": null,
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.klub-k4.si/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-04T01:40:25+01:00",
+      "description": "Just A Dance is listed by Klub K4. Check the official event page for price, language and accessibility details.",
+      "id": "event-43-just-a-dance"
     },
     {
       "id": "sunday-flea-market-2026-11-15",
