@@ -1,0 +1,23 @@
+{
+  "category": "gourmet",
+  "errors": [
+    "naslov_ni_v_rubriki",
+    "clanek_brez_slovenskega_konteksta",
+    "viri_ne_podpirajo_slovenske_rubrike"
+  ],
+  "article": {
+    "title": "Norwegian Cruise Line Menus — Norwegian Cruise Blog"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "lead_url": "https://www.norwegiancruiselineblog.com/menus",
+      "title": "Norwegian Cruise Line Menus — Norwegian Cruise Blog",
+      "errors": [
+        "naslov_ni_v_rubriki",
+        "clanek_brez_slovenskega_konteksta",
+        "viri_ne_podpirajo_slovenske_rubrike"
+      ]
+    }
+  ]
+}

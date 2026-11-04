@@ -1,0 +1,41 @@
+{
+  "category": "gourmet",
+  "errors": [
+    "naslov_ni_v_rubriki",
+    "clanek_brez_slovenskega_konteksta",
+    "viri_ne_podpirajo_slovenske_rubrike",
+    "besedilo_ni_v_slovenscini"
+  ],
+  "article": {
+    "title": "Norwegian Cruise Line Menus — Norwegian Cruise Blog",
+    "excerpt": "Explore updated Norwegian Cruise Line menus from the main dining room, specialty restaurants, and complimentary venues across the fleet. See what’s included, sample menu items, and what to expect before you sail. Explore",
+    "seoDescription": "Explore updated Norwegian Cruise Line menus from the main dining room, specialty restaurants, and complimentary venues across the fleet. See what’s include",
+    "content": "Pregled za rubriko gourmet povzema trenutno razpoložljive informacije iz spodaj navedenih virov. Besedilo je pripravljeno brez dodajanja nepodprtih dejstev.\n\n## Norwegian Cruise Line Menus — Norwegian Cruise Blog\nExplore updated Norwegian Cruise Line menus from the main dining room, specialty restaurants, and complimentary venues across the fleet. See what’s included, sample menu items, and what to expect before you sail. Explore Norwegian Cruise Line's extensive menu options with our detailed guide. Perfect for planning your onboard dining experiences, this resource provides an in-depth look at the diverse menus from various restaurants and eateries available on the ships. From fine dining to quick meals, find all the information you need to savor every bite during your NCL cruise. Check out our Featured Menus section to see the top dining choices on Norwegian Cruise Line. These selections showcase popular and highly recommended dining experiences, perfect for guests looking to plan ahead for their meals. Norwegian Cruise Line room service guide covering the NCL breakfast room service menu, all day room service menu, and special occasion options. Learn about Norwegian Cruise Line room service delivery fees, ordering methods, and available stateroom dining choices including breakfast items, sandwiches, salads, entrees, pizza, and late night cruise ship food service across the fleet. The NCL Free at Sea and Free at Sea Plus programs provide simplified value, bundling unlimited premium beverages, specialty dining, Wi-Fi, and shore excursion credits for a daily fee. The Plus upgrade offers enhanced perks like streaming Wi-Fi and bar access at Great Stirrup Cay, making your cruise experience more comprehensive. Explore the 2026 Norwegian Cruise Line main dining room menus with breakfast, lunch, and dinner included in your cruise fare. Learn about rotating entrees, holiday dining options, and ship-specific main dining room details across the NCL fleet. Discover the exclusive dining experience at The Haven Restaurant on Norwegian Cruise Line, where gourmet dishes and impeccable service await guests of The Haven. Enjoy breakfast, lunch, and dinner in an intimate setting with consistently exquisite menus designed for discerning palates. Cagney's Steakhouse has an elegant atmosphere and a menu focused on the finest cuts of meat, Cagney's has become a favorite among cruise passengers. Whether you're a meat lover or simply looking for a refined dining experience, Cagney's Steakhouse is not to be missed. Learn about the Complimentary Menus available across Norwegian Cruise Line’s range of dining venues. Enjoy diverse dining options included with your cruise fare, served in both the main dining rooms and several casual dining spots. O’Sheehan’s Bar & Grill is Norwegian Cruise\n\nVir: norwegiancruiselineblog.com — https://www.norwegiancruiselineblog.com/menus",
+    "category": "Gourmet",
+    "tags": [
+      "gourmet",
+      "Slovenija",
+      "norwegian",
+      "cruise",
+      "menus"
+    ],
+    "sources": [
+      {
+        "title": "Norwegian Cruise Line Menus — Norwegian Cruise Blog",
+        "url": "https://www.norwegiancruiselineblog.com/menus",
+        "source_name": "norwegiancruiselineblog.com"
+      }
+    ],
+    "fallback": false,
+    "gallery": [],
+    "heroImage": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Matev%C5%BE_%28Slovenian_cuisine%29.jpg/1920px-Matev%C5%BE_%28Slovenian_cuisine%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "alt": "Matevž (Slovenian cuisine) with roast meat and sauerkraut.",
+      "caption": "Petar Milošević · Wikimedia Commons · CC BY-SA 4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Matev%C5%BE_(Slovenian_cuisine).jpg"
+    },
+    "visualTemplate": "fieldnote",
+    "templateLabel": "Field Note",
+    "id": "norwegian-cruise-line-menus-norwegian-cruise-blog-89591e99"
+  }
+}

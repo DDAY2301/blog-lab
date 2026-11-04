@@ -5,9 +5,9 @@
   "posts_date": "2026-11-04",
   "posts_today": 1,
   "last_output": "daljinske-kolesarske-poti-v-sloveniji-v-fokusu-28058edc",
-  "last_error": "prekratek",
+  "last_error": "naslov_ni_v_rubriki,clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike",
   "agent_version": "2.7.0",
-  "current_category": "gore",
+  "current_category": "gourmet",
   "scheduled_posts_today": 1,
   "manual_posts_today": 0,
   "writer_mode": "workers_ai",
@@ -17,12 +17,13 @@
   "scheduled_slots_deferred": [
     "2026-11-04|10:45|dediscina",
     "2026-11-04|13:30|sezonsko",
-    "2026-11-04|16:20|gore"
+    "2026-11-04|16:20|gore",
+    "2026-11-04|19:10|gourmet"
   ],
   "last_editorial_hold": {
-    "slot": "2026-11-04|16:20|gore",
+    "slot": "2026-11-04|19:10|gourmet",
     "reason": "naslov_ni_v_rubriki,clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike,besedilo_ni_v_slovenscini",
-    "at": "2026-11-04T16:24:35+01:00"
+    "at": "2026-11-04T19:24:41+01:00"
   },
   "publisher_guardian_last_run": "2026-11-04T12:37:36+01:00",
   "publisher_guardian_last_action": {
