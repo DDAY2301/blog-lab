@@ -5,7 +5,7 @@
   "posts_date": "2026-11-05",
   "posts_today": 1,
   "last_output": "india-squad-for-world-cup-2019-india-players-list-in-cricket-world-cup-2019-times-of-india-e7dcfa6d",
-  "last_error": "fallback_no_fresh_evidence",
+  "last_error": "naslov_ni_v_rubriki,clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike",
   "agent_version": "3.0.0-learning-guarded-fallback",
   "current_category": "gourmet",
   "scheduled_posts_today": 1,
@@ -17,12 +17,13 @@
   "scheduled_slots_deferred": [
     "2026-11-05|10:45|dediscina",
     "2026-11-05|13:30|sezonsko",
-    "2026-11-05|16:20|gore"
+    "2026-11-05|16:20|gore",
+    "2026-11-05|19:10|gourmet"
   ],
   "last_editorial_hold": {
-    "slot": "2026-11-05|16:20|gore",
-    "reason": "ponavljanje",
-    "at": "2026-11-05T16:24:35+01:00"
+    "slot": "2026-11-05|19:10|gourmet",
+    "reason": "naslov_ni_v_rubriki,clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike,besedilo_ni_v_slovenscini",
+    "at": "2026-11-05T20:06:49+01:00"
   },
   "publisher_guardian_last_run": "2026-11-05T16:50:31+01:00",
   "publisher_guardian_last_action": {

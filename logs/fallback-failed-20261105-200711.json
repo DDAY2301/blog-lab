@@ -1,0 +1,23 @@
+{
+  "category": "gourmet",
+  "errors": [
+    "naslov_ni_v_rubriki",
+    "clanek_brez_slovenskega_konteksta",
+    "viri_ne_podpirajo_slovenske_rubrike"
+  ],
+  "article": {
+    "title": "Amazon Prime Business"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "lead_url": "https://www.amazon.com/businessprime",
+      "title": "Amazon Prime Business",
+      "errors": [
+        "naslov_ni_v_rubriki",
+        "clanek_brez_slovenskega_konteksta",
+        "viri_ne_podpirajo_slovenske_rubrike"
+      ]
+    }
+  ]
+}
