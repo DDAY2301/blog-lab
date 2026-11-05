@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-04T20:55:32+01:00",
+  "updatedAt": "2026-11-05T01:55:56+01:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -113,92 +113,6 @@
       "status": "confirmed",
       "lastCheckedAt": "2026-11-01T07:20:00+01:00",
       "description": "The month-long culinary festival begins today across Ljubljana, with tastings, menus, workshops and live events announced separately. Prices, languages and accessibility vary by participating venue."
-    },
-    {
-      "id": "romantic-souls-mgl-2026-11-04",
-      "title": "Romantic Souls",
-      "url": "https://www.mgl.si/en/schedule/",
-      "source": "MGL",
-      "type": "Theatre · drama",
-      "place": "MGL Main Stage · Ljubljana",
-      "startAt": "2026-11-04T19:30:00+01:00",
-      "endAt": null,
-      "price": "€12.50–€18",
-      "languages": [
-        "Slovenian"
-      ],
-      "touristFriendly": false,
-      "familyFriendly": false,
-      "accessibility": null,
-      "ticketUrl": "https://www.mgl.si/en/schedule/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-04T07:03:00+01:00",
-      "description": "Romantic Souls begins on MGL’s Main Stage at 19:30. Tickets currently cost €12.50–€18; the performance is in Slovenian."
-    },
-    {
-      "id": "magdalena-reiter-untitled-2026-11-04-2000",
-      "title": "Magdalena Reiter: Untitled",
-      "url": "https://www.bunker.si/events/magdalena-reiter-brez-naslova-2/",
-      "source": "Bunker / Stara mestna elektrarna",
-      "type": "Dance · choreographic installation",
-      "place": "Stara mestna elektrarna · Ljubljana",
-      "startAt": "2026-11-04T20:00:00+01:00",
-      "endAt": null,
-      "price": "€10 / €7 reduced",
-      "languages": [
-        "Movement-led"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": null,
-      "ticketUrl": "https://www.bunker.si/events/magdalena-reiter-brez-naslova-2/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-04T07:03:00+01:00",
-      "description": "Magdalena Reiter’s choreographic installation combines dance and audiovisual media at Stara mestna elektrarna. Tickets cost €10 or €7 reduced; check the organiser for accessibility arrangements."
-    },
-    {
-      "id": "sleaford-mods-kino-siska-2026-11-04",
-      "title": "Sleaford Mods + mal pre mal",
-      "url": "https://www.kinosiska.si/en/dogodek/",
-      "source": "Kino Šiška",
-      "type": "Concert",
-      "place": "Kino Šiška · Ljubljana",
-      "startAt": "2026-11-04T20:00:00+01:00",
-      "endAt": null,
-      "price": "€36.20 presale / €41.20 walk-up / €27.45 reduced",
-      "languages": [
-        "English",
-        "Music-led"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": "Kino Šiška provides step-free access; visitors with physical or sensory impairments and one assistant are eligible for free admission under the venue’s current policy.",
-      "ticketUrl": "https://www.kinosiska.si/en/dogodek/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-04T07:03:00+01:00",
-      "description": "Sleaford Mods perform with mal pre mal in Katedrala Hall at 20:00. Tickets cost €36.20 in presale, €41.20 at the door or €27.45 reduced, including the stated €1.20 PLUS1 contribution."
-    },
-    {
-      "id": "tommy-emmanuel-cankarjev-dom-2026-11-04",
-      "title": "Tommy Emmanuel, CGP",
-      "url": "https://www.cd-cc.si/en/culture/lease-event/tommy-emmanuel-cgp",
-      "source": "Cankarjev dom",
-      "type": "Concert · acoustic guitar",
-      "place": "Linhart Hall · Cankarjev dom",
-      "startAt": "2026-11-04T20:00:00+01:00",
-      "endAt": null,
-      "price": "€55 / €60",
-      "languages": [
-        "Instrumental music",
-        "English-language stage remarks possible"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": true,
-      "accessibility": "Contact Cankarjev dom when booking wheelchair spaces or other assistance.",
-      "ticketUrl": "https://vstopnice.cd-cc.si/si/skupina/226490/koncert-tommy-emmanuel-cgp.html",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-04T07:03:00+01:00",
-      "description": "Grammy-winning Australian fingerstyle guitarist Tommy Emmanuel performs in Linhart Hall at 20:00. Tickets cost €55 or €60."
     },
     {
       "id": "magdalena-reiter-untitled-2026-11-05-1700",
