@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-05T01:55:56+01:00",
+  "updatedAt": "2026-11-05T06:57:00+01:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -132,7 +132,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.bunker.si/events/magdalena-reiter-brez-naslova-2/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-11-04T07:08:00+01:00",
+      "lastCheckedAt": "2026-11-05T06:57:00+01:00",
       "description": "An early performance of Magdalena Reiter’s choreographic installation begins at 17:00. Tickets cost €10 or €7 reduced; a separate evening performance begins at 20:00."
     },
     {
@@ -153,7 +153,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.mgl.si/en/schedule/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-11-04T07:03:00+01:00",
+      "lastCheckedAt": "2026-11-05T06:57:00+01:00",
       "description": "Salome begins on MGL’s Main Stage at 18:00. The official schedule currently lists tickets."
     },
     {
@@ -174,7 +174,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.ljubljanafestival.si/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-11-04T07:03:00+01:00",
+      "lastCheckedAt": "2026-11-05T06:57:00+01:00",
       "description": "Laura Colombo and Silvia Capè perform in the Young Virtuosi series from 19:00 to 21:00. Check Festival Ljubljana for ticket and accessibility details."
     },
     {
@@ -195,7 +195,7 @@
       "accessibility": null,
       "ticketUrl": "https://opera.mojekarte.si/en/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-11-04T07:03:00+01:00",
+      "lastCheckedAt": "2026-11-05T06:57:00+01:00",
       "description": "Marjan Kozina’s four-act opera Equinox premieres at 19:30 in Slovenian. Current authorised ticket prices range from €19 to €65, with a stated €1 online processing fee per ticket."
     },
     {
@@ -216,7 +216,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.bunker.si/events/magdalena-reiter-brez-naslova-2/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-11-04T07:03:00+01:00",
+      "lastCheckedAt": "2026-11-05T06:57:00+01:00",
       "description": "Magdalena Reiter’s choreographic installation combines dance and audiovisual media at Stara mestna elektrarna. Tickets cost €10 or €7 reduced; check the organiser for accessibility arrangements."
     },
     {
@@ -228,7 +228,7 @@
       "place": "MGL Small Stage · Ljubljana",
       "startAt": "2026-11-05T20:00:00+01:00",
       "endAt": null,
-      "price": null,
+      "price": "€19 / €15.20 pensioners / €13.30 students",
       "languages": [
         "Slovenian"
       ],
@@ -237,8 +237,8 @@
       "accessibility": null,
       "ticketUrl": "https://www.mgl.si/en/schedule/",
       "status": "sold_out",
-      "lastCheckedAt": "2026-11-04T07:03:00+01:00",
-      "description": "Prima Facie begins on MGL’s Small Stage at 20:00. The official schedule marks this performance as sold out."
+      "lastCheckedAt": "2026-11-05T06:57:00+01:00",
+      "description": "Prima Facie begins on MGL’s Small Stage at 20:00 in Slovenian. MGL marks the performance as sold out; the listed seat prices are €19, €15.20 for pensioners and €13.30 for students."
     },
     {
       "id": "equinox-opera-2026-11-06",
@@ -249,15 +249,17 @@
       "place": "SNG Opera and Ballet Ljubljana",
       "startAt": "2026-11-06T19:30:00+01:00",
       "endAt": null,
-      "price": null,
-      "languages": [],
+      "price": "€19–€65 plus €1 processing fee online",
+      "languages": [
+        "Slovenian"
+      ],
       "touristFriendly": true,
       "familyFriendly": false,
       "accessibility": null,
       "ticketUrl": "https://opera.mojekarte.si/en/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-26T06:58:00+01:00",
-      "description": "Marjan Kozina’s four-act opera Equinox starts at 19:30. Tickets are available through the opera’s authorised seller."
+      "lastCheckedAt": "2026-11-05T06:57:00+01:00",
+      "description": "Marjan Kozina’s four-act opera Equinox begins at 19:30 in Slovenian. Current authorised ticket prices range from €19 to €65, with a stated €1 online processing fee per ticket."
     },
     {
       "id": "liamere-ljubljana-castle-2026-11-06",
@@ -277,7 +279,7 @@
       "accessibility": "Contact Ljubljana Castle before booking for step-free access arrangements to the Rock Hall.",
       "ticketUrl": "https://www.ljubljanskigrad.si/en/castle-events/liamere/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-27T07:14:00+01:00",
+      "lastCheckedAt": "2026-11-05T06:57:00+01:00",
       "description": "Liamere perform at the Castle Jazz Club at 20:00; doors open at 19:00. The €11 ticket includes a return funicular journey, and seating is limited."
     },
     {
@@ -298,7 +300,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.bunker.si/events/magdalena-reiter-brez-naslova-2/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-11-04T07:03:00+01:00",
+      "lastCheckedAt": "2026-11-05T06:57:00+01:00",
       "description": "Magdalena Reiter’s choreographic installation combines dance and audiovisual media at Stara mestna elektrarna. Tickets cost €10 or €7 reduced; check the organiser for accessibility arrangements."
     },
     {
@@ -319,7 +321,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.mgl.si/en/schedule/",
       "status": "sold_out",
-      "lastCheckedAt": "2026-10-26T06:58:00+01:00",
+      "lastCheckedAt": "2026-11-05T06:57:00+01:00",
       "description": "Man Overboard begins on MGL’s Small Stage at 20:00. The official schedule marks this performance as sold out."
     },
     {
@@ -331,7 +333,7 @@
       "place": "Kino Šiška · Ljubljana",
       "startAt": "2026-11-06T20:00:00+01:00",
       "endAt": null,
-      "price": null,
+      "price": "€23 presale / €26 walk-up",
       "languages": [
         "Music-led"
       ],
@@ -340,8 +342,8 @@
       "accessibility": "Kino Šiška publishes general venue accessibility information; contact the venue for event-specific arrangements.",
       "ticketUrl": "https://www.kinosiska.si/en/dogodek/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-27T07:14:00+01:00",
-      "description": "The second šMENT showcase presents five acts at Kino Šiška from 20:00. Check the official listing for current ticket price and availability."
+      "lastCheckedAt": "2026-11-05T06:57:00+01:00",
+      "description": "The second šMENT showcase presents Svemirko, corto.alto, Nejc Pipp & Co., Zina band and IDZ from 20:00. Regular presale costs €23 and the walk-up price is €26; earlier discounted allocations are sold out."
     },
     {
       "title": "STELLAR x K4: Janeret & Twineffect",
@@ -358,7 +360,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.klub-k4.si/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-11-04T01:40:25+01:00",
+      "lastCheckedAt": "2026-11-05T06:57:00+01:00",
       "description": "STELLAR x K4: Janeret & Twineffect is listed by Klub K4. Check the official event page for price, language and accessibility details.",
       "id": "event-18-stellar-x-k4-janeret-twineffect"
     },
@@ -378,7 +380,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.galahala.com/en/program/wave-riders-27/34774/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-23T07:15:00+02:00",
+      "lastCheckedAt": "2026-11-05T06:57:00+01:00",
       "description": "Torulsson and Skinar host an eclectic electronic club night from 22:00. Admission costs €5 until 23:00 and €8 afterwards."
     },
     {
@@ -1229,6 +1231,92 @@
       "status": "confirmed",
       "lastCheckedAt": "2026-11-04T07:03:00+01:00",
       "description": "The Slovenian Philharmonic Orchestra and GrauSchumacher Piano Duo perform new orchestral works at 19:30. Standard tickets cost €9–€42 and reduced tickets €5–€34."
+    },
+    {
+      "id": "young-virtuosi-hak-swiatek-2026-11-19",
+      "title": "Young Virtuosi: Oliver Hak and Igor Świątek",
+      "url": "https://www.ljubljanafestival.si/en/events-calendar/24493-oliver-hak-and-igor-wi-tek-34-yv",
+      "source": "Festival Ljubljana",
+      "type": "Concert · classical piano",
+      "place": "Knights' Hall, Križanke · Ljubljana",
+      "startAt": "2026-11-19T19:00:00+01:00",
+      "endAt": null,
+      "price": null,
+      "languages": [
+        "Instrumental music"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": true,
+      "accessibility": null,
+      "ticketUrl": "https://www.ljubljanafestival.si/en/events-calendar/24493-oliver-hak-and-igor-wi-tek-34-yv",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-05T06:57:00+01:00",
+      "description": "Young Polish pianists Oliver Hak and Igor Świątek perform in the Young Virtuosi series at 19:00. The organiser lists tickets but does not show a current price on the event page."
+    },
+    {
+      "id": "kromatika-2-lazic-cankarjev-dom-2026-11-19",
+      "title": "Kromatika 2: Lazić and Two Piano Concertos",
+      "url": "https://cd-cc.si/kultura/glasba/kromatika-2-lazic-in-dva-klavirska-koncerta",
+      "source": "Cankarjev dom",
+      "type": "Concert · classical",
+      "place": "Gallus Hall · Cankarjev dom",
+      "startAt": "2026-11-19T19:30:00+01:00",
+      "endAt": null,
+      "price": "€15 / €19 / €26 / €29; reduced €12 / €16 / €20 / €25",
+      "languages": [
+        "Instrumental music"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": true,
+      "accessibility": "Contact Cankarjev dom when booking wheelchair spaces or other assistance.",
+      "ticketUrl": "https://cd-cc.si/kultura/glasba/kromatika-2-lazic-in-dva-klavirska-koncerta",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-05T06:57:00+01:00",
+      "description": "The RTV Slovenia Symphony Orchestra performs Mozart, Dejan Lazić and Sibelius at 19:30, with Lazić as soloist. Standard tickets cost €15–€29 and reduced tickets €12–€25."
+    },
+    {
+      "id": "sad-sam-ppp-bunker-2026-11-19",
+      "title": "Matija Ferlin: SAD SAM PPP",
+      "url": "https://www.bunker.si/events/matija-ferlin-sad-sam-ppp/?occurrence=2026-11-19&time=1795118400",
+      "source": "Bunker / Stara mestna elektrarna",
+      "type": "Dance performance · Drugajanje",
+      "place": "Stara mestna elektrarna · Ljubljana",
+      "startAt": "2026-11-19T20:00:00+01:00",
+      "endAt": "2026-11-19T21:00:00+01:00",
+      "price": "€12 / €8 reduced; free for secondary-school students",
+      "languages": [
+        "Dance-led",
+        "Spoken content may be in regional languages"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": "Contact Bunker for event-specific step-free access and seating arrangements.",
+      "ticketUrl": "https://www.bunker.si/events/matija-ferlin-sad-sam-ppp/?occurrence=2026-11-19&time=1795118400",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-05T06:57:00+01:00",
+      "description": "Matija Ferlin’s one-hour dance performance reflects on the final 48 hours of Pier Paolo Pasolini’s life. Tickets cost €12 or €8 reduced, while secondary-school students receive free admission."
+    },
+    {
+      "id": "nipplepeople-pocket-palma-kino-siska-2026-11-19",
+      "title": "NIPPLEPEOPLE + Pocket Palma",
+      "url": "https://www.kinosiska.si/en/dogodek/nipplepeople/",
+      "source": "Kino Šiška",
+      "type": "Concert · electropop",
+      "place": "Katedrala Hall · Kino Šiška",
+      "startAt": "2026-11-19T20:00:00+01:00",
+      "endAt": null,
+      "price": "€25 presale / €30 walk-up / €18.75 reduced",
+      "languages": [
+        "Music-led",
+        "Croatian stage remarks possible"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": "Kino Šiška provides step-free access; visitors with physical or sensory impairments and one assistant are eligible for free admission under the venue’s current policy.",
+      "ticketUrl": "https://www.kinosiska.si/en/dogodek/nipplepeople/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-05T06:57:00+01:00",
+      "description": "Croatian electropop duo NIPPLEPEOPLE perform with Pocket Palma in Katedrala Hall at 20:00. Tickets cost €25 in presale, €30 at the door or €18.75 reduced."
     }
   ]
 }
