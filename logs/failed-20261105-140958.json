@@ -1,0 +1,38 @@
+{
+  "category": "dediscina",
+  "errors": [
+    "naslov_ni_v_rubriki",
+    "viri_ne_podpirajo_slovenske_rubrike",
+    "besedilo_ni_v_slovenscini"
+  ],
+  "article": {
+    "title": "Menu | jQuery UI",
+    "excerpt": "jQuery UI is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library. Whether you Menu | jQuery UI jQuery UI Menu Themeable menu with mouse and keyboard in",
+    "seoDescription": "jQuery UI is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library. Whether you Menu | j",
+    "content": "Pregled za rubriko dediscina povzema trenutno razpoložljive informacije iz spodaj navedenih virov. Besedilo je pripravljeno brez dodajanja nepodprtih dejstev.\n\n## Menu | jQuery UI\njQuery UI is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library. Whether you Menu | jQuery UI jQuery UI Menu Themeable menu with mouse and keyboard interactions for navigation. Examples Default functionality Categories Icons A menu with the default configuration, disabled items and nested menus. A list is transformed, adding theming, mouse and keyboard navigation support. Try to tab to the menu then use the cursor keys to navigate. view source 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 html > html lang = \"en\" > head > meta charset = \"utf-8\" > meta name = \"viewport\" content = \"width=device-width, initial-scale=1\" > title > jQuery UI Menu - Default functionality title > link rel = \"stylesheet\" href = \"https://code.jquery.com/ui/1.14.2/themes/base/jquery-ui.css\" > link rel = \"stylesheet\" href = \"/resources/demos/style.css\" > script src = \"https://code.jquery.com/jquery-3.7.1.js\" > script > script src = \"https://code.jquery.com/ui/1.14.2/jquery-ui.js\" > script > script > $( function ( ) { $( \"#menu\" ).menu(); } ); script > style > .ui-menu { width : 150px ; } style > head > body > ul id = \"menu\" > li class = \"ui-state-disabled\" > div > Toys (n/a) div > li > li > div > Books div > li > li > div > Clothing div > li > li > div > Electronics div > ul > li class = \"ui-state-disabled\" > div > Home Entertainment div > li > li > div > Car Hifi div > li > li > div > Utilities div > li > ul > li > li > div > Movies div > li > li > div > Music div > ul > li > div > Rock div > ul > li > div > Alternative div > li > li > div > Classic div > li > ul > li > li > div > Jazz div > ul > li > div > Freejazz div > li > li > div > Big Band div > li > li > div > Modern div > li > ul > li > li > div > Pop div > li > ul > li > li class = \"ui-state-disabled\" > div > Specials (n/a) div > li > ul > body > html > Want to learn more about the menu widget? Check out the API documentation . Interactions Draggable Droppable Resizable Selectable Sortable Widgets Accordion Autocomplete Button Checkboxradio Controlgroup Datepicker Dialog Menu Progressbar Selectmenu Slider Spinner Tabs Tooltip Effects Add Class Color Animation Easing Effect Hide Remove Class Show Switch Class Toggle Toggle Class Utilities Position Widget Factory Meta About jQuery UI Browser Support Development Center jQuery UI Changelogs jQuery UI Upgrade Guides Support Center\n\nVir: jqueryui.com — https://jqueryui.com/menu/",
+    "category": "Dediščina",
+    "tags": [
+      "dediscina",
+      "Slovenija",
+      "jquery"
+    ],
+    "sources": [
+      {
+        "title": "Menu | jQuery UI",
+        "url": "https://jqueryui.com/menu/",
+        "source_name": "jqueryui.com"
+      }
+    ],
+    "fallback": false,
+    "gallery": [],
+    "heroImage": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Tustanj_Castle_Slovenia_-_plaque.JPG/1920px-Tustanj_Castle_Slovenia_-_plaque.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "alt": "Plaque over the entrance to Tuštanj Castle, Zgornji Tuštanj, Municipality of Moravče, Slovenia",
+      "caption": "Doremo · Wikimedia Commons · CC BY-SA 3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tustanj_Castle_Slovenia_-_plaque.JPG"
+    },
+    "visualTemplate": "fieldnote",
+    "templateLabel": "Field Note",
+    "id": "menu-jquery-ui-c356901a"
+  }
+}

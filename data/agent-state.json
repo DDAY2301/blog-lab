@@ -5,17 +5,23 @@
   "posts_date": "2026-11-05",
   "posts_today": 1,
   "last_output": "india-squad-for-world-cup-2019-india-players-list-in-cricket-world-cup-2019-times-of-india-e7dcfa6d",
-  "last_error": "fallback_no_fresh_evidence",
+  "last_error": "viri_ne_podpirajo_slovenske_rubrike",
   "agent_version": "3.0.0-learning-guarded-fallback",
   "current_category": "dediscina",
   "scheduled_posts_today": 1,
   "manual_posts_today": 0,
-  "writer_mode": "deterministic_fallback",
+  "writer_mode": "workers_ai",
   "scheduled_slots_done": [
     "2026-11-05|07:35|kolesarstvo"
   ],
-  "scheduled_slots_deferred": [],
-  "last_editorial_hold": null,
+  "scheduled_slots_deferred": [
+    "2026-11-05|10:45|dediscina"
+  ],
+  "last_editorial_hold": {
+    "slot": "2026-11-05|10:45|dediscina",
+    "reason": "naslov_ni_v_rubriki,viri_ne_podpirajo_slovenske_rubrike,besedilo_ni_v_slovenscini",
+    "at": "2026-11-05T14:09:58+01:00"
+  },
   "publisher_guardian_last_run": "2026-11-05T08:26:57+01:00",
   "publisher_guardian_last_action": {
     "category": "kolesarstvo",
