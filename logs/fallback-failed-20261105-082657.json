@@ -1,0 +1,29 @@
+{
+  "category": "kolesarstvo",
+  "errors": [
+    "prekratek",
+    "manjka_fotografija"
+  ],
+  "article": {
+    "title": "Med Bledom in Bohinjem je nastala 28-kilometrska kolesarska pot z razgledi, ki jemljejo dih - Bodi eko"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "lead_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5lSHRXeHRBd1FMemlyOXlsRWxZTWswanNEd0RGOGI5RXg1dkFCUGdDc1ZmMlI0OE1zT2l2Q1FoV3RXeDRndTRuTDQ5VnRKTjhYMGFJM3piRng4Sk5ncnc?oc=5",
+      "title": "Med Bledom in Bohinjem je nastala 28-kilometrska kolesarska pot z razgledi, ki jemljejo dih - Bodi eko",
+      "errors": [
+        "prekratek",
+        "manjka_fotografija"
+      ]
+    },
+    {
+      "attempt": 2,
+      "lead_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOdXR3TTU3SnEwYTRnZjQ0aWVEZm1nV3dWVk9WTklwbXhLSWZiYjZrVkthdEhra21YTW44eHJXaU1pRGxsejBZWVJnb1U1ZWotVHJNTHhUZlZuTWZTdGJ2cE5DcXRHeE5qLXBxUGpMRERKcndWbXFCX2tDZGVnbEVJV3VLNmxNajZhN09oXzVnMXhfX0tpdmtnV3hXSHg3dVBwOGZoSUJ3?oc=5",
+      "title": "Razkrite podrobnosti 32. kolesarske dirke po Sloveniji, Omrzel še neznanka - Svet24.si",
+      "errors": [
+        "prekratek"
+      ]
+    }
+  ]
+}
