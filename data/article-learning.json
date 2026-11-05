@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-11-04T20:46:20+01:00",
-  "loop_count": 7921,
+  "updated_at": "2026-11-05T07:47:50+01:00",
+  "loop_count": 7922,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-11-04T20:46:00+01:00",
+      "last_learning_run": "2026-11-05T07:47:17+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -38,6 +38,7 @@
         "lonelyplanet.com",
         "support.microsoft.com",
         "city-data.com",
+        "kia.com",
         "news.google.com",
         "answers.com",
         "wallpaperaccess.com",
@@ -45,8 +46,7 @@
         "9454wilshire.com",
         "aarp.org",
         "sutterhealth.org",
-        "englishclub.com",
-        "nike.com"
+        "englishclub.com"
       ],
       "source_health": {
         "lonelyplanet.com": {
@@ -70,13 +70,20 @@
           "last_title": "Politics and Other Controversies Forum - The premier community for US politics, elections, and government debate. Join Democrats, Republicans, and Independents to discuss Congress,",
           "last_provider": "bing-web"
         },
+        "kia.com": {
+          "score": 2.75,
+          "seen": 3,
+          "last_seen": "2026-11-05T07:47:17+01:00",
+          "last_title": "2026 Kia Seltos | Small SUV | Kia Australia",
+          "last_provider": "bing-web"
+        },
         "news.google.com": {
           "score": 2.502,
-          "seen": 148379,
-          "last_seen": "2026-11-04T20:46:00+01:00",
-          "last_title": "Slovenija korak bližje gostiteljstvu ene največjih kolesarskih dirk na svetu - Morel.si",
+          "seen": 148383,
+          "last_seen": "2026-11-05T07:47:17+01:00",
+          "last_title": "Tudi Roglič? Ljubljana dobila največ. Kolesarski 'grand tour' in Slovenija - Ekipa",
           "last_provider": "google-news-si",
-          "published": 478419,
+          "published": 478474,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -218,26 +225,24 @@
           "last_seen": "2026-10-14T00:07:48+02:00",
           "last_title": "Rams-Falcons on 'Monday Night Football': What We Learned from Atlanta's 27-24 win",
           "last_provider": "bing-web"
-        },
-        "nps.gov": {
-          "score": 1.271,
-          "seen": 2,
-          "last_seen": "2026-09-30T14:39:11+02:00",
-          "last_title": "Grand Sable Dunes - Pictured Rocks National Lakeshore (U.S. National Park Service)",
-          "last_provider": "bing-web"
         }
       },
       "current_source_count": 7,
       "example_titles": {
         "news.google.com": [
-          "S tribune: Športni trenutki, zaradi katerih se mi še danes naježijo dlake - Svet24.si",
           "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
-          "Kozamernik: \"Rekli smo, da želimo rasti skozi turnir, in to je bila danes dobra prva stopnička\" - rtvslo.si"
+          "Slovenska blamaža na igrah! Zakaj sploh tekmujemo, če je šport pri nas umrl - Ekipa",
+          "Slovenija korak bližje gostiteljstvu ene največjih kolesarskih dirk na svetu - Morel.si"
+        ],
+        "kia.com": [
+          "All-New Kia Seltos Starting Price and Features | Kia India",
+          "Kia Seltos 2027 | Versión turbo y características | Kia México",
+          "2026 Kia Seltos | Small SUV | Kia Australia"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-11-04T20:46:10+01:00",
+      "last_learning_run": "2026-11-05T07:47:36+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -279,11 +284,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 176977,
-          "last_seen": "2026-11-04T20:46:10+01:00",
-          "last_title": "Video: Luka Simonič iz SDM: \"Če se mi ne ukvarjamo s politiko, se politika ukvarja z nami\" - Metroplay - Metropolitan.si",
-          "last_provider": "google-news-global",
-          "published": 526492,
+          "seen": 176993,
+          "last_seen": "2026-11-05T07:47:36+01:00",
+          "last_title": "Predsednik vlade Janša za ministra za ministra za digitalno preobrazbo predlaga Marka Borisa Andrijaniča - prava.si",
+          "last_provider": "google-news-si",
+          "published": 526552,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -385,7 +390,7 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 17,
+      "current_source_count": 16,
       "example_titles": {
         "news.google.com": [
           "Premier Janša ob obisku v JV Sloveniji: “Danes izpolnjujemo predvolilno obljubo, da ta del Slovenije ne bo pozabljen” - Nova24TV",
@@ -395,7 +400,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-11-04T20:46:20+01:00",
+      "last_learning_run": "2026-11-05T07:47:50+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -483,12 +488,12 @@
           "last_provider": "bing-web"
         },
         "news.google.com": {
-          "score": 2.534,
-          "seen": 203400,
-          "last_seen": "2026-11-04T20:46:20+01:00",
+          "score": 2.536,
+          "seen": 203409,
+          "last_seen": "2026-11-05T07:47:50+01:00",
           "last_title": "Slovenija preprečila pristanek izraelskega letala: tako se odziva Fraport - Info360",
           "last_provider": "google-news-global",
-          "published": 328198,
+          "published": 328214,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -583,12 +588,15 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 11,
+      "current_source_count": 10,
       "example_titles": {
         "news.google.com": [
-          "SDS presenetila s številčnostjo novih članov: Letos skoraj 8.000 novih pristopov, premier Janša napoveduje nova množična srečanja po Sloveni",
-          "Lokalne volitve se bližajo: Danes se izteče pomemben rok, ki ga nekateri volivci ne smejo zamuditi - Goriške novice",
-          "Golob je “depolitiziral” RTV SLO, jo bo tudi Janša? Ustavno sodišče je dalo “blagoslov”, a Gregorčič in Avbelj gresta na ESČP - Zanima.me"
+          "Golob je “depolitiziral” RTV SLO, jo bo tudi Janša? Ustavno sodišče je dalo “blagoslov”, a Gregorčič in Avbelj gresta na ESČP - Zanima.me",
+          "Kako svet vidi Slovenijo danes in kako je postala tako vroča evropska destinacija - Dnevnik",
+          "Pred Stevanovićevim obiskom v Srbiji znova aktualno vprašanje statusa srbske skupnosti v Sloveniji - Siol.net"
+        ],
+        "decofond.com": [
+          "8 Floating Fireplaces That Redefine the Centerpiece of Modern Living Rooms – DecoFond"
         ]
       }
     }
@@ -757,29 +765,29 @@
       "title": "Norwegian Cruise Line Menus — Norwegian Cruise Blog"
     },
     {
-      "file": "agent-state",
-      "category": "dediscina",
+      "file": "fallback-failed-20261105-073847.json",
+      "category": "kolesarstvo",
       "errors": [
-        "fallback_no_fresh_evidence"
-      ]
+        "prekratek",
+        "manjka_fotografija"
+      ],
+      "title": "Med Bledom in Bohinjem je nastala 28-kilometrska kolesarska pot z razgledi, ki jemljejo dih - Bodi eko"
     },
     {
       "file": "agent-state",
-      "category": "dediscina",
+      "category": "kolesarstvo",
       "errors": [
-        "naslov_ni_v_rubriki,clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike,besedilo_ni_v_slovenscini"
-      ],
-      "slot": "2026-11-04|19:10|gourmet"
+        "prekratek,manjka_fotografija"
+      ]
     }
   ],
   "failure_summary": {
-    "podvojen_naslov": 11,
-    "prekratek": 8,
-    "manjka_fotografija": 5,
+    "podvojen_naslov": 10,
+    "prekratek": 9,
+    "manjka_fotografija": 6,
     "naslov_ni_v_rubriki": 2,
     "clanek_brez_slovenskega_konteksta": 1,
     "viri_ne_podpirajo_slovenske_rubrike": 1,
-    "fallback_no_fresh_evidence": 1,
-    "naslov_ni_v_rubriki,clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike,besedilo_ni_v_slovenscini": 1
+    "prekratek,manjka_fotografija": 1
   }
 }
