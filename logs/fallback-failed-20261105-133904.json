@@ -1,0 +1,19 @@
+{
+  "category": "dediscina",
+  "errors": [
+    "viri_ne_podpirajo_slovenske_rubrike"
+  ],
+  "article": {
+    "title": "Menu | jQuery UI"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "lead_url": "https://jqueryui.com/menu/",
+      "title": "Menu | jQuery UI",
+      "errors": [
+        "viri_ne_podpirajo_slovenske_rubrike"
+      ]
+    }
+  ]
+}
