@@ -4,6 +4,7 @@ import {
   dateHref, keyForLjubljana, niceDate, addDays, weekendDates, eventActiveOn,
   eventIsFuture, eventHour, trustedEvent
 } from "./bloglab-taxonomy.js";
+import { magazineCardArtwork } from "./bloglab-artwork.js";
 
 const MODULES = import.meta.glob("./articles/published/*.json", { eager: true, import: "default" });
 const ARTICLES = Object.values(MODULES)
@@ -53,8 +54,14 @@ function pickEventsForDate(items, key, rubric = null) {
 function dateForArticle(item) {
   return keyForLjubljana(item.updatedAt || item.createdAt) || todayKey();
 }
-function articleImage(item) { return IMAGES[rubricForArticle(item)] || IMAGES.kultura; }
-function eventImage(item) { return IMAGES[rubricForEvent(item)] || IMAGES.kultura; }
+function articleImage(item) {
+  const category = rubricForArticle(item);
+  return magazineCardArtwork(item, category, IMAGES[category] || IMAGES.kultura);
+}
+function eventImage(item) {
+  const category = rubricForEvent(item);
+  return magazineCardArtwork(item, category, IMAGES[category] || IMAGES.kultura);
+}
 
 function PageHeader({ active = "", q = "" }) {
   const [searchOpen, setSearchOpen] = useState(Boolean(q));
