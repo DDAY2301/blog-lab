@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
+import BlogLabHome from "./BlogLabHome.jsx";
 import LanguageTools from "./LanguageTools.jsx";
 import PrivateTerminalAccess from "./PrivateTerminalAccess.jsx";
 import "./styles.css";
@@ -14,10 +15,18 @@ import "./painterly-gallery-v3.css";
 import "./painterly-original-v4.css";
 import "./painterly-atelier-v5.css";
 import "./painterly-photo-v6.css";
+import "./bloglab-home-v1.css";
+
+// Keep article links, editorial tools and all existing workflows available in the classic view.
+// The redesigned homepage is the default only for the public root route.
+const currentUrl = new URL(window.location.href);
+const existingAppRoute = ["view", "article", "post", "slug", "category", "tab", "id"]
+  .some((key) => currentUrl.searchParams.has(key)) || currentUrl.hash.startsWith("#/");
+const isPublicHome = ["/", "/index.html"].includes(currentUrl.pathname) && !existingAppRoute;
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
+    {isPublicHome ? <BlogLabHome /> : <App />}
     <LanguageTools />
     <PrivateTerminalAccess />
   </React.StrictMode>,
