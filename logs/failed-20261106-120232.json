@@ -1,0 +1,41 @@
+{
+  "category": "dediscina",
+  "errors": [
+    "naslov_ni_v_rubriki",
+    "clanek_brez_slovenskega_konteksta",
+    "viri_ne_podpirajo_slovenske_rubrike",
+    "besedilo_ni_v_slovenscini"
+  ],
+  "article": {
+    "title": "Restore items in the recycle bin that were deleted from SharePoint or Teams | Microsoft Support",
+    "excerpt": "Learn how to recover files, folders, and items you If you delete an item, you can always restore it. When you delete items from a document library or list in Microsoft Teams or SharePoint, they aren't immediately removed",
+    "seoDescription": "Learn how to recover files, folders, and items you If you delete an item, you can always restore it. When you delete items from a document library or list ",
+    "content": "Pregled za rubriko dediscina povzema trenutno razpoložljive informacije iz spodaj navedenih virov. Besedilo je pripravljeno brez dodajanja nepodprtih dejstev.\n\n## Restore items in the recycle bin that were deleted from SharePoint or Teams | Microsoft Support\nLearn how to recover files, folders, and items you If you delete an item, you can always restore it. When you delete items from a document library or list in Microsoft Teams or SharePoint, they aren't immediately removed. Deleted items go into the SharePoint site recycle bin for a period of time or until they are emptied from the recycle bin . The SharePoint site recycle bin isn't the same as the Windows recycle bin that you see on your desktop. While items are in the site recycle bin, you can restore items you deleted to their original location. If you're using SharePoint in Microsoft 365, you can even view and restore items that were deleted by someone else, as long as you have edit permissions. For info about restoring SharePoint files stored in OneDrive, see Restore a previous version of a file in OneDrive . You can restore items that you delete and items other people delete (as long as you have edit permissions). Some functionality is introduced gradually to organizations that have opted into the First Release program . This means that you may not yet see this feature or it may look different than what is described in the help articles. You will only see the Open in SharePoint option from the Files tab of your Teams channel . You can't delete a file from the Files tab of a Teams chat , and you won't find the Open in SharePoint option in a Teams chat . In the Quick Launch bar navigation on the bottom left of the screen, click Recycle bin . If you don't see the Recycle bin on the Quick Launch bar, follow these steps: If you don't see a recycle bin in SharePoint Server 2016 or 2013—the recycle bin might have been disabled. Contact your farm or server administrator. If you're an administrator, see Configure SharePoint Recycle Bin Settings . On the Recycle bin page, click the box to the left of the items or files you want to restore. If you don't see the item you're looking for, and it was deleted recently, a site collection administrator might be able to restore it from the site collection recycle bin. If you're the site collection administrator, see Restore deleted items from the site collection recycle bin . When an item is restored, it is restored to the same location that it was deleted from. Deleted items are retained in recycle bins for a certain period of time. For SharePoint, the retention time is 93 days. It begins when you delete the item from its original location. When you delete the item from the site recycle bin, it goes into the site collection recycle bin . It stays there for the remainder of the 93 days, and then is permanently deleted.\n\nVir: support.microsoft.com — https://support.microsoft.com/en-us/sharepoint/admin/restore-items-in-the-recycle-bin-that-were-deleted-from-sharepoint-or-teams",
+    "category": "Dediščina",
+    "tags": [
+      "dediscina",
+      "Slovenija",
+      "restore",
+      "items",
+      "recycle"
+    ],
+    "sources": [
+      {
+        "title": "Restore items in the recycle bin that were deleted from SharePoint or Teams | Microsoft Support",
+        "url": "https://support.microsoft.com/en-us/sharepoint/admin/restore-items-in-the-recycle-bin-that-were-deleted-from-sharepoint-or-teams",
+        "source_name": "support.microsoft.com"
+      }
+    ],
+    "fallback": false,
+    "gallery": [],
+    "heroImage": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Tustanj_Castle_Slovenia_-_plaque.JPG/1920px-Tustanj_Castle_Slovenia_-_plaque.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "alt": "Plaque over the entrance to Tuštanj Castle, Zgornji Tuštanj, Municipality of Moravče, Slovenia",
+      "caption": "Doremo · Wikimedia Commons · CC BY-SA 3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tustanj_Castle_Slovenia_-_plaque.JPG"
+    },
+    "visualTemplate": "fieldnote",
+    "templateLabel": "Field Note",
+    "id": "restore-items-in-the-recycle-bin-that-were-deleted-from-sharepoint-or-teams-microsoft-supp-ae9732b9"
+  }
+}

@@ -13,12 +13,13 @@
   "writer_mode": "workers_ai",
   "scheduled_slots_done": [],
   "scheduled_slots_deferred": [
-    "2026-11-06|07:35|kolesarstvo"
+    "2026-11-06|07:35|kolesarstvo",
+    "2026-11-06|10:45|dediscina"
   ],
   "last_editorial_hold": {
-    "slot": "2026-11-06|07:35|kolesarstvo",
-    "reason": "manjka_fotografija,ponavljanje",
-    "at": "2026-11-06T07:39:41+01:00"
+    "slot": "2026-11-06|10:45|dediscina",
+    "reason": "naslov_ni_v_rubriki,clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike,besedilo_ni_v_slovenscini",
+    "at": "2026-11-06T12:02:32+01:00"
   },
   "publisher_guardian_last_run": "2026-11-05T23:21:58+01:00",
   "publisher_guardian_last_action": {
