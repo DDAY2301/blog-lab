@@ -1,3 +1,4 @@
+import { magazineCardArtwork, LJUBLJANA_PAINTINGS, stableArtworkIndex } from "../src/bloglab-artwork.js";
 import { readFileSync, existsSync } from "node:fs";
 import assert from "node:assert/strict";
 import { join } from "node:path";
@@ -55,4 +56,24 @@ assert.ok(page.includes("href={eventHref(item)}"), "Event cards need a real deep
 assert.ok(entry.includes("isPublicHome ? <BlogLabMagazine /> : <App />"), "Public magazine and classic editor must be preserved");
 assert.ok(css.includes("mag-composition") && css.includes("grid-template-columns"), "Compact editorial layout missing");
 assert.ok(css.includes("@media(max-width:640px)"), "Responsive magazine layout missing");
+
+const pathSamples = [
+  "ljubljana-grad.png", "ljubljana-tromostovje.png",
+  "ljubljana-zmajski-most.png", "ljubljana-ljubljanica.png"
+];
+assert.equal(LJUBLJANA_PAINTINGS.length, pathSamples.length);
+for (const name of pathSamples) {
+  const filename = join(root, "public/art/painted", name);
+  assert.ok(existsSync(filename), "Missing imported Ljubljana painting: " + name);
+  const image = readFileSync(filename);
+  assert.equal(image.subarray(1, 4).toString(), "PNG", "Invalid PNG asset " + name);
+  assert.ok(image.length > 30000, "Corrupted Ljubljana painting: " + name);
+}
+const sample = { id: "culture-123", title: "Dogodek" };
+assert.equal(magazineCardArtwork(sample, "kultura", "/fallback.jpg"), magazineCardArtwork(sample, "kultura", "/fallback.jpg"));
+assert.equal(magazineCardArtwork(sample, "sport", "/art/painted/kolesarstvo.jpg"), "/art/painted/kolesarstvo.jpg");
+const seen = new Set(Array.from({length: 100}, (_, i) => stableArtworkIndex("magazine-" + i)));
+assert.equal(seen.size, 4, "All four Ljubljana scenes must be reachable from deterministic rotation");
+assert.ok(page.includes('from "./bloglab-artwork.js"'), "Magazine must use generated artwork helper");
+
 console.log("BlogLab V2: taxonomy, deep links, painting assets and compact layout checks passed");
