@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-05T23:06:35+01:00",
+  "updatedAt": "2026-11-06T07:00:00+01:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -115,130 +115,25 @@
       "description": "The month-long culinary festival begins today across Ljubljana, with tastings, menus, workshops and live events announced separately. Prices, languages and accessibility vary by participating venue."
     },
     {
-      "id": "magdalena-reiter-untitled-2026-11-05-1700",
-      "title": "Magdalena Reiter: Untitled — 17:00 performance",
-      "url": "https://www.bunker.si/events/magdalena-reiter-brez-naslova-2/",
-      "source": "Bunker / Stara mestna elektrarna",
-      "type": "Dance · choreographic installation",
-      "place": "Stara mestna elektrarna · Ljubljana",
-      "startAt": "2026-11-05T17:00:00+01:00",
-      "endAt": "2026-11-05T18:00:00+01:00",
-      "price": "€10 / €7 reduced",
-      "languages": [
-        "Movement-led"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": null,
-      "ticketUrl": "https://www.bunker.si/events/magdalena-reiter-brez-naslova-2/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-05T06:57:00+01:00",
-      "description": "An early performance of Magdalena Reiter’s choreographic installation begins at 17:00. Tickets cost €10 or €7 reduced; a separate evening performance begins at 20:00."
-    },
-    {
-      "id": "salome-mgl-2026-11-05",
-      "title": "Salome",
-      "url": "https://www.mgl.si/en/schedule/",
-      "source": "MGL",
-      "type": "Theatre · drama",
-      "place": "MGL Main Stage · Ljubljana",
-      "startAt": "2026-11-05T18:00:00+01:00",
+      "id": "zofka-kveder-fanica-obid-cankarjev-dom-2026-11-06",
+      "title": "Pioneers of Rebellion: Zofka Kveder and Fanica Obid – Mirjam",
+      "url": "https://cd-cc.si/kultura/literatura-in-humanistika/pionirki-upornistva-zofka-kveder-in-fanica-obid-mirjam",
+      "source": "Cankarjev dom",
+      "type": "Literature · public conversation",
+      "place": "Alma Karlin Hall · Cankarjev dom",
+      "startAt": "2026-11-06T19:00:00+01:00",
       "endAt": null,
-      "price": null,
+      "price": "Free ticket required",
       "languages": [
         "Slovenian"
       ],
       "touristFriendly": false,
       "familyFriendly": false,
-      "accessibility": null,
-      "ticketUrl": "https://www.mgl.si/en/schedule/",
+      "accessibility": "Contact Cankarjev dom for wheelchair seating and event-specific assistance.",
+      "ticketUrl": "https://cd-cc.si/kultura/literatura-in-humanistika/pionirki-upornistva-zofka-kveder-in-fanica-obid-mirjam",
       "status": "confirmed",
-      "lastCheckedAt": "2026-11-05T06:57:00+01:00",
-      "description": "Salome begins on MGL’s Main Stage at 18:00. The official schedule currently lists tickets."
-    },
-    {
-      "id": "young-virtuosi-colombo-cape-2026-11-05",
-      "title": "Young Virtuosi: Laura Colombo and Silvia Capè",
-      "url": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/young-virtuosi",
-      "source": "Festival Ljubljana / Visit Ljubljana",
-      "type": "Concert · classical",
-      "place": "Križanke, Knights' Hall · Ljubljana",
-      "startAt": "2026-11-05T19:00:00+01:00",
-      "endAt": "2026-11-05T21:00:00+01:00",
-      "price": null,
-      "languages": [
-        "Music-led"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": true,
-      "accessibility": null,
-      "ticketUrl": "https://www.ljubljanafestival.si/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-05T06:57:00+01:00",
-      "description": "Laura Colombo and Silvia Capè perform in the Young Virtuosi series from 19:00 to 21:00. Check Festival Ljubljana for ticket and accessibility details."
-    },
-    {
-      "id": "equinox-opera-2026-11-05",
-      "title": "Equinox",
-      "url": "https://www.opera.si/en/programme/what-s-on",
-      "source": "SNG Opera and Ballet Ljubljana",
-      "type": "Opera · premiere",
-      "place": "SNG Opera and Ballet Ljubljana",
-      "startAt": "2026-11-05T19:30:00+01:00",
-      "endAt": null,
-      "price": "€19–€65 plus €1 processing fee online",
-      "languages": [
-        "Slovenian"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": null,
-      "ticketUrl": "https://opera.mojekarte.si/en/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-05T06:57:00+01:00",
-      "description": "Marjan Kozina’s four-act opera Equinox premieres at 19:30 in Slovenian. Current authorised ticket prices range from €19 to €65, with a stated €1 online processing fee per ticket."
-    },
-    {
-      "id": "magdalena-reiter-untitled-2026-11-05-2000",
-      "title": "Magdalena Reiter: Untitled",
-      "url": "https://www.bunker.si/events/magdalena-reiter-brez-naslova-2/",
-      "source": "Bunker / Stara mestna elektrarna",
-      "type": "Dance · choreographic installation",
-      "place": "Stara mestna elektrarna · Ljubljana",
-      "startAt": "2026-11-05T20:00:00+01:00",
-      "endAt": null,
-      "price": "€10 / €7 reduced",
-      "languages": [
-        "Movement-led"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": null,
-      "ticketUrl": "https://www.bunker.si/events/magdalena-reiter-brez-naslova-2/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-05T06:57:00+01:00",
-      "description": "Magdalena Reiter’s choreographic installation combines dance and audiovisual media at Stara mestna elektrarna. Tickets cost €10 or €7 reduced; check the organiser for accessibility arrangements."
-    },
-    {
-      "id": "prima-facie-mgl-2026-11-05",
-      "title": "Prima Facie",
-      "url": "https://www.mgl.si/en/schedule/",
-      "source": "MGL",
-      "type": "Theatre · legal drama",
-      "place": "MGL Small Stage · Ljubljana",
-      "startAt": "2026-11-05T20:00:00+01:00",
-      "endAt": null,
-      "price": "€19 / €15.20 pensioners / €13.30 students",
-      "languages": [
-        "Slovenian"
-      ],
-      "touristFriendly": false,
-      "familyFriendly": false,
-      "accessibility": null,
-      "ticketUrl": "https://www.mgl.si/en/schedule/",
-      "status": "sold_out",
-      "lastCheckedAt": "2026-11-05T06:57:00+01:00",
-      "description": "Prima Facie begins on MGL’s Small Stage at 20:00 in Slovenian. MGL marks the performance as sold out; the listed seat prices are €19, €15.20 for pensioners and €13.30 for students."
+      "lastCheckedAt": "2026-11-06T07:00:00+01:00",
+      "description": "A public conversation about writers and activists Zofka Kveder and Fanica Obid – Mirjam begins at 19:00. Admission is free, but visitors must obtain a free ticket; the discussion is in Slovenian."
     },
     {
       "id": "equinox-opera-2026-11-06",
@@ -258,8 +153,29 @@
       "accessibility": null,
       "ticketUrl": "https://opera.mojekarte.si/en/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-11-05T06:57:00+01:00",
+      "lastCheckedAt": "2026-11-06T07:00:00+01:00",
       "description": "Marjan Kozina’s four-act opera Equinox begins at 19:30 in Slovenian. Current authorised ticket prices range from €19 to €65, with a stated €1 online processing fee per ticket."
+    },
+    {
+      "id": "fkk-2-virtuozno-cankarjev-dom-2026-11-06",
+      "title": "FKK 2: Virtuoso",
+      "url": "https://www.cd-cc.si/kultura/glasba/fkk-2-virtuozno",
+      "source": "Cankarjev dom",
+      "type": "Concert · classical",
+      "place": "Gallus Hall · Cankarjev dom",
+      "startAt": "2026-11-06T19:30:00+01:00",
+      "endAt": "2026-11-06T21:15:00+01:00",
+      "price": "€9 / €21 / €34 / €42; reduced €5 / €17 / €27 / €34",
+      "languages": [
+        "Instrumental music"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": true,
+      "accessibility": "Contact Cankarjev dom when booking wheelchair spaces or other assistance.",
+      "ticketUrl": "https://www.cd-cc.si/kultura/glasba/fkk-2-virtuozno",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-06T07:00:00+01:00",
+      "description": "Marie-Ange Nguci conducts and performs with the Slovenian Philharmonic Orchestra in Prokofiev, Mozart and Shostakovich at 19:30. The concert lasts about 1 hour 45 minutes including an interval."
     },
     {
       "id": "liamere-ljubljana-castle-2026-11-06",
@@ -279,7 +195,7 @@
       "accessibility": "Contact Ljubljana Castle before booking for step-free access arrangements to the Rock Hall.",
       "ticketUrl": "https://www.ljubljanskigrad.si/en/castle-events/liamere/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-11-05T06:57:00+01:00",
+      "lastCheckedAt": "2026-11-06T07:00:00+01:00",
       "description": "Liamere perform at the Castle Jazz Club at 20:00; doors open at 19:00. The €11 ticket includes a return funicular journey, and seating is limited."
     },
     {
@@ -300,7 +216,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.bunker.si/events/magdalena-reiter-brez-naslova-2/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-11-05T06:57:00+01:00",
+      "lastCheckedAt": "2026-11-06T07:00:00+01:00",
       "description": "Magdalena Reiter’s choreographic installation combines dance and audiovisual media at Stara mestna elektrarna. Tickets cost €10 or €7 reduced; check the organiser for accessibility arrangements."
     },
     {
@@ -312,7 +228,7 @@
       "place": "MGL Small Stage · Ljubljana",
       "startAt": "2026-11-06T20:00:00+01:00",
       "endAt": null,
-      "price": null,
+      "price": "€19 / €15.20 pensioners / €13.30 students",
       "languages": [
         "Slovenian"
       ],
@@ -321,8 +237,8 @@
       "accessibility": null,
       "ticketUrl": "https://www.mgl.si/en/schedule/",
       "status": "sold_out",
-      "lastCheckedAt": "2026-11-05T06:57:00+01:00",
-      "description": "Man Overboard begins on MGL’s Small Stage at 20:00. The official schedule marks this performance as sold out."
+      "lastCheckedAt": "2026-11-06T07:00:00+01:00",
+      "description": "Man Overboard begins on MGL’s Small Stage at 20:00 in Slovenian. MGL marks this performance as sold out; listed prices are €19, €15.20 for pensioners and €13.30 for students."
     },
     {
       "id": "sment-2-kino-siska-2026-11-06",
@@ -342,8 +258,29 @@
       "accessibility": "Kino Šiška publishes general venue accessibility information; contact the venue for event-specific arrangements.",
       "ticketUrl": "https://www.kinosiska.si/en/dogodek/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-11-05T06:57:00+01:00",
+      "lastCheckedAt": "2026-11-06T07:00:00+01:00",
       "description": "The second šMENT showcase presents Svemirko, corto.alto, Nejc Pipp & Co., Zina band and IDZ from 20:00. Regular presale costs €23 and the walk-up price is €26; earlier discounted allocations are sold out."
+    },
+    {
+      "id": "ko-pridem-ven-cankarjev-dom-2026-11-06",
+      "title": "When I Get Out",
+      "url": "https://www.cd-cc.si/kultura/film/ko-pridem-ven",
+      "source": "Cankarjev dom",
+      "type": "Film · documentary",
+      "place": "Kosovel Hall · Cankarjev dom",
+      "startAt": "2026-11-06T20:00:00+01:00",
+      "endAt": "2026-11-06T21:46:00+01:00",
+      "price": "€6.50 / €5.50 reduced",
+      "languages": [
+        "Slovenian"
+      ],
+      "touristFriendly": false,
+      "familyFriendly": false,
+      "accessibility": "Contact Cankarjev dom for wheelchair seating and event-specific assistance.",
+      "ticketUrl": "https://www.cd-cc.si/kultura/film/ko-pridem-ven",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-06T07:00:00+01:00",
+      "description": "Metod Pevec’s 106-minute documentary about psychodrama work in Slovenia’s central prison screens at 20:00. Tickets cost €6.50 or €5.50 reduced; no English subtitles are confirmed on the official page."
     },
     {
       "title": "STELLAR x K4: Janeret & Twineffect",
@@ -360,7 +297,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.klub-k4.si/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-11-05T06:57:00+01:00",
+      "lastCheckedAt": "2026-11-06T07:00:00+01:00",
       "description": "STELLAR x K4: Janeret & Twineffect is listed by Klub K4. Check the official event page for price, language and accessibility details.",
       "id": "event-18-stellar-x-k4-janeret-twineffect"
     },
@@ -380,7 +317,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.galahala.com/en/program/wave-riders-27/34774/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-11-05T06:57:00+01:00",
+      "lastCheckedAt": "2026-11-06T07:00:00+01:00",
       "description": "Torulsson and Skinar host an eclectic electronic club night from 22:00. Admission costs €5 until 23:00 and €8 afterwards."
     },
     {
@@ -392,15 +329,39 @@
       "place": "SNG Opera and Ballet Ljubljana",
       "startAt": "2026-11-07T19:30:00+01:00",
       "endAt": null,
-      "price": null,
-      "languages": [],
+      "price": "€19–€65 plus €1 processing fee online",
+      "languages": [
+        "Slovenian"
+      ],
       "touristFriendly": true,
       "familyFriendly": false,
       "accessibility": null,
       "ticketUrl": "https://opera.mojekarte.si/en/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-26T06:58:00+01:00",
-      "description": "Marjan Kozina’s Equinox starts at 19:30 at SNG Opera and Ballet Ljubljana. Check the authorised seller for current ticket availability."
+      "lastCheckedAt": "2026-11-06T07:00:00+01:00",
+      "description": "Marjan Kozina’s four-act opera Equinox begins at 19:30 in Slovenian. Current authorised ticket prices range from €19 to €65, with a stated €1 online processing fee per ticket."
+    },
+    {
+      "id": "forum-nove-glasbe-trk-casovnosti-2026-11-07",
+      "title": "Forum of New Music 2026: Collision of Temporalities",
+      "url": "https://www.cd-cc.si/kultura/glasba/forum-nove-glasbe-2026-koncert-1-trk-casovnosti",
+      "source": "Cankarjev dom",
+      "type": "Concert · contemporary music",
+      "place": "CD Club · Cankarjev dom",
+      "startAt": "2026-11-07T19:30:00+01:00",
+      "endAt": null,
+      "price": "€10 / €8 reduced",
+      "languages": [
+        "Instrumental music",
+        "Slovenian pre-concert talk"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": "Contact Cankarjev dom for wheelchair seating and event-specific assistance.",
+      "ticketUrl": "https://www.cd-cc.si/kultura/glasba/forum-nove-glasbe-2026-koncert-1-trk-casovnosti",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-06T07:00:00+01:00",
+      "description": "A pre-concert talk begins at 19:30 and the contemporary-music concert at 20:00. Tickets cost €10 or €8 reduced and include the accompanying programme."
     },
     {
       "id": "nate-smith-kino-siska-2026-11-07",
@@ -420,7 +381,7 @@
       "accessibility": "Kino Šiška publishes general venue accessibility information; contact the venue for event-specific arrangements.",
       "ticketUrl": "https://www.kinosiska.si/en/dogodek/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-27T07:14:00+01:00",
+      "lastCheckedAt": "2026-11-06T07:00:00+01:00",
       "description": "Nate Smith performs with CARRTOONS, J3PO and Hailey Niswanger at 20:00. Check Kino Šiška for current ticket price and availability."
     },
     {
@@ -441,7 +402,7 @@
       "accessibility": null,
       "ticketUrl": null,
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-26T06:58:00+01:00",
+      "lastCheckedAt": "2026-11-06T07:00:00+01:00",
       "description": "Nuova Orchestra Ferruccio Busoni performs in the ZRC SAZU atrium from 20:00 to 22:00. Admission is free."
     },
     {
@@ -463,7 +424,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.galahala.com/program/travnik-5-let-albuma-pubeci-ne-jocejo-gala-hala/34778/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-25T07:22:00+01:00",
+      "lastCheckedAt": "2026-11-06T07:00:00+01:00",
       "description": ".travnik marks the fifth anniversary of Pubeci ne jočejo with PTČ and Z☆JA from 21:00. Tickets cost €13 in advance or €15 on the day."
     },
     {
@@ -1317,6 +1278,112 @@
       "status": "confirmed",
       "lastCheckedAt": "2026-11-05T06:57:00+01:00",
       "description": "Croatian electropop duo NIPPLEPEOPLE perform with Pocket Palma in Katedrala Hall at 20:00. Tickets cost €25 in presale, €30 at the door or €18.75 reduced."
+    },
+    {
+      "id": "kdosovel-cankarjev-dom-2026-11-20",
+      "title": "Kdosovel",
+      "url": "https://cd-cc.si/kultura/literatura-in-humanistika/kdosovel",
+      "source": "Cankarjev dom",
+      "type": "Poetry theatre performance",
+      "place": "Duša Počkaj Hall · Cankarjev dom",
+      "startAt": "2026-11-20T19:00:00+01:00",
+      "endAt": null,
+      "price": "€5",
+      "languages": [
+        "Slovenian"
+      ],
+      "touristFriendly": false,
+      "familyFriendly": false,
+      "accessibility": "Contact Cankarjev dom for wheelchair seating and event-specific assistance.",
+      "ticketUrl": "https://cd-cc.si/kultura/literatura-in-humanistika/kdosovel",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-06T07:00:00+01:00",
+      "description": "The Slovenian-language poetry-theatre performance examines the political appropriation of Srečko Kosovel’s image. It begins at 19:00 and costs €5."
+    },
+    {
+      "id": "mozart-cankarjev-dom-2026-11-20",
+      "title": "Mozart!",
+      "url": "https://www.cd-cc.si/en/culture/music/mozart",
+      "source": "Cankarjev dom",
+      "type": "Concert · classical",
+      "place": "Gallus Hall · Cankarjev dom",
+      "startAt": "2026-11-20T19:30:00+01:00",
+      "endAt": null,
+      "price": "€21 / €25 / €29; reduced €17 / €21 / €25",
+      "languages": [
+        "Instrumental music"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": true,
+      "accessibility": "Contact Cankarjev dom when booking wheelchair spaces or other assistance.",
+      "ticketUrl": "https://www.cd-cc.si/en/culture/music/mozart",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-06T07:00:00+01:00",
+      "description": "The classical programme Mozart! begins in Gallus Hall at 19:30. Standard tickets cost €21–€29 and reduced tickets €17–€25."
+    },
+    {
+      "id": "romantic-souls-mgl-2026-11-20",
+      "title": "Romantic Souls",
+      "url": "https://www.mgl.si/en/schedule/",
+      "source": "MGL",
+      "type": "Theatre · drama",
+      "place": "MGL Main Stage · Ljubljana",
+      "startAt": "2026-11-20T19:30:00+01:00",
+      "endAt": null,
+      "price": "€18–€22; reduced €12.50–€17.60",
+      "languages": [
+        "Slovenian"
+      ],
+      "touristFriendly": false,
+      "familyFriendly": false,
+      "accessibility": "Contact MGL for performance-specific step-free seating arrangements.",
+      "ticketUrl": "https://www.mgl.si/en/schedule/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-06T07:00:00+01:00",
+      "description": "MGL stages Ivan Cankar’s Romantic Souls on the Main Stage at 19:30. The performance is in Slovenian; standard tickets cost €18–€22 with student and pensioner reductions."
+    },
+    {
+      "id": "lusitanian-ghosts-ljubljana-castle-2026-11-20",
+      "title": "Lusitanian Ghosts",
+      "url": "https://ljubljanskigrad.si/en/castle-events/page-924/",
+      "source": "Ljubljana Castle",
+      "type": "Concert · folk rock",
+      "place": "Rock Hall · Ljubljana Castle",
+      "startAt": "2026-11-20T20:00:00+01:00",
+      "endAt": null,
+      "price": "€11 including return funicular",
+      "languages": [
+        "Music-led",
+        "English and Portuguese stage remarks possible"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": "Contact Ljubljana Castle before booking for step-free access arrangements to the Rock Hall.",
+      "ticketUrl": "https://shop.ljubljanskigrad.si/en/pack.html",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-06T07:00:00+01:00",
+      "description": "Lusitanian Ghosts blend Portuguese folk instruments with contemporary rock songwriting at 20:00. The €11 ticket includes a return funicular journey."
+    },
+    {
+      "id": "guilty-pleasures-gala-hala-2026-11-20",
+      "title": "Guilty Pleasures with KUKLA & FILADENDRON",
+      "url": "https://www.galahala.com/en/program/guilty-pleasures-w-kukla-filadendron-gala-hala/34957/",
+      "source": "Gala Hala",
+      "type": "Club night · R&B and pop",
+      "place": "Gala Hala · AKC Metelkova",
+      "startAt": "2026-11-20T22:00:00+01:00",
+      "endAt": null,
+      "price": "€10 before midnight / €13 afterwards",
+      "languages": [
+        "Music-led"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": "Contact Gala Hala for event-specific accessibility information.",
+      "ticketUrl": "https://www.galahala.com/en/program/guilty-pleasures-w-kukla-filadendron-gala-hala/34957/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-06T07:00:00+01:00",
+      "description": "KUKLA and FILADENDRON host an R&B and pop club night from 22:00. Admission costs €10 before midnight and €13 afterwards."
     }
   ]
 }
