@@ -1,0 +1,30 @@
+name: BlogLab homepage redesign QA
+on:
+  pull_request:
+    paths:
+      - "src/BlogLabHome.jsx"
+      - "src/bloglab-home-v1.css"
+      - "src/main.jsx"
+      - "tools/check-homepage-redesign.mjs"
+      - "package.json"
+      - "package-lock.json"
+      - ".github/workflows/homepage-redesign-check.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify-homepage:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - name: Install locked dependencies
+        run: npm ci
+      - name: Verify homepage structure and original art
+        run: node tools/check-homepage-redesign.mjs
+      - name: Compile complete BlogLab site with Vite
+        run: npm run build
