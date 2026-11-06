@@ -1,0 +1,158 @@
+/* BlogLab V2 — production editorial pages, original oil paintings & warm atelier identity. */
+.bloglab-magazine{background:#f7edda;color:#25392e;min-height:100vh;font-family:"Iowan Old Style",Baskerville,Georgia,serif}
+.bloglab-magazine *, .bloglab-magazine *::before,.bloglab-magazine *::after{box-sizing:border-box}
+.bloglab-magazine a{color:inherit}
+.bloglab-magazine a:focus-visible,.bloglab-magazine button:focus-visible,.bloglab-magazine input:focus-visible{outline:3px solid #c88f45;outline-offset:3px}
+.bloglab-magazine .mag-wide{width:min(1360px,calc(100% - 54px));max-width:1360px;margin:0 auto}
+.bloglab-magazine .mag-overline{font:800 10px/1.55 ui-sans-serif,system-ui,sans-serif;letter-spacing:.15em;color:#977145;text-transform:uppercase}
+.bloglab-magazine .mag-header{position:sticky;top:0;z-index:80;background:linear-gradient(95deg,#203b32,#2c4438);color:#f7ecd6;border-bottom:1px solid rgba(223,196,144,.3);box-shadow:0 5px 24px rgba(15,31,24,.12)}
+.bloglab-magazine .mag-header-inner{min-height:76px;width:min(1460px,calc(100% - 54px));margin:0 auto;display:flex;align-items:center;gap:clamp(14px,2vw,34px)}
+.bloglab-magazine .mag-brand{font:400 clamp(26px,2.6vw,40px)/1 Georgia,serif;letter-spacing:-.075em;text-decoration:none;color:#fff5dd;white-space:nowrap;flex:none}
+.bloglab-magazine .mag-brand span{color:#edc68e}
+.bloglab-magazine .mag-nav{display:flex;align-items:center;justify-content:flex-end;gap:clamp(8px,1.3vw,24px);flex:1;min-width:0}
+.bloglab-magazine .mag-nav a{display:inline-flex;align-items:center;min-height:43px;padding:8px 4px;color:#f6e9d1;text-decoration:none;text-transform:uppercase;font:800 clamp(10px,.95vw,13px)/1.25 ui-sans-serif,system-ui,sans-serif;letter-spacing:.06em;border:0;border-bottom:2px solid transparent;background:none;white-space:nowrap}
+.bloglab-magazine .mag-nav a:hover,.bloglab-magazine .mag-nav a.active{border-bottom-color:#dfbc7e;color:#fff8e8}
+.bloglab-magazine .mag-search-trigger{border:1px solid #b6a587;border-radius:50%;background:rgba(255,255,255,.04);color:#fff3d9;width:43px;height:43px;flex:none;font:30px/1 Georgia,serif}
+.bloglab-magazine .mag-search-form{display:flex;gap:12px;align-items:center;width:min(1200px,calc(100% - 54px));margin:0 auto;padding:5px 0 16px}
+.bloglab-magazine .mag-search-form label{font:700 12px ui-sans-serif,system-ui,sans-serif;white-space:nowrap}
+.bloglab-magazine .mag-search-form input{flex:1;min-width:0;padding:11px 13px;border:1px solid #af936e;border-radius:6px;background:#fff9ed;color:#1b3025;font:14px ui-sans-serif,system-ui,sans-serif}
+.bloglab-magazine .mag-search-form button{padding:12px 17px;border:1px solid #d8be8f;background:#f3e3c4;color:#213a2d;border-radius:5px;font:750 12px ui-sans-serif,system-ui,sans-serif}
+.bloglab-magazine .mag-painted-banner{min-height:390px;display:flex;align-items:center;padding:66px 0 73px;background-position:center;background-size:cover;background-repeat:no-repeat;position:relative}
+.bloglab-magazine .mag-painted-banner::after{content:"";position:absolute;bottom:-1px;left:0;right:0;height:31px;background:#f7edda;clip-path:polygon(0 62%,5% 48%,11% 65%,18% 46%,23% 60%,29% 42%,35% 62%,42% 43%,51% 64%,58% 47%,64% 65%,71% 41%,77% 60%,86% 45%,92% 64%,100% 46%,100% 100%,0 100%)}
+.bloglab-magazine .mag-painted-banner .mag-wide{position:relative;z-index:1}
+.bloglab-magazine .mag-painted-banner .mag-overline{color:#f1d9aa}
+.bloglab-magazine .mag-painted-banner h1{max-width:870px;margin:11px 0 15px;color:#fff4df;font:400 clamp(53px,6.3vw,96px)/1 "Iowan Old Style",Baskerville,Georgia,serif;letter-spacing:-.055em;text-shadow:0 4px 16px rgba(16,29,22,.26)}
+.bloglab-magazine .mag-painted-banner h1 em{color:#ffe0ad}
+.bloglab-magazine .mag-painted-banner p{max-width:650px;margin:0 0 24px;color:#f6e9d1;font:400 clamp(17px,1.6vw,21px)/1.55 Georgia,serif}
+.bloglab-magazine .mag-painted-banner.compact{min-height:295px;padding:52px 0 62px}
+.bloglab-magazine .mag-painted-banner.compact h1{font-size:clamp(41px,5vw,68px);max-width:1100px;line-height:1.04}
+.bloglab-magazine .mag-hero-cta,.bloglab-magazine .mag-primary-link{display:inline-flex;padding:13px 18px;align-items:center;min-height:45px;text-decoration:none;border:1px solid #f2dec0;border-radius:3px 13px 4px 12px;background:#f5e8cb;color:#223d2f;font:750 12px ui-sans-serif,system-ui,sans-serif}
+.bloglab-magazine .mag-hero-cta:hover,.bloglab-magazine .mag-primary-link:hover{background:#fff3d9}
+.bloglab-magazine .mag-home-body{padding:30px 0 43px;background:transparent}
+.bloglab-magazine .mag-section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:17px;margin-bottom:20px}
+.bloglab-magazine .mag-section-head h2{font:400 clamp(32px,3.7vw,48px)/1.05 Georgia,serif;letter-spacing:-.05em;margin:5px 0 4px;color:#2b4133}
+.bloglab-magazine .mag-section-head p{margin:8px 0 0;font:400 15px/1.5 Georgia,serif;color:#706958}
+.bloglab-magazine .mag-text-link{flex:none;font:750 12px/1.4 ui-sans-serif,system-ui,sans-serif;text-decoration:none;border-bottom:1px solid #b28b57;padding-bottom:4px}
+.bloglab-magazine .mag-text-link:hover{text-decoration:underline}
+.bloglab-magazine .mag-today{margin-bottom:33px;border-bottom:1px solid rgba(142,113,70,.24);padding-bottom:36px}
+.bloglab-magazine .mag-today-rail{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:11px}
+.bloglab-magazine .mag-event-tile,.bloglab-magazine .mag-article-tile{display:flex;flex-direction:column;text-decoration:none;overflow:hidden;background:#fff7e8;border:1px solid #d5c4a5;border-radius:3px 13px 5px 11px;box-shadow:0 6px 18px rgba(58,42,25,.045);transition:transform .19s ease,box-shadow .19s ease;min-width:0;color:#263c30}
+.bloglab-magazine .mag-event-tile:hover,.bloglab-magazine .mag-article-tile:hover{transform:translateY(-3px);box-shadow:0 12px 24px rgba(58,42,25,.14)}
+.bloglab-magazine .mag-event-tile .mag-image{width:100%;aspect-ratio:4/3.7;background-size:cover;background-position:center}
+.bloglab-magazine .mag-tile-body{display:flex;flex-direction:column;flex:1;min-width:0;padding:12px 12px 14px;gap:8px}
+.bloglab-magazine .mag-event-tile .mag-overline{font-size:9px;line-height:1.4}
+.bloglab-magazine .mag-event-tile strong{font:550 14px/1.28 Georgia,serif;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.bloglab-magazine .mag-event-tile small,.bloglab-magazine .mag-article-tile small{color:#6f6959;font:400 11px/1.4 ui-sans-serif,system-ui,sans-serif;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.bloglab-magazine .mag-card-link{margin-top:auto;padding-top:8px;border-top:1px solid #e5d8bd;color:#426850;font:750 10px ui-sans-serif,system-ui,sans-serif}
+.bloglab-magazine .mag-composition{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);align-items:start;gap:28px;margin:0 0 29px}
+.bloglab-magazine .mag-culture-weekend{display:flex;flex-direction:column;gap:19px;min-width:0}
+.bloglab-magazine .mag-calendar-panel{min-width:0}
+.bloglab-magazine .mag-calendar-sheet{padding:22px;background:#fff8e9;border:1px solid #d9c6a6;box-shadow:4px 6px 0 #ede0c7;border-radius:4px 12px 3px 12px}
+.bloglab-magazine .mag-cal-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 16px}
+.bloglab-magazine .mag-cal-top strong{font:450 24px Georgia,serif;text-transform:capitalize}
+.bloglab-magazine .mag-cal-top button{width:38px;height:38px;border-radius:50%;border:1px solid #c9ae7d;background:#f8ead0;font:26px Georgia,serif}
+.bloglab-magazine .mag-calendar-days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:5px;text-align:center}
+.bloglab-magazine .mag-calendar-days>span{display:grid;place-items:center;min-height:27px;color:#84694b;font:800 10px ui-sans-serif,system-ui,sans-serif}
+.bloglab-magazine .mag-calendar-days.dates a{display:grid;place-items:center;position:relative;min-height:48px;border:1px solid #decfb7;background:#fffcf4;text-decoration:none;font:450 16px Georgia,serif;border-radius:3px}
+.bloglab-magazine .mag-calendar-days.dates a:hover{background:#f5e8cd}
+.bloglab-magazine .mag-calendar-days.dates a.today{background:#2c4d3a;color:#fff7e5;border-color:#2c4d3a}
+.bloglab-magazine .mag-calendar-days.dates i{position:absolute;bottom:5px;left:calc(50% - 2px);height:4px;width:4px;border-radius:50%;background:#ad7a39}
+.bloglab-magazine .mag-calendar-days.dates a.today i{background:#f0c888}
+.bloglab-magazine .mag-cal-agenda{border-top:1px solid #ddcbad;margin-top:20px;padding-top:15px}
+.bloglab-magazine .mag-cal-agenda h3{font:500 19px Georgia,serif;margin:0 0 12px}
+.bloglab-magazine .mag-cal-agenda>a{display:flex;gap:10px;align-items:center;padding:12px 0;border-top:1px solid #eee3d0;text-decoration:none;font:500 12px/1.4 ui-sans-serif,system-ui,sans-serif}
+.bloglab-magazine .mag-cal-agenda>a>span:first-child{color:#a1743f;flex:0 0 91px;font-weight:750}
+.bloglab-magazine .mag-cal-agenda>a strong{font-size:13px;flex:1}
+.bloglab-magazine .mag-cal-agenda>p{font:400 13px Georgia,serif;color:#77694f}
+.bloglab-magazine .mag-feature-big{display:grid;grid-template-columns:minmax(0,43%) minmax(0,1fr);min-height:230px;background:#fff8e9;border:1px solid #d8c5a3;border-radius:3px 12px 3px 12px;overflow:hidden;text-decoration:none;box-shadow:0 6px 19px rgba(70,50,30,.04)}
+.bloglab-magazine .mag-feature-big>.mag-image{background-size:cover;background-position:center}
+.bloglab-magazine .mag-feature-big>span:last-child{display:flex;flex-direction:column;min-width:0;gap:9px;padding:20px}
+.bloglab-magazine .mag-feature-big strong{font:450 clamp(17px,1.8vw,24px)/1.17 Georgia,serif;letter-spacing:-.025em}
+.bloglab-magazine .mag-feature-big small{color:#716b5c;font:400 12px/1.45 Georgia,serif;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.bloglab-magazine .mag-feature-big em,.bloglab-magazine .mag-feature-small em{margin-top:auto;font:750 11px ui-sans-serif,system-ui,sans-serif;color:#527054;font-style:normal}
+.bloglab-magazine .mag-feature-big:hover strong,.bloglab-magazine .mag-feature-small:hover strong{text-decoration:underline;text-underline-offset:3px}
+.bloglab-magazine .mag-weekend-compact{padding:19px;background:linear-gradient(110deg,rgba(34,58,44,.91),rgba(44,62,47,.86)),url("/art/painted/sezonsko.jpg") center/cover;color:#f7edd8;border-radius:4px 13px 4px 11px}
+.bloglab-magazine .mag-weekend-compact .mag-overline{color:#edcf9a}
+.bloglab-magazine .mag-mini-head{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.bloglab-magazine .mag-mini-head>a{font:700 11px ui-sans-serif,system-ui,sans-serif;text-decoration:underline;text-underline-offset:4px}
+.bloglab-magazine .mag-weekend-compact h2{margin:5px 0 14px;color:#f7ecd4;font:400 35px Georgia,serif;letter-spacing:-.055em}
+.bloglab-magazine .mag-mini-weekend-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+.bloglab-magazine .mag-mini-day{display:flex;flex-direction:column;min-height:145px;min-width:0;padding:12px 11px;background:#f4e6cd;border:1px solid rgba(245,219,171,.7);color:#253c2e;text-decoration:none;border-radius:4px 10px 4px 9px}
+.bloglab-magazine .mag-mini-day strong{font:450 22px Georgia,serif}
+.bloglab-magazine .mag-mini-day>span{font:700 10px ui-sans-serif,system-ui,sans-serif;color:#856844;margin:4px 0 8px}
+.bloglab-magazine .mag-mini-day small{font:450 12px/1.3 Georgia,serif;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.bloglab-magazine .mag-mini-day em{margin-top:auto;padding-top:6px;color:#59755a;font:700 10px ui-sans-serif,system-ui,sans-serif;font-style:normal}
+.bloglab-magazine .mag-mini-day:hover{background:#fff3d8}
+.bloglab-magazine .mag-side-stories{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:25px;margin-bottom:36px;padding-top:12px;border-top:1px solid rgba(149,124,85,.27)}
+.bloglab-magazine .mag-feature-small{display:grid;grid-template-columns:42% 1fr;min-height:207px;border:1px solid #d6c7aa;border-radius:3px 13px 4px 12px;overflow:hidden;text-decoration:none;background:#fff8eb}
+.bloglab-magazine .mag-feature-small>.mag-image{background-size:cover;background-position:center}
+.bloglab-magazine .mag-feature-small>span:last-child{min-width:0;display:flex;flex-direction:column;padding:19px;gap:10px}
+.bloglab-magazine .mag-feature-small strong{font:450 clamp(16px,1.7vw,24px)/1.2 Georgia,serif}
+.bloglab-magazine .mag-feature-small small{color:#706756;font:400 12px/1.45 Georgia,serif;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.bloglab-magazine .mag-latest{padding:12px 0 36px}
+.bloglab-magazine .mag-article-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:19px}
+.bloglab-magazine .mag-article-tile>.mag-image{width:100%;aspect-ratio:4/2.8;background-size:cover;background-position:center}
+.bloglab-magazine .mag-article-tile .mag-tile-body{padding:16px;min-height:160px}
+.bloglab-magazine .mag-article-tile strong{font:450 18px/1.25 Georgia,serif}
+.bloglab-magazine .mag-article-tile .mag-card-link{font-size:11px}
+.bloglab-magazine .mag-footer{background:#203a2f;color:#f9ecd4}
+.bloglab-magazine .mag-footer>.mag-wide{min-height:100px;padding:27px 0;display:flex;flex-wrap:wrap;align-items:center;gap:19px 32px}
+.bloglab-magazine .mag-footer-logo{text-decoration:none;font:400 28px Georgia,serif;color:#fff4d9}
+.bloglab-magazine .mag-footer p{margin:0 auto 0 0;font:400 14px Georgia,serif;color:#d7c9ae}
+.bloglab-magazine .mag-footer a:not(.mag-footer-logo){font:700 12px ui-sans-serif,system-ui,sans-serif;color:#ebd4ab}
+.bloglab-magazine .mag-interior{padding:21px 0 65px;min-height:50vh}
+.bloglab-magazine .mag-breadcrumb{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:12px 0 24px;color:#796f5c;font:650 12px ui-sans-serif,system-ui,sans-serif}
+.bloglab-magazine .mag-breadcrumb a{text-decoration:underline;text-underline-offset:4px}
+.bloglab-magazine .mag-breadcrumb span[aria-current]{color:#284733}
+.bloglab-magazine .mag-stats{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 23px}
+.bloglab-magazine .mag-stats span{padding:9px 13px;background:#f3e7d2;border:1px solid #d8c4a1;border-radius:999px;font:750 12px ui-sans-serif,system-ui,sans-serif}
+.bloglab-magazine .mag-list-group{padding:20px 0 29px}
+.bloglab-magazine .mag-list-group>h2{font:400 clamp(29px,3.4vw,42px) Georgia,serif;letter-spacing:-.04em;margin:0 0 21px;color:#2b4333}
+.bloglab-magazine .mag-list-group>h2 span{color:#937853;font:700 14px ui-sans-serif,system-ui,sans-serif;letter-spacing:0}
+.bloglab-magazine .mag-tabs{display:flex;gap:7px;align-items:center;flex-wrap:wrap;padding:17px 0;border-top:1px solid #d9c9ad;border-bottom:1px solid #d9c9ad}
+.bloglab-magazine .mag-tabs a{display:inline-flex;align-items:center;padding:10px 15px;background:#f9f0e0;border:1px solid #d4bc94;border-radius:99px;color:#3c4e3f;text-decoration:none;font:750 12px ui-sans-serif,system-ui,sans-serif}
+.bloglab-magazine .mag-tabs a:hover,.bloglab-magazine .mag-tabs a.active{color:#fff1d9;background:#2a4938;border-color:#2a4938}
+.bloglab-magazine .mag-entries{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.bloglab-magazine .mag-entry{display:grid;grid-template-columns:115px minmax(0,1fr) 14px;align-items:center;gap:14px;padding:10px;background:#fff8e9;border:1px solid #d9c7a7;border-radius:3px 12px 3px 10px;text-decoration:none;min-width:0}
+.bloglab-magazine .mag-entry-image{display:block;min-height:113px;background-size:cover;background-position:center;border-radius:2px 9px 3px 7px}
+.bloglab-magazine .mag-entry-body{display:flex;flex-direction:column;min-width:0;gap:6px}
+.bloglab-magazine .mag-entry-body strong{font:450 18px/1.25 Georgia,serif}
+.bloglab-magazine .mag-entry-body small{color:#77705e;font:400 11px/1.4 ui-sans-serif,system-ui,sans-serif}
+.bloglab-magazine .mag-entry-arrow{color:#6f875c;align-self:center}
+.bloglab-magazine .mag-entry:hover strong{text-decoration:underline;text-underline-offset:4px}
+.bloglab-magazine .mag-empty{padding:24px;background:#fff8e9;border:1px dashed #d1b890;border-radius:4px 12px 4px 9px;color:#746954;font:400 15px/1.6 Georgia,serif}
+.bloglab-magazine .mag-calendar-actions{display:flex;gap:13px;justify-content:space-between;flex-wrap:wrap;margin:4px 0 20px}
+.bloglab-magazine .mag-calendar-actions a{padding:10px 14px;background:#fff8e9;border:1px solid #d4c09f;border-radius:7px;text-decoration:none;font:750 12px ui-sans-serif,system-ui,sans-serif}
+.bloglab-magazine .mag-weekend-archive-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:25px 0}
+.bloglab-magazine .mag-weekend-day{background:#fff7e7;border:1px solid #d8c5a5;border-radius:3px 12px 3px 10px;overflow:hidden}
+.bloglab-magazine .mag-weekend-day-head{display:flex;flex-direction:column;min-height:180px;justify-content:flex-end;padding:18px;color:#fff3de;text-decoration:none;background-size:cover;background-position:center}
+.bloglab-magazine .mag-weekend-day-head span{font:700 11px ui-sans-serif,system-ui,sans-serif}
+.bloglab-magazine .mag-weekend-day-head strong{font:450 33px Georgia,serif}
+.bloglab-magazine .mag-weekend-day-head small{margin-top:5px;font:750 11px ui-sans-serif,system-ui,sans-serif}
+.bloglab-magazine .mag-weekend-day>div:last-child{padding:16px 19px}
+.bloglab-magazine .mag-weekend-day>div:last-child>a{display:block;padding:12px 0;border-top:1px solid #e7d8bf;text-decoration:none;font:450 16px/1.3 Georgia,serif}
+.bloglab-magazine .mag-weekend-day>div:last-child>a small{display:block;margin-top:5px;color:#716859;font:400 11px ui-sans-serif,system-ui,sans-serif}
+.bloglab-magazine .mag-weekend-day>div:last-child>p{font:400 13px/1.5 Georgia,serif;color:#766953}
+.bloglab-magazine .mag-info-link{display:flex;flex-wrap:wrap;gap:12px 20px;margin:23px 0}
+.bloglab-magazine .mag-info-link a{font:750 12px ui-sans-serif,system-ui,sans-serif;text-underline-offset:4px}
+.bloglab-magazine .mag-detail{min-height:60vh}
+.bloglab-magazine .mag-article-layout{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(245px,.65fr);align-items:start;gap:clamp(28px,5vw,73px)}
+.bloglab-magazine .mag-article-layout>article{background:#fff9eb;border:1px solid #dfcfb1;padding:clamp(24px,4vw,44px);border-radius:4px 15px 4px 13px;min-width:0}
+.bloglab-magazine .mag-article-layout>article>h2{font:450 32px Georgia,serif;margin:12px 0 17px}
+.bloglab-magazine .mag-article-layout>article p{font:400 17px/1.75 Georgia,serif;color:#3d453a;overflow-wrap:anywhere;white-space:pre-wrap}
+.bloglab-magazine .mag-article-layout>article .mag-primary-link{margin-top:15px;background:#2a4938;color:#fff4dd;border-color:#2a4938}
+.bloglab-magazine .mag-facts{position:sticky;top:100px;padding:23px;background:#eae0c9;border:1px solid #d3bd98;border-radius:3px 10px 4px 10px}
+.bloglab-magazine .mag-facts h3{font:450 27px Georgia,serif;margin:0 0 17px}
+.bloglab-magazine .mag-facts dl{margin:0}
+.bloglab-magazine .mag-facts dt{margin:11px 0 4px;color:#8d714e;font:750 11px ui-sans-serif,system-ui,sans-serif;text-transform:uppercase}
+.bloglab-magazine .mag-facts dd{margin:0 0 12px;font:400 14px/1.4 Georgia,serif}
+.bloglab-magazine .mag-facts>a{display:block;margin-top:13px;padding-top:11px;border-top:1px solid #ccba9a;text-decoration:underline;text-underline-offset:3px;font:550 14px/1.3 Georgia,serif}
+.bloglab-magazine .mag-sources{border-top:1px solid #e3cfad;margin-top:31px;padding-top:23px}
+.bloglab-magazine .mag-sources h2{font:450 26px Georgia,serif}
+.bloglab-magazine .mag-sources a{display:block;padding:8px 0;overflow-wrap:anywhere;font:400 13px/1.45 ui-sans-serif,system-ui,sans-serif;text-underline-offset:3px}
+@media(max-width:1200px){.bloglab-magazine .mag-today-rail{grid-template-columns:repeat(4,minmax(0,1fr))}.bloglab-magazine .mag-composition{grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr)}.bloglab-magazine .mag-mini-weekend-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.bloglab-magazine .mag-article-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:950px){.bloglab-magazine .mag-composition{grid-template-columns:1fr}.bloglab-magazine .mag-culture-weekend{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}.bloglab-magazine .mag-feature-big{grid-template-columns:1fr}.bloglab-magazine .mag-feature-big>.mag-image{height:140px}.bloglab-magazine .mag-mini-weekend-grid{grid-template-columns:1fr}.bloglab-magazine .mag-mini-day{min-height:65px;display:grid;grid-template-columns:1fr auto;gap:5px 10px}.bloglab-magazine .mag-mini-day small{grid-column:1/-1}.bloglab-magazine .mag-mini-day em{grid-column:1/-1}.bloglab-magazine .mag-article-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.bloglab-magazine .mag-weekend-archive-grid{grid-template-columns:1fr 1fr}.bloglab-magazine .mag-entries{grid-template-columns:1fr}.bloglab-magazine .mag-article-layout{grid-template-columns:1fr}.bloglab-magazine .mag-facts{position:static}}
+@media(max-width:800px){.bloglab-magazine .mag-header-inner{width:calc(100% - 30px);min-height:65px;flex-wrap:wrap;gap:7px 13px;padding:10px 0}.bloglab-magazine .mag-brand{font-size:30px}.bloglab-magazine .mag-nav{order:3;flex:1 0 100%;justify-content:flex-start;gap:20px;overflow-x:auto;scrollbar-width:none}.bloglab-magazine .mag-nav a{font-size:11px;min-height:35px}.bloglab-magazine .mag-search-trigger{margin-left:auto}.bloglab-magazine .mag-search-form{width:calc(100% - 30px);flex-wrap:wrap}.bloglab-magazine .mag-search-form label{width:100%}.bloglab-magazine .mag-painted-banner{min-height:345px;padding:47px 0 58px}.bloglab-magazine .mag-painted-banner.compact{min-height:260px}.bloglab-magazine .mag-weekend-archive-grid{grid-template-columns:1fr}}
+@media(max-width:640px){.bloglab-magazine .mag-wide{width:calc(100% - 30px)}.bloglab-magazine .mag-painted-banner h1{font-size:clamp(43px,11vw,65px)}.bloglab-magazine .mag-painted-banner p{font-size:16px}.bloglab-magazine .mag-painted-banner.compact h1{font-size:clamp(36px,9vw,51px)}.bloglab-magazine .mag-section-head{align-items:flex-start}.bloglab-magazine .mag-section-head h2{font-size:36px}.bloglab-magazine .mag-text-link{font-size:11px;white-space:normal;text-align:right}.bloglab-magazine .mag-today-rail{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding:3px 2px 15px;margin-right:-15px}.bloglab-magazine .mag-event-tile{flex:0 0 min(66vw,230px);scroll-snap-align:start}.bloglab-magazine .mag-composition{gap:20px}.bloglab-magazine .mag-culture-weekend{display:flex}.bloglab-magazine .mag-mini-weekend-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.bloglab-magazine .mag-mini-day{display:flex;min-height:155px}.bloglab-magazine .mag-side-stories{grid-template-columns:1fr;gap:17px}.bloglab-magazine .mag-feature-small{min-height:175px}.bloglab-magazine .mag-article-grid{grid-template-columns:1fr;gap:13px}.bloglab-magazine .mag-article-tile{display:grid;grid-template-columns:112px minmax(0,1fr)}.bloglab-magazine .mag-article-tile>.mag-image{height:100%;aspect-ratio:3/4}.bloglab-magazine .mag-article-tile .mag-tile-body{min-height:130px;padding:12px}.bloglab-magazine .mag-article-tile strong{font-size:16px}.bloglab-magazine .mag-entry{grid-template-columns:95px minmax(0,1fr) 13px;gap:9px}.bloglab-magazine .mag-entry-image{min-height:100px}.bloglab-magazine .mag-entry-body strong{font-size:15px}.bloglab-magazine .mag-article-layout>article{padding:21px}.bloglab-magazine .mag-article-layout>article p{font-size:16px}.bloglab-magazine .mag-footer>.mag-wide{gap:12px}}
+@media(max-width:390px){.bloglab-magazine .mag-mini-weekend-grid{grid-template-columns:1fr}.bloglab-magazine .mag-mini-day{min-height:72px;display:grid;grid-template-columns:1fr auto}.bloglab-magazine .mag-mini-day small{grid-column:1/-1}.bloglab-magazine .mag-calendar-sheet{padding:12px}.bloglab-magazine .mag-calendar-days.dates a{min-height:42px}.bloglab-magazine .mag-calendar-days{gap:3px}}
+@media(prefers-reduced-motion:reduce){.bloglab-magazine *{scroll-behavior:auto!important;transition:none!important}}
