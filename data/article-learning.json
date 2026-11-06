@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-11-06T07:48:01+01:00",
-  "loop_count": 7924,
+  "updated_at": "2026-11-06T20:26:08+01:00",
+  "loop_count": 7925,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-11-06T07:47:38+01:00",
+      "last_learning_run": "2026-11-06T20:25:48+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -86,11 +86,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 148392,
-          "last_seen": "2026-11-06T07:47:38+01:00",
-          "last_title": "\"Danes je enostavno biti kritičen, ker se je moč skriti za anonimnost\" - rtvslo.si",
+          "seen": 148398,
+          "last_seen": "2026-11-06T20:25:48+01:00",
+          "last_title": "Nenavadna, a dobra novica za slovenske motokrosiste: Mesec dni po pokalu narodov Slovenija pridobila dve mesti - Šport TV",
           "last_provider": "google-news-si",
-          "published": 478582,
+          "published": 478636,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,20 +227,20 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 6,
+      "current_source_count": 7,
       "example_titles": {
         "news.google.com": [
           "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
-          "S tribune: Športni trenutki, zaradi katerih se mi še danes naježijo dlake - Svet24.si",
+          "Kozamernik: \"Rekli smo, da želimo rasti skozi turnir, in to je bila danes dobra prva stopnička\" - rtvslo.si",
           "Slovenska blamaža na igrah! Zakaj sploh tekmujemo, če je šport pri nas umrl - Ekipa"
         ],
-        "xfinityconnect.email.comcast.net": [
-          "Problems accessing your mail"
+        "youtube.com": [
+          "Lincoln Heater Core Replacement - YouTube"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-11-06T07:47:49+01:00",
+      "last_learning_run": "2026-11-06T20:25:58+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -282,11 +282,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 177025,
-          "last_seen": "2026-11-06T07:47:49+01:00",
-          "last_title": "Predsednik vlade Janša za ministra za ministra za digitalno preobrazbo predlaga Marka Borisa Andrijaniča - prava.si",
-          "last_provider": "google-news-si",
-          "published": 526672,
+          "seen": 177042,
+          "last_seen": "2026-11-06T20:25:58+01:00",
+          "last_title": "Video: Luka Simonič iz SDM: \"Če se mi ne ukvarjamo s politiko, se politika ukvarja z nami\" - Metroplay - Metropolitan.si",
+          "last_provider": "google-news-global",
+          "published": 526732,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -388,7 +388,7 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 16,
+      "current_source_count": 17,
       "example_titles": {
         "news.google.com": [
           "Premier Janša ob obisku v JV Sloveniji: “Danes izpolnjujemo predvolilno obljubo, da ta del Slovenije ne bo pozabljen” - Nova24TV",
@@ -398,7 +398,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-11-06T07:48:01+01:00",
+      "last_learning_run": "2026-11-06T20:26:08+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -486,12 +486,12 @@
           "last_provider": "bing-web"
         },
         "news.google.com": {
-          "score": 2.538,
-          "seen": 203429,
-          "last_seen": "2026-11-06T07:48:01+01:00",
+          "score": 2.537,
+          "seen": 203442,
+          "last_seen": "2026-11-06T20:26:08+01:00",
           "last_title": "Slovenija preprečila pristanek izraelskega letala: tako se odziva Fraport - Info360",
           "last_provider": "google-news-global",
-          "published": 328246,
+          "published": 328262,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -586,12 +586,12 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 10,
+      "current_source_count": 13,
       "example_titles": {
         "news.google.com": [
-          "Golob je “depolitiziral” RTV SLO, jo bo tudi Janša? Ustavno sodišče je dalo “blagoslov”, a Gregorčič in Avbelj gresta na ESČP - Zanima.me",
-          "Kako svet vidi Slovenijo danes in kako je postala tako vroča evropska destinacija - Dnevnik",
-          "Pred Stevanovićevim obiskom v Srbiji znova aktualno vprašanje statusa srbske skupnosti v Sloveniji - Siol.net"
+          "(AKTUALNO) Še danes v prodaji 36. št. revije Demokracija: 30 let Demokracije, ki udejanja pravico vedeti več! Načrt za demografsko obnovo sl",
+          "Veliki infrastrukturni načrti za Grosuplje: minister Vrtovec in župan Verlič o obvoznici, prenovi cest in novih prometnih povezavah | Portal",
+          "Kako svet vidi Slovenijo danes in kako je postala tako vroča evropska destinacija - Dnevnik"
         ]
       }
     }
@@ -672,42 +672,6 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20261105-122411.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek",
-        "manjka_fotografija"
-      ],
-      "title": "Med Bledom in Bohinjem je nastala 28-kilometrska kolesarska pot z razgledi, ki jemljejo dih - Bodi eko"
-    },
-    {
-      "file": "fallback-failed-20261105-123848.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek",
-        "manjka_fotografija"
-      ],
-      "title": "Med Bledom in Bohinjem je nastala 28-kilometrska kolesarska pot z razgledi, ki jemljejo dih - Bodi eko"
-    },
-    {
-      "file": "fallback-failed-20261105-124023.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek",
-        "manjka_fotografija"
-      ],
-      "title": "Med Bledom in Bohinjem je nastala 28-kilometrska kolesarska pot z razgledi, ki jemljejo dih - Bodi eko"
-    },
-    {
-      "file": "fallback-failed-20261105-125346.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek",
-        "manjka_fotografija"
-      ],
-      "title": "Med Bledom in Bohinjem je nastala 28-kilometrska kolesarska pot z razgledi, ki jemljejo dih - Bodi eko"
-    },
-    {
       "file": "fallback-failed-20261105-133904.json",
       "category": "dediscina",
       "errors": [
@@ -760,19 +724,55 @@
       "title": "Med Bledom in Bohinjem je nastala 28-kilometrska kolesarska pot z razgledi, ki jemljejo dih - Bodi eko"
     },
     {
-      "file": "agent-state",
+      "file": "fallback-failed-20261106-123424.json",
       "category": "kolesarstvo",
       "errors": [
-        "prekratek,manjka_fotografija"
+        "prekratek",
+        "manjka_fotografija"
+      ],
+      "title": "Med Bledom in Bohinjem je nastala 28-kilometrska kolesarska pot z razgledi, ki jemljejo dih - Bodi eko"
+    },
+    {
+      "file": "fallback-failed-20261106-134002.json",
+      "category": "sezonsko",
+      "errors": [
+        "prekratek",
+        "manjka_fotografija"
+      ],
+      "title": "Nova sezona, novo zvišanje cen: za kampiranje boste zdaj mogli odšteti kar ... - Metropolitan.si"
+    },
+    {
+      "file": "fallback-failed-20261106-162452.json",
+      "category": "gore",
+      "errors": [
+        "manjka_fotografija",
+        "prekratek"
+      ],
+      "title": "ŠPORTNI VIKEND LJUBLJANICA 2026 bo med 11. in 13. septembrom v središče Ljubljane pripeljal nočni tek, trail, pohodništvo, kolesarjenje in pestro družinsko športno dogajanje - 24ur"
+    },
+    {
+      "file": "fallback-failed-20261106-193140.json",
+      "category": "kolesarstvo",
+      "errors": [
+        "prekratek",
+        "manjka_fotografija"
+      ],
+      "title": "Med Bledom in Bohinjem je nastala 28-kilometrska kolesarska pot z razgledi, ki jemljejo dih - Bodi eko"
+    },
+    {
+      "file": "agent-state",
+      "category": "gourmet",
+      "errors": [
+        "fallback_no_fresh_evidence"
       ]
     },
     {
       "file": "agent-state",
-      "category": "kolesarstvo",
+      "category": "gourmet",
       "errors": [
-        "manjka_fotografija,ponavljanje"
+        "ponavljanje"
       ],
-      "slot": "2026-11-06|07:35|kolesarstvo"
+      "slot": "2026-11-06|16:20|gore"
     }
   ],
   "failure_summary": {
@@ -781,7 +781,7 @@
     "viri_ne_podpirajo_slovenske_rubrike": 3,
     "naslov_ni_v_rubriki": 1,
     "clanek_brez_slovenskega_konteksta": 1,
-    "prekratek,manjka_fotografija": 1,
-    "manjka_fotografija,ponavljanje": 1
+    "fallback_no_fresh_evidence": 1,
+    "ponavljanje": 1
   }
 }
