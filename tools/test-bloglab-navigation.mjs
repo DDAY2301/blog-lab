@@ -43,10 +43,20 @@ for (const asset of ["hero", "dediscina", "gourmet", "kolesarstvo", "sezonsko", 
  assert.ok(existsSync(join(root, "public/art/painted/" + asset + ".jpg")), "Original oil painting missing: " + asset);
 }
 assert.ok(page.includes('import.meta.glob("./articles/published/*.json"'), "All published articles must be indexed");
-assert.ok(page.includes("mag-culture-weekend"), "Kultura and Weekend must be placed together");
-const culture = page.indexOf("<FeaturedCulture article=");
-const weekend = page.indexOf("<WeekendCompact events=");
-assert.ok(culture >= 0 && weekend > culture, "Weekend must be directly after Kultura");
+// The homepage has three equal editorial cards, followed by a separate full-width Weekend.
+assert.ok(page.includes('className="mag-rubrics-grid"'), "Missing three-column rubric grid");
+assert.ok(page.includes('className="mag-weekend-feature-grid"'), "Missing full-width Weekend cards");
+assert.ok(page.includes('["kultura", "zabava", "sport"].map('), "All three categories must be present");
+const calendar = page.indexOf('<Calendar events={events} today={today} />');
+const rubrics = page.indexOf('<section className="mag-rubrics"');
+const weekend = page.indexOf('<WeekendFeature events={events} today={today} />');
+const news = page.indexOf('<section className="mag-latest"');
+assert.ok(calendar >= 0 && calendar < rubrics && rubrics < weekend && weekend < news,
+  "Expected ordering: calendar, Kultura / Zabava / Sport, Weekend, news");
+assert.ok(!page.includes("mag-culture-weekend"), "Obsolete interleaved Weekend layout present");
+assert.ok(!page.includes("<WeekendCompact"), "Obsolete compact Weekend layout present");
+assert.ok(page.includes('className="mag-calendar-month"'), "Calendar month and agenda must be siblings");
+assert.ok(page.includes('className="mag-cal-agenda"'), "Missing adjacent daily events agenda");
 for (const component of ["RubricPage", "ArticleDetail", "EventDetail", "DatePage", "WeekendPage", "NewsPage", "SearchPage"]) {
  assert.ok(page.includes("function " + component), "Missing deep route: " + component);
 }
@@ -54,7 +64,10 @@ assert.ok(page.includes("href={rubricHref(rubric.slug)}"), "Header category nav 
 assert.ok(page.includes("href={articleHref(item)}"), "Article cards need a real deep link");
 assert.ok(page.includes("href={eventHref(item)}"), "Event cards need a real deep link");
 assert.ok(entry.includes("isPublicHome ? <BlogLabMagazine /> : <App />"), "Public magazine and classic editor must be preserved");
-assert.ok(css.includes("mag-composition") && css.includes("grid-template-columns"), "Compact editorial layout missing");
+assert.ok(css.includes(".mag-rubrics-grid") && css.includes("grid-template-columns:repeat(3"),
+  "Three category columns must be explicitly styled");
+assert.ok(css.includes(".mag-weekend-feature-grid") && css.includes(".mag-calendar-sheet"),
+  "Full-width Weekend and split calendar styles must be present");
 assert.ok(css.includes("@media(max-width:640px)"), "Responsive magazine layout missing");
 
 const pathSamples = [

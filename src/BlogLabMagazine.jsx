@@ -96,8 +96,8 @@ function PaintedBanner({ eyebrow, title, desc, image, compact = false, children 
 function Breadcrumbs({ items }) {
   return <nav className="mag-breadcrumb" aria-label="Pot po spletišču"><a href="/">Naslovnica</a>{items.map((item, i) => <React.Fragment key={i}><span aria-hidden="true">/</span>{item.href ? <a href={item.href}>{item.label}</a> : <span aria-current="page">{item.label}</span>}</React.Fragment>)}</nav>;
 }
-function SectionHeading({ kicker, title, href, link, caption }) {
-  return <div className="mag-section-head"><div><span className="mag-overline">{kicker}</span><h2>{title}</h2>{caption && <p>{caption}</p>}</div>{href && <a href={href} className="mag-text-link">{link || "Več ↗"}</a>}</div>;
+function SectionHeading({ kicker, title, href, link, caption, id }) {
+  return <div className="mag-section-head"><div><span className="mag-overline">{kicker}</span><h2 id={id}>{title}</h2>{caption && <p>{caption}</p>}</div>{href && <a href={href} className="mag-text-link">{link || "Več ↗"}</a>}</div>;
 }
 function EventTile({ item, day }) {
   const image = eventImage(item);
@@ -133,51 +133,95 @@ function Calendar({ events, today }) {
     m.setUTCMonth(m.getUTCMonth() + n);
     setShownMonth(m.toISOString().slice(0, 7));
   }
-  const shownEvents = pickEventsForDate(events, today).slice(0, 3);
-  return <section className="mag-calendar-panel" aria-labelledby="mag-cal-title">
-    <SectionHeading kicker="NAČRTUJ DAN" title="Koledar dogodkov" href={dateHref(today)} link="Vsi dogodki ↗" />
+  const shownEvents = pickEventsForDate(events, today).slice(0, 5);
+  return <section className="mag-calendar-panel" aria-labelledby="mag-cal-title" id="calendar">
+    <SectionHeading kicker="NAČRTUJ DAN" title="Koledar dogodkov" id="mag-cal-title" href={dateHref(today)} link="Vsi dogodki ↗" />
     <div className="mag-calendar-sheet">
-      <div className="mag-cal-top"><button type="button" onClick={() => shiftMonth(-1)} aria-label="Prejšnji mesec">‹</button><strong>{niceDate(firstKey, { month: "long", year: "numeric" })}</strong><button type="button" onClick={() => shiftMonth(1)} aria-label="Naslednji mesec">›</button></div>
-      <div className="mag-calendar-days">{DAYS.map((day) => <span key={day}>{day}</span>)}</div>
-      <div className="mag-calendar-days dates">{boxes.map((key, idx) => key ? <a key={key} href={dateHref(key)} className={key === today ? "today" : ""} aria-label={niceDate(key) + ", " + events.filter((e) => eventActiveOn(e, key)).length + " dogodkov"}>
-        {Number(key.slice(-2))}{events.some((e) => eventActiveOn(e, key)) && <i aria-hidden="true" />}</a> : <span key={"blank" + idx} />)}</div>
-      <div className="mag-cal-agenda"><h3>Danes na koledarju</h3>
-        {shownEvents.length ? shownEvents.map((event) => <a key={event.id} href={eventHref(event)}><span>{eventHour(event, today)}</span><strong>{event.title}</strong><span aria-hidden="true">↗</span></a>) : <p>Za danes ni potrjenih dogodkov. Izberi drug datum.</p>}
+      <div className="mag-calendar-month">
+        <div className="mag-cal-top">
+          <button type="button" onClick={() => shiftMonth(-1)} aria-label="Prejšnji mesec">‹</button>
+          <strong>{niceDate(firstKey, { month: "long", year: "numeric" })}</strong>
+          <button type="button" onClick={() => shiftMonth(1)} aria-label="Naslednji mesec">›</button>
+        </div>
+        <div className="mag-calendar-days">{DAYS.map((day) => <span key={day}>{day}</span>)}</div>
+        <div className="mag-calendar-days dates">{boxes.map((key, idx) => key
+          ? <a key={key} href={dateHref(key)} className={key === today ? "today" : ""}
+              aria-label={niceDate(key) + ", " + events.filter((e) => eventActiveOn(e, key)).length + " dogodkov"}>
+              {Number(key.slice(-2))}{events.some((e) => eventActiveOn(e, key)) && <i aria-hidden="true" />}
+            </a>
+          : <span key={"blank" + idx} />)}</div>
+      </div>
+      <div className="mag-cal-agenda">
+        <span className="mag-overline">DNEVNI IZBOR</span>
+        <h3>Danes na koledarju</h3>
+        <p className="mag-agenda-date">{niceDate(today, { weekday: "long", day: "numeric", month: "long" })}</p>
+        {shownEvents.length ? shownEvents.map((event) =>
+          <a key={event.id} href={eventHref(event)}>
+            <span>{eventHour(event, today)}</span>
+            <strong>{event.title}</strong>
+            <span aria-hidden="true">↗</span>
+          </a>
+        ) : <p>Za danes ni potrjenih dogodkov. Izberi drug datum.</p>}
+        <a className="mag-agenda-more" href={dateHref(today)}>Poglej vse današnje dogodke ↗</a>
       </div>
     </div>
   </section>;
 }
-function FeaturedCulture({ article }) {
-  return <section className="mag-culture-feature" aria-label="Kultura in uredniški izbor">
-    <SectionHeading kicker="V OSPREDJU" title="Kultura." href={rubricHref("kultura")} link="Vse iz kulture ↗" />
-    <a href={article ? articleHref(article) : rubricHref("kultura")} className="mag-feature-big">
-      <span className="mag-image" style={{ backgroundImage: "url(" + IMAGES.kultura + ")" }} aria-hidden="true" />
-      <span><span className="mag-overline">ZGODBA / KULTURA</span><strong>{article?.title || "Odkrij kulturne zgodbe in dogodke"}</strong><small>{article?.excerpt || "Razstave, kulturna dediščina in dogodki, ki jih je vredno poznati."}</small><em>Preberi več ↗</em></span>
-    </a>
-  </section>;
-}
-function WeekendCompact({ events, today }) {
-  const days = weekendDates(today);
-  return <section className="mag-weekend-compact" aria-labelledby="mag-weekend-heading">
-    <div className="mag-mini-head"><span className="mag-overline">PETEK / SOBOTA / NEDELJA</span><a href={rubricHref("weekend")}>Vsi vikendi ↗</a></div>
-    <h2 id="mag-weekend-heading">Weekend.</h2>
-    <div className="mag-mini-weekend-grid">{days.map((key, idx) => {
-      const found = pickEventsForDate(events, key);
-      return <a href={dateHref(key)} key={key} className="mag-mini-day">
-        <strong>{DAYS_LONG[idx]}</strong><span>{niceDate(key, { day: "numeric", month: "short" })}</span>
-        <small>{found.length ? found[0].title : "Oglej si koledar"}</small><em>Odkrij ↗</em>
-      </a>;
-    })}</div>
-  </section>;
-}
-function SecondaryFeature({ rubric, item }) {
+function CategoryFeature({ rubric, article }) {
   const data = rubricInfo(rubric);
-  return <section className="mag-secondary-feature">
-    <div className="mag-section-head"><div><span className="mag-overline">IZBRANO IZ RUBRIKE</span><h2>{data.name}.</h2></div><a href={rubricHref(rubric)} className="mag-text-link">Vse objave ↗</a></div>
-    <a className="mag-feature-small" href={item ? articleHref(item) : rubricHref(rubric)}>
-      <span className="mag-image" style={{ backgroundImage: "url(" + data.image + ")" }} aria-hidden="true" />
-      <span><strong>{item?.title || data.description}</strong><small>{item?.excerpt || data.description}</small><em>Odpri zgodbo ↗</em></span>
+  const target = article ? articleHref(article) : rubricHref(rubric);
+  return <article className="mag-rubric-card">
+    <a href={rubricHref(rubric)} className="mag-rubric-art"
+      style={{ backgroundImage: "url(" + data.image + ")" }}
+      aria-label={"Odpri rubriko " + data.name}>
+      <span className="mag-rubric-art-label">{data.name}</span>
     </a>
+    <div className="mag-rubric-copy">
+      <span className="mag-overline">IZBRANO IZ RUBRIKE</span>
+      <h3><a href={target}>{article?.title || data.description}</a></h3>
+      <p>{article?.excerpt || data.description}</p>
+      <div className="mag-rubric-actions">
+        <a href={target}>{article ? "Preberi članek ↗" : "Odkrij rubriko ↗"}</a>
+        <a href={rubricHref(rubric)}>Vse objave ↗</a>
+      </div>
+    </div>
+  </article>;
+}
+function WeekendFeature({ events, today }) {
+  const days = weekendDates(today);
+  const paintings = [IMAGES.weekend, IMAGES.kultura, IMAGES.trails];
+  return <section className="mag-weekend-feature" id="weekend" aria-labelledby="mag-weekend-heading">
+    <div className="mag-weekend-heading">
+      <div>
+        <span className="mag-overline">PETEK / SOBOTA / NEDELJA</span>
+        <h2 id="mag-weekend-heading">Weekend.</h2>
+        <p>Trije dnevi. Ideje, dogodki in doživetja za konec tedna.</p>
+      </div>
+      <a href={rubricHref("weekend")}>Odpri Weekend ↗</a>
+    </div>
+    <div className="mag-weekend-feature-grid">
+      {days.map((key, idx) => {
+        const found = pickEventsForDate(events, key).slice(0, 2);
+        return <article className="mag-weekend-feature-day" key={key}>
+          <a href={dateHref(key)} className="mag-weekend-feature-image"
+            style={{ backgroundImage: "url(" + paintings[idx] + ")" }}
+            aria-label={"Vsi dogodki za " + DAYS_LONG[idx]} />
+          <div className="mag-weekend-feature-body">
+            <span className="mag-overline">{niceDate(key, { day: "numeric", month: "long" })}</span>
+            <h3>{DAYS_LONG[idx]}</h3>
+            <div className="mag-weekend-feature-events">
+              {found.length ? found.map((item) =>
+                <a key={item.id} href={eventHref(item)}>
+                  <strong>{item.title}</strong>
+                  <small>{eventHour(item, key)} · {item.place || item.source || "Slovenija"}</small>
+                </a>
+              ) : <p>Za ta dan trenutno ni potrjenih dogodkov.</p>}
+            </div>
+            <a className="mag-weekend-feature-more" href={dateHref(key)}>Vsi dogodki tega dne ↗</a>
+          </div>
+        </article>;
+      })}
+    </div>
   </section>;
 }
 function Home({ events, feedStatus, today }) {
@@ -195,14 +239,17 @@ function Home({ events, feedStatus, today }) {
         {frontItems.length ? <div className="mag-today-rail">{frontItems.map((item) => <EventTile key={item.id} item={item} day={eventActiveOn(item, today) ? today : keyForLjubljana(item.startAt)} />)}</div> :
           <p className="mag-empty">{feedStatus === "loading" ? "Nalagam aktualne dogodke ..." : feedStatus === "error" ? "Vir dogodkov trenutno ni dosegljiv." : "Trenutno ni potrjenih dogodkov."}</p>}
       </section>
-      <div className="mag-composition">
-        <Calendar events={events} today={today} />
-        <div className="mag-culture-weekend"><FeaturedCulture article={spotlight.kultura} /><WeekendCompact events={events} today={today} /></div>
-      </div>
-      <div className="mag-side-stories">
-        <SecondaryFeature rubric="zabava" item={spotlight.zabava} />
-        <SecondaryFeature rubric="sport" item={spotlight.sport} />
-      </div>
+      <Calendar events={events} today={today} />
+      <section className="mag-rubrics" aria-labelledby="mag-rubrics-heading">
+        <SectionHeading kicker="ZGODBE IN RUBRIKE" title="Kultura. Zabava. Šport." id="mag-rubrics-heading"
+          caption="Tri rubrike, vsaka s svojimi zgodbami in dogodki." />
+        <div className="mag-rubrics-grid">
+          {["kultura", "zabava", "sport"].map((rubric) =>
+            <CategoryFeature key={rubric} rubric={rubric} article={spotlight[rubric]} />
+          )}
+        </div>
+      </section>
+      <WeekendFeature events={events} today={today} />
       <section className="mag-latest">
         <SectionHeading kicker="NOVE ZGODBE / ARHIV" title="Blog in novice." caption="Objavljeni članki so dostopni v svoji rubriki in kot samostojne strani." href={rubricHref("novice")} link="Vse novice ↗" />
         <div className="mag-article-grid">{ARTICLES.slice(0, 4).map((item) => <ArticleTile key={item.id} item={item} />)}</div>
