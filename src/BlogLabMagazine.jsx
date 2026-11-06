@@ -262,6 +262,8 @@ function WeekendPage({ events, today, period }) {
   const active = days.map((key, i) => ({ day: DAYS_LONG[i], key, items: pickEventsForDate(events, key) }));
   const past = events.filter((event) => !eventIsFuture(event, today) && [5, 6, 0].includes(new Date((keyForLjubljana(event.startAt) || "2000-01-01") + "T12:00:00Z").getUTCDay()))
     .sort((a, b) => new Date(b.startAt) - new Date(a.startAt)).slice(0, 40);
+  const weekendReading = ARTICLES.filter((article) =>
+    /sezons|gourmet|kulinar|turiz|izlet|potovanj|pohod|planin|gore|trail|koles|oddih|vikend|weekend/i.test([article.category, article.title].join(" ")));
   return <>
     <PaintedBanner eyebrow="BLOG LAB / IDEJE ZA PROSTI ČAS" title="Weekend." desc="Dogodki za petek, soboto in nedeljo ter arhiv preteklih vikendov." image={IMAGES.weekend} compact />
     <div className="mag-wide mag-interior"><Breadcrumbs items={[{ label: "Weekend" }]} />
@@ -275,6 +277,7 @@ function WeekendPage({ events, today, period }) {
             <div>{items.length ? items.map((item) => <a href={eventHref(item)} key={item.id}>{item.title}<small>{eventHour(item, key)} · {item.place || item.source}</small></a>) : <p>Za ta dan trenutno ni potrjenih dogodkov.</p>}</div>
           </section>
         )}</div>}
+      <ArticleList items={weekendReading} title="Zgodbe in ideje za prosti čas" />
       <div className="mag-info-link"><a href={rubricHref("kultura")}>Odkrij tudi kulturo ↗</a><a href={rubricHref("zabava")}>Zabava ↗</a><a href={rubricHref("sport")}>Šport in narava ↗</a></div>
     </div>
   </>;
