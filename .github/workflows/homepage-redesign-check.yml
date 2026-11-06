@@ -3,6 +3,10 @@ on:
   pull_request:
     paths:
       - "src/BlogLabHome.jsx"
+      - "src/BlogLabMagazine.jsx"
+      - "src/bloglab-magazine.css"
+      - "src/bloglab-taxonomy.js"
+      - "tools/test-bloglab-navigation.mjs"
       - "src/bloglab-home-v1.css"
       - "src/main.jsx"
       - "tools/check-homepage-redesign.mjs"
