@@ -1365,7 +1365,6 @@
       "description": "Lusitanian Ghosts blend Portuguese folk instruments with contemporary rock songwriting at 20:00. The €11 ticket includes a return funicular journey."
     },
     {
-      "id": "guilty-pleasures-gala-hala-2026-11-20",
       "title": "Guilty Pleasures with KUKLA & FILADENDRON",
       "url": "https://www.galahala.com/en/program/guilty-pleasures-w-kukla-filadendron-gala-hala/34957/",
       "source": "Gala Hala",
@@ -1382,26 +1381,8 @@
       "accessibility": "Contact Gala Hala for event-specific accessibility information.",
       "ticketUrl": "https://www.galahala.com/en/program/guilty-pleasures-w-kukla-filadendron-gala-hala/34957/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-11-06T07:00:00+01:00",
-      "description": "KUKLA and FILADENDRON host an R&B and pop club night from 22:00. Admission costs €10 before midnight and €13 afterwards."
-    },
-    {
-      "title": "GUILTY PLEASURES w/ KUKLA & FILADENDRON @ Gala Hala",
-      "url": "https://www.galahala.com/",
-      "source": "Gala Hala",
-      "type": "Koncert · Metelkova",
-      "place": "Gala Hala · AKC Metelkova",
-      "startAt": "2026-11-20T22:00:00+01:00",
-      "endAt": null,
-      "price": null,
-      "languages": [],
-      "touristFriendly": null,
-      "familyFriendly": null,
-      "accessibility": null,
-      "ticketUrl": "https://www.galahala.com/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-06T07:04:33+01:00",
-      "description": "GUILTY PLEASURES w/ KUKLA & FILADENDRON @ Gala Hala is listed by Gala Hala. Check the official event page for price, language and accessibility details.",
+      "lastCheckedAt": "2026-11-06T07:05:00+01:00",
+      "description": "KUKLA and FILADENDRON host an R&B and pop club night from 22:00. Admission costs €10 before midnight and €13 afterwards.",
       "id": "event-66-guilty-pleasures-w-kukla-filadendron-gala-hala"
     }
   ]
