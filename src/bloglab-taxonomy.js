@@ -44,6 +44,8 @@ export function dateHref(key) {
   return "/?dogodki=" + encodeURIComponent(key);
 }
 export function keyForLjubljana(value) {
+  // Missing endAt must not become 1970-01-01 (new Date(null) is the Unix epoch).
+  if (value === null || value === undefined || value === "") return "";
   const d = new Date(value);
   if (!Number.isFinite(d.getTime())) return "";
   const parts = Object.fromEntries(new Intl.DateTimeFormat("en-GB", {
