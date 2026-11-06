@@ -96,8 +96,8 @@ function PaintedBanner({ eyebrow, title, desc, image, compact = false, children 
 function Breadcrumbs({ items }) {
   return <nav className="mag-breadcrumb" aria-label="Pot po spletišču"><a href="/">Naslovnica</a>{items.map((item, i) => <React.Fragment key={i}><span aria-hidden="true">/</span>{item.href ? <a href={item.href}>{item.label}</a> : <span aria-current="page">{item.label}</span>}</React.Fragment>)}</nav>;
 }
-function SectionHeading({ kicker, title, href, link, caption }) {
-  return <div className="mag-section-head"><div><span className="mag-overline">{kicker}</span><h2>{title}</h2>{caption && <p>{caption}</p>}</div>{href && <a href={href} className="mag-text-link">{link || "Več ↗"}</a>}</div>;
+function SectionHeading({ kicker, title, href, link, caption, id }) {
+  return <div className="mag-section-head"><div><span className="mag-overline">{kicker}</span><h2 id={id}>{title}</h2>{caption && <p>{caption}</p>}</div>{href && <a href={href} className="mag-text-link">{link || "Več ↗"}</a>}</div>;
 }
 function EventTile({ item, day }) {
   const image = eventImage(item);
@@ -135,7 +135,7 @@ function Calendar({ events, today }) {
   }
   const shownEvents = pickEventsForDate(events, today).slice(0, 5);
   return <section className="mag-calendar-panel" aria-labelledby="mag-cal-title" id="calendar">
-    <SectionHeading kicker="NAČRTUJ DAN" title="Koledar dogodkov" href={dateHref(today)} link="Vsi dogodki ↗" />
+    <SectionHeading kicker="NAČRTUJ DAN" title="Koledar dogodkov" id="mag-cal-title" href={dateHref(today)} link="Vsi dogodki ↗" />
     <div className="mag-calendar-sheet">
       <div className="mag-calendar-month">
         <div className="mag-cal-top">
@@ -241,7 +241,7 @@ function Home({ events, feedStatus, today }) {
       </section>
       <Calendar events={events} today={today} />
       <section className="mag-rubrics" aria-labelledby="mag-rubrics-heading">
-        <SectionHeading kicker="ZGODBE IN RUBRIKE" title="Kultura. Zabava. Šport."
+        <SectionHeading kicker="ZGODBE IN RUBRIKE" title="Kultura. Zabava. Šport." id="mag-rubrics-heading"
           caption="Tri rubrike, vsaka s svojimi zgodbami in dogodki." />
         <div className="mag-rubrics-grid">
           {["kultura", "zabava", "sport"].map((rubric) =>
