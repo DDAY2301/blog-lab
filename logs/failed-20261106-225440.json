@@ -1,0 +1,41 @@
+{
+  "category": "gourmet",
+  "errors": [
+    "naslov_ni_v_rubriki",
+    "clanek_brez_slovenskega_konteksta",
+    "viri_ne_podpirajo_slovenske_rubrike",
+    "besedilo_ni_v_slovenscini"
+  ],
+  "article": {
+    "title": "Amazon Prime Business",
+    "excerpt": "One membership for your business account. Unlimited fast, FREE shipping for everyone on your business account and more business benefits Amazon Prime Business .us Done \",\"header\":\"Choose your location\"}' data-action=\"a-m",
+    "seoDescription": "One membership for your business account. Unlimited fast, FREE shipping for everyone on your business account and more business benefits Amazon Prime Busin",
+    "content": "Pregled za rubriko gourmet povzema trenutno razpoložljive informacije iz spodaj navedenih virov. Besedilo je pripravljeno brez dodajanja nepodprtih dejstev.\n\n## Amazon Prime Business\nOne membership for your business account. Unlimited fast, FREE shipping for everyone on your business account and more business benefits Amazon Prime Business .us Done \",\"header\":\"Choose your location\"}' data-action=\"a-modal\"> Delivering to San Jose 95141 Update location All Select the department you want to search in All Departments Alexa Skills Amazon Autos Amazon Devices Amazon Fresh Amazon Global Store Amazon Haul Amazon One Medical Amazon Pharmacy Amazon Resale Appliances Apps & Games Arts, Crafts & Sewing Audible Books & Originals Automotive Parts & Accessories Baby Beauty & Personal Care Books CDs & Vinyl Cell Phones & Accessories Clothing, Shoes & Jewelry Women's Clothing, Shoes & Jewelry Men's Clothing, Shoes & Jewelry Girl's Clothing, Shoes & Jewelry Boy's Clothing, Shoes & Jewelry Baby Clothing, Shoes & Jewelry Collectibles & Fine Art Computers Credit and Payment Cards Digital Music Electronics FoodMaxx Garden & Outdoor Gift Cards Grocery & Gourmet Food Handmade Health, Household & Baby Care Home & Business Services Home & Kitchen Industrial & Scientific Just for Prime Kindle Store Luggage & Travel Gear Luxury Stores Magazine Subscriptions Movies & TV Musical Instruments Office Products Pet Supplies Premium Beauty Prime Video Smart Home Software Sports & Outdoors Subscribe & Save Subscription Boxes Tools & Home Improvement Toys & Games Under $10 Video Games Whole Foods Market Search Amazon EN Hello, sign in Account & Lists Returns & Orders 0 Cart All Holiday Gifts Custom Products Home Improvement Toys & Games Pet Supplies Gift Cards Prime Groceries Amazon Home Medical Care Today's Deals Coupons Whole Foods Pharmacy Audible Beauty & Personal Care Music Registry Fashion New Releases Automotive Handmade Video Games Baby Smart Home Amazon Haul Subscribe & Save Gift Shop Best Sellers Works with Alexa \"}}}},\"cartTimeout\":{\"template\":{\"name\":\"flyoutError\",\"data\":{\"error\":{\"button\":{\"text\":\"Your Cart\",\"url\":\"/gp/cart/view.html?ref_=nav_err_cart_timeout\"},\"title\":\"Oops!\",\"paragraph\":\"Unable to retrieve your cart.\"}}}},\"primeTimeout\":{\"template\":{\"name\":\"flyoutError\",\"data\":{\"error\":{\"title\":\" \"}}}},\"ewcTimeout\":{\"template\":{\"name\":\"flyoutError\",\"data\":{\"error\":{\"button\":{\"text\":\"Your Cart\",\"url\":\"/gp/cart/view.html?ref_=nav_err_ewc_timeout\"},\"title\":\"Oops!\",\"paragraph\":\"There's a problem loading your cart right now.\"}}}},\"errorWishlist\":{\"template\":{\"name\":\"flyoutError\",\"data\":{\"error\":{\"button\":{\"text\":\"Your Wishlist\",\"url\":\"/gp/registry/wishlist/?ref_=nav_err_wishlist\"},\"title\":\"Oops!\",\"paragraph\":\"Unable to retrieve your wishlist\"}}}},\"emptyWishlist\n\nVir: amazon.com — https://www.amazon.com/primebusiness",
+    "category": "Gourmet",
+    "tags": [
+      "gourmet",
+      "Slovenija",
+      "amazon",
+      "prime",
+      "business"
+    ],
+    "sources": [
+      {
+        "title": "Amazon Prime Business",
+        "url": "https://www.amazon.com/primebusiness",
+        "source_name": "amazon.com"
+      }
+    ],
+    "fallback": false,
+    "heroImage": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Matev%C5%BE_%28Slovenian_cuisine%29.jpg/1920px-Matev%C5%BE_%28Slovenian_cuisine%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "alt": "Matevž (Slovenian cuisine) with roast meat and sauerkraut.",
+      "caption": "Petar Milošević · Wikimedia Commons · CC BY-SA 4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Matev%C5%BE_(Slovenian_cuisine).jpg"
+    },
+    "gallery": [],
+    "visualTemplate": "fieldnote",
+    "templateLabel": "Field Note",
+    "id": "amazon-prime-business-a1104302"
+  }
+}

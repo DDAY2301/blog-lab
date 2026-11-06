@@ -16,12 +16,13 @@
     "2026-11-06|07:35|kolesarstvo",
     "2026-11-06|10:45|dediscina",
     "2026-11-06|13:30|sezonsko",
-    "2026-11-06|16:20|gore"
+    "2026-11-06|16:20|gore",
+    "2026-11-06|19:10|gourmet"
   ],
   "last_editorial_hold": {
-    "slot": "2026-11-06|16:20|gore",
-    "reason": "ponavljanje",
-    "at": "2026-11-06T16:24:32+01:00"
+    "slot": "2026-11-06|19:10|gourmet",
+    "reason": "naslov_ni_v_rubriki,clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike,besedilo_ni_v_slovenscini",
+    "at": "2026-11-06T22:54:40+01:00"
   },
   "publisher_guardian_last_run": "2026-11-06T19:31:40+01:00",
   "publisher_guardian_last_action": {
