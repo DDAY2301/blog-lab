@@ -1,0 +1,117 @@
+/* BlogLab · editorial events homepage A+C.
+   This additive layer uses the original oil paintings and existing atelier palette. */
+.bloglab-redesign{min-height:100vh;background:#f7edda;color:#23332f;font-family:"Iowan Old Style",Baskerville,Georgia,serif}
+.bloglab-redesign *, .bloglab-redesign *::before,.bloglab-redesign *::after{box-sizing:border-box}
+.bloglab-redesign a{color:inherit}
+.bloglab-redesign button{cursor:pointer}
+.bloglab-redesign a:focus-visible,.bloglab-redesign button:focus-visible,.bloglab-redesign input:focus-visible{outline:3px solid #c28b4b;outline-offset:3px}
+.bloglab-redesign .labab-header{height:auto;min-height:76px;position:sticky;top:0;z-index:50;width:100%;display:block;padding:0 !important}
+.bloglab-redesign .labab-nav-inner{max-width:1400px;min-height:76px;margin:auto;padding:0 clamp(18px,4vw,58px);display:flex;align-items:center;gap:clamp(10px,2vw,30px)}
+.bloglab-redesign .labab-brand{display:inline-flex;align-items:baseline;gap:0;font-size:clamp(25px,2.7vw,39px);font-weight:400;letter-spacing:-.065em;color:#fff5df;text-decoration:none;white-space:nowrap;flex:0 0 auto}
+.bloglab-redesign .labab-dot{color:#deb984}
+.bloglab-redesign .labab-nav-inner nav{display:flex;align-items:center;justify-content:flex-end;gap:clamp(7px,1.4vw,22px);flex:1 1 auto;min-width:0}
+.bloglab-redesign .labab-nav-inner nav button,.bloglab-redesign .labab-nav-inner nav a{padding:9px 3px;color:#f4e7ce;font:700 clamp(10px,1vw,12px)/1.25 ui-sans-serif,system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;white-space:nowrap;border:0;border-bottom:2px solid transparent;background:none;border-radius:0}
+.bloglab-redesign .labab-nav-inner nav button:hover,.bloglab-redesign .labab-nav-inner nav a:hover{color:#ffedca;border-bottom-color:#c9a76e}
+.bloglab-redesign .labab-search-toggle{flex:0 0 42px;width:42px;height:42px;border:1px solid rgba(246,230,195,.4);border-radius:50%;background:transparent;color:#fff4df;font:400 29px/1 Georgia,serif}
+.bloglab-redesign .labab-search-panel{width:min(100%,1400px);margin:0 auto;padding:12px 4vw 17px;display:flex;gap:13px;align-items:center;color:#f0e4ca;font:600 12px ui-sans-serif,system-ui,sans-serif}
+.bloglab-redesign .labab-search-panel input{flex:1;min-width:0;border-radius:6px;padding:11px 14px;border:1px solid #c0a87a;background:#fffbf3;color:#23332f}
+.bloglab-redesign > .hero.paint-hero.labab-hero{min-height:420px !important;padding:clamp(66px,7vw,104px) max(6vw,calc((100vw - 1320px)/2)) 75px !important;display:flex;align-items:center;gap:30px;justify-content:space-between;background-image:linear-gradient(90deg,rgba(19,37,30,.86) 0%,rgba(27,45,34,.68) 35%,rgba(35,49,36,.13) 78%),url("/art/painted/hero.jpg") !important;background-position:center,center 48% !important;background-size:cover,cover !important}
+.bloglab-redesign > .hero.paint-hero.labab-hero::after{height:48px}
+.bloglab-redesign .labab-hero-content{position:relative;z-index:3;width:min(100%,730px)}
+.bloglab-redesign .labab-hero-folio{display:block;max-width:410px;padding-bottom:14px;margin-bottom:23px;border-bottom:1px solid rgba(243,224,179,.47);font:700 10px/1.5 ui-sans-serif,system-ui,sans-serif;letter-spacing:.16em;color:#f5e0b4}
+.bloglab-redesign .labab-hero-content h1{max-width:680px;color:#fff2d9;font:400 clamp(55px,6.8vw,94px)/.99 "Iowan Old Style",Baskerville,Georgia,serif;letter-spacing:-.055em;margin:15px 0 17px;text-shadow:0 4px 26px rgba(0,0,0,.34)}
+.bloglab-redesign .labab-hero-content h1 em{color:#f4dbab;font-weight:400}
+.bloglab-redesign .labab-hero-content p{max-width:570px;color:#f4e8d0;font:400 clamp(17px,1.7vw,21px)/1.55 Georgia,serif;margin:0 0 29px}
+.bloglab-redesign .labab-hero-content .primary{border-radius:3px 16px 5px 16px;padding:15px 22px;min-height:50px;text-decoration:none;box-shadow:4px 6px 0 rgba(14,26,20,.22);letter-spacing:.08em;font:800 11px/1.3 ui-sans-serif,system-ui,sans-serif}
+.bloglab-redesign .labab-hero-side{color:#fff1d3;font:italic 25px "Segoe Print","Bradley Hand",cursive;max-width:175px;transform:rotate(-7deg);text-shadow:0 4px 14px #14271b;position:relative;z-index:2}
+.bloglab-redesign > .labab-home{width:min(1380px,calc(100% - 36px));max-width:1380px;margin:-2px auto 0 !important;padding:44px clamp(16px,3vw,44px) 70px !important;display:block !important;border-radius:0;background:radial-gradient(ellipse at 90% 11%,rgba(204,175,124,.14),transparent 40%),repeating-linear-gradient(94deg,rgba(145,119,71,.018) 0 2px,transparent 2px 30px),linear-gradient(#f8edda,#f4e7ce) !important;box-shadow:0 12px 45px rgba(39,33,19,.06);color:#24332c}
+.bloglab-redesign .labab-kicker{color:#9a7546;font:800 10px/1.6 ui-sans-serif,system-ui,sans-serif;letter-spacing:.17em}
+.bloglab-redesign .labab-heading,.bloglab-redesign .labab-subhead{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:25px}
+.bloglab-redesign .labab-heading h2,.bloglab-redesign .labab-subhead h2{margin:5px 0 7px;color:#293a30;font:400 clamp(34px,3.8vw,54px)/1.06 "Iowan Old Style",Baskerville,Georgia,serif;letter-spacing:-.045em}
+.bloglab-redesign .labab-heading p{margin:0;color:#696858;font:400 15px/1.5 Georgia,serif}
+.bloglab-redesign .labab-heading>a{padding-bottom:9px;text-decoration:none;border-bottom:1px solid #b3915c;font:700 12px/1.3 ui-sans-serif,system-ui,sans-serif;white-space:nowrap}
+.bloglab-redesign .labab-handnote{font:italic 18px/1.2 "Segoe Print",cursive;color:#967957;transform:rotate(-6deg)}
+.bloglab-redesign .labab-today{padding:5px 0 50px;border-bottom:1px solid rgba(149,117,65,.28)}
+.bloglab-redesign .labab-events-strip{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:11px}
+.bloglab-redesign .labab-event-card{position:relative;display:flex;flex-direction:column;min-width:0;min-height:285px;overflow:hidden;padding:10px 10px 13px;background:#f9efd9;border:1px solid rgba(150,120,72,.34);border-radius:3px 12px 4px 11px;box-shadow:0 6px 17px rgba(48,35,20,.055);text-decoration:none;transition:transform .2s ease,box-shadow .2s ease}
+.bloglab-redesign .labab-event-card:hover{transform:translateY(-4px);box-shadow:0 13px 30px rgba(48,35,20,.16)}
+.bloglab-redesign .labab-event-paint{display:block;width:100%;aspect-ratio:4/4.2;margin-bottom:10px;background-size:cover;background-position:center;filter:saturate(.88)}
+.bloglab-redesign .labab-paint-caption{font:500 8px ui-sans-serif,system-ui,sans-serif;color:#887658;letter-spacing:.03em}
+.bloglab-redesign .labab-event-no{font:750 9px/1.2 ui-sans-serif,system-ui,sans-serif;color:#8f724b;letter-spacing:.065em;text-transform:uppercase;margin:8px 0 5px}
+.bloglab-redesign .labab-event-card strong{font:500 clamp(12px,1.15vw,15px)/1.3 Georgia,serif;overflow-wrap:anywhere;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.bloglab-redesign .labab-event-meta{font:400 11px/1.35 ui-sans-serif,system-ui,sans-serif;color:#655e4f;margin-top:8px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.bloglab-redesign .labab-event-visit{margin-top:auto;padding-top:12px;color:#58705e;font:700 10px ui-sans-serif,system-ui,sans-serif}
+.bloglab-redesign .labab-no-results{padding:30px;background:#fff9ee;border:1px dashed #baa37c;font:400 15px/1.5 Georgia,serif}
+.bloglab-redesign .labab-two-columns{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);gap:clamp(28px,4vw,55px);padding:55px 0 60px}
+.bloglab-redesign .labab-subhead{min-height:94px}
+.bloglab-redesign .labab-calendar-sheet{padding:clamp(14px,2.3vw,30px);background:#fff9ed;border:1px solid #d6c4a4;border-radius:4px 14px 5px 13px;box-shadow:4px 6px 0 #f0e2c6}
+.bloglab-redesign .labab-month{display:flex;align-items:center;justify-content:space-between;text-transform:capitalize;color:#2f473b}
+.bloglab-redesign .labab-month strong{font:400 25px Georgia,serif}
+.bloglab-redesign .labab-month button{border:1px solid #d8c8a7;background:#faf1dc;width:34px;height:34px;border-radius:50%;font:26px Georgia,serif}
+.bloglab-redesign .labab-weekdays,.bloglab-redesign .labab-calendar-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}
+.bloglab-redesign .labab-weekdays{margin-top:20px;color:#846e4f;text-align:center;font:700 10px ui-sans-serif,system-ui,sans-serif}
+.bloglab-redesign .labab-weekdays span{padding:6px 0}
+.bloglab-redesign .labab-calendar-grid button,.bloglab-redesign .labab-calendar-empty{position:relative;display:grid;place-items:center;min-height:49px;padding:5px;border:1px solid rgba(160,137,96,.26);border-radius:2px;background:#fcf6e9;font:500 14px Georgia,serif}
+.bloglab-redesign .labab-calendar-grid button:hover{background:#f3e8cb}
+.bloglab-redesign .labab-calendar-grid button.selected{background:#304c3e;border-color:#304c3e;color:#fff3d7}
+.bloglab-redesign .labab-calendar-grid button i{position:absolute;bottom:5px;width:4px;height:4px;background:#b68443;border-radius:50%}
+.bloglab-redesign .labab-calendar-grid button.selected i{background:#ffe0a9}
+.bloglab-redesign .labab-calendar-empty{border:0;background:transparent}
+.bloglab-redesign .labab-filters{display:flex;flex-wrap:wrap;gap:7px;margin:23px 0 17px}
+.bloglab-redesign .labab-filters button{padding:8px 12px;border:1px solid #bbaa8b;background:#fcf5e9;border-radius:100px;color:#594f40;font:700 11px ui-sans-serif,system-ui,sans-serif}
+.bloglab-redesign .labab-filters button.active{background:#2b493b;border-color:#2b493b;color:#fff3db}
+.bloglab-redesign .labab-selected-day{padding:14px 0 9px;border-top:1px solid #decfb4;display:flex;justify-content:space-between;flex-wrap:wrap;gap:7px}
+.bloglab-redesign .labab-selected-day strong{text-transform:capitalize;font:600 17px Georgia,serif}
+.bloglab-redesign .labab-selected-day span{font:500 11px ui-sans-serif,system-ui,sans-serif;color:#7b705c}
+.bloglab-redesign .labab-day-list a{display:flex;align-items:center;gap:10px;padding:11px 0;border-top:1px solid rgba(148,125,86,.19);text-decoration:none;font:400 12px ui-sans-serif,system-ui,sans-serif}
+.bloglab-redesign .labab-day-time{flex:0 0 80px;color:#715a3e;font-weight:750}
+.bloglab-redesign .labab-day-name{flex:1;min-width:0;font-weight:650;overflow-wrap:anywhere}
+.bloglab-redesign .labab-day-name small{display:block;color:#756d5b;font-weight:400;margin-top:3px}
+.bloglab-redesign .labab-day-list a:hover .labab-day-name{text-decoration:underline;text-underline-offset:3px}
+.bloglab-redesign .labab-feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.bloglab-redesign .labab-feature{overflow:hidden;background:#fff7e9;border:1px solid #d6c6a7;border-radius:4px 12px 4px 10px;box-shadow:0 8px 23px rgba(60,41,18,.055)}
+.bloglab-redesign .labab-feature:last-child{grid-column:span 2;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}
+.bloglab-redesign .labab-feature-art{height:170px;background-size:cover;background-position:center}
+.bloglab-redesign .labab-feature:last-child .labab-feature-art{height:100%;min-height:220px}
+.bloglab-redesign .labab-feature-copy{padding:17px 18px 21px}
+.bloglab-redesign .labab-feature-copy h3{font:400 19px/1.17 Georgia,serif;letter-spacing:-.025em;margin:8px 0}
+.bloglab-redesign .labab-feature-copy p{font:400 12px/1.5 Georgia,serif;color:#6d6554;margin:0 0 15px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.bloglab-redesign .labab-feature-copy button{padding:0 0 3px;border:0;border-bottom:1px solid #a67c4a;background:none;color:#3a5a47;font:800 11px ui-sans-serif,system-ui,sans-serif}
+.bloglab-redesign .labab-weekend{margin:0 calc(-1*clamp(16px,3vw,44px));padding:48px clamp(16px,3vw,44px) 55px;background:linear-gradient(130deg,rgba(35,55,42,.95),rgba(50,65,48,.96)),url("/art/painted/hero.jpg") center/cover;color:#fff0d3}
+.bloglab-redesign .labab-weekend .labab-kicker{color:#e5c999}
+.bloglab-redesign .labab-weekend .labab-heading h2{color:#fdf1d9}
+.bloglab-redesign .labab-weekend .labab-heading p{color:#eee0c5}
+.bloglab-redesign .labab-weekend .labab-heading>a{color:#fff0d3;border-color:#d6bd8c}
+.bloglab-redesign .labab-weekend-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:19px}
+.bloglab-redesign .labab-weekend-card{background:#f8ecd7;color:#2b3e32;display:grid;grid-template-rows:175px 1fr;min-width:0;border-radius:3px 14px 5px 12px;overflow:hidden}
+.bloglab-redesign .labab-weekend-paint{background-position:center;background-size:cover;filter:saturate(.85)}
+.bloglab-redesign .labab-weekend-copy{padding:17px 19px 23px}
+.bloglab-redesign .labab-weekend-copy .labab-kicker{color:#86683e}
+.bloglab-redesign .labab-weekend-copy h3{font:400 33px/.98 Georgia,serif;margin:4px 0 16px}
+.bloglab-redesign .labab-weekend-copy a{display:block;padding:11px 0;border-top:1px solid #d8c5a2;text-decoration:none;font:600 14px/1.3 Georgia,serif}
+.bloglab-redesign .labab-weekend-copy a:hover{text-decoration:underline}
+.bloglab-redesign .labab-weekend-copy small{display:block;font:400 11px/1.4 ui-sans-serif,system-ui,sans-serif;margin-top:6px;color:#746d58}
+.bloglab-redesign .labab-weekend-copy p{color:#736e5e;font:14px/1.5 Georgia,serif}
+.bloglab-redesign .labab-news{padding:61px 0 30px}
+.bloglab-redesign .labab-news-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}
+.bloglab-redesign .labab-news-card{display:flex;flex-direction:column;align-items:flex-start;text-align:left;min-width:0;padding:0;border:none;background:transparent;color:#24392d}
+.bloglab-redesign .labab-news-image{width:100%;aspect-ratio:4/3;background-size:cover;background-position:center;filter:saturate(.83);border-radius:4px 12px 3px 12px;border:1px solid #bba685;box-shadow:3px 5px 0 #e6d6b8;transition:transform .2s ease}
+.bloglab-redesign .labab-news-card:hover .labab-news-image{transform:translateY(-4px)}
+.bloglab-redesign .labab-news-category{font:800 10px ui-sans-serif,system-ui,sans-serif;letter-spacing:.13em;color:#967145;margin-top:17px;text-transform:uppercase}
+.bloglab-redesign .labab-news-card strong{font:400 clamp(17px,1.6vw,23px)/1.22 Georgia,serif;letter-spacing:-.025em;margin:8px 0 13px;overflow-wrap:anywhere}
+.bloglab-redesign .labab-news-date{margin-top:auto;color:#7c6b52;font:600 11px ui-sans-serif,system-ui,sans-serif}
+.bloglab-redesign .labab-footer{background:#182e26;color:#f6e8cc}
+.bloglab-redesign .labab-footer .container{max-width:1380px;padding:32px 0;display:flex;align-items:center;gap:20px;justify-content:space-between;flex-wrap:wrap}
+.bloglab-redesign .labab-footer strong{font:400 26px Georgia,serif}
+.bloglab-redesign .labab-footer span,.bloglab-redesign .labab-footer a{font:500 12px ui-sans-serif,system-ui,sans-serif;color:#decdb1}
+.bloglab-redesign .labab-dialog-backdrop{position:fixed;inset:0;z-index:300;display:grid;place-items:center;padding:20px;background:rgba(10,28,22,.84)}
+.bloglab-redesign .labab-article-dialog{position:relative;width:min(760px,100%);max-height:90vh;overflow:auto;padding:clamp(24px,4vw,45px);background:#f9edd7;border:1px solid #d2b783;color:#293c31;box-shadow:0 20px 70px rgba(0,0,0,.4)}
+.bloglab-redesign .labab-article-dialog h2{font:400 clamp(27px,3.4vw,45px)/1.1 Georgia,serif;margin:12px 0 24px}
+.bloglab-redesign .labab-article-dialog p{font:400 16px/1.7 Georgia,serif;white-space:pre-wrap}
+.bloglab-redesign .labab-dialog-close{position:sticky;top:0;float:right;width:42px;height:42px;border:1px solid #bb9c6d;background:#f8ecd7;font-size:28px;z-index:2}
+.bloglab-redesign .labab-article-sources{border-top:1px solid #d8c5a4;margin-top:30px;padding-top:15px;display:grid;gap:10px}
+.bloglab-redesign .labab-article-sources a{font-size:13px;overflow-wrap:anywhere}
+@media(max-width:1200px){.bloglab-redesign .labab-events-strip{grid-template-columns:repeat(4,minmax(0,1fr))}.bloglab-redesign .labab-event-card{min-height:265px}.bloglab-redesign .labab-two-columns{grid-template-columns:1fr}.bloglab-redesign .labab-feature-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.bloglab-redesign .labab-feature:last-child{grid-column:auto;display:block}.bloglab-redesign .labab-feature:last-child .labab-feature-art{height:170px;min-height:0}}
+@media(max-width:800px){.bloglab-redesign .labab-nav-inner{min-height:66px;flex-wrap:wrap;gap:7px;padding:9px 16px}.bloglab-redesign .labab-brand{font-size:30px}.bloglab-redesign .labab-nav-inner nav{order:3;flex:1 0 100%;justify-content:flex-start;overflow-x:auto;scrollbar-width:none;gap:20px;padding-bottom:3px}.bloglab-redesign .labab-nav-inner nav button,.bloglab-redesign .labab-nav-inner nav a{font-size:11px}.bloglab-redesign .labab-search-toggle{margin-left:auto}.bloglab-redesign > .hero.paint-hero.labab-hero{min-height:370px !important;padding:65px 25px 60px !important}.bloglab-redesign .labab-hero-side{display:none}.bloglab-redesign .labab-weekend-grid{grid-template-columns:1fr}.bloglab-redesign .labab-weekend-card{grid-template-columns:38% 1fr;grid-template-rows:auto;min-height:210px}.bloglab-redesign .labab-weekend-paint{min-height:210px}.bloglab-redesign .labab-news-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:580px){.bloglab-redesign .labab-hero-content h1{font-size:clamp(47px,11vw,65px)}.bloglab-redesign .labab-hero-content p{font-size:16px}.bloglab-redesign > .labab-home{width:100%;padding:35px 17px 50px !important}.bloglab-redesign .labab-heading{align-items:flex-start}.bloglab-redesign .labab-heading h2,.bloglab-redesign .labab-subhead h2{font-size:36px}.bloglab-redesign .labab-heading>a{font-size:10px;padding-top:7px}.bloglab-redesign .labab-events-strip{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:13px;padding:3px 2px 18px;margin-right:-17px;scrollbar-width:thin}.bloglab-redesign .labab-event-card{flex:0 0 min(67vw,238px);min-height:305px;scroll-snap-align:start}.bloglab-redesign .labab-event-card strong{font-size:17px}.bloglab-redesign .labab-two-columns{gap:34px;padding:40px 0}.bloglab-redesign .labab-subhead{min-height:0}.bloglab-redesign .labab-handnote{display:none}.bloglab-redesign .labab-calendar-sheet{padding:13px}.bloglab-redesign .labab-calendar-grid button,.bloglab-redesign .labab-calendar-empty{min-height:40px}.bloglab-redesign .labab-feature-grid{grid-template-columns:1fr}.bloglab-redesign .labab-feature,.bloglab-redesign .labab-feature:last-child{display:grid;grid-template-columns:38% 1fr}.bloglab-redesign .labab-feature-art,.bloglab-redesign .labab-feature:last-child .labab-feature-art{height:100%;min-height:160px}.bloglab-redesign .labab-feature-copy{padding:16px}.bloglab-redesign .labab-feature-copy h3{font-size:17px}.bloglab-redesign .labab-weekend{margin:0 -17px;padding:40px 17px 46px}.bloglab-redesign .labab-weekend-grid{gap:12px}.bloglab-redesign .labab-weekend-card{min-height:190px}.bloglab-redesign .labab-weekend-paint{min-height:190px}.bloglab-redesign .labab-weekend-copy{padding:15px}.bloglab-redesign .labab-news-grid{grid-template-columns:1fr;gap:17px}.bloglab-redesign .labab-news-card{display:grid;grid-template-columns:112px minmax(0,1fr);grid-template-rows:auto 1fr auto;gap:0 14px}.bloglab-redesign .labab-news-image{grid-row:1/4;aspect-ratio:4/5}.bloglab-redesign .labab-news-category{margin:0 0 4px}.bloglab-redesign .labab-news-card strong{font-size:18px;margin:0 0 6px}.bloglab-redesign .labab-news-date{font-size:10px}.bloglab-redesign .labab-footer .container{padding:24px 0}}
+@media(prefers-reduced-motion:reduce){.bloglab-redesign *{scroll-behavior:auto !important;transition:none !important}}
