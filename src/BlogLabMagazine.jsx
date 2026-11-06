@@ -269,7 +269,7 @@ function WeekendPage({ events, today, period }) {
       {period === "arhiv" ? <EventsList items={past} today={today} title="Arhiv vikend dogodkov" /> :
         <div className="mag-weekend-archive-grid">{active.map(({ day, key, items }, idx) =>
           <section key={key} className="mag-weekend-day">
-            <a href={dateHref(key)} className="mag-weekend-day-head" style={{ backgroundImage: "linear-gradient(90deg,rgba(29,51,37,.8),rgba(29,51,37,.2)),url(" + [IMAGES.weekend, IMAGES.culture, IMAGES.trails][idx].replace("culture", "kultura") + ")" }}>
+            <a href={dateHref(key)} className="mag-weekend-day-head" style={{ backgroundImage: "linear-gradient(90deg,rgba(29,51,37,.8),rgba(29,51,37,.2)),url(" + [IMAGES.weekend, IMAGES.kultura, IMAGES.trails][idx] + ")" }}>
               <span>{niceDate(key)}</span><strong>{day}</strong><small>Vsi dogodki na ta dan ↗</small>
             </a>
             <div>{items.length ? items.map((item) => <a href={eventHref(item)} key={item.id}>{item.title}<small>{eventHour(item, key)} · {item.place || item.source}</small></a>) : <p>Za ta dan trenutno ni potrjenih dogodkov.</p>}</div>
@@ -347,7 +347,7 @@ function SearchPage({ query, events, today }) {
   const articles = ARTICLES.filter((a) => [a.title, a.excerpt, a.category].filter(Boolean).join(" ").toLocaleLowerCase("sl").includes(q));
   const foundEvents = events.filter((e) => [e.title, e.place, e.type, e.description].filter(Boolean).join(" ").toLocaleLowerCase("sl").includes(q));
   return <>
-    <PaintedBanner eyebrow="BLOG LAB / ISKANJE" title="Rezultati iskanja." desc={"Poizvedba: " + query} image={IMAGES.guide || IMAGES.novice} compact />
+    <PaintedBanner eyebrow="BLOG LAB / ISKANJE" title="Rezultati iskanja." desc={"Poizvedba: " + query} image={IMAGES.novice} compact />
     <div className="mag-wide mag-interior"><Breadcrumbs items={[{ label: "Iskanje" }]} />
       <ArticleList items={articles} title="Najdeni članki" />
       <EventsList items={foundEvents} today={today} title="Najdeni dogodki" />
