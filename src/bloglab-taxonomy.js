@@ -8,7 +8,7 @@ export const RUBRICS = [
   { slug: "novice", name: "Blog / Novice", image: "/art/painted/vodniki.jpg", description: "Vse objavljene zgodbe, vodniki in novice v enem urejenem arhivu." }
 ];
 
-const sport = /koles|gore|gors|mountain|trail|planin|pohod|hiking|trek|tek\b|tekač|running|maraton|gibanj|rekreacij|outdoor|sport|šport|smuč|sneg|plezan|alpiniz|nogomet|košark|odboj|tenis|plav|kajo|rafting|potap|fitnes|yoga|joga|bicycle|cycling|football|basketball|race|olimp|dirk|poti\s+eurovelo|aktivn.*narav/i;
+const sport = /koles|gore|gors|mountain|trail|planin|pohod|hiking|trek|tek\b|tekač|running|maraton|gibanj|narav|gozd|rekreacij|outdoor|sport|šport|smuč|sneg|plezan|alpiniz|nogomet|košark|odboj|tenis|plav|kajo|rafting|potap|fitnes|yoga|joga|bicycle|cycling|football|basketball|race|olimp|dirk|poti\s+eurovelo|aktivn.*narav/i;
 const culture = /kultur|dedišč|heritage|muzej|museum|galer|razstav|exhibit|literatur|knjiž|umetn|art\b|gledali|theatre|opera|balet|ballet|arhitekt|zgodovin|tradici|grad\b|castle|film|kino|cinema|fotograf|poez|poetry/i;
 const entertainment = /zabav|glasb|music|koncert|concert|festival|klub|club|party|komed|comedy|nočn|night|gourmet|kulinar|hrana|food|restavra|okus|kulinarič|tržnic|sezonsk|turist|travel|potovanj|izlet|dogodek|weekend|vikend|oddih|cirkus/i;
 
