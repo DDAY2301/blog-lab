@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-11-06T20:26:08+01:00",
-  "loop_count": 7925,
+  "updated_at": "2026-11-07T06:59:03+01:00",
+  "loop_count": 7926,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-11-06T20:25:48+01:00",
+      "last_learning_run": "2026-11-07T06:58:45+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -86,11 +86,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 148398,
-          "last_seen": "2026-11-06T20:25:48+01:00",
-          "last_title": "Nenavadna, a dobra novica za slovenske motokrosiste: Mesec dni po pokalu narodov Slovenija pridobila dve mesti - Šport TV",
-          "last_provider": "google-news-si",
-          "published": 478636,
+          "seen": 148406,
+          "last_seen": "2026-11-07T06:58:45+01:00",
+          "last_title": "Slovenski nogometni junaki se vračajo iz Nemčije, doma jih čaka sprejem: poglejte, kdaj in kje - Metropolitan.si",
+          "last_provider": "google-news-global",
+          "published": 478690,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -140,6 +140,13 @@
           "seen": 3,
           "last_seen": "2026-10-24T11:08:26+02:00",
           "last_title": "10 Must-Watch YouTube Channels for ESL Learners | EnglishClub",
+          "last_provider": "bing-web"
+        },
+        "galvestonislandbrewing.com": {
+          "score": 1.523,
+          "seen": 4,
+          "last_seen": "2026-11-07T06:58:45+01:00",
+          "last_title": "Beer | Galveston Island Brewing | Galveston",
           "last_provider": "bing-web"
         },
         "nike.com": {
@@ -218,29 +225,24 @@
           "last_seen": "2026-10-28T06:43:17+01:00",
           "last_title": "Returns, Store Credit & Order Cancellations",
           "last_provider": "bing-web"
-        },
-        "nfl.com": {
-          "score": 1.271,
-          "seen": 2,
-          "last_seen": "2026-10-14T00:07:48+02:00",
-          "last_title": "Rams-Falcons on 'Monday Night Football': What We Learned from Atlanta's 27-24 win",
-          "last_provider": "bing-web"
         }
       },
-      "current_source_count": 7,
+      "current_source_count": 12,
       "example_titles": {
         "news.google.com": [
           "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
-          "Kozamernik: \"Rekli smo, da želimo rasti skozi turnir, in to je bila danes dobra prva stopnička\" - rtvslo.si",
+          "S tribune: Športni trenutki, zaradi katerih se mi še danes naježijo dlake - Svet24.si",
           "Slovenska blamaža na igrah! Zakaj sploh tekmujemo, če je šport pri nas umrl - Ekipa"
         ],
-        "youtube.com": [
-          "Lincoln Heater Core Replacement - YouTube"
+        "galvestonislandbrewing.com": [
+          "EVENTS | Galveston Island Brewing",
+          "OUR BREWS | Galveston Island Brewing",
+          "TAP ROOM | Galveston Island Brewing"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-11-06T20:25:58+01:00",
+      "last_learning_run": "2026-11-07T06:58:54+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -282,11 +284,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 177042,
-          "last_seen": "2026-11-06T20:25:58+01:00",
-          "last_title": "Video: Luka Simonič iz SDM: \"Če se mi ne ukvarjamo s politiko, se politika ukvarja z nami\" - Metroplay - Metropolitan.si",
-          "last_provider": "google-news-global",
-          "published": 526732,
+          "seen": 177056,
+          "last_seen": "2026-11-07T06:58:54+01:00",
+          "last_title": "Predsednik vlade Janša za ministra za ministra za digitalno preobrazbo predlaga Marka Borisa Andrijaniča - prava.si",
+          "last_provider": "google-news-si",
+          "published": 526792,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -388,7 +390,7 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 17,
+      "current_source_count": 14,
       "example_titles": {
         "news.google.com": [
           "Premier Janša ob obisku v JV Sloveniji: “Danes izpolnjujemo predvolilno obljubo, da ta del Slovenije ne bo pozabljen” - Nova24TV",
@@ -398,7 +400,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-11-06T20:26:08+01:00",
+      "last_learning_run": "2026-11-07T06:59:03+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -486,12 +488,12 @@
           "last_provider": "bing-web"
         },
         "news.google.com": {
-          "score": 2.537,
-          "seen": 203442,
-          "last_seen": "2026-11-06T20:26:08+01:00",
+          "score": 2.535,
+          "seen": 203456,
+          "last_seen": "2026-11-07T06:59:03+01:00",
           "last_title": "Slovenija preprečila pristanek izraelskega letala: tako se odziva Fraport - Info360",
           "last_provider": "google-news-global",
-          "published": 328262,
+          "published": 328278,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -586,7 +588,7 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 13,
+      "current_source_count": 14,
       "example_titles": {
         "news.google.com": [
           "(AKTUALNO) Še danes v prodaji 36. št. revije Demokracija: 30 let Demokracije, ki udejanja pravico vedeti več! Načrt za demografsko obnovo sl",
@@ -672,14 +674,6 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20261105-133904.json",
-      "category": "dediscina",
-      "errors": [
-        "viri_ne_podpirajo_slovenske_rubrike"
-      ],
-      "title": "Menu | jQuery UI"
-    },
-    {
       "file": "fallback-failed-20261105-141012.json",
       "category": "dediscina",
       "errors": [
@@ -760,6 +754,16 @@
       "title": "Med Bledom in Bohinjem je nastala 28-kilometrska kolesarska pot z razgledi, ki jemljejo dih - Bodi eko"
     },
     {
+      "file": "fallback-failed-20261106-215405.json",
+      "category": "gourmet",
+      "errors": [
+        "naslov_ni_v_rubriki",
+        "clanek_brez_slovenskega_konteksta",
+        "viri_ne_podpirajo_slovenske_rubrike"
+      ],
+      "title": "Amazon.com : smile.amazon"
+    },
+    {
       "file": "agent-state",
       "category": "gourmet",
       "errors": [
@@ -770,18 +774,18 @@
       "file": "agent-state",
       "category": "gourmet",
       "errors": [
-        "ponavljanje"
+        "naslov_ni_v_rubriki,clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike,besedilo_ni_v_slovenscini"
       ],
-      "slot": "2026-11-06|16:20|gore"
+      "slot": "2026-11-06|19:10|gourmet"
     }
   ],
   "failure_summary": {
-    "manjka_fotografija": 17,
-    "prekratek": 16,
-    "viri_ne_podpirajo_slovenske_rubrike": 3,
-    "naslov_ni_v_rubriki": 1,
-    "clanek_brez_slovenskega_konteksta": 1,
+    "manjka_fotografija": 16,
+    "prekratek": 15,
+    "viri_ne_podpirajo_slovenske_rubrike": 4,
+    "naslov_ni_v_rubriki": 2,
+    "clanek_brez_slovenskega_konteksta": 2,
     "fallback_no_fresh_evidence": 1,
-    "ponavljanje": 1
+    "naslov_ni_v_rubriki,clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike,besedilo_ni_v_slovenscini": 1
   }
 }
