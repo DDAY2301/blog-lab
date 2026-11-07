@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-07T07:10:00+01:00",
+  "updatedAt": "2026-11-07T07:04:42+01:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -1372,6 +1372,25 @@
       "description": "The premiere of Euripides’ The Troyan Women begins on MGL’s Small Stage at 20:00. It is performed in Slovenian; confirm current ticket availability and price with MGL."
     },
     {
+      "title": "BACKSTAGE 25 LET @ Gala hala",
+      "url": "https://www.galahala.com/",
+      "source": "Gala Hala",
+      "type": "Koncert · Metelkova",
+      "place": "Gala Hala · AKC Metelkova",
+      "startAt": "2026-11-21T20:00:00+01:00",
+      "endAt": null,
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.galahala.com/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-07T07:04:42+01:00",
+      "description": "BACKSTAGE 25 LET @ Gala hala is listed by Gala Hala. Check the official event page for price, language and accessibility details.",
+      "id": "event-65-backstage-25-let-gala-hala"
+    },
+    {
       "id": "candlelight-beatles-tribute-2026-11-21",
       "title": "Candlelight: Tribute to The Beatles",
       "url": "https://feverup.com/en/ljubljana-slovenija/candlelight",
@@ -1391,6 +1410,25 @@
       "status": "confirmed",
       "lastCheckedAt": "2026-11-07T07:10:00+01:00",
       "description": "A candlelit string tribute to The Beatles begins at 20:30 at Grand Hotel Union. The official seller lists tickets from €17.50."
+    },
+    {
+      "title": "Music Reactions Indoor Rave Ljubljana",
+      "url": "https://www.klub-k4.si/",
+      "source": "Klub K4",
+      "type": "Club · elektronika",
+      "place": "Klub K4 · Ljubljana",
+      "startAt": "2026-11-21T23:00:00+01:00",
+      "endAt": null,
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.klub-k4.si/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-07T07:04:42+01:00",
+      "description": "Music Reactions Indoor Rave Ljubljana is listed by Klub K4. Check the official event page for price, language and accessibility details.",
+      "id": "event-67-music-reactions-indoor-rave-ljubljana"
     }
   ]
 }
