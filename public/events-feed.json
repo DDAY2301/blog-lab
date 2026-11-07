@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-06T22:35:36+01:00",
+  "updatedAt": "2026-11-07T07:10:00+01:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -115,212 +115,6 @@
       "description": "The month-long culinary festival begins today across Ljubljana, with tastings, menus, workshops and live events announced separately. Prices, languages and accessibility vary by participating venue."
     },
     {
-      "id": "zofka-kveder-fanica-obid-cankarjev-dom-2026-11-06",
-      "title": "Pioneers of Rebellion: Zofka Kveder and Fanica Obid – Mirjam",
-      "url": "https://cd-cc.si/kultura/literatura-in-humanistika/pionirki-upornistva-zofka-kveder-in-fanica-obid-mirjam",
-      "source": "Cankarjev dom",
-      "type": "Literature · public conversation",
-      "place": "Alma Karlin Hall · Cankarjev dom",
-      "startAt": "2026-11-06T19:00:00+01:00",
-      "endAt": null,
-      "price": "Free ticket required",
-      "languages": [
-        "Slovenian"
-      ],
-      "touristFriendly": false,
-      "familyFriendly": false,
-      "accessibility": "Contact Cankarjev dom for wheelchair seating and event-specific assistance.",
-      "ticketUrl": "https://cd-cc.si/kultura/literatura-in-humanistika/pionirki-upornistva-zofka-kveder-in-fanica-obid-mirjam",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-06T07:00:00+01:00",
-      "description": "A public conversation about writers and activists Zofka Kveder and Fanica Obid – Mirjam begins at 19:00. Admission is free, but visitors must obtain a free ticket; the discussion is in Slovenian."
-    },
-    {
-      "id": "equinox-opera-2026-11-06",
-      "title": "Equinox",
-      "url": "https://www.opera.si/en/programme/what-s-on",
-      "source": "SNG Opera and Ballet Ljubljana",
-      "type": "Opera",
-      "place": "SNG Opera and Ballet Ljubljana",
-      "startAt": "2026-11-06T19:30:00+01:00",
-      "endAt": null,
-      "price": "€19–€65 plus €1 processing fee online",
-      "languages": [
-        "Slovenian"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": null,
-      "ticketUrl": "https://opera.mojekarte.si/en/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-06T07:00:00+01:00",
-      "description": "Marjan Kozina’s four-act opera Equinox begins at 19:30 in Slovenian. Current authorised ticket prices range from €19 to €65, with a stated €1 online processing fee per ticket."
-    },
-    {
-      "id": "fkk-2-virtuozno-cankarjev-dom-2026-11-06",
-      "title": "FKK 2: Virtuoso",
-      "url": "https://www.cd-cc.si/kultura/glasba/fkk-2-virtuozno",
-      "source": "Cankarjev dom",
-      "type": "Concert · classical",
-      "place": "Gallus Hall · Cankarjev dom",
-      "startAt": "2026-11-06T19:30:00+01:00",
-      "endAt": "2026-11-06T21:15:00+01:00",
-      "price": "€9 / €21 / €34 / €42; reduced €5 / €17 / €27 / €34",
-      "languages": [
-        "Instrumental music"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": true,
-      "accessibility": "Contact Cankarjev dom when booking wheelchair spaces or other assistance.",
-      "ticketUrl": "https://www.cd-cc.si/kultura/glasba/fkk-2-virtuozno",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-06T07:00:00+01:00",
-      "description": "Marie-Ange Nguci conducts and performs with the Slovenian Philharmonic Orchestra in Prokofiev, Mozart and Shostakovich at 19:30. The concert lasts about 1 hour 45 minutes including an interval."
-    },
-    {
-      "id": "liamere-ljubljana-castle-2026-11-06",
-      "title": "Liamere",
-      "url": "https://www.ljubljanskigrad.si/en/castle-events/liamere/",
-      "source": "Ljubljana Castle",
-      "type": "Concert · garage and trip-hop",
-      "place": "Rock Hall · Ljubljana Castle",
-      "startAt": "2026-11-06T20:00:00+01:00",
-      "endAt": "2026-11-06T23:00:00+01:00",
-      "price": "€11 including return funicular",
-      "languages": [
-        "Music-led"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": "Contact Ljubljana Castle before booking for step-free access arrangements to the Rock Hall.",
-      "ticketUrl": "https://www.ljubljanskigrad.si/en/castle-events/liamere/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-06T07:00:00+01:00",
-      "description": "Liamere perform at the Castle Jazz Club at 20:00; doors open at 19:00. The €11 ticket includes a return funicular journey, and seating is limited."
-    },
-    {
-      "id": "magdalena-reiter-untitled-2026-11-06-2000",
-      "title": "Magdalena Reiter: Untitled",
-      "url": "https://www.bunker.si/events/magdalena-reiter-brez-naslova-2/",
-      "source": "Bunker / Stara mestna elektrarna",
-      "type": "Dance · choreographic installation",
-      "place": "Stara mestna elektrarna · Ljubljana",
-      "startAt": "2026-11-06T20:00:00+01:00",
-      "endAt": null,
-      "price": "€10 / €7 reduced",
-      "languages": [
-        "Movement-led"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": null,
-      "ticketUrl": "https://www.bunker.si/events/magdalena-reiter-brez-naslova-2/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-06T07:00:00+01:00",
-      "description": "Magdalena Reiter’s choreographic installation combines dance and audiovisual media at Stara mestna elektrarna. Tickets cost €10 or €7 reduced; check the organiser for accessibility arrangements."
-    },
-    {
-      "id": "man-overboard-mgl-2026-11-06",
-      "title": "Man Overboard",
-      "url": "https://www.mgl.si/en/schedule/",
-      "source": "MGL",
-      "type": "Theatre · documentary solo",
-      "place": "MGL Small Stage · Ljubljana",
-      "startAt": "2026-11-06T20:00:00+01:00",
-      "endAt": null,
-      "price": "€19 / €15.20 pensioners / €13.30 students",
-      "languages": [
-        "Slovenian"
-      ],
-      "touristFriendly": false,
-      "familyFriendly": false,
-      "accessibility": null,
-      "ticketUrl": "https://www.mgl.si/en/schedule/",
-      "status": "sold_out",
-      "lastCheckedAt": "2026-11-06T07:00:00+01:00",
-      "description": "Man Overboard begins on MGL’s Small Stage at 20:00 in Slovenian. MGL marks this performance as sold out; listed prices are €19, €15.20 for pensioners and €13.30 for students."
-    },
-    {
-      "id": "sment-2-kino-siska-2026-11-06",
-      "title": "šMENT #2: Svemirko, corto.alto, Nejc Pipp & Co., Zina band and IDZ",
-      "url": "https://www.kinosiska.si/en/dogodek/",
-      "source": "Kino Šiška",
-      "type": "Concert · showcase",
-      "place": "Kino Šiška · Ljubljana",
-      "startAt": "2026-11-06T20:00:00+01:00",
-      "endAt": null,
-      "price": "€23 presale / €26 walk-up",
-      "languages": [
-        "Music-led"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": "Kino Šiška publishes general venue accessibility information; contact the venue for event-specific arrangements.",
-      "ticketUrl": "https://www.kinosiska.si/en/dogodek/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-06T07:00:00+01:00",
-      "description": "The second šMENT showcase presents Svemirko, corto.alto, Nejc Pipp & Co., Zina band and IDZ from 20:00. Regular presale costs €23 and the walk-up price is €26; earlier discounted allocations are sold out."
-    },
-    {
-      "id": "ko-pridem-ven-cankarjev-dom-2026-11-06",
-      "title": "When I Get Out",
-      "url": "https://www.cd-cc.si/kultura/film/ko-pridem-ven",
-      "source": "Cankarjev dom",
-      "type": "Film · documentary",
-      "place": "Kosovel Hall · Cankarjev dom",
-      "startAt": "2026-11-06T20:00:00+01:00",
-      "endAt": "2026-11-06T21:46:00+01:00",
-      "price": "€6.50 / €5.50 reduced",
-      "languages": [
-        "Slovenian"
-      ],
-      "touristFriendly": false,
-      "familyFriendly": false,
-      "accessibility": "Contact Cankarjev dom for wheelchair seating and event-specific assistance.",
-      "ticketUrl": "https://www.cd-cc.si/kultura/film/ko-pridem-ven",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-06T07:00:00+01:00",
-      "description": "Metod Pevec’s 106-minute documentary about psychodrama work in Slovenia’s central prison screens at 20:00. Tickets cost €6.50 or €5.50 reduced; no English subtitles are confirmed on the official page."
-    },
-    {
-      "title": "STELLAR x K4: Janeret & Twineffect",
-      "url": "https://www.klub-k4.si/",
-      "source": "Klub K4",
-      "type": "Club · elektronika",
-      "place": "Klub K4 · Ljubljana",
-      "startAt": "2026-11-06T22:00:00+01:00",
-      "endAt": null,
-      "price": null,
-      "languages": [],
-      "touristFriendly": null,
-      "familyFriendly": null,
-      "accessibility": null,
-      "ticketUrl": "https://www.klub-k4.si/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-06T07:00:00+01:00",
-      "description": "STELLAR x K4: Janeret & Twineffect is listed by Klub K4. Check the official event page for price, language and accessibility details.",
-      "id": "event-18-stellar-x-k4-janeret-twineffect"
-    },
-    {
-      "title": "WAVE RIDERS!",
-      "url": "https://www.galahala.com/en/program/wave-riders-27/34774/",
-      "source": "Gala Hala",
-      "type": "Club night · eclectic electronic",
-      "place": "Gala Hala · AKC Metelkova",
-      "startAt": "2026-11-06T22:00:00+01:00",
-      "endAt": null,
-      "id": "event-33-wave-riders",
-      "price": "€5 until 23:00 / €8 afterwards",
-      "languages": [],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": null,
-      "ticketUrl": "https://www.galahala.com/en/program/wave-riders-27/34774/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-06T07:00:00+01:00",
-      "description": "Torulsson and Skinar host an eclectic electronic club night from 22:00. Admission costs €5 until 23:00 and €8 afterwards."
-    },
-    {
       "id": "equinox-opera-2026-11-07",
       "title": "Equinox",
       "url": "https://www.opera.si/en/programme/what-s-on",
@@ -338,12 +132,12 @@
       "accessibility": null,
       "ticketUrl": "https://opera.mojekarte.si/en/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-11-06T07:00:00+01:00",
+      "lastCheckedAt": "2026-11-07T07:10:00+01:00",
       "description": "Marjan Kozina’s four-act opera Equinox begins at 19:30 in Slovenian. Current authorised ticket prices range from €19 to €65, with a stated €1 online processing fee per ticket."
     },
     {
       "id": "forum-nove-glasbe-trk-casovnosti-2026-11-07",
-      "title": "Forum of New Music 2026: Collision of Temporalities",
+      "title": "New Music Forum 2026: Clash of Temporalities",
       "url": "https://www.cd-cc.si/kultura/glasba/forum-nove-glasbe-2026-koncert-1-trk-casovnosti",
       "source": "Cankarjev dom",
       "type": "Concert · contemporary music",
@@ -360,29 +154,29 @@
       "accessibility": "Contact Cankarjev dom for wheelchair seating and event-specific assistance.",
       "ticketUrl": "https://www.cd-cc.si/kultura/glasba/forum-nove-glasbe-2026-koncert-1-trk-casovnosti",
       "status": "confirmed",
-      "lastCheckedAt": "2026-11-06T07:00:00+01:00",
-      "description": "A pre-concert talk begins at 19:30 and the contemporary-music concert at 20:00. Tickets cost €10 or €8 reduced and include the accompanying programme."
+      "lastCheckedAt": "2026-11-07T07:10:00+01:00",
+      "description": "An accompanying concert begins at 18:30, a pre-concert talk at 19:30 and the main contemporary-music concert at 20:00. Tickets cost €10 or €8 reduced."
     },
     {
       "id": "nate-smith-kino-siska-2026-11-07",
       "title": "Nate Smith feat. CARRTOONS, J3PO and Hailey Niswanger",
-      "url": "https://www.kinosiska.si/en/dogodek/",
+      "url": "https://www.kinosiska.si/en/dogodek/nate-smith/",
       "source": "Kino Šiška",
       "type": "Concert · jazz and groove",
       "place": "Kino Šiška · Ljubljana",
       "startAt": "2026-11-07T20:00:00+01:00",
       "endAt": null,
-      "price": null,
+      "price": "€30 presale / €35 walk-up / €22.50 reduced / €24 groups of 5+",
       "languages": [
         "Music-led"
       ],
       "touristFriendly": true,
       "familyFriendly": false,
       "accessibility": "Kino Šiška publishes general venue accessibility information; contact the venue for event-specific arrangements.",
-      "ticketUrl": "https://www.kinosiska.si/en/dogodek/",
+      "ticketUrl": "https://www.kinosiska.si/en/dogodek/nate-smith/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-11-06T07:00:00+01:00",
-      "description": "Nate Smith performs with CARRTOONS, J3PO and Hailey Niswanger at 20:00. Check Kino Šiška for current ticket price and availability."
+      "lastCheckedAt": "2026-11-07T07:10:00+01:00",
+      "description": "Nate Smith performs with CARRTOONS, J3PO and Hailey Niswanger in Katedrala Hall at 20:00. Tickets cost €30 in presale, €35 at the door, €22.50 reduced or €24 per person for groups of five or more."
     },
     {
       "id": "tartini-ljubljana-busoni-2026-11-07",
@@ -402,7 +196,7 @@
       "accessibility": null,
       "ticketUrl": null,
       "status": "confirmed",
-      "lastCheckedAt": "2026-11-06T07:00:00+01:00",
+      "lastCheckedAt": "2026-11-07T07:10:00+01:00",
       "description": "Nuova Orchestra Ferruccio Busoni performs in the ZRC SAZU atrium from 20:00 to 22:00. Admission is free."
     },
     {
@@ -424,34 +218,55 @@
       "accessibility": null,
       "ticketUrl": "https://www.galahala.com/program/travnik-5-let-albuma-pubeci-ne-jocejo-gala-hala/34778/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-11-06T07:00:00+01:00",
+      "lastCheckedAt": "2026-11-07T07:10:00+01:00",
       "description": ".travnik marks the fifth anniversary of Pubeci ne jočejo with PTČ and Z☆JA from 21:00. Tickets cost €13 in advance or €15 on the day."
+    },
+    {
+      "id": "sunday-flea-market-2026-11-08",
+      "title": "Sunday Flea Market",
+      "url": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/antique-flea-market",
+      "source": "Visit Ljubljana",
+      "type": "Market · antiques and vintage",
+      "place": "Breg · Ljubljana",
+      "startAt": "2026-11-08T08:00:00+01:00",
+      "endAt": "2026-11-08T15:00:00+01:00",
+      "price": "Free",
+      "languages": [
+        "Language-light"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": true,
+      "accessibility": "Outdoor riverside market on a paved street; individual stalls may vary.",
+      "ticketUrl": null,
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-07T07:10:00+01:00",
+      "description": "The free antique and vintage market runs on Breg from 08:00 to 15:00. In rain or bad weather, exhibitors may leave early."
     },
     {
       "id": "candlelight-queen-vs-abba-2026-11-08",
       "title": "Candlelight: Queen vs. ABBA",
-      "url": "https://feverup.com/en/ljubljana-slovenija/candlelight",
+      "url": "https://feverup.com/m/665806/en",
       "source": "Fever",
       "type": "Concert · candlelight",
       "place": "Academy of Music, University of Ljubljana",
       "startAt": "2026-11-08T18:00:00+01:00",
       "endAt": null,
-      "price": "From €37",
+      "price": "From €38.50",
       "languages": [
         "Music-led"
       ],
       "touristFriendly": true,
-      "familyFriendly": null,
+      "familyFriendly": true,
       "accessibility": null,
-      "ticketUrl": "https://feverup.com/en/ljubljana-slovenija/candlelight",
+      "ticketUrl": "https://feverup.com/m/665806/en",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-25T07:22:00+01:00",
-      "description": "A Candlelight string programme contrasting Queen and ABBA starts at 18:00. The official seller lists tickets from €37."
+      "lastCheckedAt": "2026-11-07T07:10:00+01:00",
+      "description": "The 60-minute Queen-versus-ABBA programme by the 4Strings Quartet starts at 18:00. The organiser lists admission for ages 8+ and tickets from €38.50."
     },
     {
       "id": "candlelight-ed-sheeran-coldplay-2026-11-08",
       "title": "Candlelight: Ed Sheeran Meets Coldplay",
-      "url": "https://feverup.com/en/ljubljana-slovenija/candlelight",
+      "url": "https://feverup.com/m/789270",
       "source": "Fever",
       "type": "Concert · candlelight",
       "place": "Academy of Music, University of Ljubljana",
@@ -462,12 +277,12 @@
         "Music-led"
       ],
       "touristFriendly": true,
-      "familyFriendly": null,
+      "familyFriendly": true,
       "accessibility": null,
-      "ticketUrl": "https://feverup.com/en/ljubljana-slovenija/candlelight",
+      "ticketUrl": "https://feverup.com/m/789270",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-25T07:22:00+01:00",
-      "description": "A Candlelight tribute pairing the music of Ed Sheeran and Coldplay starts at 20:30. The official seller lists tickets from €32."
+      "lastCheckedAt": "2026-11-07T07:10:00+01:00",
+      "description": "The 4Strings Quartet performs a 60-minute tribute to Ed Sheeran and Coldplay at 20:30. Admission is for ages 8+ and tickets currently start at €32."
     },
     {
       "id": "concert-academy-postproduction-accounting-2026-11-09",
@@ -1382,6 +1197,200 @@
       "lastCheckedAt": "2026-11-06T07:06:21+01:00",
       "description": "GUILTY PLEASURES w/ KUKLA & FILADENDRON @ Gala Hala is listed by Gala Hala. Check the official event page for price, language and accessibility details.",
       "id": "event-66-guilty-pleasures-w-kukla-filadendron-gala-hala"
+    },
+    {
+      "id": "dadadisko-kino-siska-2026-11-21",
+      "title": "DadaDisko: Family RAVE",
+      "url": "https://www.kinosiska.si/en/dogodek/dadadisko-druzinski-rave/",
+      "source": "Kino Šiška",
+      "type": "Family dance · workshops",
+      "place": "Katedrala Hall · Kino Šiška",
+      "startAt": "2026-11-21T10:00:00+01:00",
+      "endAt": "2026-11-21T13:00:00+01:00",
+      "price": "€13 per person / €36 family ticket for 3–4; free under age 2 and for disabled visitors",
+      "languages": [
+        "Music-led",
+        "Slovenian workshop guidance"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": true,
+      "accessibility": "Kino Šiška provides step-free access; disabled visitors are admitted free under the event policy.",
+      "ticketUrl": "https://www.kinosiska.si/en/dogodek/dadadisko-druzinski-rave/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-07T07:10:00+01:00",
+      "description": "A family rave with dance and workshops runs from 10:00 to 13:00. Tickets cost €13 per person or €36 for a family of three or four; children under two and disabled visitors enter free."
+    },
+    {
+      "id": "candlelight-coldplay-imagine-dragons-2026-11-21",
+      "title": "Candlelight: Coldplay and Imagine Dragons",
+      "url": "https://feverup.com/en/ljubljana-slovenija/candlelight",
+      "source": "Fever",
+      "type": "Concert · candlelight",
+      "place": "Grand Hotel Union Eurostars · Ljubljana",
+      "startAt": "2026-11-21T18:00:00+01:00",
+      "endAt": null,
+      "price": "From €19",
+      "languages": [
+        "Music-led"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": true,
+      "accessibility": null,
+      "ticketUrl": "https://feverup.com/en/ljubljana-slovenija/candlelight",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-07T07:10:00+01:00",
+      "description": "A Candlelight string tribute to Coldplay and Imagine Dragons starts at 18:00 at Grand Hotel Union. The official seller lists tickets from €19."
+    },
+    {
+      "id": "prifarci-friends-cankarjev-dom-2026-11-21",
+      "title": "Prifarci with Friends",
+      "url": "https://vstopnice.cd-cc.si/si/koncert-prifarcev-s-prijatelji/vstopnice-226021.html",
+      "source": "Cankarjev dom",
+      "type": "Concert · folk",
+      "place": "Gallus Hall · Cankarjev dom",
+      "startAt": "2026-11-21T19:00:00+01:00",
+      "endAt": null,
+      "price": null,
+      "languages": [
+        "Music-led",
+        "Slovenian stage remarks likely"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": true,
+      "accessibility": "Contact Cankarjev dom when booking wheelchair spaces or other assistance.",
+      "ticketUrl": "https://vstopnice.cd-cc.si/si/koncert-prifarcev-s-prijatelji/vstopnice-226021.html",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-07T07:10:00+01:00",
+      "description": "Prifarci perform with guest musicians in Gallus Hall at 19:00. Tickets are on sale; the official listing does not expose one verified price, so check the seller before booking."
+    },
+    {
+      "id": "romantic-souls-mgl-2026-11-21",
+      "title": "Romantic Souls",
+      "url": "https://www.mgl.si/en/schedule/",
+      "source": "MGL",
+      "type": "Theatre · drama",
+      "place": "MGL Main Stage · Ljubljana",
+      "startAt": "2026-11-21T19:30:00+01:00",
+      "endAt": null,
+      "price": "€18–€22; reduced €12.50–€17.60",
+      "languages": [
+        "Slovenian"
+      ],
+      "touristFriendly": false,
+      "familyFriendly": false,
+      "accessibility": "Contact MGL for performance-specific step-free seating arrangements.",
+      "ticketUrl": "https://www.mgl.si/en/schedule/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-07T07:10:00+01:00",
+      "description": "MGL stages Ivan Cankar’s Romantic Souls on the Main Stage at 19:30. The performance is in Slovenian; standard tickets cost €18–€22 with student and pensioner reductions."
+    },
+    {
+      "id": "backstage-25-gala-hala-2026-11-21",
+      "title": "Backstage: 25 Years",
+      "url": "https://www.galahala.com/en/?gala_event_day=2026-11-21&gala_event_month=2026-11",
+      "source": "Gala Hala",
+      "type": "Concert · punk rock",
+      "place": "Gala Hala · AKC Metelkova",
+      "startAt": "2026-11-21T20:00:00+01:00",
+      "endAt": null,
+      "price": "€15 presale / €20 walk-up",
+      "languages": [
+        "Music-led",
+        "Slovenian stage remarks likely"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": null,
+      "ticketUrl": "https://www.galahala.com/en/?gala_event_day=2026-11-21&gala_event_month=2026-11",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-07T07:10:00+01:00",
+      "description": "Slovenian punk-rock band Backstage celebrate their 25th anniversary at 20:00. Admission costs €15 in presale or €20 on the day."
+    },
+    {
+      "id": "sad-sam-ppp-bunker-2026-11-21",
+      "title": "Matija Ferlin: SAD SAM PPP",
+      "url": "https://www.bunker.si/en/events/matija-ferlin-sad-sam-ppp-2/?occurrence=2026-11-21",
+      "source": "Bunker / Stara mestna elektrarna",
+      "type": "Dance performance · Drugajanje",
+      "place": "Stara mestna elektrarna · Ljubljana",
+      "startAt": "2026-11-21T20:00:00+01:00",
+      "endAt": "2026-11-21T21:00:00+01:00",
+      "price": "€12 / €8 reduced; free for secondary-school students",
+      "languages": [
+        "Dance-led",
+        "Spoken content may be in regional languages"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": "Contact Bunker for event-specific step-free access and seating arrangements.",
+      "ticketUrl": "https://www.bunker.si/events/matija-ferlin-sad-sam-ppp/?occurrence=2026-11-21&time=1795291200",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-07T07:10:00+01:00",
+      "description": "Matija Ferlin’s one-hour dance performance reflects on the final 48 hours of Pier Paolo Pasolini’s life. Tickets cost €12 or €8 reduced, while secondary-school students receive free admission."
+    },
+    {
+      "id": "rave-on-endemit-kino-siska-2026-11-21",
+      "title": "RAVE ON x endemit",
+      "url": "https://www.kinosiska.si/en/dogodek/rave-on-x-endemit/",
+      "source": "Kino Šiška",
+      "type": "Film screening · DJ sets",
+      "place": "Katedrala Hall · Kino Šiška",
+      "startAt": "2026-11-21T20:00:00+01:00",
+      "endAt": null,
+      "price": "€35 presale / €40 walk-up",
+      "languages": [
+        "Music-led",
+        "Film language and subtitles not specified"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": "Kino Šiška provides step-free access; contact the venue for screening-specific assistance.",
+      "ticketUrl": "https://www.kinosiska.si/en/dogodek/rave-on-x-endemit/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-07T07:10:00+01:00",
+      "description": "RAVE ON combines a film screening with DJ sets in Katedrala Hall at 20:00. The current presale price is €35 and walk-up admission is €40."
+    },
+    {
+      "id": "troyan-women-mgl-2026-11-21",
+      "title": "The Troyan Women",
+      "url": "https://www.mgl.si/en/shows/the-troyan-women/",
+      "source": "MGL",
+      "type": "Theatre · tragedy · premiere",
+      "place": "MGL Small Stage · Ljubljana",
+      "startAt": "2026-11-21T20:00:00+01:00",
+      "endAt": null,
+      "price": null,
+      "languages": [
+        "Slovenian"
+      ],
+      "touristFriendly": false,
+      "familyFriendly": false,
+      "accessibility": "Contact MGL for performance-specific step-free seating arrangements.",
+      "ticketUrl": "https://www.mgl.si/en/schedule/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-07T07:10:00+01:00",
+      "description": "The premiere of Euripides’ The Troyan Women begins on MGL’s Small Stage at 20:00. It is performed in Slovenian; confirm current ticket availability and price with MGL."
+    },
+    {
+      "id": "candlelight-beatles-tribute-2026-11-21",
+      "title": "Candlelight: Tribute to The Beatles",
+      "url": "https://feverup.com/en/ljubljana-slovenija/candlelight",
+      "source": "Fever",
+      "type": "Concert · candlelight",
+      "place": "Grand Hotel Union Eurostars · Ljubljana",
+      "startAt": "2026-11-21T20:30:00+01:00",
+      "endAt": null,
+      "price": "From €17.50",
+      "languages": [
+        "Music-led"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": true,
+      "accessibility": null,
+      "ticketUrl": "https://feverup.com/en/ljubljana-slovenija/candlelight",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-07T07:10:00+01:00",
+      "description": "A candlelit string tribute to The Beatles begins at 20:30 at Grand Hotel Union. The official seller lists tickets from €17.50."
     }
   ]
 }
