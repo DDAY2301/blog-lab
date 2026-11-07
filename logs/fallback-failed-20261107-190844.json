@@ -1,0 +1,21 @@
+{
+  "category": "dediscina",
+  "errors": [
+    "clanek_brez_slovenskega_konteksta",
+    "viri_ne_podpirajo_slovenske_rubrike"
+  ],
+  "article": {
+    "title": "Tahoe Dashboard Not Working? Here’s the Full Diagnostic Guide"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "lead_url": "https://carinterior.alibaba.com/tips/tahoe-dashboard-not-working",
+      "title": "Tahoe Dashboard Not Working? Here’s the Full Diagnostic Guide",
+      "errors": [
+        "clanek_brez_slovenskega_konteksta",
+        "viri_ne_podpirajo_slovenske_rubrike"
+      ]
+    }
+  ]
+}
