@@ -2,28 +2,18 @@
   "last_success": "2026-11-05T13:09:57+01:00",
   "last_failure": "2026-09-21T20:56:52+02:00",
   "consecutive_failures": 0,
-  "posts_date": "2026-11-06",
+  "posts_date": "2026-11-07",
   "posts_today": 0,
   "last_output": "india-squad-for-world-cup-2019-india-players-list-in-cricket-world-cup-2019-times-of-india-e7dcfa6d",
   "last_error": "fallback_no_fresh_evidence",
   "agent_version": "3.0.0-learning-guarded-fallback",
-  "current_category": "gourmet",
+  "current_category": "kolesarstvo",
   "scheduled_posts_today": 0,
   "manual_posts_today": 0,
   "writer_mode": "workers_ai",
   "scheduled_slots_done": [],
-  "scheduled_slots_deferred": [
-    "2026-11-06|07:35|kolesarstvo",
-    "2026-11-06|10:45|dediscina",
-    "2026-11-06|13:30|sezonsko",
-    "2026-11-06|16:20|gore",
-    "2026-11-06|19:10|gourmet"
-  ],
-  "last_editorial_hold": {
-    "slot": "2026-11-06|19:10|gourmet",
-    "reason": "naslov_ni_v_rubriki,clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike,besedilo_ni_v_slovenscini",
-    "at": "2026-11-06T22:54:40+01:00"
-  },
+  "scheduled_slots_deferred": [],
+  "last_editorial_hold": null,
   "publisher_guardian_last_run": "2026-11-06T19:31:40+01:00",
   "publisher_guardian_last_action": {
     "category": "kolesarstvo",
