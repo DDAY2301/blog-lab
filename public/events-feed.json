@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-07T07:04:42+01:00",
+  "updatedAt": "2026-11-07T07:14:00+01:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -1285,28 +1285,6 @@
       "description": "MGL stages Ivan Cankar’s Romantic Souls on the Main Stage at 19:30. The performance is in Slovenian; standard tickets cost €18–€22 with student and pensioner reductions."
     },
     {
-      "id": "backstage-25-gala-hala-2026-11-21",
-      "title": "Backstage: 25 Years",
-      "url": "https://www.galahala.com/en/?gala_event_day=2026-11-21&gala_event_month=2026-11",
-      "source": "Gala Hala",
-      "type": "Concert · punk rock",
-      "place": "Gala Hala · AKC Metelkova",
-      "startAt": "2026-11-21T20:00:00+01:00",
-      "endAt": null,
-      "price": "€15 presale / €20 walk-up",
-      "languages": [
-        "Music-led",
-        "Slovenian stage remarks likely"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": null,
-      "ticketUrl": "https://www.galahala.com/en/?gala_event_day=2026-11-21&gala_event_month=2026-11",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-07T07:10:00+01:00",
-      "description": "Slovenian punk-rock band Backstage celebrate their 25th anniversary at 20:00. Admission costs €15 in presale or €20 on the day."
-    },
-    {
       "id": "sad-sam-ppp-bunker-2026-11-21",
       "title": "Matija Ferlin: SAD SAM PPP",
       "url": "https://www.bunker.si/en/events/matija-ferlin-sad-sam-ppp-2/?occurrence=2026-11-21",
@@ -1373,21 +1351,24 @@
     },
     {
       "title": "BACKSTAGE 25 LET @ Gala hala",
-      "url": "https://www.galahala.com/",
+      "url": "https://www.galahala.com/en/?gala_event_day=2026-11-21&gala_event_month=2026-11",
       "source": "Gala Hala",
-      "type": "Koncert · Metelkova",
+      "type": "Concert · punk rock",
       "place": "Gala Hala · AKC Metelkova",
       "startAt": "2026-11-21T20:00:00+01:00",
       "endAt": null,
-      "price": null,
-      "languages": [],
-      "touristFriendly": null,
-      "familyFriendly": null,
+      "price": "€15 presale / €20 walk-up",
+      "languages": [
+        "Music-led",
+        "Slovenian stage remarks likely"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": false,
       "accessibility": null,
-      "ticketUrl": "https://www.galahala.com/",
+      "ticketUrl": "https://www.galahala.com/en/?gala_event_day=2026-11-21&gala_event_month=2026-11",
       "status": "confirmed",
-      "lastCheckedAt": "2026-11-07T07:04:42+01:00",
-      "description": "BACKSTAGE 25 LET @ Gala hala is listed by Gala Hala. Check the official event page for price, language and accessibility details.",
+      "lastCheckedAt": "2026-11-07T07:10:00+01:00",
+      "description": "Slovenian punk-rock band Backstage celebrate their 25th anniversary at 20:00. Admission costs €15 in presale or €20 on the day.",
       "id": "event-65-backstage-25-let-gala-hala"
     },
     {
