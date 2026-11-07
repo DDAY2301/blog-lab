@@ -1,0 +1,40 @@
+{
+  "category": "kolesarstvo",
+  "errors": [
+    "clanek_brez_slovenskega_konteksta",
+    "viri_ne_podpirajo_slovenske_rubrike",
+    "besedilo_ni_v_slovenscini"
+  ],
+  "article": {
+    "title": "Amazon.com: Bikes - Cycling: Sports & Outdoors: Mountain Bikes ...",
+    "excerpt": ".us Done \",\"header\":\"Choose your location\"}' data-action=\"a-modal\"> Delivering to Boydton 23917 Update location All Select the department you want to search in All Departments Alexa Skills Amazon Autos Amazon Devices Ama",
+    "seoDescription": ".us Done \",\"header\":\"Choose your location\"}' data-action=\"a-modal\"> Delivering to Boydton 23917 Update location All Select the department you want to searc",
+    "content": "Pregled za rubriko kolesarstvo povzema trenutno razpoložljive informacije iz spodaj navedenih virov. Besedilo je pripravljeno brez dodajanja nepodprtih dejstev.\n\n## Amazon.com: Bikes - Cycling: Sports & Outdoors: Mountain Bikes ...\n.us Done \",\"header\":\"Choose your location\"}' data-action=\"a-modal\"> Delivering to Boydton 23917 Update location All Select the department you want to search in All Departments Alexa Skills Amazon Autos Amazon Devices Amazon Global Store Amazon Haul Amazon One Medical Amazon Pharmacy Amazon Resale Appliances Apps & Games Arts, Crafts & Sewing Audible Books & Originals Automotive Parts & Accessories Baby Beauty & Personal Care Books CDs & Vinyl Cell Phones & Accessories Clothing, Shoes & Jewelry Women's Clothing, Shoes & Jewelry Men's Clothing, Shoes & Jewelry Girl's Clothing, Shoes & Jewelry Boy's Clothing, Shoes & Jewelry Baby Clothing, Shoes & Jewelry Collectibles & Fine Art Computers Credit and Payment Cards Digital Music Electronics Garden & Outdoor Gift Cards Grocery & Gourmet Food Handmade Health, Household & Baby Care Home & Business Services Home & Kitchen Industrial & Scientific Just for Prime Kindle Store Luggage & Travel Gear Luxury Stores Magazine Subscriptions Movies & TV Musical Instruments Office Products Pet Supplies Premium Beauty Prime Video Smart Home Software Sports & Outdoors Subscribe & Save Subscription Boxes Tools & Home Improvement Toys & Games Under $10 Video Games Search Amazon EN Hello, sign in Account & Lists Returns & Orders 0 Cart All Custom Products Toys & Games Home Improvement Pet Supplies Gift Cards Prime Amazon Home Medical Care Today's Deals Coupons Pharmacy Audible Beauty & Personal Care Music Registry Fashion New Releases Automotive Handmade Video Games Baby Amazon Haul Smart Home Subscribe & Save Gift Shop Best Sellers Works with Alexa Sports & Outdoors Kindle Books Luxury \"}}}},\"cartTimeout\":{\"template\":{\"name\":\"flyoutError\",\"data\":{\"error\":{\"button\":{\"text\":\"Your Cart\",\"url\":\"/gp/cart/view.html?ref_=nav_err_cart_timeout\"},\"title\":\"Oops!\",\"paragraph\":\"Unable to retrieve your cart.\"}}}},\"primeTimeout\":{\"template\":{\"name\":\"flyoutError\",\"data\":{\"error\":{\"title\":\" \"}}}},\"ewcTimeout\":{\"template\":{\"name\":\"flyoutError\",\"data\":{\"error\":{\"button\":{\"text\":\"Your Cart\",\"url\":\"/gp/cart/view.html?ref_=nav_err_ewc_timeout\"},\"title\":\"Oops!\",\"paragraph\":\"There's a problem loading your cart right now.\"}}}},\"errorWishlist\":{\"template\":{\"name\":\"flyoutError\",\"data\":{\"error\":{\"button\":{\"text\":\"Your Wishlist\",\"url\":\"/gp/registry/wishlist/?ref_=nav_err_wishlist\"},\"title\":\"Oops!\",\"paragraph\":\"Unable to retrieve your wishlist\"}}}},\"emptyWishlist\":{\"template\":{\"name\":\"flyoutError\",\"data\":{\"error\":{\"button\":{\"text\":\"Your Wishlist\",\"url\":\"/gp/registry/wishlist/?ref_=nav_err_empty_wishlist\"},\"title\":\"Oops!\",\"paragraph\":\"Your list is empty\"}}}},\n\nVir: amazon.com — https://www.amazon.com/bikes/b?node=1265458011",
+    "category": "Kolesarstvo",
+    "tags": [
+      "kolesarstvo",
+      "Slovenija",
+      "amazon",
+      "bikes",
+      "cycling"
+    ],
+    "sources": [
+      {
+        "title": "Amazon.com: Bikes - Cycling: Sports & Outdoors: Mountain Bikes ...",
+        "url": "https://www.amazon.com/bikes/b?node=1265458011",
+        "source_name": "amazon.com"
+      }
+    ],
+    "fallback": false,
+    "gallery": [],
+    "heroImage": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/08_Slovenia_rural_landscape_-_bicycle_expedition_with_panniers.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "alt": "Three male cyclists wearing helmets during a summer bicycle tour in rural Slovenia near Luže.",
+      "caption": "Marek Ślusarczyk ( Tupungato ) Photo gallery · Wikimedia Commons · CC BY 3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:08_Slovenia_rural_landscape_-_bicycle_expedition_with_panniers.jpg"
+    },
+    "visualTemplate": "pulse",
+    "templateLabel": "Pulse",
+    "id": "amazon-com-bikes-cycling-sports-outdoors-mountain-bikes-258f8392"
+  }
+}

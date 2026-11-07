@@ -1,0 +1,21 @@
+{
+  "category": "kolesarstvo",
+  "errors": [
+    "clanek_brez_slovenskega_konteksta",
+    "viri_ne_podpirajo_slovenske_rubrike"
+  ],
+  "article": {
+    "title": "Amazon.com: Bikes - Cycling: Sports & Outdoors: Mountain Bikes ..."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "lead_url": "https://www.amazon.com/bikes/b?node=1265458011",
+      "title": "Amazon.com: Bikes - Cycling: Sports & Outdoors: Mountain Bikes ...",
+      "errors": [
+        "clanek_brez_slovenskega_konteksta",
+        "viri_ne_podpirajo_slovenske_rubrike"
+      ]
+    }
+  ]
+}
