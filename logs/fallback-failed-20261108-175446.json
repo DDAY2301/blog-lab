@@ -1,0 +1,27 @@
+{
+  "category": "gore",
+  "errors": [
+    "manjka_fotografija"
+  ],
+  "article": {
+    "title": "ŠPORTNI VIKEND LJUBLJANICA 2026 bo med 11. in 13. septembrom v središče Ljubljane pripeljal nočni tek, trail, pohodništvo, kolesarjenje in pestro družinsko športno dogajanje - 24ur"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "lead_url": "https://news.google.com/rss/articles/CBMitgJBVV95cUxQTlkwYlh3QWNaVUdkUlAyZjVPMUpCSURFbFY4Vzk4MlU3TnNuU0VVS3pxbllBVDJUZXRJWVl1STVydWZnbnFERlZhZlJ2b25xY0tNOVJ0aEs2cC03d0I1UURIRWdnRVRsVGlybFpkeFJQTGNMRWNXZFZJQ3Nxb2lyWVp2MzFSanR3YmxrQmlnQWVUMFZuM25TRXVqN09BTnBReFdKem5MZEFZMHJuakFJWTd2OFB1bERDR1JiWlRjMlBDQnRocGdhOVltdGtGYl9lY0hOaEhIWmxBZWo2NXY0M2s0N2g2cDdla1pZVGM2S3RHdzNrb212dWE1STFFWWRrV3Q5UHBuaHNMTU9MeHgzSWFQSVN3WEJ1N3dSQ0I3VGU1cWhaSEFEOURzT2t0MXRPMFViczhB?oc=5",
+      "title": "ŠPORTNI VIKEND LJUBLJANICA 2026 bo med 11. in 13. septembrom v središče Ljubljane pripeljal nočni tek, trail, pohodništvo, kolesarjenje in pestro družinsko športno dogajanje - 24ur",
+      "errors": [
+        "manjka_fotografija"
+      ]
+    },
+    {
+      "attempt": 2,
+      "lead_url": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxQNmYxRnN5YW5OTmpZdmxJR1lCV0tXcVBrZ0hEekU1NkJuRVQwbV80VmhLZTdLenJZNC0zaEI2R0s3c2VpYzUzdm9xVThTdTd5cEc1NnR0RG51eFZTaDAzc1NpOGhISnJaWjlHcVdtbHJaU2ljOHY2bUtEcC1xLXNOeGZPekd2M3BlaUlDb3pPeHQtUkRoTmxuRWdiNzRIOV9NcDRGZ0VOVlozVW5kVDYzSUQ3eURfQ1VEZDZvbXZhR21ZNEJGTV83RE1RcnhHYWQ2UnQ1NDllMWxrU05DUWl1Q3k3eU1sS2VIRWpSSXQ4Vm1NdHVRSXVrblgyQXBLVU1KSzlQSHRubXVxODA?oc=5",
+      "title": "Vipavska dolina se pripravlja na jubilejno, 10. izvedbo trail tekaškega dogodka Ultra Trail Vipavska dolina I Feel Slovenia - Lokalne Ajdovščina",
+      "errors": [
+        "manjka_fotografija"
+      ]
+    }
+  ]
+}
