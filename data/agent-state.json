@@ -7,7 +7,7 @@
   "last_output": "ormoz-v-pricakovanju-kolesarskega-spektakla-cilj-2-etape-dirke-po-sloveniji-bo-na-kerencic-5515ae76",
   "last_error": "fallback_no_fresh_evidence",
   "agent_version": "3.0.0-learning-guarded-fallback",
-  "current_category": "gourmet",
+  "current_category": "dediscina",
   "scheduled_posts_today": 1,
   "manual_posts_today": 0,
   "writer_mode": "workers_ai",
@@ -24,11 +24,11 @@
     "reason": "naslov_ni_v_rubriki,clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike,besedilo_ni_v_slovenscini",
     "at": "2026-11-08T17:54:26+01:00"
   },
-  "publisher_guardian_last_run": "2026-11-08T14:54:58+01:00",
+  "publisher_guardian_last_run": "2026-11-08T20:11:44+01:00",
   "publisher_guardian_last_action": {
     "category": "dediscina",
     "slot": "2026-11-08|10:45|dediscina",
-    "remaining_repairs": 1
+    "remaining_repairs": 3
   },
   "schedule_counter_normalized_at": "2026-10-07T16:45:00+02:00"
 }
