@@ -1,0 +1,41 @@
+{
+  "category": "dediscina",
+  "errors": [
+    "naslov_ni_v_rubriki",
+    "clanek_brez_slovenskega_konteksta",
+    "viri_ne_podpirajo_slovenske_rubrike",
+    "besedilo_ni_v_slovenscini"
+  ],
+  "article": {
+    "title": "How to Fix Ethernet Connection Issues on Windows & Mac",
+    "excerpt": "Get connected to the internet with a wired connection againEthernet is a fast, reliable way to connect to the internet, and a great alternative to Wi-Fi if your connection is spotty or slow. Unfortunately, Ethernet conne",
+    "seoDescription": "Get connected to the internet with a wired connection againEthernet is a fast, reliable way to connect to the internet, and a great alternative to Wi-Fi if",
+    "content": "Pregled za rubriko dediscina povzema trenutno razpoložljive informacije iz spodaj navedenih virov. Besedilo je pripravljeno brez dodajanja nepodprtih dejstev.\n\n## How to Fix Ethernet Connection Issues on Windows & Mac\nGet connected to the internet with a wired connection againEthernet is a fast, reliable way to connect to the internet, and a great alternative to Wi-Fi if your connection is spotty or slow. Unfortunately, Ethernet connections are prone to... How to Fix Ethernet Connection Issues on Windows & Mac Skip to Content Quizzes Search PRO Courses Hot Guides Tech Help Pro Expert Videos About wikiHow Pro Upgrade QUIZZES All Quizzes Hot Community Quizzes Love Quizzes Personality Quizzes Trivia Quizzes Taylor Swift Quizzes EXPLORE Tech Help Pro About Us Random Article Quizzes Request a New Article Community Dashboard Forums Community Quizzes Arts and Entertainment Artwork Books Movies Computers and Electronics Computers Phone Skills Technology Hacks Health Men's Health Mental Health Women's Health Relationships Dating Love Relationship Issues Hobbies and Crafts Crafts Drawing Games Education & Communication Communication Skills Personal Development Studying Personal Care and Style Fashion Hair Care Personal Hygiene Quizzes Community Quizzes Personality Quizzes Fun Games Arts and Entertainment Finance and Business Home and Garden Relationship Quizzes Cars & Other Vehicles Food and Entertaining Personal Care and Style Sports and Fitness Computers and Electronics Health Pets and Animals Travel Education & Communication Hobbies and Crafts Philosophy and Religion Work World Family Life Holidays and Traditions Relationships Youth LOG IN Log in Social login does not work in incognito and private browsers. Please log in with your username or email to continue. Facebook Google wikiHow Account No account yet? Create an account RANDOM Home Random Browse Articles Quizzes & Games All Quizzes Community Quizzes Hot Love Quizzes Personality Quizzes Fun Games Dating Simulator Learn Something New Forums Courses Happiness Hub Explore More Support wikiHow About wikiHow Log in / Sign up Terms of Use wikiHow is where trusted research and expert knowledge come together. Learn why people trust wikiHow Categories Computers and Electronics Computer Networking Internet Access 14 Easy Solutions to Fix Ethernet Issues Get connected to the internet with a wired connection again Explore this Article IN THIS ARTICLE 1 Check your network connection status. 2 Make sure your cable is plugged in correctly. 3 Try a different Ethernet port. 4 Test your connection on another computer. 5 Try connecting to Wi-Fi instead. 6 Restart your modem and/or router. 7 Run a network troubleshooter. 8 Check your internet configuration with your ISP. 9 Make sure Ethernet is enabled in BIOS (Windows). 10 Check your powe\n\nVir: wikihow.com — https://www.wikihow.com/Fixing-Ethernet-Connection-Issues",
+    "category": "Dediščina",
+    "tags": [
+      "dediscina",
+      "Slovenija",
+      "ethernet",
+      "connection",
+      "issues"
+    ],
+    "sources": [
+      {
+        "title": "How to Fix Ethernet Connection Issues on Windows & Mac",
+        "url": "https://www.wikihow.com/Fixing-Ethernet-Connection-Issues",
+        "source_name": "wikihow.com"
+      }
+    ],
+    "fallback": false,
+    "heroImage": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Tustanj_Castle_Slovenia_-_plaque.JPG/1920px-Tustanj_Castle_Slovenia_-_plaque.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "alt": "Plaque over the entrance to Tuštanj Castle, Zgornji Tuštanj, Municipality of Moravče, Slovenia",
+      "caption": "Doremo · Wikimedia Commons · CC BY-SA 3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tustanj_Castle_Slovenia_-_plaque.JPG"
+    },
+    "gallery": [],
+    "visualTemplate": "fieldnote",
+    "templateLabel": "Field Note",
+    "id": "how-to-fix-ethernet-connection-issues-on-windows-mac-788692f4"
+  }
+}
