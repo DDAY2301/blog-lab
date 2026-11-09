@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-08T21:34:12+01:00",
+  "updatedAt": "2026-11-09T07:18:00+01:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -15,7 +15,9 @@
     "Cirkus Klub",
     "Bunker / Stara mestna elektrarna",
     "ARSO",
-    "LIFFE"
+    "LIFFE",
+    "SNG Drama Ljubljana",
+    "Eventim"
   ],
   "sourcesFailed": [],
   "items": [
@@ -115,112 +117,6 @@
       "description": "The month-long culinary festival begins today across Ljubljana, with tastings, menus, workshops and live events announced separately. Prices, languages and accessibility vary by participating venue."
     },
     {
-      "id": "letaliska-flea-market-2026-11-08",
-      "title": "Sunday Flea Market at Letališka",
-      "url": "https://www.visitljubljana.com/sl/obiskovalci/prireditve/prireditve-v-ljubljani/bolsji-sejem-letaliska",
-      "source": "Visit Ljubljana / Bolšji Sejem Ljubljana",
-      "type": "Market · second-hand and collectibles",
-      "place": "Letališka cesta 4 · Ljubljana",
-      "startAt": "2026-11-08T04:00:00+01:00",
-      "endAt": "2026-11-08T14:00:00+01:00",
-      "price": null,
-      "languages": [
-        "Language-light"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": true,
-      "accessibility": null,
-      "ticketUrl": null,
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-08T07:12:00+01:00",
-      "description": "The Letališka flea market is officially listed as open from 04:00 to 14:00, with antiques, tools, clothing and collectibles. The organiser does not publish a visitor admission price or accessibility details."
-    },
-    {
-      "id": "sunday-flea-market-2026-11-08",
-      "title": "Sunday Flea Market",
-      "url": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/antique-flea-market",
-      "source": "Visit Ljubljana",
-      "type": "Market · antiques and vintage",
-      "place": "Breg · Ljubljana",
-      "startAt": "2026-11-08T08:00:00+01:00",
-      "endAt": "2026-11-08T15:00:00+01:00",
-      "price": "Free",
-      "languages": [
-        "Language-light"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": true,
-      "accessibility": "Outdoor riverside market on a paved street; individual stalls may vary.",
-      "ticketUrl": null,
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-08T07:12:00+01:00",
-      "description": "The free antique and vintage market runs on Breg from 08:00 to 15:00. In rain or bad weather, exhibitors may leave early."
-    },
-    {
-      "id": "candlelight-queen-vs-abba-2026-11-08",
-      "title": "Candlelight: Queen vs. ABBA",
-      "url": "https://feverup.com/m/665806/en",
-      "source": "Fever",
-      "type": "Concert · candlelight",
-      "place": "Academy of Music, University of Ljubljana",
-      "startAt": "2026-11-08T18:00:00+01:00",
-      "endAt": null,
-      "price": "From €42.50",
-      "languages": [
-        "Music-led"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": true,
-      "accessibility": "The venue is accessible for visitors with special needs; one companion ticket may be requested from Fever, subject to availability.",
-      "ticketUrl": "https://feverup.com/m/665806/en",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-08T07:12:00+01:00",
-      "description": "The 60-minute Queen-versus-ABBA programme by the 4Strings Quartet starts at 18:00. Admission is for ages 8+; current tickets start at €42.50 and the venue is accessible."
-    },
-    {
-      "id": "hommage-pavel-mihelcic-2026-11-08",
-      "title": "Hommage to Pavel Mihelčič",
-      "url": "https://www.ljubljanafestival.si/sl/koledar-dogodkov/25088-hommage-to-pavel-mihelcic",
-      "source": "Festival Ljubljana",
-      "type": "Concert · contemporary classical music",
-      "place": "Knights' Hall, Križanke · Ljubljana",
-      "startAt": "2026-11-08T19:30:00+01:00",
-      "endAt": "2026-11-08T21:30:00+01:00",
-      "price": "Free ticket required",
-      "languages": [
-        "Music-led",
-        "Slovenian spoken segments possible"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": true,
-      "accessibility": null,
-      "ticketUrl": "https://www.ljubljanafestival.si/sl/koledar-dogodkov/25088-hommage-to-pavel-mihelcic",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-08T07:12:00+01:00",
-      "description": "The MD7 Ensemble and guests perform a tribute to Slovenian composer Pavel Mihelčič from 19:30 to 21:30. Admission is free, but a ticket must be collected from the Križanke box office while capacity remains."
-    },
-    {
-      "id": "candlelight-ed-sheeran-coldplay-2026-11-08",
-      "title": "Candlelight: Ed Sheeran Meets Coldplay",
-      "url": "https://feverup.com/m/789270",
-      "source": "Fever",
-      "type": "Concert · candlelight",
-      "place": "Academy of Music, University of Ljubljana",
-      "startAt": "2026-11-08T20:30:00+01:00",
-      "endAt": null,
-      "price": "From €32",
-      "languages": [
-        "Music-led"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": true,
-      "accessibility": null,
-      "ticketUrl": "https://feverup.com/m/789270",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-08T07:12:00+01:00",
-      "description": "The 4Strings Quartet performs a 60-minute tribute to Ed Sheeran and Coldplay at 20:30. Admission is for ages 8+ and tickets currently start at €32."
-    },
-    {
       "id": "concert-academy-postproduction-accounting-2026-11-09",
       "title": "KONCERTNA AKADEMIJA @ KINO ŠIŠKA: POSTPRODUKCIJA, RAČUNOVODSTVO",
       "url": "https://www.galahala.com/?gala_event_day=2026-11-09&gala_event_month=2026-11",
@@ -238,7 +134,7 @@
       "accessibility": null,
       "ticketUrl": "https://www.galahala.com/?gala_event_day=2026-11-09&gala_event_month=2026-11",
       "status": "confirmed",
-      "lastCheckedAt": "2026-11-08T07:12:00+01:00",
+      "lastCheckedAt": "2026-11-09T07:18:00+01:00",
       "description": "The Concert Academy workshop on post-production and accounting starts at 17:00 at Kino Šiška. It is intended for young people interested in concert production; the organiser does not publish a general admission price."
     },
     {
@@ -260,8 +156,94 @@
       "accessibility": "Kino Šiška provides step-free access, a lift, accessible toilets, hearing loops and tactile guidance.",
       "ticketUrl": "https://www.kinosiska.si/en/dogodek/miha-godec-reviviscence/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-11-08T07:12:00+01:00",
+      "lastCheckedAt": "2026-11-09T07:18:00+01:00",
       "description": "A round table on art and marine-ecosystem restoration begins at 18:00, followed by the Reviviscence opening at 19:00. Entry is free and the installation remains on view on 10 November."
+    },
+    {
+      "id": "hrup-za-odrom-drama-2026-11-09",
+      "title": "Hrup za odrom (Noises Off)",
+      "url": "https://www.drama.si/dogodek/hrup-za-odrom/",
+      "source": "SNG Drama Ljubljana",
+      "type": "Theatre · comedy",
+      "place": "Large Stage, Litostrojska 56 · Ljubljana",
+      "startAt": "2026-11-09T19:30:00+01:00",
+      "endAt": "2026-11-09T22:10:00+01:00",
+      "price": null,
+      "languages": [
+        "Slovenian"
+      ],
+      "touristFriendly": false,
+      "familyFriendly": false,
+      "accessibility": null,
+      "ticketUrl": "https://drama.kupikarto.si/dogodek.php?dogId=7651&page=1",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-09T07:18:00+01:00",
+      "description": "SNG Drama stages Michael Frayn’s backstage comedy from 19:30 to 22:10. The performance is in Slovenian; the official booking page confirms availability but does not expose one verified ticket price."
+    },
+    {
+      "id": "new-music-forum-hybrid-spaces-2026-11-09",
+      "title": "New Music Forum 2026: Hybrid Spaces",
+      "url": "https://www.cd-cc.si/en/culture/music/new-music-forum-2026-hybrid-spaces",
+      "source": "Cankarjev dom",
+      "type": "Concert · contemporary music and electronics",
+      "place": "CD Club · Cankarjev dom",
+      "startAt": "2026-11-09T19:30:00+01:00",
+      "endAt": null,
+      "price": "€10 / €8 reduced",
+      "languages": [
+        "Music-led",
+        "English-friendly programme information"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": "Cankarjev dom publishes venue accessibility information; request accessible seating when booking.",
+      "ticketUrl": "https://vstopnice.cd-cc.si/en/tickets.html",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-09T07:18:00+01:00",
+      "description": "Hybrid Spaces begins at 19:30 and explores collaboration between human performers, electronics and machines. Tickets cost €10, or €8 for eligible reduced-price visitors."
+    },
+    {
+      "id": "bob-dylan-stozice-2026-11-09",
+      "title": "Bob Dylan",
+      "url": "https://www.eventim.si/en/event/bob-dylan-dvorana-stozice-21886195/",
+      "source": "Eventim / organiser",
+      "type": "Concert · folk rock",
+      "place": "Stožice Hall · Ljubljana",
+      "startAt": "2026-11-09T20:00:00+01:00",
+      "endAt": null,
+      "price": "€63–€179; most categories sold out at last check",
+      "languages": [
+        "Music-led",
+        "English"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": "Stožice parking includes designated reduced-mobility spaces; confirm accessible seating with the seller.",
+      "ticketUrl": "https://www.eventim.si/en/event/bob-dylan-dvorana-stozice-21886195/",
+      "status": "limited",
+      "lastCheckedAt": "2026-11-09T07:18:00+01:00",
+      "description": "Doors open at 18:00 and Bob Dylan starts punctually at 20:00. It is a phone-free concert: print the ticket, bring a physical payment card, and expect Yondr phone pouches; most categories were sold out at the last check."
+    },
+    {
+      "id": "sto-nas-je-drama-2026-11-09",
+      "title": "Sto nas je",
+      "url": "https://www.drama.si/dogodek/sto-nas-je/",
+      "source": "SNG Drama Ljubljana",
+      "type": "Theatre · drama",
+      "place": "Mala Drama, Litostrojska 56 · Ljubljana",
+      "startAt": "2026-11-09T20:00:00+01:00",
+      "endAt": "2026-11-09T21:00:00+01:00",
+      "price": null,
+      "languages": [
+        "Slovenian"
+      ],
+      "touristFriendly": false,
+      "familyFriendly": false,
+      "accessibility": null,
+      "ticketUrl": "https://drama.kupikarto.si/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-09T07:18:00+01:00",
+      "description": "The one-hour SNG Drama and Mestno gledališče Ptuj co-production starts at 20:00. It is performed in Slovenian; the official seller confirms tickets but does not expose one verified price."
     },
     {
       "id": "kristijan-krajncan-alchymia-xxi-2026-11-10",
@@ -281,7 +263,7 @@
       "accessibility": "Cankarjev dom publishes venue accessibility information; request accessible seating when booking.",
       "ticketUrl": "https://vstopnice.cd-cc.si/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-27T07:14:00+01:00",
+      "lastCheckedAt": "2026-11-09T07:18:00+01:00",
       "description": "Kristijan Krajnčan’s quintet performs Alchymia XXI in the CD Club at 19:30. Tickets cost €16, or €12 for eligible reduced-price visitors."
     },
     {
@@ -1508,6 +1490,113 @@
       "status": "confirmed",
       "lastCheckedAt": "2026-11-08T07:12:00+01:00",
       "description": "Spring screens in Kosovel Hall at 21:00 as part of LIFFe’s final day. Tickets cost €6.50–€7.30; language and subtitle details should be confirmed on the official programme before booking."
+    },
+    {
+      "id": "ojacevalnica-workshop-2026-11-23",
+      "title": "OJAČEVALNICA – Second Workshop",
+      "url": "https://www.galahala.com/?page=rezervacije%2Fniet",
+      "source": "Gala Hala",
+      "type": "Workshop · music",
+      "place": "Gala Hala · AKC Metelkova",
+      "startAt": "2026-11-23T17:00:00+01:00",
+      "endAt": null,
+      "price": null,
+      "languages": [
+        "Slovenian"
+      ],
+      "touristFriendly": false,
+      "familyFriendly": false,
+      "accessibility": null,
+      "ticketUrl": "https://www.galahala.com/?page=rezervacije%2Fniet",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-09T07:18:00+01:00",
+      "description": "The second OJAČEVALNICA workshop starts at Gala Hala at 17:00. The official listing does not publish a verified price, accessibility details or broader visitor guidance."
+    },
+    {
+      "id": "perpetuum-jazzile-greatest-hits-2026-11-23",
+      "title": "Perpetuum Jazzile – Greatest Hits",
+      "url": "https://www.cd-cc.si/en/culture/lease-event/perpetuum-jazzile-najvecji-hiti",
+      "source": "Cankarjev dom",
+      "type": "Concert · vocal pop",
+      "place": "Gallus Hall · Cankarjev dom",
+      "startAt": "2026-11-23T19:00:00+01:00",
+      "endAt": "2026-11-23T21:00:00+01:00",
+      "price": "€34 / €40 / €46 / €52 / €68",
+      "languages": [
+        "Music-led",
+        "Slovenian stage remarks likely"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": true,
+      "accessibility": "Contact Cankarjev dom when booking wheelchair spaces or other assistance.",
+      "ticketUrl": "https://vstopnice.cd-cc.si/si/perpetuum-jazzile-najvecji-hiti/vstopnice-227122.html",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-09T07:18:00+01:00",
+      "description": "Perpetuum Jazzile perform their greatest hits with guests Maja Keuc and Gregor Ravnik at 19:00. The two-hour concert has no interval; tickets cost €34–€68."
+    },
+    {
+      "id": "izstekani-leopold-i-2026-11-23",
+      "title": "Izštekani: Leopold I.",
+      "url": "https://cd-cc.si/en/culture/music/izstekani-leopold-i",
+      "source": "Cankarjev dom",
+      "type": "Concert · hip-hop and acoustic",
+      "place": "Linhart Hall · Cankarjev dom",
+      "startAt": "2026-11-23T20:00:00+01:00",
+      "endAt": "2026-11-23T22:00:00+01:00",
+      "price": "€25 / €30; reduced €21 / €26",
+      "languages": [
+        "Slovenian",
+        "Music-led"
+      ],
+      "touristFriendly": false,
+      "familyFriendly": false,
+      "accessibility": "Contact Cankarjev dom when booking wheelchair spaces or other assistance.",
+      "ticketUrl": "https://vstopnice.cd-cc.si/en/tickets.html",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-09T07:18:00+01:00",
+      "description": "Leopold I. presents an unplugged set ranging from acoustic minimalism to chamber-orchestra arrangements at 20:00. The two-hour Slovenian-language concert costs €25–€30, with reduced tickets at €21–€26."
+    },
+    {
+      "id": "sto-nas-je-drama-2026-11-23",
+      "title": "Sto nas je",
+      "url": "https://www.drama.si/dogodek/sto-nas-je/",
+      "source": "SNG Drama Ljubljana",
+      "type": "Theatre · drama",
+      "place": "Mala Drama, Litostrojska 56 · Ljubljana",
+      "startAt": "2026-11-23T20:00:00+01:00",
+      "endAt": "2026-11-23T21:00:00+01:00",
+      "price": null,
+      "languages": [
+        "Slovenian"
+      ],
+      "touristFriendly": false,
+      "familyFriendly": false,
+      "accessibility": null,
+      "ticketUrl": "https://drama.kupikarto.si/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-09T07:18:00+01:00",
+      "description": "The one-hour co-production Sto nas je starts at Mala Drama at 20:00. It is performed in Slovenian; the official listing confirms ticket sales but does not expose one verified price."
+    },
+    {
+      "id": "troyan-women-mgl-2026-11-23",
+      "title": "The Troyan Women",
+      "url": "https://www.mgl.si/en/shows/the-troyan-women/",
+      "source": "MGL",
+      "type": "Theatre · tragedy",
+      "place": "MGL Small Stage · Ljubljana",
+      "startAt": "2026-11-23T20:00:00+01:00",
+      "endAt": null,
+      "price": null,
+      "languages": [
+        "Slovenian"
+      ],
+      "touristFriendly": false,
+      "familyFriendly": false,
+      "accessibility": "Contact MGL for performance-specific step-free seating arrangements.",
+      "ticketUrl": "https://www.mgl.si/en/schedule/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-09T07:18:00+01:00",
+      "description": "MGL stages Euripides’ The Troyan Women on the Small Stage at 20:00. It is performed in Slovenian; tickets are listed, but the schedule does not expose one verified price."
     }
   ]
 }
