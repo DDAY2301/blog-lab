@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-09T07:06:32+01:00",
+  "updatedAt": "2026-11-09T07:24:00+01:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -220,9 +220,9 @@
       "familyFriendly": false,
       "accessibility": "Stožice parking includes designated reduced-mobility spaces; confirm accessible seating with the seller.",
       "ticketUrl": "https://www.eventim.si/en/event/bob-dylan-dvorana-stozice-21886195/",
-      "status": "limited",
+      "status": "confirmed",
       "lastCheckedAt": "2026-11-09T07:18:00+01:00",
-      "description": "Doors open at 18:00 and Bob Dylan starts punctually at 20:00. It is a phone-free concert: print the ticket, bring a physical payment card, and expect Yondr phone pouches; most categories were sold out at the last check."
+      "description": "Doors open at 18:00 and Bob Dylan starts punctually at 20:00. It is a phone-free concert: print the ticket, bring a physical payment card, and expect Yondr phone pouches; most ticket categories were sold out at the last check."
     },
     {
       "id": "sto-nas-je-drama-2026-11-09",
