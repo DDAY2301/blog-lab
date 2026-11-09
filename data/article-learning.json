@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-11-09T07:30:35+01:00",
-  "loop_count": 7932,
+  "updated_at": "2026-11-09T23:22:42+01:00",
+  "loop_count": 7933,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-11-09T07:30:12+01:00",
+      "last_learning_run": "2026-11-09T23:22:16+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -64,10 +64,10 @@
           "last_provider": "bing-web"
         },
         "city-data.com": {
-          "score": 3.322,
-          "seen": 5,
-          "last_seen": "2026-10-10T02:53:35+02:00",
-          "last_title": "Politics and Other Controversies Forum - The premier community for US politics, elections, and government debate. Join Democrats, Republicans, and Independents to discuss Congress,",
+          "score": 5.047,
+          "seen": 7,
+          "last_seen": "2026-11-09T23:22:16+01:00",
+          "last_title": "30th Anniversary of horrific firebombing... (Tampa, Clearwater: 2013, crime, living in) - Tampa Bay - Florida (FL) -Tampa Bay relocation forum. Insights on living in South Tampa, S",
           "last_provider": "bing-web"
         },
         "kia.com": {
@@ -86,11 +86,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 148454,
-          "last_seen": "2026-11-09T07:30:12+01:00",
+          "seen": 148460,
+          "last_seen": "2026-11-09T23:22:16+01:00",
           "last_title": "Odlični obeti, Slovenija se bi lahko že danes razveselila novega globusa - Žurnal24",
           "last_provider": "google-news-si",
-          "published": 479011,
+          "published": 479063,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,17 +227,21 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 6,
+      "current_source_count": 8,
       "example_titles": {
+        "city-data.com": [
+          "Anybody remember these restaurants? (Cincinnati, Wooster: moving to, cheapest, roach) - Ohio (OH) -Cincinnati, OH community board. Discuss l",
+          "30th Anniversary of horrific firebombing... (Tampa, Clearwater: 2013, crime, living in) - Tampa Bay - Florida (FL) -Tampa Bay relocation for"
+        ],
         "news.google.com": [
+          "S tribune: Športni trenutki, zaradi katerih se mi še danes naježijo dlake - Svet24.si",
           "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
-          "Slovenska blamaža na igrah! Zakaj sploh tekmujemo, če je šport pri nas umrl - Ekipa",
           "Slovenija proti Danski danes odpira svoje nastope na letošnjem evropskem prvenstvu - Šport TV"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-11-09T07:30:24+01:00",
+      "last_learning_run": "2026-11-09T23:22:27+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -279,11 +283,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 177130,
-          "last_seen": "2026-11-09T07:30:24+01:00",
-          "last_title": "Predsednik vlade Janša za ministra za ministra za digitalno preobrazbo predlaga Marka Borisa Andrijaniča - prava.si",
-          "last_provider": "google-news-si",
-          "published": 527152,
+          "seen": 177141,
+          "last_seen": "2026-11-09T23:22:27+01:00",
+          "last_title": "Brskali tudi po računih žene pomembnega politika: \"To je svinjarija prve vrste\" - N1 Slovenija",
+          "last_provider": "google-news-global",
+          "published": 527212,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -385,17 +389,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 12,
+      "current_source_count": 11,
       "example_titles": {
         "news.google.com": [
           "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si",
-          "Petra Kerčmar s tem preusmerila pozornost nase: en mali detajl, o katerem danes govorijo vsi - Elle.si",
-          "V Sloveniji odprta volišča: Volivci danes odločajo o štirih pomembnih vprašanjih - Mariborinfo.com"
+          "V Sloveniji odprta volišča: Volivci danes odločajo o štirih pomembnih vprašanjih - Mariborinfo.com",
+          "Dimitrij Rupel: Slovenska zunanja politika nekoč in danes - Slovenska demokratska stranka - SDS"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-11-09T07:30:35+01:00",
+      "last_learning_run": "2026-11-09T23:22:42+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -483,12 +487,12 @@
           "last_provider": "bing-web"
         },
         "news.google.com": {
-          "score": 2.537,
-          "seen": 203535,
-          "last_seen": "2026-11-09T07:30:35+01:00",
+          "score": 2.534,
+          "seen": 203550,
+          "last_seen": "2026-11-09T23:22:42+01:00",
           "last_title": "Slovenija preprečila pristanek izraelskega letala: tako se odziva Fraport - Info360",
           "last_provider": "google-news-global",
-          "published": 328374,
+          "published": 328390,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -583,17 +587,23 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 12,
+      "current_source_count": 15,
       "example_titles": {
         "news.google.com": [
-          "Golob je “depolitiziral” RTV SLO, jo bo tudi Janša? Ustavno sodišče je dalo “blagoslov”, a Gregorčič in Avbelj gresta na ESČP - Zanima.me",
-          "Kako svet vidi Slovenijo danes in kako je postala tako vroča evropska destinacija - Dnevnik",
-          "Pred Stevanovićevim obiskom v Srbiji znova aktualno vprašanje statusa srbske skupnosti v Sloveniji - Siol.net"
+          "KDO JE V SLOVENIJI SPLOH CIVILNA DRUŽBA? Janša udaril po blokadah projektov, odpira pa se tudi vprašanje političnega aktivizma! | Portal OS ",
+          "Gorivo bi se lahko še občutneje pocenilo: Bruselj danes odloča, zadnjo besedo bo imela vlada - Goriške novice",
+          "Golob je “depolitiziral” RTV SLO, jo bo tudi Janša? Ustavno sodišče je dalo “blagoslov”, a Gregorčič in Avbelj gresta na ESČP - Zanima.me"
         ]
       }
     }
   },
   "recent_articles": [
+    {
+      "id": "nova-daljinska-pohodniska-pot-pes-od-jezerskega-do-kranjske-gore-foto-95a70d64",
+      "title": "Nova daljinska pohodniška pot: peš od Jezerskega do Kranjske Gore (FOTO)",
+      "category": "Gore & traili",
+      "createdAt": "2026-11-09T18:24:47+01:00"
+    },
     {
       "id": "ormoz-v-pricakovanju-kolesarskega-spektakla-cilj-2-etape-dirke-po-sloveniji-bo-na-kerencic-5515ae76",
       "title": "Ormož v pričakovanju kolesarskega spektakla: Cilj 2. etape dirke Po Sloveniji bo na Kerenčičevem trgu -…",
@@ -659,70 +669,9 @@
       "title": "Kolesarska rajža v Slovenskih goricah z obiskom slikovitih gradov",
       "category": "Kolesarstvo",
       "createdAt": "2026-10-31T08:31:52+01:00"
-    },
-    {
-      "id": "slovenian-hiking-trail-shows-the-best-bits-of-this-beautiful-country-644062ed",
-      "title": "Slovenian hiking trail shows the best bits of this beautiful country",
-      "category": "Gore & traili",
-      "createdAt": "2026-10-30T16:24:53+01:00"
     }
   ],
   "recent_failures": [
-    {
-      "file": "fallback-failed-20261106-134002.json",
-      "category": "sezonsko",
-      "errors": [
-        "prekratek",
-        "manjka_fotografija"
-      ],
-      "title": "Nova sezona, novo zvišanje cen: za kampiranje boste zdaj mogli odšteti kar ... - Metropolitan.si"
-    },
-    {
-      "file": "fallback-failed-20261106-162452.json",
-      "category": "gore",
-      "errors": [
-        "manjka_fotografija",
-        "prekratek"
-      ],
-      "title": "ŠPORTNI VIKEND LJUBLJANICA 2026 bo med 11. in 13. septembrom v središče Ljubljane pripeljal nočni tek, trail, pohodništvo, kolesarjenje in pestro družinsko športno dogajanje - 24ur"
-    },
-    {
-      "file": "fallback-failed-20261106-193140.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek",
-        "manjka_fotografija"
-      ],
-      "title": "Med Bledom in Bohinjem je nastala 28-kilometrska kolesarska pot z razgledi, ki jemljejo dih - Bodi eko"
-    },
-    {
-      "file": "fallback-failed-20261106-215405.json",
-      "category": "gourmet",
-      "errors": [
-        "naslov_ni_v_rubriki",
-        "clanek_brez_slovenskega_konteksta",
-        "viri_ne_podpirajo_slovenske_rubrike"
-      ],
-      "title": "Amazon.com : smile.amazon"
-    },
-    {
-      "file": "fallback-failed-20261107-185439.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "clanek_brez_slovenskega_konteksta",
-        "viri_ne_podpirajo_slovenske_rubrike"
-      ],
-      "title": "Amazon.com: Bikes - Cycling: Sports & Outdoors: Mountain Bikes ..."
-    },
-    {
-      "file": "fallback-failed-20261107-190844.json",
-      "category": "dediscina",
-      "errors": [
-        "clanek_brez_slovenskega_konteksta",
-        "viri_ne_podpirajo_slovenske_rubrike"
-      ],
-      "title": "Tahoe Dashboard Not Working? Here’s the Full Diagnostic Guide"
-    },
     {
       "file": "fallback-failed-20261107-210852.json",
       "category": "dediscina",
@@ -760,10 +709,65 @@
       "title": "ŠPORTNI VIKEND LJUBLJANICA 2026 bo med 11. in 13. septembrom v središče Ljubljane pripeljal nočni tek, trail, pohodništvo, kolesarjenje in pestro družinsko športno dogajanje - 24ur"
     },
     {
+      "file": "fallback-failed-20261109-073947.json",
+      "category": "kolesarstvo",
+      "errors": [
+        "prekratek",
+        "manjka_fotografija"
+      ],
+      "title": "Med Bledom in Bohinjem je nastala 28-kilometrska kolesarska pot z razgledi, ki jemljejo dih - Bodi eko"
+    },
+    {
+      "file": "fallback-failed-20261109-131132.json",
+      "category": "kolesarstvo",
+      "errors": [
+        "prekratek",
+        "manjka_fotografija"
+      ],
+      "title": "Med Bledom in Bohinjem je nastala 28-kilometrska kolesarska pot z razgledi, ki jemljejo dih - Bodi eko"
+    },
+    {
+      "file": "fallback-failed-20261109-170902.json",
+      "category": "dediscina",
+      "errors": [
+        "clanek_brez_slovenskega_konteksta",
+        "viri_ne_podpirajo_slovenske_rubrike"
+      ],
+      "title": "GoonerNews.com | Latest Arsenal News and Transfers"
+    },
+    {
+      "file": "fallback-failed-20261109-180958.json",
+      "category": "sezonsko",
+      "errors": [
+        "prekratek"
+      ],
+      "title": "Slovenski turizem: kje smo s cenami, naložbami in kakšna bo letošnja sezona - Finance.si"
+    },
+    {
+      "file": "fallback-failed-20261109-203845.json",
+      "category": "gourmet",
+      "errors": [
+        "naslov_ni_v_rubriki",
+        "clanek_brez_slovenskega_konteksta",
+        "viri_ne_podpirajo_slovenske_rubrike"
+      ],
+      "title": "Amazon Prime @ Amazon.com"
+    },
+    {
+      "file": "fallback-failed-20261109-220446.json",
+      "category": "gourmet",
+      "errors": [
+        "naslov_ni_v_rubriki",
+        "clanek_brez_slovenskega_konteksta",
+        "viri_ne_podpirajo_slovenske_rubrike"
+      ],
+      "title": "Amazon Prime @ Amazon.com"
+    },
+    {
       "file": "agent-state",
       "category": "gourmet",
       "errors": [
-        "fallback_no_fresh_evidence"
+        "naslov_ni_v_rubriki,clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike"
       ]
     },
     {
@@ -772,17 +776,17 @@
       "errors": [
         "naslov_ni_v_rubriki,clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike,besedilo_ni_v_slovenscini"
       ],
-      "slot": "2026-11-08|16:20|gore"
+      "slot": "2026-11-09|19:10|gourmet"
     }
   ],
   "failure_summary": {
-    "manjka_fotografija": 13,
-    "prekratek": 11,
-    "viri_ne_podpirajo_slovenske_rubrike": 7,
-    "clanek_brez_slovenskega_konteksta": 5,
-    "naslov_ni_v_rubriki": 2,
+    "manjka_fotografija": 11,
+    "prekratek": 10,
+    "clanek_brez_slovenskega_konteksta": 8,
+    "viri_ne_podpirajo_slovenske_rubrike": 8,
+    "naslov_ni_v_rubriki": 4,
     "surov_spletni_izpis": 1,
-    "fallback_no_fresh_evidence": 1,
+    "naslov_ni_v_rubriki,clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike": 1,
     "naslov_ni_v_rubriki,clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike,besedilo_ni_v_slovenscini": 1
   }
 }
