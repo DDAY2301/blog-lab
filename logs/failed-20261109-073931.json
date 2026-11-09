@@ -1,0 +1,34 @@
+{
+  "category": "kolesarstvo",
+  "errors": [
+    "manjka_fotografija",
+    "ponavljanje"
+  ],
+  "article": {
+    "title": "Med Bledom in Bohinjem je nastala 28-kilometrska kolesarska pot z razgledi, ki jemljejo dih - Bodi eko",
+    "excerpt": "Med Bledom in Bohinjem je nastala 28-kilometrska kolesarska pot z razgledi, ki jemljejo dih Bodi eko",
+    "seoDescription": "Med Bledom in Bohinjem je nastala 28-kilometrska kolesarska pot z razgledi, ki jemljejo dih Bodi eko",
+    "content": "Pregled za rubriko kolesarstvo povzema trenutno razpoložljive informacije iz spodaj navedenih virov. Besedilo je pripravljeno brez dodajanja nepodprtih dejstev.\n\n## Med Bledom in Bohinjem je nastala 28-kilometrska kolesarska pot z razgledi, ki jemljejo dih - Bodi eko\nMed Bledom in Bohinjem je nastala 28-kilometrska kolesarska pot z razgledi, ki jemljejo dih Bodi eko\n\nVir: Bodi eko — https://news.google.com/rss/articles/CBMiXkFVX3lxTE5lSHRXeHRBd1FMemlyOXlsRWxZTWswanNEd0RGOGI5RXg1dkFCUGdDc1ZmMlI0OE1zT2l2Q1FoV3RXeDRndTRuTDQ5VnRKTjhYMGFJM3piRng4Sk5ncnc?oc=5\n\n## Kako brati ta pregled\nTa članek je v varnem nadomestnem načinu sestavljen izključno iz podanih virov. Ne dodaja dejstev, ki jih v podlagi ni, zato so navedene povezave sestavni del članka in omogočajo neposredno preverjanje informacij.\n\n## Kaj preveriti pred obiskom\nDatumi, odpiralni časi, dostopnost, prometne razmere, vreme in programi dogodkov se lahko spremenijo. Pred odhodom preveri najnovejše podatke neposredno pri organizatorju, upravljavcu ali drugem uradnem viru, ki je naveden v članku.",
+    "category": "Kolesarstvo",
+    "tags": [
+      "kolesarstvo",
+      "Slovenija",
+      "bledom",
+      "bohinjem",
+      "nastala"
+    ],
+    "sources": [
+      {
+        "title": "Med Bledom in Bohinjem je nastala 28-kilometrska kolesarska pot z razgledi, ki jemljejo dih - Bodi eko",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5lSHRXeHRBd1FMemlyOXlsRWxZTWswanNEd0RGOGI5RXg1dkFCUGdDc1ZmMlI0OE1zT2l2Q1FoV3RXeDRndTRuTDQ5VnRKTjhYMGFJM3piRng4Sk5ncnc?oc=5",
+        "source_name": "Bodi eko"
+      }
+    ],
+    "fallback": false,
+    "gallery": [],
+    "heroImage": null,
+    "visualTemplate": "pulse",
+    "templateLabel": "Pulse",
+    "id": "med-bledom-in-bohinjem-je-nastala-28-kilometrska-kolesarska-pot-z-razgledi-ki-jemljejo-dih-50938b87"
+  }
+}
