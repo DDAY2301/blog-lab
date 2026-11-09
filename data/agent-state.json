@@ -1,27 +1,25 @@
 {
-  "last_success": "2026-11-08T07:45:12+01:00",
+  "last_success": "2026-11-09T18:24:47+01:00",
   "last_failure": "2026-09-21T20:56:52+02:00",
   "consecutive_failures": 0,
   "posts_date": "2026-11-09",
-  "posts_today": 0,
-  "last_output": "ormoz-v-pricakovanju-kolesarskega-spektakla-cilj-2-etape-dirke-po-sloveniji-bo-na-kerencic-5515ae76",
-  "last_error": "prekratek",
+  "posts_today": 1,
+  "last_output": "nova-daljinska-pohodniska-pot-pes-od-jezerskega-do-kranjske-gore-foto-95a70d64",
+  "last_error": null,
   "agent_version": "3.0.0-learning-guarded-fallback",
-  "current_category": "sezonsko",
-  "scheduled_posts_today": 0,
+  "current_category": "gore",
+  "scheduled_posts_today": 1,
   "manual_posts_today": 0,
-  "writer_mode": "workers_ai",
-  "scheduled_slots_done": [],
+  "writer_mode": "deterministic_fallback",
+  "scheduled_slots_done": [
+    "2026-11-09|16:20|gore"
+  ],
   "scheduled_slots_deferred": [
     "2026-11-09|07:35|kolesarstvo",
     "2026-11-09|10:45|dediscina",
     "2026-11-09|13:30|sezonsko"
   ],
-  "last_editorial_hold": {
-    "slot": "2026-11-09|13:30|sezonsko",
-    "reason": "ponavljanje",
-    "at": "2026-11-09T18:09:42+01:00"
-  },
+  "last_editorial_hold": null,
   "publisher_guardian_last_run": "2026-11-09T13:11:32+01:00",
   "publisher_guardian_last_action": {
     "category": "kolesarstvo",

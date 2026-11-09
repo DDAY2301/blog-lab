@@ -5502,5 +5502,19 @@
     "provider": "google-news-si",
     "processed_at": "2026-11-08T07:45:12+01:00",
     "output_id": "ormoz-v-pricakovanju-kolesarskega-spektakla-cilj-2-etape-dirke-po-sloveniji-bo-na-kerencic-5515ae76"
+  },
+  {
+    "source_name": "Slovenske novice",
+    "category": "gore",
+    "title": "Nova daljinska pohodniška pot: peš od Jezerskega do Kranjske Gore (FOTO) - Slovenske novice",
+    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNWlNmTVEzc1hEZzBNN0FLdjB5ZkU2b1p0QmZLbGVsTDQtVng4TTJRRnROQktrbjV0REdEeEdiNHNMRlVzMFMxQ1QteXhSLVNrSlRveGF6NWhaeFplV2U1THhQdmpMSDRiWmhmQ1NzTnZrTGtmdldpWUNWVGYwdE12SUZGdkxfNlhaV21idnVfbWpFU0QtdS1JVFEyWTVXRXRsUG0taGxQZDg0cUhnRXBrLWxoemlmclNf?oc=5",
+    "summary": "Nova daljinska pohodniška pot: peš od Jezerskega do Kranjske Gore (FOTO) Slovenske novice",
+    "published": "Fri, 06 Sep 2024 07:00:00 GMT",
+    "image_url": "",
+    "video_url": "",
+    "hash": "8772994a5938d7b092e3d2f6d0bbdb511f1d0df14ae485b21754c5cac5c48a47",
+    "provider": "google-news-si",
+    "processed_at": "2026-11-09T18:24:47+01:00",
+    "output_id": "nova-daljinska-pohodniska-pot-pes-od-jezerskega-do-kranjske-gore-foto-95a70d64"
   }
 ]
