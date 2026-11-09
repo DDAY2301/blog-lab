@@ -1,0 +1,41 @@
+{
+  "category": "dediscina",
+  "errors": [
+    "naslov_ni_v_rubriki",
+    "clanek_brez_slovenskega_konteksta",
+    "viri_ne_podpirajo_slovenske_rubrike",
+    "besedilo_ni_v_slovenscini"
+  ],
+  "article": {
+    "title": "Change display brightness and color in Windows | Microsoft Support",
+    "excerpt": "Learn how to change display brightness and color in Windows. Managing your display brightness can significantly enhance your viewing experience and help conserve battery life. You can adjust the brightness manually or le",
+    "seoDescription": "Learn how to change display brightness and color in Windows. Managing your display brightness can significantly enhance your viewing experience and help co",
+    "content": "Pregled za rubriko dediscina povzema trenutno razpoložljive informacije iz spodaj navedenih virov. Besedilo je pripravljeno brez dodajanja nepodprtih dejstev.\n\n## Change display brightness and color in Windows | Microsoft Support\nLearn how to change display brightness and color in Windows. Managing your display brightness can significantly enhance your viewing experience and help conserve battery life. You can adjust the brightness manually or let your PC handle it automatically based on lighting conditions or content. You might not see the Brightness slider on devices that have an external monitor. To change the brightness on an external monitor, use the buttons on it. To adjust display brightness, select the Network icon on the right side of the taskbar, and then move the Brightness slider to adjust the brightness. Alternatively, you can adjust the display brightness from Settings > System > Display . You might not see the Brightness slider on desktop PCs that have an external monitor. To change the brightness on an external monitor, use the buttons on it. Some PCs can let Windows automatically adjust screen brightness based on the current lighting conditions. To find out if your PC supports this: This automatic setting helps make sure your screen is readable wherever you go. Even if you use it, you can still move the Brightness slider to fine-tune the brightness level for the built-in display. On HDR displays, Windows optimizes the automatic brightness adjustment behavior to better match how the human eye perceives brightness changes. As a result, brightness adjustments might take more time on HDR displays when lighting conditions change. Some Windows 11 PCs can automatically adjust the screen brightness and contrast based on content that’s displayed on your built-in screen. For example, if you’re watching a video that has a dark scene, followed by a brighter scene (for example, one that shows a bright sunny day), the brightness and contrast may change. This is normal. Content adaptive brightness control provides ideal brightness and contrast levels, while saving power and providing longer battery life at the same time. If these sudden brightness changes are distracting, or if you work in photo and video apps where color accuracy is important to you, these settings can be adjusted to best meet your needs between providing appropriate brightness and contrast and conserving battery life. Select the Start button, then type settings . Select Settings > System > Display . In Display settings, select Brightness , then set the Change brightness based on content drop-down as needed: Your display emits blue light—the kind of light you see during the day—which can keep you up at night. To help you get to sleep, turn on the night light and your display will show warmer colors at night th\n\nVir: support.microsoft.com — https://support.microsoft.com/en-us/windows/hardware/display-graphics/change-display-brightness-and-color-in-windows",
+    "category": "Dediščina",
+    "tags": [
+      "dediscina",
+      "Slovenija",
+      "change",
+      "display",
+      "brightness"
+    ],
+    "sources": [
+      {
+        "title": "Change display brightness and color in Windows | Microsoft Support",
+        "url": "https://support.microsoft.com/en-us/windows/hardware/display-graphics/change-display-brightness-and-color-in-windows",
+        "source_name": "support.microsoft.com"
+      }
+    ],
+    "fallback": false,
+    "gallery": [],
+    "heroImage": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Tustanj_Castle_Slovenia_-_plaque.JPG/1920px-Tustanj_Castle_Slovenia_-_plaque.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "alt": "Plaque over the entrance to Tuštanj Castle, Zgornji Tuštanj, Municipality of Moravče, Slovenia",
+      "caption": "Doremo · Wikimedia Commons · CC BY-SA 3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tustanj_Castle_Slovenia_-_plaque.JPG"
+    },
+    "visualTemplate": "fieldnote",
+    "templateLabel": "Field Note",
+    "id": "change-display-brightness-and-color-in-windows-microsoft-support-546b7706"
+  }
+}
