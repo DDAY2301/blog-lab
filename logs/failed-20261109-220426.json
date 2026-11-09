@@ -1,0 +1,41 @@
+{
+  "category": "gourmet",
+  "errors": [
+    "naslov_ni_v_rubriki",
+    "clanek_brez_slovenskega_konteksta",
+    "viri_ne_podpirajo_slovenske_rubrike",
+    "besedilo_ni_v_slovenscini"
+  ],
+  "article": {
+    "title": "How to Tie a Tie Perfectly (Beginner Tutorial) - YouTube",
+    "excerpt": "(function ytBootstrapConfig() {window.ytplayer={}; ytcfg.set({\"CLIENT_CANARY_STATE\":\"none\",\"DEVICE\":\"ceng\\u003dUSER_DEFINED\\u0026cos\\u003d%2Bhttps%3A%2F%2Fgithub.com%2FDDAY2301%2Fblog-lab\\u0026cplatform\\u003dDESKTOP\",\"DI",
+    "seoDescription": "(function ytBootstrapConfig() {window.ytplayer={}; ytcfg.set({\"CLIENT_CANARY_STATE\":\"none\",\"DEVICE\":\"ceng\\u003dUSER_DEFINED\\u0026cos\\u003d%2Bhttps%3A%2F%2F",
+    "content": "Pregled za rubriko gourmet povzema trenutno razpoložljive informacije iz spodaj navedenih virov. Besedilo je pripravljeno brez dodajanja nepodprtih dejstev.\n\n## How to Tie a Tie Perfectly (Beginner Tutorial) - YouTube\n(function ytBootstrapConfig() {window.ytplayer={}; ytcfg.set({\"CLIENT_CANARY_STATE\":\"none\",\"DEVICE\":\"ceng\\u003dUSER_DEFINED\\u0026cos\\u003d%2Bhttps%3A%2F%2Fgithub.com%2FDDAY2301%2Fblog-lab\\u0026cplatform\\u003dDESKTOP\",\"DISABLE_YT_IMG_DELAY_LOADING\":false,\"ELEMENT_POOL_DEFAULT_CAP\":75,\"EVENT_ID\":\"HDXyasirJ9Gl-coPxYP6wAE\",\"EXPERIMENT_FLAGS\":{\"PremiumClientSharedConfig__enable_att_context_processor\":true,\"ab_det_apm\":true,\"ab_det_el_h\":true,\"ab_det_sb_lo\":true,\"ab_fk_sk_cl\":true,\"action_companion_center_align_description\":true,\"align_ask_youtube_input_on_focus\":true,\"all_web_enable_network_machine\":true,\"all_web_network_machine_raw_request\":true,\"allow_skip_networkless\":true,\"ask_youtube_horizontal_action_buttons_searchbox\":true,\"ask_youtube_search_button_in_unfocused_searchbox\":true,\"ask_youtube_search_icon_searchbox_button\":true,\"ask_youtube_voice_button_outside_searchbox\":true,\"att_web_record_metrics\":true,\"attmusi\":true,\"attmusiw\":true,\"bg_st_hr\":true,\"browse_next_continuations_migration_playlist\":true,\"browse_reload_continuations_migration_home\":true,\"c3_enable_button_impression_logging\":true,\"c3_watch_page_component\":true,\"cancel_pending_navs\":true,\"channel_details_shelf_resize_observer\":true,\"check_user_lact_at_prompt_shown_time_on_web\":true,\"client_respect_autoplay_switch_button_renderer\":true,\"client_ui_enable_multi_track_audio_on_web_embedded_player\":true,\"cold_missing_history\":true,\"compress_gel\":true,\"config_age_report_killswitch\":true,\"course_hide_playlist_panel_shuffle_and_loop_buttons\":true,\"cow_optimize_idom_compat\":true,\"csi_on_gel\":true,\"dedupping_server_ve\":true,\"defer_menus\":true,\"defer_overlays\":true,\"delay_sheet_open_killswitch\":true,\"delhi_modern_web_player_compact_video_actions_controls\":true,\"delhi_modern_web_player_disable_frosted_glass\":true,\"delhi_modern_web_player_icons\":true,\"delhi_mweb_colorful_sd\":true,\"delhi_mweb_colorful_sd_v2\":true,\"delhi_web_player_use_external_playlist_panel\":true,\"deprecate_legacy_qna\":true,\"deprecate_pair_servlet_enabled\":true,\"desktop_add_to_playlist_renderer_dialog_popup\":true,\"desktop_delay_player_resizing\":true,\"desktop_enable_dmpanel_click_drag_scroll\":true,\"desktop_enable_dmpanel_scroll\":true,\"desktop_enable_dmpanel_wheel_scroll\":true,\"desktop_enable_entity_suggest\":true,\"desktop_enable_new_video_metadata\":true,\"desktop_enable_scrollable_suggestions_panel\":true,\"desktop_enable_single_suggestion_highlight\":true,\"desktop_enable_suggestions_panel_padding\":true,\"desktop_enable_visual_suggest\":true,\"desktop_keyboard_capture_keydown_killswitch\":true,\"desktop_mix_use_sampled_color_for_bottom_bar\":true,\"d\n\nVir: youtube.com — https://www.youtube.com/watch?v=mS6lX5QVUu0",
+    "category": "Gourmet",
+    "tags": [
+      "gourmet",
+      "Slovenija",
+      "perfectly",
+      "beginner",
+      "tutorial"
+    ],
+    "sources": [
+      {
+        "title": "How to Tie a Tie Perfectly (Beginner Tutorial) - YouTube",
+        "url": "https://www.youtube.com/watch?v=mS6lX5QVUu0",
+        "source_name": "youtube.com"
+      }
+    ],
+    "fallback": false,
+    "gallery": [],
+    "heroImage": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Matev%C5%BE_%28Slovenian_cuisine%29.jpg/1920px-Matev%C5%BE_%28Slovenian_cuisine%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "alt": "Matevž (Slovenian cuisine) with roast meat and sauerkraut.",
+      "caption": "Petar Milošević · Wikimedia Commons · CC BY-SA 4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Matev%C5%BE_(Slovenian_cuisine).jpg"
+    },
+    "visualTemplate": "fieldnote",
+    "templateLabel": "Field Note",
+    "id": "how-to-tie-a-tie-perfectly-beginner-tutorial-youtube-84c5b600"
+  }
+}
