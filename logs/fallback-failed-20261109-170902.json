@@ -1,0 +1,21 @@
+{
+  "category": "dediscina",
+  "errors": [
+    "clanek_brez_slovenskega_konteksta",
+    "viri_ne_podpirajo_slovenske_rubrike"
+  ],
+  "article": {
+    "title": "GoonerNews.com | Latest Arsenal News and Transfers"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "lead_url": "https://goonernews.com/mobile/index.html",
+      "title": "GoonerNews.com | Latest Arsenal News and Transfers",
+      "errors": [
+        "clanek_brez_slovenskega_konteksta",
+        "viri_ne_podpirajo_slovenske_rubrike"
+      ]
+    }
+  ]
+}
