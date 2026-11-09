@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-09T07:18:00+01:00",
+  "updatedAt": "2026-11-09T07:06:32+01:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -1511,6 +1511,25 @@
       "status": "confirmed",
       "lastCheckedAt": "2026-11-09T07:18:00+01:00",
       "description": "The second OJAČEVALNICA workshop starts at Gala Hala at 17:00. The official listing does not publish a verified price, accessibility details or broader visitor guidance."
+    },
+    {
+      "title": "OJAČEVALNICA – DRUGA DELAVNICA @ Gala hala",
+      "url": "https://www.galahala.com/",
+      "source": "Gala Hala",
+      "type": "Koncert · Metelkova",
+      "place": "Gala Hala · AKC Metelkova",
+      "startAt": "2026-11-23T17:00:00+01:00",
+      "endAt": null,
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.galahala.com/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-09T07:06:32+01:00",
+      "description": "OJAČEVALNICA – DRUGA DELAVNICA @ Gala hala is listed by Gala Hala. Check the official event page for price, language and accessibility details.",
+      "id": "event-72-oja-evalnica-druga-delavnica-gala-hala"
     },
     {
       "id": "perpetuum-jazzile-greatest-hits-2026-11-23",
