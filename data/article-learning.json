@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-11-08T23:06:38+01:00",
-  "loop_count": 7931,
+  "updated_at": "2026-11-09T07:30:35+01:00",
+  "loop_count": 7932,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-11-08T23:06:13+01:00",
+      "last_learning_run": "2026-11-09T07:30:12+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -86,11 +86,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 148448,
-          "last_seen": "2026-11-08T23:06:13+01:00",
+          "seen": 148454,
+          "last_seen": "2026-11-09T07:30:12+01:00",
           "last_title": "Odlični obeti, Slovenija se bi lahko že danes razveselila novega globusa - Žurnal24",
           "last_provider": "google-news-si",
-          "published": 478958,
+          "published": 479011,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,20 +227,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 9,
+      "current_source_count": 6,
       "example_titles": {
         "news.google.com": [
           "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
           "Slovenska blamaža na igrah! Zakaj sploh tekmujemo, če je šport pri nas umrl - Ekipa",
           "Slovenija proti Danski danes odpira svoje nastope na letošnjem evropskem prvenstvu - Šport TV"
-        ],
-        "worldatlas.com": [
-          "Slovenia Maps & Facts"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-11-08T23:06:24+01:00",
+      "last_learning_run": "2026-11-09T07:30:24+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -282,11 +279,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 177118,
-          "last_seen": "2026-11-08T23:06:24+01:00",
+          "seen": 177130,
+          "last_seen": "2026-11-09T07:30:24+01:00",
           "last_title": "Predsednik vlade Janša za ministra za ministra za digitalno preobrazbo predlaga Marka Borisa Andrijaniča - prava.si",
           "last_provider": "google-news-si",
-          "published": 527092,
+          "published": 527152,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -398,7 +395,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-11-08T23:06:38+01:00",
+      "last_learning_run": "2026-11-09T07:30:35+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -487,11 +484,11 @@
         },
         "news.google.com": {
           "score": 2.537,
-          "seen": 203523,
-          "last_seen": "2026-11-08T23:06:38+01:00",
+          "seen": 203535,
+          "last_seen": "2026-11-09T07:30:35+01:00",
           "last_title": "Slovenija preprečila pristanek izraelskega letala: tako se odziva Fraport - Info360",
           "last_provider": "google-news-global",
-          "published": 328358,
+          "published": 328374,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -586,14 +583,11 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 14,
+      "current_source_count": 12,
       "example_titles": {
-        "britannica.com": [
-          "Slovenia | History, Geography, & People | Britannica"
-        ],
         "news.google.com": [
-          "Kako svet vidi Slovenijo danes in kako je postala tako vroča evropska destinacija - Dnevnik",
           "Golob je “depolitiziral” RTV SLO, jo bo tudi Janša? Ustavno sodišče je dalo “blagoslov”, a Gregorčič in Avbelj gresta na ESČP - Zanima.me",
+          "Kako svet vidi Slovenijo danes in kako je postala tako vroča evropska destinacija - Dnevnik",
           "Pred Stevanovićevim obiskom v Srbiji znova aktualno vprašanje statusa srbske skupnosti v Sloveniji - Siol.net"
         ]
       }
