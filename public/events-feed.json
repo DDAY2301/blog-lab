@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-09T07:08:45+01:00",
+  "updatedAt": "2026-11-09T07:38:00+01:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -1492,9 +1492,8 @@
       "description": "Spring screens in Kosovel Hall at 21:00 as part of LIFFe’s final day. Tickets cost €6.50–€7.30; language and subtitle details should be confirmed on the official programme before booking."
     },
     {
-      "id": "ojacevalnica-workshop-2026-11-23",
-      "title": "OJAČEVALNICA – Second Workshop",
-      "url": "https://www.galahala.com/?page=rezervacije%2Fniet",
+      "title": "OJAČEVALNICA – DRUGA DELAVNICA @ Gala hala",
+      "url": "https://www.galahala.com/",
       "source": "Gala Hala",
       "type": "Workshop · music",
       "place": "Gala Hala · AKC Metelkova",
@@ -1507,28 +1506,10 @@
       "touristFriendly": false,
       "familyFriendly": false,
       "accessibility": null,
-      "ticketUrl": "https://www.galahala.com/?page=rezervacije%2Fniet",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-09T07:18:00+01:00",
-      "description": "The second OJAČEVALNICA workshop starts at Gala Hala at 17:00. The official listing does not publish a verified price, accessibility details or broader visitor guidance."
-    },
-    {
-      "title": "OJAČEVALNICA – DRUGA DELAVNICA @ Gala hala",
-      "url": "https://www.galahala.com/",
-      "source": "Gala Hala",
-      "type": "Koncert · Metelkova",
-      "place": "Gala Hala · AKC Metelkova",
-      "startAt": "2026-11-23T17:00:00+01:00",
-      "endAt": null,
-      "price": null,
-      "languages": [],
-      "touristFriendly": null,
-      "familyFriendly": null,
-      "accessibility": null,
       "ticketUrl": "https://www.galahala.com/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-11-09T07:08:45+01:00",
-      "description": "OJAČEVALNICA – DRUGA DELAVNICA @ Gala hala is listed by Gala Hala. Check the official event page for price, language and accessibility details.",
+      "lastCheckedAt": "2026-11-09T07:38:00+01:00",
+      "description": "The second OJAČEVALNICA workshop starts at Gala Hala at 17:00. The official listing does not publish a verified price, accessibility details or broader visitor guidance.",
       "id": "event-72-oja-evalnica-druga-delavnica-gala-hala"
     },
     {
