@@ -5,7 +5,7 @@
   "posts_date": "2026-11-09",
   "posts_today": 0,
   "last_output": "ormoz-v-pricakovanju-kolesarskega-spektakla-cilj-2-etape-dirke-po-sloveniji-bo-na-kerencic-5515ae76",
-  "last_error": "clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike",
+  "last_error": "fallback_no_fresh_evidence",
   "agent_version": "3.0.0-learning-guarded-fallback",
   "current_category": "dediscina",
   "scheduled_posts_today": 0,
