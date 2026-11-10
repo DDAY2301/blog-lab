@@ -14,11 +14,11 @@
   "scheduled_slots_done": [],
   "scheduled_slots_deferred": [],
   "last_editorial_hold": null,
-  "publisher_guardian_last_run": "2026-11-09T23:44:20+01:00",
+  "publisher_guardian_last_run": "2026-11-10T14:02:22+01:00",
   "publisher_guardian_last_action": {
     "category": "kolesarstvo",
-    "slot": "2026-11-09|07:35|kolesarstvo",
-    "remaining_repairs": 3
+    "slot": "2026-11-10|07:35|kolesarstvo",
+    "remaining_repairs": 2
   },
   "schedule_counter_normalized_at": "2026-10-07T16:45:00+02:00"
 }
