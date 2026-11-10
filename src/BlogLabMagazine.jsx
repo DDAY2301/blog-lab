@@ -101,7 +101,7 @@ function EventTile({ item, day }) {
   const photo = displayPhotoForEvent(item);
   const image = photo?.src || "";
   return <a href={eventHref(item)} className="mag-event-tile">
-    <span className="mag-image" style={{ backgroundImage: image ? "url(" + image + ")" : "none" }} aria-hidden="true" />
+    <span className="mag-image" style={{ backgroundImage: "url(" + image + ")" }} aria-hidden="true" />
     <span className="mag-tile-body">
       <span className="mag-overline">{rubricInfo(rubricForEvent(item)).name} / {eventHour(item, day || keyForLjubljana(item.startAt))}</span>
       <strong>{item.title}</strong><small>{item.place || item.source || "Slovenija"}</small>
@@ -114,7 +114,7 @@ function ArticleTile({ item }) {
   const rub = rubricForArticle(item);
   const photo = displayPhotoForArticle(item);
   return <a className="mag-article-tile" href={articleHref(item)}>
-    <span className="mag-image" style={{ backgroundImage: photo ? "url(" + photo.src + ")" : "none" }} aria-hidden="true" />
+    <span className="mag-image" style={{ backgroundImage: "url(" + photo.src + ")" }} aria-hidden="true" />
     <span className="mag-tile-body"><span className="mag-overline">{rubricInfo(rub).name} / {niceDate(dateForArticle(item), { day: "numeric", month: "short", year: "numeric" })}</span>
       <strong>{item.title}</strong><small>{item.excerpt || "Preberi zgodbo na BlogLab."}</small>{photo && <span className="mag-photo-credit">{photoCredit(photo)}</span>}<span className="mag-card-link">Preberi članek ↗</span></span>
   </a>;
