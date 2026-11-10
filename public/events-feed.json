@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-10T03:46:47+01:00",
+  "updatedAt": "2026-11-10T06:55:00+01:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -135,8 +135,29 @@
       "accessibility": "Kino Šiška provides step-free access, a lift, accessible toilets, hearing loops and tactile guidance.",
       "ticketUrl": "https://www.kinosiska.si/en/dogodek/miha-godec-reviviscence/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-11-09T07:18:00+01:00",
+      "lastCheckedAt": "2026-11-10T06:55:00+01:00",
       "description": "A round table on art and marine-ecosystem restoration begins at 18:00, followed by the Reviviscence opening at 19:00. Entry is free and the installation remains on view on 10 November."
+    },
+    {
+      "id": "iranska-konferenca-drama-2026-11-10",
+      "title": "Iranska konferenca",
+      "url": "https://www.drama.si/dogodek/iranska-konferenca/",
+      "source": "SNG Drama Ljubljana",
+      "type": "Theatre · drama",
+      "place": "SNG Drama Main Stage, Litostrojska 56 · Ljubljana",
+      "startAt": "2026-11-10T19:00:00+01:00",
+      "endAt": "2026-11-10T21:50:00+01:00",
+      "price": null,
+      "languages": [
+        "Slovenian"
+      ],
+      "touristFriendly": false,
+      "familyFriendly": false,
+      "accessibility": null,
+      "ticketUrl": "https://drama.kupikarto.si/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-10T06:55:00+01:00",
+      "description": "The 170-minute performance starts at 19:00 and is followed by a conversation with the creative team. It is performed in Slovenian; the official listing confirms ticket sales but does not expose one verified price."
     },
     {
       "id": "kristijan-krajncan-alchymia-xxi-2026-11-10",
@@ -156,8 +177,29 @@
       "accessibility": "Cankarjev dom publishes venue accessibility information; request accessible seating when booking.",
       "ticketUrl": "https://vstopnice.cd-cc.si/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-11-09T07:18:00+01:00",
+      "lastCheckedAt": "2026-11-10T06:55:00+01:00",
       "description": "Kristijan Krajnčan’s quintet performs Alchymia XXI in the CD Club at 19:30. Tickets cost €16, or €12 for eligible reduced-price visitors."
+    },
+    {
+      "id": "iranska-konferenca-drama-2026-11-11",
+      "title": "Iranska konferenca",
+      "url": "https://www.drama.si/dogodek/iranska-konferenca/",
+      "source": "SNG Drama Ljubljana",
+      "type": "Theatre · drama",
+      "place": "SNG Drama Main Stage, Litostrojska 56 · Ljubljana",
+      "startAt": "2026-11-11T19:30:00+01:00",
+      "endAt": "2026-11-11T22:30:00+01:00",
+      "price": null,
+      "languages": [
+        "Slovenian"
+      ],
+      "touristFriendly": false,
+      "familyFriendly": false,
+      "accessibility": null,
+      "ticketUrl": "https://drama.kupikarto.si/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-10T06:55:00+01:00",
+      "description": "Iranska konferenca runs from 19:30 to 22:30 on the Main Stage. It is performed in Slovenian; tickets are offered by SNG Drama, with no single verified price shown in the public listing."
     },
     {
       "id": "goran-vincic-vinca-cankarjev-dom-2026-11-11",
@@ -177,7 +219,7 @@
       "accessibility": "Contact Cankarjev dom for wheelchair seating and other event-specific assistance.",
       "ticketUrl": "https://cd-cc.si/en/culture/lease-event/goran-vincic-vinca",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-28T07:12:00+01:00",
+      "lastCheckedAt": "2026-11-10T06:55:00+01:00",
       "description": "Croatian stand-up comedian Goran Vinčić presents Comedy Is a Serious Thing in Gallus Hall at 20:00. The show is performed in the original language; tickets range from €28.90 to €48.90."
     },
     {
@@ -198,7 +240,7 @@
       "accessibility": "Kino Šiška publishes general venue accessibility information; contact the venue for event-specific arrangements.",
       "ticketUrl": "https://www.kinosiska.si/dogodek/rijeka-paris-texas-ii/",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-30T07:20:00+01:00",
+      "lastCheckedAt": "2026-11-10T06:55:00+01:00",
       "description": "The Siids, Chasing Nord and Turisti present the second chapter of Rijeka–Paris–Texas at 20:00. Tickets cost €19, or €14.25 at the reduced rate."
     },
     {
@@ -219,8 +261,29 @@
       "accessibility": "Contact Bunker for event-specific step-free access and seating arrangements.",
       "ticketUrl": "https://www.bunker.si/events/tina-benko-ema-krizic-svetloba-od-zunaj/?occurrence=2026-11-11&time=1794427200",
       "status": "confirmed",
-      "lastCheckedAt": "2026-10-30T07:20:00+01:00",
+      "lastCheckedAt": "2026-11-10T06:55:00+01:00",
       "description": "Tina Benko and Ema Križič present a one-hour dance work exploring movement, rhythm, sound and light. Tickets cost €10 or €7 reduced."
+    },
+    {
+      "id": "iranska-konferenca-drama-2026-11-12",
+      "title": "Iranska konferenca",
+      "url": "https://www.drama.si/dogodek/iranska-konferenca/",
+      "source": "SNG Drama Ljubljana",
+      "type": "Theatre · drama",
+      "place": "SNG Drama Main Stage, Litostrojska 56 · Ljubljana",
+      "startAt": "2026-11-12T17:00:00+01:00",
+      "endAt": "2026-11-12T19:50:00+01:00",
+      "price": null,
+      "languages": [
+        "Slovenian"
+      ],
+      "touristFriendly": false,
+      "familyFriendly": false,
+      "accessibility": null,
+      "ticketUrl": "https://drama.kupikarto.si/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-10T06:55:00+01:00",
+      "description": "The final listed November performance runs from 17:00 to 19:50. It is in Slovenian; check the official ticket shop for current price and remaining seats."
     },
     {
       "id": "tesla-cankarjev-dom-2026-11-12",
@@ -1492,6 +1555,115 @@
       "description": "MGL stages Euripides’ The Troyan Women on the Small Stage at 20:00. It is performed in Slovenian; tickets are listed, but the schedule does not expose one verified price."
     },
     {
+      "id": "omakase-shin-prulcek-2026-11-24",
+      "title": "Omakase Dinners at Shin",
+      "url": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/omakase-dinners-at-shin",
+      "source": "Visit Ljubljana / Shin Sato",
+      "type": "Culinary experience · live music",
+      "place": "Sato Prulček, Prijateljeva ulica 2 · Ljubljana",
+      "startAt": "2026-11-24T16:00:00+01:00",
+      "endAt": "2026-11-24T22:00:00+01:00",
+      "price": "€35 / €40 with live music",
+      "languages": [
+        "Language-light",
+        "English not guaranteed"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/omakase-dinners-at-shin",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-10T06:55:00+01:00",
+      "description": "Three-course omakase sittings are offered at 16:00, 18:00 and 20:00; live music runs from 19:00 to 21:00. The menu costs €35, or €40 with live music; accessibility details are not published."
+    },
+    {
+      "id": "doctor-zhivago-opera-2026-11-24",
+      "title": "Doctor Zhivago",
+      "url": "https://www.opera.si/en/programme/event/balet/doktor-zivago?d=4313",
+      "source": "SNG Opera and Ballet Ljubljana",
+      "type": "Ballet drama",
+      "place": "SNG Opera and Ballet Ljubljana",
+      "startAt": "2026-11-24T18:00:00+01:00",
+      "endAt": "2026-11-24T20:40:00+01:00",
+      "price": "€12–€50",
+      "languages": [
+        "Dance-led"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": true,
+      "accessibility": "Contact the Opera box office for wheelchair seating and performance-specific assistance.",
+      "ticketUrl": "https://www.mojekarte.si/en/city/771/ljubljana/23-1-1-1.html",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-10T06:55:00+01:00",
+      "description": "Jiří Bubeníček’s ballet drama begins at 18:00 and runs for about 2 hours 40 minutes with one interval. The official seller lists seats from €12 to €50."
+    },
+    {
+      "id": "literary-dialogues-slovenia-spain-2026-11-24",
+      "title": "Literary Dialogues: Slovenia – Spain",
+      "url": "https://www.cd-cc.si/en/culture/literature-and-humanities/literary-dialogues-slovenia-spain-0",
+      "source": "Cankarjev dom",
+      "type": "Literature · conversation",
+      "place": "Alma Karlin Hall · Cankarjev dom",
+      "startAt": "2026-11-24T18:00:00+01:00",
+      "endAt": null,
+      "price": "Free ticket required",
+      "languages": [
+        "Slovenian",
+        "Spanish",
+        "Simultaneous translation"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": "Contact Cankarjev dom for wheelchair seating and event-specific assistance.",
+      "ticketUrl": "https://www.cd-cc.si/en/culture/literature-and-humanities/literary-dialogues-slovenia-spain-0",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-10T06:55:00+01:00",
+      "description": "Writers Jesús Carrasco and Nataša Kramberger meet at 18:00 with simultaneous Slovenian–Spanish translation. Admission is free, but visitors need a free ticket."
+    },
+    {
+      "id": "letoviska-trilogija-drama-2026-11-24",
+      "title": "Letoviška trilogija",
+      "url": "https://www.drama.si/dogodek/letoviska-trilogija/",
+      "source": "SNG Drama Ljubljana",
+      "type": "Theatre · comedy",
+      "place": "SNG Drama Main Stage, Litostrojska 56 · Ljubljana",
+      "startAt": "2026-11-24T19:30:00+01:00",
+      "endAt": "2026-11-24T20:40:00+01:00",
+      "price": null,
+      "languages": [
+        "Slovenian"
+      ],
+      "touristFriendly": false,
+      "familyFriendly": false,
+      "accessibility": null,
+      "ticketUrl": "https://drama.kupikarto.si/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-10T06:55:00+01:00",
+      "description": "Carlo Goldoni’s 70-minute comedy begins at 19:30 and has no interval. It is performed in Slovenian; the official page confirms ticket sales but does not show one verified price."
+    },
+    {
+      "id": "tokac-big-band-rtv-2026-11-24",
+      "title": "Tokac & Big Band RTV Slovenija",
+      "url": "https://www.cd-cc.si/en/culture/music/after-dan-d-frontman-tokac-makes-his-solo-debut-in-gallus-hall",
+      "source": "Cankarjev dom",
+      "type": "Concert · rock and big band",
+      "place": "Gallus Hall · Cankarjev dom",
+      "startAt": "2026-11-24T19:30:00+01:00",
+      "endAt": "2026-11-24T21:00:00+01:00",
+      "price": "€20 / €22 / €26 / €30; reduced €18 / €20 / €24 / €27",
+      "languages": [
+        "Music-led",
+        "Slovenian stage remarks likely"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": true,
+      "accessibility": "Contact Cankarjev dom for wheelchair seating and event-specific assistance.",
+      "ticketUrl": "https://vstopnice.cd-cc.si/en/venue/38/gallusova-dvorana-cankarjev-dom.html",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-10T06:55:00+01:00",
+      "description": "Tokac performs new orchestral arrangements with the RTV Slovenia Big Band at 19:30. The 90-minute concert costs €20–€30, with reduced tickets from €18 to €27."
+    },
+    {
       "title": "JOŠ GORI @ Gala hala",
       "url": "https://www.galahala.com/",
       "source": "Gala Hala",
@@ -1509,6 +1681,69 @@
       "lastCheckedAt": "2026-11-10T03:46:47+01:00",
       "description": "JOŠ GORI @ Gala hala is listed by Gala Hala. Check the official event page for price, language and accessibility details.",
       "id": "event-71-jo-gori-gala-hala"
+    },
+    {
+      "id": "man-overboard-mgl-2026-11-24",
+      "title": "Man Overboard",
+      "url": "https://www.mgl.si/en/shows/man-overboard/",
+      "source": "MGL",
+      "type": "Theatre · documentary solo project",
+      "place": "MGL Small Stage · Ljubljana",
+      "startAt": "2026-11-24T20:00:00+01:00",
+      "endAt": null,
+      "price": null,
+      "languages": [
+        "Slovenian"
+      ],
+      "touristFriendly": false,
+      "familyFriendly": false,
+      "accessibility": "Contact MGL for performance-specific step-free seating arrangements.",
+      "ticketUrl": "https://www.mgl.si/en/schedule/",
+      "status": "sold_out",
+      "lastCheckedAt": "2026-11-10T06:55:00+01:00",
+      "description": "The documentary solo project starts on the Small Stage at 20:00. MGL marks this performance as sold out."
+    },
+    {
+      "id": "sto-nas-je-drama-2026-11-24",
+      "title": "Sto nas je",
+      "url": "https://www.drama.si/dogodek/sto-nas-je/",
+      "source": "SNG Drama Ljubljana",
+      "type": "Theatre · drama",
+      "place": "Mala Drama, Litostrojska 56 · Ljubljana",
+      "startAt": "2026-11-24T20:00:00+01:00",
+      "endAt": "2026-11-24T21:00:00+01:00",
+      "price": null,
+      "languages": [
+        "Slovenian"
+      ],
+      "touristFriendly": false,
+      "familyFriendly": false,
+      "accessibility": null,
+      "ticketUrl": "https://drama.kupikarto.si/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-10T06:55:00+01:00",
+      "description": "The one-hour co-production Sto nas je begins at Mala Drama at 20:00. It is performed in Slovenian; the public listing confirms ticket sales but does not expose one verified price."
+    },
+    {
+      "id": "zebrahead-kino-siska-2026-11-24",
+      "title": "ZEBRAHEAD + Punk Rock Factory",
+      "url": "https://www.kinosiska.si/en/dogodek/zebrahead/",
+      "source": "Kino Šiška",
+      "type": "Concert · punk rock and rap-rock",
+      "place": "Katedrala Hall · Kino Šiška",
+      "startAt": "2026-11-24T20:00:00+01:00",
+      "endAt": null,
+      "price": "€30 presale / €35 walk-up / €22.50 reduced",
+      "languages": [
+        "Music-led"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": "Kino Šiška provides step-free access, a lift, accessible toilets, hearing loops and tactile guidance.",
+      "ticketUrl": "https://www.kinosiska.si/en/dogodek/zebrahead/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-10T06:55:00+01:00",
+      "description": "Zebrahead and Punk Rock Factory play Katedrala Hall at 20:00. Tickets cost €30 in presale, €35 at the door or €22.50 at the reduced rate."
     }
   ]
 }
