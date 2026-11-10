@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-10T06:59:26+01:00",
+  "updatedAt": "2026-11-10T07:02:00+01:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -1702,6 +1702,48 @@
       "status": "sold_out",
       "lastCheckedAt": "2026-11-10T06:55:00+01:00",
       "description": "The documentary solo project starts on the Small Stage at 20:00. MGL marks this performance as sold out."
+    },
+    {
+      "id": "sto-nas-je-drama-2026-11-24",
+      "title": "Sto nas je",
+      "url": "https://www.drama.si/dogodek/sto-nas-je/",
+      "source": "SNG Drama Ljubljana",
+      "type": "Theatre · drama",
+      "place": "Mala Drama, Litostrojska 56 · Ljubljana",
+      "startAt": "2026-11-24T20:00:00+01:00",
+      "endAt": "2026-11-24T21:00:00+01:00",
+      "price": null,
+      "languages": [
+        "Slovenian"
+      ],
+      "touristFriendly": false,
+      "familyFriendly": false,
+      "accessibility": null,
+      "ticketUrl": "https://drama.kupikarto.si/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-10T07:02:00+01:00",
+      "description": "The one-hour co-production Sto nas je begins at Mala Drama at 20:00. It is performed in Slovenian; the public listing confirms ticket sales but does not expose one verified price."
+    },
+    {
+      "id": "zebrahead-kino-siska-2026-11-24",
+      "title": "ZEBRAHEAD + Punk Rock Factory",
+      "url": "https://www.kinosiska.si/en/dogodek/zebrahead/",
+      "source": "Kino Šiška",
+      "type": "Concert · punk rock and rap-rock",
+      "place": "Katedrala Hall · Kino Šiška",
+      "startAt": "2026-11-24T20:00:00+01:00",
+      "endAt": null,
+      "price": "€30 presale / €35 walk-up / €22.50 reduced",
+      "languages": [
+        "Music-led"
+      ],
+      "touristFriendly": true,
+      "familyFriendly": false,
+      "accessibility": "Kino Šiška provides step-free access, a lift, accessible toilets, hearing loops and tactile guidance.",
+      "ticketUrl": "https://www.kinosiska.si/en/dogodek/zebrahead/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-10T07:02:00+01:00",
+      "description": "Zebrahead and Punk Rock Factory play Katedrala Hall at 20:00. Tickets cost €30 in presale, €35 at the door or €22.50 at the reduced rate."
     }
   ]
 }
