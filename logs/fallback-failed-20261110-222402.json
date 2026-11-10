@@ -1,0 +1,23 @@
+{
+  "category": "dediscina",
+  "errors": [
+    "clanek_brez_slovenskega_konteksta",
+    "viri_ne_podpirajo_slovenske_rubrike",
+    "besedilo_ni_v_slovenscini"
+  ],
+  "article": {
+    "title": "ATTACK SHARK R85 HE Rapid Trigger Keyboard Magnetic Switch with Custom Lightbox"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "lead_url": "https://attackshark.com/products/attack-shark-r85he-wired-magnetic-switch-rapid-trigger-keyboard",
+      "title": "ATTACK SHARK R85 HE Rapid Trigger Keyboard Magnetic Switch with Custom Lightbox",
+      "errors": [
+        "clanek_brez_slovenskega_konteksta",
+        "viri_ne_podpirajo_slovenske_rubrike",
+        "besedilo_ni_v_slovenscini"
+      ]
+    }
+  ]
+}
