@@ -36,3 +36,134 @@
 .bloglab-magazine .mag-nightlife-sources a{color:#e5d5b5;text-decoration:none;border-bottom:1px solid rgba(245,232,207,.5);padding:3px 0}
 .bloglab-magazine .mag-nightlife-sources a:hover,.bloglab-magazine .mag-nightlife-sources a:focus-visible{color:#fff;border-color:currentColor}
 .bloglab-magazine .mag-interior>.mag-nightlife-sources{background:#21422e;border-radius:8px;padding:12px 16px}
+
+
+/* BlogLab photo-first visual recovery, 2026-11-10.
+   In addition to verified Unsplash media, a deep green base ensures readable
+   white type if a remote photo temporarily fails to load. */
+.bloglab-magazine .mag-painted-banner {
+  min-height: clamp(420px, 51vh, 560px);
+  padding: 62px 0 64px;
+  background-color: #17352b;
+  background-size: cover;
+  background-position: center 46%;
+  background-repeat: no-repeat;
+  isolation: isolate;
+}
+.bloglab-magazine .mag-painted-banner::after {
+  display: none;
+}
+.bloglab-magazine .mag-painted-banner .mag-wide {
+  position: relative;
+  z-index: 2;
+}
+.bloglab-magazine .mag-painted-banner h1 {
+  max-width: 930px;
+  margin: 14px 0 20px;
+  font-size: clamp(49px, 5.1vw, 88px);
+  line-height: 1.02;
+  letter-spacing: -.045em;
+  color: #fff9ef;
+  text-shadow: 0 3px 20px rgba(0, 0, 0, .54);
+}
+.bloglab-magazine .mag-painted-banner h1 em {
+  color: #f9db9e;
+}
+.bloglab-magazine .mag-painted-banner .mag-overline {
+  color: #f5d89c;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, .35);
+}
+.bloglab-magazine .mag-painted-banner p {
+  max-width: 660px;
+  margin: 0 0 24px;
+  color: #fff6e9;
+  font-size: clamp(17px, 1.3vw, 21px);
+  line-height: 1.5;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, .63);
+}
+.bloglab-magazine .mag-painted-banner.compact {
+  min-height: clamp(260px, 37vh, 370px);
+  padding: 45px 0 48px;
+}
+.bloglab-magazine .mag-hero-cta {
+  background: #f3deaf;
+  color: #18372d;
+  border: 1px solid #ebd19d;
+  border-radius: 6px;
+  font-size: 13px;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, .22);
+}
+.bloglab-magazine .mag-home-body {
+  padding-top: 35px;
+}
+.bloglab-magazine .mag-today-rail {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 4px 2px 18px;
+  scroll-snap-type: x proximity;
+  scrollbar-width: thin;
+}
+.bloglab-magazine .mag-today-rail .mag-event-tile {
+  flex: 0 0 clamp(220px, 20vw, 280px);
+  scroll-snap-align: start;
+}
+.bloglab-magazine .mag-event-tile .mag-image,
+.bloglab-magazine .mag-article-tile .mag-image,
+.bloglab-magazine .mag-rubric-art,
+.bloglab-magazine .mag-entry-image,
+.bloglab-magazine .mag-weekend-feature-image,
+.bloglab-magazine .mag-weekend-day-head {
+  background-color: #2b493a;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.bloglab-magazine .mag-event-tile .mag-image { aspect-ratio: 4 / 3; }
+.bloglab-magazine .mag-article-tile .mag-image { aspect-ratio: 16 / 10; }
+.bloglab-magazine .mag-rubric-art { min-height: 260px; }
+.bloglab-magazine .mag-weekend-feature-image { min-height: 225px; }
+.bloglab-magazine .mag-event-tile,
+.bloglab-magazine .mag-article-tile,
+.bloglab-magazine .mag-rubric-card,
+.bloglab-magazine .mag-weekend-feature-day {
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff9ed;
+  border-color: #d5c7ad;
+}
+.bloglab-magazine .mag-event-tile:hover,
+.bloglab-magazine .mag-article-tile:hover,
+.bloglab-magazine .mag-rubric-card:hover {
+  box-shadow: 0 14px 29px rgba(19, 38, 29, .13);
+}
+.bloglab-magazine .mag-photo-credit {
+  color: #62695e;
+  font-size: 10px;
+}
+@media (max-width: 800px) {
+  .bloglab-magazine .mag-painted-banner {
+    min-height: 375px;
+    padding: 48px 0 54px;
+    background-position: center center;
+  }
+  .bloglab-magazine .mag-painted-banner h1 {
+    max-width: 12ch;
+    font-size: clamp(44px, 8.5vw, 66px);
+  }
+  .bloglab-magazine .mag-painted-banner p {
+    max-width: 580px;
+    font-size: 17px;
+  }
+  .bloglab-magazine .mag-today-rail .mag-event-tile { flex-basis: 235px; }
+}
+@media (max-width: 480px) {
+  .bloglab-magazine .mag-painted-banner { min-height: 365px; }
+  .bloglab-magazine .mag-painted-banner h1 {
+    font-size: clamp(43px, 11vw, 56px);
+    line-height: 1.02;
+  }
+  .bloglab-magazine .mag-painted-banner p { font-size: 16px; }
+  .bloglab-magazine .mag-hero-cta { min-height: 46px; }
+}
