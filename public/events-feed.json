@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-09T19:55:14+01:00",
+  "updatedAt": "2026-11-10T03:46:47+01:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -117,27 +117,6 @@
       "description": "The month-long culinary festival begins today across Ljubljana, with tastings, menus, workshops and live events announced separately. Prices, languages and accessibility vary by participating venue."
     },
     {
-      "id": "concert-academy-postproduction-accounting-2026-11-09",
-      "title": "KONCERTNA AKADEMIJA @ KINO ŠIŠKA: POSTPRODUKCIJA, RAČUNOVODSTVO",
-      "url": "https://www.galahala.com/?gala_event_day=2026-11-09&gala_event_month=2026-11",
-      "source": "Gala Hala / Kino Šiška",
-      "type": "Workshop · concert production",
-      "place": "Kino Šiška · Ljubljana",
-      "startAt": "2026-11-09T17:00:00+01:00",
-      "endAt": null,
-      "price": null,
-      "languages": [
-        "Slovenian"
-      ],
-      "touristFriendly": false,
-      "familyFriendly": false,
-      "accessibility": null,
-      "ticketUrl": "https://www.galahala.com/?gala_event_day=2026-11-09&gala_event_month=2026-11",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-09T07:18:00+01:00",
-      "description": "The Concert Academy workshop on post-production and accounting starts at 17:00 at Kino Šiška. It is intended for young people interested in concert production; the organiser does not publish a general admission price."
-    },
-    {
       "id": "miha-godec-reviviscence-2026-11-09",
       "title": "Miha Godec: Reviviscence",
       "url": "https://www.kinosiska.si/en/dogodek/miha-godec-reviviscence/",
@@ -158,92 +137,6 @@
       "status": "confirmed",
       "lastCheckedAt": "2026-11-09T07:18:00+01:00",
       "description": "A round table on art and marine-ecosystem restoration begins at 18:00, followed by the Reviviscence opening at 19:00. Entry is free and the installation remains on view on 10 November."
-    },
-    {
-      "id": "hrup-za-odrom-drama-2026-11-09",
-      "title": "Hrup za odrom (Noises Off)",
-      "url": "https://www.drama.si/dogodek/hrup-za-odrom/",
-      "source": "SNG Drama Ljubljana",
-      "type": "Theatre · comedy",
-      "place": "Large Stage, Litostrojska 56 · Ljubljana",
-      "startAt": "2026-11-09T19:30:00+01:00",
-      "endAt": "2026-11-09T22:10:00+01:00",
-      "price": null,
-      "languages": [
-        "Slovenian"
-      ],
-      "touristFriendly": false,
-      "familyFriendly": false,
-      "accessibility": null,
-      "ticketUrl": "https://drama.kupikarto.si/dogodek.php?dogId=7651&page=1",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-09T07:18:00+01:00",
-      "description": "SNG Drama stages Michael Frayn’s backstage comedy from 19:30 to 22:10. The performance is in Slovenian; the official booking page confirms availability but does not expose one verified ticket price."
-    },
-    {
-      "id": "new-music-forum-hybrid-spaces-2026-11-09",
-      "title": "New Music Forum 2026: Hybrid Spaces",
-      "url": "https://www.cd-cc.si/en/culture/music/new-music-forum-2026-hybrid-spaces",
-      "source": "Cankarjev dom",
-      "type": "Concert · contemporary music and electronics",
-      "place": "CD Club · Cankarjev dom",
-      "startAt": "2026-11-09T19:30:00+01:00",
-      "endAt": null,
-      "price": "€10 / €8 reduced",
-      "languages": [
-        "Music-led",
-        "English-friendly programme information"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": "Cankarjev dom publishes venue accessibility information; request accessible seating when booking.",
-      "ticketUrl": "https://vstopnice.cd-cc.si/en/tickets.html",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-09T07:18:00+01:00",
-      "description": "Hybrid Spaces begins at 19:30 and explores collaboration between human performers, electronics and machines. Tickets cost €10, or €8 for eligible reduced-price visitors."
-    },
-    {
-      "id": "bob-dylan-stozice-2026-11-09",
-      "title": "Bob Dylan",
-      "url": "https://www.eventim.si/en/event/bob-dylan-dvorana-stozice-21886195/",
-      "source": "Eventim / organiser",
-      "type": "Concert · folk rock",
-      "place": "Stožice Hall · Ljubljana",
-      "startAt": "2026-11-09T20:00:00+01:00",
-      "endAt": null,
-      "price": "€63–€179; most categories sold out at last check",
-      "languages": [
-        "Music-led",
-        "English"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": "Stožice parking includes designated reduced-mobility spaces; confirm accessible seating with the seller.",
-      "ticketUrl": "https://www.eventim.si/en/event/bob-dylan-dvorana-stozice-21886195/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-09T07:18:00+01:00",
-      "description": "Doors open at 18:00 and Bob Dylan starts punctually at 20:00. It is a phone-free concert: print the ticket, bring a physical payment card, and expect Yondr phone pouches; most ticket categories were sold out at the last check."
-    },
-    {
-      "id": "sto-nas-je-drama-2026-11-09",
-      "title": "Sto nas je",
-      "url": "https://www.drama.si/dogodek/sto-nas-je/",
-      "source": "SNG Drama Ljubljana",
-      "type": "Theatre · drama",
-      "place": "Mala Drama, Litostrojska 56 · Ljubljana",
-      "startAt": "2026-11-09T20:00:00+01:00",
-      "endAt": "2026-11-09T21:00:00+01:00",
-      "price": null,
-      "languages": [
-        "Slovenian"
-      ],
-      "touristFriendly": false,
-      "familyFriendly": false,
-      "accessibility": null,
-      "ticketUrl": "https://drama.kupikarto.si/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-09T07:18:00+01:00",
-      "description": "The one-hour SNG Drama and Mestno gledališče Ptuj co-production starts at 20:00. It is performed in Slovenian; the official seller confirms tickets but does not expose one verified price."
     },
     {
       "id": "kristijan-krajncan-alchymia-xxi-2026-11-10",
@@ -1597,6 +1490,25 @@
       "status": "confirmed",
       "lastCheckedAt": "2026-11-09T07:18:00+01:00",
       "description": "MGL stages Euripides’ The Troyan Women on the Small Stage at 20:00. It is performed in Slovenian; tickets are listed, but the schedule does not expose one verified price."
+    },
+    {
+      "title": "JOŠ GORI @ Gala hala",
+      "url": "https://www.galahala.com/",
+      "source": "Gala Hala",
+      "type": "Koncert · Metelkova",
+      "place": "Gala Hala · AKC Metelkova",
+      "startAt": "2026-11-24T20:00:00+01:00",
+      "endAt": null,
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.galahala.com/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-10T03:46:47+01:00",
+      "description": "JOŠ GORI @ Gala hala is listed by Gala Hala. Check the official event page for price, language and accessibility details.",
+      "id": "event-71-jo-gori-gala-hala"
     }
   ]
 }
