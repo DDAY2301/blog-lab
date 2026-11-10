@@ -1,0 +1,32 @@
+/* Photo-led editorial finish: genuine documentary photos instead of faux painterly covers.
+   Keep BlogLab's dark-green/cream identity; remove template-like irregular shapes. */
+.bloglab-magazine .mag-painted-banner{background-position:center 44%;background-size:cover}
+.bloglab-magazine .mag-event-tile,
+.bloglab-magazine .mag-article-tile,
+.bloglab-magazine .mag-rubric-card,
+.bloglab-magazine .mag-weekend-feature-day,
+.bloglab-magazine .mag-weekend-day,
+.bloglab-magazine .mag-calendar-sheet{border-radius:8px;box-shadow:0 2px 14px rgba(35,39,33,.06)}
+.bloglab-magazine .mag-event-tile .mag-image,
+.bloglab-magazine .mag-article-tile .mag-image,
+.bloglab-magazine .mag-rubric-art,
+.bloglab-magazine .mag-weekend-feature-image,
+.bloglab-magazine .mag-weekend-day-head{background-color:#d6d7d1;background-position:center;background-size:cover}
+.bloglab-magazine .mag-photo-credit{font:400 10px/1.35 ui-sans-serif,system-ui,sans-serif;color:#7a7466;display:block;margin-top:3px}
+.bloglab-magazine .mag-photo-detail{font:400 12px/1.6 ui-sans-serif,system-ui,sans-serif!important;color:#6a685e!important;border-top:1px solid #dfd6c8;padding-top:11px;margin-bottom:18px}
+.bloglab-magazine .mag-photo-detail a{color:#315b45;text-underline-offset:2px}
+.bloglab-magazine .mag-photo-licenses{grid-column:1/-1;max-width:750px;font:400 12px/1.6 ui-sans-serif,system-ui,sans-serif;color:#e8dfcf;margin-top:20px}
+.bloglab-magazine .mag-photo-licenses summary{cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.bloglab-magazine .mag-photo-licenses ul{padding-left:21px;columns:2;column-gap:30px}
+.bloglab-magazine .mag-photo-licenses li{break-inside:avoid;margin-bottom:7px}
+.bloglab-magazine .mag-photo-licenses a{color:#f2dbc0}
+.bloglab-magazine .mag-weekend-feature{background:#183628}
+.bloglab-magazine .mag-weekend-feature h2{letter-spacing:-.035em}
+.bloglab-magazine .mag-weekend-feature-day,
+.bloglab-magazine .mag-weekend-day{background:#f6f0e6}
+.bloglab-magazine .mag-weekend-feature-events a,
+.bloglab-magazine .mag-weekend-day>div:last-child>a{border-top:1px solid rgba(44,66,53,.15)}
+@media(max-width:650px){
+  .bloglab-magazine .mag-photo-licenses ul{columns:1}
+  .bloglab-magazine .mag-photo-credit{font-size:9px}
+}
