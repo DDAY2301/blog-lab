@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-11-10T08:20:00+01:00",
-  "loop_count": 7934,
+  "updated_at": "2026-11-10T20:44:50+01:00",
+  "loop_count": 7935,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-11-10T08:19:30+01:00",
+      "last_learning_run": "2026-11-10T20:44:24+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -86,11 +86,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 148469,
-          "last_seen": "2026-11-10T08:19:30+01:00",
-          "last_title": "'Daj Francuze, da se igramo!' Oziroma kako se nam je zgodil šport, ne Kmetija - Ekipa",
+          "seen": 148475,
+          "last_seen": "2026-11-10T20:44:24+01:00",
+          "last_title": "Odlični obeti, Slovenija se bi lahko že danes razveselila novega globusa - Žurnal24",
           "last_provider": "google-news-si",
-          "published": 479115,
+          "published": 479167,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,17 +227,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 9,
+      "current_source_count": 6,
       "example_titles": {
         "news.google.com": [
           "S tribune: Športni trenutki, zaradi katerih se mi še danes naježijo dlake - Svet24.si",
           "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
-          "Slovenska blamaža na igrah! Zakaj sploh tekmujemo, če je šport pri nas umrl - Ekipa"
+          "Slovenija proti Danski danes odpira svoje nastope na letošnjem evropskem prvenstvu - Šport TV"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-11-10T08:19:42+01:00",
+      "last_learning_run": "2026-11-10T20:44:36+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -259,6 +259,7 @@
         "support.microsoft.com",
         "news.google.com",
         "pewresearch.org",
+        "calculator.net",
         "experian.com",
         "dictionary.com",
         "hellovein.com",
@@ -266,8 +267,7 @@
         "art.com",
         "comgateway.com",
         "creditkaren.ai",
-        "github.com",
-        "calculator.net"
+        "github.com"
       ],
       "source_health": {
         "support.microsoft.com": {
@@ -279,11 +279,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 177154,
-          "last_seen": "2026-11-10T08:19:42+01:00",
+          "seen": 177166,
+          "last_seen": "2026-11-10T20:44:36+01:00",
           "last_title": "Brskali tudi po računih žene pomembnega politika: \"To je svinjarija prve vrste\" - N1 Slovenija",
           "last_provider": "google-news-global",
-          "published": 527272,
+          "published": 527332,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -291,6 +291,13 @@
           "seen": 4,
           "last_seen": "2026-10-04T12:23:46+02:00",
           "last_title": "Key takeaways on Americans’ views of guns and gun ownership",
+          "last_provider": "bing-web"
+        },
+        "calculator.net": {
+          "score": 1.61,
+          "seen": 2,
+          "last_seen": "2026-11-10T20:44:36+01:00",
+          "last_title": "Debt Payoff Calculator",
           "last_provider": "bing-web"
         },
         "experian.com": {
@@ -349,13 +356,6 @@
           "last_title": "GitHub - bramses/chatgpt-md: A (nearly) seamless integration of ChatGPT into Obsidian.",
           "last_provider": "bing-web"
         },
-        "calculator.net": {
-          "score": 0.805,
-          "seen": 1,
-          "last_seen": "2026-10-12T13:10:16+02:00",
-          "last_title": "Date Calculator",
-          "last_provider": "bing-web"
-        },
         "worldtimebuddy.com": {
           "score": 0.805,
           "seen": 1,
@@ -388,14 +388,17 @@
       "current_source_count": 13,
       "example_titles": {
         "news.google.com": [
-          "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si",
           "V Sloveniji odprta volišča: Volivci danes odločajo o štirih pomembnih vprašanjih - Mariborinfo.com",
-          "Petra Kerčmar s tem preusmerila pozornost nase: en mali detajl, o katerem danes govorijo vsi - Elle.si"
+          "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si",
+          "Nov protest ob obisku Sara v DZ-ju. Janša: Protesti so refleks levičarskega antisemitizma. - rtvslo.si"
+        ],
+        "calculator.net": [
+          "Debt Payoff Calculator"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-11-10T08:20:00+01:00",
+      "last_learning_run": "2026-11-10T20:44:50+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -484,11 +487,11 @@
         },
         "news.google.com": {
           "score": 2.538,
-          "seen": 203561,
-          "last_seen": "2026-11-10T08:20:00+01:00",
+          "seen": 203572,
+          "last_seen": "2026-11-10T20:44:50+01:00",
           "last_title": "Slovenija preprečila pristanek izraelskega letala: tako se odziva Fraport - Info360",
           "last_provider": "google-news-global",
-          "published": 328406,
+          "published": 328422,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -586,8 +589,8 @@
       "current_source_count": 11,
       "example_titles": {
         "news.google.com": [
-          "Kako svet vidi Slovenijo danes in kako je postala tako vroča evropska destinacija - Dnevnik",
           "Golob je “depolitiziral” RTV SLO, jo bo tudi Janša? Ustavno sodišče je dalo “blagoslov”, a Gregorčič in Avbelj gresta na ESČP - Zanima.me",
+          "Kako svet vidi Slovenijo danes in kako je postala tako vroča evropska destinacija - Dnevnik",
           "Pred Stevanovićevim obiskom v Srbiji znova aktualno vprašanje statusa srbske skupnosti v Sloveniji - Siol.net"
         ]
       }
@@ -669,79 +672,7 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20261108-175446.json",
-      "category": "gore",
-      "errors": [
-        "manjka_fotografija"
-      ],
-      "title": "ŠPORTNI VIKEND LJUBLJANICA 2026 bo med 11. in 13. septembrom v središče Ljubljane pripeljal nočni tek, trail, pohodništvo, kolesarjenje in pestro družinsko športno dogajanje - 24ur"
-    },
-    {
-      "file": "fallback-failed-20261109-073947.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek",
-        "manjka_fotografija"
-      ],
-      "title": "Med Bledom in Bohinjem je nastala 28-kilometrska kolesarska pot z razgledi, ki jemljejo dih - Bodi eko"
-    },
-    {
-      "file": "fallback-failed-20261109-131132.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek",
-        "manjka_fotografija"
-      ],
-      "title": "Med Bledom in Bohinjem je nastala 28-kilometrska kolesarska pot z razgledi, ki jemljejo dih - Bodi eko"
-    },
-    {
-      "file": "fallback-failed-20261109-170902.json",
-      "category": "dediscina",
-      "errors": [
-        "clanek_brez_slovenskega_konteksta",
-        "viri_ne_podpirajo_slovenske_rubrike"
-      ],
-      "title": "GoonerNews.com | Latest Arsenal News and Transfers"
-    },
-    {
-      "file": "fallback-failed-20261109-180958.json",
-      "category": "sezonsko",
-      "errors": [
-        "prekratek"
-      ],
-      "title": "Slovenski turizem: kje smo s cenami, naložbami in kakšna bo letošnja sezona - Finance.si"
-    },
-    {
-      "file": "fallback-failed-20261109-203845.json",
-      "category": "gourmet",
-      "errors": [
-        "naslov_ni_v_rubriki",
-        "clanek_brez_slovenskega_konteksta",
-        "viri_ne_podpirajo_slovenske_rubrike"
-      ],
-      "title": "Amazon Prime @ Amazon.com"
-    },
-    {
-      "file": "fallback-failed-20261109-220446.json",
-      "category": "gourmet",
-      "errors": [
-        "naslov_ni_v_rubriki",
-        "clanek_brez_slovenskega_konteksta",
-        "viri_ne_podpirajo_slovenske_rubrike"
-      ],
-      "title": "Amazon Prime @ Amazon.com"
-    },
-    {
-      "file": "fallback-failed-20261109-234420.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek",
-        "manjka_fotografija"
-      ],
-      "title": "Med Bledom in Bohinjem je nastala 28-kilometrska kolesarska pot z razgledi, ki jemljejo dih - Bodi eko"
-    },
-    {
-      "file": "fallback-failed-20261110-073851.json",
+      "file": "fallback-failed-20261110-172359.json",
       "category": "kolesarstvo",
       "errors": [
         "prekratek"
@@ -749,7 +680,7 @@
       "title": "Dravska kolesarska pot: Adamičevo naselje – dvoetažni most – 1. etapa - Mestna občina Maribor"
     },
     {
-      "file": "fallback-failed-20261110-075345.json",
+      "file": "fallback-failed-20261110-173902.json",
       "category": "kolesarstvo",
       "errors": [
         "prekratek"
@@ -757,7 +688,63 @@
       "title": "Dravska kolesarska pot: Adamičevo naselje – dvoetažni most – 1. etapa - Mestna občina Maribor"
     },
     {
-      "file": "fallback-failed-20261110-080851.json",
+      "file": "fallback-failed-20261110-175354.json",
+      "category": "kolesarstvo",
+      "errors": [
+        "prekratek"
+      ],
+      "title": "Dravska kolesarska pot: Adamičevo naselje – dvoetažni most – 1. etapa - Mestna občina Maribor"
+    },
+    {
+      "file": "fallback-failed-20261110-180902.json",
+      "category": "kolesarstvo",
+      "errors": [
+        "prekratek"
+      ],
+      "title": "Dravska kolesarska pot: Adamičevo naselje – dvoetažni most – 1. etapa - Mestna občina Maribor"
+    },
+    {
+      "file": "fallback-failed-20261110-182355.json",
+      "category": "kolesarstvo",
+      "errors": [
+        "prekratek"
+      ],
+      "title": "Dravska kolesarska pot: Adamičevo naselje – dvoetažni most – 1. etapa - Mestna občina Maribor"
+    },
+    {
+      "file": "fallback-failed-20261110-183903.json",
+      "category": "kolesarstvo",
+      "errors": [
+        "prekratek"
+      ],
+      "title": "Dravska kolesarska pot: Adamičevo naselje – dvoetažni most – 1. etapa - Mestna občina Maribor"
+    },
+    {
+      "file": "fallback-failed-20261110-185349.json",
+      "category": "kolesarstvo",
+      "errors": [
+        "prekratek"
+      ],
+      "title": "Dravska kolesarska pot: Adamičevo naselje – dvoetažni most – 1. etapa - Mestna občina Maribor"
+    },
+    {
+      "file": "fallback-failed-20261110-190902.json",
+      "category": "kolesarstvo",
+      "errors": [
+        "prekratek"
+      ],
+      "title": "Dravska kolesarska pot: Adamičevo naselje – dvoetažni most – 1. etapa - Mestna občina Maribor"
+    },
+    {
+      "file": "fallback-failed-20261110-192453.json",
+      "category": "kolesarstvo",
+      "errors": [
+        "prekratek"
+      ],
+      "title": "Dravska kolesarska pot: Adamičevo naselje – dvoetažni most – 1. etapa - Mestna občina Maribor"
+    },
+    {
+      "file": "fallback-failed-20261110-193853.json",
       "category": "kolesarstvo",
       "errors": [
         "prekratek"
@@ -766,18 +753,23 @@
     },
     {
       "file": "agent-state",
-      "category": "kolesarstvo",
+      "category": "dediscina",
       "errors": [
-        "prekratek"
+        "fallback_no_fresh_evidence"
       ]
+    },
+    {
+      "file": "agent-state",
+      "category": "dediscina",
+      "errors": [
+        "naslov_ni_v_rubriki,clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike,besedilo_ni_v_slovenscini"
+      ],
+      "slot": "2026-11-10|07:35|kolesarstvo"
     }
   ],
   "failure_summary": {
-    "prekratek": 13,
-    "manjka_fotografija": 9,
-    "clanek_brez_slovenskega_konteksta": 7,
-    "viri_ne_podpirajo_slovenske_rubrike": 7,
-    "naslov_ni_v_rubriki": 3,
-    "surov_spletni_izpis": 1
+    "prekratek": 20,
+    "fallback_no_fresh_evidence": 1,
+    "naslov_ni_v_rubriki,clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike,besedilo_ni_v_slovenscini": 1
   }
 }
