@@ -17,6 +17,7 @@ import "./painterly-atelier-v5.css";
 import "./painterly-photo-v6.css";
 import "./bloglab-home-v1.css";
 import "./bloglab-magazine.css";
+import "./bloglab-real-editorial.css";
 
 // Keep article links, editorial tools and all existing workflows available in the classic view.
 // The redesigned homepage is the default only for the public root route.

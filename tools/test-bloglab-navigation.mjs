@@ -87,6 +87,12 @@ assert.equal(magazineCardArtwork(sample, "kultura", "/fallback.jpg"), magazineCa
 assert.equal(magazineCardArtwork(sample, "sport", "/art/painted/kolesarstvo.jpg"), "/art/painted/kolesarstvo.jpg");
 const seen = new Set(Array.from({length: 100}, (_, i) => stableArtworkIndex("magazine-" + i)));
 assert.equal(seen.size, 4, "All four Ljubljana scenes must be reachable from deterministic rotation");
-assert.ok(page.includes('from "./bloglab-artwork.js"'), "Magazine must use generated artwork helper");
+// The painterly assets remain available in the classic view, but public magazine
+// has transitioned to licensed documentary photography.
+assert.ok(page.includes('from "./bloglab-open-photos.js"'), "Magazine must use verified real photos");
+assert.ok(page.includes('from "./bloglab-nightlife.js"'), "Weekend must use confirmed club nights");
+assert.ok(page.includes('photoForArticle(item)'), "Article images should match article subject");
+assert.ok(page.includes('nightlifeForDay(events, key)'), "Weekend must not list unrelated daytime events");
+assert.ok(page.includes('Fotografije, avtorji in licence'), "Accessible photo credits missing");
 
 console.log("BlogLab V2: taxonomy, deep links, painting assets and compact layout checks passed");

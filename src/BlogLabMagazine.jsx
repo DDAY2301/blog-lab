@@ -4,20 +4,21 @@ import {
   dateHref, keyForLjubljana, niceDate, addDays, weekendDates, eventActiveOn,
   eventIsFuture, eventHour, trustedEvent
 } from "./bloglab-taxonomy.js";
-import { magazineCardArtwork } from "./bloglab-artwork.js";
+import { PHOTOS, photoForArticle, photoForEvent, photoForRubric } from "./bloglab-open-photos.js";
+import { nightlifeForDay, isNightlifeEvent, pastNightlife } from "./bloglab-nightlife.js";
 
 const MODULES = import.meta.glob("./articles/published/*.json", { eager: true, import: "default" });
 const ARTICLES = Object.values(MODULES)
   .filter((a) => a?.status === "published" && a?.id && a?.title)
   .sort((a, b) => new Date(b.updatedAt || b.createdAt || 0) - new Date(a.updatedAt || a.createdAt || 0));
 const IMAGES = {
-  hero: "/art/painted/hero.jpg",
-  kultura: "/art/painted/dediscina.jpg",
-  zabava: "/art/painted/gourmet.jpg",
-  sport: "/art/painted/kolesarstvo.jpg",
-  weekend: "/art/painted/sezonsko.jpg",
-  novice: "/art/painted/vodniki.jpg",
-  trails: "/art/painted/gore-traili.jpg"
+  hero: PHOTOS.metropolis.src,
+  kultura: PHOTOS.castle.src,
+  zabava: PHOTOS.metropolis.src,
+  sport: PHOTOS.cycling.src,
+  weekend: PHOTOS.metelkova.src,
+  novice: PHOTOS.metropolis.src,
+  trails: PHOTOS.mountains.src
 };
 const DAYS = ["Pon", "Tor", "Sre", "Čet", "Pet", "Sob", "Ned"];
 const DAYS_LONG = ["Petek", "Sobota", "Nedelja"];
@@ -54,14 +55,9 @@ function pickEventsForDate(items, key, rubric = null) {
 function dateForArticle(item) {
   return keyForLjubljana(item.updatedAt || item.createdAt) || todayKey();
 }
-function articleImage(item) {
-  const category = rubricForArticle(item);
-  return magazineCardArtwork(item, category, IMAGES[category] || IMAGES.kultura);
-}
-function eventImage(item) {
-  const category = rubricForEvent(item);
-  return magazineCardArtwork(item, category, IMAGES[category] || IMAGES.kultura);
-}
+function articleImage(item) { return photoForArticle(item)?.src || ""; }
+function eventImage(item) { return photoForEvent(item)?.src || ""; }
+function photoCredit(photo) { return photo ? "Foto: " + photo.author + " · " + photo.license + " · arhivsko/ilustrativno" : ""; }
 
 function PageHeader({ active = "", q = "" }) {
   const [searchOpen, setSearchOpen] = useState(Boolean(q));
@@ -86,10 +82,11 @@ function PageFooter() {
   return <footer className="mag-footer"><div className="mag-wide">
     <a className="mag-footer-logo" href="/">Blog Lab.</a><p>Dogodki, kultura, zabava, šport in zgodbe za vsak dan.</p>
     <a href={rubricHref("novice")}>Vse objave ↗</a><a href="/?view=archive">Klasični portal ↗</a>
+    <details className="mag-photo-licenses"><summary>Fotografije, avtorji in licence</summary><p>Uporabljene so resnične arhivske fotografije iz Wikimedia Commons, ne generirane podobe. Fotografije posameznega dogodka niso dokaz, da prikazujejo aktualni nastop.</p><ul>{Object.values(PHOTOS).map((photo) => <li key={photo.sourceUrl}><a href={photo.sourceUrl} target="_blank" rel="noopener noreferrer">{photo.alt} – {photo.author}</a> · <a href={photo.licenseUrl} target="_blank" rel="noopener noreferrer">{photo.license}</a></li>)}</ul></details>
   </div></footer>;
 }
 function PaintedBanner({ eyebrow, title, desc, image, compact = false, children }) {
-  return <section className={"mag-painted-banner" + (compact ? " compact" : "")} style={{ backgroundImage: "linear-gradient(90deg,rgba(19,38,30,.90),rgba(21,40,31,.70) 46%,rgba(21,40,31,.13)),url(" + image + ")" }}>
+  return <section className={"mag-painted-banner" + (compact ? " compact" : "")} style={{ backgroundImage: "linear-gradient(90deg,rgba(19,38,30,.9),rgba(21,40,31,.67) 46%,rgba(21,40,31,.12)),url(" + (image || IMAGES.hero) + ")" }}>
     <div className="mag-wide"><span className="mag-overline">{eyebrow}</span><h1>{title}</h1><p>{desc}</p>{children}</div>
   </section>;
 }
@@ -100,22 +97,25 @@ function SectionHeading({ kicker, title, href, link, caption, id }) {
   return <div className="mag-section-head"><div><span className="mag-overline">{kicker}</span><h2 id={id}>{title}</h2>{caption && <p>{caption}</p>}</div>{href && <a href={href} className="mag-text-link">{link || "Več ↗"}</a>}</div>;
 }
 function EventTile({ item, day }) {
-  const image = eventImage(item);
+  const photo = photoForEvent(item);
+  const image = photo?.src || "";
   return <a href={eventHref(item)} className="mag-event-tile">
-    <span className="mag-image" style={{ backgroundImage: "url(" + image + ")" }} aria-hidden="true" />
+    <span className="mag-image" style={{ backgroundImage: image ? "url(" + image + ")" : "none" }} aria-hidden="true" />
     <span className="mag-tile-body">
       <span className="mag-overline">{rubricInfo(rubricForEvent(item)).name} / {eventHour(item, day || keyForLjubljana(item.startAt))}</span>
       <strong>{item.title}</strong><small>{item.place || item.source || "Slovenija"}</small>
+      {photo && <span className="mag-photo-credit">{photoCredit(photo)}</span>}
       <span className="mag-card-link">Podrobnosti dogodka ↗</span>
     </span>
   </a>;
 }
 function ArticleTile({ item }) {
   const rub = rubricForArticle(item);
+  const photo = photoForArticle(item);
   return <a className="mag-article-tile" href={articleHref(item)}>
-    <span className="mag-image" style={{ backgroundImage: "url(" + articleImage(item) + ")" }} aria-hidden="true" />
+    <span className="mag-image" style={{ backgroundImage: photo ? "url(" + photo.src + ")" : "none" }} aria-hidden="true" />
     <span className="mag-tile-body"><span className="mag-overline">{rubricInfo(rub).name} / {niceDate(dateForArticle(item), { day: "numeric", month: "short", year: "numeric" })}</span>
-      <strong>{item.title}</strong><small>{item.excerpt || "Preberi zgodbo na BlogLab."}</small><span className="mag-card-link">Preberi članek ↗</span></span>
+      <strong>{item.title}</strong><small>{item.excerpt || "Preberi zgodbo na BlogLab."}</small>{photo && <span className="mag-photo-credit">{photoCredit(photo)}</span>}<span className="mag-card-link">Preberi članek ↗</span></span>
   </a>;
 }
 function Calendar({ events, today }) {
@@ -169,11 +169,12 @@ function Calendar({ events, today }) {
 }
 function CategoryFeature({ rubric, article }) {
   const data = rubricInfo(rubric);
+  const photo = photoForRubric(rubric);
   const target = article ? articleHref(article) : rubricHref(rubric);
   return <article className="mag-rubric-card">
     <a href={rubricHref(rubric)} className="mag-rubric-art"
-      style={{ backgroundImage: "url(" + data.image + ")" }}
-      aria-label={"Odpri rubriko " + data.name}>
+      style={{ backgroundImage: "url(" + photo.src + ")" }}
+      aria-label={"Odpri rubriko " + data.name} title={photoCredit(photo)}>
       <span className="mag-rubric-art-label">{data.name}</span>
     </a>
     <div className="mag-rubric-copy">
@@ -187,24 +188,37 @@ function CategoryFeature({ rubric, article }) {
     </div>
   </article>;
 }
+const NIGHTLIFE_SOURCES = [
+  { label: "Klub K4", url: "https://www.klub-k4.si/" },
+  { label: "Gala Hala / Metelkova", url: "https://www.galahala.com/" },
+  { label: "Channel Zero", url: "https://www.ch0.org/" },
+  { label: "Publika", url: "https://www.entrio.si/brand/publika-bar-klub" }
+];
+function NightlifeSources() {
+  return <nav className="mag-nightlife-sources" aria-label="Preveri aktualne klubske programe pri organizatorjih">
+    <span>Preveri programe klubov:</span>
+    {NIGHTLIFE_SOURCES.map((venue) => <a key={venue.url} href={venue.url} target="_blank" rel="noopener noreferrer">{venue.label} ↗</a>)}
+  </nav>;
+}
 function WeekendFeature({ events, today }) {
   const days = weekendDates(today);
-  const paintings = [IMAGES.weekend, IMAGES.kultura, IMAGES.trails];
+  const nightPhotos = [PHOTOS.metelkova, PHOTOS.metropolis, PHOTOS.metelkova];
   return <section className="mag-weekend-feature" id="weekend" aria-labelledby="mag-weekend-heading">
     <div className="mag-weekend-heading">
       <div>
         <span className="mag-overline">PETEK / SOBOTA / NEDELJA</span>
         <h2 id="mag-weekend-heading">Weekend.</h2>
-        <p>Trije dnevi. Ideje, dogodki in doživetja za konec tedna.</p>
+        <p>Petek, sobota in nedelja: klubi, koncerti, DJ večeri in nočno življenje Ljubljane. Samo preverjeni dogodki.</p>
       </div>
       <a href={rubricHref("weekend")}>Odpri Weekend ↗</a>
     </div>
+    <NightlifeSources />
     <div className="mag-weekend-feature-grid">
       {days.map((key, idx) => {
-        const found = pickEventsForDate(events, key).slice(0, 2);
+        const found = nightlifeForDay(events, key).slice(0, 3);
         return <article className="mag-weekend-feature-day" key={key}>
           <a href={dateHref(key)} className="mag-weekend-feature-image"
-            style={{ backgroundImage: "url(" + paintings[idx] + ")" }}
+            style={{ backgroundImage: "url(" + nightPhotos[idx].src + ")" }} title={photoCredit(nightPhotos[idx])}
             aria-label={"Vsi dogodki za " + DAYS_LONG[idx]} />
           <div className="mag-weekend-feature-body">
             <span className="mag-overline">{niceDate(key, { day: "numeric", month: "long" })}</span>
@@ -215,7 +229,7 @@ function WeekendFeature({ events, today }) {
                   <strong>{item.title}</strong>
                   <small>{eventHour(item, key)} · {item.place || item.source || "Slovenija"}</small>
                 </a>
-              ) : <p>Za ta dan trenutno ni potrjenih dogodkov.</p>}
+              ) : <p>Za ta večer še ni preverjenih klubskih dogodkov.</p>}
             </div>
             <a className="mag-weekend-feature-more" href={dateHref(key)}>Vsi dogodki tega dne ↗</a>
           </div>
@@ -287,7 +301,7 @@ function RubricPage({ rubric, period, events, today }) {
     .filter((e) => period === "vse" || periodFor(e, today) === period)
     .sort((a, b) => (Number(eventIsFuture(b, today)) - Number(eventIsFuture(a, today))) || new Date(b.startAt) - new Date(a.startAt));
   return <>
-    <PaintedBanner eyebrow="BLOG LAB / RUBRIKA" title={data.name + "."} desc={data.description} image={data.image} compact />
+    <PaintedBanner eyebrow="BLOG LAB / RUBRIKA" title={data.name + "."} desc={data.description} image={photoForRubric(data.slug).src} compact />
     <div className="mag-wide mag-interior">
       <Breadcrumbs items={[{ label: data.name }]} />
       <div className="mag-stats"><span>{relatedArticles.length} objavljenih člankov</span><span>{events.filter((e) => rubricForEvent(e) === rubric).length} potrjenih dogodkov</span></div>
@@ -313,25 +327,25 @@ function NewsPage() {
 }
 function WeekendPage({ events, today, period }) {
   const days = weekendDates(today);
-  const active = days.map((key, i) => ({ day: DAYS_LONG[i], key, items: pickEventsForDate(events, key) }));
-  const past = events.filter((event) => !eventIsFuture(event, today) && [5, 6, 0].includes(new Date((keyForLjubljana(event.startAt) || "2000-01-01") + "T12:00:00Z").getUTCDay()))
-    .sort((a, b) => new Date(b.startAt) - new Date(a.startAt)).slice(0, 40);
+  const active = days.map((key, i) => ({ day: DAYS_LONG[i], key, items: nightlifeForDay(events, key) }));
+  const past = pastNightlife(events, today).slice(0, 40);
   const weekendReading = ARTICLES.filter((article) =>
-    /sezons|gourmet|kulinar|turiz|izlet|potovanj|pohod|planin|gore|trail|koles|oddih|vikend|weekend/i.test([article.category, article.title].join(" ")));
+    /metelkov|klub|glasb|koncert|dj|zabav|nočn|party|nightlife|rave|festiv|vikend|weekend/i.test([article.category, article.title].join(" ")));
   return <>
-    <PaintedBanner eyebrow="BLOG LAB / IDEJE ZA PROSTI ČAS" title="Weekend." desc="Dogodki za petek, soboto in nedeljo ter arhiv preteklih vikendov." image={IMAGES.weekend} compact />
+    <PaintedBanner eyebrow="BLOG LAB / LJUBLJANA PONOČI" title="Weekend." desc="Metelkova, K4, Gala Hala, Channel Zero, Publika in druge klubske zgodbe. Preverjeni koncerti in nočni dogodki od petka do nedelje." image={IMAGES.weekend} compact />
     <div className="mag-wide mag-interior"><Breadcrumbs items={[{ label: "Weekend" }]} />
+      <NightlifeSources />
       <div className="mag-tabs"><a href={rubricHref("weekend", "aktualno")} className={period !== "arhiv" ? "active" : ""}>Ta konec tedna</a><a href={rubricHref("weekend", "arhiv")} className={period === "arhiv" ? "active" : ""}>Pretekli vikendi</a></div>
       {period === "arhiv" ? <EventsList items={past} today={today} title="Arhiv vikend dogodkov" /> :
         <div className="mag-weekend-archive-grid">{active.map(({ day, key, items }, idx) =>
           <section key={key} className="mag-weekend-day">
-            <a href={dateHref(key)} className="mag-weekend-day-head" style={{ backgroundImage: "linear-gradient(90deg,rgba(29,51,37,.8),rgba(29,51,37,.2)),url(" + [IMAGES.weekend, IMAGES.kultura, IMAGES.trails][idx] + ")" }}>
+            <a href={dateHref(key)} className="mag-weekend-day-head" style={{ backgroundImage: "linear-gradient(90deg,rgba(29,51,37,.8),rgba(29,51,37,.2)),url(" + [PHOTOS.metelkova.src, PHOTOS.metropolis.src, PHOTOS.metelkova.src][idx] + ")" }}>
               <span>{niceDate(key)}</span><strong>{day}</strong><small>Vsi dogodki na ta dan ↗</small>
             </a>
             <div>{items.length ? items.map((item) => <a href={eventHref(item)} key={item.id}>{item.title}<small>{eventHour(item, key)} · {item.place || item.source}</small></a>) : <p>Za ta dan trenutno ni potrjenih dogodkov.</p>}</div>
           </section>
         )}</div>}
-      <ArticleList items={weekendReading} title="Zgodbe in ideje za prosti čas" />
+      <ArticleList items={weekendReading} title="Klubska scena in nočno življenje" />
       <div className="mag-info-link"><a href={rubricHref("kultura")}>Odkrij tudi kulturo ↗</a><a href={rubricHref("zabava")}>Zabava ↗</a><a href={rubricHref("sport")}>Šport in narava ↗</a></div>
     </div>
   </>;
@@ -357,11 +371,12 @@ function EventDetail({ id, events, today, status }) {
   const data = rubricInfo(rubricForEvent(item));
   const officialUrl = typeof item.ticketUrl === "string" && /^https:\/\//.test(item.ticketUrl) ? item.ticketUrl : item.url;
   return <>
-    <PaintedBanner eyebrow={"BLOG LAB / " + data.name.toUpperCase()} title={item.title} desc={item.place || item.source || "Slovenija"} image={data.image} compact />
+    <PaintedBanner eyebrow={"BLOG LAB / " + data.name.toUpperCase()} title={item.title} desc={item.place || item.source || "Slovenija"} image={eventImage(item) || photoForRubric(data.slug).src} compact />
     <div className="mag-wide mag-interior mag-detail"><Breadcrumbs items={[{ href: rubricHref(data.slug), label: data.name }, { label: item.title }]} />
       <div className="mag-article-layout">
         <article><span className="mag-overline">{eventIsFuture(item, today) ? "Aktualni dogodek" : "Pretekli dogodek"} · {item.type || data.name}</span>
           <h2>O dogodku</h2><p>{item.description || "Več informacij je na voljo pri organizatorju."}</p>
+          {photoForEvent(item) && <p className="mag-photo-detail">Foto: <a href={photoForEvent(item).sourceUrl} target="_blank" rel="noopener noreferrer">{photoForEvent(item).author}</a> · <a href={photoForEvent(item).licenseUrl} target="_blank" rel="noopener noreferrer">{photoForEvent(item).license}</a>. {photoForEvent(item).note}</p>}
           <a className="mag-primary-link" href={officialUrl} target="_blank" rel="noopener noreferrer">Odpri uradne informacije ↗</a>
         </article>
         <aside className="mag-facts"><h3>Informacije</h3><dl><dt>Začetek</dt><dd>{niceDate(keyForLjubljana(item.startAt))} · {eventHour(item)}</dd>
@@ -379,10 +394,11 @@ function ArticleDetail({ id }) {
   const data = rubricInfo(rubricForArticle(item));
   const blocks = String(item.content || item.excerpt || "").split(/\n\s*\n/).filter(Boolean);
   return <>
-    <PaintedBanner eyebrow={"BLOG LAB / " + data.name.toUpperCase()} title={item.title} desc={item.excerpt || data.description} image={data.image} compact />
+    <PaintedBanner eyebrow={"BLOG LAB / " + data.name.toUpperCase()} title={item.title} desc={item.excerpt || data.description} image={articleImage(item) || photoForRubric(data.slug).src} compact />
     <div className="mag-wide mag-interior mag-detail"><Breadcrumbs items={[{ href: rubricHref(data.slug), label: data.name }, { label: item.title }]} />
       <div className="mag-article-layout">
         <article className="mag-reading"><span className="mag-overline">OBJAVLJENO · {niceDate(dateForArticle(item))} · {data.name}</span>
+          {photoForArticle(item) && <p className="mag-photo-detail">Foto: <a href={photoForArticle(item).sourceUrl} target="_blank" rel="noopener noreferrer">{photoForArticle(item).author}</a> · {photoForArticle(item).license && <a href={photoForArticle(item).licenseUrl} target="_blank" rel="noopener noreferrer">{photoForArticle(item).license}</a>}. {photoForArticle(item).note}</p>}
           {blocks.map((block, i) => {
             const text = block.replace(/\*\*/g, "").replace(/\[([^\]]+)\]\(https?:\/\/[^)]+\)/g, "$1");
             if (/^#{2,4}\s/.test(block)) return <h2 key={i}>{text.replace(/^#+\s*/, "")}</h2>;
