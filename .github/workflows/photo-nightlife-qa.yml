@@ -4,11 +4,13 @@ on:
     branches: [main]
     paths:
       - "src/bloglab-open-photos.js"
+      - "src/bloglab-display-photos.js"
       - "src/bloglab-nightlife.js"
       - "src/BlogLabMagazine.jsx"
       - "src/bloglab-real-editorial.css"
       - "src/main.jsx"
       - "tools/tests/open-photos-weekend.test.mjs"
+      - "tools/tests/photo-first-visual.test.mjs"
       - ".agents/skills/**"
       - ".github/workflows/photo-nightlife-qa.yml"
   workflow_dispatch:
@@ -27,7 +29,7 @@ jobs:
       - name: Install project dependencies
         run: npm ci
       - name: Validate photo and nightlife policy
-        run: node --test tools/tests/open-photos-weekend.test.mjs
+        run: node --test tools/tests/open-photos-weekend.test.mjs tools/tests/photo-first-visual.test.mjs
       - name: Probe external photo availability (advisory; remote source can rate-limit)
         continue-on-error: true
         run: node tools/tests/check-commons-media.mjs

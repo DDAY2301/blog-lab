@@ -91,7 +91,8 @@ assert.equal(seen.size, 4, "All four Ljubljana scenes must be reachable from det
 // has transitioned to licensed documentary photography.
 assert.ok(page.includes('from "./bloglab-open-photos.js"'), "Magazine must use verified real photos");
 assert.ok(page.includes('from "./bloglab-nightlife.js"'), "Weekend must use confirmed club nights");
-assert.ok(page.includes('photoForArticle(item)'), "Article images should match article subject");
+assert.ok(page.includes('displayPhotoForArticle(item)'), "Article images should use subject-matched licensed editorial photos");
+assert.ok(page.includes('from "./bloglab-display-photos.js"'), "Public magazine must load the Unsplash photo catalog");
 assert.ok(page.includes('nightlifeForDay(events, key)'), "Weekend must not list unrelated daytime events");
 assert.ok(page.includes('Fotografije, avtorji in licence'), "Accessible photo credits missing");
 

@@ -4,7 +4,8 @@ import {
   dateHref, keyForLjubljana, niceDate, addDays, weekendDates, eventActiveOn,
   eventIsFuture, eventHour, trustedEvent
 } from "./bloglab-taxonomy.js";
-import { PHOTOS, photoForArticle, photoForEvent, photoForRubric } from "./bloglab-open-photos.js";
+import { PHOTOS } from "./bloglab-open-photos.js";
+import { DISPLAY_PHOTOS, displayPhotoForArticle, displayPhotoForEvent, displayPhotoForRubric } from "./bloglab-display-photos.js";
 import { nightlifeForDay, isNightlifeEvent, pastNightlife } from "./bloglab-nightlife.js";
 
 const MODULES = import.meta.glob("./articles/published/*.json", { eager: true, import: "default" });
@@ -12,13 +13,13 @@ const ARTICLES = Object.values(MODULES)
   .filter((a) => a?.status === "published" && a?.id && a?.title)
   .sort((a, b) => new Date(b.updatedAt || b.createdAt || 0) - new Date(a.updatedAt || a.createdAt || 0));
 const IMAGES = {
-  hero: PHOTOS.metropolis.src,
-  kultura: PHOTOS.castle.src,
-  zabava: PHOTOS.metropolis.src,
-  sport: PHOTOS.cycling.src,
-  weekend: PHOTOS.metelkova.src,
-  novice: PHOTOS.metropolis.src,
-  trails: PHOTOS.mountains.src
+  hero: DISPLAY_PHOTOS.ljubljana.src,
+  kultura: DISPLAY_PHOTOS.castle.src,
+  zabava: DISPLAY_PHOTOS.music.src,
+  sport: DISPLAY_PHOTOS.cycling.src,
+  weekend: DISPLAY_PHOTOS.nightlife.src,
+  novice: DISPLAY_PHOTOS.river.src,
+  trails: DISPLAY_PHOTOS.hiking.src
 };
 const DAYS = ["Pon", "Tor", "Sre", "Čet", "Pet", "Sob", "Ned"];
 const DAYS_LONG = ["Petek", "Sobota", "Nedelja"];
@@ -55,8 +56,8 @@ function pickEventsForDate(items, key, rubric = null) {
 function dateForArticle(item) {
   return keyForLjubljana(item.updatedAt || item.createdAt) || todayKey();
 }
-function articleImage(item) { return photoForArticle(item)?.src || ""; }
-function eventImage(item) { return photoForEvent(item)?.src || ""; }
+function articleImage(item) { return displayPhotoForArticle(item).src; }
+function eventImage(item) { return displayPhotoForEvent(item).src; }
 function photoCredit(photo) { return photo ? "Foto: " + photo.author + " · " + photo.license + " · arhivsko/ilustrativno" : ""; }
 
 function PageHeader({ active = "", q = "" }) {
@@ -82,7 +83,7 @@ function PageFooter() {
   return <footer className="mag-footer"><div className="mag-wide">
     <a className="mag-footer-logo" href="/">Blog Lab.</a><p>Dogodki, kultura, zabava, šport in zgodbe za vsak dan.</p>
     <a href={rubricHref("novice")}>Vse objave ↗</a><a href="/?view=archive">Klasični portal ↗</a>
-    <details className="mag-photo-licenses"><summary>Fotografije, avtorji in licence</summary><p>Uporabljene so resnične arhivske fotografije iz Wikimedia Commons, ne generirane podobe. Fotografije posameznega dogodka niso dokaz, da prikazujejo aktualni nastop.</p><ul>{Object.values(PHOTOS).map((photo) => <li key={photo.sourceUrl}><a href={photo.sourceUrl} target="_blank" rel="noopener noreferrer">{photo.alt} – {photo.author}</a> · <a href={photo.licenseUrl} target="_blank" rel="noopener noreferrer">{photo.license}</a></li>)}</ul></details>
+    <details className="mag-photo-licenses"><summary>Fotografije, avtorji in licence</summary><p>Prave fotografije iz Unsplash in Wikimedia Commons. Fotografije so ilustrativne, ne dokaz konkretnega dogodka. Avtorji in licence so navedeni spodaj.</p><ul>{[...Object.values(DISPLAY_PHOTOS), ...Object.values(PHOTOS)].map((photo) => <li key={photo.sourceUrl}><a href={photo.sourceUrl} target="_blank" rel="noopener noreferrer">{photo.alt} – {photo.author}</a> · <a href={photo.licenseUrl} target="_blank" rel="noopener noreferrer">{photo.license}</a></li>)}</ul></details>
   </div></footer>;
 }
 function PaintedBanner({ eyebrow, title, desc, image, compact = false, children }) {
@@ -97,10 +98,10 @@ function SectionHeading({ kicker, title, href, link, caption, id }) {
   return <div className="mag-section-head"><div><span className="mag-overline">{kicker}</span><h2 id={id}>{title}</h2>{caption && <p>{caption}</p>}</div>{href && <a href={href} className="mag-text-link">{link || "Več ↗"}</a>}</div>;
 }
 function EventTile({ item, day }) {
-  const photo = photoForEvent(item);
+  const photo = displayPhotoForEvent(item);
   const image = photo?.src || "";
   return <a href={eventHref(item)} className="mag-event-tile">
-    <span className="mag-image" style={{ backgroundImage: image ? "url(" + image + ")" : "none" }} aria-hidden="true" />
+    <span className="mag-image" style={{ backgroundImage: "url(" + image + ")" }} aria-hidden="true" />
     <span className="mag-tile-body">
       <span className="mag-overline">{rubricInfo(rubricForEvent(item)).name} / {eventHour(item, day || keyForLjubljana(item.startAt))}</span>
       <strong>{item.title}</strong><small>{item.place || item.source || "Slovenija"}</small>
@@ -111,9 +112,9 @@ function EventTile({ item, day }) {
 }
 function ArticleTile({ item }) {
   const rub = rubricForArticle(item);
-  const photo = photoForArticle(item);
+  const photo = displayPhotoForArticle(item);
   return <a className="mag-article-tile" href={articleHref(item)}>
-    <span className="mag-image" style={{ backgroundImage: photo ? "url(" + photo.src + ")" : "none" }} aria-hidden="true" />
+    <span className="mag-image" style={{ backgroundImage: "url(" + photo.src + ")" }} aria-hidden="true" />
     <span className="mag-tile-body"><span className="mag-overline">{rubricInfo(rub).name} / {niceDate(dateForArticle(item), { day: "numeric", month: "short", year: "numeric" })}</span>
       <strong>{item.title}</strong><small>{item.excerpt || "Preberi zgodbo na BlogLab."}</small>{photo && <span className="mag-photo-credit">{photoCredit(photo)}</span>}<span className="mag-card-link">Preberi članek ↗</span></span>
   </a>;
@@ -169,7 +170,7 @@ function Calendar({ events, today }) {
 }
 function CategoryFeature({ rubric, article }) {
   const data = rubricInfo(rubric);
-  const photo = photoForRubric(rubric);
+  const photo = displayPhotoForRubric(rubric);
   const target = article ? articleHref(article) : rubricHref(rubric);
   return <article className="mag-rubric-card">
     <a href={rubricHref(rubric)} className="mag-rubric-art"
@@ -202,7 +203,7 @@ function NightlifeSources() {
 }
 function WeekendFeature({ events, today }) {
   const days = weekendDates(today);
-  const nightPhotos = [PHOTOS.metelkova, PHOTOS.metropolis, PHOTOS.metelkova];
+  const nightPhotos = [DISPLAY_PHOTOS.nightlife, DISPLAY_PHOTOS.music, DISPLAY_PHOTOS.cafe];
   return <section className="mag-weekend-feature" id="weekend" aria-labelledby="mag-weekend-heading">
     <div className="mag-weekend-heading">
       <div>
@@ -301,7 +302,7 @@ function RubricPage({ rubric, period, events, today }) {
     .filter((e) => period === "vse" || periodFor(e, today) === period)
     .sort((a, b) => (Number(eventIsFuture(b, today)) - Number(eventIsFuture(a, today))) || new Date(b.startAt) - new Date(a.startAt));
   return <>
-    <PaintedBanner eyebrow="BLOG LAB / RUBRIKA" title={data.name + "."} desc={data.description} image={photoForRubric(data.slug).src} compact />
+    <PaintedBanner eyebrow="BLOG LAB / RUBRIKA" title={data.name + "."} desc={data.description} image={displayPhotoForRubric(data.slug).src} compact />
     <div className="mag-wide mag-interior">
       <Breadcrumbs items={[{ label: data.name }]} />
       <div className="mag-stats"><span>{relatedArticles.length} objavljenih člankov</span><span>{events.filter((e) => rubricForEvent(e) === rubric).length} potrjenih dogodkov</span></div>
@@ -339,7 +340,7 @@ function WeekendPage({ events, today, period }) {
       {period === "arhiv" ? <EventsList items={past} today={today} title="Arhiv vikend dogodkov" /> :
         <div className="mag-weekend-archive-grid">{active.map(({ day, key, items }, idx) =>
           <section key={key} className="mag-weekend-day">
-            <a href={dateHref(key)} className="mag-weekend-day-head" style={{ backgroundImage: "linear-gradient(90deg,rgba(29,51,37,.8),rgba(29,51,37,.2)),url(" + [PHOTOS.metelkova.src, PHOTOS.metropolis.src, PHOTOS.metelkova.src][idx] + ")" }}>
+            <a href={dateHref(key)} className="mag-weekend-day-head" style={{ backgroundImage: "linear-gradient(90deg,rgba(29,51,37,.8),rgba(29,51,37,.2)),url(" + [DISPLAY_PHOTOS.nightlife.src, DISPLAY_PHOTOS.music.src, DISPLAY_PHOTOS.cafe.src][idx] + ")" }}>
               <span>{niceDate(key)}</span><strong>{day}</strong><small>Vsi dogodki na ta dan ↗</small>
             </a>
             <div>{items.length ? items.map((item) => <a href={eventHref(item)} key={item.id}>{item.title}<small>{eventHour(item, key)} · {item.place || item.source}</small></a>) : <p>Za ta dan trenutno ni potrjenih dogodkov.</p>}</div>
@@ -371,12 +372,12 @@ function EventDetail({ id, events, today, status }) {
   const data = rubricInfo(rubricForEvent(item));
   const officialUrl = typeof item.ticketUrl === "string" && /^https:\/\//.test(item.ticketUrl) ? item.ticketUrl : item.url;
   return <>
-    <PaintedBanner eyebrow={"BLOG LAB / " + data.name.toUpperCase()} title={item.title} desc={item.place || item.source || "Slovenija"} image={eventImage(item) || photoForRubric(data.slug).src} compact />
+    <PaintedBanner eyebrow={"BLOG LAB / " + data.name.toUpperCase()} title={item.title} desc={item.place || item.source || "Slovenija"} image={eventImage(item) || displayPhotoForRubric(data.slug).src} compact />
     <div className="mag-wide mag-interior mag-detail"><Breadcrumbs items={[{ href: rubricHref(data.slug), label: data.name }, { label: item.title }]} />
       <div className="mag-article-layout">
         <article><span className="mag-overline">{eventIsFuture(item, today) ? "Aktualni dogodek" : "Pretekli dogodek"} · {item.type || data.name}</span>
           <h2>O dogodku</h2><p>{item.description || "Več informacij je na voljo pri organizatorju."}</p>
-          {photoForEvent(item) && <p className="mag-photo-detail">Foto: <a href={photoForEvent(item).sourceUrl} target="_blank" rel="noopener noreferrer">{photoForEvent(item).author}</a> · <a href={photoForEvent(item).licenseUrl} target="_blank" rel="noopener noreferrer">{photoForEvent(item).license}</a>. {photoForEvent(item).note}</p>}
+          {displayPhotoForEvent(item) && <p className="mag-photo-detail">Foto: <a href={displayPhotoForEvent(item).sourceUrl} target="_blank" rel="noopener noreferrer">{displayPhotoForEvent(item).author}</a> · <a href={displayPhotoForEvent(item).licenseUrl} target="_blank" rel="noopener noreferrer">{displayPhotoForEvent(item).license}</a>. {displayPhotoForEvent(item).note}</p>}
           <a className="mag-primary-link" href={officialUrl} target="_blank" rel="noopener noreferrer">Odpri uradne informacije ↗</a>
         </article>
         <aside className="mag-facts"><h3>Informacije</h3><dl><dt>Začetek</dt><dd>{niceDate(keyForLjubljana(item.startAt))} · {eventHour(item)}</dd>
@@ -394,11 +395,11 @@ function ArticleDetail({ id }) {
   const data = rubricInfo(rubricForArticle(item));
   const blocks = String(item.content || item.excerpt || "").split(/\n\s*\n/).filter(Boolean);
   return <>
-    <PaintedBanner eyebrow={"BLOG LAB / " + data.name.toUpperCase()} title={item.title} desc={item.excerpt || data.description} image={articleImage(item) || photoForRubric(data.slug).src} compact />
+    <PaintedBanner eyebrow={"BLOG LAB / " + data.name.toUpperCase()} title={item.title} desc={item.excerpt || data.description} image={articleImage(item) || displayPhotoForRubric(data.slug).src} compact />
     <div className="mag-wide mag-interior mag-detail"><Breadcrumbs items={[{ href: rubricHref(data.slug), label: data.name }, { label: item.title }]} />
       <div className="mag-article-layout">
         <article className="mag-reading"><span className="mag-overline">OBJAVLJENO · {niceDate(dateForArticle(item))} · {data.name}</span>
-          {photoForArticle(item) && <p className="mag-photo-detail">Foto: <a href={photoForArticle(item).sourceUrl} target="_blank" rel="noopener noreferrer">{photoForArticle(item).author}</a> · {photoForArticle(item).license && <a href={photoForArticle(item).licenseUrl} target="_blank" rel="noopener noreferrer">{photoForArticle(item).license}</a>}. {photoForArticle(item).note}</p>}
+          {displayPhotoForArticle(item) && <p className="mag-photo-detail">Foto: <a href={displayPhotoForArticle(item).sourceUrl} target="_blank" rel="noopener noreferrer">{displayPhotoForArticle(item).author}</a> · {displayPhotoForArticle(item).license && <a href={displayPhotoForArticle(item).licenseUrl} target="_blank" rel="noopener noreferrer">{displayPhotoForArticle(item).license}</a>}. {displayPhotoForArticle(item).note}</p>}
           {blocks.map((block, i) => {
             const text = block.replace(/\*\*/g, "").replace(/\[([^\]]+)\]\(https?:\/\/[^)]+\)/g, "$1");
             if (/^#{2,4}\s/.test(block)) return <h2 key={i}>{text.replace(/^#+\s*/, "")}</h2>;
