@@ -28,6 +28,9 @@ jobs:
         run: npm ci
       - name: Validate photo and nightlife policy
         run: node --test tools/tests/open-photos-weekend.test.mjs
+      - name: Probe external photo availability (advisory; remote source can rate-limit)
+        continue-on-error: true
+        run: node tools/tests/check-commons-media.mjs
       - name: Build full publication
         run: npm run build
       - name: Check adapted skill headers
