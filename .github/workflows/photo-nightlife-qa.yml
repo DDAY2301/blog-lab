@@ -1,0 +1,39 @@
+name: BlogLab photo licensing and nightlife QA
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "src/bloglab-open-photos.js"
+      - "src/bloglab-nightlife.js"
+      - "src/BlogLabMagazine.jsx"
+      - "src/bloglab-real-editorial.css"
+      - "src/main.jsx"
+      - "tools/tests/open-photos-weekend.test.mjs"
+      - ".agents/skills/**"
+      - ".github/workflows/photo-nightlife-qa.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - name: Install project dependencies
+        run: npm ci
+      - name: Validate photo and nightlife policy
+        run: node --test tools/tests/open-photos-weekend.test.mjs
+      - name: Build full publication
+        run: npm run build
+      - name: Check adapted skill headers
+        shell: bash
+        run: |
+          set -e
+          for skill in bloglab-site-engineer bloglab-ux-e2e-qa bloglab-publisher-reliability bloglab-editorial-quality bloglab-events-verification bloglab-seo-accessibility; do
+            grep -q "^name: ${skill}$" ".agents/skills/${skill}/SKILL.md"
+          done
