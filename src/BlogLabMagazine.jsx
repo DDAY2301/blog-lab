@@ -188,6 +188,18 @@ function CategoryFeature({ rubric, article }) {
     </div>
   </article>;
 }
+const NIGHTLIFE_SOURCES = [
+  { label: "Klub K4", url: "https://www.klub-k4.si/" },
+  { label: "Gala Hala / Metelkova", url: "https://www.galahala.com/" },
+  { label: "Channel Zero", url: "https://www.ch0.org/" },
+  { label: "Publika", url: "https://www.entrio.si/brand/publika-bar-klub" }
+];
+function NightlifeSources() {
+  return <nav className="mag-nightlife-sources" aria-label="Preveri aktualne klubske programe pri organizatorjih">
+    <span>Preveri programe klubov:</span>
+    {NIGHTLIFE_SOURCES.map((venue) => <a key={venue.url} href={venue.url} target="_blank" rel="noopener noreferrer">{venue.label} ↗</a>)}
+  </nav>;
+}
 function WeekendFeature({ events, today }) {
   const days = weekendDates(today);
   const nightPhotos = [PHOTOS.metelkova, PHOTOS.metropolis, PHOTOS.metelkova];
@@ -200,6 +212,7 @@ function WeekendFeature({ events, today }) {
       </div>
       <a href={rubricHref("weekend")}>Odpri Weekend ↗</a>
     </div>
+    <NightlifeSources />
     <div className="mag-weekend-feature-grid">
       {days.map((key, idx) => {
         const found = nightlifeForDay(events, key).slice(0, 3);
@@ -321,6 +334,7 @@ function WeekendPage({ events, today, period }) {
   return <>
     <PaintedBanner eyebrow="BLOG LAB / LJUBLJANA PONOČI" title="Weekend." desc="Metelkova, K4, Gala Hala, Channel Zero, Publika in druge klubske zgodbe. Preverjeni koncerti in nočni dogodki od petka do nedelje." image={IMAGES.weekend} compact />
     <div className="mag-wide mag-interior"><Breadcrumbs items={[{ label: "Weekend" }]} />
+      <NightlifeSources />
       <div className="mag-tabs"><a href={rubricHref("weekend", "aktualno")} className={period !== "arhiv" ? "active" : ""}>Ta konec tedna</a><a href={rubricHref("weekend", "arhiv")} className={period === "arhiv" ? "active" : ""}>Pretekli vikendi</a></div>
       {period === "arhiv" ? <EventsList items={past} today={today} title="Arhiv vikend dogodkov" /> :
         <div className="mag-weekend-archive-grid">{active.map(({ day, key, items }, idx) =>
