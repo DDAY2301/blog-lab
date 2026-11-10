@@ -1,0 +1,41 @@
+{
+  "category": "kolesarstvo",
+  "errors": [
+    "naslov_ni_v_rubriki",
+    "clanek_brez_slovenskega_konteksta",
+    "viri_ne_podpirajo_slovenske_rubrike",
+    "besedilo_ni_v_slovenscini"
+  ],
+  "article": {
+    "title": "Rock Climbing in Petit Grepon, RMNP - Rock",
+    "excerpt": "Find rock climbing routes, photos, and guides for every state, along with experiences and advice from fellow climbers. Rock Climbing in Petit Grepon, RMNP - Rock Early Access Sign up for our new Interactive Topos Experie",
+    "seoDescription": "Find rock climbing routes, photos, and guides for every state, along with experiences and advice from fellow climbers. Rock Climbing in Petit Grepon, RMNP ",
+    "content": "Pregled za rubriko kolesarstvo povzema trenutno razpoložljive informacije iz spodaj navedenih virov. Besedilo je pripravljeno brez dodajanja nepodprtih dejstev.\n\n## Rock Climbing in Petit Grepon, RMNP - Rock\nFind rock climbing routes, photos, and guides for every state, along with experiences and advice from fellow climbers. Rock Climbing in Petit Grepon, RMNP - Rock Early Access Sign up for our new Interactive Topos Experience → × Sign Up or Log In Your FREE account works with all Adventure Projects sites Continue with onX Maps Sign in with Facebook Password help OR Cancel Share on Mountain Project Create Route or Route Add a Symbol Share a Photo Share a Video Taking other people's content (text, photos, etc) without permission is a copyright violation and NOT OKAY! Flag Inappropriate Post Spam? Being a jerk / offensive? Something else? Please explain. Please tell us why: Cancel An Adventure Projects staff member will review this and take an appropriate action, but we generally don't reply. Additionally, you can permanently ignore this user. More Info Climb MTB Hike Trailrun Ski Route Guide Gyms What's New Partners Forum Sign In Route Guide Climbing Gyms What's New Partners Forum Get the app Improve This Page Add To Page All Locations > Colorado > Alpine Rock > RMNP - Rock Petit Grepon Rock Climbing Climbing Area Map Routes in Petit Grepon Highlight Show all routes Trad Sport Toprope Boulder Ice Aid Mixed Alpine L › R R › L A › Z Neathawk-Collett T 5.10- 6a 18 VI+ 18 E1 5a R South Face T 5.8 5b 16 VI- 15 HVS 4c South Face Variation: La Porte de l'Enfer T 5.10a 6a 18 VI+ 18 E1 5a X Southwest Corner T 5.9 5c 17 VI 17 HVS 5a Order Wrong? Sort Routes Explore this area in 3D Use onX Backcountry to explore the terrain in 3D, view recent satellite imagery, and more. Now available in onX Backcountry Mobile apps! For more information see this post. Previous Next All Photos All Photos All Photos All Photos All Photos All Photos Elevation: 11,711 ft 3,570 m GPS: 40.28029, -105.6725 Google Map · Climbing Area Map Page Views: 195,063 total · 620/month Shared By: Charles Vernon on Dec 31, 2000 · Updates Admins: Leo Paik , John McNamee , Frances Fierst , Monty , Monomaniac , Tyler KC Page Updates (admin only) See Weather Forecast Access Issue: Closures Details Seasonal closures Feb. 15-July 31. Per the Denver Post:, the Cathedral Wall and all areas above the Loch Vale-Sky Pond Trail are closed to off-trail travel! Per this RMNP website , \"Initial closures now occur in Feb. 15 and April, when raptors return to the region and scout for nesting sites. Areas containing general habitat preferred by raptors are closed during this time. Once raptors have selected nesting spots, the initial closures are lifted or adjusted. The specific areas which raptors choose for nesting sites\n\nVir: mountainproject.com — https://www.mountainproject.com/area/105745980/petit-grepon",
+    "category": "Kolesarstvo",
+    "tags": [
+      "kolesarstvo",
+      "Slovenija",
+      "climbing",
+      "petit",
+      "grepon"
+    ],
+    "sources": [
+      {
+        "title": "Rock Climbing in Petit Grepon, RMNP - Rock",
+        "url": "https://www.mountainproject.com/area/105745980/petit-grepon",
+        "source_name": "mountainproject.com"
+      }
+    ],
+    "fallback": false,
+    "heroImage": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/08_Slovenia_rural_landscape_-_bicycle_expedition_with_panniers.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "alt": "Three male cyclists wearing helmets during a summer bicycle tour in rural Slovenia near Luže.",
+      "caption": "Marek Ślusarczyk ( Tupungato ) Photo gallery · Wikimedia Commons · CC BY 3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:08_Slovenia_rural_landscape_-_bicycle_expedition_with_panniers.jpg"
+    },
+    "gallery": [],
+    "visualTemplate": "pulse",
+    "templateLabel": "Pulse",
+    "id": "rock-climbing-in-petit-grepon-rmnp-rock-3fd3adc4"
+  }
+}
