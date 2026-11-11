@@ -1,0 +1,37 @@
+{
+  "category": "dediscina",
+  "errors": [
+    "naslov_ni_v_rubriki",
+    "viri_ne_podpirajo_slovenske_rubrike"
+  ],
+  "article": {
+    "title": "Pinterest",
+    "excerpt": "Discover recipes, home ideas, style inspiration and other ideas to try. Pinterest {\"adsAPIDomain\":\"https://api.pinterest.com\",\"appVersion\":\"e718168\",\"context\":{\"ads_grid_title_truncation_pharma_enabled\":false,\"web_paid_p",
+    "seoDescription": "Discover recipes, home ideas, style inspiration and other ideas to try. Pinterest {\"adsAPIDomain\":\"https://api.pinterest.com\",\"appVersion\":\"e718168\",\"conte",
+    "content": "Pregled za rubriko dediscina povzema trenutno razpoložljive informacije iz spodaj navedenih virov. Besedilo je pripravljeno brez dodajanja nepodprtih dejstev.\n\n## Pinterest\nDiscover recipes, home ideas, style inspiration and other ideas to try. Pinterest {\"adsAPIDomain\":\"https://api.pinterest.com\",\"appVersion\":\"e718168\",\"context\":{\"ads_grid_title_truncation_pharma_enabled\":false,\"web_paid_partnership_grid_labeling_enabled\":false,\"analysis_ua\":{\"app_type\":5,\"app_version\":\"\",\"browser_name\":\"Other\",\"browser_version\":\"\",\"device_type\":null,\"device\":\"Other\",\"os_name\":\"Other\",\"os_version\":\"\"},\"app_type_detailed\":5,\"app_version\":\"e718168\",\"autologin\":null,\"browser_name\":\"Other\",\"browser_type\":null,\"browser_version\":\"\",\"country\":\"US\",\"country_from_hostname\":\"US\",\"country_from_ip\":\"US\",\"csp_nonce\":\"aff00b5fdc177a79d0f6a596cc9b37fd\",\"current_url\":\"https://www.pinterest.com/\",\"debug\":false,\"deep_link\":\"\",\"enabled_advertiser_countries\":[\"AR\",\"AT\",\"AU\",\"BE\",\"BR\",\"CA\",\"CH\",\"CL\",\"CO\",\"DE\",\"DK\",\"ES\",\"FI\",\"FR\",\"GB\",\"IE\",\"IT\",\"JP\",\"LU\",\"MX\",\"NL\",\"NO\",\"NZ\",\"PT\",\"SE\",\"US\"],\"facebook_token\":null,\"full_path\":\"/\",\"http_referrer\":\"\",\"impersonator_user_id\":null,\"invite_code\":\"\",\"invite_sender_id\":\"\",\"is_authenticated\":false,\"is_bot\":\"false\",\"is_perf_metrics_bot\":true,\"is_vpn\":false,\"is_proxy\":false,\"is_tor\":false,\"is_hosting\":true,\"has_geo_is_anon\":true,\"has_dcip\":false,\"is_unauth_botspam_asn\":false,\"is_full_page\":true,\"is_mobile_agent\":false,\"is_sterling_on_steroids\":false,\"is_tablet_agent\":false,\"language\":\"en\",\"locale\":\"en-US\",\"origin\":\"https://www.pinterest.com\",\"path\":\"/\",\"placed_experiences\":null,\"referrer\":null,\"region_from_ip\":\"TX\",\"request_host\":\"www.pinterest.com\",\"request_identifier\":\"1597060024998851\",\"social_bot\":\"\",\"stage\":\"prod\",\"sterling_on_steroids_ldap\":null,\"sterling_on_steroids_user_type\":null,\"theme\":\"light\",\"gestalt_theme\":\"calico\",\"unauth_id\":\"ef5ce0896c1744c090f4393c467c990e\",\"seo_debug\":false,\"user_agent_can_use_native_app\":false,\"user_agent_platform\":\"other\",\"user_agent_platform_version\":null,\"user_agent\":\"BlogLabPublisher/2.1 (+https://github.com/DDAY2301/blog-lab)\",\"user\":{\"unauth_id\":\"ef5ce0896c1744c090f4393c467c990e\",\"ip_country\":\"US\",\"ip_region\":\"TX\"},\"utm_campaign\":null,\"visible_url\":\"/\"},\"enableAdaptiveStatsLoggingFlush\":false,\"experiments\":{\"active\":{\"unauth_dweb_login_modal_pwt_test\":\"enabled\"},\"triggerable\":{\"account_context_agent_aic_integration\":\"enabled\",\"account_recovery_via_phone\":\"control\",\"ace_ad_preview_safe_zone\":\"enabled\",\"ace_shareable_ad_preview\":\"enabled\",\"ace_shareable_ad_preview_routes\":\"enabled_ad_preview_metadata\",\"ads_create_performance_improvements\":\"control\",\"ads_wpo_infra_hf\":\"enabled_wpo\",\"ai_companion_full_page\":\"enabled\",\"anticlimax_unauth_support\":\"enabled\",\"ce_dweb_unauth_pin_card_overflo\n\nVir: pinterest.com — https://www.pinterest.com/",
+    "category": "Dediščina",
+    "tags": [
+      "dediscina",
+      "Slovenija",
+      "pinterest"
+    ],
+    "sources": [
+      {
+        "title": "Pinterest",
+        "url": "https://www.pinterest.com/",
+        "source_name": "pinterest.com"
+      }
+    ],
+    "fallback": false,
+    "heroImage": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Tustanj_Castle_Slovenia_-_plaque.JPG/1920px-Tustanj_Castle_Slovenia_-_plaque.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "alt": "Plaque over the entrance to Tuštanj Castle, Zgornji Tuštanj, Municipality of Moravče, Slovenia",
+      "caption": "Doremo · Wikimedia Commons · CC BY-SA 3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tustanj_Castle_Slovenia_-_plaque.JPG"
+    },
+    "gallery": [],
+    "visualTemplate": "fieldnote",
+    "templateLabel": "Field Note",
+    "id": "pinterest-6a26263a"
+  }
+}

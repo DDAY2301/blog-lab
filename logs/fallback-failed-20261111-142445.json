@@ -1,0 +1,23 @@
+{
+  "category": "dediscina",
+  "errors": [
+    "prekratek",
+    "clanek_brez_slovenskega_konteksta",
+    "viri_ne_podpirajo_slovenske_rubrike"
+  ],
+  "article": {
+    "title": "Pinterest"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "lead_url": "https://www.pinterest.com/",
+      "title": "Pinterest",
+      "errors": [
+        "prekratek",
+        "clanek_brez_slovenskega_konteksta",
+        "viri_ne_podpirajo_slovenske_rubrike"
+      ]
+    }
+  ]
+}

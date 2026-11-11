@@ -5,7 +5,7 @@
   "posts_date": "2026-11-11",
   "posts_today": 0,
   "last_output": "nova-daljinska-pohodniska-pot-pes-od-jezerskega-do-kranjske-gore-foto-95a70d64",
-  "last_error": "fallback_no_fresh_evidence",
+  "last_error": "prekratek,clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike",
   "agent_version": "3.0.0-learning-guarded-fallback",
   "current_category": "dediscina",
   "scheduled_posts_today": 0,
@@ -13,12 +13,13 @@
   "writer_mode": "workers_ai",
   "scheduled_slots_done": [],
   "scheduled_slots_deferred": [
-    "2026-11-11|07:35|kolesarstvo"
+    "2026-11-11|07:35|kolesarstvo",
+    "2026-11-11|10:45|dediscina"
   ],
   "last_editorial_hold": {
-    "slot": "2026-11-11|07:35|kolesarstvo",
-    "reason": "manjka_fotografija",
-    "at": "2026-11-11T07:39:40+01:00"
+    "slot": "2026-11-11|10:45|dediscina",
+    "reason": "naslov_ni_v_rubriki,viri_ne_podpirajo_slovenske_rubrike",
+    "at": "2026-11-11T14:24:29+01:00"
   },
   "publisher_guardian_last_run": "2026-11-11T09:26:16+01:00",
   "publisher_guardian_last_action": {
