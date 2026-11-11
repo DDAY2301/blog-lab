@@ -5516,5 +5516,19 @@
     "provider": "google-news-si",
     "processed_at": "2026-11-09T18:24:47+01:00",
     "output_id": "nova-daljinska-pohodniska-pot-pes-od-jezerskega-do-kranjske-gore-foto-95a70d64"
+  },
+  {
+    "source_name": "Slovenske novice",
+    "category": "sezonsko",
+    "title": "Arso popoldne prižgal alarme za točo, pestro vremensko dogajanje tudi prihodnje dni (FOTO in VIDEO) - Slovenske novice",
+    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOZ2dEZ1kxa1Z4RU5KNm1jb25ZZWhzSkxJcnY5c3hYSDFjTVJ2NHNqR0dvOF9RTWdkWDEzQTlNTlVmN1FUQ1BveWxwYTd6UnF4Y21yZUsxUmswNG1NWGZrR1lIa0plM2owS05KZlZ5RGVuM0JQYTN3aENlOHQ3ZElMazRDcVdVWE5jZUdKVnUtWmJqS2NuTkJVNjkzTDduZ1g1RjRoY1hhLTJXTlR4UFl2emtKWHJpZmRpYXdFM0xneW1INEVvd1JVWA?oc=5",
+    "summary": "Arso popoldne prižgal alarme za točo, pestro vremensko dogajanje tudi prihodnje dni (FOTO in VIDEO) Slovenske novice",
+    "published": "Sun, 31 May 2026 07:00:00 GMT",
+    "image_url": "",
+    "video_url": "",
+    "hash": "cb79b74e6f46597b9538bc7491cbb7187ab201f59c4f497c95580e48bade0890",
+    "provider": "google-news-si",
+    "processed_at": "2026-11-11T14:39:53+01:00",
+    "output_id": "arso-popoldne-prizgal-alarme-za-toco-pestro-vremensko-dogajanje-tudi-prihodnje-dni-foto-in-4b954a9d"
   }
 ]
