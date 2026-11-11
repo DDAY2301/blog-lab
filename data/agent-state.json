@@ -5,20 +5,25 @@
   "posts_date": "2026-11-11",
   "posts_today": 1,
   "last_output": "arso-popoldne-prizgal-alarme-za-toco-pestro-vremensko-dogajanje-tudi-prihodnje-dni-foto-in-4b954a9d",
-  "last_error": null,
+  "last_error": "manjka_fotografija",
   "agent_version": "3.0.0-learning-guarded-fallback",
-  "current_category": "sezonsko",
+  "current_category": "gore",
   "scheduled_posts_today": 1,
   "manual_posts_today": 0,
-  "writer_mode": "deterministic_fallback",
+  "writer_mode": "workers_ai",
   "scheduled_slots_done": [
     "2026-11-11|13:30|sezonsko"
   ],
   "scheduled_slots_deferred": [
     "2026-11-11|07:35|kolesarstvo",
-    "2026-11-11|10:45|dediscina"
+    "2026-11-11|10:45|dediscina",
+    "2026-11-11|16:20|gore"
   ],
-  "last_editorial_hold": null,
+  "last_editorial_hold": {
+    "slot": "2026-11-11|16:20|gore",
+    "reason": "ponavljanje",
+    "at": "2026-11-11T16:24:35+01:00"
+  },
   "publisher_guardian_last_run": "2026-11-11T09:26:16+01:00",
   "publisher_guardian_last_action": {
     "category": "kolesarstvo",
