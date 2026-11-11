@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-11-10T20:44:50+01:00",
-  "loop_count": 7935,
+  "updated_at": "2026-11-11T07:21:59+01:00",
+  "loop_count": 7936,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-11-10T20:44:24+01:00",
+      "last_learning_run": "2026-11-11T07:21:34+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -86,11 +86,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 148475,
-          "last_seen": "2026-11-10T20:44:24+01:00",
+          "seen": 148482,
+          "last_seen": "2026-11-11T07:21:34+01:00",
           "last_title": "Odlični obeti, Slovenija se bi lahko že danes razveselila novega globusa - Žurnal24",
           "last_provider": "google-news-si",
-          "published": 479167,
+          "published": 479219,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,17 +227,20 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 6,
+      "current_source_count": 8,
       "example_titles": {
         "news.google.com": [
           "S tribune: Športni trenutki, zaradi katerih se mi še danes naježijo dlake - Svet24.si",
-          "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
-          "Slovenija proti Danski danes odpira svoje nastope na letošnjem evropskem prvenstvu - Šport TV"
+          "Slovenija proti Danski danes odpira svoje nastope na letošnjem evropskem prvenstvu - Šport TV",
+          "Slovenska blamaža na igrah! Zakaj sploh tekmujemo, če je šport pri nas umrl - Ekipa"
+        ],
+        "besteron.com": [
+          "Plačilni prehod in sodobni POS terminali | Besteron"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-11-10T20:44:36+01:00",
+      "last_learning_run": "2026-11-11T07:21:45+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -279,11 +282,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 177166,
-          "last_seen": "2026-11-10T20:44:36+01:00",
+          "seen": 177179,
+          "last_seen": "2026-11-11T07:21:45+01:00",
           "last_title": "Brskali tudi po računih žene pomembnega politika: \"To je svinjarija prve vrste\" - N1 Slovenija",
           "last_provider": "google-news-global",
-          "published": 527332,
+          "published": 527392,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -388,17 +391,14 @@
       "current_source_count": 13,
       "example_titles": {
         "news.google.com": [
-          "V Sloveniji odprta volišča: Volivci danes odločajo o štirih pomembnih vprašanjih - Mariborinfo.com",
           "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si",
-          "Nov protest ob obisku Sara v DZ-ju. Janša: Protesti so refleks levičarskega antisemitizma. - rtvslo.si"
-        ],
-        "calculator.net": [
-          "Debt Payoff Calculator"
+          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer",
+          "V Sloveniji odprta volišča: Volivci danes odločajo o štirih pomembnih vprašanjih - Mariborinfo.com"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-11-10T20:44:50+01:00",
+      "last_learning_run": "2026-11-11T07:21:59+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -486,12 +486,12 @@
           "last_provider": "bing-web"
         },
         "news.google.com": {
-          "score": 2.538,
-          "seen": 203572,
-          "last_seen": "2026-11-10T20:44:50+01:00",
+          "score": 2.537,
+          "seen": 203583,
+          "last_seen": "2026-11-11T07:21:59+01:00",
           "last_title": "Slovenija preprečila pristanek izraelskega letala: tako se odziva Fraport - Info360",
           "last_provider": "google-news-global",
-          "published": 328422,
+          "published": 328438,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -586,12 +586,15 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 11,
+      "current_source_count": 12,
       "example_titles": {
         "news.google.com": [
-          "Golob je “depolitiziral” RTV SLO, jo bo tudi Janša? Ustavno sodišče je dalo “blagoslov”, a Gregorčič in Avbelj gresta na ESČP - Zanima.me",
           "Kako svet vidi Slovenijo danes in kako je postala tako vroča evropska destinacija - Dnevnik",
+          "Golob je “depolitiziral” RTV SLO, jo bo tudi Janša? Ustavno sodišče je dalo “blagoslov”, a Gregorčič in Avbelj gresta na ESČP - Zanima.me",
           "Pred Stevanovićevim obiskom v Srbiji znova aktualno vprašanje statusa srbske skupnosti v Sloveniji - Siol.net"
+        ],
+        "besteron.com": [
+          "Kontakt | Besteron"
         ]
       }
     }
@@ -672,22 +675,6 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20261110-172359.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek"
-      ],
-      "title": "Dravska kolesarska pot: Adamičevo naselje – dvoetažni most – 1. etapa - Mestna občina Maribor"
-    },
-    {
-      "file": "fallback-failed-20261110-173902.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek"
-      ],
-      "title": "Dravska kolesarska pot: Adamičevo naselje – dvoetažni most – 1. etapa - Mestna občina Maribor"
-    },
-    {
       "file": "fallback-failed-20261110-175354.json",
       "category": "kolesarstvo",
       "errors": [
@@ -752,6 +739,24 @@
       "title": "Dravska kolesarska pot: Adamičevo naselje – dvoetažni most – 1. etapa - Mestna občina Maribor"
     },
     {
+      "file": "fallback-failed-20261110-213747.json",
+      "category": "kolesarstvo",
+      "errors": [
+        "prekratek"
+      ],
+      "title": "Dravska kolesarska pot: Adamičevo naselje – dvoetažni most – 1. etapa - Mestna občina Maribor"
+    },
+    {
+      "file": "fallback-failed-20261110-222402.json",
+      "category": "dediscina",
+      "errors": [
+        "clanek_brez_slovenskega_konteksta",
+        "viri_ne_podpirajo_slovenske_rubrike",
+        "besedilo_ni_v_slovenscini"
+      ],
+      "title": "ATTACK SHARK R85 HE Rapid Trigger Keyboard Magnetic Switch with Custom Lightbox"
+    },
+    {
       "file": "agent-state",
       "category": "dediscina",
       "errors": [
@@ -768,7 +773,10 @@
     }
   ],
   "failure_summary": {
-    "prekratek": 20,
+    "prekratek": 19,
+    "clanek_brez_slovenskega_konteksta": 1,
+    "viri_ne_podpirajo_slovenske_rubrike": 1,
+    "besedilo_ni_v_slovenscini": 1,
     "fallback_no_fresh_evidence": 1,
     "naslov_ni_v_rubriki,clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike,besedilo_ni_v_slovenscini": 1
   }
