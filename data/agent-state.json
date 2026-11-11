@@ -5,7 +5,7 @@
   "posts_date": "2026-11-11",
   "posts_today": 1,
   "last_output": "arso-popoldne-prizgal-alarme-za-toco-pestro-vremensko-dogajanje-tudi-prihodnje-dni-foto-in-4b954a9d",
-  "last_error": "naslov_ni_v_rubriki,clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike,besedilo_ni_v_slovenscini",
+  "last_error": "fallback_no_fresh_evidence",
   "agent_version": "3.0.0-learning-guarded-fallback",
   "current_category": "gourmet",
   "scheduled_posts_today": 1,
