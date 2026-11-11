@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-11-11T07:21:59+01:00",
-  "loop_count": 7936,
+  "updated_at": "2026-11-11T20:36:58+01:00",
+  "loop_count": 7937,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-11-11T07:21:34+01:00",
+      "last_learning_run": "2026-11-11T20:36:34+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -86,11 +86,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 148482,
-          "last_seen": "2026-11-11T07:21:34+01:00",
+          "seen": 148488,
+          "last_seen": "2026-11-11T20:36:34+01:00",
           "last_title": "Odlični obeti, Slovenija se bi lahko že danes razveselila novega globusa - Žurnal24",
           "last_provider": "google-news-si",
-          "published": 479219,
+          "published": 479271,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,12 +227,12 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 8,
+      "current_source_count": 7,
       "example_titles": {
         "news.google.com": [
           "S tribune: Športni trenutki, zaradi katerih se mi še danes naježijo dlake - Svet24.si",
-          "Slovenija proti Danski danes odpira svoje nastope na letošnjem evropskem prvenstvu - Šport TV",
-          "Slovenska blamaža na igrah! Zakaj sploh tekmujemo, če je šport pri nas umrl - Ekipa"
+          "Merkur zavarovalnica L'Etape Slovenija: na krajši in daljši trasi slavila Slovenca - 24ur.com",
+          "Slovenija proti Danski danes odpira svoje nastope na letošnjem evropskem prvenstvu - Šport TV"
         ],
         "besteron.com": [
           "Plačilni prehod in sodobni POS terminali | Besteron"
@@ -240,7 +240,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-11-11T07:21:45+01:00",
+      "last_learning_run": "2026-11-11T20:36:47+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -282,11 +282,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 177179,
-          "last_seen": "2026-11-11T07:21:45+01:00",
-          "last_title": "Brskali tudi po računih žene pomembnega politika: \"To je svinjarija prve vrste\" - N1 Slovenija",
-          "last_provider": "google-news-global",
-          "published": 527392,
+          "seen": 177191,
+          "last_seen": "2026-11-11T20:36:47+01:00",
+          "last_title": "Danes se izteče pomemben rok pred lokalnimi volitvami: Kdo mora oddati prijavo? - Goriške novice",
+          "last_provider": "google-news-si",
+          "published": 527451,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -388,17 +388,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 13,
+      "current_source_count": 12,
       "example_titles": {
         "news.google.com": [
-          "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si",
-          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer",
-          "V Sloveniji odprta volišča: Volivci danes odločajo o štirih pomembnih vprašanjih - Mariborinfo.com"
+          "Nov protest ob obisku Sara v DZ-ju. Janša: Protesti so refleks levičarskega antisemitizma. - rtvslo.si",
+          "V Sloveniji odprta volišča: Volivci danes odločajo o štirih pomembnih vprašanjih - Mariborinfo.com",
+          "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-11-11T07:21:59+01:00",
+      "last_learning_run": "2026-11-11T20:36:58+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -486,12 +486,12 @@
           "last_provider": "bing-web"
         },
         "news.google.com": {
-          "score": 2.537,
-          "seen": 203583,
-          "last_seen": "2026-11-11T07:21:59+01:00",
+          "score": 2.539,
+          "seen": 203596,
+          "last_seen": "2026-11-11T20:36:58+01:00",
           "last_title": "Slovenija preprečila pristanek izraelskega letala: tako se odziva Fraport - Info360",
           "last_provider": "google-news-global",
-          "published": 328438,
+          "published": 328454,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -586,20 +586,23 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 12,
+      "current_source_count": 13,
       "example_titles": {
         "news.google.com": [
-          "Kako svet vidi Slovenijo danes in kako je postala tako vroča evropska destinacija - Dnevnik",
+          "Danes se izteče pomemben rok pred lokalnimi volitvami: Kdo mora oddati prijavo? - Goriške novice",
           "Golob je “depolitiziral” RTV SLO, jo bo tudi Janša? Ustavno sodišče je dalo “blagoslov”, a Gregorčič in Avbelj gresta na ESČP - Zanima.me",
-          "Pred Stevanovićevim obiskom v Srbiji znova aktualno vprašanje statusa srbske skupnosti v Sloveniji - Siol.net"
-        ],
-        "besteron.com": [
-          "Kontakt | Besteron"
+          "Kako svet vidi Slovenijo danes in kako je postala tako vroča evropska destinacija - Dnevnik"
         ]
       }
     }
   },
   "recent_articles": [
+    {
+      "id": "arso-popoldne-prizgal-alarme-za-toco-pestro-vremensko-dogajanje-tudi-prihodnje-dni-foto-in-4b954a9d",
+      "title": "Arso popoldne prižgal alarme za točo, pestro vremensko dogajanje tudi prihodnje dni (FOTO in VIDEO)",
+      "category": "Sezonsko",
+      "createdAt": "2026-11-11T14:39:53+01:00"
+    },
     {
       "id": "nova-daljinska-pohodniska-pot-pes-od-jezerskega-do-kranjske-gore-foto-95a70d64",
       "title": "Nova daljinska pohodniška pot: peš od Jezerskega do Kranjske Gore (FOTO)",
@@ -665,63 +668,9 @@
       "title": "Judovska tradicija v Sloveniji: Lendava naredila POMEMBEN korak! - Metropolitan.si",
       "category": "Dediščina",
       "createdAt": "2026-10-31T10:54:25+01:00"
-    },
-    {
-      "id": "kolesarska-rajza-v-slovenskih-goricah-z-obiskom-slikovitih-gradov-1f033a67",
-      "title": "Kolesarska rajža v Slovenskih goricah z obiskom slikovitih gradov",
-      "category": "Kolesarstvo",
-      "createdAt": "2026-10-31T08:31:52+01:00"
     }
   ],
   "recent_failures": [
-    {
-      "file": "fallback-failed-20261110-175354.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek"
-      ],
-      "title": "Dravska kolesarska pot: Adamičevo naselje – dvoetažni most – 1. etapa - Mestna občina Maribor"
-    },
-    {
-      "file": "fallback-failed-20261110-180902.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek"
-      ],
-      "title": "Dravska kolesarska pot: Adamičevo naselje – dvoetažni most – 1. etapa - Mestna občina Maribor"
-    },
-    {
-      "file": "fallback-failed-20261110-182355.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek"
-      ],
-      "title": "Dravska kolesarska pot: Adamičevo naselje – dvoetažni most – 1. etapa - Mestna občina Maribor"
-    },
-    {
-      "file": "fallback-failed-20261110-183903.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek"
-      ],
-      "title": "Dravska kolesarska pot: Adamičevo naselje – dvoetažni most – 1. etapa - Mestna občina Maribor"
-    },
-    {
-      "file": "fallback-failed-20261110-185349.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek"
-      ],
-      "title": "Dravska kolesarska pot: Adamičevo naselje – dvoetažni most – 1. etapa - Mestna občina Maribor"
-    },
-    {
-      "file": "fallback-failed-20261110-190902.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek"
-      ],
-      "title": "Dravska kolesarska pot: Adamičevo naselje – dvoetažni most – 1. etapa - Mestna občina Maribor"
-    },
     {
       "file": "fallback-failed-20261110-192453.json",
       "category": "kolesarstvo",
@@ -757,27 +706,85 @@
       "title": "ATTACK SHARK R85 HE Rapid Trigger Keyboard Magnetic Switch with Custom Lightbox"
     },
     {
-      "file": "agent-state",
+      "file": "fallback-failed-20261111-073958.json",
+      "category": "kolesarstvo",
+      "errors": [
+        "prekratek",
+        "manjka_fotografija"
+      ],
+      "title": "Dravska kolesarska pot: Adamičevo naselje – dvoetažni most – 1. etapa - Mestna občina Maribor"
+    },
+    {
+      "file": "fallback-failed-20261111-092616.json",
+      "category": "kolesarstvo",
+      "errors": [
+        "prekratek",
+        "manjka_fotografija"
+      ],
+      "title": "Dravska kolesarska pot: Adamičevo naselje – dvoetažni most – 1. etapa - Mestna občina Maribor"
+    },
+    {
+      "file": "fallback-failed-20261111-142445.json",
       "category": "dediscina",
+      "errors": [
+        "prekratek",
+        "clanek_brez_slovenskega_konteksta",
+        "viri_ne_podpirajo_slovenske_rubrike"
+      ],
+      "title": "Pinterest"
+    },
+    {
+      "file": "fallback-failed-20261111-162450.json",
+      "category": "gore",
+      "errors": [
+        "manjka_fotografija"
+      ],
+      "title": "ŠPORTNI VIKEND LJUBLJANICA 2026 bo med 11. in 13. septembrom v središče Ljubljane pripeljal nočni tek, trail, pohodništvo, kolesarjenje in pestro družinsko športno dogajanje - 24ur"
+    },
+    {
+      "file": "fallback-failed-20261111-173919.json",
+      "category": "kolesarstvo",
+      "errors": [
+        "prekratek",
+        "manjka_fotografija"
+      ],
+      "title": "Dravska kolesarska pot: Adamičevo naselje – dvoetažni most – 1. etapa - Mestna občina Maribor"
+    },
+    {
+      "file": "fallback-failed-20261111-200902.json",
+      "category": "gourmet",
+      "errors": [
+        "naslov_ni_v_rubriki",
+        "clanek_brez_slovenskega_konteksta",
+        "viri_ne_podpirajo_slovenske_rubrike",
+        "besedilo_ni_v_slovenscini"
+      ],
+      "title": "Amazon.com: Curtains & Drapes - Curtains & Drapes / Window Treatments ..."
+    },
+    {
+      "file": "agent-state",
+      "category": "gourmet",
       "errors": [
         "fallback_no_fresh_evidence"
       ]
     },
     {
       "file": "agent-state",
-      "category": "dediscina",
+      "category": "gourmet",
       "errors": [
-        "naslov_ni_v_rubriki,clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike,besedilo_ni_v_slovenscini"
+        "ponavljanje"
       ],
-      "slot": "2026-11-10|07:35|kolesarstvo"
+      "slot": "2026-11-11|16:20|gore"
     }
   ],
   "failure_summary": {
-    "prekratek": 19,
-    "clanek_brez_slovenskega_konteksta": 1,
-    "viri_ne_podpirajo_slovenske_rubrike": 1,
-    "besedilo_ni_v_slovenscini": 1,
+    "prekratek": 17,
+    "manjka_fotografija": 4,
+    "clanek_brez_slovenskega_konteksta": 3,
+    "viri_ne_podpirajo_slovenske_rubrike": 3,
+    "besedilo_ni_v_slovenscini": 2,
+    "naslov_ni_v_rubriki": 1,
     "fallback_no_fresh_evidence": 1,
-    "naslov_ni_v_rubriki,clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike,besedilo_ni_v_slovenscini": 1
+    "ponavljanje": 1
   }
 }
