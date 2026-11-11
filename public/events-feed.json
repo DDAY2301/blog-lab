@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-10T22:50:17+01:00",
+  "updatedAt": "2026-11-11T07:41:47+01:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -115,70 +115,6 @@
       "status": "confirmed",
       "lastCheckedAt": "2026-11-01T07:20:00+01:00",
       "description": "The month-long culinary festival begins today across Ljubljana, with tastings, menus, workshops and live events announced separately. Prices, languages and accessibility vary by participating venue."
-    },
-    {
-      "id": "miha-godec-reviviscence-2026-11-09",
-      "title": "Miha Godec: Reviviscence",
-      "url": "https://www.kinosiska.si/en/dogodek/miha-godec-reviviscence/",
-      "source": "Kino Šiška",
-      "type": "Intermedia · video installation",
-      "place": "Komuna Hall · Kino Šiška",
-      "startAt": "2026-11-09T19:00:00+01:00",
-      "endAt": "2026-11-10T20:00:00+01:00",
-      "price": "Free",
-      "languages": [
-        "Visual art",
-        "Opening programme may include Slovenian"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": true,
-      "accessibility": "Kino Šiška provides step-free access, a lift, accessible toilets, hearing loops and tactile guidance.",
-      "ticketUrl": "https://www.kinosiska.si/en/dogodek/miha-godec-reviviscence/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-10T06:55:00+01:00",
-      "description": "A round table on art and marine-ecosystem restoration begins at 18:00, followed by the Reviviscence opening at 19:00. Entry is free and the installation remains on view on 10 November."
-    },
-    {
-      "id": "iranska-konferenca-drama-2026-11-10",
-      "title": "Iranska konferenca",
-      "url": "https://www.drama.si/dogodek/iranska-konferenca/",
-      "source": "SNG Drama Ljubljana",
-      "type": "Theatre · drama",
-      "place": "SNG Drama Main Stage, Litostrojska 56 · Ljubljana",
-      "startAt": "2026-11-10T19:00:00+01:00",
-      "endAt": "2026-11-10T21:50:00+01:00",
-      "price": null,
-      "languages": [
-        "Slovenian"
-      ],
-      "touristFriendly": false,
-      "familyFriendly": false,
-      "accessibility": null,
-      "ticketUrl": "https://drama.kupikarto.si/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-10T06:55:00+01:00",
-      "description": "The 170-minute performance starts at 19:00 and is followed by a conversation with the creative team. It is performed in Slovenian; the official listing confirms ticket sales but does not expose one verified price."
-    },
-    {
-      "id": "kristijan-krajncan-alchymia-xxi-2026-11-10",
-      "title": "Kristijan Krajnčan 5tet: Alchymia XXI",
-      "url": "https://cd-cc.si/en/culture/music/kristijan-krajncan-5tet-alchymia-xxi",
-      "source": "Cankarjev dom",
-      "type": "Concert · contemporary jazz",
-      "place": "CD Club · Cankarjev dom",
-      "startAt": "2026-11-10T19:30:00+01:00",
-      "endAt": null,
-      "price": "€16 / €12 reduced",
-      "languages": [
-        "Music-led"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": "Cankarjev dom publishes venue accessibility information; request accessible seating when booking.",
-      "ticketUrl": "https://vstopnice.cd-cc.si/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-10T06:55:00+01:00",
-      "description": "Kristijan Krajnčan’s quintet performs Alchymia XXI in the CD Club at 19:30. Tickets cost €16, or €12 for eligible reduced-price visitors."
     },
     {
       "id": "iranska-konferenca-drama-2026-11-11",
@@ -1702,6 +1638,25 @@
       "status": "sold_out",
       "lastCheckedAt": "2026-11-10T06:55:00+01:00",
       "description": "The documentary solo project starts on the Small Stage at 20:00. MGL marks this performance as sold out."
+    },
+    {
+      "title": "LION'S LAW (FR), MESS (MEX), BREAKOUT (FR) @ Gala hala",
+      "url": "https://www.galahala.com/",
+      "source": "Gala Hala",
+      "type": "Koncert · Metelkova",
+      "place": "Gala Hala · AKC Metelkova",
+      "startAt": "2026-11-25T20:00:00+01:00",
+      "endAt": null,
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.galahala.com/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-11T07:41:47+01:00",
+      "description": "LION'S LAW (FR), MESS (MEX), BREAKOUT (FR) @ Gala hala is listed by Gala Hala. Check the official event page for price, language and accessibility details.",
+      "id": "event-78-lion-s-law-fr-mess-mex-breakout-fr-gala-hala"
     }
   ]
 }
