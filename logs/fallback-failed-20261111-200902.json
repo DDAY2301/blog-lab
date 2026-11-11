@@ -1,0 +1,25 @@
+{
+  "category": "gourmet",
+  "errors": [
+    "naslov_ni_v_rubriki",
+    "clanek_brez_slovenskega_konteksta",
+    "viri_ne_podpirajo_slovenske_rubrike",
+    "besedilo_ni_v_slovenscini"
+  ],
+  "article": {
+    "title": "Amazon.com: Curtains & Drapes - Curtains & Drapes / Window Treatments ..."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "lead_url": "https://www.amazon.com/draperies-curtains/b?node=3736141",
+      "title": "Amazon.com: Curtains & Drapes - Curtains & Drapes / Window Treatments ...",
+      "errors": [
+        "naslov_ni_v_rubriki",
+        "clanek_brez_slovenskega_konteksta",
+        "viri_ne_podpirajo_slovenske_rubrike",
+        "besedilo_ni_v_slovenscini"
+      ]
+    }
+  ]
+}
