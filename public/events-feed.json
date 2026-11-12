@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-11T17:18:12+01:00",
+  "updatedAt": "2026-11-12T02:55:52+01:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -115,90 +115,6 @@
       "status": "confirmed",
       "lastCheckedAt": "2026-11-01T07:20:00+01:00",
       "description": "The month-long culinary festival begins today across Ljubljana, with tastings, menus, workshops and live events announced separately. Prices, languages and accessibility vary by participating venue."
-    },
-    {
-      "id": "iranska-konferenca-drama-2026-11-11",
-      "title": "Iranska konferenca",
-      "url": "https://www.drama.si/dogodek/iranska-konferenca/",
-      "source": "SNG Drama Ljubljana",
-      "type": "Theatre · drama",
-      "place": "SNG Drama Main Stage, Litostrojska 56 · Ljubljana",
-      "startAt": "2026-11-11T19:30:00+01:00",
-      "endAt": "2026-11-11T22:30:00+01:00",
-      "price": null,
-      "languages": [
-        "Slovenian"
-      ],
-      "touristFriendly": false,
-      "familyFriendly": false,
-      "accessibility": null,
-      "ticketUrl": "https://drama.kupikarto.si/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-10T06:55:00+01:00",
-      "description": "Iranska konferenca runs from 19:30 to 22:30 on the Main Stage. It is performed in Slovenian; tickets are offered by SNG Drama, with no single verified price shown in the public listing."
-    },
-    {
-      "id": "goran-vincic-vinca-cankarjev-dom-2026-11-11",
-      "title": "Goran Vinčić – Vinča: Comedy Is a Serious Thing",
-      "url": "https://cd-cc.si/en/culture/lease-event/goran-vincic-vinca",
-      "source": "Cankarjev dom",
-      "type": "Stand-up comedy",
-      "place": "Gallus Hall · Cankarjev dom",
-      "startAt": "2026-11-11T20:00:00+01:00",
-      "endAt": null,
-      "price": "€28.90 / €33.90 / €38.90 / €43.90 / €48.90",
-      "languages": [
-        "Croatian / original language"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": "Contact Cankarjev dom for wheelchair seating and other event-specific assistance.",
-      "ticketUrl": "https://cd-cc.si/en/culture/lease-event/goran-vincic-vinca",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-10T06:55:00+01:00",
-      "description": "Croatian stand-up comedian Goran Vinčić presents Comedy Is a Serious Thing in Gallus Hall at 20:00. The show is performed in the original language; tickets range from €28.90 to €48.90."
-    },
-    {
-      "id": "rijeka-paris-texas-ii-kino-siska-2026-11-11",
-      "title": "Rijeka–Paris–Texas II: The Siids, Chasing Nord and Turisti",
-      "url": "https://www.kinosiska.si/dogodek/rijeka-paris-texas-ii/",
-      "source": "Kino Šiška",
-      "type": "Concert · alternative rock and electronic",
-      "place": "Kino Šiška · Ljubljana",
-      "startAt": "2026-11-11T20:00:00+01:00",
-      "endAt": null,
-      "price": "€19 / €14.25 reduced",
-      "languages": [
-        "Music-led"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": "Kino Šiška publishes general venue accessibility information; contact the venue for event-specific arrangements.",
-      "ticketUrl": "https://www.kinosiska.si/dogodek/rijeka-paris-texas-ii/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-10T06:55:00+01:00",
-      "description": "The Siids, Chasing Nord and Turisti present the second chapter of Rijeka–Paris–Texas at 20:00. Tickets cost €19, or €14.25 at the reduced rate."
-    },
-    {
-      "id": "svetloba-od-zunaj-bunker-2026-11-11",
-      "title": "Tina Benko and Ema Križič: Svetloba od zunaj",
-      "url": "https://www.bunker.si/events/tina-benko-ema-krizic-svetloba-od-zunaj/?occurrence=2026-11-11&time=1794427200",
-      "source": "Bunker / Stara mestna elektrarna",
-      "type": "Dance performance",
-      "place": "Stara mestna elektrarna · Slomškova 18",
-      "startAt": "2026-11-11T20:00:00+01:00",
-      "endAt": "2026-11-11T21:00:00+01:00",
-      "price": "€10 / €7 reduced",
-      "languages": [
-        "Dance-led"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": null,
-      "accessibility": "Contact Bunker for event-specific step-free access and seating arrangements.",
-      "ticketUrl": "https://www.bunker.si/events/tina-benko-ema-krizic-svetloba-od-zunaj/?occurrence=2026-11-11&time=1794427200",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-10T06:55:00+01:00",
-      "description": "Tina Benko and Ema Križič present a one-hour dance work exploring movement, rhythm, sound and light. Tickets cost €10 or €7 reduced."
     },
     {
       "id": "iranska-konferenca-drama-2026-11-12",
@@ -1657,6 +1573,25 @@
       "lastCheckedAt": "2026-11-11T07:41:47+01:00",
       "description": "LION'S LAW (FR), MESS (MEX), BREAKOUT (FR) @ Gala hala is listed by Gala Hala. Check the official event page for price, language and accessibility details.",
       "id": "event-78-lion-s-law-fr-mess-mex-breakout-fr-gala-hala"
+    },
+    {
+      "title": "ASTĒRIE @ Gala hala",
+      "url": "https://www.galahala.com/",
+      "source": "Gala Hala",
+      "type": "Koncert · Metelkova",
+      "place": "Gala Hala · AKC Metelkova",
+      "startAt": "2026-11-26T20:00:00+01:00",
+      "endAt": null,
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.galahala.com/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-12T02:55:52+01:00",
+      "description": "ASTĒRIE @ Gala hala is listed by Gala Hala. Check the official event page for price, language and accessibility details.",
+      "id": "event-75-ast-rie-gala-hala"
     }
   ]
 }
