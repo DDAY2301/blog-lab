@@ -5544,5 +5544,33 @@
     "provider": "google-news-si",
     "processed_at": "2026-11-12T07:39:56+01:00",
     "output_id": "zaradi-kolesarskega-ep-oviran-promet-preverite-katere-ceste-bodo-zaprte-24b5c470"
+  },
+  {
+    "source_name": "rtvslo.si",
+    "category": "gore",
+    "title": "Tradiciji slovenskega planinstva in alpinizma vpisani v register nesnovne kulturne dediščine - rtvslo.si",
+    "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQSnp0c3JTMnM3OFljMVdmZ01OTG1FV3Ywa1VCS3UtWm1NNWh2bU12RWU5b1g5RXlETFBOdkl2ZERVSkRVLUs0dThwMVg3TkdQWWxudlhVUTdIS3Q5QnRSbi1HY3lXWFpIX1FCYVVyQTItWS00c2MwOEU1emlWT3BIOFB5UlZLeG93aHV4WmRqTE5kM0sxZFZhUTlib1hKSzdFRFVLQ2Q0WHc5SjlaX05pUmZhMHhkTEhKVWxCeHpwMThnZ3FJdlI4TUFHM0V1U256c3JsMWJ3?oc=5",
+    "summary": "Tradiciji slovenskega planinstva in alpinizma vpisani v register nesnovne kulturne dediščine rtvslo.si",
+    "published": "Mon, 03 Aug 2026 07:00:00 GMT",
+    "image_url": "",
+    "video_url": "",
+    "hash": "d5056bfed89c88502b2690b0faf3fe007d323cf48d4bac48326413e6778c232a",
+    "provider": "google-news-si",
+    "processed_at": "2026-11-12T16:25:09+01:00",
+    "output_id": "tradiciji-slovenskega-planinstva-in-alpinizma-vpisani-v-register-nesnovne-kulturne-dedisci-60b092e5"
+  },
+  {
+    "source_name": "e-Koroška",
+    "category": "gore",
+    "title": "Planinstvo in alpinizem vpisana v register nesnovne kulturne dediščine Slovenije - e-Koroška",
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNcGJkbEVpNFhsQ3ZCRHNLelh6M1I1LThvaGNzb19LSE04V09FZ0lSVDY2N0NaM25zOFoxbFFxcE1sOFFOUXNwdmZRb3k4LVhpZXRsLXZuNERqdWZnVDVOMFFtaDEwYURxMldvMW56ck5fRURnOUdEVjgxNWNIWHR1U1h3REtlZENsempuenNBc1g1T2w1Z0pHUmlZZXNFVU9hOFVyeA?oc=5",
+    "summary": "Planinstvo in alpinizem vpisana v register nesnovne kulturne dediščine Slovenije e-Koroška",
+    "published": "Sat, 08 Aug 2026 07:00:00 GMT",
+    "image_url": "",
+    "video_url": "",
+    "hash": "d8f8f7cd0d585f65db854b18d480faf2235f36926a3737cd2337644172d5bdc6",
+    "provider": "google-news-si",
+    "processed_at": "2026-11-12T16:25:09+01:00",
+    "output_id": "tradiciji-slovenskega-planinstva-in-alpinizma-vpisani-v-register-nesnovne-kulturne-dedisci-60b092e5"
   }
 ]
