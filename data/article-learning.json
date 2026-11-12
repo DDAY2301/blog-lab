@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-11-12T08:11:35+01:00",
-  "loop_count": 7938,
+  "updated_at": "2026-11-12T20:55:43+01:00",
+  "loop_count": 7939,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-11-12T08:11:13+01:00",
+      "last_learning_run": "2026-11-12T20:55:07+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -38,6 +38,7 @@
         "lonelyplanet.com",
         "support.microsoft.com",
         "city-data.com",
+        "net54baseball.com",
         "kia.com",
         "support.google.com",
         "news.google.com",
@@ -45,8 +46,7 @@
         "wallpaperaccess.com",
         "offerup.com",
         "9454wilshire.com",
-        "aarp.org",
-        "sutterhealth.org"
+        "aarp.org"
       ],
       "source_health": {
         "lonelyplanet.com": {
@@ -70,6 +70,13 @@
           "last_title": "30th Anniversary of horrific firebombing... (Tampa, Clearwater: 2013, crime, living in) - Tampa Bay - Florida (FL) -Tampa Bay relocation forum. Insights on living in South Tampa, S",
           "last_provider": "bing-web"
         },
+        "net54baseball.com": {
+          "score": 2.988,
+          "seen": 3,
+          "last_seen": "2026-11-12T20:55:07+01:00",
+          "last_title": "FS: Willie Mays PSA/DNA Auto -- SOLD - Net54baseball.com Forums",
+          "last_provider": "bing-web"
+        },
         "kia.com": {
           "score": 2.75,
           "seen": 3,
@@ -86,11 +93,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 148494,
-          "last_seen": "2026-11-12T08:11:13+01:00",
+          "seen": 148501,
+          "last_seen": "2026-11-12T20:55:07+01:00",
           "last_title": "Odlični obeti, Slovenija se bi lahko že danes razveselila novega globusa - Žurnal24",
           "last_provider": "google-news-si",
-          "published": 479323,
+          "published": 479375,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -218,26 +225,24 @@
           "last_seen": "2026-10-04T18:55:06+02:00",
           "last_title": "Nike. Just Do It. Nike IN",
           "last_provider": "bing-web"
-        },
-        "dressbarn.com": {
-          "score": 1.271,
-          "seen": 2,
-          "last_seen": "2026-10-28T06:43:17+01:00",
-          "last_title": "Returns, Store Credit & Order Cancellations",
-          "last_provider": "bing-web"
         }
       },
-      "current_source_count": 6,
+      "current_source_count": 10,
       "example_titles": {
         "news.google.com": [
           "S tribune: Športni trenutki, zaradi katerih se mi še danes naježijo dlake - Svet24.si",
           "Merkur zavarovalnica L'Etape Slovenija: na krajši in daljši trasi slavila Slovenca - 24ur.com",
           "Slovenija proti Danski danes odpira svoje nastope na letošnjem evropskem prvenstvu - Šport TV"
+        ],
+        "net54baseball.com": [
+          "Net54baseball.com Forums",
+          "Cards From The B/S/T Finally Arrived! - Net54baseball.com Forums",
+          "FS: Willie Mays PSA/DNA Auto -- SOLD - Net54baseball.com Forums"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-11-12T08:11:23+01:00",
+      "last_learning_run": "2026-11-12T20:55:25+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -279,11 +284,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 177203,
-          "last_seen": "2026-11-12T08:11:23+01:00",
-          "last_title": "Predsednik vlade Janez Janša se je danes v Lendavi srečal s predsednikom madžarske vlade Viktorjem Orbanom. - prava.si",
-          "last_provider": "google-news-si",
-          "published": 527509,
+          "seen": 177215,
+          "last_seen": "2026-11-12T20:55:25+01:00",
+          "last_title": "Brskali tudi po računih žene pomembnega politika: \"To je svinjarija prve vrste\" - N1 Slovenija",
+          "last_provider": "google-news-global",
+          "published": 527565,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -388,14 +393,14 @@
       "current_source_count": 12,
       "example_titles": {
         "news.google.com": [
-          "Slovenija danes na referendumih: Kaj morate vedeti, preden se odpravite na volišče? - Dolenjskainfo.com",
           "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si",
-          "Nov protest ob obisku Sara v DZ-ju. Janša: Protesti so refleks levičarskega antisemitizma. - rtvslo.si"
+          "Slovenija danes na referendumih: Kaj morate vedeti, preden se odpravite na volišče? - Dolenjskainfo.com",
+          "Protestnik, ki je postal predsednik: Stevanović nekoč glas anticepilcev, danes pa enfant terrible, ki je vse postavil na glavo - Metropolita"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-11-12T08:11:35+01:00",
+      "last_learning_run": "2026-11-12T20:55:43+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -484,11 +489,11 @@
         },
         "news.google.com": {
           "score": 2.538,
-          "seen": 203606,
-          "last_seen": "2026-11-12T08:11:35+01:00",
+          "seen": 203619,
+          "last_seen": "2026-11-12T20:55:43+01:00",
           "last_title": "Slovenija preprečila pristanek izraelskega letala: tako se odziva Fraport - Info360",
           "last_provider": "google-news-global",
-          "published": 328470,
+          "published": 328486,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -583,17 +588,26 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 10,
+      "current_source_count": 14,
       "example_titles": {
         "news.google.com": [
-          "Kako svet vidi Slovenijo danes in kako je postala tako vroča evropska destinacija - Dnevnik",
+          "(AKTUALNO) Še danes v prodaji 36. št. revije Demokracija: 30 let Demokracije, ki udejanja pravico vedeti več! Načrt za demografsko obnovo sl",
           "Golob je “depolitiziral” RTV SLO, jo bo tudi Janša? Ustavno sodišče je dalo “blagoslov”, a Gregorčič in Avbelj gresta na ESČP - Zanima.me",
-          "Pred Stevanovićevim obiskom v Srbiji znova aktualno vprašanje statusa srbske skupnosti v Sloveniji - Siol.net"
+          "Kako svet vidi Slovenijo danes in kako je postala tako vroča evropska destinacija - Dnevnik"
+        ],
+        "cnbc.com": [
+          "Trump says ‘we don’t need a deal with Iran’"
         ]
       }
     }
   },
   "recent_articles": [
+    {
+      "id": "tradiciji-slovenskega-planinstva-in-alpinizma-vpisani-v-register-nesnovne-kulturne-dedisci-60b092e5",
+      "title": "Tradiciji slovenskega planinstva in alpinizma vpisani v register nesnovne kulturne dediščine",
+      "category": "Gore & traili",
+      "createdAt": "2026-11-12T16:25:09+01:00"
+    },
     {
       "id": "zaradi-kolesarskega-ep-oviran-promet-preverite-katere-ceste-bodo-zaprte-24b5c470",
       "title": "Zaradi kolesarskega EP oviran promet: preverite, katere ceste bodo zaprte",
@@ -659,31 +673,9 @@
       "title": "Brežiški grad: ko se 3D-doživetja in mobilna aplikacija oziroma soba pobega srečajo z zgodovino",
       "category": "Dediščina",
       "createdAt": "2026-11-01T10:46:54+01:00"
-    },
-    {
-      "id": "iz-velenja-v-dravograd-odslej-s-kolesom-odprli-9-4-kilometrsko-pot-do-mislinje-9b98b3c5",
-      "title": "Iz Velenja v Dravograd odslej s kolesom: odprli 9,4-kilometrsko pot do Mislinje",
-      "category": "Kolesarstvo",
-      "createdAt": "2026-11-01T07:39:59+01:00"
     }
   ],
   "recent_failures": [
-    {
-      "file": "fallback-failed-20261110-185349.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek"
-      ],
-      "title": "Dravska kolesarska pot: Adamičevo naselje – dvoetažni most – 1. etapa - Mestna občina Maribor"
-    },
-    {
-      "file": "fallback-failed-20261110-190902.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek"
-      ],
-      "title": "Dravska kolesarska pot: Adamičevo naselje – dvoetažni most – 1. etapa - Mestna občina Maribor"
-    },
     {
       "file": "fallback-failed-20261110-192453.json",
       "category": "kolesarstvo",
@@ -773,6 +765,21 @@
         "besedilo_ni_v_slovenscini"
       ],
       "title": "Amazon.com: Curtains & Drapes - Curtains & Drapes / Window Treatments ..."
+    },
+    {
+      "file": "fallback-failed-20261112-152528.json",
+      "category": "sezonsko",
+      "errors": [
+        "prekratek"
+      ],
+      "title": "Vreme danes: do 38 °C, ARSO opozarja na veliko toplotno obremenitev po Sloveniji - Dnevne Novice"
+    },
+    {
+      "file": "agent-state",
+      "category": "gourmet",
+      "errors": [
+        "fallback_no_fresh_evidence"
+      ]
     }
   ],
   "failure_summary": {
@@ -781,6 +788,7 @@
     "clanek_brez_slovenskega_konteksta": 3,
     "viri_ne_podpirajo_slovenske_rubrike": 3,
     "besedilo_ni_v_slovenscini": 2,
-    "naslov_ni_v_rubriki": 1
+    "naslov_ni_v_rubriki": 1,
+    "fallback_no_fresh_evidence": 1
   }
 }
