@@ -5530,5 +5530,19 @@
     "provider": "google-news-si",
     "processed_at": "2026-11-11T14:39:53+01:00",
     "output_id": "arso-popoldne-prizgal-alarme-za-toco-pestro-vremensko-dogajanje-tudi-prihodnje-dni-foto-in-4b954a9d"
+  },
+  {
+    "source_name": "N1 Slovenija",
+    "category": "kolesarstvo",
+    "title": "Zaradi kolesarskega EP oviran promet: preverite, katere ceste bodo zaprte - N1 Slovenija",
+    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNczZHTllJTHRnRGRhTDF2TGVkYjEweDBhRC1XVUtuRWdmQlNQaW1DdzR5RktzaTIyRVNObDRLMjNoN0VnYkdEUENuaFV3N2JjUjRxbENqc0tZcXZxV1NQbTBiQndhLWpaZE5TS3hoZXdTc3ppcEdCelVqRGtoUm50SzFCdk5HZ2Z4U0syZWN2anNaa0NKbG5sSGEwTjh2eXo2Njc0cGZmSThUSUVkNnlhb2xSaWsxUVBtU3JB?oc=5",
+    "summary": "Zaradi kolesarskega EP oviran promet: preverite, katere ceste bodo zaprte N1 Slovenija",
+    "published": "Fri, 02 Oct 2026 07:00:00 GMT",
+    "image_url": "",
+    "video_url": "",
+    "hash": "eaf7298a1b9ff4b8fdf8fe01535219353820618d5754bd23f3fba39c8f393a04",
+    "provider": "google-news-si",
+    "processed_at": "2026-11-12T07:39:56+01:00",
+    "output_id": "zaradi-kolesarskega-ep-oviran-promet-preverite-katere-ceste-bodo-zaprte-24b5c470"
   }
 ]
