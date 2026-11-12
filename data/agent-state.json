@@ -10,16 +10,21 @@
   "current_category": "gourmet",
   "scheduled_posts_today": 2,
   "manual_posts_today": 0,
-  "writer_mode": "deterministic_fallback",
+  "writer_mode": "workers_ai",
   "scheduled_slots_done": [
     "2026-11-12|07:35|kolesarstvo",
     "2026-11-12|16:20|gore"
   ],
   "scheduled_slots_deferred": [
     "2026-11-12|10:45|dediscina",
-    "2026-11-12|13:30|sezonsko"
+    "2026-11-12|13:30|sezonsko",
+    "2026-11-12|19:10|gourmet"
   ],
-  "last_editorial_hold": null,
+  "last_editorial_hold": {
+    "slot": "2026-11-12|19:10|gourmet",
+    "reason": "naslov_ni_v_rubriki,clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike,besedilo_ni_v_slovenscini",
+    "at": "2026-11-12T22:54:56+01:00"
+  },
   "publisher_guardian_last_run": "2026-11-12T22:08:30+01:00",
   "publisher_guardian_last_action": {
     "category": "dediscina",
