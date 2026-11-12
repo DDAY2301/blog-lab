@@ -5,9 +5,9 @@
   "posts_date": "2026-11-12",
   "posts_today": 1,
   "last_output": "zaradi-kolesarskega-ep-oviran-promet-preverite-katere-ceste-bodo-zaprte-24b5c470",
-  "last_error": "fallback_no_fresh_evidence",
+  "last_error": "prekratek",
   "agent_version": "3.0.0-learning-guarded-fallback",
-  "current_category": "dediscina",
+  "current_category": "sezonsko",
   "scheduled_posts_today": 1,
   "manual_posts_today": 0,
   "writer_mode": "workers_ai",
@@ -15,12 +15,13 @@
     "2026-11-12|07:35|kolesarstvo"
   ],
   "scheduled_slots_deferred": [
-    "2026-11-12|10:45|dediscina"
+    "2026-11-12|10:45|dediscina",
+    "2026-11-12|13:30|sezonsko"
   ],
   "last_editorial_hold": {
-    "slot": "2026-11-12|10:45|dediscina",
-    "reason": "predolg,ponavljanje,naslov_ni_v_rubriki,clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike,besedilo_ni_v_slovenscini",
-    "at": "2026-11-12T15:09:45+01:00"
+    "slot": "2026-11-12|13:30|sezonsko",
+    "reason": "ponavljanje",
+    "at": "2026-11-12T15:25:07+01:00"
   },
   "publisher_guardian_last_run": "2026-11-12T14:18:22+01:00",
   "publisher_guardian_last_action": {

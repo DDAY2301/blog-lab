@@ -1,0 +1,43 @@
+{
+  "category": "sezonsko",
+  "errors": [
+    "ponavljanje"
+  ],
+  "article": {
+    "title": "Vreme danes: do 38 °C, ARSO opozarja na veliko toplotno obremenitev po Sloveniji - Dnevne Novice",
+    "excerpt": "Vreme danes: do 38 °C, ARSO opozarja na veliko toplotno obremenitev po Sloveniji Dnevne Novice",
+    "seoDescription": "Vreme danes: do 38 °C, ARSO opozarja na veliko toplotno obremenitev po Sloveniji Dnevne Novice",
+    "content": "Pregled za rubriko sezonsko povzema trenutno razpoložljive informacije iz spodaj navedenih virov. Besedilo je pripravljeno brez dodajanja nepodprtih dejstev.\n\n## Vreme danes: do 38 °C, ARSO opozarja na veliko toplotno obremenitev po Sloveniji - Dnevne Novice\nVreme danes: do 38 °C, ARSO opozarja na veliko toplotno obremenitev po Sloveniji Dnevne Novice\n\nVir: Dnevne Novice — https://news.google.com/rss/articles/CBMia0FVX3lxTE0xeGIxWS03a0pLSFR6YkpiYjFaUVUtN1RBeC1YSlUzT3hxcndCdFVsNldHXzBIUGR3VktRY3dFUHdTRFBOaS1mOUV2THlqMUFnekRTNnl6V085Z3FIOXhZV2lvOU1zaVpoUDVZ?oc=5\n\n## ARSO vreme\nKontakt Agencija RS za okolje Vojkova 1b 1000 Ljubljana, Slovenija T +386 (0)1 4784 000 F +386 (0)1 4784 052 gp.arso@gov.si Vreme po telefonu telefonski odzivnik: 090 93 98 22 dežurni prognostik: 090 71 30 ali 090 93 41 30 vsak dan med 7h in 16h Opozorila za Slovenijo za Evropo\n\nVir: Bing Web – sezonsko – ARSO izleti danes — https://vreme.arso.gov.si/\n\n## Kako brati ta pregled\nTa članek je v varnem nadomestnem načinu sestavljen izključno iz podanih virov. Ne dodaja dejstev, ki jih v podlagi ni, zato so navedene povezave sestavni del članka in omogočajo neposredno preverjanje informacij.",
+    "category": "Sezonsko",
+    "tags": [
+      "sezonsko",
+      "Slovenija",
+      "vreme",
+      "danes",
+      "opozarja"
+    ],
+    "sources": [
+      {
+        "title": "Vreme danes: do 38 °C, ARSO opozarja na veliko toplotno obremenitev po Sloveniji - Dnevne Novice",
+        "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE0xeGIxWS03a0pLSFR6YkpiYjFaUVUtN1RBeC1YSlUzT3hxcndCdFVsNldHXzBIUGR3VktRY3dFUHdTRFBOaS1mOUV2THlqMUFnekRTNnl6V085Z3FIOXhZV2lvOU1zaVpoUDVZ?oc=5",
+        "source_name": "Dnevne Novice"
+      },
+      {
+        "title": "ARSO vreme",
+        "url": "https://vreme.arso.gov.si/",
+        "source_name": "Bing Web – sezonsko – ARSO izleti danes"
+      }
+    ],
+    "fallback": false,
+    "gallery": [],
+    "heroImage": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Frozen_Lake_Bled_%28156843859%29.jpeg/1920px-Frozen_Lake_Bled_%28156843859%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "alt": "500px provided description: This picture has been taken on a nice, sunny, but cold winter day. It is amazing to see lake Bled frozen! [#landscape ,#lake ,#frozen ,#mountains ,#wint",
+      "caption": "Anita · Wikimedia Commons · CC0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Frozen_Lake_Bled_(156843859).jpeg"
+    },
+    "visualTemplate": "fieldnote",
+    "templateLabel": "Field Note",
+    "id": "vreme-danes-do-38-c-arso-opozarja-na-veliko-toplotno-obremenitev-po-sloveniji-dnevne-novic-85b892d0"
+  }
+}
