@@ -5572,5 +5572,19 @@
     "provider": "google-news-si",
     "processed_at": "2026-11-12T16:25:09+01:00",
     "output_id": "tradiciji-slovenskega-planinstva-in-alpinizma-vpisani-v-register-nesnovne-kulturne-dedisci-60b092e5"
+  },
+  {
+    "source_name": "Outdooractive",
+    "category": "gore",
+    "title": "Celjska koča (652 m), Tolsti vrh nad Celjsko kočo (834 m) in Grmada nad Celjem(718 m) - Outdooractive",
+    "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQcks2NHNqWTI3RmJDTlhRQ3o3UlVQR2hoYTV6Wk5GNEZlRk5HcUZ2SWZGdzI5OVJSYjZITE94eWdUZ3ZvXzV5Z3ctLVlDTmpIME5NWkN1ZlZZdWRaVWV0WDNhd0VzYzdrSnVERkVHWGFLRlMzWGFacElQS1FxWVpQN0RDSzhiRUJIVXVMb0FPUWVtYzRRYnFidHN5T3N1MWpTMldBQl9hNE9hR294cV9id18xWjhCUTlHWHVVeXFjX18zc3RrNzdoZjBjU3Y2djJBckVuLWl3?oc=5",
+    "summary": "Celjska koča (652 m), Tolsti vrh nad Celjsko kočo (834 m) in Grmada nad Celjem(718 m) Outdooractive",
+    "published": "Tue, 28 Apr 2026 15:16:19 GMT",
+    "image_url": "",
+    "video_url": "",
+    "hash": "cd627d4b4db1b9e323a9f13ef3107394e244033614caed8a9cfa4258da4cfd2e",
+    "provider": "google-news-si",
+    "processed_at": "2026-11-13T17:09:46+01:00",
+    "output_id": "celjska-koca-652-m-tolsti-vrh-nad-celjsko-koco-834-m-in-grmada-nad-celjem-718-m-8e95add3"
   }
 ]
