@@ -5,9 +5,9 @@
   "posts_date": "2026-11-13",
   "posts_today": 0,
   "last_output": "tradiciji-slovenskega-planinstva-in-alpinizma-vpisani-v-register-nesnovne-kulturne-dedisci-60b092e5",
-  "last_error": "fallback_no_fresh_evidence",
+  "last_error": "prekratek,manjka_fotografija",
   "agent_version": "3.0.0-learning-guarded-fallback",
-  "current_category": "dediscina",
+  "current_category": "kolesarstvo",
   "scheduled_posts_today": 0,
   "manual_posts_today": 0,
   "writer_mode": "workers_ai",
@@ -20,11 +20,11 @@
     "reason": "manjka_fotografija",
     "at": "2026-11-13T07:39:45+01:00"
   },
-  "publisher_guardian_last_run": "2026-11-12T22:08:30+01:00",
+  "publisher_guardian_last_run": "2026-11-13T11:03:32+01:00",
   "publisher_guardian_last_action": {
-    "category": "dediscina",
-    "slot": "2026-11-12|10:45|dediscina",
-    "remaining_repairs": 2
+    "category": "kolesarstvo",
+    "slot": "2026-11-13|07:35|kolesarstvo",
+    "remaining_repairs": 1
   },
   "schedule_counter_normalized_at": "2026-10-07T16:45:00+02:00"
 }
