@@ -5586,5 +5586,20 @@
     "provider": "google-news-si",
     "processed_at": "2026-11-13T17:09:46+01:00",
     "output_id": "celjska-koca-652-m-tolsti-vrh-nad-celjsko-koco-834-m-in-grmada-nad-celjem-718-m-8e95add3"
+  },
+  {
+    "source_name": "biketopia.com",
+    "category": "kolesarstvo",
+    "title": "Bike Shop Knoxville TN | Biketopia",
+    "url": "https://biketopia.com/",
+    "summary": "Biketopia is Knoxville's trusted bicycle store serving Halls, Powell & Fountain City. Shop Trek road, mountain, and kid's bikes, or schedule a repair today! Welcome to Biketopia bike shop, the cycling destination serving Knoxville, Halls, Powell, Fountain City and Norris. We offer a smart selection of quality Trek road bikes, mountain bikes, greenway bicycles, and kid’s bikes in a clean, fun and friendly atmosphere. All of our bicycles are assembled with care and professionally fitted. Because it’s important to keep you riding, we maintain a first rate repair shop with parts in stock and experienced mechanics on duty at all times. Our mechanics have years of bike shop experience, so we’re able to offer you unparalleled performance and reliability from your bike. Our staff members are avid road cyclists and mountain bikers. We ride what we sell year round, and we love what we do. We can’t wait to be your favorite local bike shop, so come on down!",
+    "published": "Fri, 13 Nov 2026 06:19:00 GMT",
+    "image_url": "",
+    "video_url": "",
+    "hash": "c2b145c5ab5199d1e96602b78083755330b8bdca1d682e621bd2dd065a63b1af",
+    "provider": "bing-web",
+    "verified_direct": true,
+    "processed_at": "2026-11-13T19:07:48+01:00",
+    "output_id": "bike-shop-knoxville-tn-biketopia-2265cef1"
   }
 ]
