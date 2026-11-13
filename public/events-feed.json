@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-12T23:18:17+01:00",
+  "updatedAt": "2026-11-13T07:55:31+01:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -115,133 +115,6 @@
       "status": "confirmed",
       "lastCheckedAt": "2026-11-01T07:20:00+01:00",
       "description": "The month-long culinary festival begins today across Ljubljana, with tastings, menus, workshops and live events announced separately. Prices, languages and accessibility vary by participating venue."
-    },
-    {
-      "id": "iranska-konferenca-drama-2026-11-12",
-      "title": "Iranska konferenca",
-      "url": "https://www.drama.si/dogodek/iranska-konferenca/",
-      "source": "SNG Drama Ljubljana",
-      "type": "Theatre · drama",
-      "place": "SNG Drama Main Stage, Litostrojska 56 · Ljubljana",
-      "startAt": "2026-11-12T17:00:00+01:00",
-      "endAt": "2026-11-12T19:50:00+01:00",
-      "price": null,
-      "languages": [
-        "Slovenian"
-      ],
-      "touristFriendly": false,
-      "familyFriendly": false,
-      "accessibility": null,
-      "ticketUrl": "https://drama.kupikarto.si/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-10T06:55:00+01:00",
-      "description": "The final listed November performance runs from 17:00 to 19:50. It is in Slovenian; check the official ticket shop for current price and remaining seats."
-    },
-    {
-      "id": "tesla-cankarjev-dom-2026-11-12",
-      "title": "Tesla",
-      "url": "https://www.cd-cc.si/kultura/za-mlade-in-sole/tesla",
-      "source": "Cankarjev dom",
-      "type": "Music theatre · family",
-      "place": "Štih Hall · Cankarjev dom",
-      "startAt": "2026-11-12T19:00:00+01:00",
-      "endAt": null,
-      "price": "€12",
-      "languages": [
-        "Slovenian"
-      ],
-      "touristFriendly": false,
-      "familyFriendly": true,
-      "accessibility": "Contact Cankarjev dom for wheelchair seating and event-specific assistance.",
-      "ticketUrl": "https://www.cd-cc.si/kultura/za-mlade-in-sole/tesla",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-29T07:18:00+01:00",
-      "description": "The 10th-anniversary performance of Tesla starts in Štih Hall at 19:00. The music-theatre production is intended for ages 9–99; tickets cost €12."
-    },
-    {
-      "id": "romantic-souls-mgl-2026-11-12",
-      "title": "Romantic Souls",
-      "url": "https://www.mgl.si/en/shows/romantic-souls/",
-      "source": "MGL",
-      "type": "Theatre · drama",
-      "place": "MGL Main Stage · Ljubljana",
-      "startAt": "2026-11-12T19:30:00+01:00",
-      "endAt": null,
-      "price": null,
-      "languages": [
-        "Slovenian"
-      ],
-      "touristFriendly": false,
-      "familyFriendly": false,
-      "accessibility": "Contact MGL for performance-specific step-free seating arrangements.",
-      "ticketUrl": "https://www.mgl.si/en/schedule/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-29T07:18:00+01:00",
-      "description": "MGL stages Ivan Cankar’s Romantic Souls on the Main Stage at 19:30. The official schedule currently lists tickets; the performance is in Slovenian."
-    },
-    {
-      "id": "josipa-lisac-cankarjev-dom-2026-11-12",
-      "title": "Josipa Lisac",
-      "url": "https://www.cd-cc.si/en/culture/music/josipa-lisac",
-      "source": "Cankarjev dom",
-      "type": "Concert · rock, chanson and jazz",
-      "place": "Gallus Hall · Cankarjev dom",
-      "startAt": "2026-11-12T20:00:00+01:00",
-      "endAt": "2026-11-12T21:30:00+01:00",
-      "price": "€26 / €32 / €38 / €45; reduced €22 / €28 / €34 / €40",
-      "languages": [
-        "Croatian",
-        "Music-led"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": "Contact Cankarjev dom for wheelchair seating and event-specific assistance.",
-      "ticketUrl": "https://vstopnice.cd-cc.si/en/josipa-lisac/tickets-226503.html",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-29T07:18:00+01:00",
-      "description": "Josipa Lisac performs a 90-minute concert in Gallus Hall at 20:00. Standard tickets range from €26 to €45, with reduced prices from €22 to €40."
-    },
-    {
-      "id": "sonica-2026-kino-siska-2026-11-12",
-      "title": "SONICA 2026: Marina Herlop, Estelle Schorpp & Charline Dally, Litošt",
-      "url": "https://www.kinosiska.si/en/dogodek/sonica-2026-marina-herlop-estelle-schorpp-charline-dally-litost/",
-      "source": "Kino Šiška / SONICA",
-      "type": "Concert · electronic and transitory art",
-      "place": "Katedrala Hall · Kino Šiška",
-      "startAt": "2026-11-12T20:00:00+01:00",
-      "endAt": null,
-      "price": "€25 presale / €30 door; festival passes €45–48",
-      "languages": [
-        "Music-led"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": "Kino Šiška publishes general venue accessibility information; contact the venue for event-specific arrangements.",
-      "ticketUrl": "https://www.kinosiska.si/en/dogodek/sonica-2026-marina-herlop-estelle-schorpp-charline-dally-litost/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-29T07:18:00+01:00",
-      "description": "SONICA’s main concert night brings Marina Herlop, an AV performance by Estelle Schorpp and Charline Dally, and Litošt to Katedrala Hall at 20:00. Presale costs €25 and the walk-up price is €30."
-    },
-    {
-      "id": "svetloba-od-zunaj-bunker-2026-11-12",
-      "title": "Tina Benko and Ema Križič: Svetloba od zunaj",
-      "url": "https://www.bunker.si/events/tina-benko-ema-krizic-svetloba-od-zunaj/?occurrence=2026-11-11&time=1794427200",
-      "source": "Bunker / Stara mestna elektrarna",
-      "type": "Dance performance",
-      "place": "Stara mestna elektrarna · Slomškova 18",
-      "startAt": "2026-11-12T20:00:00+01:00",
-      "endAt": "2026-11-12T21:00:00+01:00",
-      "price": "€10 / €7 reduced",
-      "languages": [
-        "Dance-led"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": null,
-      "accessibility": "Contact Bunker for event-specific step-free access and seating arrangements.",
-      "ticketUrl": "https://www.bunker.si/events/tina-benko-ema-krizic-svetloba-od-zunaj/?occurrence=2026-11-11&time=1794427200",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-30T07:20:00+01:00",
-      "description": "The second Ljubljana performance of Svetloba od zunaj runs from 20:00 to 21:00. This dance-led work is suitable for visitors regardless of language; tickets cost €10 or €7 reduced."
     },
     {
       "id": "goran-vojnovic-sum-cesnje-cankarjev-dom-2026-11-13",
@@ -1592,6 +1465,25 @@
       "lastCheckedAt": "2026-11-12T02:55:52+01:00",
       "description": "ASTĒRIE @ Gala hala is listed by Gala Hala. Check the official event page for price, language and accessibility details.",
       "id": "event-75-ast-rie-gala-hala"
+    },
+    {
+      "title": "KONCERTNA AKADEMIJA: KORMORANA (SI), ZUBI (RS), SPEJS NOKSI (RS)",
+      "url": "https://www.galahala.com/",
+      "source": "Gala Hala",
+      "type": "Koncert · Metelkova",
+      "place": "Gala Hala · AKC Metelkova",
+      "startAt": "2026-11-27T20:00:00+01:00",
+      "endAt": null,
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.galahala.com/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-13T07:55:31+01:00",
+      "description": "KONCERTNA AKADEMIJA: KORMORANA (SI), ZUBI (RS), SPEJS NOKSI (RS) is listed by Gala Hala. Check the official event page for price, language and accessibility details.",
+      "id": "event-70-koncertna-akademija-kormorana-si-zubi-rs-spejs-noksi-rs"
     }
   ]
 }
