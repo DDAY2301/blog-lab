@@ -1,0 +1,41 @@
+{
+  "category": "dediscina",
+  "errors": [
+    "naslov_ni_v_rubriki",
+    "clanek_brez_slovenskega_konteksta",
+    "viri_ne_podpirajo_slovenske_rubrike",
+    "besedilo_ni_v_slovenscini"
+  ],
+  "article": {
+    "title": "How to Switch to Dark Mode in Windows 11/10 (Background & Theme)",
+    "excerpt": "Learn how to switch to Dark Mode in Windows 11 and Windows 10. Enable a dark background, change theme colors, and make apps and File Explorer dark. Switching to a dark background theme in Windows 11 or Windows 10 is an e",
+    "seoDescription": "Learn how to switch to Dark Mode in Windows 11 and Windows 10. Enable a dark background, change theme colors, and make apps and File Explorer dark. Switchi",
+    "content": "Pregled za rubriko dediscina povzema trenutno razpoložljive informacije iz spodaj navedenih virov. Besedilo je pripravljeno brez dodajanja nepodprtih dejstev.\n\n## How to Switch to Dark Mode in Windows 11/10 (Background & Theme)\nLearn how to switch to Dark Mode in Windows 11 and Windows 10. Enable a dark background, change theme colors, and make apps and File Explorer dark. Switching to a dark background theme in Windows 11 or Windows 10 is an easy way to give your computer a cleaner, more modern appearance. Instead of bright white backgrounds, Windows Dark Mode uses darker colors across supported system menus, Settings, File Explorer, and applications. Many people prefer a dark theme when working at night, watching videos, or using their computers in dimly lit rooms. It can make the screen feel less glaring, and on devices with OLED displays, darker interfaces may also help conserve battery power. Fortunately, you don’t need to download third-party themes or modify the Windows Registry to enable this feature. Both Windows 11 and Windows 10 include built-in options for switching between light and dark appearances. Quick answer: To switch to Dark Mode in Windows 11, open Settings > Personalization > Colors > Choose your mode > Dark . On Windows 10, go to Settings > Personalization > Colors and select Dark under Choose your color . Below, we’ll explain how to change your Windows background theme, customize its appearance, and fix common problems when Dark Mode doesn’t work as expected. Windows 11 includes a built-in Dark Mode that changes the appearance of the taskbar, Start menu, Settings, File Explorer, and supported applications. Windows should immediately switch from the light appearance to a darker interface. You don’t need to restart your computer. Alternatively, you can right-click an empty area of your desktop, select Personalize , and open Colors . Once enabled, supported Windows components will display dark backgrounds with lighter text. You can return to the original appearance anytime by selecting Light from the same dropdown menu. For additional customization options, see Microsoft’s official guide to personalizing colors in Windows . Windows 10 also supports Dark Mode, although its Settings interface looks slightly different from Windows 11. Here’s how to switch Windows 10 to a dark background theme: Your taskbar, Start menu, Settings, and compatible applications should now use darker colors. If you prefer separate settings for Windows and applications, select Custom instead. This lets you configure the default Windows mode and default app mode independently. Note: Windows 10 reached the end of its standard support on October 14, 2025. Dark Mode remains available, but upgrading to a supported Windows version is recommended for ongoing security updates unless your dev\n\nVir: techbaked.com — https://techbaked.com/switch-dark-mode-windows/",
+    "category": "Dediščina",
+    "tags": [
+      "dediscina",
+      "Slovenija",
+      "switch",
+      "windows",
+      "background"
+    ],
+    "sources": [
+      {
+        "title": "How to Switch to Dark Mode in Windows 11/10 (Background & Theme)",
+        "url": "https://techbaked.com/switch-dark-mode-windows/",
+        "source_name": "techbaked.com"
+      }
+    ],
+    "fallback": false,
+    "heroImage": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Tustanj_Castle_Slovenia_-_plaque.JPG/1920px-Tustanj_Castle_Slovenia_-_plaque.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "alt": "Plaque over the entrance to Tuštanj Castle, Zgornji Tuštanj, Municipality of Moravče, Slovenia",
+      "caption": "Doremo · Wikimedia Commons · CC BY-SA 3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tustanj_Castle_Slovenia_-_plaque.JPG"
+    },
+    "gallery": [],
+    "visualTemplate": "fieldnote",
+    "templateLabel": "Field Note",
+    "id": "how-to-switch-to-dark-mode-in-windows-11-10-background-theme-d4633052"
+  }
+}
