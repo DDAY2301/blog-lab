@@ -1,0 +1,19 @@
+{
+  "category": "dediscina",
+  "errors": [
+    "viri_ne_podpirajo_slovenske_rubrike"
+  ],
+  "article": {
+    "title": "Christmas Tree and Fireplace - Pinterest"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "lead_url": "https://www.pinterest.com/ideas/christmas-tree-and-fireplace/954357739274/",
+      "title": "Christmas Tree and Fireplace - Pinterest",
+      "errors": [
+        "viri_ne_podpirajo_slovenske_rubrike"
+      ]
+    }
+  ]
+}
