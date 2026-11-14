@@ -1,0 +1,39 @@
+{
+  "category": "dediscina",
+  "errors": [
+    "naslov_ni_v_rubriki",
+    "viri_ne_podpirajo_slovenske_rubrike"
+  ],
+  "article": {
+    "title": "Free Printable Quarter Fold Greeting Cards",
+    "excerpt": "{\"adsAPIDomain\":\"https://api.pinterest.com\",\"appVersion\":\"39d464a\",\"context\":{\"ads_grid_title_truncation_pharma_enabled\":false,\"web_paid_partnership_grid_labeling_enabled\":true,\"analysis_ua\":{\"app_type\":5,\"app_version\":\"",
+    "seoDescription": "{\"adsAPIDomain\":\"https://api.pinterest.com\",\"appVersion\":\"39d464a\",\"context\":{\"ads_grid_title_truncation_pharma_enabled\":false,\"web_paid_partnership_grid_l",
+    "content": "Pregled za rubriko dediscina povzema trenutno razpoložljive informacije iz spodaj navedenih virov. Besedilo je pripravljeno brez dodajanja nepodprtih dejstev.\n\n## Free Printable Quarter Fold Greeting Cards\n{\"adsAPIDomain\":\"https://api.pinterest.com\",\"appVersion\":\"39d464a\",\"context\":{\"ads_grid_title_truncation_pharma_enabled\":false,\"web_paid_partnership_grid_labeling_enabled\":true,\"analysis_ua\":{\"app_type\":5,\"app_version\":\"\",\"browser_name\":\"Other\",\"browser_version\":\"\",\"device_type\":null,\"device\":\"Other\",\"os_name\":\"Other\",\"os_version\":\"\"},\"app_type_detailed\":5,\"app_version\":\"39d464a\",\"autologin\":null,\"browser_name\":\"Other\",\"browser_type\":null,\"browser_version\":\"\",\"country\":\"US\",\"country_from_hostname\":\"US\",\"country_from_ip\":\"US\",\"csp_nonce\":\"f345d8792f5a48896b4ffb8407d4c7c1\",\"current_url\":\"https://www.pinterest.com/ideas/free-printable-quarter-fold-greeting-cards/924113988437/\",\"debug\":false,\"deep_link\":\"\",\"enabled_advertiser_countries\":[\"AR\",\"AT\",\"AU\",\"BE\",\"BR\",\"CA\",\"CH\",\"CL\",\"CO\",\"DE\",\"DK\",\"ES\",\"FI\",\"FR\",\"GB\",\"IE\",\"IT\",\"JP\",\"LU\",\"MX\",\"NL\",\"NO\",\"NZ\",\"PT\",\"SE\",\"US\"],\"facebook_token\":null,\"full_path\":\"/ideas/free-printable-quarter-fold-greeting-cards/924113988437/\",\"http_referrer\":\"\",\"impersonator_user_id\":null,\"invite_code\":\"\",\"invite_sender_id\":\"\",\"is_authenticated\":false,\"is_bot\":\"false\",\"is_perf_metrics_bot\":true,\"is_vpn\":false,\"is_proxy\":false,\"is_tor\":false,\"is_hosting\":true,\"has_geo_is_anon\":true,\"has_dcip\":true,\"is_unauth_botspam_asn\":false,\"is_full_page\":true,\"is_mobile_agent\":false,\"is_sterling_on_steroids\":false,\"is_tablet_agent\":false,\"language\":\"en\",\"locale\":\"en-US\",\"origin\":\"https://www.pinterest.com\",\"path\":\"/ideas/free-printable-quarter-fold-greeting-cards/924113988437/\",\"placed_experiences\":null,\"referrer\":null,\"region_from_ip\":\"WY\",\"request_host\":\"www.pinterest.com\",\"request_identifier\":\"6792773205950713\",\"social_bot\":\"\",\"stage\":\"prod\",\"sterling_on_steroids_ldap\":null,\"sterling_on_steroids_user_type\":null,\"theme\":\"light\",\"gestalt_theme\":\"calico\",\"unauth_id\":\"6cf923f946164227adee34e0e7ae1167\",\"seo_debug\":false,\"user_agent_can_use_native_app\":false,\"user_agent_platform\":\"other\",\"user_agent_platform_version\":null,\"user_agent\":\"BlogLabPublisher/2.1 (+https://github.com/DDAY2301/blog-lab)\",\"user\":{\"unauth_id\":\"6cf923f946164227adee34e0e7ae1167\",\"ip_country\":\"US\",\"ip_region\":\"WY\"},\"utm_campaign\":null,\"visible_url\":\"/ideas/free-printable-quarter-fold-greeting-cards/924113988437/\"},\"enableAdaptiveStatsLoggingFlush\":false,\"experiments\":{\"active\":{\"lop_unauth_lockdown_main\":\"enabled_rollout\",\"lop_unauth_lockdown_ideas_klp\":\"enabled\"},\"triggerable\":{\"account_context_agent_aic_integration\":\"enabled\",\"account_recovery_via_phone\":\"enabled\",\"ace_ad_preview_safe_zone\":\"enabled\",\"ace_shareable_ad_preview\":\"enabled\",\"ace_shareable_ad_preview_routes\":\"enabled_a\n\nVir: pinterest.com — https://www.pinterest.com/ideas/free-printable-quarter-fold-greeting-cards/924113988437/",
+    "category": "Dediščina",
+    "tags": [
+      "dediscina",
+      "Slovenija",
+      "printable",
+      "quarter",
+      "greeting"
+    ],
+    "sources": [
+      {
+        "title": "Free Printable Quarter Fold Greeting Cards",
+        "url": "https://www.pinterest.com/ideas/free-printable-quarter-fold-greeting-cards/924113988437/",
+        "source_name": "pinterest.com"
+      }
+    ],
+    "fallback": false,
+    "gallery": [],
+    "heroImage": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Tustanj_Castle_Slovenia_-_plaque.JPG/1920px-Tustanj_Castle_Slovenia_-_plaque.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "alt": "Plaque over the entrance to Tuštanj Castle, Zgornji Tuštanj, Municipality of Moravče, Slovenia",
+      "caption": "Doremo · Wikimedia Commons · CC BY-SA 3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tustanj_Castle_Slovenia_-_plaque.JPG"
+    },
+    "visualTemplate": "fieldnote",
+    "templateLabel": "Field Note",
+    "id": "free-printable-quarter-fold-greeting-cards-96132a71"
+  }
+}
