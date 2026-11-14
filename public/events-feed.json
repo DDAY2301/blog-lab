@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-14T19:15:28+01:00",
+  "updatedAt": "2026-11-15T00:58:06+01:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -115,90 +115,6 @@
       "status": "confirmed",
       "lastCheckedAt": "2026-11-01T07:20:00+01:00",
       "description": "The month-long culinary festival begins today across Ljubljana, with tastings, menus, workshops and live events announced separately. Prices, languages and accessibility vary by participating venue."
-    },
-    {
-      "id": "il-barbiere-di-siviglia-opera-2026-11-14",
-      "title": "Il barbiere di Siviglia",
-      "url": "https://www.opera.si/en/programme/event/opera/seviljski-brivec-il-barbiere-di-siviglia-2",
-      "source": "SNG Opera and Ballet Ljubljana",
-      "type": "Opera · comic opera",
-      "place": "SNG Opera and Ballet Ljubljana",
-      "startAt": "2026-11-14T18:00:00+01:00",
-      "endAt": null,
-      "price": null,
-      "languages": [
-        "Italian opera",
-        "Supertitles available; languages not specified on the event page"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": true,
-      "accessibility": "Contact the opera house for wheelchair seating and event-specific assistance.",
-      "ticketUrl": "https://opera.mojekarte.si/en/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-31T07:18:00+01:00",
-      "description": "Rossini’s comic opera begins at 18:00 in a family-subscription performance. The production is semi-staged with the orchestra on stage; confirm current seat prices and supertitle languages when booking."
-    },
-    {
-      "id": "the-deceased-mgl-2026-11-14",
-      "title": "The Deceased",
-      "url": "https://www.mgl.si/en/shows/the-deceased/",
-      "source": "MGL",
-      "type": "Theatre · comedy",
-      "place": "MGL Main Stage · Ljubljana",
-      "startAt": "2026-11-14T19:00:00+01:00",
-      "endAt": "2026-11-14T21:45:00+01:00",
-      "price": null,
-      "languages": [
-        "Slovenian"
-      ],
-      "touristFriendly": false,
-      "familyFriendly": false,
-      "accessibility": "Contact MGL for performance-specific step-free seating arrangements.",
-      "ticketUrl": "https://www.mgl.si/en/schedule/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-31T07:18:00+01:00",
-      "description": "MGL stages Branislav Nušić’s comedy on the Main Stage at 19:00. The Slovenian-language performance runs for 2 hours 45 minutes including two intervals."
-    },
-    {
-      "title": "OTI - SAMOSPEV RELEASE KONCERT @ Gala hala",
-      "url": "https://www.galahala.com/program/samodejni-osnutek-7/34787/",
-      "source": "Gala Hala",
-      "type": "Concert · indie rock and pop",
-      "place": "Gala Hala · AKC Metelkova",
-      "startAt": "2026-11-14T20:00:00+01:00",
-      "endAt": null,
-      "price": "€10 advance / €15 on the day",
-      "languages": [
-        "Slovenian",
-        "Music-led"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": "Contact Gala Hala for event-specific accessibility information.",
-      "ticketUrl": "https://www.mojekarte.si/si/oti-release-koncert-ob-izdaji-ep-ja-samospev/vstopnice-1237401.html",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-31T07:18:00+01:00",
-      "description": "OTI launches the EP Samospev with Slatkor and special guest Leyre at 20:00. Tickets cost €10 in advance or €15 on the day.",
-      "id": "event-50-oti-samospev-release-koncert-gala-hala"
-    },
-    {
-      "title": "Just A Dance",
-      "url": "https://www.klub-k4.si/",
-      "source": "Klub K4",
-      "type": "Club · elektronika",
-      "place": "Klub K4 · Ljubljana",
-      "startAt": "2026-11-14T23:00:00+01:00",
-      "endAt": null,
-      "price": null,
-      "languages": [],
-      "touristFriendly": null,
-      "familyFriendly": null,
-      "accessibility": null,
-      "ticketUrl": "https://www.klub-k4.si/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-04T01:40:25+01:00",
-      "description": "Just A Dance is listed by Klub K4. Check the official event page for price, language and accessibility details.",
-      "id": "event-43-just-a-dance"
     },
     {
       "id": "sunday-flea-market-2026-11-15",
