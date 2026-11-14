@@ -2,24 +2,24 @@
   "agent": "Blog Lab Slovenia Publisher",
   "status": "waiting",
   "enabled": true,
-  "category": "gourmet",
-  "last_run": "2026-11-13T23:53:59+01:00",
+  "category": "kolesarstvo",
+  "last_run": "2026-11-14T07:39:52+01:00",
   "last_success": "2026-11-13T19:07:48+01:00",
   "last_output": "bike-shop-knoxville-tn-biketopia-2265cef1",
   "next_run": null,
-  "message": "Ni novih neuporabljenih virov; objava se varno odloži.",
-  "posts_today": 2,
-  "scheduled_posts_today": 2,
+  "message": "Nobena sveža zgodba ni prestala uredniškega QA: prekratek,manjka_fotografija",
+  "posts_today": 0,
+  "scheduled_posts_today": 0,
   "manual_posts_today": 0,
-  "writer_mode": "deterministic_fallback",
-  "scheduled_slots_done": [
-    "2026-11-13|16:20|gore",
-    "2026-11-13|07:35|kolesarstvo"
-  ],
+  "writer_mode": "workers_ai",
+  "scheduled_slots_done": [],
   "scheduled_slots_deferred": [
-    "2026-11-13|10:45|dediscina",
-    "2026-11-13|13:30|sezonsko"
+    "2026-11-14|07:35|kolesarstvo"
   ],
-  "last_editorial_hold": null,
-  "last_error": "fallback_no_fresh_evidence"
+  "last_editorial_hold": {
+    "slot": "2026-11-14|07:35|kolesarstvo",
+    "reason": "manjka_fotografija",
+    "at": "2026-11-14T07:39:38+01:00"
+  },
+  "last_error": "prekratek,manjka_fotografija"
 }
