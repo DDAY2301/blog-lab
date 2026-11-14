@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-11-13T20:43:04+01:00",
-  "loop_count": 7941,
+  "updated_at": "2026-11-14T07:24:45+01:00",
+  "loop_count": 7942,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-11-13T20:42:43+01:00",
+      "last_learning_run": "2026-11-14T07:24:15+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -93,11 +93,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 148514,
-          "last_seen": "2026-11-13T20:42:43+01:00",
+          "seen": 148520,
+          "last_seen": "2026-11-14T07:24:15+01:00",
           "last_title": "Odlični obeti, Slovenija se bi lahko že danes razveselila novega globusa - Žurnal24",
           "last_provider": "google-news-si",
-          "published": 479479,
+          "published": 479531,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,21 +227,21 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 9,
+      "current_source_count": 8,
       "example_titles": {
         "news.google.com": [
           "Največji šok: Italijane potolkel malček, Slovenija po finale v tem terminu - Ekipa",
-          "Merkur zavarovalnica L'Etape Slovenija: na krajši in daljši trasi slavila Slovenca - 24ur.com",
-          "Slovenija proti Danski danes odpira svoje nastope na letošnjem evropskem prvenstvu - Šport TV"
+          "Slovenija proti Danski danes odpira svoje nastope na letošnjem evropskem prvenstvu - Šport TV",
+          "Merkur zavarovalnica L'Etape Slovenija: na krajši in daljši trasi slavila Slovenca - 24ur.com"
         ],
-        "investor.wayfair.com": [
-          "Wayfair Expands Northeast Footprint with Princeton, New Jersey Store",
-          "Save the Date: Way Day Returns October 24 - 26"
+        "microsoft.com": [
+          "Microsoft – AI, Cloud, Productivity, Computing, Gaming & Apps",
+          "Microsoft – AI, Cloud, Productivity, Computing, Gaming & Apps"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-11-13T20:42:53+01:00",
+      "last_learning_run": "2026-11-14T07:24:28+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -283,11 +283,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 177240,
-          "last_seen": "2026-11-13T20:42:53+01:00",
-          "last_title": "Brskali tudi po računih žene pomembnega politika: \"To je svinjarija prve vrste\" - N1 Slovenija",
-          "last_provider": "google-news-global",
-          "published": 527676,
+          "seen": 177254,
+          "last_seen": "2026-11-14T07:24:28+01:00",
+          "last_title": "Golobova vlada se je hvalila z zgodovinskim ukrepom, danes ZZZS zaradi njega tone v likvidnostne težave - Nova24TV",
+          "last_provider": "google-news-si",
+          "published": 527731,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -389,17 +389,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 13,
+      "current_source_count": 14,
       "example_titles": {
         "news.google.com": [
-          "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si",
+          "Nov protest ob obisku Sara v DZ-ju. Janša: Protesti so refleks levičarskega antisemitizma. - rtvslo.si",
           "Slovenija danes na referendumih: Kaj morate vedeti, preden se odpravite na volišče? - Dolenjskainfo.com",
-          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer"
+          "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-11-13T20:43:04+01:00",
+      "last_learning_run": "2026-11-14T07:24:45+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -488,11 +488,11 @@
         },
         "news.google.com": {
           "score": 2.548,
-          "seen": 203643,
-          "last_seen": "2026-11-13T20:43:04+01:00",
+          "seen": 203653,
+          "last_seen": "2026-11-14T07:24:45+01:00",
           "last_title": "Slovenija preprečila pristanek izraelskega letala: tako se odziva Fraport - Info360",
           "last_provider": "google-news-global",
-          "published": 328517,
+          "published": 328532,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -587,22 +587,12 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 16,
+      "current_source_count": 10,
       "example_titles": {
         "news.google.com": [
           "Kako svet vidi Slovenijo danes in kako je postala tako vroča evropska destinacija - Dnevnik",
           "Golob je “depolitiziral” RTV SLO, jo bo tudi Janša? Ustavno sodišče je dalo “blagoslov”, a Gregorčič in Avbelj gresta na ESČP - Zanima.me",
-          "Pred Stevanovićevim obiskom v Srbiji znova aktualno vprašanje statusa srbske skupnosti v Sloveniji - Siol.net"
-        ],
-        "mainevent.com": [
-          "Main Event | Bowling, Arcade Games, Laser Tag & Dining",
-          "Things to Do in Waco, TX | Main Event"
-        ],
-        "facebook.com": [
-          "Main Event - Waco, TX | Waco TX"
-        ],
-        "yelp.com": [
-          "Main Event Waco"
+          "Prijatelji so se mi opravičili, ker so takrat obnemeli, otrdeli, samo gledali in niso znali pomagati. Danes bi to znali. - rtvslo.si"
         ]
       }
     }
