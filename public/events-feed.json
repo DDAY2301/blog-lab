@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-13T17:32:03+01:00",
+  "updatedAt": "2026-11-14T01:55:06+01:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -115,90 +115,6 @@
       "status": "confirmed",
       "lastCheckedAt": "2026-11-01T07:20:00+01:00",
       "description": "The month-long culinary festival begins today across Ljubljana, with tastings, menus, workshops and live events announced separately. Prices, languages and accessibility vary by participating venue."
-    },
-    {
-      "id": "goran-vojnovic-sum-cesnje-cankarjev-dom-2026-11-13",
-      "title": "Goran Vojnović: Šum češnje",
-      "url": "https://www.cd-cc.si/kultura/literatura-in-humanistika/goran-vojnovic-sum-cesnje",
-      "source": "Cankarjev dom",
-      "type": "Literature · author conversation",
-      "place": "CD Club · Cankarjev dom",
-      "startAt": "2026-11-13T19:00:00+01:00",
-      "endAt": null,
-      "price": "Free ticket required",
-      "languages": [
-        "Slovenian"
-      ],
-      "touristFriendly": false,
-      "familyFriendly": false,
-      "accessibility": "Contact Cankarjev dom for wheelchair seating and event-specific assistance.",
-      "ticketUrl": "https://www.cd-cc.si/kultura/literatura-in-humanistika/goran-vojnovic-sum-cesnje",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-30T07:20:00+01:00",
-      "description": "Goran Vojnović discusses his new novel Šum češnje with journalist and writer Jela Krečič at 19:00. Admission is free, but a free ticket is required; the conversation is in Slovenian."
-    },
-    {
-      "id": "romantic-souls-mgl-2026-11-13",
-      "title": "Romantic Souls",
-      "url": "https://www.mgl.si/en/shows/romantic-souls/",
-      "source": "MGL",
-      "type": "Theatre · drama",
-      "place": "MGL Main Stage · Ljubljana",
-      "startAt": "2026-11-13T19:30:00+01:00",
-      "endAt": null,
-      "price": null,
-      "languages": [
-        "Slovenian"
-      ],
-      "touristFriendly": false,
-      "familyFriendly": false,
-      "accessibility": "Contact MGL for performance-specific step-free seating arrangements.",
-      "ticketUrl": "https://www.mgl.si/en/schedule/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-30T07:20:00+01:00",
-      "description": "MGL stages Ivan Cankar’s Romantic Souls on the Main Stage at 19:30. The official schedule lists tickets; the performance is in Slovenian."
-    },
-    {
-      "title": "DOUBLE DATE @ Gala hala",
-      "url": "https://www.galahala.com/program/double-date-gala-hala/34816/",
-      "source": "Gala Hala",
-      "type": "Koncert · Metelkova",
-      "place": "Gala Hala · AKC Metelkova",
-      "startAt": "2026-11-13T23:00:00+01:00",
-      "endAt": null,
-      "price": "€17 until midnight / €20 afterwards",
-      "languages": [
-        "Music-led"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": "Contact Gala Hala for event-specific accessibility information.",
-      "ticketUrl": "https://www.galahala.com/program/double-date-gala-hala/34816/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-30T07:20:00+01:00",
-      "description": "Glorex, Pholia and RotorMotor lead a fast electronic club night from 23:00. Admission costs €17 until midnight and €20 afterwards.",
-      "id": "event-47-double-date-gala-hala"
-    },
-    {
-      "title": "In Between re|lined x AMOTIK",
-      "url": "https://www.klub-k4.si/en/",
-      "source": "Klub K4",
-      "type": "Club · elektronika",
-      "place": "Klub K4 · Ljubljana",
-      "startAt": "2026-11-13T23:00:00+01:00",
-      "endAt": null,
-      "price": null,
-      "languages": [
-        "Music-led"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": "Basement club; contact Klub K4 for step-free access information.",
-      "ticketUrl": "https://www.klub-k4.si/en/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-30T07:20:00+01:00",
-      "description": "Klub K4 lists In Between re|lined x AMOTIK from 23:00. The event is 18+; the organiser has not published a ticket price on its official programme page.",
-      "id": "event-48-in-between-re-lined-x-amotik"
     },
     {
       "id": "il-barbiere-di-siviglia-opera-2026-11-14",
@@ -1484,6 +1400,25 @@
       "lastCheckedAt": "2026-11-13T07:55:31+01:00",
       "description": "KONCERTNA AKADEMIJA: KORMORANA (SI), ZUBI (RS), SPEJS NOKSI (RS) is listed by Gala Hala. Check the official event page for price, language and accessibility details.",
       "id": "event-70-koncertna-akademija-kormorana-si-zubi-rs-spejs-noksi-rs"
+    },
+    {
+      "title": "Eclypse + VLAD YAKI (UA)",
+      "url": "https://www.klub-k4.si/",
+      "source": "Klub K4",
+      "type": "Club · elektronika",
+      "place": "Klub K4 · Ljubljana",
+      "startAt": "2026-11-28T23:00:00+01:00",
+      "endAt": null,
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.klub-k4.si/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-14T01:55:06+01:00",
+      "description": "Eclypse + VLAD YAKI (UA) is listed by Klub K4. Check the official event page for price, language and accessibility details.",
+      "id": "event-67-eclypse-vlad-yaki-ua"
     }
   ]
 }
