@@ -5601,5 +5601,19 @@
     "verified_direct": true,
     "processed_at": "2026-11-13T19:07:48+01:00",
     "output_id": "bike-shop-knoxville-tn-biketopia-2265cef1"
+  },
+  {
+    "source_name": "Slovenske novice",
+    "category": "sezonsko",
+    "title": "Plohe, nevihte in visoka požarna ogroženost; v enem delu Slovenije pa bo vreme še zdržalo - Slovenske novice",
+    "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPd1M1aW1KSXd0WUVhc2c0N19oamk0QmcxZ1d4ZF9IWHZRbENYbUJmNGJyRmVKN212dHlzQlBmdW9sVkZCQUU4WWJtYVBKaC1mMVJTbjRFSDlhU25VQXFVYkRTblE1ZGw5YnVWaGNoS2xBZ2pjaTFZaGV5MUVFN2lUekk5VDIyczVxYkRTMVRiNDk2dTRJY0VadndFNGNiQzFYRzJRNWUtM0RvTGc2YmRWejA0V1NsVmNWZEUxRUNKYnNSMjlyVE9tZ1hFcGFORFZyTmc?oc=5",
+    "summary": "Plohe, nevihte in visoka požarna ogroženost; v enem delu Slovenije pa bo vreme še zdržalo Slovenske novice",
+    "published": "Sat, 25 Jul 2026 07:00:00 GMT",
+    "image_url": "",
+    "video_url": "",
+    "hash": "2a3a913bf18d33791cc894b2b7e95f914b9c438a18d004a07f50aeb0430840c6",
+    "provider": "google-news-si",
+    "processed_at": "2026-11-14T20:24:48+01:00",
+    "output_id": "plohe-nevihte-in-visoka-pozarna-ogrozenost-v-enem-delu-slovenije-pa-bo-vreme-se-zdrzalo-694ebf8c"
   }
 ]
