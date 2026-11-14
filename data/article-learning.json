@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-11-14T19:02:25+01:00",
-  "loop_count": 7943,
+  "updated_at": "2026-11-14T23:25:09+01:00",
+  "loop_count": 7944,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-11-14T19:02:02+01:00",
+      "last_learning_run": "2026-11-14T23:24:43+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -93,11 +93,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 148527,
-          "last_seen": "2026-11-14T19:02:02+01:00",
-          "last_title": "Odlični obeti, Slovenija se bi lahko že danes razveselila novega globusa - Žurnal24",
+          "seen": 148533,
+          "last_seen": "2026-11-14T23:24:43+01:00",
+          "last_title": "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
           "last_provider": "google-news-si",
-          "published": 479583,
+          "published": 479634,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,23 +227,20 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 9,
+      "current_source_count": 7,
       "example_titles": {
         "news.google.com": [
           "Največji šok: Italijane potolkel malček, Slovenija po finale v tem terminu - Ekipa",
           "Slovenija proti Danski danes odpira svoje nastope na letošnjem evropskem prvenstvu - Šport TV",
           "Merkur zavarovalnica L'Etape Slovenija: na krajši in daljši trasi slavila Slovenca - 24ur.com"
         ],
-        "famousbirthdays.com": [
-          "Emma Stone"
-        ],
-        "nationaltoday.com": [
-          "Emma Stone Birthday"
+        "homedepot.com": [
+          "The Home Depot"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-11-14T19:02:14+01:00",
+      "last_learning_run": "2026-11-14T23:24:53+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -285,11 +282,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 177269,
-          "last_seen": "2026-11-14T19:02:14+01:00",
+          "seen": 177285,
+          "last_seen": "2026-11-14T23:24:53+01:00",
           "last_title": "Zakaj je aktivist Mukijeve nevladne organizacije Danes je nov dan prejel 8 tisoč evrov s strani RTV Slovenija?! - prava.si",
           "last_provider": "google-news-si",
-          "published": 527786,
+          "published": 527841,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -391,17 +388,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 15,
+      "current_source_count": 16,
       "example_titles": {
         "news.google.com": [
           "Nov protest ob obisku Sara v DZ-ju. Janša: Protesti so refleks levičarskega antisemitizma. - rtvslo.si",
-          "V Sloveniji odprta volišča: Volivci danes odločajo o štirih pomembnih vprašanjih - Mariborinfo.com",
-          "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si"
+          "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si",
+          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-11-14T19:02:25+01:00",
+      "last_learning_run": "2026-11-14T23:25:09+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -489,12 +486,12 @@
           "last_provider": "bing-web"
         },
         "news.google.com": {
-          "score": 2.554,
-          "seen": 203662,
-          "last_seen": "2026-11-14T19:02:25+01:00",
+          "score": 2.546,
+          "seen": 203670,
+          "last_seen": "2026-11-14T23:25:09+01:00",
           "last_title": "Slovenija preprečila pristanek izraelskega letala: tako se odziva Fraport - Info360",
           "last_provider": "google-news-global",
-          "published": 328547,
+          "published": 328562,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -589,17 +586,23 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 9,
+      "current_source_count": 8,
       "example_titles": {
         "news.google.com": [
           "Kako svet vidi Slovenijo danes in kako je postala tako vroča evropska destinacija - Dnevnik",
-          "Pred Stevanovićevim obiskom v Srbiji znova aktualno vprašanje statusa srbske skupnosti v Sloveniji - Siol.net",
-          "Jugoslavija je imela zmagovalni recept za smučanje, Slovenija ga danes nima - Dnevnik"
+          "Golob je “depolitiziral” RTV SLO, jo bo tudi Janša? Ustavno sodišče je dalo “blagoslov”, a Gregorčič in Avbelj gresta na ESČP - Zanima.me",
+          "Pavel Rupar poziva na popoldanski shod z začetkom pred RTV Slovenija, policija pripravljena - Info360"
         ]
       }
     }
   },
   "recent_articles": [
+    {
+      "id": "plohe-nevihte-in-visoka-pozarna-ogrozenost-v-enem-delu-slovenije-pa-bo-vreme-se-zdrzalo-694ebf8c",
+      "title": "Plohe, nevihte in visoka požarna ogroženost; v enem delu Slovenije pa bo vreme še zdržalo",
+      "category": "Sezonsko",
+      "createdAt": "2026-11-14T20:24:48+01:00"
+    },
     {
       "id": "bike-shop-knoxville-tn-biketopia-2265cef1",
       "title": "Bike Shop Knoxville TN | Biketopia",
@@ -665,34 +668,9 @@
       "title": "Planinsko orientacijsko tekmovanje je priljubljena učna metoda (FOTO)",
       "category": "Gore & traili",
       "createdAt": "2026-11-03T16:25:05+01:00"
-    },
-    {
-      "id": "tragedija-v-kranju-zakaj-je-izkuseni-kolesar-na-spustu-v-ovinku-zapeljal-s-ceste-b29ec746",
-      "title": "Tragedija v Kranju: Zakaj je izkušeni kolesar na spustu v ovinku zapeljal s ceste?",
-      "category": "Kolesarstvo",
-      "createdAt": "2026-11-02T19:52:01+01:00"
     }
   ],
   "recent_failures": [
-    {
-      "file": "fallback-failed-20261111-200902.json",
-      "category": "gourmet",
-      "errors": [
-        "naslov_ni_v_rubriki",
-        "clanek_brez_slovenskega_konteksta",
-        "viri_ne_podpirajo_slovenske_rubrike",
-        "besedilo_ni_v_slovenscini"
-      ],
-      "title": "Amazon.com: Curtains & Drapes - Curtains & Drapes / Window Treatments ..."
-    },
-    {
-      "file": "fallback-failed-20261112-152528.json",
-      "category": "sezonsko",
-      "errors": [
-        "prekratek"
-      ],
-      "title": "Vreme danes: do 38 °C, ARSO opozarja na veliko toplotno obremenitev po Sloveniji - Dnevne Novice"
-    },
     {
       "file": "fallback-failed-20261113-074012.json",
       "category": "kolesarstvo",
@@ -765,28 +743,46 @@
       "title": "Ste pripravljeni? Kmalu s kolesom od Ljubljane do Beograda - Dnevnik"
     },
     {
+      "file": "fallback-failed-20261114-202941.json",
+      "category": "gore",
+      "errors": [
+        "manjka_fotografija"
+      ],
+      "title": "ŠPORTNI VIKEND LJUBLJANICA 2026 bo med 11. in 13. septembrom v središče Ljubljane pripeljal nočni tek, trail, pohodništvo, kolesarjenje in pestro družinsko športno dogajanje - 24ur"
+    },
+    {
+      "file": "fallback-failed-20261114-203037.json",
+      "category": "kolesarstvo",
+      "errors": [
+        "prekratek",
+        "manjka_fotografija"
+      ],
+      "title": "Ste pripravljeni? Kmalu s kolesom od Ljubljane do Beograda - Dnevnik"
+    },
+    {
       "file": "agent-state",
-      "category": "dediscina",
+      "category": "gourmet",
       "errors": [
         "fallback_no_fresh_evidence"
       ]
     },
     {
       "file": "agent-state",
-      "category": "dediscina",
+      "category": "gourmet",
       "errors": [
-        "manjka_fotografija"
+        "ponavljanje"
       ],
-      "slot": "2026-11-14|07:35|kolesarstvo"
+      "slot": "2026-11-14|16:20|gore"
     }
   ],
   "failure_summary": {
-    "prekratek": 15,
-    "manjka_fotografija": 10,
+    "prekratek": 14,
+    "manjka_fotografija": 11,
     "viri_ne_podpirajo_slovenske_rubrike": 6,
     "clanek_brez_slovenskega_konteksta": 4,
     "besedilo_ni_v_slovenscini": 2,
     "naslov_ni_v_rubriki": 1,
-    "fallback_no_fresh_evidence": 1
+    "fallback_no_fresh_evidence": 1,
+    "ponavljanje": 1
   }
 }
