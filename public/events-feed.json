@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-15T22:05:40+01:00",
+  "updatedAt": "2026-11-16T07:45:02+01:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -21,25 +21,6 @@
   ],
   "sourcesFailed": [],
   "items": [
-    {
-      "price": null,
-      "languages": [],
-      "touristFriendly": true,
-      "familyFriendly": null,
-      "accessibility": null,
-      "ticketUrl": "https://www.ljubljanskigrad.si/en/castle-events/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-10-28T07:12:00+01:00",
-      "id": "ehosistem-through-2026-11-15",
-      "title": "Aleksandra Atanasovski and Maja Licul: Ehosistem",
-      "url": "https://www.ljubljanskigrad.si/en/castle-events/",
-      "source": "Ljubljana Castle",
-      "type": "Exhibition · jewellery",
-      "place": "Pentagonal Tower · Ljubljana Castle",
-      "startAt": "2026-09-24T09:00:00+02:00",
-      "endAt": "2026-11-15T18:00:00+01:00",
-      "description": "Aleksandra Atanasovski and Maja Licul: Ehosistem is confirmed at Pentagonal Tower · Ljubljana Castle. Check the official source for any late programme or ticket changes."
-    },
     {
       "price": null,
       "languages": [],
@@ -115,95 +96,6 @@
       "status": "confirmed",
       "lastCheckedAt": "2026-11-01T07:20:00+01:00",
       "description": "The month-long culinary festival begins today across Ljubljana, with tastings, menus, workshops and live events announced separately. Prices, languages and accessibility vary by participating venue."
-    },
-    {
-      "id": "sunday-flea-market-2026-11-15",
-      "title": "Sunday Flea Market",
-      "url": "https://www.visitljubljana.com/en/visitors/events/events-in-ljubljana/antique-flea-market",
-      "source": "Visit Ljubljana",
-      "type": "Market · antiques and vintage",
-      "place": "Breg · Ljubljana",
-      "startAt": "2026-11-15T08:00:00+01:00",
-      "endAt": "2026-11-15T15:00:00+01:00",
-      "price": "Free",
-      "languages": [
-        "Slovenian",
-        "English-friendly"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": true,
-      "accessibility": "Outdoor riverside market on a mostly level paved route.",
-      "ticketUrl": null,
-      "status": "weather_dependent",
-      "lastCheckedAt": "2026-11-01T07:20:00+01:00",
-      "description": "The weekly antiques and vintage market runs along Breg from 08:00 to 15:00 with free entry. Exhibitors may leave early in rain or bad weather."
-    },
-    {
-      "id": "minotaur-liffe-kino-siska-2026-11-15",
-      "title": "LIFFe: Minotaur",
-      "url": "https://urnik.liffe.si/Film.aspx?idF=3961&ln=en",
-      "source": "LIFFE / Kino Šiška",
-      "type": "Film · festival screening",
-      "place": "Kino Šiška Cinema · Ljubljana",
-      "startAt": "2026-11-15T16:00:00+01:00",
-      "endAt": "2026-11-15T18:15:00+01:00",
-      "price": null,
-      "languages": [
-        "Russian",
-        "Slovenian subtitles"
-      ],
-      "touristFriendly": false,
-      "familyFriendly": false,
-      "accessibility": "Kino Šiška has step-free hall access, ramps, accessible toilets and hearing loops.",
-      "ticketUrl": "https://www.liffe.si/en/tickets/tickets",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-01T07:20:00+01:00",
-      "description": "Andrey Zvyagintsev’s 135-minute drama screens at Kino Šiška at 16:00 in Russian with Slovenian subtitles. The official schedule lists tickets, but the current single-ticket price is not shown on the event page."
-    },
-    {
-      "id": "teenage-sex-death-camp-miasma-liffe-2026-11-15",
-      "title": "LIFFe: Teenage Sex and Death at Camp Miasma",
-      "url": "https://urnik.liffe.si/Film.aspx?idF=3963&ln=en",
-      "source": "LIFFE / Kino Šiška",
-      "type": "Film · festival screening",
-      "place": "Kino Šiška Cinema · Ljubljana",
-      "startAt": "2026-11-15T18:40:00+01:00",
-      "endAt": "2026-11-15T20:25:00+01:00",
-      "price": null,
-      "languages": [
-        "English",
-        "Slovenian subtitles"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": "Kino Šiška has step-free hall access, ramps, accessible toilets and hearing loops.",
-      "ticketUrl": "https://www.liffe.si/en/tickets/tickets",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-01T07:20:00+01:00",
-      "description": "Jane Schoenbrun’s 105-minute film screens at 18:40 in English with Slovenian subtitles. The official schedule lists tickets, but does not show the current single-ticket price on the film page."
-    },
-    {
-      "id": "wild-horse-nine-liffe-kino-siska-2026-11-15",
-      "title": "LIFFe: Wild Horse Nine",
-      "url": "https://urnik.liffe.si/Film.aspx?idF=3977&ln=en",
-      "source": "LIFFE / Kino Šiška",
-      "type": "Film · festival screening",
-      "place": "Kino Šiška Cinema · Ljubljana",
-      "startAt": "2026-11-15T21:00:00+01:00",
-      "endAt": "2026-11-15T22:57:00+01:00",
-      "price": null,
-      "languages": [
-        "English",
-        "Spanish",
-        "Slovenian subtitles"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": "Kino Šiška has step-free hall access, ramps, accessible toilets and hearing loops.",
-      "ticketUrl": "https://www.liffe.si/en/tickets/tickets",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-01T07:20:00+01:00",
-      "description": "Martin McDonagh’s 117-minute comedy thriller screens at 21:00 in English and Spanish with Slovenian subtitles. The official schedule lists tickets, but the film page does not display a current single-ticket price."
     },
     {
       "id": "ojacevalnica-gala-hala-2026-11-16",
@@ -1335,6 +1227,25 @@
       "lastCheckedAt": "2026-11-14T01:55:06+01:00",
       "description": "Eclypse + VLAD YAKI (UA) is listed by Klub K4. Check the official event page for price, language and accessibility details.",
       "id": "event-67-eclypse-vlad-yaki-ua"
+    },
+    {
+      "title": "OJAČEVALNICA – TRETJA DELAVNICA",
+      "url": "https://www.galahala.com/",
+      "source": "Gala Hala",
+      "type": "Koncert · Metelkova",
+      "place": "Gala Hala · AKC Metelkova",
+      "startAt": "2026-11-30T17:00:00+01:00",
+      "endAt": null,
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.galahala.com/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-16T07:45:02+01:00",
+      "description": "OJAČEVALNICA – TRETJA DELAVNICA is listed by Gala Hala. Check the official event page for price, language and accessibility details.",
+      "id": "event-59-oja-evalnica-tretja-delavnica"
     }
   ]
 }
