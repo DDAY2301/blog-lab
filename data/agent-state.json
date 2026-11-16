@@ -7,7 +7,7 @@
   "last_output": "plohe-nevihte-in-visoka-pozarna-ogrozenost-v-enem-delu-slovenije-pa-bo-vreme-se-zdrzalo-694ebf8c",
   "last_error": "fallback_no_fresh_evidence",
   "agent_version": "3.0.0-learning-guarded-fallback",
-  "current_category": "gourmet",
+  "current_category": "kolesarstvo",
   "scheduled_posts_today": 0,
   "manual_posts_today": 0,
   "writer_mode": "workers_ai",
@@ -24,11 +24,11 @@
     "reason": "clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike,besedilo_ni_v_slovenscini",
     "at": "2026-11-16T23:09:50+01:00"
   },
-  "publisher_guardian_last_run": "2026-11-16T13:06:39+01:00",
+  "publisher_guardian_last_run": "2026-11-16T23:34:01+01:00",
   "publisher_guardian_last_action": {
     "category": "kolesarstvo",
     "slot": "2026-11-16|07:35|kolesarstvo",
-    "remaining_repairs": 1
+    "remaining_repairs": 4
   },
   "schedule_counter_normalized_at": "2026-10-07T16:45:00+02:00"
 }
