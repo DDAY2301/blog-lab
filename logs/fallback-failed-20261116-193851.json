@@ -1,0 +1,23 @@
+{
+  "category": "gourmet",
+  "errors": [
+    "naslov_ni_v_rubriki",
+    "clanek_brez_slovenskega_konteksta",
+    "viri_ne_podpirajo_slovenske_rubrike"
+  ],
+  "article": {
+    "title": "Native People | Indigenous Native Americans US History Essay"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "lead_url": "https://billofrightsinstitute.org/essays/native-people/",
+      "title": "Native People | Indigenous Native Americans US History Essay",
+      "errors": [
+        "naslov_ni_v_rubriki",
+        "clanek_brez_slovenskega_konteksta",
+        "viri_ne_podpirajo_slovenske_rubrike"
+      ]
+    }
+  ]
+}
