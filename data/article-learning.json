@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-11-16T07:30:57+01:00",
-  "loop_count": 7947,
+  "updated_at": "2026-11-16T23:02:44+01:00",
+  "loop_count": 7948,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-11-16T07:30:37+01:00",
+      "last_learning_run": "2026-11-16T23:02:17+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -93,11 +93,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 148548,
-          "last_seen": "2026-11-16T07:30:37+01:00",
-          "last_title": "'Daj Francuze, da se igramo!' Oziroma kako se nam je zgodil šport, ne Kmetija - Ekipa",
+          "seen": 148553,
+          "last_seen": "2026-11-16T23:02:17+01:00",
+          "last_title": "‍[+[Livestream]+] Danes v živo Severna Makedonija – Slovenija Neposredni prenos 16. november 2026 - 日本取引所グループ",
           "last_provider": "google-news-si",
-          "published": 479787,
+          "published": 479838,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -230,14 +230,17 @@
       "current_source_count": 6,
       "example_titles": {
         "news.google.com": [
-          "Kozamernik: \"Rekli smo, da želimo rasti skozi turnir, in to je bila danes dobra prva stopnička\" - rtvslo.si",
+          "Slovenija proti Danski danes odpira svoje nastope na letošnjem evropskem prvenstvu - Šport TV",
           "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
-          "Merkur zavarovalnica L'Etape Slovenija: na krajši in daljši trasi slavila Slovenca - 24ur.com"
+          "‍+!(URADNA-TV) Nogomet danes Slovenija – Severna Makedonija prenos v živo 16/11/2026 - 日本取引所グループ"
+        ],
+        "watch.plex.tv": [
+          "According to Jim (2001) Full Cast & Crew - Plex"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-11-16T07:30:47+01:00",
+      "last_learning_run": "2026-11-16T23:02:28+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -279,11 +282,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 177326,
-          "last_seen": "2026-11-16T07:30:47+01:00",
-          "last_title": "Zakaj je aktivist Mukijeve nevladne organizacije Danes je nov dan prejel 8 tisoč evrov s strani RTV Slovenija?! - prava.si",
-          "last_provider": "google-news-si",
-          "published": 528006,
+          "seen": 177327,
+          "last_seen": "2026-11-16T23:02:28+01:00",
+          "last_title": "Brskali tudi po računih žene pomembnega politika: \"To je svinjarija prve vrste\" - N1 Slovenija",
+          "last_provider": "google-news-global",
+          "published": 528061,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -385,17 +388,15 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 13,
+      "current_source_count": 1,
       "example_titles": {
         "news.google.com": [
-          "Nov protest ob obisku Sara v DZ-ju. Janša: Protesti so refleks levičarskega antisemitizma. - rtvslo.si",
-          "V Sloveniji odprta volišča: Volivci danes odločajo o štirih pomembnih vprašanjih - Mariborinfo.com",
-          "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si"
+          "Brskali tudi po računih žene pomembnega politika: \"To je svinjarija prve vrste\" - N1 Slovenija"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-11-16T07:30:57+01:00",
+      "last_learning_run": "2026-11-16T23:02:44+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -483,12 +484,12 @@
           "last_provider": "bing-web"
         },
         "news.google.com": {
-          "score": 2.548,
-          "seen": 203697,
-          "last_seen": "2026-11-16T07:30:57+01:00",
-          "last_title": "Slovenija preprečila pristanek izraelskega letala: tako se odziva Fraport - Info360",
-          "last_provider": "google-news-global",
-          "published": 328607,
+          "score": 2.561,
+          "seen": 203707,
+          "last_seen": "2026-11-16T23:02:44+01:00",
+          "last_title": "‍++>[živo] Nogomet danes Slovenija – Severna Makedonija V živo na spletu 16. november 2026 - 日本取引所グループ",
+          "last_provider": "google-news-si",
+          "published": 328622,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -583,15 +584,12 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 11,
+      "current_source_count": 10,
       "example_titles": {
-        "britannica.com": [
-          "Slovenia | History, Geography, & People | Britannica"
-        ],
         "news.google.com": [
           "Kako svet vidi Slovenijo danes in kako je postala tako vroča evropska destinacija - Dnevnik",
-          "Slovenska glasbenica ostro nad aktualno oblast: \"Ne vem, ali naj temu rečem ironija, paradoks ali vzporedni svet\" - Večer",
-          "Pavel Rupar poziva na popoldanski shod z začetkom pred RTV Slovenija, policija pripravljena - Info360"
+          "Danes se začenja svetovno gozdarsko prvenstvo - Novice - Aktualno - Mestna občina Novo mesto",
+          "Jugoslavija je imela zmagovalni recept za smučanje, Slovenija ga danes nima - Dnevnik"
         ]
       }
     }
@@ -672,52 +670,6 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20261114-073952.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek",
-        "manjka_fotografija"
-      ],
-      "title": "Ste pripravljeni? Kmalu s kolesom od Ljubljane do Beograda - Dnevnik"
-    },
-    {
-      "file": "fallback-failed-20261114-080423.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "clanek_brez_slovenskega_konteksta",
-        "viri_ne_podpirajo_slovenske_rubrike",
-        "prekratek",
-        "manjka_fotografija"
-      ],
-      "title": "Amazon.com: Bikes - Cycling: Sports & Outdoors: Mountain Bikes ..."
-    },
-    {
-      "file": "fallback-failed-20261114-153344.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek",
-        "manjka_fotografija"
-      ],
-      "title": "Ste pripravljeni? Kmalu s kolesom od Ljubljane do Beograda - Dnevnik"
-    },
-    {
-      "file": "fallback-failed-20261114-202941.json",
-      "category": "gore",
-      "errors": [
-        "manjka_fotografija"
-      ],
-      "title": "ŠPORTNI VIKEND LJUBLJANICA 2026 bo med 11. in 13. septembrom v središče Ljubljane pripeljal nočni tek, trail, pohodništvo, kolesarjenje in pestro družinsko športno dogajanje - 24ur"
-    },
-    {
-      "file": "fallback-failed-20261114-203037.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek",
-        "manjka_fotografija"
-      ],
-      "title": "Ste pripravljeni? Kmalu s kolesom od Ljubljane do Beograda - Dnevnik"
-    },
-    {
       "file": "fallback-failed-20261115-074004.json",
       "category": "kolesarstvo",
       "errors": [
@@ -763,6 +715,55 @@
       "title": "Ste pripravljeni? Kmalu s kolesom od Ljubljane do Beograda - Dnevnik"
     },
     {
+      "file": "fallback-failed-20261116-074032.json",
+      "category": "kolesarstvo",
+      "errors": [
+        "clanek_brez_slovenskega_konteksta",
+        "viri_ne_podpirajo_slovenske_rubrike",
+        "prekratek",
+        "manjka_fotografija"
+      ],
+      "title": "Amazon.com: Bikes - Cycling: Sports & Outdoors: Mountain ..."
+    },
+    {
+      "file": "fallback-failed-20261116-111013.json",
+      "category": "dediscina",
+      "errors": [
+        "clanek_brez_slovenskega_konteksta",
+        "viri_ne_podpirajo_slovenske_rubrike"
+      ],
+      "title": "Spades | Play it online for free - CardGames.io"
+    },
+    {
+      "file": "fallback-failed-20261116-130639.json",
+      "category": "kolesarstvo",
+      "errors": [
+        "clanek_brez_slovenskega_konteksta",
+        "viri_ne_podpirajo_slovenske_rubrike",
+        "prekratek",
+        "manjka_fotografija"
+      ],
+      "title": "Amazon.com: Bikes - Cycling: Sports & Outdoors: Mountain Bikes ..."
+    },
+    {
+      "file": "fallback-failed-20261116-134011.json",
+      "category": "sezonsko",
+      "errors": [
+        "prekratek"
+      ],
+      "title": "Vreme danes: do 38 °C, ARSO opozarja na veliko toplotno obremenitev po Sloveniji - Dnevne Novice"
+    },
+    {
+      "file": "fallback-failed-20261116-193851.json",
+      "category": "gourmet",
+      "errors": [
+        "naslov_ni_v_rubriki",
+        "clanek_brez_slovenskega_konteksta",
+        "viri_ne_podpirajo_slovenske_rubrike"
+      ],
+      "title": "Native People | Indigenous Native Americans US History Essay"
+    },
+    {
       "file": "agent-state",
       "category": "gourmet",
       "errors": [
@@ -773,19 +774,18 @@
       "file": "agent-state",
       "category": "gourmet",
       "errors": [
-        "naslov_ni_v_rubriki,clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike,besedilo_ni_v_slovenscini"
+        "naslov_ni_v_rubriki,viri_ne_podpirajo_slovenske_rubrike,besedilo_ni_v_slovenscini"
       ],
-      "slot": "2026-11-15|19:10|gourmet"
+      "slot": "2026-11-16|16:20|gore"
     }
   ],
   "failure_summary": {
     "prekratek": 15,
     "manjka_fotografija": 14,
-    "viri_ne_podpirajo_slovenske_rubrike": 5,
-    "clanek_brez_slovenskega_konteksta": 3,
+    "viri_ne_podpirajo_slovenske_rubrike": 7,
+    "clanek_brez_slovenskega_konteksta": 5,
     "naslov_ni_v_rubriki": 1,
-    "besedilo_ni_v_slovenscini": 1,
     "fallback_no_fresh_evidence": 1,
-    "naslov_ni_v_rubriki,clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike,besedilo_ni_v_slovenscini": 1
+    "naslov_ni_v_rubriki,viri_ne_podpirajo_slovenske_rubrike,besedilo_ni_v_slovenscini": 1
   }
 }
