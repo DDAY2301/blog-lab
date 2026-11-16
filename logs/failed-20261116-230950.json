@@ -1,0 +1,40 @@
+{
+  "category": "gourmet",
+  "errors": [
+    "clanek_brez_slovenskega_konteksta",
+    "viri_ne_podpirajo_slovenske_rubrike",
+    "besedilo_ni_v_slovenscini"
+  ],
+  "article": {
+    "title": "Open Source RFID Inventory Software: Reality Check",
+    "excerpt": "Yes—open source RFID inventory management software exists. But is it production-ready for warehouses, kitchens, or food plants? We break down real-world viability, integration costs, and hidden tradeoffs. You’ve seen the",
+    "seoDescription": "Yes—open source RFID inventory management software exists. But is it production-ready for warehouses, kitchens, or food plants? We break down real-world vi",
+    "content": "Pregled za rubriko gourmet povzema trenutno razpoložljive informacije iz spodaj navedenih virov. Besedilo je pripravljeno brez dodajanja nepodprtih dejstev.\n\n## Open Source RFID Inventory Software: Reality Check\nYes—open source RFID inventory management software exists. But is it production-ready for warehouses, kitchens, or food plants? We break down real-world viability, integration costs, and hidden tradeoffs. You’ve seen the pitch: “Open source RFID inventory management software — zero license fees!” Sounds like a win—until your warehouse team spends 87 hours troubleshooting tag collision in a 50K sqft facility… or your restaurant kitchen loses $12,400 in spoiled prep due to undetected stock discrepancies. That ‘free’ software just cost you $38/hour in labor, $18K in shrinkage, and 3 weeks of downtime. Let’s cut through the hype. Yes— there is open source RFID inventory management software available . But viability isn’t about code availability. It’s about production-grade reliability, hardware interoperability, regulatory compliance, and total cost of ownership (TCO) . As a facility ops consultant who’s deployed over 210 RFID systems—from sushi prep lines to frozen food distribution centers—I’ll tell you what actually works on the floor, not what looks good on GitHub. Here are the only four open source RFID inventory management platforms with active maintenance, documented APIs, and ≥2 years of community support: None are NSF/ANSI 2, UL 60335-1, or HACCP-compliant out-of-the-box. None pass FM Global Property Loss Prevention Data Sheet 8-29 (for high-density RF environments). And crucially—none include embedded variable frequency drive (VFD) control logic for synchronized conveyor-integrated RFID portals (a requirement for FDA-mandated traceability in food processing). A Michelin-recognized bistro installed TagTrack + Impinj R700 readers on walk-in cooler doors and prep station hoods. Goal: auto-log ingredient usage and trigger reorders at 15% remaining stock. Reality: Stainless steel surfaces caused 32% tag read failure (confirmed via ANSI/ISO 18000-6C field testing). No built-in temperature-compensation algorithm led to false negatives when ambient humidity spiked above 75% RH (common during steam-heavy prep). System logged 217 “ghost exits” in Week 1—ingredients scanned as removed but never physically moved. Solution deployed: Switched to commercial RFID-WMS hybrid (Zebra Savanna + Manhattan SCALE), with IP67-rated stainless 304 antenna housings , HACCP-compliant audit trails , and auto-shutoff safety features that halt read cycles during door slam events (per ANSI/BHMA A156.10 Grade 1 durability spec). ROI achieved in 4.2 months—not 18. Logistics manager chose RFID-OS to replace paper-based pallet tracking. Integrated with existing SAP EWM via custom RES\n\nVir: commgearpro.com — https://commgearpro.com/warehouse-systems/is-there-open-source-rfid-inventory-management-software-available",
+    "category": "Gourmet",
+    "tags": [
+      "gourmet",
+      "Slovenija",
+      "source",
+      "inventory",
+      "software"
+    ],
+    "sources": [
+      {
+        "title": "Open Source RFID Inventory Software: Reality Check",
+        "url": "https://commgearpro.com/warehouse-systems/is-there-open-source-rfid-inventory-management-software-available",
+        "source_name": "commgearpro.com"
+      }
+    ],
+    "fallback": false,
+    "heroImage": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Matev%C5%BE_%28Slovenian_cuisine%29.jpg/1920px-Matev%C5%BE_%28Slovenian_cuisine%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "alt": "Matevž (Slovenian cuisine) with roast meat and sauerkraut.",
+      "caption": "Petar Milošević · Wikimedia Commons · CC BY-SA 4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Matev%C5%BE_(Slovenian_cuisine).jpg"
+    },
+    "gallery": [],
+    "visualTemplate": "studio",
+    "templateLabel": "Studio",
+    "id": "open-source-rfid-inventory-software-reality-check-0e47f96b"
+  }
+}
