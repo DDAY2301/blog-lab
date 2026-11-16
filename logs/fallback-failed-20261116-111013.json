@@ -1,0 +1,21 @@
+{
+  "category": "dediscina",
+  "errors": [
+    "clanek_brez_slovenskega_konteksta",
+    "viri_ne_podpirajo_slovenske_rubrike"
+  ],
+  "article": {
+    "title": "Spades | Play it online for free - CardGames.io"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "lead_url": "https://cardgames.io/spades/",
+      "title": "Spades | Play it online for free - CardGames.io",
+      "errors": [
+        "clanek_brez_slovenskega_konteksta",
+        "viri_ne_podpirajo_slovenske_rubrike"
+      ]
+    }
+  ]
+}
