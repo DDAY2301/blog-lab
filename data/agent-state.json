@@ -5,7 +5,7 @@
   "posts_date": "2026-11-17",
   "posts_today": 0,
   "last_output": "plohe-nevihte-in-visoka-pozarna-ogrozenost-v-enem-delu-slovenije-pa-bo-vreme-se-zdrzalo-694ebf8c",
-  "last_error": "fallback_no_fresh_evidence",
+  "last_error": "podvojen_naslov",
   "agent_version": "3.0.0-learning-guarded-fallback",
   "current_category": "dediscina",
   "scheduled_posts_today": 0,
