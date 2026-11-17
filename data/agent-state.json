@@ -5,15 +5,21 @@
   "posts_date": "2026-11-17",
   "posts_today": 0,
   "last_output": "plohe-nevihte-in-visoka-pozarna-ogrozenost-v-enem-delu-slovenije-pa-bo-vreme-se-zdrzalo-694ebf8c",
-  "last_error": "fallback_no_fresh_evidence",
+  "last_error": "prekratek,manjka_fotografija",
   "agent_version": "3.0.0-learning-guarded-fallback",
   "current_category": "kolesarstvo",
   "scheduled_posts_today": 0,
   "manual_posts_today": 0,
   "writer_mode": "workers_ai",
   "scheduled_slots_done": [],
-  "scheduled_slots_deferred": [],
-  "last_editorial_hold": null,
+  "scheduled_slots_deferred": [
+    "2026-11-17|07:35|kolesarstvo"
+  ],
+  "last_editorial_hold": {
+    "slot": "2026-11-17|07:35|kolesarstvo",
+    "reason": "manjka_fotografija",
+    "at": "2026-11-17T08:39:48+01:00"
+  },
   "publisher_guardian_last_run": "2026-11-16T23:34:01+01:00",
   "publisher_guardian_last_action": {
     "category": "kolesarstvo",
