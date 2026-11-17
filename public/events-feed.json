@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-17T14:36:09+01:00",
+  "updatedAt": "2026-11-18T00:33:47+01:00",
   "status": "fresh",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -96,71 +96,6 @@
       "status": "confirmed",
       "lastCheckedAt": "2026-11-01T07:20:00+01:00",
       "description": "The month-long culinary festival begins today across Ljubljana, with tastings, menus, workshops and live events announced separately. Prices, languages and accessibility vary by participating venue."
-    },
-    {
-      "id": "dresden-philharmonic-cankarjev-dom-2026-11-17",
-      "title": "Dresden Philharmonic",
-      "url": "https://www.cd-cc.si/en/culture/music/dresden-philharmonic",
-      "source": "Cankarjev dom",
-      "type": "Concert · classical",
-      "place": "Gallus Hall · Cankarjev dom",
-      "startAt": "2026-11-17T19:30:00+01:00",
-      "endAt": null,
-      "price": "€38 / €50 / €62 / €70; reduced €34 / €45 / €57 / €65",
-      "languages": [
-        "Instrumental music"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": true,
-      "accessibility": "Contact Cankarjev dom when booking wheelchair spaces or other assistance.",
-      "ticketUrl": "https://www.cd-cc.si/en/culture/music/dresden-philharmonic",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-03T07:16:00+01:00",
-      "description": "Sir Donald Runnicles conducts the Dresden Philharmonic with pianist Emanuel Ax in Beethoven and Bruckner at 19:30. Standard tickets range from €38 to €70."
-    },
-    {
-      "id": "tom-skinner-cankarjev-dom-2026-11-17",
-      "title": "Tom Skinner",
-      "url": "https://www.cd-cc.si/en/culture/music/tom-skinner",
-      "source": "Cankarjev dom",
-      "type": "Concert · contemporary jazz",
-      "place": "CD Club · Cankarjev dom",
-      "startAt": "2026-11-17T19:30:00+01:00",
-      "endAt": "2026-11-17T21:00:00+01:00",
-      "price": "€18 / €15 reduced",
-      "languages": [
-        "Instrumental music",
-        "English-language stage remarks possible"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": "Contact Cankarjev dom when booking wheelchair spaces or other assistance.",
-      "ticketUrl": "https://www.cd-cc.si/en/culture/music/tom-skinner",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-03T07:16:00+01:00",
-      "description": "Tom Skinner leads a 90-minute contemporary jazz concert in the CD Club at 19:30. Tickets cost €18, or €15 for eligible reduced-price visitors."
-    },
-    {
-      "id": "personae-opera-2026-11-17",
-      "title": "PersonaE",
-      "url": "https://www.opera.si/sl/program/predstava/ostalo/personae",
-      "source": "SNG Opera and Ballet Ljubljana",
-      "type": "Music theatre · experimental",
-      "place": "Stage -3 · SNG Opera and Ballet Ljubljana",
-      "startAt": "2026-11-17T20:30:00+01:00",
-      "endAt": "2026-11-17T21:40:00+01:00",
-      "price": null,
-      "languages": [
-        "Music-led",
-        "Slovenian-language information"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": "The production uses comfortable reclining surfaces instead of seats; contact the opera house for mobility requirements.",
-      "ticketUrl": "https://opera.mojekarte.si/en/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-03T07:16:00+01:00",
-      "description": "The experimental music-theatre installation by Rocc, Raiven and Vít Zouhar begins on Stage -3 at 20:30 and lasts about 70 minutes. The official calendar confirms the date; verify the current ticket price and access requirements before booking."
     },
     {
       "id": "prima-facie-mgl-2026-11-18",
