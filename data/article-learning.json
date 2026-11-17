@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-11-16T23:02:44+01:00",
-  "loop_count": 7948,
+  "updated_at": "2026-11-17T08:56:33+01:00",
+  "loop_count": 7949,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-11-16T23:02:17+01:00",
+      "last_learning_run": "2026-11-17T08:56:08+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -57,10 +57,10 @@
           "last_provider": "bing-web"
         },
         "support.microsoft.com": {
-          "score": 7.229,
-          "seen": 13,
-          "last_seen": "2026-10-27T23:15:28+01:00",
-          "last_title": "Contact Microsoft customer support | Microsoft Support",
+          "score": 7.859,
+          "seen": 14,
+          "last_seen": "2026-11-17T08:56:08+01:00",
+          "last_title": "Account help | Microsoft Support",
           "last_provider": "bing-web"
         },
         "city-data.com": {
@@ -93,11 +93,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 148553,
-          "last_seen": "2026-11-16T23:02:17+01:00",
-          "last_title": "‍[+[Livestream]+] Danes v živo Severna Makedonija – Slovenija Neposredni prenos 16. november 2026 - 日本取引所グループ",
-          "last_provider": "google-news-si",
-          "published": 479838,
+          "seen": 148558,
+          "last_seen": "2026-11-17T08:56:08+01:00",
+          "last_title": "(+GLEJ>V ŽIVO!!) Slovenija nogomet danes v živo na spletu 16. november 2026 - UB - Universitat de Barcelona",
+          "last_provider": "google-news-global",
+          "published": 479889,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,20 +227,26 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 6,
+      "current_source_count": 8,
       "example_titles": {
-        "news.google.com": [
-          "Slovenija proti Danski danes odpira svoje nastope na letošnjem evropskem prvenstvu - Šport TV",
-          "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
-          "‍+!(URADNA-TV) Nogomet danes Slovenija – Severna Makedonija prenos v živo 16/11/2026 - 日本取引所グループ"
+        "support.microsoft.com": [
+          "Account help | Microsoft Support"
         ],
-        "watch.plex.tv": [
-          "According to Jim (2001) Full Cast & Crew - Plex"
+        "news.google.com": [
+          "Šturm z dvema zadetkoma zrežiral visoko zmago Slovenije in boj za elito - 24ur.com",
+          "Slovenija proti Danski danes odpira svoje nastope na letošnjem evropskem prvenstvu - Šport TV",
+          "Slovenska blamaža na igrah! Zakaj sploh tekmujemo, če je šport pri nas umrl - Ekipa"
+        ],
+        "microsoft.com": [
+          "Microsoft – AI, Cloud, Productivity, Computing, Gaming & Apps"
+        ],
+        "techcommunity.microsoft.com": [
+          "Put multiple values in one cell with lists and arrays in Excel"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-11-16T23:02:28+01:00",
+      "last_learning_run": "2026-11-17T08:56:19+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -282,11 +288,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 177327,
-          "last_seen": "2026-11-16T23:02:28+01:00",
-          "last_title": "Brskali tudi po računih žene pomembnega politika: \"To je svinjarija prve vrste\" - N1 Slovenija",
-          "last_provider": "google-news-global",
-          "published": 528061,
+          "seen": 177342,
+          "last_seen": "2026-11-17T08:56:19+01:00",
+          "last_title": "Zakaj je aktivist Mukijeve nevladne organizacije Danes je nov dan prejel 8 tisoč evrov s strani RTV Slovenija?! - prava.si",
+          "last_provider": "google-news-si",
+          "published": 528116,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -388,15 +394,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 1,
+      "current_source_count": 15,
       "example_titles": {
         "news.google.com": [
-          "Brskali tudi po računih žene pomembnega politika: \"To je svinjarija prve vrste\" - N1 Slovenija"
+          "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si",
+          "Petra Kerčmar s tem preusmerila pozornost nase: en mali detajl, o katerem danes govorijo vsi - Elle.si",
+          "Prvo soočenje mnenj: Naj bo socialna pomoč pogojena z družbenokoristnim delom? - rtvslo.si"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-11-16T23:02:44+01:00",
+      "last_learning_run": "2026-11-17T08:56:33+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -484,12 +492,12 @@
           "last_provider": "bing-web"
         },
         "news.google.com": {
-          "score": 2.561,
-          "seen": 203707,
-          "last_seen": "2026-11-16T23:02:44+01:00",
-          "last_title": "‍++>[živo] Nogomet danes Slovenija – Severna Makedonija V živo na spletu 16. november 2026 - 日本取引所グループ",
-          "last_provider": "google-news-si",
-          "published": 328622,
+          "score": 2.54,
+          "seen": 203717,
+          "last_seen": "2026-11-17T08:56:33+01:00",
+          "last_title": "(+GLEJ>V ŽIVO!!) Slovenija nogomet danes v živo na spletu 16. november 2026 - UB - Universitat de Barcelona",
+          "last_provider": "google-news-global",
+          "published": 328637,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -588,8 +596,8 @@
       "example_titles": {
         "news.google.com": [
           "Kako svet vidi Slovenijo danes in kako je postala tako vroča evropska destinacija - Dnevnik",
-          "Danes se začenja svetovno gozdarsko prvenstvo - Novice - Aktualno - Mestna občina Novo mesto",
-          "Jugoslavija je imela zmagovalni recept za smučanje, Slovenija ga danes nima - Dnevnik"
+          "Slovenska glasbenica ostro nad aktualno oblast: \"Ne vem, ali naj temu rečem ironija, paradoks ali vzporedni svet\" - Večer",
+          "Danes se začenja svetovno gozdarsko prvenstvo - Novice - Aktualno - Mestna občina Novo mesto"
         ]
       }
     }
@@ -670,33 +678,6 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20261115-074004.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek",
-        "manjka_fotografija"
-      ],
-      "title": "Ste pripravljeni? Kmalu s kolesom od Ljubljane do Beograda - Dnevnik"
-    },
-    {
-      "file": "fallback-failed-20261115-123253.json",
-      "category": "kolesarstvo",
-      "errors": [
-        "prekratek",
-        "manjka_fotografija"
-      ],
-      "title": "Ste pripravljeni? Kmalu s kolesom od Ljubljane do Beograda - Dnevnik"
-    },
-    {
-      "file": "fallback-failed-20261115-134006.json",
-      "category": "sezonsko",
-      "errors": [
-        "prekratek",
-        "manjka_fotografija"
-      ],
-      "title": "Vreme danes: do 38 °C, ARSO opozarja na veliko toplotno obremenitev po Sloveniji - Dnevne Novice"
-    },
-    {
       "file": "fallback-failed-20261115-162456.json",
       "category": "gore",
       "errors": [
@@ -764,28 +745,54 @@
       "title": "Native People | Indigenous Native Americans US History Essay"
     },
     {
-      "file": "agent-state",
-      "category": "gourmet",
+      "file": "fallback-failed-20261117-073908.json",
+      "category": "kolesarstvo",
       "errors": [
-        "fallback_no_fresh_evidence"
+        "prekratek",
+        "manjka_fotografija"
+      ],
+      "title": "Med Bledom in Bohinjem je nastala 28-kilometrska kolesarska pot z razgledi, ki jemljejo dih - Bodi eko"
+    },
+    {
+      "file": "fallback-failed-20261117-075412.json",
+      "category": "kolesarstvo",
+      "errors": [
+        "prekratek",
+        "manjka_fotografija"
+      ],
+      "title": "Med Bledom in Bohinjem je nastala 28-kilometrska kolesarska pot z razgledi, ki jemljejo dih - Bodi eko"
+    },
+    {
+      "file": "fallback-failed-20261117-084012.json",
+      "category": "kolesarstvo",
+      "errors": [
+        "prekratek",
+        "manjka_fotografija"
+      ],
+      "title": "Med Bledom in Bohinjem je nastala 28-kilometrska kolesarska pot z razgledi, ki jemljejo dih - Bodi eko"
+    },
+    {
+      "file": "agent-state",
+      "category": "kolesarstvo",
+      "errors": [
+        "prekratek,manjka_fotografija"
       ]
     },
     {
       "file": "agent-state",
-      "category": "gourmet",
+      "category": "kolesarstvo",
       "errors": [
-        "naslov_ni_v_rubriki,viri_ne_podpirajo_slovenske_rubrike,besedilo_ni_v_slovenscini"
+        "manjka_fotografija"
       ],
-      "slot": "2026-11-16|16:20|gore"
+      "slot": "2026-11-17|07:35|kolesarstvo"
     }
   ],
   "failure_summary": {
-    "prekratek": 15,
-    "manjka_fotografija": 14,
-    "viri_ne_podpirajo_slovenske_rubrike": 7,
+    "prekratek": 16,
+    "manjka_fotografija": 16,
+    "viri_ne_podpirajo_slovenske_rubrike": 6,
     "clanek_brez_slovenskega_konteksta": 5,
     "naslov_ni_v_rubriki": 1,
-    "fallback_no_fresh_evidence": 1,
-    "naslov_ni_v_rubriki,viri_ne_podpirajo_slovenske_rubrike,besedilo_ni_v_slovenscini": 1
+    "prekratek,manjka_fotografija": 1
   }
 }
