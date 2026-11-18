@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-18T08:40:58+01:00",
-  "status": "fresh",
+  "updatedAt": "2026-11-18T18:20:10+01:00",
+  "status": "partial",
   "sourcesChecked": [
     "Visit Ljubljana",
     "Ljubljana Castle",
@@ -19,7 +19,9 @@
     "SNG Drama Ljubljana",
     "Eventim"
   ],
-  "sourcesFailed": [],
+  "sourcesFailed": [
+    "Visit Ljubljana: HTTPError"
+  ],
   "items": [
     {
       "price": null,
