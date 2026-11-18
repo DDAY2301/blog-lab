@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-11-17T21:56:42+01:00",
-  "loop_count": 7950,
+  "updated_at": "2026-11-18T08:29:39+01:00",
+  "loop_count": 7951,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-11-17T21:56:19+01:00",
+      "last_learning_run": "2026-11-18T08:29:18+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -93,11 +93,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 148563,
-          "last_seen": "2026-11-17T21:56:19+01:00",
-          "last_title": "(+GLEJ>V ŽIVO!!) Slovenija nogomet danes v živo na spletu 16. november 2026 - UB - Universitat de Barcelona",
-          "last_provider": "google-news-global",
-          "published": 479940,
+          "seen": 148568,
+          "last_seen": "2026-11-18T08:29:18+01:00",
+          "last_title": "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
+          "last_provider": "google-news-si",
+          "published": 479991,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,20 +227,21 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 6,
+      "current_source_count": 7,
       "example_titles": {
         "news.google.com": [
           "Šturm z dvema zadetkoma zrežiral visoko zmago Slovenije in boj za elito - 24ur.com",
-          "Slovenija proti Danski danes odpira svoje nastope na letošnjem evropskem prvenstvu - Šport TV",
+          "Merkur zavarovalnica L'Etape Slovenija: na krajši in daljši trasi slavila Slovenca - 24ur.com",
           "Slovenska blamaža na igrah! Zakaj sploh tekmujemo, če je šport pri nas umrl - Ekipa"
         ],
-        "homedepot.com": [
-          "The Home Depot"
+        "microsoft.com": [
+          "Microsoft – AI, Cloud, Productivity, Computing, Gaming & Apps",
+          "Microsoft – AI, Cloud, Productivity, Computing, Gaming & Apps"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-11-17T21:56:30+01:00",
+      "last_learning_run": "2026-11-18T08:29:28+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -282,11 +283,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 177355,
-          "last_seen": "2026-11-17T21:56:30+01:00",
+          "seen": 177368,
+          "last_seen": "2026-11-18T08:29:28+01:00",
           "last_title": "Zakaj je aktivist Mukijeve nevladne organizacije Danes je nov dan prejel 8 tisoč evrov s strani RTV Slovenija?! - prava.si",
           "last_provider": "google-news-si",
-          "published": 528171,
+          "published": 528226,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -391,14 +392,14 @@
       "current_source_count": 13,
       "example_titles": {
         "news.google.com": [
-          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer",
+          "Na Radiu Ognjišče zadnje predvolilno soočenje: v ospredju prisluhi, zdravstvo, zunanja politika in sprava - Radio Ognjišče",
           "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si",
-          "Nov protest ob obisku Sara v DZ-ju. Janša: Protesti so refleks levičarskega antisemitizma. - rtvslo.si"
+          "Petra Kerčmar s tem preusmerila pozornost nase: en mali detajl, o katerem danes govorijo vsi - Elle.si"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-11-17T21:56:42+01:00",
+      "last_learning_run": "2026-11-18T08:29:39+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -487,11 +488,11 @@
         },
         "news.google.com": {
           "score": 2.545,
-          "seen": 203727,
-          "last_seen": "2026-11-17T21:56:42+01:00",
+          "seen": 203736,
+          "last_seen": "2026-11-18T08:29:39+01:00",
           "last_title": "Slovenija preprečila pristanek izraelskega letala: tako se odziva Fraport - Info360",
           "last_provider": "google-news-global",
-          "published": 328652,
+          "published": 328667,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -586,15 +587,15 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 11,
+      "current_source_count": 10,
       "example_titles": {
         "news.google.com": [
           "Kako svet vidi Slovenijo danes in kako je postala tako vroča evropska destinacija - Dnevnik",
           "Danes se začenja svetovno gozdarsko prvenstvo - Novice - Aktualno - Mestna občina Novo mesto",
           "Jugoslavija je imela zmagovalni recept za smučanje, Slovenija ga danes nima - Dnevnik"
         ],
-        "mdt.mt.gov": [
-          "Driver and Vehicle Registration | Montana Department of Transportation (MDT)"
+        "toyotaofseattle.com": [
+          "Job Listings"
         ]
       }
     }
