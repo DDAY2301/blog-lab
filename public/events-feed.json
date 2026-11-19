@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-19T14:26:50+01:00",
+  "updatedAt": "2026-11-20T00:05:59+01:00",
   "status": "partial",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -98,92 +98,6 @@
       "status": "confirmed",
       "lastCheckedAt": "2026-11-01T07:20:00+01:00",
       "description": "The month-long culinary festival begins today across Ljubljana, with tastings, menus, workshops and live events announced separately. Prices, languages and accessibility vary by participating venue."
-    },
-    {
-      "id": "young-virtuosi-hak-swiatek-2026-11-19",
-      "title": "Young Virtuosi: Oliver Hak and Igor Świątek",
-      "url": "https://www.ljubljanafestival.si/en/events-calendar/24493-oliver-hak-and-igor-wi-tek-34-yv",
-      "source": "Festival Ljubljana",
-      "type": "Concert · classical piano",
-      "place": "Knights' Hall, Križanke · Ljubljana",
-      "startAt": "2026-11-19T19:00:00+01:00",
-      "endAt": null,
-      "price": null,
-      "languages": [
-        "Instrumental music"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": true,
-      "accessibility": null,
-      "ticketUrl": "https://www.ljubljanafestival.si/en/events-calendar/24493-oliver-hak-and-igor-wi-tek-34-yv",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-05T06:57:00+01:00",
-      "description": "Young Polish pianists Oliver Hak and Igor Świątek perform in the Young Virtuosi series at 19:00. The organiser lists tickets but does not show a current price on the event page."
-    },
-    {
-      "id": "kromatika-2-lazic-cankarjev-dom-2026-11-19",
-      "title": "Kromatika 2: Lazić and Two Piano Concertos",
-      "url": "https://cd-cc.si/kultura/glasba/kromatika-2-lazic-in-dva-klavirska-koncerta",
-      "source": "Cankarjev dom",
-      "type": "Concert · classical",
-      "place": "Gallus Hall · Cankarjev dom",
-      "startAt": "2026-11-19T19:30:00+01:00",
-      "endAt": null,
-      "price": "€15 / €19 / €26 / €29; reduced €12 / €16 / €20 / €25",
-      "languages": [
-        "Instrumental music"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": true,
-      "accessibility": "Contact Cankarjev dom when booking wheelchair spaces or other assistance.",
-      "ticketUrl": "https://cd-cc.si/kultura/glasba/kromatika-2-lazic-in-dva-klavirska-koncerta",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-05T06:57:00+01:00",
-      "description": "The RTV Slovenia Symphony Orchestra performs Mozart, Dejan Lazić and Sibelius at 19:30, with Lazić as soloist. Standard tickets cost €15–€29 and reduced tickets €12–€25."
-    },
-    {
-      "id": "sad-sam-ppp-bunker-2026-11-19",
-      "title": "Matija Ferlin: SAD SAM PPP",
-      "url": "https://www.bunker.si/events/matija-ferlin-sad-sam-ppp/?occurrence=2026-11-19&time=1795118400",
-      "source": "Bunker / Stara mestna elektrarna",
-      "type": "Dance performance · Drugajanje",
-      "place": "Stara mestna elektrarna · Ljubljana",
-      "startAt": "2026-11-19T20:00:00+01:00",
-      "endAt": "2026-11-19T21:00:00+01:00",
-      "price": "€12 / €8 reduced; free for secondary-school students",
-      "languages": [
-        "Dance-led",
-        "Spoken content may be in regional languages"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": "Contact Bunker for event-specific step-free access and seating arrangements.",
-      "ticketUrl": "https://www.bunker.si/events/matija-ferlin-sad-sam-ppp/?occurrence=2026-11-19&time=1795118400",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-05T06:57:00+01:00",
-      "description": "Matija Ferlin’s one-hour dance performance reflects on the final 48 hours of Pier Paolo Pasolini’s life. Tickets cost €12 or €8 reduced, while secondary-school students receive free admission."
-    },
-    {
-      "id": "nipplepeople-pocket-palma-kino-siska-2026-11-19",
-      "title": "NIPPLEPEOPLE + Pocket Palma",
-      "url": "https://www.kinosiska.si/en/dogodek/nipplepeople/",
-      "source": "Kino Šiška",
-      "type": "Concert · electropop",
-      "place": "Katedrala Hall · Kino Šiška",
-      "startAt": "2026-11-19T20:00:00+01:00",
-      "endAt": null,
-      "price": "€25 presale / €30 walk-up / €18.75 reduced",
-      "languages": [
-        "Music-led",
-        "Croatian stage remarks possible"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": "Kino Šiška provides step-free access; visitors with physical or sensory impairments and one assistant are eligible for free admission under the venue’s current policy.",
-      "ticketUrl": "https://www.kinosiska.si/en/dogodek/nipplepeople/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-05T06:57:00+01:00",
-      "description": "Croatian electropop duo NIPPLEPEOPLE perform with Pocket Palma in Katedrala Hall at 20:00. Tickets cost €25 in presale, €30 at the door or €18.75 reduced."
     },
     {
       "id": "kdosovel-cankarjev-dom-2026-11-20",
@@ -1014,6 +928,44 @@
       "lastCheckedAt": "2026-11-16T07:45:02+01:00",
       "description": "OJAČEVALNICA – TRETJA DELAVNICA is listed by Gala Hala. Check the official event page for price, language and accessibility details.",
       "id": "event-59-oja-evalnica-tretja-delavnica"
+    },
+    {
+      "title": "ZELENO SONCE SPECIALKA: CALIBRO 35 (IT) vs. L.A. @ Gala hala",
+      "url": "https://www.galahala.com/",
+      "source": "Gala Hala",
+      "type": "Koncert · Metelkova",
+      "place": "Gala Hala · AKC Metelkova",
+      "startAt": "2026-12-04T20:00:00+01:00",
+      "endAt": null,
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.galahala.com/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-20T00:05:59+01:00",
+      "description": "ZELENO SONCE SPECIALKA: CALIBRO 35 (IT) vs. L.A. @ Gala hala is listed by Gala Hala. Check the official event page for price, language and accessibility details.",
+      "id": "event-45-zeleno-sonce-specialka-calibro-35-it-vs-l-a-gala-hala"
+    },
+    {
+      "title": "Forestdelic Label Night @ K4",
+      "url": "https://www.klub-k4.si/",
+      "source": "Klub K4",
+      "type": "Club · elektronika",
+      "place": "Klub K4 · Ljubljana",
+      "startAt": "2026-12-04T23:00:00+01:00",
+      "endAt": null,
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.klub-k4.si/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-20T00:05:59+01:00",
+      "description": "Forestdelic Label Night @ K4 is listed by Klub K4. Check the official event page for price, language and accessibility details.",
+      "id": "event-46-forestdelic-label-night-k4"
     }
   ]
 }
