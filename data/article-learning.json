@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-11-19T21:38:20+01:00",
-  "loop_count": 7954,
+  "updated_at": "2026-11-20T08:16:47+01:00",
+  "loop_count": 7955,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-11-19T21:37:45+01:00",
+      "last_learning_run": "2026-11-20T08:16:24+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -93,11 +93,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 148578,
-          "last_seen": "2026-11-19T21:37:45+01:00",
+          "seen": 148582,
+          "last_seen": "2026-11-20T08:16:24+01:00",
           "last_title": "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
           "last_provider": "google-news-si",
-          "published": 480144,
+          "published": 480195,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,23 +227,21 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 5,
+      "current_source_count": 6,
       "example_titles": {
         "news.google.com": [
           "Merkur zavarovalnica L'Etape Slovenija: na krajši in daljši trasi slavila Slovenca - 24ur.com",
           "Slovenska blamaža na igrah! Zakaj sploh tekmujemo, če je šport pri nas umrl - Ekipa",
-          "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si"
+          "Mestni svet sprejel pomembne odločitve za šport, izobraževanje in delovanje javnih zavodov - Morel.si"
         ],
-        "porterfuneralhome.com": [
-          "Layne R. Mays"
-        ],
-        "johnsoncountypost.com": [
-          "Overland Park man sentenced to nearly 36 years in prison for 2020 murder of his sister"
+        "translate.google.com": [
+          "Understand your world and communicate across languages",
+          "Je wereld begrijpen en communiceren in verschillende talen"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-11-19T21:37:55+01:00",
+      "last_learning_run": "2026-11-20T08:16:35+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -285,11 +283,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 177403,
-          "last_seen": "2026-11-19T21:37:55+01:00",
-          "last_title": "Predsednik vlade Janez Janša se je danes v Lendavi srečal s predsednikom madžarske vlade Viktorjem Orbanom. - prava.si",
-          "last_provider": "google-news-si",
-          "published": 528391,
+          "seen": 177415,
+          "last_seen": "2026-11-20T08:16:35+01:00",
+          "last_title": "Video: Luka Simonič iz SDM: \"Če se mi ne ukvarjamo s politiko, se politika ukvarja z nami\" - Metroplay - Metropolitan.si",
+          "last_provider": "google-news-global",
+          "published": 528446,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -394,14 +392,14 @@
       "current_source_count": 12,
       "example_titles": {
         "news.google.com": [
-          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer",
-          "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si",
-          "Nov protest ob obisku Sara v DZ-ju. Janša: Protesti so refleks levičarskega antisemitizma. - rtvslo.si"
+          "Nov protest ob obisku Sara v DZ-ju. Janša: Protesti so refleks levičarskega antisemitizma. - rtvslo.si",
+          "V Sloveniji odprta volišča: Volivci danes odločajo o štirih referendumskih vprašanjih - Sobotainfo.com",
+          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-11-19T21:38:20+01:00",
+      "last_learning_run": "2026-11-20T08:16:47+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -490,11 +488,11 @@
         },
         "news.google.com": {
           "score": 2.545,
-          "seen": 203769,
-          "last_seen": "2026-11-19T21:38:20+01:00",
+          "seen": 203783,
+          "last_seen": "2026-11-20T08:16:47+01:00",
           "last_title": "Slovenija preprečila pristanek izraelskega letala: tako se odziva Fraport - Info360",
           "last_provider": "google-news-global",
-          "published": 328712,
+          "published": 328727,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -589,12 +587,15 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 13,
+      "current_source_count": 15,
       "example_titles": {
         "news.google.com": [
           "Kako svet vidi Slovenijo danes in kako je postala tako vroča evropska destinacija - Dnevnik",
           "Pavel Rupar poziva na popoldanski shod z začetkom pred RTV Slovenija, policija pripravljena - Info360",
-          "Golob je “depolitiziral” RTV SLO, jo bo tudi Janša? Ustavno sodišče je dalo “blagoslov”, a Gregorčič in Avbelj gresta na ESČP - Zanima.me"
+          "Danes se začenja svetovno gozdarsko prvenstvo - Novice - Aktualno - Mestna občina Novo mesto"
+        ],
+        "thesaurus.com": [
+          "BETTER Synonyms & Antonyms - 176 words | Thesaurus.com"
         ]
       }
     }
