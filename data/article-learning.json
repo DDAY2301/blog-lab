@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-11-20T21:21:29+01:00",
-  "loop_count": 7956,
+  "updated_at": "2026-11-21T08:09:00+01:00",
+  "loop_count": 7957,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-11-20T21:21:08+01:00",
+      "last_learning_run": "2026-11-21T08:08:37+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -93,11 +93,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 148587,
-          "last_seen": "2026-11-20T21:21:08+01:00",
+          "seen": 148593,
+          "last_seen": "2026-11-21T08:08:37+01:00",
           "last_title": "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
           "last_provider": "google-news-si",
-          "published": 480246,
+          "published": 480297,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,20 +227,23 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 6,
+      "current_source_count": 8,
       "example_titles": {
         "news.google.com": [
-          "Slovenska blamaža na igrah! Zakaj sploh tekmujemo, če je šport pri nas umrl - Ekipa",
           "Merkur zavarovalnica L'Etape Slovenija: na krajši in daljši trasi slavila Slovenca - 24ur.com",
-          "Ob vrnitvi v košarkarski hram Slovenija z 31 točkami Prepeliča ugnala Latvijo - rtvslo.si"
+          "Slovenska blamaža na igrah! Zakaj sploh tekmujemo, če je šport pri nas umrl - Ekipa",
+          "Slovenija proti Danski danes odpira svoje nastope na letošnjem evropskem prvenstvu - Šport TV"
         ],
-        "github.com": [
-          "VS Code extension: GPT-6.1 Sol missing from model picker, available in Codex App and CLI · Issue #49464 · openai/codex"
+        "homedepot.com": [
+          "The Home Depot"
+        ],
+        "homelight.com": [
+          "What Upgrades Increase Home Value? 25 Improvements Worth Making"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-11-20T21:21:18+01:00",
+      "last_learning_run": "2026-11-21T08:08:48+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -282,11 +285,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 177426,
-          "last_seen": "2026-11-20T21:21:18+01:00",
-          "last_title": "Predsednik vlade Janez Janša se je danes v Lendavi srečal s predsednikom madžarske vlade Viktorjem Orbanom. - prava.si",
+          "seen": 177439,
+          "last_seen": "2026-11-21T08:08:48+01:00",
+          "last_title": "DZ potrdil proračuna: Slovenija bo prihodnje leto ustvarila 2,3 milijarde evrov primanjkljaja - Najdi.si novice",
           "last_provider": "google-news-si",
-          "published": 528501,
+          "published": 528556,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -388,17 +391,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 11,
+      "current_source_count": 13,
       "example_titles": {
         "news.google.com": [
           "Nov protest ob obisku Sara v DZ-ju. Janša: Protesti so refleks levičarskega antisemitizma. - rtvslo.si",
-          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer",
-          "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si"
+          "V Sloveniji odprta volišča: Volivci danes odločajo o štirih referendumskih vprašanjih - Sobotainfo.com",
+          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-11-20T21:21:29+01:00",
+      "last_learning_run": "2026-11-21T08:09:00+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -486,12 +489,12 @@
           "last_provider": "bing-web"
         },
         "news.google.com": {
-          "score": 2.546,
-          "seen": 203798,
-          "last_seen": "2026-11-20T21:21:29+01:00",
-          "last_title": "Slovenija preprečila pristanek izraelskega letala: tako se odziva Fraport - Info360",
-          "last_provider": "google-news-global",
-          "published": 328742,
+          "score": 2.562,
+          "seen": 203820,
+          "last_seen": "2026-11-21T08:09:00+01:00",
+          "last_title": "Ko je Slovenijo priznala evropska dvanajsterica. \"Od danes dihamo lažje.\" - rtvslo.si",
+          "last_provider": "google-news-si",
+          "published": 328757,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -586,12 +589,12 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 15,
+      "current_source_count": 22,
       "example_titles": {
         "news.google.com": [
+          "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
           "Pavel Rupar poziva na popoldanski shod z začetkom pred RTV Slovenija, policija pripravljena - Info360",
-          "Kako svet vidi Slovenijo danes in kako je postala tako vroča evropska destinacija - Dnevnik",
-          "Slovenska glasbenica ostro nad aktualno oblast: \"Ne vem, ali naj temu rečem ironija, paradoks ali vzporedni svet\" - Večer"
+          "Pred Stevanovićevim obiskom v Srbiji znova aktualno vprašanje statusa srbske skupnosti v Sloveniji - Siol.net"
         ]
       }
     }
