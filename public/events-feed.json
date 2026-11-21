@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-20T18:00:45+01:00",
+  "updatedAt": "2026-11-21T02:35:57+01:00",
   "status": "partial",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -98,110 +98,6 @@
       "status": "confirmed",
       "lastCheckedAt": "2026-11-01T07:20:00+01:00",
       "description": "The month-long culinary festival begins today across Ljubljana, with tastings, menus, workshops and live events announced separately. Prices, languages and accessibility vary by participating venue."
-    },
-    {
-      "id": "kdosovel-cankarjev-dom-2026-11-20",
-      "title": "Kdosovel",
-      "url": "https://cd-cc.si/kultura/literatura-in-humanistika/kdosovel",
-      "source": "Cankarjev dom",
-      "type": "Poetry theatre performance",
-      "place": "Duša Počkaj Hall · Cankarjev dom",
-      "startAt": "2026-11-20T19:00:00+01:00",
-      "endAt": null,
-      "price": "€5",
-      "languages": [
-        "Slovenian"
-      ],
-      "touristFriendly": false,
-      "familyFriendly": false,
-      "accessibility": "Contact Cankarjev dom for wheelchair seating and event-specific assistance.",
-      "ticketUrl": "https://cd-cc.si/kultura/literatura-in-humanistika/kdosovel",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-06T07:00:00+01:00",
-      "description": "The Slovenian-language poetry-theatre performance examines the political appropriation of Srečko Kosovel’s image. It begins at 19:00 and costs €5."
-    },
-    {
-      "id": "mozart-cankarjev-dom-2026-11-20",
-      "title": "Mozart!",
-      "url": "https://www.cd-cc.si/en/culture/music/mozart",
-      "source": "Cankarjev dom",
-      "type": "Concert · classical",
-      "place": "Gallus Hall · Cankarjev dom",
-      "startAt": "2026-11-20T19:30:00+01:00",
-      "endAt": null,
-      "price": "€21 / €25 / €29; reduced €17 / €21 / €25",
-      "languages": [
-        "Instrumental music"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": true,
-      "accessibility": "Contact Cankarjev dom when booking wheelchair spaces or other assistance.",
-      "ticketUrl": "https://www.cd-cc.si/en/culture/music/mozart",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-06T07:00:00+01:00",
-      "description": "The classical programme Mozart! begins in Gallus Hall at 19:30. Standard tickets cost €21–€29 and reduced tickets €17–€25."
-    },
-    {
-      "id": "romantic-souls-mgl-2026-11-20",
-      "title": "Romantic Souls",
-      "url": "https://www.mgl.si/en/schedule/",
-      "source": "MGL",
-      "type": "Theatre · drama",
-      "place": "MGL Main Stage · Ljubljana",
-      "startAt": "2026-11-20T19:30:00+01:00",
-      "endAt": null,
-      "price": "€18–€22; reduced €12.50–€17.60",
-      "languages": [
-        "Slovenian"
-      ],
-      "touristFriendly": false,
-      "familyFriendly": false,
-      "accessibility": "Contact MGL for performance-specific step-free seating arrangements.",
-      "ticketUrl": "https://www.mgl.si/en/schedule/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-06T07:00:00+01:00",
-      "description": "MGL stages Ivan Cankar’s Romantic Souls on the Main Stage at 19:30. The performance is in Slovenian; standard tickets cost €18–€22 with student and pensioner reductions."
-    },
-    {
-      "id": "lusitanian-ghosts-ljubljana-castle-2026-11-20",
-      "title": "Lusitanian Ghosts",
-      "url": "https://ljubljanskigrad.si/en/castle-events/page-924/",
-      "source": "Ljubljana Castle",
-      "type": "Concert · folk rock",
-      "place": "Rock Hall · Ljubljana Castle",
-      "startAt": "2026-11-20T20:00:00+01:00",
-      "endAt": null,
-      "price": "€11 including return funicular",
-      "languages": [
-        "Music-led",
-        "English and Portuguese stage remarks possible"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": false,
-      "accessibility": "Contact Ljubljana Castle before booking for step-free access arrangements to the Rock Hall.",
-      "ticketUrl": "https://shop.ljubljanskigrad.si/en/pack.html",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-06T07:00:00+01:00",
-      "description": "Lusitanian Ghosts blend Portuguese folk instruments with contemporary rock songwriting at 20:00. The €11 ticket includes a return funicular journey."
-    },
-    {
-      "title": "GUILTY PLEASURES w/ KUKLA & FILADENDRON @ Gala Hala",
-      "url": "https://www.galahala.com/",
-      "source": "Gala Hala",
-      "type": "Koncert · Metelkova",
-      "place": "Gala Hala · AKC Metelkova",
-      "startAt": "2026-11-20T22:00:00+01:00",
-      "endAt": null,
-      "price": null,
-      "languages": [],
-      "touristFriendly": null,
-      "familyFriendly": null,
-      "accessibility": null,
-      "ticketUrl": "https://www.galahala.com/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-06T07:06:21+01:00",
-      "description": "GUILTY PLEASURES w/ KUKLA & FILADENDRON @ Gala Hala is listed by Gala Hala. Check the official event page for price, language and accessibility details.",
-      "id": "event-66-guilty-pleasures-w-kukla-filadendron-gala-hala"
     },
     {
       "id": "dadadisko-kino-siska-2026-11-21",
@@ -966,6 +862,25 @@
       "lastCheckedAt": "2026-11-20T00:05:59+01:00",
       "description": "Forestdelic Label Night @ K4 is listed by Klub K4. Check the official event page for price, language and accessibility details.",
       "id": "event-46-forestdelic-label-night-k4"
+    },
+    {
+      "title": "GHETTO BABES",
+      "url": "https://www.galahala.com/",
+      "source": "Gala Hala",
+      "type": "Koncert · Metelkova",
+      "place": "Gala Hala · AKC Metelkova",
+      "startAt": "2026-12-05T23:00:00+01:00",
+      "endAt": null,
+      "price": null,
+      "languages": [],
+      "touristFriendly": null,
+      "familyFriendly": null,
+      "accessibility": null,
+      "ticketUrl": "https://www.galahala.com/",
+      "status": "confirmed",
+      "lastCheckedAt": "2026-11-21T02:35:57+01:00",
+      "description": "GHETTO BABES is listed by Gala Hala. Check the official event page for price, language and accessibility details.",
+      "id": "event-42-ghetto-babes"
     }
   ]
 }
