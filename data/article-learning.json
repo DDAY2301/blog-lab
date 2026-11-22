@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-11-22T07:49:33+01:00",
-  "loop_count": 7959,
+  "updated_at": "2026-11-22T20:41:13+01:00",
+  "loop_count": 7960,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-11-22T07:48:59+01:00",
+      "last_learning_run": "2026-11-22T20:40:51+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -92,12 +92,12 @@
           "last_provider": "bing-web"
         },
         "news.google.com": {
-          "score": 2.502,
-          "seen": 148606,
-          "last_seen": "2026-11-22T07:48:59+01:00",
-          "last_title": "Slovenski nogometni junaki se vračajo iz Nemčije, doma jih čaka sprejem: poglejte, kdaj in kje - Metropolitan.si",
-          "last_provider": "google-news-global",
-          "published": 480399,
+          "score": 2.498,
+          "seen": 148613,
+          "last_seen": "2026-11-22T20:40:51+01:00",
+          "last_title": "Nika in Domen Prevc po prvi tekmi zmajala z glavo, Norveška razred zase - Siol.net",
+          "last_provider": "google-news-si",
+          "published": 480450,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -219,25 +219,37 @@
           "last_title": "Free Online Timers – Countdown, Stopwatch, Pomodoro & More | Set-Timer",
           "last_provider": "bing-web"
         },
-        "footlocker.com": {
-          "score": 1.33,
+        "sports.yahoo.com": {
+          "score": 1.47,
           "seen": 1,
-          "last_seen": "2026-10-04T18:55:06+02:00",
-          "last_title": "Jordan Shoes | Foot Locker",
+          "last_seen": "2026-11-22T20:40:51+01:00",
+          "last_title": "NBA Scores, 2026-27 Season - Yahoo Sports",
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 8,
+      "current_source_count": 11,
       "example_titles": {
         "news.google.com": [
           "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
           "Slovenska blamaža na igrah! Zakaj sploh tekmujemo, če je šport pri nas umrl - Ekipa",
           "Slovenija proti Danski danes odpira svoje nastope na letošnjem evropskem prvenstvu - Šport TV"
+        ],
+        "cbssports.com": [
+          "NBA Scores 2026-27"
+        ],
+        "sports.yahoo.com": [
+          "NBA Scores, 2026-27 Season - Yahoo Sports"
+        ],
+        "espn.com": [
+          "NBA Scores, 2026-27 Season - ESPN"
+        ],
+        "nba.com": [
+          "NBA Games - All NBA matchups | NBA.com"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-11-22T07:49:13+01:00",
+      "last_learning_run": "2026-11-22T20:41:01+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -279,11 +291,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 177460,
-          "last_seen": "2026-11-22T07:49:13+01:00",
-          "last_title": "Pred referendumom se danes izteka pomemben rok: Preverite, ali velja tudi za vas - Mariborinfo.com",
+          "seen": 177472,
+          "last_seen": "2026-11-22T20:41:01+01:00",
+          "last_title": "Danes zvečer prihaja nova pošiljka padavin. Ponekod bo dež prešel v sneg - Mariborinfo.com",
           "last_provider": "google-news-si",
-          "published": 528666,
+          "published": 528721,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -385,17 +397,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 10,
+      "current_source_count": 12,
       "example_titles": {
         "news.google.com": [
+          "Nov protest ob obisku Sara v DZ-ju. Janša: Protesti so refleks levičarskega antisemitizma. - rtvslo.si",
           "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si",
-          "Prvo soočenje mnenj: Naj bo socialna pomoč pogojena z družbenokoristnim delom? - rtvslo.si",
           "Protestnik, ki je postal predsednik: Stevanović nekoč glas anticepilcev, danes pa enfant terrible, ki je vse postavil na glavo - Metropolita"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-11-22T07:49:33+01:00",
+      "last_learning_run": "2026-11-22T20:41:13+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -483,12 +495,12 @@
           "last_provider": "bing-web"
         },
         "news.google.com": {
-          "score": 2.562,
-          "seen": 203855,
-          "last_seen": "2026-11-22T07:49:33+01:00",
-          "last_title": "Ko je Slovenijo priznala evropska dvanajsterica. \"Od danes dihamo lažje.\" - rtvslo.si",
-          "last_provider": "google-news-si",
-          "published": 328787,
+          "score": 2.55,
+          "seen": 203866,
+          "last_seen": "2026-11-22T20:41:13+01:00",
+          "last_title": "Slovenija preprečila pristanek izraelskega letala: tako se odziva Fraport - Info360",
+          "last_provider": "google-news-global",
+          "published": 328802,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -583,12 +595,12 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 22,
+      "current_source_count": 11,
       "example_titles": {
         "news.google.com": [
-          "V Novo mesto prihaja rekordni Kids Tour of Slovenia - Novice - Aktualno - Mestna občina Novo mesto",
-          "Pavel Rupar poziva na popoldanski shod z začetkom pred RTV Slovenija, policija pripravljena - Info360",
-          "Ko so bile ZDA stare toliko kot danes Slovenija, so bile na robu razpada - Zanima.me"
+          "Pedro Opeka obisk Slovenije začel v župniji svojega očeta (foto): Hvala, ker ste ohranili vero - Zanima.me",
+          "Poštar prinesel paket, ki ga ni naročila, in zahteval 59 evrov: »Danes ste že četrti!« Kaj se dogaja? - Dnevnik",
+          "Kako svet vidi Slovenijo danes in kako je postala tako vroča evropska destinacija - Dnevnik"
         ]
       }
     }
