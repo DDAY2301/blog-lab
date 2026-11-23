@@ -1,21 +1,22 @@
 {
   "agent": "Blog Lab Slovenia Publisher",
-  "status": "waiting",
+  "status": "completed",
   "enabled": true,
   "category": "dediscina",
-  "last_run": "2026-11-23T22:36:58+01:00",
-  "last_success": "2026-11-23T22:02:54+01:00",
-  "last_output": "slovenija-pocasi-postaja-kolesarski-raj-do-poletja-bo-oznacena-celotna-kolesarska-povezava-9494b4ee",
+  "last_run": "2026-11-23T22:40:02+01:00",
+  "last_success": "2026-11-23T22:40:02+01:00",
+  "last_output": "park-v-katerem-zivi-ribniska-zgodovina-zamislil-si-ga-je-pred-20-leti-umrli-vlasto-kopac-f-ef77872e",
   "next_run": null,
-  "message": "Nobena sveža zgodba ni prestala uredniškega QA: podvojen_naslov",
-  "posts_today": 1,
-  "scheduled_posts_today": 1,
+  "message": "Fallback članek je objavljen brez zunanjega AI providerja.",
+  "posts_today": 2,
+  "scheduled_posts_today": 2,
   "manual_posts_today": 0,
   "writer_mode": "deterministic_fallback",
   "scheduled_slots_done": [
-    "2026-11-23|07:35|kolesarstvo"
+    "2026-11-23|07:35|kolesarstvo",
+    "2026-11-23|10:45|dediscina"
   ],
   "scheduled_slots_deferred": [],
   "last_editorial_hold": null,
-  "last_error": "podvojen_naslov"
+  "last_error": null
 }

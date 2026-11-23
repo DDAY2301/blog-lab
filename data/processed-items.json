@@ -5629,5 +5629,19 @@
     "provider": "google-news-si",
     "processed_at": "2026-11-23T22:02:54+01:00",
     "output_id": "slovenija-pocasi-postaja-kolesarski-raj-do-poletja-bo-oznacena-celotna-kolesarska-povezava-9494b4ee"
+  },
+  {
+    "source_name": "Slovenske novice",
+    "category": "dediscina",
+    "title": "Park, v katerem živi ribniška zgodovina: zamislil si ga je pred 20 leti umrli Vlasto Kopač (FOTO) - Slovenske novice",
+    "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQSVlvWFRZYnNPOEZqeGMyUHJlQ2xOQ2ZsQjBlRVAzbUlxSUpSY1o4Uk5GUEVnOUVfdkVtZGM1eXk5OUNsNDh0WG1oNE44MHNTd21pZjhSUzh4ZG4wcXBiUVVkNG5jeW1neW5fd01LcFhGOEs2NUJNUGI5UHBFVGF4MElZN1BLYzM3YWpCLVF4ellhSTNqWE9jRGt2cC1Hbk9XWnJDbWw3c0g3ZFRRWmxCYTFBY3Ryd3dpSEtBWHdJWVBqLTRMVS05T3lLdlM1NGpueW1zNDJoR2s0QQ?oc=5",
+    "summary": "Park, v katerem živi ribniška zgodovina: zamislil si ga je pred 20 leti umrli Vlasto Kopač (FOTO) Slovenske novice",
+    "published": "Tue, 27 Oct 2026 07:00:00 GMT",
+    "image_url": "",
+    "video_url": "",
+    "hash": "080443d7bc4f048e2345e075843bfe404e9665286ff50c0f5d42925161996325",
+    "provider": "google-news-si",
+    "processed_at": "2026-11-23T22:40:02+01:00",
+    "output_id": "park-v-katerem-zivi-ribniska-zgodovina-zamislil-si-ga-je-pred-20-leti-umrli-vlasto-kopac-f-ef77872e"
   }
 ]
