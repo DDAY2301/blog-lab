@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-11-22T20:41:13+01:00",
-  "loop_count": 7960,
+  "updated_at": "2026-11-23T08:40:05+01:00",
+  "loop_count": 7961,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-11-22T20:40:51+01:00",
+      "last_learning_run": "2026-11-23T08:39:43+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -92,12 +92,12 @@
           "last_provider": "bing-web"
         },
         "news.google.com": {
-          "score": 2.498,
-          "seen": 148613,
-          "last_seen": "2026-11-22T20:40:51+01:00",
-          "last_title": "Nika in Domen Prevc po prvi tekmi zmajala z glavo, Norveška razred zase - Siol.net",
+          "score": 2.502,
+          "seen": 148620,
+          "last_seen": "2026-11-23T08:39:43+01:00",
+          "last_title": "'Daj Francuze, da se igramo!' Oziroma kako se nam je zgodil šport, ne Kmetija - Ekipa",
           "last_provider": "google-news-si",
-          "published": 480450,
+          "published": 480501,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,29 +227,21 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 11,
+      "current_source_count": 9,
       "example_titles": {
         "news.google.com": [
-          "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
           "Slovenska blamaža na igrah! Zakaj sploh tekmujemo, če je šport pri nas umrl - Ekipa",
+          "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
           "Slovenija proti Danski danes odpira svoje nastope na letošnjem evropskem prvenstvu - Šport TV"
         ],
-        "cbssports.com": [
-          "NBA Scores 2026-27"
-        ],
-        "sports.yahoo.com": [
-          "NBA Scores, 2026-27 Season - Yahoo Sports"
-        ],
-        "espn.com": [
-          "NBA Scores, 2026-27 Season - ESPN"
-        ],
-        "nba.com": [
-          "NBA Games - All NBA matchups | NBA.com"
+        "microsoft.com": [
+          "Microsoft – AI, Cloud, Productivity, Computing, Gaming & Apps",
+          "Microsoft – AI, Cloud, Productivity, Computing, Gaming & Apps"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-11-22T20:41:01+01:00",
+      "last_learning_run": "2026-11-23T08:39:53+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -291,11 +283,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 177472,
-          "last_seen": "2026-11-22T20:41:01+01:00",
+          "seen": 177484,
+          "last_seen": "2026-11-23T08:39:53+01:00",
           "last_title": "Danes zvečer prihaja nova pošiljka padavin. Ponekod bo dež prešel v sneg - Mariborinfo.com",
           "last_provider": "google-news-si",
-          "published": 528721,
+          "published": 528776,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -400,14 +392,14 @@
       "current_source_count": 12,
       "example_titles": {
         "news.google.com": [
-          "Nov protest ob obisku Sara v DZ-ju. Janša: Protesti so refleks levičarskega antisemitizma. - rtvslo.si",
           "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si",
-          "Protestnik, ki je postal predsednik: Stevanović nekoč glas anticepilcev, danes pa enfant terrible, ki je vse postavil na glavo - Metropolita"
+          "Prvo soočenje mnenj: Naj bo socialna pomoč pogojena z družbenokoristnim delom? - rtvslo.si",
+          "Danes se je začelo zbiranje 40.000 podpisov za referendum proti politični policiji - CNVOS"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-11-22T20:41:13+01:00",
+      "last_learning_run": "2026-11-23T08:40:05+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -496,11 +488,11 @@
         },
         "news.google.com": {
           "score": 2.55,
-          "seen": 203866,
-          "last_seen": "2026-11-22T20:41:13+01:00",
+          "seen": 203878,
+          "last_seen": "2026-11-23T08:40:05+01:00",
           "last_title": "Slovenija preprečila pristanek izraelskega letala: tako se odziva Fraport - Info360",
           "last_provider": "google-news-global",
-          "published": 328802,
+          "published": 328817,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -595,12 +587,12 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 11,
+      "current_source_count": 12,
       "example_titles": {
         "news.google.com": [
           "Pedro Opeka obisk Slovenije začel v župniji svojega očeta (foto): Hvala, ker ste ohranili vero - Zanima.me",
-          "Poštar prinesel paket, ki ga ni naročila, in zahteval 59 evrov: »Danes ste že četrti!« Kaj se dogaja? - Dnevnik",
-          "Kako svet vidi Slovenijo danes in kako je postala tako vroča evropska destinacija - Dnevnik"
+          "Pavel Rupar poziva na popoldanski shod z začetkom pred RTV Slovenija, policija pripravljena - Info360",
+          "Poštar prinesel paket, ki ga ni naročila, in zahteval 59 evrov: »Danes ste že četrti!« Kaj se dogaja? - Dnevnik"
         ]
       }
     }
