@@ -1,0 +1,23 @@
+.venv/
+__pycache__/
+.pytest_cache/
+
+# Local runtime state
+data/*.db
+data/*.db-*
+data/*.sqlite
+data/*.sqlite3
+data/*.log
+data/*.tmp
+data/latest-summary.json
+data/registry.json
+data/gmail-token.json
+data/gmail-client-secret.json
+data/*token*.json
+data/*secret*
+*.pid
+
+# Local configuration/secrets
+.env
+.env.local
+*.local.env
