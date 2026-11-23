@@ -31,7 +31,40 @@ function keywords(item) {
     .filter(Boolean).join(" ").toLocaleLowerCase("sl");
 }
 
+function verifiedArticleHero(item) {
+  const hero = item?.heroImage;
+  if (!hero || typeof hero !== "object") return null;
+  const src = String(hero.url || "").trim();
+  const sourceUrl = String(hero.sourceUrl || "").trim();
+  const caption = String(hero.caption || "").trim();
+  // Only prefer traceable openly licensed photo sources. News-feed thumbnails
+  // without provenance are never used as article photos.
+  const commons = /^https:\/\/commons\.wikimedia\.org\/wiki\/File:/i.test(sourceUrl) &&
+    /Wikimedia Commons/i.test(caption) && /CC BY|CC0|public domain/i.test(caption);
+  const unsplash = /^https:\/\/unsplash\.com\/photos\//i.test(sourceUrl) &&
+    /Unsplash License/i.test(caption);
+  if (!commons && !unsplash) return null;
+  if (!/^https:\/\//i.test(src) && !/^\/media\/articles\/[\w.-]+\.webp$/i.test(src)) return null;
+  const parts = caption.split("·").map(s => s.trim());
+  const author = parts[0] || "Avtor fotografije";
+  const license = commons ? (parts.find(s => /CC BY|CC0|public domain/i.test(s)) || "Wikimedia Commons")
+    : "Unsplash License";
+  return {
+    src,
+    sourceUrl,
+    author,
+    license,
+    licenseUrl: commons ? sourceUrl : "https://unsplash.com/license",
+    alt: hero.alt || item.title || "Fotografija",
+    note: "Izvorna fotografija z navedbo avtorja in licence."
+  };
+}
+
 export function displayPhotoForArticle(item = {}) {
+  // A published article's verified, unique hero takes precedence over generic
+  // category thumbnails; otherwise the public grid repeats the same picture.
+  const heroPhoto = verifiedArticleHero(item);
+  if (heroPhoto) return heroPhoto;
   const text = keywords(item);
   if (/koles|bicycle|cycling|bicikl|gorsko kolo|bike/.test(text)) return DISPLAY_PHOTOS.cycling;
   if (/pohod|planin|triglav|alp|gorsk|narav|hiking|mountain|trail|hrib/.test(text)) return DISPLAY_PHOTOS.hiking;
