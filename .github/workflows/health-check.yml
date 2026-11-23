@@ -57,7 +57,7 @@ jobs:
             }
           fi
       - name: Verify unique, relevant, credited public photos
-        run: node --test scripts/test-photo-uniqueness.mjs
+        run: node --test scripts/test-photo-uniqueness.mjs scripts/test-article-photo-allocation.mjs
       - name: Build public site
         run: npm run build
       - name: Runtime-render public site in headless Chrome
