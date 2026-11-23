@@ -5615,5 +5615,19 @@
     "provider": "google-news-si",
     "processed_at": "2026-11-14T20:24:48+01:00",
     "output_id": "plohe-nevihte-in-visoka-pozarna-ogrozenost-v-enem-delu-slovenije-pa-bo-vreme-se-zdrzalo-694ebf8c"
+  },
+  {
+    "source_name": "24ur.com",
+    "category": "kolesarstvo",
+    "title": "Slovenija (počasi) postaja kolesarski raj. Do poletja bo označena celotna kolesarska povezava od Rateč do Obrežja - 24ur.com",
+    "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQTkRKNFl3b01nWncxVEtUMXBJallzRlQwVWgzQUM3aFlfdFV3UngtbE15VTZaaEVXTkt4c2xSQzJKZUZGZHFvaUxMTFVkSXU3bGNHekFZSWFHVnZkYWZJTUdGMG5PVnBPM19CQTFkWVl0LTVUX3h4X1RjRkdmdjA1MExqMDZQUE10OGFjQ0lGV0x2TWJFdDRiekkxUUI0VFFzX0o0Mk9ta3JiZHdhdDlEakU3ZkFwWTBUSC1lN1dVWlVrRDFsOXR1ZnBZZmNRYl9zOGxPWnhicjlHYzFqTVBUd2NOdmVVQ3Ew?oc=5",
+    "summary": "Slovenija (počasi) postaja kolesarski raj. Do poletja bo označena celotna kolesarska povezava od Rateč do Obrežja 24ur.com",
+    "published": "Tue, 31 Jan 2017 08:00:00 GMT",
+    "image_url": "",
+    "video_url": "",
+    "hash": "401bd4a2b7520daff15d171f1e704a162a78de1bad8226d660a97c4ad4787069",
+    "provider": "google-news-si",
+    "processed_at": "2026-11-23T22:02:54+01:00",
+    "output_id": "slovenija-pocasi-postaja-kolesarski-raj-do-poletja-bo-oznacena-celotna-kolesarska-povezava-9494b4ee"
   }
 ]
