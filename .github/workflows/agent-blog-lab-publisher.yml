@@ -214,18 +214,3 @@ jobs:
           git pull --rebase origin main
           git push origin HEAD:main
           echo "changed=true" >> "$GITHUB_OUTPUT"
-      - name: Final synchronized article build
-        if: ${{ steps.content.outputs.changed == 'true' && (github.event_name != 'workflow_dispatch' || inputs.dry_run == false) }}
-        run: npm run build
-      - name: Configure GitHub Pages
-        if: ${{ steps.content.outputs.changed == 'true' && (github.event_name != 'workflow_dispatch' || inputs.dry_run == false) }}
-        uses: actions/configure-pages@v6
-      - name: Upload Pages artifact
-        if: ${{ steps.content.outputs.changed == 'true' && (github.event_name != 'workflow_dispatch' || inputs.dry_run == false) }}
-        uses: actions/upload-pages-artifact@v5
-        with:
-          path: dist
-      - name: Deploy generated article to GitHub Pages
-        id: deployment
-        if: ${{ steps.content.outputs.changed == 'true' && (github.event_name != 'workflow_dispatch' || inputs.dry_run == false) }}
-        uses: actions/deploy-pages@v5
