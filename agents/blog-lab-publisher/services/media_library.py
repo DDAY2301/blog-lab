@@ -144,7 +144,7 @@ def published_image_sources(root: Path | None = None) -> set[str]:
     if app.is_file():
         legacy = app.read_text(encoding="utf-8")
         # Legacy starter articles embed string-literal Commons attribution.
-        for match in re.findall(r'sourceUrl\\s*:\\s*["\\\'](https://commons\\.wikimedia\\.org/wiki/[^"\\\']+)', legacy):
+        for match in re.findall(r'sourceUrl\s*:\s*"(https://commons\.wikimedia\.org/wiki/[^\"]+)"', legacy):
             seen.add(_media_identity(match))
     return seen
 
