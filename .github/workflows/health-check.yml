@@ -18,7 +18,7 @@ permissions:
 
 jobs:
   health:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 12
     env:
       PYTHONDONTWRITEBYTECODE: "1"
@@ -114,7 +114,5 @@ jobs:
       - name: Scan tracked files for obvious credentials
         shell: bash
         run: |
-          if git grep -I -n -E "(ghp_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|sk-[A-Za-z0-9_-]{20,})" -- . ':(exclude)package-lock.json'; then
-            echo "Credential-like material detected in tracked repository files."
-            exit 1
-          fi
+          python3 -m unittest scripts/test_repository_secrets.py
+          python3 scripts/check_repository_secrets.py
