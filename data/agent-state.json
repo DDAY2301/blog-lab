@@ -5,18 +5,24 @@
   "posts_date": "2026-11-23",
   "posts_today": 2,
   "last_output": "park-v-katerem-zivi-ribniska-zgodovina-zamislil-si-ga-je-pred-20-leti-umrli-vlasto-kopac-f-ef77872e",
-  "last_error": null,
+  "last_error": "prekratek",
   "agent_version": "3.0.0-learning-guarded-fallback",
-  "current_category": "dediscina",
+  "current_category": "sezonsko",
   "scheduled_posts_today": 2,
   "manual_posts_today": 0,
-  "writer_mode": "deterministic_fallback",
+  "writer_mode": "workers_ai",
   "scheduled_slots_done": [
     "2026-11-23|07:35|kolesarstvo",
     "2026-11-23|10:45|dediscina"
   ],
-  "scheduled_slots_deferred": [],
-  "last_editorial_hold": null,
+  "scheduled_slots_deferred": [
+    "2026-11-23|13:30|sezonsko"
+  ],
+  "last_editorial_hold": {
+    "slot": "2026-11-23|13:30|sezonsko",
+    "reason": "ponavljanje",
+    "at": "2026-11-23T22:45:58+01:00"
+  },
   "publisher_guardian_last_run": "2026-11-17T15:56:05+01:00",
   "publisher_guardian_last_action": {
     "category": "kolesarstvo",

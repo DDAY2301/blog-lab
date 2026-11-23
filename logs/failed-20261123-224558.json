@@ -1,0 +1,39 @@
+{
+  "category": "sezonsko",
+  "errors": [
+    "ponavljanje"
+  ],
+  "article": {
+    "title": "Turizem v Sloveniji: Kje smo s cenami in kakšna bo letošnja sezona?",
+    "excerpt": "Slovenija se pripravlja na novo sezono, a kako bo letos? Kje smo s cenami in naložbami?",
+    "seoDescription": "Turizem v Sloveniji: Kje smo s cenami in kakšna bo letošnja sezona?",
+    "content": "Slovenija se pripravlja na novo sezono, a kako bo letos? Kje smo s cenami in naložbami? Finance.si poroča, da so slovenski turizem in cestni promet v zadnjih letih doživeli veliko spremembe. Leta 2022 so bile cene v Sloveniji med najnižjimi v Evropi, kar je privabilo mnogo turistov. Leta 2023 so bile cene že malo višje, a še vedno nižje kot v drugih evropskih državah.\n\nFinance.si poroča, da bo letos sezona v Sloveniji bolj stabilna, a da bo še vedno veliko konkurence. \"Slovenija je že dolgo časa eden izmed najbolj priljubljenih destinacij v Evropi,\" reče Janez Šuštar, direktor Slovenske turistične zveze. \"Ampak moramo se soočiti z velikim številom turistov, ki prihajajo v našo državo.\" \n\nDa bi se izognili oviram, ki bi lahko nastala zaradi velikih števil turistov, se Slovenska turistična zveza odločila, da bo letos sezona bolj stabilna. \"Želimo, da bi bila sezona bolj stabilna in da bi se izognili oviram, ki bi lahko nastala zaradi velikih števil turistov,\" reče Janez Šuštar.\n\nFinance.si poroča, da bo letos sezona v Sloveniji bolj stabilna, a da bo še vedno velika konkurenca. \"Slovenija je že dolgo časa eden izmed najbolj priljubljenih destinacij v Evropi,\" reče Janez Šuštar. \"Ampak moramo se soočiti z velikim številom turistov, ki prihajajo v našo državo.\" \n\nDa bi se izognili oviram, ki bi lahko nastala zaradi velikih števil turistov, se Slovenska turistična zveza odločila, da bo letos sezona bolj stabilna. \"Želimo, da bi bila sezona bolj stabilna in da bi se izognili oviram, ki bi lahko nastala zaradi velikih števil turistov,\" reče Janez Šuštar.",
+    "category": "Sezonsko",
+    "tags": [
+      "turizem",
+      "Slovenija",
+      "sezona"
+    ],
+    "heroImage": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Serene_Mountain_Lake_With_Water_Lillies_%28156843781%29.jpeg/1920px-Serene_Mountain_Lake_With_Water_Lillies_%28156843781%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "alt": "500px provided description: This photo has been taken during a nice hike in Slovenian mountains in the summer time, when water lilies are in full blossom. [#trees ,#flowers ,#lands",
+      "caption": "Anita · Wikimedia Commons · CC BY 3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Serene_Mountain_Lake_With_Water_Lillies_(156843781).jpeg"
+    },
+    "gallery": [],
+    "video": {
+      "url": "https://example.com/video.mp4",
+      "title": "Slovenija"
+    },
+    "sources": [
+      {
+        "label": "Finance.si",
+        "url": "https://finance.si/"
+      }
+    ],
+    "fallback": false,
+    "visualTemplate": "fieldnote",
+    "templateLabel": "Field Note",
+    "id": "turizem-v-sloveniji-kje-smo-s-cenami-in-kaksna-bo-letosnja-sezona-5707fb6e"
+  }
+}
