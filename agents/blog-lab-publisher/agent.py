@@ -23,7 +23,7 @@ from services.publisher import publish_to_app, slugify
 from services.state import load_json, atomic_json
 from services.learning import learning_source_ok, rank_sources_with_learning
 from services.article_templates import apply_article_template, template_prompt
-from services.media_library import commons_image_for, commons_image_matches_topic, _license_is_reusable
+from services.media_library import commons_image_for, commons_image_matches_topic, _license_is_reusable, published_image_sources, _media_identity
 from services.editorial_guard import validate_automatic_story, CATEGORY_SIGNALS, SLOVENIA_SIGNALS, fold, _has_any
 from services.image_optimizer import optimize_commons_hero
 
@@ -581,6 +581,8 @@ def prepare_article_candidate(
     if output_category.strip():
         article["category"] = output_category.strip()[:40]
     article = apply_media_policy(article, source_items, topic)
+    # A different, topic-matched photograph for each new story, including after restart.
+    used_photos = published_image_sources()
     # Source feeds can carry copyrighted, unrelated thumbnails. Automatic
     # articles may only use an image with known Commons provenance/license.
     # A licensed substitute is researched below; never invent an image URL.
@@ -595,6 +597,9 @@ def prepare_article_candidate(
                 for part in str(hero.get("caption") or "").split("·")
             )
         )
+        if known_commons and _media_identity(hero.get("sourceUrl") or "") in used_photos:
+            print("COMMONS_HERO_REJECTED reason=already_published")
+            known_commons = False
         if known_commons and not commons_image_matches_topic(
             str(article.get("title") or topic or ""), hero
         ):
@@ -605,7 +610,7 @@ def prepare_article_candidate(
             article["gallery"] = []
     resolved_category = output_category.strip() or str(article.get("category") or "")
     if not _media_url(article.get("heroImage")):
-        fallback_image = commons_image_for(str(article.get("title") or topic or ""), resolved_category)
+        fallback_image = commons_image_for(str(article.get("title") or topic or ""), resolved_category, used_photos)
         if fallback_image:
             article["heroImage"] = fallback_image
     article = apply_article_template(article, resolved_category, topic)
