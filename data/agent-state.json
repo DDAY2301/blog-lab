@@ -5,7 +5,7 @@
   "posts_date": "2026-11-23",
   "posts_today": 1,
   "last_output": "slovenija-pocasi-postaja-kolesarski-raj-do-poletja-bo-oznacena-celotna-kolesarska-povezava-9494b4ee",
-  "last_error": "prekratek",
+  "last_error": "fallback_no_fresh_evidence",
   "agent_version": "3.0.0-learning-guarded-fallback",
   "current_category": "dediscina",
   "scheduled_posts_today": 1,
