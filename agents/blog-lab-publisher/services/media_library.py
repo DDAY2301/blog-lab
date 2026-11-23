@@ -5,6 +5,7 @@ import unicodedata
 import urllib.request
 from html import unescape
 from urllib.parse import quote, urlencode, unquote
+from pathlib import Path
 
 API = "https://commons.wikimedia.org/w/api.php"
 USER_AGENT = "BlogLabSloveniaMedia/1.0 (+https://bloglab.eu/)"
@@ -115,7 +116,39 @@ def _image_relevant(title: str, description: str, category_key: str) -> bool:
         return has_slovenia_context and any(term in text for term in category_terms)
     return has_slovenia_context
 
-def _search_once(query: str, category_key: str, location_terms: tuple[str, ...] = ()) -> dict | None:
+
+def _media_identity(url: str) -> str:
+    """Use the Commons file identity, not its thumbnail width or query string."""
+    return unquote(str(url or "").split("?", 1)[0]).rstrip("/").lower()
+
+
+def published_image_sources(root: Path | None = None) -> set[str]:
+    """Collect photos already published; do not recycle them into new articles."""
+    repo = root or Path(__file__).resolve().parents[3]
+    seen = set()
+    folder = repo / "src" / "articles" / "published"
+    for entry in folder.glob("*.json"):
+        try:
+            article = json.loads(entry.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            # A malformed publication is an editorial integrity issue.
+            raise RuntimeError(f"Invalid published media record: {entry.name}")
+        if not isinstance(article, dict):
+            raise RuntimeError(f"Invalid published media record: {entry.name}")
+        hero = article.get("heroImage")
+        if isinstance(hero, dict):
+            for field in ("sourceUrl", "url"):
+                if hero.get(field):
+                    seen.add(_media_identity(hero[field]))
+    app = repo / "src" / "App.jsx"
+    if app.is_file():
+        legacy = app.read_text(encoding="utf-8")
+        # Legacy starter articles embed string-literal Commons attribution.
+        for match in re.findall(r'sourceUrl\\s*:\\s*["\\\'](https://commons\\.wikimedia\\.org/wiki/[^"\\\']+)', legacy):
+            seen.add(_media_identity(match))
+    return seen
+
+def _search_once(query: str, category_key: str, location_terms: tuple[str, ...] = (), excluded: set[str] | None = None) -> dict | None:
     payload = _api({
         "action":"query","generator":"search","gsrnamespace":"6","gsrsearch":query,"gsrlimit":"24",
         "prop":"imageinfo","iiprop":"url|extmetadata|mime|size","iiurlwidth":"1600",
@@ -148,6 +181,9 @@ def _search_once(query: str, category_key: str, location_terms: tuple[str, ...] 
         if not image_url.startswith("https://"):
             continue
         source_url = "https://commons.wikimedia.org/wiki/" + quote(title.replace(" ","_"), safe=":_(),-'")
+        if excluded and (_media_identity(source_url) in excluded or _media_identity(image_url) in excluded):
+            print(f"COMMONS_MEDIA_SKIPPED_REUSED title={title!r}")
+            continue
         return {
             "url": image_url,
             "alt": description[:180] or title.replace("File:","").rsplit(".",1)[0],
@@ -156,8 +192,9 @@ def _search_once(query: str, category_key: str, location_terms: tuple[str, ...] 
         }
     return None
 
-def commons_image_for(topic: str, category: str) -> dict | None:
+def commons_image_for(topic: str, category: str, excluded_sources: set[str] | None = None) -> dict | None:
     category_key = str(category or "").strip().lower()
+    excluded = {_media_identity(url) for url in (excluded_sources or set())}
     topic_query = _safe_query(topic)
     location_terms = _location_filter(topic)
     attempts = []
@@ -175,7 +212,7 @@ def commons_image_for(topic: str, category: str) -> dict | None:
             continue
         seen.add(key)
         try:
-            found=_search_once(query, category_key, location_terms)
+            found=_search_once(query, category_key, location_terms, excluded)
         except Exception as exc:
             print(f"WARN commons media query={query!r} error={type(exc).__name__}: {exc}")
             continue
