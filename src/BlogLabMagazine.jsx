@@ -425,7 +425,7 @@ function SearchPage({ query, events, today }) {
     <PaintedBanner eyebrow="BLOG LAB / ISKANJE" title="Rezultati iskanja." desc={"Poizvedba: " + query} image={IMAGES.novice} compact />
     <div className="mag-wide mag-interior"><Breadcrumbs items={[{ label: "Iskanje" }]} />
       <ArticleList items={articles} title="Najdeni članki" />
-      <EventsList items={foundEvents} today={today} title="Najdeni dogodki" />
+      <EventsList events={events} items={foundEvents} today={today} title="Najdeni dogodki" />
     </div>
   </>;
 }
