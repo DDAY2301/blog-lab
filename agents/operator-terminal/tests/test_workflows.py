@@ -41,7 +41,15 @@ def test_operator_and_publisher_sync_with_latest_main():
 
 def test_deploying_workflows_build_after_final_sync():
     assert "name: Final synchronized public build" in OPERATOR
-    assert "name: Final synchronized article build" in PUBLISHER
+    # Publisher writes validated content straight to main. The single Pages
+    # workflow handles the build/deployment on push: no competing deploy.
+    assert "git push origin HEAD:main" in PUBLISHER
+    assert "name: Final synchronized article build" not in PUBLISHER
+    assert "actions/deploy-pages@" not in PUBLISHER
+    pages = (ROOT / ".github/workflows/deploy-pages.yml").read_text(encoding="utf-8")
+    assert 'branches: ["main"]' in pages
+    assert "name: Build site" in pages
+    assert "name: Deploy to GitHub Pages" in pages
     assert "name: Sync latest main" in LIVE
     assert "name: Build final synchronized site" in LIVE
     assert "git pull --rebase origin main" in LIVE
