@@ -40,9 +40,9 @@ RECOMMENDED_PACKAGE_SCRIPTS = {
 }
 
 SECRET_PATTERNS = (
-    re.compile(r"github_pat_[A-Za-z0-9_]{20,}", re.I),
-    re.compile(r"gh[pousr]_[A-Za-z0-9_]{20,}", re.I),
-    re.compile(r"sk-[A-Za-z0-9_-]{20,}", re.I),
+    re.compile(r"(?<![A-Za-z0-9_])github_pat_[A-Za-z0-9_]{20,}(?![A-Za-z0-9_])", re.I),
+    re.compile(r"(?<![A-Za-z0-9_])gh[pousr]_[A-Za-z0-9_]{20,}(?![A-Za-z0-9_])", re.I),
+    re.compile(r"(?<![A-Za-z0-9_])sk-[A-Za-z0-9_-]{20,}(?![A-Za-z0-9_-])", re.I),
     re.compile(r"Bearer\s+[A-Za-z0-9._-]{24,}", re.I),
 )
 
