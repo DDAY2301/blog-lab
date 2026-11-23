@@ -149,6 +149,7 @@ def published_image_sources(root: Path | None = None) -> set[str]:
     return seen
 
 def _search_once(query: str, category_key: str, location_terms: tuple[str, ...] = (), excluded: set[str] | None = None) -> dict | None:
+    excluded = {_media_identity(value) for value in (excluded or set())}
     payload = _api({
         "action":"query","generator":"search","gsrnamespace":"6","gsrsearch":query,"gsrlimit":"24",
         "prop":"imageinfo","iiprop":"url|extmetadata|mime|size","iiurlwidth":"1600",
