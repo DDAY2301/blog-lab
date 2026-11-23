@@ -1,0 +1,19 @@
+{
+  "category": "dediscina",
+  "errors": [
+    "viri_ne_podpirajo_slovenske_rubrike"
+  ],
+  "article": {
+    "title": "New-Fashioned Pumpkin Pie Recipe | Pillsbury pumpkin pie ..."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "lead_url": "https://www.pinterest.com/pin/16607092359964381/",
+      "title": "New-Fashioned Pumpkin Pie Recipe | Pillsbury pumpkin pie ...",
+      "errors": [
+        "viri_ne_podpirajo_slovenske_rubrike"
+      ]
+    }
+  ]
+}
