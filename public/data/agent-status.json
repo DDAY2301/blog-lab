@@ -3,11 +3,11 @@
   "status": "waiting",
   "enabled": true,
   "category": "dediscina",
-  "last_run": "2026-11-23T22:24:42+01:00",
+  "last_run": "2026-11-23T22:31:50+01:00",
   "last_success": "2026-11-23T22:02:54+01:00",
   "last_output": "slovenija-pocasi-postaja-kolesarski-raj-do-poletja-bo-oznacena-celotna-kolesarska-povezava-9494b4ee",
   "next_run": null,
-  "message": "Ni novih neuporabljenih virov; objava se varno odloži.",
+  "message": "Nobena sveža zgodba ni prestala uredniškega QA: podvojen_naslov",
   "posts_today": 1,
   "scheduled_posts_today": 1,
   "manual_posts_today": 0,
@@ -17,5 +17,5 @@
   ],
   "scheduled_slots_deferred": [],
   "last_editorial_hold": null,
-  "last_error": "fallback_no_fresh_evidence"
+  "last_error": "podvojen_naslov"
 }
