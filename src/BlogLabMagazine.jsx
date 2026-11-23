@@ -5,7 +5,8 @@ import {
   eventIsFuture, eventHour, trustedEvent
 } from "./bloglab-taxonomy.js";
 import { PHOTOS } from "./bloglab-open-photos.js";
-import { DISPLAY_PHOTOS, displayPhotoForArticle, displayPhotoForRubric } from "./bloglab-display-photos.js";
+import { DISPLAY_PHOTOS, displayPhotoForRubric } from "./bloglab-display-photos.js";
+import { articlePhotoForItem as displayPhotoForArticle } from "./bloglab-article-photos.js";
 import { eventPhotoForItem as displayPhotoForEvent } from "./bloglab-event-photos.js";
 import { nightlifeForDay, isNightlifeEvent, pastNightlife } from "./bloglab-nightlife.js";
 
@@ -57,7 +58,7 @@ function pickEventsForDate(items, key, rubric = null) {
 function dateForArticle(item) {
   return keyForLjubljana(item.updatedAt || item.createdAt) || todayKey();
 }
-function articleImage(item) { return displayPhotoForArticle(item).src; }
+function articleImage(item) { return displayPhotoForArticle(item, ARTICLES)?.src || ""; }
 function eventImage(item, events = []) { return displayPhotoForEvent(item, events)?.src || ""; }
 function photoCredit(photo) { return photo ? "Foto: " + photo.author + " · " + photo.license + " · arhivsko/ilustrativno" : ""; }
 
@@ -113,9 +114,9 @@ function EventTile({ item, day, events = [] }) {
 }
 function ArticleTile({ item }) {
   const rub = rubricForArticle(item);
-  const photo = displayPhotoForArticle(item);
+  const photo = displayPhotoForArticle(item, ARTICLES);
   return <a className="mag-article-tile" href={articleHref(item)}>
-    <span className="mag-image" style={{ backgroundImage: "url(" + photo.src + ")" }} aria-hidden="true" />
+    <span className="mag-image" style={{ backgroundImage: photo?.src ? "url(" + photo.src + ")" : "none" }} aria-hidden="true" />
     <span className="mag-tile-body"><span className="mag-overline">{rubricInfo(rub).name} / {niceDate(dateForArticle(item), { day: "numeric", month: "short", year: "numeric" })}</span>
       <strong>{item.title}</strong><small>{item.excerpt || "Preberi zgodbo na BlogLab."}</small>{photo && <span className="mag-photo-credit">{photoCredit(photo)}</span>}<span className="mag-card-link">Preberi članek ↗</span></span>
   </a>;
@@ -175,7 +176,7 @@ function CategoryFeature({ rubric, article }) {
   const target = article ? articleHref(article) : rubricHref(rubric);
   return <article className="mag-rubric-card">
     <a href={rubricHref(rubric)} className="mag-rubric-art"
-      style={{ backgroundImage: "url(" + photo.src + ")" }}
+      style={{ backgroundImage: photo?.src ? "url(" + photo.src + ")" : "none" }}
       aria-label={"Odpri rubriko " + data.name} title={photoCredit(photo)}>
       <span className="mag-rubric-art-label">{data.name}</span>
     </a>
@@ -400,7 +401,7 @@ function ArticleDetail({ id }) {
     <div className="mag-wide mag-interior mag-detail"><Breadcrumbs items={[{ href: rubricHref(data.slug), label: data.name }, { label: item.title }]} />
       <div className="mag-article-layout">
         <article className="mag-reading"><span className="mag-overline">OBJAVLJENO · {niceDate(dateForArticle(item))} · {data.name}</span>
-          {displayPhotoForArticle(item) && <p className="mag-photo-detail">Foto: <a href={displayPhotoForArticle(item).sourceUrl} target="_blank" rel="noopener noreferrer">{displayPhotoForArticle(item).author}</a> · {displayPhotoForArticle(item).license && <a href={displayPhotoForArticle(item).licenseUrl} target="_blank" rel="noopener noreferrer">{displayPhotoForArticle(item).license}</a>}. {displayPhotoForArticle(item).note}</p>}
+          {displayPhotoForArticle(item, ARTICLES) && <p className="mag-photo-detail">Foto: <a href={displayPhotoForArticle(item, ARTICLES).sourceUrl} target="_blank" rel="noopener noreferrer">{displayPhotoForArticle(item, ARTICLES).author}</a> · {displayPhotoForArticle(item, ARTICLES).license && <a href={displayPhotoForArticle(item, ARTICLES).licenseUrl} target="_blank" rel="noopener noreferrer">{displayPhotoForArticle(item, ARTICLES).license}</a>}. {displayPhotoForArticle(item, ARTICLES).note}</p>}
           {blocks.map((block, i) => {
             const text = block.replace(/\*\*/g, "").replace(/\[([^\]]+)\]\(https?:\/\/[^)]+\)/g, "$1");
             if (/^#{2,4}\s/.test(block)) return <h2 key={i}>{text.replace(/^#+\s*/, "")}</h2>;
