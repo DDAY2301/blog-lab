@@ -5,17 +5,23 @@
   "posts_date": "2026-11-24",
   "posts_today": 1,
   "last_output": "to-je-obcina-z-najlepsim-in-najtezjim-kolesarskim-krogom-v-sloveniji-230ca9bb",
-  "last_error": "podvojen_naslov",
+  "last_error": "podvojen_naslov,manjka_fotografija",
   "agent_version": "3.0.0-learning-guarded-fallback",
   "current_category": "dediscina",
   "scheduled_posts_today": 1,
   "manual_posts_today": 0,
-  "writer_mode": "deterministic_fallback",
+  "writer_mode": "workers_ai",
   "scheduled_slots_done": [
     "2026-11-24|07:35|kolesarstvo"
   ],
-  "scheduled_slots_deferred": [],
-  "last_editorial_hold": null,
+  "scheduled_slots_deferred": [
+    "2026-11-24|10:45|dediscina"
+  ],
+  "last_editorial_hold": {
+    "slot": "2026-11-24|10:45|dediscina",
+    "reason": "manjka_fotografija,ponavljanje",
+    "at": "2026-11-24T11:09:54+01:00"
+  },
   "publisher_guardian_last_run": "2026-11-17T15:56:05+01:00",
   "publisher_guardian_last_action": {
     "category": "kolesarstvo",
