@@ -1,0 +1,38 @@
+{
+  "category": "kolesarstvo",
+  "errors": [
+    "ponavljanje"
+  ],
+  "article": {
+    "title": "To je občina z najlepšim in najtežjim kolesarskim krogom v Sloveniji - Slovenske novice",
+    "excerpt": "To je občina z najlepšim in najtežjim kolesarskim krogom v Sloveniji Slovenske novice",
+    "seoDescription": "To je občina z najlepšim in najtežjim kolesarskim krogom v Sloveniji Slovenske novice",
+    "content": "Pregled za rubriko kolesarstvo povzema trenutno razpoložljive informacije iz spodaj navedenih virov. Besedilo je pripravljeno brez dodajanja nepodprtih dejstev.\n\n## To je občina z najlepšim in najtežjim kolesarskim krogom v Sloveniji - Slovenske novice\nTo je občina z najlepšim in najtežjim kolesarskim krogom v Sloveniji Slovenske novice\n\nVir: Slovenske novice — https://news.google.com/rss/articles/CBMi7wFBVV95cUxOTWJJYVpQVmc0NnZxVlh6dTNpY2RQNmREUjBmeENjMGVWb3JOb05fbG1oaHdXSUhTRl9OaDB4aVhrSTBzakktOEtsQUZST1VyUEdqTllBRFYxVm5xd0xRM2x2YlFQWnk4NXc0TjlDNUVwaC00QWJCOUFhdnpQd3pNTG9WQ25rUzZaXzFKSHNlbGxSWmpWczhGZDVIM2FfMks4Z3FBeDJrb1Vxc2xNcE5xbWZEbkJLQ3hrMzVMeDZ0VS1hU0FkdGVDOElzQkVpek1hSUNpakp3U2FWWmVnSElWcW9PUWczNlc3M1lGUC10NA?oc=5\n\n## Kako brati ta pregled\nTa članek je v varnem nadomestnem načinu sestavljen izključno iz podanih virov. Ne dodaja dejstev, ki jih v podlagi ni, zato so navedene povezave sestavni del članka in omogočajo neposredno preverjanje informacij.\n\n## Kaj preveriti pred obiskom\nDatumi, odpiralni časi, dostopnost, prometne razmere, vreme in programi dogodkov se lahko spremenijo. Pred odhodom preveri najnovejše podatke neposredno pri organizatorju, upravljavcu ali drugem uradnem viru, ki je naveden v članku.",
+    "category": "Kolesarstvo",
+    "tags": [
+      "kolesarstvo",
+      "Slovenija",
+      "obcina",
+      "najlepsim",
+      "najtezjim"
+    ],
+    "sources": [
+      {
+        "title": "To je občina z najlepšim in najtežjim kolesarskim krogom v Sloveniji - Slovenske novice",
+        "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxOTWJJYVpQVmc0NnZxVlh6dTNpY2RQNmREUjBmeENjMGVWb3JOb05fbG1oaHdXSUhTRl9OaDB4aVhrSTBzakktOEtsQUZST1VyUEdqTllBRFYxVm5xd0xRM2x2YlFQWnk4NXc0TjlDNUVwaC00QWJCOUFhdnpQd3pNTG9WQ25rUzZaXzFKSHNlbGxSWmpWczhGZDVIM2FfMks4Z3FBeDJrb1Vxc2xNcE5xbWZEbkJLQ3hrMzVMeDZ0VS1hU0FkdGVDOElzQkVpek1hSUNpakp3U2FWWmVnSElWcW9PUWczNlc3M1lGUC10NA?oc=5",
+        "source_name": "Slovenske novice"
+      }
+    ],
+    "fallback": false,
+    "gallery": [],
+    "heroImage": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/83/08_Slovenia_rural_landscape_-_bicycle_expedition_with_panniers_%28cropped%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "alt": "Three male cyclists wearing helmets during a summer bicycle tour in rural Slovenia near Luže.",
+      "caption": "Marek Ślusarczyk ( Tupungato ) Photo gallery · Wikimedia Commons · CC BY 3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:08_Slovenia_rural_landscape_-_bicycle_expedition_with_panniers_(cropped)_(cropped).jpg"
+    },
+    "visualTemplate": "pulse",
+    "templateLabel": "Pulse",
+    "id": "to-je-obcina-z-najlepsim-in-najtezjim-kolesarskim-krogom-v-sloveniji-slovenske-novice-230ca9bb"
+  }
+}

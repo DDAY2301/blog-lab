@@ -5643,5 +5643,19 @@
     "provider": "google-news-si",
     "processed_at": "2026-11-23T22:40:02+01:00",
     "output_id": "park-v-katerem-zivi-ribniska-zgodovina-zamislil-si-ga-je-pred-20-leti-umrli-vlasto-kopac-f-ef77872e"
+  },
+  {
+    "source_name": "Slovenske novice",
+    "category": "kolesarstvo",
+    "title": "To je občina z najlepšim in najtežjim kolesarskim krogom v Sloveniji - Slovenske novice",
+    "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxOTWJJYVpQVmc0NnZxVlh6dTNpY2RQNmREUjBmeENjMGVWb3JOb05fbG1oaHdXSUhTRl9OaDB4aVhrSTBzakktOEtsQUZST1VyUEdqTllBRFYxVm5xd0xRM2x2YlFQWnk4NXc0TjlDNUVwaC00QWJCOUFhdnpQd3pNTG9WQ25rUzZaXzFKSHNlbGxSWmpWczhGZDVIM2FfMks4Z3FBeDJrb1Vxc2xNcE5xbWZEbkJLQ3hrMzVMeDZ0VS1hU0FkdGVDOElzQkVpek1hSUNpakp3U2FWWmVnSElWcW9PUWczNlc3M1lGUC10NA?oc=5",
+    "summary": "To je občina z najlepšim in najtežjim kolesarskim krogom v Sloveniji Slovenske novice",
+    "published": "Fri, 21 Aug 2026 07:00:00 GMT",
+    "image_url": "",
+    "video_url": "",
+    "hash": "b2acd55f375de796ae230b2c081c073910c6d68f8a28de823d9bc036f6430db9",
+    "provider": "google-news-si",
+    "processed_at": "2026-11-24T07:39:49+01:00",
+    "output_id": "to-je-obcina-z-najlepsim-in-najtezjim-kolesarskim-krogom-v-sloveniji-230ca9bb"
   }
 ]
