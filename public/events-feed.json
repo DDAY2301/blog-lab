@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T15:52:49+01:00",
+  "updatedAt": "2026-11-24T03:56:37+01:00",
   "status": "partial",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -98,113 +98,6 @@
       "status": "confirmed",
       "lastCheckedAt": "2026-11-01T07:20:00+01:00",
       "description": "The month-long culinary festival begins today across Ljubljana, with tastings, menus, workshops and live events announced separately. Prices, languages and accessibility vary by participating venue."
-    },
-    {
-      "title": "OJAČEVALNICA – DRUGA DELAVNICA @ Gala hala",
-      "url": "https://www.galahala.com/",
-      "source": "Gala Hala",
-      "type": "Workshop · music",
-      "place": "Gala Hala · AKC Metelkova",
-      "startAt": "2026-11-23T17:00:00+01:00",
-      "endAt": null,
-      "price": null,
-      "languages": [
-        "Slovenian"
-      ],
-      "touristFriendly": false,
-      "familyFriendly": false,
-      "accessibility": null,
-      "ticketUrl": "https://www.galahala.com/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-09T07:38:00+01:00",
-      "description": "The second OJAČEVALNICA workshop starts at Gala Hala at 17:00. The official listing does not publish a verified price, accessibility details or broader visitor guidance.",
-      "id": "event-72-oja-evalnica-druga-delavnica-gala-hala"
-    },
-    {
-      "id": "perpetuum-jazzile-greatest-hits-2026-11-23",
-      "title": "Perpetuum Jazzile – Greatest Hits",
-      "url": "https://www.cd-cc.si/en/culture/lease-event/perpetuum-jazzile-najvecji-hiti",
-      "source": "Cankarjev dom",
-      "type": "Concert · vocal pop",
-      "place": "Gallus Hall · Cankarjev dom",
-      "startAt": "2026-11-23T19:00:00+01:00",
-      "endAt": "2026-11-23T21:00:00+01:00",
-      "price": "€34 / €40 / €46 / €52 / €68",
-      "languages": [
-        "Music-led",
-        "Slovenian stage remarks likely"
-      ],
-      "touristFriendly": true,
-      "familyFriendly": true,
-      "accessibility": "Contact Cankarjev dom when booking wheelchair spaces or other assistance.",
-      "ticketUrl": "https://vstopnice.cd-cc.si/si/perpetuum-jazzile-najvecji-hiti/vstopnice-227122.html",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-09T07:18:00+01:00",
-      "description": "Perpetuum Jazzile perform their greatest hits with guests Maja Keuc and Gregor Ravnik at 19:00. The two-hour concert has no interval; tickets cost €34–€68."
-    },
-    {
-      "id": "izstekani-leopold-i-2026-11-23",
-      "title": "Izštekani: Leopold I.",
-      "url": "https://cd-cc.si/en/culture/music/izstekani-leopold-i",
-      "source": "Cankarjev dom",
-      "type": "Concert · hip-hop and acoustic",
-      "place": "Linhart Hall · Cankarjev dom",
-      "startAt": "2026-11-23T20:00:00+01:00",
-      "endAt": "2026-11-23T22:00:00+01:00",
-      "price": "€25 / €30; reduced €21 / €26",
-      "languages": [
-        "Slovenian",
-        "Music-led"
-      ],
-      "touristFriendly": false,
-      "familyFriendly": false,
-      "accessibility": "Contact Cankarjev dom when booking wheelchair spaces or other assistance.",
-      "ticketUrl": "https://vstopnice.cd-cc.si/en/tickets.html",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-09T07:18:00+01:00",
-      "description": "Leopold I. presents an unplugged set ranging from acoustic minimalism to chamber-orchestra arrangements at 20:00. The two-hour Slovenian-language concert costs €25–€30, with reduced tickets at €21–€26."
-    },
-    {
-      "id": "sto-nas-je-drama-2026-11-23",
-      "title": "Sto nas je",
-      "url": "https://www.drama.si/dogodek/sto-nas-je/",
-      "source": "SNG Drama Ljubljana",
-      "type": "Theatre · drama",
-      "place": "Mala Drama, Litostrojska 56 · Ljubljana",
-      "startAt": "2026-11-23T20:00:00+01:00",
-      "endAt": "2026-11-23T21:00:00+01:00",
-      "price": null,
-      "languages": [
-        "Slovenian"
-      ],
-      "touristFriendly": false,
-      "familyFriendly": false,
-      "accessibility": null,
-      "ticketUrl": "https://drama.kupikarto.si/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-09T07:18:00+01:00",
-      "description": "The one-hour co-production Sto nas je starts at Mala Drama at 20:00. It is performed in Slovenian; the official listing confirms ticket sales but does not expose one verified price."
-    },
-    {
-      "id": "troyan-women-mgl-2026-11-23",
-      "title": "The Troyan Women",
-      "url": "https://www.mgl.si/en/shows/the-troyan-women/",
-      "source": "MGL",
-      "type": "Theatre · tragedy",
-      "place": "MGL Small Stage · Ljubljana",
-      "startAt": "2026-11-23T20:00:00+01:00",
-      "endAt": null,
-      "price": null,
-      "languages": [
-        "Slovenian"
-      ],
-      "touristFriendly": false,
-      "familyFriendly": false,
-      "accessibility": "Contact MGL for performance-specific step-free seating arrangements.",
-      "ticketUrl": "https://www.mgl.si/en/schedule/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-09T07:18:00+01:00",
-      "description": "MGL stages Euripides’ The Troyan Women on the Small Stage at 20:00. It is performed in Slovenian; tickets are listed, but the schedule does not expose one verified price."
     },
     {
       "id": "omakase-shin-prulcek-2026-11-24",
