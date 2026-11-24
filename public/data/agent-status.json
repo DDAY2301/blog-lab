@@ -2,12 +2,12 @@
   "agent": "Blog Lab Slovenia Publisher",
   "status": "waiting",
   "enabled": true,
-  "category": "sezonsko",
-  "last_run": "2026-11-24T13:39:52+01:00",
+  "category": "gore",
+  "last_run": "2026-11-24T16:24:57+01:00",
   "last_success": "2026-11-24T07:39:49+01:00",
   "last_output": "to-je-obcina-z-najlepsim-in-najtezjim-kolesarskim-krogom-v-sloveniji-230ca9bb",
   "next_run": null,
-  "message": "Nobena sveža zgodba ni prestala uredniškega QA: prekratek,manjka_fotografija",
+  "message": "Nobena sveža zgodba ni prestala uredniškega QA: manjka_fotografija",
   "posts_today": 1,
   "scheduled_posts_today": 1,
   "manual_posts_today": 0,
@@ -17,12 +17,13 @@
   ],
   "scheduled_slots_deferred": [
     "2026-11-24|10:45|dediscina",
-    "2026-11-24|13:30|sezonsko"
+    "2026-11-24|13:30|sezonsko",
+    "2026-11-24|16:20|gore"
   ],
   "last_editorial_hold": {
-    "slot": "2026-11-24|13:30|sezonsko",
-    "reason": "manjka_fotografija,ponavljanje",
-    "at": "2026-11-24T13:39:37+01:00"
+    "slot": "2026-11-24|16:20|gore",
+    "reason": "ponavljanje",
+    "at": "2026-11-24T16:24:44+01:00"
   },
-  "last_error": "prekratek,manjka_fotografija"
+  "last_error": "manjka_fotografija"
 }
