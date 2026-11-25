@@ -1,0 +1,42 @@
+{
+  "category": "kolesarstvo",
+  "errors": [
+    "manjka_fotografija",
+    "clanek_brez_slovenskega_konteksta",
+    "viri_ne_podpirajo_slovenske_rubrike",
+    "besedilo_ni_v_slovenscini"
+  ],
+  "article": {
+    "title": "Turistične poti v Sloveniji: Izkušnje in destinacije",
+    "excerpt": "Odkrijte najlepše turistične poti v Sloveniji in izkušnje, ki jih morate izživeti.",
+    "seoDescription": "Turistične poti v Sloveniji, destinacije in izkušnje.",
+    "content": "Slovenija je zemlja z velikimi možnosti za turistične poti in izkušnje. Od gorskih poti do obalnih mest, Slovenija ima nekaj za vsakogar.\n\n**Gorske poti**\n\nSlovenija je dom več gorskih poti, ki nudijo nenavadne poglede in izkušnje. Najbolj znane so Alpske poti, ki vodijo do vrha Triglava, najvišje gore v Sloveniji. Druga možnost je poti v Julijskih Alpah, ki nudijo širšo panoramo na okolico.\n\n**Obalne mest**\n\nSlovenija ima dve obalni mestu, Portorož in Piran. Oba mesta nudijo lep pogled na Jadransko morje in širšo okolico. Portorož je znano za svoje plaže in luksuzne hotelje, medtem ko Piran je bolj mesto z zgodovinskim značajem.\n\n**Izkušnje**\n\nSlovenija ponuja številne izkušnje, kot so jahanje, kolesarjenje in športni dogodki. Lahko si tudi ogledate starejše mestne središča, kot sta Ljubljana in Maribor.\n\n**Destinacije**\n\nSlovenija ima številne destinacije, ki nudijo različne izkušnje. Med najbolj znanimi so:\n\n*   **Ljubljana**: glavno mesto Slovenije, znano za svojo zgodovinsko središče in kulturne znamenitosti.\n*   **Maribor**: drugo največje mesto Slovenije, znano za svojo zgodovinsko središče in kulturne znamenitosti.\n*   **Celovec**: mesto na meji z Avstrijo, znano za svojo zgodovinsko središče in kulturne znamenitosti.\n*   **Portorož**: obalno mesto, znano za svoje plaže in luksuzne hotelje.\n*   **Piran**: obalno mesto, znano za svojo zgodovinsko središče in kulturne znamenitosti.\n\n**Končni odgovor**\n\nSlovenija je zemlja z velikimi možnostmi za turistične poti in izkušnje. Od gorskih poti do obalnih mest, Slovenija ima nekaj za vsakogar. Izberite destinacijo, ki se najbolje ujema z vašimi interesami in izkušnjami.",
+    "category": "Kolesarstvo",
+    "tags": [
+      "turizem",
+      "Slovenija",
+      "poti",
+      "izkušnje"
+    ],
+    "heroImage": null,
+    "gallery": [],
+    "video": {
+      "url": "https://example.com/video.mp4",
+      "title": "Slovenija"
+    },
+    "sources": [
+      {
+        "label": "Slovenija.si",
+        "url": "https://www.slovenija.si/"
+      },
+      {
+        "label": "Turizem.si",
+        "url": "https://www.turizem.si/"
+      }
+    ],
+    "fallback": false,
+    "visualTemplate": "pulse",
+    "templateLabel": "Pulse",
+    "id": "turisticne-poti-v-sloveniji-izkusnje-in-destinacije-258f8392"
+  }
+}
