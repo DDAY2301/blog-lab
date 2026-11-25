@@ -1,0 +1,40 @@
+{
+  "category": "gore",
+  "errors": [
+    "grounding_failed"
+  ],
+  "article": {
+    "title": "Alpe-Adria okrogla pot: 134 km pohod po Avstriji, Italiji in Sloveniji",
+    "excerpt": "Alpe-Adria okrogla pot je 134 km pohodniški pot, ki poteka skozi Avstrijo, Italijo in Slovenijo.",
+    "seoDescription": "Alpe-Adria okrogla pot je pohodniški pot, ki poteka skozi tri države.",
+    "content": "Alpe-Adria okrogla pot je 134 km pohodniški pot, ki poteka skozi Avstrijo, Italijo in Slovenijo. Pot je bila ustanovljena leta 2019 in je že postala popularna destinacija za pohodnike. Poteka skozi različne pokrajine in omogoča pohodnikom ogled različnih kulturnih in naravnih znamenitosti.\n\nPot se začne v Avstriji, kjer pohodniki lahko ogledajo različne gorske vrhove in potoki. Nato poteka skozi Italijo, kjer pohodniki lahko ogledajo različne mestne znamenitosti in kulturne spomenike. Končno, pot se konča v Sloveniji, kjer pohodniki lahko ogledajo različne naravne znamenitosti in gorske vrhove.\n\nAlpe-Adria okrogla pot je idealna za pohodnike, ki želijo ogledati različne kulturne in naravne znamenitosti. Pot je dostopna vseh sezonah in je idealna za pohodnike različnih starosti in sposobnosti.\n\nLokacija: Avstrija, Italija, Slovenija\nDostop: Dostopna vseh sezonah\nVarnost: Pot je varna, a pohodniki morajo upoštevati varnostne ukaze\nVremenske razmere: Pot je dostopna vseh sezonah\nOdgovorno obiskovanje: Pot je dostopna za pohodnike različnih starosti in sposobnosti",
+    "category": "Gore & traili",
+    "tags": [
+      "Alpe-Adria okrogla pot",
+      "Avstrija",
+      "Italija",
+      "Slovenija"
+    ],
+    "heroImage": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Hiking_a_Jesenice_mountain_%28Unsplash%29.jpg/1920px-Hiking_a_Jesenice_mountain_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "alt": "Jesenice, Slovenia",
+      "caption": "Ales Krivec aleskrivec · Wikimedia Commons · CC0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hiking_a_Jesenice_mountain_(Unsplash).jpg"
+    },
+    "gallery": [],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "title": "Alpe-Adria okrogla pot"
+    },
+    "sources": [
+      {
+        "label": "Much Better Adventures",
+        "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5PUHpGUXlkYjNPbE1WUjk5VzV6UmZkM0stblluTmNzZVF2SVNGSGJ5cER5ZWIzRzBfZUJuSDBtb2NfWkVqLXN2QTdOSkF1ZkJkZEk0U1JKbFBGUGN1T1dneFdRYVB5a24xOTFIb1Jab0k1QXlBMWxsWFZQZ0E?oc=5"
+      }
+    ],
+    "fallback": false,
+    "visualTemplate": "studio",
+    "templateLabel": "Studio",
+    "id": "alpe-adria-okrogla-pot-134-km-pohod-po-avstriji-italiji-in-sloveniji-66836497"
+  }
+}
