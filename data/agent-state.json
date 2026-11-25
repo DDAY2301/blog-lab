@@ -7,7 +7,7 @@
   "last_output": "na-najvecjem-kulinaricnem-dogodku-v-sloveniji-bograc-kuhali-v-124-kotlickih-foto-b4c1443c",
   "last_error": "prekratek",
   "agent_version": "3.0.0-learning-guarded-fallback",
-  "current_category": "gore",
+  "current_category": "gourmet",
   "scheduled_posts_today": 0,
   "manual_posts_today": 0,
   "writer_mode": "workers_ai",
@@ -16,12 +16,13 @@
     "2026-11-25|07:35|kolesarstvo",
     "2026-11-25|10:45|dediscina",
     "2026-11-25|13:30|sezonsko",
-    "2026-11-25|16:20|gore"
+    "2026-11-25|16:20|gore",
+    "2026-11-25|19:10|gourmet"
   ],
   "last_editorial_hold": {
-    "slot": "2026-11-25|16:20|gore",
-    "reason": "grounding_failed",
-    "at": "2026-11-25T16:25:11+01:00"
+    "slot": "2026-11-25|19:10|gourmet",
+    "reason": "prekratek",
+    "at": "2026-11-25T19:24:37+01:00"
   },
   "publisher_guardian_last_run": "2026-11-17T15:56:05+01:00",
   "publisher_guardian_last_action": {

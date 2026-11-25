@@ -1,0 +1,35 @@
+{
+  "category": "gourmet",
+  "errors": [
+    "prekratek"
+  ],
+  "article": {
+    "title": "Skrivnosti slovenske gastronomije v novi prestižni reviji OK magazin - Delo.si"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "lead_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPY0RDLW45TGJoelRUQUlZbmVuY3RiTDZOU1dESDUzZU8yRHlDWWFQM1d5NTlUb3dSeDJkOVd6aU9oQ2F4aEgyUDJ4cjNpT1B3SVpwUGxNZi1POTVpRkxibDlGS2dSbjRmUTFvNmJsQlgxeVdiMk5IcFlrYWctc3dRWF9Ka3oyeThSMkszZ1pXRmJlTnNzZHNYdFhTSENVb0RaQ1YxLUYwdG0tNWs?oc=5",
+      "title": "Skrivnosti slovenske gastronomije v novi prestižni reviji OK magazin - Delo.si",
+      "errors": [
+        "prekratek"
+      ]
+    },
+    {
+      "attempt": 2,
+      "lead_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQYlhvaUhoNVVxendRT2xHLTQ1RzR1VkFVNENoTG5oOG9pR2VGZUYxTTU4YVNFVW9lLUJaa3R1V2Y2ZVVlTl9abGJ2eENPcEc1d2lybHB0aGJ4UmtvQzhzVTJmSHRYYkwtVWd3QmRNZlhkQ0Jsa2lvQ2pzRE9KWHRfRHpkNVFYZXlVZGVaSTJudG15UlU?oc=5",
+      "title": "V Ljubljani je potekala kulinarična delavnica tradicionalne kazahstanske kuhinje - GOV.KZ",
+      "errors": [
+        "prekratek"
+      ]
+    },
+    {
+      "attempt": 3,
+      "lead_url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFB4VzliYk9XMG8xVlVYTkZSZ2JLMVZoWUhxczZhckNxTEM5eGZqY2FNOUZHdjFvc2hmeUpRclB1cWtaWC01TEF4dGJ0QnphM2VQY1pCVmVGRmlQYkU0Z2M3UU9EVjc4eTB3c05qYlNMemREM1Z5bGhF?oc=5",
+      "title": "Kako skuhati dobro kosilo za manj kot 2 evra? Rešitev je ta slovenska jed - Svet24",
+      "errors": [
+        "prekratek"
+      ]
+    }
+  ]
+}
