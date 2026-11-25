@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-11-25T09:35:28+01:00",
-  "loop_count": 7965,
+  "updated_at": "2026-11-25T22:42:47+01:00",
+  "loop_count": 7966,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-11-25T09:35:08+01:00",
+      "last_learning_run": "2026-11-25T22:42:25+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -92,12 +92,12 @@
           "last_provider": "bing-web"
         },
         "news.google.com": {
-          "score": 2.498,
-          "seen": 148651,
-          "last_seen": "2026-11-25T09:35:08+01:00",
-          "last_title": "Slovenia one step closer to hosting one of the world's largest cycling races - Portal GOV.SI",
-          "last_provider": "google-news-global",
-          "published": 480692,
+          "score": 2.502,
+          "seen": 148657,
+          "last_seen": "2026-11-25T22:42:25+01:00",
+          "last_title": "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
+          "last_provider": "google-news-si",
+          "published": 480739,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,17 +227,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 5,
+      "current_source_count": 6,
       "example_titles": {
         "news.google.com": [
-          "Merkur zavarovalnica L'Etape Slovenija: na krajši in daljši trasi slavila Slovenca - 24ur.com",
           "Slovenija proti Danski danes odpira svoje nastope na letošnjem evropskem prvenstvu - Šport TV",
-          "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si"
+          "Merkur zavarovalnica L'Etape Slovenija: na krajši in daljši trasi slavila Slovenca - 24ur.com",
+          "\"Danes je enostavno biti kritičen, ker se je moč skriti za anonimnost\" - rtvslo.si"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-11-25T09:35:18+01:00",
+      "last_learning_run": "2026-11-25T22:42:36+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -279,11 +279,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 177545,
-          "last_seen": "2026-11-25T09:35:18+01:00",
-          "last_title": "Brskali tudi po računih žene pomembnega politika: \"To je svinjarija prve vrste\" - N1 Slovenija",
-          "last_provider": "google-news-global",
-          "published": 528994,
+          "seen": 177563,
+          "last_seen": "2026-11-25T22:42:36+01:00",
+          "last_title": "Dimitrij Rupel: Slovenska zunanja politika nekoč in danes - Slovenska demokratska stranka - SDS",
+          "last_provider": "google-news-si",
+          "published": 529048,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "pewresearch.org": {
@@ -385,17 +385,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 14,
+      "current_source_count": 18,
       "example_titles": {
         "news.google.com": [
-          "Kirbiš Rojs: \"Slovenija ne more biti zadovoljna z rezi na področju kohezijske politike\" - Dnevnik",
-          "FOTO in VIDEO: Začel je z enim oknom, danes ga pozna vsa Slovenija. Zdaj je Slavko Roškar sprejel veliko odločitev - Mariborinfo.com",
-          "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si"
+          "Soočenje na Radiu Slovenija: Predstavniki parlamentarnih strank o varnosti doma in po svetu - rtvslo.si",
+          "Na Radiu Ognjišče zadnje predvolilno soočenje: v ospredju prisluhi, zdravstvo, zunanja politika in sprava - Radio Ognjišče",
+          "Janša: Zunanjo politiko vodi vlada, v ozadju spor: kdo določa smer te politike? (VIDEO) - Slovenske novice"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-11-25T09:35:28+01:00",
+      "last_learning_run": "2026-11-25T22:42:47+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -484,11 +484,11 @@
         },
         "news.google.com": {
           "score": 2.56,
-          "seen": 203944,
-          "last_seen": "2026-11-25T09:35:28+01:00",
-          "last_title": "Spomin na prvo vlado po 2. svet. vojni: Zaobljuba dela v korist ljudi vladajoče zavezuje tudi danes - rtvslo.si",
+          "seen": 203963,
+          "last_seen": "2026-11-25T22:42:47+01:00",
+          "last_title": "Kajzer: zunanjepolitična strategija mora odražati aktualno geopolitično okolje - 24ur.com",
           "last_provider": "google-news-si",
-          "published": 328877,
+          "published": 328892,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -588,7 +588,7 @@
         "news.google.com": [
           "140 let Kmetijske šole Grm, najstarejše v Sloveniji - Novice - Aktualno - Mestna občina Novo mesto",
           "Pavel Rupar poziva na popoldanski shod z začetkom pred RTV Slovenija, policija pripravljena - Info360",
-          "Ko so bile ZDA stare toliko kot danes Slovenija, so bile na robu razpada - Zanima.me"
+          "Slovenska glasbenica ostro nad aktualno oblast: \"Ne vem, ali naj temu rečem ironija, paradoks ali vzporedni svet\" - Večer"
         ]
       }
     }
@@ -669,46 +669,6 @@
   ],
   "recent_failures": [
     {
-      "file": "fallback-failed-20261123-223150.json",
-      "category": "dediscina",
-      "errors": [
-        "podvojen_naslov"
-      ],
-      "title": "Brežiški grad: ko se 3D-doživetja in mobilna aplikacija oziroma soba pobega srečajo z zgodovino - ePosavje"
-    },
-    {
-      "file": "fallback-failed-20261123-223658.json",
-      "category": "dediscina",
-      "errors": [
-        "podvojen_naslov"
-      ],
-      "title": "Brežiški grad: ko se 3D-doživetja in mobilna aplikacija oziroma soba pobega srečajo z zgodovino - ePosavje"
-    },
-    {
-      "file": "fallback-failed-20261123-224625.json",
-      "category": "sezonsko",
-      "errors": [
-        "prekratek"
-      ],
-      "title": "Slovenski turizem: kje smo s cenami, naložbami in kakšna bo letošnja sezona - Finance.si"
-    },
-    {
-      "file": "fallback-failed-20261123-225451.json",
-      "category": "gore",
-      "errors": [
-        "manjka_fotografija"
-      ],
-      "title": "ŠPORTNI VIKEND LJUBLJANICA 2026 bo med 11. in 13. septembrom v središče Ljubljane pripeljal nočni tek, trail, pohodništvo, kolesarjenje in pestro družinsko športno dogajanje - 24ur"
-    },
-    {
-      "file": "fallback-failed-20261123-231046.json",
-      "category": "gourmet",
-      "errors": [
-        "prekratek"
-      ],
-      "title": "Skrivnosti slovenske gastronomije v novi prestižni reviji OK magazin - Delo.si"
-    },
-    {
       "file": "fallback-failed-20261124-105403.json",
       "category": "dediscina",
       "errors": [
@@ -753,28 +713,68 @@
       "title": "Amazon.com: Bikes - Cycling: Sports & Outdoors: Mountain Bikes ..."
     },
     {
-      "file": "agent-state",
-      "category": "kolesarstvo",
+      "file": "fallback-failed-20261125-105404.json",
+      "category": "dediscina",
       "errors": [
-        "manjka_fotografija,clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike"
+        "podvojen_naslov"
+      ],
+      "title": "Brežiški grad: ko se 3D-doživetja in mobilna aplikacija oziroma soba pobega srečajo z zgodovino - ePosavje"
+    },
+    {
+      "file": "fallback-failed-20261125-110958.json",
+      "category": "dediscina",
+      "errors": [
+        "podvojen_naslov",
+        "manjka_fotografija"
+      ],
+      "title": "Brežiški grad: ko se 3D-doživetja in mobilna aplikacija oziroma soba pobega srečajo z zgodovino - ePosavje"
+    },
+    {
+      "file": "fallback-failed-20261125-133951.json",
+      "category": "sezonsko",
+      "errors": [
+        "prekratek",
+        "manjka_fotografija"
+      ],
+      "title": "Nova sezona, novo zvišanje cen: za kampiranje boste zdaj mogli odšteti kar ... - Metropolitan.si"
+    },
+    {
+      "file": "fallback-failed-20261125-162535.json",
+      "category": "gore",
+      "errors": [
+        "prekratek"
+      ],
+      "title": "Planinstvo in alpinizem vpisana v register nesnovne kulturne dediščine Slovenije - Domovina.je"
+    },
+    {
+      "file": "fallback-failed-20261125-192453.json",
+      "category": "gourmet",
+      "errors": [
+        "prekratek"
+      ],
+      "title": "Skrivnosti slovenske gastronomije v novi prestižni reviji OK magazin - Delo.si"
+    },
+    {
+      "file": "agent-state",
+      "category": "gourmet",
+      "errors": [
+        "prekratek"
       ]
     },
     {
       "file": "agent-state",
-      "category": "kolesarstvo",
+      "category": "gourmet",
       "errors": [
-        "manjka_fotografija,clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike,besedilo_ni_v_slovenscini"
+        "prekratek"
       ],
-      "slot": "2026-11-25|07:35|kolesarstvo"
+      "slot": "2026-11-25|19:10|gourmet"
     }
   ],
   "failure_summary": {
-    "podvojen_naslov": 12,
-    "prekratek": 5,
-    "manjka_fotografija": 5,
-    "viri_ne_podpirajo_slovenske_rubrike": 4,
-    "clanek_brez_slovenskega_konteksta": 3,
-    "manjka_fotografija,clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike": 1,
-    "manjka_fotografija,clanek_brez_slovenskega_konteksta,viri_ne_podpirajo_slovenske_rubrike,besedilo_ni_v_slovenscini": 1
+    "podvojen_naslov": 9,
+    "prekratek": 9,
+    "manjka_fotografija": 7,
+    "viri_ne_podpirajo_slovenske_rubrike": 3,
+    "clanek_brez_slovenskega_konteksta": 2
   }
 }
