@@ -56,17 +56,20 @@ jobs:
           python -m py_compile agents/blog-lab-publisher/guardian_repair.py agents/blog-lab-publisher/autonomous_fallback.py agents/blog-lab-publisher/services/*.py agents/blog-lab-publisher/schedule.py
           python agents/blog-lab-publisher/guardian_repair.py
 
+      - name: Test secret scanner (including URL false-positive regression)
+        run: python -m unittest discover -s scripts/tests -p 'test_check_repo_secrets.py'
+
       - name: Build and scan when changed
         shell: bash
         run: |
+          set -euo pipefail
           if git diff --quiet -- src/App.jsx data public/data logs && [[ -z "$(git status --porcelain -- src/articles/published)" ]]; then
             echo "No publisher repair changes."
-            exit 0
+          else
+            npm run build
           fi
-          npm run build
-          if git grep -I -n -E "(ghp_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|sk-[A-Za-z0-9_-]{20,})" -- . ':(exclude)package-lock.json'; then
-            exit 1
-          fi
+          # Always scan, including quiet runs. Do not echo any secret matches.
+          python scripts/check_repo_secrets.py
 
       - name: Commit autonomous repair
         shell: bash
