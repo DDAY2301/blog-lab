@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T15:33:22+01:00",
+  "updatedAt": "2026-11-26T01:30:12+01:00",
   "status": "partial",
   "sourcesChecked": [
     "Visit Ljubljana",
@@ -98,25 +98,6 @@
       "status": "confirmed",
       "lastCheckedAt": "2026-11-01T07:20:00+01:00",
       "description": "The month-long culinary festival begins today across Ljubljana, with tastings, menus, workshops and live events announced separately. Prices, languages and accessibility vary by participating venue."
-    },
-    {
-      "title": "LION'S LAW (FR), MESS (MEX), BREAKOUT (FR) @ Gala hala",
-      "url": "https://www.galahala.com/",
-      "source": "Gala Hala",
-      "type": "Koncert · Metelkova",
-      "place": "Gala Hala · AKC Metelkova",
-      "startAt": "2026-11-25T20:00:00+01:00",
-      "endAt": null,
-      "price": null,
-      "languages": [],
-      "touristFriendly": null,
-      "familyFriendly": null,
-      "accessibility": null,
-      "ticketUrl": "https://www.galahala.com/",
-      "status": "confirmed",
-      "lastCheckedAt": "2026-11-11T07:41:47+01:00",
-      "description": "LION'S LAW (FR), MESS (MEX), BREAKOUT (FR) @ Gala hala is listed by Gala Hala. Check the official event page for price, language and accessibility details.",
-      "id": "event-78-lion-s-law-fr-mess-mex-breakout-fr-gala-hala"
     },
     {
       "title": "ASTĒRIE @ Gala hala",
