@@ -3,11 +3,11 @@
   "status": "waiting",
   "enabled": true,
   "category": "dediscina",
-  "last_run": "2026-11-26T10:54:08+01:00",
+  "last_run": "2026-11-26T11:09:02+01:00",
   "last_success": "2026-11-24T19:24:48+01:00",
   "last_output": "na-najvecjem-kulinaricnem-dogodku-v-sloveniji-bograc-kuhali-v-124-kotlickih-foto-b4c1443c",
   "next_run": null,
-  "message": "Nobena sveža zgodba ni prestala uredniškega QA: prekratek",
+  "message": "Ni novih neuporabljenih virov; objava se varno odloži.",
   "posts_today": 0,
   "scheduled_posts_today": 0,
   "manual_posts_today": 0,
@@ -21,5 +21,5 @@
     "reason": "prekratek,manjka_fotografija",
     "at": "2026-11-26T07:39:38+01:00"
   },
-  "last_error": "prekratek"
+  "last_error": "fallback_no_fresh_evidence"
 }

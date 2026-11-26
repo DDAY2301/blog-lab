@@ -5,7 +5,7 @@
   "posts_date": "2026-11-26",
   "posts_today": 0,
   "last_output": "na-najvecjem-kulinaricnem-dogodku-v-sloveniji-bograc-kuhali-v-124-kotlickih-foto-b4c1443c",
-  "last_error": "prekratek",
+  "last_error": "fallback_no_fresh_evidence",
   "agent_version": "3.0.0-learning-guarded-fallback",
   "current_category": "dediscina",
   "scheduled_posts_today": 0,
