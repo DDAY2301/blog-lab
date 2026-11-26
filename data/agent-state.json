@@ -7,7 +7,7 @@
   "last_output": "na-najvecjem-kulinaricnem-dogodku-v-sloveniji-bograc-kuhali-v-124-kotlickih-foto-b4c1443c",
   "last_error": "prekratek,manjka_fotografija",
   "agent_version": "3.0.0-learning-guarded-fallback",
-  "current_category": "sezonsko",
+  "current_category": "kolesarstvo",
   "scheduled_posts_today": 0,
   "manual_posts_today": 0,
   "writer_mode": "workers_ai",
@@ -22,10 +22,10 @@
     "reason": "manjka_fotografija,ponavljanje",
     "at": "2026-11-26T13:39:34+01:00"
   },
-  "publisher_guardian_last_run": "2026-11-17T15:56:05+01:00",
+  "publisher_guardian_last_run": "2026-11-26T14:13:26+01:00",
   "publisher_guardian_last_action": {
     "category": "kolesarstvo",
-    "slot": "2026-11-17|07:35|kolesarstvo",
+    "slot": "2026-11-26|07:35|kolesarstvo",
     "remaining_repairs": 2
   },
   "schedule_counter_normalized_at": "2026-10-07T16:45:00+02:00"
