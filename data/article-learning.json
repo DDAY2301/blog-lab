@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-11-27T23:40:39+01:00",
-  "loop_count": 7924,
+  "updated_at": "2026-11-27T23:41:32+01:00",
+  "loop_count": 7925,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-11-27T23:40:02+01:00",
+      "last_learning_run": "2026-11-27T23:41:06+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 148353,
-          "last_seen": "2026-11-27T23:40:02+01:00",
-          "last_title": "Slovenija proti Danski danes odpira svoje nastope na letošnjem evropskem prvenstvu - Šport TV",
-          "last_provider": "google-news-si",
-          "published": 478815,
+          "seen": 148362,
+          "last_seen": "2026-11-27T23:41:06+01:00",
+          "last_title": "Fantje, Slovenija je z vami! Nogometaši nocoj v Stožicah igrajo za uvrstitev na Euro 2024 (poglejte, kaj potrebujejo proti Kazahstanu) - Metropolitan.si",
+          "last_provider": "google-news-global",
+          "published": 478880,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,7 +227,7 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 8,
+      "current_source_count": 9,
       "example_titles": {
         "news.google.com": [
           "Slovenija pred ključnim obračunom s Finsko: Poraz bi močno otežil pot na SP - Šport TV",
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-11-27T23:40:19+01:00",
+      "last_learning_run": "2026-11-27T23:41:16+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -286,11 +286,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 176794,
-          "last_seen": "2026-11-27T23:40:19+01:00",
+          "seen": 176806,
+          "last_seen": "2026-11-27T23:41:16+01:00",
           "last_title": "Brskali tudi po računih žene pomembnega politika: \"To je svinjarija prve vrste\" - N1 Slovenija",
           "last_provider": "google-news-global",
-          "published": 526904,
+          "published": 526974,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "erome.com": {
@@ -416,7 +416,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-11-27T23:40:39+01:00",
+      "last_learning_run": "2026-11-27T23:41:32+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -505,11 +505,11 @@
         },
         "news.google.com": {
           "score": 2.506,
-          "seen": 203099,
-          "last_seen": "2026-11-27T23:40:39+01:00",
+          "seen": 203118,
+          "last_seen": "2026-11-27T23:41:32+01:00",
           "last_title": "Spomin na prvo vlado po 2. svet. vojni: Zaobljuba dela v korist ljudi vladajoče zavezuje tudi danes - rtvslo.si",
           "last_provider": "google-news-si",
-          "published": 328421,
+          "published": 328446,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
