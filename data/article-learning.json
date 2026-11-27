@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-11-27T22:19:50+01:00",
-  "loop_count": 7891,
+  "updated_at": "2026-11-27T22:20:58+01:00",
+  "loop_count": 7892,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-11-27T22:19:27+01:00",
+      "last_learning_run": "2026-11-27T22:20:33+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 148111,
-          "last_seen": "2026-11-27T22:19:27+01:00",
+          "seen": 148118,
+          "last_seen": "2026-11-27T22:20:33+01:00",
           "last_title": "Slovenija pred ključnim obračunom s Finsko: Poraz bi močno otežil pot na SP - Šport TV",
           "last_provider": "google-news-si",
-          "published": 476670,
+          "published": 476735,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-11-27T22:19:39+01:00",
+      "last_learning_run": "2026-11-27T22:20:46+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -286,11 +286,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 176278,
-          "last_seen": "2026-11-27T22:19:39+01:00",
+          "seen": 176290,
+          "last_seen": "2026-11-27T22:20:46+01:00",
           "last_title": "Brskali tudi po računih žene pomembnega politika: \"To je svinjarija prve vrste\" - N1 Slovenija",
           "last_provider": "google-news-global",
-          "published": 524594,
+          "published": 524664,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "experian.com": {
@@ -402,7 +402,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-11-27T22:19:50+01:00",
+      "last_learning_run": "2026-11-27T22:20:58+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -491,11 +491,11 @@
         },
         "news.google.com": {
           "score": 2.505,
-          "seen": 202600,
-          "last_seen": "2026-11-27T22:19:50+01:00",
+          "seen": 202612,
+          "last_seen": "2026-11-27T22:20:58+01:00",
           "last_title": "Slovenija preprečila pristanek izraelskega letala: tako se odziva Fraport - Info360",
           "last_provider": "google-news-global",
-          "published": 327596,
+          "published": 327621,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -590,11 +590,8 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 11,
+      "current_source_count": 12,
       "example_titles": {
-        "youtube.com": [
-          "Chris Stapleton - Official Music Videos + Complete Collection"
-        ],
         "news.google.com": [
           "Golob zahteva odstop zdravstvenega ministra Ostrca: Zaradi ustavitve širitve Onkološkega inštituta napovedal interpelacijo - Goriške novice",
           "Kako svet vidi Slovenijo danes in kako je postala tako vroča evropska destinacija - Dnevnik",
