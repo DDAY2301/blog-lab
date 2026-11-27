@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-11-27T22:15:56+01:00",
-  "loop_count": 7887,
+  "updated_at": "2026-11-27T22:16:55+01:00",
+  "loop_count": 7888,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-11-27T22:15:34+01:00",
+      "last_learning_run": "2026-11-27T22:16:33+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 148081,
-          "last_seen": "2026-11-27T22:15:34+01:00",
-          "last_title": "Fantje, Slovenija je z vami! Nogometaši nocoj v Stožicah igrajo za uvrstitev na Euro 2024 (poglejte, kaj potrebujejo proti Kazahstanu) - Metropolitan.si",
-          "last_provider": "google-news-global",
-          "published": 476410,
+          "seen": 148088,
+          "last_seen": "2026-11-27T22:16:33+01:00",
+          "last_title": "Slovenija pred ključnim obračunom s Finsko: Poraz bi močno otežil pot na SP - Šport TV",
+          "last_provider": "google-news-si",
+          "published": 476475,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,7 +227,7 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 8,
+      "current_source_count": 7,
       "example_titles": {
         "news.google.com": [
           "Kozamernik: \"Rekli smo, da želimo rasti skozi turnir, in to je bila danes dobra prva stopnička\" - RTV SLO",
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-11-27T22:15:44+01:00",
+      "last_learning_run": "2026-11-27T22:16:43+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -286,11 +286,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 176226,
-          "last_seen": "2026-11-27T22:15:44+01:00",
-          "last_title": "Dimitrij Rupel: Slovenska zunanja politika nekoč in danes - Slovenska demokratska stranka - SDS",
+          "seen": 176236,
+          "last_seen": "2026-11-27T22:16:43+01:00",
+          "last_title": "Predsednik vlade Janez Janša se je danes v Lendavi srečal s predsednikom madžarske vlade Viktorjem Orbanom. - prava.si",
           "last_provider": "google-news-si",
-          "published": 524314,
+          "published": 524384,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "experian.com": {
@@ -392,17 +392,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 19,
+      "current_source_count": 10,
       "example_titles": {
         "news.google.com": [
-          "Na Radiu Ognjišče zadnje predvolilno soočenje: v ospredju prisluhi, zdravstvo, zunanja politika in sprava - Radio Ognjišče",
-          "'Imenovanje kot most, ki bo spajal tisto, kar je do danes delovalo nezdružljivo' - 24ur.com",
-          "Pirc Musar: Ne bom tiho, ko zunanja politika ne bo skladna z ustavnimi vrednotami države - Siol.net"
+          "Predsednik vlade na Evropskem svetu: Kohezija in skupna kmetijska politika sta ključni za Evropo - Portal GOV.SI",
+          "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si",
+          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-11-27T22:15:56+01:00",
+      "last_learning_run": "2026-11-27T22:16:55+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -422,8 +422,8 @@
       "preferred_hosts": [
         "lonelyplanet.com",
         "youtube.com",
-        "accounts.google.com",
         "britannica.com",
+        "accounts.google.com",
         "the-slovenia.com",
         "reddit.com",
         "medicalnewstoday.com",
@@ -450,6 +450,13 @@
           "last_title": "How to Install Mods for Schedule 1 (Step-by-Step Tutorial)",
           "last_provider": "bing-web"
         },
+        "britannica.com": {
+          "score": 5.88,
+          "seen": 24,
+          "last_seen": "2026-11-27T22:16:55+01:00",
+          "last_title": "Slovenia | History, Geography, & People | Britannica",
+          "last_provider": "bing-web"
+        },
         "accounts.google.com": {
           "score": 5.724,
           "published": 3546,
@@ -457,13 +464,6 @@
           "seen": 4,
           "last_seen": "2026-10-16T20:40:28+02:00",
           "last_title": "YouTube - Google Accounts",
-          "last_provider": "bing-web"
-        },
-        "britannica.com": {
-          "score": 5.635,
-          "seen": 23,
-          "last_seen": "2026-11-27T22:11:58+01:00",
-          "last_title": "Slovenia | History, Geography, & People | Britannica",
           "last_provider": "bing-web"
         },
         "the-slovenia.com": {
@@ -490,12 +490,12 @@
           "last_provider": "bing-web"
         },
         "news.google.com": {
-          "score": 2.506,
-          "seen": 202549,
-          "last_seen": "2026-11-27T22:15:56+01:00",
-          "last_title": "Spomin na prvo vlado po 2. svet. vojni: Zaobljuba dela v korist ljudi vladajoče zavezuje tudi danes - rtvslo.si",
-          "last_provider": "google-news-si",
-          "published": 327496,
+          "score": 2.505,
+          "seen": 202559,
+          "last_seen": "2026-11-27T22:16:55+01:00",
+          "last_title": "Slovenija preprečila pristanek izraelskega letala: tako se odziva Fraport - Info360",
+          "last_provider": "google-news-global",
+          "published": 327521,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -590,12 +590,15 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 19,
+      "current_source_count": 11,
       "example_titles": {
+        "britannica.com": [
+          "Slovenia | History, Geography, & People | Britannica"
+        ],
         "news.google.com": [
-          "140 let Kmetijske šole Grm, najstarejše v Sloveniji - Novice - Aktualno - Mestna občina Novo mesto",
-          "Pavel Rupar poziva na popoldanski shod z začetkom pred RTV Slovenija, policija pripravljena - Info360",
-          "Ko so bile ZDA stare toliko kot danes Slovenija, so bile na robu razpada - Zanima.me"
+          "Golob zahteva odstop zdravstvenega ministra Ostrca: Zaradi ustavitve širitve Onkološkega inštituta napovedal interpelacijo - Goriške novice",
+          "Kako svet vidi Slovenijo danes in kako je postala tako vroča evropska destinacija - Dnevnik",
+          "Jugoslavija je imela zmagovalni recept za smučanje, Slovenija ga danes nima - Dnevnik"
         ]
       }
     }
