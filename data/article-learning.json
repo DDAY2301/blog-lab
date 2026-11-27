@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-11-27T22:55:40+01:00",
-  "loop_count": 7906,
+  "updated_at": "2026-11-27T22:56:38+01:00",
+  "loop_count": 7907,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-11-27T22:55:18+01:00",
+      "last_learning_run": "2026-11-27T22:56:17+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 148209,
-          "last_seen": "2026-11-27T22:55:18+01:00",
-          "last_title": "Slovenija pred ključnim obračunom s Finsko: Poraz bi močno otežil pot na SP - Šport TV",
+          "seen": 148217,
+          "last_seen": "2026-11-27T22:56:17+01:00",
+          "last_title": "Od danes so vsi ljubljanski bazeni brezplačni – a bodite pozorni na eno stvar - Metropolitan.si",
           "last_provider": "google-news-si",
-          "published": 477645,
+          "published": 477710,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -230,14 +230,14 @@
       "current_source_count": 8,
       "example_titles": {
         "news.google.com": [
-          "Kozamernik: \"Rekli smo, da želimo rasti skozi turnir, in to je bila danes dobra prva stopnička\" - RTV SLO",
-          "Merkur zavarovalnica L'Etape Slovenija: na krajši in daljši trasi slavila Slovenca - 24ur.com",
-          "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si"
+          "Slovenija želi biti nova Švica, zdaj pa je Švica postala nova Slovenija. Trava, kriva je trava - Dnevnik",
+          "Šturm z dvema zadetkoma zrežiral visoko zmago Slovenije in boj za elito - 24ur.com",
+          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-11-27T22:55:29+01:00",
+      "last_learning_run": "2026-11-27T22:56:28+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -286,11 +286,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 176523,
-          "last_seen": "2026-11-27T22:55:29+01:00",
-          "last_title": "Dimitrij Rupel: Slovenska zunanja politika nekoč in danes - Slovenska demokratska stranka - SDS",
-          "last_provider": "google-news-si",
-          "published": 525644,
+          "seen": 176534,
+          "last_seen": "2026-11-27T22:56:28+01:00",
+          "last_title": "Video: Luka Simonič iz SDM: \"Če se mi ne ukvarjamo s politiko, se politika ukvarja z nami\" - Metroplay - Metropolitan.si",
+          "last_provider": "google-news-global",
+          "published": 525714,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "experian.com": {
@@ -392,17 +392,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 19,
+      "current_source_count": 11,
       "example_titles": {
         "news.google.com": [
-          "Na Radiu Ognjišče zadnje predvolilno soočenje: v ospredju prisluhi, zdravstvo, zunanja politika in sprava - Radio Ognjišče",
-          "'Imenovanje kot most, ki bo spajal tisto, kar je do danes delovalo nezdružljivo' - 24ur.com",
-          "Pirc Musar: Ne bom tiho, ko zunanja politika ne bo skladna z ustavnimi vrednotami države - Siol.net"
+          "Predsednik vlade na Evropskem svetu: Kohezija in skupna kmetijska politika sta ključni za Evropo - Portal GOV.SI",
+          "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si",
+          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-11-27T22:55:40+01:00",
+      "last_learning_run": "2026-11-27T22:56:38+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -474,12 +474,12 @@
           "last_provider": "bing-web"
         },
         "reddit.com": {
-          "score": 2.992,
+          "score": 3.482,
           "published": 7906,
           "last_output_id": "duckduckgo-287dab86",
-          "seen": 2,
-          "last_seen": "2026-10-16T23:38:36+02:00",
-          "last_title": "Wikipedia is easily the greatest thing the internet has ever ... - Reddit",
+          "seen": 3,
+          "last_seen": "2026-11-27T22:56:38+01:00",
+          "last_title": "I searched something on pornhub and got a warning - Reddit",
           "last_provider": "bing-web"
         },
         "medicalnewstoday.com": {
@@ -490,12 +490,12 @@
           "last_provider": "bing-web"
         },
         "news.google.com": {
-          "score": 2.506,
-          "seen": 202808,
-          "last_seen": "2026-11-27T22:55:40+01:00",
-          "last_title": "Spomin na prvo vlado po 2. svet. vojni: Zaobljuba dela v korist ljudi vladajoče zavezuje tudi danes - rtvslo.si",
-          "last_provider": "google-news-si",
-          "published": 327971,
+          "score": 2.505,
+          "seen": 202819,
+          "last_seen": "2026-11-27T22:56:38+01:00",
+          "last_title": "Slovenija preprečila pristanek izraelskega letala: tako se odziva Fraport - Info360",
+          "last_provider": "google-news-global",
+          "published": 327996,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -590,12 +590,15 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 19,
+      "current_source_count": 12,
       "example_titles": {
+        "reddit.com": [
+          "I searched something on pornhub and got a warning - Reddit"
+        ],
         "news.google.com": [
-          "140 let Kmetijske šole Grm, najstarejše v Sloveniji - Novice - Aktualno - Mestna občina Novo mesto",
-          "Pavel Rupar poziva na popoldanski shod z začetkom pred RTV Slovenija, policija pripravljena - Info360",
-          "Ko so bile ZDA stare toliko kot danes Slovenija, so bile na robu razpada - Zanima.me"
+          "Golob zahteva odstop zdravstvenega ministra Ostrca: Zaradi ustavitve širitve Onkološkega inštituta napovedal interpelacijo - Goriške novice",
+          "Kako svet vidi Slovenijo danes in kako je postala tako vroča evropska destinacija - Dnevnik",
+          "Jugoslavija je imela zmagovalni recept za smučanje, Slovenija ga danes nima - Dnevnik"
         ]
       }
     }
