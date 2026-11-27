@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-11-27T21:30:44+01:00",
-  "loop_count": 7866,
+  "updated_at": "2026-11-27T21:31:39+01:00",
+  "loop_count": 7867,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-11-27T21:30:24+01:00",
+      "last_learning_run": "2026-11-27T21:31:13+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 147934,
-          "last_seen": "2026-11-27T21:30:24+01:00",
-          "last_title": "Slovenija pred ključnim obračunom s Finsko: Poraz bi močno otežil pot na SP - Šport TV",
+          "seen": 147943,
+          "last_seen": "2026-11-27T21:31:13+01:00",
+          "last_title": "Od danes so vsi ljubljanski bazeni brezplačni – a bodite pozorni na eno stvar - Metropolitan.si",
           "last_provider": "google-news-si",
-          "published": 475045,
+          "published": 475110,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,17 +227,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 7,
+      "current_source_count": 9,
       "example_titles": {
         "news.google.com": [
-          "Kozamernik: \"Rekli smo, da želimo rasti skozi turnir, in to je bila danes dobra prva stopnička\" - RTV SLO",
-          "Merkur zavarovalnica L'Etape Slovenija: na krajši in daljši trasi slavila Slovenca - 24ur.com",
-          "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si"
+          "Slovenija želi biti nova Švica, zdaj pa je Švica postala nova Slovenija. Trava, kriva je trava - Dnevnik",
+          "Šturm z dvema zadetkoma zrežiral visoko zmago Slovenije in boj za elito - 24ur.com",
+          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-11-27T21:30:34+01:00",
+      "last_learning_run": "2026-11-27T21:31:28+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -256,9 +256,9 @@
         "wikipedia.org"
       ],
       "preferred_hosts": [
+        "pewresearch.org",
         "support.microsoft.com",
         "news.google.com",
-        "pewresearch.org",
         "experian.com",
         "dictionary.com",
         "hellovein.com",
@@ -270,6 +270,13 @@
         "calculator.net"
       ],
       "source_health": {
+        "pewresearch.org": {
+          "score": 3.851,
+          "seen": 5,
+          "last_seen": "2026-11-27T21:31:28+01:00",
+          "last_title": "In Gun Control Debate, Several Options Draw Majority Support",
+          "last_provider": "bing-web"
+        },
         "support.microsoft.com": {
           "score": 2.835,
           "seen": 3,
@@ -279,19 +286,12 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 175959,
-          "last_seen": "2026-11-27T21:30:34+01:00",
+          "seen": 175971,
+          "last_seen": "2026-11-27T21:31:28+01:00",
           "last_title": "Brskali tudi po računih žene pomembnega politika: \"To je svinjarija prve vrste\" - N1 Slovenija",
           "last_provider": "google-news-global",
-          "published": 522844,
+          "published": 522914,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
-        },
-        "pewresearch.org": {
-          "score": 2.381,
-          "seen": 4,
-          "last_seen": "2026-10-04T12:23:46+02:00",
-          "last_title": "Key takeaways on Americans’ views of guns and gun ownership",
-          "last_provider": "bing-web"
         },
         "experian.com": {
           "score": 1.559,
@@ -392,8 +392,11 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 12,
+      "current_source_count": 13,
       "example_titles": {
+        "pewresearch.org": [
+          "In Gun Control Debate, Several Options Draw Majority Support"
+        ],
         "news.google.com": [
           "Predsednik vlade na Evropskem svetu: Kohezija in skupna kmetijska politika sta ključni za Evropo - Portal GOV.SI",
           "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer",
@@ -402,7 +405,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-11-27T21:30:44+01:00",
+      "last_learning_run": "2026-11-27T21:31:39+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -490,12 +493,12 @@
           "last_provider": "bing-web"
         },
         "news.google.com": {
-          "score": 2.506,
-          "seen": 202243,
-          "last_seen": "2026-11-27T21:30:44+01:00",
-          "last_title": "Spomin na prvo vlado po 2. svet. vojni: Zaobljuba dela v korist ljudi vladajoče zavezuje tudi danes - rtvslo.si",
-          "last_provider": "google-news-si",
-          "published": 326971,
+          "score": 2.505,
+          "seen": 202255,
+          "last_seen": "2026-11-27T21:31:39+01:00",
+          "last_title": "Slovenija preprečila pristanek izraelskega letala: tako se odziva Fraport - Info360",
+          "last_provider": "google-news-global",
+          "published": 326996,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -590,12 +593,12 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 19,
+      "current_source_count": 12,
       "example_titles": {
         "news.google.com": [
-          "140 let Kmetijske šole Grm, najstarejše v Sloveniji - Novice - Aktualno - Mestna občina Novo mesto",
-          "Pavel Rupar poziva na popoldanski shod z začetkom pred RTV Slovenija, policija pripravljena - Info360",
-          "Kajzer: zunanjepolitična strategija mora odražati aktualno geopolitično okolje - 24ur.com"
+          "Kako svet vidi Slovenijo danes in kako je postala tako vroča evropska destinacija - Dnevnik",
+          "Jugoslavija je imela zmagovalni recept za smučanje, Slovenija ga danes nima - Dnevnik",
+          "\"Slovenija je zaradi socialistične preteklosti še danes ekonomsko šibkejša, kot bi lahko bila\" - Klub slovenskih podjetnikov"
         ]
       }
     }
