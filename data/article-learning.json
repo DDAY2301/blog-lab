@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-11-27T23:12:46+01:00",
-  "loop_count": 7914,
+  "updated_at": "2026-11-27T23:13:32+01:00",
+  "loop_count": 7915,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-11-27T23:12:26+01:00",
+      "last_learning_run": "2026-11-27T23:13:13+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 148273,
-          "last_seen": "2026-11-27T23:12:26+01:00",
+          "seen": 148281,
+          "last_seen": "2026-11-27T23:13:13+01:00",
           "last_title": "Slovenija pred ključnim obračunom s Finsko: Poraz bi močno otežil pot na SP - Šport TV",
           "last_provider": "google-news-si",
-          "published": 478165,
+          "published": 478230,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-11-27T23:12:36+01:00",
+      "last_learning_run": "2026-11-27T23:13:23+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -286,11 +286,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 176636,
-          "last_seen": "2026-11-27T23:12:36+01:00",
-          "last_title": "Brskali tudi po računih žene pomembnega politika: \"To je svinjarija prve vrste\" - N1 Slovenija",
-          "last_provider": "google-news-global",
-          "published": 526204,
+          "seen": 176655,
+          "last_seen": "2026-11-27T23:13:23+01:00",
+          "last_title": "Dimitrij Rupel: Slovenska zunanja politika nekoč in danes - Slovenska demokratska stranka - SDS",
+          "last_provider": "google-news-si",
+          "published": 526274,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "erome.com": {
@@ -406,20 +406,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 13,
+      "current_source_count": 19,
       "example_titles": {
         "news.google.com": [
-          "Predsednik vlade na Evropskem svetu: Kohezija in skupna kmetijska politika sta ključni za Evropo - Portal GOV.SI",
-          "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si",
-          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer"
-        ],
-        "goldsilver.com": [
-          "GoldSilver: The Leader in Bullion & Precious Metals"
+          "Na Radiu Ognjišče zadnje predvolilno soočenje: v ospredju prisluhi, zdravstvo, zunanja politika in sprava - Radio Ognjišče",
+          "'Imenovanje kot most, ki bo spajal tisto, kar je do danes delovalo nezdružljivo' - 24ur.com",
+          "Pirc Musar: Ne bom tiho, ko zunanja politika ne bo skladna z ustavnimi vrednotami države - Siol.net"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-11-27T23:12:46+01:00",
+      "last_learning_run": "2026-11-27T23:13:32+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -468,9 +465,9 @@
           "last_provider": "bing-web"
         },
         "britannica.com": {
-          "score": 6.615,
-          "seen": 27,
-          "last_seen": "2026-11-27T22:45:34+01:00",
+          "score": 6.86,
+          "seen": 28,
+          "last_seen": "2026-11-27T23:13:32+01:00",
           "last_title": "Slovenia | History, Geography, & People | Britannica",
           "last_provider": "bing-web"
         },
@@ -507,12 +504,12 @@
           "last_provider": "bing-web"
         },
         "news.google.com": {
-          "score": 2.506,
-          "seen": 202952,
-          "last_seen": "2026-11-27T23:12:46+01:00",
-          "last_title": "Spomin na prvo vlado po 2. svet. vojni: Zaobljuba dela v korist ljudi vladajoče zavezuje tudi danes - rtvslo.si",
-          "last_provider": "google-news-si",
-          "published": 328171,
+          "score": 2.505,
+          "seen": 202964,
+          "last_seen": "2026-11-27T23:13:32+01:00",
+          "last_title": "Slovenija preprečila pristanek izraelskega letala: tako se odziva Fraport - Info360",
+          "last_provider": "google-news-global",
+          "published": 328196,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -607,12 +604,15 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 19,
+      "current_source_count": 13,
       "example_titles": {
+        "britannica.com": [
+          "Slovenia | History, Geography, & People | Britannica"
+        ],
         "news.google.com": [
-          "140 let Kmetijske šole Grm, najstarejše v Sloveniji - Novice - Aktualno - Mestna občina Novo mesto",
-          "Pavel Rupar poziva na popoldanski shod z začetkom pred RTV Slovenija, policija pripravljena - Info360",
-          "Ko so bile ZDA stare toliko kot danes Slovenija, so bile na robu razpada - Zanima.me"
+          "Golob zahteva odstop zdravstvenega ministra Ostrca: Zaradi ustavitve širitve Onkološkega inštituta napovedal interpelacijo - Goriške novice",
+          "Kako svet vidi Slovenijo danes in kako je postala tako vroča evropska destinacija - Dnevnik",
+          "Jugoslavija je imela zmagovalni recept za smučanje, Slovenija ga danes nima - Dnevnik"
         ]
       }
     }
