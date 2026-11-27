@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-11-27T21:55:44+01:00",
-  "loop_count": 7876,
+  "updated_at": "2026-11-27T21:56:39+01:00",
+  "loop_count": 7877,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-11-27T21:55:21+01:00",
+      "last_learning_run": "2026-11-27T21:56:09+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 148003,
-          "last_seen": "2026-11-27T21:45:13+01:00",
-          "last_title": "Slovenija pred ključnim obračunom s Finsko: Poraz bi močno otežil pot na SP - Šport TV",
+          "seen": 148011,
+          "last_seen": "2026-11-27T21:56:09+01:00",
+          "last_title": "Od danes so vsi ljubljanski bazeni brezplačni – a bodite pozorni na eno stvar - Metropolitan.si",
           "last_provider": "google-news-si",
-          "published": 475695,
+          "published": 475760,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,19 +227,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 3,
+      "current_source_count": 8,
       "example_titles": {
-        "llbean.com": [
-          "L.L.Bean - Outside Together Since 1912",
-          "Shop All Women's Clothing"
-        ],
-        "global.llbean.com": [
-          "New to Sale New Sale Items | Now on sale at L.L.Bean | L.L.Bean International"
+        "news.google.com": [
+          "Slovenija želi biti nova Švica, zdaj pa je Švica postala nova Slovenija. Trava, kriva je trava - Dnevnik",
+          "Šturm z dvema zadetkoma zrežiral visoko zmago Slovenije in boj za elito - 24ur.com",
+          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-11-27T21:55:33+01:00",
+      "last_learning_run": "2026-11-27T21:56:29+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -288,11 +286,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 176085,
-          "last_seen": "2026-11-27T21:45:23+01:00",
+          "seen": 176097,
+          "last_seen": "2026-11-27T21:56:29+01:00",
           "last_title": "Brskali tudi po računih žene pomembnega politika: \"To je svinjarija prve vrste\" - N1 Slovenija",
           "last_provider": "google-news-global",
-          "published": 523544,
+          "published": 523614,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "experian.com": {
@@ -394,11 +392,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 0,
-      "example_titles": {}
+      "current_source_count": 12,
+      "example_titles": {
+        "news.google.com": [
+          "Predsednik vlade na Evropskem svetu: Kohezija in skupna kmetijska politika sta ključni za Evropo - Portal GOV.SI",
+          "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si",
+          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer"
+        ]
+      }
     },
     "aktualno": {
-      "last_learning_run": "2026-11-27T21:55:44+01:00",
+      "last_learning_run": "2026-11-27T21:56:39+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -486,12 +490,12 @@
           "last_provider": "bing-web"
         },
         "news.google.com": {
-          "score": 2.502,
-          "seen": 202391,
-          "last_seen": "2026-11-27T21:45:37+01:00",
+          "score": 2.505,
+          "seen": 202401,
+          "last_seen": "2026-11-27T21:56:39+01:00",
           "last_title": "Slovenija preprečila pristanek izraelskega letala: tako se odziva Fraport - Info360",
           "last_provider": "google-news-global",
-          "published": 327221,
+          "published": 327246,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -578,18 +582,24 @@
           "last_title": "The upcoming festivals in Thessaloniki that you just can´t miss - blog.thessaloniki.travel",
           "last_provider": "bing-web"
         },
-        "tampanails.com": {
+        "support.google.com": {
           "score": 1.963,
           "seen": 2,
-          "last_seen": "2026-10-24T18:30:03+02:00",
-          "last_title": "Nail Care Tips, Trends & Lifestyle - Tampa Nails Blog",
+          "last_seen": "2026-11-27T21:56:39+01:00",
+          "last_title": "Creator responsibility - YouTube Help",
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 1,
+      "current_source_count": 12,
       "example_titles": {
-        "usps.com": [
-          "USPS - Official Site"
+        "news.google.com": [
+          "Kako svet vidi Slovenijo danes in kako je postala tako vroča evropska destinacija - Dnevnik",
+          "Jugoslavija je imela zmagovalni recept za smučanje, Slovenija ga danes nima - Dnevnik",
+          "\"Slovenija je zaradi socialistične preteklosti še danes ekonomsko šibkejša, kot bi lahko bila\" - Klub slovenskih podjetnikov"
+        ],
+        "support.google.com": [
+          "YouTube Partner Manager overview - YouTube Help",
+          "Creator responsibility - YouTube Help"
         ]
       }
     }
