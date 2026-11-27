@@ -96,7 +96,7 @@ def build_digest(items: list[dict], category: str, max_items: int = 5) -> dict:
     )
 
     parts = [
-        f"**{cat_label}, {now.strftime('%-d. %-m. %Y')}.** {lead_summary}",
+        f"**{cat_label}, {now.strftime('%d. %m. %Y').lstrip('0').replace('. 0', '. ')}.** {lead_summary}",
         (
             "Spodaj so zbrane le informacije, ki jih je mogoče neposredno povezati z objavljenimi "
             "viri. Kjer vir ne ponuja dovolj podrobnosti, besedilo ne zapolnjuje vrzeli z ugibanjem."
