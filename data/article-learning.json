@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-11-28T02:08:50+01:00",
-  "loop_count": 7952,
+  "updated_at": "2026-11-28T02:09:51+01:00",
+  "loop_count": 7953,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-11-28T02:08:23+01:00",
+      "last_learning_run": "2026-11-28T02:09:17+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 148563,
-          "last_seen": "2026-11-28T02:08:23+01:00",
+          "seen": 148571,
+          "last_seen": "2026-11-28T02:09:17+01:00",
           "last_title": "Slovenija pred ključnim obračunom s Finsko: Poraz bi močno otežil pot na SP - Šport TV",
           "last_provider": "google-news-si",
-          "published": 480635,
+          "published": 480700,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,7 +227,7 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 7,
+      "current_source_count": 8,
       "example_titles": {
         "news.google.com": [
           "Slovenija želi biti nova Švica, zdaj pa je Švica postala nova Slovenija. Trava, kriva je trava - Dnevnik",
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-11-28T02:08:37+01:00",
+      "last_learning_run": "2026-11-28T02:09:36+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -286,11 +286,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 177216,
-          "last_seen": "2026-11-28T02:08:37+01:00",
+          "seen": 177228,
+          "last_seen": "2026-11-28T02:09:36+01:00",
           "last_title": "Brskali tudi po računih žene pomembnega politika: \"To je svinjarija prve vrste\" - N1 Slovenija",
           "last_provider": "google-news-global",
-          "published": 528864,
+          "published": 528934,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "erome.com": {
@@ -423,7 +423,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-11-28T02:08:50+01:00",
+      "last_learning_run": "2026-11-28T02:09:51+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -511,12 +511,12 @@
           "last_provider": "bing-web"
         },
         "news.google.com": {
-          "score": 2.505,
-          "seen": 203544,
-          "last_seen": "2026-11-28T02:08:50+01:00",
-          "last_title": "Slovenija preprečila pristanek izraelskega letala: tako se odziva Fraport - Info360",
-          "last_provider": "google-news-global",
-          "published": 329121,
+          "score": 2.506,
+          "seen": 203563,
+          "last_seen": "2026-11-28T02:09:51+01:00",
+          "last_title": "Spomin na prvo vlado po 2. svet. vojni: Zaobljuba dela v korist ljudi vladajoče zavezuje tudi danes - rtvslo.si",
+          "last_provider": "google-news-si",
+          "published": 329146,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -611,12 +611,12 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 9,
+      "current_source_count": 19,
       "example_titles": {
         "news.google.com": [
-          "Kako svet vidi Slovenijo danes in kako je postala tako vroča evropska destinacija - Dnevnik",
-          "Jugoslavija je imela zmagovalni recept za smučanje, Slovenija ga danes nima - Dnevnik",
-          "\"Slovenija je zaradi socialistične preteklosti še danes ekonomsko šibkejša, kot bi lahko bila\" - Klub slovenskih podjetnikov"
+          "140 let Kmetijske šole Grm, najstarejše v Sloveniji - Novice - Aktualno - Mestna občina Novo mesto",
+          "Pavel Rupar poziva na popoldanski shod z začetkom pred RTV Slovenija, policija pripravljena - Info360",
+          "Kajzer: zunanjepolitična strategija mora odražati aktualno geopolitično okolje - 24ur.com"
         ]
       }
     }
