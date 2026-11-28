@@ -1,30 +1,32 @@
 [
   {
     "id": "0ee8931d-7111-4e9c-9a5f-592fe0e8e429",
-    "status": "pending",
+    "status": "resolved",
     "command": "v članek o živalskem vrtu v ljubljani dodaj fotografije, nato se vrni na časovnico objavljanja člankov",
     "mode": "site",
     "category": "aktualno",
     "actor": "dan.grmusa@gmail.com",
     "created_at": "2026-09-20T13:47:50Z",
-    "updated_at": "2026-10-24T14:37:14Z",
-    "attempts": 326,
+    "updated_at": "2026-11-28T02:45:25Z",
+    "attempts": 327,
     "reason": "Workers AI capacity still unavailable; will retry later.",
-    "last_attempt_at": "2026-10-24T14:36:43Z",
-    "last_log": "INTENT_ROUTE requested=site resolved=site autocorrected=true SITE_AI_PROVIDER_UNAVAILABLE Workers AI: Workers AI site-editor HTTP 502: {\"ok\":false,\"status\":502,\"error\":\"Workers AI site-editor ni uspel.\",\"code\":\"SITE_AI_INFERENCE_FAILED\",\"detail\":\"Workers AI inference failed after 3 attempts. Last @cf/meta/llama-3.1-8b-instruct-fp8: workers_ai_model_timeout\",\"attempts\":[{\"model\":\"@cf/zai-org/glm-4.7-flash\",\"attempt\":1,\"name\":\"Error\",\"message\":\"workers_ai_model_timeout\"},{\"model\":\"@cf/zai-org/glm-4.7-flash\",\"attempt\":2,\"name\":\"Error\",\"message\":\"workers_ai_model_timeout\"},{\"model\":\"@cf/meta/llama-3.1-8b-instruct-fp8\",\"attempt\":1,\"name\":\"Error\",\"message\":\"workers_ai_model_timeout\"}],\"last_model\":\"@cf/meta/llama-3.1-8b-instruct-fp8\"} WORKERS_AI_SITE_DIAGNOSTIC_BEGIN AI capacity unavailable: Workers AI site-editor HTTP 502: {\"ok\":false,\"status\":502,\"error\":\"Workers AI site-editor ni uspel.\",\"code\":\"SITE_AI_INFERENCE_FAILED\",\"detail\":\"Workers AI inference failed after 3 attempts. Last @cf/meta/llama-3.1-8b-instruct-fp8: workers_ai_model_timeout\",\"attempts\":[{\"model\":\"@cf/zai-org/glm-4.7-flash\",\"attempt\":1,\"name\":\"Error\",\"message\":\"workers_ai_model_timeout\"},{\"model\":\"@cf/zai-org/glm-4.7-flash\",\"attempt\":2,\"name\":\"Error\",\"message\":\"workers_ai_model_timeout\"},{\"model\":\"@cf/meta/llama-3.1-8b-instruct-fp8\",\"attempt\":1,\"name\":\"Error\",\"message\":\"workers_ai_model_timeout\"}],\"last_model\":\"@cf/meta/llama-3.1-8b-instruct-fp8\"} WORKERS_AI_SITE_DIAGNOSTIC_END SITE_AI_CAPACITY_UNAVAILABLE AI model trenutno ni na voljo; ukaz ni bil delno uporabljen in se v istem runu ne bo nesmiselno ponavljal."
+    "last_attempt_at": "2026-11-28T02:44:58Z",
+    "last_log": "INTENT_ROUTE requested=site resolved=site autocorrected=true SITE_AI_PROVIDER=workers_ai SITE_AI_OK provider=workers_ai files=1 attempts=1 summary=Add photos to the article about the Ljubljana Zoo and then return to the timeline of published articles",
+    "resolved_at": "2026-11-28T02:45:25Z"
   },
   {
     "id": "de4e31a0-bc31-453b-b584-a6bfcb2623c9",
-    "status": "pending",
+    "status": "resolved",
     "command": "izboljšaj vizualno podobo na sami strani in sam izgled in informacije člankov",
     "mode": "site",
     "category": "aktualno",
     "actor": "dan.grmusa@gmail.com",
     "created_at": "2026-09-21T13:49:22Z",
-    "updated_at": "2026-10-24T14:37:44Z",
-    "attempts": 162,
+    "updated_at": "2026-11-28T02:45:53Z",
+    "attempts": 163,
     "reason": "Workers AI capacity still unavailable; will retry later.",
-    "last_attempt_at": "2026-10-24T14:37:14Z",
-    "last_log": "INTENT_ROUTE requested=site resolved=site autocorrected=true SITE_AI_PROVIDER_UNAVAILABLE Workers AI: Workers AI site-editor HTTP 502: {\"ok\":false,\"status\":502,\"error\":\"Workers AI site-editor ni uspel.\",\"code\":\"SITE_AI_INFERENCE_FAILED\",\"detail\":\"Workers AI inference failed after 3 attempts. Last @cf/meta/llama-3.1-8b-instruct-fp8: workers_ai_model_timeout\",\"attempts\":[{\"model\":\"@cf/zai-org/glm-4.7-flash\",\"attempt\":1,\"name\":\"Error\",\"message\":\"workers_ai_model_timeout\"},{\"model\":\"@cf/zai-org/glm-4.7-flash\",\"attempt\":2,\"name\":\"Error\",\"message\":\"workers_ai_model_timeout\"},{\"model\":\"@cf/meta/llama-3.1-8b-instruct-fp8\",\"attempt\":1,\"name\":\"Error\",\"message\":\"workers_ai_model_timeout\"}],\"last_model\":\"@cf/meta/llama-3.1-8b-instruct-fp8\"} WORKERS_AI_SITE_DIAGNOSTIC_BEGIN AI capacity unavailable: Workers AI site-editor HTTP 502: {\"ok\":false,\"status\":502,\"error\":\"Workers AI site-editor ni uspel.\",\"code\":\"SITE_AI_INFERENCE_FAILED\",\"detail\":\"Workers AI inference failed after 3 attempts. Last @cf/meta/llama-3.1-8b-instruct-fp8: workers_ai_model_timeout\",\"attempts\":[{\"model\":\"@cf/zai-org/glm-4.7-flash\",\"attempt\":1,\"name\":\"Error\",\"message\":\"workers_ai_model_timeout\"},{\"model\":\"@cf/zai-org/glm-4.7-flash\",\"attempt\":2,\"name\":\"Error\",\"message\":\"workers_ai_model_timeout\"},{\"model\":\"@cf/meta/llama-3.1-8b-instruct-fp8\",\"attempt\":1,\"name\":\"Error\",\"message\":\"workers_ai_model_timeout\"}],\"last_model\":\"@cf/meta/llama-3.1-8b-instruct-fp8\"} WORKERS_AI_SITE_DIAGNOSTIC_END SITE_AI_CAPACITY_UNAVAILABLE AI model trenutno ni na voljo; ukaz ni bil delno uporabljen in se v istem runu ne bo nesmiselno ponavljal."
+    "last_attempt_at": "2026-11-28T02:45:25Z",
+    "last_log": "INTENT_ROUTE requested=site resolved=site autocorrected=true SITE_AI_PROVIDER=workers_ai SITE_AI_OK provider=workers_ai files=1 attempts=1 summary=Improved the visual appearance of articles on the Blog Lab website, making them more readable and visually appealing.",
+    "resolved_at": "2026-11-28T02:45:53Z"
   }
 ]

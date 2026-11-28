@@ -104,3 +104,18 @@ Uredniško delo izpelji v naslednjih stopnjah:
 8. Če primernih dejstev, lokacije ali licencirane fotografije ni, vrni skip=true. Dnevna kvota nikoli ne upravičuje neustrezne objave.
 
 Ne vračaj naslova, kot je »What is ... | HISTORY«, »Recreation.gov« ali »Premier League - Latest...« za slovensko turistično rubriko. Nobena rubrika ne sme sprejeti slike nepovezanega kraja ali nepreverjene fotografije iz RSS vira.
+
+## Vizualna predstavitev
+
+Izberi hero fotografijo, največ 6 galerijskih fotografij in en video samo takrat, ko so ustrezni URL-ji dejansko prisotni v vhodnih podatkih ali uredniški zahtevi. Če je urednik priložil slike, imajo te prednost. Če jih ni, uporabi primerne `image_url` iz vhodnih virov, kadar obstajajo.
+
+Vizualna predstavitev mora biti skladna z drugimi rubrikami in ne sme biti nepovezana z zgodbo. Ne izmišljaj URL-ja za fotografije, saj bo backend pred objavo poskusil dodati licencirano fotografijo iz Wikimedia Commons.
+
+## Fotografije in video
+
+Media URL-ja nikoli ne izmišljaj. Uporabi samo `image_url`/`video_url`, ki je prisoten v podanih virih, ali media URL, ki ga je izrecno podal avtorizirani urednik.
+
+- Če je urednik priložil fotografije, uporabi označeno HERO fotografijo kot naslovno, ostale pa smiselno v galeriji ali med besedilom.
+- Če urednik ni priložil fotografij, aktivno preveri `image_url` v vhodnih virih in izberi najbolj relevantno preverljivo sliko kot hero.
+- Caption naj bo kratek, stvaren in naj ne dodaja novih dejstev.
+- Če ni preverljivega medija, vrni `heroImage=null`, `video=null` in `gallery=[]`.

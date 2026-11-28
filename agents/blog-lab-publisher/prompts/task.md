@@ -38,3 +38,30 @@ Za Gourmet navedi regionalni izvor ali tradicijo samo, če jo vir podpira; razli
 Pri gorah in kampiranju jasno loči splošna priporočila od konkretnih pravil parka, občine ali upravljavca. Pri aktualnem vremenu uporabljaj le preverjen, časovno ustrezen vir.
 
 Obvezno izberi preverljivo hero fotografijo iz vhodnih virov, kadar obstaja. Če je ni, ne izmišljaj URL-ja: backend bo pred objavo poskusil dodati licencirano fotografijo iz Wikimedia Commons.
+
+## Add photos to the article
+
+When adding photos to the article, ensure they are relevant, properly licensed, and meet the editorial standards. Avoid using low-quality or unverified images. If a photo is not available, consider using a placeholder or suggesting a replacement.
+
+### Photo selection criteria
+
+* Relevance: Ensure the photo is related to the article's topic and provides context.
+* Quality: Verify the image is high-resolution and suitable for publication.
+* Licensing: Check if the image is properly licensed and meets the editorial standards.
+* Originality: Avoid using copyrighted or unverified images.
+
+### Image captioning
+
+When adding captions to photos, keep them concise, informative, and free of unnecessary details. Avoid using overly promotional language or sensationalized headlines.
+
+### Gallery management
+
+When creating a gallery, ensure it is well-organized, easy to navigate, and provides a clear visual representation of the article's content. Avoid overcrowding the gallery with too many images or irrelevant photos.
+
+### Video integration
+
+When integrating videos into the article, ensure they are relevant, properly licensed, and meet the editorial standards. Avoid using low-quality or unverified videos.
+
+### Conclusion
+
+In conclusion, adding photos to the article requires careful consideration of relevance, quality, licensing, and originality. By following these guidelines, you can create a visually appealing and engaging article that meets the editorial standards.
