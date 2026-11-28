@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-11-28T18:25:36+01:00",
-  "loop_count": 8262,
+  "updated_at": "2026-11-28T18:26:35+01:00",
+  "loop_count": 8263,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-11-28T18:25:14+01:00",
+      "last_learning_run": "2026-11-28T18:26:08+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -79,11 +79,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 150523,
-          "last_seen": "2026-11-28T18:15:46+01:00",
-          "last_title": "Slovenski šport rabi Mustaphe in druge migrante - v tem svetu daje misliti - Ekipa",
+          "seen": 150529,
+          "last_seen": "2026-11-28T18:26:08+01:00",
+          "last_title": "Kje gledati finale košarkarskega EP med Slovenci in Italijani? Televizijski prenos bo! - Dnevnik",
           "last_provider": "google-news-si",
-          "published": 500785,
+          "published": 500850,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "wallpaperaccess.com": {
@@ -227,18 +227,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 2,
+      "current_source_count": 6,
       "example_titles": {
-        "hellomagazine.com": [
-          "Nicole Scherzinger and fiancé Thom Evans split after 7 years: 'Not the outcome I ever hoped for'"
-        ],
-        "the-independent.com": [
-          "Nicole Scherzinger and fiancé Thom Evans split after seven years together"
+        "news.google.com": [
+          "Slovenija želi biti nova Švica, zdaj pa je Švica postala nova Slovenija. Trava, kriva je trava - Dnevnik",
+          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
+          "Kot v sanjah: Slovenija že drugič v dveh tednih evropski prvak! (VIDEO) - Šport TV"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-11-28T18:25:24+01:00",
+      "last_learning_run": "2026-11-28T18:26:23+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -287,11 +286,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 181841,
-          "last_seen": "2026-11-28T18:15:56+01:00",
+          "seen": 181854,
+          "last_seen": "2026-11-28T18:26:23+01:00",
           "last_title": "Video: Luka Simonič iz SDM: \"Če se mi ne ukvarjamo s politiko, se politika ukvarja z nami\" - Metroplay - Metropolitan.si",
           "last_provider": "google-news-global",
-          "published": 550564,
+          "published": 550634,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "erome.com": {
@@ -421,11 +420,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 0,
-      "example_titles": {}
+      "current_source_count": 13,
+      "example_titles": {
+        "news.google.com": [
+          "Predsednik vlade na Evropskem svetu: Kohezija in skupna kmetijska politika sta ključni za Evropo - Portal GOV.SI",
+          "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si",
+          "Petra Kerčmar s tem preusmerila pozornost nase: en mali detajl, o katerem danes govorijo vsi - Elle.si"
+        ]
+      }
     },
     "aktualno": {
-      "last_learning_run": "2026-11-28T18:25:36+01:00",
+      "last_learning_run": "2026-11-28T18:26:35+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -513,12 +518,12 @@
           "last_provider": "bing-web"
         },
         "news.google.com": {
-          "score": 2.502,
-          "seen": 207959,
-          "last_seen": "2026-11-28T18:16:07+01:00",
-          "last_title": "Spomin na prvo vlado po 2. svet. vojni: Zaobljuba dela v korist ljudi vladajoče zavezuje tudi danes - RTV SLO",
-          "last_provider": "google-news-si",
-          "published": 336871,
+          "score": 2.505,
+          "seen": 207969,
+          "last_seen": "2026-11-28T18:26:35+01:00",
+          "last_title": "Slovenija preprečila pristanek izraelskega letala: tako se odziva Fraport - Info360",
+          "last_provider": "google-news-global",
+          "published": 336896,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -613,10 +618,12 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 1,
+      "current_source_count": 10,
       "example_titles": {
-        "nfl.com": [
-          "NFL Canada"
+        "news.google.com": [
+          "Kako svet vidi Slovenijo danes in kako je postala tako vroča evropska destinacija - Dnevnik",
+          "Pavel Rupar poziva na popoldanski shod z začetkom pred RTV Slovenija, policija pripravljena - Info360",
+          "Jugoslavija je imela zmagovalni recept za smučanje, Slovenija ga danes nima - Dnevnik"
         ]
       }
     }
