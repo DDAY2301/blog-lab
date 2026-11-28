@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-11-28T08:56:22+01:00",
-  "loop_count": 8028,
+  "updated_at": "2026-11-28T08:57:41+01:00",
+  "loop_count": 8029,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-11-28T08:55:55+01:00",
+      "last_learning_run": "2026-11-28T08:57:18+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -79,11 +79,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 149039,
-          "last_seen": "2026-11-28T08:55:55+01:00",
+          "seen": 149045,
+          "last_seen": "2026-11-28T08:57:18+01:00",
           "last_title": "Od danes so vsi ljubljanski bazeni brezplačni – a bodite pozorni na eno stvar - Metropolitan.si",
           "last_provider": "google-news-si",
-          "published": 485575,
+          "published": 485640,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "wallpaperaccess.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-11-28T08:56:05+01:00",
+      "last_learning_run": "2026-11-28T08:57:28+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -286,11 +286,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 178326,
-          "last_seen": "2026-11-28T08:56:05+01:00",
+          "seen": 178338,
+          "last_seen": "2026-11-28T08:57:28+01:00",
           "last_title": "Video: Luka Simonič iz SDM: \"Če se mi ne ukvarjamo s politiko, se politika ukvarja z nami\" - Metroplay - Metropolitan.si",
           "last_provider": "google-news-global",
-          "published": 534184,
+          "published": 534254,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "erome.com": {
@@ -430,7 +430,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-11-28T08:56:22+01:00",
+      "last_learning_run": "2026-11-28T08:57:41+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -519,11 +519,11 @@
         },
         "news.google.com": {
           "score": 2.506,
-          "seen": 204636,
-          "last_seen": "2026-11-28T08:56:22+01:00",
+          "seen": 204655,
+          "last_seen": "2026-11-28T08:57:41+01:00",
           "last_title": "Od propada do ponosa Slovenije: čez mitnico je šlo vse, od soli do žafrana - Dnevnik",
           "last_provider": "google-news-si",
-          "published": 331021,
+          "published": 331046,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
