@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-11-28T15:40:40+01:00",
-  "loop_count": 8196,
+  "updated_at": "2026-11-28T15:41:28+01:00",
+  "loop_count": 8197,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-11-28T15:40:19+01:00",
+      "last_learning_run": "2026-11-28T15:41:07+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -79,11 +79,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 150116,
-          "last_seen": "2026-11-28T15:40:19+01:00",
+          "seen": 150122,
+          "last_seen": "2026-11-28T15:41:07+01:00",
           "last_title": "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
           "last_provider": "google-news-si",
-          "published": 496495,
+          "published": 496560,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "wallpaperaccess.com": {
@@ -163,6 +163,13 @@
           "last_title": "Engineering Standards | Mountlake Terrace, WA",
           "last_provider": "bing-web"
         },
+        "eporner.com": {
+          "score": 1.47,
+          "seen": 1,
+          "last_seen": "2026-11-28T15:41:07+01:00",
+          "last_title": "Bokep Porn - Bokep Indo & Bokep Terbaru Videos - EPORNER",
+          "last_provider": "bing-web"
+        },
         "ewsclub.org": {
           "score": 1.47,
           "seen": 1,
@@ -218,26 +225,22 @@
           "last_seen": "2026-10-04T18:55:06+02:00",
           "last_title": "Nike. Just Do It. Nike IN",
           "last_provider": "bing-web"
-        },
-        "chromedino.com": {
-          "score": 1.271,
-          "seen": 2,
-          "last_seen": "2026-11-28T02:53:17+01:00",
-          "last_title": "Chrome Dino Halloween – Pumpkins, Bats and a Ghost T-Rex",
-          "last_provider": "bing-web"
         }
       },
-      "current_source_count": 6,
+      "current_source_count": 7,
       "example_titles": {
         "news.google.com": [
           "Slovenija pred ključnim obračunom s Finsko: Poraz bi močno otežil pot na SP - Šport TV",
           "Ob vrnitvi v košarkarski hram Slovenija z 31 točkami Prepeliča ugnala Latvijo - RTV SLO",
           "\"Danes je enostavno biti kritičen, ker se je moč skriti za anonimnost\" - rtvslo.si"
+        ],
+        "eporner.com": [
+          "Bokep Porn - Bokep Indo & Bokep Terbaru Videos - EPORNER"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-11-28T15:40:29+01:00",
+      "last_learning_run": "2026-11-28T15:41:17+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -286,11 +289,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 180889,
-          "last_seen": "2026-11-28T15:40:29+01:00",
+          "seen": 180906,
+          "last_seen": "2026-11-28T15:41:17+01:00",
           "last_title": "Dimitrij Rupel: Slovenska zunanja politika nekoč in danes - Slovenska demokratska stranka - SDS",
           "last_provider": "google-news-si",
-          "published": 545944,
+          "published": 546014,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "erome.com": {
@@ -430,7 +433,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-11-28T15:40:40+01:00",
+      "last_learning_run": "2026-11-28T15:41:28+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -519,11 +522,11 @@
         },
         "news.google.com": {
           "score": 2.506,
-          "seen": 207030,
-          "last_seen": "2026-11-28T15:40:40+01:00",
+          "seen": 207049,
+          "last_seen": "2026-11-28T15:41:28+01:00",
           "last_title": "Od propada do ponosa Slovenije: čez mitnico je šlo vse, od soli do žafrana - Dnevnik",
           "last_provider": "google-news-si",
-          "published": 335221,
+          "published": 335246,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
