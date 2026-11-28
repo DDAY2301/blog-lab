@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-11-28T03:23:45+01:00",
-  "loop_count": 7962,
+  "updated_at": "2026-11-28T03:24:38+01:00",
+  "loop_count": 7963,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-11-28T03:23:21+01:00",
+      "last_learning_run": "2026-11-28T03:24:09+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -72,11 +72,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 148631,
-          "last_seen": "2026-11-28T03:23:21+01:00",
-          "last_title": "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
+          "seen": 148638,
+          "last_seen": "2026-11-28T03:24:09+01:00",
+          "last_title": "Slovenija pred ključnim obračunom s Finsko: Poraz bi močno otežil pot na SP - Šport TV",
           "last_provider": "google-news-si",
-          "published": 481285,
+          "published": 481350,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "answers.com": {
@@ -227,17 +227,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 6,
+      "current_source_count": 7,
       "example_titles": {
         "news.google.com": [
-          "Slovenija pred ključnim obračunom s Finsko: Poraz bi močno otežil pot na SP - Šport TV",
-          "Kozamernik: \"Rekli smo, da želimo rasti skozi turnir, in to je bila danes dobra prva stopnička\" - RTV SLO",
-          "Ob vrnitvi v košarkarski hram Slovenija z 31 točkami Prepeliča ugnala Latvijo - RTV SLO"
+          "Slovenija želi biti nova Švica, zdaj pa je Švica postala nova Slovenija. Trava, kriva je trava - Dnevnik",
+          "Slovenija po 24 letih znova v finalu evropskega prvenstva U18, za zlato na Šport TV proti Italiji! - Šport TV",
+          "Največji šok: Italijane potolkel malček, Slovenija po finale v tem terminu - Ekipa"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-11-28T03:23:36+01:00",
+      "last_learning_run": "2026-11-28T03:24:26+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -286,11 +286,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 177366,
-          "last_seen": "2026-11-28T03:23:36+01:00",
-          "last_title": "Brskali tudi po računih žene pomembnega politika: \"To je svinjarija prve vrste\" - N1 Slovenija",
-          "last_provider": "google-news-global",
-          "published": 529564,
+          "seen": 177384,
+          "last_seen": "2026-11-28T03:24:26+01:00",
+          "last_title": "Sonja Lokar: Če boste na dan volitev obsedeli doma, boste dobili tisto, česar nočete - Onaplus",
+          "last_provider": "google-news-si",
+          "published": 529634,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "erome.com": {
@@ -413,17 +413,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 12,
+      "current_source_count": 18,
       "example_titles": {
         "news.google.com": [
-          "Predsednik vlade na Evropskem svetu: Kohezija in skupna kmetijska politika sta ključni za Evropo - Portal GOV.SI",
-          "Milan Kučan spregovoril o aferi Black Cube: \"Pričakovati je, da bo politika najprej naredila korak pri sebi\" - Večer",
-          "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si"
+          "Pirc Musar: Ne bom tiho, ko zunanja politika ne bo skladna z ustavnimi vrednotami države - Siol.net",
+          "Nataša Pirc Musar: Ne bom tiho, ko zunanja politika ne bo skladna z ustavnimi vrednotami države - Slovenske novice",
+          "Odnosi z Izraelom: diplomacija ne sme biti izgovor za normalizacijo zločinov - Dnevnik"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-11-28T03:23:45+01:00",
+      "last_learning_run": "2026-11-28T03:24:38+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -512,11 +512,11 @@
         },
         "news.google.com": {
           "score": 2.505,
-          "seen": 203697,
-          "last_seen": "2026-11-28T03:23:45+01:00",
+          "seen": 203708,
+          "last_seen": "2026-11-28T03:24:38+01:00",
           "last_title": "Slovenija preprečila pristanek izraelskega letala: tako se odziva Fraport - Info360",
           "last_provider": "google-news-global",
-          "published": 329371,
+          "published": 329396,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -611,7 +611,7 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 9,
+      "current_source_count": 11,
       "example_titles": {
         "news.google.com": [
           "Kako svet vidi Slovenijo danes in kako je postala tako vroča evropska destinacija - Dnevnik",
