@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-11-28T05:53:55+01:00",
-  "loop_count": 7983,
+  "updated_at": "2026-11-28T05:54:49+01:00",
+  "loop_count": 7984,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-11-28T05:53:28+01:00",
+      "last_learning_run": "2026-11-28T05:54:22+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -79,11 +79,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 148760,
-          "last_seen": "2026-11-28T05:39:16+01:00",
+          "seen": 148767,
+          "last_seen": "2026-11-28T05:54:22+01:00",
           "last_title": "Slovenija proti Danski danes odpira svoje nastope na letošnjem evropskem prvenstvu - Šport TV",
           "last_provider": "google-news-si",
-          "published": 482650,
+          "published": 482715,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "wallpaperaccess.com": {
@@ -227,17 +227,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 3,
+      "current_source_count": 7,
       "example_titles": {
-        "answers.com": [
-          "What are some adjectives that describe the Statue of Liberty? - Answers",
-          "How did Michael Jackson gain access to statue of liberty torch? - Answers",
-          "Does The Statue of Liberty represent Lucifer? - Answers"
+        "news.google.com": [
+          "Slovenija pred ključnim obračunom s Finsko: Poraz bi močno otežil pot na SP - Šport TV",
+          "Kozamernik: \"Rekli smo, da želimo rasti skozi turnir, in to je bila danes dobra prva stopnička\" - RTV SLO",
+          "Merkur zavarovalnica L'Etape Slovenija: na krajši in daljši trasi slavila Slovenca - 24ur.com"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-11-28T05:53:44+01:00",
+      "last_learning_run": "2026-11-28T05:54:36+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -286,11 +286,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 177669,
-          "last_seen": "2026-11-28T05:39:28+01:00",
-          "last_title": "Dimitrij Rupel: Slovenska zunanja politika nekoč in danes - Slovenska demokratska stranka - SDS",
-          "last_provider": "google-news-si",
-          "published": 531034,
+          "seen": 177681,
+          "last_seen": "2026-11-28T05:54:36+01:00",
+          "last_title": "Brskali tudi po računih žene pomembnega politika: \"To je svinjarija prve vrste\" - N1 Slovenija",
+          "last_provider": "google-news-global",
+          "published": 531104,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "erome.com": {
@@ -420,15 +420,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 1,
+      "current_source_count": 12,
       "example_titles": {
-        "magicintheplanning.com": [
-          "Animal Kingdom Rides and Attractions: The Complete 2026 Guide | Magic in the Planning"
+        "news.google.com": [
+          "Predsednik vlade na Evropskem svetu: Kohezija in skupna kmetijska politika sta ključni za Evropo - Portal GOV.SI",
+          "Janez Janša na obisku pri predsednici ni 'šparal jezika': Robert Golob danes kot Zoran Janković, saj misli, da ... - Metropolitan.si",
+          "Danes se je začelo zbiranje 40.000 podpisov za referendum proti politični policiji - CNVOS"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-11-28T05:53:55+01:00",
+      "last_learning_run": "2026-11-28T05:54:49+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -516,12 +518,12 @@
           "last_provider": "bing-web"
         },
         "news.google.com": {
-          "score": 2.502,
-          "seen": 204020,
-          "last_seen": "2026-11-28T05:39:39+01:00",
-          "last_title": "Slovenija preprečila pristanek izraelskega letala: tako se odziva Fraport - Info360",
-          "last_provider": "google-news-global",
-          "published": 329896,
+          "score": 2.506,
+          "seen": 204039,
+          "last_seen": "2026-11-28T05:54:49+01:00",
+          "last_title": "Spomin na prvo vlado po 2. svet. vojni: Zaobljuba dela v korist ljudi vladajoče zavezuje tudi danes - rtvslo.si",
+          "last_provider": "google-news-si",
+          "published": 329921,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -616,8 +618,14 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 0,
-      "example_titles": {}
+      "current_source_count": 19,
+      "example_titles": {
+        "news.google.com": [
+          "140 let Kmetijske šole Grm, najstarejše v Sloveniji - Novice - Aktualno - Mestna občina Novo mesto",
+          "Pavel Rupar poziva na popoldanski shod z začetkom pred RTV Slovenija, policija pripravljena - Info360",
+          "Kajzer: zunanjepolitična strategija mora odražati aktualno geopolitično okolje - 24ur.com"
+        ]
+      }
     }
   },
   "recent_articles": [
