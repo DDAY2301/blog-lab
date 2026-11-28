@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-11-28T17:40:31+01:00",
-  "loop_count": 8244,
+  "updated_at": "2026-11-28T17:41:19+01:00",
+  "loop_count": 8245,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-11-28T17:40:11+01:00",
+      "last_learning_run": "2026-11-28T17:40:59+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -79,11 +79,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 150421,
-          "last_seen": "2026-11-28T17:40:11+01:00",
+          "seen": 150428,
+          "last_seen": "2026-11-28T17:40:59+01:00",
           "last_title": "Slovenski šport rabi Mustaphe in druge migrante - v tem svetu daje misliti - Ekipa",
           "last_provider": "google-news-si",
-          "published": 499615,
+          "published": 499680,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "wallpaperaccess.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-11-28T17:40:21+01:00",
+      "last_learning_run": "2026-11-28T17:41:09+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -286,11 +286,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 181612,
-          "last_seen": "2026-11-28T17:40:21+01:00",
+          "seen": 181629,
+          "last_seen": "2026-11-28T17:41:09+01:00",
           "last_title": "Dimitrij Rupel: Slovenska zunanja politika nekoč in danes - Slovenska demokratska stranka - SDS",
           "last_provider": "google-news-si",
-          "published": 549304,
+          "published": 549374,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "erome.com": {
@@ -430,7 +430,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-11-28T17:40:31+01:00",
+      "last_learning_run": "2026-11-28T17:41:19+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -463,9 +463,9 @@
       ],
       "source_health": {
         "britannica.com": {
-          "score": 20.335,
-          "seen": 83,
-          "last_seen": "2026-11-28T17:14:42+01:00",
+          "score": 20.58,
+          "seen": 84,
+          "last_seen": "2026-11-28T17:41:19+01:00",
           "last_title": "Slovenia | History, Geography, & People | Britannica",
           "last_provider": "bing-web"
         },
@@ -519,11 +519,11 @@
         },
         "news.google.com": {
           "score": 2.505,
-          "seen": 207727,
-          "last_seen": "2026-11-28T17:40:31+01:00",
+          "seen": 207737,
+          "last_seen": "2026-11-28T17:41:19+01:00",
           "last_title": "Slovenija preprečila pristanek izraelskega letala: tako se odziva Fraport - Info360",
           "last_provider": "google-news-global",
-          "published": 336421,
+          "published": 336446,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -618,8 +618,11 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 10,
+      "current_source_count": 11,
       "example_titles": {
+        "britannica.com": [
+          "Slovenia | History, Geography, & People | Britannica"
+        ],
         "news.google.com": [
           "Kako svet vidi Slovenijo danes in kako je postala tako vroča evropska destinacija - Dnevnik",
           "Pavel Rupar poziva na popoldanski shod z začetkom pred RTV Slovenija, policija pripravljena - Info360",
