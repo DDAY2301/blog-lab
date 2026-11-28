@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-11-28T16:11:31+01:00",
-  "loop_count": 8209,
+  "updated_at": "2026-11-28T16:12:56+01:00",
+  "loop_count": 8210,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-11-28T16:11:10+01:00",
+      "last_learning_run": "2026-11-28T16:12:36+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -79,11 +79,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 150195,
-          "last_seen": "2026-11-28T16:11:10+01:00",
-          "last_title": "Košarka (Ž): Slovenija - Latvija, Kvalifikacije za Evropsko prvenstvo 2027, Skupina K - Siol.net",
+          "seen": 150201,
+          "last_seen": "2026-11-28T16:12:36+01:00",
+          "last_title": "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
           "last_provider": "google-news-si",
-          "published": 497340,
+          "published": 497405,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "wallpaperaccess.com": {
@@ -227,17 +227,17 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 7,
+      "current_source_count": 6,
       "example_titles": {
         "news.google.com": [
           "Slovenija pred ključnim obračunom s Finsko: Poraz bi močno otežil pot na SP - Šport TV",
-          "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
-          "\"Danes je enostavno biti kritičen, ker se je moč skriti za anonimnost\" - rtvslo.si"
+          "\"Danes je enostavno biti kritičen, ker se je moč skriti za anonimnost\" - rtvslo.si",
+          "Ob vrnitvi v košarkarski hram Slovenija z 31 točkami Prepeliča ugnala Latvijo - RTV SLO"
         ]
       }
     },
     "politika": {
-      "last_learning_run": "2026-11-28T16:11:20+01:00",
+      "last_learning_run": "2026-11-28T16:12:46+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -286,11 +286,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 181099,
-          "last_seen": "2026-11-28T16:11:20+01:00",
+          "seen": 181116,
+          "last_seen": "2026-11-28T16:12:46+01:00",
           "last_title": "Dimitrij Rupel: Slovenska zunanja politika nekoč in danes - Slovenska demokratska stranka - SDS",
           "last_provider": "google-news-si",
-          "published": 546854,
+          "published": 546924,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "erome.com": {
@@ -430,7 +430,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-11-28T16:11:31+01:00",
+      "last_learning_run": "2026-11-28T16:12:56+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -519,11 +519,11 @@
         },
         "news.google.com": {
           "score": 2.506,
-          "seen": 207246,
-          "last_seen": "2026-11-28T16:11:31+01:00",
+          "seen": 207265,
+          "last_seen": "2026-11-28T16:12:56+01:00",
           "last_title": "Od propada do ponosa Slovenije: čez mitnico je šlo vse, od soli do žafrana - Dnevnik",
           "last_provider": "google-news-si",
-          "published": 335546,
+          "published": 335571,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
