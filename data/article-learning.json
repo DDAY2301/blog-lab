@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-11-28T14:26:28+01:00",
-  "loop_count": 8167,
+  "updated_at": "2026-11-28T14:28:03+01:00",
+  "loop_count": 8168,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-11-28T14:26:08+01:00",
+      "last_learning_run": "2026-11-28T14:27:35+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -79,11 +79,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 149938,
-          "last_seen": "2026-11-28T14:26:08+01:00",
+          "seen": 149944,
+          "last_seen": "2026-11-28T14:27:35+01:00",
           "last_title": "Slovenija pred ključnim obračunom s Finsko: Poraz bi močno otežil pot na SP - Šport TV",
           "last_provider": "google-news-si",
-          "published": 494610,
+          "published": 494675,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "wallpaperaccess.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-11-28T14:26:19+01:00",
+      "last_learning_run": "2026-11-28T14:27:45+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -286,11 +286,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 180450,
-          "last_seen": "2026-11-28T14:26:19+01:00",
+          "seen": 180464,
+          "last_seen": "2026-11-28T14:27:45+01:00",
           "last_title": "Brskali tudi po računih žene pomembnega politika: \"To je svinjarija prve vrste\" - N1 Slovenija",
           "last_provider": "google-news-global",
-          "published": 543914,
+          "published": 543984,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "erome.com": {
@@ -430,7 +430,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-11-28T14:26:28+01:00",
+      "last_learning_run": "2026-11-28T14:28:03+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -519,11 +519,11 @@
         },
         "news.google.com": {
           "score": 2.505,
-          "seen": 206615,
-          "last_seen": "2026-11-28T14:26:28+01:00",
+          "seen": 206627,
+          "last_seen": "2026-11-28T14:28:03+01:00",
           "last_title": "Slovenija preprečila pristanek izraelskega letala: tako se odziva Fraport - Info360",
           "last_provider": "google-news-global",
-          "published": 334496,
+          "published": 334521,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -620,13 +620,13 @@
       },
       "current_source_count": 13,
       "example_titles": {
-        "britannica.com": [
-          "Slovenia | History, Geography, & People | Britannica"
-        ],
         "news.google.com": [
           "Kako svet vidi Slovenijo danes in kako je postala tako vroča evropska destinacija - Dnevnik",
           "Pavel Rupar poziva na popoldanski shod z začetkom pred RTV Slovenija, policija pripravljena - Info360",
           "Jugoslavija je imela zmagovalni recept za smučanje, Slovenija ga danes nima - Dnevnik"
+        ],
+        "teams.live.com": [
+          "Free Online Meetings & Video Calls | Microsoft Teams"
         ]
       }
     }
