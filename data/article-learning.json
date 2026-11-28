@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-11-28T13:13:25+01:00",
-  "loop_count": 8133,
+  "updated_at": "2026-11-28T13:14:45+01:00",
+  "loop_count": 8134,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-11-28T13:13:00+01:00",
+      "last_learning_run": "2026-11-28T13:14:22+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -79,11 +79,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 149732,
-          "last_seen": "2026-11-28T13:13:00+01:00",
+          "seen": 149738,
+          "last_seen": "2026-11-28T13:14:22+01:00",
           "last_title": "10 LET NA TVOJI ŠPORTNI POTI: Decathlon Slovenija praznuje desetletje inovacij, povezovanja in vrhunske kakovosti - Zadovoljna.si",
           "last_provider": "google-news-si",
-          "published": 492400,
+          "published": 492465,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "wallpaperaccess.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-11-28T13:13:14+01:00",
+      "last_learning_run": "2026-11-28T13:14:33+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -286,11 +286,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 179943,
-          "last_seen": "2026-11-28T13:13:14+01:00",
-          "last_title": "Dimitrij Rupel: Slovenska zunanja politika nekoč in danes - Slovenska demokratska stranka - SDS",
+          "seen": 179960,
+          "last_seen": "2026-11-28T13:14:33+01:00",
+          "last_title": "Petra Kerčmar s tem preusmerila pozornost nase: en mali detajl, o katerem danes govorijo vsi - Elle.si",
           "last_provider": "google-news-si",
-          "published": 541534,
+          "published": 541604,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "erome.com": {
@@ -423,14 +423,14 @@
       "current_source_count": 17,
       "example_titles": {
         "news.google.com": [
-          "Na Radiu Ognjišče zadnje predvolilno soočenje: v ospredju prisluhi, zdravstvo, zunanja politika in sprava - Radio Ognjišče",
           "Soočenje na Radiu Slovenija: Predstavniki parlamentarnih strank o varnosti doma in po svetu - rtvslo.si",
-          "Pirc Musar: Ne bom tiho, ko zunanja politika ne bo skladna z ustavnimi vrednotami države - Siol.net"
+          "Na Radiu Ognjišče zadnje predvolilno soočenje: v ospredju prisluhi, zdravstvo, zunanja politika in sprava - Radio Ognjišče",
+          "Janša diplomatom: Zunanjo politiko vodi vlada in samo to je uradna politika Slovenije - N1 Slovenija"
         ]
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-11-28T13:13:25+01:00",
+      "last_learning_run": "2026-11-28T13:14:45+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -470,9 +470,9 @@
           "last_provider": "bing-web"
         },
         "britannica.com": {
-          "score": 16.17,
-          "seen": 66,
-          "last_seen": "2026-11-28T13:00:01+01:00",
+          "score": 16.415,
+          "seen": 67,
+          "last_seen": "2026-11-28T13:14:45+01:00",
           "last_title": "Slovenia | History, Geography, & People | Britannica",
           "last_provider": "bing-web"
         },
@@ -519,11 +519,11 @@
         },
         "news.google.com": {
           "score": 2.505,
-          "seen": 206141,
-          "last_seen": "2026-11-28T13:13:25+01:00",
+          "seen": 206151,
+          "last_seen": "2026-11-28T13:14:45+01:00",
           "last_title": "Slovenija preprečila pristanek izraelskega letala: tako se odziva Fraport - Info360",
           "last_provider": "google-news-global",
-          "published": 333646,
+          "published": 333671,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -618,8 +618,11 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 10,
+      "current_source_count": 11,
       "example_titles": {
+        "britannica.com": [
+          "Slovenia | History, Geography, & People | Britannica"
+        ],
         "news.google.com": [
           "Kako svet vidi Slovenijo danes in kako je postala tako vroča evropska destinacija - Dnevnik",
           "Jugoslavija je imela zmagovalni recept za smučanje, Slovenija ga danes nima - Dnevnik",
