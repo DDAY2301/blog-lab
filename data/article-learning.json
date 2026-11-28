@@ -1,8 +1,8 @@
 {
   "version": "1.0.0-continuous-learning",
   "mode": "continuous",
-  "updated_at": "2026-11-28T11:10:29+01:00",
-  "loop_count": 8081,
+  "updated_at": "2026-11-28T11:11:13+01:00",
+  "loop_count": 8082,
   "global_writing_rules": [
     "Naslov naj bo konkreten in naj ne obljublja več, kot viri dokazujejo.",
     "Prvi odstavek mora povedati kaj se je zgodilo, kje, kdaj in zakaj je pomembno.",
@@ -17,7 +17,7 @@
   ],
   "categories": {
     "sport": {
-      "last_learning_run": "2026-11-28T11:10:09+01:00",
+      "last_learning_run": "2026-11-28T11:10:51+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Vsak športni članek mora imeti jasno športno jedro že v naslovu ali prvem odstavku.",
@@ -79,11 +79,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 149385,
-          "last_seen": "2026-11-28T11:10:09+01:00",
+          "seen": 149392,
+          "last_seen": "2026-11-28T11:10:51+01:00",
           "last_title": "Slovenija pred ključnim obračunom s Finsko: Poraz bi močno otežil pot na SP - Šport TV",
           "last_provider": "google-news-si",
-          "published": 489020,
+          "published": 489085,
           "last_output_id": "kaksna-tekma-kaksna-zmaga-slovenije-selektor-zelo-sem-ponosen-c89c9a1d"
         },
         "wallpaperaccess.com": {
@@ -237,7 +237,7 @@
       }
     },
     "politika": {
-      "last_learning_run": "2026-11-28T11:10:19+01:00",
+      "last_learning_run": "2026-11-28T11:11:02+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Politične članke piši nevtralno, brez priporočil, ocen kandidatov ali napovedovanja izida.",
@@ -286,11 +286,11 @@
         },
         "news.google.com": {
           "score": 2.502,
-          "seen": 179148,
-          "last_seen": "2026-11-28T11:10:19+01:00",
+          "seen": 179161,
+          "last_seen": "2026-11-28T11:11:02+01:00",
           "last_title": "Brskali tudi po računih žene pomembnega politika: \"To je svinjarija prve vrste\" - N1 Slovenija",
           "last_provider": "google-news-global",
-          "published": 537894,
+          "published": 537964,
           "last_output_id": "mijiceva-odlocitev-sprozila-plaz-odzivov-predsednica-levice-besna-dno-dna-slovenske-politi-0713d909"
         },
         "erome.com": {
@@ -420,7 +420,7 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 14,
+      "current_source_count": 13,
       "example_titles": {
         "news.google.com": [
           "Predsednik vlade na Evropskem svetu: Kohezija in skupna kmetijska politika sta ključni za Evropo - Portal GOV.SI",
@@ -430,7 +430,7 @@
       }
     },
     "aktualno": {
-      "last_learning_run": "2026-11-28T11:10:29+01:00",
+      "last_learning_run": "2026-11-28T11:11:13+01:00",
       "learning_mode": "continuous_24h",
       "writing_rules": [
         "Aktualno mora ostati vezano na Slovenijo, lokalno dogajanje ali jasno relevantno evropsko/regionalno temo.",
@@ -518,12 +518,12 @@
           "last_provider": "bing-web"
         },
         "news.google.com": {
-          "score": 2.506,
-          "seen": 205377,
-          "last_seen": "2026-11-28T11:10:29+01:00",
-          "last_title": "Od propada do ponosa Slovenije: čez mitnico je šlo vse, od soli do žafrana - Dnevnik",
-          "last_provider": "google-news-si",
-          "published": 332346,
+          "score": 2.505,
+          "seen": 205389,
+          "last_seen": "2026-11-28T11:11:13+01:00",
+          "last_title": "Slovenija preprečila pristanek izraelskega letala: tako se odziva Fraport - Info360",
+          "last_provider": "google-news-global",
+          "published": 332371,
           "last_output_id": "je-igor-e-bergant-na-tv-slovenija-namerno-zlorabil-programski-cas-za-prikrito-propagando-6a24efe3"
         },
         "account.microsoft.com": {
@@ -618,12 +618,12 @@
           "last_provider": "bing-web"
         }
       },
-      "current_source_count": 19,
+      "current_source_count": 12,
       "example_titles": {
         "news.google.com": [
-          "140 let Kmetijske šole Grm, najstarejše v Sloveniji - Novice - Aktualno - Mestna občina Novo mesto",
-          "Pavel Rupar poziva na popoldanski shod z začetkom pred RTV Slovenija, policija pripravljena - Info360",
-          "Kajzer: zunanjepolitična strategija mora odražati aktualno geopolitično okolje - 24ur.com"
+          "Danes oblačno z občasnimi padavinami, v noči na četrtek ponekod sneg do nižin - N1 Slovenija",
+          "Deset let po sprejetju Nove urbane agende: Kje je danes Slovenija? - Portal GOV.SI",
+          "Slovenija bo danes dobila tekmeca v dodatnih kvalifikacijah za elito lige narodov: Zmaga bi se poznala tudi iz finančnega vidika - Planet No"
         ]
       }
     }
